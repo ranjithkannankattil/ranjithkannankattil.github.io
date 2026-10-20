@@ -44,6 +44,8 @@
       (cat === "all" || (cat === "fav" ? favs.has(s.id) : s.category === cat)) &&
       (!term || s.name.toLowerCase().includes(term))
     );
+    // stations that failed today's check go to the bottom (order otherwise kept)
+    list.sort((a, b) => (a.offline ? 1 : 0) - (b.offline ? 1 : 0));
     grid.innerHTML = "";
     for (const s of list) {
       const li = document.createElement("li");
@@ -52,7 +54,7 @@
       li.innerHTML = `
         <button class="hit" aria-label="Play ${s.name}">
           <span class="tile">${initials(s.name)}<span class="pl"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></span></span>
-          <span class="txt"><div class="nm">${s.name}</div><div class="sub">${LABEL[s.category]} · ${s.offline ? "Offline at last check" : s.freq || (s.streams.length > 1 ? s.streams.length + " sources" : "Live")}</div></span>
+          <span class="txt"><div class="nm">${s.name}</div><div class="sub">${LABEL[s.category]} · ${s.offline ? "Not working today" : s.freq || (s.streams.length > 1 ? s.streams.length + " sources" : "Live")}</div></span>
         </button>
         <button class="fav" aria-label="Favourite" aria-pressed="${favs.has(s.id)}"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2Z"/></svg></button>`;
       li.querySelector(".hit").onclick = () => (current?.id === s.id ? toggle() : play(s));
