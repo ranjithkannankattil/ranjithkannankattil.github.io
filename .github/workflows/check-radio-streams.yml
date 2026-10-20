@@ -5,6 +5,11 @@ on:
     # 06:15 UTC = 11:45 in India, when Akashvani and community stations are on air
     - cron: "15 6 * * *"
   workflow_dispatch: {}   # "Run workflow" button on the Actions tab
+  push:                   # also run when the checker itself is changed
+    branches: [main]
+    paths:
+      - scripts/check_streams.py
+      - .github/workflows/check-radio-streams.yml
 
 permissions:
   contents: write
