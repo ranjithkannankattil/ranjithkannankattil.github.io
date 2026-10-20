@@ -7,13 +7,13 @@
   'use strict';
 
   var CITIES = [
-    { id: 'hou', name: 'Houston',    sub: 'Texas, USA',         tz: 'America/Chicago', abbr: ['CST', 'CDT'] },
-    { id: 'lon', name: 'London',     sub: 'United Kingdom',     tz: 'Europe/London',   abbr: ['GMT', 'BST'] },
-    { id: 'mil', name: 'Milan',      sub: 'Italy',              tz: 'Europe/Rome',     abbr: ['CET', 'CEST'] },
-    { id: 'moz', name: 'Mozambique', sub: 'Maputo · Afungi',    tz: 'Africa/Maputo',   abbr: ['CAT', 'CAT'] },
-    { id: 'blr', name: 'Bangalore',  sub: 'India',              tz: 'Asia/Kolkata',    abbr: ['IST', 'IST'] },
-    { id: 'chn', name: 'China',      sub: 'Beijing · Shanghai', tz: 'Asia/Shanghai',   abbr: ['CST', 'CST'] },
-    { id: 'seo', name: 'Seoul',      sub: 'South Korea',        tz: 'Asia/Seoul',      abbr: ['KST', 'KST'] }
+    { id: 'hou', name: 'Houston',   cc: 'US', sub: 'Texas, United States', tz: 'America/Chicago', abbr: ['CST', 'CDT'] },
+    { id: 'lon', name: 'London',    cc: 'UK', sub: 'United Kingdom',       tz: 'Europe/London',   abbr: ['GMT', 'BST'] },
+    { id: 'mil', name: 'Milan',     cc: 'IT', sub: 'Italy',                tz: 'Europe/Rome',     abbr: ['CET', 'CEST'] },
+    { id: 'moz', name: 'Maputo',    cc: 'MZ', sub: 'Mozambique',           tz: 'Africa/Maputo',   abbr: ['CAT', 'CAT'] },
+    { id: 'blr', name: 'Bangalore', cc: 'IN', sub: 'India',                tz: 'Asia/Kolkata',    abbr: ['IST', 'IST'] },
+    { id: 'chn', name: 'Beijing',   cc: 'CN', sub: 'China',                tz: 'Asia/Shanghai',   abbr: ['CST', 'CST'] },
+    { id: 'seo', name: 'Seoul',     cc: 'KR', sub: 'South Korea',          tz: 'Asia/Seoul',      abbr: ['KST', 'KST'] }
   ];
   var STEP = 15;            // minutes per slider step
   var MIN = 60000;
@@ -133,7 +133,7 @@
   /* ---------- build static UI ---------- */
   var baseSel = $('baseSel');
   CITIES.forEach(function (c) {
-    var o = document.createElement('option'); o.value = c.id; o.textContent = c.name; baseSel.appendChild(o);
+    var o = document.createElement('option'); o.value = c.id; o.textContent = c.name + ', ' + c.cc; baseSel.appendChild(o);
   });
 
   var sliders = {
@@ -175,7 +175,7 @@
       lab.className = 'mt-lab' + (c.id === S.base ? ' is-base' : '') + (isOff(c) ? ' is-off' : '');
       lab.innerHTML =
         '<input type="checkbox"' + (isOff(c) ? '' : ' checked') + ' data-id="' + c.id + '" aria-label="Include ' + c.name + ' in suggestions">' +
-        '<span class="mt-lab-txt"><span class="mt-lab-n">' + c.name + '</span>' +
+        '<span class="mt-lab-txt"><span class="mt-lab-n">' + c.name + '<span class="mt-cc">' + c.cc + '</span></span>' +
         '<span class="mt-lab-t mt-clock" data-now="' + c.id + '"></span></span>';
       labelsEl.appendChild(lab);
 
@@ -239,7 +239,7 @@
       var dd = dayDiff(pa.ymd, ca.ymd), dst = stdDst(c.tz, a);
       if (!isOff(c)) { counted++; if (st === 'work') inHours++; else misses.push(c.name + ' ' + statusWord(c, st, a).toLowerCase()); }
       html += '<li class="mt-li' + (isOff(c) ? ' is-off' : '') + (c.id === S.base ? ' is-base' : '') + '">' +
-        '<div class="mt-li-city"><span class="mt-li-n">' + c.name + '</span><span class="mt-li-s">' + c.sub + '</span><span class="mt-li-now mt-clock" data-now="' + c.id + '"></span></div>' +
+        '<div class="mt-li-city"><span class="mt-li-n">' + c.name + '<span class="mt-cc">' + c.cc + '</span></span><span class="mt-li-s">' + c.sub + '</span><span class="mt-li-now mt-clock" data-now="' + c.id + '"></span></div>' +
         '<div class="mt-li-time">' + hm(ca) + '<span>–' + hm(cz) + '</span></div>' +
         '<div class="mt-li-day">' + dayLabel(ca) + (dd ? ' <b class="mt-shift">' + (dd > 0 ? '+' : '−') + Math.abs(dd) + ' day</b>' : '') + '</div>' +
         '<div class="mt-li-zone">' + abbr(c, a) + ' · ' + fmtOff(off) +
@@ -451,7 +451,7 @@
     CITIES.forEach(function (c) {
       if (isOff(c)) return;
       var ca = parts(c.tz, a), cz = parts(c.tz, z);
-      lines.push(c.name + '  ' + hm(ca) + '–' + hm(cz) + ' ' + abbr(c, a) + (ca.ymd !== pb.ymd ? ' (' + dayLabel(ca) + ')' : ''));
+      lines.push(c.name + ', ' + c.cc + '  ' + hm(ca) + '–' + hm(cz) + ' ' + abbr(c, a) + (ca.ymd !== pb.ymd ? ' (' + dayLabel(ca) + ')' : ''));
     });
     var text = lines.join('\n'), btn = $('copyBtn');
     var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy times for an invite'; }, 1600); };

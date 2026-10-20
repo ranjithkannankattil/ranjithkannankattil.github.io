@@ -76,6 +76,7 @@ body[data-section="productivity"] input[type=range]:focus-visible{ outline:2px s
 .mt-lab-txt{ display:flex; flex-direction:column; min-width:0; line-height:1.15; }
 .mt-lab-n{ font-family:var(--f-display); font-weight:600; font-size:.95rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 .mt-lab-t{ font-family:var(--f-mono); font-size:.72rem; color:var(--ink-soft); white-space:nowrap; }
+.mt-cc{ font-family:var(--f-mono); font-weight:400; font-size:.6rem; letter-spacing:.1em; color:var(--ink-soft); margin-left:.35rem; vertical-align:1px; }
 .mt-clock b{ font-weight:500; color:var(--ink); }
 .mt-rel{ display:inline-block; font-size:.62rem; font-weight:500; letter-spacing:.02em; padding:0 .28rem; margin-left:.15rem; background:var(--accent-soft); color:var(--accent); line-height:1.5; }
 .mt-rel.behind{ background:var(--c-off); color:var(--ink-soft); }
