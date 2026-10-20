@@ -20,8 +20,7 @@ window.STATIONS = [
     "name": "Club FM",
     "category": "fm",
     "streams": [
-      "https://listen.openstream.co/4626/audio",
-      "https://eu10.fastcast4u.com/clubfmuae"
+      "https://listen.openstream.co/4626/audio"
     ]
   },
   {
@@ -1013,4 +1012,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-10-20T22:24Z";
+window.STATIONS_CHECKED = "2026-10-20T22:33Z";
