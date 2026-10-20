@@ -176,7 +176,7 @@
       lab.innerHTML =
         '<input type="checkbox"' + (isOff(c) ? '' : ' checked') + ' data-id="' + c.id + '" aria-label="Include ' + c.name + ' in suggestions">' +
         '<span class="mt-lab-txt"><span class="mt-lab-n">' + c.name + '</span>' +
-        '<span class="mt-lab-t" data-t="' + c.id + '"></span></span>';
+        '<span class="mt-lab-t mt-clock" data-now="' + c.id + '"></span></span>';
       labelsEl.appendChild(lab);
 
       var row = document.createElement('div');
@@ -203,6 +203,7 @@
     } else nl.hidden = true;
 
     renderDate();
+    renderClocks();
     renderBest();
     renderDst();
   }
@@ -237,10 +238,8 @@
       var ca = parts(c.tz, a), cz = parts(c.tz, z), st = meetStatus(c, a, z), off = offset(c.tz, a);
       var dd = dayDiff(pa.ymd, ca.ymd), dst = stdDst(c.tz, a);
       if (!isOff(c)) { counted++; if (st === 'work') inHours++; else misses.push(c.name + ' ' + statusWord(c, st, a).toLowerCase()); }
-      var t = document.querySelector('[data-t="' + c.id + '"]');
-      if (t) t.textContent = hm(ca);
       html += '<li class="mt-li' + (isOff(c) ? ' is-off' : '') + (c.id === S.base ? ' is-base' : '') + '">' +
-        '<div class="mt-li-city"><span class="mt-li-n">' + c.name + '</span><span class="mt-li-s">' + c.sub + '</span></div>' +
+        '<div class="mt-li-city"><span class="mt-li-n">' + c.name + '</span><span class="mt-li-s">' + c.sub + '</span><span class="mt-li-now mt-clock" data-now="' + c.id + '"></span></div>' +
         '<div class="mt-li-time">' + hm(ca) + '<span>–' + hm(cz) + '</span></div>' +
         '<div class="mt-li-day">' + dayLabel(ca) + (dd ? ' <b class="mt-shift">' + (dd > 0 ? '+' : '−') + Math.abs(dd) + ' day</b>' : '') + '</div>' +
         '<div class="mt-li-zone">' + abbr(c, a) + ' · ' + fmtOff(off) +
@@ -249,6 +248,7 @@
         '</li>';
     });
     list.innerHTML = html;
+    renderClocks();
 
     var v = $('pickVerdict');
     if (!counted) v.textContent = 'No cities selected.';
@@ -358,6 +358,23 @@
     try { history.replaceState(null, '', location.pathname + '?' + p.toString() + location.hash); } catch (e) {}
   }
 
+  /* ---------- live clocks ---------- */
+  function renderClocks() {
+    var now = Math.floor(Date.now() / MIN) * MIN;
+    CITIES.forEach(function (c) {
+      var p = parts(c.tz, now);
+      var html = '<b>' + hm(p) + '</b> ' + p.wd + ' ' + p.d + '<span class="mt-mon"> ' + MON[p.mo - 1] + '</span>';
+      document.querySelectorAll('[data-now="' + c.id + '"]').forEach(function (el) {
+        el.innerHTML = html;
+        el.title = 'Now in ' + c.name + ': ' + hm(p) + ', ' + dayLabel(p) + ' ' + p.y + ' (' + abbr(c, now) + ')';
+      });
+    });
+    var nl = $('nowLine'), t = Date.now();
+    if (day && t >= day.start && t < day.end) { nl.hidden = false; nl.style.left = ((t - day.start) / (day.end - day.start) * 100) + '%'; }
+    else if (day) nl.hidden = true;
+  }
+  function tick() { renderClocks(); setTimeout(tick, MIN - (Date.now() % MIN) + 50); }
+
   /* ---------- actions ---------- */
   function keepWallTime(fn) {           // change something, keep the same base clock time selected
     var p = parts(base().tz, day.start + S.step * STEP * MIN);
@@ -456,4 +473,5 @@
       : Math.ceil((Date.now() - day.start) / (STEP * MIN));
   }
   renderSel();
+  tick();
 })();
