@@ -62,7 +62,7 @@ def curl(url: str, timeout: int = TIMEOUT) -> tuple[int, str, bytes, dict, int]:
         cmd = ["curl", "-sS", "-L", "--http0.9", "--max-time", str(timeout),
                "-A", UA, "-H", f"Origin: {ORIGIN}", "-H", f"Referer: {ORIGIN}/radio.html",
                "-H", "Accept: */*", "-H", "Accept-Encoding: identity;q=1, *;q=0",
-               "-H", "Sec-Fetch-Dest: audio", "-H", "Sec-Fetch-Mode: no-cors",
+               "-H", "Range: bytes=0-", "-H", "Sec-Fetch-Dest: audio", "-H", "Sec-Fetch-Mode: no-cors",
                "-D", hdr.name, "-o", body.name, "-w", "%{http_code} %{content_type}", url]
         p = subprocess.run(cmd, capture_output=True, text=True)
         out = (p.stdout or "0 ").split(" ", 1)
@@ -136,8 +136,9 @@ def test_stream(url: str) -> tuple[str, str]:
             return DEAD, "returns a web page, not audio"
         if code in (200, 206) and len(data) >= MIN_BYTES:
             if rc == 0:
-                # A live stream never finishes downloading; this one did, so it's a file (e.g. a jingle)
-                return DEAD, "a fixed audio file, not a live stream"
+                # A live stream never finishes downloading. This one did: either a file (a jingle -
+                # never used as a replacement) or a region-blocked message for GitHub's US servers.
+                return UNKNOWN, "finished downloading: a file, or blocked in GitHub's region"
             return OK, f"{len(data)//1000} KB in {TIMEOUT}s"
         return DEAD, f"HTTP {code}, {len(data)} bytes"
     except Exception as e:  # noqa: BLE001
