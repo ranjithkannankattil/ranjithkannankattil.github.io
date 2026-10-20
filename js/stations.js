@@ -52,8 +52,7 @@ window.STATIONS = [
     "category": "fm",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SUNO917_SC"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radiosunobahrain",

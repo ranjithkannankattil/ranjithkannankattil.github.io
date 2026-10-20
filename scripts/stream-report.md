@@ -1,13 +1,12 @@
 # Radio stream check — 2026-10-20
 
-**80 of 116 stations playing.** 35 offline, 1 couldn't be checked.
+**81 of 116 stations playing.** 34 offline, 1 couldn't be checked.
 
 ## Offline
 
 | Station | Why |
 |---|---|
 | Radio Mango | https://listen.openstream.co/4635/audio — returns a web page, not audio; https://radiomangoalive1-a.akamaihd.net/9268677ef77949a9b21d33239a55eadd/ap-southeast-1/6034685947001/playlist.m3u8 — playlist HTTP 400 |
-| Radio Suno | https://playerservices.streamtheworld.com/api/livestream-redirect/SUNO917_SC — a fixed audio file, not a live stream |
 | AIR Devikulam | https://radio.wavespb.com/live/e97acc829da9bf2a/e97acc829da9bf2a.m3u8 — playlist HTTP 404 |
 | My Radio FM | https://cast1.my-control-panel.com/proxy/myradio90fm/stream — HTTP 401, 0 bytes |
 | AIR Kannur | https://radio.wavespb.com/live/b82c91a395fc4a7d/b82c91a395fc4a7d.m3u8 — playlist HTTP 404 |
