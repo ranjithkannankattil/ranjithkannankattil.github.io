@@ -60,7 +60,9 @@ def curl(url: str, max_bytes: int | None = None, timeout: int = TIMEOUT) -> tupl
     """Return (http_code, content_type, body, headers). http_code 0 = failed."""
     with tempfile.NamedTemporaryFile() as body, tempfile.NamedTemporaryFile() as hdr:
         cmd = ["curl", "-sS", "-L", "--http0.9", "--max-time", str(timeout),
-               "-A", UA, "-H", f"Origin: {ORIGIN}", "-H", "Icy-MetaData: 0",
+               "-A", UA, "-H", f"Origin: {ORIGIN}", "-H", f"Referer: {ORIGIN}/radio.html",
+               "-H", "Accept: */*", "-H", "Accept-Encoding: identity;q=1, *;q=0",
+               "-H", "Range: bytes=0-", "-H", "Sec-Fetch-Dest: audio", "-H", "Sec-Fetch-Mode: no-cors",
                "-D", hdr.name, "-o", body.name, "-w", "%{http_code} %{content_type}", url]
         if max_bytes:
             cmd[1:1] = ["--max-filesize", str(max_bytes * 50)]
@@ -95,10 +97,12 @@ def test_hls(url: str, depth: int = 0) -> tuple[bool, str]:
     if not uris:
         return False, "empty playlist"
     nxt = urllib.parse.urljoin(url, uris[-1] if "#EXTINF" in data.decode("utf-8", "ignore") else uris[0])
-    if is_hls(nxt) and depth < 2:
+    if is_hls(nxt) and depth < 3:
         return test_hls(nxt, depth + 1)
     code, _, seg, _ = curl(nxt, timeout=8)
-    if code in (200, 206) and len(seg) > 1000:
+    if seg.lstrip().startswith(b"#EXTM3U") and depth < 3:
+        return test_hls(nxt, depth + 1)
+    if code in (200, 206) and len(seg) > 300:
         return True, "HLS ok"
     return False, f"segment HTTP {code}, {len(seg)} bytes"
 
@@ -109,8 +113,13 @@ def test_stream(url: str) -> tuple[bool, str]:
     try:
         if is_hls(url):
             return test_hls(url)
-        code, ctype, data, _ = curl(url, max_bytes=MIN_BYTES)
+        code, ctype, data, headers = curl(url, max_bytes=MIN_BYTES)
         head = data[:200].lower()
+        clen = headers.get("content-length", "")
+        crange = headers.get("content-range", "")
+        total = crange.rsplit("/", 1)[-1] if "/" in crange else clen
+        if total.isdigit() and 0 < int(total) < 200_000_000 and b"#extm3u" not in head:
+            return False, "a fixed audio file, not a live stream"
         if b"#extm3u" in head:
             return test_hls(url)
         if "html" in ctype or b"<html" in head or b"<!doctype" in head:
@@ -167,9 +176,11 @@ def from_radio_browser(name: str) -> list[str]:
                 rows = []
         for r in rows:
             langs = (r.get("language") or "").lower()
-            if r.get("countrycode") not in ("IN", "AE", "QA", "BH", "OM", "SA", "KW", "GB", "US", "AU") and "malayalam" not in langs:
+            if "malayalam" not in langs:
                 continue
-            if not want <= tokens(r.get("name", "")):
+            theirs = tokens(r.get("name", ""))
+            extra = theirs - want            # same distinctive words; only frequencies may differ
+            if not want or not want <= theirs or any(not t.isdigit() for t in extra):
                 continue
             for k in ("url_resolved", "url"):
                 if r.get(k) and r[k] not in found:
@@ -193,6 +204,7 @@ def akashvani_official() -> dict[str, str]:
 
 
 def find_replacements(st: dict, known: set[str]) -> list[str]:
+    known = known | set(st.get("exclude", []))
     cands = []
     official = akashvani_official().get(st.get("akv", "").lower())
     for u in ([official] if official else []) + from_radiosindia(st["id"]) + from_radio_browser(st["name"]):
@@ -204,8 +216,7 @@ def find_replacements(st: dict, known: set[str]) -> list[str]:
         ok, _ = test_stream(u)
         if ok:
             good.append(u)
-            if len(good) >= 2:
-                break
+            break
     return good
 
 
@@ -223,7 +234,7 @@ def main() -> None:
     akv = akashvani_official()
     for st in stations:
         new = akv.get(st.get("akv", "").lower())
-        if new and new not in st["streams"]:
+        if new and new not in st["streams"] and new not in st.get("exclude", []):
             ok, why = test_stream(new)
             results[new] = (ok, why)
             if ok:
