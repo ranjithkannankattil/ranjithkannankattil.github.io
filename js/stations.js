@@ -21,7 +21,6 @@ window.STATIONS = [
     "category": "fm",
     "streams": [
       "https://listen.openstream.co/4626/audio",
-      "https://listen.openstream.co/4635/audio",
       "https://eu10.fastcast4u.com/clubfmuae"
     ]
   },
