@@ -15,6 +15,7 @@
   };
   let favs = new Set(store.get("mr-favs", []));
   let cat = store.get("mr-cat", "all");
+  let show = "all";     // all | live | down — set by the dashboard tiles
   let current = null, hls = null, tryIndex = 0, failTimer = null;
 
   const S = window.STATIONS;
@@ -42,6 +43,7 @@
     const term = q.value.trim().toLowerCase();
     const list = S.filter((s) =>
       (cat === "all" || (cat === "fav" ? favs.has(s.id) : s.category === cat)) &&
+      (show === "all" || (show === "down") === !!s.offline) &&
       (!term || s.name.toLowerCase().includes(term))
     );
     // stations that failed today's check go to the bottom (order otherwise kept)
@@ -54,14 +56,15 @@
       li.innerHTML = `
         <button class="hit" aria-label="Play ${s.name}">
           <span class="tile">${initials(s.name)}<span class="pl"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></span></span>
-          <span class="txt"><div class="nm">${s.name}</div><div class="sub">${LABEL[s.category]} · ${s.offline ? "Not working today" : s.freq || (s.streams.length > 1 ? s.streams.length + " sources" : "Live")}</div></span>
+          <span class="txt"><div class="nm">${s.name}</div><div class="sub">${s.offline ? "Not working today" : LABEL[s.category] + " · " + (s.freq || (s.streams.length > 1 ? s.streams.length + " sources" : "Live"))}</div></span>
         </button>
         <button class="fav" aria-label="Favourite" aria-pressed="${favs.has(s.id)}"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2Z"/></svg></button>`;
       li.querySelector(".hit").onclick = () => (current?.id === s.id ? toggle() : play(s));
       li.querySelector(".fav").onclick = (e) => { e.stopPropagation(); toggleFav(s.id); };
       grid.append(li);
     }
-    $("#count").textContent = `${list.length} station${list.length === 1 ? "" : "s"}`;
+    $("#count").textContent = `${list.length} station${list.length === 1 ? "" : "s"}` +
+      (show === "live" ? " · live now" : show === "down" ? " · not working today" : "");
     $("#empty").hidden = list.length > 0;
   }
 
@@ -150,7 +153,25 @@
     navigator.mediaSession.setActionHandler("pause", toggle);
   }
 
+  function renderStats() {
+    const down = S.filter((s) => s.offline).length;
+    $("#stTotal").textContent = S.length;
+    $("#stLive").textContent = S.length - down;
+    $("#stDown").textContent = down;
+    const c = window.STATIONS_CHECKED;
+    if (c) {
+      const d = new Date(c);
+      $("#stWhen").textContent = d.toLocaleString(undefined, { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
+      $("#stWhen").title = "Every station is tested daily at 11:45 India time";
+    }
+    document.querySelectorAll(".radio-stats .stat[data-status]").forEach((b) => {
+      b.setAttribute("aria-pressed", b.dataset.status === show);
+      b.onclick = () => { show = b.dataset.status === show ? "all" : b.dataset.status; renderStats(); render(); };
+    });
+  }
+
   if (cat === "fav" && !favs.size) cat = "all";
+  renderStats();
   renderChips(); render();
   const last = byId[store.get("mr-last", "")];
   if (last) {

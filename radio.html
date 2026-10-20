@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/radio.css?v=3">
+<link rel="stylesheet" href="css/radio.css?v=4">
 </head>
 <body data-section="radio" class="wide">
 
@@ -38,6 +38,13 @@
       <input id="q" type="search" placeholder="Station name" autocomplete="off">
     </label>
   </div>
+
+  <section class="radio-stats" aria-label="Station status">
+    <button class="stat" data-status="all"><span class="k">Total stations</span><span class="v" id="stTotal">–</span></button>
+    <button class="stat live" data-status="live"><span class="k"><i></i>Live now</span><span class="v" id="stLive">–</span></button>
+    <button class="stat down" data-status="down"><span class="k"><i></i>Not working today</span><span class="v" id="stDown">–</span></button>
+    <div class="stat when"><span class="k">Last checked</span><span class="v small" id="stWhen">–</span></div>
+  </section>
 
   <nav class="radio-chips" id="chips" aria-label="Filter by category"></nav>
   <div class="diamond-rule"><span class="diamond-mark">◆</span></div>
@@ -76,7 +83,7 @@
   (function () {
     var day = new Date().toISOString().slice(0, 10);
     function load(src, next) { var el = document.createElement("script"); el.src = src; el.onload = next; document.body.appendChild(el); }
-    load("js/stations.js?d=" + day + "-" + Math.floor(Date.now() / 36e5), function () { load("js/radio.js?v=3"); });
+    load("js/stations.js?d=" + day + "-" + Math.floor(Date.now() / 36e5), function () { load("js/radio.js?v=4"); });
   })();
 </script>
 </body>

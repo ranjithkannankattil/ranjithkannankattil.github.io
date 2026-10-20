@@ -52,7 +52,9 @@ def load_stations() -> tuple[str, list[dict]]:
 
 def save_stations(header: str, stations: list[dict]) -> None:
     body = json.dumps(stations, ensure_ascii=False, indent=2)
-    STATIONS_JS.write_text(f"{header}window.STATIONS = {body};\n", encoding="utf-8")
+    checked = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
+    STATIONS_JS.write_text(f"{header}window.STATIONS = {body};\nwindow.STATIONS_CHECKED = \"{checked}\";\n",
+                           encoding="utf-8")
 
 
 # ---------------------------------------------------------------- testing
