@@ -172,6 +172,15 @@ footer .diamond-mark{ color:var(--accent); margin:0 .5rem; }
   transition:background .15s ease;
 }
 .practice:hover{ background:var(--paper-2); }
+.practice-wide{ grid-column:1 / -1; display:flex; align-items:center; gap:1.4rem; padding:1.4rem 1.6rem; }
+.practice-wide > div:nth-child(2){ flex:1; }
+.practice.practice-wide .swatch{ margin-bottom:0; flex:none; }
+.practice.practice-wide p{ margin:0; }
+@media (max-width:600px){
+  .practice-wide{ display:block; padding:2rem 1.6rem; }
+  .practice.practice-wide .swatch{ margin-bottom:1.2rem; }
+  .practice.practice-wide p{ margin:0 0 1.2rem; }
+}
 .practice .swatch{
   width:1.6rem; height:1.6rem;
   border-radius:2px;
