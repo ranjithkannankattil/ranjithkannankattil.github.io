@@ -1,0 +1,331 @@
+/* German radio stations for radio.html — from radio-browser.info, kept only if the stream plays.
+   Checked twice a day by scripts/check_streams.py (GitHub Actions).
+   streams: tried in order; offline: set by the check when none work */
+window.STATIONS = [
+  {
+    "id": "mangoradio",
+    "name": "MANGORADIO",
+    "category": "music",
+    "streams": [
+      "https://mangoradio.stream.laut.fm/mangoradio"
+    ]
+  },
+  {
+    "id": "deutschlandfunk-dlf-mp3",
+    "name": "Deutschlandfunk | DLF | MP3",
+    "category": "news",
+    "streams": [
+      "https://st01.sslstream.dlf.de/dlf/01/128/mp3/stream.mp3?aggregator=web"
+    ]
+  },
+  {
+    "id": "swr3",
+    "name": "SWR3",
+    "category": "news",
+    "streams": [
+      "https://liveradio.swr.de/sw282p3/swr3/play.mp3"
+    ]
+  },
+  {
+    "id": "1live",
+    "name": "1LIVE",
+    "category": "music",
+    "streams": [
+      "https://wdr-1live-live.icecast.wdr.de/wdr/1live/live/mp3/128/stream.mp3",
+      "https://wdr-1live-live.icecastssl.wdr.de/wdr/1live/live/mp3/128/stream.mp3"
+    ]
+  },
+  {
+    "id": "bayern-3",
+    "name": "Bayern 3",
+    "category": "music",
+    "streams": [
+      "https://dispatcher.rndfnk.com/br/br3/live/mp3/mid"
+    ]
+  },
+  {
+    "id": "orf-hitradio-o3-hq",
+    "name": "ORF Hitradio Ö3 | HQ",
+    "category": "music",
+    "streams": [
+      "https://orf-live.ors-shoutcast.at/oe3-q2a"
+    ]
+  },
+  {
+    "id": "deutschlandfunk-dlf-aac",
+    "name": "Deutschlandfunk | DLF | AAC",
+    "category": "news",
+    "streams": [
+      "https://st01.sslstream.dlf.de/dlf/01/high/aac/stream.aac?aggregator=web",
+      "https://st01.sslstream.dlf.de/dlf/01/mid/aac/stream.aac?aggregator=web"
+    ]
+  },
+  {
+    "id": "wdr-5",
+    "name": "WDR 5",
+    "category": "news",
+    "streams": [
+      "https://wdr-wdr5-live.icecast.wdr.de/wdr/wdr5/live/mp3/128/stream.mp3",
+      "https://wdr-wdr5-live.icecastssl.wdr.de/wdr/wdr5/live/mp3/128/stream.mp3"
+    ]
+  },
+  {
+    "id": "rock-antenne",
+    "name": "Rock Antenne",
+    "category": "music",
+    "streams": [
+      "https://mp3channels.webradio.rockantenne.de/rockantenne"
+    ]
+  },
+  {
+    "id": "top-100-club-charts-dance-dj-mix-radio-2",
+    "name": "# TOP 100 CLUB CHARTS - DANCE & DJ MIX RADIO - 24 HOURS NON-STOP MUSIC @ TikTok Hits, Ibiza House, Sunset Lounge, Melodic Music, EDM, Deep House, Dance Music, Techno & Hypertechno, Rave Charts, Top 40 Charts, Latin, Reggaeton Music, Moombahton, Urban Hits, HipHop, Party & Clubbing Radio, Trending Chartmusic, R&B, Urban, Mixtape - & LIVE DJ SET",
+    "category": "music",
+    "streams": [
+      "https://breakz-2012-high.rautemusik.fm/?ref=radiobrowser-top100-clubcharts"
+    ]
+  },
+  {
+    "id": "radio-eins",
+    "name": "Radio Eins",
+    "category": "news",
+    "streams": [
+      "https://f131.rndfnk.com/ard/rbb/radioeins/live/mp3/128/stream.mp3?cid=01FC1WH12KJ93TCQPDSE2E5PZ9&sid=3KnSnWiSw6mfEyYtIyhWmkXWca3&token=bPO4Y-B8A2inVn3kqUseFO7dWODyPt7IPYwLEG5HUkc&tvf=IyBpZcc43xhmMTMxLnJuZGZuay5jb20",
+      "https://d131.rndfnk.com/ard/rbb/radioeins/live/mp3/128/stream.mp3?cid=01FC1WH12KJ93TCQPDSE2E5PZ9&sid=3KozWk07f1yvNVTwGV8gofxSDxM&token=4inenNbPpMeSaFW11CcJ948ud7C59Ql4mGHetwoaqFA&tvf=lUlcEklj3xhkMTMxLnJuZGZuay5jb20"
+    ]
+  },
+  {
+    "id": "fm4-orf-hq",
+    "name": "FM4 | ORF | HQ",
+    "category": "music",
+    "streams": [
+      "https://orf-live.ors-shoutcast.at/fm4-q2a"
+    ]
+  },
+  {
+    "id": "deutschlandfunk-dlf-opus",
+    "name": "Deutschlandfunk | DLF | OPUS",
+    "category": "news",
+    "streams": [
+      "https://st01.sslstream.dlf.de/dlf/01/low/opus/stream.opus?aggregator=web"
+    ]
+  },
+  {
+    "id": "dj-club-charts-club-classics-festival-hi",
+    "name": "DJ & CLUB CHARTS ---> Club Classics, Festival-Hits, Remixes, Single Charts, Mashups, DJ Sets, Club Edits, Dancefloor, Underground, Nightlife, Party Anthems, Ibiza, Miami, Clubbing, Festival, Remix, Mashup, DJ, EDM, RAVE, Dance, Urban, Latin, Beachclub, Lounge",
+    "category": "music",
+    "streams": [
+      "https://breakz-2012-high.rautemusik.fm/?ref=rb-djclubcharts"
+    ]
+  },
+  {
+    "id": "90s90s-hits",
+    "name": "90s90s Hits",
+    "category": "music",
+    "streams": [
+      "https://streams.90s90s.de/pop/mp3-192/streams.90s90s.de/"
+    ]
+  },
+  {
+    "id": "top-100-dj-charts-dj-remix-charts-radio-",
+    "name": "# TOP 100 DJ CHARTS - DJ REMIX & CHARTS RADIO @ TikTok Charts, Electronic Music, EDM, House, Deep House, Dance Music, Techno & Hypertechno, Top40, Latin Charts, Reggaeton, Urban, HipHop, Club & Party Radio - & LIVE DJ SETS",
+    "category": "music",
+    "streams": [
+      "https://breakz-high.rautemusik.fm/?ref=radiobrowser-top100-djcharts"
+    ]
+  },
+  {
+    "id": "0r-music-for-sleep-sleep-relax-calm-medi",
+    "name": "0R - MUSIC FOR SLEEP || Sleep, Relax, Calm, Meditation, Nature, Ambient, Soft Music, Piano, Deep Sleep, Peaceful, Chill, Background, Slow, Gentle, Instrumental",
+    "category": "music",
+    "streams": [
+      "https://0nlineradio.radioho.st/classical-classical-music-for-sleep?ref=radio-browser26"
+    ]
+  },
+  {
+    "id": "80s80s",
+    "name": "80S80S",
+    "category": "music",
+    "streams": [
+      "https://streams.80s80s.de/web/mp3-192/streams.80s80s.de/"
+    ]
+  },
+  {
+    "id": "br24",
+    "name": "BR24",
+    "category": "news",
+    "streams": [
+      "https://dispatcher.rndfnk.com/br/br24/live/mp3/mid"
+    ]
+  },
+  {
+    "id": "inforadio",
+    "name": "Inforadio",
+    "category": "news",
+    "streams": [
+      "https://dispatcher.rndfnk.com/rbb/inforadio/live/mp3/mid"
+    ]
+  },
+  {
+    "id": "rock-antenne-heavy-metal",
+    "name": "Rock Antenne - Heavy Metal",
+    "category": "music",
+    "streams": [
+      "https://mp3channels.webradio.rockantenne.de/heavy-metal"
+    ]
+  },
+  {
+    "id": "wdr-2-rheinland",
+    "name": "WDR 2 Rheinland",
+    "category": "news",
+    "streams": [
+      "https://wdr-wdr2-rheinland.icecast.wdr.de/wdr/wdr2/rheinland/mp3/128/stream.mp3"
+    ]
+  },
+  {
+    "id": "nius",
+    "name": "NIUS",
+    "category": "news",
+    "streams": [
+      "https://radio.nius.de/live?ref=radiobrowser"
+    ]
+  },
+  {
+    "id": "hit-radio-ffh",
+    "name": "Hit Radio FFH",
+    "category": "music",
+    "streams": [
+      "https://mp3.ffh.de/radioffh/hqlivestream.mp3"
+    ]
+  },
+  {
+    "id": "rockantenne-alternative",
+    "name": "ROCKANTENNE Alternative",
+    "category": "music",
+    "streams": [
+      "https://stream.rockantenne.de/alternative/stream/mp3"
+    ]
+  },
+  {
+    "id": "deutschlandfunk-kultur-dlf-mp3",
+    "name": "Deutschlandfunk Kultur | DLF | MP3",
+    "category": "news",
+    "streams": [
+      "https://st02.sslstream.dlf.de/dlf/02/128/mp3/stream.mp3?aggregator=web"
+    ]
+  },
+  {
+    "id": "sunshine-live",
+    "name": "Sunshine Live",
+    "category": "music",
+    "streams": [
+      "https://stream.sunshine-live.de/live/mp3-192/stream.sunshine-live.de/",
+      "https://sunsl.streamabc.net/sunsl-sslsimulcast-mp3-192-4434053?sABC=6557p1o3%230%236080533n48sp2nrq0o4389q6o67o3qps%23fgernz.fhafuvar-yvir.qr&aw_0_1st.playerid=stream.sunshine-live.de&amsparams=playerid:stream.sunshine-live.de;skey:1700250035"
+    ]
+  },
+  {
+    "id": "wdr4",
+    "name": "WDR4",
+    "category": "music",
+    "streams": [
+      "https://wdr-wdr4-live.icecastssl.wdr.de/wdr/wdr4/live/mp3/128/stream.mp3"
+    ]
+  },
+  {
+    "id": "bayern-1-oberbayern",
+    "name": "Bayern 1 Oberbayern",
+    "category": "music",
+    "streams": [
+      "https://dispatcher.rndfnk.com/br/br1/obb/mp3/mid"
+    ]
+  },
+  {
+    "id": "ibiza-chillout-lounge-ambient-deep-house",
+    "name": "IBIZA CHILLOUT LOUNGE - Ambient, Deep House, Balearic, Smooth Jazz, Acoustic, Chill House, Lo-Fi, Chillwave, Dream Pop, Electro, Tropical House, Sunset Chill, Café del Mar, Soft Electronica, Slow House, Ambient, Relax, Easy Listening, Beach Vibes, Summer",
+    "category": "music",
+    "streams": [
+      "https://0nlineradio.radioho.st/lounge-ibiza-chillout-lounge?ref=rb26"
+    ]
+  },
+  {
+    "id": "ndr-info-niedersachsen",
+    "name": "NDR Info (Niedersachsen)",
+    "category": "news",
+    "streams": [
+      "https://icecast.ndr.de/ndr/ndrinfo/live/mp3/128/stream.mp3"
+    ]
+  },
+  {
+    "id": "top-100-charts-dj-mixes-pop-rock-dance-h",
+    "name": "# TOP 100 CHARTS --- DJ MIXES -- Pop, Rock, Dance, House, Techno, Trance, Electro, Hip-Hop, Rap, RnB, Reggaeton, Latin, Jazz, Blues, Soul, Funk, Metal, Indie, Alternative, Chillout, Lounge, Ambient, Classical, Acoustic, Party, Hits, Charts, Oldies, 80s, 90s, EDM, Club, Deep House, Tropical, Mood, Love Songs, Workout, Relax",
+    "category": "music",
+    "streams": [
+      "https://breakz-high.rautemusik.fm/?ref=rb-djclubcharts0326"
+    ]
+  },
+  {
+    "id": "bayern-2",
+    "name": "Bayern 2",
+    "category": "news",
+    "streams": [
+      "https://dispatcher.rndfnk.com/br/br2/live/mp3/mid"
+    ]
+  },
+  {
+    "id": "deejay-remixe-your-radio-for-finest-hous",
+    "name": "_DEEJAY REMIXE_ Your Radio for finest House, EDM, Electro, Dance, Mashup, Hypertechno, Techno, Bootleg, Charts, Top40, Chillout, Lounge, HipHop, Urban & Latin Party DJ Remixes!",
+    "category": "music",
+    "streams": [
+      "https://breakz-high.rautemusik.fm/?ref=radiobrowser-deejay-remixes-radio"
+    ]
+  },
+  {
+    "id": "srf-3",
+    "name": "SRF 3",
+    "category": "music",
+    "streams": [
+      "https://stream.srg-ssr.ch/m/drs3/mp3_128"
+    ]
+  },
+  {
+    "id": "klassik-radio-live",
+    "name": "Klassik Radio - Live",
+    "category": "music",
+    "streams": [
+      "https://live.streams.klassikradio.de/klassikradio-deutschland/stream/mp3"
+    ]
+  },
+  {
+    "id": "antenne-bayern-chillout",
+    "name": "Antenne Bayern - Chillout",
+    "category": "music",
+    "streams": [
+      "https://mp3channels.webradio.antenne.de/chillout"
+    ]
+  },
+  {
+    "id": "antenne-bayern",
+    "name": "Antenne Bayern",
+    "category": "music",
+    "streams": [
+      "https://mp3channels.webradio.antenne.de/antenne"
+    ]
+  },
+  {
+    "id": "ndr-info-hamburg",
+    "name": "NDR Info (Hamburg)",
+    "category": "news",
+    "streams": [
+      "https://icecast.ndr.de/ndr/ndrinfo/hamburg/mp3/128/stream.mp3"
+    ]
+  },
+  {
+    "id": "ndr-2",
+    "name": "NDR 2",
+    "category": "music",
+    "streams": [
+      "https://icecast.ndr.de/ndr/ndr2/niedersachsen/mp3/128/stream.mp3"
+    ]
+  }
+];
+window.STATIONS_CHECKED = "2026-10-20T23:57Z";
