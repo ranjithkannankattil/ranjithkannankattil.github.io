@@ -133,7 +133,10 @@ def test_stream(url: str) -> tuple[str, str]:
         if no_answer(code, data, rc):
             return UNKNOWN, "no answer to GitHub's servers"
         if "html" in ctype or b"<html" in head or b"<!doctype" in head:
-            return DEAD, "returns a web page, not audio"
+            if code in (200, 206):
+                # some servers show their player page to scripts but stream audio to browsers
+                return UNKNOWN, "server answered GitHub with a web page"
+            return DEAD, f"HTTP {code} error page"
         if code in (200, 206) and len(data) >= MIN_BYTES:
             if rc == 0:
                 # A live stream never finishes downloading. This one did: either a file (a jingle -
