@@ -1,6 +1,6 @@
 (() => {
   const COLS = window.RADIO_COLLECTIONS;
-  const GROUPS = ["English", "India & South Asia", "Africa", "Europe & Asia"];
+  const GROUPS = ["English", "India & South Asia", "Africa", "Europe", "Middle East & Central Asia", "East & Southeast Asia", "Americas"];
   const REGIONS = new Set(["uk", "us", "canada", "anz", "world"]);   // shown via the station's country instead
   const byCol = Object.fromEntries(COLS.map((c) => [c.id, c]));
 

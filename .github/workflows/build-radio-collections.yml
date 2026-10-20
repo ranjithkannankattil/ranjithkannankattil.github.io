@@ -1,0 +1,36 @@
+name: Build radio collections
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - scripts/build_collections.py
+
+permissions:
+  contents: write
+
+concurrency:
+  group: radio-streams        # never at the same time as the stream check
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build new collections (only streams that play are kept)
+        run: python3 scripts/build_collections.py | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898732+github-actions[bot]@users.noreply.github.com"
+          git add js/stations js/collections.js
+          if git diff --cached --quiet; then echo "No changes."; else
+            git commit -m "Radio: add new language collections"
+            git pull --rebase && git push
+          fi
