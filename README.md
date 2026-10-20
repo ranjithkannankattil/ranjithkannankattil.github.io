@@ -3,7 +3,7 @@
 ## Structure
 ```
 index.html              Home
-cv.html                 CV
+cv.html                 CV (hidden for now: unlinked from nav + Home, noindex)
 photography.html        Photography (grayscale contact-sheet grid, 20 photos)
 writings.html           Writings archive — 365 posts, search + tag filters
 writing-post.html       Single-post template (reads ?slug=...)
