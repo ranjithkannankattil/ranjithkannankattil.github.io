@@ -6,21 +6,34 @@
 (function () {
   'use strict';
 
-  var CITIES = [
-    { id: 'hou', name: 'Houston',   cc: 'US', sub: 'Texas, United States', tz: 'America/Chicago', abbr: ['CST', 'CDT'], hrs: [7, 16] },
-    { id: 'lon', name: 'London',    cc: 'UK', sub: 'United Kingdom',       tz: 'Europe/London',   abbr: ['GMT', 'BST'], hrs: [9, 18] },
-    { id: 'mil', name: 'Milan',     cc: 'IT', sub: 'Italy',                tz: 'Europe/Rome',     abbr: ['CET', 'CEST'], hrs: [9, 18] },
-    { id: 'moz', name: 'Maputo',    cc: 'MZ', sub: 'Mozambique',           tz: 'Africa/Maputo',   abbr: ['CAT', 'CAT'], hrs: [9, 18] },
-    { id: 'blr', name: 'Bangalore', cc: 'IN', sub: 'India',                tz: 'Asia/Kolkata',    abbr: ['IST', 'IST'], hrs: [13.5, 22.5] },
-    { id: 'chn', name: 'Beijing',   cc: 'CN', sub: 'China',                tz: 'Asia/Shanghai',   abbr: ['CST', 'CST'], hrs: [9, 18] },
-    { id: 'seo', name: 'Seoul',     cc: 'KR', sub: 'South Korea',          tz: 'Asia/Seoul',      abbr: ['KST', 'KST'], hrs: [9, 18] }
-  ];
-  // hrs = default working day in local time (decimal hours); editable per city on the page.
+  // Cities come from js/cities.js; the visitor can add or remove them on the page.
+  var CITIES = [];
   var STEP = 15;            // minutes per slider step
   var MIN = 60000;
   var LS_KEY = 'ranjithkb.meeting.v1';
   var MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
+  var MAX_CITIES = 12, MIN_CITIES = 2;
+  var WD = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+  function validTz(tz) { try { new Intl.DateTimeFormat('en-US', { timeZone: tz }); return true; } catch (e) { return false; } }
+  var CATALOG = (window.CITY_CATALOG || []).filter(function (c) { return validTz(c.tz); });
+  var DEFAULT_IDS = (window.MEETING_DEFAULT_CITIES || []).slice();
+  var ALL_ZONES = [];
+  try { ALL_ZONES = Intl.supportedValuesOf('timeZone'); } catch (e) {}
+  function lookup(id) {
+    var c = null;
+    for (var i = 0; i < CATALOG.length; i++) if (CATALOG[i].id === id) { c = CATALOG[i]; break; }
+    if (!c && typeof id === 'string' && id.indexOf('/') > 0 && validTz(id)) {   // any IANA zone
+      c = { id: id, name: id.split('/').pop().replace(/_/g, ' '), cc: '', country: id.split('/')[0] + ' time zone', tz: id };
+    }
+    if (!c) return null;
+    if (!c.hrs) c.hrs = [9, 18];
+    if (!c.wk) c.wk = [0, 6];
+    c.sub = c.country;
+    return c;
+  }
+  var ccTag = function (c) { return c.cc ? '<span class="mt-cc">' + c.cc + '</span>' : ''; };
+  var withCc = function (c) { return c.name + (c.cc ? ', ' + c.cc : ''); };
   var $ = function (id) { return document.getElementById(id); };
   var pad = function (n) { return (n < 10 ? '0' : '') + n; };
   var clamp = function (v, a, b) { return Math.max(a, Math.min(b, v)); };
@@ -57,7 +70,14 @@
     if (a === b) return null;
     return offset(tz, ms) === Math.max(a, b);
   }
-  function abbr(c, ms) { var s = stdDst(c.tz, ms); return c.abbr[s ? 1 : 0]; }
+  var shortFmt = {};
+  function abbr(c, ms) {                // '' when the zone has no common abbreviation
+    if (c.abbr) return c.abbr[stdDst(c.tz, ms) ? 1 : 0];
+    var f = shortFmt[c.tz] || (shortFmt[c.tz] = new Intl.DateTimeFormat('en-US', { timeZone: c.tz, timeZoneName: 'short' }));
+    var n = ''; f.formatToParts(ms).forEach(function (p) { if (p.type === 'timeZoneName') n = p.value; });
+    return /^(GMT|UTC)/.test(n) ? '' : n;
+  }
+  function zoneLabel(c, ms) { var a = abbr(c, ms); return (a ? a + ' · ' : '') + fmtOff(offset(c.tz, ms)); }
   function fmtOff(m) {
     var a = Math.abs(m);
     return 'UTC' + (m < 0 ? '−' : '+') + Math.floor(a / 60) + (a % 60 ? ':' + pad(a % 60) : '');
@@ -80,10 +100,11 @@
   var fmtHour = function (h) { var w = Math.floor(h); return pad(w) + ':' + (h % 1 ? '30' : '00'); };
 
   /* ---------- state ---------- */
-  var S = { date: null, base: 'mil', step: 0, len: 60, flex: 1, off: [], hours: {} };
+  var S = { date: null, base: 'mil', step: 0, len: 60, flex: 1, off: [], hours: {}, cities: DEFAULT_IDS.slice() };
   try {
     var saved = JSON.parse(localStorage.getItem(LS_KEY) || 'null');
     if (saved) ['base', 'len', 'flex', 'off'].forEach(function (k) { if (saved[k] != null) S[k] = saved[k]; });
+    if (saved && Array.isArray(saved.cities)) S.cities = saved.cities.filter(function (x) { return typeof x === 'string'; });
     if (saved && saved.hours && typeof saved.hours === 'object') {
       Object.keys(saved.hours).forEach(function (id) {
         var h = saved.hours[id];
@@ -93,6 +114,15 @@
   } catch (e) { /* storage unavailable: defaults */ }
 
   var q = new URLSearchParams(location.search);
+  if (q.get('c')) S.cities = q.get('c').split(',');
+  function setCities() {
+    var seen = {};
+    CITIES = S.cities.map(lookup).filter(function (c) { if (!c || seen[c.id]) return false; seen[c.id] = 1; return true; }).slice(0, MAX_CITIES);
+    if (CITIES.length < MIN_CITIES) CITIES = DEFAULT_IDS.map(lookup).filter(Boolean);
+    S.cities = CITIES.map(function (c) { return c.id; });
+    if (!CITIES.some(function (c) { return c.id === S.base; })) S.base = S.cities.indexOf('mil') >= 0 ? 'mil' : S.cities[0];
+  }
+  setCities();
   if (q.get('base') && CITIES.some(function (c) { return c.id === q.get('base'); })) S.base = q.get('base');
   if (q.get('len') && +q.get('len') >= 15) S.len = clamp(Math.round(+q.get('len') / 15) * 15, 15, 240);
   var base = function () { return CITIES.filter(function (c) { return c.id === S.base; })[0]; };
@@ -100,7 +130,7 @@
   var urlTime = /^\d{4}$/.test(q.get('t') || '') ? q.get('t') : null;
 
   function save() {
-    try { localStorage.setItem(LS_KEY, JSON.stringify({ base: S.base, len: S.len, flex: S.flex, off: S.off, hours: S.hours })); } catch (e) {}
+    try { localStorage.setItem(LS_KEY, JSON.stringify({ base: S.base, len: S.len, flex: S.flex, off: S.off, hours: S.hours, cities: S.cities })); } catch (e) {}
   }
 
   /* ---------- core ---------- */
@@ -118,7 +148,7 @@
   function inWin(lm, s, len) { return len >= 1440 || mod(lm - s) < len; }               // handles overnight windows
   function statusAt(c, ms) {
     var p = parts(c.tz, ms);
-    if (p.wd === 'Sat' || p.wd === 'Sun') return 'wkend';
+    if (c.wk.indexOf(WD[p.wd]) >= 0) return 'wkend';
     var lm = p.h * 60 + p.mi, h = hrs(c), s = h[0] * 60, len = span(h), fx = S.flex * 60;
     if (inWin(lm, s, len)) return 'work';
     if (fx && inWin(lm, s - fx, len + 2 * fx)) return 'edge';
@@ -143,9 +173,13 @@
 
   /* ---------- build static UI ---------- */
   var baseSel = $('baseSel');
-  CITIES.forEach(function (c) {
-    var o = document.createElement('option'); o.value = c.id; o.textContent = c.name + ', ' + c.cc; baseSel.appendChild(o);
-  });
+  function buildBaseSel() {
+    baseSel.innerHTML = '';
+    CITIES.forEach(function (c) {
+      var o = document.createElement('option'); o.value = c.id; o.textContent = withCc(c); baseSel.appendChild(o);
+    });
+    baseSel.value = S.base;
+  }
 
   var sliders = {
     len:  { r: $('lenR'),  v: $('lenV'),  f: null },
@@ -177,7 +211,7 @@
   function buildHours() {
     hoursList.innerHTML = CITIES.map(function (c) {
       return '<div class="mt-hr" data-id="' + c.id + '">' +
-        '<div class="mt-hr-city"><span class="mt-hr-n">' + c.name + '<span class="mt-cc">' + c.cc + '</span></span>' +
+        '<div class="mt-hr-city"><span class="mt-hr-n">' + c.name + ccTag(c) + '</span>' +
           '<span class="mt-hr-val" data-hv></span></div>' +
         '<div class="mt-hr-ctl"><div class="dual"><div class="dual-track"><i></i><i></i></div>' +
           '<input type="range" min="0" max="24" step="0.5" data-end="0" aria-label="' + c.name + ' workday starts (local time)">' +
@@ -240,8 +274,13 @@
   /* ---------- rendering ---------- */
   var labelsEl = $('labels'), tracksEl = $('tracks'), timeR = $('timeR');
 
+  var citySig = '';
   function renderBoard() {
     computeDay();
+    var mid = day.start + 12 * 60 * MIN;
+    CITIES.sort(function (x, y) { return offset(x.tz, mid) - offset(y.tz, mid) || x.name.localeCompare(y.name); });
+    var sig = CITIES.map(function (c) { return c.id; }).join(',');
+    if (sig !== citySig) { citySig = sig; buildBaseSel(); buildHours(); renderChips(); }
     var b = base(), hours = Math.round(day.steps / 4);
     labelsEl.innerHTML = ''; tracksEl.innerHTML = '';
     tracksEl.style.setProperty('--n', hours);
@@ -251,7 +290,7 @@
       lab.className = 'mt-lab' + (c.id === S.base ? ' is-base' : '') + (isOff(c) ? ' is-off' : '');
       lab.innerHTML =
         '<input type="checkbox"' + (isOff(c) ? '' : ' checked') + ' data-id="' + c.id + '" aria-label="Include ' + c.name + ' in suggestions">' +
-        '<span class="mt-lab-txt"><span class="mt-lab-n">' + c.name + '<span class="mt-cc">' + c.cc + '</span></span>' +
+        '<span class="mt-lab-txt"><span class="mt-lab-n">' + c.name + ccTag(c) + '</span>' +
         '<span class="mt-lab-t mt-clock" data-now="' + c.id + '"></span></span>';
       labelsEl.appendChild(lab);
 
@@ -308,7 +347,7 @@
     $('selTag').textContent = hm(pa);
 
     $('pickTime').textContent = hm(pa) + ' – ' + hm(pz);
-    $('pickSub').textContent = b.name + ' · ' + dayLabel(pa) + ' · ' + abbr(b, a) + ' ' + fmtOff(offset(b.tz, a));
+    $('pickSub').textContent = b.name + ' · ' + dayLabel(pa) + ' · ' + zoneLabel(b, a);
 
     var list = $('cityList'), html = '', inHours = 0, counted = 0, misses = [];
     CITIES.forEach(function (c) {
@@ -316,10 +355,10 @@
       var dd = dayDiff(pa.ymd, ca.ymd), dst = stdDst(c.tz, a);
       if (!isOff(c)) { counted++; if (st === 'work') inHours++; else misses.push(c.name + ' ' + statusWord(c, st, a).toLowerCase()); }
       html += '<li class="mt-li' + (isOff(c) ? ' is-off' : '') + (c.id === S.base ? ' is-base' : '') + '">' +
-        '<div class="mt-li-city"><span class="mt-li-n">' + c.name + '<span class="mt-cc">' + c.cc + '</span></span><span class="mt-li-s">' + c.sub + '</span><span class="mt-li-now mt-clock" data-now="' + c.id + '"></span></div>' +
+        '<div class="mt-li-city"><span class="mt-li-n">' + c.name + ccTag(c) + '</span><span class="mt-li-s">' + c.sub + '</span><span class="mt-li-now mt-clock" data-now="' + c.id + '"></span></div>' +
         '<div class="mt-li-time">' + hm(ca) + '<span>–' + hm(cz) + '</span></div>' +
         '<div class="mt-li-day">' + dayLabel(ca) + (dd ? ' <b class="mt-shift">' + (dd > 0 ? '+' : '−') + Math.abs(dd) + ' day</b>' : '') + '</div>' +
-        '<div class="mt-li-zone">' + abbr(c, a) + ' · ' + fmtOff(off) +
+        '<div class="mt-li-zone">' + zoneLabel(c, a) +
           '<span>' + (dst === null ? 'No DST' : dst ? 'Summer time' : 'Standard time') + '</span></div>' +
         '<div class="mt-li-st"><span class="mt-chip s-' + st + '">' + statusWord(c, st, a) + '</span></div>' +
         '</li>';
@@ -407,7 +446,10 @@
       var delta = g[0].to - g[0].from, dir = delta < 0 ? 'back' : 'forward';
       var names = g.map(function (x) { return x.c.name; });
       var who = names.length > 1 ? names.slice(0, -1).join(', ') + ' & ' + names[names.length - 1] : names[0];
-      var zones = g.map(function (x) { return x.c.abbr[delta < 0 ? 1 : 0] + ' → ' + x.c.abbr[delta < 0 ? 0 : 1]; }).join(', ');
+      var zones = g.map(function (x) {
+        var b4 = abbr(x.c, at - MIN), af = abbr(x.c, at);
+        return b4 && af && b4 !== af ? b4 + ' → ' + af : fmtOff(x.from) + ' → ' + fmtOff(x.to);
+      }).join(', ');
       var inDay = at >= day.start && at < day.end;
       // effect on gaps from the base city
       var fx = [];
@@ -432,6 +474,7 @@
     p.set('d', S.date); p.set('t', pad(pa.h) + pad(pa.mi));
     if (S.base !== 'mil') p.set('base', S.base);
     if (S.len !== 60) p.set('len', S.len);
+    if (!sameAsDefault()) p.set('c', S.cities.join(','));
     try { history.replaceState(null, '', location.pathname + '?' + p.toString() + location.hash); } catch (e) {}
   }
 
@@ -446,7 +489,7 @@
         ' <span class="mt-rel' + (c.id === S.base ? ' is-base' : d > 0 ? ' ahead' : d < 0 ? ' behind' : '') + '">' + rel + '</span>';
       document.querySelectorAll('[data-now="' + c.id + '"]').forEach(function (el) {
         el.innerHTML = html;
-        el.title = 'Now in ' + c.name + ': ' + hm(p) + ', ' + dayLabel(p) + ' ' + p.y + ' (' + abbr(c, now) + ')' +
+        el.title = 'Now in ' + c.name + ': ' + hm(p) + ', ' + dayLabel(p) + ' ' + p.y + ' (' + zoneLabel(c, now) + ')' +
           (c.id === S.base ? '' : d === 0 ? ' — same time as ' + base().name : ' — ' + fmtHrs(d) + (d > 0 ? ' ahead of ' : ' behind ') + base().name);
       });
     });
@@ -474,14 +517,114 @@
   $('dateInput').addEventListener('change', function (e) {
     if (/^\d{4}-\d{2}-\d{2}$/.test(e.target.value)) keepWallTime(function () { S.date = e.target.value; });
   });
-  baseSel.addEventListener('change', function () {
-    // keep the same instant, re-expressed in the new base city's day
+  function setBase(id) {               // keep the same instant, re-expressed in the new base city's day
     var inst = day.start + S.step * STEP * MIN;
-    S.base = baseSel.value; save();
+    S.base = id; save();
     S.date = parts(base().tz, inst).ymd;
     computeDay();
     S.step = Math.round((inst - day.start) / (STEP * MIN));
-    renderBoard(); renderSel();
+  }
+  baseSel.addEventListener('change', function () { setBase(baseSel.value); renderBoard(); renderSel(); });
+
+  /* ---------- choosing cities ---------- */
+  var chipsEl = $('cityChips'), cityQ = $('cityQ'), cityRes = $('cityRes'), resItems = [], resIdx = 0;
+  var norm = function (x) { return String(x).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase(); };
+  var sameAsDefault = function () { return S.cities.slice().sort().join(',') === DEFAULT_IDS.slice().sort().join(','); };
+  function renderChips() {
+    chipsEl.innerHTML = CITIES.map(function (c) {
+      return '<span class="mt-city-chip' + (c.id === S.base ? ' is-base' : '') + '">' + c.name + ccTag(c) +
+        '<button data-rm="' + c.id + '" aria-label="Remove ' + c.name + '"' + (CITIES.length <= MIN_CITIES ? ' disabled' : '') + '>×</button></span>';
+    }).join('');
+    $('citiesCount').textContent = CITIES.length + ' cities';
+    $('citiesReset').disabled = sameAsDefault();
+    var full = CITIES.length >= MAX_CITIES;
+    cityQ.disabled = full;
+    cityQ.placeholder = full ? 'That’s the maximum of ' + MAX_CITIES + ' — remove one to add another'
+      : 'Add a city or country — e.g. Doha, Perth, Calgary';
+  }
+  function searchCities(text) {
+    var qn = norm(text.trim());
+    if (!qn) return [];
+    var have = {}; S.cities.forEach(function (id) { have[id] = 1; });
+    var hits = [];
+    CATALOG.forEach(function (c) {
+      if (have[c.id]) return;
+      var n = norm(c.name), hay = ' ' + norm([c.name, c.country, c.cc, c.aka || '', c.tz.replace(/_/g, ' ')].join(' '));
+      var sc = n.indexOf(qn) === 0 ? 0 : (' ' + n).indexOf(' ' + qn) >= 0 ? 1 : hay.indexOf(' ' + qn) >= 0 ? 2 : hay.indexOf(qn) >= 0 ? 3 : -1;
+      if (sc >= 0) hits.push({ c: c, sc: sc });
+    });
+    hits.sort(function (x, y) { return x.sc - y.sc || x.c.name.localeCompare(y.c.name); });
+    var out = hits.slice(0, 8).map(function (h) { return lookup(h.c.id); });
+    if (out.length < 8 && qn.length >= 2) {           // fall back to any time zone the browser knows
+      var named = {}; CATALOG.forEach(function (c) { named[norm(c.name)] = 1; });
+      ALL_ZONES.forEach(function (z) {
+        if (out.length >= 8 || have[z]) return;
+        var city = norm(z.split('/').pop().replace(/_/g, ' '));
+        if (!named[city] && (city.indexOf(qn) === 0 || norm(z.replace(/_/g, ' ')).indexOf(qn) >= 0)) out.push(lookup(z));
+      });
+    }
+    return out.filter(Boolean);
+  }
+  function noMatchText(text) {
+    var qn = norm(text.trim()), on = CITIES.filter(function (c) {
+      return (' ' + norm([c.name, c.country, c.aka || ''].join(' '))).indexOf(' ' + qn) >= 0;
+    });
+    if (on.length) return on.map(function (c) { return c.name; }).join(', ') + (on.length > 1 ? ' are' : ' is') + ' already on the list.';
+    return 'No match. Try a nearby big city or the country name.';
+  }
+  function showResults() {
+    resItems = searchCities(cityQ.value); resIdx = 0;
+    var now = Math.floor(Date.now() / MIN) * MIN;
+    if (!cityQ.value.trim()) { cityRes.hidden = true; cityQ.setAttribute('aria-expanded', 'false'); return; }
+    cityRes.innerHTML = resItems.length ? resItems.map(function (c, i) {
+      var p = parts(c.tz, now);
+      return '<li role="option" id="cr' + i + '" data-add="' + c.id + '"' + (i === 0 ? ' aria-selected="true"' : '') + '>' +
+        '<span class="mt-res-n">' + c.name + ccTag(c) + '</span><span class="mt-res-c">' + c.country + '</span>' +
+        '<span class="mt-res-t">' + hm(p) + ' · ' + fmtOff(offset(c.tz, now)) + '</span></li>';
+    }).join('') : '<li class="mt-res-none">' + noMatchText(cityQ.value) + '</li>';
+    cityRes.hidden = false; cityQ.setAttribute('aria-expanded', 'true');
+    cityQ.setAttribute('aria-activedescendant', resItems.length ? 'cr0' : '');
+  }
+  function markRes() {
+    cityRes.querySelectorAll('[role=option]').forEach(function (li, i) { li.setAttribute('aria-selected', i === resIdx ? 'true' : 'false'); });
+    cityQ.setAttribute('aria-activedescendant', 'cr' + resIdx);
+    var el = $('cr' + resIdx); if (el) el.scrollIntoView({ block: 'nearest' });
+  }
+  function citiesChanged() { setCities(); save(); citySig = ''; renderBoard(); renderSel(); }
+  function addCity(id) {
+    if (CITIES.length >= MAX_CITIES || S.cities.indexOf(id) >= 0) return;
+    S.cities.push(id); cityQ.value = ''; showResults(); citiesChanged(); cityQ.focus();
+  }
+  function removeCity(id) {
+    if (CITIES.length <= MIN_CITIES) return;
+    if (id === S.base) { var next = S.cities.indexOf('mil') >= 0 && id !== 'mil' ? 'mil' : S.cities.filter(function (x) { return x !== id; })[0]; setBase(next); }
+    S.cities = S.cities.filter(function (x) { return x !== id; });
+    citiesChanged();
+  }
+  cityQ.addEventListener('input', showResults);
+  cityQ.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowDown' && resItems.length) { resIdx = (resIdx + 1) % resItems.length; markRes(); e.preventDefault(); }
+    else if (e.key === 'ArrowUp' && resItems.length) { resIdx = (resIdx - 1 + resItems.length) % resItems.length; markRes(); e.preventDefault(); }
+    else if (e.key === 'Enter') { if (resItems[resIdx]) addCity(resItems[resIdx].id); e.preventDefault(); }
+    else if (e.key === 'Escape') { cityQ.value = ''; showResults(); }
+  });
+  cityRes.addEventListener('mousedown', function (e) {
+    var li = e.target.closest('[data-add]'); if (!li) return;
+    e.preventDefault(); addCity(li.dataset.add);
+  });
+  chipsEl.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-rm]'); if (b) removeCity(b.dataset.rm);
+  });
+  $('citiesReset').addEventListener('click', function () {
+    S.cities = DEFAULT_IDS.slice();
+    if (S.cities.indexOf(S.base) < 0) setBase('mil');
+    citiesChanged();
+  });
+  $('citiesToggle').addEventListener('click', function () {
+    var open = this.getAttribute('aria-expanded') !== 'true';
+    this.setAttribute('aria-expanded', open);
+    $('citiesPanel').hidden = !open;
+    if (open) cityQ.focus();
   });
 
   timeR.addEventListener('input', function () { S.step = +timeR.value; renderSel(); });
@@ -525,7 +668,7 @@
     CITIES.forEach(function (c) {
       if (isOff(c)) return;
       var ca = parts(c.tz, a), cz = parts(c.tz, z);
-      lines.push(c.name + ', ' + c.cc + '  ' + hm(ca) + '–' + hm(cz) + ' ' + abbr(c, a) + (ca.ymd !== pb.ymd ? ' (' + dayLabel(ca) + ')' : ''));
+      lines.push(withCc(c) + '  ' + hm(ca) + '–' + hm(cz) + ' ' + (abbr(c, a) || fmtOff(offset(c.tz, a))) + (ca.ymd !== pb.ymd ? ' (' + dayLabel(ca) + ')' : ''));
     });
     var text = lines.join('\n'), btn = $('copyBtn');
     var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy times for an invite'; }, 1600); };
@@ -541,7 +684,6 @@
   /* ---------- start ---------- */
   syncSliders();
   computeDay();
-  buildHours();
   if (urlTime) {
     var a = S.date.split('-').map(Number);
     S.step = Math.round((wallToUTC(base().tz, a[0], a[1], a[2], +urlTime.slice(0, 2), +urlTime.slice(2)) - day.start) / (STEP * MIN));

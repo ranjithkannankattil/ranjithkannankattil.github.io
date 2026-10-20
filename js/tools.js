@@ -16,7 +16,7 @@ window.TOOLS = [
     name: 'Meeting time finder',
     short: 'Meetings',
     href: 'meeting.html',
-    blurb: 'Houston, London, Milan, Maputo, Bangalore, Beijing and Seoul on one timeline. Working hours per city, daylight saving resolved for the date you pick.',
+    blurb: 'Houston, London, Milan, Maputo, Bangalore, Beijing and Seoul on one timeline, plus any city you add. Working hours per city, daylight saving resolved for the date you pick.',
     meta: 'Time zones · DST · Working hours'
   }
 ];
