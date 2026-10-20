@@ -1,12 +1,12 @@
 /* ============================================================
-   RADIO — Malayalam live radio page
+   RADIO — live radio in many languages
    ============================================================ */
 body[data-section="radio"]{ padding-bottom:6.5rem; }
 body[data-section="radio"] button{ font:inherit; color:inherit; cursor:pointer; border:0; background:none; padding:0; }
 body[data-section="radio"] svg{ display:block; }
 
 .radio-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:1.5rem; flex-wrap:wrap; padding-top:2.5rem; }
-.radio-title{ font-family:var(--f-ml); font-weight:700; font-size:clamp(2rem,5vw,2.8rem); line-height:1.1; margin:0; color:var(--ink); }
+.radio-title{ font-family:var(--f-display); letter-spacing:-.01em; font-weight:700; font-size:clamp(2rem,5vw,2.8rem); line-height:1.1; margin:0; color:var(--ink); }
 .radio-intro{ margin:.5rem 0 0; color:var(--ink-soft); max-width:52ch; }
 
 .radio-search{ display:flex; flex-direction:column; gap:.3rem; min-width:240px; }
@@ -28,7 +28,7 @@ body[data-section="radio"] svg{ display:block; }
 .radio-stats .down .v{ color:#9A4421; }
 .radio-stats .v.small{ font-size:1.05rem; line-height:1.9rem; }
 .radio-chips{ display:flex; gap:.5rem 1.4rem; flex-wrap:wrap; margin-top:1.8rem; font-family:var(--f-mono); font-size:.76rem; letter-spacing:.08em; text-transform:uppercase; }
-.radio-chips button{ color:var(--ink-soft); padding-bottom:.3rem; border-bottom:2px solid transparent; }
+nav.radio-chips button{ color:var(--ink-soft); padding-bottom:.3rem; border-bottom:2px solid transparent; }
 .radio-chips button:hover{ color:var(--ink); }
 .radio-chips button[aria-pressed="true"]{ color:var(--ink); border-bottom-color:var(--accent); }
 .radio-chips .n{ opacity:.55; margin-left:.3rem; }
@@ -90,3 +90,21 @@ body[data-section="radio"] svg{ display:block; }
   .np-vol{ display:none; }
 }
 @media (prefers-reduced-motion:reduce){ body[data-section="radio"] *{ animation:none!important; transition:none!important; } }
+
+/* collection picker */
+.radio-collections{ margin-top:2rem; border-top:1px solid var(--line); }
+.col-row{ display:grid; grid-template-columns:11.5rem 1fr; align-items:baseline; gap:.35rem 1rem; padding:.7rem 0; border-bottom:1px solid var(--line); font-family:var(--f-mono); font-size:.76rem; letter-spacing:.06em; text-transform:uppercase; }
+.col-group{ color:var(--ink-soft); font-size:.66rem; letter-spacing:.12em; }
+.col-items{ display:flex; flex-wrap:wrap; gap:.55rem 1.1rem; }
+.radio-collections .col-row button{ color:var(--ink-soft); padding-bottom:.2rem; border-bottom:2px solid transparent; }
+.col-row button:hover{ color:var(--ink); }
+.col-row button[aria-pressed="true"]{ color:var(--ink); border-bottom-color:var(--accent); }
+.col-head{ margin-top:2.2rem; }
+.col-name{ font-family:var(--f-display); font-weight:600; font-size:1.6rem; margin:0; }
+.col-native{ font-family:var(--f-ml), var(--f-body); font-weight:400; color:var(--ink-soft); margin-left:.4rem; }
+.col-intro{ margin:.35rem 0 0; color:var(--ink-soft); max-width:62ch; }
+.radio-player .np-col{ font-family:var(--f-mono); font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; opacity:.55; }
+@media (max-width:640px){
+  .col-row{ grid-template-columns:1fr; }
+}
+.radio-player[hidden]{ display:none; }

@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-"""Daily health check for the Radio page (js/stations.js).
+"""Twice-daily health check for the Radio page (js/stations/*.js, one file per collection).
 
 For every station it:
   1. tests each stream the way a browser on ranjithkb.com would need it to work
      (HTTPS only; HLS playlists must allow cross-origin playback),
   2. moves working streams to the front so the player tries them first,
   3. if a station has no working stream, looks for a replacement on the
-     station's radiosindia.com page and in the radio-browser.info directory,
+     station's radiosindia.com page (Malayalam), Akashvani's official list, and the
+     radio-browser.info directory (same language, same name),
   4. marks stations that still have nothing as offline (they stay listed),
   5. drops a stream only after DROP_AFTER failed checks in a row
      and the station has another working stream,
@@ -28,7 +29,8 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-STATIONS_JS = ROOT / "js" / "stations.js"
+STATIONS_DIR = ROOT / "js" / "stations"
+COLLECTIONS_JS = ROOT / "js" / "collections.js"
 HEALTH = ROOT / "scripts" / "stream-health.json"
 REPORT = ROOT / "scripts" / "stream-report.md"
 
@@ -42,19 +44,26 @@ TODAY = dt.date.today().isoformat()
 
 
 # ---------------------------------------------------------------- data I/O
-def load_stations() -> tuple[str, list[dict]]:
-    text = STATIONS_JS.read_text(encoding="utf-8")
-    start = text.index("window.STATIONS")
+def _json_array(text: str, marker: str) -> tuple[str, list]:
+    start = text.index(marker)
     arr_start = text.index("[", start)
     arr_end = text.rindex("]")
     return text[:start], json.loads(text[arr_start:arr_end + 1])
 
 
-def save_stations(header: str, stations: list[dict]) -> None:
+def load_collections() -> list[dict]:
+    return _json_array(COLLECTIONS_JS.read_text(encoding="utf-8"), "window.RADIO_COLLECTIONS")[1]
+
+
+def load_stations(path: Path) -> tuple[str, list[dict]]:
+    return _json_array(path.read_text(encoding="utf-8"), "window.STATIONS")
+
+
+def save_stations(path: Path, header: str, stations: list[dict]) -> None:
     body = json.dumps(stations, ensure_ascii=False, indent=2)
     checked = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ")
-    STATIONS_JS.write_text(f"{header}window.STATIONS = {body};\nwindow.STATIONS_CHECKED = \"{checked}\";\n",
-                           encoding="utf-8")
+    path.write_text(f"{header}window.STATIONS = {body};\nwindow.STATIONS_CHECKED = \"{checked}\";\n",
+                    encoding="utf-8")
 
 
 # ---------------------------------------------------------------- testing
@@ -175,14 +184,14 @@ def from_radiosindia(station_id: str) -> list[str]:
     return [u.strip() for u in m.group(1).split(" or ")] if m else []
 
 
-STOP = {"radio", "fm", "air", "akashvani", "online", "the", "malayalam", "hits", "live"}
+STOP = {"radio", "fm", "am", "air", "akashvani", "online", "the", "hits", "live", "hd", "mp3", "aac", "128k", "stream"}
 
 
 def tokens(name: str) -> set[str]:
     return {t for t in re.findall(r"[a-z0-9]+", name.lower()) if t not in STOP} or set(re.findall(r"[a-z0-9]+", name.lower()))
 
 
-def from_radio_browser(name: str) -> list[str]:
+def from_radio_browser(name: str, languages: list[str]) -> list[str]:
     want = tokens(name)
     found: list[str] = []
     queries = {name, re.sub(r"^(AIR|Radio)\s+", "", name, flags=re.I)}
@@ -197,7 +206,7 @@ def from_radio_browser(name: str) -> list[str]:
                 rows = []
         for r in rows:
             langs = (r.get("language") or "").lower()
-            if "malayalam" not in langs:
+            if not any(l in langs for l in languages):
                 continue
             theirs = tokens(r.get("name", ""))
             extra = theirs - want            # same distinctive words; only frequencies may differ
@@ -224,11 +233,16 @@ def akashvani_official() -> dict[str, str]:
     return _AKV
 
 
-def find_replacements(st: dict, known: set[str]) -> list[str]:
+def find_replacements(st: dict, known: set[str], col: dict) -> list[str]:
     known = known | set(st.get("exclude", []))
     cands = []
     official = akashvani_official().get(st.get("akv", "").lower())
-    for u in ([official] if official else []) + from_radiosindia(st["id"]) + from_radio_browser(st["name"]):
+    sources = [official] if official else []
+    if col["id"] == "malayalam":
+        sources += from_radiosindia(st["id"])
+    if col.get("rb"):
+        sources += from_radio_browser(st["name"], col["rb"])
+    for u in sources:
         for v in best_variant(u.strip()):
             if v not in known and v not in cands:
                 cands.append(v)
@@ -242,12 +256,22 @@ def find_replacements(st: dict, known: set[str]) -> list[str]:
 
 # ---------------------------------------------------------------- main
 def main() -> None:
-    header, stations = load_stations()
+    files = {}                      # collection id -> (path, header, stations)
+    owner = {}                      # id(station dict) -> collection
+    for col in load_collections():
+        path = STATIONS_DIR / f"{col['id']}.js"
+        if not path.exists():
+            continue
+        header, sts = load_stations(path)
+        files[col["id"]] = (path, header, sts)
+        for st in sts:
+            owner[id(st)] = col
+    stations = [st for _, _, sts in files.values() for st in sts]
     health: dict = json.loads(HEALTH.read_text()) if HEALTH.exists() else {}
 
     # 1. test every stream (and the https version of http ones)
     urls = sorted({v for s in stations for u in s["streams"] for v in best_variant(u)})
-    with cf.ThreadPoolExecutor(max_workers=16) as ex:
+    with cf.ThreadPoolExecutor(max_workers=32) as ex:
         results = dict(zip(urls, ex.map(test_stream, urls)))
 
     # Akashvani changes its official links from time to time: add any new one up front
@@ -282,7 +306,7 @@ def main() -> None:
         # 2. no working stream -> look for a replacement
         found = []
         if not working and dead:
-            found = find_replacements(st, set(st["streams"]))
+            found = find_replacements(st, set(st["streams"]), owner[id(st)])
             working = found
 
         # 3. drop long-dead streams only when something else works
@@ -311,7 +335,7 @@ def main() -> None:
             note.append(f"{len(dead)} backup source(s) failing")
         if not working:
             note.append("; ".join(f"{u} — {results[best_variant(u)[0]][1]}" for u in dead + unknown))
-        report_rows.append((status, st["name"], " · ".join(note)))
+        report_rows.append((status, f'{owner[id(st)]["name"]} · {st["name"]}', " · ".join(note)))
 
     ok = sum(1 for r in report_rows if r[0] == "ok")
     if ok < len(stations) * SANITY_MIN:
@@ -319,13 +343,19 @@ def main() -> None:
         # (runner network trouble), not the stations. Change nothing.
         raise SystemExit(f"Only {ok}/{len(stations)} stations reachable — assuming a network problem, no changes written.")
 
-    save_stations(header, stations)
+    for path, header, sts in files.values():
+        save_stations(path, header, sts)
     HEALTH.write_text(json.dumps(health, indent=2, sort_keys=True) + "\n")
 
     off = [r for r in report_rows if r[0] == "OFFLINE"]
     unk = [r for r in report_rows if r[0] == "UNKNOWN"]
     lines = [f"# Radio stream check — {TODAY}", "",
-             f"**{ok} of {len(stations)} stations playing.** {len(off)} offline, {len(unk)} couldn't be checked.", ""]
+             f"**{ok} of {len(stations)} stations playing.** {len(off)} offline, {len(unk)} couldn't be checked.", "",
+             "| Collection | Stations | Playing | Offline |", "|---|---|---|---|"]
+    for cid, (_, _, sts) in files.items():
+        n_off = sum(1 for x in sts if x.get("offline"))
+        lines.append(f"| {owner[id(sts[0])]['name'] if sts else cid} | {len(sts)} | {len(sts) - n_off} | {n_off} |")
+    lines.append("")
     for title, rows in (("Offline", off), ("Couldn't be checked from GitHub (left unchanged)", unk)):
         if rows:
             lines += [f"## {title}", "", "| Station | Why |", "|---|---|"]

@@ -1,4 +1,4 @@
-/* Radio stations for radio.html.
+/* Malayalam radio stations for radio.html.
    Checked and updated daily by scripts/check_streams.py (GitHub Actions).
    category: air | fm | online | artist | devotional
    streams: tried in order until one plays; working ones are moved first

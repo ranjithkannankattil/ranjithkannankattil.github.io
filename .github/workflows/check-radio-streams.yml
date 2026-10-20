@@ -12,6 +12,7 @@ on:
     branches: [main]
     paths:
       - scripts/check_streams.py
+      - js/collections.js
       - .github/workflows/check-radio-streams.yml
 
 permissions:
@@ -24,7 +25,7 @@ concurrency:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
 
@@ -42,7 +43,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898732+github-actions[bot]@users.noreply.github.com"
-          git add js/stations.js scripts/stream-health.json scripts/stream-report.md
+          git add js/stations scripts/stream-health.json scripts/stream-report.md
           if git diff --cached --quiet; then
             echo "No changes."
           else

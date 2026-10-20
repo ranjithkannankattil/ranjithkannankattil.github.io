@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Radio — Ranjith Kannankattil</title>
-<meta name="description" content="Live Malayalam radio — Akashvani, FM and online stations in one place.">
+<meta name="description" content="Live radio in many languages — Malayalam, Hindi, Tamil, English news, talk and music, African languages, Italian, French and Korean.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css?v=2">
-<link rel="stylesheet" href="css/radio.css?v=4">
+<link rel="stylesheet" href="css/radio.css?v=6">
 </head>
 <body data-section="radio" class="wide">
 
@@ -31,13 +31,20 @@
 <main>
   <div class="radio-head">
     <div>
-      <h1 class="radio-title">മലയാളം റേഡിയോ</h1>
-      <p class="radio-intro">Akashvani, FM and online Malayalam stations, live. Pick one and leave it on.</p>
+      <h1 class="radio-title">Radio</h1>
+      <p class="radio-intro">Live stations in many languages, each one tested twice a day. Pick one and leave it on.</p>
     </div>
     <label class="radio-search">
       <span>Search</span>
       <input id="q" type="search" placeholder="Station name" autocomplete="off">
     </label>
+  </div>
+
+  <nav class="radio-collections" id="collections" aria-label="Choose a collection"></nav>
+
+  <div class="col-head">
+    <h2 class="col-name"><span id="colName"></span> <span class="col-native" id="colNative"></span></h2>
+    <p class="col-intro" id="colIntro"></p>
   </div>
 
   <section class="radio-stats" aria-label="Station status">
@@ -66,6 +73,7 @@
     <div class="np-tile" id="npTile"></div>
     <div class="np-text">
       <div class="np-name" id="npName"></div>
+      <div class="np-col" id="npCol"></div>
       <div class="np-status" id="npStatus"></div>
     </div>
   </div>
@@ -79,13 +87,7 @@
 <audio id="audio" preload="none"></audio>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.5.13/hls.min.js"></script>
-<script>
-  // Load the station list fresh each day (it is updated by the daily check), then the player.
-  (function () {
-    var day = new Date().toISOString().slice(0, 10);
-    function load(src, next) { var el = document.createElement("script"); el.src = src; el.onload = next; document.body.appendChild(el); }
-    load("js/stations.js?d=" + day + "-" + Math.floor(Date.now() / 36e5), function () { load("js/radio.js?v=6"); });
-  })();
-</script>
+<script src="js/collections.js?v=1"></script>
+<script src="js/radio.js?v=8"></script>
 </body>
 </html>
