@@ -56,7 +56,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming.softnep.net:10996/;stream.nsv&type=mp3&volume=60"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "universal-health-radio",
@@ -81,7 +82,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://studio.901nbcfm.com.au:8902/newstream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "tinau-fm",
@@ -116,3 +118,4 @@ window.STATIONS = [
     ]
   }
 ];
+window.STATIONS_CHECKED = "2026-10-20T23:46Z";
