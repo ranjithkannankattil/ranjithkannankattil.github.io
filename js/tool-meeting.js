@@ -7,14 +7,15 @@
   'use strict';
 
   var CITIES = [
-    { id: 'hou', name: 'Houston',   cc: 'US', sub: 'Texas, United States', tz: 'America/Chicago', abbr: ['CST', 'CDT'] },
-    { id: 'lon', name: 'London',    cc: 'UK', sub: 'United Kingdom',       tz: 'Europe/London',   abbr: ['GMT', 'BST'] },
-    { id: 'mil', name: 'Milan',     cc: 'IT', sub: 'Italy',                tz: 'Europe/Rome',     abbr: ['CET', 'CEST'] },
-    { id: 'moz', name: 'Maputo',    cc: 'MZ', sub: 'Mozambique',           tz: 'Africa/Maputo',   abbr: ['CAT', 'CAT'] },
-    { id: 'blr', name: 'Bangalore', cc: 'IN', sub: 'India',                tz: 'Asia/Kolkata',    abbr: ['IST', 'IST'] },
-    { id: 'chn', name: 'Beijing',   cc: 'CN', sub: 'China',                tz: 'Asia/Shanghai',   abbr: ['CST', 'CST'] },
-    { id: 'seo', name: 'Seoul',     cc: 'KR', sub: 'South Korea',          tz: 'Asia/Seoul',      abbr: ['KST', 'KST'] }
+    { id: 'hou', name: 'Houston',   cc: 'US', sub: 'Texas, United States', tz: 'America/Chicago', abbr: ['CST', 'CDT'], hrs: [8, 17] },
+    { id: 'lon', name: 'London',    cc: 'UK', sub: 'United Kingdom',       tz: 'Europe/London',   abbr: ['GMT', 'BST'], hrs: [9, 17.5] },
+    { id: 'mil', name: 'Milan',     cc: 'IT', sub: 'Italy',                tz: 'Europe/Rome',     abbr: ['CET', 'CEST'], hrs: [9, 18] },
+    { id: 'moz', name: 'Maputo',    cc: 'MZ', sub: 'Mozambique',           tz: 'Africa/Maputo',   abbr: ['CAT', 'CAT'], hrs: [7.5, 16.5] },
+    { id: 'blr', name: 'Bangalore', cc: 'IN', sub: 'India',                tz: 'Asia/Kolkata',    abbr: ['IST', 'IST'], hrs: [13.5, 22.5] },
+    { id: 'chn', name: 'Beijing',   cc: 'CN', sub: 'China',                tz: 'Asia/Shanghai',   abbr: ['CST', 'CST'], hrs: [9, 18] },
+    { id: 'seo', name: 'Seoul',     cc: 'KR', sub: 'South Korea',          tz: 'Asia/Seoul',      abbr: ['KST', 'KST'], hrs: [9, 18] }
   ];
+  // hrs = default working day in local time (decimal hours); editable per city on the page.
   var STEP = 15;            // minutes per slider step
   var MIN = 60000;
   var LS_KEY = 'ranjithkb.meeting.v1';
@@ -79,10 +80,16 @@
   var fmtHour = function (h) { var w = Math.floor(h); return pad(w) + ':' + (h % 1 ? '30' : '00'); };
 
   /* ---------- state ---------- */
-  var S = { date: null, base: 'mil', step: 0, len: 60, ws: 8, we: 18, flex: 1, off: [] };
+  var S = { date: null, base: 'mil', step: 0, len: 60, flex: 1, off: [], hours: {} };
   try {
     var saved = JSON.parse(localStorage.getItem(LS_KEY) || 'null');
-    if (saved) ['base', 'len', 'ws', 'we', 'flex', 'off'].forEach(function (k) { if (saved[k] != null) S[k] = saved[k]; });
+    if (saved) ['base', 'len', 'flex', 'off'].forEach(function (k) { if (saved[k] != null) S[k] = saved[k]; });
+    if (saved && saved.hours && typeof saved.hours === 'object') {
+      Object.keys(saved.hours).forEach(function (id) {
+        var h = saved.hours[id];
+        if (Array.isArray(h) && h.length === 2 && h.every(function (x) { return typeof x === 'number' && x >= 0 && x <= 24; })) S.hours[id] = h;
+      });
+    }
   } catch (e) { /* storage unavailable: defaults */ }
 
   var q = new URLSearchParams(location.search);
@@ -93,7 +100,7 @@
   var urlTime = /^\d{4}$/.test(q.get('t') || '') ? q.get('t') : null;
 
   function save() {
-    try { localStorage.setItem(LS_KEY, JSON.stringify({ base: S.base, len: S.len, ws: S.ws, we: S.we, flex: S.flex, off: S.off })); } catch (e) {}
+    try { localStorage.setItem(LS_KEY, JSON.stringify({ base: S.base, len: S.len, flex: S.flex, off: S.off, hours: S.hours })); } catch (e) {}
   }
 
   /* ---------- core ---------- */
@@ -105,12 +112,16 @@
   }
   var isOff = function (c) { return S.off.indexOf(c.id) >= 0; };
 
+  var hrs = function (c) { return S.hours[c.id] || c.hrs; };
+  var mod = function (m) { return ((m % 1440) + 1440) % 1440; };
+  function span(h) { var d = mod(h[1] * 60 - h[0] * 60); return d === 0 ? 1440 : d; }   // minutes in the working day
+  function inWin(lm, s, len) { return len >= 1440 || mod(lm - s) < len; }               // handles overnight windows
   function statusAt(c, ms) {
     var p = parts(c.tz, ms);
     if (p.wd === 'Sat' || p.wd === 'Sun') return 'wkend';
-    var lm = p.h * 60 + p.mi, ws = S.ws * 60, we = S.we * 60, fx = S.flex * 60;
-    if (lm >= ws && lm < we) return 'work';
-    if (lm >= ws - fx && lm < we + fx) return 'edge';
+    var lm = p.h * 60 + p.mi, h = hrs(c), s = h[0] * 60, len = span(h), fx = S.flex * 60;
+    if (inWin(lm, s, len)) return 'work';
+    if (fx && inWin(lm, s - fx, len + 2 * fx)) return 'edge';
     return 'off';
   }
   var RANK = { work: 0, edge: 1, off: 2, wkend: 3 };
@@ -126,7 +137,7 @@
     if (s === 'work') return 'In hours';
     if (s === 'wkend') return 'Weekend';
     var p = parts(c.tz, a), lm = p.h * 60 + p.mi;
-    if (s === 'edge') return lm < S.ws * 60 ? 'Early' : 'Late';
+    if (s === 'edge') { var h = hrs(c); return mod(h[0] * 60 - lm) < mod(lm - h[1] * 60) ? 'Early' : 'Late'; }
     return (lm < 6 * 60 || lm >= 22 * 60) ? 'Night' : 'Off hours';
   }
 
@@ -138,8 +149,6 @@
 
   var sliders = {
     len:  { r: $('lenR'),  v: $('lenV'),  f: null },
-    ws:  { r: $('wsR'),   v: $('wsV'),   f: fmtHour },
-    we:   { r: $('weR'),   v: $('weV'),   f: fmtHour },
     flex: { r: $('flexR'), v: $('flexV'), f: function (x) { return x ? '±' + x + ' h' : 'No stretch'; } }
   };
   sliders.len.f = function (x) {
@@ -160,6 +169,73 @@
     var p = (r.value - r.min) / (r.max - r.min) * 100;
     r.style.setProperty('--p', p + '%');
   }
+
+  /* ---------- working hours per city ---------- */
+  var hoursList = $('hoursList');
+  var fmtDur = function (m) { var h = Math.floor(m / 60), r = m % 60; return h + ' h' + (r ? ' ' + r : ''); };
+  var fmtHrs24 = function (x) { return x === 24 ? '24:00' : fmtHour(x); };
+  function buildHours() {
+    hoursList.innerHTML = CITIES.map(function (c) {
+      return '<div class="mt-hr" data-id="' + c.id + '">' +
+        '<div class="mt-hr-city"><span class="mt-hr-n">' + c.name + '<span class="mt-cc">' + c.cc + '</span></span>' +
+          '<span class="mt-hr-val" data-hv></span></div>' +
+        '<div class="mt-hr-ctl"><div class="dual"><div class="dual-track"><i></i><i></i></div>' +
+          '<input type="range" min="0" max="24" step="0.5" data-end="0" aria-label="' + c.name + ' workday starts (local time)">' +
+          '<input type="range" min="0" max="24" step="0.5" data-end="1" aria-label="' + c.name + ' workday ends (local time)"></div>' +
+          '<div class="dual-ticks"><span>00</span><span>06</span><span>12</span><span>18</span><span>24</span></div></div>' +
+        '<div class="mt-hr-base" data-hb></div>' +
+        '</div>';
+    }).join('');
+    CITIES.forEach(function (c) {
+      var row = hoursList.querySelector('[data-id="' + c.id + '"]'), ins = row.querySelectorAll('input');
+      ins[0].value = hrs(c)[0]; ins[1].value = hrs(c)[1] === 0 ? 24 : hrs(c)[1];
+    });
+    updateHours();
+  }
+  function updateHours() {
+    var b = base(), mid = day.start + 12 * 60 * MIN;
+    CITIES.forEach(function (c) {
+      var row = hoursList.querySelector('[data-id="' + c.id + '"]');
+      if (!row) return;
+      var h = hrs(c), a = h[0] / 24 * 100, z = h[1] / 24 * 100, bars = row.querySelectorAll('.dual-track i');
+      if (h[0] < h[1]) { bars[0].style.cssText = 'left:' + a + '%;width:' + (z - a) + '%'; bars[1].style.cssText = 'display:none'; }
+      else { bars[0].style.cssText = 'left:0;width:' + z + '%'; bars[1].style.cssText = 'left:' + a + '%;width:' + (100 - a) + '%'; }
+      var len = span(h);
+      row.querySelector('[data-hv]').innerHTML = '<b>' + fmtHrs24(h[0]) + '–' + fmtHrs24(h[1]) + '</b> ' + fmtDur(len) + (h[1] <= h[0] ? ' · overnight' : '');
+      row.classList.toggle('is-custom', !!S.hours[c.id]);
+      // the same window in the base city's clock, for the selected date
+      var lp = parts(c.tz, mid), st = wallToUTC(c.tz, lp.y, lp.mo, lp.d, Math.floor(h[0]), (h[0] % 1) * 60);
+      var ps = parts(b.tz, st), pe = parts(b.tz, st + len * MIN);
+      row.querySelector('[data-hb]').textContent = c.id === b.id ? 'Base city' : '= ' + hm(ps) + '–' + hm(pe) + ' ' + b.name;
+    });
+    $('hoursSum').textContent = CITIES.filter(function (c) { return S.hours[c.id]; }).length
+      ? 'Custom hours set' : 'Local office hours';
+    $('hoursReset').disabled = !Object.keys(S.hours).length;
+  }
+  var hoursRaf = 0;
+  hoursList.addEventListener('input', function (e) {
+    var inp = e.target, row = inp.closest('.mt-hr');
+    if (!row) return;
+    var c = CITIES.filter(function (x) { return x.id === row.dataset.id; })[0], ins = row.querySelectorAll('input');
+    var a = +ins[0].value, z = +ins[1].value;
+    if (a === z) {   // handles can't sit on the same spot: push the one being dragged half an hour back
+      if (inp === ins[0]) { a = a >= 0.5 ? a - 0.5 : 0.5; ins[0].value = a; }
+      else { z = z <= 23.5 ? z + 0.5 : 23.5; ins[1].value = z; }
+    }
+    var h = [a, z];
+    if (h[0] === c.hrs[0] && h[1] === c.hrs[1]) delete S.hours[c.id]; else S.hours[c.id] = h;
+    save(); updateHours();
+    cancelAnimationFrame(hoursRaf);
+    hoursRaf = requestAnimationFrame(function () { renderBoard(); renderSel(); });
+  });
+  $('hoursToggle').addEventListener('click', function () {
+    var open = this.getAttribute('aria-expanded') !== 'true';
+    this.setAttribute('aria-expanded', open);
+    $('hoursPanel').hidden = !open;
+  });
+  $('hoursReset').addEventListener('click', function () {
+    S.hours = {}; save(); buildHours(); renderBoard(); renderSel();
+  });
 
   /* ---------- rendering ---------- */
   var labelsEl = $('labels'), tracksEl = $('tracks'), timeR = $('timeR');
@@ -204,6 +280,7 @@
 
     renderDate();
     renderClocks();
+    if (hoursList.firstChild) updateHours();
     renderBest();
     renderDst();
   }
@@ -412,9 +489,6 @@
   Object.keys(sliders).forEach(function (k) {
     sliders[k].r.addEventListener('input', function () {
       S[k] = +sliders[k].r.value;
-      if (k === 'ws' && S.we - S.ws < 1) S.we = S.ws + 1;
-      if (k === 'we' && S.we - S.ws < 1) S.ws = S.we - 1;
-      S.ws = clamp(S.ws, 5, 12); S.we = clamp(S.we, 13, 22);
       syncSliders(); save();
       renderBoard(); renderSel();
     });
@@ -467,6 +541,7 @@
   /* ---------- start ---------- */
   syncSliders();
   computeDay();
+  buildHours();
   if (urlTime) {
     var a = S.date.split('-').map(Number);
     S.step = Math.round((wallToUTC(base().tz, a[0], a[1], a[2], +urlTime.slice(0, 2), +urlTime.slice(2)) - day.start) / (STEP * MIN));

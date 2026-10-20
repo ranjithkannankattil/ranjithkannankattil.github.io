@@ -9,7 +9,11 @@ writings.html           Writings archive — 365 posts, search + tag filters
 writing-post.html       Single-post template (reads ?slug=...)
 publications.html       Books + academic publication
 radio.html              Live Malayalam radio
-productivity.html       Productivity tools — meeting time finder (js/meeting.js, css/productivity.css)
+productivity/           Productivity tools hub (index.html) + one page per tool
+  meeting.html          Tool 01: meeting time finder (js/tool-meeting.js, css/tool-meeting.css)
+productivity.html       Redirect from the old address (keeps meeting-finder links working)
+js/tools.js             Tool registry: builds the hub cards and the tool switcher
+css/productivity.css    Shared styles for the hub and every tool page
 feed.xml                RSS feed (latest 50 writings, static — regenerate manually)
 CNAME                   Custom domain file for GitHub Pages (ranjithkb.com)
 css/style.css           All styling, incl. per-section accent colours
@@ -67,3 +71,10 @@ following the existing pattern (cover image, meta line, description, links).
 - Malayalam text uses the Manjari typeface throughout.
 - Byline convention: "Ranjith" on Home/Photography, "Ranjith K B" on CV,
   "Ranjith Kannankattil" on Publications/literary content.
+
+## Adding a productivity tool
+1. Add an entry to `window.TOOLS` in `js/tools.js` (id, name, short, href, blurb, meta).
+2. Copy `productivity/meeting.html` to `productivity/<id>.html`; keep the header,
+   `<main data-tool="<id>">` and `<div data-tool-nav>`, replace the `<section>`.
+3. Put the tool's code in `js/tool-<id>.js` and `css/tool-<id>.css`.
+The hub card and the switcher on every tool page update by themselves.
