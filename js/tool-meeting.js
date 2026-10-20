@@ -662,16 +662,77 @@
     if (e.key === 'ArrowRight') { moveDays(e.shiftKey ? 7 : 1); e.preventDefault(); }
   });
 
-  $('copyBtn').addEventListener('click', function () {
-    var a = day.start + S.step * STEP * MIN, z = a + S.len * MIN, b = base(), pb = parts(b.tz, a);
-    var lines = [dayLabel(pb) + ' ' + pb.y + ' · ' + sliders.len.f(S.len)];
+  /* ---------- invites ---------- */
+  var titleIn = $('mtgTitle');
+  try { titleIn.value = localStorage.getItem(LS_KEY + '.title') || ''; } catch (e) {}
+  var title = function () { return titleIn.value.trim() || 'Meeting'; };
+  function slot() {
+    var a = day.start + S.step * STEP * MIN;
+    return { a: a, z: a + S.len * MIN, b: base(), pb: parts(base().tz, a) };
+  }
+  function slotLines(x) {
+    var lines = [];
     CITIES.forEach(function (c) {
       if (isOff(c)) return;
-      var ca = parts(c.tz, a), cz = parts(c.tz, z);
-      lines.push(withCc(c) + '  ' + hm(ca) + '–' + hm(cz) + ' ' + (abbr(c, a) || fmtOff(offset(c.tz, a))) + (ca.ymd !== pb.ymd ? ' (' + dayLabel(ca) + ')' : ''));
+      var ca = parts(c.tz, x.a), cz = parts(c.tz, x.z);
+      lines.push(withCc(c) + '  ' + hm(ca) + '–' + hm(cz) + ' ' + (abbr(c, x.a) || fmtOff(offset(c.tz, x.a))) +
+        (ca.ymd !== x.pb.ymd ? ' (' + dayLabel(ca) + ')' : ''));
     });
-    var text = lines.join('\n'), btn = $('copyBtn');
-    var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy times for an invite'; }, 1600); };
+    return lines;
+  }
+  var utcStamp = function (ms) { return new Date(ms).toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, ''); };   // 20261028T130000Z
+  var utcIso = function (ms) { return new Date(ms).toISOString().replace(/\.\d{3}/, ''); };                          // 2026-10-28T13:00:00Z
+  function details(x) { return 'Local times\n' + slotLines(x).join('\n'); }
+  function updateInvites() {
+    var x = slot(), t = title(), d = details(x);
+    $('gcalLink').href = 'https://calendar.google.com/calendar/render?action=TEMPLATE' +
+      '&text=' + encodeURIComponent(t) + '&dates=' + utcStamp(x.a) + '/' + utcStamp(x.z) + '&details=' + encodeURIComponent(d);
+    $('olLink').href = 'https://outlook.office.com/calendar/deeplink/compose?path=%2Fcalendar%2Faction%2Fcompose&rru=addevent' +
+      '&subject=' + encodeURIComponent(t) + '&startdt=' + encodeURIComponent(utcIso(x.a)) + '&enddt=' + encodeURIComponent(utcIso(x.z)) +
+      '&body=' + encodeURIComponent(d);
+  }
+  titleIn.addEventListener('input', function () {
+    try { localStorage.setItem(LS_KEY + '.title', titleIn.value); } catch (e) {}
+    updateInvites();
+  });
+  titleIn.addEventListener('keydown', function (e) { if (e.key === 'Enter') titleIn.blur(); });
+  // keep the links current whenever the slot or settings change
+  var _renderSel = renderSel;
+  renderSel = function () { _renderSel(); updateInvites(); };
+
+  function icsEscape(v) { return String(v).replace(/\\/g, '\\\\').replace(/;/g, '\;').replace(/,/g, '\\,').replace(/\r?\n/g, '\\n'); }
+  function icsFold(line) {           // RFC 5545: lines over 75 octets continue with a leading space
+    var out = [], cur = '', bytes = 0;
+    Array.from(line).forEach(function (ch) {
+      var n = new TextEncoder().encode(ch).length;
+      if (bytes + n > 74) { out.push(cur); cur = ' '; bytes = 1; }
+      cur += ch; bytes += n;
+    });
+    out.push(cur);
+    return out.join('\r\n');
+  }
+  $('icsBtn').addEventListener('click', function () {
+    var x = slot(), t = title();
+    var uid = Date.now().toString(36) + Math.random().toString(36).slice(2, 10) + '@ranjithkb.com';
+    var ics = [
+      'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//ranjithkb.com//Meeting time finder//EN', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH',
+      'BEGIN:VEVENT', 'UID:' + uid, 'DTSTAMP:' + utcStamp(Date.now()),
+      'DTSTART:' + utcStamp(x.a), 'DTEND:' + utcStamp(x.z),
+      'SUMMARY:' + icsEscape(t), 'DESCRIPTION:' + icsEscape(details(x)),
+      'END:VEVENT', 'END:VCALENDAR'
+    ].map(icsFold).join('\r\n') + '\r\n';
+    var name = (t.replace(/[^\w\- ]+/g, '').trim().replace(/\s+/g, '-') || 'meeting') + '-' + x.pb.ymd + '.ics';
+    var url = URL.createObjectURL(new Blob([ics], { type: 'text/calendar;charset=utf-8' }));
+    var link = document.createElement('a'); link.href = url; link.download = name;
+    document.body.appendChild(link); link.click(); link.remove();
+    setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
+  });
+
+  $('copyBtn').addEventListener('click', function () {
+    var x = slot();
+    var text = [title() + ' — ' + dayLabel(x.pb) + ' ' + x.pb.y + ' · ' + sliders.len.f(S.len)].concat(slotLines(x)).join('\n');
+    var btn = $('copyBtn');
+    var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy times as text'; }, 1600); };
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, fallback);
     else fallback();
     function fallback() {
