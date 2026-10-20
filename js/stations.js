@@ -19,9 +19,9 @@ window.STATIONS = [
     "name": "Club FM",
     "category": "fm",
     "streams": [
+      "https://listen.openstream.co/4626/audio",
       "https://listen.openstream.co/4635/audio",
-      "https://eu10.fastcast4u.com/clubfmuae",
-      "https://listen.openstream.co/4626/audio"
+      "https://eu10.fastcast4u.com/clubfmuae"
     ]
   },
   {
@@ -29,6 +29,7 @@ window.STATIONS = [
     "name": "Radio Mango",
     "category": "fm",
     "streams": [
+      "https://downloads.manoramaonline.com/Audios/Radiomango/Main-jingle.mp3",
       "https://listen.openstream.co/4635/audio",
       "https://radiomangoalive1-a.akamaihd.net/9268677ef77949a9b21d33239a55eadd/ap-southeast-1/6034685947001/playlist.m3u8",
       "https://eu10.fastcast4u.com/clubfmuae"
@@ -104,6 +105,7 @@ window.STATIONS = [
     "name": "AIR Malayalam",
     "category": "air",
     "streams": [
+      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8",
       "https://radio.wavespb.com/live/6ff13de7ea9b53d7/6ff13de7ea9b53d7.m3u8"
     ],
     "akv": "Akashvani Kerala"
@@ -118,7 +120,8 @@ window.STATIONS = [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio044/playlist.m3u8"
     ],
     "freq": "102.3 FM",
-    "akv": "Akashvani Kochi"
+    "akv": "Akashvani Kochi",
+    "offline": true
   },
   {
     "id": "fmrainbowkochi",
@@ -128,7 +131,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/7df6f2a8c3c4d33b/7df6f2a8c3c4d33b.m3u8"
     ],
-    "akv": "FM Rainbow Kochi"
+    "akv": "FM Rainbow Kochi",
+    "offline": true
   },
   {
     "id": "aircalicut",
@@ -137,7 +141,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/8321393de70015fc/8321393de70015fc.m3u8"
     ],
-    "akv": "Akashvani Calicut"
+    "akv": "Akashvani Calicut",
+    "offline": true
   },
   {
     "id": "vbmalayalam",
@@ -146,7 +151,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/ad3a8436a329e2d6/ad3a8436a329e2d6.m3u8"
     ],
-    "akv": "VB MALAYALAM"
+    "akv": "VB MALAYALAM",
+    "offline": true
   },
   {
     "id": "airalappuzha",
@@ -161,6 +167,7 @@ window.STATIONS = [
     "name": "AIR Devikulam",
     "category": "air",
     "streams": [
+      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8",
       "https://radio.wavespb.com/live/e97acc829da9bf2a/e97acc829da9bf2a.m3u8"
     ],
     "akv": "Akashvani Devikulam"
@@ -170,8 +177,8 @@ window.STATIONS = [
     "name": "AIR Kozhikode FM",
     "category": "air",
     "streams": [
-      "https://radio.wavespb.com/live/b69c296065db7627/b69c296065db7627.m3u8",
-      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio083/playlist.m3u8"
+      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio083/playlist.m3u8",
+      "https://radio.wavespb.com/live/b69c296065db7627/b69c296065db7627.m3u8"
     ],
     "akv": "Akashvani Kozhikode Real FM"
   },
@@ -196,8 +203,8 @@ window.STATIONS = [
     "name": "Nammude Radio",
     "category": "online",
     "streams": [
-      "https://das-edge16-live365-dal02.cdnstream.com/a39171",
-      "https://stream.nammude.uk/listen/nammude_uk/live"
+      "https://stream.nammude.uk/listen/nammude_uk/live",
+      "https://das-edge16-live365-dal02.cdnstream.com/a39171"
     ]
   },
   {
@@ -206,7 +213,8 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://cast1.my-control-panel.com/proxy/myradio90fm/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "airkannur",
@@ -215,7 +223,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/b82c91a395fc4a7d/b82c91a395fc4a7d.m3u8"
     ],
-    "akv": "Akashvani Kannur"
+    "akv": "Akashvani Kannur",
+    "offline": true
   },
   {
     "id": "helloradio",
@@ -231,14 +240,15 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://icecast.octosignals.com/benziger"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "aahafmradio",
     "name": "Aaha FM",
     "category": "online",
     "streams": [
-      "http://s2.radio.co/s3801784f1/listen"
+      "https://s2.radio.co/s3801784f1/listen"
     ]
   },
   {
@@ -248,13 +258,15 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/58390a2ed33cea4a/58390a2ed33cea4a.m3u8"
     ],
-    "akv": "Akashvani Manjeri"
+    "akv": "Akashvani Manjeri",
+    "offline": true
   },
   {
     "id": "akashvanithrissur",
     "name": "AIR Thrissur",
     "category": "air",
     "streams": [
+      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8",
       "https://radio.wavespb.com/live/f70fdeca437dc326/f70fdeca437dc326.m3u8"
     ],
     "freq": "630 AM",
@@ -299,7 +311,8 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://icecast.octosignals.com/radiomacfast"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "globalradio",
@@ -333,7 +346,8 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://onair.junefm.in/live"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radiomangalam",
@@ -341,7 +355,8 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "http://radiomangalam.in:8000/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "sargakshetrafm",
@@ -350,7 +365,8 @@ window.STATIONS = [
     "streams": [
       "https://icecast.octosignals.com/sargakshetrafm",
       "https://edge.mixlr.com/channel/ugbfe"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radiomediavillage",
@@ -399,7 +415,8 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://usa10.fastcast4u.com:8110/;?type=http&nocache=3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "lmrradio",
@@ -439,7 +456,8 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://usa15.fastcast4u.com/proxy/radiomall/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radiomate",
@@ -487,7 +505,8 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://streamer.radio.co/s8d5f06a3d/listen"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "malayalammusic",
@@ -553,7 +572,8 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://stream.zeno.fm/f3nc8x3tywzuv"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "arradio",
@@ -578,7 +598,8 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://stream.zeno.fm/mfn3gkbvty8uv"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radiobeatmalayalamhd",
@@ -594,7 +615,8 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://centova71.instainternet.com/proxy/tcrliveradio?mp=/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "kaathoramlive",
@@ -618,7 +640,8 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://fm.saksoftlabs.com/radio.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radiome",
@@ -634,7 +657,8 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://thaalam.tamilfmradios.com/live"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "omrradio",
@@ -642,7 +666,8 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://stream.zeno.fm/x2baeup395quv"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radiotirur",
@@ -658,7 +683,8 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://stream.zeno.fm/9k5ku7bhb8zuv"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "mazhavilfm",
@@ -666,7 +692,8 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://live.sarrit.com:8010/mazhavilfm"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radiosarangi",
@@ -707,6 +734,8 @@ window.STATIONS = [
     "name": "Radio Cafe",
     "category": "online",
     "streams": [
+      "https://listen.radioking.com/radio/69079/stream/106852",
+      "https://www.radioking.com/play/ace-cafe",
       "https://stream.zeno.fm/gqmh0caknchvv"
     ]
   },
@@ -724,13 +753,15 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://stream.zeno.fm/xwlwqmiogncvv"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radioutsav",
     "name": "Radio Utsav",
     "category": "online",
     "streams": [
+      "https://icecast.maxxwave.co.uk/utsav",
       "http://82.145.63.6:6094/mp=/stream"
     ]
   },
@@ -756,7 +787,8 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://gains.reviveradio.net/proxy/menorah?mp=/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "dvnradio",
@@ -780,7 +812,8 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.radio.co/s1383afdc9/listen?ver=828256"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "reviveradiomalayalam",
@@ -795,6 +828,7 @@ window.STATIONS = [
     "name": "Radio Wind",
     "category": "devotional",
     "streams": [
+      "https://rtn.cdnstream1.com/2571_96.aac",
       "https://stream.radio.co/s9015a8e16/listen"
     ]
   },
@@ -804,7 +838,8 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://s7.voscast.com:9563/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "bafaradio",
@@ -851,6 +886,8 @@ window.STATIONS = [
     "name": "Green Radio",
     "category": "devotional",
     "streams": [
+      "https://stream.radio.co/s9e1625f13/listen",
+      "https://gains.reviveradio.net/proxy/greenradio?mp=/stream",
       "http://108.170.51.230:8010/stream"
     ]
   },
@@ -868,7 +905,8 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://usa14.fastcast4u.com/proxy/bobbygeo?mp=/;"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radiomaria",
@@ -884,7 +922,8 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://streams.radio.co/s4e89ff5bd/listen"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "muthnabiradio",
@@ -915,6 +954,8 @@ window.STATIONS = [
     "name": "Quran Radio",
     "category": "devotional",
     "streams": [
+      "https://n0a.radiojar.com/0tpy1h0kxtzuv?rj-ttl=5&rj-tok=AAABhdgGORQA-2acfyF3_4WY2g",
+      "https://n09.radiojar.com/0tpy1h0kxtzuv?rj-ttl=5&rj-tok=AAABjKoABHgAdULpynjQ7EwB6A",
       "https://server03.quran-uni.com:7029/stream"
     ]
   },
@@ -932,7 +973,8 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/rdcci38kky4vv"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "malayalambhakthiradio",
@@ -965,6 +1007,7 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/w9kku8utuy8uv"
-    ]
+    ],
+    "offline": true
   }
 ];
