@@ -1,0 +1,75 @@
+/* ============================================================
+   RADIO — Malayalam live radio page
+   ============================================================ */
+body[data-section="radio"]{ padding-bottom:6.5rem; }
+body[data-section="radio"] button{ font:inherit; color:inherit; cursor:pointer; border:0; background:none; padding:0; }
+body[data-section="radio"] svg{ display:block; }
+
+.radio-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:1.5rem; flex-wrap:wrap; padding-top:2.5rem; }
+.radio-title{ font-family:var(--f-ml); font-weight:700; font-size:clamp(2rem,5vw,2.8rem); line-height:1.1; margin:0; color:var(--ink); }
+.radio-intro{ margin:.5rem 0 0; color:var(--ink-soft); max-width:52ch; }
+
+.radio-search{ display:flex; flex-direction:column; gap:.3rem; min-width:240px; }
+.radio-search span{ font-family:var(--f-mono); font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-soft); }
+.radio-search input{ font-family:var(--f-body); font-size:1rem; color:var(--ink); background:transparent; border:0; border-bottom:1px solid var(--line); padding:.35rem 0; outline:0; }
+.radio-search input:focus{ border-bottom-color:var(--accent); }
+
+.radio-chips{ display:flex; gap:.5rem 1.4rem; flex-wrap:wrap; margin-top:1.8rem; font-family:var(--f-mono); font-size:.76rem; letter-spacing:.08em; text-transform:uppercase; }
+.radio-chips button{ color:var(--ink-soft); padding-bottom:.3rem; border-bottom:2px solid transparent; }
+.radio-chips button:hover{ color:var(--ink); }
+.radio-chips button[aria-pressed="true"]{ color:var(--ink); border-bottom-color:var(--accent); }
+.radio-chips .n{ opacity:.55; margin-left:.3rem; }
+
+.radio-count{ font-family:var(--f-mono); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); margin:0 0 1rem; }
+.radio-grid{ list-style:none; margin:0; padding:0; display:grid; gap:1px; background:var(--line); border:1px solid var(--line); grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); }
+.radio-card{ position:relative; background:var(--paper); }
+.radio-card .hit{ display:flex; align-items:center; gap:.85rem; width:100%; text-align:left; padding:.9rem 2.6rem .9rem .9rem; transition:background .15s; }
+.radio-card .hit:hover{ background:var(--paper-2); }
+.radio-card .tile{ width:44px; height:44px; flex:none; display:grid; place-items:center; background:var(--accent-soft); color:var(--accent); font-family:var(--f-display); font-weight:600; font-size:.95rem; letter-spacing:.02em; position:relative; }
+.radio-card .tile .pl{ position:absolute; inset:0; display:grid; place-items:center; background:var(--accent); opacity:0; transition:opacity .15s; }
+.radio-card .tile .pl svg{ width:16px; height:16px; fill:var(--paper); }
+.radio-card .hit:hover .tile .pl, .radio-card.on .tile .pl{ opacity:1; }
+.radio-card .txt{ min-width:0; }
+.radio-card .nm{ font-family:var(--f-display); font-weight:600; font-size:.98rem; line-height:1.25; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.radio-card .sub{ font-family:var(--f-mono); font-size:.66rem; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); margin-top:.2rem; }
+.radio-card.on{ background:var(--accent-soft); }
+.radio-card.on .hit:hover{ background:var(--accent-soft); }
+.radio-card.err .sub{ color:#9B2C2C; }
+.radio-card .fav{ position:absolute; right:.6rem; top:50%; transform:translateY(-50%); width:28px; height:28px; display:grid; place-items:center; opacity:.45; }
+.radio-card:hover .fav, .radio-card .fav[aria-pressed="true"]{ opacity:1; }
+.radio-card .fav svg, .np-fav svg{ width:16px; height:16px; fill:none; stroke:var(--ink); stroke-width:1.8; }
+.radio-card .fav[aria-pressed="true"] svg{ fill:var(--accent); stroke:var(--accent); }
+
+.radio-empty{ text-align:center; color:var(--ink-soft); padding:2.5rem 0; }
+.radio-note{ color:var(--ink-soft); font-size:.92rem; margin-top:2rem; max-width:62ch; }
+
+/* Player bar */
+.radio-player{ position:fixed; left:0; right:0; bottom:0; background:var(--ink); color:var(--paper); display:flex; align-items:center; gap:1rem; padding:.7rem 5vw calc(.7rem + env(safe-area-inset-bottom)); border-top:3px solid var(--accent); z-index:20; }
+.radio-player .np{ display:flex; align-items:center; gap:.85rem; flex:1; min-width:0; }
+.radio-player .np-tile{ width:42px; height:42px; flex:none; display:grid; place-items:center; background:var(--accent); color:var(--paper); font-family:var(--f-display); font-weight:600; font-size:.9rem; }
+.radio-player .np-text{ min-width:0; }
+.radio-player .np-name{ font-family:var(--f-display); font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.radio-player .np-status{ font-family:var(--f-mono); font-size:.66rem; letter-spacing:.1em; text-transform:uppercase; opacity:.7; margin-top:.15rem; }
+.radio-player.playing .np-status::before{ content:"● "; color:#E25B4B; animation:radio-blink 1.6s ease-in-out infinite; }
+.radio-player.loading .np-status::after{ content:""; display:inline-block; width:9px; height:9px; margin-left:.45rem; border:1.5px solid currentColor; border-right-color:transparent; border-radius:50%; animation:radio-spin .8s linear infinite; vertical-align:-1px; }
+.np-controls{ display:flex; align-items:center; gap:.8rem; }
+.np-fav{ width:36px; height:36px; display:grid; place-items:center; }
+.np-fav svg{ stroke:var(--paper); width:18px; height:18px; }
+.np-fav[aria-pressed="true"] svg{ fill:#E8C07A; stroke:#E8C07A; }
+.np-play{ width:44px; height:44px; border-radius:50%; background:var(--paper)!important; display:grid; place-items:center; }
+.np-play svg{ width:18px; height:18px; fill:var(--ink); }
+.np-play .i-pause, .radio-player.playing .np-play .i-play{ display:none; }
+.radio-player.playing .np-play .i-pause{ display:block; }
+.np-vol{ width:100px; accent-color:var(--paper); }
+@keyframes radio-spin{ to{ transform:rotate(360deg); } }
+@keyframes radio-blink{ 0%,100%{ opacity:.3; } 50%{ opacity:1; } }
+
+@media (max-width:640px){
+  .radio-search{ min-width:0; width:100%; }
+  .radio-grid{ grid-template-columns:1fr 1fr; }
+  .radio-card .hit{ flex-direction:column; align-items:flex-start; gap:.6rem; padding:.85rem; }
+  .radio-card .nm{ white-space:normal; }
+  .radio-card .fav{ top:.6rem; transform:none; }
+  .np-vol{ display:none; }
+}
+@media (prefers-reduced-motion:reduce){ body[data-section="radio"] *{ animation:none!important; transition:none!important; } }
