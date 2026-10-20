@@ -31,10 +31,12 @@ window.STATIONS = [
     "category": "fm",
     "streams": [
       "https://listen.openstream.co/4635/audio",
-      "https://radiomangoalive1-a.akamaihd.net/9268677ef77949a9b21d33239a55eadd/ap-southeast-1/6034685947001/playlist.m3u8",
-      "https://eu10.fastcast4u.com/clubfmuae"
+      "https://radiomangoalive1-a.akamaihd.net/9268677ef77949a9b21d33239a55eadd/ap-southeast-1/6034685947001/playlist.m3u8"
     ],
-    "offline": true
+    "offline": true,
+    "exclude": [
+      "https://eu10.fastcast4u.com/clubfmuae"
+    ]
   },
   {
     "id": "homefm",
