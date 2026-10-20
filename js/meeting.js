@@ -362,11 +362,15 @@
   function renderClocks() {
     var now = Math.floor(Date.now() / MIN) * MIN;
     CITIES.forEach(function (c) {
-      var p = parts(c.tz, now);
-      var html = '<b>' + hm(p) + '</b> ' + p.wd + ' ' + p.d + '<span class="mt-mon"> ' + MON[p.mo - 1] + '</span>';
+      var p = parts(c.tz, now), d = offset(c.tz, now) - offset(base().tz, now);
+      var a = Math.abs(d), rel = c.id === S.base ? 'base' : d === 0 ? '±0h'
+        : (d > 0 ? '+' : '−') + Math.floor(a / 60) + (a % 60 ? ':' + pad(a % 60) : '') + 'h';
+      var html = '<b>' + hm(p) + '</b> ' + p.wd + ' ' + p.d + '<span class="mt-mon"> ' + MON[p.mo - 1] + '</span>' +
+        ' <span class="mt-rel' + (c.id === S.base ? ' is-base' : d > 0 ? ' ahead' : d < 0 ? ' behind' : '') + '">' + rel + '</span>';
       document.querySelectorAll('[data-now="' + c.id + '"]').forEach(function (el) {
         el.innerHTML = html;
-        el.title = 'Now in ' + c.name + ': ' + hm(p) + ', ' + dayLabel(p) + ' ' + p.y + ' (' + abbr(c, now) + ')';
+        el.title = 'Now in ' + c.name + ': ' + hm(p) + ', ' + dayLabel(p) + ' ' + p.y + ' (' + abbr(c, now) + ')' +
+          (c.id === S.base ? '' : d === 0 ? ' — same time as ' + base().name : ' — ' + fmtHrs(d) + (d > 0 ? ' ahead of ' : ' behind ') + base().name);
       });
     });
     var nl = $('nowLine'), t = Date.now();

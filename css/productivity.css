@@ -7,7 +7,7 @@ body[data-section="productivity"]{
   --c-off:   #DFD9CC;
   --c-wkend: repeating-linear-gradient(135deg, #DFD9CC 0 4px, #E9E4D9 4px 8px);
   --row:     46px;
-  --lab:     178px;
+  --lab:     208px;
 }
 body[data-section="productivity"] button{ font:inherit; color:inherit; cursor:pointer; border:0; background:none; padding:0; }
 
@@ -77,9 +77,12 @@ body[data-section="productivity"] input[type=range]:focus-visible{ outline:2px s
 .mt-lab-n{ font-family:var(--f-display); font-weight:600; font-size:.95rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 .mt-lab-t{ font-family:var(--f-mono); font-size:.72rem; color:var(--ink-soft); white-space:nowrap; }
 .mt-clock b{ font-weight:500; color:var(--ink); }
+.mt-rel{ display:inline-block; font-size:.62rem; font-weight:500; letter-spacing:.02em; padding:0 .28rem; margin-left:.15rem; background:var(--accent-soft); color:var(--accent); line-height:1.5; }
+.mt-rel.behind{ background:var(--c-off); color:var(--ink-soft); }
+.mt-rel.is-base{ background:none; color:var(--accent); text-transform:uppercase; letter-spacing:.08em; padding:0; }
 .mt-li-now{ font-family:var(--f-mono); font-size:.7rem; color:var(--ink-soft); margin-top:.15rem; white-space:nowrap; }
 .mt-li-now::before{ content:"Now "; text-transform:uppercase; letter-spacing:.08em; font-size:.6rem; color:var(--accent); }
-.mt-lab.is-base .mt-lab-n::after{ content:"base"; font-family:var(--f-mono); font-weight:400; font-size:.58rem; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-left:.4rem; vertical-align:2px; }
+.mt-lab.is-base .mt-lab-n::after{ content:none; font-family:var(--f-mono); font-weight:400; font-size:.58rem; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-left:.4rem; vertical-align:2px; }
 .mt-lab.is-off .mt-lab-txt{ opacity:.45; }
 
 .mt-tracks-wrap{ position:relative; }
@@ -166,13 +169,14 @@ body[data-section="productivity"] input[type=range]:focus-visible{ outline:2px s
   .mt-li-zone{ display:none; }
 }
 @media (max-width:820px){
-  body[data-section="productivity"]{ --lab:132px; --row:40px; }
+  body[data-section="productivity"]{ --lab:160px; --row:40px; }
   .mt-c span{ display:none; }
   .mt-legend-tip{ margin-left:0; width:100%; }
   .mt-cols{ grid-template-columns:1fr; gap:2rem; }
 }
 @media (max-width:600px){
-  body[data-section="productivity"]{ --lab:108px; --row:40px; }
+  body[data-section="productivity"]{ --lab:118px; --row:48px; }
+  .mt-lab .mt-clock{ white-space:normal; line-height:1.25; }
   .mt-lab .mt-mon{ display:none; }
   .mt-lab-t{ font-size:.66rem; }
   .mt-bar{ align-items:stretch; }
