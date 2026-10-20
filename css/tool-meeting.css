@@ -114,7 +114,14 @@ body[data-section="productivity"] .mt-hours-toggle{ text-align:left; align-conte
 .mt-now{ position:absolute; top:-10px; bottom:-10px; width:0; border-left:1.5px dashed #A8522E; pointer-events:none; }
 .mt-now span{ position:absolute; bottom:-1.25rem; left:0; transform:translateX(-50%); font-family:var(--f-mono); font-size:.6rem; letter-spacing:.08em; text-transform:uppercase; color:#A8522E; }
 
-.mt-scrub-lab{ font-family:var(--f-mono); font-size:.66rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-soft); align-self:center; margin-top:1.3rem; }
+.mt-scrub-lab{ display:flex; align-items:center; gap:.4rem; margin-top:1.3rem; align-self:center; font-family:var(--f-mono); font-size:.66rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-soft); }
+.mt-scrub-lab span{ flex:1; text-align:center; }
+.mt-nudge{ font-family:var(--f-mono) !important; font-size:.7rem !important; letter-spacing:.02em; padding:.35rem .5rem !important; border:1px solid var(--line) !important; color:var(--ink) !important; background:var(--paper) !important; min-width:2.6rem; transition:background .15s, border-color .15s; }
+.mt-nudge:hover{ border-color:var(--accent) !important; background:var(--accent-soft) !important; }
+.mt-nudge:disabled{ opacity:.3; cursor:default !important; }
+.mt-pick-nudge{ display:flex; gap:.35rem; margin-top:.7rem; flex-wrap:wrap; }
+.mt-pick-nudge .mt-nudge{ color:var(--paper) !important; background:rgba(255,255,255,.1) !important; border-color:rgba(240,237,230,.4) !important; min-width:0; flex:1 1 auto; }
+.mt-pick-nudge .mt-nudge:hover{ background:rgba(255,255,255,.2) !important; border-color:var(--paper) !important; }
 .mt-scrub{ margin-top:1.3rem; }
 
 /* ---------- result ---------- */
@@ -218,6 +225,8 @@ body[data-section="productivity"] .mt-hours-toggle{ text-align:left; align-conte
   .mt-lab.is-base .mt-lab-n::after{ display:none; }
   .mt-lab.is-base .mt-lab-n{ text-decoration:underline; text-decoration-color:var(--accent); text-underline-offset:3px; }
   .mt-pick-time{ font-size:2rem; }
+  .mt-scrub-lab span{ display:none; }
+  .mt-scrub-lab .mt-nudge{ min-width:0; flex:1; padding:.45rem .2rem !important; }
   .mt-li{ grid-template-columns:1fr auto; gap:.15rem .8rem; padding:.7rem .9rem; }
   .mt-li-city{ grid-column:1; grid-row:1; }
   .mt-li-time{ grid-column:2; grid-row:1; text-align:right; }

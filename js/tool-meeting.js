@@ -338,6 +338,9 @@
     var maxStep = day.steps - S.len / STEP;
     S.step = clamp(S.step, 0, maxStep);
     timeR.max = maxStep; timeR.value = S.step; fill(timeR);
+    document.querySelectorAll('[data-nudge]').forEach(function (btn) {
+      var n = +btn.dataset.nudge; btn.disabled = n < 0 ? S.step + n < 0 : S.step + n > maxStep;
+    });
 
     var a = day.start + S.step * STEP * MIN, z = a + S.len * MIN, b = base();
     var pa = parts(b.tz, a), pz = parts(b.tz, z);
@@ -628,6 +631,9 @@
   });
 
   timeR.addEventListener('input', function () { S.step = +timeR.value; renderSel(); });
+  document.querySelectorAll('[data-nudge]').forEach(function (btn) {
+    btn.addEventListener('click', function () { S.step += +btn.dataset.nudge; renderSel(); });
+  });
 
   Object.keys(sliders).forEach(function (k) {
     sliders[k].r.addEventListener('input', function () {
@@ -647,7 +653,8 @@
   tracksEl.addEventListener('click', function (e) {
     var c = e.target.closest('.mt-c');
     if (!c) return;
-    S.step = +c.dataset.i * 4; renderSel();
+    var r = c.getBoundingClientRect(), quarter = clamp(Math.floor((e.clientX - r.left) / r.width * 4), 0, 3);
+    S.step = +c.dataset.i * 4 + quarter; renderSel();
   });
   $('best').addEventListener('click', function (e) {
     var w = e.target.closest('.mt-win');
