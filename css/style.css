@@ -211,8 +211,6 @@ footer .diamond-mark{ color:var(--accent); margin:0 .5rem; }
   .titleblock{ padding:1.2rem 6vw .8rem; gap:.6rem; }
   nav.tabs{ gap:.4rem 1.1rem; font-size:.7rem; }
 }
-/* three-card variant (used while The Work card is hidden) */
-.practice-grid.cols-3{ grid-template-columns:repeat(3, 1fr); }
 @media (max-width:720px){
   .practice-grid{ grid-template-columns:1fr; }
 }
