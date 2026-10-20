@@ -1,6 +1,9 @@
-/* Edit this list to add, remove or fix stations.
+/* Radio stations for radio.html.
+   Checked and updated daily by scripts/check_streams.py (GitHub Actions).
    category: air | fm | online | artist | devotional
-   streams: tried in order until one plays */
+   streams: tried in order until one plays; working ones are moved first
+   offline: set by the daily check when no stream works (station stays listed)
+   akv: name in the Akashvani station list, used to pick up new official links */
 window.STATIONS = [
   {
     "id": "radiomirchimalayalam",
@@ -102,7 +105,8 @@ window.STATIONS = [
     "category": "air",
     "streams": [
       "https://radio.wavespb.com/live/6ff13de7ea9b53d7/6ff13de7ea9b53d7.m3u8"
-    ]
+    ],
+    "akv": "Akashvani Kerala"
   },
   {
     "id": "kochifm",
@@ -113,17 +117,53 @@ window.STATIONS = [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio045/playlist.m3u8",
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio044/playlist.m3u8"
     ],
-    "freq": "102.3 FM"
+    "freq": "102.3 FM",
+    "akv": "Akashvani Kochi"
+  },
+  {
+    "id": "fmrainbowkochi",
+    "name": "AIR FM Rainbow Kochi",
+    "category": "air",
+    "freq": "107.5 FM",
+    "streams": [
+      "https://radio.wavespb.com/live/7df6f2a8c3c4d33b/7df6f2a8c3c4d33b.m3u8"
+    ],
+    "akv": "FM Rainbow Kochi"
+  },
+  {
+    "id": "aircalicut",
+    "name": "AIR Kozhikode (Calicut)",
+    "category": "air",
+    "streams": [
+      "https://radio.wavespb.com/live/8321393de70015fc/8321393de70015fc.m3u8"
+    ],
+    "akv": "Akashvani Calicut"
+  },
+  {
+    "id": "vbmalayalam",
+    "name": "Vividh Bharati Malayalam",
+    "category": "air",
+    "streams": [
+      "https://radio.wavespb.com/live/ad3a8436a329e2d6/ad3a8436a329e2d6.m3u8"
+    ],
+    "akv": "VB MALAYALAM"
+  },
+  {
+    "id": "airalappuzha",
+    "name": "AIR Alappuzha",
+    "category": "air",
+    "streams": [
+      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
+    ]
   },
   {
     "id": "airdevikulam",
     "name": "AIR Devikulam",
     "category": "air",
     "streams": [
-      "https://radio.wavespb.com/live/e97acc829da9bf2a/e97acc829da9bf2a.m3u8",
-      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio214/playlist.m3u8",
-      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
-    ]
+      "https://radio.wavespb.com/live/e97acc829da9bf2a/e97acc829da9bf2a.m3u8"
+    ],
+    "akv": "Akashvani Devikulam"
   },
   {
     "id": "airkozhikodefm",
@@ -132,7 +172,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/b69c296065db7627/b69c296065db7627.m3u8",
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio083/playlist.m3u8"
-    ]
+    ],
+    "akv": "Akashvani Kozhikode Real FM"
   },
   {
     "id": "radio90fm",
@@ -172,8 +213,9 @@ window.STATIONS = [
     "name": "AIR Kannur",
     "category": "air",
     "streams": [
-      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio173/playlist.m3u8"
-    ]
+      "https://radio.wavespb.com/live/b82c91a395fc4a7d/b82c91a395fc4a7d.m3u8"
+    ],
+    "akv": "Akashvani Kannur"
   },
   {
     "id": "helloradio",
@@ -204,20 +246,19 @@ window.STATIONS = [
     "name": "AIR Manjeri FM",
     "category": "air",
     "streams": [
-      "https://radio.wavespb.com/live/58390a2ed33cea4a/58390a2ed33cea4a.m3u8",
-      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio101/playlist.m3u8"
-    ]
+      "https://radio.wavespb.com/live/58390a2ed33cea4a/58390a2ed33cea4a.m3u8"
+    ],
+    "akv": "Akashvani Manjeri"
   },
   {
     "id": "akashvanithrissur",
     "name": "AIR Thrissur",
     "category": "air",
     "streams": [
-      "https://radio.wavespb.com/live/f70fdeca437dc326/f70fdeca437dc326.m3u8",
-      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio036/playlist.m3u8",
-      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
+      "https://radio.wavespb.com/live/f70fdeca437dc326/f70fdeca437dc326.m3u8"
     ],
-    "freq": "630 AM"
+    "freq": "630 AM",
+    "akv": "Akashvani Thrissur"
   },
   {
     "id": "radioneythal",
@@ -519,6 +560,7 @@ window.STATIONS = [
     "name": "AR Radio",
     "category": "online",
     "streams": [
+      "https://free.rcast.net/200660",
       "https://stream.zeno.fm/heq754gwxwzuv"
     ]
   },
@@ -913,6 +955,7 @@ window.STATIONS = [
     "name": "Devotional Radio",
     "category": "devotional",
     "streams": [
+      "https://stream.zeno.fm/x7mve2vt01zuv",
       "https://stream.zeno.fm/zkqsxrd1h2zuv"
     ]
   },

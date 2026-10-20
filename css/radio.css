@@ -35,6 +35,8 @@ body[data-section="radio"] svg{ display:block; }
 .radio-card.on{ background:var(--accent-soft); }
 .radio-card.on .hit:hover{ background:var(--accent-soft); }
 .radio-card.err .sub{ color:#9B2C2C; }
+.radio-card.off .tile{ background:var(--paper-2); color:var(--ink-soft); }
+.radio-card.off .nm{ color:var(--ink-soft); }
 .radio-card .fav{ position:absolute; right:.6rem; top:50%; transform:translateY(-50%); width:28px; height:28px; display:grid; place-items:center; opacity:.45; }
 .radio-card:hover .fav, .radio-card .fav[aria-pressed="true"]{ opacity:1; }
 .radio-card .fav svg, .np-fav svg{ width:16px; height:16px; fill:none; stroke:var(--ink); stroke-width:1.8; }

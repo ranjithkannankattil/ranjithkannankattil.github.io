@@ -47,12 +47,12 @@
     grid.innerHTML = "";
     for (const s of list) {
       const li = document.createElement("li");
-      li.className = "radio-card" + (current?.id === s.id ? " on" : "");
+      li.className = "radio-card" + (current?.id === s.id ? " on" : "") + (s.offline ? " off" : "");
       li.dataset.id = s.id;
       li.innerHTML = `
         <button class="hit" aria-label="Play ${s.name}">
           <span class="tile">${initials(s.name)}<span class="pl"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></span></span>
-          <span class="txt"><div class="nm">${s.name}</div><div class="sub">${LABEL[s.category]} · ${s.freq || (s.streams.length > 1 ? s.streams.length + " sources" : "Live")}</div></span>
+          <span class="txt"><div class="nm">${s.name}</div><div class="sub">${LABEL[s.category]} · ${s.offline ? "Offline at last check" : s.freq || (s.streams.length > 1 ? s.streams.length + " sources" : "Live")}</div></span>
         </button>
         <button class="fav" aria-label="Favourite" aria-pressed="${favs.has(s.id)}"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2Z"/></svg></button>`;
       li.querySelector(".hit").onclick = () => (current?.id === s.id ? toggle() : play(s));
@@ -109,7 +109,9 @@
     status(s.streams.length > 1 ? `Connecting · source ${tryIndex + 1}/${s.streams.length}` : "Connecting");
     failTimer = setTimeout(next, 12000);
     const isHls = /\.m3u8(\?|$)/i.test(url);
-    if (isHls && !audio.canPlayType("application/vnd.apple.mpegurl") && window.Hls?.isSupported()) {
+    // hls.js first: the browser's own HLS player can't read some Akashvani playlists.
+    // Native HLS is only used where hls.js can't run (iPhone Safari).
+    if (isHls && window.Hls?.isSupported()) {
       hls = new Hls({ lowLatencyMode: false });
       hls.on(Hls.Events.ERROR, (_, d) => { if (d.fatal) next(); });
       hls.loadSource(url); hls.attachMedia(audio);
