@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Productivity — Ranjith Kannankattil</title>
+<meta name="description" content="Meeting time finder across Houston, London, Milan, Mozambique, Bangalore, China and Seoul, with daylight saving handled per date.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/productivity.css?v=1">
+</head>
+<body data-section="productivity" class="wide">
+
+<header class="titleblock">
+  <div>
+    <div class="id">RANJITH KANNANKATTIL</div>
+    <div class="name">Productivity</div>
+  </div>
+  <nav class="tabs">
+    <a href="index.html">Home</a>
+    <a href="photography.html">Photography</a>
+    <a href="writings.html">Writings</a>
+    <a href="publications.html">Publications</a>
+    <a href="cv.html">The Work</a>
+    <a href="radio.html">Radio</a>
+    <a href="productivity.html" class="active">Productivity</a>
+  </nav>
+</header>
+
+<main>
+  <section class="mt" id="meeting" aria-labelledby="mtTitle">
+    <div class="mt-head">
+      <div>
+        <div class="mt-eyebrow">Tool 01</div>
+        <h1 class="mt-title" id="mtTitle">Meeting time finder</h1>
+        <p class="mt-intro">Seven places I keep scheduling across, on one line. Slide to a time or pick one of the suggested windows. Daylight saving is worked out for the date you choose, so the weeks when Europe and the US change clocks on different Sundays come out right.</p>
+      </div>
+    </div>
+
+    <!-- Date + base -->
+    <div class="mt-bar">
+      <div class="mt-date" role="group" aria-label="Date">
+        <button class="mt-step" data-days="-7" title="Back one week" aria-label="Back one week">«</button>
+        <button class="mt-step" data-days="-1" title="Previous day (←)" aria-label="Previous day">‹</button>
+        <label class="mt-day">
+          <span class="mt-day-main" id="dayMain"></span>
+          <span class="mt-day-rel" id="dayRel"></span>
+          <input type="date" id="dateInput" aria-label="Pick a date">
+        </label>
+        <button class="mt-step" data-days="1" title="Next day (→)" aria-label="Next day">›</button>
+        <button class="mt-step" data-days="7" title="Forward one week" aria-label="Forward one week">»</button>
+        <button class="mt-today" id="todayBtn">Today</button>
+      </div>
+      <label class="mt-base">
+        <span>Show times in</span>
+        <select id="baseSel"></select>
+      </label>
+    </div>
+
+    <!-- Sliders -->
+    <div class="mt-sliders">
+      <label class="mt-sl">
+        <span class="mt-sl-k">Meeting length</span>
+        <span class="mt-sl-v" id="lenV"></span>
+        <input type="range" id="lenR" min="15" max="240" step="15">
+      </label>
+      <label class="mt-sl">
+        <span class="mt-sl-k">Workday starts</span>
+        <span class="mt-sl-v" id="wsV"></span>
+        <input type="range" id="wsR" min="5" max="12" step="0.5">
+      </label>
+      <label class="mt-sl">
+        <span class="mt-sl-k">Workday ends</span>
+        <span class="mt-sl-v" id="weV"></span>
+        <input type="range" id="weR" min="13" max="22" step="0.5">
+      </label>
+      <label class="mt-sl">
+        <span class="mt-sl-k">Will stretch by</span>
+        <span class="mt-sl-v" id="flexV"></span>
+        <input type="range" id="flexR" min="0" max="3" step="0.5">
+      </label>
+    </div>
+
+    <!-- Timeline -->
+    <div class="mt-board">
+      <div class="mt-legend" aria-hidden="true">
+        <span><i class="k-work"></i>Working hours</span>
+        <span><i class="k-edge"></i>Stretch</span>
+        <span><i class="k-off"></i>Off hours</span>
+        <span><i class="k-wkend"></i>Weekend</span>
+        <span class="mt-legend-tip">Untick a city to leave it out of the suggestions</span>
+      </div>
+      <div class="mt-tl">
+        <div class="mt-labels" id="labels"></div>
+        <div class="mt-tracks-wrap">
+          <div class="mt-tracks" id="tracks"></div>
+          <div class="mt-now" id="nowLine" hidden><span>now</span></div>
+          <div class="mt-sel" id="selBox"><span id="selTag"></span></div>
+        </div>
+        <div class="mt-scrub-lab">Time</div>
+        <div class="mt-scrub">
+          <input type="range" id="timeR" min="0" max="95" step="1" aria-label="Meeting start time">
+        </div>
+      </div>
+    </div>
+
+    <!-- Result -->
+    <div class="mt-result">
+      <div class="mt-pick">
+        <div class="mt-pick-k">Selected slot</div>
+        <div class="mt-pick-time" id="pickTime"></div>
+        <div class="mt-pick-sub" id="pickSub"></div>
+        <div class="mt-pick-verdict" id="pickVerdict"></div>
+        <button class="mt-copy" id="copyBtn">Copy times for an invite</button>
+      </div>
+      <ul class="mt-list" id="cityList"></ul>
+    </div>
+
+    <div class="mt-cols">
+      <div>
+        <h2 class="mt-h2">Best windows that day</h2>
+        <ol class="mt-best" id="best"></ol>
+      </div>
+      <div>
+        <h2 class="mt-h2">Clock changes nearby</h2>
+        <ul class="mt-dst" id="dst"></ul>
+      </div>
+    </div>
+
+    <p class="mt-note">Times come from your browser's time-zone database, so daylight-saving rules stay current with it. Weekends are Saturday and Sunday in every city. Mozambique and India do not observe daylight saving, nor do China and Korea.</p>
+  </section>
+
+  <div class="diamond-rule"><span class="diamond-mark">◆</span></div>
+</main>
+
+<footer>
+  <div>© <span id="year"></span> Ranjith Kannankattil</div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="js/meeting.js?v=1"></script>
+</body>
+</html>

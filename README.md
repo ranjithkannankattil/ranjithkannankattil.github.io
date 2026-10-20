@@ -8,6 +8,8 @@ photography.html        Photography (grayscale contact-sheet grid, 20 photos)
 writings.html           Writings archive — 365 posts, search + tag filters
 writing-post.html       Single-post template (reads ?slug=...)
 publications.html       Books + academic publication
+radio.html              Live Malayalam radio
+productivity.html       Productivity tools — meeting time finder (js/meeting.js, css/productivity.css)
 feed.xml                RSS feed (latest 50 writings, static — regenerate manually)
 CNAME                   Custom domain file for GitHub Pages (ranjithkb.com)
 css/style.css           All styling, incl. per-section accent colours
