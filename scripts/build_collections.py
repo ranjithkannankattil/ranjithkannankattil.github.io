@@ -88,6 +88,8 @@ DEVOT = re.compile(r"\b(religio\w*|christian|gospel|islam(ic)?|quran|qur'an|bhak
 def clean(name: str) -> str:
     n = re.sub(r"\s*[\(\[][^)\]]*(\bk\b|kbps|mp3|aac\+?|hls|opus|flac|\bhd\b|stream|ogg|\d{2,3}k)[^)\]]*[\)\]]", "", name, flags=re.I)
     n = re.sub(r"\s+(HD Opus|Opus|MP3|AAC\+?|HLS|FLAC|\d{2,3}k(bps)?( mp3| aac)?)$", "", n, flags=re.I)
+    n = re.sub(r"\s*[-|–]\s*(\d{2,3}\s*k?(bps)?\s*)?(mp3|aac\+?|ogg|opus|hls|flac)\b.*$", "", n, flags=re.I)   # "Kiss - 128MP3", "DLF | MP3"
+    n = re.sub(r"\s*\|\s*", " · ", n)
     n = re.sub(r"\s{2,}", " ", n).strip(" -–|·")
     n = n or name.strip()
     if not re.search(r"[\sA-Z]", n) and re.fullmatch(r"[a-z0-9\-_.]+", n):      # "radioname" / "radio-name" slugs
@@ -114,6 +116,8 @@ def fetch(params: dict) -> list[dict]:
     params = dict(params)
     skip_cc = params.pop("_not", None)          # e.g. Latin American Spanish: leave out Spain
     q = dict(params, order="clickcount", reverse="true", hidebroken="true", limit="150")
+    if "language" in q:
+        q["languageExact"] = "true"              # otherwise "malay" also matches "malayalam", "ar" matches "magyar"
     for host in ("de1", "fi1", "nl1", "at1"):
         try:
             rows = json.loads(cs.http_get(f"https://{host}.api.radio-browser.info/json/stations/search?" + urllib.parse.urlencode(q), timeout=30))
@@ -121,6 +125,9 @@ def fetch(params: dict) -> list[dict]:
         except Exception:  # noqa: BLE001
             continue
     return []
+
+
+BLOCK = re.compile(r"supreme master|^test\b|^untitled", re.I)
 
 
 def category(r: dict) -> str:
@@ -142,6 +149,8 @@ def candidates(queries: list[dict]) -> list[dict]:
             continue
         u = norm_url(raw)
         name = clean(r.get("name") or "")
+        if BLOCK.search(name):
+            continue
         nk = re.sub(r"[^\w]", "", name.lower())
         if not nk or u in by_url:
             continue
