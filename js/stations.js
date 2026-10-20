@@ -52,7 +52,8 @@ window.STATIONS = [
     "category": "fm",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SUNO917_SC"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radiosunobahrain",
@@ -192,8 +193,7 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://ice42.securenetsystems.net/CR90?type=.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radiokerala",
@@ -878,8 +878,7 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://ice7.securenetsystems.net/AMENFM"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "marymatharadio",
