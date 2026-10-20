@@ -84,7 +84,7 @@
   (function () {
     var day = new Date().toISOString().slice(0, 10);
     function load(src, next) { var el = document.createElement("script"); el.src = src; el.onload = next; document.body.appendChild(el); }
-    load("js/stations.js?d=" + day + "-" + Math.floor(Date.now() / 36e5), function () { load("js/radio.js?v=4"); });
+    load("js/stations.js?d=" + day + "-" + Math.floor(Date.now() / 36e5), function () { load("js/radio.js?v=5"); });
   })();
 </script>
 </body>

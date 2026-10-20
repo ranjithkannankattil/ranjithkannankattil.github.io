@@ -8,7 +8,7 @@ For every station it:
   3. if a station has no working stream, looks for a replacement on the
      station's radiosindia.com page and in the radio-browser.info directory,
   4. marks stations that still have nothing as offline (they stay listed),
-  5. drops a stream only after it has failed for DROP_AFTER days in a row
+  5. drops a stream only after DROP_AFTER failed checks in a row
      and the station has another working stream,
   6. writes scripts/stream-report.md and scripts/stream-health.json.
 
@@ -32,7 +32,7 @@ STATIONS_JS = ROOT / "js" / "stations.js"
 HEALTH = ROOT / "scripts" / "stream-health.json"
 REPORT = ROOT / "scripts" / "stream-report.md"
 
-DROP_AFTER = 7          # consecutive failed days before a stream is removed
+DROP_AFTER = 14         # consecutive failed checks (2 a day = 7 days) before a stream is removed
 SANITY_MIN = 0.4        # if fewer than 40% of stations work, assume the runner's network is at fault
 MIN_BYTES = 16_000      # audio bytes needed in TIMEOUT seconds to count as live
 TIMEOUT = 10
@@ -306,7 +306,7 @@ def main() -> None:
         if found:
             note.append(f"new stream found: {', '.join(found)}")
         if dropped:
-            note.append(f"removed after {DROP_AFTER} days dead: {', '.join(dropped)}")
+            note.append(f"removed after {DROP_AFTER} failed checks: {', '.join(dropped)}")
         if dead and working:
             note.append(f"{len(dead)} backup source(s) failing")
         if not working:
