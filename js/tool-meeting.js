@@ -7,10 +7,10 @@
   'use strict';
 
   var CITIES = [
-    { id: 'hou', name: 'Houston',   cc: 'US', sub: 'Texas, United States', tz: 'America/Chicago', abbr: ['CST', 'CDT'], hrs: [8, 17] },
-    { id: 'lon', name: 'London',    cc: 'UK', sub: 'United Kingdom',       tz: 'Europe/London',   abbr: ['GMT', 'BST'], hrs: [9, 17.5] },
+    { id: 'hou', name: 'Houston',   cc: 'US', sub: 'Texas, United States', tz: 'America/Chicago', abbr: ['CST', 'CDT'], hrs: [7, 16] },
+    { id: 'lon', name: 'London',    cc: 'UK', sub: 'United Kingdom',       tz: 'Europe/London',   abbr: ['GMT', 'BST'], hrs: [9, 18] },
     { id: 'mil', name: 'Milan',     cc: 'IT', sub: 'Italy',                tz: 'Europe/Rome',     abbr: ['CET', 'CEST'], hrs: [9, 18] },
-    { id: 'moz', name: 'Maputo',    cc: 'MZ', sub: 'Mozambique',           tz: 'Africa/Maputo',   abbr: ['CAT', 'CAT'], hrs: [7.5, 16.5] },
+    { id: 'moz', name: 'Maputo',    cc: 'MZ', sub: 'Mozambique',           tz: 'Africa/Maputo',   abbr: ['CAT', 'CAT'], hrs: [9, 18] },
     { id: 'blr', name: 'Bangalore', cc: 'IN', sub: 'India',                tz: 'Asia/Kolkata',    abbr: ['IST', 'IST'], hrs: [13.5, 22.5] },
     { id: 'chn', name: 'Beijing',   cc: 'CN', sub: 'China',                tz: 'Asia/Shanghai',   abbr: ['CST', 'CST'], hrs: [9, 18] },
     { id: 'seo', name: 'Seoul',     cc: 'KR', sub: 'South Korea',          tz: 'Asia/Seoul',      abbr: ['KST', 'KST'], hrs: [9, 18] }
