@@ -1,6 +1,6 @@
 # Radio stream check — 2026-10-20
 
-**79 of 116 stations playing.** 27 offline, 10 couldn't be checked.
+**81 of 116 stations playing.** 27 offline, 8 couldn't be checked.
 
 ## Offline
 
@@ -38,11 +38,9 @@
 
 | Station | Why |
 |---|---|
-| Hello Radio | https://radio.helloradio.in/radio — no answer to GitHub's servers |
 | Benziger FM | https://icecast.octosignals.com/benziger — server refuses GitHub's servers (403) |
 | Radio Macfast | https://icecast.octosignals.com/radiomacfast — server refuses GitHub's servers (403) |
 | Sargakshetra FM | https://edge.mixlr.com/channel/ugbfe — HTTP 404 error page; https://icecast.octosignals.com/sargakshetrafm — server refuses GitHub's servers (403) |
-| Ashraya FM | https://fm.ashrayafm90.com/ashrayafm — no answer to GitHub's servers |
 | Paattupetti | https://streamer.radio.co/s8d5f06a3d/listen — server refuses GitHub's servers (403) |
 | Deshavani FM | https://fm.saksoftlabs.com/radio.mp3 — no answer to GitHub's servers |
 | Shalom Radio | https://stream.radio.co/s1383afdc9/listen?ver=828256 — server refuses GitHub's servers (403) |
@@ -53,7 +51,6 @@
 
 | Station | Note |
 |---|---|
-| Club FM | removed after 7 days dead: https://eu10.fastcast4u.com/clubfmuae · 1 backup source(s) failing |
 | AIR Kochi FM | 2 backup source(s) failing |
 | Nammude Radio | 1 backup source(s) failing |
 | Janvani FM | 1 backup source(s) failing |
