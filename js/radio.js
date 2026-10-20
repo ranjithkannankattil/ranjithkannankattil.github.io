@@ -162,7 +162,7 @@
     if (c) {
       const d = new Date(c);
       $("#stWhen").textContent = d.toLocaleString(undefined, { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
-      $("#stWhen").title = "Every station is tested twice a day, at 9:00 and 21:00 Milan time";
+      $("#stWhen").title = "Every station is tested twice a day, at 6:15 am and 7:05 pm India time";
     }
     document.querySelectorAll(".radio-stats .stat[data-status]").forEach((b) => {
       b.setAttribute("aria-pressed", b.dataset.status === show);

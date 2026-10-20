@@ -2,13 +2,11 @@ name: Check radio streams
 
 on:
   schedule:
-    # 9:05 and 21:05 Milan time. GitHub schedules are in UTC and Milan switches
-    # between UTC+1 and UTC+2, so both possible UTC hours are listed and the
-    # "Only at 9:00 / 21:00 Milan time" step below skips the wrong one.
-    - cron: "5 7 * * *"
-    - cron: "5 8 * * *"
-    - cron: "5 19 * * *"
-    - cron: "5 20 * * *"
+    # India time (IST = UTC+5:30, no daylight saving):
+    #   00:45 UTC = 6:15 am IST, just after Akashvani stations come on air
+    #   13:35 UTC = 7:05 pm IST, evening programming
+    - cron: "45 0 * * *"
+    - cron: "35 13 * * *"
   workflow_dispatch: {}   # "Run workflow" button on the Actions tab
   push:                   # also run when the checker itself is changed
     branches: [main]
@@ -28,38 +26,19 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - name: Only at 9:00 / 21:00 Milan time
-        id: gate
-        run: |
-          if [ "${{ github.event_name }}" != "schedule" ]; then echo "run=true" >> "$GITHUB_OUTPUT"; exit 0; fi
-          cron_hour=$(echo "${{ github.event.schedule }}" | awk '{print $2}')
-          offset=$(TZ=Europe/Rome date +%z | sed -E 's/^\+0?([0-9]+)00$/\1/')
-          want_am=$(( 9 - offset )); want_pm=$(( 21 - offset ))
-          if [ "$cron_hour" = "$want_am" ] || [ "$cron_hour" = "$want_pm" ]; then
-            echo "run=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "Skipping: UTC $cron_hour:05 is not 9:05 or 21:05 in Milan today (UTC+$offset)."
-            echo "run=false" >> "$GITHUB_OUTPUT"
-          fi
-
       - uses: actions/checkout@v4
-        if: steps.gate.outputs.run == 'true'
 
       - uses: actions/setup-python@v5
-        if: steps.gate.outputs.run == 'true'
         with:
           python-version: "3.12"
 
       - name: Test every stream and look for replacements
-        if: steps.gate.outputs.run == 'true'
         run: python3 scripts/check_streams.py
 
       - name: Add the report to the run summary
-        if: steps.gate.outputs.run == 'true'
         run: cat scripts/stream-report.md >> "$GITHUB_STEP_SUMMARY"
 
       - name: Commit changes
-        if: steps.gate.outputs.run == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898732+github-actions[bot]@users.noreply.github.com"
@@ -67,7 +46,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes."
           else
-            git commit -m "Radio: stream check $(TZ=Europe/Rome date "+%F %H:%M")"
+            git commit -m "Radio: stream check $(TZ=Asia/Kolkata date "+%F %H:%M") IST"
             git pull --rebase
             git push
           fi
