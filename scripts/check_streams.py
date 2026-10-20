@@ -136,6 +136,8 @@ def test_stream(url: str) -> tuple[str, str]:
             if code in (200, 206):
                 # some servers show their player page to scripts but stream audio to browsers
                 return UNKNOWN, "server answered GitHub with a web page"
+            if code == 403:
+                return UNKNOWN, "server refuses GitHub's servers (403)"
             return DEAD, f"HTTP {code} error page"
         if code in (200, 206) and len(data) >= MIN_BYTES:
             if rc == 0:

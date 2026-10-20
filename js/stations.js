@@ -243,8 +243,7 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://icecast.octosignals.com/benziger"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "aahafmradio",
