@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/radio.css">
+<link rel="stylesheet" href="css/radio.css?v=3">
 </head>
 <body data-section="radio" class="wide">
 
@@ -71,7 +71,13 @@
 <audio id="audio" preload="none"></audio>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.5.13/hls.min.js"></script>
-<script src="js/stations.js"></script>
-<script src="js/radio.js"></script>
+<script>
+  // Load the station list fresh each day (it is updated by the daily check), then the player.
+  (function () {
+    var day = new Date().toISOString().slice(0, 10);
+    function load(src, next) { var el = document.createElement("script"); el.src = src; el.onload = next; document.body.appendChild(el); }
+    load("js/stations.js?d=" + day + "-" + Math.floor(Date.now() / 36e5), function () { load("js/radio.js?v=3"); });
+  })();
+</script>
 </body>
 </html>
