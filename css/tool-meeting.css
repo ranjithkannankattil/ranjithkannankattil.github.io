@@ -270,3 +270,10 @@ body[data-section="productivity"] .mt-hours-toggle{ text-align:left; align-conte
   .mt-bar-r{ width:100%; justify-content:space-between; }
   .mt-cities{ padding:.9rem .8rem 1rem; }
 }
+
+/* dark mode grid colours (the rest comes from style.css) */
+@media (prefers-color-scheme: dark){
+  body[data-section="productivity"]{
+    --c-work:#4A4166; --c-edge:#2E2940; --c-off:#24242A;
+    --c-wkend:repeating-linear-gradient(135deg, #24242A 0 4px, #2B2B32 4px 8px); }
+}

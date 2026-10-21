@@ -168,6 +168,11 @@ footer .diamond-mark{ color:var(--accent); margin:0 .5rem; }
   margin:3rem 0;
   border:1px solid var(--line);
 }
+.practice-grid.three{ grid-template-columns:repeat(3, 1fr); margin-top:.8rem; }
+.grid-label{ font-family:var(--f-mono); font-size:.68rem; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-soft); margin-top:3rem; }
+.grid-label + .practice-grid{ margin-top:.8rem; }
+@media (max-width:860px){ .practice-grid.three{ grid-template-columns:1fr 1fr; } }
+@media (max-width:560px){ .practice-grid.three{ grid-template-columns:1fr; } }
 .practice{
   background:var(--paper);
   padding:2rem 1.6rem;
@@ -750,3 +755,33 @@ nav.tabs .nav-menu a.current{ background:var(--accent-soft); box-shadow:inset 3p
 .visits{ color:var(--ink-soft); }
 .visits::before{ content:"◆ "; color:var(--accent); }
 
+
+/* ============================================================
+   DARK MODE — follows the phone / computer setting
+   ============================================================ */
+@media (prefers-color-scheme: dark){
+  :root{
+    color-scheme:dark;
+    --ink:#ECE8DF; --ink-soft:#A8A49A; --paper:#141417; --paper-2:#1F1F24; --line:#35353C;
+    --accent:#8FA8E0; --accent-soft:#232B3D;
+  }
+  [data-section="home"]         { --accent:#8FA8E0; --accent-soft:#232B3D; }
+  [data-section="cv"]           { --accent:#8FB0CF; --accent-soft:#1F2730; }
+  [data-section="photography"]  { --accent:#E08A63; --accent-soft:#33231C; }
+  [data-section="writings"]     { --accent:#E0B54A; --accent-soft:#30291A; --ink-accent:#E39B8F; }
+  [data-section="publications"] { --accent:#D98AA7; --accent-soft:#33202A; }
+  [data-section="radio"]        { --accent:#6BC497; --accent-soft:#1B2D24; }
+  [data-section="news"]         { --accent:#EC8572; --accent-soft:#36201C; }
+  [data-section="productivity"] { --accent:#B4A2DE; --accent-soft:#28233A; }
+
+  img{ filter:brightness(.92); }
+  .frame img, .hero-photo img{ filter:grayscale(1) contrast(1.05) brightness(.9); }
+  .frame:hover img, .hero-photo:hover img{ filter:grayscale(0) contrast(1.05) brightness(.95); }
+  /* panels that are dark in the light theme stay dark */
+  .radio-player{ --ink:#0B0B0D; --paper:#F0EDE6; }
+  .mt-pick{ background:#3E3459 !important; --paper:#F0EDE6; color:#F0EDE6 !important; }
+  .radio-stats .live .v{ color:#6BC497 !important; }
+  .radio-stats .down .v, .story .meta .other{ color:#E8916A !important; }
+  .acct-err{ color:#F29A9A !important; }
+  .nav-menu{ box-shadow:0 14px 40px -16px rgba(0,0,0,.8) !important; }
+}
