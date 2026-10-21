@@ -428,7 +428,7 @@
 
       say("Looking up what's worth seeing…");
       const [all, hubs, wx] = await Promise.all([placesAround(centre, km), stationsAround(centre, km + 1), weather(dest, $("date").value, +opts.days)]);
-      let cands = all.map((p) => ({ ...p, cat: classify(p) })).filter((p) => p.cat);
+      let cands = all.map((p) => ({ ...p, cat: classify(p) })).filter((p) => p.cat && !/\b(former|demolished|defunct|destroyed|closed)\b/i.test(p.desc + "|" + p.types));
       if (!cands.length) { say("Wikidata knows of no sights around here yet — try a nearby bigger town."); return; }
       cands.forEach((p) => (p.score = scoreOf(p, likes)));
       // stadiums only for people who asked for shows and matches
@@ -664,7 +664,7 @@
     sc.append(el("h3", null, "If plans change"));
     const near = (pred, k = 3) => plan.leftovers.concat(d.extra).filter(pred).sort((a, b) => dist(d.centre, a) - dist(d.centre, b)).slice(0, k);
     const blocks = [];
-    const rainy = near((p) => CATS[p.cat].indoor && !d.stops.includes(p));
+    const rainy = near((p) => CATS[p.cat].indoor && !/stadium|arena/i.test(p.types) && !d.stops.includes(p));
     const outdoor = d.stops.filter((p) => !CATS[p.cat].indoor);
     if (rainy.length) blocks.push(["If it rains", `Swap ${outdoor.slice(0, 2).map((p) => p.name).join(" and ") || "the outdoor stops"} for something indoors:`, rainy]);
     const must = [...d.stops].sort((a, b) => b.sl - a.sl).slice(0, 3);
