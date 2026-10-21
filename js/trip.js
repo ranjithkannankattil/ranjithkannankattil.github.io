@@ -431,6 +431,11 @@
       let cands = all.map((p) => ({ ...p, cat: classify(p) })).filter((p) => p.cat);
       if (!cands.length) { say("Wikidata knows of no sights around here yet — try a nearby bigger town."); return; }
       cands.forEach((p) => (p.score = scoreOf(p, likes)));
+      // stadiums only for people who asked for shows and matches
+      cands.forEach((p) => { if (/stadium|arena|venue/i.test(p.types) && !likes.includes("culture")) p.score *= .35; });
+      // a very wet trip leans indoors (multi-day trips also swap the wettest day, below)
+      const wetDays = wx ? wx.filter((w) => w.rain >= 70).length : 0;
+      if (wx && wetDays && wetDays >= Math.ceil(wx.length / 2)) cands.forEach((p) => { p.score *= CATS[p.cat].indoor ? 1.5 : .6; });
       cands.sort((a, b) => b.score - a.score);
       // drop near-duplicates (a church and its own bell tower etc.)
       const picked = [];
