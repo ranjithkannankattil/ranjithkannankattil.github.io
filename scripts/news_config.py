@@ -257,3 +257,7 @@ LOCAL_FROM = {"kodungallur": "thrissur"}
 BRIEFING = [("world", ["en"]), ("india", ["en"]), ("kerala", ["en", "ml"]), ("thrissur", ["en", "ml"]), ("kodungallur", ["ml", "en"]),
             ("bengaluru", ["en"]), ("uk", ["en"]), ("swansea", ["en"]), ("london", ["en"]), ("italy", ["en", "it"]), ("milan", ["it", "en"]),
             ("china", ["en"]), ("qingdao", ["en", "zh"]), ("mozambique", ["en", "pt"])]
+
+# Instant refresh: the address of the Cloudflare Worker in worker/news-live.js once it is deployed
+# (e.g. "https://news-live.<your-name>.workers.dev"). Empty = Refresh just loads the latest edition.
+LIVE_URL = ""

@@ -13,7 +13,7 @@ from collections import defaultdict
 from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(__file__))
-from news_config import LANGS, OUTLETS, PLACES, JUNK, NATIVE, ALIASES, TOPICS, LOCAL_PAGES, LOCAL_FROM, BRIEFING  # noqa: E402
+from news_config import LANGS, OUTLETS, PLACES, JUNK, NATIVE, ALIASES, TOPICS, LOCAL_PAGES, LOCAL_FROM, BRIEFING, LIVE_URL  # noqa: E402
 import news_extras  # noqa: E402
 
 try:
@@ -181,7 +181,7 @@ def enrich(stories, cache):
     for st in stories:
         key = st["u"].split("/articles/")[-1].split("?")[0] if "news.google.com" in st["u"] else st["u"]
         st["_k"] = key
-        if key in cache:
+        if key in cache and not (key.startswith("http") and "pt" not in cache[key] and not cache[key].get("pt_tried")):
             cache[key]["seen"] = int(NOW)
         else:
             todo.append(st)
@@ -213,13 +213,17 @@ def enrich(stories, cache):
         page = get(u, limit=600_000, timeout=12, tries=1)
         s = summary_from(page, uniq[k]["t"])
         x = "" if s else news_extras.excerpt(page)
-        return k, u, s, x
+        return k, u, s, x, news_extras.published(page)
 
     with cf.ThreadPoolExecutor(24) as ex:
-        for k, u, s, x in ex.map(fetch, decoded.items()):
+        for k, u, s, x, pt in ex.map(fetch, decoded.items()):
             cache[k] = {"u": u, "s": s, "seen": int(NOW), "first": int(NOW)}
             if x:
                 cache[k]["x"] = x
+            if pt and pt <= NOW + 3600:
+                cache[k]["pt"] = pt
+            elif k.startswith("http"):
+                cache[k]["pt_tried"] = 1
 
     for st in stories:
         c = cache.get(st["_k"], {})
@@ -228,8 +232,8 @@ def enrich(stories, cache):
             st["s"] = c["s"]
         if c.get("x"):
             st["_x"] = c["x"]
-        if st.get("_first") and c.get("first"):
-            st["ts"] = c["first"]
+        if st.get("_first") and (c.get("pt") or c.get("first")):
+            st["ts"] = c.get("pt") or c["first"]
 
 
 def names(p):
@@ -287,7 +291,7 @@ def main():
             own = src_pid == pid and any(n.isascii() and n.replace(" ", "-") in u.lower() for n in names(pmap[pid]))
             for it in items:
                 name = outlet_for(lang, host(it["u"]))
-                if not name:
+                if not name or not news_extras.script_ok(it["t"], lang):
                     continue
                 it.update(src=name, _first=it.get("ts") is None, _own=own)
                 it.setdefault("ts", int(NOW))
@@ -376,7 +380,8 @@ def main():
                     if st.get("s"):
                         seen_s.add(st["s"])
                     keep.append(st)
-                r[part][lang] = sorted(keep, key=lambda x: -x["ts"])[:cap]
+                keep = [x for x in keep if NOW - x["ts"] < 8 * 86400]
+                r[part][lang] = news_extras.diversify(sorted(keep, key=lambda x: -x["ts"]))[:cap]
         for t in r["topics"].values():
             for lang, lst in t.items():
                 seen_u = set()
@@ -416,10 +421,19 @@ def main():
         "places": [{"id": p["id"], "name": p["name"], "native": NATIVE.get(p["id"], ""), "parent": p.get("parent"), "kind": p["kind"], "langs": p["langs"]} for p in PLACES],
         "outlets": {k: sorted(set(v.values())) for k, v in OUTLETS.items()},
         "topics": [[t, n] for t, n, _ in TOPICS],
+        "live": LIVE_URL,
     }
     (out / "index.json").write_text(json.dumps(index, ensure_ascii=False, separators=(",", ":")))
     (out / "report.txt").write_text(time.strftime("%Y-%m-%d %H:%M UTC\n", time.gmtime(NOW)) + f"feeds {len(urls)}, failed {failed}\n"
                                     + "\n".join(report) + "\n\nLocal pages:\n" + json.dumps(local_debug, ensure_ascii=False, indent=1) + "\n")
+
+    # settings for the instant-refresh worker (worker/news-live.js)
+    live = {"ed": {l: v["ed"] for l, v in LANGS.items()}, "outlets": OUTLETS,
+            "names": {}, "places": {}, "not_story": NOT_STORY.pattern, "when": WHEN}
+    for p in PLACES:
+        live["places"][p["id"]] = {"kind": p["kind"], "cc": p.get("cc", ""), "langs": p["langs"], "name": p["name"], "q": p.get("q", {})}
+        live["names"][p["id"]] = names(p)
+    (out / "live.json").write_text(json.dumps(live, ensure_ascii=False, separators=(",", ":")))
 
     # morning briefing epub + OPDS catalogue for KOReader
     try:

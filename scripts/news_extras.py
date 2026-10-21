@@ -59,6 +59,51 @@ def harvest_page(text, base):
     return out[:40]
 
 
+PUB = [re.compile(r'<meta[^>]+(?:property|name|itemprop)\s*=\s*["\'](?:article:published_time|og:article:published_time|datePublished|publish-date|pubdate)["\'][^>]*content\s*=\s*["\']([^"\']+)', re.I),
+       re.compile(r'"datePublished"\s*:\s*"([^"]+)"')]
+
+
+def published(page):
+    """Publication time (unix) from an article page, if it says."""
+    if not page:
+        return None
+    import datetime as dt
+    for rx in PUB:
+        m = rx.search(page)
+        if m:
+            v = m.group(1).strip().replace("Z", "+00:00")
+            try:
+                t = dt.datetime.fromisoformat(v)
+                if t.tzinfo is None:
+                    t = t.replace(tzinfo=dt.timezone(dt.timedelta(hours=5, minutes=30)))
+                return int(t.timestamp())
+            except ValueError:
+                continue
+    return None
+
+
+def script_ok(t, lang):
+    """Headlines in a non-Latin language should be in that script (drops menu links like 'OPINION')."""
+    if lang in ("en", "it", "fr", "de", "es", "pt"):
+        return True
+    letters = [c for c in t if c.isalpha()]
+    return bool(letters) and sum(1 for c in letters if ord(c) > 0x2FF) / len(letters) > 0.5
+
+
+def diversify(items, key=lambda s: s.get("src")):
+    """Keep roughly time order but don't let one paper take three slots in a row."""
+    out, rest = [], list(items)
+    while rest:
+        pick = 0
+        if len(out) >= 2 and key(out[-1]) == key(out[-2]):
+            for i, s in enumerate(rest):
+                if key(s) != key(out[-1]):
+                    pick = i
+                    break
+        out.append(rest.pop(pick))
+    return out
+
+
 def excerpt(page):
     """First paragraphs of an article, for summarising when the paper gave no standfirst."""
     if not page:

@@ -156,6 +156,7 @@
     m.append(el("span", null, ago(s.ts)));
     if (other) m.append(el("span", "other", "Other outlet"));
     if (s.ai) m.append(el("span", "ai", "AI summary"));
+    if (s.live) m.append(el("span", "ai", "Just in"));
     a.append(m);
     return a;
   }
@@ -303,10 +304,32 @@
     if (document.visibilityState === "visible" && data && Date.now() - lastLoad > 15 * 60 * 1000 && Date.now() / 1000 > data.updated + index.every) load(true);
   });
 
+  // instant refresh through the Cloudflare Worker (worker/news-live.js), when one is set up
+  async function live() {
+    if (!index || !index.live || !data) return 0;
+    try {
+      const want = (langs.length ? langs : ["en"]).filter((l) => byId[place].langs.includes(l));
+      const r = await fetch(`${index.live}?p=${encodeURIComponent(place)}&l=${want.join(",")}`);
+      if (!r.ok) return 0;
+      const d = await r.json();
+      const key = (t) => t.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, "").slice(0, 80);
+      let added = 0;
+      for (const [l, list] of Object.entries(d.news || {})) {
+        const have = new Set(((data.news || {})[l] || []).map((s) => key(s.t)));
+        const fresh = list.filter((s) => !have.has(key(s.t)) && s.ts > data.updated - 3600).map((s) => ({ ...s, live: 1 }));
+        if (fresh.length) { data.news[l] = [...fresh, ...(data.news[l] || [])]; added += fresh.length; }
+      }
+      if (added) renderStories();
+      return added;
+    } catch { return 0; }
+  }
+
   $("refresh").onclick = async () => {
     const btn = $("refresh");
     btn.classList.add("spin"); btn.disabled = true;
     const r = await load(true);
+    const extra = await live();
+    if (extra) { btn.classList.remove("spin"); btn.disabled = false; renderWhen(`${extra} new ${extra === 1 ? "story" : "stories"} since the ${fmtTime(data.updated)} edition`); return; }
     btn.classList.remove("spin"); btn.disabled = false;
     if (r === "new") renderWhen(`New edition loaded · ${fmtTime(data.updated)}`);
     else if (r === "same") renderWhen(`Up to date — edition of ${fmtTime(data.updated)}; the next one is due around ${fmtTime(data.updated + index.every + 600)}`);
