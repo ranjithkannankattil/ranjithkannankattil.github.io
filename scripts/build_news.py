@@ -213,6 +213,13 @@ def enrich(stories, cache):
             st["s"] = c["s"]
 
 
+def names(p):
+    n = [p["name"], NATIVE.get(p["id"], "")] + ALIASES.get(p["id"], [])
+    for q in p.get("q", {}).values():
+        n += [x.strip() for x in q.split(" OR ")]
+    return [x.lower() for x in n if x and len(x) > 1]
+
+
 def norm(t):
     return re.sub(r"\W+", "", t.lower())[:80]
 
@@ -247,6 +254,7 @@ def main():
     print(f"feeds fetched, {failed} failed", flush=True)
 
     kind = {p["id"]: p["kind"] for p in PLACES}
+    pmap = {p["id"]: p for p in PLACES}
     result = defaultdict(lambda: {"news": {}, "other": {}})
     report, stale = [], {}
     for pid, lang, us in jobs:
@@ -273,7 +281,13 @@ def main():
         trusted.sort(key=lambda s: -s["ts"])
         other.sort(key=lambda s: -s["ts"])
         local = kind[pid] in ("region", "city")
-        trusted, other = trusted[:KEEP * (2 if local else 1)], other[:KEEP_OTHER * 2]
+        if local:  # stories naming the place in the headline first; the rest are checked against their summary later
+            nm = names(pmap[pid])
+            hit = lambda st: any(n in st["t"].lower() for n in nm)  # noqa: E731
+            trusted = [x for x in trusted if hit(x)][:KEEP] + [x for x in trusted if not hit(x)][:KEEP]
+            other = [x for x in other if hit(x)][:KEEP_OTHER] + [x for x in other if not hit(x)][:KEEP_OTHER]
+        else:
+            trusted, other = trusted[:KEEP], other[:KEEP_OTHER]
         if not got_any:  # every feed failed this run: keep the last good data
             pf = prev / "p" / f"{pid}.json"
             if pf.exists():
@@ -286,14 +300,6 @@ def main():
 
     allst = [s for r in result.values() for part in ("news", "other") for lst in r[part].values() for s in lst if "_k" not in s and "news.google.com" in s["u"]]
     enrich(allst, cache)
-
-    pmap = {p["id"]: p for p in PLACES}
-
-    def names(p):
-        n = [p["name"], NATIVE.get(p["id"], "")] + ALIASES.get(p["id"], [])
-        for q in p.get("q", {}).values():
-            n += [x.strip() for x in q.split(" OR ")]
-        return [x.lower() for x in n if x and len(x) > 1]
 
     for pid, r in result.items():
         p = pmap[pid]
@@ -313,7 +319,7 @@ def main():
                     if st.get("s"):
                         seen_s.add(st["s"])
                     keep.append(st)
-                r[part][lang] = keep[:cap]
+                r[part][lang] = sorted(keep, key=lambda x: -x["ts"])[:cap]
         for lang in p["langs"]:
             report.append(f"{pid:20} {lang}  trusted {len(r['news'].get(lang, [])):3}  other {len(r['other'].get(lang, [])):3}{'  (kept previous)' if stale.get((pid, lang)) else ''}")
         for part in ("news", "other"):
