@@ -381,7 +381,8 @@
       }
       t += tripEnd ? 0 : 10;
       if (t > dayEnd + (tripEnd ? 0 : 10) && keep.length > 1) {
-        const weakest = [...keep].sort((a, b) => a.score - b.score)[0];
+        const weakest = [...keep].sort((a, b) => (a.forced ? 1e9 : a.score) - (b.forced ? 1e9 : b.score))[0];
+        if (weakest.forced) break;
         keep = keep.filter((x) => x !== weakest);
         ok = false;
       }
@@ -447,8 +448,6 @@
       const centre = base && dist(base, dest) < 15000 ? { lat: (base.lat + dest.lat * 2) / 3, lon: (base.lon + dest.lon * 2) / 3 } : dest;
       const km = opts.mode === "car" ? Math.min(12 + days * 8, 50) : opts.mode === "pt" ? Math.min(3.5 + days * 1.6, 12) : Math.min(2.2 + days * .7, 5);
       state.city = dest;
-      lastHash = "#" + new URLSearchParams({ d: $("dest").value, f: $("from").value, b: $("base").value, e: $("end").value, eb: $("endBy").value, dt: $("date").value, ...Object.fromEntries(Object.entries(opts).map(([k, v]) => [k, Array.isArray(v) ? v.join(",") : v])), t0: $("t0").value, t1: $("t1").value, l: $("lunch").checked ? 1 : 0 });
-      history.replaceState(null, "", "#" + new URLSearchParams({ d: $("dest").value, f: $("from").value, b: $("base").value, e: $("end").value, eb: $("endBy").value, dt: $("date").value, ...Object.fromEntries(Object.entries(opts).map(([k, v]) => [k, Array.isArray(v) ? v.join(",") : v])), t0: $("t0").value, t1: $("t1").value, l: $("lunch").checked ? 1 : 0 }));
 
       say("Looking up what's worth seeing…");
       const [all, hubs, wx] = await Promise.all([placesAround(centre, km), stationsAround(centre, km + 1), weather(dest, $("date").value, +opts.days)]);
@@ -478,18 +477,25 @@
         const byIndoor = groups.map((g, i) => [i, indoor(g)]).sort((a, b) => b[1] - a[1]);
         if (byRain[0][1] >= 60) { const g2 = [...groups]; groups[byRain[0][0]] = g2[byIndoor[0][0]]; groups[byIndoor[0][0]] = g2[byRain[0][0]]; }
       }
-      if (end && groups.length > 1) {   // the part of town nearest the trip's end goes last
-        const cen = (g) => ({ lat: g.reduce((a, p) => a + p.lat, 0) / g.length, lon: g.reduce((a, p) => a + p.lon, 0) / g.length });
-        let bi = 0; groups.forEach((g, i) => { if (g.length && dist(cen(g), end) < dist(cen(groups[bi]), end)) bi = i; });
-        const L2 = groups.length - 1; [groups[bi], groups[L2]] = [groups[L2], groups[bi]];
-      }
       const ctx = { hubs, base, city: dest.name, end, endBy: end && $("endBy").value ? minutes($("endBy").value) : null, lastIdx: groups.length - 1 };
+      // your changes: places added to a day (+ Add) and places removed (Remove); kept in the share link
+      const edits = pendingEdits || { add: {}, rm: [] };
+      pendingEdits = null;
+      const byId = Object.fromEntries(picked.map((p) => [p.id, p]));
       const make = (hrsOk) => {
-        const out = groups.map((g, i) => g.length ? buildDay(g.slice(0, perDay + 3), dayDates[i], i, ctx) : null).filter(Boolean);
-        const leftovers = picked.filter((p) => !out.some((d) => d.stops.includes(p))).slice(0, 40);
-        plan = { dest, from, base, end, endBy: ctx.endBy, days: out, wx, hubs, leftovers, likes, km, hrsOk };
+        const out = groups.map((g, i) => {
+          const forced = Object.entries(edits.add).filter(([, d]) => d === i).map(([id]) => byId[id]).filter(Boolean);
+          const rest = g.filter((p) => !edits.rm.includes(p.id) && !(p.id in edits.add));
+          picked.forEach((p) => (p.forced = p.id in edits.add));
+          const list = [...forced, ...rest.slice(0, Math.max(0, perDay + 3 - forced.length))];
+          return list.length ? buildDay(list, dayDates[i], i, ctx) : null;
+        }).filter(Boolean);
+        const leftovers = picked.filter((p) => !out.some((d) => d.stops.includes(p)) && !edits.rm.includes(p.id)).slice(0, 40);
+        plan = { dest, from, base, end, endBy: ctx.endBy, days: out, wx, hubs, leftovers, likes, km, hrsOk, edits, byId,
+          replan() { const keep = current; make(plan.hrsOk); writeHash(); render(); showDay(Math.min(keep, plan.days.length - 1)); } };
       };
       make(null);
+      writeHash();
       say("");
       render();
       $("out").hidden = false;
@@ -615,6 +621,16 @@
     const gm = el("div", "links");
     for (let k = 0; k < pts.length - 1; k += 10) gm.append(linkA(pts.length > 11 ? `Open route in Google Maps (part ${k / 10 + 1}) ↗` : "Open the whole day in Google Maps ↗", gmaps.route(pts.slice(k, k + 11), opts.mode === "car" ? "driving" : "walking"), "primary"));
     hd.append(gm);
+    const nEd = Object.keys(plan.edits.add).length + plan.edits.rm.length;
+    if (nEd) {
+      const u = el("div", "edits");
+      u.append(el("span", null, `${nEd} change${nEd > 1 ? "s" : ""} of yours — the times below are re-worked around them.`));
+      const undo = el("button", "edit", "Undo all");
+      undo.type = "button";
+      undo.onclick = () => { plan.edits.add = {}; plan.edits.rm = []; plan.replan(); };
+      u.append(undo);
+      hd.append(u);
+    }
     box.append(hd);
 
     // timeline
@@ -679,6 +695,12 @@
         ls.append(linkA("Tickets & hours ↗", `https://www.google.com/search?q=${encodeURIComponent(`"${p.name}" ${plan.dest.name} official tickets opening hours`)}`));
         if (p.wiki) ls.append(linkA("Wikipedia ↗", `https://en.wikipedia.org/wiki/${encodeURIComponent(p.wiki.replace(/ /g, "_"))}`));
         ls.append(linkA("Map ↗", gmaps.place(p)));
+        const rm = el("button", "edit rm", "Remove");
+        rm.type = "button";
+        rm.title = "Take this out and re-time the day";
+        rm.onclick = () => { delete plan.edits.add[p.id]; if (!plan.edits.rm.includes(p.id)) plan.edits.rm.push(p.id); plan.replan(); };
+        ls.append(rm);
+        if (p.forced) top.append(el("span", "added", "added by you"));
         b.append(ls);
         li.append(b);
         const fig = el("div", "thumb");
@@ -695,7 +717,7 @@
 
     // scenarios
     const sc = el("section", "scen");
-    sc.append(el("h3", null, "If plans change"));
+    sc.append(el("h3", null, "If plans change"), el("p", "sc-hint", "Tap + Add to fit a place into this day; the order and times are worked out again. Remove takes a stop out."));
     const near = (pred, k = 3) => plan.leftovers.concat(d.extra).filter(pred).sort((a, b) => dist(d.centre, a) - dist(d.centre, b)).slice(0, k);
     const blocks = [];
     const rainy = near((p) => CATS[p.cat].indoor && !/stadium|arena/i.test(p.types) && !d.stops.includes(p));
@@ -712,7 +734,19 @@
       const c = el("div", "sc");
       c.append(el("h4", null, t), el("p", null, s));
       const ul = el("ul");
-      for (const p of list) { const li = el("li"); li.append(linkA(p.name, gmaps.place(p)), el("span", null, ` · ${CATS[p.cat].label}${dist(d.centre, p) > 0 ? " · " + fmtKm(dist(d.centre, p)) + " from the day's centre" : ""}`)); ul.append(li); }
+      for (const p of list) {
+        const li = el("li");
+        const inDay = d.stops.includes(p);
+        if (!inDay) {
+          const add = el("button", "edit add", "+ Add");
+          add.type = "button";
+          add.title = "Add to this day and re-time it";
+          add.onclick = () => { plan.edits.add[p.id] = d.idx; plan.edits.rm = plan.edits.rm.filter((x) => x !== p.id); plan.replan(); };
+          li.append(add);
+        }
+        li.append(linkA(p.name, gmaps.place(p)), el("span", null, ` · ${CATS[p.cat].label}${inDay ? " · already in today's plan" : dist(d.centre, p) > 0 ? " · " + fmtKm(dist(d.centre, p)) + " from the day's centre" : ""}`));
+        ul.append(li);
+      }
       c.append(ul);
       sc.append(c);
     }
@@ -770,7 +804,16 @@
   }
 
   // ------------------------------------------------------------------ shared links: #d=Florence&dt=…
-  let lastHash = "";
+  let lastHash = "", pendingEdits = null;
+  function writeHash() {
+    const q = { d: $("dest").value, f: $("from").value, b: $("base").value, e: $("end").value, eb: $("endBy").value, dt: $("date").value,
+      ...Object.fromEntries(Object.entries(opts).map(([k, v]) => [k, Array.isArray(v) ? v.join(",") : v])), t0: $("t0").value, t1: $("t1").value, l: $("lunch").checked ? 1 : 0 };
+    const ed = plan && plan.edits;
+    if (ed && Object.keys(ed.add).length) q.a = Object.entries(ed.add).map(([id, d]) => `${id}.${d}`).join(",");
+    if (ed && ed.rm.length) q.x = ed.rm.join(",");
+    lastHash = "#" + new URLSearchParams(q);
+    history.replaceState(null, "", lastHash);
+  }
   function fromHash() {
     if (location.hash === lastHash) return;
     lastHash = location.hash;
@@ -779,6 +822,7 @@
     state.dest = state.from = state.base = state.end = null;
     $("dest").value = h.get("d"); $("from").value = h.get("f") || ""; $("base").value = h.get("b") || "";
     $("end").value = h.get("e") || ""; $("endBy").value = h.get("eb") || "";
+    pendingEdits = { add: Object.fromEntries((h.get("a") || "").split(",").filter(Boolean).map((x) => { const [id, d] = x.split("."); return [id, +d]; })), rm: (h.get("x") || "").split(",").filter(Boolean) };
     if (h.get("dt")) $("date").value = h.get("dt");
     for (const k of ["days", "mode", "walk", "pace"]) if (h.get(k)) opts[k] = h.get(k);
     if (h.get("likes")) opts.likes = h.get("likes").split(",");

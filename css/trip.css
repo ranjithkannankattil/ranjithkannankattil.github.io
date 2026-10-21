@@ -148,3 +148,14 @@ body[data-section="trip"] .tp-days button[aria-pressed="true"]{ color:var(--ink)
   .tl > li{ break-inside:avoid; }
 }
 @media (prefers-color-scheme: dark){ .tp-map .leaflet-tile-pane{ filter:invert(1) hue-rotate(180deg) brightness(.85) contrast(.9); } }
+
+/* editing the plan */
+body[data-section="trip"] .edit{ font-family:var(--f-mono); font-size:.64rem; letter-spacing:.06em; text-transform:uppercase; padding:.15rem .5rem; border:1px solid var(--accent); color:var(--accent); }
+body[data-section="trip"] .edit:hover{ background:var(--accent); color:var(--paper); }
+body[data-section="trip"] .edit.rm{ border-color:var(--line); color:var(--ink-soft); }
+body[data-section="trip"] .edit.rm:hover{ border-color:#C2502F; background:transparent; color:#C2502F; }
+.sc li .edit.add{ margin-right:.5rem; vertical-align:1px; }
+.added{ font-family:var(--f-mono); font-size:.58rem; letter-spacing:.08em; text-transform:uppercase; color:var(--paper); background:var(--accent); padding:.05rem .35rem; margin-left:.3rem; }
+.edits{ display:flex; gap:.8rem; align-items:center; flex-wrap:wrap; margin-top:.7rem; padding:.5rem .7rem; background:var(--accent-soft); font-size:.88rem; }
+.sc-hint{ font-size:.85rem; color:var(--ink-soft); margin:-.3rem 0 .4rem; }
+@media print{ .edit, .sc-hint, .edits button{ display:none !important; } }
