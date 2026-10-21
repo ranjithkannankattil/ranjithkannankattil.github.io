@@ -157,6 +157,102 @@
     }
     return [...seen.values()];
   }
+  // ---- regions, islands, countries: tour mode
+  const AREA_KINDS = /^(state|region|province|county|island|archipelago|country|islands|district)$/i;
+  function isArea(d) {
+    if (AREA_KINDS.test(d.kind || "")) return true;
+    const e = d.extent;
+    return !!(e && e.length === 4 && dist({ lat: e[1], lon: e[0] }, { lat: e[3], lon: e[2] }) > 60000);
+  }
+  async function placesInArea(d) {
+    let w, n, e, sth;
+    if (d.extent && d.extent.length === 4) [w, n, e, sth] = d.extent;
+    else { w = d.lon - 1; e = d.lon + 1; n = d.lat + .7; sth = d.lat - .7; }
+    const diag = dist({ lat: n, lon: w }, { lat: sth, lon: e });
+    const minSl = diag > 400000 ? 35 : diag > 200000 ? 22 : diag > 100000 ? 16 : 12;
+    const rows = await sparql(`SELECT ?item ?itemLabel ?itemDescription ?lat ?lon ?sl ?wiki ?town ?townLabel (SAMPLE(?img) AS ?image) (SAMPLE(?site) AS ?website) (GROUP_CONCAT(DISTINCT ?typeLabel; separator="|") AS ?types) WHERE {
+      SERVICE wikibase:box { ?item wdt:P625 ?c . bd:serviceParam wikibase:cornerWest "Point(${w} ${sth})"^^geo:wktLiteral . bd:serviceParam wikibase:cornerEast "Point(${e} ${n})"^^geo:wktLiteral . }
+      ?item wikibase:sitelinks ?sl . FILTER(?sl >= ${minSl})
+      ?item wdt:P31 ?type . ?type rdfs:label ?typeLabel . FILTER(LANG(?typeLabel) = "en")
+      OPTIONAL { ?item wdt:P131 ?town }
+      OPTIONAL { ?item wdt:P18 ?img } OPTIONAL { ?item wdt:P856 ?site }
+      OPTIONAL { ?wa schema:about ?item; schema:isPartOf <https://en.wikipedia.org/>; schema:name ?wiki }
+      BIND(geof:latitude(?c) AS ?lat) BIND(geof:longitude(?c) AS ?lon)
+      SERVICE wikibase:label { bd:serviceParam wikibase:language "en,mul". }
+    } GROUP BY ?item ?itemLabel ?itemDescription ?lat ?lon ?sl ?wiki ?town ?townLabel ORDER BY DESC(?sl) LIMIT 700`);
+    const seen = new Map();
+    for (const r of rows) {
+      const id = r.item.value.split("/").pop();
+      if (seen.has(id) || /^Q\d+$/.test(r.itemLabel.value)) continue;
+      seen.set(id, { id, name: r.itemLabel.value, desc: r.itemDescription ? r.itemDescription.value : "", lat: +r.lat.value, lon: +r.lon.value, sl: +r.sl.value,
+        types: r.types.value, wiki: r.wiki ? r.wiki.value : "", image: r.image ? r.image.value : "", website: r.website ? r.website.value : "",
+        town: r.townLabel && !/^Q\d+$/.test(r.townLabel.value) ? r.townLabel.value : "", townId: r.town ? r.town.value.split("/").pop() : "" });
+    }
+    return [...seen.values()];
+  }
+  async function areaQid(d) {
+    const s = await getJSON(`https://www.wikidata.org/w/api.php?action=wbsearchentities&search=${encodeURIComponent(d.name)}&language=en&type=item&limit=1&format=json&origin=*`, {}, 8000);
+    return s.search && s.search[0] && s.search[0].id;
+  }
+  // plan B for big areas: the area's biggest towns, then the sights around each
+  async function placesByTowns(d) {
+    const qid = await areaQid(d);
+    if (!qid) return [];
+    const tw = await sparql(`SELECT ?t ?tLabel ?lat ?lon ?pop WHERE { ?t wdt:P131+ wd:${qid} ; wdt:P1082 ?pop ; wdt:P625 ?c . ?t wdt:P31/wdt:P279* wd:Q486972 .
+      BIND(geof:latitude(?c) AS ?lat) BIND(geof:longitude(?c) AS ?lon) SERVICE wikibase:label { bd:serviceParam wikibase:language "en,mul". } } ORDER BY DESC(?pop) LIMIT 14`);
+    const list = tw.map((r) => ({ id: r.t.value.split("/").pop(), name: r.tLabel.value, lat: +r.lat.value, lon: +r.lon.value }));
+    const res = await Promise.all(list.map((t) => placesAround(t, 4).then((ps) => ps.map((p) => ({ ...p, town: t.name, townId: t.id }))).catch(() => [])));
+    const seen = new Map();
+    for (const p of res.flat()) if (!seen.has(p.id)) seen.set(p.id, p);
+    return [...seen.values()];
+  }
+  async function insideArea(d, places) {          // keep only places that Wikidata puts inside the area (not across the strait)
+    try {
+      const qid = await areaQid(d);
+      if (!qid) return places;
+      const ok = new Set();
+      for (let i = 0; i < places.length; i += 150) {
+        const rows = await sparql(`SELECT ?item WHERE { VALUES ?item { ${places.slice(i, i + 150).map((p) => "wd:" + p.id).join(" ")} } ?item wdt:P131+ wd:${qid} . }`);
+        rows.forEach((r) => ok.add(r.item.value.split("/").pop()));
+      }
+      return ok.size >= 5 ? places.filter((p) => ok.has(p.id)) : places;
+    } catch { return places; }
+  }
+  function towns(places) {                       // group sights by town; tiny groups join a big neighbour within 6 km
+    const by = new Map();
+    for (const p of places) { const k = p.townId || p.id; if (!by.has(k)) by.set(k, { key: k, name: p.town || p.name, places: [] }); by.get(k).places.push(p); }
+    let list = [...by.values()].map((t) => ({ ...t, lat: t.places.reduce((a, p) => a + p.lat, 0) / t.places.length, lon: t.places.reduce((a, p) => a + p.lon, 0) / t.places.length, score: t.places.reduce((a, p) => a + p.score, 0) }));
+    list.sort((a, b) => b.score - a.score);
+    const out = [];
+    for (const t of list) {
+      const host = out.find((o) => dist(o, t) < 6000);
+      if (host) { host.places.push(...t.places); host.score += t.score; } else out.push(t);
+    }
+    out.forEach((t) => t.places.sort((a, b) => b.score - a.score));
+    return out;
+  }
+  function allocateDays(tlist, days, perDay) {   // each day goes to the town where one more day adds the most
+    const gain = (t, k) => t.places.slice(perDay * k, perDay * (k + 1)).reduce((a, p) => a + p.score, 0) * (k ? .8 : 1);
+    const alloc = new Map();
+    for (let d = 0; d < days; d++) {
+      let best = null, bg = -1;
+      for (const t of tlist.slice(0, 30)) { const g = gain(t, alloc.get(t) || 0); if (g > bg) { bg = g; best = t; } }
+      if (!best || bg <= 0) break;
+      alloc.set(best, (alloc.get(best) || 0) + 1);
+    }
+    return [...alloc.entries()].map(([t, n]) => ({ ...t, days: n }));
+  }
+  function orderTowns(ts, from, to) {
+    const start = from ? [...ts].sort((a, b) => dist(from, a) - dist(from, b))[0] : ts[0];
+    const rest = ts.filter((t) => t !== start);
+    return [start, ...orderRoute(start, rest, to || null)];
+  }
+  function hop(a, b) {                            // town-to-town travel estimate
+    const d = dist(a, b);
+    if (opts.mode === "car") return { type: "car", m: d * 1.3, min: Math.round(10 + d * 1.3 / 1000 / (d > 30000 ? 70 : 45) * 60) };
+    return { type: "pt", m: d * 1.4, min: Math.round(20 + d * 1.4 / 1000 / 50 * 60) };
+  }
+
   function classify(p) {
     // judge each "instance of" type on its own: Palazzo Vecchio is a city hall *and* a museum
     const types = p.types.split("|");
@@ -371,12 +467,13 @@
   }
 
   function buildDay(cluster, date, idx, ctx) {
-    const t0 = minutes($("t0").value || "09:00"), t1 = minutes($("t1").value || "18:00");
+    const trav = ctx.travel && ctx.travel[idx];
+    const t0 = minutes($("t0").value || "09:00") + (trav ? trav.min : 0), t1 = minutes($("t1").value || "18:00");
     let dayEnd = opts.days === "0.5" ? Math.min(t1, t0 + 270) : t1;
-    const hubs = ctx.hubs;
+    const hubs = ctx.hubsFor ? ctx.hubsFor[idx] || [] : ctx.hubs;
     const tripEnd = ctx.end && idx === ctx.lastIdx ? ctx.end : null;     // the last day heads for where the trip ends
     const centre = { lat: cluster.reduce((a, p) => a + p.lat, 0) / cluster.length, lon: cluster.reduce((a, p) => a + p.lon, 0) / cluster.length };
-    const base = ctx.base;
+    const base = ctx.base && (!ctx.tour || dist(ctx.base, centre) < 20000) ? ctx.base : null;
     // where the day starts and ends: your base if it's close, otherwise the main stop near this part of town
     const startHub = base && dist(base, centre) < WALK[opts.walk].leg * 1.6 ? base : (opts.mode === "car" ? null : nearestHub(cluster.sort((a, b) => dist(base || centre, a) - dist(base || centre, b))[0], hubs, 1800));
     const start = startHub || base || { ...centre, name: `${ctx.city} — centre of this area` };
@@ -420,6 +517,7 @@
     // final schedule
     const items = [];
     let t = t0, prev = start, walked = 0, lunchDone = !$("lunch").checked;
+    if (trav) items.push({ kind: "travel", at: t0 - trav.min, trav, to: start });
     items.push({ kind: "start", at: t, place: start, hub: startHub && startHub !== base ? startHub : null, isBase: start === base });
     for (const p of keep) {
       const leg = legBetween(prev, p);
@@ -452,7 +550,8 @@
     } else if (opts.mode !== "car" && start !== prev) {
       items.push({ kind: "end", at: t, place: prev, last: true, back: start });
     }
-    return { idx, date, start, items, stops: keep, extra, walked, endAt: t, centre };
+    if (ctx.tour && ctx.sleep && ctx.sleep[idx]) items.push({ kind: "sleep", at: t, town: ctx.sleep[idx] });
+    return { idx, date, start, items, stops: keep, extra, walked, endAt: t, centre, town: ctx.townOf ? ctx.townOf[idx] : null };
   }
 
   // ------------------------------------------------------------------ main
@@ -473,8 +572,10 @@
       const km = opts.mode === "car" ? Math.min(12 + days * 8, 50) : opts.mode === "pt" ? Math.min(3.5 + days * 1.6, 12) : Math.min(2.2 + days * .7, 5);
       state.city = dest;
 
-      say("Looking up what's worth seeing…");
-      const [all, hubs, wx] = await Promise.all([placesAround(centre, km), stationsAround(centre, km + 1), weather(dest, $("date").value, +opts.days)]);
+      const tour = isArea(dest) && days >= 1;
+      say(tour ? `Looking across ${dest.name} for the best places…` : "Looking up what's worth seeing…");
+      const [raw, hubs, wx] = await Promise.all([tour ? placesInArea(dest).then((r) => r.length >= 15 ? r : placesByTowns(dest)).catch(() => placesByTowns(dest)) : placesAround(centre, km), tour ? Promise.resolve([]) : stationsAround(centre, km + 1), weather(dest, $("date").value, +opts.days)]);
+      const all = tour ? await insideArea(dest, raw) : raw;
       let cands = all.map((p) => ({ ...p, cat: classify(p) })).filter((p) => p.cat && !/\b(former|demolished|defunct|destroyed|closed)\b/i.test(p.desc + "|" + p.types));
       if (!cands.length) { say("Wikidata knows of no sights around here yet — try a nearby bigger town."); return; }
       cands.forEach((p) => (p.score = scoreOf(p, likes)));
@@ -491,17 +592,38 @@
       const pool = picked.slice(0, Math.ceil(perDay * days * 1.5) + 3);
 
       say("Putting the days together…");
-      const groups = balance(kmeans(pool, days), perDay);
-      groups.sort((a, b) => b.reduce((s, p) => s + p.score, 0) - a.reduce((s, p) => s + p.score, 0));   // best day first
+      let groups, tourInfo = null;
+      if (tour) {
+        // which towns, how many days each, in what order, and how you get between them
+        const tl = allocateDays(towns(picked), days, perDay);
+        const startNear = base || (from && dist(from, dest) < 300000 ? from : null);
+        const ordered = orderTowns(tl, startNear, end);
+        groups = []; const townOf = [], hubsFor = [], travel = [], sleep = [];
+        const hubLists = await Promise.all(ordered.map((t) => opts.mode === "car" ? Promise.resolve([]) : stationsAround(t, 4)));
+        ordered.forEach((t, ti) => {
+          const parts = t.days > 1 ? balance(kmeans(t.places.slice(0, perDay * t.days + 4), t.days), perDay) : [t.places.slice(0, perDay + 3)];
+          parts.forEach((g, k) => {
+            const i = groups.length;
+            groups.push(g); townOf.push(t.name); hubsFor.push(hubLists[ti]);
+            if (i > 0 && k === 0) { const prev = ordered[ti - 1]; travel[i] = { from: prev, to: t, fromName: prev.name, toName: t.name, ...hop(prev, t) }; }
+            sleep[i] = t.name;
+          });
+        });
+        sleep[groups.length - 1] = null;
+        tourInfo = { ordered, townOf, hubsFor, travel, sleep };
+      } else {
+        groups = balance(kmeans(pool, days), perDay);
+        groups.sort((a, b) => b.reduce((s, p) => s + p.score, 0) - a.reduce((s, p) => s + p.score, 0));   // best day first
+      }
       const dayDates = groups.map((_, i) => new Date(new Date($("date").value + "T12:00").getTime() + i * 864e5).toISOString().slice(0, 10));
-      // a museum-heavy cluster suits the rainiest day
-      if (wx && groups.length > 1) {
+      // a museum-heavy cluster suits the rainiest day (city trips only: on a tour the order follows the road)
+      if (!tour && wx && groups.length > 1) {
         const indoor = (g) => g.filter((p) => CATS[p.cat].indoor).length / Math.max(1, g.length);
         const byRain = dayDates.map((d, i) => [i, (wx.find((w) => w.date === d) || {}).rain || 0]).sort((a, b) => b[1] - a[1]);
         const byIndoor = groups.map((g, i) => [i, indoor(g)]).sort((a, b) => b[1] - a[1]);
         if (byRain[0][1] >= 60) { const g2 = [...groups]; groups[byRain[0][0]] = g2[byIndoor[0][0]]; groups[byIndoor[0][0]] = g2[byRain[0][0]]; }
       }
-      const ctx = { hubs, base, city: dest.name, end, endBy: end && $("endBy").value ? minutes($("endBy").value) : null, lastIdx: groups.length - 1 };
+      const ctx = { hubs, base, city: dest.name, tour, ...(tourInfo || {}), end, endBy: end && $("endBy").value ? minutes($("endBy").value) : null, lastIdx: groups.length - 1 };
       // your changes: places added to a day (+ Add) and places removed (Remove); kept in the share link
       const edits = pendingEdits || { add: {}, rm: [] };
       pendingEdits = null;
@@ -515,7 +637,7 @@
           return list.length ? buildDay(list, dayDates[i], i, ctx) : null;
         }).filter(Boolean);
         const leftovers = picked.filter((p) => !out.some((d) => d.stops.includes(p)) && !edits.rm.includes(p.id)).slice(0, 40);
-        plan = { dest, from, base, end, endBy: ctx.endBy, days: out, wx, hubs, leftovers, likes, km, hrsOk, edits, byId,
+        plan = { dest, from, base, end, endBy: ctx.endBy, days: out, wx, hubs, leftovers, likes, km, hrsOk, edits, byId, tour: tourInfo,
           replan() { const keep = current; make(plan.hrsOk); writeHash(); render(); showDay(Math.min(keep, plan.days.length - 1)); } };
       };
       make(null);
@@ -526,7 +648,7 @@
       $("out").scrollIntoView({ behavior: "smooth", block: "start" });
       // opening hours from OpenStreetMap arrive later; re-time the days when they do
       const token = (window.__tripRun = (window.__tripRun || 0) + 1);
-      hoursFor(pool.slice(0, 45), centre, km).then((hrs) => {
+      hoursFor((tour ? groups.flat() : pool).slice(0, 45), centre, tour ? 150 : km).then((hrs) => {
         if (token !== window.__tripRun) return;
         if (hrs) for (const p of pool) { const h = hrs[p.id]; if (h) { p.oh = h.oh; p.fee = h.fee; p.website = p.website || h.website; } }
         const keepDay = current;
@@ -551,7 +673,9 @@
     const sum = $("sum");
     sum.innerHTML = "";
     const h = el("div", "s-main");
-    h.append(el("h2", null, dest.name), el("p", null, `${days.length === 1 && opts.days === "0.5" ? "Half a day" : days.length + (days.length === 1 ? " day" : " days")} from ${new Date($("date").value + "T12:00").toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" })} · ${({ walk: "on foot", pt: "on foot with buses, trams and metro", car: "by car" })[opts.mode]} · ${WALK[opts.walk].label} · ${days.reduce((a, d) => a + d.stops.length, 0)} places`));
+    h.append(el("h2", null, plan.tour ? `${dest.name} — a ${days.length}-day tour` : dest.name));
+    if (plan.tour) h.append(el("p", "route", plan.tour.ordered.map((t) => t.days > 1 ? `${t.name} (${t.days} days)` : t.name).join("  →  ")));
+    h.append(el("p", null, `${days.length === 1 && opts.days === "0.5" ? "Half a day" : days.length + (days.length === 1 ? " day" : " days")} from ${new Date($("date").value + "T12:00").toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" })} · ${({ walk: "on foot", pt: "on foot with buses, trams and metro", car: "by car" })[opts.mode]} · ${WALK[opts.walk].label} · ${days.reduce((a, d) => a + d.stops.length, 0)} places`));
     const act = el("div", "s-act");
     const share = el("button", "btn", "Share this plan");
     share.onclick = async () => { try { if (navigator.share) await navigator.share({ title: `Trip: ${dest.name}`, url: location.href }); else { await navigator.clipboard.writeText(location.href); share.textContent = "Link copied"; } } catch {} };
@@ -618,7 +742,7 @@
     nav.innerHTML = "";
     days.forEach((d, i) => {
       const b = el("button", null);
-      b.append(el("b", null, days.length === 1 ? "Your day" : `Day ${i + 1}`), el("span", null, new Date(d.date + "T12:00").toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short" })));
+      b.append(el("b", null, days.length === 1 ? "Your day" : `Day ${i + 1}${d.town ? " · " + d.town : ""}`), el("span", null, new Date(d.date + "T12:00").toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short" })));
       b.onclick = () => showDay(i);
       nav.append(b);
     });
@@ -686,6 +810,29 @@
         if (it.leg.type === "car") b.append(linkA("Parking nearby ↗", gmaps.near("parking", it.to)));
         li.append(b);
         ol.append(li);
+      } else if (it.kind === "travel") {
+        const li = el("li", "tl-travel " + it.trav.type);
+        li.append(el("span", "time", fmtT(it.at)));
+        const b = el("div", "body");
+        b.append(el("div", "k", "Travel"), el("div", "name", `${it.trav.fromName} → ${it.trav.toName}`),
+          el("div", "sub", `about ${fmtKm(it.trav.m)} · ${fmtDur(it.trav.min)} ${it.trav.type === "car" ? "by car" : "by train or bus"}`));
+        const ls = el("div", "links");
+        ls.append(linkA(it.trav.type === "car" ? "Driving route ↗" : "Trains & buses (Google Maps) ↗", gmaps.dir(it.trav.from, it.to, it.trav.type === "car" ? "driving" : "transit")));
+        if (it.trav.type !== "car") for (const [n, u] of TRAINS[plan.dest.cc] || [["Trainline", "https://www.thetrainline.com"]]) ls.append(linkA(`${n} ↗`, u));
+        ls.append(linkA("All options (Rome2rio) ↗", `https://www.rome2rio.com/s/${encodeURIComponent(it.trav.fromName + ", " + plan.dest.name)}/${encodeURIComponent(it.trav.toName + ", " + plan.dest.name)}`));
+        b.append(ls);
+        li.append(b);
+        ol.append(li);
+      } else if (it.kind === "sleep") {
+        const li = el("li", "tl-sleep");
+        li.append(el("span", "time", ""));
+        const b = el("div", "body");
+        b.append(el("div", "k", "Overnight"), el("div", "name", `Stay in ${it.town}`));
+        const ls = el("div", "links");
+        ls.append(linkA("Places to stay ↗", `https://www.google.com/travel/hotels/${encodeURIComponent(it.town + ", " + plan.dest.name)}`), linkA("Dinner nearby ↗", gmaps.near("restaurants", d.stops[d.stops.length - 1] || d.start)));
+        b.append(ls);
+        li.append(b);
+        ol.append(li);
       } else if (it.kind === "lunch") {
         const li = el("li", "tl-lunch");
         li.append(el("span", "time", fmtT(it.at)));
@@ -742,7 +889,7 @@
     // scenarios
     const sc = el("section", "scen");
     sc.append(el("h3", null, "If plans change"), el("p", "sc-hint", "Tap + Add to fit a place into this day; the order and times are worked out again. Remove takes a stop out."));
-    const near = (pred, k = 3) => plan.leftovers.concat(d.extra).filter(pred).sort((a, b) => dist(d.centre, a) - dist(d.centre, b)).slice(0, k);
+    const near = (pred, k = 3) => plan.leftovers.concat(d.extra).filter((p) => !plan.tour || dist(d.centre, p) < 15000).filter(pred).sort((a, b) => dist(d.centre, a) - dist(d.centre, b)).slice(0, k);
     const blocks = [];
     const rainy = near((p) => CATS[p.cat].indoor && !/stadium|arena/i.test(p.types) && !d.stops.includes(p));
     const outdoor = d.stops.filter((p) => !CATS[p.cat].indoor);
