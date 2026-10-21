@@ -168,7 +168,7 @@
     }
   }
 
-  function render() {
+  function visibleList() {
     const term = q.value.trim().toLowerCase();
     const list = S.filter((s) =>
       (cat === "all" || (cat === "fav" ? favs.has(key(s)) : s.category === cat)) &&
@@ -177,6 +177,11 @@
     );
     // stations that failed the latest check go to the bottom (order otherwise kept)
     list.sort((a, b) => (a.offline ? 1 : 0) - (b.offline ? 1 : 0));
+    return list;
+  }
+
+  function render() {
+    const list = visibleList();
     grid.innerHTML = "";
     for (const s of list) {
       const li = document.createElement("li");
@@ -193,7 +198,7 @@
         <button class="fav" aria-label="Favourite" aria-pressed="${favs.has(key(s))}"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2Z"/></svg></button>`;
       li.querySelector(".nm").textContent = s.name;      // names come from a public directory: never as HTML
       li.querySelector(".sub").textContent = sub;
-      li.querySelector(".hit").onclick = () => (isCur(s) ? toggle() : play(s));
+      li.querySelector(".hit").onclick = () => (isCur(s) ? toggle() : play(s, list));
       li.querySelector(".fav").onclick = (e) => { e.stopPropagation(); toggleFav(key(s)); };
       grid.append(li);
     }
@@ -241,6 +246,7 @@
     player.classList.toggle("playing", st === "playing");
     player.classList.toggle("loading", st === "loading");
     playBtn.setAttribute("aria-label", st === "playing" ? "Pause" : "Play");
+    if ("mediaSession" in navigator) navigator.mediaSession.playbackState = st === "idle" ? "paused" : "playing";
   }
   function syncPlayer() {
     if (!current) return;
@@ -261,14 +267,43 @@
     audio.pause(); audio.removeAttribute("src"); audio.load();
   }
 
-  function play(s) {
+  // Next / previous: steps through the list on screen when the station was picked
+  // (same collection, filter and search), skipping stations marked not working.
+  let queue = [];
+  function skip(dir) {
+    if (!current) return;
+    let list = queue.length ? queue : (currentCol === col.id ? visibleList() : []);
+    const live = list.filter((x) => !x.offline || x.id === current.id);
+    if (live.length < 2) { status("No other station in this list"); return; }
+    let i = live.findIndex((x) => x.id === current.id);
+    if (i < 0) i = dir > 0 ? -1 : 0;
+    const s = live[(i + dir + live.length) % live.length];
+    play(s, list);
+  }
+
+  // square artwork for car screens and lock screens: the station's initials on the accent colour
+  function artwork(s) {
+    try {
+      const c = document.createElement("canvas"); c.width = c.height = 512;
+      const g = c.getContext("2d");
+      g.fillStyle = getComputedStyle(document.body).getPropertyValue("--accent").trim() || "#2F6B4F";
+      g.fillRect(0, 0, 512, 512);
+      g.fillStyle = "#F0EDE6"; g.textAlign = "center"; g.textBaseline = "middle";
+      g.font = "600 190px 'Space Grotesk', sans-serif";
+      g.fillText(initials(s.name), 256, 270);
+      return [{ src: c.toDataURL("image/png"), sizes: "512x512", type: "image/png" }];
+    } catch { return []; }
+  }
+
+  function play(s, list) {
+    queue = list || visibleList();
     current = s; currentCol = col.id; tryIndex = 0;
     store.set("mr-last2", { c: col.id, s });
     showNowPlaying(s, col.id);
     syncPlayer();
     document.title = `▶ ${s.name} — Radio`;
     if ("mediaSession" in navigator) {
-      navigator.mediaSession.metadata = new MediaMetadata({ title: s.name, artist: `${col.name} radio · ranjithkb.com` });
+      navigator.mediaSession.metadata = new MediaMetadata({ title: s.name, artist: `${col.name} radio`, album: "ranjithkb.com", artwork: artwork(s) });
     }
     attempt();
   }
@@ -279,21 +314,21 @@
     if (!url) { setState("idle"); status("Offline — try another station"); markErr(s.id); return; }
     setState("loading");
     status(s.streams.length > 1 ? `Connecting · source ${tryIndex + 1}/${s.streams.length}` : "Connecting");
-    failTimer = setTimeout(next, 12000);
+    failTimer = setTimeout(nextSource, 12000);
     const isHls = /\.m3u8(\?|$)/i.test(url);
     // hls.js first: the browser's own HLS player can't read some playlists (e.g. Akashvani).
     // Native HLS is only used where hls.js can't run (iPhone Safari).
     if (isHls && window.Hls?.isSupported()) {
       hls = new Hls({ lowLatencyMode: false });
-      hls.on(Hls.Events.ERROR, (_, d) => { if (d.fatal) next(); });
+      hls.on(Hls.Events.ERROR, (_, d) => { if (d.fatal) nextSource(); });
       hls.loadSource(url); hls.attachMedia(audio);
-      hls.on(Hls.Events.MANIFEST_PARSED, () => audio.play().catch(next));
+      hls.on(Hls.Events.MANIFEST_PARSED, () => audio.play().catch(nextSource));
     } else {
       audio.src = url;
-      audio.play().catch((e) => { if (e.name !== "AbortError") next(); });
+      audio.play().catch((e) => { if (e.name !== "AbortError") nextSource(); });
     }
   }
-  function next() { if (!current) return; tryIndex++; attempt(); }
+  function nextSource() { if (!current) return; tryIndex++; attempt(); }
   function markErr(id) { if (currentCol === col.id) document.querySelector(`.radio-card[data-id="${CSS.escape(id)}"]`)?.classList.add("err"); }
 
   function toggle() {
@@ -303,9 +338,11 @@
 
   audio.addEventListener("playing", () => { clearTimeout(failTimer); setState("playing"); status("Live"); });
   audio.addEventListener("waiting", () => { if (!audio.paused) { setState("loading"); status("Buffering"); } });
-  audio.addEventListener("error", () => { if (current && audio.getAttribute("src")) next(); });
+  audio.addEventListener("error", () => { if (current && audio.getAttribute("src")) nextSource(); });
 
   playBtn.onclick = toggle;
+  $("#prevBtn").onclick = () => skip(-1);
+  $("#nextBtn").onclick = () => skip(1);
   npFav.onclick = () => current && toggleFav(`${currentCol}:${current.id}`);
   const vol = $("#vol");
   vol.value = store.get("mr-vol", 1); audio.volume = vol.value;
@@ -313,11 +350,21 @@
   q.oninput = render;
   document.addEventListener("keydown", (e) => {
     if (e.code === "Space" && e.target === document.body) { e.preventDefault(); toggle(); }
+    if ((e.key === "ArrowRight" || e.key === "ArrowLeft") && e.target === document.body && current) { e.preventDefault(); skip(e.key === "ArrowRight" ? 1 : -1); }
     if (e.key === "/" && e.target !== q) { e.preventDefault(); q.focus(); }
   });
   if ("mediaSession" in navigator) {
     navigator.mediaSession.setActionHandler("play", toggle);
     navigator.mediaSession.setActionHandler("pause", toggle);
+    // steering-wheel / Bluetooth / lock-screen buttons
+    for (const [a, d] of [["nexttrack", 1], ["previoustrack", -1]]) {
+      try { navigator.mediaSession.setActionHandler(a, () => skip(d)); } catch { /* not supported */ }
+    }
+    // some cars only send seek buttons: treat them as next / previous too
+    for (const [a, d] of [["seekforward", 1], ["seekbackward", -1]]) {
+      try { navigator.mediaSession.setActionHandler(a, () => skip(d)); } catch { /* not supported */ }
+    }
+    try { navigator.mediaSession.setActionHandler("stop", () => { if (current && !audio.paused) toggle(); }); } catch { /* not supported */ }
   }
 
   // ---------------------------------------------------------- start

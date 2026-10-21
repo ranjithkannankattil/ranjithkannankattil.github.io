@@ -76,6 +76,10 @@ nav.radio-chips button{ color:var(--ink-soft); padding-bottom:.3rem; border-bott
 .np-play .i-pause, .radio-player.playing .np-play .i-play{ display:none; }
 .radio-player.playing .np-play .i-pause{ display:block; }
 .np-vol{ width:100px; accent-color:var(--paper); }
+.np-skip{ width:40px; height:40px; display:grid; place-items:center; border-radius:50%; }
+.np-skip svg{ width:20px; height:20px; fill:var(--paper); }
+body[data-section="radio"] .np-skip:hover{ background:rgba(240,237,230,.12); }
+.np-controls{ gap:.5rem; }
 @keyframes radio-spin{ to{ transform:rotate(360deg); } }
 @keyframes radio-blink{ 0%,100%{ opacity:.3; } 50%{ opacity:1; } }
 
@@ -88,6 +92,8 @@ nav.radio-chips button{ color:var(--ink-soft); padding-bottom:.3rem; border-bott
   .radio-card .nm{ white-space:normal; }
   .radio-card .fav{ top:.6rem; transform:none; }
   .np-vol{ display:none; }
+  .radio-player{ gap:.6rem; }
+  .np-controls{ gap:.15rem; }
 }
 @media (prefers-reduced-motion:reduce){ body[data-section="radio"] *{ animation:none!important; transition:none!important; } }
 
