@@ -24,7 +24,8 @@ jobs:
         run: |
           set -e
           SRC=https://ranjithkb-radio.firebaseapp.com
-          mkdir -p __/auth/handler __/auth/iframe __/firebase
+          mkdir -p __/auth/handler __/auth/iframe
+          # __/firebase/init.json is kept in the repo by hand (this project has no Firebase Hosting)
           # GitHub Pages only serves pages with an .html extension as HTML, so the two
           # pages live at handler/index.html and iframe/index.html (Pages redirects
           # /__/auth/handler -> /__/auth/handler/ and keeps the query string)
@@ -33,9 +34,11 @@ jobs:
           curl -fsSL "$SRC/__/auth/handler.js"     -o __/auth/handler.js
           curl -fsSL "$SRC/__/auth/iframe.js"      -o __/auth/iframe.js
           curl -fsSL "$SRC/__/auth/experiments.js" -o __/auth/experiments.js
-          curl -fsSL "$SRC/__/firebase/init.json"  -o __/firebase/init.json
+          # the pages load their scripts relatively; make the paths absolute so they
+          # still resolve from /__/auth/handler/ and /__/auth/iframe/
+          sed -i -E 's#src="(experiments|handler|iframe)\.js"#src="/__/auth/\1.js"#g' __/auth/handler/index.html __/auth/iframe/index.html
+          grep -o 'src="[^"]*"' __/auth/handler/index.html __/auth/iframe/index.html
           ls -la __/auth __/auth/handler __/auth/iframe __/firebase
-          grep -o 'src="[^"]*"' __/auth/handler/index.html __/auth/iframe/index.html || true
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
