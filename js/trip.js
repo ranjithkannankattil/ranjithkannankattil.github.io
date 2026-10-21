@@ -833,15 +833,22 @@
     }
     const walkLegs = legs.filter((x) => x.leg.type === "walk");
     const myLayer = layer, color = getComputedStyle(document.body).getPropertyValue("--accent").trim() || "#1F6F78";
-    await Promise.all(walkLegs.map(async (x) => {
+    // consecutive walking legs become one stretch = one routing request (the free server dislikes bursts)
+    const chains = [];
+    for (const it of legs) {
+      if (it.leg.type !== "walk") { chains.push(null); continue; }
+      const last = chains[chains.length - 1];
+      if (last) last.push(it.to); else chains.push([it.from, it.to]);
+    }
+    for (const ch of chains.filter(Boolean)) {
+      if (layer !== myLayer) return;
       try {
-        const j = await getJSON(`https://routing.openstreetmap.de/routed-foot/route/v1/foot/${x.from.lon},${x.from.lat};${x.to.lon},${x.to.lat}?overview=full&geometries=geojson`, {}, 9000);
-        if (layer !== myLayer) return;
+        const j = await getJSON(`https://routing.openstreetmap.de/routed-foot/route/v1/foot/${ch.map((p) => `${p.lon},${p.lat}`).join(";")}?overview=full&geometries=geojson`, {}, 12000);
         const g = j.routes && j.routes[0];
-        if (g) { L.geoJSON(g.geometry, { style: { color, weight: 4, opacity: .85 } }).addTo(myLayer); return; }
-      } catch { /* fall back to a straight line */ }
-      if (layer === myLayer) L.polyline([[x.from.lat, x.from.lon], [x.to.lat, x.to.lon]], { color, weight: 3, opacity: .6, dashArray: "2 6" }).addTo(myLayer);
-    }));
+        if (g && layer === myLayer) { L.geoJSON(g.geometry, { style: { color, weight: 4, opacity: .85 } }).addTo(myLayer); continue; }
+      } catch { /* straight lines instead */ }
+      if (layer === myLayer) L.polyline(ch.map((p) => [p.lat, p.lon]), { color, weight: 3, opacity: .6, dashArray: "2 6" }).addTo(myLayer);
+    }
   }
 
   // ------------------------------------------------------------------ shared links: #d=Florence&dt=…
