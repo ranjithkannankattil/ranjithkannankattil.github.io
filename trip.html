@@ -16,7 +16,7 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <link rel="stylesheet" href="css/style.css?v=7">
-<link rel="stylesheet" href="css/trip.css?v=2">
+<link rel="stylesheet" href="css/trip.css?v=3">
 </head>
 <body data-section="trip" class="wide">
 
@@ -63,6 +63,18 @@
         <span class="k">Start each day at <em>optional</em></span>
         <input id="base" name="base" placeholder="Hotel, station or address — otherwise the main station">
         <div class="sugg" id="baseSugg" hidden></div>
+      </label>
+    </div>
+
+    <div class="tp-row two end">
+      <label class="tp-field place">
+        <span class="k">End the trip at <em>optional</em></span>
+        <input id="end" name="end" placeholder="Airport, station or hotel you leave from on the last day">
+        <div class="sugg" id="endSugg" hidden></div>
+      </label>
+      <label class="tp-field">
+        <span class="k">Be there by <em>optional</em></span>
+        <input id="endBy" type="time">
       </label>
     </div>
 
@@ -132,7 +144,7 @@
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<script src="js/trip.js?v=7"></script>
+<script src="js/trip.js?v=8"></script>
 <script src="js/nav.js?v=4" defer></script>
 <script src="js/visits.js?v=2" defer></script>
 </body>

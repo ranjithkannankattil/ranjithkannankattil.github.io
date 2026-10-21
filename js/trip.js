@@ -114,6 +114,7 @@
   suggest($("dest"), $("destSugg"), "dest");
   suggest($("from"), $("fromSugg"), "from");
   suggest($("base"), $("baseSugg"), "base", () => state.dest);
+  suggest($("end"), $("endSugg"), "end", () => state.dest);
 
   async function resolve(key, input, near) {
     if (state[key] || !input.value.trim()) return state[key];
@@ -328,6 +329,16 @@
     return best;
   };
 
+  // the trip's last leg: walk if it's close, otherwise transport even on a walking trip
+  const isAirport = (p) => /aerodrome|airport/i.test(p.kind || "") || /airport|aeroporto|aéroport|flughafen|aeropuerto|aeroporto/i.test(p.name || "");
+  const endBuffer = (p) => isAirport(p) ? 120 : /station|bahnhof|stazione|gare|estación/i.test((p.name || "") + (p.kind || "")) ? 20 : 10;
+  function endLeg(a, b) {
+    const d = dist(a, b);
+    if (d <= WALK[opts.walk].leg) return { type: "walk", m: d, min: walkMin(d) };
+    if (opts.mode === "car") return { type: "car", m: d, min: Math.round(6 + d / 1000 * (d > 8000 ? 1.4 : 2.4)) };
+    return { type: "pt", m: d, min: Math.round(10 + d / 1000 * (d > 8000 ? 1.8 : 3.2)) };
+  }
+
   function legBetween(a, b) {
     const d = dist(a, b), w = WALK[opts.walk];
     if (opts.mode === "walk" || d <= w.leg) return { type: "walk", m: d, min: walkMin(d) };
@@ -337,15 +348,22 @@
 
   function buildDay(cluster, date, idx, ctx) {
     const t0 = minutes($("t0").value || "09:00"), t1 = minutes($("t1").value || "18:00");
-    const dayEnd = opts.days === "0.5" ? Math.min(t1, t0 + 270) : t1;
+    let dayEnd = opts.days === "0.5" ? Math.min(t1, t0 + 270) : t1;
     const hubs = ctx.hubs;
+    const tripEnd = ctx.end && idx === ctx.lastIdx ? ctx.end : null;     // the last day heads for where the trip ends
     const centre = { lat: cluster.reduce((a, p) => a + p.lat, 0) / cluster.length, lon: cluster.reduce((a, p) => a + p.lon, 0) / cluster.length };
     const base = ctx.base;
     // where the day starts and ends: your base if it's close, otherwise the main stop near this part of town
     const startHub = base && dist(base, centre) < WALK[opts.walk].leg * 1.6 ? base : (opts.mode === "car" ? null : nearestHub(cluster.sort((a, b) => dist(base || centre, a) - dist(base || centre, b))[0], hubs, 1800));
     const start = startHub || base || { ...centre, name: `${ctx.city} — centre of this area` };
     // walking order from the start; the finish is whatever stop is near the last sight (not the other way round)
-    let stops = orderRoute(start, cluster.filter((p) => p !== start), base && base !== start ? base : null);
+    const towards = tripEnd && dist(tripEnd, centre) < 15000 ? tripEnd : base && base !== start ? base : null;
+    let stops = orderRoute(start, cluster.filter((p) => p !== start), towards);
+    let endLegEst = 10;
+    if (tripEnd) {
+      endLegEst = endLeg(centre, tripEnd).min;
+      if (ctx.endBy != null) dayEnd = Math.min(dayEnd, ctx.endBy - endLegEst - endBuffer(tripEnd));
+    }
 
     // timeline, dropping the weakest stops that don't fit (they become "if you have time")
     const wd = new Date(date + "T12:00");
@@ -361,17 +379,17 @@
         t += visitMinutes(p);
         prev = p;
       }
-      t += 10;
-      if (t > dayEnd + 10 && keep.length > 1) {
+      t += tripEnd ? 0 : 10;
+      if (t > dayEnd + (tripEnd ? 0 : 10) && keep.length > 1) {
         const weakest = [...keep].sort((a, b) => a.score - b.score)[0];
         keep = keep.filter((x) => x !== weakest);
         ok = false;
       }
       if (ok) break;
     }
-    keep = orderRoute(start, keep, base && base !== start ? base : null);
+    keep = orderRoute(start, keep, towards);
     const lastStop = keep[keep.length - 1] || start;
-    const lastHub = opts.mode === "car" ? null : (base && dist(lastStop, base) < WALK[opts.walk].leg ? null : nearestHub(lastStop, hubs, 900));
+    const lastHub = tripEnd || opts.mode === "car" ? null : (base && dist(lastStop, base) < WALK[opts.walk].leg ? null : nearestHub(lastStop, hubs, 900));
     const extra = stops.filter((p) => !keep.includes(p)).sort((a, b) => b.score - a.score);
 
     // final schedule
@@ -393,7 +411,13 @@
       t += dur;
       prev = p;
     }
-    if (lastHub || base) {
+    if (tripEnd) {
+      const leg = endLeg(prev, tripEnd);
+      items.push({ kind: "leg", from: prev, to: tripEnd, leg, at: t });
+      if (leg.type === "walk") walked += leg.m;
+      t += leg.min;
+      items.push({ kind: "end", at: t, place: tripEnd, tripEnd: true, by: ctx.endBy, late: ctx.endBy != null && t > ctx.endBy - endBuffer(tripEnd) });
+    } else if (lastHub || base) {
       const endP = lastHub || base;
       const leg = legBetween(prev, endP);
       items.push({ kind: "leg", from: prev, to: endP, leg, at: t });
@@ -417,14 +441,14 @@
       say("Finding the place…");
       const dest = await resolve("dest", $("dest"));
       if (!dest) { say("Couldn't find that place — try the city name."); return; }
-      const [from, base] = await Promise.all([resolve("from", $("from")).catch(() => null), resolve("base", $("base"), dest).catch(() => null)]);
+      const [from, base, end] = await Promise.all([resolve("from", $("from")).catch(() => null), resolve("base", $("base"), dest).catch(() => null), resolve("end", $("end"), dest).catch(() => null)]);
       const days = Math.max(1, Math.ceil(+opts.days));
       const likes = opts.likes.length ? opts.likes : ["must"];
       const centre = base && dist(base, dest) < 15000 ? { lat: (base.lat + dest.lat * 2) / 3, lon: (base.lon + dest.lon * 2) / 3 } : dest;
       const km = opts.mode === "car" ? Math.min(12 + days * 8, 50) : opts.mode === "pt" ? Math.min(3.5 + days * 1.6, 12) : Math.min(2.2 + days * .7, 5);
       state.city = dest;
-      lastHash = "#" + new URLSearchParams({ d: $("dest").value, f: $("from").value, b: $("base").value, dt: $("date").value, ...Object.fromEntries(Object.entries(opts).map(([k, v]) => [k, Array.isArray(v) ? v.join(",") : v])), t0: $("t0").value, t1: $("t1").value, l: $("lunch").checked ? 1 : 0 });
-      history.replaceState(null, "", "#" + new URLSearchParams({ d: $("dest").value, f: $("from").value, b: $("base").value, dt: $("date").value, ...Object.fromEntries(Object.entries(opts).map(([k, v]) => [k, Array.isArray(v) ? v.join(",") : v])), t0: $("t0").value, t1: $("t1").value, l: $("lunch").checked ? 1 : 0 }));
+      lastHash = "#" + new URLSearchParams({ d: $("dest").value, f: $("from").value, b: $("base").value, e: $("end").value, eb: $("endBy").value, dt: $("date").value, ...Object.fromEntries(Object.entries(opts).map(([k, v]) => [k, Array.isArray(v) ? v.join(",") : v])), t0: $("t0").value, t1: $("t1").value, l: $("lunch").checked ? 1 : 0 });
+      history.replaceState(null, "", "#" + new URLSearchParams({ d: $("dest").value, f: $("from").value, b: $("base").value, e: $("end").value, eb: $("endBy").value, dt: $("date").value, ...Object.fromEntries(Object.entries(opts).map(([k, v]) => [k, Array.isArray(v) ? v.join(",") : v])), t0: $("t0").value, t1: $("t1").value, l: $("lunch").checked ? 1 : 0 }));
 
       say("Looking up what's worth seeing…");
       const [all, hubs, wx] = await Promise.all([placesAround(centre, km), stationsAround(centre, km + 1), weather(dest, $("date").value, +opts.days)]);
@@ -454,11 +478,16 @@
         const byIndoor = groups.map((g, i) => [i, indoor(g)]).sort((a, b) => b[1] - a[1]);
         if (byRain[0][1] >= 60) { const g2 = [...groups]; groups[byRain[0][0]] = g2[byIndoor[0][0]]; groups[byIndoor[0][0]] = g2[byRain[0][0]]; }
       }
-      const ctx = { hubs, base, city: dest.name };
+      if (end && groups.length > 1) {   // the part of town nearest the trip's end goes last
+        const cen = (g) => ({ lat: g.reduce((a, p) => a + p.lat, 0) / g.length, lon: g.reduce((a, p) => a + p.lon, 0) / g.length });
+        let bi = 0; groups.forEach((g, i) => { if (g.length && dist(cen(g), end) < dist(cen(groups[bi]), end)) bi = i; });
+        const L2 = groups.length - 1; [groups[bi], groups[L2]] = [groups[L2], groups[bi]];
+      }
+      const ctx = { hubs, base, city: dest.name, end, endBy: end && $("endBy").value ? minutes($("endBy").value) : null, lastIdx: groups.length - 1 };
       const make = (hrsOk) => {
         const out = groups.map((g, i) => g.length ? buildDay(g.slice(0, perDay + 3), dayDates[i], i, ctx) : null).filter(Boolean);
         const leftovers = picked.filter((p) => !out.some((d) => d.stops.includes(p))).slice(0, 40);
-        plan = { dest, from, base, days: out, wx, hubs, leftovers, likes, km, hrsOk };
+        plan = { dest, from, base, end, endBy: ctx.endBy, days: out, wx, hubs, leftovers, likes, km, hrsOk };
       };
       make(null);
       say("");
@@ -533,6 +562,10 @@
       if (dist(from, dest) > 250000) gl.append(linkA("Flights (Google Flights) ↗", `https://www.google.com/travel/flights?q=${encodeURIComponent(`Flights from ${from.name} to ${dest.name}`)}`));
     } else gl.append(el("span", "hint", "Add where you're coming from to get train, flight and route links."));
     for (const [n, u] of TRAINS[dest.cc] || [["Trainline", "https://www.thetrainline.com"]]) gl.append(linkA(`${n} — tickets ↗`, u));
+    if (plan.end) {
+      gl.append(el("span", "hint", `Trip ends at ${plan.end.name}${plan.endBy != null ? ", by " + fmtT(plan.endBy) : ""}.`));
+      if (from) gl.append(linkA(`Home from ${plan.end.name} (Rome2rio) ↗`, `https://www.rome2rio.com/s/${encodeURIComponent(plan.end.name)}/${encodeURIComponent(from.name)}`));
+    }
     g.append(gl);
     cards.append(g);
     const a = el("section", "card");
@@ -590,15 +623,16 @@
     for (const it of d.items) {
       if (it.kind === "start" || it.kind === "end") {
         const li = el("li", "tl-hub");
-        const label = it.last ? "Finish here" : it.isBase ? (plan.base ? plan.base.name : "Start") : it.place.name || "Start";
-        const kind = it.last ? `no station close by — ${it.back.name ? "back to " + it.back.name : "head back"} by bus/tram or on foot` : it.isBase ? "your base" : it.place.kind ? ({ train: "railway station", metro: "metro station", tram: "tram stop", bus: "bus station" })[it.place.kind] : "start";
+        const label = it.tripEnd ? (it.place.name || "Trip ends") : it.last ? "Finish here" : it.isBase ? (plan.base ? plan.base.name : "Start") : it.place.name || "Start";
+        const kind = it.tripEnd ? ("where your trip ends" + (it.by != null ? ` · be there by ${fmtT(it.by)}` + (isAirport(it.place) ? " (2 hours before a flight)" : "") : "")) : it.last ? `no station close by — ${it.back.name ? "back to " + it.back.name : "head back"} by bus/tram or on foot` : it.isBase ? "your base" : it.place.kind ? ({ train: "railway station", metro: "metro station", tram: "tram stop", bus: "bus station" })[it.place.kind] : "start";
         li.append(el("span", "time", fmtT(it.at)));
         const b = el("div", "body");
-        b.append(el("div", "k", it.kind === "start" ? "Start" : "Finish"), el("div", "name", label), el("div", "sub", kind));
+        b.append(el("div", "k", it.kind === "start" ? "Start" : it.tripEnd ? "Trip ends" : "Finish"), el("div", "name", label), el("div", "sub", kind));
+        if (it.late) b.append(el("div", "hrs closed", `Tight: you'd arrive about ${fmtT(it.at)}. Drop the last stop, or leave earlier.`));
         const ls = el("div", "links");
         ls.append(linkA("Map ↗", gmaps.place(it.place)));
         if (it.last) ls.append(linkA(`Route back ↗`, gmaps.dir(it.place, plan.base || it.back, "transit")));
-        if (it.kind === "end" && plan.base && !it.isBase && !it.last) ls.append(linkA(`Back to ${plan.base.name} ↗`, gmaps.dir(it.place, plan.base, opts.mode === "car" ? "driving" : "transit")));
+        if (it.kind === "end" && plan.base && !it.isBase && !it.last && !it.tripEnd) ls.append(linkA(`Back to ${plan.base.name} ↗`, gmaps.dir(it.place, plan.base, opts.mode === "car" ? "driving" : "transit")));
         if (it.kind === "start" && plan.base && !it.isBase) ls.append(linkA(`From ${plan.base.name} ↗`, gmaps.dir(plan.base, it.place, opts.mode === "car" ? "driving" : "transit")));
         b.append(ls);
         li.append(b);
@@ -742,8 +776,9 @@
     lastHash = location.hash;
     const h = new URLSearchParams(location.hash.slice(1));
     if (!h.get("d")) return;
-    state.dest = state.from = state.base = null;
+    state.dest = state.from = state.base = state.end = null;
     $("dest").value = h.get("d"); $("from").value = h.get("f") || ""; $("base").value = h.get("b") || "";
+    $("end").value = h.get("e") || ""; $("endBy").value = h.get("eb") || "";
     if (h.get("dt")) $("date").value = h.get("dt");
     for (const k of ["days", "mode", "walk", "pace"]) if (h.get(k)) opts[k] = h.get(k);
     if (h.get("likes")) opts.likes = h.get("likes").split(",");

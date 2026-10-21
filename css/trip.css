@@ -13,6 +13,7 @@ body[data-section="trip"] button{ font:inherit; color:inherit; cursor:pointer; b
 .tp-row{ display:grid; gap:1rem 1.6rem; }
 .tp-row.two{ grid-template-columns:2fr 1fr; }
 .tp-row.two + .tp-row.two{ grid-template-columns:1fr 1fr; }
+.tp-row.two.end{ grid-template-columns:2fr 1fr; }
 .tp-row.three{ grid-template-columns:repeat(3, auto); justify-content:start; }
 .tp-row.small{ grid-template-columns:repeat(3, max-content); align-items:end; }
 .tp-field{ display:flex; flex-direction:column; gap:.35rem; position:relative; }
@@ -135,7 +136,7 @@ body[data-section="trip"] .tp-days button[aria-pressed="true"]{ color:var(--ink)
   .tp-map{ position:relative; top:0; height:340px; }
 }
 @media (max-width:640px){
-  .tp-row.two, .tp-row.two + .tp-row.two, .tp-row.three, .tp-row.small{ grid-template-columns:1fr; }
+  .tp-row.two, .tp-row.two + .tp-row.two, .tp-row.two.end, .tp-row.three, .tp-row.small{ grid-template-columns:1fr; }
   .tl > li{ grid-template-columns:3rem minmax(0,1fr); }
   .tl .thumb{ display:none; }
   .tp-sum h2{ font-size:1.6rem; }
