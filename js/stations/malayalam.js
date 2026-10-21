@@ -258,8 +258,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/58390a2ed33cea4a/58390a2ed33cea4a.m3u8"
     ],
-    "akv": "Akashvani Manjeri",
-    "offline": true
+    "akv": "Akashvani Manjeri"
   },
   {
     "id": "akashvanithrissur",
@@ -272,8 +271,7 @@ window.STATIONS = [
     "akv": "Akashvani Thrissur",
     "exclude": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radioneythal",
@@ -483,7 +481,8 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://usa8.fastcast4u.com/proxy/auralradio?mp=/1/;stream.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "premamfm",
@@ -1010,4 +1009,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-10-20T23:46Z";
+window.STATIONS_CHECKED = "2026-10-21T00:20Z";

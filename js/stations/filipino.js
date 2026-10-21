@@ -64,7 +64,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/26ea0anpms8uv"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "cjrk-fm-102-7-east-fm-toronto-on",
@@ -325,4 +326,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T00:07Z";
+window.STATIONS_CHECKED = "2026-10-21T00:20Z";
