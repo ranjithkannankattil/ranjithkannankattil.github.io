@@ -30,28 +30,89 @@
     return (b.length ? a[0] + b[0] : a.slice(0, 2).join("")).toUpperCase();
   }
 
-  // ---------------------------------------------------------- collection picker
-  function renderPicker() {
-    const nav = $("#collections");
-    nav.innerHTML = "";
+  // ---------------------------------------------------------- language bar
+  // The page opens on your default language (Malayalam unless you change it);
+  // the chips show your default plus the languages you used recently.
+  const getDefault = () => (byCol[store.get("mr-default", "malayalam")] ? store.get("mr-default", "malayalam") : "malayalam");
+  let recent = (store.get("mr-recent", []) || []).filter((id) => byCol[id]);
+
+  function renderBar() {
+    const def = getDefault();
+    $("#langCur").textContent = col.name;
+    $("#langNative").textContent = col.native && col.native !== col.name ? col.native : "";
+    // quick chips: default first, then recent ones
+    const quick = [def, ...recent.filter((id) => id !== def)].slice(0, 7);
+    const box = $("#langQuick");
+    box.innerHTML = "";
+    for (const id of quick) {
+      const c = byCol[id];
+      const b = document.createElement("button");
+      b.className = "lq";
+      b.setAttribute("aria-pressed", id === col.id);
+      b.innerHTML = (id === def ? '<span class="star" aria-label="Default">★</span>' : "") + "<span></span>";
+      b.lastChild.textContent = c.name;
+      b.onclick = () => openCollection(id, true);
+      box.append(b);
+    }
+    const isDef = col.id === def;
+    const d = $("#defBtn");
+    d.classList.toggle("is-default", isDef);
+    d.textContent = isDef ? "★ Opens by default" : `☆ Make ${col.name} my default`;
+    d.title = isDef ? "This page opens on this language" : "Open the Radio page on this language next time";
+  }
+
+  function renderLangList() {
+    const term = $("#langQ").value.trim().toLowerCase();
+    const list = $("#langList");
+    list.innerHTML = "";
+    let first = null;
     for (const g of GROUPS) {
-      const items = COLS.filter((c) => c.group === g);
+      const items = COLS.filter((c) => c.group === g &&
+        (!term || (c.name + " " + (c.native || "")).toLowerCase().includes(term)));
       if (!items.length) continue;
+      const h = document.createElement("div");
+      h.className = "lg"; h.textContent = g;
+      list.append(h);
       const row = document.createElement("div");
-      row.className = "col-row";
-      row.innerHTML = `<span class="col-group">${g}</span><span class="col-items"></span>`;
-      const box = row.querySelector(".col-items");
+      row.className = "li-row";
       for (const c of items) {
         const b = document.createElement("button");
-        b.textContent = c.name;
-        if (c.native && c.native !== c.name) b.title = c.native;
-        b.setAttribute("aria-pressed", col && col.id === c.id);
-        b.onclick = () => openCollection(c.id, true);
-        box.append(b);
+        b.className = "li";
+        b.setAttribute("aria-pressed", c.id === col.id);
+        b.innerHTML = "<span></span><small></small>";
+        b.firstChild.textContent = c.name;
+        b.lastChild.textContent = c.native && c.native !== c.name ? c.native : "";
+        b.onclick = () => { closePanel(); openCollection(c.id, true); };
+        row.append(b);
+        first = first || c;
       }
-      nav.append(row);
+      list.append(row);
     }
+    if (!first) list.innerHTML = '<p class="li-none">No language matches.</p>';
+    return first;
   }
+
+  function openPanel() {
+    $("#langPanel").hidden = false;
+    $("#langBtn").setAttribute("aria-expanded", "true");
+    $("#langQ").value = "";
+    renderLangList();
+    $("#langQ").focus();
+  }
+  function closePanel() {
+    $("#langPanel").hidden = true;
+    $("#langBtn").setAttribute("aria-expanded", "false");
+  }
+  $("#langBtn").onclick = () => ($("#langPanel").hidden ? openPanel() : closePanel());
+  $("#langQ").oninput = renderLangList;
+  $("#langQ").onkeydown = (e) => {
+    if (e.key === "Enter") { const f = renderLangList(); if (f) { closePanel(); openCollection(f.id, true); } }
+    if (e.key === "Escape") { closePanel(); $("#langBtn").focus(); }
+  };
+  document.addEventListener("click", (e) => {
+    if (!$("#langPanel").hidden && !e.target.closest(".lang-pick")) closePanel();
+  });
+  $("#defBtn").onclick = () => { store.set("mr-default", col.id); renderBar(); };
 
   function loadScript(src) {
     return new Promise((res, rej) => {
@@ -64,11 +125,12 @@
   async function openCollection(id, user) {
     const c = byCol[id] || byCol.malayalam;
     col = c; cat = "all"; show = "all";
-    store.set("mr-col", c.id);
+    recent = [c.id, ...recent.filter((x) => x !== c.id)].slice(0, 8);
+    store.set("mr-recent", recent);
     const url = new URL(location.href);
     url.searchParams.set("c", c.id);
     history.replaceState(null, "", url);
-    renderPicker();
+    renderBar();
     $("#colName").textContent = c.name;
     $("#colNative").textContent = c.native && c.native !== c.name ? c.native : "";
     $("#colIntro").textContent = c.intro;
@@ -81,7 +143,7 @@
     S = window.STATIONS || [];
     byId = Object.fromEntries(S.map((s) => [s.id, s]));
     renderStats(); renderChips(); render();
-    if (user) $("#colName").scrollIntoView({ behavior: "smooth", block: "nearest" });
+    if (user) $(".radio-bar").scrollIntoView({ behavior: "smooth", block: "nearest" });
   }
 
   // ---------------------------------------------------------- lists
@@ -251,6 +313,7 @@
     showNowPlaying(current, currentCol);
     status("Tap play to resume");
   }
-  const want = new URLSearchParams(location.search).get("c") || store.get("mr-col", "malayalam");
+  // a shared link (?c=hindi) wins; otherwise open on the default language
+  const want = new URLSearchParams(location.search).get("c") || getDefault();
   openCollection(byCol[want] ? want : "malayalam", false);
 })();
