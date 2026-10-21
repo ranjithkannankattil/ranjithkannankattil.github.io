@@ -159,3 +159,8 @@ body[data-section="trip"] .edit.rm:hover{ border-color:#C2502F; background:trans
 .edits{ display:flex; gap:.8rem; align-items:center; flex-wrap:wrap; margin-top:.7rem; padding:.5rem .7rem; background:var(--accent-soft); font-size:.88rem; }
 .sc-hint{ font-size:.85rem; color:var(--ink-soft); margin:-.3rem 0 .4rem; }
 @media print{ .edit, .sc-hint, .edits button{ display:none !important; } }
+
+/* map refresh */
+body[data-section="trip"] .map-refresh{ width:34px; height:34px; display:grid; place-items:center; background:#fff; color:#1B1B1F; border:2px solid rgba(0,0,0,.2); border-radius:4px; font-size:18px; line-height:1; cursor:pointer; }
+body[data-section="trip"] .map-refresh:hover{ background:#f4f4f4; }
+.map-refresh.spin{ animation:tp-spin .6s linear infinite; }

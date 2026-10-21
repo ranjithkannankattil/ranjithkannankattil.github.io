@@ -521,8 +521,8 @@
       make(null);
       writeHash();
       say("");
-      render();
       $("out").hidden = false;
+      render();
       $("out").scrollIntoView({ behavior: "smooth", block: "start" });
       // opening hours from OpenStreetMap arrive later; re-time the days when they do
       const token = (window.__tripRun = (window.__tripRun || 0) + 1);
@@ -783,6 +783,22 @@
     if (!window.L) return;
     if (!MAP) {
       MAP = L.map("map", { scrollWheelZoom: false, zoomControl: true });
+      const Refresh = L.Control.extend({
+        options: { position: "topright" },
+        onAdd() {
+          const b = L.DomUtil.create("button", "map-refresh");
+          b.type = "button"; b.title = "Refresh the map"; b.setAttribute("aria-label", "Refresh the map");
+          b.innerHTML = "↻";
+          L.DomEvent.disableClickPropagation(b);
+          b.onclick = () => { b.classList.add("spin"); MAP.invalidateSize(); drawMap(plan.days[current]).finally(() => setTimeout(() => b.classList.remove("spin"), 300)); };
+          return b;
+        },
+      });
+      new Refresh().addTo(MAP);
+      // redraw whenever the box changes size (shown, rotated phone, window resized)
+      let rz = null;
+      new ResizeObserver(() => { clearTimeout(rz); rz = setTimeout(() => { MAP.invalidateSize(); if (MAP.__fit) MAP.fitBounds(MAP.__fit, { padding: [30, 30], maxZoom: 16 }); }, 120); }).observe($("map"));
+      document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") MAP.invalidateSize(); });
       L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       }).addTo(MAP);
@@ -804,8 +820,10 @@
         pts.push([it.place.lat, it.place.lon]);
       }
     }
+    MAP.invalidateSize();
+    MAP.__fit = pts.length ? pts : null;
     if (pts.length) MAP.fitBounds(pts, { padding: [30, 30], maxZoom: 16 });
-    setTimeout(() => MAP.invalidateSize(), 50);
+    setTimeout(() => { MAP.invalidateSize(); if (pts.length) MAP.fitBounds(pts, { padding: [30, 30], maxZoom: 16 }); }, 120);
     // walking paths along real streets for the walking legs; straight dashed lines for rides
     const legs = d.items.filter((x) => x.kind === "leg");
     for (const it of legs) {
@@ -814,17 +832,16 @@
       }
     }
     const walkLegs = legs.filter((x) => x.leg.type === "walk");
-    try {
-      const coords = walkLegs.map((x) => `${x.from.lon},${x.from.lat};${x.to.lon},${x.to.lat}`);
-      for (const c of coords) {
-        const j = await getJSON(`https://routing.openstreetmap.de/routed-foot/route/v1/foot/${c}?overview=full&geometries=geojson`, {}, 9000);
-        if (plan.days[current] !== d) return;
+    const myLayer = layer, color = getComputedStyle(document.body).getPropertyValue("--accent").trim() || "#1F6F78";
+    await Promise.all(walkLegs.map(async (x) => {
+      try {
+        const j = await getJSON(`https://routing.openstreetmap.de/routed-foot/route/v1/foot/${x.from.lon},${x.from.lat};${x.to.lon},${x.to.lat}?overview=full&geometries=geojson`, {}, 9000);
+        if (layer !== myLayer) return;
         const g = j.routes && j.routes[0];
-        if (g) L.geoJSON(g.geometry, { style: { color: getComputedStyle(document.body).getPropertyValue("--accent").trim() || "#1F6F78", weight: 4, opacity: .85 } }).addTo(layer);
-      }
-    } catch {
-      for (const it of walkLegs) L.polyline([[it.from.lat, it.from.lon], [it.to.lat, it.to.lon]], { color: "#1F6F78", weight: 3, opacity: .7 }).addTo(layer);
-    }
+        if (g) { L.geoJSON(g.geometry, { style: { color, weight: 4, opacity: .85 } }).addTo(myLayer); return; }
+      } catch { /* fall back to a straight line */ }
+      if (layer === myLayer) L.polyline([[x.from.lat, x.from.lon], [x.to.lat, x.to.lon]], { color, weight: 3, opacity: .6, dashArray: "2 6" }).addTo(myLayer);
+    }));
   }
 
   // ------------------------------------------------------------------ shared links: #d=Florence&dt=…
