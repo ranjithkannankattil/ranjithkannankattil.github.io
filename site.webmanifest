@@ -1,0 +1,47 @@
+{
+ "name": "Ranjith Kannankattil",
+ "short_name": "ranjithkb",
+ "description": "Writings, photography, radio and news",
+ "start_url": "/",
+ "scope": "/",
+ "id": "/",
+ "display": "standalone",
+ "background_color": "#F0EDE6",
+ "theme_color": "#1B1B1F",
+ "icons": [
+  {
+   "src": "/assets/icons/site-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any maskable"
+  },
+  {
+   "src": "/assets/icons/site-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any maskable"
+  }
+ ],
+ "shortcuts": [
+  {
+   "name": "Radio",
+   "url": "/radio.html",
+   "icons": [
+    {
+     "src": "/assets/icons/radio-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  },
+  {
+   "name": "News",
+   "url": "/news.html",
+   "icons": [
+    {
+     "src": "/assets/icons/news-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  }
+ ]
+}

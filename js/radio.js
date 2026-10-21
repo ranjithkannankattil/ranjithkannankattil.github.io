@@ -251,6 +251,7 @@
   function syncPlayer() {
     if (!current) return;
     npFav.setAttribute("aria-pressed", favs.has(`${currentCol}:${current.id}`));
+    document.querySelectorAll(".rp").forEach((b, i) => { const x = store.get("mr-played", [])[i]; b.classList.toggle("on", !!x && x.c === currentCol && x.s.id === current.id); });
     document.querySelectorAll(".radio-card").forEach((c) =>
       c.classList.toggle("on", currentCol === col.id && c.dataset.id === current.id));
   }
@@ -262,7 +263,7 @@
   }
 
   function teardown() {
-    clearTimeout(failTimer);
+    clearTimeout(failTimer); clearTimeout(stallTimer); clearTimeout(retryTimer);
     if (hls) { hls.destroy(); hls = null; }
     audio.pause(); audio.removeAttribute("src"); audio.load();
   }
@@ -278,7 +279,7 @@
     let i = live.findIndex((x) => x.id === current.id);
     if (i < 0) i = dir > 0 ? -1 : 0;
     const s = live[(i + dir + live.length) % live.length];
-    play(s, list);
+    play(s, list, currentCol, dir);
   }
 
   // square artwork for car screens and lock screens: the station's initials on the accent colour
@@ -295,23 +296,50 @@
     } catch { return []; }
   }
 
-  function play(s, list) {
-    queue = list || visibleList();
-    current = s; currentCol = col.id; tryIndex = 0;
-    store.set("mr-last2", { c: col.id, s });
-    showNowPlaying(s, col.id);
+  // ---- staying on air: reconnect after drop-outs (tunnels, patchy signal), and when a station
+  // reached with Next/Previous is dead, carry on to the following one
+  const vol = $("#vol");
+  let wants = false, everPlayed = false, retries = 0, stallTimer = null, retryTimer = null, skipDir = 0, autoSkips = 0;
+
+  function play(s, list, cId = col.id, dir = 0) {
+    queue = list || (cId === (col && col.id) ? visibleList() : [s]);
+    current = s; currentCol = cId; tryIndex = 0;
+    everPlayed = false; retries = 0; skipDir = dir;
+    if (!dir) autoSkips = 0;
+    store.set("mr-last2", { c: cId, s });
+    showNowPlaying(s, cId);
     syncPlayer();
     document.title = `▶ ${s.name} — Radio`;
     if ("mediaSession" in navigator) {
-      navigator.mediaSession.metadata = new MediaMetadata({ title: s.name, artist: `${col.name} radio`, album: "ranjithkb.com", artwork: artwork(s) });
+      const cn = byCol[cId] ? byCol[cId].name : "";
+      navigator.mediaSession.metadata = new MediaMetadata({ title: s.name, artist: `${cn} radio`, album: "ranjithkb.com", artwork: artwork(s) });
     }
     attempt();
   }
 
+  function reconnect(why) {
+    if (!wants || !current) return;
+    clearTimeout(stallTimer); clearTimeout(retryTimer);
+    if (!navigator.onLine) { setState("loading"); status("No signal — will reconnect"); return; }
+    if (retries >= 4) { retries = 0; nextSource(); return; }
+    const wait = [1500, 3000, 6000, 12000][retries++];
+    setState("loading"); status(why || "Reconnecting");
+    retryTimer = setTimeout(attempt, wait);
+  }
+  window.addEventListener("online", () => { if (wants && current && audio.paused) { retries = 0; attempt(); } });
+  window.addEventListener("offline", () => { if (wants) { setState("loading"); status("No signal — will reconnect"); } });
+
   function attempt() {
     teardown();
+    wants = true;
     const s = current, url = s.streams[tryIndex];
-    if (!url) { setState("idle"); status("Offline — try another station"); markErr(s.id); return; }
+    if (!url) {
+      if (everPlayed) { tryIndex = 0; everPlayed = false; reconnect("Reconnecting"); return; }  // was on air: start over
+      setState("idle"); status("Offline — try another station"); markErr(s.id);
+      if (skipDir && autoSkips < 6) { autoSkips++; status("Offline — trying the next one"); setTimeout(() => skip(skipDir), 700); }
+      else wants = false;
+      return;
+    }
     setState("loading");
     status(s.streams.length > 1 ? `Connecting · source ${tryIndex + 1}/${s.streams.length}` : "Connecting");
     failTimer = setTimeout(nextSource, 12000);
@@ -328,23 +356,71 @@
       audio.play().catch((e) => { if (e.name !== "AbortError") nextSource(); });
     }
   }
-  function nextSource() { if (!current) return; tryIndex++; attempt(); }
+  function nextSource() { if (!current) return; tryIndex++; retries = 0; attempt(); }
   function markErr(id) { if (currentCol === col.id) document.querySelector(`.radio-card[data-id="${CSS.escape(id)}"]`)?.classList.add("err"); }
 
   function toggle() {
     if (!current) return;
-    if (audio.paused) attempt(); else { teardown(); setState("idle"); status("Paused"); }
+    if (audio.paused) { retries = 0; attempt(); } else { wants = false; teardown(); setState("idle"); status("Paused"); }
   }
 
-  audio.addEventListener("playing", () => { clearTimeout(failTimer); setState("playing"); status("Live"); });
-  audio.addEventListener("waiting", () => { if (!audio.paused) { setState("loading"); status("Buffering"); } });
-  audio.addEventListener("error", () => { if (current && audio.getAttribute("src")) nextSource(); });
+  audio.addEventListener("playing", () => {
+    clearTimeout(failTimer); clearTimeout(stallTimer);
+    if (!everPlayed) rememberStation(currentCol, current);
+    everPlayed = true; retries = 0; autoSkips = 0; skipDir = 0;
+    setState("playing"); status(sleepAt ? sleepLabel() : "Live");
+  });
+  const stalled = () => {
+    if (audio.paused || !wants) return;
+    setState("loading"); status("Buffering");
+    clearTimeout(stallTimer);
+    stallTimer = setTimeout(() => reconnect("Signal lost — reconnecting"), 10000);
+  };
+  audio.addEventListener("waiting", stalled);
+  audio.addEventListener("stalled", stalled);
+  audio.addEventListener("ended", () => { if (wants) reconnect(); });   // a live stream should never end
+  audio.addEventListener("error", () => {
+    if (!current || !audio.getAttribute("src")) return;
+    if (everPlayed) reconnect(); else nextSource();
+  });
+
+  // ---- sleep timer: off → 15 → 30 → 60 → 90 minutes, fades out over the last 20 seconds
+  let sleepAt = 0, sleepTick = null;
+  const SLEEP_STEPS = [0, 15, 30, 60, 90];
+  const sleepBtn = $("#sleepBtn");
+  function sleepLabel() { const m = Math.max(1, Math.ceil((sleepAt - Date.now()) / 60000)); return `Live · sleep in ${m} min`; }
+  function setSleep(mins) {
+    clearInterval(sleepTick);
+    sleepAt = mins ? Date.now() + mins * 60000 : 0;
+    sleepBtn.classList.toggle("on", !!mins);
+    sleepBtn.querySelector("b").textContent = mins ? mins : "";
+    sleepBtn.setAttribute("aria-label", mins ? `Sleep timer: ${mins} minutes (tap to change)` : "Sleep timer: off");
+    sleepBtn.title = mins ? `Stops in ${mins} min` : "Sleep timer";
+    if (!mins) { audio.volume = vol.value; if (!audio.paused) status("Live"); return; }
+    if (!audio.paused) status(sleepLabel());
+    sleepTick = setInterval(() => {
+      const left = sleepAt - Date.now();
+      if (left <= 0) {
+        clearInterval(sleepTick); sleepAt = 0;
+        if (!audio.paused) toggle();
+        audio.volume = vol.value; status("Sleep timer — stopped");
+        sleepBtn.classList.remove("on"); sleepBtn.querySelector("b").textContent = "";
+        return;
+      }
+      if (left < 20000) audio.volume = vol.value * (left / 20000);
+      if (!audio.paused && Math.round(left / 1000) % 30 === 0) status(sleepLabel());
+    }, 1000);
+  }
+  sleepBtn.onclick = () => {
+    const now = sleepAt ? SLEEP_STEPS.find((m) => m * 60000 >= sleepAt - Date.now() - 30000) || 0 : 0;
+    const i = SLEEP_STEPS.indexOf(now);
+    setSleep(SLEEP_STEPS[(i + 1) % SLEEP_STEPS.length]);
+  };
 
   playBtn.onclick = toggle;
   $("#prevBtn").onclick = () => skip(-1);
   $("#nextBtn").onclick = () => skip(1);
   npFav.onclick = () => current && toggleFav(`${currentCol}:${current.id}`);
-  const vol = $("#vol");
   vol.value = store.get("mr-vol", 1); audio.volume = vol.value;
   vol.oninput = () => { audio.volume = vol.value; store.set("mr-vol", +vol.value); };
   q.oninput = render;
@@ -367,6 +443,36 @@
     try { navigator.mediaSession.setActionHandler("stop", () => { if (current && !audio.paused) toggle(); }); } catch { /* not supported */ }
   }
 
+  // ---- recently played, across languages
+  function rememberStation(cId, s) {
+    const list = store.get("mr-played", []).filter((x) => !(x.c === cId && x.s.id === s.id));
+    list.unshift({ c: cId, s: { id: s.id, name: s.name, streams: s.streams, category: s.category } });
+    store.set("mr-played", list.slice(0, 10));
+    renderRecent();
+  }
+  function renderRecent() {
+    const box = $("#recentRow");
+    if (!box) return;
+    const list = store.get("mr-played", []).filter((x) => byCol[x.c] && x.s && x.s.streams);
+    box.hidden = !list.length;
+    const row = box.querySelector(".rp-list");
+    row.innerHTML = "";
+    for (const { c, s } of list.slice(0, 8)) {
+      const b = document.createElement("button");
+      b.className = "rp" + (current && currentCol === c && current.id === s.id ? " on" : "");
+      b.innerHTML = '<span class="t"></span><span class="x"><span class="n"></span><span class="l"></span></span>';
+      b.querySelector(".t").textContent = initials(s.name);
+      b.querySelector(".n").textContent = s.name;
+      b.querySelector(".l").textContent = byCol[c].name;
+      b.onclick = () => {
+        if (current && currentCol === c && current.id === s.id) { toggle(); return; }
+        const fresh = c === col.id && byId[s.id] ? byId[s.id] : s;   // latest streams when that list is open
+        play(fresh, c === col.id ? null : [fresh], c);
+      };
+      row.append(b);
+    }
+  }
+
   // ---------------------------------------------------------- start
   const last = store.get("mr-last2", null);
   if (last && last.s && last.s.streams) {
@@ -374,6 +480,7 @@
     showNowPlaying(current, currentCol);
     status("Tap play to resume");
   }
+  renderRecent();
   // a shared link (?c=hindi) wins; otherwise open on the default language
   const want = new URLSearchParams(location.search).get("c") || getDefault();
   openCollection(byCol[want] ? want : "malayalam", false);

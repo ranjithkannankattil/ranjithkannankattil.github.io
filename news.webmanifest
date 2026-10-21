@@ -1,0 +1,37 @@
+{
+ "name": "News \u2014 ranjithkb.com",
+ "short_name": "News",
+ "description": "Trusted papers, world to your town",
+ "start_url": "/news.html",
+ "scope": "/",
+ "id": "/news.html",
+ "display": "standalone",
+ "background_color": "#F0EDE6",
+ "theme_color": "#1B1B1F",
+ "icons": [
+  {
+   "src": "/assets/icons/news-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "purpose": "any maskable"
+  },
+  {
+   "src": "/assets/icons/news-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "any maskable"
+  }
+ ],
+ "shortcuts": [
+  {
+   "name": "Radio",
+   "url": "/radio.html",
+   "icons": [
+    {
+     "src": "/assets/icons/radio-192.png",
+     "sizes": "192x192"
+    }
+   ]
+  }
+ ]
+}
