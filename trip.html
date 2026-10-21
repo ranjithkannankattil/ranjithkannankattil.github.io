@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trip planner — Ranjith Kannankattil</title>
+<meta name="description" content="Plan a day or a week anywhere: main sights in walking order, stop to stop, with opening hours, tickets, weather and maps.">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="icon" href="/assets/icons/site-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/icons/site-180.png">
+<meta name="theme-color" content="#F0EDE6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16161A" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="css/style.css?v=7">
+<link rel="stylesheet" href="css/trip.css?v=1">
+</head>
+<body data-section="trip" class="wide">
+
+<header class="titleblock">
+  <div>
+    <div class="id">RANJITH KANNANKATTIL</div>
+    <div class="name">Trip planner</div>
+  </div>
+  <nav class="tabs" data-root="" data-active="trip" aria-label="Site">
+    <a href="index.html">Home</a>
+    <a href="writings.html">Writings</a>
+    <a href="photography.html">Photography</a>
+    <a href="radio.html">Radio</a>
+    <a href="news.html">News</a>
+    <a href="trip.html" class="active">Trip planner</a>
+  </nav>
+</header>
+
+<main>
+  <section class="tp-head">
+    <h1 class="tp-title">Trip planner</h1>
+    <p class="tp-intro">Tell it where, when and how you like to get around. It lays out each day in walking order — from the station or stop where you start to the one where you finish — with opening hours on your date, tickets, the weather and a map.</p>
+  </section>
+
+  <form class="tp-form" id="form" autocomplete="off">
+    <div class="tp-row two">
+      <label class="tp-field place">
+        <span class="k">Where to</span>
+        <input id="dest" name="dest" placeholder="City or town — e.g. Florence, Kochi, Swansea" required>
+        <div class="sugg" id="destSugg" hidden></div>
+      </label>
+      <label class="tp-field">
+        <span class="k">Date of visit</span>
+        <input id="date" name="date" type="date" required>
+      </label>
+    </div>
+    <div class="tp-row two">
+      <label class="tp-field place">
+        <span class="k">Coming from <em>optional</em></span>
+        <input id="from" name="from" placeholder="Where you travel from — for trains, flights and routes">
+        <div class="sugg" id="fromSugg" hidden></div>
+      </label>
+      <label class="tp-field place">
+        <span class="k">Start each day at <em>optional</em></span>
+        <input id="base" name="base" placeholder="Hotel, station or address — otherwise the main station">
+        <div class="sugg" id="baseSugg" hidden></div>
+      </label>
+    </div>
+
+    <fieldset class="tp-opt">
+      <legend class="k">How long</legend>
+      <div class="chips" data-name="days">
+        <button type="button" data-v="0.5">Half day</button><button type="button" data-v="1">1 day</button><button type="button" data-v="2">2 days</button>
+        <button type="button" data-v="3">3 days</button><button type="button" data-v="4">4 days</button><button type="button" data-v="5">5 days</button><button type="button" data-v="7">A week</button>
+      </div>
+    </fieldset>
+    <div class="tp-row three">
+      <fieldset class="tp-opt">
+        <legend class="k">Getting around</legend>
+        <div class="chips" data-name="mode">
+          <button type="button" data-v="walk">Walking only</button><button type="button" data-v="pt">Bus, tram &amp; metro</button><button type="button" data-v="car">Car</button>
+        </div>
+      </fieldset>
+      <fieldset class="tp-opt">
+        <legend class="k">Walking</legend>
+        <div class="chips" data-name="walk">
+          <button type="button" data-v="light" title="About 5 km a day">A little</button><button type="button" data-v="moderate" title="About 10 km a day">Some</button><button type="button" data-v="lots" title="15 km or more a day">Lots</button>
+        </div>
+      </fieldset>
+      <fieldset class="tp-opt">
+        <legend class="k">Pace</legend>
+        <div class="chips" data-name="pace">
+          <button type="button" data-v="relaxed">Relaxed</button><button type="button" data-v="balanced">Balanced</button><button type="button" data-v="packed">Packed</button>
+        </div>
+      </fieldset>
+    </div>
+    <fieldset class="tp-opt">
+      <legend class="k">Interested in <em>pick any</em></legend>
+      <div class="chips multi" data-name="likes">
+        <button type="button" data-v="must">Must-sees</button><button type="button" data-v="museum">Museums &amp; galleries</button><button type="button" data-v="history">History &amp; architecture</button>
+        <button type="button" data-v="religious">Churches &amp; temples</button><button type="button" data-v="nature">Views &amp; nature</button><button type="button" data-v="parks">Parks &amp; gardens</button>
+        <button type="button" data-v="markets">Markets &amp; shopping</button><button type="button" data-v="culture">Theatre &amp; music</button><button type="button" data-v="family">Family &amp; kids</button>
+        <button type="button" data-v="gems">Lesser-known places</button>
+      </div>
+    </fieldset>
+    <div class="tp-row three small">
+      <label class="tp-field"><span class="k">Start the day</span><input id="t0" type="time" value="09:00"></label>
+      <label class="tp-field"><span class="k">Finish by</span><input id="t1" type="time" value="18:00"></label>
+      <label class="tp-check"><input id="lunch" type="checkbox" checked> <span>Leave time for lunch</span></label>
+    </div>
+    <div class="tp-go">
+      <button class="go" id="go" type="submit">Plan my trip</button>
+      <span class="tp-status" id="status" role="status"></span>
+    </div>
+  </form>
+
+  <section class="tp-out" id="out" hidden>
+    <div class="tp-sum" id="sum"></div>
+    <div class="tp-cards" id="cards"></div>
+    <nav class="tp-days" id="days" aria-label="Days"></nav>
+    <div class="tp-day" id="day">
+      <div class="tp-map" id="map"></div>
+      <div class="tp-plan" id="plan"></div>
+    </div>
+    <p class="tp-note">Places, descriptions and opening hours come from Wikidata, Wikipedia and OpenStreetMap, edited by volunteers. Check hours and prices on the official sites before you go, especially on holidays. Walking times are on foot at an easy pace; bus, tram and car times are estimates. Open the Google Maps links for live times.</p>
+  </section>
+</main>
+
+<footer>
+  <div>© <span id="year"></span> Ranjith Kannankattil</div>
+  <div class="foot-r"><span class="visits" id="visits" hidden></span><a href="privacy.html">Privacy</a></div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="js/trip.js?v=1"></script>
+<script src="js/nav.js?v=4" defer></script>
+<script src="js/visits.js?v=2" defer></script>
+</body>
+</html>

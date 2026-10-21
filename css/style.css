@@ -25,6 +25,7 @@
 [data-section="publications"]       { --accent:#6B2740; --accent-soft:#EBDCE1; }
 [data-section="radio"]       { --accent:#2F6B4F; --accent-soft:#DCE9E1; }
 [data-section="news"]        { --accent:#A33A2C; --accent-soft:#F2E0DB; }
+[data-section="trip"]         { --accent:#1F6F78; --accent-soft:#DCEBEC; }
 [data-section="productivity"] { --accent:#5C4D7D; --accent-soft:#E7E2EF; }
 
 *{ box-sizing:border-box; }
@@ -171,6 +172,8 @@ footer .diamond-mark{ color:var(--accent); margin:0 .5rem; }
 .practice-grid.three{ grid-template-columns:repeat(3, 1fr); margin-top:.8rem; }
 .grid-label{ font-family:var(--f-mono); font-size:.68rem; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-soft); margin-top:3rem; }
 .grid-label + .practice-grid{ margin-top:.8rem; }
+.practice-grid.four{ grid-template-columns:repeat(4, 1fr); }
+@media (max-width:1000px){ .practice-grid.four{ grid-template-columns:1fr 1fr; } }
 @media (max-width:860px){ .practice-grid.three{ grid-template-columns:1fr 1fr; } }
 @media (max-width:560px){ .practice-grid.three{ grid-template-columns:1fr; } }
 .practice{
@@ -775,6 +778,7 @@ nav.tabs .nav-menu a.current{ background:var(--accent-soft); box-shadow:inset 3p
   [data-section="radio"]        { --accent:#6BC497; --accent-soft:#1B2D24; }
   [data-section="news"]         { --accent:#EC8572; --accent-soft:#36201C; }
   [data-section="productivity"] { --accent:#B4A2DE; --accent-soft:#28233A; }
+  [data-section="trip"]         { --accent:#6CC3CB; --accent-soft:#1A2B2D; }
 
   img{ filter:brightness(.92); }
   .frame img, .hero-photo img{ filter:grayscale(1) contrast(1.05) brightness(.9); }
