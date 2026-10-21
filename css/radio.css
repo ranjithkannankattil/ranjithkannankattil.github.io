@@ -1,7 +1,8 @@
 /* ============================================================
    RADIO — live radio in many languages
    ============================================================ */
-body[data-section="radio"]{ padding-bottom:6.5rem; }
+body[data-section="radio"]{ padding-bottom:2rem; }
+body[data-section="radio"]:has(.radio-player:not([hidden])){ padding-bottom:6.5rem; }
 body[data-section="radio"] button{ font:inherit; color:inherit; cursor:pointer; border:0; background:none; padding:0; }
 body[data-section="radio"] svg{ display:block; }
 
@@ -203,7 +204,7 @@ body[data-section="radio"] .rp.on{ border-color:var(--accent); background:var(--
 }
 /* phones: a taller two-row player with big, easy-to-hit controls */
 @media (max-width:640px){
-  body[data-section="radio"]{ padding-bottom:10.5rem; }
+  body[data-section="radio"]:has(.radio-player:not([hidden])){ padding-bottom:10.5rem; }
   .radio-player{ flex-direction:column; align-items:stretch; gap:.65rem; padding:.85rem 1rem calc(.85rem + env(safe-area-inset-bottom)); }
   .radio-player .np{ gap:.8rem; }
   .radio-player .np-tile{ width:48px; height:48px; font-size:1rem; }
@@ -221,3 +222,11 @@ body[data-section="radio"] .rp.on{ border-color:var(--accent); background:var(--
 }
 /* keep the site's floating top/bottom buttons behind the player and its sleep menu */
 body[data-section="radio"] .scroll-nav{ z-index:15; }
+/* close (×) button: far right on desktop, top-right corner of the player on phones */
+body[data-section="radio"] .np-close{ flex:none; width:40px; height:40px; display:grid; place-items:center; border-radius:50%; color:var(--paper); opacity:.7; }
+body[data-section="radio"] .np-close:hover, body[data-section="radio"] .np-close:focus-visible{ opacity:1; background:rgba(240,237,230,.12); }
+.np-close svg{ width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; }
+@media (max-width:640px){
+  body[data-section="radio"] .np-close{ position:absolute; top:.55rem; right:.6rem; width:44px; height:44px; }
+  .radio-player .np{ padding-right:3rem; }
+}

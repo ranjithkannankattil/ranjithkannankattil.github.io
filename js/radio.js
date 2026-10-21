@@ -306,7 +306,7 @@
     current = s; currentCol = cId; tryIndex = 0;
     everPlayed = false; retries = 0; skipDir = dir;
     if (!dir) autoSkips = 0;
-    store.set("mr-last2", { c: cId, s });
+    store.set("mr-last2", { c: cId, s }); store.set("mr-closed", false);
     showNowPlaying(s, cId);
     syncPlayer();
     document.title = `▶ ${s.name} — Radio`;
@@ -438,6 +438,20 @@
   document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !sleepMenu.hidden) { openSleep(false); sleepBtn.focus(); } });
   paintSleep();
 
+  // close: stop the stream, cancel any sleep timer, hide the bar (and don't bring it back on the next visit)
+  const pageTitle = document.title.replace(/^▶ .*? — /, "");
+  function closePlayer() {
+    wants = false; teardown(); if (sleepAt) setSleep(0); setState("idle");
+    openSleep(false);
+    current = null; currentCol = null;
+    document.querySelectorAll(".radio-card.on, .rp.on").forEach((el) => el.classList.remove("on"));
+    player.hidden = true;
+    document.title = pageTitle;
+    if ("mediaSession" in navigator) { navigator.mediaSession.metadata = null; try { navigator.mediaSession.playbackState = "none"; } catch { /* older browsers */ } }
+    store.set("mr-closed", true);
+  }
+  $("#closeBtn").onclick = closePlayer;
+
   playBtn.onclick = toggle;
   $("#prevBtn").onclick = () => skip(-1);
   $("#nextBtn").onclick = () => skip(1);
@@ -496,7 +510,7 @@
 
   // ---------------------------------------------------------- start
   const last = store.get("mr-last2", null);
-  if (last && last.s && last.s.streams) {
+  if (last && last.s && last.s.streams && !store.get("mr-closed", false)) {
     current = last.s; currentCol = last.c;
     showNowPlaying(current, currentCol);
     status("Tap play to resume");
