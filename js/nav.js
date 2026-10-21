@@ -63,6 +63,41 @@
     document.addEventListener("click", (e) => { if (!nav.contains(e.target)) groups.forEach((g) => (g.open = false)); });
     document.addEventListener("keydown", (e) => { if (e.key === "Escape") groups.forEach((g) => (g.open = false)); });
   });
+  // Floating "top / bottom" buttons on every long page.
+  // Up appears once you've scrolled down a little; down hides near the end of the page.
+  // Sits above any bar pinned to the bottom of the screen (e.g. the radio player).
+  (function scrollButtons() {
+    const box = document.createElement("div");
+    box.className = "scroll-nav"; box.setAttribute("aria-label", "Page scroll");
+    box.innerHTML =
+      '<button type="button" class="sn-btn sn-up" aria-label="Back to top" title="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 14l6-6 6 6"/></svg></button>' +
+      '<button type="button" class="sn-btn sn-down" aria-label="Go to bottom" title="Go to bottom"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 10l6 6 6-6"/></svg></button>';
+    document.body.append(box);
+    const up = box.querySelector(".sn-up"), down = box.querySelector(".sn-down");
+    const calm = matchMedia("(prefers-reduced-motion: reduce)");
+    const go = (top) => window.scrollTo({ top, behavior: calm.matches ? "auto" : "smooth" });
+    up.onclick = () => go(0);
+    down.onclick = () => go(document.documentElement.scrollHeight);
+    const bars = () => [...document.querySelectorAll(".radio-player")];
+    let raf = 0;
+    function update() {
+      raf = 0;
+      const doc = document.documentElement, vh = window.innerHeight, y = window.scrollY;
+      const long = doc.scrollHeight > vh * 1.6;
+      up.classList.toggle("on", long && y > Math.min(600, vh * 0.6));
+      down.classList.toggle("on", long && doc.scrollHeight - (y + vh) > Math.min(600, vh * 0.6));
+      let lift = 0;
+      bars().forEach((b) => { if (!b.hidden && getComputedStyle(b).display !== "none") lift = Math.max(lift, b.getBoundingClientRect().height); });
+      box.style.setProperty("--sn-lift", lift + "px");
+    }
+    const queue = () => { if (!raf) raf = requestAnimationFrame(update); };
+    addEventListener("scroll", queue, { passive: true });
+    addEventListener("resize", queue);
+    new ResizeObserver(queue).observe(document.body);                       // content loading in later
+    bars().forEach((b) => new MutationObserver(queue).observe(b, { attributes: true, attributeFilter: ["hidden", "style", "class"] }));
+    update();
+  })();
+
   // offline shell + "Add to Home Screen" (see /sw.js)
   if ("serviceWorker" in navigator && location.protocol === "https:") navigator.serviceWorker.register("/sw.js").catch(() => {});
 })();

@@ -133,7 +133,6 @@
     clearTimeout(t);
     t = setTimeout(() => { query = e.target.value.trim(); if (query.length > 1) needText(); render(); }, 120);
   });
-  window.addEventListener("scroll", () => $("back-to-top").classList.toggle("show", window.scrollY > 900), { passive: true });
 
   const u = new URLSearchParams(location.search);
   query = u.get("q") || ""; tag = u.get("tag") || ""; form = u.get("form") || "";
