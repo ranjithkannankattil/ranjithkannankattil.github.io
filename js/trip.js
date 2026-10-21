@@ -18,7 +18,7 @@
   const CATS = {
     museum: { label: "Museum", rx: /museum|gallery|art collection|glyptotheque|exhibition|kunsthalle|pinacoteca/i, indoor: 1 },
     religious: { label: "Church / temple", rx: /church|cathedral|basilica|chapel|temple|mosque|synagogue|abbey|monastery|baptistery|shrine|convent|pagoda|gurdwara|kovil|kshetram/i, indoor: 1 },
-    parks: { label: "Park / garden", rx: /\bpark\b|garden|botanical|arboretum/i },
+    parks: { label: "Park / garden", rx: /(?<!archaeological |archeological |heritage |historical )\bpark\b|garden|botanical|arboretum/i },
     nature: { label: "View / nature", rx: /viewpoint|lookout|belvedere|hill|mountain|\blake\b|waterfall|beach|nature reserve|forest|cliff|cave|valley|bay|lagoon|promenade|riverfront|backwater/i },
     markets: { label: "Market / shopping", rx: /market|bazaar|shopping|food hall|souk|arcade|mall\b/i },
     culture: { label: "Theatre / music", rx: /theatre|theater|opera|concert hall|arts venue|music venue|arena|stadium|cinema/i, indoor: 1 },
@@ -169,7 +169,7 @@
     if (d.extent && d.extent.length === 4) [w, n, e, sth] = d.extent;
     else { w = d.lon - 1; e = d.lon + 1; n = d.lat + .7; sth = d.lat - .7; }
     const diag = dist({ lat: n, lon: w }, { lat: sth, lon: e });
-    const minSl = diag > 400000 ? 22 : diag > 200000 ? 18 : diag > 100000 ? 14 : 12;
+    const minSl = diag > 400000 ? 11 : diag > 200000 ? 10 : 8;
     const rows = await sparql(`SELECT ?item ?itemLabel ?itemDescription ?lat ?lon ?sl ?wiki ?town ?townLabel (SAMPLE(?img) AS ?image) (SAMPLE(?site) AS ?website) (GROUP_CONCAT(DISTINCT ?typeLabel; separator="|") AS ?types) WHERE {
       SERVICE wikibase:box { ?item wdt:P625 ?c . bd:serviceParam wikibase:cornerWest "Point(${w} ${sth})"^^geo:wktLiteral . bd:serviceParam wikibase:cornerEast "Point(${e} ${n})"^^geo:wktLiteral . }
       ?item wikibase:sitelinks ?sl . FILTER(?sl >= ${minSl})
