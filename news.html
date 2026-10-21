@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css?v=5">
-<link rel="stylesheet" href="css/news.css?v=1">
+<link rel="stylesheet" href="css/news.css?v=2">
 </head>
 <body data-section="news" class="wide">
 
@@ -69,13 +69,14 @@
     <button class="refresh" id="refresh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66M20 4v5h-5"/></svg><span>Refresh</span></button>
   </div>
 
+  <nav class="topics" id="topics" aria-label="Topics" hidden></nav>
   <div class="stories" id="stories"></div>
 
   <details class="sources" id="sources">
     <summary>Which papers are used</summary>
     <div id="sourcesBody"></div>
   </details>
-  <p class="news-note">Each story links to the paper's own website; summaries are the paper's own standfirst. Stories are found through Google News and kept only when they come from the papers listed above. Some papers ask for a subscription to read the full article.</p>
+  <p class="news-note">Each story links to the paper's own website; summaries are the paper's own standfirst, except where marked "AI summary". Stories are found through Google News and kept only when they come from the papers listed above. Some papers ask for a subscription to read the full article.</p>
 </main>
 
 <footer>
@@ -84,7 +85,7 @@
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-<script src="js/news.js?v=1" defer></script>
+<script src="js/news.js?v=2" defer></script>
 <script src="js/nav.js?v=3" defer></script>
 <script src="js/visits.js?v=2" defer></script>
 </body>

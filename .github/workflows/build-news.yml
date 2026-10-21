@@ -9,6 +9,7 @@ on:
     paths:
       - scripts/build_news.py
       - scripts/news_config.py
+      - scripts/news_extras.py
       - .github/workflows/build-news.yml
 
 permissions:
@@ -38,6 +39,11 @@ jobs:
 
       - run: pip install -q googlenewsdecoder
 
+      - name: Malayalam font for the briefing epub
+        run: |
+          mkdir -p scripts/.fonts
+          curl -sSfL -o scripts/.fonts/Manjari-Regular.ttf https://raw.githubusercontent.com/google/fonts/main/ofl/manjari/Manjari-Regular.ttf || true
+
       - name: Restore link/summary cache
         uses: actions/cache/restore@v4
         with:
@@ -46,6 +52,11 @@ jobs:
           restore-keys: news-cache-
 
       - name: Build
+        env:
+          # optional: add a free Gemini API key as a repository secret named GEMINI_API_KEY
+          # to get short AI summaries and a digest per place; everything else works without it
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
         run: python3 -u scripts/build_news.py --out out --prev prev
 
       - name: Save link/summary cache

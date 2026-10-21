@@ -13,7 +13,8 @@ from collections import defaultdict
 from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(__file__))
-from news_config import LANGS, OUTLETS, PLACES, JUNK, NATIVE, ALIASES  # noqa: E402
+from news_config import LANGS, OUTLETS, PLACES, JUNK, NATIVE, ALIASES, TOPICS, LOCAL_PAGES, LOCAL_FROM, BRIEFING  # noqa: E402
+import news_extras  # noqa: E402
 
 try:
     from googlenewsdecoder import gnewsdecoder
@@ -21,7 +22,7 @@ except ImportError:  # still works, links just stay as Google News redirects
     gnewsdecoder = None
 
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36"
-KEEP, KEEP_OTHER = 25, 12
+KEEP, KEEP_OTHER, KEEP_TOPIC = 25, 12, 15
 WHEN = {"world": "1d", "country": "1d", "region": "3d", "city": "7d"}
 NOW = time.time()
 
@@ -105,7 +106,12 @@ def parse_rss(xml):
 
 
 def jobs_for(p):
-    """(place_id, lang, [urls]) for one place."""
+    """(place_id, lang, topic, [urls]) for one place; topic "" is the main list."""
+    for lang in p["langs"]:
+        ed = edition(lang, p.get("cc", ""))
+        if p["kind"] == "world" or (p["kind"] == "country" and ed[1] == p.get("cc")):
+            for tid, _, sec in TOPICS:
+                yield p["id"], lang, tid, [gn_url(f"/headlines/section/topic/{sec}", ed)]
     for lang in p["langs"]:
         ed = edition(lang, p.get("cc", ""))
         eds = [ed]
@@ -117,7 +123,7 @@ def jobs_for(p):
         for e in eds:
             if p["kind"] == "world":
                 urls.append(gn_url("/headlines/section/topic/WORLD", e))
-                urls.append(gn_url("/headlines/section/topic/BUSINESS", e))
+                urls.append(gn_url("", e))
                 continue
             if p["kind"] == "country" and e[1] == p.get("cc"):
                 urls.append(gn_url("/headlines/section/topic/NATION", e))
@@ -130,7 +136,7 @@ def jobs_for(p):
                     # one paper per search: Google News reads "a site:x OR site:y" as "(a site:x) OR site:y"
                     for d in domains[:4]:
                         urls.append(gn_url("/search", e, f"{name} site:{d} when:{when}"))
-        yield p["id"], lang, urls
+        yield p["id"], lang, "", urls
 
 
 # English outlets most likely to cover a country's own towns
@@ -173,7 +179,7 @@ def enrich(stories, cache):
     """Resolve Google News links to publisher links and fetch the publisher's summary (cached)."""
     todo = []
     for st in stories:
-        key = st["u"].split("/articles/")[-1].split("?")[0]
+        key = st["u"].split("/articles/")[-1].split("?")[0] if "news.google.com" in st["u"] else st["u"]
         st["_k"] = key
         if key in cache:
             cache[key]["seen"] = int(NOW)
@@ -183,6 +189,8 @@ def enrich(stories, cache):
     print(f"enrich: {len(stories)} stories, {len(uniq)} new", flush=True)
 
     def decode(st):
+        if "news.google.com" not in st["u"]:
+            return st["_k"], st["u"]
         if not gnewsdecoder:
             return st["_k"], st["u"]
         try:
@@ -202,18 +210,26 @@ def enrich(stories, cache):
         k, u = item
         if "news.google.com" in u:
             return k, u, ""
-        page = get(u, limit=400_000, timeout=12, tries=1)
-        return k, u, summary_from(page, uniq[k]["t"])
+        page = get(u, limit=600_000, timeout=12, tries=1)
+        s = summary_from(page, uniq[k]["t"])
+        x = "" if s else news_extras.excerpt(page)
+        return k, u, s, x
 
     with cf.ThreadPoolExecutor(24) as ex:
-        for k, u, s in ex.map(fetch, decoded.items()):
-            cache[k] = {"u": u, "s": s, "seen": int(NOW)}
+        for k, u, s, x in ex.map(fetch, decoded.items()):
+            cache[k] = {"u": u, "s": s, "seen": int(NOW), "first": int(NOW)}
+            if x:
+                cache[k]["x"] = x
 
     for st in stories:
         c = cache.get(st["_k"], {})
         st["u"] = c.get("u", st["u"])
         if c.get("s"):
             st["s"] = c["s"]
+        if c.get("x"):
+            st["_x"] = c["x"]
+        if st.get("_first") and c.get("first"):
+            st["ts"] = c["first"]
 
 
 def names(p):
@@ -241,14 +257,15 @@ def main():
 
     places = [p for p in PLACES if not a.only or p["id"] in a.only.split(",")]
     jobs = [j for p in places for j in jobs_for(p)]
-    urls = sorted({u for _, _, us in jobs for u in us})
-    print(f"{len(places)} places, {len(jobs)} place-languages, {len(urls)} feeds", flush=True)
+    local_urls = sorted({u for pid in [p["id"] for p in places] for us in LOCAL_PAGES.get(LOCAL_FROM.get(pid, pid), {}).values() for u in us})
+    urls = sorted({u for *_, us in jobs for u in us} | set(local_urls))
+    print(f"{len(places)} places, {len(jobs)} lists, {len(urls)} feeds and pages", flush=True)
 
     feeds = {}
 
     def pull(u):
         time.sleep(0.15)
-        return u, get(u)
+        return u, get(u, limit=3_000_000)
 
     with cf.ThreadPoolExecutor(5) as ex:
         for u, x in ex.map(pull, urls):
@@ -256,39 +273,62 @@ def main():
     failed = sum(1 for x in feeds.values() if x is None)
     print(f"feeds fetched, {failed} failed", flush=True)
 
-    kind = {p["id"]: p["kind"] for p in PLACES}
     pmap = {p["id"]: p for p in PLACES}
-    result = defaultdict(lambda: {"news": {}, "other": {}})
-    report, stale = [], {}
-    for pid, lang, us in jobs:
+    result = defaultdict(lambda: {"news": {}, "other": {}, "topics": defaultdict(dict)})
+    report, stale, local_debug = [], {}, {}
+
+    def harvest(pid, lang):
+        """Stories from the papers' own district pages / city feeds."""
+        src_pid = LOCAL_FROM.get(pid, pid)
+        out = []
+        for u in LOCAL_PAGES.get(src_pid, {}).get(lang, []):
+            items = news_extras.harvest_page(feeds.get(u), u)
+            local_debug[u] = {"ok": feeds.get(u) is not None, "n": len(items), "sample": [i["t"][:70] for i in items[:4]]}
+            own = src_pid == pid and any(n.isascii() and n.replace(" ", "-") in u.lower() for n in names(pmap[pid]))
+            for it in items:
+                name = outlet_for(lang, host(it["u"]))
+                if not name:
+                    continue
+                it.update(src=name, _first=it.get("ts") is None, _own=own)
+                it.setdefault("ts", int(NOW))
+                out.append(it)
+        return out
+
+    for pid, lang, topic, us in jobs:
+        kind = pmap[pid]["kind"]
         trusted, other, seen = [], [], set()
         got_any = False
+        cands = []
         for u in us:
             if feeds.get(u) is None:
                 continue
             got_any = True
-            for st in parse_rss(feeds[u]):
-                k = norm(st["t"])
-                if k in seen:
-                    continue
-                if NOW - st["ts"] > 8 * 86400:
-                    continue
-                if NOT_STORY.search(st["t"]) or len(st["t"]) < 10:
-                    continue
-                name = outlet_for(lang, st["h"])
-                if name:
-                    seen.add(k)
-                    st["src"] = name
-                    trusted.append(st)
-                elif kind[pid] in ("region", "city") and st["h"] and not junk(st["h"], st["t"]):
-                    seen.add(k)
-                    other.append(st)
+            cands += parse_rss(feeds[u])
+        if not topic and kind in ("region", "city"):
+            loc = harvest(pid, lang)
+            got_any = got_any or bool(loc)
+            cands = loc + cands
+        for st in cands:
+            k = norm(st["t"])
+            if k in seen or NOW - st["ts"] > 8 * 86400:
+                continue
+            if NOT_STORY.search(st["t"]) or len(st["t"]) < 10:
+                continue
+            name = st["src"] if st.get("_own") is not None else outlet_for(lang, st["h"])
+            if name:
+                seen.add(k)
+                st["src"] = name
+                trusted.append(st)
+            elif not topic and kind in ("region", "city") and st.get("h") and not junk(st["h"], st["t"]):
+                seen.add(k)
+                other.append(st)
         trusted.sort(key=lambda s: -s["ts"])
         other.sort(key=lambda s: -s["ts"])
-        local = kind[pid] in ("region", "city")
-        if local:  # stories naming the place in the headline first; the rest are checked against their summary later
+        if topic:
+            trusted, other = trusted[:KEEP_TOPIC], []
+        elif kind in ("region", "city"):  # stories naming the place first; the rest are checked against their summary later
             nm = names(pmap[pid])
-            hit = lambda st: any(n in st["t"].lower() for n in nm)  # noqa: E731
+            hit = lambda st: st.get("_own") or any(n in st["t"].lower() for n in nm)  # noqa: E731
             trusted = [x for x in trusted if hit(x)][:KEEP] + [x for x in trusted if not hit(x)][:KEEP]
             other = [x for x in other if hit(x)][:KEEP_OTHER] + [x for x in other if not hit(x)][:KEEP_OTHER]
         else:
@@ -297,13 +337,25 @@ def main():
             pf = prev / "p" / f"{pid}.json"
             if pf.exists():
                 old = json.loads(pf.read_text())
-                trusted = old.get("news", {}).get(lang, [])
-                other = old.get("other", {}).get(lang, [])
-        result[pid]["news"][lang] = trusted
-        result[pid]["other"][lang] = other
-        stale[(pid, lang)] = not got_any
+                if topic:
+                    trusted = old.get("topics", {}).get(topic, {}).get(lang, [])
+                else:
+                    trusted = old.get("news", {}).get(lang, [])
+                    other = old.get("other", {}).get(lang, [])
+        if topic:
+            result[pid]["topics"][topic][lang] = trusted
+        else:
+            result[pid]["news"][lang] = trusted
+            result[pid]["other"][lang] = other
+            stale[(pid, lang)] = not got_any
 
-    allst = [s for r in result.values() for part in ("news", "other") for lst in r[part].values() for s in lst if "_k" not in s and "news.google.com" in s["u"]]
+    def every_list(r):
+        yield from r["news"].values()
+        yield from r["other"].values()
+        for t in r["topics"].values():
+            yield from t.values()
+
+    allst = [s for r in result.values() for lst in every_list(r) for s in lst if "_k" not in s and ("news.google.com" in s["u"] or s.get("_own") is not None)]
     enrich(allst, cache)
 
     for pid, r in result.items():
@@ -316,7 +368,7 @@ def main():
                 for st in lst:
                     if st["u"] in seen_u or (st.get("s") and st["s"] in seen_s):
                         continue
-                    if local and not stale.get((pid, lang)):
+                    if local and not stale.get((pid, lang)) and not st.get("_own"):
                         text = (st["t"] + " " + st.get("s", "")).lower()
                         if not any(n in text for n in nm):
                             continue
@@ -325,12 +377,37 @@ def main():
                         seen_s.add(st["s"])
                     keep.append(st)
                 r[part][lang] = sorted(keep, key=lambda x: -x["ts"])[:cap]
+        for t in r["topics"].values():
+            for lang, lst in t.items():
+                seen_u = set()
+                t[lang] = [x for x in lst if not (x["u"] in seen_u or seen_u.add(x["u"]))]
         for lang in p["langs"]:
-            report.append(f"{pid:20} {lang}  trusted {len(r['news'].get(lang, [])):3}  other {len(r['other'].get(lang, [])):3}{'  (kept previous)' if stale.get((pid, lang)) else ''}")
-        for part in ("news", "other"):
-            for lang, lst in r[part].items():
-                r[part][lang] = [{k: v for k, v in s.items() if k in ("t", "s", "u", "src", "ts")} for s in lst]
-        (out / "p" / f"{pid}.json").write_text(json.dumps({"id": pid, "updated": int(NOW), **r}, ensure_ascii=False, separators=(",", ":")))
+            report.append(f"{pid:20} {lang}  trusted {len(r['news'].get(lang, [])):3}  other {len(r['other'].get(lang, [])):3}"
+                          f"  topics {sum(len(t.get(lang, [])) for t in r['topics'].values()):3}{'  (kept previous)' if stale.get((pid, lang)) else ''}")
+
+    # AI: summaries for stories the papers gave none for, and a short digest per briefing place
+    ai = news_extras.AI(cache)
+    if ai.on:
+        need = [s for r in result.values() for lst in r["news"].values() for s in lst if not s.get("s") and s.get("_x")]
+        ai.summaries(need)
+        for pid, langs in BRIEFING:
+            if pid in result:
+                for lang in langs:
+                    lst = result[pid]["news"].get(lang, [])
+                    d = ai.digest(pmap[pid]["name"], LANGS[lang]["name"], lst)
+                    if d:
+                        result[pid].setdefault("digest", {})[lang] = d
+        print(f"AI: {ai.calls} calls, {ai.errors} errors", flush=True)
+
+    clean = lambda lst: [{k: v for k, v in s.items() if k in ("t", "s", "u", "src", "ts", "ai")} for s in lst]  # noqa: E731
+    for pid, r in result.items():
+        doc = {"id": pid, "updated": int(NOW), "news": {l: clean(v) for l, v in r["news"].items()},
+               "other": {l: clean(v) for l, v in r["other"].items()}}
+        if r["topics"]:
+            doc["topics"] = {t: {l: clean(v) for l, v in d.items()} for t, d in r["topics"].items()}
+        if r.get("digest"):
+            doc["digest"] = r["digest"]
+        (out / "p" / f"{pid}.json").write_text(json.dumps(doc, ensure_ascii=False, separators=(",", ":")))
 
     index = {
         "updated": int(NOW),
@@ -338,9 +415,17 @@ def main():
         "langs": {k: {"name": v["name"], "native": v["native"]} for k, v in LANGS.items()},
         "places": [{"id": p["id"], "name": p["name"], "native": NATIVE.get(p["id"], ""), "parent": p.get("parent"), "kind": p["kind"], "langs": p["langs"]} for p in PLACES],
         "outlets": {k: sorted(set(v.values())) for k, v in OUTLETS.items()},
+        "topics": [[t, n] for t, n, _ in TOPICS],
     }
     (out / "index.json").write_text(json.dumps(index, ensure_ascii=False, separators=(",", ":")))
-    (out / "report.txt").write_text(time.strftime("%Y-%m-%d %H:%M UTC\n", time.gmtime(NOW)) + f"feeds {len(urls)}, failed {failed}\n" + "\n".join(report) + "\n")
+    (out / "report.txt").write_text(time.strftime("%Y-%m-%d %H:%M UTC\n", time.gmtime(NOW)) + f"feeds {len(urls)}, failed {failed}\n"
+                                    + "\n".join(report) + "\n\nLocal pages:\n" + json.dumps(local_debug, ensure_ascii=False, indent=1) + "\n")
+
+    # morning briefing epub + OPDS catalogue for KOReader
+    try:
+        news_extras.briefing(out, result, pmap, LANGS, NOW)
+    except Exception as e:  # noqa: BLE001
+        print("briefing failed:", e, flush=True)
 
     # keep the cache small: drop entries unseen for 4 days
     cache = {k: v for k, v in cache.items() if NOW - v.get("seen", 0) < 4 * 86400}

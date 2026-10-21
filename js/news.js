@@ -15,7 +15,7 @@
   let langs = store.get("news-langs", ["en", "ml"]);
   let pins = store.get("news-pins", DEFAULT_PINS);
   let showOther = store.get("news-other", false);
-  let data = null, nextTimer = null, lastLoad = 0;
+  let data = null, nextTimer = null, lastLoad = 0, topic = "";
   const open = new Set();
 
   const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
@@ -155,8 +155,25 @@
     m.append(el("span", "src", s.src || "Unknown"));
     m.append(el("span", null, ago(s.ts)));
     if (other) m.append(el("span", "other", "Other outlet"));
+    if (s.ai) m.append(el("span", "ai", "AI summary"));
     a.append(m);
     return a;
+  }
+
+  function renderTopics() {
+    const nav = $("topics");
+    nav.innerHTML = "";
+    const has = data && data.topics && index.topics;
+    nav.hidden = !has;
+    if (!has) { topic = ""; return; }
+    if (topic && !data.topics[topic]) topic = "";
+    for (const [id, name] of [["", "Top stories"], ...index.topics]) {
+      if (id && !data.topics[id]) continue;
+      const b = el("button", null, name);
+      b.setAttribute("aria-pressed", id === topic);
+      b.onclick = () => { topic = id; renderTopics(); renderStories(); };
+      nav.append(b);
+    }
   }
 
   function renderStories() {
@@ -190,18 +207,28 @@
       const L = index.langs[l];
       const sec = el("section", "lang-sec");
       sec.lang = l;
-      let list = (data.news && data.news[l]) || [];
-      let others = local && showOther ? (data.other && data.other[l]) || [] : [];
+      const T = topic && data.topics && data.topics[topic];
+      let list = T ? T[l] || [] : (data.news && data.news[l]) || [];
+      let others = !T && local && showOther ? (data.other && data.other[l]) || [] : [];
       const items = [...list.map((s) => [s, false]), ...others.map((s) => [s, true])].sort((a, b) => b[0].ts - a[0].ts);
       const head = el("div", "sec-head");
       head.append(el("h2", null, L.name), el("span", "n", items.length ? `${items.length} ${items.length === 1 ? "story" : "stories"}` : ""));
       sec.append(head);
+      const dg = !T && data.digest && data.digest[l];
+      if (dg && dg.b && dg.b.length) {
+        const d = el("div", "digest");
+        d.append(el("div", "dk", `${p.name} in brief`));
+        const ul = el("ul");
+        for (const b of dg.b) ul.append(el("li", null, b));
+        d.append(ul, el("div", "dn", "AI summary of the stories below — check the papers for detail"));
+        sec.append(d);
+      }
       if (!items.length) {
         const n = el("p", "empty", `No ${L.name} stories about ${p.name} from the trusted papers in the last ${p.kind === "city" ? "week" : "few days"}.`);
         if (local && !showOther && (data.other && data.other[l] || []).length) n.textContent += ` ${data.other[l].length} from other local outlets — switch them on above.`;
         sec.append(n);
       } else {
-        const key = place + ":" + l;
+        const key = place + ":" + l + ":" + topic;
         const lim = open.has(key) ? items.length : PER;
         items.slice(0, lim).forEach(([s, o], i) => sec.append(storyEl(s, i === 0, o)));
         if (items.length > lim) {
@@ -245,7 +272,7 @@
       const before = data && data.id === place ? data.updated : 0;
       data = await getJSON(`p/${place}.json`, fresh);
       lastLoad = Date.now();
-      renderBar(); renderLangs(); renderSub(); renderStories();
+      renderBar(); renderLangs(); renderSub(); renderTopics(); renderStories();
       renderWhen();
       schedule();
       return before && data.updated > before ? "new" : before ? "same" : "first";

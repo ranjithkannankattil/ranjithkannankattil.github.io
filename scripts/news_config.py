@@ -221,3 +221,39 @@ ALIASES = {
     "washington": ["Washington", "White House", "Capitol"], "paris": ["Paris", "parisien"], "berlin": ["Berlin"], "madrid": ["Madrid"],
     "lisbon": ["Lisboa", "Lisbon"], "tokyo": ["東京", "Tokyo", "都内"], "seoul": ["서울", "Seoul"],
 }
+
+# Topic tabs at World and country level (Google News sections).
+TOPICS = [("business", "Business", "BUSINESS"), ("tech", "Technology", "TECHNOLOGY"), ("sport", "Sport", "SPORTS"),
+          ("science", "Science", "SCIENCE"), ("health", "Health", "HEALTH"), ("culture", "Entertainment", "ENTERTAINMENT")]
+
+# The papers' own district pages, read directly for more local stories.
+# A town listed in LOCAL_FROM takes its district's stories that mention the town.
+LOCAL_PAGES = {
+    "thrissur": {"ml": ["https://www.mathrubhumi.com/thrissur", "https://www.manoramaonline.com/district-news/thrissur.html",
+                        "https://www.deshabhimani.com/district/thrissur"],
+                 "en": ["https://www.thehindu.com/news/cities/Kochi/feeder/default.rss"]},
+    "kochi": {"ml": ["https://www.mathrubhumi.com/ernakulam", "https://www.manoramaonline.com/district-news/ernakulam.html",
+                     "https://www.deshabhimani.com/district/ernakulam"],
+              "en": ["https://www.thehindu.com/news/cities/Kochi/feeder/default.rss"]},
+    "thiruvananthapuram": {"ml": ["https://www.mathrubhumi.com/thiruvananthapuram", "https://www.manoramaonline.com/district-news/thiruvananthapuram.html",
+                                  "https://www.deshabhimani.com/district/thiruvananthapuram"],
+                           "en": ["https://www.thehindu.com/news/cities/Thiruvananthapuram/feeder/default.rss"]},
+    "kozhikode": {"ml": ["https://www.mathrubhumi.com/kozhikode", "https://www.manoramaonline.com/district-news/kozhikode.html",
+                         "https://www.deshabhimani.com/district/kozhikode"],
+                  "en": ["https://www.thehindu.com/news/cities/kozhikode/feeder/default.rss"]},
+    "kerala": {"en": ["https://www.thehindu.com/news/national/kerala/feeder/default.rss"]},
+    "bengaluru": {"en": ["https://www.thehindu.com/news/cities/bangalore/feeder/default.rss"]},
+    "chennai": {"en": ["https://www.thehindu.com/news/cities/chennai/feeder/default.rss"]},
+    "mumbai": {"en": ["https://www.thehindu.com/news/cities/mumbai/feeder/default.rss"]},
+    "delhi": {"en": ["https://www.thehindu.com/news/cities/Delhi/feeder/default.rss"]},
+    "hyderabad": {"en": ["https://www.thehindu.com/news/cities/Hyderabad/feeder/default.rss"]},
+    "kolkata": {"en": ["https://www.thehindu.com/news/cities/kolkata/feeder/default.rss"]},
+    "coimbatore": {"en": ["https://www.thehindu.com/news/cities/Coimbatore/feeder/default.rss"]},
+    "mangaluru": {"en": ["https://www.thehindu.com/news/cities/Mangalore/feeder/default.rss"]},
+}
+LOCAL_FROM = {"kodungallur": "thrissur"}
+
+# Places that get a short AI digest and go into the morning briefing epub.
+BRIEFING = [("world", ["en"]), ("india", ["en"]), ("kerala", ["en", "ml"]), ("thrissur", ["en", "ml"]), ("kodungallur", ["ml", "en"]),
+            ("bengaluru", ["en"]), ("uk", ["en"]), ("swansea", ["en"]), ("london", ["en"]), ("italy", ["en", "it"]), ("milan", ["it", "en"]),
+            ("china", ["en"]), ("qingdao", ["en", "zh"]), ("mozambique", ["en", "pt"])]
