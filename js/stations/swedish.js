@@ -141,6 +141,7 @@ window.STATIONS = [
     "name": "Sveriges Radio - P4 Blekinge",
     "category": "music",
     "streams": [
+      "https://sverigesradio.se/topsy/direkt/213-lo-mp3.m3u",
       "https://live1.sr.se/p4blek-mp3-96"
     ]
   },
@@ -320,7 +321,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://live1.sr.se/p4jkpg-aac-320"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "sveriges-radio-p3-din-gata",
@@ -331,4 +333,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T00:20Z";
+window.STATIONS_CHECKED = "2026-10-21T05:33Z";

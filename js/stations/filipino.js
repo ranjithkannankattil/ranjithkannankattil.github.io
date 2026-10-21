@@ -63,9 +63,9 @@ window.STATIONS = [
     "name": "MOR Entertainment",
     "category": "music",
     "streams": [
+      "https://stream-37.zeno.fm/26ea0anpms8uv",
       "https://stream.zeno.fm/26ea0anpms8uv"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "cjrk-fm-102-7-east-fm-toronto-on",
@@ -326,4 +326,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T00:20Z";
+window.STATIONS_CHECKED = "2026-10-21T05:33Z";

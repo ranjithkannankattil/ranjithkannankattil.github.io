@@ -121,8 +121,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play-radio-stream3.hndt.com/now/WUBA5hW2/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-10",
@@ -325,4 +324,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T00:20Z";
+window.STATIONS_CHECKED = "2026-10-21T05:33Z";

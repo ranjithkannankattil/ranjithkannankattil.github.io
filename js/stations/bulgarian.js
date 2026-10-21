@@ -48,7 +48,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nova-radio.neterra.tv/veselinaretro"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "badrock-hard-heavy",
@@ -210,7 +211,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radyo.yayin.com.tr:4474/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-lagoshevtsi",
@@ -325,4 +327,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T00:20Z";
+window.STATIONS_CHECKED = "2026-10-21T05:33Z";

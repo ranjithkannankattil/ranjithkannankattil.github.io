@@ -136,7 +136,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/EHR_LATVIESU_HITI.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "skontons",
@@ -160,7 +161,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.ehrhiti.lv:8000/Stream_67.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "european-hit-radio-superhits-hiphop-rnb",
@@ -168,7 +170,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://25633.live.streamtheworld.com/EHR_SUPERHITS_HIPHOP_RNBAAC.aac"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "ehr-remixes",
@@ -176,7 +179,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.ehrhiti.lv:8000/Stream_32.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "ehr-fresh",
@@ -184,7 +188,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.ehrhiti.lv:8000/Stream_25.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "ehr-darbam",
@@ -224,7 +229,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/EHR_LIDO_GARSU_HITIAAC.aac"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "ehr-superhits-radio-superhits",
@@ -232,7 +238,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://27943.live.streamtheworld.com/EHR_SUPERHITS.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "european-hit-radio-superhits-gold",
@@ -312,7 +319,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/LATVIESU_HITI_ZELTA_HITIAAC.aac"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "pieci-hiti",
@@ -323,4 +331,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T00:20Z";
+window.STATIONS_CHECKED = "2026-10-21T05:33Z";

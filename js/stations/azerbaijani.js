@@ -96,7 +96,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cdn4.yayin.com.tr/kntv/tracks-v1a1/mono.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-enerji-101-1-fm",
@@ -163,4 +164,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T00:20Z";
+window.STATIONS_CHECKED = "2026-10-21T05:33Z";

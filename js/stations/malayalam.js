@@ -171,8 +171,7 @@ window.STATIONS = [
     "akv": "Akashvani Devikulam",
     "exclude": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "airkozhikodefm",
@@ -215,8 +214,7 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://cast1.my-control-panel.com/proxy/myradio90fm/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "airkannur",
@@ -481,8 +479,7 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://usa8.fastcast4u.com/proxy/auralradio?mp=/1/;stream.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "premamfm",
@@ -1009,4 +1006,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T00:20Z";
+window.STATIONS_CHECKED = "2026-10-21T05:33Z";

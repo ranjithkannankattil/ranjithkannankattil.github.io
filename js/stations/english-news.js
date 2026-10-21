@@ -46,7 +46,8 @@ window.STATIONS = [
     "streams": [
       "https://live.amperwave.net/direct/foxnewsradio-foxnewsradioaac-imc?source=fnr.web"
     ],
-    "where": "US"
+    "where": "US",
+    "offline": true
   },
   {
     "id": "msnbc",
@@ -202,4 +203,4 @@ window.STATIONS = [
     "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T00:20Z";
+window.STATIONS_CHECKED = "2026-10-21T05:33Z";
