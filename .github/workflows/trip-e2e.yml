@@ -1,0 +1,13 @@
+name: Trip planner check (temporary)
+on: { workflow_dispatch: {} }
+permissions: { contents: write }
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm i -s playwright@1.48.2 && npx playwright install --with-deps chromium > /dev/null
+      - run: node scripts/trip_e2e.mjs > probe-out.txt 2>&1 || true
+      - run: |
+          git config user.name "github-actions[bot]"; git config user.email "41898732+github-actions[bot]@users.noreply.github.com"
+          git checkout -b probe-out; git add -f probe-out.txt shot-*.png; git commit -qm probe; git push -f origin probe-out
