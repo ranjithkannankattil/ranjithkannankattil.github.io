@@ -3,7 +3,7 @@
    These values are public by design: what protects the data is firestore.rules. */
 window.FIREBASE_CONFIG = {
   apiKey: "AIzaSyDGsaqqamWbS6RCtyU9v54o-oqZqYzdDEo",
-  authDomain: "ranjithkb-radio.firebaseapp.com",
+  authDomain: "ranjithkb.com",               // sign-in helper is self-hosted under /__/auth/ (same site)
   projectId: "ranjithkb-radio",
   storageBucket: "ranjithkb-radio.firebasestorage.app",
   messagingSenderId: "780863401130",
