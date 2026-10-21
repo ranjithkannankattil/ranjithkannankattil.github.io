@@ -4,7 +4,7 @@
 ```
 index.html              Home
 cv.html                 CV (hidden for now: unlinked from nav + Home, noindex)
-photography.html        Photography (grayscale contact-sheet grid, 20 photos)
+photography.html        Photography: one section per series (Tenby 18, Florence 20), colour grid + viewer
 writings.html           Writings archive — 365 posts, search + tag filters
 writing-post.html       Single-post template (reads ?slug=...)
 publications.html       Books + academic publication
