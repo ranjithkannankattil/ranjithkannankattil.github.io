@@ -108,9 +108,7 @@ def jobs_for(p):
         eds = [ed]
         if lang == "zh" and ed != LANGS["zh"]["ed"]["*"]:
             eds.append(LANGS["zh"]["ed"]["*"])  # Hong Kong edition carries more independent Chinese-language outlets
-        name = p.get("q", {}).get(lang, p["name"])
-        if " OR " in name:
-            name = f"({name})"
+        names = [x.strip() for x in p.get("q", {}).get(lang, p["name"]).split(" OR ")]
         when = WHEN[p["kind"]]
         urls = []
         for e in eds:
@@ -120,19 +118,21 @@ def jobs_for(p):
                 continue
             if p["kind"] == "country" and e[1] == p.get("cc"):
                 urls.append(gn_url("/headlines/section/topic/NATION", e))
-            urls.append(gn_url("/search", e, f"{name} when:{when}"))
             domains = list(OUTLETS.get(lang, {}))
             if lang == "en":
                 domains = EN_LOCAL.get(p.get("cc"), EN_LOCAL["*"])
-            if domains:
-                sites = " OR ".join(f"site:{d}" for d in domains[:14])
-                urls.append(gn_url("/search", e, f"{name} ({sites}) when:{when}"))
+            for name in names:
+                urls.append(gn_url("/search", e, f"{name} when:{when}"))
+                if p["kind"] in ("region", "city"):
+                    # one paper per search: Google News reads "a site:x OR site:y" as "(a site:x) OR site:y"
+                    for d in domains[:4]:
+                        urls.append(gn_url("/search", e, f"{name} site:{d} when:{when}"))
         yield p["id"], lang, urls
 
 
 # English outlets most likely to cover a country's own towns
 EN_LOCAL = {
-    "IN": ["thehindu.com", "newindianexpress.com", "indianexpress.com", "deccanherald.com", "thenewsminute.com", "onmanorama.com",
+    "IN": ["thehindu.com", "newindianexpress.com", "onmanorama.com", "indianexpress.com", "deccanherald.com", "thenewsminute.com",
            "english.mathrubhumi.com", "telegraphindia.com", "hindustantimes.com", "scroll.in", "thewire.in", "livemint.com", "theprint.in"],
     "GB": ["bbc.co.uk", "theguardian.com", "walesonline.co.uk", "nation.cymru", "independent.co.uk", "standard.co.uk", "itv.com",
            "manchestereveningnews.co.uk", "heraldscotland.com", "scotsman.com", "birminghammail.co.uk", "inews.co.uk", "news.sky.com"],
