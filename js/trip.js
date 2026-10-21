@@ -19,14 +19,14 @@
     museum: { label: "Museum", rx: /museum|gallery|art collection|glyptotheque|exhibition|kunsthalle|pinacoteca/i, indoor: 1 },
     religious: { label: "Church / temple", rx: /church|cathedral|basilica|chapel|temple|mosque|synagogue|abbey|monastery|baptistery|shrine|convent|pagoda|gurdwara|kovil|kshetram/i, indoor: 1 },
     parks: { label: "Park / garden", rx: /\bpark\b|garden|botanical|arboretum/i },
-    nature: { label: "View / nature", rx: /viewpoint|lookout|belvedere|hill|mountain|\blake\b|waterfall|beach|nature reserve|forest|\bisland\b|cliff|cave|valley|bay|lagoon|promenade|riverfront|backwater/i },
+    nature: { label: "View / nature", rx: /viewpoint|lookout|belvedere|hill|mountain|\blake\b|waterfall|beach|nature reserve|forest|cliff|cave|valley|bay|lagoon|promenade|riverfront|backwater/i },
     markets: { label: "Market / shopping", rx: /market|bazaar|shopping|food hall|souk|arcade|mall\b/i },
     culture: { label: "Theatre / music", rx: /theatre|theater|opera|concert hall|arts venue|music venue|arena|stadium|cinema/i, indoor: 1 },
     family: { label: "Family", rx: /\bzoo\b|aquarium|amusement park|theme park|planetarium|science centre|science center|water park|children/i },
     history: { label: "Landmark", rx: /palace|palazzo|castle|fort\b|fortress|tower|bridge|monument|memorial|square|plaza|piazza|fountain|statue|archaeolog|ruin|gate|city wall|amphitheatre|loggia|old town|mausoleum|landmark|villa|lighthouse|historic|heritage|harbour|harbor|pier|dock|cemetery|obelisk|column|arch\b|colonnade/i },
   };
   const ORDER = ["religious", "parks", "museum", "family", "culture", "markets", "nature", "history"];
-  const EXCLUDE = /\b(city|town|village|comune|municipality|province|region|state|country|county|administrative|district|neighbou?rhood|ward|council|siege|revolt|conspiracy|battle|war|university|college|school|institute|library|archives|society|academy|hospital|company|business|enterprise|organi[sz]ation|railway station|metro station|bus station|airport|human|painting|fresco|artwork|cycle of frescoes|sacristy|studiolo|pharmacy|drugstore|sport|championship|record group|event|election|treaty|diocese|archdiocese|parish\b|constituency|electoral|office|embassy|consulate|hotel|restaurant|road|highway|railway line|river|tributary|watercourse|mountain range|ecumenical)\b/i;
+  const EXCLUDE = /\b(city|town|village|comune|municipality|province|region|state|country|county|administrative|district|neighbou?rhood|ward|council|siege|revolt|conspiracy|battle|war|university|college|school|institute|library|archives|society|academy|hospital|company|business|enterprise|organi[sz]ation|railway station|metro station|bus station|airport|human|painting|fresco|artwork|cycle of frescoes|sacristy|studiolo|pharmacy|drugstore|sport|championship|record group|event|election|treaty|diocese|archdiocese|parish\b|constituency|electoral|office|embassy|consulate|hotel|restaurant|road|highway|railway line|river|tributary|watercourse|mountain range|ecumenical|island|islands|archipelago|islet|metropolitan city|consortium|peninsula|cape|strait|sea|gulf)\b/i;
   const ARTWORK = /sculpture|painting|fresco|artwork|mosaic|altarpiece|tapestry/i;
   const STATION_RX = /railway station|train station|metro station|subway station|underground station|tram stop|bus station|light rail station|station\b|terminus|interchange/i;
 
@@ -218,9 +218,18 @@
       return ok.size >= 5 ? places.filter((p) => ok.has(p.id)) : places;
     } catch { return places; }
   }
+  const NOT_TOWN = /province|metropolitan|region|consortium|county|district|department|\bitaly\b|\bsicily\b|islands?$|archipelago|municipality of|comprensorio/i;
   function towns(places) {                       // group sights by town; tiny groups join a big neighbour within 6 km
-    const by = new Map();
-    for (const p of places) { const k = p.townId || p.id; if (!by.has(k)) by.set(k, { key: k, name: p.town || p.name, places: [] }); by.get(k).places.push(p); }
+    const by = new Map(), loose = [];
+    for (const p of places) {
+      if (!p.town || NOT_TOWN.test(p.town)) { loose.push(p); continue; }   // only tagged with a province: placed by distance below
+      const k = p.townId || p.id; if (!by.has(k)) by.set(k, { key: k, name: p.town, places: [] }); by.get(k).places.push(p);
+    }
+    for (const p of loose) {
+      let best = null, bd = 15000;
+      for (const t of by.values()) { const d = dist(p, t.places[0]); if (d < bd) { bd = d; best = t; } }
+      if (best) best.places.push(p);
+    }
     let list = [...by.values()].map((t) => ({ ...t, lat: t.places.reduce((a, p) => a + p.lat, 0) / t.places.length, lon: t.places.reduce((a, p) => a + p.lon, 0) / t.places.length, score: t.places.reduce((a, p) => a + p.score, 0) }));
     list.sort((a, b) => b.score - a.score);
     const out = [];
@@ -476,7 +485,7 @@
     const base = ctx.base && (!ctx.tour || dist(ctx.base, centre) < 20000) ? ctx.base : null;
     // where the day starts and ends: your base if it's close, otherwise the main stop near this part of town
     const startHub = base && dist(base, centre) < WALK[opts.walk].leg * 1.6 ? base : (opts.mode === "car" ? null : nearestHub(cluster.sort((a, b) => dist(base || centre, a) - dist(base || centre, b))[0], hubs, 1800));
-    const start = startHub || base || { ...centre, name: `${ctx.city} — centre of this area` };
+    const start = startHub || base || { ...centre, name: ctx.townOf && ctx.townOf[idx] ? `${ctx.townOf[idx]} — town centre` : `${ctx.city} — centre of this area` };
     // walking order from the start; the finish is whatever stop is near the last sight (not the other way round)
     const towards = tripEnd && dist(tripEnd, centre) < 15000 ? tripEnd : base && base !== start ? base : null;
     let stops = orderRoute(start, cluster.filter((p) => p !== start), towards);
