@@ -291,7 +291,7 @@ def main():
             own = src_pid == pid and any(n.isascii() and n.replace(" ", "-") in u.lower() for n in names(pmap[pid]))
             for it in items:
                 name = outlet_for(lang, host(it["u"]))
-                if not name or not news_extras.script_ok(it["t"], lang):
+                if not name or not news_extras.script_ok(it["t"], lang) or re.search(r"\(\d{2,3}\)\s*അന്തരിച്ചു|അന്തരിച്ചു\.?$|ആദരാഞ്ജലി", it["t"]):
                     continue
                 it.update(src=name, _first=it.get("ts") is None, _own=own)
                 it.setdefault("ts", int(NOW))
@@ -382,7 +382,8 @@ def main():
                         seen_s.add(st["s"])
                     keep.append(st)
                 keep = [x for x in keep if NOW - x["ts"] < 8 * 86400]
-                r[part][lang] = news_extras.diversify(sorted(keep, key=lambda x: -x["ts"]))[:cap]
+                keep.sort(key=lambda x: -x["ts"])
+                r[part][lang] = (news_extras.round_robin(keep) if local else news_extras.diversify(keep))[:cap]
         for t in r["topics"].values():
             for lang, lst in t.items():
                 seen_u = set()
