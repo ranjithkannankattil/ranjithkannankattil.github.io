@@ -370,8 +370,7 @@ window.STATIONS = [
     "streams": [
       "https://icecast.octosignals.com/sargakshetrafm",
       "https://edge.mixlr.com/channel/ugbfe"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radiomediavillage",

@@ -320,7 +320,8 @@ def main() -> None:
         if working:
             st.pop("offline", None)
         elif unknown:
-            pass        # couldn't tell from GitHub's servers: leave the station as it was
+            # GitHub's servers couldn't tell (blocked/refused); real browsers usually play these, so don't show them as down
+            st.pop("offline", None)
         else:
             st["offline"] = True
 
