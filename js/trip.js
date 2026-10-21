@@ -423,6 +423,7 @@
       const centre = base && dist(base, dest) < 15000 ? { lat: (base.lat + dest.lat * 2) / 3, lon: (base.lon + dest.lon * 2) / 3 } : dest;
       const km = opts.mode === "car" ? Math.min(12 + days * 8, 50) : opts.mode === "pt" ? Math.min(3.5 + days * 1.6, 12) : Math.min(2.2 + days * .7, 5);
       state.city = dest;
+      lastHash = "#" + new URLSearchParams({ d: $("dest").value, f: $("from").value, b: $("base").value, dt: $("date").value, ...Object.fromEntries(Object.entries(opts).map(([k, v]) => [k, Array.isArray(v) ? v.join(",") : v])), t0: $("t0").value, t1: $("t1").value, l: $("lunch").checked ? 1 : 0 });
       history.replaceState(null, "", "#" + new URLSearchParams({ d: $("dest").value, f: $("from").value, b: $("base").value, dt: $("date").value, ...Object.fromEntries(Object.entries(opts).map(([k, v]) => [k, Array.isArray(v) ? v.join(",") : v])), t0: $("t0").value, t1: $("t1").value, l: $("lunch").checked ? 1 : 0 }));
 
       say("Looking up what's worth seeing…");
@@ -730,8 +731,13 @@
   }
 
   // ------------------------------------------------------------------ shared links: #d=Florence&dt=…
-  const h = new URLSearchParams(location.hash.slice(1));
-  if (h.get("d")) {
+  let lastHash = "";
+  function fromHash() {
+    if (location.hash === lastHash) return;
+    lastHash = location.hash;
+    const h = new URLSearchParams(location.hash.slice(1));
+    if (!h.get("d")) return;
+    state.dest = state.from = state.base = null;
     $("dest").value = h.get("d"); $("from").value = h.get("f") || ""; $("base").value = h.get("b") || "";
     if (h.get("dt")) $("date").value = h.get("dt");
     for (const k of ["days", "mode", "walk", "pace"]) if (h.get(k)) opts[k] = h.get(k);
@@ -742,4 +748,6 @@
     document.querySelectorAll(".chips").forEach((box) => { const nm = box.dataset.name, multi = box.classList.contains("multi"); box.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", multi ? opts[nm].includes(b.dataset.v) : opts[nm] === b.dataset.v)); });
     setTimeout(() => $("form").requestSubmit(), 50);
   }
+  window.addEventListener("hashchange", fromHash);
+  fromHash();
 })();
