@@ -243,7 +243,7 @@
   }
   function allocateDays(tlist, days, perDay) {   // each day goes to the town where one more day adds the most
     // a day in a town with only one or two sights is worth much less than a full day somewhere rich
-    const gain = (t, k) => { const g = t.places.slice(perDay * k, perDay * (k + 1)); return g.reduce((a, p) => a + p.score, 0) * (k ? .8 : 1) * Math.min(1, (g.length / Math.min(perDay, 4)) ** 1.5); };
+    const gain = (t, k) => { const g = t.places.slice(perDay * k, perDay * (k + 1)); return g.reduce((a, p) => a + p.score, 0) * [1, .6, .35, .25][Math.min(k, 3)] * Math.min(1, (g.length / Math.min(perDay, 4)) ** 1.5); };
     const alloc = new Map();
     for (let d = 0; d < days; d++) {
       let best = null, bg = -1;
