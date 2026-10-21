@@ -169,7 +169,7 @@
     if (d.extent && d.extent.length === 4) [w, n, e, sth] = d.extent;
     else { w = d.lon - 1; e = d.lon + 1; n = d.lat + .7; sth = d.lat - .7; }
     const diag = dist({ lat: n, lon: w }, { lat: sth, lon: e });
-    const minSl = diag > 400000 ? 35 : diag > 200000 ? 22 : diag > 100000 ? 16 : 12;
+    const minSl = diag > 400000 ? 22 : diag > 200000 ? 18 : diag > 100000 ? 14 : 12;
     const rows = await sparql(`SELECT ?item ?itemLabel ?itemDescription ?lat ?lon ?sl ?wiki ?town ?townLabel (SAMPLE(?img) AS ?image) (SAMPLE(?site) AS ?website) (GROUP_CONCAT(DISTINCT ?typeLabel; separator="|") AS ?types) WHERE {
       SERVICE wikibase:box { ?item wdt:P625 ?c . bd:serviceParam wikibase:cornerWest "Point(${w} ${sth})"^^geo:wktLiteral . bd:serviceParam wikibase:cornerEast "Point(${e} ${n})"^^geo:wktLiteral . }
       ?item wikibase:sitelinks ?sl . FILTER(?sl >= ${minSl})
