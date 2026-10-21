@@ -88,7 +88,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://a8.siar.us/listen/campursari/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rri-pro-2-92-1-fm-tanjungpinang",
@@ -326,4 +327,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T18:27Z";
+window.STATIONS_CHECKED = "2026-10-21T18:55Z";

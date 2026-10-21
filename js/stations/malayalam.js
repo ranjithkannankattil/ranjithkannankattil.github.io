@@ -217,7 +217,8 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://cast1.my-control-panel.com/proxy/myradio90fm/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "airkannur",
@@ -317,8 +318,7 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://icecast.octosignals.com/radiomacfast"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "globalradio",
@@ -352,7 +352,8 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://onair.junefm.in/live"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radiomangalam",
@@ -509,8 +510,7 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://streamer.radio.co/s8d5f06a3d/listen"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "malayalammusic",
@@ -644,8 +644,7 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://fm.saksoftlabs.com/radio.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radiome",
@@ -815,8 +814,7 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.radio.co/s1383afdc9/listen?ver=828256"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "reviveradiomalayalam",
@@ -832,8 +830,7 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.radio.co/s9015a8e16/listen"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radioangelos",
@@ -925,8 +922,7 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://streams.radio.co/s4e89ff5bd/listen"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "muthnabiradio",
@@ -1013,4 +1009,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T18:27Z";
+window.STATIONS_CHECKED = "2026-10-21T18:55Z";

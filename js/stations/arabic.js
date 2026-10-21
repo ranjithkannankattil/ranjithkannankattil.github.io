@@ -192,7 +192,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://broadcast.shoutstream.co.uk/stream/8112"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "medi-1-radio",
@@ -325,4 +326,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T18:27Z";
+window.STATIONS_CHECKED = "2026-10-21T18:55Z";

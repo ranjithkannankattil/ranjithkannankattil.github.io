@@ -32,8 +32,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://myradio24.org/bosscomaz"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "autolife-radio-azerbaijan",
@@ -166,4 +165,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T18:27Z";
+window.STATIONS_CHECKED = "2026-10-21T18:55Z";

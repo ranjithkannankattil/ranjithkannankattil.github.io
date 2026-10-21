@@ -1,42 +1,67 @@
 {
   "http://108.170.51.230:8010/stream": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "no answer to GitHub's servers",
     "since": "2026-10-20"
   },
   "http://82.145.63.6:6094/mp=/stream": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-20"
   },
   "http://centova87.instainternet.com:8272/;": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-20"
   },
   "http://radiomangalam.in:8000/stream": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "no answer to GitHub's servers",
     "since": "2026-10-20"
   },
   "http://server.geetradio.com:8020/radio.mp3": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-20"
   },
+  "https://1946218710.rsc.cdn77.org/1946218710/index.m3u8": {
+    "fails": 1,
+    "last_reason": "playlist HTTP 206",
+    "since": "2026-10-21"
+  },
+  "https://a8.siar.us/listen/campursari/stream": {
+    "fails": 1,
+    "last_reason": "HTTP 404 error page",
+    "since": "2026-10-21"
+  },
   "https://air.pc.cdn.bitgravity.com/air/live/pbaudio044/playlist.m3u8": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "playlist HTTP 404",
     "since": "2026-10-20"
   },
   "https://air.pc.cdn.bitgravity.com/air/live/pbaudio045/playlist.m3u8": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "playlist HTTP 404",
     "since": "2026-10-20"
   },
+  "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8": {
+    "fails": 1,
+    "last_reason": "playlist HTTP 404",
+    "since": "2026-10-21"
+  },
   "https://atunwadigital.streamguys1.com/yfm979takoradi": {
-    "fails": 3,
+    "fails": 4,
     "last_reason": "HTTP 502, 0 bytes",
+    "since": "2026-10-21"
+  },
+  "https://broadcast.shoutstream.co.uk/stream/8112": {
+    "fails": 1,
+    "last_reason": "HTTP 500 error page",
+    "since": "2026-10-21"
+  },
+  "https://c2.auracast.net:8048/stream": {
+    "fails": 1,
+    "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-21"
   },
   "https://c4.radioboss.fm:8547/autodj": {
@@ -44,13 +69,18 @@
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-20"
   },
+  "https://cast1.my-control-panel.com/proxy/myradio90fm/stream": {
+    "fails": 1,
+    "last_reason": "HTTP 401, 0 bytes",
+    "since": "2026-10-21"
+  },
   "https://centova71.instainternet.com/proxy/tcrliveradio?mp=/stream": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "HTTP 404 error page",
     "since": "2026-10-20"
   },
   "https://classic.nl/streams/?s=main": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "HTTP 500 error page",
     "since": "2026-10-21"
   },
@@ -60,27 +90,27 @@
     "since": "2026-10-20"
   },
   "https://das-edge16-live365-dal02.cdnstream.com/a39171": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "HTTP 404 error page",
     "since": "2026-10-20"
   },
   "https://dc4.serverse.com/proxy/pearlfm/stream/1/": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "HTTP 502 error page",
     "since": "2026-10-21"
   },
   "https://dreamsiteradiocp2.com/proxy/rmindia1?mp=/stream": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "HTTP 401, 0 bytes",
     "since": "2026-10-21"
   },
   "https://edge.mixlr.com/channel/ugbfe": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "HTTP 404 error page",
     "since": "2026-10-20"
   },
   "https://fm.alarabiya.net/fm/myStream/playlist.m3u8": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "playlist HTTP 404",
     "since": "2026-10-21"
   },
@@ -90,12 +120,12 @@
     "since": "2026-10-20"
   },
   "https://gains.reviveradio.net/proxy/menorah?mp=/stream": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "HTTP 502 error page",
     "since": "2026-10-20"
   },
   "https://i.klikhost.com:8272/;": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "HTTP 401, 0 bytes",
     "since": "2026-10-21"
   },
@@ -115,162 +145,142 @@
     "since": "2026-10-20"
   },
   "https://lhttp.qtfm.cn/live/1908/64k.mp3": {
-    "fails": 2,
+    "fails": 3,
     "last_reason": "HTTP 404 error page",
     "since": "2026-10-21"
   },
   "https://lhttp.qtfm.cn/live/20500215/64k.mp3": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "HTTP 404 error page",
-    "since": "2026-10-21"
-  },
-  "https://listen.openstream.co/4103/audio": {
-    "fails": 1,
-    "last_reason": "HTTP 200, 0 bytes",
     "since": "2026-10-21"
   },
   "https://listen.openstream.co/4635/audio": {
-    "fails": 9,
+    "fails": 10,
     "last_reason": "HTTP 502 error page",
     "since": "2026-10-20"
   },
-  "https://live-icy.dr.dk/A/A07H.mp3": {
-    "fails": 1,
-    "last_reason": "HTTP 0, 0 bytes",
-    "since": "2026-10-21"
-  },
-  "https://live-icy.dr.dk/A/A12H.mp3": {
-    "fails": 1,
-    "last_reason": "HTTP 0, 0 bytes",
-    "since": "2026-10-21"
-  },
-  "https://live-icy.dr.dk/A/A13H.mp3": {
-    "fails": 1,
-    "last_reason": "HTTP 0, 0 bytes",
-    "since": "2026-10-21"
-  },
   "https://live.sarrit.com:8010/mazhavilfm": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "HTTP 404 error page",
     "since": "2026-10-20"
   },
-  "https://myradio24.org/bosscomaz": {
+  "https://onair.junefm.in/live": {
     "fails": 1,
-    "last_reason": "HTTP 200, 15831 bytes",
+    "last_reason": "HTTP 404 error page",
     "since": "2026-10-21"
   },
   "https://ptmirror3.passiontimes.hk/hls3/stream.m3u8": {
-    "fails": 2,
+    "fails": 3,
     "last_reason": "segment HTTP 404, 3652 bytes",
     "since": "2026-10-21"
   },
   "https://radio.auralradiokerala.com:1330/;?type=http&nocache=1723445732": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-20"
   },
   "https://radio.mfm.ua/online128": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "HTTP 302 error page",
     "since": "2026-10-21"
   },
   "https://radio.wavespb.com/live/58390a2ed33cea4a/58390a2ed33cea4a.m3u8": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "playlist HTTP 404",
     "since": "2026-10-21"
   },
   "https://radio.wavespb.com/live/70400e7510e87cdf/70400e7510e87cdf.m3u8": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "playlist HTTP 404",
     "since": "2026-10-21"
   },
   "https://radio.wavespb.com/live/7df6f2a8c3c4d33b/7df6f2a8c3c4d33b.m3u8": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "playlist HTTP 404",
     "since": "2026-10-21"
   },
   "https://radio.wavespb.com/live/b82c91a395fc4a7d/b82c91a395fc4a7d.m3u8": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "playlist HTTP 404",
     "since": "2026-10-21"
   },
   "https://radio.wavespb.com/live/bad174fd7eac38d0/bad174fd7eac38d0.m3u8": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "playlist HTTP 404",
     "since": "2026-10-21"
   },
   "https://radio.wavespb.com/live/e97acc829da9bf2a/e97acc829da9bf2a.m3u8": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "playlist HTTP 404",
     "since": "2026-10-21"
   },
   "https://radio.wavespb.com/live/f70fdeca437dc326/f70fdeca437dc326.m3u8": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "playlist HTTP 404",
     "since": "2026-10-21"
   },
   "https://radiomangoalive1-a.akamaihd.net/9268677ef77949a9b21d33239a55eadd/ap-southeast-1/6034685947001/playlist.m3u8": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "playlist HTTP 400",
     "since": "2026-10-20"
   },
   "https://relay.stream.enacast-cloud.com:40323/radiollancaHD.mp3": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "HTTP 404 error page",
     "since": "2026-10-21"
   },
   "https://s2.myradiostream.com/5538/listen.mp3": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "HTTP 401 error page",
     "since": "2026-10-21"
   },
   "https://s40.myradiostream.com/:22546/listen.mp3?": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-21"
   },
   "https://s7.everestcast.com:1155/stream": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "HTTP 404 error page",
     "since": "2026-10-21"
   },
   "https://s7.voscast.com:9563/stream": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-20"
   },
   "https://sapircast.caster.fm:11309/OsZpV": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-21"
   },
   "https://sapircast.caster.fm:17039/aRsGW": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-21"
   },
   "https://server03.quran-uni.com:7029/stream": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-20"
   },
   "https://servidor28.brlogic.com:8032/live": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-21"
   },
   "https://shaincast.caster.fm:48148/listen.mp3": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-21"
   },
   "https://str.yodacdn.net/radio_respublica/video.m3u8": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "playlist HTTP 403",
     "since": "2026-10-21"
   },
   "https://stream-node2.rri.co.id/streaming/14/9314/rrisngliatpro1.mp3": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "HTTP 404 error page",
     "since": "2026-10-21"
   },
@@ -285,62 +295,62 @@
     "since": "2026-10-20"
   },
   "https://stream.radiojar.com/u7d8heq3bnzuv": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "HTTP 503, 41 bytes",
     "since": "2026-10-21"
   },
   "https://stream.zeno.fm/1noxhem5qpkuv": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "HTTP 503, 40 bytes",
     "since": "2026-10-21"
   },
   "https://stream.zeno.fm/9k5ku7bhb8zuv": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "HTTP 401, 0 bytes",
     "since": "2026-10-20"
   },
   "https://stream.zeno.fm/f3nc8x3tywzuv": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "HTTP 401, 0 bytes",
     "since": "2026-10-20"
   },
   "https://stream.zeno.fm/gqmh0caknchvv": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "HTTP 401, 0 bytes",
     "since": "2026-10-20"
   },
   "https://stream.zeno.fm/heq754gwxwzuv": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "HTTP 401, 0 bytes",
     "since": "2026-10-20"
   },
   "https://stream.zeno.fm/mfn3gkbvty8uv": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "HTTP 401, 0 bytes",
     "since": "2026-10-20"
   },
   "https://stream.zeno.fm/rdcci38kky4vv": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "HTTP 401, 0 bytes",
     "since": "2026-10-20"
   },
   "https://stream.zeno.fm/w9kku8utuy8uv": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "HTTP 401, 0 bytes",
     "since": "2026-10-20"
   },
   "https://stream.zeno.fm/x2baeup395quv": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "HTTP 401, 0 bytes",
     "since": "2026-10-20"
   },
   "https://stream.zeno.fm/xwlwqmiogncvv": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "HTTP 401, 0 bytes",
     "since": "2026-10-20"
   },
   "https://stream.zeno.fm/zkqsxrd1h2zuv": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "HTTP 401, 0 bytes",
     "since": "2026-10-20"
   },
@@ -350,22 +360,32 @@
     "since": "2026-10-20"
   },
   "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8": {
+    "fails": 2,
+    "last_reason": "playlist HTTP 206",
+    "since": "2026-10-21"
+  },
+  "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR": {
+    "fails": 1,
+    "last_reason": "playlist HTTP 206",
+    "since": "2026-10-21"
+  },
+  "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8": {
     "fails": 1,
     "last_reason": "playlist HTTP 206",
     "since": "2026-10-21"
   },
   "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "playlist HTTP 206",
     "since": "2026-10-21"
   },
   "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "playlist HTTP 206",
     "since": "2026-10-21"
   },
   "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "playlist HTTP 206",
     "since": "2026-10-21"
   },
@@ -374,7 +394,7 @@
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-21"
   },
-  "https://streaming.softnep.net:10994/;stream.nsv": {
+  "https://streaming.softnep.net:10996/;stream.nsv&type=mp3&volume=60": {
     "fails": 1,
     "last_reason": "HTTP 503 error page",
     "since": "2026-10-21"
@@ -384,38 +404,33 @@
     "last_reason": "HTTP 403 error page",
     "since": "2026-10-20"
   },
-  "https://strw3.openstream.co/495": {
-    "fails": 1,
-    "last_reason": "HTTP 502, 0 bytes",
-    "since": "2026-10-21"
-  },
   "https://studio.901nbcfm.com.au:8902/newstream": {
-    "fails": 4,
+    "fails": 5,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-20"
   },
   "https://thaalam.tamilfmradios.com/live": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "HTTP 403, 2 bytes",
     "since": "2026-10-20"
   },
   "https://usa10.fastcast4u.com:8110/;?type=http&nocache=3": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-20"
   },
   "https://usa14.fastcast4u.com/proxy/bobbygeo?mp=/;": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "HTTP 404, 16 bytes",
     "since": "2026-10-20"
   },
   "https://usa15.fastcast4u.com/proxy/radiomall/stream": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "HTTP 502 error page",
     "since": "2026-10-20"
   },
   "https://usa19.fastcast4u.com:6270/stream": {
-    "fails": 12,
+    "fails": 13,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-20"
   }
