@@ -104,6 +104,21 @@ def diversify(items, key=lambda s: s.get("src")):
     return out
 
 
+def round_robin(items, key=lambda s: s.get("src")):
+    """One from each paper in turn (each paper's own order kept)."""
+    from collections import OrderedDict
+    q = OrderedDict()
+    for it in items:
+        q.setdefault(key(it), []).append(it)
+    out = []
+    while q:
+        for k in list(q):
+            out.append(q[k].pop(0))
+            if not q[k]:
+                del q[k]
+    return out
+
+
 def excerpt(page):
     """First paragraphs of an article, for summarising when the paper gave no standfirst."""
     if not page:

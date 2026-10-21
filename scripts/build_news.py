@@ -333,7 +333,8 @@ def main():
         elif kind in ("region", "city"):  # stories naming the place first; the rest are checked against their summary later
             nm = names(pmap[pid])
             hit = lambda st: st.get("_own") or any(n in st["t"].lower() for n in nm)  # noqa: E731
-            trusted = [x for x in trusted if hit(x)][:KEEP] + [x for x in trusted if not hit(x)][:KEEP]
+            trusted = news_extras.round_robin([x for x in trusted if hit(x)])[:KEEP * 2] \
+                + [x for x in trusted if not hit(x)][:KEEP]
             other = [x for x in other if hit(x)][:KEEP_OTHER] + [x for x in other if not hit(x)][:KEEP_OTHER]
         else:
             trusted, other = trusted[:KEEP], other[:KEEP_OTHER]
