@@ -722,3 +722,30 @@ footer .diamond-mark{ color:var(--accent); margin:0 .5rem; }
   vertical-align:middle;
 }
 a.chip-btn{ text-decoration:none; display:inline-block; }
+
+/* ============================================================
+   NAV MENUS (Creative / Tools) and footer visit counter
+   ============================================================ */
+nav.tabs{ align-items:center; }
+.nav-group{ position:relative; }
+.nav-group summary{ list-style:none; cursor:pointer; display:flex; align-items:center; gap:.35rem; padding-bottom:.3rem; border-bottom:2px solid transparent; color:var(--ink-soft); }
+.nav-group summary::-webkit-details-marker{ display:none; }
+.nav-group summary:hover, .nav-group[open] summary{ color:var(--ink); }
+.nav-group.active summary{ color:var(--ink); border-bottom-color:var(--accent); }
+.nav-group .caret{ font-size:.62rem; transition:transform .15s ease; }
+.nav-group[open] .caret{ transform:rotate(180deg); }
+.nav-menu{ position:absolute; right:0; top:calc(100% + .55rem); z-index:50; min-width:16rem; background:var(--paper); border:1px solid var(--ink); box-shadow:0 14px 32px -18px rgba(0,0,0,.45); padding:.35rem; display:grid; gap:1px; text-transform:none; letter-spacing:0; }
+.nav-menu::before{ content:""; position:absolute; left:0; right:0; top:-.6rem; height:.6rem; }   /* keeps hover alive across the gap */
+nav.tabs .nav-menu a{ display:block; padding:.55rem .7rem; border-bottom:0; color:var(--ink); }
+nav.tabs .nav-menu a:hover{ background:var(--paper-2); }
+.nav-menu b{ display:block; font-family:var(--f-display); font-weight:600; font-size:.92rem; }
+.nav-menu small{ display:block; font-family:var(--f-body); font-size:.8rem; color:var(--ink-soft); margin-top:.1rem; }
+nav.tabs .nav-menu a.current{ background:var(--accent-soft); box-shadow:inset 3px 0 0 var(--accent); }
+@media (max-width:600px){
+  .nav-menu{ right:auto; left:0; min-width:14rem; }
+  .nav-group:last-child .nav-menu{ left:auto; right:0; }
+}
+.foot-r{ display:flex; gap:1.2rem; align-items:center; }
+.visits{ color:var(--ink-soft); }
+.visits::before{ content:"◆ "; color:var(--accent); }
+
