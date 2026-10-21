@@ -1,161 +1,143 @@
-(function(){
-  const listEl   = document.getElementById('archive');
-  const countEl  = document.getElementById('result-count');
-  const searchEl = document.getElementById('search-input');
-  const tagEl    = document.getElementById('tag-filter');
-  const popularEl = document.getElementById('popular-tags');
-  const activeEl   = document.getElementById('active-filters');
-  const backTop    = document.getElementById('back-to-top');
-  const randomEl   = document.getElementById('random-post');
+// Writings archive: list, search, filters. Reads window.POST_INDEX (js/posts-index.js);
+// full text for searching is fetched only when someone types (posts/search.json).
+(function () {
+  const P = [...window.POST_INDEX].sort((a, b) => (b.d + b.s).localeCompare(a.d + a.s));   // newest first
+  const $ = (id) => document.getElementById(id);
+  const el = (t, c, txt) => { const e = document.createElement(t); if (c) e.className = c; if (txt != null) e.textContent = txt; return e; };
+  const FORM = { "ഗദ്യം": "Prose", "കവിത": "Poem" };
+  const MONTH = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const fmt = (d) => `${+d.slice(8, 10)} ${MONTH[+d.slice(5, 7) - 1]}`;
+  const link = (p) => `writing-post.html?slug=${encodeURIComponent(p.s)}`;
+  const formOf = (p) => (p.tags || []).map((t) => FORM[t]).find(Boolean) || "";
 
-  const FORM_TAG = { 'ഗദ്യം': 'Prose', 'കവിത': 'Poem' };
+  let query = "", tag = "", form = "", fullText = null, loadingText = false;
 
-  function syncURL(query, tag){
-    const params = new URLSearchParams();
-    if (query) params.set('q', query);
-    if (tag)   params.set('tag', tag);
-    const qs = params.toString();
-    history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
+  // ---- header numbers
+  const years = [...new Set(P.map((p) => p.d.slice(0, 4)))].sort();
+  const poems = P.filter((p) => formOf(p) === "Poem").length;
+  const stats = [[P.length, "pieces"], [`${years[0]}–${years.at(-1)}`, "years"], [poems, "poems"], [P.length - poems, "prose"]];
+  for (const [v, k] of stats) { const d = el("div"); d.append(el("dt", null, k), el("dd", null, v)); $("stats").append(d); }
+
+  // ---- today's pick (same for everyone on a given day), and "another one"
+  function showPick(p) {
+    $("pick").hidden = false;
+    const a = $("pickTitle"); a.href = link(p); a.textContent = p.t;
+    $("pickEx").textContent = p.x;
+    $("pickEx").hidden = !p.x;
+    $("pickMeta").textContent = [fmt(p.d) + " " + p.d.slice(0, 4), formOf(p), `${p.m} min read`].filter(Boolean).join(" · ");
+  }
+  const day = Math.floor(Date.now() / 864e5);
+  showPick(P[(day * 2654435761 >>> 0) % P.length]);
+  $("random-post").onclick = (e) => { e.preventDefault(); showPick(P[Math.floor(Math.random() * P.length)]); };
+
+  // ---- filters
+  for (const [v, label] of [["", "All"], ["Prose", "Prose"], ["Poem", "Poems"]]) {
+    const b = el("button", "seg", label);
+    b.onclick = () => { form = v; render(); };
+    b.dataset.v = v;
+    $("forms").append(b);
+  }
+  const counts = {};
+  P.forEach((p) => p.tags.forEach((t) => { if (!FORM[t]) counts[t] = (counts[t] || 0) + 1; }));
+  Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 12).forEach(([t, n]) => {
+    const b = el("button", "chip-btn");
+    b.append(document.createTextNode(t + " "), el("span", "n", n));
+    b.dataset.tag = t;
+    b.onclick = () => { tag = tag === t ? "" : t; render(); };
+    $("popular-tags").append(b);
+  });
+
+  async function needText() {
+    if (fullText || loadingText) return;
+    loadingText = true;
+    try {
+      const rows = await (await fetch("posts/search.json")).json();
+      fullText = Object.fromEntries(rows);
+    } catch { fullText = {}; }
+    loadingText = false;
+    render();
   }
 
-  function readURL(){
-    const params = new URLSearchParams(location.search);
-    return { q: params.get('q') || '', tag: params.get('tag') || '' };
-  }
-
-  function topTags(n){
-    const counts = {};
-    POSTS.forEach(p => (p.tags||[]).forEach(t => counts[t] = (counts[t]||0)+1));
-    return Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,n).map(e=>e[0]);
-  }
-
-  function populateTags(){
-    const tags = new Set();
-    POSTS.forEach(p => (p.tags || []).forEach(t => tags.add(t)));
-    [...tags].sort().forEach(t => {
-      const opt = document.createElement('option');
-      opt.value = t; opt.textContent = t;
-      tagEl.appendChild(opt);
-    });
-
-    topTags(10).forEach(t => {
-      const btn = document.createElement('button');
-      btn.className = 'chip-btn';
-      btn.textContent = t;
-      btn.dataset.tag = t;
-      btn.addEventListener('click', () => {
-        tagEl.value = (tagEl.value === t) ? '' : t;
-        render();
-      });
-      popularEl.appendChild(btn);
-    });
-  }
-
-  function renderActiveFilters(query, tag){
-    activeEl.innerHTML = '';
-    const pills = [];
-    if (query) pills.push({label:`“${query}”`, clear:()=>{searchEl.value='';}});
-    if (tag)   pills.push({label:tag, clear:()=>{tagEl.value='';}});
-    pills.forEach(p => {
-      const span = document.createElement('span');
-      span.className = 'filter-pill';
-      span.innerHTML = `${p.label} <button aria-label="Remove filter">×</button>`;
-      span.querySelector('button').addEventListener('click', () => { p.clear(); render(); });
-      activeEl.appendChild(span);
-    });
-    if (pills.length){
-      const clearAll = document.createElement('button');
-      clearAll.className = 'clear-all';
-      clearAll.textContent = 'Clear all';
-      clearAll.addEventListener('click', () => {
-        searchEl.value=''; tagEl.value='';
-        render();
-      });
-      activeEl.appendChild(clearAll);
-    }
-    [...popularEl.children].forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.tag === tag);
-    });
-  }
-
-  function matches(post, query, tag){
-    if (tag && !(post.tags || []).includes(tag)) return false;
+  function matches(p) {
+    if (tag && !p.tags.includes(tag)) return false;
+    if (form && formOf(p) !== form) return false;
     if (!query) return true;
-    const hay = [
-      post.title_ml, post.title_en,
-      (post.tags || []).join(' '),
-      (post.body || []).join(' ')
-    ].join(' ').toLowerCase();
-    return hay.includes(query.toLowerCase());
+    const q = query.toLowerCase();
+    if ((p.t + " " + p.te + " " + p.tags.join(" ") + " " + p.x).toLowerCase().includes(q)) return true;
+    return !!(fullText && fullText[p.f] && fullText[p.f].includes(q));
   }
 
-  function render(){
-    const query = searchEl.value.trim();
-    const tag   = tagEl.value;
-    const filtered = POSTS.filter(p => matches(p, query, tag));
+  function render() {
+    const list = P.filter(matches);
+    document.querySelectorAll("#forms .seg").forEach((b) => b.setAttribute("aria-pressed", b.dataset.v === form));
+    document.querySelectorAll("#popular-tags .chip-btn").forEach((b) => b.classList.toggle("active", b.dataset.tag === tag));
+    const params = new URLSearchParams();
+    if (query) params.set("q", query);
+    if (tag) params.set("tag", tag);
+    if (form) params.set("form", form);
+    history.replaceState(null, "", params.toString() ? "?" + params : location.pathname);
 
-    renderActiveFilters(query, tag);
-    syncURL(query, tag);
-
-    countEl.textContent = filtered.length + (filtered.length === 1 ? " post" : " posts")
-      + (query || tag ? " found" : " total");
-
-    listEl.innerHTML = '';
-    if (filtered.length === 0){
-      listEl.innerHTML = '<p style="color:var(--ink-soft); font-family:var(--f-mono); font-size:.85rem;">No posts match. Try another word or clear the filters.</p>';
-      return;
-    }
+    const filtered = query || tag || form;
+    $("result-count").textContent = filtered
+      ? `${list.length} of ${P.length}${query && !fullText ? " · searching the full text…" : ""}`
+      : "";
+    $("pick").hidden = !!filtered;
 
     const byYear = {};
-    filtered.forEach(p => {
-      const y = p.date.slice(0,4);
-      (byYear[y] = byYear[y] || []).push(p);
-    });
+    list.forEach((p) => (byYear[p.d.slice(0, 4)] = byYear[p.d.slice(0, 4)] || []).push(p));
+    const ys = Object.keys(byYear).sort((a, b) => b - a);
 
-    Object.keys(byYear).sort((a,b)=>b-a).forEach(year => {
-      const group = document.createElement('div');
-      group.className = 'year-group';
-      const h2 = document.createElement('h2');
-      h2.innerHTML = `${year} <span class="year-count">${byYear[year].length} post${byYear[year].length===1?'':'s'}</span>`;
-      group.appendChild(h2);
+    const yn = $("years");
+    yn.innerHTML = "";
+    for (const y of ys) {
+      const a = el("a", null, y);
+      a.href = "#y" + y;
+      a.append(el("span", "n", byYear[y].length));
+      yn.append(a);
+    }
 
-      const ul = document.createElement('ul');
-      ul.className = 'entry-list';
-      byYear[year].forEach(p => {
-        const li = document.createElement('li');
-        li.className = 'entry';
-        const originalLink = p.source_url
-          ? ` <a class="src-link" href="${p.source_url}" target="_blank" rel="noopener" title="Read original">↗</a>` : '';
-        const form = (p.tags||[]).find(t => FORM_TAG[t]);
-        const formBadge = form ? `<span class="form-badge">${FORM_TAG[form]}</span>` : '';
-        li.innerHTML = `
-          <time>${p.date}</time>
-          <a class="title" href="writing-post.html?slug=${encodeURIComponent(p.slug)}">
-            ${formBadge}${p.title_ml}${p.title_en ? ` <span class="en">— ${p.title_en}</span>` : ''}
-          </a>${originalLink}
-        `;
-        ul.appendChild(li);
-      });
-      group.appendChild(ul);
-      listEl.appendChild(group);
-    });
+    const box = $("archive");
+    box.innerHTML = "";
+    if (!list.length) { box.append(el("p", "wr-none", "Nothing matches. Try another word, or clear the filters.")); return; }
+    for (const y of ys) {
+      const g = el("section", "year-group");
+      g.id = "y" + y;
+      const h = el("h2"); h.append(document.createTextNode(y), el("span", "year-count", `${byYear[y].length}`));
+      g.append(h);
+      const ul = el("ul", "entry-list");
+      for (const p of byYear[y]) {
+        const li = el("li", "entry");
+        li.append(el("time", null, fmt(p.d)));
+        const body = el("div", "e-body");
+        const a = el("a", "title");
+        a.href = link(p);
+        a.textContent = p.t;
+        if (p.te) a.append(el("span", "en", " — " + p.te));
+        body.append(a);
+        if (p.x) body.append(el("p", "e-ex", p.x));
+        li.append(body);
+        const m = el("div", "e-meta");
+        const f = formOf(p);
+        if (f) m.append(el("span", "form-badge", f));
+        m.append(el("span", null, `${p.m} min`));
+        li.append(m);
+        ul.append(li);
+      }
+      g.append(ul);
+      box.append(g);
+    }
   }
 
-  window.addEventListener('scroll', () => {
-    backTop.classList.toggle('show', window.scrollY > 800);
+  let t = null;
+  $("search-input").addEventListener("input", (e) => {
+    clearTimeout(t);
+    t = setTimeout(() => { query = e.target.value.trim(); if (query.length > 1) needText(); render(); }, 120);
   });
+  window.addEventListener("scroll", () => $("back-to-top").classList.toggle("show", window.scrollY > 900), { passive: true });
 
-  randomEl.addEventListener('click', (e) => {
-    e.preventDefault();
-    const pick = POSTS[Math.floor(Math.random() * POSTS.length)];
-    location.href = `writing-post.html?slug=${encodeURIComponent(pick.slug)}`;
-  });
-
-  populateTags();
-  const initial = readURL();
-  searchEl.value = initial.q;
-  tagEl.value = initial.tag;
-  searchEl.addEventListener('input', render);
-  tagEl.addEventListener('change', render);
+  const u = new URLSearchParams(location.search);
+  query = u.get("q") || ""; tag = u.get("tag") || ""; form = u.get("form") || "";
+  $("search-input").value = query;
+  if (query) needText();
   render();
 })();

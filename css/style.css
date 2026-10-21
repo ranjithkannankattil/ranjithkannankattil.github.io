@@ -588,7 +588,7 @@ footer .diamond-mark{ color:var(--accent); margin:0 .5rem; }
    ============================================================ */
 .hero-grid{
   display:grid;
-  grid-template-columns:1.15fr .85fr;
+  grid-template-columns:minmax(0,1fr) 260px;
   gap:3rem;
   align-items:start;
   padding:4rem 0 1rem;
@@ -608,7 +608,8 @@ footer .diamond-mark{ color:var(--accent); margin:0 .5rem; }
 .contact-pill:hover{ border-color:var(--accent); color:var(--accent); }
 .hero-photo{
   position:relative;
-  aspect-ratio:3/4;
+  aspect-ratio:4/5;
+  width:100%; max-width:260px; justify-self:end; align-self:start; margin-top:.4rem;
   overflow:hidden;
   border:1px solid var(--line);
   box-shadow:6px 6px 0 var(--accent-soft);
@@ -620,7 +621,8 @@ footer .diamond-mark{ color:var(--accent); margin:0 .5rem; }
 }
 .hero-photo:hover img{ filter:grayscale(0) contrast(1.05); }
 .hero-photo .cap{
-  position:absolute; left:.7rem; bottom:.6rem;
+  position:absolute; left:0; right:0; bottom:0; padding:1.4rem .7rem .55rem;
+  background:linear-gradient(transparent, rgba(0,0,0,.6));
   font-family:var(--f-mono);
   font-size:.68rem;
   color:#F0EDE6;
@@ -638,7 +640,7 @@ footer .diamond-mark{ color:var(--accent); margin:0 .5rem; }
 .contact-line a{ border-bottom:1px solid currentColor; color:var(--accent); }
 @media (max-width:800px){
   .hero-grid{ grid-template-columns:1fr; gap:2rem; padding-top:2.5rem; }
-  .hero-photo{ aspect-ratio:16/10; order:-1; }
+  .hero-photo{ aspect-ratio:21/9; order:-1; max-width:none; justify-self:stretch; margin-top:0; }
 }
 
 /* ============================================================

@@ -11,8 +11,12 @@
 <meta name="theme-color" content="#16161A" media="(prefers-color-scheme: dark)">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=5">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap"></noscript>
+<link rel="stylesheet" href="css/style.css?v=6">
+<link rel="stylesheet" href="css/photography.css?v=1">
+<link rel="preload" as="image" href="assets/photos/web/DSC05412-800.webp" imagesrcset="assets/photos/web/DSC05412-800.webp 800w, assets/photos/web/DSC05412-1600.webp 1600w" imagesizes="(max-width:900px) 100vw, 1100px">
 </head>
 <body data-section="photography" class="wide">
 
@@ -32,35 +36,115 @@
   </nav>
 </header>
 
-<main>
-  <p style="max-width:56ch; color:var(--ink-soft); margin-top:2rem;">
-    Street photography, shot on a Sony ZV-E10 with a Tamron 17-70mm f/2.8. This set is from
-    Florence — hover a frame for the caption.
-  </p>
+<main class="phg">
+  <section class="ph-head">
+    <div>
+      <h1 class="ph-title">Photography</h1>
+      <p class="ph-intro">Street photography, mostly black and white. Shot on a Sony ZV-E10 with a Tamron 17–70mm f/2.8.</p>
+    </div>
+    <div class="ph-series">
+      <span class="k">Series</span>
+      <span class="v">Florence</span>
+      <span class="n">20 frames</span>
+    </div>
+  </section>
 
-  <div class="contact-sheet">
-    <div class="frame"><img src="assets/photos/DSC05397.jpg"><div class="cap">Door knocker, Florence</div></div>
-    <div class="frame"><img src="assets/photos/DSC05400.jpg"><div class="cap">Back alley, Florence</div></div>
-    <div class="frame"><img src="assets/photos/DSC05384.jpg"><div class="cap">Tram, Piazza del Carmine</div></div>
-    <div class="frame"><img src="assets/photos/DSC05386.jpg"><div class="cap">On the phone, Florence</div></div>
-    <div class="frame"><img src="assets/photos/DSC05412.jpg"><div class="cap">Via de' Calzaiuoli, Duomo behind</div></div>
-    <div class="frame"><img src="assets/photos/DSC05432.jpg"><div class="cap">Fashion shoot, Piazza del Duomo</div></div>
-    <div class="frame"><img src="assets/photos/DSC05418.jpg"><div class="cap">Portrait, Florence</div></div>
-    <div class="frame"><img src="assets/photos/DSC05443.jpg"><div class="cap">Soldiers on duty, Piazza del Duomo</div></div>
-    <div class="frame"><img src="assets/photos/DSC05487.jpg"><div class="cap">Coronas Café, Firenze</div></div>
-    <div class="frame"><img src="assets/photos/DSC05493.jpg"><div class="cap">La Rinascente, reflected</div></div>
-    <div class="frame"><img src="assets/photos/DSC05492.jpg"><div class="cap">Piazza della Repubblica</div></div>
-    <div class="frame"><img src="assets/photos/DSC05512.jpg"><div class="cap">Fontana del Nettuno, horses</div></div>
-    <div class="frame"><img src="assets/photos/DSC05508.jpg"><div class="cap">Loggia dei Lanzi, market street</div></div>
-    <div class="frame"><img src="assets/photos/DSC05516.jpg"><div class="cap">Statue and shadow</div></div>
-    <div class="frame"><img src="assets/photos/DSC05519.jpg"><div class="cap">Ponte Santa Trinita, Arno</div></div>
-    <div class="frame"><img src="assets/photos/DSC05576.jpg"><div class="cap">Arno, looking toward the hills</div></div>
-    <div class="frame"><img src="assets/photos/DSC05579.jpg"><div class="cap">S.A.D.A Antichità, Volterra sign</div></div>
-    <div class="frame"><img src="assets/photos/DSC05584.jpg"><div class="cap">Ponte Vecchio, from Ponte Santa Trinita</div></div>
-    <div class="frame"><img src="assets/photos/DSC05604.jpg"><div class="cap">Fontana del Nettuno</div></div>
-    <div class="frame"><img src="assets/photos/DSC05607.jpg"><div class="cap">Alley toward the Duomo</div></div>
+  <div class="ph-grid">
+    <figure class="ph s6 lead" data-i="0" data-full="assets/photos/web/DSC05412-1600.webp">
+      <button class="ph-open" aria-label="Open: Via de' Calzaiuoli, Duomo behind"><img src="assets/photos/web/DSC05412-800.webp" srcset="assets/photos/web/DSC05412-800.webp 800w, assets/photos/web/DSC05412-1600.webp 1600w" sizes="(max-width:900px) 100vw, 1100px" width="800" height="419" alt="Via de' Calzaiuoli, Duomo behind" decoding="async" fetchpriority="high"></button>
+      <figcaption><span class="no">01</span>Via de' Calzaiuoli, Duomo behind</figcaption>
+    </figure>
+    <figure class="ph s6" data-i="1" data-full="assets/photos/web/DSC05397-1600.webp">
+      <button class="ph-open" aria-label="Open: Door knocker, Florence"><img src="assets/photos/web/DSC05397-800.webp" srcset="assets/photos/web/DSC05397-800.webp 800w, assets/photos/web/DSC05397-1600.webp 1600w" sizes="(max-width:900px) 100vw, 1100px" width="800" height="419" alt="Door knocker, Florence" decoding="async" loading="lazy"></button>
+      <figcaption><span class="no">02</span>Door knocker, Florence</figcaption>
+    </figure>
+    <figure class="ph s3" data-i="2" data-full="assets/photos/web/DSC05400-1600.webp">
+      <button class="ph-open" aria-label="Open: Back alley, Florence"><img src="assets/photos/web/DSC05400-800.webp" srcset="assets/photos/web/DSC05400-800.webp 800w, assets/photos/web/DSC05400-1600.webp 1600w" sizes="(max-width:700px) 100vw, (max-width:900px) 50vw, 560px" width="800" height="419" alt="Back alley, Florence" decoding="async" loading="lazy"></button>
+      <figcaption><span class="no">03</span>Back alley, Florence</figcaption>
+    </figure>
+    <figure class="ph s3" data-i="3" data-full="assets/photos/web/DSC05384-1600.webp">
+      <button class="ph-open" aria-label="Open: Tram, Piazza del Carmine"><img src="assets/photos/web/DSC05384-800.webp" srcset="assets/photos/web/DSC05384-800.webp 800w, assets/photos/web/DSC05384-1600.webp 1600w" sizes="(max-width:700px) 100vw, (max-width:900px) 50vw, 560px" width="800" height="419" alt="Tram, Piazza del Carmine" decoding="async" loading="lazy"></button>
+      <figcaption><span class="no">04</span>Tram, Piazza del Carmine</figcaption>
+    </figure>
+    <figure class="ph s2" data-i="4" data-full="assets/photos/web/DSC05386-1600.webp">
+      <button class="ph-open" aria-label="Open: On the phone, Florence"><img src="assets/photos/web/DSC05386-800.webp" srcset="assets/photos/web/DSC05386-800.webp 800w, assets/photos/web/DSC05386-1600.webp 1600w" sizes="(max-width:700px) 100vw, (max-width:900px) 50vw, 370px" width="800" height="419" alt="On the phone, Florence" decoding="async" loading="lazy"></button>
+      <figcaption><span class="no">05</span>On the phone, Florence</figcaption>
+    </figure>
+    <figure class="ph s2" data-i="5" data-full="assets/photos/web/DSC05432-1600.webp">
+      <button class="ph-open" aria-label="Open: Fashion shoot, Piazza del Duomo"><img src="assets/photos/web/DSC05432-800.webp" srcset="assets/photos/web/DSC05432-800.webp 800w, assets/photos/web/DSC05432-1600.webp 1600w" sizes="(max-width:700px) 100vw, (max-width:900px) 50vw, 370px" width="800" height="419" alt="Fashion shoot, Piazza del Duomo" decoding="async" loading="lazy"></button>
+      <figcaption><span class="no">06</span>Fashion shoot, Piazza del Duomo</figcaption>
+    </figure>
+    <figure class="ph s2" data-i="6" data-full="assets/photos/web/DSC05418-1600.webp">
+      <button class="ph-open" aria-label="Open: Portrait, Florence"><img src="assets/photos/web/DSC05418-800.webp" srcset="assets/photos/web/DSC05418-800.webp 800w, assets/photos/web/DSC05418-1600.webp 1600w" sizes="(max-width:700px) 100vw, (max-width:900px) 50vw, 370px" width="800" height="419" alt="Portrait, Florence" decoding="async" loading="lazy"></button>
+      <figcaption><span class="no">07</span>Portrait, Florence</figcaption>
+    </figure>
+    <figure class="ph s3" data-i="7" data-full="assets/photos/web/DSC05443-1600.webp">
+      <button class="ph-open" aria-label="Open: Soldiers on duty, Piazza del Duomo"><img src="assets/photos/web/DSC05443-800.webp" srcset="assets/photos/web/DSC05443-800.webp 800w, assets/photos/web/DSC05443-1600.webp 1600w" sizes="(max-width:700px) 100vw, (max-width:900px) 50vw, 560px" width="800" height="419" alt="Soldiers on duty, Piazza del Duomo" decoding="async" loading="lazy"></button>
+      <figcaption><span class="no">08</span>Soldiers on duty, Piazza del Duomo</figcaption>
+    </figure>
+    <figure class="ph s3" data-i="8" data-full="assets/photos/web/DSC05487-1600.webp">
+      <button class="ph-open" aria-label="Open: Coronas Café, Firenze"><img src="assets/photos/web/DSC05487-800.webp" srcset="assets/photos/web/DSC05487-800.webp 800w, assets/photos/web/DSC05487-1600.webp 1600w" sizes="(max-width:700px) 100vw, (max-width:900px) 50vw, 560px" width="800" height="419" alt="Coronas Café, Firenze" decoding="async" loading="lazy"></button>
+      <figcaption><span class="no">09</span>Coronas Café, Firenze</figcaption>
+    </figure>
+    <figure class="ph s2" data-i="9" data-full="assets/photos/web/DSC05493-1600.webp">
+      <button class="ph-open" aria-label="Open: La Rinascente, reflected"><img src="assets/photos/web/DSC05493-800.webp" srcset="assets/photos/web/DSC05493-800.webp 800w, assets/photos/web/DSC05493-1600.webp 1600w" sizes="(max-width:700px) 100vw, (max-width:900px) 50vw, 370px" width="800" height="419" alt="La Rinascente, reflected" decoding="async" loading="lazy"></button>
+      <figcaption><span class="no">10</span>La Rinascente, reflected</figcaption>
+    </figure>
+    <figure class="ph s2" data-i="10" data-full="assets/photos/web/DSC05492-1600.webp">
+      <button class="ph-open" aria-label="Open: Piazza della Repubblica"><img src="assets/photos/web/DSC05492-800.webp" srcset="assets/photos/web/DSC05492-800.webp 800w, assets/photos/web/DSC05492-1600.webp 1600w" sizes="(max-width:700px) 100vw, (max-width:900px) 50vw, 370px" width="800" height="419" alt="Piazza della Repubblica" decoding="async" loading="lazy"></button>
+      <figcaption><span class="no">11</span>Piazza della Repubblica</figcaption>
+    </figure>
+    <figure class="ph s2" data-i="11" data-full="assets/photos/web/DSC05512-1600.webp">
+      <button class="ph-open" aria-label="Open: Fontana del Nettuno, horses"><img src="assets/photos/web/DSC05512-800.webp" srcset="assets/photos/web/DSC05512-800.webp 800w, assets/photos/web/DSC05512-1600.webp 1600w" sizes="(max-width:700px) 100vw, (max-width:900px) 50vw, 370px" width="800" height="419" alt="Fontana del Nettuno, horses" decoding="async" loading="lazy"></button>
+      <figcaption><span class="no">12</span>Fontana del Nettuno, horses</figcaption>
+    </figure>
+    <figure class="ph s6" data-i="12" data-full="assets/photos/web/DSC05508-1600.webp">
+      <button class="ph-open" aria-label="Open: Loggia dei Lanzi, market street"><img src="assets/photos/web/DSC05508-800.webp" srcset="assets/photos/web/DSC05508-800.webp 800w, assets/photos/web/DSC05508-1600.webp 1600w" sizes="(max-width:900px) 100vw, 1100px" width="800" height="419" alt="Loggia dei Lanzi, market street" decoding="async" loading="lazy"></button>
+      <figcaption><span class="no">13</span>Loggia dei Lanzi, market street</figcaption>
+    </figure>
+    <figure class="ph s3" data-i="13" data-full="assets/photos/web/DSC05516-1600.webp">
+      <button class="ph-open" aria-label="Open: Statue and shadow"><img src="assets/photos/web/DSC05516-800.webp" srcset="assets/photos/web/DSC05516-800.webp 800w, assets/photos/web/DSC05516-1600.webp 1600w" sizes="(max-width:700px) 100vw, (max-width:900px) 50vw, 560px" width="800" height="419" alt="Statue and shadow" decoding="async" loading="lazy"></button>
+      <figcaption><span class="no">14</span>Statue and shadow</figcaption>
+    </figure>
+    <figure class="ph s3" data-i="14" data-full="assets/photos/web/DSC05519-1600.webp">
+      <button class="ph-open" aria-label="Open: Ponte Santa Trinita, Arno"><img src="assets/photos/web/DSC05519-800.webp" srcset="assets/photos/web/DSC05519-800.webp 800w, assets/photos/web/DSC05519-1600.webp 1600w" sizes="(max-width:700px) 100vw, (max-width:900px) 50vw, 560px" width="800" height="419" alt="Ponte Santa Trinita, Arno" decoding="async" loading="lazy"></button>
+      <figcaption><span class="no">15</span>Ponte Santa Trinita, Arno</figcaption>
+    </figure>
+    <figure class="ph s2" data-i="15" data-full="assets/photos/web/DSC05576-1600.webp">
+      <button class="ph-open" aria-label="Open: Arno, looking toward the hills"><img src="assets/photos/web/DSC05576-800.webp" srcset="assets/photos/web/DSC05576-800.webp 800w, assets/photos/web/DSC05576-1600.webp 1600w" sizes="(max-width:700px) 100vw, (max-width:900px) 50vw, 370px" width="800" height="419" alt="Arno, looking toward the hills" decoding="async" loading="lazy"></button>
+      <figcaption><span class="no">16</span>Arno, looking toward the hills</figcaption>
+    </figure>
+    <figure class="ph s2" data-i="16" data-full="assets/photos/web/DSC05579-1600.webp">
+      <button class="ph-open" aria-label="Open: S.A.D.A Antichità, Volterra sign"><img src="assets/photos/web/DSC05579-800.webp" srcset="assets/photos/web/DSC05579-800.webp 800w, assets/photos/web/DSC05579-1600.webp 1600w" sizes="(max-width:700px) 100vw, (max-width:900px) 50vw, 370px" width="800" height="419" alt="S.A.D.A Antichità, Volterra sign" decoding="async" loading="lazy"></button>
+      <figcaption><span class="no">17</span>S.A.D.A Antichità, Volterra sign</figcaption>
+    </figure>
+    <figure class="ph s2" data-i="17" data-full="assets/photos/web/DSC05584-1600.webp">
+      <button class="ph-open" aria-label="Open: Ponte Vecchio, from Ponte Santa Trinita"><img src="assets/photos/web/DSC05584-800.webp" srcset="assets/photos/web/DSC05584-800.webp 800w, assets/photos/web/DSC05584-1600.webp 1600w" sizes="(max-width:700px) 100vw, (max-width:900px) 50vw, 370px" width="800" height="419" alt="Ponte Vecchio, from Ponte Santa Trinita" decoding="async" loading="lazy"></button>
+      <figcaption><span class="no">18</span>Ponte Vecchio, from Ponte Santa Trinita</figcaption>
+    </figure>
+    <figure class="ph s3" data-i="18" data-full="assets/photos/web/DSC05604-1600.webp">
+      <button class="ph-open" aria-label="Open: Fontana del Nettuno"><img src="assets/photos/web/DSC05604-800.webp" srcset="assets/photos/web/DSC05604-800.webp 800w, assets/photos/web/DSC05604-1600.webp 1600w" sizes="(max-width:700px) 100vw, (max-width:900px) 50vw, 560px" width="800" height="419" alt="Fontana del Nettuno" decoding="async" loading="lazy"></button>
+      <figcaption><span class="no">19</span>Fontana del Nettuno</figcaption>
+    </figure>
+    <figure class="ph s3" data-i="19" data-full="assets/photos/web/DSC05607-1600.webp">
+      <button class="ph-open" aria-label="Open: Alley toward the Duomo"><img src="assets/photos/web/DSC05607-800.webp" srcset="assets/photos/web/DSC05607-800.webp 800w, assets/photos/web/DSC05607-1600.webp 1600w" sizes="(max-width:700px) 100vw, (max-width:900px) 50vw, 560px" width="800" height="419" alt="Alley toward the Duomo" decoding="async" loading="lazy"></button>
+      <figcaption><span class="no">20</span>Alley toward the Duomo</figcaption>
+    </figure>
   </div>
+  <p class="ph-foot">Tap a frame to see it large, in colour. More cities as I get to them.</p>
 </main>
+
+<dialog class="lb" id="lb" aria-label="Photo viewer">
+  <div class="lb-stage" id="lbStage"><img id="lbImg" alt=""></div>
+  <div class="lb-bar">
+    <span class="lb-no" id="lbNo"></span>
+    <span class="lb-cap" id="lbCap"></span>
+    <button class="lb-bw" id="lbBw" aria-pressed="false">B&amp;W</button>
+  </div>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous photo">‹</button>
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Next photo">›</button>
+  <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+</dialog>
 
 <footer>
   <div>© <span id="year"></span> Ranjith Kannankattil</div>
@@ -68,6 +152,7 @@
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="js/photography.js?v=1" defer></script>
 <script src="js/nav.js?v=3" defer></script>
 <script src="js/visits.js?v=2" defer></script>
 </body>

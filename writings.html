@@ -11,8 +11,11 @@
 <meta name="theme-color" content="#16161A" media="(prefers-color-scheme: dark)">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=5">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap"></noscript>
+<link rel="stylesheet" href="css/style.css?v=6">
+<link rel="stylesheet" href="css/writings.css?v=1">
 <link rel="alternate" type="application/rss+xml" title="Ranjith — Writings" href="feed.xml">
 </head>
 <body data-section="writings" id="top">
@@ -33,28 +36,35 @@
   </nav>
 </header>
 
-<main>
-  <p style="max-width:60ch; color:var(--ink-soft); margin-top:2rem;">
-    365 posts — 123 from Blogger (2009–2022) and 242 hand-reviewed pieces from
-    Facebook (2011–2024) — gathered into one chronological archive. Search
-    across titles, tags and body text — everything is indexed on this page,
-    no server required.
-  </p>
+<main class="wr">
+  <section class="wr-head">
+    <div>
+      <h1 class="wr-title">Writings <span class="ml">എഴുത്തുകൾ</span></h1>
+      <p class="wr-intro">Fifteen years of Malayalam prose and poetry — from the old blogs and from Facebook — gathered into one archive you can search.</p>
+    </div>
+    <dl class="wr-stats" id="stats"></dl>
+  </section>
 
-  <div class="search-row">
-    <input id="search-input" type="text" placeholder="Search titles, tags, text…" autocomplete="off">
-    <select id="tag-filter">
-      <option value="">All tags</option>
-    </select>
-    <a href="#" id="random-post" class="chip-btn" style="align-self:center;">🎲 Random</a>
-    <a href="feed.xml" class="chip-btn" style="align-self:center;" title="RSS feed">RSS</a>
+  <article class="wr-pick" id="pick" hidden>
+    <div class="k">Today's pick</div>
+    <a class="pk-title" id="pickTitle"></a>
+    <p class="pk-ex" id="pickEx"></p>
+    <div class="pk-meta"><span id="pickMeta"></span><a href="#" id="random-post">Another one ↻</a></div>
+  </article>
+
+  <div class="wr-controls">
+    <label class="wr-search"><span class="sr">Search</span>
+      <input id="search-input" type="search" placeholder="Search titles, tags and full text…" autocomplete="off">
+    </label>
+    <div class="wr-forms" id="forms" role="group" aria-label="Form"></div>
   </div>
-
-  <div id="popular-tags" class="popular-tags"></div>
-  <div id="active-filters" class="active-filters"></div>
-  <div id="result-count" class="result-count"></div>
+  <div class="wr-tags" id="popular-tags" aria-label="Tags"></div>
+  <nav class="wr-years" id="years" aria-label="Jump to year"></nav>
+  <div class="result-count" id="result-count"></div>
 
   <div id="archive"></div>
+  <p class="wr-foot"><a href="feed.xml">RSS feed</a> · originals link back to the blog where there is one.</p>
+  <a href="#top" id="back-to-top" class="back-to-top" aria-label="Back to top">↑</a>
 </main>
 
 <a href="#top" id="back-to-top" class="back-to-top">↑ TOP</a>
@@ -65,7 +75,7 @@
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-<script src="js/posts.js"></script>
+<script src="js/posts-index.js?v=1"></script>
 <script src="js/writings.js"></script>
 <script src="js/nav.js?v=3" defer></script>
 <script src="js/visits.js?v=2" defer></script>

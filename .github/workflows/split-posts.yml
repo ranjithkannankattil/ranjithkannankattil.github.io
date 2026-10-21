@@ -1,0 +1,22 @@
+name: Split writings for fast pages
+
+on:
+  push:
+    branches: [main]
+    paths: [js/posts.js, scripts/split_posts.py]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  split:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/split_posts.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898732+github-actions[bot]@users.noreply.github.com"
+          git add -A js/posts-index.js posts
+          git diff --cached --quiet || { git commit -m "Writings: rebuild index and post files"; git pull --rebase; git push; }

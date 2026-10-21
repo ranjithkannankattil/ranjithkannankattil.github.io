@@ -1,8 +1,8 @@
 // Offline shell for ranjithkb.com: pages and their CSS/JS keep working without a signal.
 // Never touches audio streams, news data or anything on other sites (except Google Fonts).
-const CACHE = "rkb-v1";
+const CACHE = "rkb-v2";
 const SHELL = ["/", "/radio.html", "/news.html", "/css/style.css", "/css/radio.css", "/css/news.css",
-  "/js/nav.js", "/js/radio.js", "/js/news.js", "/js/collections.js", "/assets/icons/radio-192.png", "/assets/icons/news-192.png"];
+  "/js/nav.js", "/writings.html", "/photography.html", "/css/writings.css", "/css/photography.css", "/js/posts-index.js", "/js/radio.js", "/js/news.js", "/js/collections.js", "/assets/icons/radio-192.png", "/assets/icons/news-192.png"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).catch(() => {}).then(() => self.skipWaiting()));
