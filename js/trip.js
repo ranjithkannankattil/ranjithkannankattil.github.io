@@ -304,6 +304,30 @@
     }
     return groups;
   }
+  // even out the days: a thin day takes the nearest places from overfull days (by score-weighted time)
+  function balance(groups, perDay) {
+    if (groups.length < 2) return groups;
+    const cen = (g) => g.length ? { lat: g.reduce((a, p) => a + p.lat, 0) / g.length, lon: g.reduce((a, p) => a + p.lon, 0) / g.length } : null;
+    const weight = (g) => g.reduce((a, p) => a + p.score, 0);
+    const total = groups.reduce((a, g) => a + weight(g), 0), fair = total / groups.length;
+    for (let it = 0; it < 80; it++) {
+      const w = groups.map(weight);
+      const thin = w.indexOf(Math.min(...w));
+      if (w[thin] >= fair * .7 && groups[thin].length >= Math.min(perDay, 3)) break;
+      const c = cen(groups[thin]) || cen(groups[w.indexOf(Math.max(...w))]);
+      let best = null, bg = -1, bd = Infinity;
+      groups.forEach((g, gi) => {
+        if (gi === thin || w[gi] <= fair || g.length <= 2) return;
+        for (const p of g) { const d = dist(c, p) / Math.sqrt(p.score); if (d < bd) { bd = d; best = p; bg = gi; } }
+      });
+      if (!best) break;
+      groups[bg] = groups[bg].filter((x) => x !== best);
+      groups[thin].push(best);
+    }
+    groups.forEach((g) => g.sort((a, b) => b.score - a.score));
+    return groups;
+  }
+
   function orderRoute(start, stops, end) {             // nearest neighbour, then 2-opt
     let rest = [...stops], route = [], cur = start;
     while (rest.length) { rest.sort((a, b) => dist(cur, a) - dist(cur, b)); cur = rest.shift(); route.push(cur); }
@@ -467,7 +491,7 @@
       const pool = picked.slice(0, Math.ceil(perDay * days * 1.5) + 3);
 
       say("Putting the days together…");
-      const groups = kmeans(pool, days);
+      const groups = balance(kmeans(pool, days), perDay);
       groups.sort((a, b) => b.reduce((s, p) => s + p.score, 0) - a.reduce((s, p) => s + p.score, 0));   // best day first
       const dayDates = groups.map((_, i) => new Date(new Date($("date").value + "T12:00").getTime() + i * 864e5).toISOString().slice(0, 10));
       // a museum-heavy cluster suits the rainiest day
