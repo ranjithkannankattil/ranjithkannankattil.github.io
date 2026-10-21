@@ -173,13 +173,14 @@
     const rows = await sparql(`SELECT ?item ?itemLabel ?itemDescription ?lat ?lon ?sl ?wiki ?town ?townLabel (SAMPLE(?img) AS ?image) (SAMPLE(?site) AS ?website) (GROUP_CONCAT(DISTINCT ?typeLabel; separator="|") AS ?types) WHERE {
       SERVICE wikibase:box { ?item wdt:P625 ?c . bd:serviceParam wikibase:cornerWest "Point(${w} ${sth})"^^geo:wktLiteral . bd:serviceParam wikibase:cornerEast "Point(${e} ${n})"^^geo:wktLiteral . }
       ?item wikibase:sitelinks ?sl . FILTER(?sl >= ${minSl})
+      FILTER NOT EXISTS { ?item wdt:P31 ?settle . VALUES ?settle { wd:Q747074 wd:Q515 wd:Q1549591 wd:Q3957 wd:Q532 wd:Q5119 wd:Q15284 wd:Q486972 wd:Q18415311 wd:Q15110 wd:Q15089 wd:Q23442 wd:Q33837 wd:Q1710033 wd:Q21518270 wd:Q2074737 wd:Q1637706 wd:Q123705 wd:Q484170 wd:Q1093829 wd:Q8502 wd:Q6465 wd:Q107425 } }
       ?item wdt:P31 ?type . ?type rdfs:label ?typeLabel . FILTER(LANG(?typeLabel) = "en")
       OPTIONAL { ?item wdt:P131 ?town }
       OPTIONAL { ?item wdt:P18 ?img } OPTIONAL { ?item wdt:P856 ?site }
       OPTIONAL { ?wa schema:about ?item; schema:isPartOf <https://en.wikipedia.org/>; schema:name ?wiki }
       BIND(geof:latitude(?c) AS ?lat) BIND(geof:longitude(?c) AS ?lon)
       SERVICE wikibase:label { bd:serviceParam wikibase:language "en,mul". }
-    } GROUP BY ?item ?itemLabel ?itemDescription ?lat ?lon ?sl ?wiki ?town ?townLabel ORDER BY DESC(?sl) LIMIT 700`);
+    } GROUP BY ?item ?itemLabel ?itemDescription ?lat ?lon ?sl ?wiki ?town ?townLabel ORDER BY DESC(?sl) LIMIT 1500`);
     const seen = new Map();
     for (const r of rows) {
       const id = r.item.value.split("/").pop();
@@ -234,14 +235,15 @@
     list.sort((a, b) => b.score - a.score);
     const out = [];
     for (const t of list) {
-      const host = out.find((o) => dist(o, t) < 6000);
+      const host = out.find((o) => dist(o, t) < (t.places.length <= 2 ? 12000 : 6000));
       if (host) { host.places.push(...t.places); host.score += t.score; } else out.push(t);
     }
     out.forEach((t) => t.places.sort((a, b) => b.score - a.score));
     return out;
   }
   function allocateDays(tlist, days, perDay) {   // each day goes to the town where one more day adds the most
-    const gain = (t, k) => t.places.slice(perDay * k, perDay * (k + 1)).reduce((a, p) => a + p.score, 0) * (k ? .8 : 1);
+    // a day in a town with only one or two sights is worth much less than a full day somewhere rich
+    const gain = (t, k) => { const g = t.places.slice(perDay * k, perDay * (k + 1)); return g.reduce((a, p) => a + p.score, 0) * (k ? .8 : 1) * Math.min(1, (g.length / Math.min(perDay, 4)) ** 1.5); };
     const alloc = new Map();
     for (let d = 0; d < days; d++) {
       let best = null, bg = -1;
