@@ -13,6 +13,7 @@ For every station it:
      and the station has another working stream,
   6. writes scripts/stream-report.md and scripts/stream-health.json.
 
+Covers every collection listed in js/collections.js (70+ languages, 2,000+ stations).
 Uses only the Python standard library plus the curl command.
 Run locally:  python3 scripts/check_streams.py
 """

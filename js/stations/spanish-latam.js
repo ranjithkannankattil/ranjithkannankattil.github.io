@@ -27,14 +27,6 @@ window.STATIONS = [
     ]
   },
   {
-    "id": "pyongyang-radio-fm",
-    "name": "Pyongyang Radio FM",
-    "category": "news",
-    "streams": [
-      "https://listen7.myradio24.com/69366"
-    ]
-  },
-  {
     "id": "la-ke-buena-san-andres-tuxtla-103-9-fm-x",
     "name": "La Ke Buena San Andrés Tuxtla - 103.9 FM - XHDQ-FM - San Andrés Tuxtla, Veracruz",
     "category": "music",

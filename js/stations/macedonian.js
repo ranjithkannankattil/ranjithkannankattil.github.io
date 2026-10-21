@@ -3,14 +3,6 @@
    streams: tried in order; offline: set by the check when none work */
 window.STATIONS = [
   {
-    "id": "radio-plus-mauritius",
-    "name": "Radio Plus Mauritius",
-    "category": "news",
-    "streams": [
-      "https://stream.radioplus.mu:8000/radio.mp3"
-    ]
-  },
-  {
     "id": "just-music-radio",
     "name": "Just Music Radio",
     "category": "music",
