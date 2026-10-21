@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy — Ranjith Kannankattil</title>
+<meta name="description" content="What ranjithkb.com stores about visitors, why, and how to have it removed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=2">
+<style>
+  .privacy h1{ font-family:var(--f-display); font-weight:600; font-size:clamp(2rem,5vw,2.6rem); margin:2.5rem 0 .4rem; }
+  .privacy .updated{ font-family:var(--f-mono); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); }
+  .privacy h2{ font-family:var(--f-display); font-weight:600; font-size:1.2rem; margin:2.4rem 0 .6rem; }
+  .privacy p, .privacy li{ max-width:66ch; }
+  .privacy ul{ padding-left:1.2rem; }
+  .privacy li{ margin:.35rem 0; }
+  .privacy table{ border-collapse:collapse; width:100%; max-width:760px; margin:.6rem 0 1rem; font-size:.95rem; }
+  .privacy th, .privacy td{ text-align:left; vertical-align:top; padding:.55rem .7rem; border-top:1px solid var(--line); }
+  .privacy th{ font-family:var(--f-mono); font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); font-weight:500; }
+  .privacy a{ border-bottom:1px solid var(--line); }
+  .privacy a:hover{ border-bottom-color:var(--accent); }
+  .privacy .summary{ background:var(--paper-2); border-left:3px solid var(--accent); padding:1rem 1.2rem; max-width:66ch; }
+  .privacy .summary p{ margin:.3rem 0; }
+</style>
+</head>
+<body data-section="home">
+
+<header class="titleblock">
+  <div>
+    <div class="id">RANJITH KANNANKATTIL</div>
+    <div class="name">Privacy</div>
+  </div>
+  <nav class="tabs">
+    <a href="index.html">Home</a>
+    <a href="photography.html">Photography</a>
+    <a href="writings.html">Writings</a>
+    <a href="publications.html">Publications</a>
+    <a href="radio.html">Radio</a>
+    <a href="productivity/">Productivity</a>
+  </nav>
+</header>
+
+<main class="privacy">
+  <h1>Privacy</h1>
+  <div class="updated">Last updated 21 October 2026</div>
+
+  <div class="summary" style="margin-top:1.6rem">
+    <p><strong>In short:</strong> this is a personal website. There are no ads, no analytics and no tracking cookies.
+    Your settings (favourite stations, volume, default language, meeting-finder cities) stay in your own browser.
+    The only thing stored about you anywhere is what you choose to save by signing in on the Radio page —
+    your Google account ID and email, your favourite stations and your default language — and you can have that removed at any time.</p>
+  </div>
+
+  <h2>Who is responsible</h2>
+  <p>This site is run by Ranjith Kannankattil, an individual based in Milan, Italy, who is the data controller for
+  anything described here. To ask a question or exercise any of your rights, message
+  <a href="https://instagram.com/runjyth" target="_blank" rel="noopener">@runjyth on Instagram</a>.</p>
+
+  <h2>What stays in your browser</h2>
+  <p>Some pages remember your choices using your browser's local storage. This never leaves your device and is not sent to me:</p>
+  <ul>
+    <li><strong>Radio</strong> — favourite stations, the last station played, volume, your default language and recently used languages.</li>
+    <li><strong>Productivity</strong> — the cities, working hours and meeting title you set in the meeting finder.</li>
+  </ul>
+  <p>You can clear it at any time by clearing this site's data in your browser settings.</p>
+
+  <h2>Signing in on the Radio page (optional)</h2>
+  <p>If you choose <em>Sign in to save favourites</em>, you sign in with your Google account so your favourites follow you to other devices.</p>
+  <table>
+    <tr><th>What</th><th>Why</th></tr>
+    <tr><td>Your Google account ID, email address, name and profile picture link (held by Firebase Authentication)</td><td>To know which saved list is yours when you sign in. Your name is shown only to you, next to the Sign out button.</td></tr>
+    <tr><td>Your list of favourite stations, your default language and when they were last changed (held in Firebase Firestore)</td><td>To show your favourites on any device you sign in on.</td></tr>
+  </table>
+  <ul>
+    <li><strong>Legal basis:</strong> you ask for this feature by signing in, so it is processed to provide it to you (GDPR Art. 6(1)(b)). Without signing in, everything still works and nothing is stored about you.</li>
+    <li><strong>Who processes it:</strong> Google Firebase (Google Ireland Limited), with data stored in the EU (Firestore location <code>eur3</code>). Google acts as a processor under its <a href="https://firebase.google.com/terms/data-processing-terms" target="_blank" rel="noopener">data processing terms</a>.</li>
+    <li><strong>Who can see it:</strong> only you, through the site; the database rules let each signed-in person read and change only their own record. I can see it as the site owner, and look at it only to fix problems or to delete it when asked.</li>
+    <li><strong>How long:</strong> until you ask for it to be deleted. Records not used for two years may be deleted.</li>
+    <li>It is never sold, shared for marketing or used for anything else.</li>
+  </ul>
+
+  <h2>Services your browser connects to</h2>
+  <p>Like most websites, pages here load some parts from other services. Each one receives your IP address and basic browser information when it does:</p>
+  <ul>
+    <li><strong>GitHub Pages</strong> — hosts this site (GitHub keeps standard server logs).</li>
+    <li><strong>Google Fonts</strong> — the typefaces.</li>
+    <li><strong>cdnjs (Cloudflare)</strong> — the player library used for some radio streams.</li>
+    <li><strong>Radio broadcasters</strong> — when you press play, your browser connects directly to that station's streaming server, as it would on the station's own website. Their own privacy policies apply.</li>
+    <li><strong>Google Firebase</strong> — only if you sign in, as described above.</li>
+  </ul>
+
+  <h2>Your rights</h2>
+  <p>Under the GDPR you can ask to see the data held about you, correct it, delete it, receive a copy, or object to its use.
+  Message <a href="https://instagram.com/runjyth" target="_blank" rel="noopener">@runjyth on Instagram</a> and it will be handled within 30 days.
+  Signing out does not delete your saved list — ask, and it will be removed.
+  You can also complain to the Italian data protection authority, the
+  <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">Garante per la protezione dei dati personali</a>.</p>
+
+  <h2>Children</h2>
+  <p>Signing in is not intended for children under 14 (the age of digital consent in Italy).</p>
+
+  <h2>Changes</h2>
+  <p>If this changes, the date at the top will change with it.</p>
+
+  <div class="diamond-rule"><span class="diamond-mark">◆</span></div>
+</main>
+
+<footer>
+  <div>© <span id="year"></span> Ranjith Kannankattil</div>
+  <div><a href="privacy.html">Privacy</a></div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
