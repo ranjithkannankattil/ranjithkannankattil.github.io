@@ -1,0 +1,17 @@
+rules_version = '2';
+// Paste this into Firebase console → Firestore Database → Rules, then Publish.
+// Each signed-in visitor can read and write only their own document: users/{their uid}.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{uid} {
+      allow read, delete: if request.auth != null && request.auth.uid == uid;
+      allow create, update: if request.auth != null && request.auth.uid == uid
+        && request.resource.data.keys().hasOnly(['favs', 'def', 'updated'])
+        && request.resource.data.favs is list && request.resource.data.favs.size() <= 500
+        && (!('def' in request.resource.data) || request.resource.data.def is string);
+    }
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

@@ -144,3 +144,17 @@ body[data-section="radio"] .def-btn.is-default{ color:var(--ink-soft); cursor:de
   .lang-panel{ width:100%; }
 }
 
+/* sign-in */
+.acct{ display:flex; align-items:center; gap:.7rem; font-family:var(--f-mono); font-size:.7rem; letter-spacing:.06em; text-transform:uppercase; }
+body[data-section="radio"] .acct-in{ display:inline-flex; align-items:center; gap:.45rem; padding:.4rem .75rem; border:1px solid var(--ink); color:var(--ink); }
+body[data-section="radio"] .acct-in:hover{ background:var(--ink); color:var(--paper); }
+body[data-section="radio"] .acct-in:hover svg{ fill:var(--paper); }
+.acct-in svg{ width:14px; height:14px; fill:var(--ink); }
+.acct-who{ color:var(--ink); font-weight:500; }
+.acct-ok{ color:var(--ink-soft); }
+.acct-ok::before{ content:"● "; color:#2F8F5B; }
+body[data-section="radio"] .acct-out{ color:var(--ink-soft); border-bottom:1px solid var(--line); padding-bottom:.1rem; }
+body[data-section="radio"] .acct-out:hover{ color:var(--ink); }
+.acct-err{ color:#9B2C2C; text-transform:none; letter-spacing:0; font-family:var(--f-body); }
+@media (max-width:640px){ .acct{ width:100%; } }
+

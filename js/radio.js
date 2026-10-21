@@ -112,7 +112,10 @@
   document.addEventListener("click", (e) => {
     if (!$("#langPanel").hidden && !e.target.closest(".lang-pick")) closePanel();
   });
-  $("#defBtn").onclick = () => { store.set("mr-default", col.id); renderBar(); };
+  $("#defBtn").onclick = () => {
+    store.set("mr-default", col.id); renderBar();
+    window.dispatchEvent(new CustomEvent("radio:local-change", { detail: { favs: [...favs], def: col.id } }));
+  };
 
   function loadScript(src) {
     return new Promise((res, rej) => {
@@ -219,7 +222,18 @@
     favs.has(k) ? favs.delete(k) : favs.add(k);
     store.set("mr-favs2", [...favs]);
     renderChips(); render(); syncPlayer();
+    // js/radio-sync.js saves this to the visitor's account when they are signed in
+    window.dispatchEvent(new CustomEvent("radio:local-change", { detail: { favs: [...favs], def: getDefault() } }));
   }
+
+  // favourites / default coming back from the visitor's account (js/radio-sync.js)
+  window.addEventListener("radio:remote-change", (e) => {
+    const { favs: f, def } = e.detail || {};
+    if (Array.isArray(f)) { favs = new Set(f); store.set("mr-favs2", f); }
+    if (def && byCol[def]) store.set("mr-default", def);
+    if (col) { renderBar(); renderChips(); render(); syncPlayer(); }
+  });
+  window.RadioApp = { getFavs: () => [...favs], getDefault: () => getDefault() };
 
   // ---------------------------------------------------------- player
   function status(t) { $("#npStatus").textContent = t; }
