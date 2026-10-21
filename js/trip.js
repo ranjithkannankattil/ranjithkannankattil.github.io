@@ -343,7 +343,7 @@
     const base = ctx.base;
     // where the day starts and ends: your base if it's close, otherwise the main stop near this part of town
     const startHub = base && dist(base, centre) < WALK[opts.walk].leg * 1.6 ? base : (opts.mode === "car" ? null : nearestHub(cluster.sort((a, b) => dist(base || centre, a) - dist(base || centre, b))[0], hubs, 1800));
-    const start = startHub || base || centre;
+    const start = startHub || base || { ...centre, name: `${ctx.city} — centre of this area` };
     // walking order from the start; the finish is whatever stop is near the last sight (not the other way round)
     let stops = orderRoute(start, cluster.filter((p) => p !== start), base && base !== start ? base : null);
 
@@ -449,7 +449,7 @@
         const byIndoor = groups.map((g, i) => [i, indoor(g)]).sort((a, b) => b[1] - a[1]);
         if (byRain[0][1] >= 60) { const g2 = [...groups]; groups[byRain[0][0]] = g2[byIndoor[0][0]]; groups[byIndoor[0][0]] = g2[byRain[0][0]]; }
       }
-      const ctx = { hubs, base };
+      const ctx = { hubs, base, city: dest.name };
       const make = (hrsOk) => {
         const out = groups.map((g, i) => g.length ? buildDay(g.slice(0, perDay + 3), dayDates[i], i, ctx) : null).filter(Boolean);
         const leftovers = picked.filter((p) => !out.some((d) => d.stops.includes(p))).slice(0, 40);
