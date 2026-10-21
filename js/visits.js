@@ -13,7 +13,8 @@
 
   const show = (n) => {
     if (!n) return;
-    el.textContent = `${Number(n).toLocaleString("en-GB")} visits`;
+    n = Number(n);
+    el.textContent = `${n.toLocaleString("en-GB")} ${n === 1 ? "visit" : "visits"}`;
     el.title = "Each browser is counted once a day. Nothing about you is stored — see Privacy.";
     el.hidden = false;
   };
