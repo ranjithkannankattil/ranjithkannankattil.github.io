@@ -318,8 +318,13 @@
     return route;
   }
   const nearestHub = (p, hubs, max = 1500) => {
-    let best = null, bd = max;
-    for (const h of hubs) { const d = dist(p, h) - Math.log2(h.sl + 2) * 40 - (h.kind === "train" || h.kind === "metro" ? 150 : 0); if (d < bd) { bd = d; best = h; } }
+    let best = null, bd = Infinity;
+    for (const h of hubs) {
+      const real = dist(p, h);
+      if (real > max) continue;
+      const d = real - Math.log2(h.sl + 2) * 40 - (h.kind === "train" || h.kind === "metro" ? 150 : 0);
+      if (d < bd) { bd = d; best = h; }
+    }
     return best;
   };
 
@@ -339,9 +344,8 @@
     // where the day starts and ends: your base if it's close, otherwise the main stop near this part of town
     const startHub = base && dist(base, centre) < WALK[opts.walk].leg * 1.6 ? base : (opts.mode === "car" ? null : nearestHub(cluster.sort((a, b) => dist(base || centre, a) - dist(base || centre, b))[0], hubs, 1800));
     const start = startHub || base || centre;
-    let stops = orderRoute(start, cluster.filter((p) => p !== start), null);
-    const lastHub = opts.mode === "car" ? null : nearestHub(stops[stops.length - 1] || start, hubs, 1100);
-    stops = orderRoute(start, stops, lastHub || base);
+    // walking order from the start; the finish is whatever stop is near the last sight (not the other way round)
+    let stops = orderRoute(start, cluster.filter((p) => p !== start), base && base !== start ? base : null);
 
     // timeline, dropping the weakest stops that don't fit (they become "if you have time")
     const wd = new Date(date + "T12:00");
@@ -357,7 +361,7 @@
         t += visitMinutes(p);
         prev = p;
       }
-      if (lastHub) t += legBetween(prev, lastHub).min;
+      t += 10;
       if (t > dayEnd + 10 && keep.length > 1) {
         const weakest = [...keep].sort((a, b) => a.score - b.score)[0];
         keep = keep.filter((x) => x !== weakest);
@@ -365,7 +369,9 @@
       }
       if (ok) break;
     }
-    keep = orderRoute(start, keep, lastHub || base);
+    keep = orderRoute(start, keep, base && base !== start ? base : null);
+    const lastStop = keep[keep.length - 1] || start;
+    const lastHub = opts.mode === "car" ? null : (base && dist(lastStop, base) < WALK[opts.walk].leg ? null : nearestHub(lastStop, hubs, 900));
     const extra = stops.filter((p) => !keep.includes(p)).sort((a, b) => b.score - a.score);
 
     // final schedule
@@ -394,6 +400,8 @@
       if (leg.type === "walk") walked += leg.m;
       t += leg.min;
       items.push({ kind: "end", at: t, place: endP, isBase: endP === base });
+    } else if (opts.mode !== "car" && start !== prev) {
+      items.push({ kind: "end", at: t, place: prev, last: true, back: start });
     }
     return { idx, date, start, items, stops: keep, extra, walked, endAt: t, centre };
   }
@@ -429,10 +437,6 @@
       const perDay = Math.round(PACE[opts.pace].stops * (opts.days === "0.5" ? .55 : 1));
       const pool = picked.slice(0, Math.ceil(perDay * days * 1.5) + 3);
 
-      say("Checking opening hours…");
-      const hrs = await Promise.race([hoursFor(pool.slice(0, 45), centre, km), new Promise((r) => setTimeout(() => r(null), 32000))]);
-      if (hrs) for (const p of pool) { const h = hrs[p.id]; if (h) { p.oh = h.oh; p.fee = h.fee; p.website = p.website || h.website; } }
-
       say("Putting the days together…");
       const groups = kmeans(pool, days);
       groups.sort((a, b) => b.reduce((s, p) => s + p.score, 0) - a.reduce((s, p) => s + p.score, 0));   // best day first
@@ -445,13 +449,26 @@
         if (byRain[0][1] >= 60) { const g2 = [...groups]; groups[byRain[0][0]] = g2[byIndoor[0][0]]; groups[byIndoor[0][0]] = g2[byRain[0][0]]; }
       }
       const ctx = { hubs, base };
-      const out = groups.map((g, i) => g.length ? buildDay(g.slice(0, perDay + 3), dayDates[i], i, ctx) : null).filter(Boolean);
-      const leftovers = picked.filter((p) => !out.some((d) => d.stops.includes(p))).slice(0, 40);
-      plan = { dest, from, base, days: out, wx, hubs, leftovers, likes, km, hrsOk: !!hrs };
+      const make = (hrsOk) => {
+        const out = groups.map((g, i) => g.length ? buildDay(g.slice(0, perDay + 3), dayDates[i], i, ctx) : null).filter(Boolean);
+        const leftovers = picked.filter((p) => !out.some((d) => d.stops.includes(p))).slice(0, 40);
+        plan = { dest, from, base, days: out, wx, hubs, leftovers, likes, km, hrsOk };
+      };
+      make(null);
       say("");
       render();
       $("out").hidden = false;
       $("out").scrollIntoView({ behavior: "smooth", block: "start" });
+      // opening hours from OpenStreetMap arrive later; re-time the days when they do
+      const token = (window.__tripRun = (window.__tripRun || 0) + 1);
+      hoursFor(pool.slice(0, 45), centre, km).then((hrs) => {
+        if (token !== window.__tripRun) return;
+        if (hrs) for (const p of pool) { const h = hrs[p.id]; if (h) { p.oh = h.oh; p.fee = h.fee; p.website = p.website || h.website; } }
+        const keepDay = current;
+        make(hrs ? true : false);
+        render();
+        if (keepDay) showDay(Math.min(keepDay, plan.days.length - 1));
+      });
     } catch (err) {
       say("Something didn't answer (" + (err.message || err) + "). Try again in a moment.");
     } finally { btn.disabled = false; }
@@ -555,7 +572,7 @@
     const facts = [`${d.stops.length} places`, `about ${fmtKm(d.walked)} on foot`, `${fmtT(d.items[0].at)}–${fmtT(d.endAt)}`];
     if (wx) facts.push(`${WX(wx.code)[0]} ${Math.round(wx.hi)}°, rain ${wx.rain}%`);
     hd.append(el("p", null, facts.join(" · ")));
-    const pts = [d.start, ...d.stops, ...(d.items.at(-1).kind === "end" ? [d.items.at(-1).place] : [])];
+    const pts = [d.start, ...d.stops, ...(d.items.at(-1).kind === "end" && !d.items.at(-1).last ? [d.items.at(-1).place] : [])];
     const gm = el("div", "links");
     for (let k = 0; k < pts.length - 1; k += 10) gm.append(linkA(pts.length > 11 ? `Open route in Google Maps (part ${k / 10 + 1}) ↗` : "Open the whole day in Google Maps ↗", gmaps.route(pts.slice(k, k + 11), opts.mode === "car" ? "driving" : "walking"), "primary"));
     hd.append(gm);
@@ -567,14 +584,15 @@
     for (const it of d.items) {
       if (it.kind === "start" || it.kind === "end") {
         const li = el("li", "tl-hub");
-        const label = it.isBase ? (plan.base ? plan.base.name : "Start") : it.place.name || "Start";
-        const kind = it.isBase ? "your base" : it.place.kind ? ({ train: "railway station", metro: "metro station", tram: "tram stop", bus: "bus station" })[it.place.kind] : "start";
+        const label = it.last ? "Finish here" : it.isBase ? (plan.base ? plan.base.name : "Start") : it.place.name || "Start";
+        const kind = it.last ? `no station close by — ${it.back.name ? "back to " + it.back.name : "head back"} by bus/tram or on foot` : it.isBase ? "your base" : it.place.kind ? ({ train: "railway station", metro: "metro station", tram: "tram stop", bus: "bus station" })[it.place.kind] : "start";
         li.append(el("span", "time", fmtT(it.at)));
         const b = el("div", "body");
         b.append(el("div", "k", it.kind === "start" ? "Start" : "Finish"), el("div", "name", label), el("div", "sub", kind));
         const ls = el("div", "links");
         ls.append(linkA("Map ↗", gmaps.place(it.place)));
-        if (it.kind === "end" && plan.base && !it.isBase) ls.append(linkA(`Back to ${plan.base.name} ↗`, gmaps.dir(it.place, plan.base, opts.mode === "car" ? "driving" : "transit")));
+        if (it.last) ls.append(linkA(`Route back ↗`, gmaps.dir(it.place, plan.base || it.back, "transit")));
+        if (it.kind === "end" && plan.base && !it.isBase && !it.last) ls.append(linkA(`Back to ${plan.base.name} ↗`, gmaps.dir(it.place, plan.base, opts.mode === "car" ? "driving" : "transit")));
         if (it.kind === "start" && plan.base && !it.isBase) ls.append(linkA(`From ${plan.base.name} ↗`, gmaps.dir(plan.base, it.place, opts.mode === "car" ? "driving" : "transit")));
         b.append(ls);
         li.append(b);
@@ -611,7 +629,7 @@
         b.append(el("div", "sub", [CATS[p.cat].label, fmtDur(it.end - it.at), p.fee === "yes" ? "ticket needed" : p.fee === "no" ? "free" : ""].filter(Boolean).join(" · ")));
         const hrs = el("div", "hrs " + it.hours.s);
         hrs.textContent = it.hours.s === "open" ? it.hours.txt + " on this day" + (it.wait ? ` — opens at ${fmtT(it.at)}, so the plan waits` : "") :
-          it.hours.s === "closed" ? "Closed on this day, according to OpenStreetMap. Swap it with one of the alternatives below." : plan.hrsOk ? "Opening hours not listed. Check before you go." : "Opening hours couldn't be checked right now.";
+          it.hours.s === "closed" ? "Closed on this day, according to OpenStreetMap. Swap it with one of the alternatives below." : plan.hrsOk ? "Opening hours not listed. Check before you go." : plan.hrsOk === null ? "Checking opening hours…" : "Opening hours couldn't be checked right now (the map data server is busy).";
         if (it.warn === "hours") hrs.textContent += " It may close before you're done here.";
         b.append(hrs);
         const desc = el("p", "desc", p.desc ? p.desc.charAt(0).toUpperCase() + p.desc.slice(1) + "." : "");
@@ -683,7 +701,7 @@
         const k = n;
         m.on("click", () => document.querySelector(`.tl-stop[data-n="${k}"]`)?.scrollIntoView({ behavior: "smooth", block: "center" }));
         pts.push([it.place.lat, it.place.lon]);
-      } else if (it.kind === "start" || it.kind === "end") {
+      } else if ((it.kind === "start" || it.kind === "end") && !it.last) {
         L.marker([it.place.lat, it.place.lon], { icon: iconFor(it.kind === "start" ? "S" : "F", "hub") }).addTo(layer).bindPopup(`<b>${it.kind === "start" ? "Start" : "Finish"}</b><br>${(it.place.name || "").replace(/</g, "&lt;")}`);
         pts.push([it.place.lat, it.place.lon]);
       }
