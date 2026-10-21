@@ -16,7 +16,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap"></noscript>
 <link rel="stylesheet" href="css/style.css?v=8">
-<link rel="stylesheet" href="css/radio.css?v=10">
+<link rel="stylesheet" href="css/radio.css?v=11">
 </head>
 <body data-section="radio" class="wide">
 
@@ -109,11 +109,25 @@
   </div>
   <div class="np-controls">
     <button class="np-fav" id="npFav" aria-label="Add to favourites"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2Z"/></svg></button>
-    <button class="np-sleep" id="sleepBtn" aria-label="Sleep timer: off" title="Sleep timer"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg><b></b></button>
+    <button class="np-sleep" id="sleepBtn" aria-haspopup="true" aria-expanded="false" aria-controls="sleepMenu" aria-label="Sleep timer: off. Choose when the radio stops." title="Sleep timer: stop the radio after a set time"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg><span class="lab" id="sleepLab">Sleep</span></button>
     <button class="np-skip" id="prevBtn" aria-label="Previous station" title="Previous station"><svg viewBox="0 0 24 24"><path d="M6 5h2.2v14H6zM19 5.5v13L9.5 12z"/></svg></button>
     <button class="np-play" id="playBtn" aria-label="Play"><svg class="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg><svg class="i-pause" viewBox="0 0 24 24"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg></button>
     <button class="np-skip" id="nextBtn" aria-label="Next station" title="Next station"><svg viewBox="0 0 24 24"><path d="M15.8 5H18v14h-2.2zM5 5.5v13l9.5-6.5z"/></svg></button>
     <input class="np-vol" id="vol" type="range" min="0" max="1" step="0.01" value="1" aria-label="Volume">
+  </div>
+  <div class="sleep-menu" id="sleepMenu" role="dialog" aria-label="Sleep timer" hidden>
+    <div class="sm-head">
+      <b>Sleep timer</b>
+      <span>Turn the radio off by itself, after:</span>
+    </div>
+    <div class="sm-opts" role="group" aria-label="Stop after">
+      <button data-min="15">15 min</button>
+      <button data-min="30">30 min</button>
+      <button data-min="60">1 hour</button>
+      <button data-min="90">90 min</button>
+    </div>
+    <p class="sm-now" id="sleepNow"></p>
+    <button class="sm-off" id="sleepOff" hidden>Turn timer off</button>
   </div>
 </div>
 
@@ -121,7 +135,7 @@
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.5.13/hls.min.js"></script>
 <script src="js/collections.js?v=1"></script>
-<script src="js/radio.js?v=13"></script>
+<script src="js/radio.js?v=14"></script>
 <script src="js/firebase-config.js?v=3"></script>
 <script type="module" src="js/radio-sync.js?v=1"></script>
 <script src="js/nav.js?v=5" defer></script>

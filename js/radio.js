@@ -384,38 +384,59 @@
     if (everPlayed) reconnect(); else nextSource();
   });
 
-  // ---- sleep timer: off → 15 → 30 → 60 → 90 minutes, fades out over the last 20 seconds
-  let sleepAt = 0, sleepTick = null;
-  const SLEEP_STEPS = [0, 15, 30, 60, 90];
-  const sleepBtn = $("#sleepBtn");
-  function sleepLabel() { const m = Math.max(1, Math.ceil((sleepAt - Date.now()) / 60000)); return `Live · sleep in ${m} min`; }
+  // ---- sleep timer: tap the Sleep button, pick how long; the radio fades out over the last
+  // 20 seconds and stops. The button shows the time left (e.g. "28 min").
+  let sleepAt = 0, sleepTick = null, sleepPick = 0;
+  const sleepBtn = $("#sleepBtn"), sleepMenu = $("#sleepMenu"), sleepLab = $("#sleepLab");
+  const minsLeft = () => Math.max(1, Math.ceil((sleepAt - Date.now()) / 60000));
+  const nice = (m) => (m >= 60 ? `${Math.floor(m / 60)} h${m % 60 ? " " + (m % 60) + " min" : ""}` : `${m} min`);
+  function sleepLabel() { return `Live · stops in ${nice(minsLeft())}`; }
+  const clock = (ms) => new Date(ms).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+  function paintSleep() {
+    const on = !!sleepAt, m = on ? minsLeft() : 0;
+    sleepBtn.classList.toggle("on", on);
+    sleepLab.textContent = on ? nice(m) : "Sleep";
+    sleepBtn.setAttribute("aria-label", on ? `Sleep timer on: radio stops in ${nice(m)}, at ${clock(sleepAt)}. Tap to change.` : "Sleep timer: off. Choose when the radio stops.");
+    sleepBtn.title = on ? `Radio stops at ${clock(sleepAt)}` : "Sleep timer: stop the radio after a set time";
+    $("#sleepNow").textContent = on ? `On — the radio fades out and stops at ${clock(sleepAt)} (${nice(m)} from now).` : "Off. The radio keeps playing until you stop it.";
+    $("#sleepOff").hidden = !on;
+    sleepMenu.querySelectorAll("[data-min]").forEach((b) => b.setAttribute("aria-pressed", on && +b.dataset.min === sleepPick));
+  }
   function setSleep(mins) {
     clearInterval(sleepTick);
-    sleepAt = mins ? Date.now() + mins * 60000 : 0;
-    sleepBtn.classList.toggle("on", !!mins);
-    sleepBtn.querySelector("b").textContent = mins ? mins : "";
-    sleepBtn.setAttribute("aria-label", mins ? `Sleep timer: ${mins} minutes (tap to change)` : "Sleep timer: off");
-    sleepBtn.title = mins ? `Stops in ${mins} min` : "Sleep timer";
-    if (!mins) { audio.volume = vol.value; if (!audio.paused) status("Live"); return; }
+    sleepAt = mins ? Date.now() + mins * 60000 : 0; sleepPick = mins;
+    audio.volume = vol.value;
+    paintSleep();
+    if (!mins) { if (!audio.paused) status("Live"); return; }
     if (!audio.paused) status(sleepLabel());
+    let lastMin = minsLeft();
     sleepTick = setInterval(() => {
       const left = sleepAt - Date.now();
       if (left <= 0) {
-        clearInterval(sleepTick); sleepAt = 0;
+        clearInterval(sleepTick); sleepAt = 0; sleepPick = 0;
         if (!audio.paused) toggle();
-        audio.volume = vol.value; status("Sleep timer — stopped");
-        sleepBtn.classList.remove("on"); sleepBtn.querySelector("b").textContent = "";
+        audio.volume = vol.value; status("Stopped by sleep timer");
+        paintSleep();
         return;
       }
       if (left < 20000) audio.volume = vol.value * (left / 20000);
-      if (!audio.paused && Math.round(left / 1000) % 30 === 0) status(sleepLabel());
+      if (minsLeft() !== lastMin) { lastMin = minsLeft(); paintSleep(); if (!audio.paused) status(sleepLabel()); }
     }, 1000);
   }
-  sleepBtn.onclick = () => {
-    const now = sleepAt ? SLEEP_STEPS.find((m) => m * 60000 >= sleepAt - Date.now() - 30000) || 0 : 0;
-    const i = SLEEP_STEPS.indexOf(now);
-    setSleep(SLEEP_STEPS[(i + 1) % SLEEP_STEPS.length]);
-  };
+  function openSleep(open) {
+    sleepMenu.hidden = !open; sleepBtn.setAttribute("aria-expanded", open);
+    if (open) { paintSleep(); (sleepMenu.querySelector('[aria-pressed="true"]') || sleepMenu.querySelector("[data-min]")).focus(); }
+  }
+  sleepBtn.onclick = (e) => { e.stopPropagation(); openSleep(sleepMenu.hidden); };
+  sleepMenu.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const b = e.target.closest("[data-min]");
+    if (b) { setSleep(+b.dataset.min); openSleep(false); sleepBtn.focus(); }
+    if (e.target.id === "sleepOff") { setSleep(0); openSleep(false); sleepBtn.focus(); }
+  });
+  document.addEventListener("click", () => { if (!sleepMenu.hidden) openSleep(false); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !sleepMenu.hidden) { openSleep(false); sleepBtn.focus(); } });
+  paintSleep();
 
   playBtn.onclick = toggle;
   $("#prevBtn").onclick = () => skip(-1);
