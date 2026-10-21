@@ -606,7 +606,10 @@
       let groups, tourInfo = null;
       if (tour) {
         // which towns, how many days each, in what order, and how you get between them
-        const tl = allocateDays(towns(picked), days, perDay);
+        const allTowns = towns(picked);
+        const tl = allocateDays(allTowns, days, perDay);
+        if (/debug/.test(location.search)) window.__tripDebug = { raw: raw.length, inside: all.length, cands: cands.length, picked: picked.slice(0, 40).map((p) => `${p.name} [${p.cat}] ${p.town} sl=${p.sl}`),
+          towns: allTowns.slice(0, 15).map((t) => `${t.name}: ${t.places.length} places, score ${t.score.toFixed(1)}`), chosen: tl.map((t) => `${t.name}×${t.days}`) };
         const startNear = base || (from && dist(from, dest) < 300000 ? from : null);
         const ordered = orderTowns(tl, startNear, end);
         groups = []; const townOf = [], hubsFor = [], travel = [], sleep = [];
