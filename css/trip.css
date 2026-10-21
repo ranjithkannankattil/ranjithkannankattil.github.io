@@ -146,3 +146,4 @@ body[data-section="trip"] .tp-days button[aria-pressed="true"]{ color:var(--ink)
   .tp-map{ position:relative; height:360px; break-inside:avoid; }
   .tl > li{ break-inside:avoid; }
 }
+@media (prefers-color-scheme: dark){ .tp-map .leaflet-tile-pane{ filter:invert(1) hue-rotate(180deg) brightness(.85) contrast(.9); } }

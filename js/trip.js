@@ -25,7 +25,7 @@
     family: { label: "Family", rx: /\bzoo\b|aquarium|amusement park|theme park|planetarium|science centre|science center|water park|children/i },
     history: { label: "Landmark", rx: /palace|palazzo|castle|fort\b|fortress|tower|bridge|monument|memorial|square|plaza|piazza|fountain|statue|archaeolog|ruin|gate|city wall|amphitheatre|loggia|old town|mausoleum|landmark|villa|lighthouse|historic|heritage|harbour|harbor|pier|dock|cemetery|obelisk|column|arch\b|colonnade/i },
   };
-  const ORDER = ["museum", "religious", "family", "culture", "markets", "parks", "nature", "history"];
+  const ORDER = ["religious", "parks", "museum", "family", "culture", "markets", "nature", "history"];
   const EXCLUDE = /\b(city|town|village|comune|municipality|province|region|state|country|county|administrative|district|neighbou?rhood|ward|council|siege|revolt|conspiracy|battle|war|university|college|school|institute|library|archives|society|academy|hospital|company|business|enterprise|organi[sz]ation|railway station|metro station|bus station|airport|human|painting|fresco|artwork|cycle of frescoes|sacristy|studiolo|pharmacy|drugstore|sport|championship|record group|event|election|treaty|diocese|archdiocese|parish\b|constituency|electoral|office|embassy|consulate|hotel|restaurant|road|highway|railway line|river|tributary|watercourse|mountain range|ecumenical)\b/i;
   const ARTWORK = /sculpture|painting|fresco|artwork|mosaic|altarpiece|tapestry/i;
   const STATION_RX = /railway station|train station|metro station|subway station|underground station|tram stop|bus station|light rail station|station\b|terminus|interchange/i;
@@ -159,7 +159,7 @@
   function classify(p) {
     // judge each "instance of" type on its own: Palazzo Vecchio is a city hall *and* a museum
     const types = p.types.split("|");
-    if (types.some((t) => ARTWORK.test(t)) && !types.some((t) => /fountain|monument|memorial|square|statue/i.test(t))) return null;
+    if (types.some((t) => ARTWORK.test(t) || /^statue$|cultural property/i.test(t) && ARTWORK.test(p.types)) && !types.some((t) => /fountain|monument|memorial|square/i.test(t))) return null;
     for (const k of ORDER) for (const t of types) if (!EXCLUDE.test(t) && !STATION_RX.test(t) && CATS[k].rx.test(t)) return k;
     return null;
   }
@@ -186,10 +186,10 @@
   async function hoursFor(places, c, km) {      // OpenStreetMap opening hours, matched by Wikidata id (best effort)
     const ids = places.map((p) => p.id);
     if (!ids.length) return {};
-    const q = `[out:json][timeout:25];nwr["wikidata"~"^(${ids.join("|")})$"](around:${Math.round(km * 1000)},${c.lat},${c.lon});out tags;`;
+    const q = `[out:json][timeout:25];(nwr["wikidata"~"^(${ids.join("|")})$"]["opening_hours"](around:${Math.round(km * 1000)},${c.lat},${c.lon}););out tags;`;
     for (const host of ["https://overpass-api.de/api/interpreter", "https://maps.mail.ru/osm/tools/overpass/api/interpreter", "https://overpass.private.coffee/api/interpreter"]) {
       try {
-        const j = await getJSON(host, { method: "POST", body: "data=" + encodeURIComponent(q) }, 28000);
+        const j = await getJSON(host, { method: "POST", body: "data=" + encodeURIComponent(q) }, 16000);
         const map = {};
         for (const e of j.elements || []) {
           const t = e.tags || {};
@@ -263,9 +263,9 @@
     let m;
     switch (p.cat) {
       case "museum": m = p.sl > 50 ? 150 : p.sl > 20 ? 90 : 60; break;
-      case "religious": m = p.sl > 40 ? 50 : 25; break;
+      case "religious": m = p.sl > 60 ? 75 : p.sl > 35 ? 45 : 25; break;
       case "family": m = 150; break;
-      case "parks": m = p.sl > 25 ? 60 : 40; break;
+      case "parks": m = p.sl > 25 ? 75 : 40; break;
       case "nature": m = 35; break;
       case "markets": m = 45; break;
       case "culture": m = 20; break;
@@ -319,7 +319,7 @@
   }
   const nearestHub = (p, hubs, max = 1500) => {
     let best = null, bd = max;
-    for (const h of hubs) { const d = dist(p, h) - Math.log2(h.sl + 2) * 40; if (d < bd) { bd = d; best = h; } }
+    for (const h of hubs) { const d = dist(p, h) - Math.log2(h.sl + 2) * 40 - (h.kind === "train" || h.kind === "metro" ? 150 : 0); if (d < bd) { bd = d; best = h; } }
     return best;
   };
 
@@ -340,7 +340,7 @@
     const startHub = base && dist(base, centre) < WALK[opts.walk].leg * 1.6 ? base : (opts.mode === "car" ? null : nearestHub(cluster.sort((a, b) => dist(base || centre, a) - dist(base || centre, b))[0], hubs, 1800));
     const start = startHub || base || centre;
     let stops = orderRoute(start, cluster.filter((p) => p !== start), null);
-    const lastHub = opts.mode === "car" ? null : nearestHub(stops[stops.length - 1] || start, hubs, 1800);
+    const lastHub = opts.mode === "car" ? null : nearestHub(stops[stops.length - 1] || start, hubs, 1100);
     stops = orderRoute(start, stops, lastHub || base);
 
     // timeline, dropping the weakest stops that don't fit (they become "if you have time")
@@ -430,7 +430,7 @@
       const pool = picked.slice(0, Math.ceil(perDay * days * 1.5) + 3);
 
       say("Checking opening hours…");
-      const hrs = await Promise.race([hoursFor(pool.slice(0, 60), centre, km), new Promise((r) => setTimeout(() => r(null), 22000))]);
+      const hrs = await Promise.race([hoursFor(pool.slice(0, 45), centre, km), new Promise((r) => setTimeout(() => r(null), 32000))]);
       if (hrs) for (const p of pool) { const h = hrs[p.id]; if (h) { p.oh = h.oh; p.fee = h.fee; p.website = p.website || h.website; } }
 
       say("Putting the days together…");
@@ -667,9 +667,8 @@
     if (!window.L) return;
     if (!MAP) {
       MAP = L.map("map", { scrollWheelZoom: false, zoomControl: true });
-      const dark = matchMedia("(prefers-color-scheme: dark)").matches;
-      L.tileLayer(`https://{s}.basemaps.cartocdn.com/rastertiles/${dark ? "dark_all" : "voyager"}/{z}/{x}/{y}{r}.png`, {
-        maxZoom: 19, subdomains: "abcd", attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       }).addTo(MAP);
     }
     if (layer) layer.remove();
