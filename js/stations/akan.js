@@ -161,7 +161,8 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://listen.openstream.co/4103/audio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "parousia-radio",
@@ -317,4 +318,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T05:33Z";
+window.STATIONS_CHECKED = "2026-10-21T18:27Z";

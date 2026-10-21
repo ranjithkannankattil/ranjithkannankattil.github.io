@@ -32,7 +32,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://myradio24.org/bosscomaz"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "autolife-radio-azerbaijan",
@@ -64,7 +65,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s40.myradiostream.com/:22546/listen.mp3?"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "media-fm-105-5",
@@ -88,7 +90,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://str.yodacdn.net/radio_respublica/video.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "kn-music-tv",
@@ -96,8 +99,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cdn4.yayin.com.tr/kntv/tracks-v1a1/mono.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-enerji-101-1-fm",
@@ -164,4 +166,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T05:33Z";
+window.STATIONS_CHECKED = "2026-10-21T18:27Z";

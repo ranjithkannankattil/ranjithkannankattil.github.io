@@ -232,7 +232,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radiojar.com/u7d8heq3bnzuv"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "iradio-fm",
@@ -247,6 +248,7 @@ window.STATIONS = [
     "name": "Golden Hits FM",
     "category": "music",
     "streams": [
+      "https://i.klikhost.com:9134/stream",
       "https://i.klikhost.com:8272/;"
     ]
   },
@@ -320,7 +322,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/14/9314/rrisngliatpro1.mp3"
-    ]
+    ],
+    "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T05:33Z";
+window.STATIONS_CHECKED = "2026-10-21T18:27Z";

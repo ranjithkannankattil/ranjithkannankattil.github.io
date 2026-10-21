@@ -49,7 +49,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-icy.dr.dk/A/A07H.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "classic-rock-danmark",
@@ -106,7 +107,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-icy.dr.dk/A/A12H.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "nova-100-dansk",
@@ -219,7 +221,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-icy.dr.dk/A/A13H.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-100",
@@ -327,4 +330,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T05:33Z";
+window.STATIONS_CHECKED = "2026-10-21T18:27Z";

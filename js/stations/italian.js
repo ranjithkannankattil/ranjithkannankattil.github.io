@@ -169,8 +169,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S51100361/Sz3kCA55PrRh/playlist_audio.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-birikina",
@@ -285,4 +284,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T05:33Z";
+window.STATIONS_CHECKED = "2026-10-21T18:27Z";

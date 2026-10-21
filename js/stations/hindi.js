@@ -168,7 +168,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s7.everestcast.com:1155/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-retro-bollywood-90s",
@@ -299,4 +300,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T05:33Z";
+window.STATIONS_CHECKED = "2026-10-21T18:27Z";

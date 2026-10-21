@@ -105,7 +105,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://servidor28.brlogic.com:8032/live"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "gaucha",
@@ -324,4 +325,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T05:33Z";
+window.STATIONS_CHECKED = "2026-10-21T18:27Z";

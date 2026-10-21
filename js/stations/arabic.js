@@ -240,7 +240,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://fm.alarabiya.net/fm/myStream/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rayan-fm",
@@ -324,4 +325,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T05:33Z";
+window.STATIONS_CHECKED = "2026-10-21T18:27Z";

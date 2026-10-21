@@ -214,7 +214,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://classic.nl/streams/?s=main"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "538-top-50",
@@ -230,7 +231,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming.omroepbrabant.nl/mp3hq"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "mnm-hits",
@@ -337,4 +339,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T05:33Z";
+window.STATIONS_CHECKED = "2026-10-21T18:27Z";

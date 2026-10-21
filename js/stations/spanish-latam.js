@@ -24,8 +24,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/ACIR22_s01AAC.aac"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "la-ke-buena-san-andres-tuxtla-103-9-fm-x",
@@ -266,8 +265,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/ACIR11_s01AAC.aac"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "oldies-internet-radio-online-www-oldiesi",
@@ -318,4 +316,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T05:33Z";
+window.STATIONS_CHECKED = "2026-10-21T18:27Z";

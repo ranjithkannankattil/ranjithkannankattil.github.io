@@ -275,7 +275,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sapircast.caster.fm:11309/OsZpV"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "r2extra-chill",
@@ -326,4 +327,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T05:33Z";
+window.STATIONS_CHECKED = "2026-10-21T18:27Z";
