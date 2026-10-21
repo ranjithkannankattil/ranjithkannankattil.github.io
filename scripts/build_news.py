@@ -13,7 +13,7 @@ from collections import defaultdict
 from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(__file__))
-from news_config import LANGS, OUTLETS, PLACES, JUNK, NATIVE  # noqa: E402
+from news_config import LANGS, OUTLETS, PLACES, JUNK, NATIVE, ALIASES  # noqa: E402
 
 try:
     from googlenewsdecoder import gnewsdecoder
@@ -109,6 +109,8 @@ def jobs_for(p):
         if lang == "zh" and ed != LANGS["zh"]["ed"]["*"]:
             eds.append(LANGS["zh"]["ed"]["*"])  # Hong Kong edition carries more independent Chinese-language outlets
         name = p.get("q", {}).get(lang, p["name"])
+        if " OR " in name:
+            name = f"({name})"
         when = WHEN[p["kind"]]
         urls = []
         for e in eds:
@@ -246,7 +248,7 @@ def main():
 
     kind = {p["id"]: p["kind"] for p in PLACES}
     result = defaultdict(lambda: {"news": {}, "other": {}})
-    report = []
+    report, stale = [], {}
     for pid, lang, us in jobs:
         trusted, other, seen = [], [], set()
         got_any = False
@@ -270,7 +272,8 @@ def main():
                     other.append(st)
         trusted.sort(key=lambda s: -s["ts"])
         other.sort(key=lambda s: -s["ts"])
-        trusted, other = trusted[:KEEP], other[:KEEP_OTHER]
+        local = kind[pid] in ("region", "city")
+        trusted, other = trusted[:KEEP * (2 if local else 1)], other[:KEEP_OTHER * 2]
         if not got_any:  # every feed failed this run: keep the last good data
             pf = prev / "p" / f"{pid}.json"
             if pf.exists():
@@ -279,12 +282,40 @@ def main():
                 other = old.get("other", {}).get(lang, [])
         result[pid]["news"][lang] = trusted
         result[pid]["other"][lang] = other
-        report.append(f"{pid:20} {lang}  trusted {len(trusted):3}  other {len(other):3}{'  (kept previous)' if not got_any else ''}")
+        stale[(pid, lang)] = not got_any
 
     allst = [s for r in result.values() for part in ("news", "other") for lst in r[part].values() for s in lst if "_k" not in s and "news.google.com" in s["u"]]
     enrich(allst, cache)
 
+    pmap = {p["id"]: p for p in PLACES}
+
+    def names(p):
+        n = [p["name"], NATIVE.get(p["id"], "")] + ALIASES.get(p["id"], [])
+        for q in p.get("q", {}).values():
+            n += [x.strip() for x in q.split(" OR ")]
+        return [x.lower() for x in n if x and len(x) > 1]
+
     for pid, r in result.items():
+        p = pmap[pid]
+        local = p["kind"] in ("region", "city")
+        nm = names(p)
+        for part, cap in (("news", KEEP), ("other", KEEP_OTHER)):
+            for lang, lst in r[part].items():
+                keep, seen_u, seen_s = [], set(), set()
+                for st in lst:
+                    if st["u"] in seen_u or (st.get("s") and st["s"] in seen_s):
+                        continue
+                    if local and not stale.get((pid, lang)):
+                        text = (st["t"] + " " + st.get("s", "")).lower()
+                        if not any(n in text for n in nm):
+                            continue
+                    seen_u.add(st["u"])
+                    if st.get("s"):
+                        seen_s.add(st["s"])
+                    keep.append(st)
+                r[part][lang] = keep[:cap]
+        for lang in p["langs"]:
+            report.append(f"{pid:20} {lang}  trusted {len(r['news'].get(lang, [])):3}  other {len(r['other'].get(lang, [])):3}{'  (kept previous)' if stale.get((pid, lang)) else ''}")
         for part in ("news", "other"):
             for lang, lst in r[part].items():
                 r[part][lang] = [{k: v for k, v in s.items() if k in ("t", "s", "u", "src", "ts")} for s in lst]

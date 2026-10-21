@@ -24,6 +24,7 @@
 [data-section="writings"]    { --accent:#B8860B; --accent-soft:#F1E6C8; --ink-accent:#6B1F1F; }
 [data-section="publications"]       { --accent:#6B2740; --accent-soft:#EBDCE1; }
 [data-section="radio"]       { --accent:#2F6B4F; --accent-soft:#DCE9E1; }
+[data-section="news"]        { --accent:#A33A2C; --accent-soft:#F2E0DB; }
 [data-section="productivity"] { --accent:#5C4D7D; --accent-soft:#E7E2EF; }
 
 *{ box-sizing:border-box; }

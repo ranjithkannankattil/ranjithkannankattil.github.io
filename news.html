@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>News — Ranjith Kannankattil</title>
+<meta name="description" content="Headlines from trusted independent papers, in the languages you choose, from the whole world down to your own town. Updated every two hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=4">
+<link rel="stylesheet" href="css/news.css?v=1">
+</head>
+<body data-section="news" class="wide">
+
+<header class="titleblock">
+  <div>
+    <div class="id">RANJITH KANNANKATTIL</div>
+    <div class="name">News</div>
+  </div>
+  <nav class="tabs" data-root="" data-active="news" aria-label="Site">
+    <a href="index.html">Home</a>
+    <a href="photography.html">Photography</a>
+    <a href="writings.html">Writings</a>
+    <a href="publications.html">Publications</a>
+    <a href="radio.html">Radio</a>
+    <a href="news.html" class="active">News</a>
+    <a href="productivity/">Productivity</a>
+  </nav>
+</header>
+
+<main>
+  <div class="news-head">
+    <h1 class="news-title">News</h1>
+    <p class="news-intro">Headlines from trusted, independent papers in the languages you choose — from the whole world down to your own town. A new edition every two hours.</p>
+  </div>
+
+  <div class="news-bar">
+    <div class="place-pick">
+      <button class="place-btn" id="placeBtn" aria-haspopup="true" aria-expanded="false" aria-controls="placePanel">
+        <span class="k" id="placePath">Place</span>
+        <span class="cur"><span id="placeCur">World</span> <span class="nat" id="placeNative"></span></span>
+        <span class="caret" aria-hidden="true">▾</span>
+      </button>
+      <div class="place-panel" id="placePanel" hidden>
+        <input id="placeQ" type="search" placeholder="Type a place — e.g. Thrissur, Swansea, Qingdao" autocomplete="off" aria-label="Find a place">
+        <div class="place-list" id="placeList"></div>
+      </div>
+    </div>
+    <div class="pins" id="pins" aria-label="Your places"></div>
+    <button class="pin-btn" id="pinBtn"></button>
+  </div>
+
+  <div class="lang-row">
+    <span class="k">Languages</span>
+    <div class="langs" id="langs" role="group" aria-label="Languages to show"></div>
+  </div>
+
+  <nav class="subplaces" id="subplaces" aria-label="Places within"></nav>
+
+  <div class="edition">
+    <div class="ed-when"><span class="dot" aria-hidden="true"></span><span id="edWhen">Loading the latest edition…</span></div>
+    <label class="other-tog" id="otherWrap" hidden><input type="checkbox" id="otherTog"> <span>Include other local outlets</span></label>
+    <button class="refresh" id="refresh"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66M20 4v5h-5"/></svg><span>Refresh</span></button>
+  </div>
+
+  <div class="stories" id="stories"></div>
+
+  <details class="sources" id="sources">
+    <summary>Which papers are used</summary>
+    <div id="sourcesBody"></div>
+  </details>
+  <p class="news-note">Each story links to the paper's own website; summaries are the paper's own standfirst. Stories are found through Google News and kept only when they come from the papers listed above. Some papers ask for a subscription to read the full article.</p>
+</main>
+
+<footer>
+  <div>© <span id="year"></span> Ranjith Kannankattil</div>
+  <div class="foot-r"><span class="visits" id="visits" hidden></span><a href="privacy.html">Privacy</a></div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="js/news.js?v=1" defer></script>
+<script src="js/nav.js?v=2" defer></script>
+<script src="js/visits.js?v=2" defer></script>
+</body>
+</html>
