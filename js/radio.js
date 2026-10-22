@@ -407,10 +407,12 @@
     castLab.textContent = label || (on ? "Casting" : "Cast");
     castBtn.title = on ? "Playing on a speaker or TV. Tap to change or stop." : "Play on a speaker or TV";
   }
-  if (audio.remote && audio.remote.watchAvailability) {
+  // The button is always offered, so the feature can be found; what it does depends on the browser.
+  const iOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || (/Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints > 1);
+  const safari = /^((?!CriOS|FxiOS|EdgiOS|OPiOS|Chrome|Android).)*Safari/i.test(navigator.userAgent);
+  castBtn.hidden = false;
+  if (audio.remote && audio.remote.prompt && !iOS) {
     const r = audio.remote;
-    // some phones can't watch for devices in the background; the picker still works there
-    r.watchAvailability((avail) => { castBtn.hidden = !avail && !casting; }).catch(() => { castBtn.hidden = false; });
     r.addEventListener("connecting", () => castState(false, "Connecting…"));
     r.addEventListener("connect", () => castState(true));
     r.addEventListener("disconnect", () => {
@@ -420,11 +422,16 @@
     });
     castBtn.onclick = () => r.prompt().catch((e) => {
       if (e.name === "NotSupportedError") status("This station can't be cast. Try another, or a Bluetooth speaker.", 6000);
+      else if (e.name === "NotFoundError") status("No speaker or TV found on this Wi-Fi.", 6000);
     });
-  } else if (window.WebKitPlaybackTargetAvailabilityEvent) {
-    audio.addEventListener("webkitplaybacktargetavailabilitychanged", (e) => { castBtn.hidden = e.availability !== "available"; });
+  } else if (audio.webkitShowPlaybackTargetPicker && (safari || !iOS)) {
     audio.addEventListener("webkitcurrentplaybacktargetiswirelesschanged", () => castState(!!audio.webkitCurrentPlaybackTargetIsWireless));
     castBtn.onclick = () => audio.webkitShowPlaybackTargetPicker();
+  } else if (iOS) {
+    // other iPhone browsers: the picker may or may not respond, so try it and explain the sure way
+    castBtn.onclick = () => { if (audio.webkitShowPlaybackTargetPicker) { try { audio.webkitShowPlaybackTargetPicker(); } catch (e) { /* not offered here */ } } status("On iPhone: open Control Center, tap the AirPlay icon on the music card and pick your speaker or TV.", 9000); };
+  } else {
+    castBtn.onclick = () => status("This browser can't cast. Use its own menu (Chrome: ⋮ → Cast), or pair a Bluetooth speaker.", 9000);
   }
 
   const sleepBtn = $("#sleepBtn"), sleepMenu = $("#sleepMenu"), sleepLab = $("#sleepLab");
