@@ -143,7 +143,8 @@
     window.STATIONS = null; window.STATIONS_CHECKED = null;
     try { await loadScript(`js/stations/${c.id}.js?d=${stamp}`); } catch { /* shown as empty */ }
     if (col !== c) return;   // user switched again while loading
-    S = window.STATIONS || [];
+    // stations that failed 20 checks in a row are hidden; the check keeps testing them and un-hides any that come back
+    S = (window.STATIONS || []).filter((s) => !s.hidden);
     byId = Object.fromEntries(S.map((s) => [s.id, s]));
     renderStats(); renderChips(); render();
     if (user) $(".radio-bar").scrollIntoView({ behavior: "smooth", block: "nearest" });
@@ -187,6 +188,7 @@
       const li = document.createElement("li");
       li.className = "radio-card" + (isCur(s) ? " on" : "") + (s.offline ? " off" : "");
       li.dataset.id = s.id;
+      const isNew = s.added && (Date.now() - Date.parse(s.added)) < 21 * 864e5;
       const sub = s.offline ? "Not working today"
         : [REGIONS.has(s.category) ? "" : catLabel(s.category),
            s.freq || s.where || (s.streams.length > 1 ? s.streams.length + " sources" : "Live")].filter(Boolean).join(" · ");
@@ -198,6 +200,7 @@
         <button class="fav" aria-label="Favourite" aria-pressed="${favs.has(key(s))}"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2Z"/></svg></button>`;
       li.querySelector(".nm").textContent = s.name;      // names come from a public directory: never as HTML
       li.querySelector(".sub").textContent = sub;
+      if (isNew && !s.offline) li.querySelector(".nm").insertAdjacentHTML("beforeend", ' <span class="new-tag">New</span>');
       li.querySelector(".hit").onclick = () => (isCur(s) ? toggle() : play(s, list));
       li.querySelector(".fav").onclick = (e) => { e.stopPropagation(); toggleFav(key(s)); };
       grid.append(li);

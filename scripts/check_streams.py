@@ -36,6 +36,8 @@ HEALTH = ROOT / "scripts" / "stream-health.json"
 REPORT = ROOT / "scripts" / "stream-report.md"
 
 DROP_AFTER = 14         # consecutive failed checks (2 a day = 7 days) before a stream is removed
+HIDE_AFTER = 20         # consecutive checks with nothing playing before a station is hidden from the page
+                        # (it stays in the file, keeps being tested, and comes back as soon as it plays)
 SANITY_MIN = 0.4        # if fewer than 40% of stations work, assume the runner's network is at fault
 MIN_BYTES = 16_000      # audio bytes needed in TIMEOUT seconds to count as live
 TIMEOUT = 10
@@ -286,6 +288,8 @@ def main() -> None:
 
     report_rows = []
     changed_stations = []
+    st_health = health.setdefault("@station", {})      # consecutive checks with nothing playing, per station
+    hidden_now, back_now = [], []
     for st in stations:
         before = list(st["streams"])
         working, dead, unknown = [], [], []
@@ -325,6 +329,18 @@ def main() -> None:
         else:
             st["offline"] = True
 
+        key = f'{owner[id(st)]["id"]}:{st["id"]}'
+        if working:
+            st_health.pop(key, None)
+            if st.pop("hidden", None):
+                back_now.append(f'{owner[id(st)]["name"]} · {st["name"]}')
+        elif not unknown:                       # definitely nothing playing this time
+            n = st_health.get(key, 0) + 1
+            st_health[key] = n
+            if n >= HIDE_AFTER and not st.get("hidden"):
+                st["hidden"] = True
+                hidden_now.append(f'{owner[id(st)]["name"]} · {st["name"]}')
+
         if st["streams"] != before or found or dropped:
             changed_stations.append(st["name"])
         status = "ok" if working else ("UNKNOWN" if unknown else "OFFLINE")
@@ -345,14 +361,24 @@ def main() -> None:
         # (runner network trouble), not the stations. Change nothing.
         raise SystemExit(f"Only {ok}/{len(stations)} stations reachable — assuming a network problem, no changes written.")
 
+    # look for stations we don't have yet (only when the network is healthy, which the check above confirms)
+    try:
+        from discover_stations import discover
+        added = discover(load_collections(), files, health, test_stream, OK)
+    except Exception as e:  # noqa: BLE001 — discovery must never break the check itself
+        print("discovery skipped:", e)
+        added = []
+
     for path, header, sts in files.values():
         save_stations(path, header, sts)
     HEALTH.write_text(json.dumps(health, indent=2, sort_keys=True) + "\n")
 
     off = [r for r in report_rows if r[0] == "OFFLINE"]
     unk = [r for r in report_rows if r[0] == "UNKNOWN"]
+    n_hidden = sum(1 for st in stations if st.get("hidden"))
     lines = [f"# Radio stream check — {TODAY}", "",
-             f"**{ok} of {len(stations)} stations playing.** {len(off)} offline, {len(unk)} couldn't be checked.", "",
+             f"**{ok} of {len(stations)} stations playing.** {len(off)} offline, {len(unk)} couldn't be checked, "
+             f"{n_hidden} hidden after {HIDE_AFTER}+ failed checks in a row, {len(added)} new stations added.", "",
              "| Collection | Stations | Playing | Offline |", "|---|---|---|---|"]
     for cid, (_, _, sts) in files.items():
         n_off = sum(1 for x in sts if x.get("offline"))
@@ -363,6 +389,9 @@ def main() -> None:
             lines += [f"## {title}", "", "| Station | Why |", "|---|---|"]
             lines += [f"| {n} | {why} |" for _, n, why in rows]
             lines.append("")
+    for title, items in ((f"New stations added", added), (f"Hidden this run ({HIDE_AFTER} failed checks in a row)", hidden_now), ("Back on the page (playing again)", back_now)):
+        if items:
+            lines += [f"## {title}", ""] + [f"- {x}" for x in items] + [""]
     notes = [r for r in report_rows if r[0] == "ok" and r[2]]
     if notes:
         lines += ["## Changes and warnings", "", "| Station | Note |", "|---|---|"]

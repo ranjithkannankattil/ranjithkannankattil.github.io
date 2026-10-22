@@ -12,6 +12,7 @@ on:
     branches: [main]
     paths:
       - scripts/check_streams.py
+      - scripts/discover_stations.py
       - js/collections.js
       - .github/workflows/check-radio-streams.yml
 
