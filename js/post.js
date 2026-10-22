@@ -16,6 +16,21 @@
     return;
   }
   document.title = `${p.t} — Writings — Ranjith`;
+  // per-post search and share details (the static ones in the page are generic)
+  const url = `https://ranjithkb.com/${link(p)}`;
+  const setMeta = (attr, key, val) => {
+    let m = document.head.querySelector(`meta[${attr}="${key}"]`);
+    if (!m) { m = document.createElement("meta"); m.setAttribute(attr, key); document.head.append(m); }
+    m.content = val;
+  };
+  const desc = p.x || p.te || p.t;
+  setMeta("name", "description", desc);
+  setMeta("property", "og:title", p.t);
+  setMeta("property", "og:description", desc);
+  setMeta("property", "og:url", url);
+  const canon = document.createElement("link");
+  canon.rel = "canonical"; canon.href = url;
+  document.head.append(canon);
   const form = (p.tags || []).map((t) => FORM[t]).find(Boolean) || "";
   const [y, m, d] = p.d.split("-");
 
