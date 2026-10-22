@@ -15,7 +15,12 @@
   const ZOOM = { day: 28, week: 10, month: 3.3, quarter: 1.05, year: 0.32 };
   const LIBS = { exceljs: '../js/vendor/exceljs-4.4.0.min.js', jspdf: '../js/vendor/jspdf-2.5.2.min.js' };
   const PAPER = { a4: [297, 210], a3: [420, 297], letter: [279.4, 215.9], tabloid: [431.8, 279.4] };
-  const DEF_OPT = { deps: true, crit: false, prog: true, labels: true, today: true, wkend: true, work: false, auto: true };
+  const DEF_OPT = { deps: true, crit: false, prog: true, labels: true, today: true, wkend: true, work: false, auto: true, bar: 'solid' };
+  const BARS = ['solid', 'outline', 'striped', 'thin', 'arrow'];
+  const BAR_NAME = { solid: 'Solid', outline: 'Outline', striped: 'Striped', thin: 'Thin line', arrow: 'Arrow' };
+  // link kinds: which end of the predecessor drives which end of this row
+  const KINDS = ['FS', 'SS', 'FF', 'SF'];
+  const KIND_TXT = { FS: 'starts after it finishes', SS: 'starts when it starts', FF: 'finishes when it finishes', SF: 'finishes when it starts' };
 
   const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -113,29 +118,62 @@
   function dependsOn(a, b, seen = new Set()) {
     if (a === b) return true;
     if (seen.has(a.id)) return false; seen.add(a.id);
-    for (const d of a.dep || []) { const p = S.byId.get(d); if (p && dependsOn(p, b, seen)) return true; }
+    for (const d of a.dep || []) { const p = S.byId.get(d.id); if (p && dependsOn(p, b, seen)) return true; }
     if (a.t === 'group') for (const k of S.kids.get(a.id) || []) if (dependsOn(k, b, seen)) return true;
     return false;
   }
 
-  // push successors later so each starts after what it depends on
-  function schedule() {
-    if (!P.opt.auto) return;
+  // move k days, counting only Mon–Fri when the timeline counts working days
+  function addW(n, k) {
+    if (!work() || !k) return n + k;
+    let d = n, c = Math.abs(k); const st = Math.sign(k);
+    while (c > 0) { d += st; if (!weekend(d)) c--; }
+    return d;
+  }
+  // earliest start for row r that respects link d ({ id, k: FS|SS|FF|SF, l: lag in days })
+  function linkStart(r, d) {
+    const p = S.byId.get(d.id); if (!p) return null;
+    const E = eff(p); if (E.s == null || r.s == null) return null;
+    const ps = E.s, pe = p.t === 'ms' ? E.s : E.e, l = d.l || 0, span = (r.e ?? r.s) - r.s;
+    switch (d.k) {
+      case 'SS': { const n = addW(ps, l); return r.t === 'ms' ? n : nextWork(n); }
+      case 'FF': return addW(pe, l) - span;
+      case 'SF': return addW(ps, l) - span;
+      default: { const n = addW(pe, (p.t === 'ms' || r.t === 'ms' ? 0 : 1) + l); return r.t === 'ms' ? n : nextWork(n); }
+    }
+  }
+  // "3, 5SS+2, 7FF-1, 4FS+1w" -> [{ n, k, l }]
+  function parseDeps(txt) {
+    const out = [], rx = /(\d+)\s*(FS|SS|FF|SF)?\s*(?:([+-])\s*(\d+(?:[.,]\d+)?)\s*(e?days?|e?d|w|wks?|weeks?|ew)?)?/gi;
+    let m;
+    while ((m = rx.exec(String(txt || '')))) {
+      let l = m[3] ? (m[3] === '-' ? -1 : 1) * parseFloat(m[4].replace(',', '.')) : 0;
+      if (m[5] && /w/i.test(m[5])) l *= work() ? 5 : 7;
+      out.push({ n: +m[1], k: (m[2] || 'FS').toUpperCase(), l: Math.round(l) });
+    }
+    return out;
+  }
+  function depsText(r) {
+    return (r.dep || []).map((d) => {
+      if (!S.idx.has(d.id)) return null;
+      const k = d.k !== 'FS' || d.l ? d.k : '';
+      return S.idx.get(d.id) + 1 + k + (d.l ? (d.l > 0 ? '+' : '') + d.l : '');
+    }).filter(Boolean).join(', ');
+  }
+  const lagTxt = (l) => (l ? ` ${l > 0 ? '+' : '−'}${Math.abs(l)} ${work() ? 'working ' : ''}day${Math.abs(l) === 1 ? '' : 's'}` : '');
+
+  // push rows later so each respects its links
+  function schedule(force) {
+    if (!P.opt.auto && !force) return;
     struct();
     for (let pass = 0; pass < P.rows.length + 1; pass++) {
       let moved = false;
       for (const r of P.rows) {
         if (r.t === 'group' || r.s == null || !r.dep || !r.dep.length) continue;
         let need = -Infinity;
-        for (const id of r.dep) {
-          const p = S.byId.get(id); if (!p) continue;
-          const E = eff(p); if (E.s == null) continue;
-          const pe = p.t === 'ms' ? E.s : E.e;
-          need = Math.max(need, p.t === 'ms' || r.t === 'ms' ? pe : pe + 1);
-        }
+        for (const d of r.dep) { const n = linkStart(r, d); if (n != null) need = Math.max(need, n); }
         if (need === -Infinity) continue;
-        if (r.t !== 'ms') need = nextWork(need);
-        if (need > r.s) { const d = need - r.s; r.s += d; r.e = (r.e ?? r.s - d) + d; moved = true; }
+        if (need > r.s) { const k = need - r.s; r.s += k; if (r.e != null) r.e += k; moved = true; }
       }
       if (!moved) break;
     }
@@ -147,17 +185,16 @@
     const b = bounds(); if (!b) return set;
     const items = P.rows.filter((r) => r.t !== 'group' && r.s != null);
     for (const r of items) if ((r.e ?? r.s) === b[1]) set.add(r.id);
-    const free = (pe, s) => { for (let d = pe + 1; d < s; d++) if (!work() || !weekend(d)) return true; return false; };
     let grew = true;
     while (grew) {
       grew = false;
       for (const r of items) {
         if (!set.has(r.id)) continue;
-        for (const id of r.dep || []) {
-          const p = S.byId.get(id);
-          if (!p || set.has(id) || p.t === 'group' || p.s == null) continue;
-          const pe = p.t === 'ms' ? p.s : p.e;
-          if (r.s <= pe || !free(pe, r.s)) { set.add(id); grew = true; }
+        for (const d of r.dep || []) {
+          const p = S.byId.get(d.id);
+          if (!p || set.has(p.id) || p.t === 'group' || p.s == null) continue;
+          const n = linkStart(r, d);
+          if (n != null && n >= r.s) { set.add(p.id); grew = true; }      // no slack on this link
         }
       }
     }
@@ -305,48 +342,69 @@
     if (P.opt.deps) for (const v of rowsV) {
       const r = v.r; if (r.t === 'group' || r.s == null || !r.dep || !r.dep.length) continue;
       const si = at.get(r.id);
-      for (const id of r.dep) {
-        let p = S.byId.get(id); if (!p) continue;
-        let pi = at.get(id);
-        if (pi == null) { const g = S.par.get(id); if (!g) continue; p = g; pi = at.get(g.id); }
+      for (const ln of r.dep) {
+        let p = S.byId.get(ln.id); if (!p) continue;
+        let pi = at.get(ln.id);
+        if (pi == null) { const g = S.par.get(ln.id); if (!g) continue; p = g; pi = at.get(g.id); }
         const E = eff(p); if (E.s == null || pi == null) continue;
-        // leave from under the end of the predecessor (labels sit to its right), arrive at the start of the successor
-        const down = si > pi, sy = HEAD + si * ROW + ROW / 2;
-        const ex = p.t === 'ms' ? f1(X(E.s) + mx) : p.t === 'group' ? f1(X(E.e + 1) - 4) : f1(Math.max(X(E.s) + 3, X(E.e + 1) - 5));
+        // leave from under the predecessor (labels sit to its right): its end for F…, its start for S…;
+        // arrive at this row's start for …S, or its end for …F
+        const k = ln.k || 'FS', fromEnd = k[0] === 'F', toEnd = k[1] === 'F';
+        const down = si > pi, sy = HEAD + si * ROW + ROW / 2, mid = sy + (down ? -ROW / 2 : ROW / 2);
+        const ex = p.t === 'ms' ? f1(X(E.s) + mx)
+          : fromEnd ? (p.t === 'group' ? f1(X(E.e + 1) - 4) : f1(Math.max(X(E.s) + 3, X(E.e + 1) - 5)))
+            : (p.t === 'group' ? f1(X(E.s) + 4) : f1(Math.min(X(E.e + 1) - 3, X(E.s) + 5)));
         const ey = HEAD + pi * ROW + (p.t === 'ms' ? (down ? ROW / 2 + 8 : ROW / 2 - 8) : p.t === 'group' ? (down ? 22 : 11) : down ? 25 : 7);
-        const sx = r.t === 'ms' ? f1(X(r.s) + mx - 9) : X(r.s);
-        const d = sx >= ex + 6
-          ? `M${ex} ${ey}V${sy}H${f1(sx - 1)}`
-          : `M${ex} ${ey}V${sy + (down ? -ROW / 2 : ROW / 2)}H${f1(sx - 10)}V${sy}H${f1(sx - 1)}`;
+        let d;
+        if (!toEnd) {
+          const sx = r.t === 'ms' ? f1(X(r.s) + mx - 9) : X(r.s);
+          d = sx >= ex + 6 ? `M${ex} ${ey}V${sy}H${f1(sx - 1)}` : `M${ex} ${ey}V${mid}H${f1(sx - 10)}V${sy}H${f1(sx - 1)}`;
+        } else {
+          const tx = r.t === 'ms' ? f1(X(r.s) + mx + 9) : X((r.e ?? r.s) + 1);
+          d = tx <= ex - 6 ? `M${ex} ${ey}V${sy}H${f1(tx + 1)}` : `M${ex} ${ey}V${mid}H${f1(tx + 10)}V${sy}H${f1(tx + 1)}`;
+        }
         const c = crit.has(r.id) && crit.has(p.id);
         out.push(`<path class="dep${c ? ' c' : ''}" d="${d}" marker-end="url(#${c ? 'arc' : 'ar'})"/>`);
       }
     }
 
     // bars
+    const stripes = new Set();
     rowsV.forEach((v, i) => {
       const r = v.r, E = eff(r); if (E.s == null) return;
       const y = HEAD + i * ROW, c = colour(r), cr = crit.has(r.id), on = !print && r.id === sel ? ' on' : '';
       let lx;
       if (r.t === 'ms') {
         const cx = X(E.s) + mx, cy = y + ROW / 2;
-        out.push(`<g class="bar ms${on}" data-id="${r.id}">${shape(r.sh, cx, cy, 8, c, cr)}${print ? '' : `<rect class="hit" x="${f1(cx - 11)}" y="${y + 4}" width="22" height="${ROW - 8}"/>`}</g>`);
-        lx = cx + 14;
+        out.push(`<g class="bar ms${on}" data-id="${r.id}">${shape(r.sh, cx, cy, 8, c, cr)}${print ? '' : `<rect class="hit" x="${f1(cx - 11)}" y="${y + 4}" width="22" height="${ROW - 8}"/><circle class="cn" cx="${f1(cx + 14)}" cy="${cy}" r="4.2"/>`}</g>`);
+        lx = cx + (print ? 14 : 22);
       } else if (r.t === 'group') {
         const x = X(E.s), w = Math.max(X(E.e + 1) - x, 3), by = y + 11;
         out.push(`<g class="bar grp${on}" data-id="${r.id}"><path fill="${c}" d="M${x} ${by}H${f1(x + w)}V${by + 11}L${f1(x + w - 5)} ${by + 6}H${f1(x + 5)}L${x} ${by + 11}Z"/>${print ? '' : `<rect class="hit" x="${x}" y="${y + 6}" width="${f1(w)}" height="${ROW - 12}"/>`}</g>`);
         lx = x + w + 8;
       } else {
-        const x = X(E.s), w = Math.max(X(E.e + 1) - x, 3), by = y + 7, bh = 18;
+        const bs = BARS.includes(r.bs) ? r.bs : P.opt.bar || 'solid';
+        const x = X(E.s), w = Math.max(X(E.e + 1) - x, 3), thin = bs === 'thin';
+        const by = thin ? y + 13 : y + 7, bh = thin ? 6 : 18, hy = y + 7, hh = 18;
         const pw = P.opt.prog ? f1((w * clamp(r.p || 0, 0, 100)) / 100) : w;
-        let g = `<g class="bar task${on}" data-id="${r.id}"><rect x="${f1(x + 0.5)}" y="${by + 0.5}" width="${f1(w - 1)}" height="${bh - 1}" rx="3" fill="${c}" fill-opacity="${P.opt.prog ? 0.28 : 1}" stroke="${c}" stroke-opacity=".75"${cr ? ' class="crit"' : ''}/>`;
-        if (P.opt.prog && pw > 0) g += `<rect x="${x}" y="${by}" width="${pw}" height="${bh}" rx="3" fill="${c}"/>`;
+        const ccl = cr ? ' class="crit"' : '', tint = P.opt.prog ? 0.28 : 1;
+        let g = `<g class="bar task${on}" data-id="${r.id}">`;
+        if (bs === 'arrow') {
+          const tp = Math.min(9, w / 2), body = `M${x} ${by}H${f1(x + w - tp)}L${f1(x + w)} ${by + bh / 2}L${f1(x + w - tp)} ${by + bh}H${x}Z`;
+          g += `<clipPath id="k${r.id}"><path d="${body}"/></clipPath><path d="${body}" fill="${c}" fill-opacity="${tint}" stroke="${c}" stroke-opacity=".75"${ccl}/>`;
+          if (P.opt.prog && pw > 0) g += `<rect x="${x}" y="${by}" width="${pw}" height="${bh}" fill="${c}" clip-path="url(#k${r.id})"/>`;
+        } else {
+          if (bs === 'striped') stripes.add(c);
+          const fill = bs === 'outline' ? `fill="${c}" fill-opacity=".07"` : bs === 'striped' ? `fill="url(#st${c.slice(1)})"` : `fill="${c}" fill-opacity="${tint}"`;
+          g += `<rect x="${f1(x + 0.5)}" y="${by + 0.5}" width="${f1(w - 1)}" height="${bh - 1}" rx="3" ${fill} stroke="${c}" stroke-opacity="${bs === 'outline' ? 1 : 0.75}" stroke-width="${bs === 'outline' ? 1.5 : 1}"${ccl}/>`;
+          if (P.opt.prog && pw > 0) g += `<rect x="${x}" y="${by}" width="${pw}" height="${bh}" rx="3" fill="${c}"/>`;
+        }
         if (!print) {
           const hw = Math.min(7, w / 4);
-          g += `<rect class="hit mv" x="${x}" y="${by}" width="${f1(w)}" height="${bh}"/>`;
-          g += `<rect class="hit rz l" x="${f1(x - 3)}" y="${by}" width="${f1(hw + 3)}" height="${bh}"/><rect class="hit rz r" x="${f1(x + w - hw)}" y="${by}" width="${f1(hw + 3)}" height="${bh}"/>`;
+          g += `<rect class="hit mv" x="${x}" y="${hy}" width="${f1(w)}" height="${hh}"/>`;
+          g += `<rect class="hit rz l" x="${f1(x - 3)}" y="${hy}" width="${f1(hw + 3)}" height="${hh}"/><rect class="hit rz r" x="${f1(x + w - hw)}" y="${hy}" width="${f1(hw + 3)}" height="${hh}"/>`;
           if (P.opt.prog) g += `<path class="ph" d="M${f1(x + pw)} ${by + bh - 2}l4.5 6.5h-9z"/>`;
-          g += `<circle class="cn" cx="${f1(x + w + 8)}" cy="${by + bh / 2}" r="4.2"/>`;
+          g += `<circle class="cn s" cx="${f1(x - 8)}" cy="${hy + hh / 2}" r="4.2"/><circle class="cn" cx="${f1(x + w + 8)}" cy="${hy + hh / 2}" r="4.2"/>`;
         }
         out.push(g + '</g>');
         lx = x + w + (print ? 8 : 17);
@@ -357,6 +415,7 @@
       }
     });
 
+    for (const c of stripes) out.push(`<pattern id="st${c.slice(1)}" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="${c}" fill-opacity=".1"/><rect width="2.4" height="6" fill="${c}" fill-opacity=".6"/></pattern>`);
     // header on top
     out.push(`<rect class="hd" width="${W}" height="${HEAD}"/><path class="gm" d="${hl}"/><path class="gl" d="${ll}"/><path class="hb" d="M0 24.5H${W}M0 ${HEAD - 0.5}H${W}"/>`, ...txt);
     if (tx != null) out.push(`<path class="tdm" d="M${f1(tx - 5)} ${HEAD - 7}h10l-5 7z"/>`);
@@ -391,7 +450,7 @@
 
   function rowHTML(v, crit) {
     const r = v.r, E = eff(r), g = r.t === 'group', ms = r.t === 'ms', c = colour(r);
-    const dep = (r.dep || []).map((d) => (S.idx.has(d) ? S.idx.get(d) + 1 : null)).filter(Boolean).join(', ');
+    const dep = depsText(r);
     const cls = ['tr', r.t, r.id === sel ? 'sel' : '', v.lvl ? 'kid' : '', crit.has(r.id) ? 'critr' : ''].filter(Boolean).join(' ');
     let h = `<div class="${cls}" data-id="${r.id}"><span class="c-no" title="Drag to reorder · click for details">${v.i + 1}</span><span class="c-name">`;
     if (g) h += `<button class="tw" aria-label="${r.col ? 'Show' : 'Hide'} its tasks" aria-expanded="${!r.col}">${r.col ? '▸' : '▾'}</button>`;
@@ -403,9 +462,9 @@
       h += `<input type="date" data-f="s" value="${n2iso(r.s)}" aria-label="${ms ? 'Date' : 'Start'}">`;
       h += ms ? `<span class="ro">—</span><span class="ro num" title="Milestone">◆</span><span></span>`
         : `<input type="date" data-f="e" value="${n2iso(r.e)}" aria-label="End"><input type="number" data-f="d" min="1" value="${days(r.s, r.e) ?? ''}" aria-label="${work() ? 'Working days' : 'Days'}"><input type="number" data-f="p" min="0" max="100" step="5" value="${r.p || 0}" aria-label="Done %">`;
-      h += `<input data-f="o" value="${esc(r.o)}" aria-label="Owner" placeholder="—"><input data-f="dep" value="${dep}" aria-label="Comes after rows" placeholder="—" title="Row numbers this one follows, e.g. 3, 5">`;
+      h += `<input data-f="o" value="${esc(r.o)}" aria-label="Owner" placeholder="—"><input data-f="dep" value="${dep}" aria-label="Linked to rows" placeholder="—" title="Rows this one is linked to: 3 = after row 3 finishes, 3SS = starts with it, 3FF = finishes with it, 3SF; add a lag like 3+2 or 3SS-1">`;
     }
-    return h + `<button class="del" aria-label="Delete row" title="Delete row">×</button></div>`;
+    return h + `<button class="more" aria-label="Row actions" title="Insert, duplicate, change type… (or right-click)">⋯</button></div>`;
   }
 
   function renderTable() {
@@ -436,6 +495,7 @@
     $('undo').disabled = !undoS.length; $('redo').disabled = !redoS.length;
     document.querySelectorAll('#zoom [data-z]').forEach((b) => b.classList.toggle('on', b.dataset.z !== 'fit' && Math.abs(Math.log(P.ppd / ZOOM[b.dataset.z])) < 0.2));
     document.querySelectorAll('[data-opt]').forEach((i) => { i.checked = !!P.opt[i.dataset.opt]; });
+    $('barAll').innerHTML = barsHTML(P.opt.bar, false);
     if (document.activeElement !== $('pname')) $('pname').value = P.title;
     const n = counts();
     $('saved').textContent = [plural(n.t, 'task'), plural(n.m, 'milestone')].join(' · ') + ' · saved in this browser';
@@ -482,10 +542,13 @@
       if (t === 'ms') e = s; else if (s != null && (e == null || e < s)) e = s;
       let id = String(r.id || uid()); while (ids.has(id)) id = uid(); ids.add(id);
       const c = /^#[0-9a-f]{6}$/i.test(r.c || '') ? r.c : null;
-      return { id, t, n: String(r.n ?? ''), s, e, p: clamp(Math.round(+r.p || 0), 0, 100), o: String(r.o || ''), c, dep: Array.isArray(r.dep) ? r.dep.map(String) : [], sh: SHAPES.includes(r.sh) ? r.sh : undefined, nt: r.nt ? String(r.nt) : undefined, col: !!r.col };
+      const dep = (Array.isArray(r.dep) ? r.dep : []).map((d) => (typeof d === 'string' || typeof d === 'number' ? { id: String(d), k: 'FS', l: 0 }
+        : d && d.id != null ? { id: String(d.id), k: KINDS.includes(d.k) ? d.k : 'FS', l: Math.round(+d.l || 0) } : null)).filter(Boolean);
+      return { id, t, n: String(r.n ?? ''), s, e, p: clamp(Math.round(+r.p || 0), 0, 100), o: String(r.o || ''), c, dep, sh: SHAPES.includes(r.sh) ? r.sh : undefined, bs: BARS.includes(r.bs) ? r.bs : undefined, nt: r.nt ? String(r.nt) : undefined, col: !!r.col };
     });
     const all = new Set(p.rows.map((r) => r.id));
-    p.rows.forEach((r) => { r.dep = r.dep.filter((d) => all.has(d) && d !== r.id); });
+    p.rows.forEach((r) => { r.dep = r.dep.filter((d) => all.has(d.id) && d.id !== r.id); });
+    if (!BARS.includes(p.opt.bar)) p.opt.bar = 'solid';
     return p;
   }
 
@@ -540,7 +603,7 @@
       if (o) r.o = o;
       made.push(r); p.rows.push(r);
     }
-    T.rows.forEach((x, i) => { if (x[5]) made[i].dep = x[5].map((j) => made[j].id); });
+    T.rows.forEach((x, i) => { if (x[5]) made[i].dep = x[5].map((j) => ({ id: made[j].id, k: 'FS', l: 0 })); });
     if (T.live) for (const r of p.rows) if (r.t === 'task') r.p = clamp(Math.round(((t0 - r.s + 1) / (r.e - r.s + 1)) * 20) * 5, 0, 100);
     return p;
   }
@@ -563,16 +626,20 @@
     if (x < R.scrollLeft + 10 || x > R.scrollLeft + R.clientWidth - 80) R.scrollLeft = Math.max(0, x - 80);
   }
 
-  function setDeps(r, val) {
-    const nums = String(val || '').split(/[^\d]+/).filter(Boolean).map(Number);
+  function setDeps(r, val) { setLinks(r, parseDeps(val).map((x) => ({ p: P.rows[x.n - 1], n: x.n, k: x.k, l: x.l }))); }
+  function setLinks(r, list) {        // list: [{ p: row, n: row number, k, l }]
+    const keep = r.dep; r.dep = [];
     const ok = [], bad = [];
-    for (const k of nums) {
-      const p = P.rows[k - 1];
-      if (!p || p === r || p === S.par.get(r.id) || dependsOn(p, r)) { bad.push(k); continue; }
-      if (!ok.includes(p.id)) ok.push(p.id);
+    for (const x of list) {
+      const p = x.p;
+      if (!p || p === r || p === S.par.get(r.id) || dependsOn(p, r)) { bad.push(x.n); continue; }
+      const i = ok.findIndex((d) => d.id === p.id);
+      const d = { id: p.id, k: KINDS.includes(x.k) ? x.k : 'FS', l: Math.round(+x.l || 0) };
+      if (i >= 0) ok[i] = d; else ok.push(d);
     }
     r.dep = ok;
     if (bad.length) toast(`Skipped row ${bad.join(', ')} — it would make a loop or doesn't exist.`);
+    return keep;
   }
 
   function edit(r, f, val) {
@@ -596,11 +663,14 @@
     schedule(); commit(); renderAll();
   }
 
-  function add(t, after) {
+  function add(t, after, opt = {}) {
     struct();
     const ref = after || (sel && S.byId.get(sel)) || null;
     let at = P.rows.length, prevEnd = null;
-    if (ref) {
+    if (ref && opt.above) {
+      at = S.idx.get(ref.id);
+      const E = eff(ref); prevEnd = E.s != null ? E.s - 1 : null;
+    } else if (ref) {
       const i = S.idx.get(ref.id);
       const g = ref.t === 'group' ? ref : S.par.get(ref.id);
       at = t === 'group' && g ? S.idx.get(g.id) + 1 + S.kids.get(g.id).length : i + 1;
@@ -609,7 +679,7 @@
     } else { const b = bounds(); prevEnd = b ? b[1] : null; }
     const s0 = nextWork(prevEnd != null ? prevEnd + 1 : today());
     const rows = t === 'group' ? [mk('group', 'New phase'), mk('task', 'First task', s0, endFor(s0, 5))]
-      : t === 'ms' ? [mk('ms', 'Milestone', prevEnd ?? today())]
+      : t === 'ms' ? [mk('ms', 'Milestone', opt.above && prevEnd != null ? prevEnd + 1 : prevEnd ?? today())]
         : [mk('task', 'New task', s0, endFor(s0, 5))];
     P.rows.splice(at, 0, ...rows);
     sel = rows[0].id;
@@ -625,7 +695,7 @@
     const [i, n] = block(r);
     const gone = new Set(P.rows.slice(i, i + n).map((x) => x.id));
     P.rows.splice(i, n);
-    P.rows.forEach((x) => { x.dep = (x.dep || []).filter((d) => !gone.has(d)); });
+    P.rows.forEach((x) => { x.dep = (x.dep || []).filter((d) => !gone.has(d.id)); });
     if (gone.has(sel)) sel = null;
     commit(); renderAll();
     toast(`Deleted “${r.n || 'untitled'}”${n > 1 ? ` and its ${plural(n - 1, 'row')}` : ''}.`, 'Undo', undo);
@@ -656,6 +726,105 @@
     if (moveBlock(r, target)) { commit(); renderAll(); focusName(r.id); }
   }
 
+  // a new task straight after r; whatever followed r now follows the new task (and moves later)
+  function insertInSequence(r) {
+    struct();
+    const before = new Map(P.rows.map((x) => [x.id, x.s]));
+    const s0 = nextWork((r.t === 'group' ? eff(r).e : r.e ?? r.s) + (r.t === 'ms' ? 0 : 1));
+    const n = mk('task', 'New task', s0, endFor(s0, 5), { dep: [{ id: r.id, k: 'FS', l: 0 }] });
+    let relinked = 0;
+    for (const x of P.rows) x.dep = (x.dep || []).map((d) => (d.id === r.id && d.k === 'FS' ? (relinked++, { ...d, id: n.id }) : d));
+    const [i, len] = block(r);
+    P.rows.splice(r.t === 'group' ? i + len : i + 1, 0, n);
+    schedule(true);
+    const moved = P.rows.filter((x) => before.has(x.id) && x.s !== before.get(x.id)).length;
+    sel = n.id; commit(); renderAll(); ensureVisible(n); focusName(n.id, true);
+    toast(relinked ? `Inserted after “${r.n || 'untitled'}”; ${plural(relinked, 'linked task')} now follow${relinked === 1 ? 's' : ''} it${moved ? `, ${moved} moved later` : ''}.` : `Inserted after “${r.n || 'untitled'}” and linked to it.`, 'Undo', undo);
+  }
+  function duplicate(r) {
+    if (!r) return;
+    struct();
+    const [i, n] = block(r), map = new Map();
+    const copies = P.rows.slice(i, i + n).map((x) => { const c = JSON.parse(JSON.stringify(x)); c.id = uid(); map.set(x.id, c.id); return c; });
+    copies.forEach((c) => { c.dep = c.dep.map((d) => (map.has(d.id) ? { ...d, id: map.get(d.id) } : d)); });
+    P.rows.splice(i + n, 0, ...copies);
+    sel = copies[0].id; commit(); renderAll(); focusName(sel, true);
+    toast(`Duplicated “${r.n || 'untitled'}”${n > 1 ? ` with its ${plural(n - 1, 'row')}` : ''} — type to rename it.`, 'Undo', undo);
+  }
+  function convert(r, t) {
+    if (!r || r.t === t) return;
+    struct();
+    if (r.t === 'group') { const E = eff(r); r.s = E.s ?? nextWork(today()); r.e = E.e ?? endFor(r.s, 5); }
+    if (t === 'ms') r.e = r.s;
+    else if (t === 'task' && r.t === 'ms') r.e = r.s != null ? endFor(r.s, 5) : null;
+    if (t === 'group') { r.dep = []; r.col = false; }
+    r.t = t;
+  }
+
+  /* ---------------- row menu (⋯ button or right-click) ---------------- */
+  const barIcon = (k) => {
+    const b = { solid: '<rect x="2" y="3" width="24" height="8" rx="2"/>', outline: '<rect x="2.75" y="3.75" width="22.5" height="6.5" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>',
+      striped: '<rect x="2.75" y="3.75" width="22.5" height="6.5" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6 11L11 3M11 11L16 3M16 11L21 3" stroke="currentColor" stroke-width="1.4"/>',
+      thin: '<rect x="2" y="5.5" width="24" height="3" rx="1.5"/>', arrow: '<path d="M2 3H20L26 7L20 11H2Z"/>' }[k];
+    return `<svg viewBox="0 0 28 14" aria-hidden="true" fill="currentColor">${b}</svg>`;
+  };
+  const barsHTML = (cur, auto) => (auto ? `<button type="button" data-bs="" class="${cur ? '' : 'on'} txt" title="Use the timeline's bar style">Auto</button>` : '') +
+    BARS.map((k) => `<button type="button" data-bs="${k}" class="${cur === k ? 'on' : ''}" title="${BAR_NAME[k]}" aria-label="${BAR_NAME[k]} bar">${barIcon(k)}</button>`).join('');
+  let menuRow = null;
+  function openMenu(r, x, y) {
+    if (!r) return;
+    closePop(); selectRow(r.id); menuRow = r;
+    const m = $('menu'), t = r.t, kbd = (k) => `<kbd>${k}</kbd>`;
+    m.innerHTML = `<div class="rm-h">Row ${S.idx.get(r.id) + 1} · ${esc(r.n || 'Untitled')}</div>
+      <button data-act="below">Insert task below ${kbd('Enter')}</button>
+      <button data-act="above">Insert task above</button>
+      ${t !== 'group' ? `<button data-act="seq">Insert in sequence<span>after this; what followed it moves later</span></button>` : ''}
+      <button data-act="ms">Insert milestone below</button>
+      <button data-act="group">Insert phase below</button>
+      <button data-act="dup">Duplicate${t === 'group' ? ' phase and its tasks' : ''} ${kbd('Ctrl D')}</button>
+      <hr>
+      <div class="rm-row"><span>Type</span><div class="tl-seg mini">${[['task', 'Task'], ['ms', 'Milestone'], ['group', 'Phase']].map(([k, l]) => `<button type="button" data-type="${k}" class="${t === k ? 'on' : ''}">${l}</button>`).join('')}</div></div>
+      ${t === 'task' ? `<div class="rm-row"><span>Bar</span><div class="tl-bars">${barsHTML(r.bs, true)}</div></div>` : ''}
+      ${t === 'ms' ? `<div class="rm-row"><span>Symbol</span><div class="tl-shapes">${shapesHTML(r.sh)}</div></div>` : ''}
+      <div class="rm-row"><span>Colour</span><div class="tl-pal">${palHTML(r.c, 'Automatic')}</div></div>
+      <hr>
+      <button data-act="edit">All details… ${kbd('double-click')}</button>
+      <button data-act="del" class="danger">Delete${t === 'group' ? ' phase and its tasks' : ''} ${kbd('Del')}</button>`;
+    m.hidden = false;
+    m.style.left = Math.max(8, Math.min(x, innerWidth - m.offsetWidth - 8)) + 'px';
+    m.style.top = Math.max(8, Math.min(y, innerHeight - m.offsetHeight - 8)) + 'px';
+    const f = m.querySelector('button'); if (f) f.focus({ preventScroll: true });
+  }
+  const closeMenu = () => { $('menu').hidden = true; menuRow = null; };
+  $('menu').addEventListener('click', (e) => {
+    const b = e.target.closest('button'); const r = menuRow; if (!b || !r) return;
+    const a = b.dataset.act;
+    if (a) {
+      closeMenu();
+      if (a === 'below') add('task', r);
+      else if (a === 'above') add('task', r, { above: true });
+      else if (a === 'seq') insertInSequence(r);
+      else if (a === 'ms') add('ms', r);
+      else if (a === 'group') add('group', r);
+      else if (a === 'dup') duplicate(r);
+      else if (a === 'edit') openEditor(r);
+      else if (a === 'del') deleteRow(r);
+      return;
+    }
+    if (b.dataset.type) { convert(r, b.dataset.type); schedule(); }
+    else if ('bs' in b.dataset) r.bs = b.dataset.bs || undefined;
+    else if (b.dataset.sh) r.sh = b.dataset.sh === 'diamond' ? undefined : b.dataset.sh;
+    else if ('c' in b.dataset) r.c = b.dataset.c || null;
+    else return;
+    commit(); renderAll(); openMenu(r, parseFloat($('menu').style.left), parseFloat($('menu').style.top));
+  });
+  $('menu').addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') { closeMenu(); return; }
+    if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+    const bs = [...$('menu').querySelectorAll('button[data-act]')], i = bs.indexOf(document.activeElement);
+    const j = (i + (e.key === 'ArrowDown' ? 1 : -1) + bs.length) % bs.length; bs[j].focus(); e.preventDefault();
+  });
+
   /* ---------------- task list events ---------------- */
   const tb = $('tb');
   tb.addEventListener('input', (e) => {
@@ -684,9 +853,10 @@
     const r = rowOf(e.target); if (!r) return;
     if (e.target.closest('.tw')) { r.col = !r.col; quiet(); renderAll(); return; }
     if (e.target.closest('.sw')) { openPop(r, e.target.closest('.sw')); return; }
-    if (e.target.closest('.del')) { deleteRow(r); return; }
+    if (e.target.closest('.more')) { const b = e.target.closest('.more').getBoundingClientRect(); openMenu(r, b.right - 250, b.bottom + 4); return; }
     selectRow(r.id);
   });
+  tb.addEventListener('contextmenu', (e) => { const r = rowOf(e.target); if (!r || e.target.closest('input')) return; e.preventDefault(); openMenu(r, e.clientX, e.clientY); });
 
   // drag a row number to reorder; a plain click opens the details
   let rdrag = null;
@@ -741,7 +911,7 @@
       return;
     }
     drag = { mode, r, wasSel, x0: p.x, y0: p.y, sl: $('right').scrollLeft, snap: P.rows.map((x) => [x.s, x.e, x.p]), day0: dayAt(p.x), cx0: e.clientX, moved: false };
-    if (mode === 'link') { const c = e.target; drag.x0 = +c.getAttribute('cx'); drag.y0 = +c.getAttribute('cy'); }
+    if (mode === 'link') { const c = e.target; drag.x0 = +c.getAttribute('cx'); drag.y0 = +c.getAttribute('cy'); drag.from = c.classList.contains('s') ? 'S' : 'F'; }
     chartEl.setPointerCapture(e.pointerId);
     if (mode !== 'pan') chartEl.classList.add('dragging');
     e.preventDefault();
@@ -781,7 +951,12 @@
     if (d.mode === 'link') {
       const l = chartEl.querySelector('.lnk'); if (l) l.remove();
       if (cancel || !d.moved) return;
-      const v = rowAtY(ptr(e).y); if (v) linkTo(d.r, v.r);
+      const q = ptr(e), v = rowAtY(q.y);
+      if (v && v.r !== d.r) {
+        const E = eff(v.r), mid = E.s == null ? 0 : ((E.s + (E.e ?? E.s) + 1) / 2 - RG[0]) * P.ppd;
+        const to = v.r.t === 'ms' || q.x < mid ? 'S' : 'F';
+        linkTo(d.r, v.r, d.from + to);
+      }
       return;
     }
     if (cancel || !d.moved) {
@@ -800,6 +975,11 @@
     if (r) openEditor(r);
   });
   chartEl.addEventListener('pointerleave', () => { if (!drag) hideTip(); });
+  chartEl.addEventListener('contextmenu', (e) => {
+    const g = e.target.closest('.bar'), r = g ? S.byId.get(g.dataset.id) : (rowAtY(ptr(e).y) || {}).r;
+    if (!r) return;
+    e.preventDefault(); hideTip(); openMenu(r, e.clientX, e.clientY);
+  });
 
   function linkLine(p) {
     const svg = chartEl.querySelector('svg'); if (!svg) return;
@@ -807,14 +987,15 @@
     if (!l) { l = document.createElementNS('http://www.w3.org/2000/svg', 'path'); l.setAttribute('class', 'lnk'); svg.append(l); }
     l.setAttribute('d', `M${drag.x0} ${drag.y0}L${f1(p.x)} ${f1(p.y)}`);
   }
-  function linkTo(pred, succ) {
+  function linkTo(pred, succ, k = 'FS') {
     if (succ === pred) return;
     if (succ.t === 'group') return toast('Link to a task or milestone rather than a phase.');
-    if (succ.dep.includes(pred.id)) return toast('Those two are already linked.');
-    if (pred === S.par.get(succ.id) || dependsOn(pred, succ)) return toast('That link would make a loop.');
-    succ.dep.push(pred.id);
+    const had = succ.dep.find((d) => d.id === pred.id);
+    if (had && had.k === k) return toast('Those two are already linked that way.');
+    if (!had && (pred === S.par.get(succ.id) || dependsOn(pred, succ))) return toast('That link would make a loop.');
+    if (had) had.k = k; else succ.dep.push({ id: pred.id, k, l: 0 });
     schedule(); sel = succ.id; commit(); renderAll();
-    toast(`“${succ.n || 'untitled'}” now follows “${pred.n || 'untitled'}”.`, 'Undo', undo);
+    toast(`“${succ.n || 'untitled'}” ${KIND_TXT[k]} — “${pred.n || 'untitled'}”.`, 'Undo', undo);
   }
 
   function hover(e, p) {
@@ -830,6 +1011,7 @@
     if (r.t !== 'ms' && P.opt.prog) h += ` · ${E.p || 0}% done`;
     h += '</span>';
     if (r.o) h += `<br>${esc(r.o)}`;
+    for (const d of (r.dep || []).slice(0, 4)) { const p = S.byId.get(d.id); if (p) h += `<br><span class="m">${KIND_TXT[d.k]}${lagTxt(d.l)}: ${S.idx.get(p.id) + 1} ${esc(p.n)}</span>`; }
     if (r.nt) h += `<br><i>${esc(r.nt)}</i>`;
     t.innerHTML = h; t.hidden = false;
     const R = $('right'), w = t.offsetWidth;
@@ -934,11 +1116,11 @@
   });
 
   /* ---------------- details dialog ---------------- */
-  let edRow = null, edC = null, edSh = null;
+  let edRow = null, edC = null, edSh = null, edBs = null;
   const ed = $('ed');
   function openEditor(r) {
     if (!r) return;
-    struct(); edRow = r; edC = r.c; edSh = r.sh;
+    struct(); edRow = r; edC = r.c; edSh = r.sh; edBs = r.bs;
     selectRow(r.id);
     const E = eff(r);
     $('edH').textContent = r.t === 'group' ? 'Phase' : r.t === 'ms' ? 'Milestone' : 'Task';
@@ -946,8 +1128,9 @@
     $('edS').value = n2iso(r.t === 'group' ? E.s : r.s); $('edE').value = n2iso(r.t === 'group' ? E.e : r.e);
     $('edD').value = r.t === 'task' ? days(r.s, r.e) ?? '' : '';
     $('edDL').textContent = work() ? 'Work days' : 'Days';
-    $('edP').value = r.p || 0; $('edPV').textContent = (r.p || 0) + '%';
-    $('edDep').value = (r.dep || []).map((d) => S.idx.get(d) + 1).join(', ');
+    $('edP').value = r.p || 0; $('edPV').textContent = (r.p || 0) + '%'; $('edP').style.setProperty('--p', (r.p || 0) + '%');
+    $('edDeps').innerHTML = ''; (r.dep || []).forEach((d) => addLinkRow(d));
+    $('edBs').innerHTML = barsHTML(edBs, true);
     $('edNt').value = r.nt || '';
     $('edC').innerHTML = palHTML(edC, 'Automatic'); $('edSh').innerHTML = shapesHTML(edSh);
     edType(r.t);
@@ -967,16 +1150,28 @@
   $('edS').onchange = () => { const s = iso2n($('edS').value), d = +$('edD').value || 5; if (s != null && $('edT').value === 'task') $('edE').value = n2iso(endFor(s, d)); };
   $('edE').onchange = () => { const s = iso2n($('edS').value), e = iso2n($('edE').value); if (s != null && e != null && e >= s) $('edD').value = days(s, e); };
   $('edD').oninput = () => { const s = iso2n($('edS').value), d = parseInt($('edD').value, 10); if (s != null && d > 0) $('edE').value = n2iso(endFor(s, d)); };
-  $('edP').oninput = () => { $('edPV').textContent = $('edP').value + '%'; };
+  $('edP').oninput = () => { $('edPV').textContent = $('edP').value + '%'; $('edP').style.setProperty('--p', $('edP').value + '%'); };
   $('edC').onclick = (e) => { const b = e.target.closest('button'); if (!b) return; edC = b.dataset.c || null; $('edC').innerHTML = palHTML(edC, 'Automatic'); };
   $('edSh').onclick = (e) => { const b = e.target.closest('button'); if (!b) return; edSh = b.dataset.sh === 'diamond' ? undefined : b.dataset.sh; $('edSh').innerHTML = shapesHTML(edSh); };
+  function addLinkRow(d) {
+    const me = edRow, opts = P.rows.map((x, i) => (x === me || x === S.par.get(me.id) ? '' : `<option value="${x.id}"${d && d.id === x.id ? ' selected' : ''}>${i + 1} · ${esc((x.n || 'Untitled').slice(0, 40))}${x.t === 'group' ? ' (phase)' : ''}</option>`)).join('');
+    const div = document.createElement('div'); div.className = 'ed-link';
+    div.innerHTML = `<select class="lp" aria-label="Linked row">${d ? '' : '<option value="">Choose a row…</option>'}${opts}</select>
+      <select class="lk" aria-label="How they are linked">${KINDS.map((k) => `<option value="${k}"${(d ? d.k : 'FS') === k ? ' selected' : ''}>${k} · ${KIND_TXT[k].replace('it', 'that')}</option>`).join('')}</select>
+      <label class="ll"><input type="number" step="1" value="${d ? d.l || 0 : 0}" aria-label="Lag in days"><span>d lag</span></label>
+      <button type="button" class="x" aria-label="Remove link">×</button>`;
+    $('edDeps').append(div);
+  }
+  $('edDepAdd').onclick = () => { addLinkRow(null); $('edDeps').lastElementChild.querySelector('select').focus(); };
+  $('edDeps').onclick = (e) => { const x = e.target.closest('.x'); if (x) x.closest('.ed-link').remove(); };
+  $('edBs').onclick = (e) => { const b = e.target.closest('button'); if (!b) return; edBs = b.dataset.bs || undefined; $('edBs').innerHTML = barsHTML(edBs, true); };
   $('edCancel').onclick = () => ed.close();
   $('edDel').onclick = () => { ed.close(); deleteRow(edRow); };
   $('edForm').addEventListener('submit', (e) => {
     e.preventDefault();
     const r = edRow, t = $('edT').value;
     if (r.t === 'group' && t !== 'group') { const E = eff(r); r.s = E.s ?? nextWork(today()); r.e = E.e ?? endFor(r.s, 5); }
-    r.n = $('edN').value.trim(); r.o = $('edO').value.trim(); r.nt = $('edNt').value.trim() || undefined; r.c = edC; r.sh = edSh;
+    r.n = $('edN').value.trim(); r.o = $('edO').value.trim(); r.nt = $('edNt').value.trim() || undefined; r.c = edC; r.sh = edSh; r.bs = edBs;
     if (t !== 'group') {
       let s = iso2n($('edS').value), en = iso2n($('edE').value);
       if (t === 'ms') { if (s == null) s = r.s ?? today(); en = s; }
@@ -987,7 +1182,10 @@
       }
       r.s = s; r.e = en;
       r.p = t === 'task' ? +$('edP').value : 0;
-      setDeps(r, $('edDep').value);
+      setLinks(r, [...$('edDeps').querySelectorAll('.ed-link')].map((el) => {
+        const p = S.byId.get(el.querySelector('.lp').value);
+        return { p, n: p ? S.idx.get(p.id) + 1 : '?', k: el.querySelector('.lk').value, l: +el.querySelector('.ll input').value || 0 };
+      }).filter((x) => x.p));
     } else r.dep = [];
     r.t = t;
     ed.close();
@@ -1002,6 +1200,11 @@
   $('pname').addEventListener('input', () => { P.title = $('pname').value; document.title = P.title + ' — Timeline & Gantt'; saveSoon(); });
   $('pname').addEventListener('change', () => { P.title = $('pname').value.trim() || 'Untitled timeline'; commit(); toolbar(); });
   $('pname').addEventListener('keydown', (e) => { if (e.key === 'Enter') e.target.blur(); });
+  $('barAll').onclick = (e) => {
+    const b = e.target.closest('[data-bs]'); if (!b) return;
+    P.opt.bar = b.dataset.bs; P.rows.forEach((r) => { delete r.bs; });
+    commit(); renderAll();
+  };
   document.querySelectorAll('[data-opt]').forEach((i) => i.addEventListener('change', () => {
     P.opt[i.dataset.opt] = i.checked;
     if (i.dataset.opt === 'auto' && i.checked) schedule();
@@ -1016,12 +1219,40 @@
   document.addEventListener('click', (e) => {
     document.querySelectorAll('.tl-menu[open]').forEach((d) => { if (!d.contains(e.target)) d.open = false; });
     if (!$('pop').hidden && !e.target.closest('#pop, .sw')) closePop();
+    if (!$('menu').hidden && !e.target.closest('#menu, .more')) closeMenu();
   });
+  window.addEventListener('scroll', () => { closeMenu(); closePop(); }, { passive: true });
   const closeMenus = () => document.querySelectorAll('.tl-menu[open]').forEach((d) => { d.open = false; });
 
   $('tplList').innerHTML = Object.entries(TPL).map(([k, t]) => `<button class="tl-mi" data-tpl="${k}"><b>${esc(t.title)}</b><span>${esc(t.blurb)}</span></button>`).join('');
   $('tplList').onclick = (e) => { const b = e.target.closest('[data-tpl]'); if (!b) return; closeMenus(); openProject(fromTpl(b.dataset.tpl), null, { fit: true }); toast(`Started “${TPL[b.dataset.tpl].title}” — make it yours.`); };
-  $('newBtn').onclick = () => { closeMenus(); openProject(blank(), null); add('task'); };
+  $('newBtn').onclick = () => { closeMenus(); save(); openProject(blank(), null); add('task'); };
+  $('dupBtn').onclick = () => {
+    closeMenus(); save();
+    const copy = JSON.parse(JSON.stringify(P)); copy.title = P.title + ' (copy)';
+    openProject(copy, null); toast(`Made “${copy.title}”. The original is still under File → Your timelines.`);
+  };
+  $('clearBtn').onclick = () => {
+    closeMenus();
+    if (!P.rows.length) return toast('This timeline is already empty.');
+    const n = P.rows.length; P.rows = []; sel = null; commit(); renderAll();
+    toast(`Cleared ${plural(n, 'row')}.`, 'Undo', undo);
+  };
+  let clearArm = 0;
+  $('clearAll').onclick = (e) => {
+    e.stopPropagation();
+    const L = myList(), ids = Object.keys(L);
+    if (!ids.length) return;
+    if (Date.now() - clearArm > 4000) { clearArm = Date.now(); $('clearAll').textContent = `Click again to remove all ${ids.length}`; setTimeout(() => { $('clearAll').textContent = 'Remove all'; }, 4000); return; }
+    clearArm = 0; $('clearAll').textContent = 'Remove all';
+    const backup = ids.map((k) => [k, store.get('p:' + k)]);
+    ids.forEach((k) => store.del('p:' + k)); store.set('list', '{}');
+    closeMenus(); openProject(blank(), null);
+    toast(`Removed ${plural(ids.length, 'timeline')} from this browser.`, 'Undo', () => {
+      backup.forEach(([k, v]) => { if (v) store.set('p:' + k, v); }); store.set('list', JSON.stringify(L));
+      const first = ids[0]; try { openProject(JSON.parse(store.get('p:' + first)), first); } catch (err) { /* nothing to reopen */ }
+    });
+  };
   function fillOpen() {
     const L = Object.entries(myList()).sort((a, b) => b[1].u - a[1].u);
     $('myList').innerHTML = L.length ? L.map(([k, v]) => `<div class="tl-my"><button class="tl-mi${k === pid ? ' cur' : ''}" data-open="${k}"><b>${esc(v.t || 'Untitled')}</b><span>Edited ${new Date(v.u).toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' })}</span></button><button class="x" data-rm="${k}" aria-label="Remove ${esc(v.t)}" title="Remove from this browser">×</button></div>`).join('')
@@ -1073,6 +1304,7 @@
       else if (k === 'pdf') await toPDF();
       else if (k === 'png') await toImage('png');
       else if (k === 'svg') await toImage('svg');
+      else if (k === 'msp') download(new Blob([toMSP()], { type: 'application/xml' }), fileName() + '.xml');
       else if (k === 'csv') download(new Blob(['﻿' + toCSV()], { type: 'text/csv;charset=utf-8' }), fileName() + '.csv');
       else download(new Blob([JSON.stringify(fileJSON(), null, 1)], { type: 'application/json' }), fileName() + '.timeline.json');
       closeMenus();
@@ -1100,9 +1332,12 @@
     const mod = e.ctrlKey || e.metaKey, k = e.key.toLowerCase();
     if (mod && k === 'z' && !inField) { e.preventDefault(); e.shiftKey ? redo() : undo(); return; }
     if (mod && k === 'y' && !inField) { e.preventDefault(); redo(); return; }
+    if (mod && k === 'd' && sel && !document.querySelector('dialog[open]')) { e.preventDefault(); duplicate(S.byId.get(sel)); return; }
     if (inField || mod || e.altKey || document.querySelector('dialog[open]')) return;
     if ((e.key === 'Delete' || e.key === 'Backspace') && sel) { e.preventDefault(); deleteRow(S.byId.get(sel)); }
     else if (e.key === 'Enter' && sel) { e.preventDefault(); openEditor(S.byId.get(sel)); }
+    else if (e.key === 'Insert') { e.preventDefault(); add('task'); }
+    else if (e.key === 'ContextMenu' && sel) { e.preventDefault(); const el = tb.querySelector(`.tr[data-id="${sel}"] .more`); if (el) el.click(); }
     else if (e.key === '+' || e.key === '=') setZoom(P.ppd * 1.4);
     else if (e.key === '-' || e.key === '_') setZoom(P.ppd / 1.4);
     else if (k === 't') goToday();
@@ -1111,7 +1346,7 @@
       if (!V.length) return;
       const i = V.findIndex((v) => v.r.id === sel), j = clamp(i < 0 ? 0 : i + (e.key === 'ArrowDown' ? 1 : -1), 0, V.length - 1);
       e.preventDefault(); selectRow(V[j].r.id); ensureVisible(V[j].r);
-    } else if (e.key === 'Escape') { closeMenus(); closePop(); if (sel) { sel = null; renderAll(); } }
+    } else if (e.key === 'Escape') { closeMenus(); closePop(); closeMenu(); if (sel) { sel = null; renderAll(); } }
   });
 
   /* ---------------- toast ---------------- */
@@ -1144,8 +1379,9 @@
     return { app: 'ranjithkb-timeline', v: 1, title: P.title, opt: P.opt, ppd: P.ppd, rows: P.rows.map((r) => {
       const o = { id: r.id, t: r.t, n: r.n };
       if (r.t !== 'group') { o.s = n2iso(r.s) || undefined; if (r.t === 'task') o.e = n2iso(r.e) || undefined; }
-      if (r.p) o.p = r.p; if (r.o) o.o = r.o; if (r.c) o.c = r.c; if (r.dep && r.dep.length) o.dep = r.dep;
-      if (r.sh) o.sh = r.sh; if (r.nt) o.nt = r.nt; if (r.col) o.col = true;
+      if (r.p) o.p = r.p; if (r.o) o.o = r.o; if (r.c) o.c = r.c;
+      if (r.dep && r.dep.length) o.dep = r.dep.map((d) => (d.k === 'FS' && !d.l ? d.id : d));
+      if (r.sh) o.sh = r.sh; if (r.bs) o.bs = r.bs; if (r.nt) o.nt = r.nt; if (r.col) o.col = true;
       return o;
     }) };
   }
@@ -1167,19 +1403,80 @@
 
   /* ---------------- import ---------------- */
   async function importFile(f) {
-    const name = f.name.replace(/\.(timeline\.)?(json|xlsx|xls|csv|tsv|txt)$/i, '');
+    const name = f.name.replace(/\.(timeline\.)?(json|xlsx|xls|csv|tsv|txt|xml|mpp)$/i, '');
     try {
       if (/\.json$/i.test(f.name)) {
         const o = JSON.parse(await f.text());
         if (!o || !Array.isArray(o.rows)) throw new Error('not a timeline file');
         openProject(o, null, { fit: true }); toast(`Opened “${P.title}”.`); return;
       }
+      if (/\.mpp$/i.test(f.name)) return toast('.mpp files are locked to Microsoft Project — in Project, use File → Save As → XML, then open that here.');
+      if (/\.xml$/i.test(f.name)) { fromMSP(await f.text(), name); return; }
       let aoa;
       if (/\.xlsx$/i.test(f.name)) aoa = await readXLSX(await f.arrayBuffer());
       else if (/\.xls$/i.test(f.name)) return toast('Old .xls files can’t be read here — save it as .xlsx or CSV first.');
       else aoa = parseDelimited(await f.text());
       fromTable(aoa, true, name);
     } catch (err) { console.error(err); toast('Could not read that file: ' + err.message); }
+  }
+  // Microsoft Project XML (also written by Primavera P6, ProjectLibre, GanttProject and others)
+  function fromMSP(xml, name) {
+    const doc = new DOMParser().parseFromString(xml, 'application/xml');
+    if (doc.getElementsByTagName('parsererror').length) throw new Error('that XML could not be read');
+    const kid = (el, tag) => { for (const c of el.children) if (c.localName === tag) return c.textContent.trim(); return ''; };
+    const root = doc.documentElement;
+    const tasks = [...doc.getElementsByTagName('Task')].filter((t) => t.parentElement && t.parentElement.localName === 'Tasks');
+    if (!tasks.length) throw new Error('no tasks found — is it a Microsoft Project XML file?');
+    const day = (v) => { const m = /^(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}))?/.exec(v || ''); return m ? [ymd(+m[1], m[2] - 1, +m[3]), +(m[4] || 12)] : [null, 0]; };
+    const byUid = new Map(), out = [], links = [];
+    for (const t of tasks) {
+      const nm = kid(t, 'Name'), lvl = +kid(t, 'OutlineLevel') || 0;
+      if (!nm || lvl === 0 || kid(t, 'IsNull') === '1') continue;
+      const sum = kid(t, 'Summary') === '1', ms = kid(t, 'Milestone') === '1';
+      const [s] = day(kid(t, 'Start')); let [e, eh] = day(kid(t, 'Finish'));
+      if (e != null && s != null && e > s && eh <= 8) e -= 1;        // a finish at 08:00 means the day before
+      const r = sum ? mk('group', nm) : ms ? mk('ms', nm, s, s) : mk('task', nm, s, e ?? s);
+      const pc = +kid(t, 'PercentComplete'); if (!sum && pc) r.p = clamp(Math.round(pc), 0, 100);
+      const nt = kid(t, 'Notes'); if (nt) r.nt = nt.slice(0, 600);
+      byUid.set(kid(t, 'UID'), r); out.push(r);
+      for (const pl of t.children) if (pl.localName === 'PredecessorLink') links.push([r, kid(pl, 'PredecessorUID'), kid(pl, 'Type'), +kid(pl, 'LinkLag') || 0, +kid(pl, 'LagFormat') || 7]);
+    }
+    for (const [r, u, ty, lag, fmt] of links) {
+      const p = byUid.get(u); if (!p || p === r || r.t === 'group') continue;
+      const k = { 0: 'FF', 1: 'FS', 2: 'SF', 3: 'SS' }[ty] || 'FS';
+      const per = [4, 6, 8, 10, 12, 36, 38, 40].includes(fmt) ? 14400 : 4800;      // tenths of a minute per (elapsed) day
+      r.dep.push({ id: p.id, k, l: Math.round(lag / per) });
+    }
+    if (!out.length) throw new Error('found no named tasks');
+    const p = blank(kid(root, 'Title') || kid(root, 'Name').replace(/\.xml$/i, '') || name);
+    p.opt.work = true;                                                  // Project counts working days
+    p.rows = out;
+    openProject(p, null, { fit: true });
+    toast(`Opened ${plural(out.length, 'row')} from Microsoft Project. Use ⋯ on any row (or right-click) to insert activities in between.`);
+  }
+  function toMSP() {
+    struct();
+    const x = (v) => String(v).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    const dt = (n, h) => n2iso(n) + 'T' + h + ':00:00';
+    const wd = (s, e) => { let n = 0; for (let d = s; d <= e; d++) if (!weekend(d)) n++; return Math.max(n, 1); };
+    const b = bounds() || [today(), today()];
+    const uidOf = new Map(P.rows.map((r, i) => [r.id, i + 1]));
+    let gno = 0, kno = 0, top = 0;
+    const rows = P.rows.map((r, i) => {
+      const E = eff(r), lvl = S.par.has(r.id) ? 2 : 1;
+      if (r.t === 'group') { gno = ++top; kno = 0; } else if (lvl === 1) { top++; }
+      const num = r.t === 'group' || lvl === 1 ? String(top) : gno + '.' + ++kno;
+      const s = E.s ?? b[0], e = r.t === 'ms' ? s : E.e ?? s;
+      const dur = r.t === 'ms' ? 0 : wd(s, e) * 8;
+      let t = `<Task><UID>${i + 1}</UID><ID>${i + 1}</ID><Name>${x(r.n || 'Untitled')}</Name><Type>1</Type><IsNull>0</IsNull><WBS>${num}</WBS><OutlineNumber>${num}</OutlineNumber><OutlineLevel>${lvl}</OutlineLevel>`;
+      t += `<Start>${dt(s, '08')}</Start><Finish>${dt(e, r.t === 'ms' ? '08' : '17')}</Finish><Duration>PT${dur}H0M0S</Duration><DurationFormat>7</DurationFormat>`;
+      t += `<Milestone>${r.t === 'ms' ? 1 : 0}</Milestone><Summary>${r.t === 'group' ? 1 : 0}</Summary><PercentComplete>${r.t === 'ms' ? 0 : E.p || 0}</PercentComplete>`;
+      if (r.t !== 'group' && !(r.dep || []).length) t += `<ConstraintType>4</ConstraintType><ConstraintDate>${dt(s, '08')}</ConstraintDate>`;
+      if (r.nt) t += `<Notes>${x(r.nt)}</Notes>`;
+      for (const d of r.dep || []) if (uidOf.has(d.id)) t += `<PredecessorLink><PredecessorUID>${uidOf.get(d.id)}</PredecessorUID><Type>${{ FF: 0, FS: 1, SF: 2, SS: 3 }[d.k]}</Type><CrossProject>0</CrossProject><LinkLag>${(d.l || 0) * 4800}</LinkLag><LagFormat>7</LagFormat></PredecessorLink>`;
+      return t + '</Task>';
+    });
+    return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Project xmlns="http://schemas.microsoft.com/project"><SaveVersion>14</SaveVersion><Name>${x(fileName())}.xml</Name><Title>${x(P.title)}</Title><ScheduleFromStart>1</ScheduleFromStart><StartDate>${dt(b[0], '08')}</StartDate><FinishDate>${dt(b[1], '17')}</FinishDate><MinutesPerDay>480</MinutesPerDay><MinutesPerWeek>2400</MinutesPerWeek><DaysPerMonth>20</DaysPerMonth><Tasks>\n${rows.join('\n')}\n</Tasks></Project>`;
   }
   async function readXLSX(buf) {
     await need('exceljs');
@@ -1298,7 +1595,10 @@
       if (col.t == null && col.g == null && nx && nx.s != null) { r.t = 'group'; r.s = r.e = null; }
       delete r._pending;
     });
-    for (const [r, txt] of rawDeps) r.dep = txt.split(/[^\d]+/).filter(Boolean).map(Number).map((n) => refs.get(n)).filter((p) => p && p !== r).map((p) => p.id);
+    for (const [r, txt] of rawDeps) {
+      r.dep = [];
+      for (const x of parseDeps(txt)) { const p = refs.get(x.n); if (p && p !== r && !r.dep.some((d) => d.id === p.id)) r.dep.push({ id: p.id, k: x.k, l: x.l }); }
+    }
     if (!out.length) return toast('Found no rows with a task name.');
     const dated = out.filter((r) => r.s != null).length;
     if (asNew) { const p = blank(name || 'Imported timeline'); p.rows = out; openProject(p, null, { fit: true }); }
@@ -1319,7 +1619,7 @@
       return {
         no: i + 1, name: r.n, type: r.t === 'group' ? 'Phase' : r.t === 'ms' ? 'Milestone' : 'Task',
         s: E.s, e: r.t === 'ms' ? E.s : E.e, d: r.t === 'ms' ? 0 : days(E.s, E.e), p: r.t === 'ms' ? null : E.p || 0,
-        o: r.o || '', dep: (r.dep || []).map((d) => S.idx.get(d) + 1).filter(Boolean).join(', '), c: colour(r), nt: r.nt || '', lvl: S.par.has(r.id) ? 1 : 0,
+        o: r.o || '', dep: depsText(r), c: colour(r), nt: r.nt || '', lvl: S.par.has(r.id) ? 1 : 0,
       };
     });
   }

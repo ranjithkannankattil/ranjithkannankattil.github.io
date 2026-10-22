@@ -17,7 +17,7 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
 <link rel="stylesheet" href="../css/style.css?v=8">
 <link rel="stylesheet" href="../css/productivity.css?v=1">
-<link rel="stylesheet" href="../css/tool-timeline.css?v=1">
+<link rel="stylesheet" href="../css/tool-timeline.css?v=2">
 </head>
 <body data-section="productivity" class="wide">
 
@@ -74,23 +74,28 @@
           <label><input type="checkbox" data-opt="work"> Count working days only (Mon–Fri)</label>
           <label><input type="checkbox" data-opt="auto"> Move linked tasks along when a task moves</label>
           <hr>
+          <div class="tl-mh">Bar style for every task</div>
+          <div class="tl-bars wide" id="barAll"></div>
+          <hr>
           <div class="tl-mh">Columns in the list</div>
           <div class="tl-cols"><label><input type="checkbox" data-col="s"> Start</label><label><input type="checkbox" data-col="e"> End</label><label><input type="checkbox" data-col="d"> Days</label><label><input type="checkbox" data-col="p"> Done %</label><label><input type="checkbox" data-col="o"> Owner</label><label><input type="checkbox" data-col="dep"> After</label></div>
         </div>
       </details>
       <span class="tl-sp"></span>
       <details class="tl-menu" id="openMenu">
-        <summary class="tl-btn">Open <i aria-hidden="true">▾</i></summary>
+        <summary class="tl-btn">File <i aria-hidden="true">▾</i></summary>
         <div class="tl-pop right wide">
           <button class="tl-mi" id="newBtn"><b>New blank timeline</b></button>
+          <button class="tl-mi" id="dupBtn"><b>Duplicate this timeline</b><span>A copy to try a different plan on</span></button>
+          <button class="tl-mi" id="clearBtn"><b>Clear all rows</b><span>Keeps the name; Undo brings them back</span></button>
           <div class="tl-mh">Start from a template</div>
           <div id="tplList"></div>
           <div class="tl-mh">Bring in your own</div>
-          <button class="tl-mi" id="fileBtn"><b>Open a file…</b><span>Excel (.xlsx), CSV or a timeline (.json)</span></button>
+          <button class="tl-mi" id="fileBtn"><b>Open a file…</b><span>MS Project (.xml), Excel (.xlsx), CSV or a timeline (.json)</span></button>
           <button class="tl-mi" id="pasteBtn"><b>Paste from Excel or Sheets…</b><span>Copy rows with a name, start and end</span></button>
-          <div class="tl-mh">Your timelines in this browser</div>
+          <div class="tl-mh tl-mh-row"><span>Your timelines in this browser</span><button type="button" id="clearAll">Remove all</button></div>
           <div id="myList"></div>
-          <input type="file" id="file" accept=".json,.xlsx,.csv,.tsv,.txt" hidden>
+          <input type="file" id="file" accept=".json,.xlsx,.csv,.tsv,.txt,.xml,.mpp" hidden>
         </div>
       </details>
       <details class="tl-menu" id="dlMenu">
@@ -102,6 +107,7 @@
             <button data-dl="png"><b>Image</b><span>.png · for slides</span></button>
             <button data-dl="svg"><b>Vector</b><span>.svg · scales cleanly</span></button>
             <button data-dl="csv"><b>CSV</b><span>plain table</span></button>
+            <button data-dl="msp"><b>MS Project</b><span>.xml · Project, P6, ProjectLibre</span></button>
             <button data-dl="json"><b>Timeline file</b><span>.json · reopen here</span></button>
           </div>
           <div class="tl-mh">PDF paper</div>
@@ -134,7 +140,8 @@
 
     <ul class="tl-hints">
       <li><b>Drag</b> a bar to move it, or its ends to change dates; drag the little triangle under a bar to set progress.</li>
-      <li><b>Link</b> tasks by dragging the dot at the end of a bar onto the task that follows it.</li>
+      <li><b>Link</b> by dragging a bar's dot onto another bar: from its end for finish→, its start for start→; drop on the left half to link to that bar's start, the right half for its finish.</li>
+      <li><b>⋯ or right-click</b> a row or bar to insert above, below or in sequence, duplicate (Ctrl+D), switch task / milestone / phase, or change its bar.</li>
       <li><b>Enter</b> in a name adds the next task; Alt+↑/↓ moves a row; drag a row number to reorder; double-click a bar for all its details.</li>
       <li><b>Ctrl + scroll</b> over the chart zooms; drag empty space to pan.</li>
     </ul>
@@ -147,6 +154,7 @@
 
 <div class="tl-toast" id="toast" role="status" hidden></div>
 <div class="tl-colpop" id="pop" hidden></div>
+<div class="tl-colpop tl-rmenu" id="menu" role="menu" hidden></div>
 
 <dialog class="tl-dlg" id="ed" aria-labelledby="edH">
   <form method="dialog" id="edForm">
@@ -165,7 +173,8 @@
     <label class="f ed-prog"><span>Done <b id="edPV">0%</b></span><input type="range" id="edP" min="0" max="100" step="5"></label>
     <div class="f"><span>Colour</span><div class="tl-pal" id="edC"></div></div>
     <div class="f ed-shape"><span>Symbol</span><div class="tl-shapes" id="edSh"></div></div>
-    <label class="f ed-dep"><span>Comes after rows</span><input id="edDep" placeholder="e.g. 3, 5" autocomplete="off"></label>
+    <div class="f ed-bar"><span>Bar</span><div class="tl-bars" id="edBs"></div></div>
+    <div class="f ed-dep"><span>Linked to — this one…</span><div id="edDeps" class="ed-links"></div><button type="button" class="tl-addlink" id="edDepAdd">+ Add a link</button></div>
     <label class="f"><span>Notes</span><textarea id="edNt" rows="2"></textarea></label>
     <div class="dlg-act">
       <button type="button" class="tl-btn danger" id="edDel">Delete</button>
@@ -179,7 +188,7 @@
 <dialog class="tl-dlg" id="pasteDlg" aria-labelledby="pasteH">
   <form method="dialog">
     <h2 id="pasteH">Paste from a spreadsheet</h2>
-    <p class="dlg-p">Copy the rows in Excel, Google Sheets or Numbers, headings included, and paste them here. Columns it understands: <i>Task</i> or <i>Name</i>, <i>Start</i>, <i>End</i> or <i>Duration</i>, <i>Done %</i>, <i>Owner</i>, <i>Phase</i>, <i>Type</i> and <i>Predecessors</i>. A row with no dates becomes a phase heading; a row with only one date becomes a milestone.</p>
+    <p class="dlg-p">Copy the rows in Excel, Google Sheets or Numbers, headings included, and paste them here. Columns it understands: <i>Task</i> or <i>Name</i>, <i>Start</i>, <i>End</i> or <i>Duration</i>, <i>Done %</i>, <i>Owner</i>, <i>Phase</i>, <i>Type</i> and <i>Predecessors</i> (like <i>3</i>, <i>5SS+2</i> or <i>7FF</i>). A row with no dates becomes a phase heading; a row with only one date becomes a milestone.</p>
     <textarea id="pasteTx" rows="9" placeholder="Task&#9;Start&#9;End&#10;Design&#9;03/11/2026&#9;14/11/2026&#10;Build&#9;17/11/2026&#9;19/12/2026&#10;Launch&#9;21/12/2026"></textarea>
     <div class="dlg-act">
       <button type="button" class="tl-btn" id="pasteCancel">Cancel</button>
@@ -197,7 +206,7 @@
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="../js/tools.js?v=3"></script>
-<script src="../js/tool-timeline.js?v=1"></script>
+<script src="../js/tool-timeline.js?v=2"></script>
 <script src="../js/nav.js?v=6" defer></script>
 <script src="../js/visits.js?v=2" defer></script>
 </body>
