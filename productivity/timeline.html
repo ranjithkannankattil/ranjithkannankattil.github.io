@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timeline &amp; Gantt — Productivity — Ranjith Kannankattil</title>
+<meta name="description" content="Plan phases, tasks and milestones on a drag-and-drop Gantt chart, then download it as a live Excel workbook, a PDF or an image. Runs in your browser.">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="icon" href="/assets/icons/site-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/icons/site-180.png">
+<meta name="theme-color" content="#F0EDE6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16161A" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
+<link rel="stylesheet" href="../css/style.css?v=8">
+<link rel="stylesheet" href="../css/productivity.css?v=1">
+<link rel="stylesheet" href="../css/tool-timeline.css?v=1">
+</head>
+<body data-section="productivity" class="wide">
+
+<header class="titleblock">
+  <div>
+    <div class="id">RANJITH KANNANKATTIL</div>
+    <div class="name">Productivity</div>
+  </div>
+  <nav class="tabs" data-root="../" data-active="productivity" aria-label="Site">
+    <a href="../index.html">Home</a>
+    <a href="../radio.html">Radio</a>
+    <a href="./" class="active">Productivity</a>
+  </nav>
+</header>
+
+<main data-tool="timeline">
+  <div data-tool-nav></div>
+  <section class="tl" aria-labelledby="tlTitle">
+    <div class="tool-head">
+      <div class="tool-eyebrow" data-tool-eyebrow>Tool</div>
+      <h1 class="tool-title" id="tlTitle">Timeline &amp; Gantt</h1>
+      <p class="tool-intro">Phases, tasks, milestones and the links between them, on one screen. Type into the list or drag the bars. When it's ready, download an Excel workbook whose bars redraw when you change a date, a PDF for the meeting, or an image for your slides. Your timelines stay in this browser.</p>
+    </div>
+
+    <div class="tl-top">
+      <input class="tl-name" id="pname" aria-label="Timeline name" spellcheck="false">
+      <span class="tl-saved" id="saved"></span>
+    </div>
+
+    <div class="tl-bar" role="toolbar" aria-label="Timeline">
+      <div class="tl-grp">
+        <button class="tl-btn ink" id="addT" title="Add a task below the selected row (Enter in a name does the same)">+ Task</button>
+        <button class="tl-btn" id="addM" title="Add a milestone">+ Milestone</button>
+        <button class="tl-btn" id="addG" title="Add a phase — tasks below it belong to it">+ Phase</button>
+      </div>
+      <div class="tl-grp">
+        <button class="tl-btn ico" id="undo" title="Undo (Ctrl+Z)" aria-label="Undo">↶</button>
+        <button class="tl-btn ico" id="redo" title="Redo (Ctrl+Shift+Z)" aria-label="Redo">↷</button>
+      </div>
+      <div class="tl-grp" id="zoom" role="group" aria-label="Zoom">
+        <button class="tl-btn" data-z="day" title="Zoom to days">Day</button><button class="tl-btn" data-z="week" title="Zoom to weeks">Week</button><button class="tl-btn" data-z="month" title="Zoom to months">Month</button><button class="tl-btn" data-z="quarter" title="Zoom to quarters">Qtr</button><button class="tl-btn" data-z="year" title="Zoom to years">Year</button><button class="tl-btn" data-z="fit" title="Fit the whole plan (F)">Fit</button>
+      </div>
+      <button class="tl-btn" id="todayBtn" title="Scroll to today (T)">Today</button>
+      <details class="tl-menu" id="viewMenu">
+        <summary class="tl-btn">View <i aria-hidden="true">▾</i></summary>
+        <div class="tl-pop">
+          <label><input type="checkbox" data-opt="deps"> Dependency arrows</label>
+          <label><input type="checkbox" data-opt="crit"> Highlight the critical path</label>
+          <label><input type="checkbox" data-opt="prog"> Progress on bars</label>
+          <label><input type="checkbox" data-opt="labels"> Names beside bars</label>
+          <label><input type="checkbox" data-opt="today"> Today line</label>
+          <label><input type="checkbox" data-opt="wkend"> Shade weekends</label>
+          <hr>
+          <label><input type="checkbox" data-opt="work"> Count working days only (Mon–Fri)</label>
+          <label><input type="checkbox" data-opt="auto"> Move linked tasks along when a task moves</label>
+          <hr>
+          <div class="tl-mh">Columns in the list</div>
+          <div class="tl-cols"><label><input type="checkbox" data-col="s"> Start</label><label><input type="checkbox" data-col="e"> End</label><label><input type="checkbox" data-col="d"> Days</label><label><input type="checkbox" data-col="p"> Done %</label><label><input type="checkbox" data-col="o"> Owner</label><label><input type="checkbox" data-col="dep"> After</label></div>
+        </div>
+      </details>
+      <span class="tl-sp"></span>
+      <details class="tl-menu" id="openMenu">
+        <summary class="tl-btn">Open <i aria-hidden="true">▾</i></summary>
+        <div class="tl-pop right wide">
+          <button class="tl-mi" id="newBtn"><b>New blank timeline</b></button>
+          <div class="tl-mh">Start from a template</div>
+          <div id="tplList"></div>
+          <div class="tl-mh">Bring in your own</div>
+          <button class="tl-mi" id="fileBtn"><b>Open a file…</b><span>Excel (.xlsx), CSV or a timeline (.json)</span></button>
+          <button class="tl-mi" id="pasteBtn"><b>Paste from Excel or Sheets…</b><span>Copy rows with a name, start and end</span></button>
+          <div class="tl-mh">Your timelines in this browser</div>
+          <div id="myList"></div>
+          <input type="file" id="file" accept=".json,.xlsx,.csv,.tsv,.txt" hidden>
+        </div>
+      </details>
+      <details class="tl-menu" id="dlMenu">
+        <summary class="tl-btn ink">Download <i aria-hidden="true">▾</i></summary>
+        <div class="tl-pop right wide">
+          <div class="tl-dl" id="dlBtns">
+            <button data-dl="xlsx"><b>Excel</b><span>.xlsx · live Gantt sheet</span></button>
+            <button data-dl="pdf"><b>PDF</b><span>paged, for print</span></button>
+            <button data-dl="png"><b>Image</b><span>.png · for slides</span></button>
+            <button data-dl="svg"><b>Vector</b><span>.svg · scales cleanly</span></button>
+            <button data-dl="csv"><b>CSV</b><span>plain table</span></button>
+            <button data-dl="json"><b>Timeline file</b><span>.json · reopen here</span></button>
+          </div>
+          <div class="tl-mh">PDF paper</div>
+          <div class="tl-seg" id="paper"><button data-v="a4">A4</button><button data-v="a3">A3</button><button data-v="letter">Letter</button><button data-v="tabloid">Tabloid</button></div>
+          <div class="tl-mh">Columns beside the chart (PDF and images)</div>
+          <label><input type="checkbox" data-xc="dates" checked> Start and end</label>
+          <label><input type="checkbox" data-xc="owner"> Owner</label>
+          <label><input type="checkbox" data-xc="done"> Done %</label>
+        </div>
+      </details>
+      <button class="tl-btn" id="share" title="Copy a link that opens this timeline">Share link</button>
+    </div>
+
+    <div class="tl-grid" id="grid">
+      <div class="tl-left" id="left">
+        <div class="tl-th" aria-hidden="true"><span>#</span><span>Task</span><span>Start</span><span>End</span><span class="num">Days</span><span class="num">Done</span><span>Owner</span><span>After</span><span></span></div>
+        <div id="tb" class="tl-tb"></div>
+        <div class="tl-drop" id="drop" hidden></div>
+      </div>
+      <div class="tl-split" id="split" role="separator" aria-orientation="vertical" aria-label="Resize the task list" tabindex="0"></div>
+      <div class="tl-right" id="right">
+        <div id="chart" class="tl-chart"></div>
+        <div class="tl-tip" id="tip" hidden></div>
+        <div class="tl-empty" id="empty" hidden>
+          <p>An empty timeline. Add a first task, start from a template, or paste rows from a spreadsheet.</p>
+          <div><button class="tl-btn ink" data-empty="task">+ First task</button><button class="tl-btn" data-empty="tpl">Templates</button><button class="tl-btn" data-empty="paste">Paste rows</button></div>
+        </div>
+      </div>
+    </div>
+
+    <ul class="tl-hints">
+      <li><b>Drag</b> a bar to move it, or its ends to change dates; drag the little triangle under a bar to set progress.</li>
+      <li><b>Link</b> tasks by dragging the dot at the end of a bar onto the task that follows it.</li>
+      <li><b>Enter</b> in a name adds the next task; Alt+↑/↓ moves a row; drag a row number to reorder; double-click a bar for all its details.</li>
+      <li><b>Ctrl + scroll</b> over the chart zooms; drag empty space to pan.</li>
+    </ul>
+
+    <p class="mt-note tl-note">Nothing leaves your browser unless you share a link, and the timeline travels inside that link itself. The Excel download keeps the chart live: change a start, end or done figure and the bars redraw, with today marked in red.</p>
+  </section>
+
+  <div class="diamond-rule"><span class="diamond-mark">◆</span></div>
+</main>
+
+<div class="tl-toast" id="toast" role="status" hidden></div>
+<div class="tl-colpop" id="pop" hidden></div>
+
+<dialog class="tl-dlg" id="ed" aria-labelledby="edH">
+  <form method="dialog" id="edForm">
+    <h2 id="edH">Edit</h2>
+    <label class="f"><span>Name</span><input id="edN" autocomplete="off"></label>
+    <div class="f-row">
+      <label class="f"><span>Type</span><select id="edT"><option value="task">Task</option><option value="ms">Milestone</option><option value="group">Phase</option></select></label>
+      <label class="f"><span>Owner</span><input id="edO" autocomplete="off"></label>
+    </div>
+    <div class="f-row three ed-dates">
+      <label class="f"><span id="edSL">Start</span><input type="date" id="edS"></label>
+      <label class="f ed-span"><span>End</span><input type="date" id="edE"></label>
+      <label class="f ed-span"><span id="edDL">Days</span><input type="number" id="edD" min="1"></label>
+    </div>
+    <p class="ed-sum" id="edSum"></p>
+    <label class="f ed-prog"><span>Done <b id="edPV">0%</b></span><input type="range" id="edP" min="0" max="100" step="5"></label>
+    <div class="f"><span>Colour</span><div class="tl-pal" id="edC"></div></div>
+    <div class="f ed-shape"><span>Symbol</span><div class="tl-shapes" id="edSh"></div></div>
+    <label class="f ed-dep"><span>Comes after rows</span><input id="edDep" placeholder="e.g. 3, 5" autocomplete="off"></label>
+    <label class="f"><span>Notes</span><textarea id="edNt" rows="2"></textarea></label>
+    <div class="dlg-act">
+      <button type="button" class="tl-btn danger" id="edDel">Delete</button>
+      <span class="tl-sp"></span>
+      <button type="button" class="tl-btn" id="edCancel">Cancel</button>
+      <button type="submit" class="tl-btn ink" id="edOk">Save</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog class="tl-dlg" id="pasteDlg" aria-labelledby="pasteH">
+  <form method="dialog">
+    <h2 id="pasteH">Paste from a spreadsheet</h2>
+    <p class="dlg-p">Copy the rows in Excel, Google Sheets or Numbers, headings included, and paste them here. Columns it understands: <i>Task</i> or <i>Name</i>, <i>Start</i>, <i>End</i> or <i>Duration</i>, <i>Done %</i>, <i>Owner</i>, <i>Phase</i>, <i>Type</i> and <i>Predecessors</i>. A row with no dates becomes a phase heading; a row with only one date becomes a milestone.</p>
+    <textarea id="pasteTx" rows="9" placeholder="Task&#9;Start&#9;End&#10;Design&#9;03/11/2026&#9;14/11/2026&#10;Build&#9;17/11/2026&#9;19/12/2026&#10;Launch&#9;21/12/2026"></textarea>
+    <div class="dlg-act">
+      <button type="button" class="tl-btn" id="pasteCancel">Cancel</button>
+      <span class="tl-sp"></span>
+      <button type="button" class="tl-btn" id="pasteAdd">Add to this timeline</button>
+      <button type="button" class="tl-btn ink" id="pasteNew">Make a new timeline</button>
+    </div>
+  </form>
+</dialog>
+
+<footer>
+  <div>© <span id="year"></span> Ranjith Kannankattil</div>
+  <div class="foot-r"><span class="visits" id="visits" hidden></span><a href="../privacy.html">Privacy</a></div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/tools.js?v=3"></script>
+<script src="../js/tool-timeline.js?v=1"></script>
+<script src="../js/nav.js?v=6" defer></script>
+<script src="../js/visits.js?v=2" defer></script>
+</body>
+</html>

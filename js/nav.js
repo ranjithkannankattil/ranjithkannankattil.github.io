@@ -13,7 +13,7 @@
       { id: "radio", label: "Radio", desc: "2,200 live stations in 70+ languages", href: "radio.html" },
       { id: "news", label: "News", desc: "Trusted papers, world to your town", href: "news.html" },
       { id: "trip", label: "Trip planner", desc: "Day-by-day walking plans, anywhere", href: "trip.html" },
-      { id: "productivity", label: "Productivity", desc: "Meeting finder across time zones", href: "productivity/" },
+      { id: "productivity", label: "Productivity", desc: "Meeting finder, Gantt timelines", href: "productivity/" },
     ] },
   ];
 

@@ -18,6 +18,14 @@ window.TOOLS = [
     href: 'meeting.html',
     blurb: 'Houston, London, Milan, Maputo, Bangalore, Beijing and Seoul on one timeline, plus any city you add. Working hours per city, daylight saving resolved for the date you pick.',
     meta: 'Time zones · DST · Working hours'
+  },
+  {
+    id: 'timeline',
+    name: 'Timeline & Gantt',
+    short: 'Timeline',
+    href: 'timeline.html',
+    blurb: 'Phases, tasks, milestones and dependencies on a drag-and-drop Gantt chart. Download a live Excel workbook, a paged PDF or an image for slides.',
+    meta: 'Gantt · Milestones · Excel · PDF · PNG'
   }
 ];
 
