@@ -329,6 +329,33 @@ window.STATIONS = [
       "https://10gb1.acangroup.org:8000/rsi"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "nostalgie-80-90",
+    "name": "Nostalgie 80 90",
+    "category": "music",
+    "streams": [
+      "https://streaming.nrjaudio.fm/ou62iyxp336f?origine=fluxradios&aw_0_1st.station=Nostalgie-80-90"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "radio-meuh",
+    "name": "Radio Meuh",
+    "category": "music",
+    "streams": [
+      "https://radiomeuh.ice.infomaniak.ch/radiomeuh-128.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "france-bleu-provence",
+    "name": "France Bleu Provence",
+    "category": "music",
+    "streams": [
+      "https://icecast.radiofrance.fr/fbprovence-midfi.mp3?ID=radiofrance"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

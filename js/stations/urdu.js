@@ -204,6 +204,24 @@ window.STATIONS = [
       "https://stream.zeno.fm/bahhkuge5zhvv"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "live-fm",
+    "name": "Live FM",
+    "category": "music",
+    "streams": [
+      "https://stream.aiir.com/dbv0rxpwp6ytv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "radio-vivid-voice",
+    "name": "Radio Vivid Voice",
+    "category": "news",
+    "streams": [
+      "https://stream.zeno.fm/xuin6ocdc2juv"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

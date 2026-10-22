@@ -339,6 +339,33 @@ window.STATIONS = [
       "https://live-bauerse-fm.sharp-stream.com/nrj_instreamtest_se_mp3"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "sveriges-kristna-radio",
+    "name": "Sveriges Kristna Radio",
+    "category": "devotional",
+    "streams": [
+      "https://s2.radio.co/sfbf5f5b85/listen"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "bananradion",
+    "name": "BANANRADION",
+    "category": "music",
+    "streams": [
+      "https://lyssna.bananradion.se/listen/bananradion/128aac"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "sveriges-radio-sr-sisuradio",
+    "name": "Sveriges Radio - SR Sisuradio",
+    "category": "news",
+    "streams": [
+      "https://live1.sr.se/finska-aac-320"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

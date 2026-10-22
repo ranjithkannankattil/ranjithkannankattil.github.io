@@ -120,8 +120,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://centova.dukahosting.com/proxy/021kafe/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "naxi-love-radio",
@@ -340,6 +339,24 @@ window.STATIONS = [
       "https://naxidigital-clubbing128ssl.streaming.rs:8092/;"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "radio-s-2000-te-folk",
+    "name": "Radio S 2000-te Folk",
+    "category": "music",
+    "streams": [
+      "https://stream.radios.rs:9060/stream"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "nas-mm-radio-97-8",
+    "name": "NAŠ MM Radio 97.8",
+    "category": "music",
+    "streams": [
+      "https://radio.dukahosting.com:7045/stream"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

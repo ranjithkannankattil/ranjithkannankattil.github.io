@@ -104,8 +104,7 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://broadcast.shoutcheap.com/proxy/alban/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-maria-albania-programi-per-amerike",
@@ -340,6 +339,33 @@ window.STATIONS = [
       "https://live.radio-zemra.eu/folklor"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "prime-gold",
+    "name": "Prime Gold",
+    "category": "music",
+    "streams": [
+      "https://play.primeradio.al/primegold"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "radio-rainca",
+    "name": "Radio Rainca",
+    "category": "music",
+    "streams": [
+      "https://radiocast.ch:8000/stream"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "radio-dj-98-2",
+    "name": "Radio DJ 98.2",
+    "category": "music",
+    "streams": [
+      "https://radios.albaniadigitalradio.al/albaniaradiodj"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

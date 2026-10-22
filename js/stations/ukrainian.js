@@ -152,8 +152,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s5.radioforge.com:7908/live?n=77357"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "24-breaking-live",
@@ -358,6 +357,33 @@ window.STATIONS = [
       "https://cast.mediaonline.net.ua/loungefm320"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "radio-jazz-gold-fm",
+    "name": "Radio Jazz Gold FM",
+    "category": "music",
+    "streams": [
+      "https://online.radiojazz.ua/RadioJazz_Gold"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "station-4",
+    "name": "Радіо Байрактар",
+    "category": "music",
+    "streams": [
+      "https://online.radiobayraktar.ua/RadioBayraktar"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "club-hits-2000s",
+    "name": "Club Hits 2000s",
+    "category": "music",
+    "streams": [
+      "https://radio.retrolan.party:8000/radio.mp3"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

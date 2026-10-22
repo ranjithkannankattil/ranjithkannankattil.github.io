@@ -389,6 +389,33 @@ window.STATIONS = [
       "https://21223.live.streamtheworld.com/VERONICAAAC.aac"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "slam-housuh-in-de-pauzuh",
+    "name": "SLAM! Housuh In De Pauzuh",
+    "category": "music",
+    "streams": [
+      "https://stream.slam.nl/WEB16_MP3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "sky-radio-hits",
+    "name": "Sky Radio Hits",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR01.mp3?dist=skyradio_web&ttag=talpa_consent:0&gdpr=1&gdpr_consent=BO2svb6O2svb6ADABANLDTAAAAAxKAAA"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "all-oldies-channel",
+    "name": "All Oldies Channel",
+    "category": "music",
+    "streams": [
+      "https://radio.alloldieschannel.com:8000/stream"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

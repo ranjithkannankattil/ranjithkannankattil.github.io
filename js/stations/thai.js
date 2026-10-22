@@ -137,8 +137,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sapircast.caster.fm:17039/aRsGW"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "tp-tv-channel-digital-tv-channel-10",
@@ -269,4 +268,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

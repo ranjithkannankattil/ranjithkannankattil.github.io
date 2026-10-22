@@ -355,6 +355,33 @@ window.STATIONS = [
       "https://icecast.multhielemedia.de/listen/kontrafunk/radio.mp3"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "104-6-rtl",
+    "name": "104.6 RTL",
+    "category": "music",
+    "streams": [
+      "https://stream.104.6rtl.com/rtl-live/mp3-192/radio-browser.info/"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "sunshine-live-techno",
+    "name": "Sunshine Live - Techno",
+    "category": "music",
+    "streams": [
+      "https://stream.sunshine-live.de/techno/mp3-192/stream.sunshine-live.de/"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "o1-orf-hq",
+    "name": "Ö1 · ORF · HQ",
+    "category": "music",
+    "streams": [
+      "https://orf-live.ors-shoutcast.at/oe1-q2a"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

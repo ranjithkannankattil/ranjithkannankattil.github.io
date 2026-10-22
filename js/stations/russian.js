@@ -88,7 +88,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://bookradio.hostingradio.ru:8069/fm"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "fm-2",
@@ -348,6 +349,33 @@ window.STATIONS = [
       "https://aircast.breaking-bass.ru:8443/air"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "101-ru",
+    "name": "101.RU - Дискотека СССР",
+    "category": "music",
+    "streams": [
+      "https://pub0201.101.ru/stream/pro/aac/64/144"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "trance-is-star-radio",
+    "name": "TRANCE IS STAR RADIO",
+    "category": "music",
+    "streams": [
+      "https://myradio24.org/tisradio"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "station-17",
+    "name": "ВАШЕ РАДИО",
+    "category": "music",
+    "streams": [
+      "https://live.zhanafm.kz:8443/vasheradio"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

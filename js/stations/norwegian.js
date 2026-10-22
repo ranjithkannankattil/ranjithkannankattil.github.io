@@ -380,6 +380,15 @@ window.STATIONS = [
       "https://live-bauerno.sharp-stream.com/norskpop_no_mp3"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "ordentlig-radio",
+    "name": "Ordentlig Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.oradio.no/oradio_hq"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

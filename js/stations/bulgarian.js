@@ -48,8 +48,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nova-radio.neterra.tv/veselinaretro"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "badrock-hard-heavy",
@@ -171,8 +170,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ssl120.radyotelekom.com.tr/8122/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "city-hiphop-rab",
@@ -352,6 +350,15 @@ window.STATIONS = [
       "https://eu1.reliastream.com/proxy/mhr?mp=/MHR"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "darik-nostalgie",
+    "name": "Darik Nostalgie",
+    "category": "music",
+    "streams": [
+      "https://a10.asurahosting.com:7600/radio.mp3"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

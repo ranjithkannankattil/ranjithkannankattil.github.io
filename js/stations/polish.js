@@ -323,6 +323,24 @@ window.STATIONS = [
     "streams": [
       "https://shoutcast.paranormalium.pl:8000/5"
     ]
+  },
+  {
+    "id": "radio-eska-2-kultowe-polskie",
+    "name": "Radio Eska 2 Kultowe Polskie",
+    "category": "music",
+    "streams": [
+      "https://waw.ic.smcdn.pl/6040-1.aac"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "antyradio-made-in-poland",
+    "name": "Antyradio Made In Poland",
+    "category": "music",
+    "streams": [
+      "https://an04.cdn.eurozet.pl/ANTPOL.mp3?t=1668748669557?redirected=04"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

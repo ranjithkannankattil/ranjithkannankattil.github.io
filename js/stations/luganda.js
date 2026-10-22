@@ -16,8 +16,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://dc4.serverse.com/proxy/pearlfm/stream/1/"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "kitintale-christian-fellowship",
@@ -81,8 +80,7 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://s39.myradiostream.com/:15664/;"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "106-1-next-radio",
@@ -247,6 +245,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/raoopfak6k2vv"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "enjiri-radio",
+    "name": "Enjiri Radio",
+    "category": "devotional",
+    "streams": [
+      "https://stream.zeno.fm/xdb8nazajqcvv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "exodus-comfort-radio",
+    "name": "Exodus Comfort Radio",
+    "category": "devotional",
+    "streams": [
+      "https://stream.zeno.fm/k2zma0qewtjvv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "great-hits-manchester",
+    "name": "Great Hits Manchester",
+    "category": "music",
+    "streams": [
+      "https://listen-nation.sharp-stream.com/hull.mp3"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

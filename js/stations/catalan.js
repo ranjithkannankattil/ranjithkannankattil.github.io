@@ -367,6 +367,33 @@ window.STATIONS = [
       "https://stream.rubostudio.es/listen/cat/radio.mp3"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "catalunya-musica",
+    "name": "Catalunya Música",
+    "category": "music",
+    "streams": [
+      "https://directes-radio-int.3catdirectes.cat/live-content/catalunya-musica-hls/bitrate_1.m3u8"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "radio-riba-roja",
+    "name": "Ràdio Riba-roja",
+    "category": "music",
+    "streams": [
+      "https://enacast.com/radioribarroja/streams/SD"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "radio-vilablareix",
+    "name": "Ràdio Vilablareix",
+    "category": "music",
+    "streams": [
+      "https://enacast.com/radiovilablareix/streams/SD"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

@@ -323,6 +323,33 @@ window.STATIONS = [
     "streams": [
       "https://radyo.yayin.com.tr:5714/stream"
     ]
+  },
+  {
+    "id": "pop-90-turkiye",
+    "name": "POP 90 Turkiye",
+    "category": "music",
+    "streams": [
+      "https://23613.live.streamtheworld.com/POP90AAC_SC"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "bars-radyo-104-8",
+    "name": "Barış Radyo 104.8",
+    "category": "devotional",
+    "streams": [
+      "https://yayin2.canliyayin.org:9350/stream?/;stream.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "radio-44",
+    "name": "Radio 44",
+    "category": "music",
+    "streams": [
+      "https://radyo44.80.yayin.com.tr/stream"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

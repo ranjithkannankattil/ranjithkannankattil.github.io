@@ -366,6 +366,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "where": "UK"
+  },
+  {
+    "id": "outlaw-country-music-radio",
+    "name": "Outlaw – Country Music Radio",
+    "category": "rock",
+    "streams": [
+      "https://r.bgp.rodeo/listen/outlaw/radio.mp3"
+    ],
+    "added": "2026-10-22",
+    "where": "US"
+  },
+  {
+    "id": "96-7-kiss-fm-khfi-fm-austin",
+    "name": "96.7 KISS FM - KHFI-FM Austin",
+    "category": "pop",
+    "streams": [
+      "https://stream.revma.ihrhls.com/zc2173"
+    ],
+    "added": "2026-10-22",
+    "where": "US"
+  },
+  {
+    "id": "only-hits-k-pop",
+    "name": "Only Hits K-Pop",
+    "category": "pop",
+    "streams": [
+      "https://kpop.onlyhit.us/play"
+    ],
+    "added": "2026-10-22",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

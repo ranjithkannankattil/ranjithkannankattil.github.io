@@ -378,6 +378,33 @@ window.STATIONS = [
       "https://icecast.err.ee/r2alternatiiv.opus"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "bigfm",
+    "name": "BIGfm",
+    "category": "music",
+    "streams": [
+      "https://sc2.flamebox.org/bigfm-hd"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "nrj-estonia",
+    "name": "NRJ Estonia",
+    "category": "music",
+    "streams": [
+      "https://stream.skymedia.ee/live/NRJ"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "xl-radio-estonia",
+    "name": "XL Radio Estonia",
+    "category": "music",
+    "streams": [
+      "https://stream.rcast.net/69794"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

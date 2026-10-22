@@ -203,10 +203,9 @@ window.STATIONS = [
     "name": "Antena 3",
     "category": "music",
     "streams": [
-      "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8",
-      "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8"
-    ],
-    "offline": true
+      "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8",
+      "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
+    ]
   },
   {
     "id": "golofm",
@@ -230,7 +229,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "cidade-fm-2",
@@ -277,10 +277,9 @@ window.STATIONS = [
     "name": "Antena 2",
     "category": "music",
     "streams": [
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR",
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8"
-    ],
-    "offline": true
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8",
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
+    ]
   },
   {
     "id": "rca-radio-clube-de-armamar",
@@ -312,7 +311,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.streamaudio.de:8000/radio-dom-bosco-fm"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "smoothfm-soul",
@@ -346,7 +346,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/rdpafrica80a/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "antena-1-acores-portugal",
@@ -355,7 +356,35 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
+    "added": "2026-10-22",
+    "offline": true
+  },
+  {
+    "id": "radio-festival-madeira-98-4-fm",
+    "name": "Rádio Festival Madeira (98.4 FM)",
+    "category": "music",
+    "streams": [
+      "https://audio.serv.pt/8012/stream.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "radio-orbital",
+    "name": "radio orbital",
+    "category": "music",
+    "streams": [
+      "https://centova.radio.com.pt/proxy/401?mp=/stream"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "radio-paralelo",
+    "name": "Rádio Paralelo",
+    "category": "music",
+    "streams": [
+      "https://radioparalelo.indymedia.pt/listen/paralelo/radio.mp3"
+    ],
     "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

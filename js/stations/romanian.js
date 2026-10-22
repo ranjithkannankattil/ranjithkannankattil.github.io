@@ -330,6 +330,15 @@ window.STATIONS = [
       "https://stream.dixi.md:9443/Roks"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "clasic-radio-strauss-bucuresti",
+    "name": "Clasic Radio_Strauss -București",
+    "category": "music",
+    "streams": [
+      "https://live.radioclasic.com/listen/radio_clasic_strauss/live.mp3"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

@@ -330,6 +330,24 @@ window.STATIONS = [
       "https://muste.latvijasradio.lv/pieci/smil:k1.smil/playlist.m3u8"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "european-hit-radio-c-c-radio",
+    "name": "European Hit Radio - C&C Radio",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/EHR_IDEAL_MUSICAAC.aac"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "cave-lounge",
+    "name": "Cave Lounge",
+    "category": "news",
+    "streams": [
+      "https://stream.zeno.fm/geuwghjjyjjtv"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

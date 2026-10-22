@@ -168,7 +168,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://svara-stream.radioddns.net/yogyakarta_voksradio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "klcbs-new-age",
@@ -208,7 +209,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:9154/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radiks-fm-semarang",
@@ -322,7 +324,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/14/9314/rrisngliatpro1.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "mosh-head-black-metal-id",
@@ -359,6 +362,24 @@ window.STATIONS = [
       "https://stream.zeno.fm/uvlmugvqrnkvv"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "ras-fm-jakarta",
+    "name": "RAS FM Jakarta",
+    "category": "devotional",
+    "streams": [
+      "https://i.klikhost.com/9006/stream"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "pandu-musik-radio",
+    "name": "Pandu Musik Radio",
+    "category": "music",
+    "streams": [
+      "https://usa3.fastcast4u.com/proxy/pandumusikradio?mp=/1"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

@@ -330,6 +330,33 @@ window.STATIONS = [
       "https://hu-stream03.klubradio.hu:8443/bpstream"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "cool-fm",
+    "name": "Cool FM",
+    "category": "music",
+    "streams": [
+      "https://mediagw.e-tiger.net/stream/cfmhq"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "mr2-petofi-radio",
+    "name": "MR2 - Petőfi Rádió",
+    "category": "music",
+    "streams": [
+      "https://mr-stream.connectmedia.hu/4738/mr2.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "nemzeti-sport-radio",
+    "name": "Nemzeti Sport Radio",
+    "category": "news",
+    "streams": [
+      "https://icast.connectmedia.hu/4656/mr11.aac"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

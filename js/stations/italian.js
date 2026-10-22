@@ -318,6 +318,33 @@ window.STATIONS = [
       "https://az1.mediacp.eu/listen/natureradiosleep/radio.mp3"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "radio-bruno-made-in-italy",
+    "name": "Radio Bruno - Made in Italy",
+    "category": "music",
+    "streams": [
+      "https://stream2.xdevel.com/audio1s975355-54/stream/icecast.audio"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "babboleo-suono",
+    "name": "Babboleo Suono",
+    "category": "music",
+    "streams": [
+      "https://stream.rcs.revma.com/sv2hu8qqv6bwv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "jazz-radio-swiss",
+    "name": "Jazz · Radio Swiss",
+    "category": "music",
+    "streams": [
+      "https://stream.srg-ssr.ch/m/rsj/mp3_128"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

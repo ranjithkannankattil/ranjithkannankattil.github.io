@@ -177,8 +177,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://antares.dribbcast.com/proxy/jpop?mp=/s"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "neuro-21-station",
@@ -333,6 +332,33 @@ window.STATIONS = [
       "https://stream.vrstv.jp/"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "wave-anime-radio",
+    "name": "Wave Anime Radio",
+    "category": "music",
+    "streams": [
+      "https://channel_2.waveani.fun/stream"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "animenfo-radio",
+    "name": "AnimeNfo Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zenolive.com/xwa8ckz7mzzuv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "big-b-radio-asian-pop",
+    "name": "Big B Radio - Asian pop",
+    "category": "music",
+    "streams": [
+      "https://antares.dribbcast.com/proxy/apop?mp=/s?"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

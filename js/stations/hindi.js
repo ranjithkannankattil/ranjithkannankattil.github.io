@@ -342,6 +342,33 @@ window.STATIONS = [
       "https://drive.uber.radio/uber/bollywoodlove/icecast.audio"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "mohammed-rafi",
+    "name": "Mohammed Rafi",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/6yqvumgfxtzuv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "fever-104-fm",
+    "name": "Fever 104 FM",
+    "category": "music",
+    "streams": [
+      "https://radio.canstream.co.uk:8115/live.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "vividh-bharti-mumbai",
+    "name": "Vividh Bharti Mumbai",
+    "category": "music",
+    "streams": [
+      "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio011/hlspbaudio011_Auto.m3u8"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

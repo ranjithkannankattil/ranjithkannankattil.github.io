@@ -96,8 +96,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://1603884249.rsc.cdn77.org/1603884249/index.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "fm94-7",
@@ -360,6 +359,33 @@ window.STATIONS = [
       "https://rthkradiocmgrgb-live.akamaized.net/hls/live/2046112/radiocmgrgb/index_64_a.m3u8"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "station-24",
+    "name": "佛山南海广播",
+    "category": "music",
+    "streams": [
+      "https://radiopull.radiofoshan.com.cn/live/1400820947_BSID_42_audio.m3u8"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "station-25",
+    "name": "佛山顺德广播",
+    "category": "news",
+    "streams": [
+      "https://radiopull.radiofoshan.com.cn/live/1400820947_BSID_44_audio.m3u8"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "rthk-radio-6",
+    "name": "RTHK Radio 6 央廣香港之聲",
+    "category": "music",
+    "streams": [
+      "https://rthkradiocnrhk-live.akamaized.net/hls/live/2046111/radiocnrhk/master.m3u8"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

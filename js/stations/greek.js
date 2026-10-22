@@ -376,6 +376,33 @@ window.STATIONS = [
       "https://radiostreaming.ert.gr/ert-proto"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "rock-fm-96-9",
+    "name": "Rock FM 96.9",
+    "category": "music",
+    "streams": [
+      "https://az10.yesstreaming.net:8060/radio.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "89-5",
+    "name": "Εκκλησία της Ελλάδας 89.5",
+    "category": "devotional",
+    "streams": [
+      "https://loki.mental-media.gr:8038/index.html"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "station-5",
+    "name": "ΕΡΤ Δεύτερο Παραδοσιακά",
+    "category": "music",
+    "streams": [
+      "https://radiostreaming.ert.gr/ert-defteroparadosiaka"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

@@ -257,6 +257,15 @@ window.STATIONS = [
       "https://live.sgpc.net:8443/;stream.mp3"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "jap-radio",
+    "name": "Jap Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/r3m0whh0kxquv"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

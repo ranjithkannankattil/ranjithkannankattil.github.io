@@ -379,6 +379,24 @@ window.STATIONS = [
       "https://live-icy.dr.dk/A19H_master2.mp3"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "vinyl-hits",
+    "name": "Vinyl Hits",
+    "category": "music",
+    "streams": [
+      "https://stream.vinylhits.dk/vinylaac"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "2town-radio",
+    "name": "2town Radio",
+    "category": "music",
+    "streams": [
+      "https://streaming.radio.co/sd9d980ff0/listen"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

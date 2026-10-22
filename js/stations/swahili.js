@@ -178,8 +178,7 @@ window.STATIONS = [
     "streams": [
       "https://us5new.listen2myradio.com:2199/listen.php?port=8138&type=ice&mount=stream"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "heavenly-altar-church-radio-kampala",
@@ -216,6 +215,33 @@ window.STATIONS = [
       "https://rfiswahili96k.ice.infomaniak.ch/rfiswahili-96k.mp3"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "bnx-media-fm-kampala",
+    "name": "BNX Media FM - Kampala",
+    "category": "devotional",
+    "streams": [
+      "https://stream.zeno.fm/6icyyzi1hawuv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "voice-of-heaven-kampala",
+    "name": "Voice Of Heaven - Kampala",
+    "category": "devotional",
+    "streams": [
+      "https://stream.zeno.fm/s961sfesdmntv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "promise-radio-ug",
+    "name": "Promise Radio UG",
+    "category": "devotional",
+    "streams": [
+      "https://stream.zeno.fm/hkzgeqlcjoxuv"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

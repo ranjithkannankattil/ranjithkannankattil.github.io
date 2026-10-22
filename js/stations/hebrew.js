@@ -377,6 +377,33 @@ window.STATIONS = [
       "https://radio.kinshasafm.xyz/listen/kinshasafm/radio.mp3"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "chabad-org-torah-classes-radio",
+    "name": "Chabad.org Torah Classes Radio",
+    "category": "music",
+    "streams": [
+      "https://streams.radio.co/s9f35c3afc/listen"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "radio-jai-96-3",
+    "name": "Radio Jai 96.3",
+    "category": "music",
+    "streams": [
+      "https://vivo.solumedia.com:19360/jaitv/jaitv.m3u8"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "radios-100fm-100-stars",
+    "name": "Radios 100FM - 100% Stars (ערוץ הכוכבים)",
+    "category": "music",
+    "streams": [
+      "https://gb25.streamgates.net/radios-audio/100Stars/icecast.audio"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

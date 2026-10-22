@@ -350,6 +350,33 @@ window.STATIONS = [
       "https://s3.radio.co/s97f38db97/listen"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "los-40-principales-mexico",
+    "name": "Los 40 Principales México",
+    "category": "music",
+    "streams": [
+      "https://14843.live.streamtheworld.com/LOS40_MEXICO_SC"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "la-salsa-maestra",
+    "name": "La Salsa Maestra",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/c1skkw28pfeuv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "amor-solo-musica-romantica",
+    "name": "AMOR: Sólo Música Romántica",
+    "category": "music",
+    "streams": [
+      "https://18373.live.streamtheworld.com:443/XHSHFMAAC.aac"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

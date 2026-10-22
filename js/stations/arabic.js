@@ -350,6 +350,33 @@ window.STATIONS = [
       "https://webradio2.tda.dz:8001/Illizi_64K.mp3"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "noor-al-eman",
+    "name": "Noor Al-Eman",
+    "category": "music",
+    "streams": [
+      "https://edge.mixlr.com/channel/boaht"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "adwaafm",
+    "name": "Adwaafm",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/5bxh2nh0x1zuv?1681882617017"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "voice-of-lebanon-sawtlebnan-radio",
+    "name": "Voice of Lebanon (Sawtlebnan) Radio",
+    "category": "music",
+    "streams": [
+      "https://l3.itworkscdn.net/itwaudio/9054/stream"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

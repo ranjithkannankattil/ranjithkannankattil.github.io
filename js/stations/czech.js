@@ -359,6 +359,33 @@ window.STATIONS = [
       "https://rozhlas.stream/hradec_kralove.mp3"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "rock-radio-cz-rock",
+    "name": "Rock rádio – CZ Rock",
+    "category": "music",
+    "streams": [
+      "https://ice2.radia.cz/rockzabava128.aac"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "evropa-2-actve",
+    "name": "Evropa 2 - Actve",
+    "category": "music",
+    "streams": [
+      "https://ice.actve.net/fm-evropa2-128"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "hitradio-zlin",
+    "name": "Hitradio Zlín",
+    "category": "music",
+    "streams": [
+      "https://ice.radia.cz/radiozlin128.mp3"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

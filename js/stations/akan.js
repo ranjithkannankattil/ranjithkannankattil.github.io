@@ -24,7 +24,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://atunwadigital.streamguys1.com/angelfm"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "nhyira-104-5-fm",
@@ -297,8 +298,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://atunwadigital.streamguys1.com/yfm979takoradi"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "yfm-107-9-accra",
@@ -332,8 +332,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.localstreamgh.com/listen/ahenfie_radio_/radio.mp3"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "sompa-106-5fm-accra",
@@ -370,6 +369,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/9564yrw5v2quv"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "asaase-radio-99-5fm-accra",
+    "name": "Asaase Radio 99.5FM Accra",
+    "category": "news",
+    "streams": [
+      "https://stream.radiojar.com/cyg76xcvp0hvv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "wooden-radio",
+    "name": "Wooden Radio",
+    "category": "news",
+    "streams": [
+      "https://stream.zeno.fm/9ux8wtex9qzuv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "dadi-fm",
+    "name": "Dadi Fm",
+    "category": "news",
+    "streams": [
+      "https://stream.zeno.fm/afzd4f4nq7zuv"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

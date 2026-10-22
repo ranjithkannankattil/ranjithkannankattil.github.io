@@ -379,6 +379,33 @@ window.STATIONS = [
       "https://adhandler.kissfmradio.cires21.com/get_link?url=https://bbhitfm.kissfmradio.cires21.com/bbhitfm.mp3"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "ibiza-x-radio",
+    "name": "Ibiza X Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.radiojar.com/p1f2vpv37reuv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "1000-hits-classical",
+    "name": "1000 HITS Classical",
+    "category": "music",
+    "streams": [
+      "https://ais-sa2.cdnstream1.com/2208_128.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "flaix-fm",
+    "name": "Flaix FM",
+    "category": "music",
+    "streams": [
+      "https://stream.flaixfm.cat/icecast"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

@@ -229,8 +229,7 @@ window.STATIONS = [
     "streams": [
       "https://rogers-hls.leanstream.co/rogers/tor590.stream/playlist.m3u8"
     ],
-    "where": "Canada",
-    "offline": true
+    "where": "Canada"
   },
   {
     "id": "bloomberg-radio-boston",
@@ -309,6 +308,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "where": "UK"
+  },
+  {
+    "id": "bbc-radio-5-live",
+    "name": "BBC Radio 5 Live",
+    "category": "sport",
+    "streams": [
+      "https://as-hls-ww-live.akamaized.net/pool_89021708/live/ww/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d128000.norewind.m3u8"
+    ],
+    "added": "2026-10-22",
+    "where": "UK"
+  },
+  {
+    "id": "kexp",
+    "name": "KEXP",
+    "category": "us",
+    "streams": [
+      "https://kexp.streamguys1.com/kexp160.aac?listenerid=f4bcb5c771d830fbdd4195088a946ea6&awparams=companionAds%3Atrue"
+    ],
+    "added": "2026-10-22",
+    "where": "US"
+  },
+  {
+    "id": "sky-news-australia-radio",
+    "name": "Sky News Australia Radio",
+    "category": "anz",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/NOVA_SKYNEWSAAC.aac"
+    ],
+    "added": "2026-10-22",
+    "where": "Australia"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

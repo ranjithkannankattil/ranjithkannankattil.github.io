@@ -251,6 +251,15 @@ window.STATIONS = [
       "https://live.radio.si/Aktual"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "slavonski-radio",
+    "name": "Slavonski Radio",
+    "category": "music",
+    "streams": [
+      "https://ec2s.crolive.com.hr:8035/stream"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

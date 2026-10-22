@@ -121,7 +121,8 @@ window.STATIONS = [
       "https://radio.wavespb.com/live/70400e7510e87cdf/70400e7510e87cdf.m3u8"
     ],
     "freq": "102.3 FM",
-    "akv": "Akashvani Kochi"
+    "akv": "Akashvani Kochi",
+    "offline": true
   },
   {
     "id": "fmrainbowkochi",
@@ -131,7 +132,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/7df6f2a8c3c4d33b/7df6f2a8c3c4d33b.m3u8"
     ],
-    "akv": "FM Rainbow Kochi"
+    "akv": "FM Rainbow Kochi",
+    "offline": true
   },
   {
     "id": "aircalicut",
@@ -169,7 +171,8 @@ window.STATIONS = [
     "akv": "Akashvani Devikulam",
     "exclude": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "airkozhikodefm",
@@ -220,7 +223,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/b82c91a395fc4a7d/b82c91a395fc4a7d.m3u8"
     ],
-    "akv": "Akashvani Kannur"
+    "akv": "Akashvani Kannur",
+    "offline": true
   },
   {
     "id": "helloradio",
@@ -253,7 +257,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/58390a2ed33cea4a/58390a2ed33cea4a.m3u8"
     ],
-    "akv": "Akashvani Manjeri"
+    "akv": "Akashvani Manjeri",
+    "offline": true
   },
   {
     "id": "akashvanithrissur",
@@ -266,7 +271,8 @@ window.STATIONS = [
     "akv": "Akashvani Thrissur",
     "exclude": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radioneythal",
@@ -274,8 +280,7 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://s2.myradiostream.com/5538/listen.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radiomattoli",
@@ -307,7 +312,8 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://icecast.octosignals.com/radiomacfast"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "globalradio",
@@ -357,8 +363,7 @@ window.STATIONS = [
     "name": "Sargakshetra FM",
     "category": "online",
     "streams": [
-      "https://icecast.octosignals.com/sargakshetrafm",
-      "https://edge.mixlr.com/channel/ugbfe"
+      "https://icecast.octosignals.com/sargakshetrafm"
     ]
   },
   {
@@ -897,8 +902,7 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://dreamsiteradiocp2.com/proxy/rmindia1?mp=/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "puthiyerushalemradio",
@@ -1044,6 +1048,33 @@ window.STATIONS = [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/playlist.m3u8"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "aural-oldies",
+    "name": "AURAL OLDIES",
+    "category": "online",
+    "streams": [
+      "https://stream.zeno.fm/anrf216cu68uv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "shaiva-lahari",
+    "name": "Shaiva Lahari",
+    "category": "online",
+    "streams": [
+      "https://radio.shaivam.org/listen/shaiva-lahari/radio.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "shahimsha-online-radio",
+    "name": "Shahimsha Online radio",
+    "category": "online",
+    "streams": [
+      "https://radio.shahimsha.com/listen/shahimsha/radio.mp3"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

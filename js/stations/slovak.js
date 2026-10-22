@@ -349,6 +349,24 @@ window.STATIONS = [
       "https://stream.bbfm.sk/bbfm128.mp3"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "rusynfm",
+    "name": "RusynFM",
+    "category": "music",
+    "streams": [
+      "https://stream.rusyn.fm/rusyny.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "patria-radio",
+    "name": "Pátria Rádió",
+    "category": "news",
+    "streams": [
+      "https://icecast.stv.livebox.sk/patria_128.mp3"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

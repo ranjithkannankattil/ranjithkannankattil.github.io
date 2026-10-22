@@ -358,6 +358,33 @@ window.STATIONS = [
       "https://live1.sr.se/finska-aac-320"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "radio-mega",
+    "name": "Radio Mega",
+    "category": "music",
+    "streams": [
+      "https://streaming.radioplay.fi/fi_radiomega_128.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "radio-patmos",
+    "name": "Radio Patmos",
+    "category": "devotional",
+    "streams": [
+      "https://s3.yesstreaming.net:7011/radio"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "ida-radio",
+    "name": "IDA Radio",
+    "category": "music",
+    "streams": [
+      "https://broadcast.idaidaida.net:8000/stream"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

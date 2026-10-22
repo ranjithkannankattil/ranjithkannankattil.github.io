@@ -359,6 +359,33 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_SUNO_TAMIL_S01.mp3"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "tamil-amuthu-bakthi-radio",
+    "name": "Tamil Amuthu Bakthi Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/bpc3ucypmm0uv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "american-tamil-radio",
+    "name": "American Tamil Radio",
+    "category": "music",
+    "streams": [
+      "https://cp11.serverse.com/proxy/hgsmgluv?mp=/stream"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "friendstamilfm",
+    "name": "Friendstamilfm",
+    "category": "music",
+    "streams": [
+      "https://usa15.fastcast4u.com/proxy/tammus00?mp=/;"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

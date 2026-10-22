@@ -120,8 +120,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/1908/64k.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-bulbul",
@@ -148,4 +147,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

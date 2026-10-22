@@ -240,6 +240,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "where": "Ireland"
+  },
+  {
+    "id": "bbc-news-hd-720p",
+    "name": "BBC News HD (720P)",
+    "category": "uk",
+    "streams": [
+      "https://vs-hls-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/t=3840/v=pv14/b=5070016/main.m3u8"
+    ],
+    "added": "2026-10-22",
+    "where": "UK"
+  },
+  {
+    "id": "citi-fm",
+    "name": "Citi FM",
+    "category": "world",
+    "streams": [
+      "https://citi973fm.radioca.st/index.html:80/;stream.mp3"
+    ],
+    "added": "2026-10-22",
+    "where": "Ghana"
+  },
+  {
+    "id": "bloomberg-am-new-york-ny",
+    "name": "Bloomberg AM New York, NY",
+    "category": "us",
+    "streams": [
+      "https://29314.live.streamtheworld.com/WBBRNYAAC_SC"
+    ],
+    "added": "2026-10-22",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

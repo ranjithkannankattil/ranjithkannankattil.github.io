@@ -334,6 +334,15 @@ window.STATIONS = [
       "https://us1.amfmph.com/ssl/rmniloilo?mp=/stream"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "palawan-wave-fm",
+    "name": "Palawan Wave FM",
+    "category": "news",
+    "streams": [
+      "https://xcite.radyoph.com:8020/dzrt"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";

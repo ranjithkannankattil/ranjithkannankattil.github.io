@@ -359,6 +359,33 @@ window.STATIONS = [
       "https://ssl.zoeweb.net/proxy/serradourada?mp=/stream"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "bh-fm-102-1-mhz-zyc690",
+    "name": "BH FM 102,1 MHz ZYC690",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/BHFMAAC.aac"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "nova-brasil-fm-sao-paulo",
+    "name": "Nova Brasil Fm São Paulo",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/NOVABRASIL_SPAAC.aac"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "bandnews-fm-belo-horizonte",
+    "name": "BandNews FM Belo Horizonte",
+    "category": "news",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/BANDNEWSFM_BHAAC.aac"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T07:12Z";
+window.STATIONS_CHECKED = "2026-10-22T18:25Z";
