@@ -208,7 +208,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://s7.myradiostream.com:60218/;;"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "moyo-fm",
@@ -291,4 +292,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T18:55Z";
+window.STATIONS_CHECKED = "2026-10-22T05:37Z";

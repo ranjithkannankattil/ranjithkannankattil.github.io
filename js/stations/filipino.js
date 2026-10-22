@@ -16,7 +16,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://azura.loveradio.com.ph/listen/love_radio_manila/radio.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "bombo-radyo-iloilo",
@@ -40,8 +41,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/1noxhem5qpkuv"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "imix-radio",
@@ -327,4 +327,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T18:55Z";
+window.STATIONS_CHECKED = "2026-10-22T05:37Z";

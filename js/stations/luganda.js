@@ -81,7 +81,8 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://s39.myradiostream.com/:15664/;"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "106-1-next-radio",
@@ -220,4 +221,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T18:55Z";
+window.STATIONS_CHECKED = "2026-10-22T05:37Z";

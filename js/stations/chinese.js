@@ -201,8 +201,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-17",
@@ -234,7 +233,8 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://streams.radiomast.io/ce298b32-8776-4192-9900-092f44b63e7f"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-20",
@@ -325,4 +325,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T18:55Z";
+window.STATIONS_CHECKED = "2026-10-22T05:37Z";

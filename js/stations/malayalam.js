@@ -118,13 +118,10 @@ window.STATIONS = [
     "name": "AIR Kochi FM",
     "category": "air",
     "streams": [
-      "https://radio.wavespb.com/live/70400e7510e87cdf/70400e7510e87cdf.m3u8",
-      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio045/playlist.m3u8",
-      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio044/playlist.m3u8"
+      "https://radio.wavespb.com/live/70400e7510e87cdf/70400e7510e87cdf.m3u8"
     ],
     "freq": "102.3 FM",
-    "akv": "Akashvani Kochi",
-    "offline": true
+    "akv": "Akashvani Kochi"
   },
   {
     "id": "fmrainbowkochi",
@@ -134,8 +131,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/7df6f2a8c3c4d33b/7df6f2a8c3c4d33b.m3u8"
     ],
-    "akv": "FM Rainbow Kochi",
-    "offline": true
+    "akv": "FM Rainbow Kochi"
   },
   {
     "id": "aircalicut",
@@ -173,8 +169,7 @@ window.STATIONS = [
     "akv": "Akashvani Devikulam",
     "exclude": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "airkozhikodefm",
@@ -207,8 +202,7 @@ window.STATIONS = [
     "name": "Nammude Radio",
     "category": "online",
     "streams": [
-      "https://stream.nammude.uk/listen/nammude_uk/live",
-      "https://das-edge16-live365-dal02.cdnstream.com/a39171"
+      "https://stream.nammude.uk/listen/nammude_uk/live"
     ]
   },
   {
@@ -217,8 +211,7 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://cast1.my-control-panel.com/proxy/myradio90fm/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "airkannur",
@@ -227,8 +220,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/b82c91a395fc4a7d/b82c91a395fc4a7d.m3u8"
     ],
-    "akv": "Akashvani Kannur",
-    "offline": true
+    "akv": "Akashvani Kannur"
   },
   {
     "id": "helloradio",
@@ -261,8 +253,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/58390a2ed33cea4a/58390a2ed33cea4a.m3u8"
     ],
-    "akv": "Akashvani Manjeri",
-    "offline": true
+    "akv": "Akashvani Manjeri"
   },
   {
     "id": "akashvanithrissur",
@@ -275,8 +266,7 @@ window.STATIONS = [
     "akv": "Akashvani Thrissur",
     "exclude": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radioneythal",
@@ -308,8 +298,7 @@ window.STATIONS = [
     "name": "Janvani FM",
     "category": "online",
     "streams": [
-      "https://radiosavre.com:8060/radio.mp3",
-      "http://centova87.instainternet.com:8272/;"
+      "https://radiosavre.com:8060/radio.mp3"
     ]
   },
   {
@@ -352,8 +341,7 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://onair.junefm.in/live"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radiomangalam",
@@ -533,9 +521,7 @@ window.STATIONS = [
     "name": "Radio Shree",
     "category": "online",
     "streams": [
-      "https://eu10.fastcast4u.com:14910/;",
-      "https://usa19.fastcast4u.com:6270/stream",
-      "http://server.geetradio.com:8020/radio.mp3"
+      "https://eu10.fastcast4u.com:14910/;"
     ]
   },
   {
@@ -584,8 +570,7 @@ window.STATIONS = [
     "name": "AR Radio",
     "category": "online",
     "streams": [
-      "https://free.rcast.net/200660",
-      "https://stream.zeno.fm/heq754gwxwzuv"
+      "https://free.rcast.net/200660"
     ]
   },
   {
@@ -719,8 +704,7 @@ window.STATIONS = [
     "name": "Aural Radio",
     "category": "online",
     "streams": [
-      "https://live.auralradiokerala.in/auralradio/mp3",
-      "https://radio.auralradiokerala.com:1330/;?type=http&nocache=1723445732"
+      "https://live.auralradiokerala.in/auralradio/mp3"
     ]
   },
   {
@@ -995,8 +979,7 @@ window.STATIONS = [
     "name": "Devotional Radio",
     "category": "devotional",
     "streams": [
-      "https://stream.zeno.fm/x7mve2vt01zuv",
-      "https://stream.zeno.fm/zkqsxrd1h2zuv"
+      "https://stream.zeno.fm/x7mve2vt01zuv"
     ]
   },
   {
@@ -1009,4 +992,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T18:55Z";
+window.STATIONS_CHECKED = "2026-10-22T05:37Z";

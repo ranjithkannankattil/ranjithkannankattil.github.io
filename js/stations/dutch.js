@@ -214,8 +214,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://classic.nl/streams/?s=main"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "538-top-50",
@@ -338,4 +337,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T18:55Z";
+window.STATIONS_CHECKED = "2026-10-22T05:37Z";

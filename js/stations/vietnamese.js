@@ -48,7 +48,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://gbw.ynradio.cn/radio/gjgb.stream/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "replay-news-tieng-viet-radio-tin-tuc-moi",
@@ -83,4 +84,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T18:55Z";
+window.STATIONS_CHECKED = "2026-10-22T05:37Z";

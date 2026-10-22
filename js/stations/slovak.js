@@ -168,7 +168,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream3.bestfm.sk:8000/128.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-vlna-60-70",
@@ -323,4 +324,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T18:55Z";
+window.STATIONS_CHECKED = "2026-10-22T05:37Z";

@@ -80,8 +80,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.wavespb.com/live/bad174fd7eac38d0/bad174fd7eac38d0.m3u8"
-    ],
-    "offline": true
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T18:55Z";
+window.STATIONS_CHECKED = "2026-10-22T05:37Z";

@@ -48,7 +48,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nova-radio.neterra.tv/veselinaretro"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "badrock-hard-heavy",
@@ -170,7 +171,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ssl120.radyotelekom.com.tr/8122/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "city-hiphop-rab",
@@ -325,4 +327,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T18:55Z";
+window.STATIONS_CHECKED = "2026-10-22T05:37Z";

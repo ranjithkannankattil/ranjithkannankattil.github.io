@@ -104,7 +104,8 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://broadcast.shoutcheap.com/proxy/alban/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-maria-albania-programi-per-amerike",
@@ -323,4 +324,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T18:55Z";
+window.STATIONS_CHECKED = "2026-10-22T05:37Z";

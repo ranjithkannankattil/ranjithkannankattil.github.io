@@ -220,8 +220,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://c2.auracast.net:8048/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "catalunya-radio",
@@ -237,7 +236,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ztnr.rtve.es/ztnr/1694255.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "esradio-principal",
@@ -328,4 +328,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-21T18:55Z";
+window.STATIONS_CHECKED = "2026-10-22T05:37Z";
