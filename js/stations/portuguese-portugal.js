@@ -205,7 +205,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8",
       "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "golofm",
@@ -278,7 +279,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR",
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rca-radio-clube-de-armamar",
@@ -336,6 +338,24 @@ window.STATIONS = [
       "https://stream-hls.bauermedia.pt/comercial.aac/playlist.m3u8"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "rdp-africa-portugal",
+    "name": "RDP Africa (Portugal)",
+    "category": "music",
+    "streams": [
+      "https://streaming-live.rtp.pt/liveradio/rdpafrica80a/playlist.m3u8"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "antena-1-acores-portugal",
+    "name": "Antena 1 Açores (Portugal)",
+    "category": "news",
+    "streams": [
+      "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

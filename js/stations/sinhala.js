@@ -16,8 +16,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://srv01.onlineradio.voaplus.com/siyathafm"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "y-fm",
@@ -140,6 +139,15 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/3PVRAAC.aac",
       "https://playerservices.streamtheworld.com/api/livestream-redirect/3PVR.mp3"
     ]
+  },
+  {
+    "id": "golden-maple-radio",
+    "name": "Golden Maple Radio",
+    "category": "music",
+    "streams": [
+      "https://s46.myradiostream.com:11156/listen.mp3"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

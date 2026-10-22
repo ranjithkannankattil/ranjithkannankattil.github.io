@@ -332,6 +332,33 @@ window.STATIONS = [
       "https://24503.live.streamtheworld.com/JBFMAAC_SC"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "radio-jb-fm-99-9",
+    "name": "Rádio JB FM 99.9",
+    "category": "music",
+    "streams": [
+      "https://26573.live.streamtheworld.com/JBFMAAC.aac?1771934687401"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "radio-motel",
+    "name": "Radio Motel",
+    "category": "music",
+    "streams": [
+      "https://usa11.fastcast4u.com/proxy/radiomotel?mp=/stream3#.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "99-5-fm-goiania-go",
+    "name": "99,5 FM Goiânia GO",
+    "category": "music",
+    "streams": [
+      "https://ssl.zoeweb.net/proxy/serradourada?mp=/stream"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

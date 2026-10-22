@@ -321,6 +321,15 @@ window.STATIONS = [
     "streams": [
       "https://radio.musorok.org/listen/jazzygroove/jazzygroove.mp3"
     ]
+  },
+  {
+    "id": "klubradio",
+    "name": "Klubrádió",
+    "category": "news",
+    "streams": [
+      "https://hu-stream03.klubradio.hu:8443/bpstream"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

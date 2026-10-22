@@ -68,6 +68,15 @@ window.STATIONS = [
       "https://radio.fdvi.org/live"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "alefamusic",
+    "name": "Alefamusic",
+    "category": "music",
+    "streams": [
+      "https://www.radioking.com/play/alefamusic"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

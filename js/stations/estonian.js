@@ -351,6 +351,33 @@ window.STATIONS = [
       "https://ice.leviracloud.eu/phr96-aac?"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "ida-radio",
+    "name": "IDA Radio",
+    "category": "music",
+    "streams": [
+      "https://broadcast.idaidaida.net:8000/stream"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "legendaarne-raadio",
+    "name": "Legendaarne Raadio",
+    "category": "music",
+    "streams": [
+      "https://stream.skymedia.ee/live/Legendaarne"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "r2altpop",
+    "name": "R2Altpop",
+    "category": "music",
+    "streams": [
+      "https://icecast.err.ee/r2alternatiiv.opus"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

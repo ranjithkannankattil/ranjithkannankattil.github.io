@@ -331,6 +331,33 @@ window.STATIONS = [
       "https://cast.brg.ua/powerfm_main_public_mp3_hq"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "avtoradio",
+    "name": "Avtoradio",
+    "category": "music",
+    "streams": [
+      "https://cast.mediaonline.net.ua/avtoradio"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "station-3",
+    "name": "Слобожанське ФМ",
+    "category": "news",
+    "streams": [
+      "https://globalic.stream:1810/stream"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "lounge-fm",
+    "name": "Lounge FM",
+    "category": "music",
+    "streams": [
+      "https://cast.mediaonline.net.ua/loungefm320"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

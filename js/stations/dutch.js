@@ -362,6 +362,33 @@ window.STATIONS = [
       "https://stream.realhardstyle.nl/"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "klara-continuo",
+    "name": "Klara Continuo",
+    "category": "music",
+    "streams": [
+      "https://icecast.vrtcdn.be/klaracontinuo-high.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "sky-radio-lounge",
+    "name": "Sky Radio Lounge",
+    "category": "music",
+    "streams": [
+      "https://28983.live.streamtheworld.com/SRGSTR07AAC_SC"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "veronica-rock-radio",
+    "name": "Veronica Rock Radio",
+    "category": "music",
+    "streams": [
+      "https://21223.live.streamtheworld.com/VERONICAAAC.aac"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

@@ -332,7 +332,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.localstreamgh.com/listen/ahenfie_radio_/radio.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "sompa-106-5fm-accra",
@@ -342,6 +343,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/55sg1lh4pqquv"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "akomapa-fm",
+    "name": "Akomapa FM",
+    "category": "devotional",
+    "streams": [
+      "https://stream.streamgenial.stream/cxxs2usduv8uv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "fruitful-radio",
+    "name": "Fruitful Radio",
+    "category": "devotional",
+    "streams": [
+      "https://stream.zeno.fm/zavpry0xx7zuv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "jet-radio-online",
+    "name": "Jet Radio Online",
+    "category": "news",
+    "streams": [
+      "https://stream.zeno.fm/9564yrw5v2quv"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

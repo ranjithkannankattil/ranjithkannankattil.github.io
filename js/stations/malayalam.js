@@ -253,8 +253,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/58390a2ed33cea4a/58390a2ed33cea4a.m3u8"
     ],
-    "akv": "Akashvani Manjeri",
-    "offline": true
+    "akv": "Akashvani Manjeri"
   },
   {
     "id": "akashvanithrissur",
@@ -1018,6 +1017,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/4yfsm0d8n98uv"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "london-malayalam-radio",
+    "name": "London Malayalam Radio",
+    "category": "online",
+    "streams": [
+      "https://ais-edge105-live365-dal02.cdnstream.com/a50671"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "ananthapuri-fm",
+    "name": "Ananthapuri FM",
+    "category": "fm",
+    "streams": [
+      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio229/chunklist.m3u8"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "vividh-bharati-thiruvananthapuram",
+    "name": "Vividh Bharati Thiruvananthapuram",
+    "category": "online",
+    "streams": [
+      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/playlist.m3u8"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

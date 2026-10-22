@@ -8,8 +8,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.wavespb.com/live/0beac8e921bbfdbb/0beac8e921bbfdbb.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "svbc-ttd-radio",
@@ -73,8 +72,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.wavespb.com/live/3a02c5c035815bb9/3a02c5c035815bb9.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "fm-rainbow-vijayawada",
@@ -101,6 +99,33 @@ window.STATIONS = [
       "https://radio.wavespb.com/live/5d9989b5189a8f4a/5d9989b5189a8f4a.m3u8"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "akashvani-tirupati",
+    "name": "Akashvani Tirupati",
+    "category": "news",
+    "streams": [
+      "https://radio.wavespb.com/live/1119aa26b4e9f653/1119aa26b4e9f653.m3u8"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "fm-rainbow-visakhapatnam",
+    "name": "FM Rainbow Visakhapatnam",
+    "category": "music",
+    "streams": [
+      "https://radio.wavespb.com/live/147314c8aedf4389/147314c8aedf4389.m3u8"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "live-fm",
+    "name": "Live FM",
+    "category": "music",
+    "streams": [
+      "https://stream.aiir.com/dbv0rxpwp6ytv"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

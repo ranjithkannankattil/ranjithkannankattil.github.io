@@ -177,7 +177,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://antares.dribbcast.com/proxy/jpop?mp=/s"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "neuro-21-station",
@@ -323,6 +324,15 @@ window.STATIONS = [
     "streams": [
       "https://vrc.gate.vrtv.jp/live?p=g&u=d"
     ]
+  },
+  {
+    "id": "vr-soundscape-tv",
+    "name": "VR Soundscape TV",
+    "category": "music",
+    "streams": [
+      "https://stream.vrstv.jp/"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

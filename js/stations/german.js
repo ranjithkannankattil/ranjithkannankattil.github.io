@@ -328,6 +328,33 @@ window.STATIONS = [
     "streams": [
       "https://0nlineradio.radioho.st/0r-90s?ref=radio-browser26"
     ]
+  },
+  {
+    "id": "bigfm-deutschland",
+    "name": "bigFM Deutschland",
+    "category": "news",
+    "streams": [
+      "https://stream.bigfm.de/deutschland/mp3-128/radio-browser"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "orf-hitradio-o3",
+    "name": "ORF Hitradio Ö3",
+    "category": "music",
+    "streams": [
+      "https://ors-sn03.ors-shoutcast.at/oe3-q1a"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "kontrafunk",
+    "name": "Kontrafunk",
+    "category": "news",
+    "streams": [
+      "https://icecast.multhielemedia.de/listen/kontrafunk/radio.mp3"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

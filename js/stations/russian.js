@@ -321,6 +321,33 @@ window.STATIONS = [
     "streams": [
       "https://radio7server.streamr.ru:8040/radio7256.mp3"
     ]
+  },
+  {
+    "id": "autolife-radio-azerbaijan",
+    "name": "AutoLife Radio Azerbaijan",
+    "category": "music",
+    "streams": [
+      "https://radio.autoliferadio.com:8090/radio"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "98-9-fm",
+    "name": "Русское радио Минск 98.9 FM",
+    "category": "music",
+    "streams": [
+      "https://stream.rusradio.by:8443/live128"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "breaking-bass-air",
+    "name": "Breaking Bass Air",
+    "category": "music",
+    "streams": [
+      "https://aircast.breaking-bass.ru:8443/air"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

@@ -57,7 +57,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qingting.fm/live/4915/64k.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-6",
@@ -121,7 +122,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play-radio-stream3.hndt.com/now/WUBA5hW2/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-10",
@@ -322,6 +324,15 @@ window.STATIONS = [
     "streams": [
       "https://stream.ginnet.cloud/live0130lo-yfyo/_definst_/am/playlist.m3u8"
     ]
+  },
+  {
+    "id": "station-25",
+    "name": "自由亚洲",
+    "category": "news",
+    "streams": [
+      "https://stream-283.surfernetwork.com/ub3pfplpqbktv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ1YjNwZnBscHFia3R2IiwiaG9zdCI6InN0cmVhbS0yODMuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6ImlsOUFTUmtQVFdhYWk1djdfWVlRaEEiLCJpYXQiOjE3OTI2Mjc4NjgsImV4cCI6MTc5MjYyNzkyOH0.oKPznil7Y4HglIxaCRPYcSJgKjzJsHLS4TXEugkAtpw"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

@@ -323,6 +323,33 @@ window.STATIONS = [
     "streams": [
       "https://stream.damasradio.fm/radio"
     ]
+  },
+  {
+    "id": "radio-manarat",
+    "name": "Radio Manarat",
+    "category": "news",
+    "streams": [
+      "https://listen.radioking.com/radio/252934/stream/297385"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "fairuz",
+    "name": "Fairuz فيروز",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/xkhnk4vee18uv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "illizi",
+    "name": "Illizi اليزي",
+    "category": "news",
+    "streams": [
+      "https://webradio2.tda.dz:8001/Illizi_64K.mp3"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

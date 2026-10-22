@@ -352,6 +352,33 @@ window.STATIONS = [
       "https://stream.probroadcast.dk/guldjul"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "mix-fm",
+    "name": "Mix FM",
+    "category": "music",
+    "streams": [
+      "https://hello.citrus3.com:2020/stream/mixfm"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "limfjord-plus",
+    "name": "Limfjord Plus",
+    "category": "music",
+    "streams": [
+      "https://media.limfjordnetradio.dk/plus128"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "dr-p5-sjlland",
+    "name": "dr p5 sjælland",
+    "category": "music",
+    "streams": [
+      "https://live-icy.dr.dk/A19H_master2.mp3"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

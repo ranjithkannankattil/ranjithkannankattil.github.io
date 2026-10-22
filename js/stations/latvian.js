@@ -321,6 +321,15 @@ window.STATIONS = [
     "streams": [
       "https://muste.latvijasradio.lv/pieci/smil:k3.smil/playlist.m3u8"
     ]
+  },
+  {
+    "id": "hip-hop-strava",
+    "name": "Hip Hop Strāva",
+    "category": "music",
+    "streams": [
+      "https://muste.latvijasradio.lv/pieci/smil:k1.smil/playlist.m3u8"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

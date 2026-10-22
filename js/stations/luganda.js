@@ -229,6 +229,24 @@ window.STATIONS = [
       "https://cast5.my-control-panel.com/proxy/busogaroyalradio/stream"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "block-fm-103-2",
+    "name": "BLOCK FM 103.2",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/gxjhbloltwluv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "radio-sinza",
+    "name": "Radio Sinza",
+    "category": "devotional",
+    "streams": [
+      "https://stream.zeno.fm/raoopfak6k2vv"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

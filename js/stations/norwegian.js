@@ -353,6 +353,33 @@ window.STATIONS = [
       "https://live-nors.sharp-stream.com/nors13.mp3"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "nrk-p1",
+    "name": "NRK P1+",
+    "category": "music",
+    "streams": [
+      "https://nrk-live-radio-world.akamaized.net/p1pluss/muxed.m3u8?adap=audio&aco=aac"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "nrk-p1-vestfold",
+    "name": "NRK P1 Vestfold",
+    "category": "news",
+    "streams": [
+      "https://lyd.nrk.no/icecast/aac/high/s0w7hwn47m/p1_dk12"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "norsk-pop",
+    "name": "Norsk Pop",
+    "category": "music",
+    "streams": [
+      "https://live-bauerno.sharp-stream.com/norskpop_no_mp3"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

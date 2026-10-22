@@ -340,6 +340,33 @@ window.STATIONS = [
       "https://stream.idelta.es/listen/radio_joventut/stream"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "radio-ciutat-de-badalona",
+    "name": "Ràdio Ciutat de Badalona",
+    "category": "music",
+    "streams": [
+      "https://enacast.com/radiob/streams/HD"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "vilassar-radio",
+    "name": "VILASSAR RADIO",
+    "category": "music",
+    "streams": [
+      "https://relay.stream.enacast-cloud.com:40226/radiovilassardemarHD.mp3?us_privacy=1YNY56.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "formula-cat",
+    "name": "Fórmula CAT",
+    "category": "music",
+    "streams": [
+      "https://stream.rubostudio.es/listen/cat/radio.mp3"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

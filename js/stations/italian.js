@@ -291,6 +291,33 @@ window.STATIONS = [
       "https://radioitaliasmi.akamaized.net/hls/live/2093120/RISMI/stream01/streamPlaylist.m3u8"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "radio-dimensione-relax",
+    "name": "RADIO DIMENSIONE RELAX",
+    "category": "music",
+    "streams": [
+      "https://az1.mediacp.eu/listen/radiodimensionerelax/radio.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "r101-made-in-italy",
+    "name": "R101 Made in Italy",
+    "category": "music",
+    "streams": [
+      "https://icy.unitedradio.it/R101MadeInItaly.aac"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "nature-radio-sleep",
+    "name": "NATURE RADIO SLEEP",
+    "category": "music",
+    "streams": [
+      "https://az1.mediacp.eu/listen/natureradiosleep/radio.mp3"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

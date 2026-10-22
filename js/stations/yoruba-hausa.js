@@ -108,6 +108,24 @@ window.STATIONS = [
       "https://stream.zeno.fm/qvudrrg5tasvv"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "afrikana-radio-live-african",
+    "name": "Afrikana Radio – Live African",
+    "category": "music",
+    "streams": [
+      "https://radio.afrikanabestsounds.com/listen/live_african/radio.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "zuria-fm",
+    "name": "Zuria Fm",
+    "category": "news",
+    "streams": [
+      "https://atunwadigital.streamguys1.com/yfm1025kumasi"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

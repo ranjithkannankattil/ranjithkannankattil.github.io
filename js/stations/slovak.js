@@ -331,6 +331,24 @@ window.STATIONS = [
       "https://stream.subfm.sk/subfm"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "fun-radio-80-90",
+    "name": "Fun Radio 80&90",
+    "category": "music",
+    "streams": [
+      "https://stream.funradio.sk:8000/80-90-128.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "bb-fm-radio",
+    "name": "BB FM rádio",
+    "category": "music",
+    "streams": [
+      "https://stream.bbfm.sk/bbfm128.mp3"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

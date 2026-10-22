@@ -315,6 +315,33 @@ window.STATIONS = [
       "https://drive.uber.radio/uber/bollywoodshreyaghosal/icecast.audio"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "2b-radio-sangam-krishna",
+    "name": "2B! Radio Sangam Krishna",
+    "category": "devotional",
+    "streams": [
+      "https://millenniumhits.out.airtime.pro:8000/millenniumhits_a"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "mixify-bollywood",
+    "name": "Mixify Bollywood",
+    "category": "music",
+    "streams": [
+      "https://server.mixify.in/listen/listen/radio.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "bollywood-love",
+    "name": "Bollywood Love",
+    "category": "music",
+    "streams": [
+      "https://drive.uber.radio/uber/bollywoodlove/icecast.audio"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

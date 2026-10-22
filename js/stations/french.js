@@ -302,6 +302,33 @@ window.STATIONS = [
       "https://ice.creacast.com/radio-courtoisie"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "france-musique",
+    "name": "France Musique",
+    "category": "music",
+    "streams": [
+      "https://icecast.radiofrance.fr/francemusique-hifi.aac"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "radio-orient",
+    "name": "Radio Orient",
+    "category": "devotional",
+    "streams": [
+      "https://stream.rcs.revma.com/7hnrkawf4p8uv.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "rts-92-5-rsi",
+    "name": "RTS 92.5 RSI",
+    "category": "music",
+    "streams": [
+      "https://10gb1.acangroup.org:8000/rsi"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

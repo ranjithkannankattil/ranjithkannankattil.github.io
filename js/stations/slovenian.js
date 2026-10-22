@@ -258,6 +258,15 @@ window.STATIONS = [
     "streams": [
       "https://live.radio.si/Radio1VE"
     ]
+  },
+  {
+    "id": "radio-aktual",
+    "name": "Radio Aktual",
+    "category": "music",
+    "streams": [
+      "https://live.radio.si/Aktual"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

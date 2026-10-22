@@ -352,6 +352,33 @@ window.STATIONS = [
       "https://granada-copesedes-rrcast.flumotion.com/copesedes/granada-low.mp3"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "canal-fiesta-radio",
+    "name": "Canal Fiesta Radio",
+    "category": "music",
+    "streams": [
+      "https://rtva-live-radio.flumotion.com/rtva/cfr.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "80s-90s-absolute-hits",
+    "name": "80s 90s Absolute Hits",
+    "category": "music",
+    "streams": [
+      "https://live.streamthe.world/absolutehits"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "hit-fm",
+    "name": "Hit FM",
+    "category": "music",
+    "streams": [
+      "https://adhandler.kissfmradio.cires21.com/get_link?url=https://bbhitfm.kissfmradio.cires21.com/bbhitfm.mp3"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

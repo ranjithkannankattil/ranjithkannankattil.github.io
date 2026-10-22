@@ -229,7 +229,8 @@ window.STATIONS = [
     "streams": [
       "https://rogers-hls.leanstream.co/rogers/tor590.stream/playlist.m3u8"
     ],
-    "where": "Canada"
+    "where": "Canada",
+    "offline": true
   },
   {
     "id": "bloomberg-radio-boston",
@@ -278,6 +279,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "where": "US"
+  },
+  {
+    "id": "npr-24-hour-program-stream",
+    "name": "NPR 24 Hour Program Stream",
+    "category": "us",
+    "streams": [
+      "https://npr-ice.streamguys1.com/live.mp3"
+    ],
+    "added": "2026-10-22",
+    "where": "US"
+  },
+  {
+    "id": "walm-2",
+    "name": "WALM 2",
+    "category": "us",
+    "streams": [
+      "https://icecast.walmradio.com:8443/walm2_opus"
+    ],
+    "added": "2026-10-22",
+    "where": "US"
+  },
+  {
+    "id": "times-radio",
+    "name": "Times Radio",
+    "category": "uk",
+    "streams": [
+      "https://timesradio.wireless.radio/stream"
+    ],
+    "added": "2026-10-22",
+    "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

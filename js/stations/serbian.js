@@ -322,6 +322,24 @@ window.STATIONS = [
     "streams": [
       "https://streamer.radio.co/s34d2c17d8/listen"
     ]
+  },
+  {
+    "id": "kiss-fm",
+    "name": "Kiss FM",
+    "category": "music",
+    "streams": [
+      "https://cast2.my-control-panel.com/proxy/kissdoog/stream"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "naxi-clubbing-radio",
+    "name": "Naxi Clubbing Radio",
+    "category": "music",
+    "streams": [
+      "https://naxidigital-clubbing128ssl.streaming.rs:8092/;"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

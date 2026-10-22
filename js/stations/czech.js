@@ -332,6 +332,33 @@ window.STATIONS = [
       "https://ice.actve.net/fm-frekvence1-aac"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "hvezda",
+    "name": "Hvězda",
+    "category": "music",
+    "streams": [
+      "https://hls.hvezda.info/session01/128k/s.m3u8"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "express-fm",
+    "name": "Express FM",
+    "category": "music",
+    "streams": [
+      "https://icecast8.play.cz/expres128mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "cesky-rozhlas-hradec-kralove",
+    "name": "Český rozhlas Hradec Králové",
+    "category": "music",
+    "streams": [
+      "https://rozhlas.stream/hradec_kralove.mp3"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

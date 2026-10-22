@@ -321,6 +321,15 @@ window.STATIONS = [
     "streams": [
       "https://petrecere.radiotequila.ro/7000/stream"
     ]
+  },
+  {
+    "id": "radio-roks-moldova",
+    "name": "Radio ROKS Moldova",
+    "category": "music",
+    "streams": [
+      "https://stream.dixi.md:9443/Roks"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

@@ -332,6 +332,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/tmgktm50dzzuv"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "tamil-2021-latest-hits",
+    "name": "Tamil 2021 Latest Hits",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/dkxftg6k7tzuv.aac"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "chillax-fm",
+    "name": "Chillax FM",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/ohhsihm2byluv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "radio-suno-tamil",
+    "name": "Radio Suno Tamil",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_SUNO_TAMIL_S01.mp3"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

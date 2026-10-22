@@ -331,6 +331,33 @@ window.STATIONS = [
       "https://cast2.radiovoima.fi/voima.mp3"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "radio-helsinki",
+    "name": "Radio Helsinki",
+    "category": "news",
+    "streams": [
+      "https://stream.radiohelsinki.fi/stream"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "radio-city-kiekkoradio",
+    "name": "Radio City Kiekkoradio",
+    "category": "music",
+    "streams": [
+      "https://wr2.downtime.fi/kiekko.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "sveriges-radio-sr-sisuradio",
+    "name": "Sveriges Radio - SR Sisuradio",
+    "category": "news",
+    "streams": [
+      "https://live1.sr.se/finska-aac-320"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

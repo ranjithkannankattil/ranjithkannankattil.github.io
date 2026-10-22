@@ -325,6 +325,33 @@ window.STATIONS = [
     "streams": [
       "https://g5.turbohost.eu/proxy/romantic/stream"
     ]
+  },
+  {
+    "id": "jazz-fm",
+    "name": "Jazz FM",
+    "category": "music",
+    "streams": [
+      "https://cdn.bweb.bg/radio/jazz-fm.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "n-joy-bg",
+    "name": "N-Joy BG",
+    "category": "music",
+    "streams": [
+      "https://cdn.bweb.bg/radio/njoy.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "metro-hits-radio",
+    "name": "Metro HITS Radio",
+    "category": "news",
+    "streams": [
+      "https://eu1.reliastream.com/proxy/mhr?mp=/MHR"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

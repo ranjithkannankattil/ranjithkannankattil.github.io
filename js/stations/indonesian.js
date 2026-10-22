@@ -184,8 +184,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://a3.alhastream.com:4010/radio"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "suara-soneta",
@@ -333,6 +332,33 @@ window.STATIONS = [
       "https://moshhead-blackmetal.stream.laut.fm/moshhead-blackmetal"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "alternatif-radio-jakarta",
+    "name": "Alternatif radio jakarta",
+    "category": "music",
+    "streams": [
+      "https://void.idserverhost.com/8016/stream"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "pejuang-kopi",
+    "name": "Pejuang Kopi",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/sthgzynfcd0uv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "koplo-fm",
+    "name": "Koplo FM",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/uvlmugvqrnkvv"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

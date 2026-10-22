@@ -39,9 +39,9 @@ window.STATIONS = [
     "name": "Win Radio Davao",
     "category": "music",
     "streams": [
+      "https://stream-42.zeno.fm/1noxhem5qpkuv",
       "https://stream.zeno.fm/1noxhem5qpkuv"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "imix-radio",
@@ -325,6 +325,15 @@ window.STATIONS = [
     "streams": [
       "https://streamnavs.net:8133/live"
     ]
+  },
+  {
+    "id": "rmn-dyri-iloilo",
+    "name": "RMN DYRI Iloilo",
+    "category": "news",
+    "streams": [
+      "https://us1.amfmph.com/ssl/rmniloilo?mp=/stream"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

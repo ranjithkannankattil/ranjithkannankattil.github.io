@@ -350,6 +350,33 @@ window.STATIONS = [
       "https://live.kcm.fm/livemusic"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "station-6",
+    "name": "ברסלב פוריו: ספרי ברסלב",
+    "category": "music",
+    "streams": [
+      "https://cast.breslevforyou.co.il/listen/books/radio.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "ivri-6",
+    "name": "Ivri 6",
+    "category": "music",
+    "streams": [
+      "https://streaming.radio.co/sa06221901/listen"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "kinshasa-fm",
+    "name": "Kinshasa FM",
+    "category": "music",
+    "streams": [
+      "https://radio.kinshasafm.xyz/listen/kinshasafm/radio.mp3"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

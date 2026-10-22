@@ -323,6 +323,33 @@ window.STATIONS = [
       "https://canelaradio.makrodigital.com/stream/canelaradioguayaquil"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "blu-radio-senal-nacional",
+    "name": "Blu Radio, señal nacional",
+    "category": "news",
+    "streams": [
+      "https://27403.live.streamtheworld.com/BLURADIO_SC"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "caracol-radio-colombia",
+    "name": "Caracol Radio Colombia",
+    "category": "news",
+    "streams": [
+      "https://24253.live.streamtheworld.com/CARACOL_RADIOAAC_SC"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "jesus-is-lord-radio",
+    "name": "JESUS IS LORD Radio",
+    "category": "devotional",
+    "streams": [
+      "https://s3.radio.co/s97f38db97/listen"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

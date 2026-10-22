@@ -96,7 +96,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://1603884249.rsc.cdn77.org/1603884249/index.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "fm94-7",
@@ -332,6 +333,33 @@ window.STATIONS = [
       "https://das-edge11-live365-dal03.cdnstream.com/a57743_2"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "sound-of-hope-australia-cantonese",
+    "name": "Sound of Hope Australia Cantonese",
+    "category": "music",
+    "streams": [
+      "https://sohcan.out.airtime.pro:8000/sohcan_a"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "946",
+    "name": "佛山电台真爱946",
+    "category": "news",
+    "streams": [
+      "https://radiopull.radiofoshan.com.cn/live/1400389414_BSID_46_audio.m3u8"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "station-23",
+    "name": "香港電台第八台",
+    "category": "music",
+    "streams": [
+      "https://rthkradiocmgrgb-live.akamaized.net/hls/live/2046112/radiocmgrgb/index_64_a.m3u8"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

@@ -178,7 +178,8 @@ window.STATIONS = [
     "streams": [
       "https://us5new.listen2myradio.com:2199/listen.php?port=8138&type=ice&mount=stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "heavenly-altar-church-radio-kampala",
@@ -188,6 +189,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/6s8719ctbphvv"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "nakawa-online-radio-kampala",
+    "name": "Nakawa Online Radio - Kampala",
+    "category": "devotional",
+    "streams": [
+      "https://stream.zeno.fm/6hs5suuvqfhvv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "sanctuary-fm-kampala",
+    "name": "Sanctuary FM - Kampala",
+    "category": "devotional",
+    "streams": [
+      "https://stream.zeno.fm/vyx334hsbphvv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "rfi-kiswahili",
+    "name": "RFI Kiswahili",
+    "category": "news",
+    "streams": [
+      "https://rfiswahili96k.ice.infomaniak.ch/rfiswahili-96k.mp3"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

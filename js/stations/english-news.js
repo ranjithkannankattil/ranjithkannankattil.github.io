@@ -210,6 +210,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "where": "UK"
+  },
+  {
+    "id": "bbc-radio-5-live",
+    "name": "BBC Radio 5 Live",
+    "category": "uk",
+    "streams": [
+      "https://as-hls-ww-live.akamaized.net/pool_89021708/live/ww/bbc_radio_five_live/bbc_radio_five_live.isml/bbc_radio_five_live-audio%3d128000.norewind.m3u8"
+    ],
+    "added": "2026-10-22",
+    "where": "UK"
+  },
+  {
+    "id": "bbc-live-news",
+    "name": "BBC Live News",
+    "category": "uk",
+    "streams": [
+      "https://as-hls-ww-live.akamaized.net/pool_53367543/live/ww/bbc_sounds_news/bbc_sounds_news.isml/bbc_sounds_news-audio%3d128000.norewind.m3u8"
+    ],
+    "added": "2026-10-22",
+    "where": "UK"
+  },
+  {
+    "id": "rte1",
+    "name": "RTE1",
+    "category": "uk",
+    "streams": [
+      "https://icecast.rte.ie/radio1"
+    ],
+    "added": "2026-10-22",
+    "where": "Ireland"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

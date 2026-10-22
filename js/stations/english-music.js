@@ -336,6 +336,36 @@ window.STATIONS = [
       "https://ice2.somafm.com/reggae-256-mp3"
     ],
     "where": "US"
+  },
+  {
+    "id": "walm-2-hd",
+    "name": "WALM 2 HD",
+    "category": "classical",
+    "streams": [
+      "https://icecast.walmradio.com:8443/walm2"
+    ],
+    "added": "2026-10-22",
+    "where": "US"
+  },
+  {
+    "id": "walm-2",
+    "name": "WALM 2",
+    "category": "classical",
+    "streams": [
+      "https://icecast.walmradio.com:8443/walm2_opus"
+    ],
+    "added": "2026-10-22",
+    "where": "US"
+  },
+  {
+    "id": "bbc-radio-2",
+    "name": "BBC Radio 2",
+    "category": "pop",
+    "streams": [
+      "https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/pc_hd_abr_v2/cf/bbc_radio_two.m3u8"
+    ],
+    "added": "2026-10-22",
+    "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

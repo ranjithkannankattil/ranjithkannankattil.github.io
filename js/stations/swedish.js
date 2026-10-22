@@ -330,6 +330,15 @@ window.STATIONS = [
     "streams": [
       "https://live1.sr.se/dingata-aac-320"
     ]
+  },
+  {
+    "id": "nrj",
+    "name": "NRJ",
+    "category": "music",
+    "streams": [
+      "https://live-bauerse-fm.sharp-stream.com/nrj_instreamtest_se_mp3"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

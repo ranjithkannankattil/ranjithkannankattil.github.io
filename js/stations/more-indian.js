@@ -76,6 +76,15 @@ window.STATIONS = [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio072/playlist.m3u8"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "air-kolhapur",
+    "name": "AIR Kolhapur",
+    "category": "news",
+    "streams": [
+      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio063/playlist.m3u8"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

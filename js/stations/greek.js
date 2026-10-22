@@ -349,6 +349,33 @@ window.STATIONS = [
       "https://netradio.live24.gr/laikos876"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "balkan-radio",
+    "name": "Balkan Radio",
+    "category": "music",
+    "streams": [
+      "https://samcloud.spacial.com/api/listen?sid=99064&m=sc&rid=175019&t=ssl"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "galaxy-92",
+    "name": "Galaxy 92",
+    "category": "music",
+    "streams": [
+      "https://netradio.live24.gr/galaxy9292"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "station-4",
+    "name": "ΕΡΤ Πρώτο Πρόγραμμα",
+    "category": "music",
+    "streams": [
+      "https://radiostreaming.ert.gr/ert-proto"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";

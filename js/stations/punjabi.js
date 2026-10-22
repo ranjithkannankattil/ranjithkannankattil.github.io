@@ -230,6 +230,33 @@ window.STATIONS = [
       "https://stream.zenolive.com/4mbfcn4mf24tv"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "live-fm",
+    "name": "Live FM",
+    "category": "music",
+    "streams": [
+      "https://stream.aiir.com/dbv0rxpwp6ytv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "red-fm",
+    "name": "RED FM",
+    "category": "music",
+    "streams": [
+      "https://ice24.securenetsystems.net/CKYE?playSessionID=FEC6C3A5-AAAF-839F-F4F9CC684849AEA6"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "live-gurbani-sri-darbar-sahib-sgpc",
+    "name": "Live Gurbani - Sri Darbar Sahib (SGPC)",
+    "category": "devotional",
+    "streams": [
+      "https://live.sgpc.net:8443/;stream.mp3"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T06:55Z";
+window.STATIONS_CHECKED = "2026-10-22T07:12Z";
