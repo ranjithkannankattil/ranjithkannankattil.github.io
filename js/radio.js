@@ -7,6 +7,7 @@
   const $ = (s) => document.querySelector(s);
   const grid = $("#grid"), chips = $("#chips"), q = $("#q"), audio = $("#audio");
   const player = $("#player"), playBtn = $("#playBtn"), npFav = $("#npFav");
+  let lastSwitch = 0;   // when the station last changed (a cast speaker sometimes lets go then)
 
   const store = {
     get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch { return d; } },
@@ -244,7 +245,13 @@
   window.RadioApp = { getFavs: () => [...favs], getDefault: () => getDefault() };
 
   // ---------------------------------------------------------- player
-  function status(t) { $("#npStatus").textContent = t; }
+  // a held message (e.g. about casting) is not overwritten by connection updates for a few seconds
+  let holdUntil = 0;
+  function status(t, hold) {
+    if (!hold && Date.now() < holdUntil) return;
+    holdUntil = hold ? Date.now() + hold : 0;
+    $("#npStatus").textContent = t;
+  }
   function setState(st) {
     player.classList.toggle("playing", st === "playing");
     player.classList.toggle("loading", st === "loading");
@@ -306,7 +313,7 @@
 
   function play(s, list, cId = col.id, dir = 0) {
     queue = list || (cId === (col && col.id) ? visibleList() : [s]);
-    current = s; currentCol = cId; tryIndex = 0;
+    current = s; currentCol = cId; tryIndex = 0; lastSwitch = Date.now();
     everPlayed = false; retries = 0; skipDir = dir;
     if (!dir) autoSkips = 0;
     store.set("mr-last2", { c: cId, s }); store.set("mr-closed", false);
@@ -390,6 +397,36 @@
   // ---- sleep timer: tap the Sleep button, pick how long; the radio fades out over the last
   // 20 seconds and stops. The button shows the time left (e.g. "28 min").
   let sleepAt = 0, sleepTick = null, sleepPick = 0;
+  // ---- play on a speaker or TV: Remote Playback (Chrome → Chromecast / Nest) or AirPlay (Safari)
+  const castBtn = $("#castBtn"), castLab = $("#castLab");
+  let casting = false;
+  function castState(on, label) {
+    casting = on;
+    castBtn.classList.toggle("on", on);
+    castBtn.setAttribute("aria-pressed", on);
+    castLab.textContent = label || (on ? "Casting" : "Cast");
+    castBtn.title = on ? "Playing on a speaker or TV. Tap to change or stop." : "Play on a speaker or TV";
+  }
+  if (audio.remote && audio.remote.watchAvailability) {
+    const r = audio.remote;
+    // some phones can't watch for devices in the background; the picker still works there
+    r.watchAvailability((avail) => { castBtn.hidden = !avail && !casting; }).catch(() => { castBtn.hidden = false; });
+    r.addEventListener("connecting", () => castState(false, "Connecting…"));
+    r.addEventListener("connect", () => castState(true));
+    r.addEventListener("disconnect", () => {
+      const was = casting;
+      castState(false);
+      if (was && Date.now() - lastSwitch < 8000) status("The speaker let go when the station changed. Tap cast again.", 6000);
+    });
+    castBtn.onclick = () => r.prompt().catch((e) => {
+      if (e.name === "NotSupportedError") status("This station can't be cast. Try another, or a Bluetooth speaker.", 6000);
+    });
+  } else if (window.WebKitPlaybackTargetAvailabilityEvent) {
+    audio.addEventListener("webkitplaybacktargetavailabilitychanged", (e) => { castBtn.hidden = e.availability !== "available"; });
+    audio.addEventListener("webkitcurrentplaybacktargetiswirelesschanged", () => castState(!!audio.webkitCurrentPlaybackTargetIsWireless));
+    castBtn.onclick = () => audio.webkitShowPlaybackTargetPicker();
+  }
+
   const sleepBtn = $("#sleepBtn"), sleepMenu = $("#sleepMenu"), sleepLab = $("#sleepLab");
   const minsLeft = () => Math.max(1, Math.ceil((sleepAt - Date.now()) / 60000));
   const nice = (m) => (m >= 60 ? `${Math.floor(m / 60)} h${m % 60 ? " " + (m % 60) + " min" : ""}` : `${m} min`);

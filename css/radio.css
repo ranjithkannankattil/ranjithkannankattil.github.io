@@ -167,6 +167,12 @@ body[data-section="radio"] .acct-out:hover{ color:var(--ink); }
 
 
 /* sleep timer: labelled button + choice menu */
+body[data-section="radio"] .np-cast{ display:flex; align-items:center; gap:.4rem; height:40px; padding:0 .75rem 0 .6rem; border-radius:999px; border:1px solid rgba(240,237,230,.28); color:var(--paper); white-space:nowrap; }
+body[data-section="radio"] .np-cast[hidden]{ display:none; }
+.np-cast svg{ width:17px; height:17px; flex:none; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+.np-cast svg circle{ fill:currentColor; stroke:none; }
+.np-cast .lab{ font-family:var(--f-mono); font-size:.72rem; letter-spacing:.04em; }
+body[data-section="radio"] .np-cast.on{ color:#E8C07A; border-color:#E8C07A; background:rgba(232,192,122,.12); }
 body[data-section="radio"] .np-sleep{ display:flex; align-items:center; gap:.4rem; height:40px; padding:0 .75rem 0 .6rem; border-radius:999px; border:1px solid rgba(240,237,230,.28); color:var(--paper); white-space:nowrap; }
 .np-sleep svg{ width:16px; height:16px; flex:none; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linejoin:round; }
 .np-sleep .lab{ font-family:var(--f-mono); font-size:.72rem; letter-spacing:.04em; }
@@ -216,7 +222,7 @@ body[data-section="radio"] .rp.on{ border-color:var(--accent); background:var(--
   .np-skip svg{ width:24px; height:24px; }
   .np-play{ width:60px; height:60px; }
   .np-play svg{ width:24px; height:24px; }
-  body[data-section="radio"] .np-sleep{ height:48px; padding:0 .85rem 0 .7rem; }
+  body[data-section="radio"] .np-sleep, body[data-section="radio"] .np-cast{ height:48px; padding:0 .85rem 0 .7rem; }
   .np-sleep .lab{ font-size:.78rem; }
   .sleep-menu{ left:.75rem; right:.75rem; width:auto; }
 }
