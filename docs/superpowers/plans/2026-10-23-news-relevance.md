@@ -169,7 +169,7 @@ def test_both_places_named_kept():
 **Interfaces:**
 - Produces:
   - `build_around(own: dict[str, list], parent_news: dict[str, list], parent_id: str, langs: list[str], cap: int = 8) -> dict | None`. It returns `{"from": parent_id, "news": {lang: [...]}}` holding, for each language where `len(own.get(lang, [])) < 5`, up to `cap` parent stories whose `u` is not among the own stories' URLs. It returns `None` if no language gets any stories.
-  - `doc["around"]` is set only when this is not `None`. The stories pass through the existing `clean()`. Only region and city places with a parent get it.
+  - The parent is `LOCAL_FROM.get(pid, p["parent"])`, so Kodungallur draws on Thrissur, not Kerala. `doc["around"]` is set only when this is not `None`; the stories pass through the existing `clean()`. Only region and city places get it.
   - `report.txt` gains a final `Thin places:` section listing `pid lang own N around M` for every list still under 5.
 
 - [ ] **Step 1: Write failing tests:**
@@ -188,7 +188,7 @@ def test_both_places_named_kept():
 
 **Interfaces:**
 - Consumes: `data.around = {from, news: {lang: [story]}}` (Task 6). It may be absent.
-- Produces: for the current language, when there is no topic and `data.around?.news?.[l]?.length`, a `<div class="around">` holding the heading `Around ${p.name} — from ${parentName}` (parentName from `index.places`, where the parent's `kind` of `region` adds " district" for an Indian region with an Indian city child, otherwise the name alone) and then the stories via `storyEl(s, false, false)`. With nothing to show, no element at all.
+- Produces: for the current language, when there is no topic and `data.around?.news?.[l]?.length`, a `<div class="around">` holding the heading `Around ${p.name} — from ${parentName}` (parentName = the name in `index.places` of `around.from`) and then the stories via `storyEl(s, false, false)`. With nothing to show, no element at all.
 
 - [ ] **Step 1: Write the check.** Under `scripts/`, add a Playwright script `check_news_around.mjs` that serves the repo, fulfils `raw.githubusercontent.com/**/news-data/**` with fixture JSON (one place with `around`, one without), opens `news.html?p=kodungallur`, and asserts that `.around` exists with the heading text and 2 stories. For a place without `around` it asserts `.around` count is 0.
 - [ ] **Step 2: Run it to see it fail:** `NODE_PATH=/opt/node-tools/node_modules node scripts/check_news_around.mjs` → assertion fails (no `.around`).
