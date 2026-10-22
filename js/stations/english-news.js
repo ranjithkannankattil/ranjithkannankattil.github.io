@@ -210,26 +210,6 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "where": "UK"
-  },
-  {
-    "id": "100-best-ibiza-deep-house",
-    "name": "#100 BEST IBIZA DEEP HOUSE",
-    "category": "canada",
-    "streams": [
-      "https://stream.zeno.fm/lwv6zqgtv1dtv"
-    ],
-    "added": "2026-10-22",
-    "where": "Canada"
-  },
-  {
-    "id": "50s-60s-retro-hits",
-    "name": "50s 60s RETRO HITS",
-    "category": "world",
-    "streams": [
-      "https://stream.zeno.fm/pxzwykxbluitv"
-    ],
-    "added": "2026-10-22",
-    "where": "Italy"
   }
 ];
 window.STATIONS_CHECKED = "2026-10-22T06:55Z";

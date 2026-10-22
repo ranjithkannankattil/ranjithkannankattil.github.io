@@ -328,33 +328,6 @@ window.STATIONS = [
     "streams": [
       "https://0nlineradio.radioho.st/0r-90s?ref=radio-browser26"
     ]
-  },
-  {
-    "id": "0r-piano-jazz-lounge-jazz-piano-lounge-s",
-    "name": "0R - PIANO JAZZ LOUNGE · · Jazz, Piano, Lounge, Smooth, Chill, Relax, Soft, Acoustic, Instrumental, Evening, Romantic, Background, Coffee, Mellow, Elegant",
-    "category": "music",
-    "streams": [
-      "https://0nlineradio.radioho.st/lounge-piano-jazz-bar?ref=radio-browser26"
-    ],
-    "added": "2026-10-22"
-  },
-  {
-    "id": "neuerscheinungen-radio-charts-dj-charts-",
-    "name": "NEUERSCHEINUNGEN - Radio Charts - DJ Charts - Club Charts - Top 100 - Top 40 Club - Pop, Hip-Hop, Dance, EDM, House, Techno, R&B, Trap, Reggaeton, Afrobeat, Indie-Pop, Tropical House, Future Bass, Electro Swing, Synthwave, Deep House, Progressive House, Vocal House, DJ Sets, Remix, Mashup, Dancefloor, Festival-Hits, Club-Hits, Nightlife, Underground.",
-    "category": "music",
-    "streams": [
-      "https://breakz-high.rautemusik.fm/?ref=rb-neuerscheinungen"
-    ],
-    "added": "2026-10-22"
-  },
-  {
-    "id": "0r-coffee-lounge-background-music-jazz-l",
-    "name": "0R - COFFEE LOUNGE · · Background Music, Jazz, Lounge, Chill, Smooth, Acoustic, Soft Pop, Easy Listening, Relax, Cafe, Background, Mellow, Evening, Instrumental, Romantic, Soft Jazz",
-    "category": "music",
-    "streams": [
-      "https://0nlineradio.radioho.st/lounge-coffee-bar-lounge?ref=radio-browser26"
-    ],
-    "added": "2026-10-22"
   }
 ];
 window.STATIONS_CHECKED = "2026-10-22T06:55Z";

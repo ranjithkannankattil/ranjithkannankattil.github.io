@@ -336,36 +336,6 @@ window.STATIONS = [
       "https://ice2.somafm.com/reggae-256-mp3"
     ],
     "where": "US"
-  },
-  {
-    "id": "radio-armisa",
-    "name": "Radio Armisa",
-    "category": "country",
-    "streams": [
-      "https://onair.armisa.it/listen/armisa/radio.mp3"
-    ],
-    "added": "2026-10-22",
-    "where": "Italy"
-  },
-  {
-    "id": "top-100-club-charts-dance-dj-mix-radio-2",
-    "name": "# TOP 100 CLUB CHARTS - DANCE & DJ MIX RADIO - 24 HOURS NON-STOP MUSIC @ TikTok Hits, Ibiza House, Sunset Lounge, Melodic Music, EDM, Deep House, Dance Music, Techno & Hypertechno, Rave Charts, Top 40 Charts, Latin, Reggaeton Music, Moombahton, Urban Hits, HipHop, Party & Clubbing Radio, Trending Chartmusic, R&B, Urban, Mixtape - & LIVE DJ SET",
-    "category": "jazz",
-    "streams": [
-      "https://breakz-2012-high.rautemusik.fm/?ref=radiobrowser-top100-clubcharts"
-    ],
-    "added": "2026-10-22",
-    "where": "Germany"
-  },
-  {
-    "id": "walm-2-hd",
-    "name": "WALM 2 HD",
-    "category": "classical",
-    "streams": [
-      "https://icecast.walmradio.com:8443/walm2"
-    ],
-    "added": "2026-10-22",
-    "where": "US"
   }
 ];
 window.STATIONS_CHECKED = "2026-10-22T06:55Z";

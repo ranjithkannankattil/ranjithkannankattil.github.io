@@ -22,6 +22,21 @@ GENRES = [("rock", r"rock|metal|punk|grunge|alternative|indie"), ("jazz", r"jazz
           ("country", r"country|bluegrass|americana|folk"), ("pop", r"pop|hits|top 40|chart|dance|80s|90s|oldies|adult contemporary")]
 
 
+# state propaganda and mislabelled foreign services that the directory files under other languages
+PROPAGANDA = re.compile(r"pyongyang|voice of korea|\bkcbs\b|sputnik|russia today|\brt (news|radio)\b|rfi russia|radio rossii|vesti fm", re.I)
+MUSIC_WORDS = re.compile(r"\b(house|deep|dance|hits|retro|oldies|50s|60s|70s|80s|90s|lounge|chill|edm|techno|trance|music|mix|charts?|remix|beats|jazz|rock|pop)\b", re.I)
+
+
+def sane_name(name: str) -> bool:
+    """Real station names, not keyword-stuffed listings ("# TOP 100 CLUB CHARTS - … @ TikTok Hits, Ibiza…")."""
+    if len(name) > 48 or name.count(",") > 1 or re.search(r"[#@]|https?:|www\.", name):
+        return False
+    if re.search(r"\btop\s?\d{2,3}\b|24 ?hours|non-?stop|tiktok", name, re.I):
+        return False
+    letters = [c for c in name if c.isalpha()]
+    return not (len(name) > 22 and letters and sum(c.isupper() for c in letters) / len(letters) > .8)
+
+
 def queries_for(col: dict, new_specs: dict) -> list[dict]:
     if col["id"] in new_specs:
         return new_specs[col["id"]]
@@ -48,6 +63,10 @@ def category_for(col: dict, r: dict, bc) -> str | None:
             return "fm"
         return "online"
     if col["id"] in ("english-news", "english-talk"):
+        if MUSIC_WORDS.search(name):                 # music streams someone tagged "news"
+            return None
+        if col["id"] == "english-news" and not re.search(r"\b(news|bbc|npr|world service|abc|cbc|lbc|times|radio [0-9]|public radio)\b", (name + " " + tags), re.I):
+            return None
         if "comedy" in cats and "comedy" in tags:
             return "comedy"
         if "sport" in cats and re.search(r"\bsports?\b", tags):
@@ -91,10 +110,14 @@ def discover(cols: list[dict], files: dict, health: dict, test_stream, OK: str) 
             if not raw:
                 continue
             u = bc.norm_url(raw)
-            name = bc.clean(r.get("name") or "")
+            name = re.sub(r"\s*\([^)]{18,}\)", "", bc.clean(r.get("name") or "")).strip(" ,-–")   # drop long bracketed frequency lists
             nk = re.sub(r"[^\w]", "", name.lower())
             if not nk or u in have_urls or nk in have_names or u in tried or nk in seen or bc.BLOCK.search(name):
                 continue
+            if not sane_name(name) or PROPAGANDA.search(name):
+                continue
+            if col["id"] == "english-music" and (r.get("countrycode") or "") not in ("GB", "IE", "US", "CA", "AU", "NZ", ""):
+                continue                              # English-language music from English-speaking countries
             cat = category_for(col, r, bc)
             if not cat:
                 continue

@@ -316,29 +316,11 @@ window.STATIONS = [
     ]
   },
   {
-    "id": "pyongyang-radio-fm",
-    "name": "Pyongyang Radio FM",
-    "category": "news",
-    "streams": [
-      "https://listen7.myradio24.com/69366"
-    ],
-    "added": "2026-10-22"
-  },
-  {
     "id": "radio-canela-guayas",
     "name": "Radio Canela Guayas",
     "category": "music",
     "streams": [
       "https://canelaradio.makrodigital.com/stream/canelaradioguayaquil"
-    ],
-    "added": "2026-10-22"
-  },
-  {
-    "id": "blu-radio-senal-nacional-hjck-89-9-mhz-f",
-    "name": "Blu Radio, señal nacional (HJCK, 89.9 MHz FM, Bogotá / HJN42, 96.3 MHz, San Martín, Meta / HJH87, 103.1 MHz, Paipa, Boyacá / HJOM, 1090 KHz, Cartagena de Indias / HJM47 103.1 MHz, Algeciras, Huila / HJQ43, 94.1 MHz, Bugalagrande, Valle del Cauca)",
-    "category": "news",
-    "streams": [
-      "https://27403.live.streamtheworld.com/BLURADIO_SC"
     ],
     "added": "2026-10-22"
   }

@@ -324,15 +324,6 @@ window.STATIONS = [
     ]
   },
   {
-    "id": "rfi-russia",
-    "name": "RFI Russia",
-    "category": "news",
-    "streams": [
-      "https://rfiukraine.ice.infomaniak.ch/rfiukraine-96.mp3"
-    ],
-    "added": "2026-10-22"
-  },
-  {
     "id": "powerfm",
     "name": "PowerFM",
     "category": "news",
