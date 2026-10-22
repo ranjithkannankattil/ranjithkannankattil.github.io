@@ -325,6 +325,33 @@ window.STATIONS = [
     "streams": [
       "https://streamer.radio.co/s6a9beb92e/listen"
     ]
+  },
+  {
+    "id": "vinylhits-dk",
+    "name": "Vinylhits.dk",
+    "category": "music",
+    "streams": [
+      "https://stream.vinylhits.dk/vinylmp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "dansbandsradio-se",
+    "name": "DansBandsRadio.se",
+    "category": "music",
+    "streams": [
+      "https://sc.dansbandsradio.se/dbr64.aac"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "globus-guld-jul",
+    "name": "Globus Guld Jul",
+    "category": "music",
+    "streams": [
+      "https://stream.probroadcast.dk/guldjul"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

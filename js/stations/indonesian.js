@@ -184,7 +184,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://a3.alhastream.com:4010/radio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "suara-soneta",
@@ -323,6 +324,15 @@ window.STATIONS = [
     "streams": [
       "https://stream-node2.rri.co.id/streaming/14/9314/rrisngliatpro1.mp3"
     ]
+  },
+  {
+    "id": "mosh-head-black-metal-id",
+    "name": "Mosh Head Black Metal ID",
+    "category": "music",
+    "streams": [
+      "https://moshhead-blackmetal.stream.laut.fm/moshhead-blackmetal"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

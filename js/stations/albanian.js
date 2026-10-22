@@ -322,6 +322,24 @@ window.STATIONS = [
     "streams": [
       "https://cp1.sednastream.com/proxy/radioone94?mp=/stream"
     ]
+  },
+  {
+    "id": "glamradio",
+    "name": "GlamRADIO",
+    "category": "music",
+    "streams": [
+      "https://stream.glamradio.fm:8443/glamradio"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "radio-shqip-folklor",
+    "name": "Radio Shqip Folklor",
+    "category": "music",
+    "streams": [
+      "https://live.radio-zemra.eu/folklor"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

@@ -323,6 +323,15 @@ window.STATIONS = [
     "streams": [
       "https://cast.mgtradio.net/radio/8040/aac"
     ]
+  },
+  {
+    "id": "jb-fm",
+    "name": "JB FM",
+    "category": "music",
+    "streams": [
+      "https://24503.live.streamtheworld.com/JBFMAAC_SC"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

@@ -41,6 +41,15 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/dkpdmc8e0chvv"
     ]
+  },
+  {
+    "id": "air-jeypore",
+    "name": "AIR Jeypore",
+    "category": "music",
+    "streams": [
+      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio112/playlist.m3u8"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

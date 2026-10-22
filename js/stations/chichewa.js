@@ -208,8 +208,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://s7.myradiostream.com:60218/;;"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "moyo-fm",
@@ -290,6 +289,15 @@ window.STATIONS = [
     "streams": [
       "https://lbsradio-dexterity.radioca.st/stream"
     ]
+  },
+  {
+    "id": "marweltan-radio59",
+    "name": "Marweltan Radio59",
+    "category": "news",
+    "streams": [
+      "https://stream.zeno.fm/ohodrsmndawtv"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

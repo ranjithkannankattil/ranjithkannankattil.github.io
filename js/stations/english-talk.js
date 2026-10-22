@@ -248,6 +248,36 @@ window.STATIONS = [
       "https://streams.kcrw.com/kcrw_mp3?aw_0_1st.playerid=radio-browser.info"
     ],
     "where": "US"
+  },
+  {
+    "id": "bbc-world-service",
+    "name": "BBC World Service",
+    "category": "uk",
+    "streams": [
+      "https://stream.live.vc.bbcmedia.co.uk/bbc_world_service"
+    ],
+    "added": "2026-10-22",
+    "where": "UK"
+  },
+  {
+    "id": "walm-old-time-radio",
+    "name": "WALM - Old Time Radio",
+    "category": "comedy",
+    "streams": [
+      "https://icecast.walmradio.com:8443/otr"
+    ],
+    "added": "2026-10-22",
+    "where": "US"
+  },
+  {
+    "id": "walm-2-hd",
+    "name": "WALM 2 HD",
+    "category": "us",
+    "streams": [
+      "https://icecast.walmradio.com:8443/walm2"
+    ],
+    "added": "2026-10-22",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

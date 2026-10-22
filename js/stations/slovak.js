@@ -322,6 +322,15 @@ window.STATIONS = [
     "streams": [
       "https://solid1.streamupsolutions.com/proxy/vhhggmih/stream"
     ]
+  },
+  {
+    "id": "subfm",
+    "name": "SubFM",
+    "category": "music",
+    "streams": [
+      "https://stream.subfm.sk/subfm"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

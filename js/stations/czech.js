@@ -323,6 +323,15 @@ window.STATIONS = [
     "streams": [
       "https://stream.mediawork.cz/retrotv/retrotvHQ1/playlist.m3u8"
     ]
+  },
+  {
+    "id": "frekvence-1",
+    "name": "Frekvence 1",
+    "category": "music",
+    "streams": [
+      "https://ice.actve.net/fm-frekvence1-aac"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

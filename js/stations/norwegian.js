@@ -326,6 +326,33 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiorakel.no/radiorakel_hq"
     ]
+  },
+  {
+    "id": "radio-dsf-finnmark",
+    "name": "Radio DSF - Finnmark",
+    "category": "devotional",
+    "streams": [
+      "https://lyd.radiodsf.no/dsf_hq"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "radio-trndelag",
+    "name": "RADIO Trøndelag",
+    "category": "news",
+    "streams": [
+      "https://nettradio.radiotrondelag.no:8443/radio_trondelag"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "radio-rox",
+    "name": "Radio Rox",
+    "category": "music",
+    "streams": [
+      "https://live-nors.sharp-stream.com/nors13.mp3"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

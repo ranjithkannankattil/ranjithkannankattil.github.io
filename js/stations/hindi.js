@@ -297,6 +297,24 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/yg1qhsbaqv5tv"
     ]
+  },
+  {
+    "id": "bombaybeats",
+    "name": "BombayBeats",
+    "category": "music",
+    "streams": [
+      "https://strm112.1.fm/bombaybeats_mobile_mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "shreyaghosal",
+    "name": "Shreyaghosal",
+    "category": "music",
+    "streams": [
+      "https://drive.uber.radio/uber/bollywoodshreyaghosal/icecast.audio"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

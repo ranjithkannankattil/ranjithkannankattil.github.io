@@ -120,7 +120,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://centova.dukahosting.com/proxy/021kafe/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "naxi-love-radio",
@@ -323,4 +324,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

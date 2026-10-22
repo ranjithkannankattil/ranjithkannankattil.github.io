@@ -322,6 +322,24 @@ window.STATIONS = [
     "streams": [
       "https://solid48.streamupsolutions.com/proxy/cfujtbgw/109fm"
     ]
+  },
+  {
+    "id": "rfi-russia",
+    "name": "RFI Russia",
+    "category": "news",
+    "streams": [
+      "https://rfiukraine.ice.infomaniak.ch/rfiukraine-96.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "powerfm",
+    "name": "PowerFM",
+    "category": "news",
+    "streams": [
+      "https://cast.brg.ua/powerfm_main_public_mp3_hq"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

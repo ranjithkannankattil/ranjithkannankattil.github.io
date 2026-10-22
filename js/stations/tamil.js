@@ -305,6 +305,33 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/nxggffwgtp8uv"
     ]
+  },
+  {
+    "id": "jei-fm-klang-tamil-radio",
+    "name": "Jei FM Klang Tamil Radio",
+    "category": "music",
+    "streams": [
+      "https://usa3.fastcast4u.com/proxy/jeifm?mp=/1"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "britishindiantamilradio",
+    "name": "Britishindiantamilradio",
+    "category": "music",
+    "streams": [
+      "https://hello.citrus3.com:2020/stream/britishindiantamilradio"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "tamil-comedy-radio",
+    "name": "Tamil Comedy Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/tmgktm50dzzuv"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

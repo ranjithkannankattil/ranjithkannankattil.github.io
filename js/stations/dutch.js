@@ -335,6 +335,33 @@ window.STATIONS = [
     "streams": [
       "https://stream.radionl.fm/radionl"
     ]
+  },
+  {
+    "id": "tukker-fm",
+    "name": "Tukker FM",
+    "category": "music",
+    "streams": [
+      "https://stream.tukkerfm.nl/tukkerfm"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "classicnl-opera",
+    "name": "Classicnl Opera",
+    "category": "music",
+    "streams": [
+      "https://classic.nl/streams/?s=opera"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "real-hardstyle-radio",
+    "name": "Real Hardstyle Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.realhardstyle.nl/"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

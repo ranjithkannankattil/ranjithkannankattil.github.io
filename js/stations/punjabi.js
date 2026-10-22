@@ -203,6 +203,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/019324w4ez4tv",
       "https://stream.zenolive.com/019324w4ez4tv"
     ]
+  },
+  {
+    "id": "radio-maharani",
+    "name": "Radio Maharani",
+    "category": "news",
+    "streams": [
+      "https://streamasiacdn.atc-labs.com/radiomaharani.aac"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "live-kirtan-sri-harmandir-sahib",
+    "name": "Live Kirtan Sri Harmandir Sahib",
+    "category": "devotional",
+    "streams": [
+      "https://live.sgpc.net:8443/;nocache=889869"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "desi-world-radio",
+    "name": "Desi World Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zenolive.com/4mbfcn4mf24tv"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

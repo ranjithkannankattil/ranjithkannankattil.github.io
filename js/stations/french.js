@@ -275,6 +275,33 @@ window.STATIONS = [
     "streams": [
       "https://stream.zenolive.com/rq40edfn3reuv"
     ]
+  },
+  {
+    "id": "sud-radio",
+    "name": "Sud Radio",
+    "category": "news",
+    "streams": [
+      "https://ice.creacast.com/sudradio"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "alouette",
+    "name": "Alouette",
+    "category": "music",
+    "streams": [
+      "https://alouette.ice.infomaniak.ch/alouette-high.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "radio-courtoisie",
+    "name": "Radio Courtoisie",
+    "category": "devotional",
+    "streams": [
+      "https://ice.creacast.com/radio-courtoisie"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

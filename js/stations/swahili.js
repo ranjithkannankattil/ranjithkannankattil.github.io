@@ -161,6 +161,33 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/3zgc6zpfvorvv"
     ]
+  },
+  {
+    "id": "wasafi-fm",
+    "name": "Wasafi Fm",
+    "category": "music",
+    "streams": [
+      "https://streaming.radionomy.com/JamendoLounge"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "104-1-favour-fm-gulu-104-1-fm",
+    "name": "104.1 Favour FM - Gulu - 104.1 FM",
+    "category": "devotional",
+    "streams": [
+      "https://us5new.listen2myradio.com:2199/listen.php?port=8138&type=ice&mount=stream"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "heavenly-altar-church-radio-kampala",
+    "name": "Heavenly Altar Church Radio - Kampala",
+    "category": "devotional",
+    "streams": [
+      "https://stream.zeno.fm/6s8719ctbphvv"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

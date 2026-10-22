@@ -282,6 +282,15 @@ window.STATIONS = [
     "streams": [
       "https://nr9.newradio.it/proxy/ebaruffa?mp=/stream"
     ]
+  },
+  {
+    "id": "radio-italia-solo-musica-italiana",
+    "name": "Radio Italia Solo Musica Italiana",
+    "category": "music",
+    "streams": [
+      "https://radioitaliasmi.akamaized.net/hls/live/2093120/RISMI/stream01/streamPlaylist.m3u8"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

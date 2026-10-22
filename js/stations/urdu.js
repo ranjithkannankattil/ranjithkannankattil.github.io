@@ -177,6 +177,33 @@ window.STATIONS = [
     "streams": [
       "https://ads-direct.sharp-stream.com/1458.mp3"
     ]
+  },
+  {
+    "id": "radio-madhoshi",
+    "name": "Radio Madhoshi",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/7rsl8fsccf8uv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "raagam-air-24-7",
+    "name": "Raagam AIR 24*7",
+    "category": "music",
+    "streams": [
+      "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudioragam/hlspbaudioragam_Auto.m3u8"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "all4masti",
+    "name": "All4Masti",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/bahhkuge5zhvv"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

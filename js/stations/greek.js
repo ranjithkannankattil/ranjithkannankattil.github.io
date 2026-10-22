@@ -322,6 +322,33 @@ window.STATIONS = [
     "streams": [
       "https://stream.newageradio.gr/listen/jazz/radio.flac"
     ]
+  },
+  {
+    "id": "era-trito-programma",
+    "name": "ERA Trito Programma",
+    "category": "music",
+    "streams": [
+      "https://radiostreaming.ert.gr/ert-trito"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "90s-heaven",
+    "name": "90s Heaven",
+    "category": "music",
+    "streams": [
+      "https://sp3.streams.ovh/8070/stream"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "laikos-fm",
+    "name": "Laikos FM",
+    "category": "music",
+    "streams": [
+      "https://netradio.live24.gr/laikos876"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

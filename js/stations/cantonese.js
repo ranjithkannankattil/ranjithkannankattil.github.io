@@ -265,8 +265,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ptmirror3.passiontimes.hk/hls3/stream.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "chkt-am1430-fairchild",
@@ -324,6 +323,15 @@ window.STATIONS = [
     "streams": [
       "https://rthkradiocmgrgb-live.akamaized.net/hls/live/2046112/radiocmgrgb/master.m3u8"
     ]
+  },
+  {
+    "id": "bridge-radio-hits",
+    "name": "Bridge Radio - 华语 HITS",
+    "category": "music",
+    "streams": [
+      "https://das-edge11-live365-dal03.cdnstream.com/a57743_2"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

@@ -81,6 +81,33 @@ window.STATIONS = [
     "streams": [
       "https://listen.radioking.com/radio/876181/stream/946306"
     ]
+  },
+  {
+    "id": "fresh-105-9-fm-ibadan",
+    "name": "Fresh 105.9 FM Ibadan",
+    "category": "news",
+    "streams": [
+      "https://stream.zenolive.com/e9x2n97b9uduv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "glow-99-1-fm-akure",
+    "name": "Glow 99.1 FM Akure",
+    "category": "news",
+    "streams": [
+      "https://stream.zeno.fm/mwam2yirv1pvv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "crest-91-1-fm-ibadan",
+    "name": "Crest 91.1 FM Ibadan",
+    "category": "news",
+    "streams": [
+      "https://stream.zeno.fm/qvudrrg5tasvv"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

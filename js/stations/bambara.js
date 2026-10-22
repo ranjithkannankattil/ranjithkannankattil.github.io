@@ -81,6 +81,24 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/x3gb8t9nzk0uv"
     ]
+  },
+  {
+    "id": "radio-yele-sagabali-la-voix-du-beledougo",
+    "name": "Radio Yélé Sagabali La Voix Du Beledougou",
+    "category": "music",
+    "streams": [
+      "https://stream-286.surfernetwork.com/au9gskurq0hvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJhdTlnc2t1cnEwaHZ2IiwiaG9zdCI6InN0cmVhbS0yODYuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6Im9jTjZzQk03U3lhU1NGbVJibjBmU3ciLCJpYXQiOjE3OTI2NDQ3OTMsImV4cCI6MTc5MjY0NDg1M30.jf0xbKRyZTWrc50ZnNoeHraPGbqO3cyH1IB0lSFGcbk"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "afrikana-radio-live-african",
+    "name": "Afrikana Radio – Live African",
+    "category": "music",
+    "streams": [
+      "https://radio.afrikanabestsounds.com/listen/live_african/radio.mp3"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

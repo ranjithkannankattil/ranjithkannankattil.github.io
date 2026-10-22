@@ -324,6 +324,33 @@ window.STATIONS = [
     "streams": [
       "https://live.err.ee/live/r2pop.m3u8?short=true"
     ]
+  },
+  {
+    "id": "rock-fm-metal",
+    "name": "Rock-FM Metal",
+    "category": "music",
+    "streams": [
+      "https://edge04.cdn.bitflip.ee:8888/rckmetal"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "duo-greatesthits-estonia",
+    "name": "Duo GreatestHits (Estonia)",
+    "category": "music",
+    "streams": [
+      "https://le306.euddn.net/a5731fc77d99cdf19376dbde3dfe4ab17dc4a6a0134bbd79dc77445ba495ede3d514ba7a0ebfd06f1243c1f72a38cd90dab00793379d546c8de3ea496e032465f284e7b8586d6de0c29d0f601ce0c93ad71d116fac19257610f566654fe755faf7ad9d030ee6583475237c3c5a0803e25cfb5f9fe436f03d6986c977b0dd055cfaceef9f5a70cbd6017d00dd773a3da1d08052efad3b59b5a343583081b9bd1a0c0497ac745b1729878aa0ce846b3603/hitmix.aac"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "power-hit-radio",
+    "name": "Power Hit Radio",
+    "category": "music",
+    "streams": [
+      "https://ice.leviracloud.eu/phr96-aac?"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

@@ -323,6 +323,33 @@ window.STATIONS = [
     "streams": [
       "https://radio.streamgates.net/stream/1045fm"
     ]
+  },
+  {
+    "id": "hakatze",
+    "name": "הקצה - Hakatze",
+    "category": "music",
+    "streams": [
+      "https://kzradio.mediacast.co.il/kzradio_live/kzradio/icecast.audio"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "chabad-org-jewish-music",
+    "name": "Chabad.org Jewish Music",
+    "category": "music",
+    "streams": [
+      "https://stream.radio.co/sdfd68a101/listen"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "kol-hai",
+    "name": "kol hai",
+    "category": "music",
+    "streams": [
+      "https://live.kcm.fm/livemusic"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

@@ -177,6 +177,15 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/krk4kw830tzuv"
     ]
+  },
+  {
+    "id": "my-club-remix",
+    "name": "MY CLUB REMIX",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/u7eee0hyzp8uv"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

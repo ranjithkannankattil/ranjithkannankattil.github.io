@@ -16,7 +16,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://srv01.onlineradio.voaplus.com/siyathafm"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "y-fm",
@@ -141,4 +142,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

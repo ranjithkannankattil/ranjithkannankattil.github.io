@@ -236,8 +236,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ztnr.rtve.es/ztnr/1694255.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "esradio-principal",
@@ -326,6 +325,33 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiojar.com/asngk2sg798uv?1659885393"
     ]
+  },
+  {
+    "id": "cafe-del-mar-calm",
+    "name": "Café del Mar CALM",
+    "category": "music",
+    "streams": [
+      "https://streamer.radio.co/sb748f24ad/listen"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "cadena-ser-sevilla",
+    "name": "Cadena SER Sevilla",
+    "category": "news",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/SER_SEVILLA.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "cope-granada-sta-fe",
+    "name": "COPE Granada-Sta.Fe",
+    "category": "news",
+    "streams": [
+      "https://granada-copesedes-rrcast.flumotion.com/copesedes/granada-low.mp3"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

@@ -229,8 +229,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "cidade-fm-2",
@@ -279,8 +278,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR",
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "rca-radio-clube-de-armamar",
@@ -329,6 +327,15 @@ window.STATIONS = [
     "streams": [
       "https://2000.streeemer.com/listen/2000s/radio.aac"
     ]
+  },
+  {
+    "id": "radio-comercial",
+    "name": "Rádio Comercial",
+    "category": "music",
+    "streams": [
+      "https://stream-hls.bauermedia.pt/comercial.aac/playlist.m3u8"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

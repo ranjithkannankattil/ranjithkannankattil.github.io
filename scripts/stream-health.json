@@ -1,31 +1,353 @@
 {
+  "@station": {
+    "akan:yfm-97-9-takoradi": 1,
+    "albanian:alfa-omega-radio": 1,
+    "arabic:al-arabiya-fm": 1,
+    "azerbaijani:azerbaycan-radiosu-105-0-fm": 1,
+    "azerbaijani:xezer-fm": 1,
+    "bulgarian:radio-balkanika": 1,
+    "bulgarian:veselina-retro": 1,
+    "catalan:radio-llanca": 1,
+    "filipino:win-radio-davao": 1,
+    "indonesian:cosmopolitan-90-4-fm-jakarta": 1,
+    "indonesian:voks-radio-bali-102-fm": 1,
+    "kazakh:station-3": 1,
+    "korean:big-b-radio-k-pop": 1,
+    "luganda:107-9-pearl-fm": 1,
+    "luganda:christ-fm-91-6-kampala": 1,
+    "luganda:foundation-of-truth-radio": 1,
+    "malayalam:greenradio": 1,
+    "malayalam:keralafm": 1,
+    "malayalam:manjerifm": 1,
+    "malayalam:mazhavilfm": 1,
+    "malayalam:menorahradio": 1,
+    "malayalam:njanmalayalibhakthi": 1,
+    "malayalam:omrradio": 1,
+    "malayalam:quranradiomalayalam": 1,
+    "malayalam:radioangelos": 1,
+    "malayalam:radioayyappa": 1,
+    "malayalam:radiocafe": 1,
+    "malayalam:radiolalsalam": 1,
+    "malayalam:radiomallu": 1,
+    "malayalam:radiomangalam": 1,
+    "malayalam:radiomango": 1,
+    "malayalam:radiomaria": 1,
+    "malayalam:radionellika": 1,
+    "malayalam:radioneythal": 1,
+    "malayalam:radioutsav": 1,
+    "malayalam:radiovatakara": 1,
+    "malayalam:ragamradio": 1,
+    "malayalam:tcrliveradio": 1,
+    "malayalam:thaalamradio": 1,
+    "malayalam:tharangamradio": 1,
+    "nepali:90-1-nbc-fm-sydney": 1,
+    "nepali:cin-khabar": 1,
+    "portuguese-brazil:maquina-do-tempo-mpb-brasil": 1,
+    "serbian:021-caffe": 1,
+    "sinhala:sitha-fm": 1,
+    "sinhala:siyath-fm": 1,
+    "slovak:radio-best-fm": 1,
+    "telugu:fm-rainbow-hyderabad": 1,
+    "telugu:vividh-bharati-telugu-vijayawada": 1,
+    "thai:fm-96-mhz-zaab-news-radio": 1,
+    "ukrainian:europa-plus": 1
+  },
+  "_tried": {
+    "https://103.246.184.62:1935/noice_genfm/genfm/chunklist_w279187457.m3u8": "2026-10-22",
+    "https://103.246.184.62:1935/noice_jakfm/jakfm/chunklist_w1246572933.m3u8": "2026-10-22",
+    "https://103.246.184.62:1935/noice_kisfm/kisfm/chunklist.m3u8": "2026-10-22",
+    "https://116.202.241.212:8048/stream?type=http&nocache=6887": "2026-10-22",
+    "https://124.43.10.122:8080/live": "2026-10-22",
+    "https://141.164.38.238/listen/ara_fm/radio.mp3": "2026-10-22",
+    "https://148.72.153.65:9201/stream": "2026-10-22",
+    "https://149.13.0.81/radio1.ogg": "2026-10-22",
+    "https://151.80.42.191:8288/stream": "2026-10-22",
+    "https://157.254.194.202/stream/nanahira@256": "2026-10-22",
+    "https://162.244.80.118:3024/stream.mp3?ver=349829": "2026-10-22",
+    "https://162.244.80.118:3024/stream.mp3?ver=517748": "2026-10-22",
+    "https://162.244.80.118:4900/;stream.mp3": "2026-10-22",
+    "https://162.244.80.52:8732/;stream.mp3": "2026-10-22",
+    "https://162.244.80.52:8732/stream.mp3": "2026-10-22",
+    "https://167.114.131.90:2758/": "2026-10-22",
+    "https://173.203.133.187:9700/;": "2026-10-22",
+    "https://173.203.133.187:9700/;stream/1": "2026-10-22",
+    "https://176.9.30.66/cool64": "2026-10-22",
+    "https://178.88.167.62:8080/AVTORADIO_192": "2026-10-22",
+    "https://185.32.188.17:8097/stream": "2026-10-22",
+    "https://188.40.62.20:8004/stream": "2026-10-22",
+    "https://192.99.8.192:5032/;stream": "2026-10-22",
+    "https://193.108.24.21:8000/fresh": "2026-10-22",
+    "https://195.150.20.242:8000/rmf_fm": "2026-10-22",
+    "https://195.23.85.126:8455/stream": "2026-10-22",
+    "https://195.95.158.131:9060/": "2026-10-22",
+    "https://195.95.158.131:9080/": "2026-10-22",
+    "https://195.95.206.17/HitFM": "2026-10-22",
+    "https://198.178.123.5:7016/;stream.mp3": "2026-10-22",
+    "https://198.245.61.103:8029/stream": "2026-10-22",
+    "https://198.7.59.28:34235/stream": "2026-10-22",
+    "https://202.39.43.67:1935/live/RA000036/chunklist.m3u8": "2026-10-22",
+    "https://209.126.124.126:8872/stream": "2026-10-22",
+    "https://212.200.230.50:1935/rns3/treciprogram/livestream/stream.m3u8": "2026-10-22",
+    "https://213.133.109.18:10004/stream": "2026-10-22",
+    "https://213.226.189.174:8000/radio.mp3": "2026-10-22",
+    "https://220.247.227.20:8000/RSLstream": "2026-10-22",
+    "https://220.247.227.20:8000/rajaratastream": "2026-10-22",
+    "https://220.247.227.6:8000/Snsstream": "2026-10-22",
+    "https://26153.live.streamtheworld.com:3690/LOS40_MEXICO_SC": "2026-10-22",
+    "https://28093.live.streamtheworld.com:3690/MORFM_S01AAC_SC": "2026-10-22",
+    "https://31.13.223.148:8000/1_rock.mp3": "2026-10-22",
+    "https://37.247.98.8/stream/22/;": "2026-10-22",
+    "https://37.247.98.8/stream/25/;": "2026-10-22",
+    "https://46.20.3.207/listen.pls": "2026-10-22",
+    "https://4stream.pl:18272/stream": "2026-10-22",
+    "https://5.191.241.101:8000/arazmarket": "2026-10-22",
+    "https://5.191.241.101:8000/avtofm": "2026-10-22",
+    "https://5.191.241.101:8000/bravo": "2026-10-22",
+    "https://5.191.241.101:8000/rahatmarket": "2026-10-22",
+    "https://5.56.158.246:8000/stream": "2026-10-22",
+    "https://51.254.61.148:8222/": "2026-10-22",
+    "https://5230.cloudrad.io:8354/": "2026-10-22",
+    "https://5230.cloudrad.io:8354/live": "2026-10-22",
+    "https://54.38.43.201:8009/stream-128kmp3-BossaNovaBrazil": "2026-10-22",
+    "https://62.138.18.102:8133/stream": "2026-10-22",
+    "https://65.108.124.70:7954/mij": "2026-10-22",
+    "https://66.248.205.220:8400/stream": "2026-10-22",
+    "https://66.45.232.131:9994/;stream/1/;": "2026-10-22",
+    "https://77.240.38.228:8000/aspanfm": "2026-10-22",
+    "https://79.106.48.2:8000/radiotirana2": "2026-10-22",
+    "https://80.232.162.149:8000/gold96mp3": "2026-10-22",
+    "https://80.232.162.149:8000/swh96mp3": "2026-10-22",
+    "https://80.90.86.194:1935/live/inradio/playlist.m3u8": "2026-10-22",
+    "https://88.119.151.74:8001/vaikuradijas": "2026-10-22",
+    "https://89.218.30.37/ktklive/live.hq/playlist.m3u8": "2026-10-22",
+    "https://89.238.227.6:8006/;": "2026-10-22",
+    "https://91.201.214.229:8000/zhulduz": "2026-10-22",
+    "https://91.218.212.84:8000/radionv.mp3": "2026-10-22",
+    "https://91.218.213.49:8000/ur1-mp3": "2026-10-22",
+    "https://92.61.114.159:7812/slagerfm256.mp3": "2026-10-22",
+    "https://94.20.137.130:8995/realfm?n=1ae9db9ce6bdfe42937a": "2026-10-22",
+    "https://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/nonuk/sbr_low/ak/bbc_somali_radio.m3u8": "2026-10-22",
+    "https://a1rj.streams.com.br:7801/stream": "2026-10-22",
+    "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio002/hlspbaudio002_Auto.m3u8": "2026-10-22",
+    "https://anadolu.liderhost.com.tr:10912/live": "2026-10-22",
+    "https://antares.dribbcast.com/proxy/apop?mp=/s": "2026-10-22",
+    "https://antena1.newradio.it/stream": "2026-10-22",
+    "https://antena1.newradio.it/stream?ext=.mp3": "2026-10-22",
+    "https://as1.digitalsynapsebd.com:8582/;": "2026-10-22",
+    "https://as1.digitalsynapsebd.com:8741/;": "2026-10-22",
+    "https://as3.digitalsynapsebd.com:8582/stream": "2026-10-22",
+    "https://asiafm.hk:8000/asiahd": "2026-10-22",
+    "https://astreaming.europafm.ro:8000/europafm_aacp48k": "2026-10-22",
+    "https://audio.lumen.sk:8000/live128.mp3": "2026-10-22",
+    "https://audio.radiownet.pl:8000/stream": "2026-10-22",
+    "https://c5.hostingcentar.com:8059/stream?4960": "2026-10-22",
+    "https://capeant.antfarm.co.za:8000/Bosveld": "2026-10-22",
+    "https://capeant.antfarm.co.za:8000/SFM": "2026-10-22",
+    "https://cdn-th2.login.in.th/shoutcast/8425": "2026-10-22",
+    "https://centova.dukahosting.com:2022/stream": "2026-10-22",
+    "https://channel_3.waveani.fun/stream": "2026-10-22",
+    "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2023-8-27/24e94d7f-07dc-9d45-95d0-ddfbbda2b7ae.mp3": "2026-10-22",
+    "https://edge126.rdsnet.ro:84/profm/dancefm.mp3": "2026-10-22",
+    "https://edge126.rdsnet.ro:84/profm/profm.mp3": "2026-10-22",
+    "https://eu6.fastcast4u.com:5306/;": "2026-10-22",
+    "https://fm01-ice.stream.khz.se/fm01_mp3": "2026-10-22",
+    "https://fm02-ice.stream.khz.se/fm02_mp3": "2026-10-22",
+    "https://fm03-ice.stream.khz.se/fm03_mp3?": "2026-10-22",
+    "https://fm05-ice.stream.khz.se/fm05_aac": "2026-10-22",
+    "https://funasia.streamguys1.com/live9": "2026-10-22",
+    "https://goldfm.cn:8000/goldfm": "2026-10-22",
+    "https://gyusyabu.ddo.jp:8000/": "2026-10-22",
+    "https://hd.matutos.com.br:8008/;stream.mp3": "2026-10-22",
+    "https://ibizaglobalradio.streaming-pro.com:8024/": "2026-10-22",
+    "https://ic2326.c1261.fast-serv.com/rm128": "2026-10-22",
+    "https://ice.digitalradiohk.net:8000/drhk": "2026-10-22",
+    "https://icecast-radiovanya.cdnvideo.ru/radiovanya": "2026-10-22",
+    "https://icecast.pereraadio.ee:8000/Tartu": "2026-10-22",
+    "https://icecast.vgtrk.cdnvideo.ru/mayakfm_mp3_192kbps": "2026-10-22",
+    "https://icecast.vgtrk.cdnvideo.ru/vestifm_aac_64kbps": "2026-10-22",
+    "https://icecast.vgtrk.cdnvideo.ru/vestifm_mp3_192kbps": "2026-10-22",
+    "https://icecast2.play.cz:8000/country128aac": "2026-10-22",
+    "https://icecast2.play.cz:8000/kiss128aac": "2026-10-22",
+    "https://ipanel.instream.audio/8004/stream": "2026-10-22",
+    "https://kb.cdnwz.net/kol_barama": "2026-10-22",
+    "https://klausyk.manofm.lt:8000/Icecast2": "2026-10-22",
+    "https://linuxfreelancer.com:8000/test.mp3": "2026-10-22",
+    "https://listen.rusongs.ru/ru-mp3-128": "2026-10-22",
+    "https://live.antenazagreb.hr:8000/;": "2026-10-22",
+    "https://live.antenazagreb.hr:8002/;": "2026-10-22",
+    "https://live.guerrillaradio.ro:8010/guerrilla.aac": "2026-10-22",
+    "https://live.humorfm.by:8000/veseloeradio": "2026-10-22",
+    "https://live.radioantena.si/Antena": "2026-10-22",
+    "https://live.radiokiss.gr/kissfm1006hq.mp3": "2026-10-22",
+    "https://live.radyositesihazir.com:10997/": "2026-10-22",
+    "https://live.slovakradio.sk:8000/Junior_256.mp3": "2026-10-22",
+    "https://live.slovakradio.sk:8000/Slovensko_256.mp3": "2026-10-22",
+    "https://live.streaming.a2d.tv/asset/20025962.isml/.m3u8": "2026-10-22",
+    "https://live.top80.fm:8086/": "2026-10-22",
+    "https://live.trusl.com:1170/;": "2026-10-22",
+    "https://live.ximalaya.com/radio-first-page-app/live/999/64.m3u8?transcode=ts": "2026-10-22",
+    "https://live02.rfi.fr/rfiafrique-64.mp3": "2026-10-22",
+    "https://live02.rfi.fr/rfienpersan-64k.mp3": "2026-10-22",
+    "https://live02.rfi.fr/rfimonde-64.mp3": "2026-10-22",
+    "https://live02.rfi.fr/rfivietnamien-96k.mp3": "2026-10-22",
+    "https://live3.istoikona.net:8372/stream/2/Title1=Kanali": "2026-10-22",
+    "https://live3.smartbomb.co.th:8624/;stream.mp3": "2026-10-22",
+    "https://livestreaming.esradio.fm/stream64.mp3": "2026-10-22",
+    "https://lovesantiago.radioca.st:8832/stream": "2026-10-22",
+    "https://lr1mp1.latvijasradio.lv:8012/;": "2026-10-22",
+    "https://lr3mp0.latvijasradio.lv:8004/;": "2026-10-22",
+    "https://ls.qingting.fm/live/3412131.m3u8?bitrate=64": "2026-10-22",
+    "https://media.login.in.th:8200/;stream.mp3": "2026-10-22",
+    "https://mediaserv38.live-streams.nl:8006/live": "2026-10-22",
+    "https://megadanceradio.hopto.org:8000/livemega.mp3": "2026-10-22",
+    "https://minimw.imbc.com/dmfm/_definst_/mfm.stream/playlist.m3u8?_lsu_sa_=6A01E51233A93174BE43A5BC31713C4C65193C05A403F2673F9069a836AC37F69Da1337F33F2864720D937A118b8C114A7AE89C9FD4A1A75CD22C8BD2C45774AC19C0B1B982899642A72669FCEBFA488C566152CAE37304420EC9E457B13542A79CD5F420452D820265BD377F9B91AB8": "2026-10-22",
+    "https://minisw.imbc.com/dsfm/_definst_/sfm.stream/playlist.m3u8?_lsu_sa_=6CC13A15D3D03354C646D5BA32C1D74145BF3115940032BA3A60C3a5E67835F6EEa063D032B21C4DE0983AB166bFD12D68090E7465BE17D40DCDDE28A274695DE3577704A0107D6D5D9DA282B3AB97C89156F50E3508E90D5EE8B2BF53610A966ECEC1B8D693A4CC461267787078A282": "2026-10-22",
+    "https://mounthoreb1.primcast.com:8210/": "2026-10-22",
+    "https://mp3.polskieradio.pl:8900/;.mp3": "2026-10-22",
+    "https://mp3stream4.abradio.cz:8000/humor128.mp3": "2026-10-22",
+    "https://mpc1.mediacp.eu:8024/;": "2026-10-22",
+    "https://mr-stream.mediaconnect.hu/4734/mr1.aac": "2026-10-22",
+    "https://mr-stream.mediaconnect.hu/4747/mr7.aac": "2026-10-22",
+    "https://n09.rcs.revma.com/cn0zcqsbv4uvv/9_1i7eg69ua9k0u02/playlist.m3u8": "2026-10-22",
+    "https://naxi128ssl.streaming.rs:9152/": "2026-10-22",
+    "https://naxidigital-exyurock48.streaming.rs:8405/": "2026-10-22",
+    "https://nettradio.nearadio.no:8000/stream": "2026-10-22",
+    "https://nettradio.sorlandsradioen.no/sorlandsradioen_hq": "2026-10-22",
+    "https://ngcdn002.cnr.cn/live/jjzs/index.m3u8": "2026-10-22",
+    "https://nostalgie128.streaming.rs:9250/": "2026-10-22",
+    "https://okayfm.atunwadigital.streamguys1.com/okayfm": "2026-10-22",
+    "https://onair.lviv.fm:8000/lviv32.fm": "2026-10-22",
+    "https://play.radioregional.pt:8220/stream/2/;;/stream.mp3": "2026-10-22",
+    "https://playerservices.streamtheworld.com/api/livestream-redirect/CAPITAL958FM_PREM.aac": "2026-10-22",
+    "https://playerservices.streamtheworld.com/api/livestream-redirect/RIA897FM_PREM.aac": "2026-10-22",
+    "https://playerservices.streamtheworld.com/api/livestream-redirect/WARNA942FMAAC.aac": "2026-10-22",
+    "https://playerservices.streamtheworld.com/api/livestream-redirect/WARNA942FM_PREM.aac": "2026-10-22",
+    "https://procyon.shoutca.st:8488/index": "2026-10-22",
+    "https://procyon.shoutca.st:8492/listen.mp3": "2026-10-22",
+    "https://psrlive2.listenon.in/80?station=tamil80shitsradio": "2026-10-22",
+    "https://psrlive2.listenon.in/arrlite?ah=0e81749e37789e5fb8c290926ce87e3f": "2026-10-22",
+    "https://pu.klikhost.com:8052/": "2026-10-22",
+    "https://quasar.shoutca.st:8018/": "2026-10-22",
+    "https://radio.kahoku.net:8000/;": "2026-10-22",
+    "https://radio.lotustechnologieslk.net:8006/": "2026-10-22",
+    "https://radio.mosaiquefm.net:8000/mosalive": "2026-10-22",
+    "https://radio.pblab.in/radiokhushbu": "2026-10-22",
+    "https://radio.punjabrocks.com:9988/;": "2026-10-22",
+    "https://radio105bombarder.com:21010/": "2026-10-22",
+    "https://radio11.plathong.net:8896/;stream.mp3": "2026-10-22",
+    "https://radiomalva.ddns.net:8000/rmbc.ogg": "2026-10-22",
+    "https://rdj966.net:8000/rdj966.mp3": "2026-10-22",
+    "https://s0.radiohost.pl:8018/stream": "2026-10-22",
+    "https://s1.voscast.com:10442/stream": "2026-10-22",
+    "https://s17.ssl-stream.com:8214/stream": "2026-10-22",
+    "https://s2.audiostream.hu:8091/bdpstrock_FLAC": "2026-10-22",
+    "https://s2.voscast.com:9530/": "2026-10-22",
+    "https://sarcheshmeh.icdndhcp.com:18452/stream": "2026-10-22",
+    "https://server-14.stream-server.nl:8030/": "2026-10-22",
+    "https://server1.tnt.ba:8010/": "2026-10-22",
+    "https://server1.tnt.ba:9010/": "2026-10-22",
+    "https://server7.20comunicacion.com:8040/": "2026-10-22",
+    "https://shoutcast.pondi.hr:8000/;": "2026-10-22",
+    "https://shoutcast2.radio24.it:8000/;": "2026-10-22",
+    "https://stereo.nasyidfm.com:8000/": "2026-10-22",
+    "https://stream-eu-a.rcs.revma.com/cn0zcqsbv4uvv/36_1nbhrvq7qpz1h02/playlist.m3u8": "2026-10-22",
+    "https://stream-redirect.bauermedia.fi/kiss/kiss_64.aac?aw_0_1st.bauer_loggedin=false&aw_0_1st.playerid=BMUK_tunein": "2026-10-22",
+    "https://stream-redirect.bauermedia.fi/nostalgia/nostalgia_64.aac?aw_0_1st.bauer_loggedin=false&aw_0_1st.playerid=BMUK_tunein": "2026-10-22",
+    "https://stream-redirect.bauermedia.fi/nrj/nrj_64.aac?aw_0_1st.bauer_loggedin=false&aw_0_1st.playerid=BMUK_tunein": "2026-10-22",
+    "https://stream-redirect.bauermedia.fi/radionova/radionova_64.aac?aw_0_1st.bauer_loggedin=false&aw_0_1st.playerid=BMUK_tunein": "2026-10-22",
+    "https://stream.ecce.sk:8000/radiokosice-128.mp3": "2026-10-22",
+    "https://stream.europeanhitradio.com:8000/Stream_21.aac": "2026-10-22",
+    "https://stream.europeanhitradio.com:8000/Stream_24.aac": "2026-10-22",
+    "https://stream.jewishmusicstream.com:8000/": "2026-10-22",
+    "https://stream.manofm.lt/listen?": "2026-10-22",
+    "https://stream.marijosradijas.lt:8001/marijosradijas.mp3": "2026-10-22",
+    "https://stream.mercyradio.eu/kabare.mp3": "2026-10-22",
+    "https://stream.metacast.eu/radio1rock.ogg": "2026-10-22",
+    "https://stream.radiobollyfm.in:8201/hd?t=1526570335": "2026-10-22",
+    "https://stream.radiogorenc.si:8000/radiogorenc.mp3": "2026-10-22",
+    "https://stream.radioreklama.bg/bgradio128": "2026-10-22",
+    "https://stream.radioreklama.bg/radio164": "2026-10-22",
+    "https://stream.radiosai.net:8000/": "2026-10-22",
+    "https://stream.radiosai.net:8020/": "2026-10-22",
+    "https://stream.rockradio.si:9034/;": "2026-10-22",
+    "https://stream.rtvbn.com:8522/;.mp3": "2026-10-22",
+    "https://stream.svobodny-vysilac.cz:8000/live.mp3": "2026-10-22",
+    "https://stream02.exit.si:8000/DALMACIJA?": "2026-10-22",
+    "https://stream1.infovojna.com:8000/live": "2026-10-22",
+    "https://stream1.radio-banovina.hr:8008/;": "2026-10-22",
+    "https://stream1.radionepal.gov.np/live/": "2026-10-22",
+    "https://stream3.polskieradio.pl:8956/;": "2026-10-22",
+    "https://streamer.radiocampus.be/stream.mp3": "2026-10-22",
+    "https://streaming-live-app.rtp.pt/liveradio/antena180a/playlist.m3u8": "2026-10-22",
+    "https://streaming.karolina.rs:8000/karolina": "2026-10-22",
+    "https://streaming.knoozfm.net:8000/knoozfm": "2026-10-22",
+    "https://streaming.martiproduccions.com:8000/capitalhd": "2026-10-22",
+    "https://streaming.softnep.net:8037/;": "2026-10-22",
+    "https://streaming.softnep.net:8143/;stream.nsv&type=mp3&volume=60": "2026-10-22",
+    "https://streaming.tdiradio.com:8000/tdiradio": "2026-10-22",
+    "https://streaming2.toutech.net:8000/jawharafm": "2026-10-22",
+    "https://streaming5.elitecomunicacion.es:8082/live.mp3": "2026-10-22",
+    "https://streams.extrafm.hr:8110/;": "2026-10-22",
+    "https://streams.greenhost.nl:8080/barok": "2026-10-22",
+    "https://studio.901nbcfm.com.au:8902/newstream": "2026-10-22",
+    "https://svobodneradio.radioca.st:8859/stream": "2026-10-22",
+    "https://thaipbs-live.cdn.byteark.com/live-en/playlist_720p/index.m3u8": "2026-10-22",
+    "https://transliacija.rc.lt/rc128.mp3": "2026-10-22",
+    "https://turkmedya.radyotvonline.com/turkmedya/alemfm.stream/playlist.m3u8": "2026-10-22",
+    "https://tv.balkanweb.com:8081/news24/livestream/playlist.m3u8": "2026-10-22",
+    "https://uk20freenew.listen2myradio.com:16065/;": "2026-10-22",
+    "https://us2.amfmph.com:8848/live": "2026-10-22",
+    "https://usa9-vn.mixstream.net:8084/;": "2026-10-22",
+    "https://voksenradio.dk:8002/": "2026-10-22",
+    "https://wijayafm.onlivestreaming.net:9880/stream?": "2026-10-22",
+    "https://wma06.fluidstream.net:3614/;listen.pls": "2026-10-22",
+    "https://wma07.fluidstream.net:4610/": "2026-10-22",
+    "https://wma08.fluidstream.net:3612/;listen.pls": "2026-10-22",
+    "https://wma08.fluidstream.net:5010/;stream.aac": "2026-10-22",
+    "https://wr11-ice.stream.khz.se/wr11_mp3": "2026-10-22",
+    "https://www.hamropatro.com/api/radio/stream/5092732051652608": "2026-10-22",
+    "https://www.hamropatro.com/api/radio/stream/5639388954361856": "2026-10-22",
+    "https://www.hamropatro.com/api/radio/stream/5761100687605760": "2026-10-22",
+    "https://www.hamropatro.com/api/radio/stream/9": "2026-10-22",
+    "https://www.quran-radio.org:8002/": "2026-10-22",
+    "https://xxdelgado.radioca.st/": "2026-10-22",
+    "https://yayin.arabeskfm.biz:8042/": "2026-10-22",
+    "https://yayin1.radyohizmeti.com:8585/;": "2026-10-22",
+    "https://yayin6.radyohizmeti.com:7050/;stream.mp3": "2026-10-22",
+    "https://zet-net-01.cdn.eurozet.pl:8400/": "2026-10-22"
+  },
   "http://108.170.51.230:8010/stream": {
-    "fails": 14,
+    "fails": 15,
     "last_reason": "no answer to GitHub's servers",
     "since": "2026-10-20"
   },
   "http://82.145.63.6:6094/mp=/stream": {
-    "fails": 14,
+    "fails": 15,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-20"
   },
   "http://radiomangalam.in:8000/stream": {
-    "fails": 14,
+    "fails": 15,
     "last_reason": "no answer to GitHub's servers",
     "since": "2026-10-20"
   },
+  "https://a3.alhastream.com:4010/radio": {
+    "fails": 1,
+    "last_reason": "HTTP 0, 0 bytes",
+    "since": "2026-10-22"
+  },
+  "https://antares.dribbcast.com/proxy/kpop?mp=/s": {
+    "fails": 1,
+    "last_reason": "HTTP 0, 0 bytes",
+    "since": "2026-10-22"
+  },
   "https://atunwadigital.streamguys1.com/yfm979takoradi": {
-    "fails": 5,
+    "fails": 6,
     "last_reason": "HTTP 502, 0 bytes",
     "since": "2026-10-21"
   },
-  "https://azura.loveradio.com.ph/listen/love_radio_manila/radio.mp3": {
-    "fails": 1,
-    "last_reason": "HTTP 200, 0 bytes",
-    "since": "2026-10-22"
-  },
   "https://broadcast.shoutcheap.com/proxy/alban/stream": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "HTTP 401, 0 bytes",
     "since": "2026-10-22"
   },
@@ -34,8 +356,13 @@
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-20"
   },
+  "https://centova.dukahosting.com/proxy/021kafe/stream": {
+    "fails": 1,
+    "last_reason": "HTTP 503, 0 bytes",
+    "since": "2026-10-22"
+  },
   "https://centova71.instainternet.com/proxy/tcrliveradio?mp=/stream": {
-    "fails": 14,
+    "fails": 15,
     "last_reason": "HTTP 404 error page",
     "since": "2026-10-20"
   },
@@ -45,22 +372,22 @@
     "since": "2026-10-20"
   },
   "https://dc4.serverse.com/proxy/pearlfm/stream/1/": {
-    "fails": 3,
+    "fails": 4,
     "last_reason": "HTTP 502 error page",
     "since": "2026-10-21"
   },
   "https://dreamsiteradiocp2.com/proxy/rmindia1?mp=/stream": {
-    "fails": 3,
+    "fails": 4,
     "last_reason": "HTTP 401, 0 bytes",
     "since": "2026-10-21"
   },
   "https://edge.mixlr.com/channel/ugbfe": {
-    "fails": 14,
+    "fails": 15,
     "last_reason": "HTTP 404 error page",
     "since": "2026-10-20"
   },
   "https://fm.alarabiya.net/fm/myStream/playlist.m3u8": {
-    "fails": 3,
+    "fails": 4,
     "last_reason": "playlist HTTP 404",
     "since": "2026-10-21"
   },
@@ -70,14 +397,9 @@
     "since": "2026-10-20"
   },
   "https://gains.reviveradio.net/proxy/menorah?mp=/stream": {
-    "fails": 14,
+    "fails": 15,
     "last_reason": "HTTP 502 error page",
     "since": "2026-10-20"
-  },
-  "https://gbw.ynradio.cn/radio/gjgb.stream/playlist.m3u8": {
-    "fails": 1,
-    "last_reason": "playlist HTTP 502",
-    "since": "2026-10-22"
   },
   "https://icecast.octosignals.com/benziger": {
     "fails": 4,
@@ -95,97 +417,117 @@
     "since": "2026-10-20"
   },
   "https://lhttp.qtfm.cn/live/1908/64k.mp3": {
-    "fails": 4,
+    "fails": 5,
     "last_reason": "HTTP 404 error page",
     "since": "2026-10-21"
   },
   "https://listen.openstream.co/4635/audio": {
-    "fails": 11,
+    "fails": 12,
     "last_reason": "HTTP 502 error page",
     "since": "2026-10-20"
   },
   "https://live.sarrit.com:8010/mazhavilfm": {
-    "fails": 14,
+    "fails": 15,
     "last_reason": "HTTP 404 error page",
     "since": "2026-10-20"
   },
-  "https://nova-radio.neterra.tv/veselinaretro": {
+  "https://live1.sr.se/p1-aac-32": {
     "fails": 1,
+    "last_reason": "HTTP 302 error page",
+    "since": "2026-10-22"
+  },
+  "https://nova-radio.neterra.tv/veselinaretro": {
+    "fails": 2,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-22"
   },
-  "https://ptmirror3.passiontimes.hk/hls3/stream.m3u8": {
-    "fails": 4,
-    "last_reason": "segment HTTP 404, 3652 bytes",
-    "since": "2026-10-21"
+  "https://r1.comcities.com/proxy/fotonline/stream": {
+    "fails": 1,
+    "last_reason": "HTTP 502 error page",
+    "since": "2026-10-22"
+  },
+  "https://radio.wavespb.com/live/0beac8e921bbfdbb/0beac8e921bbfdbb.m3u8": {
+    "fails": 1,
+    "last_reason": "playlist HTTP 404",
+    "since": "2026-10-22"
+  },
+  "https://radio.wavespb.com/live/3a02c5c035815bb9/3a02c5c035815bb9.m3u8": {
+    "fails": 1,
+    "last_reason": "segment HTTP 404, 564 bytes",
+    "since": "2026-10-22"
+  },
+  "https://radio.wavespb.com/live/58390a2ed33cea4a/58390a2ed33cea4a.m3u8": {
+    "fails": 1,
+    "last_reason": "segment HTTP 404, 564 bytes",
+    "since": "2026-10-22"
   },
   "https://radiomangoalive1-a.akamaihd.net/9268677ef77949a9b21d33239a55eadd/ap-southeast-1/6034685947001/playlist.m3u8": {
-    "fails": 14,
+    "fails": 15,
     "last_reason": "playlist HTTP 400",
     "since": "2026-10-20"
   },
   "https://relay.stream.enacast-cloud.com:40323/radiollancaHD.mp3": {
-    "fails": 3,
+    "fails": 4,
     "last_reason": "HTTP 404 error page",
     "since": "2026-10-21"
   },
   "https://s2.myradiostream.com/5538/listen.mp3": {
-    "fails": 3,
+    "fails": 4,
     "last_reason": "HTTP 401 error page",
     "since": "2026-10-21"
   },
   "https://s39.myradiostream.com/:15664/;": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-22"
   },
   "https://s40.myradiostream.com/:22546/listen.mp3?": {
-    "fails": 3,
+    "fails": 4,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-21"
   },
   "https://s5.radioforge.com:7908/live?n=77357": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "HTTP 503 error page",
     "since": "2026-10-22"
   },
-  "https://s7.myradiostream.com:60218/;;": {
-    "fails": 1,
-    "last_reason": "HTTP 401, 0 bytes",
-    "since": "2026-10-22"
-  },
   "https://s7.voscast.com:9563/stream": {
-    "fails": 14,
+    "fails": 15,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-20"
   },
   "https://sapircast.caster.fm:17039/aRsGW": {
-    "fails": 3,
+    "fails": 4,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-21"
   },
   "https://server03.quran-uni.com:7029/stream": {
-    "fails": 14,
+    "fails": 15,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-20"
   },
   "https://servidor28.brlogic.com:8032/live": {
-    "fails": 3,
+    "fails": 4,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-21"
   },
   "https://shaincast.caster.fm:48148/listen.mp3": {
-    "fails": 3,
+    "fails": 4,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-21"
   },
-  "https://ssl120.radyotelekom.com.tr/8122/stream": {
+  "https://srv01.onlineradio.voaplus.com/siyathafm": {
     "fails": 1,
+    "last_reason": "HTTP 404 error page",
+    "since": "2026-10-22"
+  },
+  "https://ssl120.radyotelekom.com.tr/8122/stream": {
+    "fails": 2,
     "last_reason": "HTTP 500 error page",
     "since": "2026-10-22"
   },
   "https://str.yodacdn.net/radio_respublica/video.m3u8": {
-    "fails": 3,
+    "fails": 4,
     "last_reason": "playlist HTTP 403",
     "since": "2026-10-21"
   },
@@ -200,52 +542,57 @@
     "since": "2026-10-20"
   },
   "https://stream.radiojar.com/u7d8heq3bnzuv": {
-    "fails": 3,
+    "fails": 4,
     "last_reason": "HTTP 503, 41 bytes",
     "since": "2026-10-21"
   },
+  "https://stream.zeno.fm/1noxhem5qpkuv": {
+    "fails": 1,
+    "last_reason": "HTTP 503, 40 bytes",
+    "since": "2026-10-22"
+  },
   "https://stream.zeno.fm/9k5ku7bhb8zuv": {
-    "fails": 14,
+    "fails": 15,
     "last_reason": "HTTP 401, 0 bytes",
     "since": "2026-10-20"
   },
   "https://stream.zeno.fm/f3nc8x3tywzuv": {
-    "fails": 14,
+    "fails": 15,
     "last_reason": "HTTP 401, 0 bytes",
     "since": "2026-10-20"
   },
   "https://stream.zeno.fm/gqmh0caknchvv": {
-    "fails": 14,
+    "fails": 15,
     "last_reason": "HTTP 401, 0 bytes",
     "since": "2026-10-20"
   },
   "https://stream.zeno.fm/mfn3gkbvty8uv": {
-    "fails": 14,
+    "fails": 15,
     "last_reason": "HTTP 401, 0 bytes",
     "since": "2026-10-20"
   },
   "https://stream.zeno.fm/rdcci38kky4vv": {
-    "fails": 14,
+    "fails": 15,
     "last_reason": "HTTP 401, 0 bytes",
     "since": "2026-10-20"
   },
   "https://stream.zeno.fm/w9kku8utuy8uv": {
-    "fails": 14,
+    "fails": 15,
     "last_reason": "HTTP 401, 0 bytes",
     "since": "2026-10-20"
   },
   "https://stream.zeno.fm/x2baeup395quv": {
-    "fails": 14,
+    "fails": 15,
     "last_reason": "HTTP 401, 0 bytes",
     "since": "2026-10-20"
   },
   "https://stream.zeno.fm/xwlwqmiogncvv": {
-    "fails": 14,
+    "fails": 15,
     "last_reason": "HTTP 401, 0 bytes",
     "since": "2026-10-20"
   },
   "https://stream3.bestfm.sk:8000/128.mp3": {
-    "fails": 1,
+    "fails": 2,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-22"
   },
@@ -254,23 +601,13 @@
     "last_reason": "HTTP 403 error page",
     "since": "2026-10-20"
   },
-  "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8": {
-    "fails": 3,
+  "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8": {
+    "fails": 1,
     "last_reason": "playlist HTTP 206",
-    "since": "2026-10-21"
-  },
-  "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR": {
-    "fails": 2,
-    "last_reason": "playlist HTTP 206",
-    "since": "2026-10-21"
-  },
-  "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8": {
-    "fails": 3,
-    "last_reason": "playlist HTTP 206",
-    "since": "2026-10-21"
+    "since": "2026-10-22"
   },
   "https://streaming.softnep.net:10996/;stream.nsv&type=mp3&volume=60": {
-    "fails": 2,
+    "fails": 3,
     "last_reason": "HTTP 503 error page",
     "since": "2026-10-21"
   },
@@ -279,44 +616,29 @@
     "last_reason": "HTTP 403 error page",
     "since": "2026-10-20"
   },
-  "https://streams.radiomast.io/ce298b32-8776-4192-9900-092f44b63e7f": {
-    "fails": 1,
-    "last_reason": "HTTP 503 error page",
-    "since": "2026-10-22"
-  },
   "https://studio.901nbcfm.com.au:8902/newstream": {
-    "fails": 6,
+    "fails": 7,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-20"
   },
   "https://thaalam.tamilfmradios.com/live": {
-    "fails": 14,
+    "fails": 15,
     "last_reason": "HTTP 403, 2 bytes",
     "since": "2026-10-20"
   },
   "https://usa10.fastcast4u.com:8110/;?type=http&nocache=3": {
-    "fails": 14,
+    "fails": 15,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-20"
   },
   "https://usa14.fastcast4u.com/proxy/bobbygeo?mp=/;": {
-    "fails": 14,
+    "fails": 15,
     "last_reason": "HTTP 404, 16 bytes",
     "since": "2026-10-20"
   },
   "https://usa15.fastcast4u.com/proxy/radiomall/stream": {
-    "fails": 14,
+    "fails": 15,
     "last_reason": "HTTP 502 error page",
     "since": "2026-10-20"
-  },
-  "https://webtvstream.bhtelecom.ba/radio_usora.m3u8": {
-    "fails": 1,
-    "last_reason": "segment HTTP 404, 580 bytes",
-    "since": "2026-10-22"
-  },
-  "https://ztnr.rtve.es/ztnr/1694255.m3u8": {
-    "fails": 1,
-    "last_reason": "segment HTTP 403, 0 bytes",
-    "since": "2026-10-22"
   }
 }

@@ -322,6 +322,24 @@ window.STATIONS = [
     "streams": [
       "https://relay.stream.enacast-cloud.com:30048/rap56.mp3"
     ]
+  },
+  {
+    "id": "flaixbac-andorra",
+    "name": "Flaixbac Andorra",
+    "category": "music",
+    "streams": [
+      "https://streaming.giraweb.com/8010/stream"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "remember-radio-joventut",
+    "name": "Remember Ràdio Joventut",
+    "category": "news",
+    "streams": [
+      "https://stream.idelta.es/listen/radio_joventut/stream"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

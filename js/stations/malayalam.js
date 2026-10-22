@@ -253,7 +253,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/58390a2ed33cea4a/58390a2ed33cea4a.m3u8"
     ],
-    "akv": "Akashvani Manjeri"
+    "akv": "Akashvani Manjeri",
+    "offline": true
   },
   {
     "id": "akashvanithrissur",
@@ -990,6 +991,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/w9kku8utuy8uv"
     ],
     "offline": true
+  },
+  {
+    "id": "raagam-air-24-7",
+    "name": "Raagam AIR 24*7",
+    "category": "air",
+    "streams": [
+      "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudioragam/hlspbaudioragam_Auto.m3u8"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "anbu-fm-malayalam",
+    "name": "Anbu FM Malayalam",
+    "category": "fm",
+    "streams": [
+      "https://stream.zeno.fm/8ca40byv4x8uv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "fm-city-100-1",
+    "name": "FM City 100.1",
+    "category": "fm",
+    "streams": [
+      "https://stream.zeno.fm/4yfsm0d8n98uv"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

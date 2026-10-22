@@ -200,6 +200,36 @@ window.STATIONS = [
       "https://wamu.cdnstream1.com/wamu.mp3"
     ],
     "where": "US"
+  },
+  {
+    "id": "bbc-radio-4",
+    "name": "BBC Radio 4",
+    "category": "uk",
+    "streams": [
+      "https://as-hls-ww-live.akamaized.net/pool_55057080/live/ww/bbc_radio_fourfm/bbc_radio_fourfm.isml/bbc_radio_fourfm-audio%3d128000.norewind.m3u8"
+    ],
+    "added": "2026-10-22",
+    "where": "UK"
+  },
+  {
+    "id": "100-best-ibiza-deep-house",
+    "name": "#100 BEST IBIZA DEEP HOUSE",
+    "category": "canada",
+    "streams": [
+      "https://stream.zeno.fm/lwv6zqgtv1dtv"
+    ],
+    "added": "2026-10-22",
+    "where": "Canada"
+  },
+  {
+    "id": "50s-60s-retro-hits",
+    "name": "50s 60s RETRO HITS",
+    "category": "world",
+    "streams": [
+      "https://stream.zeno.fm/pxzwykxbluitv"
+    ],
+    "added": "2026-10-22",
+    "where": "Italy"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

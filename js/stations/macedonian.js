@@ -186,6 +186,15 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiogbg.se:8050/relay4"
     ]
+  },
+  {
+    "id": "radio-plus-mauritius",
+    "name": "Radio Plus Mauritius",
+    "category": "news",
+    "streams": [
+      "https://stream.radioplus.mu:8000/radio.mp3"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

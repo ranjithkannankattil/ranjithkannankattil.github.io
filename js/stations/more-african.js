@@ -41,6 +41,33 @@ window.STATIONS = [
     "streams": [
       "https://radio.afrikanabestsounds.com/listen/live_african/radio.mp3"
     ]
+  },
+  {
+    "id": "tropicast-radio-station",
+    "name": "Tropicast Radio Station",
+    "category": "music",
+    "streams": [
+      "https://listen.tropicastradio.com/stations/gwjhbnsfzq/live.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "fpp-frequence-paris-plurielle-rfpp",
+    "name": "FPP Fréquence Paris Plurielle rfpp",
+    "category": "news",
+    "streams": [
+      "https://direct.rfpp.net/fpp.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "innovation-fm",
+    "name": "Innovation FM",
+    "category": "news",
+    "streams": [
+      "https://radio.fdvi.org/live"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

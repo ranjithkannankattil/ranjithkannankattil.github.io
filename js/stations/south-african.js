@@ -58,6 +58,15 @@ window.STATIONS = [
     "streams": [
       "https://edge.iono.fm/xice/301_low.aac"
     ]
+  },
+  {
+    "id": "amapiano-fm",
+    "name": "Amapiano FM",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/xs6zeac1ts8uv"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

@@ -170,7 +170,8 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://r1.comcities.com/proxy/fotonline/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "voice-of-heaven-kampala",
@@ -219,6 +220,15 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/v73tc5gwaphvv"
     ]
+  },
+  {
+    "id": "busoga-royal-radio",
+    "name": "BUSOGA ROYAL RADIO",
+    "category": "music",
+    "streams": [
+      "https://cast5.my-control-panel.com/proxy/busogaroyalradio/stream"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

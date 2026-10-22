@@ -315,6 +315,33 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/bbpfy9pk21zuv"
     ]
+  },
+  {
+    "id": "peace-fm",
+    "name": "Peace FM",
+    "category": "news",
+    "streams": [
+      "https://peacefm-atunwadigital.streamguys1.com/peacefm?amsparams=playerid%3ASGplayer%3Bskey%3A1611468493100%3B&awparams=playerid%3ASGplayer%3Bplayerid%3ASGplayer%3Bplayerid%3ASGplayer%3B&us_privacy=1YNN&us_privacy=1YNN&us_privacy=1YNN"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "ahenfie-fm-106-1mhz",
+    "name": "Ahenfie FM 106.1MHz",
+    "category": "news",
+    "streams": [
+      "https://radio.localstreamgh.com/listen/ahenfie_radio_/radio.mp3"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "sompa-106-5fm-accra",
+    "name": "Sompa 106.5FM Accra",
+    "category": "news",
+    "streams": [
+      "https://stream.zeno.fm/55sg1lh4pqquv"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

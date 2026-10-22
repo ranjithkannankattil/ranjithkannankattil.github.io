@@ -49,6 +49,33 @@ window.STATIONS = [
     "streams": [
       "https://mahakatharadio.com/api/station/live.mp3"
     ]
+  },
+  {
+    "id": "big-92-7-fm",
+    "name": "BIG 92.7 FM",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/dbstwo3dvhhtv"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "radio-maharani",
+    "name": "Radio Maharani",
+    "category": "news",
+    "streams": [
+      "https://streamasiacdn.atc-labs.com/radiomaharani.aac"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "air-nanded",
+    "name": "AIR Nanded",
+    "category": "music",
+    "streams": [
+      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio072/playlist.m3u8"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

@@ -131,6 +131,24 @@ window.STATIONS = [
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio027/hlspbaudio027_Auto.m3u8"
     ]
+  },
+  {
+    "id": "air-fm-rainbow-bangalore",
+    "name": "Air FM Rainbow Bangalore",
+    "category": "music",
+    "streams": [
+      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio031/playlist.m3u8"
+    ],
+    "added": "2026-10-22"
+  },
+  {
+    "id": "live-fm",
+    "name": "Live FM",
+    "category": "music",
+    "streams": [
+      "https://stream.aiir.com/dbv0rxpwp6ytv"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";

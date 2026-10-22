@@ -322,6 +322,15 @@ window.STATIONS = [
     "streams": [
       "https://servidor39-5.brlogic.com:7076/live"
     ]
+  },
+  {
+    "id": "radio-voima",
+    "name": "Radio Voima",
+    "category": "music",
+    "streams": [
+      "https://cast2.radiovoima.fi/voima.mp3"
+    ],
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T05:37Z";
+window.STATIONS_CHECKED = "2026-10-22T06:55Z";
