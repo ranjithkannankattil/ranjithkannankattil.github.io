@@ -15,6 +15,7 @@ from pathlib import Path
 sys.path.insert(0, os.path.dirname(__file__))
 from news_config import LANGS, OUTLETS, PLACES, JUNK, NATIVE, ALIASES, TOPICS, LOCAL_PAGES, LOCAL_FROM, BRIEFING, LIVE_URL  # noqa: E402
 import news_extras  # noqa: E402
+from news_relevance import filter_local, other_names  # noqa: E402
 
 try:
     from googlenewsdecoder import gnewsdecoder
@@ -280,6 +281,13 @@ def main():
     pmap = {p["id"]: p for p in PLACES}
     result = defaultdict(lambda: {"news": {}, "other": {}, "topics": defaultdict(dict)})
     report, stale, local_debug = [], {}, {}
+    removed = defaultdict(dict)                     # (pid, lang) -> {"club": n, "other_place": n, ...}
+    others_of = {}
+
+    def others(pid):
+        if pid not in others_of:
+            others_of[pid] = other_names(pid, pmap, names, LOCAL_FROM)
+        return others_of[pid]
 
     def harvest(pid, lang):
         """Stories from the papers' own district pages / city feeds."""
@@ -336,6 +344,8 @@ def main():
             trusted = news_extras.round_robin([x for x in trusted if hit(x)])[:KEEP * 2] \
                 + [x for x in trusted if not hit(x)][:KEEP]
             other = [x for x in other if hit(x)][:KEEP_OTHER] + [x for x in other if not hit(x)][:KEEP_OTHER]
+            trusted = filter_local(trusted, pid, nm, others(pid), removed[(pid, lang)])
+            other = filter_local(other, pid, nm, others(pid), removed[(pid, lang)])
         else:
             trusted, other = trusted[:KEEP], other[:KEEP_OTHER]
         if not got_any:  # every feed failed this run: keep the last good data
@@ -381,6 +391,8 @@ def main():
                     if st.get("s"):
                         seen_s.add(st["s"])
                     keep.append(st)
+                if local:
+                    keep = filter_local(keep, pid, nm, others(pid), removed[(pid, lang)])
                 keep = [x for x in keep if NOW - x["ts"] < 8 * 86400]
                 keep.sort(key=lambda x: -x["ts"])
                 r[part][lang] = (news_extras.round_robin(keep) if local else news_extras.diversify(keep))[:cap]
@@ -390,7 +402,8 @@ def main():
                 t[lang] = [x for x in lst if not (x["u"] in seen_u or seen_u.add(x["u"]))]
         for lang in p["langs"]:
             report.append(f"{pid:20} {lang}  trusted {len(r['news'].get(lang, [])):3}  other {len(r['other'].get(lang, [])):3}"
-                          f"  topics {sum(len(t.get(lang, [])) for t in r['topics'].values()):3}{'  (kept previous)' if stale.get((pid, lang)) else ''}")
+                          f"  topics {sum(len(t.get(lang, [])) for t in r['topics'].values()):3}{'  (kept previous)' if stale.get((pid, lang)) else ''}"
+                          + "".join(f"  removed {k.replace('_', '-')} {v}" for k, v in sorted(removed[(pid, lang)].items()) if v))
 
     # AI: summaries for stories the papers gave none for, and a short digest per briefing place
     ai = news_extras.AI(cache)

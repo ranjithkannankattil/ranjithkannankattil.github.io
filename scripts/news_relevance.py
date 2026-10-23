@@ -27,23 +27,37 @@ def club_story(title, summary, pid):
     return not (CIVIC.search(title or "") or CIVIC.search(summary or ""))
 
 
+def _names_in(t, n):
+    """Latin-script names match whole words ("us" is not in "bus"); other scripts match as
+    substrings, because Malayalam, Tamil etc. add suffixes to place names."""
+    n = n.lower()
+    if n.isascii():
+        return re.search(r"(?<![a-z0-9])" + re.escape(n) + r"(?![a-z0-9])", t) is not None
+    return n in t
+
+
 def other_place(title, own, others):
     """The headline names another place and none of this place's own names."""
     t = (title or "").lower()
-    if any(n.lower() in t for n in own if n):
+    if any(n and n.lower() in t for n in own):
         return False
-    return any(n.lower() in t for n in others if n)
+    return any(n and _names_in(t, n) for n in others)
 
 
-def other_names(pid, pmap, names_fn):
-    """Names of every other place, except this place's ancestors and descendants,
+def other_names(pid, pmap, names_fn, local_from=None):
+    """Names of every other place in the same country, except this place's ancestors and
+    descendants (including towns that take their stories from its pages, via LOCAL_FROM),
     plus the district words of its region (minus its own names)."""
+    local_from = local_from or {}
+    cc = pmap[pid].get("cc")
     ancestors, p = set(), pmap[pid].get("parent")
     while p:
         ancestors.add(p)
         p = pmap.get(p, {}).get("parent")
 
     def is_descendant(q):
+        if local_from.get(q) == pid:
+            return True
         while q:
             q = pmap.get(q, {}).get("parent")
             if q == pid:
@@ -56,10 +70,25 @@ def other_names(pid, pmap, names_fn):
         family |= {n.lower() for n in names_fn(pmap[a])}
     out = set()
     for q, place in pmap.items():
-        if q == pid or q in ancestors or is_descendant(q):
+        if q == pid or q in ancestors or is_descendant(q) or (cc and place.get("cc") and place.get("cc") != cc):
             continue
         out |= {n.lower() for n in names_fn(place)}
     for a in ancestors:
         out |= {w.lower() for w in PLACE_WORDS.get(a, [])}
     # a word that is also one of our own (or an ancestor's) names never counts as "another place"
     return sorted(n for n in out if n not in own and n not in family and not any(n in o or o in n for o in own))
+
+
+def filter_local(stories, pid, own, others, counts):
+    """Drop club stories, and district-page stories whose headline names only another place.
+    Counts what each rule removed in `counts` ("club", "other_place")."""
+    kept = []
+    for st in stories:
+        if club_story(st.get("t", ""), st.get("s", ""), pid):
+            counts["club"] = counts.get("club", 0) + 1
+            continue
+        if st.get("_own") and other_place(st.get("t", ""), own, others):
+            counts["other_place"] = counts.get("other_place", 0) + 1
+            continue
+        kept.append(st)
+    return kept

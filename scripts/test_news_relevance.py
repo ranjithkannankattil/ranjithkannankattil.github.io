@@ -56,3 +56,47 @@ def test_other_names_excludes_family():
     assert "kerala" not in o and "world" not in o  # ancestors
     assert "kodungallur" not in o                  # descendant
     assert "thrissur" not in o                     # itself, also removed from the district words
+
+
+from news_relevance import filter_local
+
+
+def test_filter_local_counts():
+    stories = [
+        {"t": "AC Milan beat Bournemouth 2-0", "s": ""},
+        {"t": "കൊച്ചിയിലെ ‘മിനി റെഡ് സ്ട്രീറ്റ്’", "_own": True},
+        {"t": "Water supply restored", "_own": True},
+    ]
+    counts = {}
+    kept = filter_local(stories, "milan", ["thrissur", "തൃശൂ"], ["കൊച്ചി", "kochi"], counts)
+    assert [s["t"] for s in kept] == ["Water supply restored"]
+    assert counts == {"club": 1, "other_place": 1}
+
+
+def test_filter_local_other_place_only_for_district_pages():
+    counts = {}
+    kept = filter_local([{"t": "Kochi metro extended to Thrissur? No: Kochi only"}], "thrissur", ["x-not-present"], ["kochi"], counts)
+    assert len(kept) == 1 and counts == {}
+
+
+def test_other_place_ascii_whole_words():
+    assert not other_place("Bus stand reopens", ["thrissur"], ["us"])
+    assert not other_place("Aroma of Onam", ["thrissur"], ["roma"])
+    assert other_place("Kochi metro update", ["thrissur"], ["kochi"])
+
+
+def test_other_names_same_country_and_district_towns():
+    pmap = {
+        "world": {"id": "world", "name": "World", "parent": None},
+        "india": {"id": "india", "name": "India", "parent": "world", "cc": "IN"},
+        "kerala": {"id": "kerala", "name": "Kerala", "parent": "india", "cc": "IN"},
+        "thrissur": {"id": "thrissur", "name": "Thrissur", "parent": "kerala", "cc": "IN"},
+        "kodungallur": {"id": "kodungallur", "name": "Kodungallur", "parent": "kerala", "cc": "IN"},
+        "kochi": {"id": "kochi", "name": "Kochi", "parent": "kerala", "cc": "IN"},
+        "uk": {"id": "uk", "name": "UK", "parent": "world", "cc": "GB"},
+    }
+    names_fn = lambda p: [p["name"].lower()]  # noqa: E731
+    o = other_names("thrissur", pmap, names_fn, local_from={"kodungallur": "thrissur"})
+    assert "kochi" in o
+    assert "uk" not in o              # another country
+    assert "kodungallur" not in o     # takes its stories from Thrissur's pages
