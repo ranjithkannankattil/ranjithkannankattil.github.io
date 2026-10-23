@@ -15,7 +15,7 @@ from pathlib import Path
 sys.path.insert(0, os.path.dirname(__file__))
 from news_config import LANGS, OUTLETS, PLACES, JUNK, NATIVE, ALIASES, TOPICS, LOCAL_PAGES, LOCAL_FROM, BRIEFING, LIVE_URL  # noqa: E402
 import news_extras  # noqa: E402
-from news_relevance import filter_local, other_names  # noqa: E402
+from news_relevance import filter_local, other_names, thin_from_prev, THIN_DAYS  # noqa: E402
 
 try:
     from googlenewsdecoder import gnewsdecoder
@@ -106,7 +106,7 @@ def parse_rss(xml):
     return out
 
 
-def jobs_for(p):
+def jobs_for(p, thin=False):
     """(place_id, lang, topic, [urls]) for one place; topic "" is the main list."""
     for lang in p["langs"]:
         ed = edition(lang, p.get("cc", ""))
@@ -119,7 +119,7 @@ def jobs_for(p):
         if lang == "zh" and ed != LANGS["zh"]["ed"]["*"]:
             eds.append(LANGS["zh"]["ed"]["*"])  # Hong Kong edition carries more independent Chinese-language outlets
         names = [x.strip() for x in p.get("q", {}).get(lang, p["name"]).split(" OR ")]
-        when = WHEN[p["kind"]]
+        when = f"{THIN_DAYS}d" if thin else WHEN[p["kind"]]
         urls = []
         for e in eds:
             if p["kind"] == "world":
@@ -261,7 +261,9 @@ def main():
     cache = json.loads(cache_path.read_text()) if cache_path.exists() else {}
 
     places = [p for p in PLACES if not a.only or p["id"] in a.only.split(",")]
-    jobs = [j for p in places for j in jobs_for(p)]
+    thin = thin_from_prev(prev, [p["id"] for p in places], {p["id"]: p["kind"] for p in places})
+    max_age = lambda pid: (THIN_DAYS if pid in thin else 8) * 86400  # noqa: E731
+    jobs = [j for p in places for j in jobs_for(p, p["id"] in thin)]
     local_urls = sorted({u for pid in [p["id"] for p in places] for us in LOCAL_PAGES.get(LOCAL_FROM.get(pid, pid), {}).values() for u in us})
     urls = sorted({u for *_, us in jobs for u in us} | set(local_urls))
     print(f"{len(places)} places, {len(jobs)} lists, {len(urls)} feeds and pages", flush=True)
@@ -322,7 +324,7 @@ def main():
             cands = loc + cands
         for st in cands:
             k = norm(st["t"])
-            if k in seen or NOW - st["ts"] > 8 * 86400:
+            if k in seen or NOW - st["ts"] > max_age(pid):
                 continue
             if NOT_STORY.search(st["t"]) or len(st["t"]) < 10:
                 continue
@@ -393,7 +395,7 @@ def main():
                     keep.append(st)
                 if local:
                     keep = filter_local(keep, pid, nm, others(pid), removed[(pid, lang)])
-                keep = [x for x in keep if NOW - x["ts"] < 8 * 86400]
+                keep = [x for x in keep if NOW - x["ts"] < max_age(pid)]
                 keep.sort(key=lambda x: -x["ts"])
                 r[part][lang] = (news_extras.round_robin(keep) if local else news_extras.diversify(keep))[:cap]
         for t in r["topics"].values():
@@ -438,7 +440,7 @@ def main():
         for lang in pmap[pid]["langs"]:
             report.append(f"{pid:20} {lang}  trusted {len(r['news'].get(lang, [])):3}  other {len(r['other'].get(lang, [])):3}"
                           f"  topics {sum(len(t.get(lang, [])) for t in r['topics'].values()):3}{'  (kept previous)' if stale.get((pid, lang)) else ''}"
-                          + "".join(f"  removed {k.replace('_', '-')} {v}" for k, v in sorted(removed[(pid, lang)].items()) if v))
+                          + (f"  window {THIN_DAYS}d" if pid in thin else "") + "".join(f"  removed {k.replace('_', '-')} {v}" for k, v in sorted(removed[(pid, lang)].items()) if v))
 
     clean = lambda lst: [{k: v for k, v in s.items() if k in ("t", "s", "u", "src", "ts", "ai")} for s in lst]  # noqa: E731
     for pid, r in result.items():

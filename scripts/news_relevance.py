@@ -92,3 +92,26 @@ def filter_local(stories, pid, own, others, counts):
             continue
         kept.append(st)
     return kept
+
+
+THIN, THIN_DAYS = 5, 21
+
+
+def thin_from_prev(prev_dir, pids, kinds):
+    """Region/city ids whose previous edition had fewer than THIN stories in any language."""
+    import json
+    from pathlib import Path
+    out = set()
+    for pid in pids:
+        if kinds.get(pid) not in ("region", "city"):
+            continue
+        f = Path(prev_dir) / "p" / f"{pid}.json"
+        if not f.exists():
+            continue
+        try:
+            news = json.loads(f.read_text()).get("news", {})
+        except (OSError, ValueError):
+            continue
+        if news and any(len(v) < THIN for v in news.values()):
+            out.add(pid)
+    return out

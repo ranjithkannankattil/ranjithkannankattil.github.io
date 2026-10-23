@@ -153,3 +153,23 @@ def test_relevance_leaves_calls_for_digests():
     ai.calls = news_extras.AI.MAX_CALLS - 3
     ai.relevance([("Thrissur", {"t": "x"})], reserve=3)
     assert ai.asked == []
+
+
+import json as _json
+from news_relevance import thin_from_prev
+
+
+def test_thin_from_prev(tmp_path):
+    (tmp_path / "p").mkdir()
+    w = lambda pid, news: (tmp_path / "p" / f"{pid}.json").write_text(_json.dumps({"news": news}))  # noqa: E731
+    w("a", {"en": [1, 2], "ml": [1]})
+    w("b", {"en": [1] * 6})
+    w("d", {"en": []})
+    kinds = {"a": "city", "b": "city", "c": "city", "d": "country"}
+    assert thin_from_prev(tmp_path, ["a", "b", "c", "d"], kinds) == {"a"}
+
+
+def test_thin_if_any_language_is_thin(tmp_path):
+    (tmp_path / "p").mkdir()
+    (tmp_path / "p" / "k.json").write_text(_json.dumps({"news": {"en": [1], "ml": [1] * 9}}))
+    assert thin_from_prev(tmp_path, ["k"], {"k": "city"}) == {"k"}
