@@ -6,7 +6,7 @@ body[data-section="trip"] button{ font:inherit; color:inherit; cursor:pointer; b
 .tp-title{ font-family:var(--f-display); font-weight:700; font-size:clamp(2rem,5vw,2.8rem); line-height:1.1; margin:0; letter-spacing:-.01em; }
 .tp-intro{ color:var(--ink-soft); max-width:64ch; margin:.6rem 0 0; }
 .k{ font-family:var(--f-mono); font-size:.62rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-soft); }
-.k em{ font-style:normal; text-transform:none; letter-spacing:0; opacity:.7; }
+.k em{ font-style:normal; text-transform:none; letter-spacing:0; opacity:.85; }
 
 /* form */
 .tp-form{ margin-top:2rem; border-top:2px solid var(--ink); padding-top:1.4rem; display:grid; gap:1.3rem; }

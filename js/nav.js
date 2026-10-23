@@ -68,7 +68,7 @@
   // Sits above any bar pinned to the bottom of the screen (e.g. the radio player).
   (function scrollButtons() {
     const box = document.createElement("div");
-    box.className = "scroll-nav"; box.setAttribute("aria-label", "Page scroll");
+    box.className = "scroll-nav"; box.setAttribute("role", "group"); box.setAttribute("aria-label", "Page scroll");
     box.innerHTML =
       '<button type="button" class="sn-btn sn-up" aria-label="Back to top" title="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 14l6-6 6 6"/></svg></button>' +
       '<button type="button" class="sn-btn sn-down" aria-label="Go to bottom" title="Go to bottom"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 10l6 6 6-6"/></svg></button>';

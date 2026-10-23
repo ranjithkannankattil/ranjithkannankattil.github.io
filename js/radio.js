@@ -261,7 +261,7 @@
     let n = $("#radioNote");
     if (!n) {
       n = document.createElement("p");
-      n.id = "radioNote"; n.className = "radio-note"; n.setAttribute("role", "status");
+      n.id = "radioNote"; n.className = "radio-msg"; n.setAttribute("role", "status");
       grid.before(n);
     }
     n.textContent = t; n.hidden = false;

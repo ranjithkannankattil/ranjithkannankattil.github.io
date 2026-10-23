@@ -1071,6 +1071,10 @@
   (function splitter() {
     const grid = $('grid'), sp = $('split');
     const saved = store.get('lw'); if (saved) grid.style.setProperty('--lw', saved);
+    // screen readers hear the list's width as a percentage of the tool
+    const tell = () => { sp.setAttribute('aria-valuenow', String(Math.round(100 * $('left').offsetWidth / Math.max(1, grid.clientWidth)))); };
+    sp.setAttribute('aria-valuemin', '0'); sp.setAttribute('aria-valuemax', '100'); tell();
+    new ResizeObserver(tell).observe($('left'));
     let x0 = null, w0 = 0;
     sp.addEventListener('pointerdown', (e) => { x0 = e.clientX; w0 = $('left').offsetWidth; sp.setPointerCapture(e.pointerId); e.preventDefault(); });
     sp.addEventListener('pointermove', (e) => {
