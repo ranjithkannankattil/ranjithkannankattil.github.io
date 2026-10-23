@@ -215,7 +215,8 @@ def test_match_report_without_club_name():
     assert club_story("QPR - Swansea | Football", "", "swansea")
     assert club_story("Swansea 0-1 West Ham - the fans' verdict", "", "swansea")
     assert club_story("Coach who worked under Jürgen Klopp has Swansea dreaming of promotion", "", "swansea")
-    assert club_story("Bournemouth and Milan: Two clubs connected by stripes meet at last", "", "milan")
+    # borderline club-history features naming the city stay (accepted: "clubs" alone is too common a word)
+    assert not club_story("Bournemouth and Milan: Two clubs connected by stripes meet at last", "", "milan")
     assert club_story("Dream night for Bournemouth - how did the Premier League come to dominate Europe?", "", "milan")
 
 
@@ -280,3 +281,70 @@ def test_in_script():
     assert in_script("തൃശൂർ വാർത്ത", "ml") and not in_script("ಬೆಂಗಳೂರು", "ml")
     assert in_script("Milan news", "en") and in_script("Notizie di Milano", "it")
     assert in_script("青岛新闻", "zh") and in_script("서울 뉴스", "ko")
+
+
+# ---- final review fix pass ----
+def test_place_like_club_names_need_a_sport_cue():                     # review 1
+    for t, pid in [("Chelsea Flower Show opens with record crowds", "london"),
+                   ("Fulham Road shop owners fear rent rise", "london"),
+                   ("Crystal Palace Park dinosaurs restored", "london"),
+                   ("Celtic Connections festival line-up announced", "glasgow"),
+                   ("Hearts warmed as Edinburgh charity hits target", "edinburgh"),
+                   ("Regione Lazio, via libera al nuovo piano rifiuti per Roma", "rome")]:
+        assert not club_story(t, "", pid), t
+    assert club_story("Chelsea beat Spurs in London derby fixture", "", "london")   # with a sport cue
+    assert club_story("Tottenham Hotspur sack manager", "", "london")                  # unambiguous name
+
+
+def test_everyday_words_are_not_sport():                               # review 2
+    for t, pid in [("How to beat the heat in London this weekend", "london"),
+                   ("London's best comedy clubs", "london"),
+                   ("Tube closures 2-4 November: what you need to know", "london"),
+                   ("Derby day for London commuters as rail fares rise", "london"),
+                   ("Henry V returns to the Old Vic", "london"),
+                   ("Partita Iva, a Milano boom di aperture", "milan")]:
+        assert not club_story(t, "", pid), t
+
+
+def test_thin_uses_only_recent_stories_and_all_languages(tmp_path):    # review 3
+    import time
+    (tmp_path / "p").mkdir()
+    now = time.time()
+    old = [{"ts": now - 15 * 86400}] * 5
+    (tmp_path / "p" / "a.json").write_text(_json.dumps({"news": {"en": old + [{"ts": now}]}}))     # 1 recent: thin
+    (tmp_path / "p" / "b.json").write_text(_json.dumps({"news": {"en": [{"ts": now}] * 6}}))         # en fine, ml missing
+    (tmp_path / "p" / "c.json").write_text(_json.dumps({"news": {"en": [{"ts": now}] * 6}}))
+    kinds = {"a": "city", "b": "city", "c": "city"}
+    langs = {"a": ["en"], "b": ["en", "ml"], "c": ["en"]}
+    assert thin_from_prev(tmp_path, ["a", "b", "c"], kinds, langs=langs, now=now) == {"a", "b"}
+
+
+def test_kollam_as_year_and_district_towns_kept():                     # review 4
+    import build_news as bn
+    pmap = {p["id"]: p for p in bn.PLACES}
+    own = bn.names(pmap["thrissur"]) + __import__("news_config").DISTRICT_TOWNS.get("thrissur", [])
+    others = other_names("thrissur", pmap, bn.names, bn.LOCAL_FROM)
+    assert not other_place("ഈ കൊല്ലം പൂരം ഗംഭീരമാക്കും", own, others)                     # 'this year'
+    assert not other_place("ചാലക്കുടിയിൽ യുവാവ് അറസ്റ്റിൽ, പ്രതി കൊച്ചിയിലേക്ക് കടന്നു", own, others)
+    assert other_place("കൊച്ചിയിലെ ‘മിനി റെഡ് സ്ട്രീറ്റ്’", own, others)                    # still dropped
+    assert "delhi" not in others and "kolkata" not in others                               # other states: Gemini's call
+
+
+def test_relevance_asks_only_district_stories_without_the_place():    # review 5
+    from news_relevance import relevance_asks
+    pmap = {"india": {"id": "india", "name": "India", "kind": "country", "parent": None},
+            "kerala": {"id": "kerala", "name": "Kerala", "kind": "region", "parent": "india"},
+            "thrissur": {"id": "thrissur", "name": "Thrissur", "kind": "city", "parent": "kerala"}}
+    named = {"t": "Thrissur pooram plan", "_own": True, "ts": 2}
+    village = {"t": "Water supply restored", "_own": True, "ts": 1}
+    result = {"thrissur": {"news": {"en": [named, village]}}}
+    asks = relevance_asks(result, pmap, lambda p: [p["name"].lower()])
+    assert [a[1] for a in asks] == [village]
+    assert asks[0][0] == "Thrissur, Kerala, India (from the Thrissur district page)"
+
+
+def test_relevance_prompt_says_true_when_unsure():
+    ai = _ai([])
+    ai.cache["k1"] = {}
+    ai.relevance([("Thrissur", {"t": "x", "_k": "k1"})])
+    assert "unsure" in ai.asked[0] and "true" in ai.asked[0]

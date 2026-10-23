@@ -13,9 +13,9 @@ from collections import defaultdict
 from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(__file__))
-from news_config import LANGS, OUTLETS, PLACES, JUNK, NATIVE, ALIASES, TOPICS, LOCAL_PAGES, LOCAL_FROM, BRIEFING, LIVE_URL  # noqa: E402
+from news_config import DISTRICT_TOWNS, LANGS, OUTLETS, PLACES, JUNK, NATIVE, ALIASES, TOPICS, LOCAL_PAGES, LOCAL_FROM, BRIEFING, LIVE_URL  # noqa: E402
 import news_extras  # noqa: E402
-from news_relevance import filter_local, other_names, thin_from_prev, build_around, ancestor_chain, in_script, THIN, THIN_DAYS  # noqa: E402
+from news_relevance import filter_local, other_names, thin_from_prev, build_around, ancestor_chain, in_script, relevance_asks, THIN, THIN_DAYS  # noqa: E402
 
 try:
     from googlenewsdecoder import gnewsdecoder
@@ -237,6 +237,11 @@ def enrich(stories, cache):
             st["ts"] = c.get("pt") or c["first"]
 
 
+def own_names(p):
+    """A place's names plus, for a district, its own towns (DISTRICT_TOWNS)."""
+    return names(p) + [x.lower() for x in DISTRICT_TOWNS.get(p["id"], [])]
+
+
 def names(p):
     n = [p["name"], NATIVE.get(p["id"], "")] + ALIASES.get(p["id"], [])
     for q in p.get("q", {}).values():
@@ -261,7 +266,7 @@ def main():
     cache = json.loads(cache_path.read_text()) if cache_path.exists() else {}
 
     places = [p for p in PLACES if not a.only or p["id"] in a.only.split(",")]
-    thin = thin_from_prev(prev, [p["id"] for p in places], {p["id"]: p["kind"] for p in places})
+    thin = thin_from_prev(prev, [p["id"] for p in places], {p["id"]: p["kind"] for p in places}, {p["id"]: p["langs"] for p in places}, NOW)
     max_age = lambda pid: (THIN_DAYS if pid in thin else 8) * 86400  # noqa: E731
     jobs = [j for p in places for j in jobs_for(p, p["id"] in thin)]
     local_urls = sorted({u for pid in [p["id"] for p in places] for us in LOCAL_PAGES.get(LOCAL_FROM.get(pid, pid), {}).values() for u in us})
@@ -341,7 +346,7 @@ def main():
         if topic:
             trusted, other = trusted[:KEEP_TOPIC], []
         elif kind in ("region", "city"):  # stories naming the place first; the rest are checked against their summary later
-            nm = names(pmap[pid])
+            nm = own_names(pmap[pid])
             hit = lambda st: st.get("_own") or any(n in st["t"].lower() for n in nm)  # noqa: E731
             trusted = news_extras.round_robin([x for x in trusted if hit(x)])[:KEEP * 2] \
                 + [x for x in trusted if not hit(x)][:KEEP]
@@ -378,7 +383,7 @@ def main():
     for pid, r in result.items():
         p = pmap[pid]
         local = p["kind"] in ("region", "city")
-        nm = names(p)
+        nm = own_names(p)
         for part, cap in (("news", KEEP), ("other", KEEP_OTHER)):
             for lang, lst in r[part].items():
                 keep, seen_u, seen_s = [], set(), set()
@@ -410,17 +415,7 @@ def main():
         ai.summaries(need)
         # stories the rules could not settle: kept only because they came from a district page,
         # or naming the place only in their summary
-        asks = []
-        for pid, r in result.items():
-            p = pmap[pid]
-            if p["kind"] not in ("region", "city"):
-                continue
-            nm = names(p)
-            for lang, lst in r["news"].items():
-                for st in lst:
-                    if st.get("_own") or not any(n in st["t"].lower() for n in nm):
-                        asks.append((p["name"], st, pid, lang))
-        asks.sort(key=lambda x: -x[1].get("ts", 0))
+        asks = relevance_asks(result, pmap, own_names)
         reserve = sum(len(langs) for _, langs in BRIEFING)
         gone = ai.relevance([(name, st) for name, st, _, _ in asks], reserve=reserve)
         for name, st, pid, lang in asks:

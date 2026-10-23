@@ -229,16 +229,17 @@ ALIASES = {
 # Football clubs named after (or playing in) a place. A headline naming one is a club story
 # and leaves that place's lists, unless the headline or summary also has a civic cue (CIVIC).
 # Whole phrases, case-insensitive. Never a bare "Inter" (an ordinary Italian word).
-CLUBS = {
+CLUBS = {   # only names that cannot mean anything else; a place-like name ("Chelsea", "Lazio", "Hearts")
+            # counts only through the sport cues in news_relevance.SPORT
     "milan": ["AC Milan", "Inter Milan", "l'Inter", "Rossoneri", "Nerazzurri", "San Siro", "il Milan"],
-    "swansea": ["Swansea City", "the Swans", "Swans"],
-    "london": ["Chelsea", "Arsenal", "Tottenham", "Spurs", "West Ham", "Fulham", "Crystal Palace", "Brentford"],
+    "swansea": ["Swansea City", "the Swans"],
+    "london": ["Chelsea FC", "Arsenal FC", "Tottenham Hotspur", "West Ham United", "Fulham FC", "Crystal Palace FC", "Brentford FC"],
     "manchester": ["Manchester United", "Man Utd", "Manchester City", "Man City"],
     "birmingham": ["Aston Villa", "Birmingham City"],
-    "glasgow": ["Celtic", "Rangers"],
-    "edinburgh": ["Hearts", "Hibernian", "Hibs"],
+    "glasgow": ["Celtic FC", "Rangers FC", "Old Firm"],
+    "edinburgh": ["Heart of Midlothian", "Hibernian FC"],
     "cardiff": ["Cardiff City", "the Bluebirds"],
-    "rome": ["AS Roma", "Lazio", "giallorossi", "biancocelesti"],
+    "rome": ["AS Roma", "SS Lazio", "giallorossi", "biancocelesti"],
 }
 CIVIC = re.compile(r"\b(police|council|mayor|riots?|protests?|traffic|fire|court|hospital|schools?|floods?|strikes?|polizia|comune|sindaco|"
                    r"scontri|corteo|traffico|incendio|tribunale|ospedale|scuol[ae]|sciopero)\b|പോലീസ്|പൊലീസ്|നഗരസഭ|കോടതി|ആശുപത്രി|സമരം|"
@@ -249,8 +250,17 @@ CIVIC = re.compile(r"\b(police|council|mayor|riots?|protests?|traffic|fire|court
 PLACE_WORDS = {
     "kerala": ["Thiruvananthapuram", "Trivandrum", "Kollam", "Pathanamthitta", "Alappuzha", "Alleppey", "Kottayam", "Idukki",
                "Ernakulam", "Kochi", "Cochin", "Thrissur", "Palakkad", "Malappuram", "Kozhikode", "Calicut", "Wayanad", "Kannur",
-               "Kasaragod", "തിരുവനന്തപുര", "കൊല്ലം", "പത്തനംതിട്ട", "ആലപ്പുഴ", "കോട്ടയം", "ഇടുക്കി", "എറണാകുള", "കൊച്ചി",
+               "Kasaragod", "തിരുവനന്തപുര", "കൊല്ലത്ത്", "കൊല്ലം ജില്ല", "പത്തനംതിട്ട", "ആലപ്പുഴ", "കോട്ടയം", "ഇടുക്കി", "എറണാകുള", "കൊച്ചി",
                "തൃശൂ", "തൃശ്ശൂ", "പാലക്കാട്", "മലപ്പുറം", "കോഴിക്കോ", "വയനാട്", "കണ്ണൂർ", "കാസർകോട്"],
+}
+
+# A district's own towns: a headline naming one of them is about the district (for Thrissur's
+# pages: "Chalakudy arrest" is Thrissur news even though it does not say "Thrissur").
+DISTRICT_TOWNS = {
+    "thrissur": ["Chalakudy", "Irinjalakuda", "Guruvayur", "Kunnamkulam", "Mala", "Nattika", "Wadakkanchery", "Chavakkad",
+                 "Puthukkad", "Kodakara", "Kodungallur", "Ollur", "Peechi", "Vadanappally", "Kaipamangalam",
+                 "ചാലക്കുടി", "ഇരിങ്ങാലക്കുട", "ഗുരുവായൂർ", "കുന്നംകുളം", "മാള", "നാട്ടിക", "വടക്കാഞ്ചേരി", "ചാവക്കാട്",
+                 "പുതുക്കാട്", "കൊടകര", "കൊടുങ്ങല്ലൂ", "ഒല്ലൂർ", "പീച്ചി", "വാടാനപ്പള്ളി", "കയ്പമംഗലം"],
 }
 
 # Topic tabs at World and country level (Google News sections).

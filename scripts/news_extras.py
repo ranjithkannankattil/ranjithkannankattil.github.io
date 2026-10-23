@@ -213,6 +213,7 @@ class AI:
             payload = [{"i": n, "place": p, "headline": s.get("t", ""), "summary": (s.get("s") or "")[:300]} for n, (p, s) in enumerate(batch)]
             res = self._ask("For each news story below, answer whether it is about, or happening in, the named place. "
                             "A story that only mentions the place in passing, or is about a sports club named after it, is not. "
+                            "A story from a district page about a village or town there is about the place. If you are unsure, answer true. "
                             'Return JSON: [{"i": number, "about": true or false}].\n\n' + json.dumps(payload, ensure_ascii=False))
             if not isinstance(res, list):
                 continue

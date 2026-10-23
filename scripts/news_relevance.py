@@ -21,13 +21,14 @@ def _club_pattern(pid):
 
 # match reports that name only the city ("QPR - Swansea", "Swansea 0-1 West Ham"); used only
 # for places that have clubs listed in CLUBS
-SPORT = re.compile(r"\b(football|soccer|premier league|champions league|europa league|serie a|fa cup|efl|"
-                   r"derby|fixtures?|kick-off|clubs?|striker|midfielder|goalkeeper|relegation|fans' verdict|player ratings|"
-                   r"(?:win|victory) (?:against|over)|beat|draw with|defeat to|loss to|championship|promotion (?:dream|push|race|chase|hopes|bid)|"
-                   r"(?:dreaming of|chasing) promotion|calcio|allenatore|partita)\b"
-                   r"|\b\d\s?[-–]\s?\d\b(?!\s*(?:bed|day|week|month|year|hour|min|%|per|star|km|room))"
+_MONTHS = r"(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec|genn|febbr|magg|giu|lugl|ag|sett|ott|dic)"
+SPORT = re.compile(r"\b(football|soccer|premier league|champions league|europa league|serie a|fa cup|efl|championship|"
+                   r"fixtures?|kick-off|striker|midfielder|goalkeeper|relegation|fans' verdict|player ratings|"
+                   r"(?:win|victory) (?:against|over)|draw with|defeat to|loss to|promotion (?:dream|push|race|chase|hopes|bid)|"
+                   r"(?:dreaming of|chasing) promotion|calcio|allenatore)\b"
+                   r"|\b\d\s?[-–]\s?\d\b(?!\s*(?:bed|day|week|month|year|hour|min|%|per|star|km|room|" + _MONTHS + r"))"
                    r"|\s[-–]\s\w+\s\|\s*football"
-                   r"|\w\s+v\.?\s+\w", re.I)
+                   r"|(?-i:\b[A-Z][\w'’.]*\s+v\.?\s+[A-Z])", re.I)  # "Swansea v West Ham" — lower-case v only ("Henry V" is not)
 
 
 def club_story(title, summary, pid):
@@ -52,9 +53,17 @@ def _names_in(t, n):
 def other_place(title, own, others):
     """The headline names another place and none of this place's own names."""
     t = (title or "").lower()
-    if any(n and n.lower() in t for n in own):
+    if any(n and _names_in(t, n) for n in own):
         return False
     return any(n and _names_in(t, n) for n in others)
+
+
+def _up(pid, pmap):
+    out, q = [], pmap.get(pid, {}).get("parent")
+    while q:
+        out.append(q)
+        q = pmap.get(q, {}).get("parent")
+    return out
 
 
 def other_names(pid, pmap, names_fn, local_from=None):
@@ -63,6 +72,9 @@ def other_names(pid, pmap, names_fn, local_from=None):
     plus the district words of its region (minus its own names)."""
     local_from = local_from or {}
     cc = pmap[pid].get("cc")
+    # other places in the same state (nearest region above); headlines about other states or
+    # the capital are left to the Gemini check rather than dropped by this rule
+    state = next((a for a in _up(pid, pmap) if pmap.get(a, {}).get("kind") == "region"), None)
     ancestors, p = set(), pmap[pid].get("parent")
     while p:
         ancestors.add(p)
@@ -84,6 +96,8 @@ def other_names(pid, pmap, names_fn, local_from=None):
     out = set()
     for q, place in pmap.items():
         if q == pid or q in ancestors or is_descendant(q) or (cc and place.get("cc") and place.get("cc") != cc):
+            continue
+        if state and state not in _up(q, pmap):
             continue
         out |= {n.lower() for n in names_fn(place)}
     for a in ancestors:
@@ -110,10 +124,14 @@ def filter_local(stories, pid, own, others, counts):
 THIN, THIN_DAYS = 5, 21
 
 
-def thin_from_prev(prev_dir, pids, kinds):
-    """Region/city ids whose previous edition had fewer than THIN stories in any language."""
+def thin_from_prev(prev_dir, pids, kinds, langs=None, now=None):
+    """Region/city ids whose previous edition had fewer than THIN stories from the last 8 days in
+    any of their languages (a language with none at all counts). Counting only recent stories keeps
+    the decision stable: a place that reaches THIN only thanks to the longer window stays thin."""
     import json
+    import time
     from pathlib import Path
+    now = now or time.time()
     out = set()
     for pid in pids:
         if kinds.get(pid) not in ("region", "city"):
@@ -125,7 +143,9 @@ def thin_from_prev(prev_dir, pids, kinds):
             news = json.loads(f.read_text()).get("news", {})
         except (OSError, ValueError):
             continue
-        if news and any(len(v) < THIN for v in news.values()):
+        recent = lambda v: [x for x in v if not isinstance(x, dict) or now - x.get("ts", now) < 8 * 86400]  # noqa: E731
+        ls = (langs or {}).get(pid) or list(news)
+        if ls and any(len(recent(news.get(l, []))) < THIN for l in ls):
             out.add(pid)
     return out
 
@@ -175,3 +195,26 @@ def in_script(text, lang):
     lo, hi = _SCRIPTS[lang]
     letters = [c for c in text or "" if c.isalpha()]
     return bool(letters) and sum(lo <= c <= hi for c in letters) / len(letters) > 0.5
+
+
+
+def relevance_asks(result, pmap, own_fn):
+    """Stories for the Gemini check: region/city stories whose headline does not name the place
+    (kept because they came from its district page, or name it only in the summary), newest
+    first. Returns [(label, story, pid, lang)], where label gives Gemini the place's context."""
+    asks = []
+    for pid, r in result.items():
+        p = pmap[pid]
+        if p["kind"] not in ("region", "city"):
+            continue
+        own = own_fn(p)
+        chain = [pmap[a]["name"] for a in _up(pid, pmap) if pmap.get(a, {}).get("kind") != "world"]
+        base = ", ".join([p["name"]] + chain)
+        for lang, lst in r["news"].items():
+            for st in lst:
+                if any(_names_in((st.get("t") or "").lower(), n) for n in own):
+                    continue
+                label = base + (f" (from the {p['name']} district page)" if st.get("_own") else "")
+                asks.append((label, st, pid, lang))
+    asks.sort(key=lambda a: -a[1].get("ts", 0))
+    return asks
