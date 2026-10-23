@@ -9,7 +9,11 @@ import {
 } from "firebase/firestore";
 
 const RULES = readFileSync(new URL("../../firestore.rules", import.meta.url), "utf8");
-const withOwner = (uid) => RULES.replace(/return '';\s*\/\/ OWNER_UID/, `return '${uid}'; // OWNER_UID`);
+function withOwner(uid) {
+  const out = RULES.replace(/return '';(\s*\}\s*\/\/ OWNER_UID)/, `return '${uid}';$1`);
+  if (out === RULES) throw new Error("OWNER_UID line not found in firestore.rules");
+  return out;
+}
 const [host, port] = (process.env.FIRESTORE_EMULATOR_HOST || "127.0.0.1:8080").split(":");
 const K = "malayalam~club-fm";
 
