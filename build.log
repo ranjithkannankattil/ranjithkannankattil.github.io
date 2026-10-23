@@ -1,0 +1,163 @@
+72 places, 399 lists, 881 feeds and pages
+feeds fetched, 0 failed
+enrich: 11073 stories, 1013 new
+AI: 28 calls, 0 errors
+world                en  trusted  23  other   0  topics  74
+world                ml  trusted  25  other   0  topics  64
+world                hi  trusted  25  other   0  topics  76
+world                ta  trusted  25  other   0  topics  67
+world                kn  trusted   7  other   0  topics   3
+world                te  trusted  24  other   0  topics  53
+world                bn  trusted  25  other   0  topics  28
+world                mr  trusted  25  other   0  topics  74
+world                it  trusted  25  other   0  topics  76
+world                fr  trusted  25  other   0  topics  70
+world                de  trusted  25  other   0  topics  49
+world                es  trusted  25  other   0  topics  73
+world                pt  trusted  25  other   0  topics  72
+world                zh  trusted  21  other   0  topics  47
+world                ko  trusted  25  other   0  topics  76
+world                ja  trusted  25  other   0  topics  34
+world                ar  trusted  13  other   0  topics  63
+india                en  trusted  24  other   0  topics  64
+india                ml  trusted  25  other   0  topics  64
+india                hi  trusted  24  other   0  topics  76
+india                ta  trusted  25  other   0  topics  67
+india                kn  trusted   2  other   0  topics   3
+india                te  trusted  25  other   0  topics  53
+india                bn  trusted  25  other   0  topics  28
+india                mr  trusted  25  other   0  topics  74
+kerala               en  trusted  25  other  12  topics   0
+kerala               ml  trusted  25  other  12  topics   0
+thrissur             en  trusted  21  other  12  topics   0  removed ai 2
+thrissur             ml  trusted  23  other  12  topics   0  removed ai 2  removed other-place 3
+kodungallur          en  trusted   5  other   4  topics   0  window 21d
+kodungallur          ml  trusted   3  other  12  topics   0  window 21d
+kochi                en  trusted  25  other  12  topics   0  removed other-place 2
+kochi                ml  trusted  25  other  12  topics   0  removed other-place 1
+thiruvananthapuram   en  trusted  24  other  12  topics   0  removed ai 1
+thiruvananthapuram   ml  trusted  25  other  12  topics   0  removed other-place 1
+kozhikode            en  trusted  24  other  12  topics   0  removed ai 1  removed other-place 8
+kozhikode            ml  trusted  25  other  12  topics   0  removed other-place 1
+karnataka            en  trusted  25  other  12  topics   0  window 21d
+karnataka            kn  trusted   0  other   5  topics   0  window 21d
+bengaluru            en  trusted  25  other  12  topics   0  window 21d
+bengaluru            kn  trusted  11  other   1  topics   0  window 21d  removed ai 4
+bengaluru            ml  trusted  25  other  12  topics   0  window 21d
+mangaluru            en  trusted  21  other  12  topics   0  window 21d  removed ai 4
+mangaluru            kn  trusted   2  other   0  topics   0  window 21d
+tamil-nadu           en  trusted  24  other  12  topics   0  removed ai 1
+tamil-nadu           ta  trusted  25  other  12  topics   0
+chennai              en  trusted  25  other  12  topics   0
+chennai              ta  trusted  25  other  12  topics   0
+coimbatore           en  trusted  23  other  12  topics   0  removed ai 2
+coimbatore           ta  trusted  25  other  12  topics   0
+maharashtra          en  trusted  25  other  12  topics   0
+maharashtra          mr  trusted  25  other  12  topics   0
+maharashtra          hi  trusted  24  other  12  topics   0  removed ai 1
+mumbai               en  trusted  25  other  12  topics   0
+mumbai               mr  trusted  25  other  12  topics   0
+mumbai               hi  trusted  25  other  12  topics   0
+pune                 en  trusted  25  other  12  topics   0
+pune                 mr  trusted  25  other  12  topics   0
+delhi                en  trusted  25  other  12  topics   0
+delhi                hi  trusted  25  other  12  topics   0
+telangana            en  trusted  25  other  12  topics   0
+telangana            te  trusted  25  other  12  topics   0
+hyderabad            en  trusted  25  other  12  topics   0
+hyderabad            te  trusted  25  other  12  topics   0
+west-bengal          en  trusted  23  other  12  topics   0  removed ai 2
+west-bengal          bn  trusted   8  other  12  topics   0
+kolkata              en  trusted  22  other  12  topics   0  removed ai 3
+kolkata              bn  trusted  25  other  12  topics   0
+uk                   en  trusted  25  other   0  topics  74
+wales                en  trusted  25  other  12  topics   0
+swansea              en  trusted  16  other  10  topics   0  removed club 35
+cardiff              en  trusted  25  other  12  topics   0  removed club 21
+england              en  trusted  25  other  12  topics   0
+london               en  trusted  24  other  12  topics   0  removed ai 1  removed club 3
+manchester           en  trusted  10  other   3  topics   0  removed club 60
+birmingham           en  trusted  13  other  12  topics   0  removed club 13
+scotland             en  trusted  25  other  12  topics   0
+edinburgh            en  trusted  25  other  12  topics   0  removed club 1
+glasgow              en  trusted  20  other  12  topics   0  removed club 4
+italy                it  trusted  25  other   0  topics  76
+italy                en  trusted  20  other   0  topics   0
+lombardy             it  trusted  25  other  12  topics   0  window 21d
+lombardy             en  trusted   5  other  12  topics   0  window 21d
+milan                it  trusted  25  other  12  topics   0
+milan                en  trusted  25  other   3  topics   0  removed club 21
+bergamo              it  trusted  25  other  12  topics   0  window 21d
+bergamo              en  trusted   0  other  12  topics   0  window 21d
+lazio                it  trusted  22  other  12  topics   0  window 21d  removed ai 3
+lazio                en  trusted   7  other  12  topics   0  window 21d
+rome                 it  trusted  25  other  12  topics   0  removed club 4
+rome                 en  trusted  15  other  12  topics   0  removed ai 3  removed club 3
+china                zh  trusted  25  other   0  topics  12
+china                en  trusted  25  other   0  topics   0
+shandong             zh  trusted   6  other  12  topics   0  window 21d
+shandong             en  trusted   0  other  12  topics   0  window 21d
+qingdao              zh  trusted   1  other  12  topics   0  window 21d
+qingdao              en  trusted   0  other  12  topics   0  window 21d
+jinan                zh  trusted   2  other  12  topics   0  window 21d
+jinan                en  trusted   0  other  12  topics   0  window 21d
+jiangsu              zh  trusted   8  other  12  topics   0  window 21d
+jiangsu              en  trusted   0  other  12  topics   0  window 21d
+qidong               zh  trusted   3  other  12  topics   0  window 21d
+qidong               en  trusted   0  other   2  topics   0  window 21d
+nantong              zh  trusted   2  other  12  topics   0  window 21d
+nantong              en  trusted   1  other  12  topics   0  window 21d
+nanjing              zh  trusted  12  other  12  topics   0  window 21d
+nanjing              en  trusted   1  other  12  topics   0  window 21d
+shanghai             zh  trusted  25  other  12  topics   0  window 21d
+shanghai             en  trusted  23  other  12  topics   0  window 21d
+beijing              zh  trusted  21  other  12  topics   0  removed ai 1
+beijing              en  trusted  15  other  12  topics   0
+uae                  en  trusted  15  other   0  topics  53
+uae                  ar  trusted  25  other   0  topics  63
+uae                  ml  trusted   8  other   0  topics   0
+dubai                en  trusted  25  other  12  topics   0
+dubai                ar  trusted  11  other  12  topics   0
+dubai                ml  trusted  24  other  12  topics   0  removed ai 1
+abu-dhabi            en  trusted  25  other  12  topics   0
+abu-dhabi            ar  trusted  10  other  12  topics   0
+abu-dhabi            ml  trusted  12  other   7  topics   0
+mozambique           pt  trusted  25  other   0  topics  72
+mozambique           en  trusted  25  other   0  topics   0
+cabo-delgado         pt  trusted  21  other  12  topics   0  window 21d
+cabo-delgado         en  trusted  12  other   6  topics   0  window 21d
+pemba                pt  trusted   1  other  12  topics   0  window 21d
+pemba                en  trusted   4  other   3  topics   0  window 21d
+maputo               pt  trusted  11  other  12  topics   0
+maputo               en  trusted   7  other  10  topics   0
+usa                  en  trusted  25  other   0  topics  53
+usa                  es  trusted  14  other   0  topics  33
+new-york             en  trusted  25  other  12  topics   0
+new-york             es  trusted  21  other  12  topics   0
+washington           en  trusted  14  other  12  topics   0
+france               fr  trusted  25  other   0  topics  70
+france               en  trusted  25  other   0  topics   0
+paris                fr  trusted  25  other  12  topics   0
+paris                en  trusted  25  other  12  topics   0
+germany              de  trusted  25  other   0  topics  49
+germany              en  trusted  24  other   0  topics   0
+berlin               de  trusted  25  other  12  topics   0
+berlin               en  trusted   9  other  12  topics   0
+spain                es  trusted  25  other   0  topics  73
+spain                en  trusted  11  other   0  topics   0
+madrid               es  trusted  24  other  12  topics   0  removed ai 1
+madrid               en  trusted  25  other  12  topics   0
+portugal             pt  trusted  25  other   0  topics  72
+portugal             en  trusted   6  other   0  topics   0
+lisbon               pt  trusted  25  other  12  topics   0
+lisbon               en  trusted   8  other  12  topics   0
+japan                ja  trusted  25  other   0  topics  34
+japan                en  trusted  25  other   0  topics   0
+tokyo                ja  trusted  25  other  12  topics   0
+tokyo                en  trusted   8  other  12  topics   0
+south-korea          ko  trusted  25  other   0  topics  76
+south-korea          en  trusted  16  other   0  topics   0
+seoul                ko  trusted  25  other   9  topics   0
+seoul                en  trusted  24  other  12  topics   0
+singapore            en  trusted  25  other   0  topics  64
+singapore            zh  trusted  25  other   0  topics   0
