@@ -276,6 +276,7 @@
   let RR = window.RadioRatings || null, rrFailed = false, pTok = 0, pKey = "", pStars = null, pLast = null, pBusy = false;
   window.addEventListener("radio:ratings-ready", () => { RR = window.RadioRatings; if (panelOpen()) loadPanel(); });
   window.addEventListener("radio:ratings-failed", () => { rrFailed = true; if (panelOpen()) loadPanel(); });
+  window.addEventListener("radio:ratings-account", () => { if (panelOpen()) loadPanel(); });
   const panelOpen = () => SP && !SP.hidden;
   const LABEL = { waiting: "Waiting for approval", approved: "Published", rejected: "Not published" };
 
@@ -351,7 +352,7 @@
     usable(true);
     $("#stAvg").textContent = "Loading ratings…";
     try {
-      await RR.ready();
+      // reading needs no account; one is made only when the visitor rates or comments
       const [sum, mine, list] = await Promise.all([RR.summary(pKey), RR.mine(pKey), RR.approved(pKey, { limit: 5 })]);
       if (tok !== pTok) return;
       $("#stAvg").textContent = avgText(sum);
@@ -382,7 +383,8 @@
     } catch (e) {
       if (tok !== pTok) return;
       setStars(before);
-      $("#stSaved").textContent = e && e.code === "too-fast" ? "Slow down a little — try again in a few seconds." : "Couldn't save — try again.";
+      $("#stSaved").textContent = e && e.code === "too-fast" ? "Slow down a little — try again in a few seconds."
+        : e && e.code === "unavailable" ? "Ratings unavailable right now" : "Couldn't save — try again.";
     } finally { pBusy = false; }
   }
 
@@ -410,7 +412,11 @@
         if (tok !== pTok) return;
         $("#stNote").textContent = "Thanks — your comment will appear once it's approved.";
         $("#stState").textContent = LABEL.waiting;
-      } catch { if (tok === pTok) $("#stNote").textContent = "Couldn't send — try again."; }
+      } catch (e) {
+        if (tok !== pTok) return;
+        $("#stNote").textContent = e && e.code === "too-fast" ? "Slow down a little — try again in a few seconds."
+          : e && e.code === "unavailable" ? "Ratings unavailable right now" : "Couldn't send — try again.";
+      }
       finally { $("#stSend").disabled = false; }
     };
     $("#stMore").onclick = async () => {
@@ -424,6 +430,7 @@
       } catch { $("#stMore").hidden = true; }
     };
     $("#stShare").onclick = () => current && shareStation(current, currentCol);
+    $("#stPlay").onclick = () => playBtn.click();
     $("#stClose").onclick = closeStationPanel;
     SB.onclick = closeStationPanel;
     document.addEventListener("keydown", (e) => { if (e.key === "Escape" && panelOpen()) closeStationPanel(); });
@@ -465,6 +472,7 @@
     player.classList.toggle("playing", st === "playing");
     player.classList.toggle("loading", st === "loading");
     playBtn.setAttribute("aria-label", st === "playing" ? "Pause" : "Play");
+    const sp = document.getElementById("stPlay"); if (sp) sp.setAttribute("aria-label", st === "playing" ? "Pause" : "Play");
     if ("mediaSession" in navigator) navigator.mediaSession.playbackState = st === "idle" ? "paused" : "playing";
   }
   function syncPlayer() {

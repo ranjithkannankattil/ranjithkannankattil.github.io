@@ -111,10 +111,10 @@
 
   <h2>Rating and commenting on stations (optional)</h2>
   <p>On the Radio page you can give a station one to five stars and add a short comment. You don't need to sign in:
-  the first time you rate, your browser gets an anonymous ID from Firebase Authentication, so your rating can be changed later and counted only once.</p>
+  the first time you rate or comment, your browser gets an anonymous ID from Firebase Authentication, so your rating can be changed later and counted once per browser. Just opening a station's ratings creates nothing. If you then sign in with Google, the anonymous ID is joined to your account, so your ratings stay yours.</p>
   <ul>
     <li><strong>What is stored:</strong> the anonymous ID (or your Google account ID, if you are signed in), the station, your stars, your comment if you write one, and when you sent it — in Google Firebase (EU, Firestore location <code>eur3</code>), as described above.</li>
-    <li><strong>Who can see it:</strong> the average and the number of ratings are shown to everyone. A comment is published without any name, together with its stars and date, only after I have read and approved it; until then only you and I can see it.</li>
+    <li><strong>Who can see it:</strong> the average and the number of ratings are shown to everyone. Individual ratings are stored with the anonymous ID (not a name), and the site reads them to work out the average, so anyone looking at the database directly could see that one ID gave several ratings. A comment is published without any name, together with its stars and date, only after I have read and approved it; until then only you and I can see it.</li>
     <li><strong>Legal basis:</strong> you choose to rate or comment, so it is processed to provide that feature (GDPR Art. 6(1)(b)).</li>
     <li><strong>Removing it:</strong> to have a rating or comment removed, contact me (see above). Clearing this site's data in your browser removes the anonymous ID from your device; ratings already given stay counted unless you ask for them to be removed.</li>
   </ul>

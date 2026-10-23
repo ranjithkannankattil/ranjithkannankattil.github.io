@@ -7,7 +7,7 @@ import * as F from "firebase/firestore";
 import { createRatings, keyFor } from "../../js/radio-ratings-core.js";
 
 const RULES = readFileSync(new URL("../../firestore.rules", import.meta.url), "utf8")
-  .replace(/return '';(\s*\}\s*\/\/ OWNER_UID)/, "return 'owner';$1");
+  .replace(/return '[^']*';(\s*\}\s*\/\/ OWNER_UID)/, "return 'owner';$1");
 const [host, port] = (process.env.FIRESTORE_EMULATOR_HOST || "127.0.0.1:8080").split(":");
 const K = "malayalam~club-fm";
 

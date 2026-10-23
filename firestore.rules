@@ -34,14 +34,23 @@ service cloud.firestore {
         && request.resource.data.ts == request.time
         && getAfter(/databases/$(database)/documents/limits/$(uid)).data.last == request.time
         && (!exists(/databases/$(database)/documents/limits/$(uid))
+            || !('last' in get(/databases/$(database)/documents/limits/$(uid)).data)
             || get(/databases/$(database)/documents/limits/$(uid)).data.last < request.time - duration.value(12, 's'));
       allow delete: if isOwner();
+    }
+    // limits/{uid}: when this browser last rated (last) and last commented (lastComment).
+    // Each field may only be set to the current time or left as it was; it can't be dropped.
+    function stamp(f) {
+      return (f in request.resource.data)
+        ? (request.resource.data[f] == request.time
+           || (resource != null && f in resource.data && request.resource.data[f] == resource.data[f]))
+        : (resource == null || !(f in resource.data));
     }
     match /limits/{uid} {
       allow read: if signedAs(uid);
       allow create, update: if signedAs(uid)
-        && request.resource.data.keys().hasOnly(['last'])
-        && request.resource.data.last == request.time;
+        && request.resource.data.keys().hasOnly(['last', 'lastComment'])
+        && stamp('last') && stamp('lastComment');
     }
 
     // Comments: public only once approved; the author and the owner can read them before that.
@@ -50,9 +59,14 @@ service cloud.firestore {
       return request.auth != null && d.uid == request.auth.uid
         && d.keys().hasOnly(['key', 'uid', 'stars', 'text', 'ts', 'status'])
         && d.keys().hasAll(['key', 'uid', 'stars', 'text', 'ts', 'status'])
-        && d.key is string && id == d.key + '__' + d.uid
+        && d.key is string && d.key.matches('^[a-z0-9-]+~[^/~]{1,200}$') && id == d.key + '__' + d.uid
         && d.text is string && d.text.size() <= 300
-        && goodStars(d.stars) && d.ts == request.time && d.status == 'waiting';
+        && goodStars(d.stars) && d.ts == request.time && d.status == 'waiting'
+        // written in a batch with limits/{uid}.lastComment, at most one comment every 30 s
+        && getAfter(/databases/$(database)/documents/limits/$(request.auth.uid)).data.lastComment == request.time
+        && (!exists(/databases/$(database)/documents/limits/$(request.auth.uid))
+            || !('lastComment' in get(/databases/$(database)/documents/limits/$(request.auth.uid)).data)
+            || get(/databases/$(database)/documents/limits/$(request.auth.uid)).data.lastComment < request.time - duration.value(30, 's'));
     }
     match /comments/{id} {
       allow get: if resource == null || resource.data.status == 'approved' || isOwner()

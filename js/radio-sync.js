@@ -8,6 +8,7 @@ if (cfg && cfg.apiKey && box) {
   const note = document.getElementById("acctNote");
   if (note) note.hidden = false;
   const V = "10.12.2";
+  const { upgradeToGoogle } = await import("./radio-ratings-core.js");
   const [{ initializeApp, getApps, getApp }, A, F] = await Promise.all([
     import(`https://www.gstatic.com/firebasejs/${V}/firebase-app.js`),
     import(`https://www.gstatic.com/firebasejs/${V}/firebase-auth.js`),
@@ -47,15 +48,12 @@ if (cfg && cfg.apiKey && box) {
   }
   const state = (t) => { const el = document.getElementById("acctState"); if (el) el.textContent = t; };
 
+  // keeps any station ratings made before signing in (see upgradeToGoogle)
   async function signIn() {
-    try { await A.signInWithPopup(auth, provider); }
-    catch (e) {
-      if (e && (e.code === "auth/popup-blocked" || e.code === "auth/operation-not-supported-in-this-environment")) {
-        await A.signInWithRedirect(auth, provider);
-      } else if (!(e && e.code === "auth/popup-closed-by-user")) {
-        alertBox("Couldn't sign in — please try again.");
-      }
-    }
+    try { await upgradeToGoogle(auth, A, provider); }
+    catch { alertBox("Couldn't sign in — please try again."); return; }
+    // linking an anonymous ID keeps the same account, so no sign-in event fires: pick it up here
+    await onUser(auth.currentUser);
   }
   function alertBox(t) { const s = document.createElement("span"); s.className = "acct-err"; s.textContent = t; box.append(s); setTimeout(() => s.remove(), 5000); }
 
@@ -87,10 +85,17 @@ if (cfg && cfg.apiKey && box) {
   });
 
   A.getRedirectResult(auth).catch(() => {});
-  A.onAuthStateChanged(auth, async (u) => {
-    // an anonymous ID (made when someone rates a station) is not a signed-in account
-    user = u && !u.isAnonymous ? u : null;
+  // an anonymous ID (made when someone rates a station) is not a signed-in account
+  let seen = "";
+  async function onUser(u) {
+    const next = u && !u.isAnonymous ? u : null;
+    const id = next ? next.uid : "";
+    user = next;
+    if (id === seen) return;
+    seen = id;
     draw();
     if (user) await mergeOnSignIn();
-  });
+  }
+  draw();
+  A.onAuthStateChanged(auth, onUser);
 }

@@ -213,17 +213,54 @@ checks['show more loads 10'] = async () => {
 };
 
 checks['auth failure shows unavailable'] = async () => {
-  for (const fake of [{ ready: { throw: 'unavailable' } }, { fail: true }]) {
+  // sign-in blocked: the average and comments still show; saving says ratings are unavailable
+  {
+    const { p } = await withPanel({ fake: { ready: { throw: 'unavailable' }, rate: { throw: 'unavailable' }, summary: { count: 4, avg: 4.5 } } });
+    ok((await p.textContent('#stAvg')) === '★ 4.5 · 4 ratings', 'sign-in blocked: the average still shows');
+    await p.click('#stStars [data-v="3"]');
+    await p.waitForTimeout(100);
+    ok((await p.textContent('#stSaved')) === 'Ratings unavailable right now', 'sign-in blocked: saving says unavailable');
+    await p.close();
+  }
+  // Firebase can't be reached at all
+  for (const fake of [{ summary: { throw: 'unavailable' } }, { fail: true }]) {
     const { p } = await withPanel({ fake, init: () => {
       Object.defineProperty(navigator, 'share', { value: async (d) => { window.__shared = d; }, configurable: true });
     } });
-    ok((await p.textContent('#stAvg')) === 'Ratings unavailable right now', `unavailable shown (${fake.fail ? 'module failed' : 'sign-in failed'})`);
+    ok((await p.textContent('#stAvg')) === 'Ratings unavailable right now', `unavailable shown (${fake.fail ? 'module failed' : 'unreachable'})`);
     ok(await p.isDisabled('#stStars [data-v="1"]') && await p.isDisabled('#stSend'), 'stars and Send disabled');
     await p.click('#stShare');
     await p.waitForTimeout(100);
     ok(!!(await p.evaluate(() => window.__shared)), 'Share still works');
     await p.close();
   }
+};
+
+checks['opening the panel creates no account'] = async () => {
+  const { p } = await withPanel();
+  ok((await calls(p, 'ready')).length === 0, 'opening the panel does not sign in');
+  await p.close();
+};
+
+checks['panel reloads when the account changes'] = async () => {
+  const { p } = await withPanel();
+  const before = (await calls(p, 'mine')).length;
+  await p.evaluate(() => window.dispatchEvent(new CustomEvent('radio:ratings-account')));
+  await p.waitForTimeout(150);
+  ok((await calls(p, 'mine')).length === before + 1, 'panel reloads when the account changes');
+  await p.close();
+};
+
+checks['play from the panel'] = async () => {
+  const s = await stationOf();
+  const p = await open(`/radio.html?c=malayalam&s=${encodeURIComponent(s.id)}`, { width: 390, height: 844 });
+  ok(await p.isVisible('#stPlay'), 'shared link: Play button in the panel');
+  await p.click('#stPlay');
+  await p.waitForTimeout(200);
+  // streams can't connect in this test (outside requests are blocked), so check that playing was attempted
+  const st = await statusText(p);
+  ok(st !== 'Tap play to start', `Play in the panel starts the station (status: ${st})`);
+  await p.close();
 };
 
 checks['share button shares'] = async () => {

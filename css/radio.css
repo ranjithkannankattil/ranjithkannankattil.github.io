@@ -264,6 +264,10 @@ body[data-section="radio"] .np-close:hover, body[data-section="radio"] .np-close
 .st-title{ display:flex; flex-direction:column; gap:.25rem; min-width:0; }
 .st-title b{ font-family:var(--f-display); font-weight:600; font-size:1.1rem; line-height:1.2; }
 .st-avg{ font-family:var(--f-mono); font-size:.72rem; letter-spacing:.06em; color:rgba(240,237,230,.75); }
+#stPanel .st-play{ flex:none; width:40px; height:40px; margin-left:auto; display:grid; place-items:center; border-radius:50%; background:var(--paper); color:var(--ink); }
+#stPanel .st-play svg{ width:18px; height:18px; fill:currentColor; }
+#stPanel .st-play .i-pause, .radio-player.playing ~ #stPanel .st-play .i-play{ display:none; }
+.radio-player.playing ~ #stPanel .st-play .i-pause{ display:block; }
 #stPanel .st-close{ flex:none; width:36px; height:36px; display:grid; place-items:center; border-radius:50%; color:var(--paper); }
 #stPanel .st-close:hover{ background:rgba(240,237,230,.1); }
 #stPanel .st-close svg{ width:18px; height:18px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; }

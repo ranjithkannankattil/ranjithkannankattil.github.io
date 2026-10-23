@@ -6,6 +6,7 @@
 export const keyFor = (collectionId, stationId) => `${collectionId}~${stationId}`;
 
 const MIN_FOR_AVG = 3;
+const WAITING_CAP = 200;   // the approval page shows at most this many at once
 const fail = (code, cause) => Object.assign(new Error(code), { code, cause });
 const ms = (t) => (t && typeof t.toMillis === "function" ? t.toMillis() : 0);
 const okStars = (s) => Number.isInteger(s) && s >= 1 && s <= 5;
@@ -13,16 +14,18 @@ const okStars = (s) => Number.isInteger(s) && s >= 1 && s <= 5;
 export function createRatings({ auth, db, A, F }) {
   let signing = null;
 
+  // the live account: Google if signed in, else an anonymous ID made on first use.
+  // Nothing is cached, so signing in or out never leaves a stale ID behind.
+  async function settled() { if (typeof auth.authStateReady === "function") await auth.authStateReady(); }
   async function ready() {
     if (auth.currentUser) return auth.currentUser.uid;
     if (!signing) {
       signing = (async () => {
-        if (typeof auth.authStateReady === "function") await auth.authStateReady();
+        await settled();
         if (auth.currentUser) return auth.currentUser.uid;
         const cred = await A.signInAnonymously(auth);
         return cred.user.uid;
-      })();
-      signing.catch(() => { signing = null; });
+      })().finally(() => { signing = null; });
     }
     try { return await signing; } catch (e) { throw fail("unavailable", e); }
   }
@@ -50,8 +53,11 @@ export function createRatings({ auth, db, A, F }) {
       return { count: n, avg: n >= MIN_FOR_AVG ? avg : null };
     },
 
+    // what this browser gave the station; never creates an account just to look
     async mine(key) {
-      const uid = await ready();
+      await settled();
+      if (!auth.currentUser) return { stars: null, comment: null };
+      const uid = auth.currentUser.uid;
       const [v, c] = await call(() => Promise.all([
         F.getDoc(F.doc(db, "ratings", key, "votes", uid)),
         F.getDoc(F.doc(db, "comments", `${key}__${uid}`)),
@@ -69,7 +75,7 @@ export function createRatings({ auth, db, A, F }) {
       await call(() => {
         const b = F.writeBatch(db);
         b.set(F.doc(db, "ratings", key, "votes", uid), { stars, ts: F.serverTimestamp() });
-        b.set(F.doc(db, "limits", uid), { last: F.serverTimestamp() });
+        b.set(F.doc(db, "limits", uid), { last: F.serverTimestamp() }, { merge: true });
         return b.commit();
       }, "too-fast");
     },
@@ -78,8 +84,12 @@ export function createRatings({ auth, db, A, F }) {
       if (!okStars(stars)) throw fail("bad-stars");
       const uid = await ready();
       const t = String(text || "").trim().slice(0, 300);
-      await call(() => F.setDoc(F.doc(db, "comments", `${key}__${uid}`),
-        { key, uid, stars, text: t, ts: F.serverTimestamp(), status: "waiting" }));
+      await call(() => {
+        const b = F.writeBatch(db);
+        b.set(F.doc(db, "comments", `${key}__${uid}`), { key, uid, stars, text: t, ts: F.serverTimestamp(), status: "waiting" });
+        b.set(F.doc(db, "limits", uid), { lastComment: F.serverTimestamp() }, { merge: true });
+        return b.commit();
+      }, "too-fast");
     },
 
     // equality-only queries need no composite index; sorting and paging happen here
@@ -91,7 +101,7 @@ export function createRatings({ auth, db, A, F }) {
 
     async waiting() {
       await ready();
-      const snap = await call(() => F.getDocs(F.query(comments(), F.where("status", "==", "waiting"))));
+      const snap = await call(() => F.getDocs(F.query(comments(), F.where("status", "==", "waiting"), F.limit(WAITING_CAP))));
       return snap.docs.map(shape).sort((a, b) => ms(a.ts) - ms(b.ts)).map(({ status, ...c }) => c);
     },
 
@@ -107,4 +117,27 @@ export function createRatings({ auth, db, A, F }) {
       await call(() => F.updateDoc(F.doc(db, "comments", id), { status }));
     },
   };
+}
+
+// Google sign-in from a browser that already has an anonymous ID: link the two, so ratings
+// and comments made anonymously stay with the person. If that Google account already exists
+// elsewhere, sign in to it instead. A blocked popup falls back to a full-page redirect.
+export async function upgradeToGoogle(auth, A, provider) {
+  const anon = auth.currentUser && auth.currentUser.isAnonymous;
+  try {
+    if (anon) await A.linkWithPopup(auth.currentUser, provider);
+    else await A.signInWithPopup(auth, provider);
+  } catch (e) {
+    const code = e && e.code;
+    if (anon && (code === "auth/credential-already-in-use" || code === "auth/email-already-in-use")) {
+      const cred = A.GoogleAuthProvider.credentialFromError(e);
+      if (cred) { await A.signInWithCredential(auth, cred); return; }
+      await A.signInWithPopup(auth, provider);
+    } else if (code === "auth/popup-blocked" || code === "auth/operation-not-supported-in-this-environment") {
+      if (anon) await A.linkWithRedirect(auth.currentUser, provider);
+      else await A.signInWithRedirect(auth, provider);
+    } else if (code !== "auth/popup-closed-by-user" && code !== "auth/cancelled-popup-request") {
+      throw e;
+    }
+  }
 }

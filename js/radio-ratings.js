@@ -1,7 +1,7 @@
 // Loads Firebase and the ratings module for radio.html, then sets window.RadioRatings and
 // fires "radio:ratings-ready". Visitors who never signed in get an anonymous Firebase ID the
 // first time they rate (radio.html); radio-admin.html uses the same loader. If Firebase can't load, "radio:ratings-failed" fires instead.
-import { createRatings, keyFor } from "./radio-ratings-core.js";
+import { createRatings, keyFor, upgradeToGoogle } from "./radio-ratings-core.js";
 
 const cfg = window.FIREBASE_CONFIG;
 try {
@@ -23,17 +23,19 @@ try {
     const u = auth.currentUser;
     return u ? { uid: u.uid, anonymous: u.isAnonymous } : null;
   };
-  R.signInGoogle = async () => {
+  R.signInGoogle = () => {
     const provider = new A.GoogleAuthProvider();
     provider.setCustomParameters({ prompt: "select_account" });
-    try { await A.signInWithPopup(auth, provider); }
-    catch (e) {
-      if (e && (e.code === "auth/popup-blocked" || e.code === "auth/operation-not-supported-in-this-environment")) await A.signInWithRedirect(auth, provider);
-      else if (!(e && e.code === "auth/popup-closed-by-user")) throw e;
-    }
+    return upgradeToGoogle(auth, A, provider);
   };
   R.signOut = () => A.signOut(auth);
   window.RadioRatings = R;
+  // an open station panel reloads when someone signs in or out
+  let firstAuth = true;
+  A.onAuthStateChanged(auth, () => {
+    if (firstAuth) { firstAuth = false; return; }
+    window.dispatchEvent(new CustomEvent("radio:ratings-account"));
+  });
   window.dispatchEvent(new CustomEvent("radio:ratings-ready"));
 } catch (e) {
   console.warn("Ratings unavailable:", e);

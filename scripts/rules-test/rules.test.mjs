@@ -10,7 +10,7 @@ import {
 
 const RULES = readFileSync(new URL("../../firestore.rules", import.meta.url), "utf8");
 function withOwner(uid, rules = RULES) {
-  const out = rules.replace(/return '';(\s*\}\s*\/\/ OWNER_UID)/, `return '${uid}';$1`);
+  const out = rules.replace(/return '[^']*';(\s*\}\s*\/\/ OWNER_UID)/, `return '${uid}';$1`);
   if (out === rules) throw new Error("OWNER_UID line not found in firestore.rules");
   return out;
 }
@@ -195,4 +195,13 @@ test("harness still works once the real owner ID is filled in", () => {
   if (!/return 'RealOwnerId123';/.test(filled)) throw new Error("could not fill");
   if (!/return 'owner';/.test(withOwner("owner", filled))) throw new Error("harness did not replace a filled-in ID");
   void prev;
+});
+
+test("rating cannot wipe the comment limit", async () => {
+  await seed((d) => setDoc(doc(d, "limits/anon1"), { last: ago(60), lastComment: ago(5) }));
+  await assertFails(rateBatch(db("anon1"), "anon1", 4));              // overwrite without lastComment
+  const d = db("anon1"), b = writeBatch(d);
+  b.set(doc(d, `ratings/${K}/votes/anon1`), { stars: 4, ts: serverTimestamp() });
+  b.set(doc(d, "limits/anon1"), { last: serverTimestamp() }, { merge: true });
+  await assertSucceeds(b.commit());
 });
