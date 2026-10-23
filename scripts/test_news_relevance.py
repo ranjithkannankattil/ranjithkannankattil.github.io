@@ -256,3 +256,27 @@ def test_ancestor_chain():
     assert ancestor_chain("thrissur", pmap, {}) == ["kerala", "india"]
     # a district that is also the parent: no loop, no repeat
     assert ancestor_chain("kodungallur", pmap, {"kodungallur": "kerala"}) == ["kerala", "india"]
+
+
+# found in trial 3
+def test_versus_and_victory_reports():
+    assert club_story("Swansea v West Ham United", "", "swansea")
+    assert club_story("West Ham: Fan speaks about Championship victory against Swansea", "", "swansea")
+
+
+def test_around_skips_wrong_script():
+    hindi = {"t": "भारत चीन बॉर्डर पर", "u": "h"}
+    kannada = {"t": "ಬೆಂಗಳೂರು ಸುದ್ದಿ", "u": "k"}
+    ok = lambda s, lang: lang != "kn" or any("ಀ" <= ch <= "೿" for ch in s["t"])  # noqa: E731
+    a = build_around({"kn": []}, [("karnataka", {"kn": []}), ("india", {"kn": [hindi, kannada]})], ["kn"], keep=ok)
+    assert a["news"]["kn"] == [kannada]
+
+
+from news_relevance import in_script
+
+
+def test_in_script():
+    assert in_script("ಬೆಂಗಳೂರು ಸುದ್ದಿ", "kn") and not in_script("भारत चीन बॉर्डर पर", "kn")
+    assert in_script("തൃശൂർ വാർത്ത", "ml") and not in_script("ಬೆಂಗಳೂರು", "ml")
+    assert in_script("Milan news", "en") and in_script("Notizie di Milano", "it")
+    assert in_script("青岛新闻", "zh") and in_script("서울 뉴스", "ko")

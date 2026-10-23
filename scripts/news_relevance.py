@@ -23,10 +23,11 @@ def _club_pattern(pid):
 # for places that have clubs listed in CLUBS
 SPORT = re.compile(r"\b(football|soccer|premier league|champions league|europa league|serie a|fa cup|efl|"
                    r"derby|fixtures?|kick-off|clubs?|striker|midfielder|goalkeeper|relegation|fans' verdict|player ratings|"
-                   r"win (?:against|over)|beat|draw with|defeat to|loss to|promotion (?:dream|push|race|chase|hopes|bid)|"
+                   r"(?:win|victory) (?:against|over)|beat|draw with|defeat to|loss to|championship|promotion (?:dream|push|race|chase|hopes|bid)|"
                    r"(?:dreaming of|chasing) promotion|calcio|allenatore|partita)\b"
                    r"|\b\d\s?[-–]\s?\d\b(?!\s*(?:bed|day|week|month|year|hour|min|%|per|star|km|room))"
-                   r"|\s[-–]\s\w+\s\|\s*football", re.I)
+                   r"|\s[-–]\s\w+\s\|\s*football"
+                   r"|\w\s+v\.?\s+\w", re.I)
 
 
 def club_story(title, summary, pid):
@@ -129,7 +130,7 @@ def thin_from_prev(prev_dir, pids, kinds):
     return out
 
 
-def build_around(own, chain, langs, cap=8):
+def build_around(own, chain, langs, cap=8, keep=None):
     """For each language where a place has fewer than THIN own stories, up to `cap` stories from
     the nearest place in `chain` (ancestors, nearest first: [(pid, news)]) that has some in that
     language and that the place does not already show. None when nothing is needed or found."""
@@ -140,7 +141,7 @@ def build_around(own, chain, langs, cap=8):
             continue
         seen = {s.get("u") for s in mine}
         for pid, news in chain:
-            extra = [s for s in news.get(lang, []) if s.get("u") not in seen][:cap]
+            extra = [s for s in news.get(lang, []) if s.get("u") not in seen and (keep is None or keep(s, lang))][:cap]
             if extra:
                 out[lang], frm[lang] = extra, pid
                 break
@@ -159,3 +160,18 @@ def ancestor_chain(pid, pmap, local_from):
             out.append(q)
         q = pmap[q].get("parent")
     return out
+
+
+# Unicode blocks of each non-Latin language, so borrowed stories are in the right script
+_SCRIPTS = {"ml": ("ഀ", "ൿ"), "kn": ("ಀ", "೿"), "ta": ("஀", "௿"), "te": ("ఀ", "౿"),
+            "bn": ("ঀ", "৿"), "hi": ("ऀ", "ॿ"), "mr": ("ऀ", "ॿ"), "ar": ("؀", "ۿ"),
+            "zh": ("一", "鿿"), "ja": ("぀", "鿿"), "ko": ("가", "힯")}
+
+
+def in_script(text, lang):
+    """Most letters of the headline are in the language's own script (Latin languages always pass)."""
+    if lang not in _SCRIPTS:
+        return True
+    lo, hi = _SCRIPTS[lang]
+    letters = [c for c in text or "" if c.isalpha()]
+    return bool(letters) and sum(lo <= c <= hi for c in letters) / len(letters) > 0.5
