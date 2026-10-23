@@ -1,0 +1,20 @@
+name: Probe news sources (temporary)
+on:
+  push:
+    branches: [news-relevance]
+    paths: [scripts/probe_sources.py, .github/workflows/probe-sources.yml]
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: python3 -u scripts/probe_sources.py
+      - name: Publish result to probe-out
+        run: |
+          cd probe && git init -q -b probe-out && git config user.name "github-actions[bot]" && git config user.email "41898732+github-actions[bot]@users.noreply.github.com"
+          git add -A && git commit -qm "probe $(date -u +%FT%TZ)" && git push -qf "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" probe-out
