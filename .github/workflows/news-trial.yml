@@ -1,4 +1,4 @@
-name: News trial build (temporary, not published) # run 2
+name: News trial build (temporary, not published) # run 3
 on:
   push:
     branches: [news-relevance]
@@ -26,9 +26,10 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
-        run: python3 -u scripts/build_news.py --out out --prev prev
+        run: set -o pipefail; python3 -u scripts/build_news.py --out out --prev prev 2>&1 | tee build.log
       - name: Publish to probe-out for checking
+        if: always()
         run: |
-          mkdir -p t/p && cp out/report.txt t/ && for p in milan swansea thrissur kodungallur pemba bengaluru cabo-delgado qingdao qidong mangaluru; do cp out/p/$p.json t/p/ 2>/dev/null || true; done
+          mkdir -p t/p && cp build.log t/ 2>/dev/null; tail -80 build.log > t/build-tail.txt 2>/dev/null; cp out/report.txt t/ 2>/dev/null; for p in milan swansea thrissur kodungallur pemba bengaluru cabo-delgado qingdao qidong mangaluru; do cp out/p/$p.json t/p/ 2>/dev/null || true; done
           cd t && git init -q -b probe-out && git config user.name "github-actions[bot]" && git config user.email "41898732+github-actions[bot]@users.noreply.github.com"
           git add -A && git commit -qm "trial $(date -u +%FT%TZ)" && git push -qf "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" probe-out
