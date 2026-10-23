@@ -9,9 +9,9 @@ import {
 } from "firebase/firestore";
 
 const RULES = readFileSync(new URL("../../firestore.rules", import.meta.url), "utf8");
-function withOwner(uid) {
-  const out = RULES.replace(/return '';(\s*\}\s*\/\/ OWNER_UID)/, `return '${uid}';$1`);
-  if (out === RULES) throw new Error("OWNER_UID line not found in firestore.rules");
+function withOwner(uid, rules = RULES) {
+  const out = rules.replace(/return '';(\s*\}\s*\/\/ OWNER_UID)/, `return '${uid}';$1`);
+  if (out === rules) throw new Error("OWNER_UID line not found in firestore.rules");
   return out;
 }
 const [host, port] = (process.env.FIRESTORE_EMULATOR_HOST || "127.0.0.1:8080").split(":");
@@ -74,22 +74,22 @@ test("anyone can read and aggregate votes", async () => {
 });
 
 test("comment starts waiting", async () => {
-  await assertSucceeds(setDoc(doc(db("anon1"), `comments/${K}__anon1`), comment("anon1")));
-  await assertFails(setDoc(doc(db("anon2"), `comments/${K}__anon2`), comment("anon2", { status: "approved" })));
+  await assertSucceeds(commentBatch(db("anon1"), "anon1", comment("anon1")));
+  await assertFails(commentBatch(db("anon2"), "anon2", comment("anon2", { status: "approved" })));
 });
 
 test("comment id must match key and uid", async () => {
-  await assertFails(setDoc(doc(db("anon1"), `comments/${K}__anon2`), comment("anon1")));
-  await assertFails(setDoc(doc(db("anon1"), `comments/${K}__anon1`), comment("anon2")));
+  await assertFails(commentBatch(db("anon1"), "anon1", comment("anon1"), K, `${K}__anon2`));
+  await assertFails(commentBatch(db("anon1"), "anon1", comment("anon2")));
 });
 
 test("over 300 chars refused", async () => {
-  await assertFails(setDoc(doc(db("anon1"), `comments/${K}__anon1`), comment("anon1", { text: "x".repeat(301) })));
-  await assertSucceeds(setDoc(doc(db("anon1"), `comments/${K}__anon1`), comment("anon1", { text: "x".repeat(300) })));
+  await assertFails(commentBatch(db("anon1"), "anon1", comment("anon1", { text: "x".repeat(301) })));
+  await assertSucceeds(commentBatch(db("anon1"), "anon1", comment("anon1", { text: "x".repeat(300) })));
 });
 
 test("extra fields refused", async () => {
-  await assertFails(setDoc(doc(db("anon1"), `comments/${K}__anon1`), comment("anon1", { name: "Me" })));
+  await assertFails(commentBatch(db("anon1"), "anon1", comment("anon1", { name: "Me" })));
 });
 
 test("waiting comment hidden from others", async () => {
@@ -125,7 +125,7 @@ test("author edit resets to waiting", async () => {
   await seedComment("anon1", "approved");
   const ref = doc(db("anon1"), `comments/${K}__anon1`);
   await assertFails(setDoc(ref, comment("anon1", { text: "Changed", status: "approved" })));
-  await assertSucceeds(setDoc(ref, comment("anon1", { text: "Changed" })));
+  await assertSucceeds(commentBatch(db("anon1"), "anon1", comment("anon1", { text: "Changed" })));
 });
 
 test("non-owner cannot change status", async () => {
@@ -149,4 +149,50 @@ test("existing users and stats rules unchanged", async () => {
   await seed((d) => setDoc(doc(d, "stats/site"), { visits: 5 }));
   await assertSucceeds(updateDoc(doc(db(null), "stats/site"), { visits: increment(1) }));
   await assertFails(setDoc(doc(db(null), "other/x"), { a: 1 }));
+});
+
+// ---- found in the final review
+function commentBatch(d, uid, data, key = K, id = `${key}__${uid}`) {
+  const b = writeBatch(d);
+  b.set(doc(d, `comments/${id}`), data);
+  b.set(doc(d, `limits/${uid}`), { lastComment: serverTimestamp() }, { merge: true });
+  return b.commit();
+}
+
+test("comment without limits update refused", async () => {
+  await assertFails(setDoc(doc(db("anon1"), `comments/${K}__anon1`), comment("anon1")));
+  await assertSucceeds(commentBatch(db("anon1"), "anon1", comment("anon1")));
+});
+
+test("comment too fast refused", async () => {
+  await seed((d) => setDoc(doc(d, "limits/anon1"), { lastComment: ago(10) }));
+  await assertFails(commentBatch(db("anon1"), "anon1", comment("anon1")));
+  await seed((d) => setDoc(doc(d, "limits/anon1"), { lastComment: ago(40) }));
+  await assertSucceeds(commentBatch(db("anon1"), "anon1", comment("anon1")));
+});
+
+test("rating then commenting straight away is fine", async () => {
+  await assertSucceeds(rateBatch(db("anon1"), "anon1", 4));
+  await assertSucceeds(commentBatch(db("anon1"), "anon1", comment("anon1")));
+  await assertFails(rateBatch(db("anon1"), "anon1", 5));   // the vote limit still holds
+});
+
+test("comment key must look like a station key", async () => {
+  for (const bad of ["x", "a b~c", "~station", "malayalam~"]) {
+    await assertFails(commentBatch(db("anon1"), "anon1", comment("anon1", { key: bad }), bad));
+  }
+});
+
+test("limits fields cannot be backdated", async () => {
+  await assertFails(setDoc(doc(db("anon1"), "limits/anon1"), { last: ago(100) }));
+  await assertFails(setDoc(doc(db("anon1"), "limits/anon1"), { lastComment: ago(100) }));
+  await assertFails(setDoc(doc(db("anon1"), "limits/anon1"), { other: serverTimestamp() }));
+});
+
+test("harness still works once the real owner ID is filled in", () => {
+  const filled = RULES.replace(/return '[^']*';(\s*\}\s*\/\/ OWNER_UID)/, "return 'RealOwnerId123';$1");
+  const prev = RULES;
+  if (!/return 'RealOwnerId123';/.test(filled)) throw new Error("could not fill");
+  if (!/return 'owner';/.test(withOwner("owner", filled))) throw new Error("harness did not replace a filled-in ID");
+  void prev;
 });

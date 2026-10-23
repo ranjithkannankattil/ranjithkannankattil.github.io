@@ -97,3 +97,63 @@ test("ready failure throws unavailable", async () => {
   const A = { signInAnonymously: async () => { throw Object.assign(new Error("x"), { code: "auth/operation-not-allowed" }); } };
   await assert.rejects(createRatings({ auth: { currentUser: null }, db: null, A, F }).ready(), (e) => e.code === "unavailable");
 });
+
+// ---- found in the final review
+test("ready after sign-out uses the new account", async () => {
+  const auth = { currentUser: null };
+  let n = 0;
+  const A = { signInAnonymously: async (a) => { a.currentUser = { uid: `anon-${++n}` }; return { user: a.currentUser }; } };
+  const r = createRatings({ auth, db: null, A, F });
+  assert.equal(await r.ready(), "anon-1");
+  auth.currentUser = null;                       // signed out
+  assert.equal(await r.ready(), "anon-2");
+  auth.currentUser = { uid: "google-uid" };      // signed in with Google
+  assert.equal(await r.ready(), "google-uid");
+});
+
+test("summary and approved need no account; mine without one does not sign in", async () => {
+  await R("a").rate(K, 5);
+  let signed = 0;
+  const auth = { currentUser: null };
+  const A = { signInAnonymously: async () => { signed++; throw Object.assign(new Error("blocked"), { code: "auth/admin-restricted-operation" }); } };
+  const r = createRatings({ auth, db: env.unauthenticatedContext().firestore(), A, F });
+  assert.deepEqual(await r.summary(K), { count: 1, avg: null });
+  assert.deepEqual(await r.approved(K), []);
+  assert.deepEqual(await r.mine(K), { stars: null, comment: null });
+  assert.equal(signed, 0);
+  await assert.rejects(r.rate(K, 4), (e) => e.code === "unavailable");
+});
+
+test("comment too soon after another throws too-fast; right after a rating is fine", async () => {
+  const r = R("a");
+  await r.rate(K, 4);
+  await r.comment(K, 4, "First");
+  await assert.rejects(r.comment(K, 4, "Second"), (e) => e.code === "too-fast");
+});
+
+test("waiting is capped", async () => {
+  await env.withSecurityRulesDisabled(async (c) => {
+    const d = c.firestore();
+    const b = F.writeBatch(d);
+    for (let i = 0; i < 205; i++) b.set(F.doc(d, "comments", `${K}__u${i}`), { key: K, uid: `u${i}`, stars: 3, text: "x", ts: ts(1e12 + i), status: "waiting" });
+    await b.commit();
+  });
+  assert.equal((await R("owner").waiting()).length, 200);
+});
+
+test("upgradeToGoogle links an anonymous account, or signs in when the Google account exists", async () => {
+  const { upgradeToGoogle } = await import("../../js/radio-ratings-core.js");
+  const log = [];
+  const provider = {};
+  const A = {
+    linkWithPopup: async () => { log.push("link"); },
+    signInWithPopup: async () => { log.push("signin"); },
+    signInWithCredential: async (a, c) => { log.push("cred:" + c); },
+    GoogleAuthProvider: { credentialFromError: () => "C" },
+  };
+  await upgradeToGoogle({ currentUser: { isAnonymous: true } }, A, provider);
+  await upgradeToGoogle({ currentUser: null }, A, provider);
+  A.linkWithPopup = async () => { throw Object.assign(new Error("x"), { code: "auth/credential-already-in-use" }); };
+  await upgradeToGoogle({ currentUser: { isAnonymous: true } }, A, provider);
+  assert.deepEqual(log, ["link", "signin", "cred:C"]);
+});
