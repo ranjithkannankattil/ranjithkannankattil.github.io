@@ -5,7 +5,7 @@ import { readFileSync } from "node:fs";
 import { initializeTestEnvironment, assertSucceeds, assertFails } from "@firebase/rules-unit-testing";
 import {
   doc, setDoc, getDoc, updateDoc, writeBatch, serverTimestamp, Timestamp, collection,
-  query, where, getDocs, getCountFromServer, increment,
+  query, where, getDocs, getCountFromServer, increment, deleteDoc,
 } from "firebase/firestore";
 
 const RULES = readFileSync(new URL("../../firestore.rules", import.meta.url), "utf8");
@@ -149,6 +149,15 @@ test("existing users and stats rules unchanged", async () => {
   await seed((d) => setDoc(doc(d, "stats/site"), { visits: 5 }));
   await assertSucceeds(updateDoc(doc(db(null), "stats/site"), { visits: increment(1) }));
   await assertFails(setDoc(doc(db(null), "other/x"), { a: 1 }));
+});
+
+test("app download counter: only +1, nothing else", async () => {
+  await assertSucceeds(setDoc(doc(db(null), "stats/downloads"), { apk: 1 }));
+  await assertSucceeds(updateDoc(doc(db(null), "stats/downloads"), { apk: increment(1) }));
+  await assertSucceeds(getDoc(doc(db(null), "stats/downloads")));
+  await assertFails(updateDoc(doc(db(null), "stats/downloads"), { apk: increment(5) }));
+  await assertFails(updateDoc(doc(db(null), "stats/downloads"), { apk: increment(1), who: "x" }));
+  await assertFails(deleteDoc(doc(db(null), "stats/downloads")));
 });
 
 // ---- found in the final review
