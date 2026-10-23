@@ -363,3 +363,13 @@ def test_lottery_result_is_not_a_story():
     import build_news as bn
     assert bn.NOT_STORY.search("live സുവർണ കേരളം ലോട്ടറി SK-74 നറുക്കെടുപ്പ് ഫലം")
     assert bn.NOT_STORY.search("Kerala Lottery Result Today: Karunya KR-725")
+
+
+# found in trial 5: an undecodable Google News link crashed the whole build
+def test_enrich_survives_undecoded_google_link(monkeypatch):
+    import build_news as bn
+    monkeypatch.setattr(bn, "gnewsdecoder", None)
+    st = {"u": "https://news.google.com/rss/articles/ABC?oc=5", "t": "A headline here"}
+    cache = {}
+    bn.enrich([st], cache)
+    assert "ABC" not in cache and st["u"].startswith("https://news.google.com")  # kept, retried next build

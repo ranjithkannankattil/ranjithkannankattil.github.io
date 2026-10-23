@@ -1,4 +1,4 @@
-name: News trial build (temporary, not published) # run 6
+name: News trial build (temporary, not published) # run 7
 on:
   push:
     branches: [news-relevance]

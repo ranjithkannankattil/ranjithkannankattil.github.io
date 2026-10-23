@@ -210,7 +210,7 @@ def enrich(stories, cache):
     def fetch(item):
         k, u = item
         if "news.google.com" in u:
-            return k, u, ""
+            return k, u, "", "", None   # not decoded (e.g. rate-limited): retried next build
         page = get(u, limit=600_000, timeout=12, tries=1)
         s = summary_from(page, uniq[k]["t"])
         x = "" if s else news_extras.excerpt(page)
@@ -218,6 +218,8 @@ def enrich(stories, cache):
 
     with cf.ThreadPoolExecutor(24) as ex:
         for k, u, s, x, pt in ex.map(fetch, decoded.items()):
+            if "news.google.com" in u:
+                continue
             cache[k] = {"u": u, "s": s, "seen": int(NOW), "first": int(NOW)}
             if x:
                 cache[k]["x"] = x
