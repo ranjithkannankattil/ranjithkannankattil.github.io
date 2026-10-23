@@ -8,12 +8,13 @@ if (cfg && cfg.apiKey && box) {
   const note = document.getElementById("acctNote");
   if (note) note.hidden = false;
   const V = "10.12.2";
-  const [{ initializeApp }, A, F] = await Promise.all([
+  const [{ initializeApp, getApps, getApp }, A, F] = await Promise.all([
     import(`https://www.gstatic.com/firebasejs/${V}/firebase-app.js`),
     import(`https://www.gstatic.com/firebasejs/${V}/firebase-auth.js`),
     import(`https://www.gstatic.com/firebasejs/${V}/firebase-firestore.js`),
   ]);
-  const app = initializeApp(cfg);
+  // js/radio-ratings.js shares this app; whichever module runs first creates it
+  const app = getApps().length ? getApp() : initializeApp(cfg);
   const auth = A.getAuth(app);
   const db = F.getFirestore(app);
   const provider = new A.GoogleAuthProvider();
@@ -87,8 +88,9 @@ if (cfg && cfg.apiKey && box) {
 
   A.getRedirectResult(auth).catch(() => {});
   A.onAuthStateChanged(auth, async (u) => {
-    user = u;
+    // an anonymous ID (made when someone rates a station) is not a signed-in account
+    user = u && !u.isAnonymous ? u : null;
     draw();
-    if (u) await mergeOnSignIn();
+    if (user) await mergeOnSignIn();
   });
 }
