@@ -1,3 +1,4 @@
+import re
 # News page configuration: languages, trusted outlets per language, and the place tree.
 # Edit freely — the 2-hourly build (scripts/build_news.py) reads this file.
 
@@ -80,7 +81,7 @@ OUTLETS = {
            "rbb24.de": "rbb24"},
     "es": {"elpais.com": "El País", "bbc.com": "BBC Mundo", "eldiario.es": "elDiario.es", "elmundo.es": "El Mundo", "lavanguardia.com": "La Vanguardia",
            "rtve.es": "RTVE", "elconfidencial.com": "El Confidencial", "dw.com": "DW", "france24.com": "France 24", "nytimes.com": "The New York Times"},
-    "pt": {"publico.pt": "Público", "expresso.pt": "Expresso", "rtp.pt": "RTP", "observador.pt": "Observador", "dn.pt": "Diário de Notícias",
+    "pt": {"cartamz.com": "Carta de Moçambique", "opais.co.mz": "O País", "publico.pt": "Público", "expresso.pt": "Expresso", "rtp.pt": "RTP", "observador.pt": "Observador", "dn.pt": "Diário de Notícias",
            "jn.pt": "Jornal de Notícias", "lusa.pt": "Lusa", "folha.uol.com.br": "Folha de S.Paulo", "bbc.com": "BBC Brasil",
            "cartamz.com": "Carta de Moçambique", "opais.co.mz": "O País", "dw.com": "DW", "rfi.fr": "RFI", "voaportugues.com": "VOA Português",
            "zitamar.com": "Zitamar"},
@@ -205,21 +206,61 @@ NATIVE = {"thrissur": "തൃശൂർ", "kodungallur": "കൊടുങ്ങ�
 # Other spellings. For a region or city, a story is kept only if its headline or summary
 # mentions the place by its name, its search names, its native name or one of these.
 ALIASES = {
-    "thrissur": ["Trichur", "തൃശ്ശൂ", "തൃശൂ"], "kodungallur": ["Kodungalloor", "Cranganore", "Muziris", "കൊടുങ്ങല്ലൂ"],
+    "thrissur": ["Trichur", "തൃശ്ശൂ", "തൃശൂ"], "kodungallur": ["Kodungalloor", "Cranganore", "Muziris", "കൊടുങ്ങല്ലൂ",
+                    "Methala", "Eriyad", "Azhikode", "Mathilakam", "Kaipamangalam", "Pullut", "Edavilangu", "Sringapuram",
+                    "Lokamaleswaram", "Kurumba", "മേത്തല", "എറിയാട്", "അഴീക്കോട്", "മതിലകം", "കയ്പമംഗലം", "പുല്ലൂറ്റ്",
+                    "എടവിലങ്ങ്", "ശൃംഗപുരം", "ലോകമലേശ്വരം"],
     "kochi": ["Kochi", "Cochin", "Ernakulam", "എറണാകുള"], "thiruvananthapuram": ["Trivandrum", "തിരുവനന്തപുര"],
     "kozhikode": ["Calicut", "കോഴിക്കോ"], "kerala": ["Keralam", "Kerala", "കേരള"], "bengaluru": ["Bangalore", "ಬೆಂಗಳೂರ", "ബെംഗളൂര", "ബംഗളൂര"],
     "mangaluru": ["Mangalore", "ಮಂಗಳೂರ"], "karnataka": ["ಕರ್ನಾಟಕ"], "chennai": ["Madras", "சென்னை"], "coimbatore": ["Kovai", "கோவை"],
     "tamil-nadu": ["T.N.", "தமிழ்நாடு", "தமிழக"], "mumbai": ["Bombay", "मुंबई", "मुम्बई"], "pune": ["Poona", "पुणे"],
     "maharashtra": ["महाराष्ट्र"], "delhi": ["दिल्ली"], "kolkata": ["Calcutta", "কলকাতা"], "west-bengal": ["Bengal", "পশ্চিমবঙ্গ", "বাংলা"],
-    "hyderabad": ["హైదరాబాద్"], "telangana": ["తెలంగాణ"], "swansea": ["Abertawe", "Swans"], "cardiff": ["Caerdydd"],
+    "hyderabad": ["హైదరాబాద్"], "telangana": ["తెలంగాణ"], "swansea": ["Abertawe"], "cardiff": ["Caerdydd"],
     "wales": ["Welsh", "Cymru", "Senedd"], "scotland": ["Scottish", "Holyrood"], "england": ["English"],
     "milan": ["Milano", "Milanese", "Meneghin"], "lombardy": ["Lombardia", "lombard"], "rome": ["Roma", "Capitolina"], "lazio": ["Lazio", "Roma"],
     "qingdao": ["青岛", "青島", "Tsingtao"], "qidong": ["启东", "啟東"], "nantong": ["南通"], "nanjing": ["南京"], "jinan": ["济南", "濟南"],
     "shandong": ["山东", "山東"], "jiangsu": ["江苏", "江蘇"], "shanghai": ["上海"], "beijing": ["北京"],
-    "dubai": ["دبي", "ദുബായ", "ദുബൈ"], "abu-dhabi": ["أبوظبي", "أبو ظبي", "അബുദാബി", "അബൂദബി"], "pemba": ["Pemba"], "maputo": ["Maputo"],
+    "dubai": ["دبي", "ദുബായ", "ദുബൈ"], "abu-dhabi": ["أبوظبي", "أبو ظبي", "അബുദാബി", "അബൂദബി"], "pemba": ["Pemba", "Pemba city", "baía de Pemba"], "maputo": ["Maputo"],
     "cabo-delgado": ["Cabo Delgado", "Cabo-Delgado", "Mocímboa", "Palma", "Afungi", "Rovuma"], "new-york": ["New York", "NYC", "Nueva York", "Manhattan", "Brooklyn"],
     "washington": ["Washington", "White House", "Capitol"], "paris": ["Paris", "parisien"], "berlin": ["Berlin"], "madrid": ["Madrid"],
     "lisbon": ["Lisboa", "Lisbon"], "tokyo": ["東京", "Tokyo", "都内"], "seoul": ["서울", "Seoul"],
+}
+
+# Football clubs named after (or playing in) a place. A headline naming one is a club story
+# and leaves that place's lists, unless the headline or summary also has a civic cue (CIVIC).
+# Whole phrases, case-insensitive. Never a bare "Inter" (an ordinary Italian word).
+CLUBS = {   # only names that cannot mean anything else; a place-like name ("Chelsea", "Lazio", "Hearts")
+            # counts only through the sport cues in news_relevance.SPORT
+    "milan": ["AC Milan", "Inter Milan", "l'Inter", "Rossoneri", "Nerazzurri", "San Siro", "il Milan"],
+    "swansea": ["Swansea City", "the Swans"],
+    "london": ["Chelsea FC", "Arsenal FC", "Tottenham Hotspur", "West Ham United", "Fulham FC", "Crystal Palace FC", "Brentford FC"],
+    "manchester": ["Manchester United", "Man Utd", "Manchester City", "Man City"],
+    "birmingham": ["Aston Villa", "Birmingham City"],
+    "glasgow": ["Celtic FC", "Rangers FC", "Old Firm"],
+    "edinburgh": ["Heart of Midlothian", "Hibernian FC"],
+    "cardiff": ["Cardiff City", "the Bluebirds"],
+    "rome": ["AS Roma", "SS Lazio", "giallorossi", "biancocelesti"],
+}
+CIVIC = re.compile(r"\b(police|council|mayor|riots?|protests?|traffic|fire|court|hospital|schools?|floods?|strikes?|polizia|comune|sindaco|"
+                   r"scontri|corteo|traffico|incendio|tribunale|ospedale|scuol[ae]|sciopero)\b|പോലീസ്|പൊലീസ്|നഗരസഭ|കോടതി|ആശുപത്രി|സമരം|"
+                   r"警方|法院|医院|学校", re.I)
+
+# More place names for the "names another place" rule, by region. A district-page story whose
+# headline names one of these (or any other place in PLACES) and not its own place is dropped.
+PLACE_WORDS = {
+    "kerala": ["Thiruvananthapuram", "Trivandrum", "Kollam", "Pathanamthitta", "Alappuzha", "Alleppey", "Kottayam", "Idukki",
+               "Ernakulam", "Kochi", "Cochin", "Thrissur", "Palakkad", "Malappuram", "Kozhikode", "Calicut", "Wayanad", "Kannur",
+               "Kasaragod", "തിരുവനന്തപുര", "കൊല്ലത്ത്", "കൊല്ലം ജില്ല", "പത്തനംതിട്ട", "ആലപ്പുഴ", "കോട്ടയം", "ഇടുക്കി", "എറണാകുള", "കൊച്ചി",
+               "തൃശൂ", "തൃശ്ശൂ", "പാലക്കാട്", "മലപ്പുറം", "കോഴിക്കോ", "വയനാട്", "കണ്ണൂർ", "കാസർകോട്"],
+}
+
+# A district's own towns: a headline naming one of them is about the district (for Thrissur's
+# pages: "Chalakudy arrest" is Thrissur news even though it does not say "Thrissur").
+DISTRICT_TOWNS = {
+    "thrissur": ["Chalakudy", "Irinjalakuda", "Guruvayur", "Kunnamkulam", "Mala", "Nattika", "Wadakkanchery", "Chavakkad",
+                 "Puthukkad", "Kodakara", "Kodungallur", "Ollur", "Peechi", "Vadanappally", "Kaipamangalam",
+                 "ചാലക്കുടി", "ഇരിങ്ങാലക്കുട", "ഗുരുവായൂർ", "കുന്നംകുളം", "മാള", "നാട്ടിക", "വടക്കാഞ്ചേരി", "ചാവക്കാട്",
+                 "പുതുക്കാട്", "കൊടകര", "കൊടുങ്ങല്ലൂ", "ഒല്ലൂർ", "പീച്ചി", "വാടാനപ്പള്ളി", "കയ്പമംഗലം"],
 }
 
 # Topic tabs at World and country level (Google News sections).
@@ -242,14 +283,16 @@ LOCAL_PAGES = {
                          "https://www.deshabhimani.com/district/kozhikode"],
                   "en": ["https://www.thehindu.com/news/cities/kozhikode/feeder/default.rss"]},
     "kerala": {"en": ["https://www.thehindu.com/news/national/kerala/feeder/default.rss"]},
-    "bengaluru": {"en": ["https://www.thehindu.com/news/cities/bangalore/feeder/default.rss"]},
+    "bengaluru": {"en": ["https://www.thehindu.com/news/cities/bangalore/feeder/default.rss"],
+                  "kn": ["https://www.prajavani.net/district/bengaluru-city"]},
     "chennai": {"en": ["https://www.thehindu.com/news/cities/chennai/feeder/default.rss"]},
     "mumbai": {"en": ["https://www.thehindu.com/news/cities/mumbai/feeder/default.rss"]},
     "delhi": {"en": ["https://www.thehindu.com/news/cities/Delhi/feeder/default.rss"]},
     "hyderabad": {"en": ["https://www.thehindu.com/news/cities/Hyderabad/feeder/default.rss"]},
     "kolkata": {"en": ["https://www.thehindu.com/news/cities/kolkata/feeder/default.rss"]},
     "coimbatore": {"en": ["https://www.thehindu.com/news/cities/Coimbatore/feeder/default.rss"]},
-    "mangaluru": {"en": ["https://www.thehindu.com/news/cities/Mangalore/feeder/default.rss"]},
+    "mangaluru": {"en": ["https://www.thehindu.com/news/cities/Mangalore/feeder/default.rss"],
+                  "kn": ["https://www.prajavani.net/district/dakshina-kannada"]},
 }
 LOCAL_FROM = {"kodungallur": "thrissur"}
 

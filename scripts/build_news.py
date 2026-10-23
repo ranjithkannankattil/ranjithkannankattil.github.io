@@ -13,8 +13,9 @@ from collections import defaultdict
 from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(__file__))
-from news_config import LANGS, OUTLETS, PLACES, JUNK, NATIVE, ALIASES, TOPICS, LOCAL_PAGES, LOCAL_FROM, BRIEFING, LIVE_URL  # noqa: E402
+from news_config import DISTRICT_TOWNS, LANGS, OUTLETS, PLACES, JUNK, NATIVE, ALIASES, TOPICS, LOCAL_PAGES, LOCAL_FROM, BRIEFING, LIVE_URL  # noqa: E402
 import news_extras  # noqa: E402
+from news_relevance import filter_local, other_names, thin_from_prev, build_around, ancestor_chain, in_script, relevance_asks, THIN, THIN_DAYS  # noqa: E402
 
 try:
     from googlenewsdecoder import gnewsdecoder
@@ -75,7 +76,7 @@ def outlet_for(lang, h):
     return None
 
 
-NOT_STORY = re.compile(r"(stats & head-to-head|scores & fixtures|scores, results|live scores|player stats|^catch up on|e-?paper|today'?s paper|\bnewspaper group\b|^bbc [a-z]+$|^the city$|news headlines for school assembly|horoscope|weather today|^watch:? live|express group\b|, (mon|tue|wed|thu|fri|sat|sun), \d)", re.I)
+NOT_STORY = re.compile(r"(stats & head-to-head|scores & fixtures|scores, results|live scores|player stats|^catch up on|e-?paper|today'?s paper|\bnewspaper group\b|^bbc [a-z]+$|^the city$|news headlines for school assembly|horoscope|lottery result|ലോട്ടറി.*(ഫലം|നറുക്കെടുപ്പ്)|weather today|^watch:? live|express group\b|, (mon|tue|wed|thu|fri|sat|sun), \d)", re.I)
 
 
 def junk(h, title):
@@ -105,7 +106,7 @@ def parse_rss(xml):
     return out
 
 
-def jobs_for(p):
+def jobs_for(p, thin=False):
     """(place_id, lang, topic, [urls]) for one place; topic "" is the main list."""
     for lang in p["langs"]:
         ed = edition(lang, p.get("cc", ""))
@@ -118,7 +119,7 @@ def jobs_for(p):
         if lang == "zh" and ed != LANGS["zh"]["ed"]["*"]:
             eds.append(LANGS["zh"]["ed"]["*"])  # Hong Kong edition carries more independent Chinese-language outlets
         names = [x.strip() for x in p.get("q", {}).get(lang, p["name"]).split(" OR ")]
-        when = WHEN[p["kind"]]
+        when = f"{THIN_DAYS}d" if thin else WHEN[p["kind"]]
         urls = []
         for e in eds:
             if p["kind"] == "world":
@@ -209,7 +210,7 @@ def enrich(stories, cache):
     def fetch(item):
         k, u = item
         if "news.google.com" in u:
-            return k, u, ""
+            return k, u, "", "", None   # not decoded (e.g. rate-limited): retried next build
         page = get(u, limit=600_000, timeout=12, tries=1)
         s = summary_from(page, uniq[k]["t"])
         x = "" if s else news_extras.excerpt(page)
@@ -217,6 +218,8 @@ def enrich(stories, cache):
 
     with cf.ThreadPoolExecutor(24) as ex:
         for k, u, s, x, pt in ex.map(fetch, decoded.items()):
+            if "news.google.com" in u:
+                continue
             cache[k] = {"u": u, "s": s, "seen": int(NOW), "first": int(NOW)}
             if x:
                 cache[k]["x"] = x
@@ -234,6 +237,11 @@ def enrich(stories, cache):
             st["_x"] = c["x"]
         if st.get("_first") and (c.get("pt") or c.get("first")):
             st["ts"] = c.get("pt") or c["first"]
+
+
+def own_names(p):
+    """A place's names plus, for a district, its own towns (DISTRICT_TOWNS)."""
+    return names(p) + [x.lower() for x in DISTRICT_TOWNS.get(p["id"], [])]
 
 
 def names(p):
@@ -260,7 +268,9 @@ def main():
     cache = json.loads(cache_path.read_text()) if cache_path.exists() else {}
 
     places = [p for p in PLACES if not a.only or p["id"] in a.only.split(",")]
-    jobs = [j for p in places for j in jobs_for(p)]
+    thin = thin_from_prev(prev, [p["id"] for p in places], {p["id"]: p["kind"] for p in places}, {p["id"]: p["langs"] for p in places}, NOW)
+    max_age = lambda pid: (THIN_DAYS if pid in thin else 8) * 86400  # noqa: E731
+    jobs = [j for p in places for j in jobs_for(p, p["id"] in thin)]
     local_urls = sorted({u for pid in [p["id"] for p in places] for us in LOCAL_PAGES.get(LOCAL_FROM.get(pid, pid), {}).values() for u in us})
     urls = sorted({u for *_, us in jobs for u in us} | set(local_urls))
     print(f"{len(places)} places, {len(jobs)} lists, {len(urls)} feeds and pages", flush=True)
@@ -280,6 +290,13 @@ def main():
     pmap = {p["id"]: p for p in PLACES}
     result = defaultdict(lambda: {"news": {}, "other": {}, "topics": defaultdict(dict)})
     report, stale, local_debug = [], {}, {}
+    removed = defaultdict(dict)                     # (pid, lang) -> {"club": n, "other_place": n, ...}
+    others_of = {}
+
+    def others(pid):
+        if pid not in others_of:
+            others_of[pid] = other_names(pid, pmap, names, LOCAL_FROM)
+        return others_of[pid]
 
     def harvest(pid, lang):
         """Stories from the papers' own district pages / city feeds."""
@@ -314,7 +331,7 @@ def main():
             cands = loc + cands
         for st in cands:
             k = norm(st["t"])
-            if k in seen or NOW - st["ts"] > 8 * 86400:
+            if k in seen or NOW - st["ts"] > max_age(pid):
                 continue
             if NOT_STORY.search(st["t"]) or len(st["t"]) < 10:
                 continue
@@ -331,11 +348,13 @@ def main():
         if topic:
             trusted, other = trusted[:KEEP_TOPIC], []
         elif kind in ("region", "city"):  # stories naming the place first; the rest are checked against their summary later
-            nm = names(pmap[pid])
+            nm = own_names(pmap[pid])
             hit = lambda st: st.get("_own") or any(n in st["t"].lower() for n in nm)  # noqa: E731
             trusted = news_extras.round_robin([x for x in trusted if hit(x)])[:KEEP * 2] \
                 + [x for x in trusted if not hit(x)][:KEEP]
             other = [x for x in other if hit(x)][:KEEP_OTHER] + [x for x in other if not hit(x)][:KEEP_OTHER]
+            trusted = filter_local(trusted, pid, nm, others(pid), removed[(pid, lang)])
+            other = filter_local(other, pid, nm, others(pid), removed[(pid, lang)])
         else:
             trusted, other = trusted[:KEEP], other[:KEEP_OTHER]
         if not got_any:  # every feed failed this run: keep the last good data
@@ -366,7 +385,7 @@ def main():
     for pid, r in result.items():
         p = pmap[pid]
         local = p["kind"] in ("region", "city")
-        nm = names(p)
+        nm = own_names(p)
         for part, cap in (("news", KEEP), ("other", KEEP_OTHER)):
             for lang, lst in r[part].items():
                 keep, seen_u, seen_s = [], set(), set()
@@ -381,22 +400,30 @@ def main():
                     if st.get("s"):
                         seen_s.add(st["s"])
                     keep.append(st)
-                keep = [x for x in keep if NOW - x["ts"] < 8 * 86400]
+                if local:
+                    keep = filter_local(keep, pid, nm, others(pid), removed[(pid, lang)])
+                keep = [x for x in keep if NOW - x["ts"] < max_age(pid)]
                 keep.sort(key=lambda x: -x["ts"])
                 r[part][lang] = (news_extras.round_robin(keep) if local else news_extras.diversify(keep))[:cap]
         for t in r["topics"].values():
             for lang, lst in t.items():
                 seen_u = set()
                 t[lang] = [x for x in lst if not (x["u"] in seen_u or seen_u.add(x["u"]))]
-        for lang in p["langs"]:
-            report.append(f"{pid:20} {lang}  trusted {len(r['news'].get(lang, [])):3}  other {len(r['other'].get(lang, [])):3}"
-                          f"  topics {sum(len(t.get(lang, [])) for t in r['topics'].values()):3}{'  (kept previous)' if stale.get((pid, lang)) else ''}")
 
     # AI: summaries for stories the papers gave none for, and a short digest per briefing place
     ai = news_extras.AI(cache)
     if ai.on:
         need = [s for r in result.values() for lst in r["news"].values() for s in lst if not s.get("s") and s.get("_x")]
         ai.summaries(need)
+        # stories the rules could not settle: kept only because they came from a district page,
+        # or naming the place only in their summary
+        asks = relevance_asks(result, pmap, own_names)
+        reserve = sum(len(langs) for _, langs in BRIEFING)
+        gone = ai.relevance([(name, st) for name, st, _, _ in asks], reserve=reserve)
+        for name, st, pid, lang in asks:
+            if id(st) in gone:
+                result[pid]["news"][lang] = [x for x in result[pid]["news"][lang] if x is not st]
+                removed[(pid, lang)]["ai"] = removed[(pid, lang)].get("ai", 0) + 1
         for pid, langs in BRIEFING:
             if pid in result:
                 for lang in langs:
@@ -406,6 +433,13 @@ def main():
                         result[pid].setdefault("digest", {})[lang] = d
         print(f"AI: {ai.calls} calls, {ai.errors} errors", flush=True)
 
+    for pid, r in result.items():
+        for lang in pmap[pid]["langs"]:
+            report.append(f"{pid:20} {lang}  trusted {len(r['news'].get(lang, [])):3}  other {len(r['other'].get(lang, [])):3}"
+                          f"  topics {sum(len(t.get(lang, [])) for t in r['topics'].values()):3}{'  (kept previous)' if stale.get((pid, lang)) else ''}"
+                          + (f"  window {THIN_DAYS}d" if pid in thin else "") + "".join(f"  removed {k.replace('_', '-')} {v}" for k, v in sorted(removed[(pid, lang)].items()) if v))
+
+    thin_lines = []
     clean = lambda lst: [{k: v for k, v in s.items() if k in ("t", "s", "u", "src", "ts", "ai")} for s in lst]  # noqa: E731
     for pid, r in result.items():
         doc = {"id": pid, "updated": int(NOW), "news": {l: clean(v) for l, v in r["news"].items()},
@@ -414,6 +448,19 @@ def main():
             doc["topics"] = {t: {l: clean(v) for l, v in d.items()} for t, d in r["topics"].items()}
         if r.get("digest"):
             doc["digest"] = r["digest"]
+        p = pmap[pid]
+        around = None
+        if p["kind"] in ("region", "city"):
+            # nearest first: the district whose pages it reads (LOCAL_FROM), then up the tree, never World
+            chain = [(q, result[q]["news"]) for q in ancestor_chain(pid, pmap, LOCAL_FROM) if q in result]
+            around = build_around(r["news"], chain, p["langs"], keep=lambda s, l: in_script(s.get("t", ""), l))
+            if around:
+                doc["around"] = {"from": around["from"], "news": {l: clean(v) for l, v in around["news"].items()}}
+                for l, v in around["news"].items():
+                    thin_lines.append(f"{pid:20} {l}  own {len(r['news'].get(l, [])):3}  around {len(v):3} from {around['from'][l]}")
+            for l in p["langs"]:
+                if len(r["news"].get(l, [])) < THIN and not (around and l in around["news"]):
+                    thin_lines.append(f"{pid:20} {l}  own {len(r['news'].get(l, [])):3}  around   0  (nothing to borrow)")
         (out / "p" / f"{pid}.json").write_text(json.dumps(doc, ensure_ascii=False, separators=(",", ":")))
 
     index = {
@@ -427,7 +474,7 @@ def main():
     }
     (out / "index.json").write_text(json.dumps(index, ensure_ascii=False, separators=(",", ":")))
     (out / "report.txt").write_text(time.strftime("%Y-%m-%d %H:%M UTC\n", time.gmtime(NOW)) + f"feeds {len(urls)}, failed {failed}\n"
-                                    + "\n".join(report) + "\n\nLocal pages:\n" + json.dumps(local_debug, ensure_ascii=False, indent=1) + "\n")
+                                    + "\n".join(report) + "\n\nThin places:\n" + ("\n".join(thin_lines) or "none") + "\n\nLocal pages:\n" + json.dumps(local_debug, ensure_ascii=False, indent=1) + "\n")
 
     # settings for the instant-refresh worker (worker/news-live.js)
     live = {"ed": {l: v["ed"] for l, v in LANGS.items()}, "outlets": OUTLETS,

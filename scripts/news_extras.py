@@ -133,7 +133,7 @@ def excerpt(page):
 # ------------------------------------------------------------------ Gemini
 class AI:
     """Gemini via its REST API. Off unless the GEMINI_API_KEY secret is set."""
-    MAX_CALLS = 30
+    MAX_CALLS = 60
 
     def __init__(self, cache):
         self.key = os.environ.get("GEMINI_API_KEY", "").strip()
@@ -193,6 +193,46 @@ class AI:
                     s["s"], s["ai"] = txt, 1
                     if s.get("_k") in self.cache:
                         self.cache[s["_k"]]["ai_s"] = txt
+
+    def relevance(self, items, reserve=0):
+        """Ask whether each story is about its place. items: [(place_name, story)].
+        Returns the id()s of stories judged NOT about their place. Verdicts are cached per story
+        and place; anything unanswered is kept. Leaves `reserve` calls for later steps."""
+        drop, todo = set(), []
+        for place, s in items:
+            c = self.cache.get(s.get("_k"), {})
+            v = c.get("rel2:" + place)
+            if v is False:
+                drop.add(id(s))
+            elif v is None:
+                todo.append((place, s))
+        for i in range(0, len(todo), 40):
+            if self.calls >= self.MAX_CALLS - reserve:
+                break
+            batch = todo[i:i + 40]
+            payload = [{"i": n, "place": p, "headline": s.get("t", ""), "summary": (s.get("s") or "")[:300]} for n, (p, s) in enumerate(batch)]
+            res = self._ask("For each news story below, answer whether it is about, or happening in, the named place. "
+                            "A story that only mentions the place in passing, or is about a sports club named after it, is not. "
+                            "A story from a district page about a village or town there is about the place. "
+                            "A story about the whole state or country (a state lottery result, a state minister's statement, "
+                            "a state-wide scheme) is not about a city or district unless it says what happens there. "
+                            "If you are unsure, answer true. "
+                            'Return JSON: [{"i": number, "about": true or false}].\n\n' + json.dumps(payload, ensure_ascii=False))
+            if not isinstance(res, list):
+                continue
+            for r in res:
+                try:
+                    n, about = int(r["i"]), r["about"]
+                except (KeyError, ValueError, TypeError):
+                    continue
+                if not isinstance(about, bool) or not 0 <= n < len(batch):
+                    continue
+                place, s = batch[n]
+                if s.get("_k") in self.cache:
+                    self.cache[s["_k"]]["rel2:" + place] = about
+                if not about:
+                    drop.add(id(s))
+        return drop
 
     def digest(self, place, lang_name, stories):
         """Three neutral bullet points on what the trusted papers are reporting about a place."""
