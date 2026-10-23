@@ -61,14 +61,15 @@
 
 <main class="privacy">
   <h1>Privacy</h1>
-  <div class="updated">Last updated 21 October 2026</div>
+  <div class="updated">Last updated 23 October 2026</div>
 
   <div class="summary" style="margin-top:1.6rem">
     <p><strong>In short:</strong> this is a personal website. There are no ads, no analytics and no tracking cookies.
     Your settings (favourite stations, volume, default language, news places and languages, meeting-finder cities) stay in your own browser.
     A visitor counter keeps one shared total — no names, addresses or identifiers.
-    The only thing stored about you anywhere is what you choose to save by signing in on the Radio page —
-    your Google account ID and email, your favourite stations and your default language — and you can have that removed at any time.</p>
+    The only things stored about you anywhere are what you choose to save on the Radio page: if you sign in,
+    your Google account ID and email, your favourite stations and your default language; if you rate a station or comment on it,
+    the rating and comment under an anonymous ID your browser creates. You can have any of it removed at any time.</p>
   </div>
 
   <h2>Who is responsible</h2>
@@ -101,11 +102,21 @@
     <tr><td>Your list of favourite stations, your default language and when they were last changed (held in Firebase Firestore)</td><td>To show your favourites on any device you sign in on.</td></tr>
   </table>
   <ul>
-    <li><strong>Legal basis:</strong> you ask for this feature by signing in, so it is processed to provide it to you (GDPR Art. 6(1)(b)). Without signing in, everything still works and nothing is stored about you.</li>
+    <li><strong>Legal basis:</strong> you ask for this feature by signing in, so it is processed to provide it to you (GDPR Art. 6(1)(b)). Without signing in, everything still works and nothing is stored about you (apart from any station ratings you choose to give, below).</li>
     <li><strong>Who processes it:</strong> Google Firebase (Google Ireland Limited), with data stored in the EU (Firestore location <code>eur3</code>). Google acts as a processor under its <a href="https://firebase.google.com/terms/data-processing-terms" target="_blank" rel="noopener">data processing terms</a>.</li>
     <li><strong>Who can see it:</strong> only you, through the site; the database rules let each signed-in person read and change only their own record. I can see it as the site owner, and look at it only to fix problems or to delete it when asked.</li>
     <li><strong>How long:</strong> until you ask for it to be deleted. Records not used for two years may be deleted.</li>
     <li>It is never sold, shared for marketing or used for anything else.</li>
+  </ul>
+
+  <h2>Rating and commenting on stations (optional)</h2>
+  <p>On the Radio page you can give a station one to five stars and add a short comment. You don't need to sign in:
+  the first time you rate, your browser gets an anonymous ID from Firebase Authentication, so your rating can be changed later and counted only once.</p>
+  <ul>
+    <li><strong>What is stored:</strong> the anonymous ID (or your Google account ID, if you are signed in), the station, your stars, your comment if you write one, and when you sent it — in Google Firebase (EU, Firestore location <code>eur3</code>), as described above.</li>
+    <li><strong>Who can see it:</strong> the average and the number of ratings are shown to everyone. A comment is published without any name, together with its stars and date, only after I have read and approved it; until then only you and I can see it.</li>
+    <li><strong>Legal basis:</strong> you choose to rate or comment, so it is processed to provide that feature (GDPR Art. 6(1)(b)).</li>
+    <li><strong>Removing it:</strong> to have a rating or comment removed, contact me (see above). Clearing this site's data in your browser removes the anonymous ID from your device; ratings already given stay counted unless you ask for them to be removed.</li>
   </ul>
 
   <h2>Services your browser connects to</h2>
@@ -118,7 +129,7 @@
     <li><strong>Newspapers</strong> — only when you open a story, which takes you to that paper's own website (occasionally through a Google News link). Their own privacy policies apply.</li>
     <li><strong>Trip planner</strong> — when you plan a trip, the places you type and the area you choose are sent straight from your browser to Photon by Komoot (place search), Wikidata and Wikipedia (sights and descriptions), OpenStreetMap services (opening hours and walking routes), Open-Meteo (weather) and the OpenStreetMap tile servers (the map). Nothing is stored on this site; a plan you share lives only in its link.</li>
     <li><strong>Radio broadcasters</strong> — when you press play, your browser connects directly to that station's streaming server, as it would on the station's own website. Their own privacy policies apply.</li>
-    <li><strong>Google Firebase</strong> — to update and show the visitor total, and if you sign in, as described above.</li>
+    <li><strong>Google Firebase</strong> — to update and show the visitor total, for station ratings and comments, and if you sign in, as described above.</li>
   </ul>
 
   <h2>Your rights</h2>
