@@ -18,7 +18,10 @@ jobs:
         with: { python-version: "3.12" }
       - run: pip install -q googlenewsdecoder pytest && cd scripts && python3 -m pytest -q
       - uses: actions/cache/restore@v4
-        with: { path: .news-cache, key: news-cache-trial-${{ github.run_id }}, restore-keys: news-cache- }
+        with:
+          path: .news-cache
+          key: news-cache-trial-${{ github.run_id }}
+          restore-keys: news-cache-
       - name: Build (output kept off the live news-data branch)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
