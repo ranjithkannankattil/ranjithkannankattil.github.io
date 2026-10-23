@@ -19,10 +19,22 @@ def _club_pattern(pid):
     return _club_rx[pid]
 
 
+# match reports that name only the city ("QPR - Swansea", "Swansea 0-1 West Ham"); used only
+# for places that have clubs listed in CLUBS
+SPORT = re.compile(r"\b(football|soccer|premier league|champions league|europa league|serie a|fa cup|efl|"
+                   r"derby|fixtures?|kick-off|clubs?|striker|midfielder|goalkeeper|relegation|fans' verdict|player ratings|"
+                   r"win (?:against|over)|beat|draw with|defeat to|loss to|promotion (?:dream|push|race|chase|hopes|bid)|"
+                   r"(?:dreaming of|chasing) promotion|calcio|allenatore|partita)\b"
+                   r"|\b\d\s?[-–]\s?\d\b(?!\s*(?:bed|day|week|month|year|hour|min|%|per|star|km|room))"
+                   r"|\s[-–]\s\w+\s\|\s*football", re.I)
+
+
 def club_story(title, summary, pid):
     """A story about the place's football club rather than the place itself."""
     rx = _club_pattern(pid)
-    if not rx or not rx.search(title or ""):
+    if not rx:
+        return False
+    if not rx.search(title or "") and not SPORT.search(title or ""):
         return False
     return not (CIVIC.search(title or "") or CIVIC.search(summary or ""))
 
@@ -117,16 +129,33 @@ def thin_from_prev(prev_dir, pids, kinds):
     return out
 
 
-def build_around(own, parent_news, parent_id, langs, cap=8):
-    """For each language where a place has fewer than THIN own stories, up to `cap` of its
-    parent's stories that it does not already show. None when nothing is needed or found."""
-    out = {}
+def build_around(own, chain, langs, cap=8):
+    """For each language where a place has fewer than THIN own stories, up to `cap` stories from
+    the nearest place in `chain` (ancestors, nearest first: [(pid, news)]) that has some in that
+    language and that the place does not already show. None when nothing is needed or found."""
+    out, frm = {}, {}
     for lang in langs:
         mine = own.get(lang, [])
         if len(mine) >= THIN:
             continue
         seen = {s.get("u") for s in mine}
-        extra = [s for s in parent_news.get(lang, []) if s.get("u") not in seen][:cap]
-        if extra:
-            out[lang] = extra
-    return {"from": parent_id, "news": out} if out else None
+        for pid, news in chain:
+            extra = [s for s in news.get(lang, []) if s.get("u") not in seen][:cap]
+            if extra:
+                out[lang], frm[lang] = extra, pid
+                break
+    return {"from": frm, "news": out} if out else None
+
+
+def ancestor_chain(pid, pmap, local_from):
+    """Places to borrow 'Around' stories from, nearest first: the district whose pages the town
+    reads (local_from), then its parent and upwards. Never World, never a place twice."""
+    out, q = [], local_from.get(pid)
+    if q:
+        out.append(q)
+    q = pmap[pid].get("parent")
+    while q and q in pmap and pmap[q].get("kind") != "world":
+        if q not in out:
+            out.append(q)
+        q = pmap[q].get("parent")
+    return out

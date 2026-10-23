@@ -18,7 +18,7 @@ const index = {
 const files = {
   'index.json': index,
   'p/kodungallur.json': { id: 'kodungallur', updated: now, news: { en: [st('Muziris boat tour opens')], ml: [] }, other: {},
-    around: { from: 'thrissur', news: { en: [st('Thrissur pooram plan'), st('Thrissur rail works')] } } },
+    around: { from: { en: 'thrissur' }, news: { en: [st('Thrissur pooram plan'), st('Thrissur rail works')] } } },
   'p/thrissur.json': { id: 'thrissur', updated: now, news: { en: [st('Thrissur pooram plan')], ml: [] }, other: {} },
 };
 const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });

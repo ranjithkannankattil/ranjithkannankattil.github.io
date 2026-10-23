@@ -184,21 +184,21 @@ def _s(u):
 
 def test_around_fills_thin_lang():
     s1, s2, s3, s4 = _s("1"), _s("2"), _s("3"), _s("4")
-    a = build_around({"ml": [s1]}, {"ml": [s1, s2, s3], "en": [s4]}, "thrissur", ["ml", "en"])
-    assert a == {"from": "thrissur", "news": {"ml": [s2, s3], "en": [s4]}}
+    a = build_around({"ml": [s1]}, [("thrissur", {"ml": [s1, s2, s3], "en": [s4]})], ["ml", "en"])
+    assert a == {"from": {"ml": "thrissur", "en": "thrissur"}, "news": {"ml": [s2, s3], "en": [s4]}}
 
 
 def test_around_not_needed():
     five = [_s(str(i)) for i in range(5)]
-    assert build_around({"ml": five, "en": five}, {"ml": [_s("x")]}, "thrissur", ["ml", "en"]) is None
+    assert build_around({"ml": five, "en": five}, [("thrissur", {"ml": [_s("x")]})], ["ml", "en"]) is None
 
 
 def test_around_empty_parent_is_none():
-    assert build_around({"ml": []}, {}, "thrissur", ["ml"]) is None
+    assert build_around({"ml": []}, [("thrissur", {})], ["ml"]) is None
 
 
 def test_around_caps_at_8():
-    a = build_around({"en": []}, {"en": [_s(str(i)) for i in range(20)]}, "kerala", ["en"])
+    a = build_around({"en": []}, [("kerala", {"en": [_s(str(i)) for i in range(20)]})], ["en"])
     assert len(a["news"]["en"]) == 8
 
 
@@ -208,3 +208,51 @@ def test_verified_sources_added():
     assert "pinnaclenews.net" not in OUTLETS["pt"]           # probe: site did not respond
     assert any("prajavani.net/district/bengaluru-city" in u for u in LOCAL_PAGES["bengaluru"]["kn"])
     assert any("prajavani.net/district/dakshina-kannada" in u for u in LOCAL_PAGES["mangaluru"]["kn"])
+
+
+# found in the trial build: match reports that name only the city, not the club
+def test_match_report_without_club_name():
+    assert club_story("QPR - Swansea | Football", "", "swansea")
+    assert club_story("Swansea 0-1 West Ham - the fans' verdict", "", "swansea")
+    assert club_story("Coach who worked under Jürgen Klopp has Swansea dreaming of promotion", "", "swansea")
+    assert club_story("Bournemouth and Milan: Two clubs connected by stripes meet at last", "", "milan")
+    assert club_story("Dream night for Bournemouth - how did the Premier League come to dominate Europe?", "", "milan")
+
+
+def test_sport_cue_only_for_club_cities():
+    assert not club_story("Thrissur 2-1 win in state football", "", "thrissur")   # no clubs listed for Thrissur
+
+
+def test_civic_beats_sport_cue():
+    assert not club_story("Police close roads around stadium before Swansea match", "", "swansea")
+
+
+def test_around_walks_up_the_tree():
+    s = {"t": "China news", "u": "c1"}
+    a = build_around({"en": []}, [("shandong", {"en": []}), ("china", {"en": [s]})], ["en"])
+    assert a == {"from": {"en": "china"}, "news": {"en": [s]}}
+
+
+def test_sport_cue_false_positives_kept():
+    assert not club_story("Milan fashion week runs 22-28 September", "", "milan")
+    assert not club_story("Swansea coach crash closes the M4", "", "swansea")
+    assert not club_story("Store promotion draws crowds in Swansea", "", "swansea")
+    assert not club_story("Milan hotel manager speaks out", "", "milan")
+    assert not club_story("Swansea family wins 2-3 bedroom house in prize draw", "", "swansea")
+
+
+def test_more_match_reports():
+    assert club_story("Nuno Espirito Santo: Listen to West Ham boss' reaction to win against Swansea", "", "swansea")
+
+
+from news_relevance import ancestor_chain
+
+
+def test_ancestor_chain():
+    pmap = {"world": {"kind": "world", "parent": None}, "india": {"kind": "country", "parent": "world"},
+            "kerala": {"kind": "region", "parent": "india"}, "thrissur": {"kind": "city", "parent": "kerala"},
+            "kodungallur": {"kind": "city", "parent": "kerala"}}
+    assert ancestor_chain("kodungallur", pmap, {"kodungallur": "thrissur"}) == ["thrissur", "kerala", "india"]
+    assert ancestor_chain("thrissur", pmap, {}) == ["kerala", "india"]
+    # a district that is also the parent: no loop, no repeat
+    assert ancestor_chain("kodungallur", pmap, {"kodungallur": "kerala"}) == ["kerala", "india"]

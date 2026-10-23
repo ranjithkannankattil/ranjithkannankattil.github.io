@@ -15,7 +15,7 @@ from pathlib import Path
 sys.path.insert(0, os.path.dirname(__file__))
 from news_config import LANGS, OUTLETS, PLACES, JUNK, NATIVE, ALIASES, TOPICS, LOCAL_PAGES, LOCAL_FROM, BRIEFING, LIVE_URL  # noqa: E402
 import news_extras  # noqa: E402
-from news_relevance import filter_local, other_names, thin_from_prev, build_around, THIN, THIN_DAYS  # noqa: E402
+from news_relevance import filter_local, other_names, thin_from_prev, build_around, ancestor_chain, THIN, THIN_DAYS  # noqa: E402
 
 try:
     from googlenewsdecoder import gnewsdecoder
@@ -452,13 +452,15 @@ def main():
         if r.get("digest"):
             doc["digest"] = r["digest"]
         p = pmap[pid]
-        parent = LOCAL_FROM.get(pid, p.get("parent"))
-        if p["kind"] in ("region", "city") and parent in result:
-            around = build_around(r["news"], result[parent]["news"], parent, p["langs"])
+        around = None
+        if p["kind"] in ("region", "city"):
+            # nearest first: the district whose pages it reads (LOCAL_FROM), then up the tree, never World
+            chain = [(q, result[q]["news"]) for q in ancestor_chain(pid, pmap, LOCAL_FROM) if q in result]
+            around = build_around(r["news"], chain, p["langs"])
             if around:
-                doc["around"] = {"from": parent, "news": {l: clean(v) for l, v in around["news"].items()}}
+                doc["around"] = {"from": around["from"], "news": {l: clean(v) for l, v in around["news"].items()}}
                 for l, v in around["news"].items():
-                    thin_lines.append(f"{pid:20} {l}  own {len(r['news'].get(l, [])):3}  around {len(v):3} from {parent}")
+                    thin_lines.append(f"{pid:20} {l}  own {len(r['news'].get(l, [])):3}  around {len(v):3} from {around['from'][l]}")
             for l in p["langs"]:
                 if len(r["news"].get(l, [])) < THIN and not (around and l in around["news"]):
                     thin_lines.append(f"{pid:20} {l}  own {len(r['news'].get(l, [])):3}  around   0  (nothing to borrow)")
