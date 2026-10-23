@@ -1,3 +1,4 @@
+import re
 # News page configuration: languages, trusted outlets per language, and the place tree.
 # Edit freely — the 2-hourly build (scripts/build_news.py) reads this file.
 
@@ -205,21 +206,51 @@ NATIVE = {"thrissur": "തൃശൂർ", "kodungallur": "കൊടുങ്ങ�
 # Other spellings. For a region or city, a story is kept only if its headline or summary
 # mentions the place by its name, its search names, its native name or one of these.
 ALIASES = {
-    "thrissur": ["Trichur", "തൃശ്ശൂ", "തൃശൂ"], "kodungallur": ["Kodungalloor", "Cranganore", "Muziris", "കൊടുങ്ങല്ലൂ"],
+    "thrissur": ["Trichur", "തൃശ്ശൂ", "തൃശൂ"], "kodungallur": ["Kodungalloor", "Cranganore", "Muziris", "കൊടുങ്ങല്ലൂ",
+                    "Methala", "Eriyad", "Azhikode", "Mathilakam", "Kaipamangalam", "Pullut", "Edavilangu", "Sringapuram",
+                    "Lokamaleswaram", "Kurumba", "മേത്തല", "എറിയാട്", "അഴീക്കോട്", "മതിലകം", "കയ്പമംഗലം", "പുല്ലൂറ്റ്",
+                    "എടവിലങ്ങ്", "ശൃംഗപുരം", "ലോകമലേശ്വരം"],
     "kochi": ["Kochi", "Cochin", "Ernakulam", "എറണാകുള"], "thiruvananthapuram": ["Trivandrum", "തിരുവനന്തപുര"],
     "kozhikode": ["Calicut", "കോഴിക്കോ"], "kerala": ["Keralam", "Kerala", "കേരള"], "bengaluru": ["Bangalore", "ಬೆಂಗಳೂರ", "ബെംഗളൂര", "ബംഗളൂര"],
     "mangaluru": ["Mangalore", "ಮಂಗಳೂರ"], "karnataka": ["ಕರ್ನಾಟಕ"], "chennai": ["Madras", "சென்னை"], "coimbatore": ["Kovai", "கோவை"],
     "tamil-nadu": ["T.N.", "தமிழ்நாடு", "தமிழக"], "mumbai": ["Bombay", "मुंबई", "मुम्बई"], "pune": ["Poona", "पुणे"],
     "maharashtra": ["महाराष्ट्र"], "delhi": ["दिल्ली"], "kolkata": ["Calcutta", "কলকাতা"], "west-bengal": ["Bengal", "পশ্চিমবঙ্গ", "বাংলা"],
-    "hyderabad": ["హైదరాబాద్"], "telangana": ["తెలంగాణ"], "swansea": ["Abertawe", "Swans"], "cardiff": ["Caerdydd"],
+    "hyderabad": ["హైదరాబాద్"], "telangana": ["తెలంగాణ"], "swansea": ["Abertawe"], "cardiff": ["Caerdydd"],
     "wales": ["Welsh", "Cymru", "Senedd"], "scotland": ["Scottish", "Holyrood"], "england": ["English"],
     "milan": ["Milano", "Milanese", "Meneghin"], "lombardy": ["Lombardia", "lombard"], "rome": ["Roma", "Capitolina"], "lazio": ["Lazio", "Roma"],
     "qingdao": ["青岛", "青島", "Tsingtao"], "qidong": ["启东", "啟東"], "nantong": ["南通"], "nanjing": ["南京"], "jinan": ["济南", "濟南"],
     "shandong": ["山东", "山東"], "jiangsu": ["江苏", "江蘇"], "shanghai": ["上海"], "beijing": ["北京"],
-    "dubai": ["دبي", "ദുബായ", "ദുബൈ"], "abu-dhabi": ["أبوظبي", "أبو ظبي", "അബുദാബി", "അബൂദബി"], "pemba": ["Pemba"], "maputo": ["Maputo"],
+    "dubai": ["دبي", "ദുബായ", "ദുബൈ"], "abu-dhabi": ["أبوظبي", "أبو ظبي", "അബുദാബി", "അബൂദബി"], "pemba": ["Pemba", "Pemba city", "baía de Pemba"], "maputo": ["Maputo"],
     "cabo-delgado": ["Cabo Delgado", "Cabo-Delgado", "Mocímboa", "Palma", "Afungi", "Rovuma"], "new-york": ["New York", "NYC", "Nueva York", "Manhattan", "Brooklyn"],
     "washington": ["Washington", "White House", "Capitol"], "paris": ["Paris", "parisien"], "berlin": ["Berlin"], "madrid": ["Madrid"],
     "lisbon": ["Lisboa", "Lisbon"], "tokyo": ["東京", "Tokyo", "都内"], "seoul": ["서울", "Seoul"],
+}
+
+# Football clubs named after (or playing in) a place. A headline naming one is a club story
+# and leaves that place's lists, unless the headline or summary also has a civic cue (CIVIC).
+# Whole phrases, case-insensitive. Never a bare "Inter" (an ordinary Italian word).
+CLUBS = {
+    "milan": ["AC Milan", "Inter Milan", "l'Inter", "Rossoneri", "Nerazzurri", "San Siro", "il Milan"],
+    "swansea": ["Swansea City", "the Swans", "Swans"],
+    "london": ["Chelsea", "Arsenal", "Tottenham", "Spurs", "West Ham", "Fulham", "Crystal Palace", "Brentford"],
+    "manchester": ["Manchester United", "Man Utd", "Manchester City", "Man City"],
+    "birmingham": ["Aston Villa", "Birmingham City"],
+    "glasgow": ["Celtic", "Rangers"],
+    "edinburgh": ["Hearts", "Hibernian", "Hibs"],
+    "cardiff": ["Cardiff City", "the Bluebirds"],
+    "rome": ["AS Roma", "Lazio", "giallorossi", "biancocelesti"],
+}
+CIVIC = re.compile(r"\b(police|council|mayor|riots?|protests?|traffic|fire|court|hospital|schools?|floods?|strikes?|polizia|comune|sindaco|"
+                   r"scontri|corteo|traffico|incendio|tribunale|ospedale|scuol[ae]|sciopero)\b|പോലീസ്|പൊലീസ്|നഗരസഭ|കോടതി|ആശുപത്രി|സമരം|"
+                   r"警方|法院|医院|学校", re.I)
+
+# More place names for the "names another place" rule, by region. A district-page story whose
+# headline names one of these (or any other place in PLACES) and not its own place is dropped.
+PLACE_WORDS = {
+    "kerala": ["Thiruvananthapuram", "Trivandrum", "Kollam", "Pathanamthitta", "Alappuzha", "Alleppey", "Kottayam", "Idukki",
+               "Ernakulam", "Kochi", "Cochin", "Thrissur", "Palakkad", "Malappuram", "Kozhikode", "Calicut", "Wayanad", "Kannur",
+               "Kasaragod", "തിരുവനന്തപുര", "കൊല്ലം", "പത്തനംതിട്ട", "ആലപ്പുഴ", "കോട്ടയം", "ഇടുക്കി", "എറണാകുള", "കൊച്ചി",
+               "തൃശൂ", "തൃശ്ശൂ", "പാലക്കാട്", "മലപ്പുറം", "കോഴിക്കോ", "വയനാട്", "കണ്ണൂർ", "കാസർകോട്"],
 }
 
 # Topic tabs at World and country level (Google News sections).

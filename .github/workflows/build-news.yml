@@ -10,6 +10,8 @@ on:
       - scripts/build_news.py
       - scripts/news_config.py
       - scripts/news_extras.py
+      - scripts/news_relevance.py
+      - scripts/test_news_relevance.py
       - .github/workflows/build-news.yml
 
 permissions:
@@ -50,6 +52,9 @@ jobs:
           path: .news-cache
           key: news-cache-${{ github.run_id }}
           restore-keys: news-cache-
+
+      - name: Tests
+        run: pip install -q pytest && cd scripts && python3 -m pytest -q
 
       - name: Build
         env:
