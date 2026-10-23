@@ -1,6 +1,6 @@
 // Loads Firebase and the ratings module for radio.html, then sets window.RadioRatings and
 // fires "radio:ratings-ready". Visitors who never signed in get an anonymous Firebase ID the
-// first time they rate. If Firebase can't load, "radio:ratings-failed" fires instead.
+// first time they rate (radio.html); radio-admin.html uses the same loader. If Firebase can't load, "radio:ratings-failed" fires instead.
 import { createRatings, keyFor } from "./radio-ratings-core.js";
 
 const cfg = window.FIREBASE_CONFIG;
@@ -14,8 +14,25 @@ try {
   ]);
   // radio-sync.js uses the same default app; whichever module runs first creates it
   const app = App.getApps().length ? App.getApp() : App.initializeApp(cfg);
-  const R = createRatings({ auth: A.getAuth(app), db: F.getFirestore(app), A, F });
+  const auth = A.getAuth(app);
+  const R = createRatings({ auth, db: F.getFirestore(app), A, F });
   R.keyFor = keyFor;
+  // for the approval page: who is signed in, and Google sign-in / out
+  R.account = async () => {
+    await auth.authStateReady();
+    const u = auth.currentUser;
+    return u ? { uid: u.uid, anonymous: u.isAnonymous } : null;
+  };
+  R.signInGoogle = async () => {
+    const provider = new A.GoogleAuthProvider();
+    provider.setCustomParameters({ prompt: "select_account" });
+    try { await A.signInWithPopup(auth, provider); }
+    catch (e) {
+      if (e && (e.code === "auth/popup-blocked" || e.code === "auth/operation-not-supported-in-this-environment")) await A.signInWithRedirect(auth, provider);
+      else if (!(e && e.code === "auth/popup-closed-by-user")) throw e;
+    }
+  };
+  R.signOut = () => A.signOut(auth);
   window.RadioRatings = R;
   window.dispatchEvent(new CustomEvent("radio:ratings-ready"));
 } catch (e) {

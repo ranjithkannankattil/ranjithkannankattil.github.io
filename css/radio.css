@@ -302,3 +302,25 @@ body[data-section="radio"] .np-close:hover, body[data-section="radio"] .np-close
   .st-back{ background:rgba(0,0,0,.45); }
   .st-panel{ left:0; right:0; bottom:0; width:auto; max-height:85vh; border-radius:16px 16px 0 0; border-bottom:0; padding-bottom:calc(1.1rem + env(safe-area-inset-bottom)); }
 }
+
+/* ---------- radio-admin.html ---------- */
+.ad{ max-width:48rem; padding-top:2.5rem; padding-bottom:3rem; }
+.ad-msg{ font-family:var(--f-mono); font-size:.75rem; color:var(--accent); min-height:1em; }
+.ad-box{ border:1px solid var(--line); padding:1.1rem 1.2rem; margin-top:1rem; }
+.ad-box[hidden], #adOwner[hidden]{ display:none; }
+.ad-box p{ margin:0 0 .7rem; }
+.ad-uid{ font-family:var(--f-mono); font-size:.85rem; overflow-wrap:anywhere; }
+.ad-hint{ color:var(--ink-soft); font-size:.92rem; }
+body[data-section="radio"] .ad-btn{ font-family:var(--f-display); font-weight:600; padding:.55rem 1.1rem; border-radius:999px; background:var(--ink); color:var(--paper); }
+body[data-section="radio"] .ad-btn.small{ font-size:.85rem; padding:.4rem .9rem; }
+body[data-section="radio"] .ad-btn.quiet{ background:transparent; color:var(--ink); border:1px solid var(--line); }
+body[data-section="radio"] .ad-btn:disabled{ opacity:.5; cursor:wait; }
+body[data-section="radio"] .ad-link{ font-family:var(--f-mono); font-size:.75rem; text-decoration:underline; color:var(--ink-soft); margin-top:.6rem; }
+.ad-h{ font-family:var(--f-display); font-size:1.25rem; margin:2rem 0 .6rem; }
+.ad-list{ list-style:none; margin:0; padding:0; border-top:1px solid var(--line); }
+.ad-list li{ border-bottom:1px solid var(--line); padding:.85rem 0; }
+.ad-head{ display:flex; flex-wrap:wrap; gap:.3rem .8rem; align-items:baseline; }
+.ad-meta{ font-family:var(--f-mono); font-size:.7rem; color:var(--ink-soft); }
+.ad-text{ margin:.35rem 0 .6rem; white-space:pre-line; overflow-wrap:anywhere; }
+.ad-act{ display:flex; gap:.5rem; }
+.ad-empty{ color:var(--ink-soft); }
