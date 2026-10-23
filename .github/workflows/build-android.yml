@@ -1,0 +1,63 @@
+name: Build Radio Android app
+
+on:
+  push:
+    branches: [radio-app]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: gradle
+
+      - name: Install and sync web layer
+        run: |
+          npm ci
+          npx cap sync android
+
+      - name: Restore signing key (optional secrets)
+        env:
+          KEYSTORE_B64: ${{ secrets.RADIO_KEYSTORE_B64 }}
+        run: |
+          if [ -n "$KEYSTORE_B64" ]; then
+            echo "$KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/radio.keystore"
+            echo "RADIO_KEYSTORE_PATH=$RUNNER_TEMP/radio.keystore" >> "$GITHUB_ENV"
+            echo "Signing with your own key"
+          else
+            mkdir -p ~/.android
+            [ -f ~/.android/debug.keystore ] || keytool -genkeypair -keystore ~/.android/debug.keystore \
+              -storepass android -keypass android -alias androiddebugkey -keyalg RSA -keysize 2048 \
+              -validity 10000 -dname "CN=Android Debug,O=Android,C=US"
+            echo "No RADIO_KEYSTORE_B64 secret: signing with a debug key"
+          fi
+
+      - name: Build APK
+        env:
+          RADIO_KEYSTORE_PASSWORD: ${{ secrets.RADIO_KEYSTORE_PASSWORD }}
+        working-directory: android
+        run: |
+          chmod +x gradlew
+          ./gradlew --no-daemon assembleRelease
+          cp app/build/outputs/apk/release/app-release.apk "$GITHUB_WORKSPACE/Radio.apk"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Radio-android
+          path: Radio.apk
+          retention-days: 30

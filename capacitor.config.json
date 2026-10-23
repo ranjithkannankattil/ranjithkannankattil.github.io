@@ -1,0 +1,24 @@
+{
+  "appId": "com.ranjithkb.radio",
+  "appName": "Radio",
+  "webDir": "www",
+  "server": {
+    "url": "https://ranjithkb.com/radio.html",
+    "allowNavigation": [
+      "ranjithkb.com",
+      "*.ranjithkb.com"
+    ],
+    "errorPath": "offline.html"
+  },
+  "backgroundColor": "#16161A",
+  "android": {
+    "allowMixedContent": true,
+    "adjustMarginsForEdgeToEdge": "force",
+    "backgroundColor": "#16161A"
+  },
+  "ios": {
+    "contentInset": "always",
+    "limitsNavigationsToAppBoundDomains": false,
+    "backgroundColor": "#16161A"
+  }
+}
