@@ -19,7 +19,7 @@ service cloud.firestore {
     }
     // ---- Radio ratings and comments (see docs/superpowers/specs/2026-10-23-radio-ratings-share-design.md)
     // The approver is the site owner's Firebase account ID, filled in below once known. Empty = nobody.
-    function ownerUid() { return ''; } // OWNER_UID
+    function ownerUid() { return 'oidT4ydQi7aRffo0v6qvf4mMNM72'; } // OWNER_UID
     function isOwner() { return request.auth != null && ownerUid() != '' && request.auth.uid == ownerUid(); }
     function signedAs(uid) { return request.auth != null && request.auth.uid == uid; }
     function goodStars(v) { return v is int && v >= 1 && v <= 5; }
