@@ -400,16 +400,31 @@ def main():
             for lang, lst in t.items():
                 seen_u = set()
                 t[lang] = [x for x in lst if not (x["u"] in seen_u or seen_u.add(x["u"]))]
-        for lang in p["langs"]:
-            report.append(f"{pid:20} {lang}  trusted {len(r['news'].get(lang, [])):3}  other {len(r['other'].get(lang, [])):3}"
-                          f"  topics {sum(len(t.get(lang, [])) for t in r['topics'].values()):3}{'  (kept previous)' if stale.get((pid, lang)) else ''}"
-                          + "".join(f"  removed {k.replace('_', '-')} {v}" for k, v in sorted(removed[(pid, lang)].items()) if v))
 
     # AI: summaries for stories the papers gave none for, and a short digest per briefing place
     ai = news_extras.AI(cache)
     if ai.on:
         need = [s for r in result.values() for lst in r["news"].values() for s in lst if not s.get("s") and s.get("_x")]
         ai.summaries(need)
+        # stories the rules could not settle: kept only because they came from a district page,
+        # or naming the place only in their summary
+        asks = []
+        for pid, r in result.items():
+            p = pmap[pid]
+            if p["kind"] not in ("region", "city"):
+                continue
+            nm = names(p)
+            for lang, lst in r["news"].items():
+                for st in lst:
+                    if st.get("_own") or not any(n in st["t"].lower() for n in nm):
+                        asks.append((p["name"], st, pid, lang))
+        asks.sort(key=lambda x: -x[1].get("ts", 0))
+        reserve = sum(len(langs) for _, langs in BRIEFING)
+        gone = ai.relevance([(name, st) for name, st, _, _ in asks], reserve=reserve)
+        for name, st, pid, lang in asks:
+            if id(st) in gone:
+                result[pid]["news"][lang] = [x for x in result[pid]["news"][lang] if x is not st]
+                removed[(pid, lang)]["ai"] = removed[(pid, lang)].get("ai", 0) + 1
         for pid, langs in BRIEFING:
             if pid in result:
                 for lang in langs:
@@ -418,6 +433,12 @@ def main():
                     if d:
                         result[pid].setdefault("digest", {})[lang] = d
         print(f"AI: {ai.calls} calls, {ai.errors} errors", flush=True)
+
+    for pid, r in result.items():
+        for lang in pmap[pid]["langs"]:
+            report.append(f"{pid:20} {lang}  trusted {len(r['news'].get(lang, [])):3}  other {len(r['other'].get(lang, [])):3}"
+                          f"  topics {sum(len(t.get(lang, [])) for t in r['topics'].values()):3}{'  (kept previous)' if stale.get((pid, lang)) else ''}"
+                          + "".join(f"  removed {k.replace('_', '-')} {v}" for k, v in sorted(removed[(pid, lang)].items()) if v))
 
     clean = lambda lst: [{k: v for k, v in s.items() if k in ("t", "s", "u", "src", "ts", "ai")} for s in lst]  # noqa: E731
     for pid, r in result.items():

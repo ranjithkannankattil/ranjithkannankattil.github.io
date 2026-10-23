@@ -100,3 +100,56 @@ def test_other_names_same_country_and_district_towns():
     assert "kochi" in o
     assert "uk" not in o              # another country
     assert "kodungallur" not in o     # takes its stories from Thrissur's pages
+
+
+import news_extras
+
+
+def _ai(reply):
+    ai = news_extras.AI.__new__(news_extras.AI)
+    ai.key, ai.on, ai.cache, ai.calls, ai.errors, ai.model = "x", True, {}, 0, 0, "m"
+    ai.asked = []
+
+    def fake(prompt):
+        ai.asked.append(prompt); ai.calls += 1
+        return reply
+    ai._ask = fake
+    return ai
+
+
+def test_relevance_drops_false():
+    ai = _ai([{"i": 0, "about": False}, {"i": 1, "about": True}])
+    a, b = {"t": "Kochi news", "_k": "k1"}, {"t": "Thrissur news", "_k": "k2"}
+    ai.cache.update({"k1": {}, "k2": {}})
+    out = ai.relevance([("Thrissur", a), ("Thrissur", b)])
+    assert out == {id(a)}
+    assert ai.cache["k1"]["rel:Thrissur"] is False and ai.cache["k2"]["rel:Thrissur"] is True
+
+
+def test_relevance_uses_cache():
+    ai = _ai(None)
+    a = {"t": "Kochi news", "_k": "k1"}
+    ai.cache["k1"] = {"rel:Thrissur": False}
+    assert ai.relevance([("Thrissur", a)]) == {id(a)}
+    assert ai.asked == []
+
+
+def test_relevance_garbled_reply_keeps():
+    ai = _ai([{"i": 7, "about": "no"}])
+    a = {"t": "x", "_k": "k1"}
+    ai.cache["k1"] = {}
+    assert ai.relevance([("Thrissur", a)]) == set()
+
+
+def test_relevance_no_answer_keeps():
+    ai = _ai(None)
+    a = {"t": "x", "_k": "k1"}
+    ai.cache["k1"] = {}
+    assert ai.relevance([("Thrissur", a)]) == set()
+
+
+def test_relevance_leaves_calls_for_digests():
+    ai = _ai([])
+    ai.calls = news_extras.AI.MAX_CALLS - 3
+    ai.relevance([("Thrissur", {"t": "x"})], reserve=3)
+    assert ai.asked == []
