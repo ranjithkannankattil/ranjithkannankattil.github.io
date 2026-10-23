@@ -26,7 +26,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap"></noscript>
 <link rel="stylesheet" href="css/style.css?v=9">
-<link rel="stylesheet" href="css/radio.css?v=19">
+<link rel="stylesheet" href="css/radio.css?v=20">
 </head>
 <body data-section="radio" class="wide">
 
@@ -99,6 +99,23 @@
   <p class="radio-count" id="count"></p>
   <ul class="radio-grid" id="grid"></ul>
   <p class="radio-empty" id="empty" hidden>No stations match.</p>
+
+  <aside class="radio-app" id="radioApp" hidden>
+    <img class="ra-icon" src="assets/icons/radio-192.png" width="56" height="56" alt="">
+    <div class="ra-text">
+      <h2 class="ra-title">Radio for Android</h2>
+      <p class="ra-desc">The same stations as an app: keeps playing with the screen off, with lock-screen, Bluetooth and car controls.</p>
+      <p class="ra-steps">Open the downloaded file and allow installs from your browser when asked.</p>
+    </div>
+    <a class="ra-btn" href="downloads/Radio.apk" download="Radio.apk" type="application/vnd.android.package-archive">Download APK <span class="ra-size">3.4 MB</span></a>
+  </aside>
+  <script>
+    // Offer the APK everywhere except inside the app itself and on iPhone/iPad, which can't install it.
+    (function () {
+      var ua = navigator.userAgent, ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+      if (!window.Capacitor && !ios) document.getElementById("radioApp").hidden = false;
+    })();
+  </script>
 
   <p class="radio-note">Streams belong to their broadcasters and some go offline from time to time. If one doesn't start, the next source is tried automatically.</p>
   <p class="radio-note acct-note" id="acctNote" hidden>Signing in is optional. It stores your Google account ID and email with your list of favourite stations and your default language, so they appear on any device you sign in on — nothing else. Sign out any time; to have your saved list deleted, get in touch. <a href="privacy.html">Privacy details</a>.</p>

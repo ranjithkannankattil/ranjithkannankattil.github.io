@@ -18,6 +18,7 @@ self.addEventListener("fetch", (e) => {
   const url = new URL(req.url);
   const same = url.origin === location.origin;
   if (!same && !fonts.test(req.url)) return;
+  if (same && url.pathname.startsWith("/downloads/")) return; // app downloads: always fresh, never cached
   if (same && (url.pathname.startsWith("/__/") || url.pathname.startsWith("/js/stations/"))) {
     // station lists: always fresh when online, last copy when not
     e.respondWith(fetch(req).then((r) => { const c = r.clone(); caches.open(CACHE).then((x) => x.put(req, c)); return r; }).catch(() => caches.match(req)));
