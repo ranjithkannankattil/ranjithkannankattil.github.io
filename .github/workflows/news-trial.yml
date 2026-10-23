@@ -1,0 +1,31 @@
+name: News trial build (temporary, not published)
+on:
+  push:
+    branches: [news-relevance]
+    paths: [.github/workflows/news-trial.yml]
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        continue-on-error: true
+        with: { ref: news-data, path: prev }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -q googlenewsdecoder pytest && cd scripts && python3 -m pytest -q
+      - uses: actions/cache/restore@v4
+        with: { path: .news-cache, key: news-cache-trial-${{ github.run_id }}, restore-keys: news-cache- }
+      - name: Build (output kept off the live news-data branch)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+        run: python3 -u scripts/build_news.py --out out --prev prev
+      - name: Publish to probe-out for checking
+        run: |
+          mkdir -p t/p && cp out/report.txt t/ && for p in milan swansea thrissur kodungallur pemba bengaluru cabo-delgado qingdao qidong mangaluru; do cp out/p/$p.json t/p/ 2>/dev/null || true; done
+          cd t && git init -q -b probe-out && git config user.name "github-actions[bot]" && git config user.email "41898732+github-actions[bot]@users.noreply.github.com"
+          git add -A && git commit -qm "trial $(date -u +%FT%TZ)" && git push -qf "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" probe-out
