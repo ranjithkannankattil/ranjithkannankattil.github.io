@@ -200,3 +200,11 @@ def test_around_empty_parent_is_none():
 def test_around_caps_at_8():
     a = build_around({"en": []}, {"en": [_s(str(i)) for i in range(20)]}, "kerala", ["en"])
     assert len(a["news"]["en"]) == 8
+
+
+def test_verified_sources_added():
+    from news_config import OUTLETS, LOCAL_PAGES
+    assert "cartamz.com" in OUTLETS["pt"] and "opais.co.mz" in OUTLETS["pt"]
+    assert "pinnaclenews.net" not in OUTLETS["pt"]           # probe: site did not respond
+    assert any("prajavani.net/district/bengaluru-city" in u for u in LOCAL_PAGES["bengaluru"]["kn"])
+    assert any("prajavani.net/district/dakshina-kannada" in u for u in LOCAL_PAGES["mangaluru"]["kn"])

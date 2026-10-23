@@ -1,3 +1,4 @@
 scripts/.fonts/
 
 .superpowers/
+__pycache__/

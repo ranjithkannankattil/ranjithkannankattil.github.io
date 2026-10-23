@@ -81,7 +81,7 @@ OUTLETS = {
            "rbb24.de": "rbb24"},
     "es": {"elpais.com": "El País", "bbc.com": "BBC Mundo", "eldiario.es": "elDiario.es", "elmundo.es": "El Mundo", "lavanguardia.com": "La Vanguardia",
            "rtve.es": "RTVE", "elconfidencial.com": "El Confidencial", "dw.com": "DW", "france24.com": "France 24", "nytimes.com": "The New York Times"},
-    "pt": {"publico.pt": "Público", "expresso.pt": "Expresso", "rtp.pt": "RTP", "observador.pt": "Observador", "dn.pt": "Diário de Notícias",
+    "pt": {"cartamz.com": "Carta de Moçambique", "opais.co.mz": "O País", "publico.pt": "Público", "expresso.pt": "Expresso", "rtp.pt": "RTP", "observador.pt": "Observador", "dn.pt": "Diário de Notícias",
            "jn.pt": "Jornal de Notícias", "lusa.pt": "Lusa", "folha.uol.com.br": "Folha de S.Paulo", "bbc.com": "BBC Brasil",
            "cartamz.com": "Carta de Moçambique", "opais.co.mz": "O País", "dw.com": "DW", "rfi.fr": "RFI", "voaportugues.com": "VOA Português",
            "zitamar.com": "Zitamar"},
@@ -273,14 +273,16 @@ LOCAL_PAGES = {
                          "https://www.deshabhimani.com/district/kozhikode"],
                   "en": ["https://www.thehindu.com/news/cities/kozhikode/feeder/default.rss"]},
     "kerala": {"en": ["https://www.thehindu.com/news/national/kerala/feeder/default.rss"]},
-    "bengaluru": {"en": ["https://www.thehindu.com/news/cities/bangalore/feeder/default.rss"]},
+    "bengaluru": {"en": ["https://www.thehindu.com/news/cities/bangalore/feeder/default.rss"],
+                  "kn": ["https://www.prajavani.net/district/bengaluru-city"]},
     "chennai": {"en": ["https://www.thehindu.com/news/cities/chennai/feeder/default.rss"]},
     "mumbai": {"en": ["https://www.thehindu.com/news/cities/mumbai/feeder/default.rss"]},
     "delhi": {"en": ["https://www.thehindu.com/news/cities/Delhi/feeder/default.rss"]},
     "hyderabad": {"en": ["https://www.thehindu.com/news/cities/Hyderabad/feeder/default.rss"]},
     "kolkata": {"en": ["https://www.thehindu.com/news/cities/kolkata/feeder/default.rss"]},
     "coimbatore": {"en": ["https://www.thehindu.com/news/cities/Coimbatore/feeder/default.rss"]},
-    "mangaluru": {"en": ["https://www.thehindu.com/news/cities/Mangalore/feeder/default.rss"]},
+    "mangaluru": {"en": ["https://www.thehindu.com/news/cities/Mangalore/feeder/default.rss"],
+                  "kn": ["https://www.prajavani.net/district/dakshina-kannada"]},
 }
 LOCAL_FROM = {"kodungallur": "thrissur"}
 
