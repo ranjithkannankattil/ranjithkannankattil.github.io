@@ -123,13 +123,13 @@ def test_relevance_drops_false():
     ai.cache.update({"k1": {}, "k2": {}})
     out = ai.relevance([("Thrissur", a), ("Thrissur", b)])
     assert out == {id(a)}
-    assert ai.cache["k1"]["rel:Thrissur"] is False and ai.cache["k2"]["rel:Thrissur"] is True
+    assert ai.cache["k1"]["rel2:Thrissur"] is False and ai.cache["k2"]["rel2:Thrissur"] is True
 
 
 def test_relevance_uses_cache():
     ai = _ai(None)
     a = {"t": "Kochi news", "_k": "k1"}
-    ai.cache["k1"] = {"rel:Thrissur": False}
+    ai.cache["k1"] = {"rel2:Thrissur": False}
     assert ai.relevance([("Thrissur", a)]) == {id(a)}
     assert ai.asked == []
 
@@ -348,3 +348,18 @@ def test_relevance_prompt_says_true_when_unsure():
     ai.cache["k1"] = {}
     ai.relevance([("Thrissur", {"t": "x", "_k": "k1"})])
     assert "unsure" in ai.asked[0] and "true" in ai.asked[0]
+
+
+# found in trial 4: state-wide items on district pages
+def test_relevance_prompt_excludes_state_wide_and_uses_fresh_cache_key():
+    ai = _ai([{"i": 0, "about": False}])
+    a = {"t": "x", "_k": "k1"}
+    ai.cache["k1"] = {"rel:Thrissur": True}          # an answer to the old question is not reused
+    assert ai.relevance([("Thrissur", a)]) == {id(a)}
+    assert "whole state" in ai.asked[0]
+
+
+def test_lottery_result_is_not_a_story():
+    import build_news as bn
+    assert bn.NOT_STORY.search("live സുവർണ കേരളം ലോട്ടറി SK-74 നറുക്കെടുപ്പ് ഫലം")
+    assert bn.NOT_STORY.search("Kerala Lottery Result Today: Karunya KR-725")

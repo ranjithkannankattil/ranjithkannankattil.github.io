@@ -76,7 +76,7 @@ def outlet_for(lang, h):
     return None
 
 
-NOT_STORY = re.compile(r"(stats & head-to-head|scores & fixtures|scores, results|live scores|player stats|^catch up on|e-?paper|today'?s paper|\bnewspaper group\b|^bbc [a-z]+$|^the city$|news headlines for school assembly|horoscope|weather today|^watch:? live|express group\b|, (mon|tue|wed|thu|fri|sat|sun), \d)", re.I)
+NOT_STORY = re.compile(r"(stats & head-to-head|scores & fixtures|scores, results|live scores|player stats|^catch up on|e-?paper|today'?s paper|\bnewspaper group\b|^bbc [a-z]+$|^the city$|news headlines for school assembly|horoscope|lottery result|ലോട്ടറി.*(ഫലം|നറുക്കെടുപ്പ്)|weather today|^watch:? live|express group\b|, (mon|tue|wed|thu|fri|sat|sun), \d)", re.I)
 
 
 def junk(h, title):

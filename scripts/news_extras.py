@@ -201,7 +201,7 @@ class AI:
         drop, todo = set(), []
         for place, s in items:
             c = self.cache.get(s.get("_k"), {})
-            v = c.get("rel:" + place)
+            v = c.get("rel2:" + place)
             if v is False:
                 drop.add(id(s))
             elif v is None:
@@ -213,7 +213,10 @@ class AI:
             payload = [{"i": n, "place": p, "headline": s.get("t", ""), "summary": (s.get("s") or "")[:300]} for n, (p, s) in enumerate(batch)]
             res = self._ask("For each news story below, answer whether it is about, or happening in, the named place. "
                             "A story that only mentions the place in passing, or is about a sports club named after it, is not. "
-                            "A story from a district page about a village or town there is about the place. If you are unsure, answer true. "
+                            "A story from a district page about a village or town there is about the place. "
+                            "A story about the whole state or country (a state lottery result, a state minister's statement, "
+                            "a state-wide scheme) is not about a city or district unless it says what happens there. "
+                            "If you are unsure, answer true. "
                             'Return JSON: [{"i": number, "about": true or false}].\n\n' + json.dumps(payload, ensure_ascii=False))
             if not isinstance(res, list):
                 continue
@@ -226,7 +229,7 @@ class AI:
                     continue
                 place, s = batch[n]
                 if s.get("_k") in self.cache:
-                    self.cache[s["_k"]]["rel:" + place] = about
+                    self.cache[s["_k"]]["rel2:" + place] = about
                 if not about:
                     drop.add(id(s))
         return drop
