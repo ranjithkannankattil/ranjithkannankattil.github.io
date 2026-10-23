@@ -15,7 +15,7 @@ from pathlib import Path
 sys.path.insert(0, os.path.dirname(__file__))
 from news_config import LANGS, OUTLETS, PLACES, JUNK, NATIVE, ALIASES, TOPICS, LOCAL_PAGES, LOCAL_FROM, BRIEFING, LIVE_URL  # noqa: E402
 import news_extras  # noqa: E402
-from news_relevance import filter_local, other_names, thin_from_prev, THIN_DAYS  # noqa: E402
+from news_relevance import filter_local, other_names, thin_from_prev, build_around, THIN, THIN_DAYS  # noqa: E402
 
 try:
     from googlenewsdecoder import gnewsdecoder
@@ -442,6 +442,7 @@ def main():
                           f"  topics {sum(len(t.get(lang, [])) for t in r['topics'].values()):3}{'  (kept previous)' if stale.get((pid, lang)) else ''}"
                           + (f"  window {THIN_DAYS}d" if pid in thin else "") + "".join(f"  removed {k.replace('_', '-')} {v}" for k, v in sorted(removed[(pid, lang)].items()) if v))
 
+    thin_lines = []
     clean = lambda lst: [{k: v for k, v in s.items() if k in ("t", "s", "u", "src", "ts", "ai")} for s in lst]  # noqa: E731
     for pid, r in result.items():
         doc = {"id": pid, "updated": int(NOW), "news": {l: clean(v) for l, v in r["news"].items()},
@@ -450,6 +451,17 @@ def main():
             doc["topics"] = {t: {l: clean(v) for l, v in d.items()} for t, d in r["topics"].items()}
         if r.get("digest"):
             doc["digest"] = r["digest"]
+        p = pmap[pid]
+        parent = LOCAL_FROM.get(pid, p.get("parent"))
+        if p["kind"] in ("region", "city") and parent in result:
+            around = build_around(r["news"], result[parent]["news"], parent, p["langs"])
+            if around:
+                doc["around"] = {"from": parent, "news": {l: clean(v) for l, v in around["news"].items()}}
+                for l, v in around["news"].items():
+                    thin_lines.append(f"{pid:20} {l}  own {len(r['news'].get(l, [])):3}  around {len(v):3} from {parent}")
+            for l in p["langs"]:
+                if len(r["news"].get(l, [])) < THIN and not (around and l in around["news"]):
+                    thin_lines.append(f"{pid:20} {l}  own {len(r['news'].get(l, [])):3}  around   0  (nothing to borrow)")
         (out / "p" / f"{pid}.json").write_text(json.dumps(doc, ensure_ascii=False, separators=(",", ":")))
 
     index = {
@@ -463,7 +475,7 @@ def main():
     }
     (out / "index.json").write_text(json.dumps(index, ensure_ascii=False, separators=(",", ":")))
     (out / "report.txt").write_text(time.strftime("%Y-%m-%d %H:%M UTC\n", time.gmtime(NOW)) + f"feeds {len(urls)}, failed {failed}\n"
-                                    + "\n".join(report) + "\n\nLocal pages:\n" + json.dumps(local_debug, ensure_ascii=False, indent=1) + "\n")
+                                    + "\n".join(report) + "\n\nThin places:\n" + ("\n".join(thin_lines) or "none") + "\n\nLocal pages:\n" + json.dumps(local_debug, ensure_ascii=False, indent=1) + "\n")
 
     # settings for the instant-refresh worker (worker/news-live.js)
     live = {"ed": {l: v["ed"] for l, v in LANGS.items()}, "outlets": OUTLETS,

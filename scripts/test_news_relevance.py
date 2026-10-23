@@ -173,3 +173,30 @@ def test_thin_if_any_language_is_thin(tmp_path):
     (tmp_path / "p").mkdir()
     (tmp_path / "p" / "k.json").write_text(_json.dumps({"news": {"en": [1], "ml": [1] * 9}}))
     assert thin_from_prev(tmp_path, ["k"], {"k": "city"}) == {"k"}
+
+
+from news_relevance import build_around
+
+
+def _s(u):
+    return {"t": u, "u": u}
+
+
+def test_around_fills_thin_lang():
+    s1, s2, s3, s4 = _s("1"), _s("2"), _s("3"), _s("4")
+    a = build_around({"ml": [s1]}, {"ml": [s1, s2, s3], "en": [s4]}, "thrissur", ["ml", "en"])
+    assert a == {"from": "thrissur", "news": {"ml": [s2, s3], "en": [s4]}}
+
+
+def test_around_not_needed():
+    five = [_s(str(i)) for i in range(5)]
+    assert build_around({"ml": five, "en": five}, {"ml": [_s("x")]}, "thrissur", ["ml", "en"]) is None
+
+
+def test_around_empty_parent_is_none():
+    assert build_around({"ml": []}, {}, "thrissur", ["ml"]) is None
+
+
+def test_around_caps_at_8():
+    a = build_around({"en": []}, {"en": [_s(str(i)) for i in range(20)]}, "kerala", ["en"])
+    assert len(a["news"]["en"]) == 8

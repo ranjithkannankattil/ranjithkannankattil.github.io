@@ -115,3 +115,18 @@ def thin_from_prev(prev_dir, pids, kinds):
         if news and any(len(v) < THIN for v in news.values()):
             out.add(pid)
     return out
+
+
+def build_around(own, parent_news, parent_id, langs, cap=8):
+    """For each language where a place has fewer than THIN own stories, up to `cap` of its
+    parent's stories that it does not already show. None when nothing is needed or found."""
+    out = {}
+    for lang in langs:
+        mine = own.get(lang, [])
+        if len(mine) >= THIN:
+            continue
+        seen = {s.get("u") for s in mine}
+        extra = [s for s in parent_news.get(lang, []) if s.get("u") not in seen][:cap]
+        if extra:
+            out[lang] = extra
+    return {"from": parent_id, "news": out} if out else None
