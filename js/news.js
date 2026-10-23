@@ -241,9 +241,10 @@
       // a quiet place: the district's (or region's) stories, clearly labelled as not its own
       const ar = !T && local && data.around && data.around.news && data.around.news[l];
       if (ar && ar.length) {
-        const from = byId[data.around.from];
+        const fid = typeof data.around.from === "object" ? data.around.from[l] : data.around.from;   // per language; older files: one id
+        const from = byId[fid];
         const d = el("div", "around");
-        d.append(el("div", "around-k", `Around ${p.name} — from ${from ? from.name : data.around.from}`));
+        d.append(el("div", "around-k", `Around ${p.name} — from ${from ? from.name : fid}`));
         ar.forEach((s) => d.append(storyEl(s, false, false)));
         sec.append(d);
       }
