@@ -244,6 +244,49 @@
   });
   window.RadioApp = { getFavs: () => [...favs], getDefault: () => getDefault() };
 
+  // ---------------------------------------------------------- sharing
+  const shareUrl = (cId, s) => `${location.origin}/radio.html?c=${cId}&s=${encodeURIComponent(s.id)}`;
+  async function shareStation(s, cId) {
+    const url = shareUrl(cId, s);
+    if (navigator.share) {
+      try { await navigator.share({ title: s.name, text: `${s.name} on ranjithkb.com radio`, url }); return; }
+      catch (e) { if (e && e.name === "AbortError") return; /* otherwise fall back to copying */ }
+    }
+    try { await navigator.clipboard.writeText(url); notice("Link copied", 4000); }
+    catch { notice(`Copy this link: ${url}`, 10000); }
+  }
+  // a message in the player bar when it is showing, otherwise in a note above the station list
+  function notice(t, hold) {
+    if (!player.hidden) { status(t, hold); return; }
+    let n = $("#radioNote");
+    if (!n) {
+      n = document.createElement("p");
+      n.id = "radioNote"; n.className = "radio-note"; n.setAttribute("role", "status");
+      grid.before(n);
+    }
+    n.textContent = t; n.hidden = false;
+    clearTimeout(notice.t);
+    notice.t = setTimeout(() => { n.hidden = true; }, hold || 5000);
+  }
+  let openStationPanel = () => {};   // the station panel (ratings, comments, share) sets this
+
+  // open a shared station: its language, shown in the player bar ready to play, panel open
+  async function openStation(cId, sid) {
+    if (!col || col.id !== cId || !S.length) await openCollection(cId, false);
+    if (col.id !== cId) return;   // the visitor picked another language meanwhile
+    const s = byId[sid];
+    if (!s) { notice("That station isn't available any more", 6000); return; }
+    teardown(); setState("idle");
+    current = s; currentCol = cId; queue = visibleList();
+    store.set("mr-last2", { c: cId, s }); store.set("mr-closed", false);
+    showNowPlaying(s, cId);
+    syncPlayer();
+    status("Tap play to start");
+    openStationPanel();
+  }
+  window.RadioApp.share = () => current && shareStation(current, currentCol);
+  window.RadioApp.openStation = openStation;
+
   // ---------------------------------------------------------- player
   // a held message (e.g. about casting) is not overwritten by connection updates for a few seconds
   let holdUntil = 0;
@@ -583,6 +626,14 @@
   }
   renderRecent();
   // a shared link (?c=hindi) wins; otherwise open on the default language
-  const want = new URLSearchParams(location.search).get("c") || getDefault();
-  openCollection(byCol[want] ? want : "malayalam", false);
+  // a station link (?c=hindi&s=<id>) also shows that station ready to play
+  const params = new URLSearchParams(location.search);
+  const want = params.get("c") || getDefault(), sid = params.get("s");
+  const startCol = byCol[want] ? want : "malayalam";
+  const opening = openCollection(startCol, false);
+  if (sid) {
+    opening.then(() => openStation(startCol, sid)).finally(() => {
+      const url = new URL(location.href); url.searchParams.delete("s"); history.replaceState(null, "", url);
+    });
+  }
 })();
