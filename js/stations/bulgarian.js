@@ -48,7 +48,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nova-radio.neterra.tv/veselinaretro"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "badrock-hard-heavy",
@@ -359,6 +360,33 @@ window.STATIONS = [
       "https://a10.asurahosting.com:7600/radio.mp3"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "95-7-fm",
+    "name": "Радио БНР програма Христо Ботев Русе 95.7 FM",
+    "category": "music",
+    "streams": [
+      "https://e106-ts.cdn.bg/regstations/fls/HrBotev.stream/chunklist.m3u8"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "bg-voice-hit-mix",
+    "name": "BG Voice Hit Mix",
+    "category": "music",
+    "streams": [
+      "https://stream.radio.co/s53f1b7497/listen"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "metro-dance-radio",
+    "name": "Metro DANCE Radio",
+    "category": "news",
+    "streams": [
+      "https://eu1.reliastream.com/proxy/mdr?mp=/MDR"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

@@ -350,6 +350,33 @@ window.STATIONS = [
       "https://radyo44.80.yayin.com.tr/stream"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "apacik-radyo",
+    "name": "Apacik Radyo",
+    "category": "music",
+    "streams": [
+      "https://stream.34bit.net/ar.aac"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "trt-memleketim-fm",
+    "name": "TRT Memleketim FM",
+    "category": "music",
+    "streams": [
+      "https://radio-trtmemleketimfm.medya.trt.com.tr/master.m3u8"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "power-dance",
+    "name": "Power Dance",
+    "category": "music",
+    "streams": [
+      "https://listen.powerapp.com.tr/powerdance/mpeg/icecast.audio"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

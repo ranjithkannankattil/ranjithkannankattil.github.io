@@ -377,6 +377,33 @@ window.STATIONS = [
       "https://18373.live.streamtheworld.com:443/XHSHFMAAC.aac"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "1-oldies",
+    "name": "__1 oldies",
+    "category": "music",
+    "streams": [
+      "https://80sexitos.stream.laut.fm/80sexitos"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radio-panamericana",
+    "name": "Radio Panamericana",
+    "category": "news",
+    "streams": [
+      "https://stream.zeno.fm/pnwpbyfambruv"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "groove-wave-lounge",
+    "name": "Groove Wave Lounge",
+    "category": "music",
+    "streams": [
+      "https://stm1.srvif.com:7576/;"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

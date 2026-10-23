@@ -16,7 +16,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/MIXFM_SAOPAULOAAC.aac"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "bossa-jazz-brasil",
@@ -386,6 +387,33 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/BANDNEWSFM_BHAAC.aac"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "radio-fm-o-dia-99-7-fm",
+    "name": "Rádio FM O Dia 99.7 FM",
+    "category": "music",
+    "streams": [
+      "https://wz7.servidoresbrasil.com:8274/stream"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "cbn-rio-de-janeiro-92-5-fm",
+    "name": "CBN Rio de Janeiro 92.5 FM",
+    "category": "news",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/CBN_RJ_ADP.m3u8"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "kiss-fm-sao-paulo",
+    "name": "Kiss FM São Paulo",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_KISSFMAAC.aac?1655609055880"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

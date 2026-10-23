@@ -266,6 +266,15 @@ window.STATIONS = [
       "https://stream.zeno.fm/r3m0whh0kxquv"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "radio-central-24",
+    "name": "Radio Central 24",
+    "category": "music",
+    "streams": [
+      "https://casper.radioca.st/;"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

@@ -406,6 +406,33 @@ window.STATIONS = [
       "https://stream.flaixfm.cat/icecast"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "radiole-espana",
+    "name": "RADIOLE (España)",
+    "category": "music",
+    "streams": [
+      "https://20043.live.streamtheworld.com/RADIOLE.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "los-40-catalunya",
+    "name": "Los 40 Catalunya",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_CAT_SC"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "electrodanceworld-radio",
+    "name": "ElectroDanceWorld Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/s70bvdgqks8uv"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

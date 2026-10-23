@@ -384,6 +384,33 @@ window.STATIONS = [
       "https://radio.retrolan.party:8000/radio.mp3"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "station-5",
+    "name": "Авторадіо",
+    "category": "news",
+    "streams": [
+      "https://cast.mediaonline.net.ua/avtoradio320"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "station-6",
+    "name": "Радіо П'ятниця",
+    "category": "news",
+    "streams": [
+      "https://cast.mediaonline.net.ua/radiopyatnica320"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "station-7",
+    "name": "Радіо «РЕЙД»",
+    "category": "music",
+    "streams": [
+      "https://a9.asurahosting.com:7390/radio.mp3"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

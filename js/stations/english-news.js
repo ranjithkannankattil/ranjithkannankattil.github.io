@@ -270,6 +270,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "where": "US"
+  },
+  {
+    "id": "3aw-melbourne-693-am",
+    "name": "3AW - Melbourne - 693 AM",
+    "category": "anz",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/3AW.mp3"
+    ],
+    "added": "2026-10-23",
+    "where": "Australia"
+  },
+  {
+    "id": "radio-plus-mauritius",
+    "name": "Radio Plus Mauritius",
+    "category": "world",
+    "streams": [
+      "https://stream.radioplus.mu:8000/radio.mp3"
+    ],
+    "added": "2026-10-23",
+    "where": "Mauritius"
+  },
+  {
+    "id": "power-98-7",
+    "name": "Power 98.7",
+    "category": "world",
+    "streams": [
+      "https://edge.iono.fm/xice/65_medium.aac"
+    ],
+    "added": "2026-10-23",
+    "where": "South Africa"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

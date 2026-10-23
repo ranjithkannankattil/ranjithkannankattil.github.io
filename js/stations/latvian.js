@@ -348,6 +348,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/geuwghjjyjjtv"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "gradio-lv-one",
+    "name": "gradio.lv ONE",
+    "category": "music",
+    "streams": [
+      "https://stream.gradio.lv/gradio-one.mp4a"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "latvijas-radio-1",
+    "name": "Latvijas Radio 1",
+    "category": "news",
+    "streams": [
+      "https://muste.latvijasradio.lv/shoutcast/mp4:lr1a.stream/playlist.m3u8"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radio-viens",
+    "name": "Radio Viens",
+    "category": "music",
+    "streams": [
+      "https://radioviens.lv/live"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

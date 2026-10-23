@@ -178,7 +178,8 @@ window.STATIONS = [
     "streams": [
       "https://us5new.listen2myradio.com:2199/listen.php?port=8138&type=ice&mount=stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "heavenly-altar-church-radio-kampala",
@@ -242,6 +243,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/hkzgeqlcjoxuv"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "makie-max-radio",
+    "name": "Makie Max Radio",
+    "category": "news",
+    "streams": [
+      "https://eu4.fastcast4u.com/proxy/makiemaxradio?mp=/1"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radio-ssese-101-9-fm",
+    "name": "RADIO SSESE 101.9 FM",
+    "category": "news",
+    "streams": [
+      "https://stream.zeno.fm/bphnslpg8p1uv"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "glory-fm-maganjo-kampala",
+    "name": "Glory FM Maganjo - Kampala",
+    "category": "devotional",
+    "streams": [
+      "https://stream.zeno.fm/bn7dbg8w0nhvv"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

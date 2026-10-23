@@ -201,8 +201,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-17",
@@ -218,8 +217,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://lhttp.qingting.fm/live/276/64k.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-19",
@@ -342,6 +340,33 @@ window.STATIONS = [
       "https://piccpndali.v.myalicdn.com/audio/cctv2_2.m3u8"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "station-26",
+    "name": "上海新闻广播",
+    "category": "news",
+    "streams": [
+      "https://lhttp.qingting.fm/live/270/64k.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "50",
+    "name": "50首经典古典音乐",
+    "category": "music",
+    "streams": [
+      "https://lhttp-hw.qtfm.cn/live/5022308/64k.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "101-fm101-7",
+    "name": "上海流行音乐广播 动感101 FM101.7",
+    "category": "music",
+    "streams": [
+      "https://lhttp-hw.qtfm.cn/live/274/64k.mp3"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

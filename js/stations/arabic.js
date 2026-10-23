@@ -377,6 +377,33 @@ window.STATIONS = [
       "https://l3.itworkscdn.net/itwaudio/9054/stream"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "station-10",
+    "name": "راديو الشيخ محمد المقرمي إذاعة (هندسة القلوب)",
+    "category": "music",
+    "streams": [
+      "https://s1.reliastream.com/proxy/almaqrami?mp=/stream"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "el-bahdja",
+    "name": "El Bahdja - الجزائر العاصمة",
+    "category": "news",
+    "streams": [
+      "https://webradio3.tda.dz:8001/ElBahdja_64K.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "darusalam-radio",
+    "name": "Darusalam Radio",
+    "category": "devotional",
+    "streams": [
+      "https://streams.radio.co/s0975ec186/listen"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

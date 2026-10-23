@@ -416,6 +416,33 @@ window.STATIONS = [
       "https://radio.alloldieschannel.com:8000/stream"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "vrt-radio-2-west-vlaanderen",
+    "name": "VRT Radio 2 West-Vlaanderen",
+    "category": "music",
+    "streams": [
+      "https://icecast.vrtcdn.be/ra2wvl-high.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "slam-non-stop",
+    "name": "SLAM! Non Stop",
+    "category": "music",
+    "streams": [
+      "https://stream.radiocorp.nl/web10_mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "qmusic-foute-uur",
+    "name": "Qmusic Foute Uur",
+    "category": "music",
+    "streams": [
+      "https://stream.qmusic.nl/fouteuur/aac"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

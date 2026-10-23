@@ -339,6 +339,24 @@ window.STATIONS = [
       "https://live.radioclasic.com/listen/radio_clasic_strauss/live.mp3"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "acustic-radio",
+    "name": "Acustic Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/xmgnc6mcwnhvv"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "adjud-fm",
+    "name": "Adjud FM",
+    "category": "music",
+    "streams": [
+      "https://live.adjudfm.ro:8000/adjudfm.aac"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

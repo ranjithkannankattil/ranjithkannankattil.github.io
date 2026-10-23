@@ -168,8 +168,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://svara-stream.radioddns.net/yogyakarta_voksradio"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "klcbs-new-age",
@@ -209,8 +208,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:9154/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radiks-fm-semarang",
@@ -324,8 +322,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/14/9314/rrisngliatpro1.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "mosh-head-black-metal-id",
@@ -380,6 +377,33 @@ window.STATIONS = [
       "https://usa3.fastcast4u.com/proxy/pandumusikradio?mp=/1"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "elgangga-fm",
+    "name": "Elgangga FM",
+    "category": "music",
+    "streams": [
+      "https://b.alhastream.com:5140/radio"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "klcbs-fusion",
+    "name": "KLCBS Fusion",
+    "category": "music",
+    "streams": [
+      "https://streaming.klcbsofficial.com/listen/fusion/klcbs-fusion"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "amandit-93-9-fm",
+    "name": "Amandit 93.9 FM",
+    "category": "music",
+    "streams": [
+      "https://b.alhastream.com:5035/radio"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

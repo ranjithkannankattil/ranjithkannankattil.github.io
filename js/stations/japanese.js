@@ -359,6 +359,33 @@ window.STATIONS = [
       "https://antares.dribbcast.com/proxy/apop?mp=/s?"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "bbn-japanese",
+    "name": "BBN Japanese",
+    "category": "devotional",
+    "streams": [
+      "https://streams.radiomast.io/a622d414-52a6-4426-b3b8-ed2a4dbb704b"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "animeradio-de",
+    "name": "AnimeRadio.de",
+    "category": "music",
+    "streams": [
+      "https://stream.animeradio.de/animeradio.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "jpop-powerplay-kawaii",
+    "name": "JPop Powerplay Kawaii",
+    "category": "music",
+    "streams": [
+      "https://kathy.torontocast.com:3060/stream/1/?esPlayer&cb=221391.mp3"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

@@ -348,7 +348,8 @@ window.STATIONS = [
     "streams": [
       "https://aircast.breaking-bass.ru:8443/air"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "101-ru",
@@ -376,6 +377,33 @@ window.STATIONS = [
       "https://live.zhanafm.kz:8443/vasheradio"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "fm-70e",
+    "name": "Ретро FM 70e",
+    "category": "music",
+    "streams": [
+      "https://retro70.hostingradio.ru:8025/retro70-128.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "life-fm",
+    "name": "Соловьёв life FM",
+    "category": "news",
+    "streams": [
+      "https://solovievfm.hostingradio.ru/solovievfm128.aacp"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "caspian-business-radio-boss",
+    "name": "Caspian Business Radio BOSS",
+    "category": "news",
+    "streams": [
+      "https://myradio24.org/bosscomaz"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

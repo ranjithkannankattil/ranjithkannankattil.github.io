@@ -272,6 +272,15 @@ window.STATIONS = [
       "https://listen-nation.sharp-stream.com/hull.mp3"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "radio-ssese-101-9-fm",
+    "name": "RADIO SSESE 101.9 FM",
+    "category": "news",
+    "streams": [
+      "https://stream.zeno.fm/bphnslpg8p1uv"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

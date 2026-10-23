@@ -405,6 +405,33 @@ window.STATIONS = [
       "https://stream.rcast.net/69794"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "xfm-eesti",
+    "name": "XFM Eesti",
+    "category": "news",
+    "streams": [
+      "https://sc2.treraadio.ee/xfm-tallinn"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "tagatuba-fm",
+    "name": "Tagatuba FM",
+    "category": "music",
+    "streams": [
+      "https://mcr.streams.gr:10416/stream"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "err-klassikaraadio",
+    "name": "ERR Klassikaraadio",
+    "category": "music",
+    "streams": [
+      "https://icecast.err.ee/klassikaraadio.mp3"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

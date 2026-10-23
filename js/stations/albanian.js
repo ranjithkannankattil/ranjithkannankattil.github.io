@@ -366,6 +366,33 @@ window.STATIONS = [
       "https://radios.albaniadigitalradio.al/albaniaradiodj"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "radio-popullore",
+    "name": "Radio Popullore",
+    "category": "music",
+    "streams": [
+      "https://cp1.sednastream.com/proxy/shqipfolk/stream"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radio-mergimi",
+    "name": "Radio Mergimi",
+    "category": "music",
+    "streams": [
+      "https://radio.radiomergimi.com:8114/stream"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radio-1",
+    "name": "Radio 1",
+    "category": "devotional",
+    "streams": [
+      "https://livestream.radio1.al/hls/radio.m3u8"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

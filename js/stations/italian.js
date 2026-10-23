@@ -345,6 +345,33 @@ window.STATIONS = [
       "https://stream.srg-ssr.ch/m/rsj/mp3_128"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "radio-volami-nel-cuore",
+    "name": "Radio Volami nel Cuore",
+    "category": "music",
+    "streams": [
+      "https://rci.canaleitalia.tv:8009/;"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "discoradio-il-ritmo-della-tua-citta",
+    "name": "Discoradio - Il Ritmo della tua città",
+    "category": "music",
+    "streams": [
+      "https://icstream.rds.radio/disco"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "italia-italia-80",
+    "name": "ITALIA Italia 80",
+    "category": "music",
+    "streams": [
+      "https://icy.unitedradio.it/um016.mp3"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

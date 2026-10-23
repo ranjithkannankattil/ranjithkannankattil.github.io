@@ -32,7 +32,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.softnep.net:10828/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "ujyaalo-90-network",
@@ -118,4 +119,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

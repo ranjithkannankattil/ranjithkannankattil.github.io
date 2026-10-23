@@ -209,6 +209,33 @@ window.STATIONS = [
       "https://centova.radioservers.biz/proxy/eastfmc1/stream"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "mbc-fm4u",
+    "name": "MBC FM4U",
+    "category": "music",
+    "streams": [
+      "https://minimw.imbc.com/dmfm/_definst_/mfm.stream/playlist.m3u8?_lsu_sa_=69B1841A83103904DB45D5B53A31F34E05893FF57800F2363B60E3a516B63EC69Ea8D3AF3FD22C47E01436A1A7bAB1A9EEEA0436F3BB215246FC2773FDDCCC9FF6C04EF472B03A7E6C74A6420BBABFD0BE4B65F3FF21D5C79980F3A1E519BFEF184543F44EFCDDF1FF6E44E347653B1F"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "mbc-fm",
+    "name": "MBC FM",
+    "category": "music",
+    "streams": [
+      "https://minisw.imbc.com/dsfm/_definst_/sfm.stream/playlist.m3u8?_lsu_sa_=68919E1363883D34B742559934D1FF47259F32B5C000821F3840ABa5A6AF3726A6a663783BD25A45F0BF34A1B6bD71D5C345F4F61278F2959F0858196353AF9407330DA027CA0C6978619518ADDCED4D7A1637155985D2ECC6AAF778E76AED6B790730144F878DD339BEE1A3D0FAB467"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "big-b-radio-asian-pop",
+    "name": "Big B Radio - Asian pop",
+    "category": "music",
+    "streams": [
+      "https://antares.dribbcast.com/proxy/apop?mp=/s?"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

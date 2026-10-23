@@ -224,7 +224,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radios.rs:9076/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-s-gym",
@@ -357,6 +358,33 @@ window.STATIONS = [
       "https://radio.dukahosting.com:7045/stream"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "radio-021",
+    "name": "Radio 021",
+    "category": "music",
+    "streams": [
+      "https://radio.dukahosting.com/8006/stream"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "rock-radio-belgrade",
+    "name": "Rock Radio Belgrade (Рок Радио Београд)",
+    "category": "music",
+    "streams": [
+      "https://edge9.pink.rs/rockstream"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "station-2",
+    "name": "РТС - Радио Београд - Рокенролер",
+    "category": "music",
+    "streams": [
+      "https://rtsradio-live.morescreens.com/RTS_2_006/audio/chunklist.m3u8"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

@@ -385,6 +385,33 @@ window.STATIONS = [
       "https://broadcast.idaidaida.net:8000/stream"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "yle-radio-suomi-kajaani",
+    "name": "Yle Radio Suomi Kajaani",
+    "category": "news",
+    "streams": [
+      "https://yleradiolive5.akamaized.net/hls/live/20000882/ylers-kajaani/256/variant.m3u8"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radio-classic",
+    "name": "Radio Classic",
+    "category": "music",
+    "streams": [
+      "https://streaming.radioplay.fi/fi_classic_128.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "tekoalyradio",
+    "name": "Tekoälyradio",
+    "category": "music",
+    "streams": [
+      "https://streaming.radioplay.fi/fi_tekoalyradio_128.mp3"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

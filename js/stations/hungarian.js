@@ -357,6 +357,24 @@ window.STATIONS = [
       "https://icast.connectmedia.hu/4656/mr11.aac"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "adventnet-radio",
+    "name": "AdventNet rádió",
+    "category": "devotional",
+    "streams": [
+      "https://radio.adventnet.hu:8443/stream"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "muravideki-magyar-radio",
+    "name": "Muravidéki Magyar Rádió",
+    "category": "music",
+    "streams": [
+      "https://mp3.rtvslo.si/mmr"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

@@ -385,6 +385,33 @@ window.STATIONS = [
       "https://radioparalelo.indymedia.pt/listen/paralelo/radio.mp3"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "rfm-latinas",
+    "name": "RFM LATINAS",
+    "category": "music",
+    "streams": [
+      "https://25693.live.streamtheworld.com/RFM_LATINASAAC.aac"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radio-nova-era",
+    "name": "Rádio Nova Era",
+    "category": "music",
+    "streams": [
+      "https://centova.radio.com.pt/proxy/478?mp=/stream"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radio-renascenca-2",
+    "name": "Radio Renascença",
+    "category": "news",
+    "streams": [
+      "https://22593.live.streamtheworld.com/RADIO_RENASCENCAAAC.aac"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

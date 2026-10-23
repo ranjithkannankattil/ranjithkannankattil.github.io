@@ -76,8 +76,16 @@ window.STATIONS = [
     "streams": [
       "https://www.radioking.com/play/alefamusic"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
+  },
+  {
+    "id": "radio-rsf-109-antanifotsy",
+    "name": "Radio RSF 109 Antanifotsy",
+    "category": "music",
+    "streams": [
+      "https://listen.tropicastradio.com/stations/3freccr11b/live.mp3"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

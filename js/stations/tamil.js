@@ -386,6 +386,33 @@ window.STATIONS = [
       "https://usa15.fastcast4u.com/proxy/tammus00?mp=/;"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "sahara-fm-tamil",
+    "name": "Sahara FM Tamil",
+    "category": "music",
+    "streams": [
+      "https://azuracast.vibesounds.in:8000/radio.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "chennai-fm-rainbow",
+    "name": "Chennai FM Rainbow",
+    "category": "music",
+    "streams": [
+      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio022/playlist.m3u8"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "fmrainbowtamil",
+    "name": "Fmrainbowtamil",
+    "category": "music",
+    "streams": [
+      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio022/playlist.m3u8"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

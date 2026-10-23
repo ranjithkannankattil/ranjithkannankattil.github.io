@@ -24,8 +24,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://atunwadigital.streamguys1.com/angelfm"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "nhyira-104-5-fm",
@@ -396,6 +395,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/afzd4f4nq7zuv"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "bramcom-radio-online",
+    "name": "Bramcom Radio Online",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/5k38xxf1v7zuv"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "kastle-fm",
+    "name": "Kastle FM",
+    "category": "news",
+    "streams": [
+      "https://stream.zeno.fm/evaq9ab4k0hvv"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "neat-fm",
+    "name": "Neat Fm",
+    "category": "news",
+    "streams": [
+      "https://atunwadigital.streamguys1.com/neatfm"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

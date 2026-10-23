@@ -177,7 +177,8 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://enacast.com/radioabadiademontserrat/streams/HD"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "antena-2000",
@@ -394,6 +395,33 @@ window.STATIONS = [
       "https://enacast.com/radiovilablareix/streams/SD"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "radio-la-selva",
+    "name": "Ràdio la Selva",
+    "category": "music",
+    "streams": [
+      "https://streaming.enacast.com/radiolaselva56.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radio-valencianismo",
+    "name": "Radio Valencianismo",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/oqux7fanb3lvv"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "pollenca",
+    "name": "Pollença",
+    "category": "music",
+    "streams": [
+      "https://stream.recasound.es/proxy/radiopollensa/stream"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

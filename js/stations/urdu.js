@@ -222,6 +222,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/xuin6ocdc2juv"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "radio-asian-air",
+    "name": "Radio Asian Air",
+    "category": "devotional",
+    "streams": [
+      "https://s2.citrus3.com:8282/stream"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radio-central-24",
+    "name": "Radio Central 24",
+    "category": "music",
+    "streams": [
+      "https://casper.radioca.st/;"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "ckye-fm-93-1-red-fm-vancouver-bc",
+    "name": "CKYE-FM 93.1 \"Red FM\" Vancouver, BC",
+    "category": "music",
+    "streams": [
+      "https://ice24.securenetsystems.net/CKYE"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

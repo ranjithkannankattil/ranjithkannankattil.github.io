@@ -369,6 +369,33 @@ window.STATIONS = [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio011/hlspbaudio011_Auto.m3u8"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "sandesh-radio",
+    "name": "Sandesh Radio",
+    "category": "music",
+    "streams": [
+      "https://sandeshradio2017.radioca.st/stream"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radionev",
+    "name": "RadioNev",
+    "category": "music",
+    "streams": [
+      "https://a7.asurahosting.com:8140/radio.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "classic-radio-bhakti-sangeet",
+    "name": "Classic Radio Bhakti Sangeet",
+    "category": "devotional",
+    "streams": [
+      "https://stream.zeno.fm/epylmeu4zf7vv"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

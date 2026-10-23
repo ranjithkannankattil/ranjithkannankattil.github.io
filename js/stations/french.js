@@ -356,6 +356,33 @@ window.STATIONS = [
       "https://icecast.radiofrance.fr/fbprovence-midfi.mp3?ID=radiofrance"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "yumi-co-radio",
+    "name": "Yumi Co. Radio",
+    "category": "music",
+    "streams": [
+      "https://yumicoradio.net/stream"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radio-freedom-fm",
+    "name": "Radio Freedom FM",
+    "category": "music",
+    "streams": [
+      "https://freedomice.streamakaci.com/freedom.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "rts-la-premiere",
+    "name": "RTS La Première",
+    "category": "music",
+    "streams": [
+      "https://stream.srg-ssr.ch/m/la-1ere/mp3_128"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

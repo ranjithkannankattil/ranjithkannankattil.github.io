@@ -308,7 +308,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast3.my-control-panel.com/proxy/ronald/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "eagle-fm-95-5",
@@ -343,6 +344,33 @@ window.STATIONS = [
       "https://xcite.radyoph.com:8020/dzrt"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "radyo-natin-madridejos",
+    "name": "Radyo Natin Madridejos",
+    "category": "news",
+    "streams": [
+      "https://tx.radyonatinfm.com:8010/madridejos"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "galactic-hearts-radio",
+    "name": "Galactic Hearts Radio",
+    "category": "devotional",
+    "streams": [
+      "https://ca.azura.linkodev.ch/listen/galactic_hearts_radio/jttcgalactichearts"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "star-fm-92-7-pampanga",
+    "name": "Star FM 92.7 Pampanga",
+    "category": "news",
+    "streams": [
+      "https://stream.zeno.fm/g1pmt17nz9duv"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

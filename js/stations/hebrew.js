@@ -404,6 +404,33 @@ window.STATIONS = [
       "https://gb25.streamgates.net/radios-audio/100Stars/icecast.audio"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "martha-kowaski",
+    "name": "Martha Kowaski",
+    "category": "devotional",
+    "streams": [
+      "https://streaming.live365.com/a95708"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "wjpr-1640-am-the-jhper-edison-new-jersey",
+    "name": "WJPR 1640 AM - The Jhper - Edison, New Jersey",
+    "category": "music",
+    "streams": [
+      "https://ice41.securenetsystems.net:80/WJPRAM"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "kol-radio",
+    "name": "Kol Radio",
+    "category": "music",
+    "streams": [
+      "https://uksoutha.streaming.broadcast.radio:20691/kolradio"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

@@ -386,6 +386,33 @@ window.STATIONS = [
       "https://ice.radia.cz/radiozlin128.mp3"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "cro-ostrava",
+    "name": "ČRo Ostrava",
+    "category": "music",
+    "streams": [
+      "https://rozhlas.stream/ostrava_high.aac"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "hardcoreradio-cz",
+    "name": "HARDCORERADIO.CZ",
+    "category": "music",
+    "streams": [
+      "https://radio.hardcoreradio.cz/listen/hardcore_radio/radio.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "hitradio-city-zona-lasky",
+    "name": "hitradio City zona Lasky",
+    "category": "music",
+    "streams": [
+      "https://ice.abradio.cz/cityzl128.mp3"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

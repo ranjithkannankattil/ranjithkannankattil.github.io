@@ -8,8 +8,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.wavespb.com/live/0beac8e921bbfdbb/0beac8e921bbfdbb.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "svbc-ttd-radio",
@@ -81,8 +80,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.wavespb.com/live/bad174fd7eac38d0/bad174fd7eac38d0.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "vb-telugu-hyderabad",
@@ -100,8 +98,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/5d9989b5189a8f4a/5d9989b5189a8f4a.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "akashvani-tirupati",
@@ -110,8 +107,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/1119aa26b4e9f653/1119aa26b4e9f653.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "fm-rainbow-visakhapatnam",
@@ -133,4 +129,4 @@ window.STATIONS = [
     "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

@@ -266,6 +266,15 @@ window.STATIONS = [
     "streams": [
       "https://radio1.ohmi-design.com/8086/;"
     ]
+  },
+  {
+    "id": "mcot-chumphon-amphoe-lang-suan-fm-104-75",
+    "name": "MCOT Chumphon (Amphoe Lang Suan) FM 104.75",
+    "category": "music",
+    "streams": [
+      "https://lb-media.mcot.net/RegionRadio/ChumphonLangsuan.stream_aac/playlist.m3u8"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

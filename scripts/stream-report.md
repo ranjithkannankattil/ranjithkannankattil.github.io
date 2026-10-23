@@ -1,80 +1,80 @@
-# Radio stream check — 2026-10-22
+# Radio stream check — 2026-10-23
 
-**2387 of 2467 stations playing.** 59 offline, 21 couldn't be checked, 0 hidden after 20+ failed checks in a row, 120 new stations added.
+**2502 of 2587 stations playing.** 58 offline, 27 couldn't be checked, 0 hidden after 20+ failed checks in a row, 125 new stations added.
 
 | Collection | Stations | Playing | Offline |
 |---|---|---|---|
-| English News | 29 | 29 | 0 |
-| English Talk | 36 | 36 | 0 |
-| English Music | 43 | 43 | 0 |
-| Malayalam | 125 | 97 | 28 |
-| Hindi | 45 | 45 | 0 |
-| Tamil | 47 | 47 | 0 |
-| Telugu | 15 | 10 | 5 |
+| English News | 32 | 32 | 0 |
+| English Talk | 39 | 39 | 0 |
+| English Music | 46 | 46 | 0 |
+| Malayalam | 128 | 107 | 21 |
+| Hindi | 48 | 48 | 0 |
+| Tamil | 50 | 50 | 0 |
+| Telugu | 15 | 14 | 1 |
 | Kannada | 18 | 18 | 0 |
 | Bengali | 24 | 24 | 0 |
-| Punjabi | 32 | 32 | 0 |
-| Urdu | 27 | 27 | 0 |
+| Punjabi | 33 | 33 | 0 |
+| Urdu | 30 | 30 | 0 |
 | Bhojpuri | 5 | 5 | 0 |
-| Odia | 6 | 5 | 1 |
-| Nepali | 14 | 12 | 2 |
-| More Indian | 10 | 8 | 2 |
-| Swahili | 29 | 29 | 0 |
-| Luganda | 33 | 32 | 1 |
-| Akan / Twi | 48 | 47 | 1 |
+| Odia | 6 | 6 | 0 |
+| Nepali | 14 | 11 | 3 |
+| More Indian | 10 | 10 | 0 |
+| Swahili | 32 | 31 | 1 |
+| Luganda | 34 | 33 | 1 |
+| Akan / Twi | 51 | 51 | 0 |
 | Chichewa | 37 | 37 | 0 |
 | Yoruba, Hausa & Igbo | 15 | 15 | 0 |
 | Amharic & Tigrinya | 14 | 14 | 0 |
 | Bambara & Wolof | 12 | 12 | 0 |
 | Afrikaans | 22 | 22 | 0 |
 | Zulu, Xhosa & Sotho | 8 | 8 | 0 |
-| More African | 9 | 8 | 1 |
-| Italian | 42 | 42 | 0 |
-| French | 43 | 43 | 0 |
-| Korean | 25 | 24 | 1 |
-| Spanish (Spain) | 49 | 49 | 0 |
-| Spanish (Latin America) | 46 | 46 | 0 |
-| Portuguese (Brazil) | 47 | 46 | 1 |
-| Portuguese (Portugal) | 46 | 42 | 4 |
-| German | 46 | 46 | 0 |
-| Dutch | 49 | 49 | 0 |
-| Polish | 42 | 42 | 0 |
-| Greek | 49 | 49 | 0 |
-| Russian | 46 | 45 | 1 |
-| Ukrainian | 47 | 47 | 0 |
-| Romanian | 42 | 42 | 0 |
-| Hungarian | 44 | 44 | 0 |
-| Czech | 47 | 47 | 0 |
-| Slovak | 45 | 44 | 1 |
-| Serbian | 44 | 44 | 0 |
+| More African | 10 | 10 | 0 |
+| Italian | 45 | 45 | 0 |
+| French | 46 | 46 | 0 |
+| Korean | 28 | 27 | 1 |
+| Spanish (Spain) | 52 | 52 | 0 |
+| Spanish (Latin America) | 49 | 49 | 0 |
+| Portuguese (Brazil) | 50 | 48 | 2 |
+| Portuguese (Portugal) | 49 | 45 | 4 |
+| German | 49 | 49 | 0 |
+| Dutch | 52 | 52 | 0 |
+| Polish | 44 | 38 | 6 |
+| Greek | 52 | 52 | 0 |
+| Russian | 49 | 47 | 2 |
+| Ukrainian | 50 | 50 | 0 |
+| Romanian | 44 | 44 | 0 |
+| Hungarian | 46 | 46 | 0 |
+| Czech | 50 | 50 | 0 |
+| Slovak | 48 | 47 | 1 |
+| Serbian | 47 | 46 | 1 |
 | Croatian | 32 | 32 | 0 |
-| Bosnian | 30 | 30 | 0 |
-| Slovenian | 33 | 33 | 0 |
-| Bulgarian | 44 | 44 | 0 |
-| Albanian | 45 | 45 | 0 |
+| Bosnian | 30 | 29 | 1 |
+| Slovenian | 33 | 32 | 1 |
+| Bulgarian | 47 | 46 | 1 |
+| Albanian | 48 | 48 | 0 |
 | Macedonian | 24 | 24 | 0 |
 | Swedish | 44 | 44 | 0 |
 | Norwegian | 47 | 47 | 0 |
-| Danish | 48 | 48 | 0 |
-| Finnish | 47 | 47 | 0 |
-| Estonian | 49 | 49 | 0 |
-| Latvian | 43 | 43 | 0 |
+| Danish | 49 | 49 | 0 |
+| Finnish | 50 | 50 | 0 |
+| Estonian | 52 | 52 | 0 |
+| Latvian | 46 | 46 | 0 |
 | Lithuanian | 30 | 30 | 0 |
-| Catalan | 48 | 47 | 1 |
-| Arabic | 46 | 45 | 1 |
-| Turkish | 43 | 43 | 0 |
+| Catalan | 51 | 49 | 2 |
+| Arabic | 49 | 48 | 1 |
+| Turkish | 46 | 46 | 0 |
 | Persian | 23 | 23 | 0 |
-| Hebrew | 49 | 49 | 0 |
+| Hebrew | 52 | 52 | 0 |
 | Kurdish | 24 | 24 | 0 |
 | Azerbaijani | 20 | 19 | 1 |
-| Kazakh | 18 | 18 | 0 |
-| Chinese (Mandarin) | 42 | 40 | 2 |
-| Cantonese | 47 | 47 | 0 |
-| Japanese | 44 | 44 | 0 |
-| Indonesian | 46 | 42 | 4 |
+| Kazakh | 18 | 17 | 1 |
+| Chinese (Mandarin) | 45 | 45 | 0 |
+| Cantonese | 50 | 47 | 3 |
+| Japanese | 47 | 47 | 0 |
+| Indonesian | 49 | 48 | 1 |
 | Malay | 16 | 16 | 0 |
-| Filipino | 42 | 42 | 0 |
-| Thai | 33 | 33 | 0 |
+| Filipino | 45 | 44 | 1 |
+| Thai | 34 | 34 | 0 |
 | Vietnamese | 10 | 10 | 0 |
 | Sinhala | 18 | 17 | 1 |
 
@@ -83,13 +83,6 @@
 | Station | Why |
 |---|---|
 | Malayalam · Radio Mango | https://listen.openstream.co/4635/audio — HTTP 502 error page; https://radiomangoalive1-a.akamaihd.net/9268677ef77949a9b21d33239a55eadd/ap-southeast-1/6034685947001/playlist.m3u8 — playlist HTTP 400 |
-| Malayalam · AIR Kochi FM | https://radio.wavespb.com/live/70400e7510e87cdf/70400e7510e87cdf.m3u8 — playlist HTTP 404 |
-| Malayalam · AIR FM Rainbow Kochi | https://radio.wavespb.com/live/7df6f2a8c3c4d33b/7df6f2a8c3c4d33b.m3u8 — playlist HTTP 404 |
-| Malayalam · AIR Devikulam | https://radio.wavespb.com/live/e97acc829da9bf2a/e97acc829da9bf2a.m3u8 — playlist HTTP 404 |
-| Malayalam · AIR Kannur | https://radio.wavespb.com/live/b82c91a395fc4a7d/b82c91a395fc4a7d.m3u8 — playlist HTTP 404 |
-| Malayalam · AIR Manjeri FM | https://radio.wavespb.com/live/58390a2ed33cea4a/58390a2ed33cea4a.m3u8 — playlist HTTP 404 |
-| Malayalam · AIR Thrissur | https://radio.wavespb.com/live/f70fdeca437dc326/f70fdeca437dc326.m3u8 — playlist HTTP 404 |
-| Malayalam · Radio Macfast | https://icecast.octosignals.com/radiomacfast — HTTP 404 error page |
 | Malayalam · Radio Mangalam | http://radiomangalam.in:8000/stream — no answer to GitHub's servers |
 | Malayalam · Radio Nellika | https://usa10.fastcast4u.com:8110/;?type=http&nocache=3 — HTTP 0, 0 bytes |
 | Malayalam · Radio Mallu | https://usa15.fastcast4u.com/proxy/radiomall/stream — HTTP 502 error page |
@@ -110,192 +103,207 @@
 | Malayalam · Quran Radio | https://server03.quran-uni.com:7029/stream — HTTP 0, 0 bytes |
 | Malayalam · Radio Ayyappa | https://stream.zeno.fm/rdcci38kky4vv — HTTP 401, 0 bytes |
 | Malayalam · Njan Malayali Bhakthi | https://stream.zeno.fm/w9kku8utuy8uv — HTTP 401, 0 bytes |
-| Telugu · Vividh Bharati Telugu Vijayawada | https://radio.wavespb.com/live/0beac8e921bbfdbb/0beac8e921bbfdbb.m3u8 — playlist HTTP 404 |
-| Telugu · FM Rainbow Vijayawada | https://radio.wavespb.com/live/bad174fd7eac38d0/bad174fd7eac38d0.m3u8 — playlist HTTP 404 |
-| Telugu · Akashvani Nizamabad | https://radio.wavespb.com/live/5d9989b5189a8f4a/5d9989b5189a8f4a.m3u8 — playlist HTTP 404 |
-| Telugu · Akashvani Tirupati | https://radio.wavespb.com/live/1119aa26b4e9f653/1119aa26b4e9f653.m3u8 — playlist HTTP 404 |
 | Telugu · FM Rainbow Visakhapatnam | https://radio.wavespb.com/live/147314c8aedf4389/147314c8aedf4389.m3u8 — playlist HTTP 404 |
-| Odia · AIR Jeypore | https://air.pc.cdn.bitgravity.com/air/live/pbaudio112/playlist.m3u8 — playlist HTTP 404 |
+| Nepali · Kalika FM 95.2 | https://streaming.softnep.net:10828/stream — HTTP 502 error page |
 | Nepali · CIN Khabar | https://streaming.softnep.net:10996/;stream.nsv&type=mp3&volume=60 — HTTP 503 error page |
 | Nepali · 90.1 NBC FM Sydney | https://studio.901nbcfm.com.au:8902/newstream — HTTP 0, 0 bytes |
-| More Indian · AIR Nanded | https://air.pc.cdn.bitgravity.com/air/live/pbaudio072/playlist.m3u8 — playlist HTTP 404 |
-| More Indian · AIR Kolhapur | https://air.pc.cdn.bitgravity.com/air/live/pbaudio063/playlist.m3u8 — playlist HTTP 404 |
+| Swahili · 104.1 Favour FM - Gulu - 104.1 FM | https://us5new.listen2myradio.com:2199/listen.php?port=8138&type=ice&mount=stream — HTTP 200, 205 bytes |
 | Luganda · Foundation of Truth Radio | https://r1.comcities.com/proxy/fotonline/stream — HTTP 502 error page |
-| Akan / Twi · Angel FM | https://atunwadigital.streamguys1.com/angelfm — HTTP 502, 0 bytes |
-| More African · Alefamusic | https://www.radioking.com/play/alefamusic — HTTP 301 error page |
 | Korean · SBS Power FM | https://radiolive.sbs.co.kr/powerpc/powerfm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTI2ODYwMTAsInBhdGgiOiIvcG93ZXJmbS5zdHJlYW0iLCJkdXJhdGlvbiI6LTEsInVubyI6IjlkMDFiOGE3LThlMDMtNDFkYS1iYWZhLTM1YzYyZGU5NzdlNCIsImlhdCI6MTc5MjY0MjgxMH0.PMNO73j0Gu8tDxuzEDDcbUuhW9OUZBZSYD__4ffU3R4 — playlist HTTP 403 |
+| Portuguese (Brazil) · Rádio Mix 106.3 FM | https://playerservices.streamtheworld.com/api/livestream-redirect/MIXFM_SAOPAULOAAC.aac — HTTP 404 error page |
 | Portuguese (Brazil) · Máquina do Tempo (MPB Brasil) | https://servidor28.brlogic.com:8032/live — HTTP 0, 0 bytes |
 | Portuguese (Portugal) · Antena 1 Madeira (Portugal) | https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8 — playlist HTTP 206 |
 | Portuguese (Portugal) · Rádio Dom Bosco FM | https://stream.streamaudio.de:8000/radio-dom-bosco-fm — HTTP 0, 0 bytes |
 | Portuguese (Portugal) · RDP Africa (Portugal) | https://streaming-live.rtp.pt/liveradio/rdpafrica80a/playlist.m3u8 — playlist HTTP 206 |
 | Portuguese (Portugal) · Antena 1 Açores (Portugal) | https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8 — playlist HTTP 206 |
+| Polish · ESKA GORĄCA 100 | https://ic1.smcdn.pl/6120-1.mp3 — HTTP 404 error page |
+| Polish · ESKA - Gorąca 20 | https://waw.ic.smcdn.pl/6130-1.mp3 — HTTP 404 error page |
+| Polish · ESKA - Do Pracy | https://waw.ic.smcdn.pl/6140-1.mp3 — HTTP 404 error page |
+| Polish · ESKA POZNAŃ | https://ic2.smcdn.pl/2140-1.aac — HTTP 404 error page |
+| Polish · ESKA - Summer City | https://waw.ic.smcdn.pl/6120-1.mp3 — HTTP 404 error page |
+| Polish · Radio Eska 2 Kultowe Polskie | https://waw.ic.smcdn.pl/6040-1.aac — HTTP 404 error page |
 | Russian · Радио Книга | https://bookradio.hostingradio.ru:8069/fm — HTTP 404 error page |
+| Russian · Breaking Bass Air | https://aircast.breaking-bass.ru:8443/air — HTTP 503, 405 bytes |
 | Slovak · RÁDIO BEST FM | https://stream3.bestfm.sk:8000/128.mp3 — HTTP 0, 0 bytes |
+| Serbian · Radio S Jazz | https://stream.radios.rs:9076/stream — HTTP 401, 0 bytes |
+| Bosnian · Radio Gradačac | https://webtvstream.bhtelecom.ba/radio_gradacac.m3u8 — playlist HTTP 404 |
+| Slovenian · Toti Radio | https://live.radio.si/Toti — HTTP 404 error page |
+| Bulgarian · Veselina Retro | https://nova-radio.neterra.tv/veselinaretro — HTTP 0, 0 bytes |
 | Catalan · Ràdio Llançà | https://relay.stream.enacast-cloud.com:40323/radiollancaHD.mp3 — HTTP 404 error page |
+| Catalan · Montserrat Ràdio | https://enacast.com/radioabadiademontserrat/streams/HD — HTTP 404 error page |
 | Arabic · Al Arabiya FM | https://fm.alarabiya.net/fm/myStream/playlist.m3u8 — playlist HTTP 404 |
 | Azerbaijani · Azerbaycan Radiosu 105.0 FM | https://str.yodacdn.net/radio_respublica/video.m3u8 — playlist HTTP 403 |
-| Chinese (Mandarin) · Fm891线上音乐台 | https://lhttp.qtfm.cn/live/20500215/64k.mp3 — HTTP 404 error page |
-| Chinese (Mandarin) · 第一财经 | https://lhttp.qingting.fm/live/276/64k.mp3 — HTTP 404 error page |
-| Indonesian · Voks Radio Jogja 105.3 FM | https://svara-stream.radioddns.net/yogyakarta_voksradio — HTTP 404 error page |
-| Indonesian · POP FM Jogja | https://i.klikhost.com:9154/stream — HTTP 401, 0 bytes |
+| Kazakh · 新疆哈语广播 | https://lhttp.qtfm.cn/live/1908/64k.mp3 — HTTP 404 error page |
+| Cantonese · 香港新城电台财经台 | https://1716664847.rsc.cdn77.org/1716664847/tracks-a1/mono.ts.m3u8 — playlist HTTP 206 |
+| Cantonese · 香港新城电台知讯台 | https://1603884249.rsc.cdn77.org/1603884249/index.m3u8 — playlist HTTP 206 |
+| Cantonese · 熱血時報 | https://ptmirror3.passiontimes.hk/hls3/stream.m3u8 — segment HTTP 404, 3652 bytes |
 | Indonesian · Cosmopolitan 90.4 FM Jakarta | https://stream.radiojar.com/u7d8heq3bnzuv — HTTP 503, 41 bytes |
-| Indonesian · RRI Pro 1 Sungailiat | https://stream-node2.rri.co.id/streaming/14/9314/rrisngliatpro1.mp3 — HTTP 404 error page |
+| Filipino · Pinoy Rock Radio L.A. 105.9 FM | https://cast3.my-control-panel.com/proxy/ronald/stream — HTTP 0, 0 bytes |
 | Sinhala · Sitha FM | https://shaincast.caster.fm:48148/listen.mp3 — HTTP 0, 0 bytes |
 
 ## Couldn't be checked from GitHub (left unchanged)
 
 | Station | Why |
 |---|---|
-| English Talk · WALM 2 | https://icecast.walmradio.com:8443/walm2_opus — no answer to GitHub's servers |
-| English Music · WALM 2 | https://icecast.walmradio.com:8443/walm2_opus — no answer to GitHub's servers |
+| English Talk · WALM 2 HD | https://icecast.walmradio.com:8443/walm2 — no answer to GitHub's servers |
+| English Music · WALM 2 HD | https://icecast.walmradio.com:8443/walm2 — no answer to GitHub's servers |
 | Malayalam · Paattupetti | https://streamer.radio.co/s8d5f06a3d/listen — server refuses GitHub's servers (403) |
 | Malayalam · Deshavani FM | https://fm.saksoftlabs.com/radio.mp3 — no answer to GitHub's servers |
 | Malayalam · Shalom Radio | https://stream.radio.co/s1383afdc9/listen?ver=828256 — server refuses GitHub's servers (403) |
 | Malayalam · Radio Wind | https://stream.radio.co/s9015a8e16/listen — server refuses GitHub's servers (403) |
 | Malayalam · Puthiyerushalem | https://streams.radio.co/s4e89ff5bd/listen — server refuses GitHub's servers (403) |
-| Tamil · Mohan Radio | https://psrlive4.listenon.in/mohan?station=mohanradio — no answer to GitHub's servers |
-| Bengali · Radio Foorti | https://radiofoorti.fm/api/stream — no answer to GitHub's servers |
 | Italian · Radio Armisa | https://onair.armisa.it/listen/armisa/radio.mp3 — no answer to GitHub's servers |
-| Portuguese (Portugal) · OXIGÉNIO 102.6 FM | https://proic1.evspt.com/oxigenio_aac — no answer to GitHub's servers |
-| Bulgarian · Radio Balkanika | https://ssl120.radyotelekom.com.tr/8122/stream — no answer to GitHub's servers |
+| Croatian · Radio Student | https://stream.radiostudent.hr/audio — server answered GitHub with a web page |
+| Bulgarian · Radio Balkanika | https://ssl120.radyotelekom.com.tr/8122/stream — server answered GitHub with a web page |
+| Macedonian · Star Radio (Ex-YU Retro) Skopje, Macedonia | https://radiostar.pro/stream/exyuretro.php — server answered GitHub with a web page |
+| Macedonian · Star Radio (World Hits) Skopje, Macedonia | https://radiostar.pro/stream/worldretro.php — server answered GitHub with a web page |
+| Macedonian · Star Radio (MK Narodna) Skopje, Macedonia | https://radiostar.pro/stream/mknarodna.php — server answered GitHub with a web page |
+| Macedonian · Star Radio (Live) Skopje, Macedonia | https://radiostar.pro/stream/starlive.php — server answered GitHub with a web page |
+| Macedonian · Star Radio (Boemi) Skopje, Macedonia | https://radiostar.pro/stream/boemi.php — server answered GitHub with a web page |
+| Macedonian · Star Radio (Urban Folk) Skopje, Macedonia | https://radiostar.pro/stream/narodna.php — server answered GitHub with a web page |
+| Macedonian · Star Radio (Plus) Skopje, Macedonia | https://radiostar.pro/stream/starplus.php — server answered GitHub with a web page |
 | Swedish · NRJ Sweden | https://tx-bauerse.sharp-stream.com/http_live.php?i=nrj_instreamtest_se_mp3 — no answer to GitHub's servers |
 | Swedish · 106,7 Rockklassiker | https://tx-bauerse.sharp-stream.com/http_live.php?ua=WEB&i=rockklassiker_instream_se_mp3 — no answer to GitHub's servers |
 | Swedish · Mix Megapol | https://tx-bauerse.sharp-stream.com/http_live.php?ua=WEB&i=mixmegapol_instream_se_mp3 — no answer to GitHub's servers |
+| Swedish · Retro FM Skåne | https://live-bauerse-fm.sharp-stream.com/retrofm_aacp?ua=WEB&aw_0_1st.playerid=SBS_RP_WEB&aw_0_1st.skey=1575715192&companionAds=true&listenerId=@@GUID@@ — no answer to GitHub's servers |
 | Norwegian · radiOrakel | https://stream.radiorakel.no/radiorakel_hq — no answer to GitHub's servers |
 | Finnish · Roll FM | https://rollfm.online/ — no answer to GitHub's servers |
+| Turkish · Radyo 35 | https://yayin.turkhosted.com/6012/stream — no answer to GitHub's servers |
 | Azerbaijani · Naxçıvan Radiosu | https://s33.myradiostream.com:12782/listen.mp3 — no answer to GitHub's servers |
-| Kazakh · 新疆哈语广播 | https://lhttp.qtfm.cn/live/1908/64k.mp3 — finished downloading: a file, or blocked in GitHub's region |
-| Indonesian · POLARIS FM | https://i.klikhost.com/9604/stream.aac — server answered GitHub with a web page |
+| Chinese (Mandarin) · 天籁之音 - 经典正流行 | https://play-radio-stream3.hndt.com/now/WUBA5hW2/chunklist.m3u8 — segment: no answer to GitHub's servers |
 | Sinhala · Ran FM | https://a3.asurahosting.com/listen/ranfm/radio.mp3 — no answer to GitHub's servers |
 
 ## New stations added
 
-- English News · BBC News HD (720P) (uk)
-- English News · Citi FM (world)
-- English News · Bloomberg AM New York, NY (us)
-- English Talk · BBC Radio 5 Live (sport)
-- English Talk · KEXP (us)
-- English Talk · Sky News Australia Radio (anz)
-- English Music · Outlaw – Country Music Radio (rock)
-- English Music · 96.7 KISS FM - KHFI-FM Austin (pop)
-- English Music · Only Hits K-Pop (pop)
-- Malayalam · AURAL OLDIES (online)
-- Malayalam · Shaiva Lahari (online)
-- Malayalam · Shahimsha Online radio (online)
-- Hindi · Mohammed Rafi (music)
-- Hindi · Fever 104 FM (music)
-- Hindi · Vividh Bharti Mumbai (music)
-- Tamil · Tamil Amuthu Bakthi Radio (music)
-- Tamil · American Tamil Radio (music)
-- Tamil · Friendstamilfm (music)
-- Punjabi · Jap Radio (music)
-- Urdu · Live FM (music)
-- Urdu · Radio Vivid Voice (news)
-- Swahili · BNX Media FM - Kampala (devotional)
-- Swahili · Voice Of Heaven - Kampala (devotional)
-- Swahili · Promise Radio UG (devotional)
-- Luganda · Enjiri Radio (devotional)
-- Luganda · Exodus Comfort Radio (devotional)
-- Luganda · Great Hits Manchester (music)
-- Akan / Twi · Asaase Radio 99.5FM Accra (news)
-- Akan / Twi · Wooden Radio (news)
-- Akan / Twi · Dadi Fm (news)
-- Italian · Radio Bruno - Made in Italy (music)
-- Italian · Babboleo Suono (music)
-- Italian · Jazz · Radio Swiss (music)
-- French · Nostalgie 80 90 (music)
-- French · Radio Meuh (music)
-- French · France Bleu Provence (music)
-- Korean · KBS 1Radio (music)
-- Korean · KBS Cool FM (music)
-- Korean · CJRK-FM 102.7 "East FM" Toronto, ON (music)
-- Spanish (Spain) · Ibiza X Radio (music)
-- Spanish (Spain) · 1000 HITS Classical (music)
-- Spanish (Spain) · Flaix FM (music)
-- Spanish (Latin America) · Los 40 Principales México (music)
-- Spanish (Latin America) · La Salsa Maestra (music)
-- Spanish (Latin America) · AMOR: Sólo Música Romántica (music)
-- Portuguese (Brazil) · BH FM 102,1 MHz ZYC690 (music)
-- Portuguese (Brazil) · Nova Brasil Fm São Paulo (music)
-- Portuguese (Brazil) · BandNews FM Belo Horizonte (news)
-- Portuguese (Portugal) · Rádio Festival Madeira (98.4 FM) (music)
-- Portuguese (Portugal) · radio orbital (music)
-- Portuguese (Portugal) · Rádio Paralelo (music)
-- German · 104.6 RTL (music)
-- German · Sunshine Live - Techno (music)
-- German · Ö1 · ORF · HQ (music)
-- Dutch · SLAM! Housuh In De Pauzuh (music)
-- Dutch · Sky Radio Hits (music)
-- Dutch · All Oldies Channel (music)
-- Polish · Radio Eska 2 Kultowe Polskie (music)
-- Polish · Antyradio Made In Poland (music)
-- Greek · Rock FM 96.9 (music)
-- Greek · Εκκλησία της Ελλάδας 89.5 (devotional)
-- Greek · ΕΡΤ Δεύτερο Παραδοσιακά (music)
-- Russian · 101.RU - Дискотека СССР (music)
-- Russian · TRANCE IS STAR RADIO (music)
-- Russian · ВАШЕ РАДИО (music)
-- Ukrainian · Radio Jazz Gold FM (music)
-- Ukrainian · Радіо Байрактар (music)
-- Ukrainian · Club Hits 2000s (music)
-- Romanian · Clasic Radio_Strauss -București (music)
-- Hungarian · Cool FM (music)
-- Hungarian · MR2 - Petőfi Rádió (music)
-- Hungarian · Nemzeti Sport Radio (news)
-- Czech · Rock rádio – CZ Rock (music)
-- Czech · Evropa 2 - Actve (music)
-- Czech · Hitradio Zlín (music)
-- Slovak · RusynFM (music)
-- Slovak · Pátria Rádió (news)
-- Serbian · Radio S 2000-te Folk (music)
-- Serbian · NAŠ MM Radio 97.8 (music)
-- Croatian · Slavonski Radio (music)
-- Bulgarian · Darik Nostalgie (music)
-- Albanian · Prime Gold (music)
-- Albanian · Radio Rainca (music)
-- Albanian · Radio DJ 98.2 (music)
-- Swedish · Sveriges Kristna Radio (devotional)
-- Swedish · BANANRADION (music)
-- Swedish · Sveriges Radio - SR Sisuradio (news)
-- Norwegian · Ordentlig Radio (music)
-- Danish · Vinyl Hits (music)
-- Danish · 2town Radio (music)
-- Finnish · Radio Mega (music)
-- Finnish · Radio Patmos (devotional)
-- Finnish · IDA Radio (music)
-- Estonian · BIGfm (music)
-- Estonian · NRJ Estonia (music)
-- Estonian · XL Radio Estonia (music)
-- Latvian · European Hit Radio - C&C Radio (music)
-- Latvian · Cave Lounge (news)
-- Catalan · Catalunya Música (music)
-- Catalan · Ràdio Riba-roja (music)
-- Catalan · Ràdio Vilablareix (music)
-- Arabic · Noor Al-Eman (music)
-- Arabic · Adwaafm (music)
-- Arabic · Voice of Lebanon (Sawtlebnan) Radio (music)
-- Turkish · POP 90 Turkiye (music)
-- Turkish · Barış Radyo 104.8 (devotional)
-- Turkish · Radio 44 (music)
-- Hebrew · Chabad.org Torah Classes Radio (music)
-- Hebrew · Radio Jai 96.3 (music)
-- Hebrew · Radios 100FM - 100% Stars (ערוץ הכוכבים) (music)
-- Chinese (Mandarin) · CCTV-2财经伴音 (music)
-- Cantonese · 佛山南海广播 (music)
-- Cantonese · 佛山顺德广播 (news)
-- Cantonese · RTHK Radio 6 央廣香港之聲 (music)
-- Japanese · Wave Anime Radio (music)
-- Japanese · AnimeNfo Radio (music)
-- Japanese · Big B Radio - Asian pop (music)
-- Indonesian · RAS FM Jakarta (devotional)
-- Indonesian · Pandu Musik Radio (music)
-- Filipino · Palawan Wave FM (news)
+- English News · 3AW - Melbourne - 693 AM (anz)
+- English News · Radio Plus Mauritius (world)
+- English News · Power 98.7 (world)
+- English Talk · RTE1 (uk)
+- English Talk · BBC Radio 4 Extra (comedy)
+- English Talk · GB News (uk)
+- English Music · KISS - The Best Vibes & Energy (pop)
+- English Music · 181.FM - Kickin' Country (rock)
+- English Music · 181.FM - 80's Country (country)
+- Malayalam · Radio Onattukara (online)
+- Malayalam · Planet black (online)
+- Malayalam · Mala90 (online)
+- Hindi · Sandesh Radio (music)
+- Hindi · RadioNev (music)
+- Hindi · Classic Radio Bhakti Sangeet (devotional)
+- Tamil · Sahara FM Tamil (music)
+- Tamil · Chennai FM Rainbow (music)
+- Tamil · Fmrainbowtamil (music)
+- Punjabi · Radio Central 24 (music)
+- Urdu · Radio Asian Air (devotional)
+- Urdu · Radio Central 24 (music)
+- Urdu · CKYE-FM 93.1 "Red FM" Vancouver, BC (music)
+- Swahili · Makie Max Radio (news)
+- Swahili · RADIO SSESE 101.9 FM (news)
+- Swahili · Glory FM Maganjo - Kampala (devotional)
+- Luganda · RADIO SSESE 101.9 FM (news)
+- Akan / Twi · Bramcom Radio Online (music)
+- Akan / Twi · Kastle FM (news)
+- Akan / Twi · Neat Fm (news)
+- More African · Radio RSF 109 Antanifotsy (music)
+- Italian · Radio Volami nel Cuore (music)
+- Italian · Discoradio - Il Ritmo della tua città (music)
+- Italian · ITALIA Italia 80 (music)
+- French · Yumi Co. Radio (music)
+- French · Radio Freedom FM (music)
+- French · RTS La Première (music)
+- Korean · MBC FM4U (music)
+- Korean · MBC FM (music)
+- Korean · Big B Radio - Asian pop (music)
+- Spanish (Spain) · RADIOLE (España) (music)
+- Spanish (Spain) · Los 40 Catalunya (music)
+- Spanish (Spain) · ElectroDanceWorld Radio (music)
+- Spanish (Latin America) · __1 oldies (music)
+- Spanish (Latin America) · Radio Panamericana (news)
+- Spanish (Latin America) · Groove Wave Lounge (music)
+- Portuguese (Brazil) · Rádio FM O Dia 99.7 FM (music)
+- Portuguese (Brazil) · CBN Rio de Janeiro 92.5 FM (news)
+- Portuguese (Brazil) · Kiss FM São Paulo (music)
+- Portuguese (Portugal) · RFM LATINAS (music)
+- Portuguese (Portugal) · Rádio Nova Era (music)
+- Portuguese (Portugal) · Radio Renascença (news)
+- German · Deutschlandfunk Nova · DLF (news)
+- German · Bayern 1 Franken (music)
+- German · Fritz (music)
+- Dutch · VRT Radio 2 West-Vlaanderen (music)
+- Dutch · SLAM! Non Stop (music)
+- Dutch · Qmusic Foute Uur (music)
+- Polish · AH.FM: Electronic Dance Music · Trance (music)
+- Polish · Polskie Radio Dzieciom (music)
+- Greek · Apacik Radyo (music)
+- Greek · Imagine 897 Thessaloniki,gr (music)
+- Greek · Easy (music)
+- Russian · Ретро FM 70e (music)
+- Russian · Соловьёв life FM (news)
+- Russian · Caspian Business Radio BOSS (news)
+- Ukrainian · Авторадіо (news)
+- Ukrainian · Радіо П'ятниця (news)
+- Ukrainian · Радіо «РЕЙД» (music)
+- Romanian · Acustic Radio (music)
+- Romanian · Adjud FM (music)
+- Hungarian · AdventNet rádió (devotional)
+- Hungarian · Muravidéki Magyar Rádió (music)
+- Czech · ČRo Ostrava (music)
+- Czech · HARDCORERADIO.CZ (music)
+- Czech · hitradio City zona Lasky (music)
+- Slovak · Rádio Písnička (music)
+- Slovak · Radio Expres (music)
+- Slovak · Šlágr Rádio (music)
+- Serbian · Radio 021 (music)
+- Serbian · Rock Radio Belgrade (Рок Радио Београд) (music)
+- Serbian · РТС - Радио Београд - Рокенролер (music)
+- Bulgarian · Радио БНР програма Христо Ботев Русе 95.7 FM (music)
+- Bulgarian · BG Voice Hit Mix (music)
+- Bulgarian · Metro DANCE Radio (news)
+- Albanian · Radio Popullore (music)
+- Albanian · Radio Mergimi (music)
+- Albanian · Radio 1 (devotional)
+- Danish · DR Ramasjang/Ultra Radio (music)
+- Finnish · Yle Radio Suomi Kajaani (news)
+- Finnish · Radio Classic (music)
+- Finnish · Tekoälyradio (music)
+- Estonian · XFM Eesti (news)
+- Estonian · Tagatuba FM (music)
+- Estonian · ERR Klassikaraadio (music)
+- Latvian · gradio.lv ONE (music)
+- Latvian · Latvijas Radio 1 (news)
+- Latvian · Radio Viens (music)
+- Catalan · Ràdio la Selva (music)
+- Catalan · Radio Valencianismo (music)
+- Catalan · Pollença (music)
+- Arabic · راديو الشيخ محمد المقرمي إذاعة (هندسة القلوب) (music)
+- Arabic · El Bahdja - الجزائر العاصمة (news)
+- Arabic · Darusalam Radio (devotional)
+- Turkish · Apacik Radyo (music)
+- Turkish · TRT Memleketim FM (music)
+- Turkish · Power Dance (music)
+- Hebrew · Martha Kowaski (devotional)
+- Hebrew · WJPR 1640 AM - The Jhper - Edison, New Jersey (music)
+- Hebrew · Kol Radio (music)
+- Chinese (Mandarin) · 上海新闻广播 (news)
+- Chinese (Mandarin) · 50首经典古典音乐 (music)
+- Chinese (Mandarin) · 上海流行音乐广播 动感101 FM101.7 (music)
+- Cantonese · 中山环保旅游之声·快乐888 (music)
+- Cantonese · 南方生活广播 (music)
+- Cantonese · 佛山综合广播 (music)
+- Japanese · BBN Japanese (devotional)
+- Japanese · AnimeRadio.de (music)
+- Japanese · JPop Powerplay Kawaii (music)
+- Indonesian · Elgangga FM (music)
+- Indonesian · KLCBS Fusion (music)
+- Indonesian · Amandit 93.9 FM (music)
+- Filipino · Radyo Natin Madridejos (news)
+- Filipino · Galactic Hearts Radio (devotional)
+- Filipino · Star FM 92.7 Pampanga (news)
+- Thai · MCOT Chumphon (Amphoe Lang Suan) FM 104.75 (music)
 
 ## Changes and warnings
 
 | Station | Note |
 |---|---|
-| Malayalam · Sargakshetra FM | removed after 14 failed checks: https://edge.mixlr.com/channel/ugbfe · 1 backup source(s) failing |
 | Portuguese (Portugal) · Antena 3 | 1 backup source(s) failing |
 | Portuguese (Portugal) · Antena 2 | 1 backup source(s) failing |
-| Indonesian · Golden Hits FM | 1 backup source(s) failing |

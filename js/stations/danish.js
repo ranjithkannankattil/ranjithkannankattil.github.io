@@ -397,6 +397,15 @@ window.STATIONS = [
       "https://streaming.radio.co/sd9d980ff0/listen"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "dr-ramasjang-ultra-radio",
+    "name": "DR Ramasjang/Ultra Radio",
+    "category": "music",
+    "streams": [
+      "https://live-icy.gss.dr.dk/A/A24H.mp3"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

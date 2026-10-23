@@ -396,6 +396,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "where": "US"
+  },
+  {
+    "id": "kiss-the-best-vibes-energy",
+    "name": "KISS - The Best Vibes & Energy",
+    "category": "pop",
+    "streams": [
+      "https://live-bauerkiss.sharp-stream.com/kissnational.aac?direct=true&aw_0_1st.skey=1602676850&rp_source=1&=&&___cb=60456375243858"
+    ],
+    "added": "2026-10-23",
+    "where": "UK"
+  },
+  {
+    "id": "181-fm-kickin-country",
+    "name": "181.FM - Kickin' Country",
+    "category": "rock",
+    "streams": [
+      "https://listen.181fm.com/181-kickincountry_128k.mp3"
+    ],
+    "added": "2026-10-23",
+    "where": "US"
+  },
+  {
+    "id": "181-fm-80-s-country",
+    "name": "181.FM - 80's Country",
+    "category": "country",
+    "streams": [
+      "https://listen.181fm.com/181-80scountry_128k.mp3"
+    ],
+    "added": "2026-10-23",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

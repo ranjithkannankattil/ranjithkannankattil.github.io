@@ -56,7 +56,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://1716664847.rsc.cdn77.org/1716664847/tracks-a1/mono.ts.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-6",
@@ -96,7 +97,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://1603884249.rsc.cdn77.org/1603884249/index.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "fm94-7",
@@ -265,7 +267,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ptmirror3.passiontimes.hk/hls3/stream.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "chkt-am1430-fairchild",
@@ -386,6 +389,33 @@ window.STATIONS = [
       "https://rthkradiocnrhk-live.akamaized.net/hls/live/2046111/radiocnrhk/master.m3u8"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "888",
+    "name": "中山环保旅游之声·快乐888",
+    "category": "music",
+    "streams": [
+      "https://lhttp.qingting.fm/live/1278/64k.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "station-26",
+    "name": "南方生活广播",
+    "category": "music",
+    "streams": [
+      "https://lhttp.qtfm.cn/live/468/64k.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "station-27",
+    "name": "佛山综合广播",
+    "category": "music",
+    "streams": [
+      "https://radiopull.radiofoshan.com.cn/live/1400820947_BSID_46_audio.m3u8"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

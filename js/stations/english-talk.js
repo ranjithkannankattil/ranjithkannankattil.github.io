@@ -338,6 +338,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "where": "Australia"
+  },
+  {
+    "id": "rte1",
+    "name": "RTE1",
+    "category": "uk",
+    "streams": [
+      "https://icecast.rte.ie/radio1"
+    ],
+    "added": "2026-10-23",
+    "where": "Ireland"
+  },
+  {
+    "id": "bbc-radio-4-extra",
+    "name": "BBC Radio 4 Extra",
+    "category": "comedy",
+    "streams": [
+      "https://as-hls-ww-live.akamaized.net/pool_26173715/live/ww/bbc_radio_four_extra/bbc_radio_four_extra.isml/bbc_radio_four_extra-audio%3d128000.norewind.m3u8"
+    ],
+    "added": "2026-10-23",
+    "where": "UK"
+  },
+  {
+    "id": "gb-news",
+    "name": "GB News",
+    "category": "uk",
+    "streams": [
+      "https://listen-gbnews.sharp-stream.com/gbnews.mp3"
+    ],
+    "added": "2026-10-23",
+    "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

@@ -382,6 +382,33 @@ window.STATIONS = [
       "https://orf-live.ors-shoutcast.at/oe1-q2a"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "deutschlandfunk-nova-dlf",
+    "name": "Deutschlandfunk Nova · DLF",
+    "category": "news",
+    "streams": [
+      "https://st03.sslstream.dlf.de/dlf/03/high/aac/stream.aac?aggregator=web"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "bayern-1-franken",
+    "name": "Bayern 1 Franken",
+    "category": "music",
+    "streams": [
+      "https://dispatcher.rndfnk.com/br/br1/franken/mp3/mid"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "fritz",
+    "name": "Fritz",
+    "category": "music",
+    "streams": [
+      "https://dispatcher.rndfnk.com/rbb/fritz/live/mp3/mid"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

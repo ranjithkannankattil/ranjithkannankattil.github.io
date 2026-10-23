@@ -160,7 +160,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_gradacac.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-usk-1",
@@ -243,4 +244,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

@@ -367,6 +367,33 @@ window.STATIONS = [
       "https://icecast.stv.livebox.sk/patria_128.mp3"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "radio-pisnicka",
+    "name": "Rádio Písnička",
+    "category": "music",
+    "streams": [
+      "https://stream.slagr-radio.cz/pisnicka"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radio-expres-2",
+    "name": "Radio Expres",
+    "category": "music",
+    "streams": [
+      "https://stream.bauermedia.sk/expres-hi.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "slagr-radio",
+    "name": "Šlágr Rádio",
+    "category": "music",
+    "streams": [
+      "https://stream.slagr-radio.cz/mp3"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";

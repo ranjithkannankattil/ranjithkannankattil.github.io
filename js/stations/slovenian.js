@@ -49,7 +49,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://live.radio.si/Toti"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "ars-tretji-program",
@@ -269,4 +270,4 @@ window.STATIONS = [
     "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-22T18:25Z";
+window.STATIONS_CHECKED = "2026-10-23T05:41Z";
