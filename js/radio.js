@@ -404,7 +404,9 @@
     casting = on;
     castBtn.classList.toggle("on", on);
     castBtn.setAttribute("aria-pressed", on);
-    castLab.textContent = label || (on ? "Casting" : "Cast");
+    castLab.textContent = label || "";      // icon only; a word only while connecting
+    castLab.hidden = !label;
+    castBtn.setAttribute("aria-label", on ? "Casting to a speaker or TV. Tap to change or stop." : "Play on a speaker or TV");
     castBtn.title = on ? "Playing on a speaker or TV. Tap to change or stop." : "Play on a speaker or TV";
   }
   // The button is always offered, so the feature can be found; what it does depends on the browser.
@@ -442,7 +444,7 @@
   function paintSleep() {
     const on = !!sleepAt, m = on ? minsLeft() : 0;
     sleepBtn.classList.toggle("on", on);
-    sleepLab.textContent = on ? nice(m) : "Sleep";
+    sleepLab.textContent = on ? (m >= 60 ? `${Math.floor(m / 60)}h${m % 60 ? " " + (m % 60) + "m" : ""}` : `${m} min`) : "Sleep";   // short on the button; full in aria-label
     sleepBtn.setAttribute("aria-label", on ? `Sleep timer on: radio stops in ${nice(m)}, at ${clock(sleepAt)}. Tap to change.` : "Sleep timer: off. Choose when the radio stops.");
     sleepBtn.title = on ? `Radio stops at ${clock(sleepAt)}` : "Sleep timer: stop the radio after a set time";
     $("#sleepNow").textContent = on ? `On — the radio fades out and stops at ${clock(sleepAt)} (${nice(m)} from now).` : "Off. The radio keeps playing until you stop it.";

@@ -72,7 +72,8 @@ nav.radio-chips button{ color:var(--ink-soft); padding-bottom:.3rem; border-bott
 .np-fav{ width:36px; height:36px; display:grid; place-items:center; }
 .np-fav svg{ stroke:var(--paper); width:18px; height:18px; }
 .np-fav[aria-pressed="true"] svg{ fill:#E8C07A; stroke:#E8C07A; }
-.np-play{ width:44px; height:44px; border-radius:50%; background:var(--paper)!important; display:grid; place-items:center; }
+.np-play, .np-skip, .np-fav, .np-cast{ flex:none; }
+.np-play{ width:44px; height:44px; aspect-ratio:1; border-radius:50%; background:var(--paper)!important; display:grid; place-items:center; }
 .np-play svg{ width:18px; height:18px; fill:var(--ink); }
 .np-play .i-pause, .radio-player.playing .np-play .i-play{ display:none; }
 .radio-player.playing .np-play .i-pause{ display:block; }
@@ -167,7 +168,7 @@ body[data-section="radio"] .acct-out:hover{ color:var(--ink); }
 
 
 /* sleep timer: labelled button + choice menu */
-body[data-section="radio"] .np-cast{ display:flex; align-items:center; gap:.4rem; height:40px; padding:0 .75rem 0 .6rem; border-radius:999px; border:1px solid rgba(240,237,230,.28); color:var(--paper); white-space:nowrap; }
+body[data-section="radio"] .np-cast{ display:flex; align-items:center; justify-content:center; gap:.4rem; min-width:40px; height:40px; padding:0 .6rem; border-radius:999px; border:1px solid rgba(240,237,230,.28); color:var(--paper); white-space:nowrap; }
 body[data-section="radio"] .np-cast[hidden]{ display:none; }
 .np-cast svg{ width:17px; height:17px; flex:none; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
 .np-cast svg circle{ fill:currentColor; stroke:none; }
@@ -222,7 +223,14 @@ body[data-section="radio"] .rp.on{ border-color:var(--accent); background:var(--
   .np-skip svg{ width:24px; height:24px; }
   .np-play{ width:60px; height:60px; }
   .np-play svg{ width:24px; height:24px; }
-  body[data-section="radio"] .np-sleep, body[data-section="radio"] .np-cast{ height:48px; padding:0 .85rem 0 .7rem; }
+  body[data-section="radio"] .np-sleep{ height:48px; padding:0 .85rem 0 .7rem; }
+  body[data-section="radio"] .np-cast{ height:48px; min-width:48px; padding:0 .8rem; }
+  /* the heart moves up beside × so the controls row fits; Sleep is the one control that may give way */
+  .radio-player .np-fav{ position:absolute; top:.55rem; right:calc(.6rem + 46px); width:44px; height:44px; }
+  body .radio-player .np{ padding-right:96px; }
+  .np-skip{ width:48px; height:48px; }
+  body[data-section="radio"] .np-sleep{ flex:0 1 auto; min-width:48px; overflow:hidden; }
+  .np-sleep .lab{ overflow:hidden; text-overflow:ellipsis; }
   .np-sleep .lab{ font-size:.78rem; }
   .sleep-menu{ left:.75rem; right:.75rem; width:auto; }
 }

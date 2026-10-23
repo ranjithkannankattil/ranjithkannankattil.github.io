@@ -65,7 +65,7 @@ const safariFake = () => {
   ok((await p.evaluate(() => window.__prompted)) === 1, 'Chrome: tapping opens the cast picker');
   await p.evaluate(() => { window.__remote.state = 'connected'; window.__remote.dispatchEvent(new Event('connect')); });
   ok(await p.$eval('#castBtn', (x) => x.classList.contains('on')), 'Chrome: button highlighted while casting');
-  ok(/casting/i.test(await p.textContent('#castBtn')), 'Chrome: label says Casting');
+  ok(/casting/i.test(await p.getAttribute('#castBtn', 'aria-label')) && !(await p.textContent('#castBtn')).trim(), 'Chrome: icon only, screen readers hear Casting');
   // the session drops right after a station change: ask to tap again
   await p.click('#nextBtn');
   await p.evaluate(() => { window.__remote.state = 'disconnected'; window.__remote.dispatchEvent(new Event('disconnect')); });
@@ -106,6 +106,30 @@ const safariFake = () => {
   ok((await p.evaluate(() => window.__picker)) === 1, 'Safari: tapping opens the AirPlay picker');
   await p.evaluate(() => { const a = document.querySelector('#audio'); Object.defineProperty(a, 'webkitCurrentPlaybackTargetIsWireless', { value: true, configurable: true }); a.dispatchEvent(new Event('webkitcurrentplaybacktargetiswirelesschanged')); });
   ok(await p.$eval('#castBtn', (x) => x.classList.contains('on')), 'Safari: highlighted while on AirPlay');
+  await p.close();
+}
+
+// 5. phones: round buttons stay round, nothing spills off the screen
+for (const w of [360, 390]) {
+  const p = await b.newPage({ viewport: { width: w, height: 800 } });
+  await p.route(/fonts\.g|firestore|gstatic|visits|^https?:\/\/(?!localhost)/, (r) => r.abort());
+  await p.goto(URL); await p.waitForTimeout(600);
+  await p.click('#grid li >> nth=0'); await p.waitForTimeout(200);
+  const play = await p.$eval('#playBtn', (x) => [x.offsetWidth, x.offsetHeight]);
+  const cast = await p.$eval('#castBtn', (x) => [x.offsetWidth, x.offsetHeight, x.textContent.trim()]);
+  const over = await p.evaluate(() => document.documentElement.scrollWidth);
+  ok(play[0] === play[1], `${w}px: play button is a circle (${play.join('×')})`);
+  ok(cast[0] === cast[1] && !cast[2], `${w}px: cast is an icon-only circle (${cast[0]}×${cast[1]})`);
+  ok(over <= w, `${w}px: no sideways scroll (${over})`);
+  const inside = async () => p.$$eval('.np-controls > *, #npFav, #closeBtn', (xs) => xs.filter((x) => !x.hidden && x.offsetWidth)
+    .filter((x) => { const r = x.getBoundingClientRect(); return r.left < 0 || r.right > innerWidth + 0.5; }).map((x) => x.id || x.className));
+  let out = await inside();
+  ok(!out.length, `${w}px: every control fully on screen, sleep timer off${out.length ? ' — outside: ' + out : ''}`);
+  await p.click('#sleepBtn'); await p.click('#sleepMenu [data-min="90"]'); await p.waitForTimeout(100);
+  out = await inside();
+  ok(!out.length, `${w}px: every control fully on screen, sleep timer on (${(await p.textContent('#sleepLab')).trim()})${out.length ? ' — outside: ' + out : ''}`);
+  const name = await p.$eval('.np-name', (x) => x.getBoundingClientRect().right), fav = await p.$eval('#npFav', (x) => x.getBoundingClientRect().left);
+  ok(name <= fav + 0.5, `${w}px: station name does not run under the heart`);
   await p.close();
 }
 
