@@ -238,6 +238,15 @@
           sec.append(more);
         }
       }
+      // a quiet place: the district's (or region's) stories, clearly labelled as not its own
+      const ar = !T && local && data.around && data.around.news && data.around.news[l];
+      if (ar && ar.length) {
+        const from = byId[data.around.from];
+        const d = el("div", "around");
+        d.append(el("div", "around-k", `Around ${p.name} — from ${from ? from.name : data.around.from}`));
+        ar.forEach((s) => d.append(storyEl(s, false, false)));
+        sec.append(d);
+      }
       box.append(sec);
     }
     renderSources(chosen);

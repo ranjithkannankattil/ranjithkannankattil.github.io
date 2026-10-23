@@ -130,3 +130,9 @@ body[data-section="news"] .topics button[aria-pressed="true"]{ color:var(--ink);
 .digest li{ margin:.3rem 0; font-size:.98rem; line-height:1.45; }
 .digest .dn{ font-family:var(--f-mono); font-size:.6rem; letter-spacing:.06em; color:var(--ink-soft); }
 .story .meta .ai{ color:var(--accent); }
+
+/* "Around <place>": the parent's stories for a quiet town, set apart from its own */
+.around{ margin-top:1.4rem; padding-left:1rem; border-left:2px solid var(--line); }
+.around-k{ font-family:var(--f-mono); font-size:.66rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-soft); padding-bottom:.2rem; }
+.around .story{ padding:.8rem 0; }
+.around .story h3{ font-size:1rem; font-weight:500; }
