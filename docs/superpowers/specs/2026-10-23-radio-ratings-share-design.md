@@ -17,14 +17,14 @@ to sign in to rate.
 - Comments appear only after the owner approves them, and are shown **without a name**.
 - Averages are computed by Firestore when a station's panel opens (aggregation query);
   station cards in the list do not show stars (a twice-daily summary can be added later).
-- Approver: the Google account **ranjeethkkb@gmail.com** (verified email).
+- Approver: the owner's Google account, identified in the rules by its Firebase account ID (uid), never by email, so no email appears in the public repo or on the site.
 
 ## Constraints
 
 - Existing Firebase project `ranjithkb-radio` (Firestore, eur3), free tier.
 - Static site on GitHub Pages; no server. Rules are the only protection.
-- The owner does three manual steps: enable Anonymous sign-in, publish the new rules,
-  open the approval page once.
+- The owner does three manual steps: enable Anonymous sign-in, open the approval page
+  once and send the account ID it shows, publish the rules with that ID filled in.
 - The phone controls row stays exactly as it is (no new buttons there).
 - If Firebase is unreachable, playback and sharing keep working.
 
@@ -106,16 +106,14 @@ Every rating write is a batch: the vote plus `limits/{uid}.last = request.time`.
     `stars` int 1–5, `ts == request.time`, `status == 'waiting'`.
   - update by the approver: only `status` changes, to `approved` or `rejected`.
   - delete: author or approver.
-- Approver test: `request.auth.token.email == 'ranjeethkkb@gmail.com' &&
-  request.auth.token.email_verified == true`.
+- Approver test: `request.auth != null && request.auth.uid == '<OWNER_UID>'`, where `<OWNER_UID>` is filled in once the owner has signed in on the approval page (step below). Until then no account can approve, so waiting comments simply stay hidden.
 - Existing `users/{uid}` and `stats/site` rules unchanged; default deny stays.
 
-Note: `firestore.rules` is in the public repo, so the approver email is visible there.
 
 ## Owner side — `radio-admin.html`
 
 `noindex`, not linked from the site. Google sign-in (existing `radio-sync.js` setup).
-If the signed-in account is not the approver: `This page is for the site owner.`
+If the signed-in account is not the approver: `This page is for the site owner.`, plus `Your account ID: <uid>` with a **Copy** button (this is how the owner gets the ID to put in the rules; the page never shows an email).
 Otherwise two lists:
 
 - **Waiting** (oldest first): station name (resolved from the station files), stars,
