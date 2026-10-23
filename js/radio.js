@@ -281,15 +281,26 @@
   // Next / previous: steps through the list on screen when the station was picked
   // (same collection, filter and search), skipping stations marked not working.
   let queue = [];
-  function skip(dir) {
+  // Hands-free: from a favourite, Next / Previous stay among this language's favourites;
+  // a change made with car / headphone / lock-screen buttons is spoken.
+  let sayNames = store.get("mr-say", true);
+  function speak(t) {
+    if (!sayNames || !("speechSynthesis" in window)) return;
+    try { speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(t); u.rate = 1.05; speechSynthesis.speak(u); } catch { /* no voice */ }
+  }
+  function skip(dir, spoken) {
     if (!current) return;
     let list = queue.length ? queue : (currentCol === col.id ? visibleList() : []);
+    const pool = currentCol === col.id ? S : list;
+    const favList = pool.filter((x) => favs.has(`${currentCol}:${x.id}`));
+    if (favs.has(`${currentCol}:${current.id}`) && favList.length >= 2) list = favList;
     const live = list.filter((x) => !x.offline || x.id === current.id);
     if (live.length < 2) { status("No other station in this list"); return; }
     let i = live.findIndex((x) => x.id === current.id);
     if (i < 0) i = dir > 0 ? -1 : 0;
     const s = live[(i + dir + live.length) % live.length];
     play(s, list, currentCol, dir);
+    if (spoken) speak(s.name);
   }
 
   // square artwork for car screens and lock screens: the station's initials on the accent colour
@@ -518,11 +529,11 @@
     navigator.mediaSession.setActionHandler("pause", toggle);
     // steering-wheel / Bluetooth / lock-screen buttons
     for (const [a, d] of [["nexttrack", 1], ["previoustrack", -1]]) {
-      try { navigator.mediaSession.setActionHandler(a, () => skip(d)); } catch { /* not supported */ }
+      try { navigator.mediaSession.setActionHandler(a, () => skip(d, true)); } catch { /* not supported */ }
     }
     // some cars only send seek buttons: treat them as next / previous too
     for (const [a, d] of [["seekforward", 1], ["seekbackward", -1]]) {
-      try { navigator.mediaSession.setActionHandler(a, () => skip(d)); } catch { /* not supported */ }
+      try { navigator.mediaSession.setActionHandler(a, () => skip(d, true)); } catch { /* not supported */ }
     }
     try { navigator.mediaSession.setActionHandler("stop", () => { if (current && !audio.paused) toggle(); }); } catch { /* not supported */ }
   }
@@ -555,6 +566,12 @@
       };
       row.append(b);
     }
+  }
+
+  const sayBox = $("#sayNames");
+  if (sayBox) {
+    sayBox.checked = sayNames;
+    sayBox.onchange = () => { sayNames = sayBox.checked; store.set("mr-say", sayNames); if (!sayNames && "speechSynthesis" in window) speechSynthesis.cancel(); };
   }
 
   // ---------------------------------------------------------- start
