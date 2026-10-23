@@ -12,6 +12,7 @@ const only = process.argv[2];   // optional: run checks whose name contains this
 // the fake ratings module: answers come from window.__fake (set by each check before load)
 const FAKE = `
 const f = window.__fake || {};
+if (f.fail) { window.dispatchEvent(new CustomEvent('radio:ratings-failed')); } else {
 const calls = window.__calls = [];
 const wrap = (name, dflt) => async (...a) => { calls.push([name, ...a]); const v = f[name];
   if (v && v.throw) throw Object.assign(new Error(v.throw), { code: v.throw });
@@ -22,10 +23,11 @@ window.RadioRatings = {
   mine: wrap('mine', { stars: null, comment: null }), rate: wrap('rate'), comment: wrap('comment'),
   approved: wrap('approved', []), waiting: wrap('waiting', []), published: wrap('published', []), setStatus: wrap('setStatus'),
 };
-window.dispatchEvent(new CustomEvent('radio:ratings-ready'));`;
+window.dispatchEvent(new CustomEvent('radio:ratings-ready')); }`;
 
 async function open(path = '/radio.html', { width = 1280, height = 900, fake = {}, init, slowStations = 0 } = {}) {
   const p = await b.newPage({ viewport: { width, height } });
+  p.setDefaultTimeout(3000);
   p.on('pageerror', (e) => { if (/firebase|gstatic/.test(e.message)) return; console.log('pageerror', e.message); failed++; });
   await p.route(/fonts\.g|firestore|gstatic|visits|^https?:\/\/(?!localhost)/, (r) => r.abort());
   await p.route(/js\/radio-ratings\.js/, (r) => r.fulfill({ contentType: 'text/javascript', body: FAKE }));
@@ -100,6 +102,172 @@ checks['unknown station message'] = async () => {
     return (n && !n.hidden && n.textContent) || (!pl.hidden && document.querySelector('#npStatus').textContent) || '';
   });
   ok(t === "That station isn't available any more", `unknown station message (${t})`);
+  await p.close();
+};
+
+// ---------------------------------------------------------- the station panel
+async function withPanel(opts = {}) {
+  const p = await open('/radio.html?c=malayalam', opts);
+  const s = await first(p);
+  await p.click('#grid li >> nth=0');
+  await p.click('#npName');
+  await p.waitForTimeout(250);
+  return { p, s, key: `malayalam~${s.id}` };
+}
+const calls = (p, name) => p.evaluate((n) => window.__calls.filter((c) => c[0] === n), name);
+
+checks['panel opens from the bar'] = async () => {
+  {
+    const { p } = await withPanel();
+    ok(await p.isVisible('#stPanel'), 'panel opens from the bar (1280 px)');
+    const r = await p.locator('#stPanel').boundingBox(), bar = await p.locator('#player').boundingBox();
+    ok(r.y + r.height <= bar.y + 1, 'desktop: the card sits above the player bar');
+    await p.close();
+  }
+  {
+    const { p } = await withPanel({ width: 390, height: 844 });
+    ok(await p.isVisible('#stPanel'), 'panel opens from the bar (390 px)');
+    const r = await p.locator('#stPanel').boundingBox();
+    ok(Math.abs(r.y + r.height - 844) < 2 && r.width >= 389, `phone: a sheet from the bottom (${Math.round(r.y + r.height)})`);
+    await p.screenshot({ path: 'panel-390.png' });
+    await p.close();
+  }
+};
+
+checks['average text'] = async () => {
+  for (const [sum, want] of [[{ count: 0, avg: null }, 'Not rated yet'], [{ count: 2, avg: null }, '2 ratings so far'],
+    [{ count: 1, avg: null }, '1 rating so far'], [{ count: 18, avg: 4.31 }, '★ 4.3 · 18 ratings']]) {
+    const { p } = await withPanel({ fake: { summary: sum } });
+    const t = await p.textContent('#stAvg');
+    ok(t === want, `average text: ${want} (${t})`);
+    if (sum.count === 18) await p.screenshot({ path: 'panel-1280.png' });
+    await p.close();
+  }
+};
+
+checks['tap a star saves'] = async () => {
+  const { p, key } = await withPanel();
+  await p.click('#stStars [data-v="4"]');
+  await p.waitForTimeout(150);
+  const c = await calls(p, 'rate');
+  ok(c.length === 1 && c[0][1] === key && c[0][2] === 4, 'tap a star saves (rate called with key, 4)');
+  ok((await p.textContent('#stSaved')) === 'Saved ✓', 'Saved ✓ shows');
+  ok((await p.getAttribute('#stStars [data-v="4"]', 'aria-checked')) === 'true', 'the star is checked');
+  await p.close();
+};
+
+checks['too fast message'] = async () => {
+  const { p } = await withPanel({ fake: { rate: { throw: 'too-fast' } } });
+  await p.click('#stStars [data-v="2"]');
+  await p.waitForTimeout(150);
+  ok((await p.textContent('#stSaved')) === 'Slow down a little — try again in a few seconds.', 'too fast message');
+  await p.close();
+};
+
+checks['send comment'] = async () => {
+  const { p, key } = await withPanel({ fake: { mine: { stars: 4, comment: null } } });
+  await p.fill('#stText', 'Great evening songs');
+  ok((await p.textContent('#stCount')) === '19/300', 'character counter');
+  await p.click('#stSend');
+  await p.waitForTimeout(150);
+  const c = await calls(p, 'comment');
+  ok(c.length === 1 && c[0][1] === key && c[0][2] === 4 && c[0][3] === 'Great evening songs', 'comment sent with key, stars, text');
+  ok((await p.textContent('#stNote')) === "Thanks — your comment will appear once it's approved.", 'send comment note');
+  await p.close();
+};
+
+checks['comment needs a rating first'] = async () => {
+  const { p } = await withPanel();
+  await p.fill('#stText', 'Hello');
+  await p.click('#stSend');
+  await p.waitForTimeout(100);
+  ok((await calls(p, 'comment')).length === 0 && (await p.textContent('#stNote')) === 'Choose a star rating first.', 'comment needs a rating first');
+  await p.close();
+};
+
+checks['existing comment shows its state'] = async () => {
+  for (const [status, label] of [['waiting', 'Waiting for approval'], ['approved', 'Published'], ['rejected', 'Not published']]) {
+    const { p } = await withPanel({ fake: { mine: { stars: 3, comment: { text: 'Nice', stars: 3, status } } } });
+    ok((await p.inputValue('#stText')) === 'Nice' && (await p.textContent('#stState')) === label, `existing comment shows its state: ${label}`);
+    ok((await p.getAttribute('#stStars [data-v="3"]', 'aria-checked')) === 'true', `existing rating checked (${status})`);
+    await p.close();
+  }
+};
+
+checks['comment text is escaped'] = async () => {
+  const { p } = await withPanel({ fake: { approved: [{ stars: 5, text: '<img src=x onerror=alert(1)>', ts: 1.7e12 }] } });
+  ok((await p.locator('#stList img').count()) === 0 && (await p.textContent('#stList')).includes('<img src=x'), 'comment text is escaped');
+  await p.close();
+};
+
+checks['show more loads 10'] = async () => {
+  const { p } = await withPanel({ init: () => {
+    window.__fake.approved = (k, o) => Array.from({ length: o && o.after ? 10 : 5 }, (_, i) => ({ stars: 4, text: 'c' + i, ts: 2e12 - i * 1e6 }));
+  } });
+  ok((await p.locator('#stList li').count()) === 5 && await p.isVisible('#stMore'), 'five comments and Show more');
+  await p.click('#stMore');
+  await p.waitForTimeout(150);
+  const c = await calls(p, 'approved');
+  ok((await p.locator('#stList li').count()) === 15 && c[1][2].limit === 10 && !!c[1][2].after, 'show more loads 10');
+  await p.close();
+};
+
+checks['auth failure shows unavailable'] = async () => {
+  for (const fake of [{ ready: { throw: 'unavailable' } }, { fail: true }]) {
+    const { p } = await withPanel({ fake, init: () => {
+      Object.defineProperty(navigator, 'share', { value: async (d) => { window.__shared = d; }, configurable: true });
+    } });
+    ok((await p.textContent('#stAvg')) === 'Ratings unavailable right now', `unavailable shown (${fake.fail ? 'module failed' : 'sign-in failed'})`);
+    ok(await p.isDisabled('#stStars [data-v="1"]') && await p.isDisabled('#stSend'), 'stars and Send disabled');
+    await p.click('#stShare');
+    await p.waitForTimeout(100);
+    ok(!!(await p.evaluate(() => window.__shared)), 'Share still works');
+    await p.close();
+  }
+};
+
+checks['share button shares'] = async () => {
+  const { p, s } = await withPanel({ init: () => {
+    Object.defineProperty(navigator, 'share', { value: async (d) => { window.__shared = d; }, configurable: true });
+  } });
+  await p.click('#stShare');
+  await p.waitForTimeout(100);
+  const d = await p.evaluate(() => window.__shared || {});
+  ok(d.url && d.url.endsWith(`&s=${encodeURIComponent(s.id)}`), 'share button shares');
+  await p.close();
+};
+
+checks['keyboard'] = async () => {
+  const { p } = await withPanel();
+  await p.focus('#stStars [data-v="1"]');
+  await p.keyboard.press('ArrowRight');
+  ok((await p.evaluate(() => document.activeElement.dataset.v)) === '2', 'ArrowRight moves to the next star');
+  await p.keyboard.press('ArrowLeft');
+  ok((await p.evaluate(() => document.activeElement.dataset.v)) === '1', 'ArrowLeft moves back');
+  await p.keyboard.press('Enter');
+  await p.waitForTimeout(100);
+  ok((await calls(p, 'rate')).length === 1, 'Enter saves the focused star');
+  await p.keyboard.press('Escape');
+  ok(await p.isHidden('#stPanel'), 'Esc closes the panel');
+  await p.close();
+};
+
+checks['closing'] = async () => {
+  const { p } = await withPanel();
+  await p.click('#stClose');
+  ok(await p.isHidden('#stPanel'), 'close button closes');
+  await p.click('#npTile');
+  await p.waitForTimeout(100);
+  ok(await p.isVisible('#stPanel'), 'tile opens it too');
+  await p.mouse.click(640, 120);
+  ok(await p.isHidden('#stPanel'), 'tap outside closes');
+  await p.close();
+};
+
+checks['shared link opens the panel'] = async () => {
+  const s = await stationOf();
+  const p = await open(`/radio.html?c=malayalam&s=${encodeURIComponent(s.id)}`);
+  ok(await p.isVisible('#stPanel'), 'shared link opens the panel');
   await p.close();
 };
 
