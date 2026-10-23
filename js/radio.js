@@ -244,6 +244,222 @@
   });
   window.RadioApp = { getFavs: () => [...favs], getDefault: () => getDefault() };
 
+  // ---------------------------------------------------------- sharing
+  const shareUrl = (cId, s) => `${location.origin}/radio.html?c=${cId}&s=${encodeURIComponent(s.id)}`;
+  async function shareStation(s, cId) {
+    const url = shareUrl(cId, s);
+    if (navigator.share) {
+      try { await navigator.share({ title: s.name, text: `${s.name} on ranjithkb.com radio`, url }); return; }
+      catch (e) { if (e && e.name === "AbortError") return; /* otherwise fall back to copying */ }
+    }
+    try { await navigator.clipboard.writeText(url); notice("Link copied", 4000); }
+    catch { notice(`Copy this link: ${url}`, 10000); }
+  }
+  // a message in the player bar when it is showing, otherwise in a note above the station list
+  function notice(t, hold) {
+    if (!player.hidden) { status(t, hold); return; }
+    let n = $("#radioNote");
+    if (!n) {
+      n = document.createElement("p");
+      n.id = "radioNote"; n.className = "radio-note"; n.setAttribute("role", "status");
+      grid.before(n);
+    }
+    n.textContent = t; n.hidden = false;
+    clearTimeout(notice.t);
+    notice.t = setTimeout(() => { n.hidden = true; }, hold || 5000);
+  }
+
+  // ---------------------------------------------------------- station panel: rate, comment, share
+  // Tapping the station in the player bar opens it. Ratings come from js/radio-ratings.js
+  // (window.RadioRatings); if that can't load, the panel says so and sharing still works.
+  const SP = $("#stPanel"), SB = $("#stBack"), stars = [...document.querySelectorAll("#stStars [data-v]")];
+  let RR = window.RadioRatings || null, rrFailed = false, pTok = 0, pKey = "", pStars = null, pLast = null, pBusy = false;
+  window.addEventListener("radio:ratings-ready", () => { RR = window.RadioRatings; if (panelOpen()) loadPanel(); });
+  window.addEventListener("radio:ratings-failed", () => { rrFailed = true; if (panelOpen()) loadPanel(); });
+  window.addEventListener("radio:ratings-account", () => { if (panelOpen()) loadPanel(); });
+  const panelOpen = () => SP && !SP.hidden;
+  const LABEL = { waiting: "Waiting for approval", approved: "Published", rejected: "Not published" };
+
+  function avgText({ count, avg }) {
+    if (!count) return "Not rated yet";
+    if (avg == null || count < 3) return `${count} rating${count > 1 ? "s" : ""} so far`;
+    return `★ ${avg.toFixed(1)} · ${count} ratings`;
+  }
+  function setStars(v) {
+    pStars = v;
+    stars.forEach((b) => {
+      const n = +b.dataset.v;
+      b.setAttribute("aria-checked", String(n === v));
+      b.classList.toggle("lit", v != null && n <= v);
+      b.tabIndex = n === (v || 1) ? 0 : -1;
+    });
+  }
+  function usable(on) {
+    stars.forEach((b) => { b.disabled = !on; });
+    $("#stText").disabled = !on; $("#stSend").disabled = !on;
+  }
+  const tsMs = (t) => (t && typeof t.toMillis === "function" ? t.toMillis() : typeof t === "number" ? t : Date.parse(t) || 0);
+  function addComments(list) {
+    const ul = $("#stList");
+    for (const c of list) {
+      const li = document.createElement("li");
+      const meta = document.createElement("span");
+      meta.className = "st-meta";
+      const st = document.createElement("span");
+      st.className = "st-mini"; st.textContent = "★".repeat(c.stars) + "☆".repeat(5 - c.stars);
+      st.setAttribute("aria-label", `${c.stars} of 5 stars`);
+      const d = document.createElement("span");
+      d.textContent = new Date(tsMs(c.ts)).toLocaleDateString(undefined, { day: "numeric", month: "short", year: "numeric" });
+      meta.append(st, d);
+      const t = document.createElement("p");
+      t.textContent = c.text;
+      li.append(meta, t);
+      ul.append(li);
+    }
+    if (list.length) pLast = list[list.length - 1].ts;
+  }
+
+  function openStationPanel() {
+    if (!current || !SP) return;
+    $("#stName").textContent = current.name;
+    SP.hidden = false; SB.hidden = false;
+    placePanel();
+    loadPanel();
+    $("#stClose").focus({ preventScroll: true });
+  }
+  function closeStationPanel() {
+    if (!panelOpen()) return;
+    SP.hidden = true; SB.hidden = true; pTok++;
+    $("#npName").focus({ preventScroll: true });
+  }
+  // on wider screens the card sits just above the player bar
+  function placePanel() { if (panelOpen()) SP.style.setProperty("--bar", `${player.offsetHeight}px`); }
+
+  async function loadPanel() {
+    if (!current) return;
+    const tok = ++pTok;
+    pKey = `${currentCol}~${current.id}`;
+    $("#stName").textContent = current.name;
+    $("#stSaved").textContent = ""; $("#stNote").textContent = ""; $("#stState").textContent = "";
+    $("#stText").value = ""; $("#stCount").textContent = "0/300";
+    $("#stList").innerHTML = ""; $("#stMore").hidden = true; pLast = null;
+    setStars(null);
+    if (!RR) {
+      usable(false);
+      $("#stAvg").textContent = rrFailed ? "Ratings unavailable right now" : "Loading ratings…";
+      return;
+    }
+    usable(true);
+    $("#stAvg").textContent = "Loading ratings…";
+    try {
+      // reading needs no account; one is made only when the visitor rates or comments
+      const [sum, mine, list] = await Promise.all([RR.summary(pKey), RR.mine(pKey), RR.approved(pKey, { limit: 5 })]);
+      if (tok !== pTok) return;
+      $("#stAvg").textContent = avgText(sum);
+      setStars(mine.stars);
+      if (mine.comment) {
+        $("#stText").value = mine.comment.text;
+        $("#stCount").textContent = `${mine.comment.text.length}/300`;
+        $("#stState").textContent = LABEL[mine.comment.status] || "";
+      }
+      addComments(list);
+      $("#stMore").hidden = list.length < 5;
+      $(".st-say").classList.toggle("empty", !list.length);
+    } catch (e) {
+      if (tok !== pTok) return;
+      console.warn("Ratings unavailable:", e);
+      $("#stAvg").textContent = "Ratings unavailable right now";
+      usable(false);
+    }
+  }
+
+  async function saveStars(v) {
+    if (!RR || pBusy) return;
+    const before = pStars, tok = pTok;
+    pBusy = true; setStars(v); $("#stSaved").textContent = "Saving…";
+    try {
+      await RR.rate(pKey, v);
+      if (tok === pTok) $("#stSaved").textContent = "Saved ✓";
+    } catch (e) {
+      if (tok !== pTok) return;
+      setStars(before);
+      $("#stSaved").textContent = e && e.code === "too-fast" ? "Slow down a little — try again in a few seconds."
+        : e && e.code === "unavailable" ? "Ratings unavailable right now" : "Couldn't save — try again.";
+    } finally { pBusy = false; }
+  }
+
+  if (SP) {
+    stars.forEach((b, i) => {
+      b.onclick = () => saveStars(+b.dataset.v);
+      b.onkeydown = (e) => {
+        const d = e.key === "ArrowRight" || e.key === "ArrowUp" ? 1 : e.key === "ArrowLeft" || e.key === "ArrowDown" ? -1 : 0;
+        if (!d) return;
+        e.preventDefault();
+        const n = stars[(i + d + stars.length) % stars.length];
+        stars.forEach((x) => { x.tabIndex = x === n ? 0 : -1; });
+        n.focus();
+      };
+    });
+    $("#stText").oninput = () => { $("#stCount").textContent = `${$("#stText").value.length}/300`; };
+    $("#stSend").onclick = async () => {
+      const text = $("#stText").value.trim();
+      if (!text || !RR) return;
+      if (pStars == null) { $("#stNote").textContent = "Choose a star rating first."; return; }
+      const tok = pTok;
+      $("#stSend").disabled = true;
+      try {
+        await RR.comment(pKey, pStars, text);
+        if (tok !== pTok) return;
+        $("#stNote").textContent = "Thanks — your comment will appear once it's approved.";
+        $("#stState").textContent = LABEL.waiting;
+      } catch (e) {
+        if (tok !== pTok) return;
+        $("#stNote").textContent = e && e.code === "too-fast" ? "Slow down a little — try again in a few seconds."
+          : e && e.code === "unavailable" ? "Ratings unavailable right now" : "Couldn't send — try again.";
+      }
+      finally { $("#stSend").disabled = false; }
+    };
+    $("#stMore").onclick = async () => {
+      if (!RR) return;
+      const tok = pTok;
+      try {
+        const more = await RR.approved(pKey, { after: pLast, limit: 10 });
+        if (tok !== pTok) return;
+        addComments(more);
+        $("#stMore").hidden = more.length < 10;
+      } catch { $("#stMore").hidden = true; }
+    };
+    $("#stShare").onclick = () => current && shareStation(current, currentCol);
+    $("#stPlay").onclick = () => playBtn.click();
+    $("#stClose").onclick = closeStationPanel;
+    SB.onclick = closeStationPanel;
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && panelOpen()) closeStationPanel(); });
+    window.addEventListener("resize", placePanel);
+    for (const el of [$("#npTile"), $("#npName")]) {
+      el.setAttribute("role", "button"); el.tabIndex = 0;
+      el.title = "Rate, comment or share this station";
+      el.onclick = openStationPanel;
+      el.onkeydown = (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openStationPanel(); } };
+    }
+  }
+
+  // open a shared station: its language, shown in the player bar ready to play, panel open
+  async function openStation(cId, sid) {
+    if (!col || col.id !== cId || !S.length) await openCollection(cId, false);
+    if (col.id !== cId) return;   // the visitor picked another language meanwhile
+    const s = byId[sid];
+    if (!s) { notice("That station isn't available any more", 6000); return; }
+    teardown(); setState("idle");
+    current = s; currentCol = cId; queue = visibleList();
+    store.set("mr-last2", { c: cId, s }); store.set("mr-closed", false);
+    showNowPlaying(s, cId);
+    syncPlayer();
+    status("Tap play to start");
+    openStationPanel();
+  }
+  window.RadioApp.share = () => current && shareStation(current, currentCol);
+  window.RadioApp.openStation = openStation;
+
   // ---------------------------------------------------------- player
   // a held message (e.g. about casting) is not overwritten by connection updates for a few seconds
   let holdUntil = 0;
@@ -256,6 +472,7 @@
     player.classList.toggle("playing", st === "playing");
     player.classList.toggle("loading", st === "loading");
     playBtn.setAttribute("aria-label", st === "playing" ? "Pause" : "Play");
+    const sp = document.getElementById("stPlay"); if (sp) sp.setAttribute("aria-label", st === "playing" ? "Pause" : "Play");
     if ("mediaSession" in navigator) navigator.mediaSession.playbackState = st === "idle" ? "paused" : "playing";
   }
   function syncPlayer() {
@@ -270,6 +487,7 @@
     $("#npName").textContent = s.name;
     $("#npTile").textContent = initials(s.name);
     $("#npCol").textContent = byCol[cId] ? byCol[cId].name : "";
+    if (panelOpen() && pKey !== `${cId}~${s.id}`) loadPanel();
   }
 
   function teardown() {
@@ -502,7 +720,7 @@
   const pageTitle = document.title.replace(/^▶ .*? — /, "");
   function closePlayer() {
     wants = false; teardown(); if (sleepAt) setSleep(0); setState("idle");
-    openSleep(false);
+    openSleep(false); closeStationPanel();
     current = null; currentCol = null;
     document.querySelectorAll(".radio-card.on, .rp.on").forEach((el) => el.classList.remove("on"));
     player.hidden = true;
@@ -583,6 +801,14 @@
   }
   renderRecent();
   // a shared link (?c=hindi) wins; otherwise open on the default language
-  const want = new URLSearchParams(location.search).get("c") || getDefault();
-  openCollection(byCol[want] ? want : "malayalam", false);
+  // a station link (?c=hindi&s=<id>) also shows that station ready to play
+  const params = new URLSearchParams(location.search);
+  const want = params.get("c") || getDefault(), sid = params.get("s");
+  const startCol = byCol[want] ? want : "malayalam";
+  const opening = openCollection(startCol, false);
+  if (sid) {
+    opening.then(() => openStation(startCol, sid)).finally(() => {
+      const url = new URL(location.href); url.searchParams.delete("s"); history.replaceState(null, "", url);
+    });
+  }
 })();

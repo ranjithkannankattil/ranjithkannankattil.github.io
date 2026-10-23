@@ -26,7 +26,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap"></noscript>
 <link rel="stylesheet" href="css/style.css?v=8">
-<link rel="stylesheet" href="css/radio.css?v=17">
+<link rel="stylesheet" href="css/radio.css?v=18">
 </head>
 <body data-section="radio" class="wide">
 
@@ -144,13 +144,42 @@
   </div>
 </div>
 
+<div class="st-back" id="stBack" hidden></div>
+<section class="st-panel" id="stPanel" role="dialog" aria-modal="true" aria-labelledby="stName" hidden>
+  <header class="st-head">
+    <div class="st-title"><b id="stName"></b><span class="st-avg" id="stAvg"></span></div>
+    <button class="st-play" id="stPlay" aria-label="Play" title="Play or pause"><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z"/></svg><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg></button>
+    <button class="st-close" id="stClose" aria-label="Close" title="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </header>
+  <div class="st-sec">
+    <span class="st-lab" id="stRateLab">Your rating</span>
+    <div class="st-stars" id="stStars" role="radiogroup" aria-labelledby="stRateLab">
+      <button role="radio" aria-checked="false" data-v="1" aria-label="1 star">★</button><button role="radio" aria-checked="false" data-v="2" aria-label="2 stars">★</button><button role="radio" aria-checked="false" data-v="3" aria-label="3 stars">★</button><button role="radio" aria-checked="false" data-v="4" aria-label="4 stars">★</button><button role="radio" aria-checked="false" data-v="5" aria-label="5 stars">★</button>
+      <span class="st-saved" id="stSaved" aria-live="polite"></span>
+    </div>
+  </div>
+  <div class="st-sec">
+    <label class="st-lab" for="stText">Comment <span>(optional, shown without your name once approved)</span></label>
+    <textarea id="stText" maxlength="300" rows="3" placeholder="What do you like about this station?"></textarea>
+    <div class="st-row"><span class="st-state" id="stState"></span><span class="st-count" id="stCount">0/300</span><button class="st-send" id="stSend">Send</button></div>
+    <p class="st-note" id="stNote" aria-live="polite"></p>
+  </div>
+  <div class="st-sec st-say">
+    <span class="st-lab">What listeners say</span>
+    <ul class="st-list" id="stList"></ul>
+    <button class="st-more" id="stMore" hidden>Show more</button>
+  </div>
+  <button class="st-share" id="stShare"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3m0 0L7.5 7.5M12 3l4.5 4.5M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg>Share this station</button>
+</section>
+
 <audio id="audio" preload="none"></audio>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.5.13/hls.min.js"></script>
 <script src="js/collections.js?v=1"></script>
-<script src="js/radio.js?v=21"></script>
+<script src="js/radio.js?v=22"></script>
 <script src="js/firebase-config.js?v=3"></script>
-<script type="module" src="js/radio-sync.js?v=1"></script>
+<script type="module" src="js/radio-sync.js?v=2"></script>
+<script type="module" src="js/radio-ratings.js?v=1"></script>
 <script src="js/nav.js?v=6" defer></script>
 <script src="js/visits.js?v=2" defer></script>
 </body>
