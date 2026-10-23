@@ -383,6 +383,33 @@ window.STATIONS = [
       "https://stream.srg-ssr.ch/m/la-1ere/mp3_128"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "chante-france",
+    "name": "Chante France",
+    "category": "music",
+    "streams": [
+      "https://stream.chantefrance.com/Chante_France"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radio-plus-mauritius",
+    "name": "Radio Plus Mauritius",
+    "category": "news",
+    "streams": [
+      "https://stream.radioplus.mu:8000/radio.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "el-bahdja",
+    "name": "El Bahdja - الجزائر العاصمة",
+    "category": "news",
+    "streams": [
+      "https://webradio3.tda.dz:8001/ElBahdja_64K.mp3"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

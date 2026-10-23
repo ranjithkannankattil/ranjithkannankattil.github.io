@@ -280,7 +280,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio129/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "tamil-ragam",
@@ -413,6 +414,33 @@ window.STATIONS = [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio022/playlist.m3u8"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "mellisai-fm",
+    "name": "Mellisai Fm",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/e9hsbbbey4zuv"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "jn-fm-tamil-classic",
+    "name": "JN FM TAMIL CLASSIC",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/qkdmq6d7kfhvv"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "slbc-tamil-national-service",
+    "name": "Slbc Tamil National Service",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/xekhrn4zetzuv"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

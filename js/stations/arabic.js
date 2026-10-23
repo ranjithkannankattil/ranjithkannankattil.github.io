@@ -404,6 +404,33 @@ window.STATIONS = [
       "https://streams.radio.co/s0975ec186/listen"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "5-replay-news",
+    "name": "إذاعة الأخبار كل 5 دقائق REPLAY NEWS - العربية",
+    "category": "news",
+    "streams": [
+      "https://replaynewsar.ice.infomaniak.ch/replaynewsar-128.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "monte-carlo-doualiya",
+    "name": "Monte Carlo Doualiya",
+    "category": "news",
+    "streams": [
+      "https://montecarlodoualiya128k.ice.infomaniak.ch/mc-doualiya.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "alifalif-fm",
+    "name": "AlifAlif FM",
+    "category": "music",
+    "streams": [
+      "https://alifalifjobs.com/radio/8000/AlifAlifLive.mp3"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

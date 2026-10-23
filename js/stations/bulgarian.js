@@ -48,8 +48,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nova-radio.neterra.tv/veselinaretro"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "badrock-hard-heavy",
@@ -387,6 +386,33 @@ window.STATIONS = [
       "https://eu1.reliastream.com/proxy/mdr?mp=/MDR"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "city-radio-bulgaria",
+    "name": "City Radio Bulgaria",
+    "category": "music",
+    "streams": [
+      "https://play.global.audio/city.opus"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "badrock-national",
+    "name": "Badrock National",
+    "category": "music",
+    "streams": [
+      "https://streams.badrockradio.net/national"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "station-7",
+    "name": "Авторадио",
+    "category": "music",
+    "streams": [
+      "https://play.global.audio/avtoradio.opus"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

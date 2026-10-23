@@ -270,6 +270,15 @@ window.STATIONS = [
       "https://stream.zeno.fm/bn7dbg8w0nhvv"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "gospel-kingz",
+    "name": "Gospel Kingz",
+    "category": "devotional",
+    "streams": [
+      "https://stream.zeno.fm/vstzctms6rhvv"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

@@ -224,8 +224,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radios.rs:9076/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-s-gym",
@@ -385,6 +384,33 @@ window.STATIONS = [
       "https://rtsradio-live.morescreens.com/RTS_2_006/audio/chunklist.m3u8"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "kiss-fm-ex-yu",
+    "name": "KISS FM EX YU",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/abn3hm6w768uv"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radio-s-juzni",
+    "name": "Radio S Južni",
+    "category": "music",
+    "streams": [
+      "https://stream.radios.rs:9038/stream"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "naxi-gold-radio",
+    "name": "Naxi Gold Radio",
+    "category": "music",
+    "streams": [
+      "https://naxidigital-gold128ssl.streaming.rs:8062/;stream.nsv"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

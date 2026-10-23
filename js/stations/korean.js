@@ -236,6 +236,33 @@ window.STATIONS = [
       "https://antares.dribbcast.com/proxy/apop?mp=/s?"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "fm105-2",
+    "name": "평양FM105.2",
+    "category": "music",
+    "streams": [
+      "https://listen7.myradio24.com/69366"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "fm-2",
+    "name": "평양FM",
+    "category": "news",
+    "streams": [
+      "https://listen7.myradio24.com/69366"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "mbc-fm4u-2",
+    "name": "안동MBC FM4U",
+    "category": "music",
+    "streams": [
+      "https://live.andongmbc.co.kr/live/fmlive/playlist.m3u8"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

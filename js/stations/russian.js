@@ -225,7 +225,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://jfm1.hostingradio.ru:14536/ijstream.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-svoboda-rfe-rl-russian-ch-4",
@@ -404,6 +405,33 @@ window.STATIONS = [
       "https://myradio24.org/bosscomaz"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "station-18",
+    "name": "Говорит Москва",
+    "category": "news",
+    "streams": [
+      "https://media.govoritmoskva.ru:8880/ru64.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "station-19",
+    "name": "Радио Сева",
+    "category": "news",
+    "streams": [
+      "https://seva.ru/radio/stream"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "station-20",
+    "name": "Высоцкий",
+    "category": "music",
+    "streams": [
+      "https://rr-vysockij.hostingradio.ru/vysockij96.aacp"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

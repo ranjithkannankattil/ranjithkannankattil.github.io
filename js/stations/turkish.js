@@ -377,6 +377,33 @@ window.STATIONS = [
       "https://listen.powerapp.com.tr/powerdance/mpeg/icecast.audio"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "hemdem-radyo",
+    "name": "Hemdem Radyo",
+    "category": "music",
+    "streams": [
+      "https://yayin.hemdemradyo.com/"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "super-fm-99-9",
+    "name": "Süper FM 99.9",
+    "category": "music",
+    "streams": [
+      "https://yayin.superfmradyo.com.tr/superfm/stream"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radyo-gokceada",
+    "name": "Radyo Gökçeada",
+    "category": "music",
+    "streams": [
+      "https://radyo.yayin.com.tr:6179/;"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

@@ -426,6 +426,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "where": "US"
+  },
+  {
+    "id": "rock-fm-classic-rock",
+    "name": "ROCK FM Classic Rock",
+    "category": "rock",
+    "streams": [
+      "https://audiotainment-sw.streamabc.net/atsw-classicrock-mp3-128-2538548?"
+    ],
+    "added": "2026-10-23",
+    "where": "US"
+  },
+  {
+    "id": "heart-70s",
+    "name": "Heart 70s",
+    "category": "pop",
+    "streams": [
+      "https://media-ssl.musicradio.com/Heart70sMP3"
+    ],
+    "added": "2026-10-23",
+    "where": "UK"
+  },
+  {
+    "id": "181-fm-90-s-country",
+    "name": "181.FM - 90's Country",
+    "category": "country",
+    "streams": [
+      "https://listen.181fm.com/181-90scountry_128k.mp3"
+    ],
+    "added": "2026-10-23",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

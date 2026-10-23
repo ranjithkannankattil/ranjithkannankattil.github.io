@@ -396,6 +396,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/epylmeu4zf7vv"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "tune-india-radio",
+    "name": "Tune India Radio",
+    "category": "music",
+    "streams": [
+      "https://s2.radio.co/se5e166e2f/listen#.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "mixify-hindi-hits",
+    "name": "MixiFy Hindi Hits",
+    "category": "music",
+    "streams": [
+      "https://server.mixify.in/listen/new_hits/radio.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "gazal-radio-london",
+    "name": "Gazal Radio London",
+    "category": "music",
+    "streams": [
+      "https://streaming.webhostnepal.com/8018/stream"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

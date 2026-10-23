@@ -331,7 +331,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.vrstv.jp/"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "wave-anime-radio",
@@ -386,6 +387,24 @@ window.STATIONS = [
       "https://kathy.torontocast.com:3060/stream/1/?esPlayer&cb=221391.mp3"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "galau-jikan-fm-indonesia",
+    "name": "Galau Jikan FM - Indonesia",
+    "category": "music",
+    "streams": [
+      "https://radio.gjfm.my.id/listen/gjfm/siaran"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "j-club-powerplay-hiphop-asia-dream-radio",
+    "name": "J-Club Powerplay HipHop(Asia DREAM Radio)",
+    "category": "music",
+    "streams": [
+      "https://kathy.torontocast.com:3350/;?shoutcast"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

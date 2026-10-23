@@ -368,6 +368,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "where": "UK"
+  },
+  {
+    "id": "jacaranda-fm",
+    "name": "Jacaranda FM",
+    "category": "world",
+    "streams": [
+      "https://edge.iono.fm/xice/jacarandafm_live_medium.aac"
+    ],
+    "added": "2026-10-23",
+    "where": "South Africa"
+  },
+  {
+    "id": "wamu-american-university-radio",
+    "name": "WAMU American University Radio",
+    "category": "us",
+    "streams": [
+      "https://wamu.cdnstream1.com/wamu.mp3"
+    ],
+    "added": "2026-10-23",
+    "where": "US"
+  },
+  {
+    "id": "comedy-104-radiostorm",
+    "name": "Comedy 104 - Radiostorm",
+    "category": "comedy",
+    "streams": [
+      "https://ais-sa5.cdnstream1.com/b42761_64mp3"
+    ],
+    "added": "2026-10-23",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

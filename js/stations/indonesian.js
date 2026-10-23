@@ -168,7 +168,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://svara-stream.radioddns.net/yogyakarta_voksradio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "klcbs-new-age",
@@ -216,7 +217,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:9620/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-music-indonesia",
@@ -266,7 +268,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:8500/;super.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "bahtera-yudha-fm-surabaya",
@@ -314,7 +317,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://server.radioimeldafm.co.id/radio/8040/gajahmadafm"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rri-pro-1-sungailiat",
@@ -322,7 +326,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/14/9314/rrisngliatpro1.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "mosh-head-black-metal-id",
@@ -404,6 +409,33 @@ window.STATIONS = [
       "https://b.alhastream.com:5035/radio"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "gajahmada-fm",
+    "name": "Gajahmada FM",
+    "category": "music",
+    "streams": [
+      "https://server.radioimeldafm.co.id:8040/gajahmadafm"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "yaski-radio",
+    "name": "YASKI Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.heartline.co.id:8443/radio_yaski_stereo"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "heartline-tangerang",
+    "name": "Heartline Tangerang",
+    "category": "music",
+    "streams": [
+      "https://stream.heartline.co.id:8443/heartline_tangerang"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

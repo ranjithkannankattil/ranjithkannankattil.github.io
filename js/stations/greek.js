@@ -430,6 +430,33 @@ window.STATIONS = [
       "https://easy972.live24.gr/easy972"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "disco-cafe",
+    "name": "Disco Cafe",
+    "category": "music",
+    "streams": [
+      "https://azuracast.streams.ovh:8260/radio.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "athens-dee-jay-95-2",
+    "name": "Athens Dee Jay 95.2",
+    "category": "music",
+    "streams": [
+      "https://netradio.live24.gr/athensdeejay"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "trito-live",
+    "name": "Trito Live",
+    "category": "music",
+    "streams": [
+      "https://r1.cloudskep.com/cybcr/cybc3/icecast.audio"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

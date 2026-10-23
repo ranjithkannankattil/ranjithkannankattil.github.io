@@ -422,6 +422,33 @@ window.STATIONS = [
       "https://atunwadigital.streamguys1.com/neatfm"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "kobbyros-radio",
+    "name": "Kobbyros Radio",
+    "category": "news",
+    "streams": [
+      "https://stream.zeno.fm/47nz3zut26duv"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "rehic-radio",
+    "name": "REHIC Radio",
+    "category": "devotional",
+    "streams": [
+      "https://stream.zeno.fm/hqbxxmq50tzuv"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radio-ned",
+    "name": "Radio NED",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/qsa068q31tzuv"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

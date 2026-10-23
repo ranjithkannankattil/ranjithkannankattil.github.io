@@ -412,6 +412,33 @@ window.STATIONS = [
       "https://streaming.radioplay.fi/fi_tekoalyradio_128.mp3"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "yle-radio-suomi-joensuu",
+    "name": "Yle Radio Suomi, Joensuu",
+    "category": "music",
+    "streams": [
+      "https://icecast.live.yle.fi/radio/YleJoensuu/icecast.audio"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radio-tuottaja1",
+    "name": "Radio Tuottaja1",
+    "category": "music",
+    "streams": [
+      "https://kaupunkiradio.radiotaajuus.fi:9013/radio"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "yle-radio-suomi-pori",
+    "name": "Yle Radio Suomi - Pori",
+    "category": "music",
+    "streams": [
+      "https://icecast.live.yle.fi/radio/YlePori/icecast.audio"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

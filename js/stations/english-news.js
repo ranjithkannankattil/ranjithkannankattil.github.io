@@ -300,6 +300,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "where": "South Africa"
+  },
+  {
+    "id": "joy-fm",
+    "name": "Joy Fm",
+    "category": "world",
+    "streams": [
+      "https://mmg.streamguys1.com/JoyFM-mp3?key=8689cc761932e3151f94ddbdbfdf4aa0f4000234b5caeaaa179a2fc0d59a4be9b8b774c3653cb14d1fd76f5cbf80e482&awparams=playerid%3ASGplayer%3B&amsparams=playerid%3ASGplayer%3Bskey%3A1609840716923%3B&aw_0_req.gdpr=true&us_privacy=1YNN"
+    ],
+    "added": "2026-10-23",
+    "where": "Ghana"
+  },
+  {
+    "id": "lbc-london",
+    "name": "LBC London",
+    "category": "uk",
+    "streams": [
+      "https://media-ice.musicradio.com/LBCUKMP3Low"
+    ],
+    "added": "2026-10-23",
+    "where": "UK"
+  },
+  {
+    "id": "abc-radio-national",
+    "name": "ABC Radio National",
+    "category": "anz",
+    "streams": [
+      "https://abc.streamguys1.com/live/rnnsw/icecast.audio"
+    ],
+    "added": "2026-10-23",
+    "where": "Australia"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

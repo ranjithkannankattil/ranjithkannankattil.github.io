@@ -49,8 +49,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://live.radio.si/Toti"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "ars-tretji-program",
@@ -268,6 +267,15 @@ window.STATIONS = [
       "https://live.radio.si/Aktual"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "radio-1-80-a",
+    "name": "Radio 1 80-a",
+    "category": "music",
+    "streams": [
+      "https://live.radio1.si/Radio80"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

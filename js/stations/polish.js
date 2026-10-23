@@ -49,8 +49,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ic1.smcdn.pl/6120-1.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "eska-goraca-20",
@@ -58,8 +57,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://waw.ic.smcdn.pl/6130-1.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "polskie-radio-24",
@@ -107,8 +105,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://waw.ic.smcdn.pl/6140-1.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "vox-fm-128",
@@ -157,8 +154,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ic2.smcdn.pl/2140-1.aac"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "rmf-fm-polska",
@@ -230,8 +226,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://waw.ic.smcdn.pl/6120-1.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "antyradio-classic-rock",
@@ -336,8 +331,7 @@ window.STATIONS = [
     "streams": [
       "https://waw.ic.smcdn.pl/6040-1.aac"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "antyradio-made-in-poland",
@@ -365,6 +359,33 @@ window.STATIONS = [
       "https://stream85.polskieradio.pl/live/radio_dzieciom.sdp/playlist.m3u8"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "eska-2",
+    "name": "ESKA 2",
+    "category": "music",
+    "streams": [
+      "https://ic1.smcdn.pl/1530-1.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "eska-rzeszow",
+    "name": "Eska - Rzeszów",
+    "category": "music",
+    "streams": [
+      "https://ic1.smcdn.pl/2240-1.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "wnet-fm",
+    "name": "Wnet.fm",
+    "category": "music",
+    "streams": [
+      "https://media.wnet.fm/wnet.fm"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

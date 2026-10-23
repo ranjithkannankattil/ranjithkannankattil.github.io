@@ -112,7 +112,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.xo.fm/xofm128"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "lounge-fm",
@@ -375,6 +376,33 @@ window.STATIONS = [
       "https://radioviens.lv/live"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "ehr-party-service",
+    "name": "EHR Party Service",
+    "category": "music",
+    "streams": [
+      "https://stream.ehrhiti.lv:8000/Stream_12.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "europa",
+    "name": "EUROPA+",
+    "category": "music",
+    "streams": [
+      "https://live-radioliepaja.lv/listen/europa/radio"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "ehr-ideal-music",
+    "name": "EHR iDeal Music",
+    "category": "music",
+    "streams": [
+      "https://stream.ehrhiti.lv:8000/Stream_78.mp3"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

@@ -201,7 +201,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-17",
@@ -367,6 +368,33 @@ window.STATIONS = [
       "https://lhttp-hw.qtfm.cn/live/274/64k.mp3"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "ufm-100-3-radio",
+    "name": "UFM 100.3 Radio",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/UFM_1003AAC.aac"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "cctv-1",
+    "name": "CCTV-1综合伴音",
+    "category": "music",
+    "streams": [
+      "https://piccpndali.v.myalicdn.com/audio/cctv1_2.m3u8"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "fm90-6-radio-chinese",
+    "name": "新西兰中文广播电台 FM90.6 Radio Chinese",
+    "category": "news",
+    "streams": [
+      "https://s26.myradiostream.com:20274/listen.mp3"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

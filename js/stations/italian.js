@@ -372,6 +372,33 @@ window.STATIONS = [
       "https://icy.unitedradio.it/um016.mp3"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "radio-radicale",
+    "name": "Radio Radicale",
+    "category": "news",
+    "streams": [
+      "https://live.radioradicale.it/live.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "romantica-radio",
+    "name": "Romantica Radio",
+    "category": "music",
+    "streams": [
+      "https://vetrina.multi-radio.com/romanticaradio"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "one-dance",
+    "name": "One Dance",
+    "category": "music",
+    "streams": [
+      "https://ice10.fluidstream.net/rn1_2.mp3"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

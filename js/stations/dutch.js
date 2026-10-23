@@ -443,6 +443,33 @@ window.STATIONS = [
       "https://stream.qmusic.nl/fouteuur/aac"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "538",
+    "name": "538",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR09.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "rtv-noord",
+    "name": "RTV Noord",
+    "category": "music",
+    "streams": [
+      "https://media.rtvnoord.nl/icecast/rtvnoord/radio"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radio-gelderland",
+    "name": "Radio Gelderland",
+    "category": "news",
+    "streams": [
+      "https://d2od87akyl46nm.cloudfront.net/icecast/omroepgelderland/radiogelderland"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

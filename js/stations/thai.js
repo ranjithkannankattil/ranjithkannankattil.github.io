@@ -275,6 +275,15 @@ window.STATIONS = [
       "https://lb-media.mcot.net/RegionRadio/ChumphonLangsuan.stream_aac/playlist.m3u8"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "krb-radio-2",
+    "name": "KRB Radio 2",
+    "category": "news",
+    "streams": [
+      "https://nontawat3664.i234.me:8443/stream"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

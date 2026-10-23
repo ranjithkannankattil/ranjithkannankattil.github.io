@@ -56,8 +56,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://1716664847.rsc.cdn77.org/1716664847/tracks-a1/mono.ts.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-6",
@@ -97,8 +96,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://1603884249.rsc.cdn77.org/1603884249/index.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "fm94-7",
@@ -416,6 +414,33 @@ window.STATIONS = [
       "https://radiopull.radiofoshan.com.cn/live/1400820947_BSID_46_audio.m3u8"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "station-28",
+    "name": "湾区音乐台_鹤山音乐广播",
+    "category": "music",
+    "streams": [
+      "https://lhttp-hw.qtfm.cn/live/20500163/64k.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "cnr-7",
+    "name": "CNR-7 粵港澳大灣區之聲",
+    "category": "music",
+    "streams": [
+      "https://satellitepull.cnr.cn/live/wxhxzs/playlist.m3u8?wsSession=a919bd0baf31a1a6f3966f08-174761752612586&wsIPSercert=270c8446fe14303f2433a2f164ccd9e5"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "cri",
+    "name": "CRI世界华声",
+    "category": "news",
+    "streams": [
+      "https://sk.cri.cn/hxfh.m3u8"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

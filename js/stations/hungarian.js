@@ -375,6 +375,24 @@ window.STATIONS = [
       "https://mp3.rtvslo.si/mmr"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "youventus-radio",
+    "name": "Youventus Rádió",
+    "category": "music",
+    "streams": [
+      "https://s2.audiostream.hu/juventus_192k"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "bdpst-rock-192-kbit-s",
+    "name": "BDPST ROCK - 192 kbit/s",
+    "category": "music",
+    "streams": [
+      "https://s2.audiostream.hu/bdpstrock_192k"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

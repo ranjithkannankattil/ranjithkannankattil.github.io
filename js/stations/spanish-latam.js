@@ -404,6 +404,33 @@ window.STATIONS = [
       "https://stm1.srvif.com:7576/;"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "w-radio-ciudad-de-mexico-televisa-radio",
+    "name": "W Radio Ciudad de México Televisa Radio",
+    "category": "news",
+    "streams": [
+      "https://26383.live.streamtheworld.com/W_RADIOAAC_SC"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "studio-92-92-5-fm-lima",
+    "name": "Studio 92 (92.5 FM Lima)",
+    "category": "music",
+    "streams": [
+      "https://mdstrm.com/audio/5fada553978fe1080e3ac5ea/icecast.audio"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "los40-la-radio-de-los-conciertos",
+    "name": "LOS40: La Radio de los Conciertos",
+    "category": "news",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_MEXICOAAC.aac"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

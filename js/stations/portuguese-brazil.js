@@ -16,8 +16,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/MIXFM_SAOPAULOAAC.aac"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "bossa-jazz-brasil",
@@ -414,6 +413,33 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_KISSFMAAC.aac?1655609055880"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "tropical-smooth-jazz",
+    "name": "Tropical Smooth Jazz",
+    "category": "music",
+    "streams": [
+      "https://servidor32-3.brlogic.com:8230/live"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radio-metropolitana-98-5-fm",
+    "name": "Rádio Metropolitana 98.5 FM",
+    "category": "music",
+    "streams": [
+      "https://ice.fabricahost.com.br/metropolitana985sp"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "alvorada-fm-94-9-mhz-zyc708",
+    "name": "Alvorada FM 94,9 Mhz ZYC708",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_ALVORADAAAC.aac"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

@@ -321,7 +321,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://solid1.streamupsolutions.com/proxy/vhhggmih/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "subfm",
@@ -394,6 +395,24 @@ window.STATIONS = [
       "https://stream.slagr-radio.cz/mp3"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "tv-lux-audio",
+    "name": "TV Lux (audio)",
+    "category": "music",
+    "streams": [
+      "https://stream.tvlux.sk/lux/lux.stream_aac/playlist.m3u8"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "ta3",
+    "name": "TA3",
+    "category": "music",
+    "streams": [
+      "https://n13.stv.livebox.sk/ta3/685d9a141bd846e8facf83bc378da26b/1.smil/chunklist_b2691072.m3u8"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

@@ -406,6 +406,33 @@ window.STATIONS = [
       "https://live-icy.gss.dr.dk/A/A24H.mp3"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "classical-relaxation-radio-art",
+    "name": "ClassicaL Relaxation Radio Art",
+    "category": "music",
+    "streams": [
+      "https://air.radioart.online/hClassical_relaxation.mp3?dlid=db5ceb796b3f6b3b40cb449ed670f317"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radio-victoria-esbjerg",
+    "name": "Radio Victoria Esbjerg",
+    "category": "music",
+    "streams": [
+      "https://stream.probroadcast.dk/victoria"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radio-playback",
+    "name": "Radio Playback",
+    "category": "music",
+    "streams": [
+      "https://stream02.radioplayback.dk/stream"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

@@ -433,6 +433,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/s70bvdgqks8uv"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "punk-irratia",
+    "name": "punk irratia",
+    "category": "music",
+    "streams": [
+      "https://punkirratia.net:8443/punk"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "rac105",
+    "name": "RAC105",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/RAC105.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "europa-fm-guipuzcoa",
+    "name": "Europa FM Guipuzcoa",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/se76qau1hc9uv"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

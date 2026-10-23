@@ -249,6 +249,24 @@ window.STATIONS = [
       "https://ice24.securenetsystems.net/CKYE"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "radio-mirpur",
+    "name": "Radio Mirpur",
+    "category": "music",
+    "streams": [
+      "https://whmsonic.radio.gov.pk:8074/?type=http&nocache=9"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radio-sangam",
+    "name": "Radio Sangam",
+    "category": "music",
+    "streams": [
+      "https://mediaserv68.live-streams.nl:8067/stream"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

@@ -216,7 +216,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radios.albaniadigitalradio.al/albanialoveradio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-lushnja",
@@ -365,7 +366,8 @@ window.STATIONS = [
     "streams": [
       "https://radios.albaniadigitalradio.al/albaniaradiodj"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "radio-popullore",
@@ -393,6 +395,24 @@ window.STATIONS = [
       "https://livestream.radio1.al/hls/radio.m3u8"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "radio-nacional",
+    "name": "Radio Nacional",
+    "category": "news",
+    "streams": [
+      "https://stream.zeno.fm/vkqjn43uuptuv"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radio-iliria",
+    "name": "Radio Iliria",
+    "category": "news",
+    "streams": [
+      "https://onlineradio.cfd/listen/radio_iliria/radio.mp3"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

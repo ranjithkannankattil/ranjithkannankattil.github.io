@@ -413,6 +413,33 @@ window.STATIONS = [
       "https://ice.abradio.cz/cityzl128.mp3"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "dance-club-radio",
+    "name": "Dance Club Radio",
+    "category": "music",
+    "streams": [
+      "https://ice4.abradio.cz/dance128.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "pigy-cz-pohadky",
+    "name": "Pigy.cz – Pohádky",
+    "category": "music",
+    "streams": [
+      "https://ice.actve.net/web-pg-pohadky"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radio-pisnicka",
+    "name": "Rádio Písnička",
+    "category": "music",
+    "streams": [
+      "https://stream.slagr-radio.cz/pisnicka"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

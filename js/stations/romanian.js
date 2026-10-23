@@ -357,6 +357,24 @@ window.STATIONS = [
       "https://live.adjudfm.ro:8000/adjudfm.aac"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "radio-vacanta-gold",
+    "name": "Radio Vacanța - Gold",
+    "category": "music",
+    "streams": [
+      "https://stream4.srr.ro:8443/gold_rv"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "clasic-radio-mozart-bucuresti",
+    "name": "Clasic Radio_Mozart -București",
+    "category": "music",
+    "streams": [
+      "https://live.radioclasic.com/listen/radio_clasic_mozart/live.mp3"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

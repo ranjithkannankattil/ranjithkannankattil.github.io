@@ -322,7 +322,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://relay.stream.enacast-cloud.com:30048/rap56.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "flaixbac-andorra",
@@ -422,6 +423,33 @@ window.STATIONS = [
       "https://stream.recasound.es/proxy/radiopollensa/stream"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "idofm",
+    "name": "IdòFM",
+    "category": "music",
+    "streams": [
+      "https://ido.omedia.cat/listen/idofm/idofm.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "rne-radio-5-barcelona",
+    "name": "RNE Radio 5 Barcelona",
+    "category": "music",
+    "streams": [
+      "https://f111.rndfnk.com/star/crtve/rne5/bcn/aac/128/stream.aac?cid=01GEP66PD2Z35HZMWWYTNPZDNA&sid=3FcfW2W3jdWkXz7vkD72zU2Ngq6&token=LHRzylmDW8bb20dv4Y5loVc683Q4WaYIA3aHusJnd9Q&tvf=VK9SHi5cvBhmMTExLnJuZGZuay5jb20"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radio-manlleu",
+    "name": "Ràdio Manlleu",
+    "category": "music",
+    "streams": [
+      "https://enacast.com/radiomanlleu/streams/HD"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

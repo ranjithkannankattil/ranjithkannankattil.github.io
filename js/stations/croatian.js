@@ -260,6 +260,24 @@ window.STATIONS = [
       "https://ec2s.crolive.com.hr:8035/stream"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "radio-busovaca",
+    "name": "Radio Busovača",
+    "category": "news",
+    "streams": [
+      "https://ec2s.crolive.com.hr:1510/stream"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radio-101",
+    "name": "Radio 101",
+    "category": "music",
+    "streams": [
+      "https://live.radio101.hr:9531/stream.mp3"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

@@ -160,8 +160,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_gradacac.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-usk-1",
@@ -242,6 +241,24 @@ window.STATIONS = [
     "streams": [
       "https://443-1.autopo.st/45?type=http"
     ]
+  },
+  {
+    "id": "kontakt-radio",
+    "name": "Kontakt Radio",
+    "category": "music",
+    "streams": [
+      "https://mojstream.eu:8114/kontaktradio"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "moj-radio",
+    "name": "Moj Radio",
+    "category": "music",
+    "streams": [
+      "https://webtvstream.bhtelecom.ba/moj_radio.m3u8"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

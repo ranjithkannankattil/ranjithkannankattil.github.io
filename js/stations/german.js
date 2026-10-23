@@ -409,6 +409,33 @@ window.STATIONS = [
       "https://dispatcher.rndfnk.com/rbb/fritz/live/mp3/mid"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "antenne-bayern-classic-rock-live",
+    "name": "Antenne Bayern - Classic Rock Live",
+    "category": "music",
+    "streams": [
+      "https://mp3channels.webradio.antenne.de/classic-rock-live"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "fm4-orf",
+    "name": "FM4 · ORF",
+    "category": "music",
+    "streams": [
+      "https://orf-live.ors-shoutcast.at/fm4-q1a"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radio-bob-bobs-alternative-rock",
+    "name": "RADIO BOB! BOBs Alternative Rock",
+    "category": "music",
+    "streams": [
+      "https://streams.radiobob.de/bob-alternative/mp3-192/streams.radiobob.de/"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

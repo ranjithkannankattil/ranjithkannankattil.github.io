@@ -432,6 +432,33 @@ window.STATIONS = [
       "https://icecast.err.ee/klassikaraadio.mp3"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "nrj-dnb",
+    "name": "NRJ DnB",
+    "category": "music",
+    "streams": [
+      "https://stream.skymedia.ee/live/NRJdnb"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "kaguraadio",
+    "name": "Kaguraadio",
+    "category": "news",
+    "streams": [
+      "https://radio.vlevelscdn.net/radio/kaguraadio.stream/chunklist_w936127105.m3u8"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "r2pop",
+    "name": "R2Pop",
+    "category": "music",
+    "streams": [
+      "https://icecast.err.ee/r2pop.opus"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

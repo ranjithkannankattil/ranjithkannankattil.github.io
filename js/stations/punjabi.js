@@ -275,6 +275,24 @@ window.STATIONS = [
       "https://casper.radioca.st/;"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "redflow",
+    "name": "RedFlow",
+    "category": "music",
+    "streams": [
+      "https://stream.fixupcare.com/live.mp3"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "desi-world-radio-usa",
+    "name": "desi world radio (USA)",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/4mbfcn4mf24tv"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

@@ -232,7 +232,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.brokenbeats.net/tune"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-shanson",
@@ -411,6 +412,33 @@ window.STATIONS = [
       "https://a9.asurahosting.com:7390/radio.mp3"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "station-8",
+    "name": "Люкс ФМ – Українські хіти",
+    "category": "music",
+    "streams": [
+      "https://lux.radio.tvstitch.com/ukrayinski-hiti-sd"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "radio-roks-ukrainian",
+    "name": "Radio ROKS Ukrainian",
+    "category": "music",
+    "streams": [
+      "https://online.radioroks.ua/RadioROKS_Ukr_HD"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "station-9",
+    "name": "Люкс ФМ – Золоті хіти",
+    "category": "music",
+    "streams": [
+      "https://lux.radio.tvstitch.com/zoloti-hiti-sd"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

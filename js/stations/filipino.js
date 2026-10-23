@@ -308,8 +308,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast3.my-control-panel.com/proxy/ronald/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "eagle-fm-95-5",
@@ -371,6 +370,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/g1pmt17nz9duv"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "89-7-manila-zounds",
+    "name": "89.7 Manila Zounds",
+    "category": "music",
+    "streams": [
+      "https://visayas.radyonatinfm.com:8000/stream"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "vibe-radio",
+    "name": "Vibe Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/zf0ac4raqy8uv"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "105-9-hot-fm-manila",
+    "name": "105.9 Hot FM Manila",
+    "category": "music",
+    "streams": [
+      "https://a8.asurahosting.com:6820/radio.mp3"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";

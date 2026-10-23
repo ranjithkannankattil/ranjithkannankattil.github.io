@@ -366,6 +366,33 @@ window.STATIONS = [
       "https://live1.sr.se/finska-aac-320"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "dagnys-jukebox",
+    "name": "Dagnys Jukebox",
+    "category": "music",
+    "streams": [
+      "https://stream.dagnysjukebox.se/dagny"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "vinyl-fm-se",
+    "name": "Vinyl FM (SE)",
+    "category": "music",
+    "streams": [
+      "https://live-bauerse-fm.sharp-stream.com/vinylfm_instream_se_aacp?direct=true&listenerid=undefined&aw_0_1st.bauer_listenerid=undefined&amsparams=playerid:SBS_RP_WEB;skey:1602162911;&aw_0_1st.playerid=SBS_RP_WEB&aw_0_1st.skey=1602162911&aw_0_1st.bauer_loggedin=false&awparams=loggedin:false;&aw_0_req.userConsent=false"
+    ],
+    "added": "2026-10-23"
+  },
+  {
+    "id": "p4-vastmanland",
+    "name": "P4 Västmanland",
+    "category": "music",
+    "streams": [
+      "https://live1.sr.se/p4vstm-mp3-96"
+    ],
+    "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T05:41Z";
+window.STATIONS_CHECKED = "2026-10-23T18:14Z";
