@@ -1,0 +1,80 @@
+italy                it  trusted  25  other   0  topics  78
+italy                en  trusted  21  other   0  topics   0  (kept previous)
+lombardy             it  trusted  25  other  12  topics   0  (kept previous)  window 21d
+lombardy             en  trusted   0  other  11  topics   0  (kept previous)  window 21d
+milan                it  trusted  25  other  12  topics   0  (kept previous)
+milan                en  trusted  20  other   4  topics   0  (kept previous)  removed club 13
+bergamo              it  trusted  25  other  12  topics   0  window 21d
+bergamo              en  trusted   0  other  12  topics   0  window 21d
+lazio                it  trusted  22  other  12  topics   0  (kept previous)  window 21d  removed ai 3
+lazio                en  trusted   2  other   0  topics   0  window 21d
+rome                 it  trusted  23  other  12  topics   0  (kept previous)  removed club 2
+rome                 en  trusted   6  other   0  topics   0
+china                zh  trusted  25  other   0  topics  13
+china                en  trusted  25  other   0  topics   0
+shandong             zh  trusted   6  other  12  topics   0  window 21d
+shandong             en  trusted   0  other  12  topics   0  (kept previous)  window 21d
+qingdao              zh  trusted   0  other  12  topics   0  window 21d
+qingdao              en  trusted   0  other  12  topics   0  (kept previous)  window 21d
+jinan                zh  trusted   0  other  12  topics   0  window 21d
+jinan                en  trusted   0  other  12  topics   0  (kept previous)  window 21d
+jiangsu              zh  trusted   8  other  12  topics   0  window 21d
+jiangsu              en  trusted   1  other  12  topics   0  (kept previous)  window 21d
+qidong               zh  trusted   3  other  12  topics   0  window 21d
+qidong               en  trusted   0  other   1  topics   0  (kept previous)  window 21d
+nantong              zh  trusted   2  other  12  topics   0  window 21d
+nantong              en  trusted   1  other   5  topics   0  (kept previous)  window 21d
+nanjing              zh  trusted  12  other  12  topics   0  window 21d
+nanjing              en  trusted   0  other  12  topics   0  (kept previous)  window 21d  removed ai 1
+shanghai             zh  trusted  25  other  12  topics   0  window 21d
+shanghai             en  trusted   4  other  12  topics   0  (kept previous)  window 21d
+beijing              zh  trusted  20  other  12  topics   0  removed ai 1
+beijing              en  trusted  14  other  12  topics   0
+uae                  en  trusted   0  other   0  topics  53
+uae                  ar  trusted  25  other   0  topics  66
+uae                  ml  trusted   8  other   0  topics   0
+dubai                en  trusted  25  other  12  topics   0
+dubai                ar  trusted  10  other  12  topics   0  removed ai 1
+dubai                ml  trusted  23  other  12  topics   0  removed ai 2
+abu-dhabi            en  trusted  25  other  12  topics   0
+abu-dhabi            ar  trusted   9  other  12  topics   0  removed ai 1
+abu-dhabi            ml  trusted  11  other   7  topics   0  removed ai 1
+mozambique           pt  trusted  25  other   0  topics  73
+mozambique           en  trusted  25  other   0  topics   0  (kept previous)
+cabo-delgado         pt  trusted  18  other  12  topics   0  window 21d
+cabo-delgado         en  trusted  10  other   5  topics   0  window 21d
+pemba                pt  trusted   0  other   7  topics   0  (kept previous)  window 21d
+pemba                en  trusted   1  other   1  topics   0  (kept previous)  window 21d
+maputo               pt  trusted  12  other  12  topics   0  (kept previous)
+maputo               en  trusted   7  other  10  topics   0  (kept previous)
+usa                  en  trusted  25  other   0  topics  53
+usa                  es  trusted   9  other   0  topics  32
+new-york             en  trusted  25  other  12  topics   0  (kept previous)
+new-york             es  trusted  21  other  12  topics   0  (kept previous)
+washington           en  trusted  14  other  12  topics   0  (kept previous)  removed ai 1
+france               fr  trusted  19  other   0  topics  68
+france               en  trusted  25  other   0  topics   0  (kept previous)
+paris                fr  trusted  25  other  12  topics   0  (kept previous)
+paris                en  trusted  25  other  12  topics   0  (kept previous)
+germany              de  trusted  25  other   0  topics  47
+germany              en  trusted  24  other   0  topics   0  (kept previous)
+berlin               de  trusted  25  other  12  topics   0
+berlin               en  trusted   8  other  12  topics   0
+spain                es  trusted  20  other   0  topics  73
+spain                en  trusted  11  other   0  topics   0  (kept previous)
+madrid               es  trusted  24  other  12  topics   0  (kept previous)  removed ai 1
+madrid               en  trusted  25  other  12  topics   0  (kept previous)
+portugal             pt  trusted  25  other   0  topics  73
+portugal             en  trusted   6  other   0  topics   0  (kept previous)
+lisbon               pt  trusted  25  other  12  topics   0  (kept previous)
+lisbon               en  trusted   8  other  12  topics   0  (kept previous)
+japan                ja  trusted  25  other   0  topics  32
+japan                en  trusted  25  other   0  topics   0  (kept previous)
+tokyo                ja  trusted  24  other  12  topics   0  removed ai 1
+tokyo                en  trusted   8  other  12  topics   0  (kept previous)
+south-korea          ko  trusted  25  other   0  topics  76
+south-korea          en  trusted  16  other   0  topics   0  (kept previous)
+seoul                ko  trusted  25  other  12  topics   0
+seoul                en  trusted  23  other  12  topics   0  (kept previous)
+singapore            en  trusted  25  other   0  topics  69
+singapore            zh  trusted  25  other   0  topics   0
