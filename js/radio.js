@@ -491,6 +491,7 @@
   }
 
   let ownPauses = 0, interruptTimer = null;   // see the "pause" listener further down
+  let interruptedAt = 0;                      // set while paused by a phone call, waiting to resume
   function teardown() {
     clearTimeout(failTimer); clearTimeout(stallTimer); clearTimeout(retryTimer);
     if (hls) { hls.destroy(); hls = null; }
@@ -573,6 +574,7 @@
   function attempt() {
     teardown();
     wants = true;
+    interruptedAt = 0;
     const s = current, url = s.streams[tryIndex];
     if (!url) {
       if (everPlayed) { tryIndex = 0; everPlayed = false; reconnect("Reconnecting"); return; }  // was on air: start over
@@ -602,6 +604,7 @@
 
   function toggle() {
     if (!current) return;
+    interruptedAt = 0;
     if (audio.paused) { retries = 0; attempt(); } else { wants = false; teardown(); setState("idle"); status("Paused"); }
   }
 
@@ -622,6 +625,26 @@
   // pulled out, another app taking the audio. Stay paused instead of "reconnecting" over
   // the call; play (on the page or the lock screen) starts it again. A real drop-out also
   // reports an error or the stream ending, and is still handled as a reconnect.
+  //
+  // After a phone call the station comes back on by itself. iPhones (Safari, Brave and every
+  // other iOS browser, iOS 16.4+) report the call through navigator.audioSession: its state
+  // is "interrupted" while the call holds the audio and changes back when the call ends.
+  // Pulling out headphones is not an interruption, so that never restarts it on the speaker.
+  // Android and some iPhones resume the paused audio themselves; that is followed too.
+  const AS = navigator.audioSession;
+  const RESUME_WINDOW = 60 * 60 * 1000;      // don't come back on hours after a call
+  const callHoldsAudio = () => !!AS && AS.state === "interrupted";
+
+  function resumeAfterCall() {
+    if (!interruptedAt || !current) return;
+    const fresh = Date.now() - interruptedAt < RESUME_WINDOW;
+    interruptedAt = 0;
+    if (!fresh) { setState("idle"); status("Paused"); return; }
+    retries = 0; tryIndex = 0;
+    status("Call ended — back on air");
+    attempt();                                // a new connection: live, not where it stopped
+  }
+
   audio.addEventListener("pause", () => {
     if (ownPauses > 0) { ownPauses--; return; }
     if (!wants || !current) return;
@@ -630,8 +653,22 @@
       if (!audio.paused || audio.error || audio.ended || !wants) return;
       wants = false;
       clearTimeout(failTimer); clearTimeout(stallTimer); clearTimeout(retryTimer);
-      setState("idle"); status("Paused");
+      setState("idle");
+      if (callHoldsAudio()) { interruptedAt = Date.now(); status("Paused for a call — resumes after"); }
+      else status("Paused");
     }, 400);
+  });
+  if (AS && typeof AS.addEventListener === "function") {
+    AS.addEventListener("statechange", () => {
+      if (interruptedAt && !callHoldsAudio()) setTimeout(() => { if (!callHoldsAudio()) resumeAfterCall(); }, 600);
+    });
+  }
+  // The phone itself started the paused audio again (Android, or iOS after the call):
+  // reconnect so it plays live rather than from where it stopped.
+  audio.addEventListener("play", () => {
+    if (wants) return;                        // this page started it
+    if (interruptedAt) { resumeAfterCall(); return; }
+    wants = true;
   });
   audio.addEventListener("waiting", stalled);
   audio.addEventListener("stalled", stalled);
@@ -737,7 +774,7 @@
   // close: stop the stream, cancel any sleep timer, hide the bar (and don't bring it back on the next visit)
   const pageTitle = document.title.replace(/^▶ .*? — /, "");
   function closePlayer() {
-    wants = false; teardown(); if (sleepAt) setSleep(0); setState("idle");
+    wants = false; interruptedAt = 0; teardown(); if (sleepAt) setSleep(0); setState("idle");
     openSleep(false); closeStationPanel();
     current = null; currentCol = null;
     document.querySelectorAll(".radio-card.on, .rp.on").forEach((el) => el.classList.remove("on"));
