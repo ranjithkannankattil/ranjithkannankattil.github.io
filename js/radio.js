@@ -490,9 +490,11 @@
     if (panelOpen() && pKey !== `${cId}~${s.id}`) loadPanel();
   }
 
+  let ownPauses = 0, interruptTimer = null;   // see the "pause" listener further down
   function teardown() {
     clearTimeout(failTimer); clearTimeout(stallTimer); clearTimeout(retryTimer);
     if (hls) { hls.destroy(); hls = null; }
+    if (!audio.paused) ownPauses++;   // this pause is ours, not a phone call (see "pause" below)
     audio.pause(); audio.removeAttribute("src"); audio.load();
   }
 
@@ -604,7 +606,8 @@
   }
 
   audio.addEventListener("playing", () => {
-    clearTimeout(failTimer); clearTimeout(stallTimer);
+    clearTimeout(failTimer); clearTimeout(stallTimer); clearTimeout(interruptTimer);
+    wants = true;   // also covers the phone resuming the stream by itself after a call
     if (!everPlayed) rememberStation(currentCol, current);
     everPlayed = true; retries = 0; autoSkips = 0; skipDir = 0;
     setState("playing"); status(sleepAt ? sleepLabel() : "Live");
@@ -615,6 +618,21 @@
     clearTimeout(stallTimer);
     stallTimer = setTimeout(() => reconnect("Signal lost — reconnecting"), 10000);
   };
+  // Paused by something other than this page: a phone call, Siri, an alarm, headphones
+  // pulled out, another app taking the audio. Stay paused instead of "reconnecting" over
+  // the call; play (on the page or the lock screen) starts it again. A real drop-out also
+  // reports an error or the stream ending, and is still handled as a reconnect.
+  audio.addEventListener("pause", () => {
+    if (ownPauses > 0) { ownPauses--; return; }
+    if (!wants || !current) return;
+    clearTimeout(interruptTimer);
+    interruptTimer = setTimeout(() => {
+      if (!audio.paused || audio.error || audio.ended || !wants) return;
+      wants = false;
+      clearTimeout(failTimer); clearTimeout(stallTimer); clearTimeout(retryTimer);
+      setState("idle"); status("Paused");
+    }, 400);
+  });
   audio.addEventListener("waiting", stalled);
   audio.addEventListener("stalled", stalled);
   audio.addEventListener("ended", () => { if (wants) reconnect(); });   // a live stream should never end
