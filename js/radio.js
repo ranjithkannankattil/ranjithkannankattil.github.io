@@ -644,7 +644,7 @@
     dbgBox.textContent = `${ts} ${msg} | paused=${audio.paused} wants=${wants} held=${!!interruptedAt} session=${AS ? AS.state : "n/a"} vis=${document.visibilityState}\n` + dbgBox.textContent;
   }
   if (dbgOn) {
-    dbg(`debug on · ${navigator.userAgent}`);
+    dbg(`debug on · player v29 · ${navigator.userAgent}`);
     for (const ev of ["play", "playing", "pause", "waiting", "stalled", "ended", "error", "emptied"]) audio.addEventListener(ev, () => dbg(`audio ${ev}`));
     if (AS && AS.addEventListener) AS.addEventListener("statechange", () => dbg("audioSession statechange"));
     document.addEventListener("visibilitychange", () => dbg("visibilitychange"));
@@ -665,6 +665,19 @@
       dbg(`held paused (call=${callHoldsAudio()})`);
     }, 400);
   });
+  // iPhone says a call (or another app) has taken the audio: pause and hold, even if the
+  // browser never sends a pause event for it.
+  function holdForCall(why) {
+    if (!wants || !current) return;
+    dbg(`hold for call (${why})`);
+    wants = false; interruptedAt = Date.now();
+    clearTimeout(interruptTimer); clearTimeout(failTimer); clearTimeout(stallTimer); clearTimeout(retryTimer);
+    ownPauseAt = Date.now(); audio.pause();
+    setState("idle"); status("Paused");
+  }
+  if (AS && typeof AS.addEventListener === "function") {
+    AS.addEventListener("statechange", () => { if (callHoldsAudio()) holdForCall("audio session interrupted"); });
+  }
   // Something other than this page started the audio while it was held: pause it again.
   const holdPaused = () => {
     if (wants || !interruptedAt) return false;
