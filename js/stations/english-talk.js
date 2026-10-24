@@ -398,6 +398,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "where": "US"
+  },
+  {
+    "id": "al-jazeera-english",
+    "name": "Al Jazeera - English",
+    "category": "sport",
+    "streams": [
+      "https://live-hls-audio-web-aje.getaj.net/VOICE-AJE/01.m3u8"
+    ],
+    "added": "2026-10-24",
+    "where": "Qatar"
+  },
+  {
+    "id": "citi-fm",
+    "name": "Citi FM",
+    "category": "sport",
+    "streams": [
+      "https://citi973fm.radioca.st/index.html:80/;stream.mp3"
+    ],
+    "added": "2026-10-24",
+    "where": "Ghana"
+  },
+  {
+    "id": "rokit-radio-british-comedy-1",
+    "name": "ROKit Radio : British Comedy 1",
+    "category": "comedy",
+    "streams": [
+      "https://streaming04.liveboxstream.uk/proxy/roksta14/stream"
+    ],
+    "added": "2026-10-24",
+    "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

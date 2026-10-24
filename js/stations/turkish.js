@@ -404,6 +404,33 @@ window.STATIONS = [
       "https://radyo.yayin.com.tr:6179/;"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "powerturk-fm-turkey-2",
+    "name": "POWERTÜRK FM TURKEY 2",
+    "category": "music",
+    "streams": [
+      "https://live.powerapp.com.tr/powerturk/abr/powerturk/128/playlist.m3u8"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "istanbul-fm",
+    "name": "İstanbul FM",
+    "category": "music",
+    "streams": [
+      "https://yayin.istanbulfm.com.tr/istanbulfm/playlist.m3u8"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "ankara-universitesi-radyosu-radyo-ilef",
+    "name": "Ankara Üniversitesi Radyosu Radyo İlef",
+    "category": "music",
+    "streams": [
+      "https://radyo.ilef.net/stream"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

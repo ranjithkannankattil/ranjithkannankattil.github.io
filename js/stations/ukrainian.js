@@ -439,6 +439,33 @@ window.STATIONS = [
       "https://lux.radio.tvstitch.com/zoloti-hiti-sd"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "station-10",
+    "name": "Радіо Світанок",
+    "category": "devotional",
+    "streams": [
+      "https://online.radiosvitanok.org.ua/live"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "roks-103-6",
+    "name": "Радіо ROKS 103.6",
+    "category": "music",
+    "streams": [
+      "https://online.radioroks.ua/RadioROKS"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "k-pop-24",
+    "name": "K-Pop 24",
+    "category": "music",
+    "streams": [
+      "https://lux.radio.tvstitch.com/k-pop-sd"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

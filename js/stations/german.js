@@ -436,6 +436,33 @@ window.STATIONS = [
       "https://streams.radiobob.de/bob-alternative/mp3-192/streams.radiobob.de/"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "radio-bollerwagen",
+    "name": "Radio Bollerwagen",
+    "category": "music",
+    "streams": [
+      "https://ffn-stream19.radiohost.de/radiobollerwagen_mp3-192?ref=radioplayer&listenerid=31363233323633323031-323030333a64653a343731363a3730313a623731343a346664383a313761363a39386165-3537373636-4d6f7a696c6c612f352e3020285831313b205562"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "swr4-bw",
+    "name": "SWR4 BW",
+    "category": "music",
+    "streams": [
+      "https://liveradio.swr.de/sw890cl/swr4bw/"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "wdr-2-rhein-und-ruhr",
+    "name": "WDR 2 Rhein und Ruhr",
+    "category": "news",
+    "streams": [
+      "https://wdr-wdr2-rheinruhr.icecast.wdr.de/wdr/wdr2/rheinruhr/mp3/128/stream.mp3"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

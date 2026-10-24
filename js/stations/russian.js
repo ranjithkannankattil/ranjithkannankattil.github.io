@@ -88,8 +88,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://bookradio.hostingradio.ru:8069/fm"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "fm-2",
@@ -432,6 +431,33 @@ window.STATIONS = [
       "https://rr-vysockij.hostingradio.ru/vysockij96.aacp"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "fm-93-6",
+    "name": "Коммерсантъ FM 93.6",
+    "category": "news",
+    "streams": [
+      "https://kommersant77.hostingradio.ru:8085/kommersant128.mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "station-21",
+    "name": "Одесса радио",
+    "category": "music",
+    "streams": [
+      "https://listen6.myradio24.com/odesradio"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "101-ru-michael-jackson",
+    "name": "101.ru Michael Jackson",
+    "category": "music",
+    "streams": [
+      "https://srv01.gpmradio.ru/stream/pro/aac/64/52"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

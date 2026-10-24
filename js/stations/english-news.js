@@ -330,6 +330,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "where": "Australia"
+  },
+  {
+    "id": "bbc-radio-scotland",
+    "name": "BBC Radio Scotland",
+    "category": "uk",
+    "streams": [
+      "https://as-hls-ww-live.akamaized.net/pool_43322914/live/ww/bbc_radio_scotland_fm/bbc_radio_scotland_fm.isml/bbc_radio_scotland_fm-audio%3d128000.norewind.m3u8"
+    ],
+    "added": "2026-10-24",
+    "where": "UK"
+  },
+  {
+    "id": "zbs-zodiak-fm",
+    "name": "ZBS Zodiak FM",
+    "category": "world",
+    "streams": [
+      "https://ice31.securenetsystems.net/0079"
+    ],
+    "added": "2026-10-24",
+    "where": "Malawi"
+  },
+  {
+    "id": "ujyaalo-90-network",
+    "name": "Ujyaalo 90 Network",
+    "category": "world",
+    "streams": [
+      "https://stream.zenolive.com/wtuvp08xq1duv"
+    ],
+    "added": "2026-10-24",
+    "where": "Nepal"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

@@ -399,6 +399,33 @@ window.STATIONS = [
       "https://ice10.fluidstream.net/rn1_2.mp3"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "rai-news-24",
+    "name": "Rai News 24",
+    "category": "news",
+    "streams": [
+      "https://streamcdnb3-8e7439fdb1694c8da3a0fd63e4dda518.msvdn.net/rainews1/hls/rainews_2400/chunklist.m3u8"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-italia-anni-60-trentino-alto-adige",
+    "name": "Radio Italia Anni 60 - Trentino Alto Adige",
+    "category": "music",
+    "streams": [
+      "https://ice10.fluidstream.net/anni60tn.aac"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "rds",
+    "name": "RDS",
+    "category": "music",
+    "streams": [
+      "https://stream.rds.radio/audio/rds.stream_aac/chunklist.m3u8"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

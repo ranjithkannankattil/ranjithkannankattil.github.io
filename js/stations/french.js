@@ -410,6 +410,33 @@ window.STATIONS = [
       "https://webradio3.tda.dz:8001/ElBahdja_64K.mp3"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "generations-rap-fr-gold",
+    "name": "Generations Rap FR Gold",
+    "category": "music",
+    "streams": [
+      "https://gene-wr06.ice.infomaniak.ch/gene-wr06.mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "latina-reggaeton",
+    "name": "Latina Reggaeton",
+    "category": "music",
+    "streams": [
+      "https://latinareggaeton.ice.infomaniak.ch/latinareggaeton.mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "fip-reggae",
+    "name": "FIP Reggae",
+    "category": "music",
+    "streams": [
+      "https://icecast.radiofrance.fr/fipreggae-hifi.aac"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

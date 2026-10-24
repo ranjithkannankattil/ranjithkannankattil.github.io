@@ -413,6 +413,33 @@ window.STATIONS = [
       "https://play.global.audio/avtoradio.opus"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "99-0-fm",
+    "name": "Радио Вероника Русе 99.0 FM",
+    "category": "music",
+    "streams": [
+      "https://28933.live.streamtheworld.com/RADIO_VERONIKAAAC_H.aac"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "energy-100-5-fm",
+    "name": "Радио Energy Болгария Русе 100.5 FM",
+    "category": "music",
+    "streams": [
+      "https://29103.live.streamtheworld.com/RADIO_ENERGYAAC_H.aac"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-nova",
+    "name": "Radio Nova",
+    "category": "music",
+    "streams": [
+      "https://25453.live.streamtheworld.com/RADIO_NOVAAAC_H.aac"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

@@ -413,6 +413,33 @@ window.STATIONS = [
       "https://onlineradio.cfd/listen/radio_iliria/radio.mp3"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "radio-ejani",
+    "name": "Radio Ejani",
+    "category": "news",
+    "streams": [
+      "https://live-ol.meldingcloud.com/albanianlive/am106online.m3u8?auth_key=1711939304-0-0-c9ac7fc169f869fc45f13bfb96bbe81f"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-myzeqeja",
+    "name": "Radio Myzeqeja",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/c7x08ebksg8uv"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-club-bar",
+    "name": "Radio Club Bar",
+    "category": "music",
+    "streams": [
+      "https://cp1.sednastream.com/proxy/deephouse/stream"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

@@ -169,8 +169,7 @@ window.STATIONS = [
     "akv": "Akashvani Devikulam",
     "exclude": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "airkozhikodefm",
@@ -221,8 +220,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/b82c91a395fc4a7d/b82c91a395fc4a7d.m3u8"
     ],
-    "akv": "Akashvani Kannur",
-    "offline": true
+    "akv": "Akashvani Kannur"
   },
   {
     "id": "helloradio",
@@ -255,8 +253,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/58390a2ed33cea4a/58390a2ed33cea4a.m3u8"
     ],
-    "akv": "Akashvani Manjeri",
-    "offline": true
+    "akv": "Akashvani Manjeri"
   },
   {
     "id": "akashvanithrissur",
@@ -269,8 +266,7 @@ window.STATIONS = [
     "akv": "Akashvani Thrissur",
     "exclude": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radioneythal",
@@ -310,8 +306,7 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://icecast.octosignals.com/radiomacfast"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "globalradio",
@@ -345,7 +340,8 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://onair.junefm.in/live"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radiomangalam",
@@ -369,8 +365,8 @@ window.STATIONS = [
     "name": "Radio Media Village",
     "category": "online",
     "streams": [
-      "https://cp3.shoutcheap.com:18145/stream",
-      "https://443-1.autopo.st/183/stream"
+      "https://443-1.autopo.st/183/stream",
+      "https://cp3.shoutcheap.com:18145/stream"
     ]
   },
   {
@@ -1072,7 +1068,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.shahimsha.com/listen/shahimsha/radio.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "radio-onattukara",
@@ -1127,6 +1124,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/s6hhy943w0hvv"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "hallos-radio",
+    "name": "Hallos Radio",
+    "category": "online",
+    "streams": [
+      "https://usa8.fastcast4u.com/proxy/auralradio?mp=/1"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "jesus-radio-malayalam",
+    "name": "Jesus Radio Malayalam",
+    "category": "devotional",
+    "streams": [
+      "https://gains.reviveradio.net/proxy/jesusreigns?mp=/stream"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "malysadan",
+    "name": "Malysadan",
+    "category": "online",
+    "streams": [
+      "https://stream.zeno.fm/8g9nvr1rkrhvv"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

@@ -48,7 +48,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://radio.host247.net/spedafm"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "trt-radyo-kurdi",
@@ -196,4 +197,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

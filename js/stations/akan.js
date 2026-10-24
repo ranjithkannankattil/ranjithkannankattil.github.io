@@ -449,6 +449,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/qsa068q31tzuv"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "kok-radio",
+    "name": "Kok Radio",
+    "category": "devotional",
+    "streams": [
+      "https://stream.zeno.fm/z5xgdb10tueuv"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "secret-fm-online",
+    "name": "Secret Fm Online",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/rgts3k9c37zuv"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "moonlite-fm",
+    "name": "Moonlite Fm",
+    "category": "music",
+    "streams": [
+      "https://stream.lensnetworks.com/proxy/moonlite?mp=/stream"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

@@ -293,6 +293,24 @@ window.STATIONS = [
       "https://stream.zeno.fm/4mbfcn4mf24tv"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "krpi-ferndale-1550-am",
+    "name": "KRPI Ferndale 1550 AM",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/KRPIAM_SC"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-singh-naad",
+    "name": "RADIO SINGH NAAD",
+    "category": "devotional",
+    "streams": [
+      "https://s8.voscast.com/cdn/?k=67baed255b875&m=;stream1740303687963/1"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

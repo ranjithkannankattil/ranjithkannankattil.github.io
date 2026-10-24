@@ -457,6 +457,33 @@ window.STATIONS = [
       "https://r1.cloudskep.com/cybcr/cybc3/icecast.audio"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "athens-radio-trance",
+    "name": "Athens Radio Trance",
+    "category": "music",
+    "streams": [
+      "https://cast.streams.ovh:8008/;"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "rainbow-89-2",
+    "name": "Rainbow 89 Μπλε",
+    "category": "music",
+    "streams": [
+      "https://n06.radiojar.com/akf7zea5kzuvv?rj-ttl=5&rj-tok=AAABjW_i2S8Az6X2ujnqoLooNA"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "hit-ellinikos",
+    "name": "Hit Ellinikos",
+    "category": "music",
+    "streams": [
+      "https://solid9.streamupsolutions.com/proxy/zvbgdllc?mp=/stream"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

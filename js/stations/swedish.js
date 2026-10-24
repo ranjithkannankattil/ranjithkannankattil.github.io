@@ -393,6 +393,24 @@ window.STATIONS = [
       "https://live1.sr.se/p4vstm-mp3-96"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "sveriges-radio-ekot-sander-direkt",
+    "name": "Sveriges Radio - Ekot sänder direkt",
+    "category": "news",
+    "streams": [
+      "https://live1.sr.se/ekotdirekt-aac-320"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "sauna-radio",
+    "name": "Sauna Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.saunaradio.com/live"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

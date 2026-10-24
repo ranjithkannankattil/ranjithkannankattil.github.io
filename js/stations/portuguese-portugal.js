@@ -206,8 +206,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8",
       "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "golofm",
@@ -347,8 +346,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/rdpafrica80a/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "antena-1-acores-portugal",
@@ -357,7 +355,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -430,6 +429,33 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/OBSERVADORAAC.aac?dist=web-popup&devicename=aac"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "radio-elvas",
+    "name": "Rádio Elvas",
+    "category": "music",
+    "streams": [
+      "https://radios2.justweb.pt:8066/stream?type=http&nocache=297"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "cantinho-dos-emigrantes",
+    "name": "Cantinho dos Emigrantes",
+    "category": "music",
+    "streams": [
+      "https://cast.redewt.net:9825/stream"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "m80-radio-pop",
+    "name": "M80 Rádio – Pop",
+    "category": "music",
+    "streams": [
+      "https://stream-icy.bauermedia.pt/m80pop.aac"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

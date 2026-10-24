@@ -201,8 +201,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-17",
@@ -395,6 +394,33 @@ window.STATIONS = [
       "https://s26.myradiostream.com:20274/listen.mp3"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "cctv-6",
+    "name": "CCTV-6电影频道伴音",
+    "category": "music",
+    "streams": [
+      "https://piccpndali.v.myalicdn.com/audio/cctv6_2.m3u8"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "station-27",
+    "name": "听云评书台",
+    "category": "music",
+    "streams": [
+      "https://m.tyradio.uk/typs.mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "station-28",
+    "name": "北京新闻广播",
+    "category": "news",
+    "streams": [
+      "https://lhttp.qtfm.cn/live/339/64k.mp3"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

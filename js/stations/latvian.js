@@ -403,6 +403,33 @@ window.STATIONS = [
       "https://stream.ehrhiti.lv:8000/Stream_78.mp3"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "your-city-padio",
+    "name": "Your City Padio",
+    "category": "music",
+    "streams": [
+      "https://c28.radioboss.fm:18234/stream"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-energy-lv",
+    "name": "Radio ENERGY.LV",
+    "category": "music",
+    "streams": [
+      "https://radio2.radioenergy.lv:9000/"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-7",
+    "name": "Radio 7",
+    "category": "music",
+    "streams": [
+      "https://listen.radio7.lv:2053/Radio7"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

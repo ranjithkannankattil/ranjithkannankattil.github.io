@@ -413,6 +413,33 @@ window.STATIONS = [
       "https://n13.stv.livebox.sk/ta3/685d9a141bd846e8facf83bc378da26b/1.smil/chunklist_b2691072.m3u8"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "radio-rebeca",
+    "name": "Rádio Rebeca",
+    "category": "music",
+    "streams": [
+      "https://mpc2.mediacp.eu:8200/rebecaweb"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-viva-metropol",
+    "name": "Radio Viva Metropol",
+    "category": "news",
+    "streams": [
+      "https://stream.sepia.sk:8000/viva128.mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-rsi",
+    "name": "Rádio RSI",
+    "category": "news",
+    "streams": [
+      "https://icecast.stv.livebox.sk/rsi_128.mp3"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

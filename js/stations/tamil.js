@@ -280,8 +280,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio129/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "tamil-ragam",
@@ -441,6 +440,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/xekhrn4zetzuv"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "vasantham-fm",
+    "name": "Vasantham FM",
+    "category": "music",
+    "streams": [
+      "https://cp12.serverse.com/proxy/vasanthamfm?mp=/stream"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "harris-jeyaraj",
+    "name": "Harris Jeyaraj",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/0bhsthssutzuv"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "live-fm",
+    "name": "Live FM",
+    "category": "music",
+    "streams": [
+      "https://stream.aiir.com/dbv0rxpwp6ytv"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

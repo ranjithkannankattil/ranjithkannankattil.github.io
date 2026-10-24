@@ -440,6 +440,33 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_ALVORADAAAC.aac"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "nativa-fm-95-3-sao-paulo",
+    "name": "Nativa FM 95.3 São Paulo",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/NATIVA_SPAAC.m3u8"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-globo-98-1-fm",
+    "name": "Rádio Globo 98.1 FM",
+    "category": "news",
+    "streams": [
+      "https://26583.live.streamtheworld.com:443/RADIO_GLOBO_RJAAC.aac?dist=radioscombr"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-pampa",
+    "name": "Radio Pampa",
+    "category": "music",
+    "streams": [
+      "https://cast4.audiostream.com.br:2653/mp3"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

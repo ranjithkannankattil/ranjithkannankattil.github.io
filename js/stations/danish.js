@@ -433,6 +433,15 @@ window.STATIONS = [
       "https://stream02.radioplayback.dk/stream"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "globus-guld-country",
+    "name": "Globus Guld Country",
+    "category": "music",
+    "streams": [
+      "https://stream.probroadcast.dk/guldcountrymp3"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

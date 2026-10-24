@@ -331,8 +331,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.vrstv.jp/"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "wave-anime-radio",
@@ -405,6 +404,33 @@ window.STATIONS = [
       "https://kathy.torontocast.com:3350/;?shoutcast"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "milcpod",
+    "name": "MILCpod",
+    "category": "music",
+    "streams": [
+      "https://radio.milradio.info:9000/milcpod.m3u8"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-linguas",
+    "name": "Radio Linguas",
+    "category": "music",
+    "streams": [
+      "https://radiolinguas.eu:8001/radiolinguas"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "mdk-space-radio",
+    "name": "MDK Space Radio",
+    "category": "music",
+    "streams": [
+      "https://radio.mdkband.com/stream.mp3"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

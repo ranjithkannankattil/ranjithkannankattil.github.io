@@ -440,6 +440,33 @@ window.STATIONS = [
       "https://stream.slagr-radio.cz/pisnicka"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "phonk-nation-radio",
+    "name": "Phonk Nation Radio",
+    "category": "music",
+    "streams": [
+      "https://radio.mxnticek.eu/listen/phonk/128.mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-proglas",
+    "name": "Radio Proglas",
+    "category": "devotional",
+    "streams": [
+      "https://icecast2.play.cz/proglas128"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "rockova-zabava",
+    "name": "Rocková zábava",
+    "category": "music",
+    "streams": [
+      "https://ice.abradio.cz/rockzabava128.mp3"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

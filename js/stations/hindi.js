@@ -423,6 +423,33 @@ window.STATIONS = [
       "https://streaming.webhostnepal.com/8018/stream"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "mohobbat-radio",
+    "name": "Mohobbat Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/t2ekq8zsgtzuv"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "bhajans-radio-guyana",
+    "name": "Bhajans Radio Guyana",
+    "category": "music",
+    "streams": [
+      "https://s5.citrus3.com:8148/stream"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-maharani",
+    "name": "Radio Maharani",
+    "category": "news",
+    "streams": [
+      "https://streamasiacdn.atc-labs.com/radiomaharani.aac"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

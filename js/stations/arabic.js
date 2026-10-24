@@ -431,6 +431,33 @@ window.STATIONS = [
       "https://alifalifjobs.com/radio/8000/AlifAlifLive.mp3"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "skyrock-casablanca",
+    "name": "Skyrock Casablanca",
+    "category": "music",
+    "streams": [
+      "https://icecast.skyrock.net/s/casa_aac_64k"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "aswat-fm",
+    "name": "Aswat FM",
+    "category": "music",
+    "streams": [
+      "https://broadcast.ice.infomaniak.ch/aswat-high.mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "ajyal-palestine",
+    "name": "Ajyal - Palestine",
+    "category": "music",
+    "streams": [
+      "https://streamer.mada.ps:8208/ajyal"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

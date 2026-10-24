@@ -40,7 +40,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiokaleva.digitacdn.net/radio/kaleva/master.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "yle-radio-suomi-hameenlinna",
@@ -439,6 +440,24 @@ window.STATIONS = [
       "https://icecast.live.yle.fi/radio/YlePori/icecast.audio"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "pride-radio",
+    "name": "Pride Radio",
+    "category": "music",
+    "streams": [
+      "https://streaming.radioplay.fi/fi_pride_128.mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-dei-lahti",
+    "name": "Radio Dei Lahti",
+    "category": "music",
+    "streams": [
+      "https://stream.dei.fi:8443/lahti"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

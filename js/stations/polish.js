@@ -386,6 +386,33 @@ window.STATIONS = [
       "https://media.wnet.fm/wnet.fm"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "radio-disco-dance",
+    "name": "Radio Disco-Dance",
+    "category": "music",
+    "streams": [
+      "https://radiodd.cloud/radio/8000/radio.mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "costa-s-ambient-radio",
+    "name": "CoSTa's Ambient Radio",
+    "category": "music",
+    "streams": [
+      "https://pc.costa-server.info.pl:11020/listen/costas_ambient_radio/radio.mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radioparty-pl-vocal-trance",
+    "name": "Radioparty.pl Vocal Trance",
+    "category": "music",
+    "streams": [
+      "https://s2.radioparty.pl:8025/vocaltrance"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

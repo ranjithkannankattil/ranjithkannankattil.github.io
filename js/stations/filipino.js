@@ -397,6 +397,33 @@ window.STATIONS = [
       "https://a8.asurahosting.com:6820/radio.mp3"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "taps-radio-ilagan",
+    "name": "TAPS RADIO ILAGAN",
+    "category": "music",
+    "streams": [
+      "https://us1.amfmph.com/ssl/tapsradioilagan?mp=/stream"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "newsline-central-luzon-105-5-fm",
+    "name": "Newsline Central Luzon 105.5 FM",
+    "category": "news",
+    "streams": [
+      "https://makatistream.brigadanews.ph/"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-maria-philippines",
+    "name": "Radio Maria Philippines",
+    "category": "devotional",
+    "streams": [
+      "https://dreamsiteradiocp2.com/proxy/rmphilippine?mp=/stream?ver=748140"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

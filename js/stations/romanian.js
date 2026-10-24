@@ -375,6 +375,33 @@ window.STATIONS = [
       "https://live.radioclasic.com/listen/radio_clasic_mozart/live.mp3"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "magic-fm-gold",
+    "name": "Magic FM Gold",
+    "category": "music",
+    "streams": [
+      "https://live.kissfm.ro/magic.gold.hits"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "magic-fm-party-mix",
+    "name": "Magic FM Party Mix",
+    "category": "music",
+    "streams": [
+      "https://live.kissfm.ro/magic.party.mix"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-blue-romania",
+    "name": "Radio Blue Romania",
+    "category": "music",
+    "streams": [
+      "https://asculta.muzicaok.de:8002/stream"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

@@ -96,7 +96,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.phost.hu:8004/retro"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "jazzy-soul",
@@ -393,6 +394,33 @@ window.STATIONS = [
       "https://s2.audiostream.hu/bdpstrock_192k"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "folkradio",
+    "name": "Folkrádio",
+    "category": "music",
+    "streams": [
+      "https://stream.folkradio.hu/folkradio.mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "bdpst-rock",
+    "name": "BDPST ROCK",
+    "category": "music",
+    "streams": [
+      "https://s2.audiostream.hu/bdpstrock_FLAC"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "streamx-radio",
+    "name": "StreamX Radio",
+    "category": "music",
+    "streams": [
+      "https://radio.streamxradio.live/listen/streamx_radio/radio.mp3"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

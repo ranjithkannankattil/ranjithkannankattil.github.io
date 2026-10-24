@@ -460,6 +460,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/se76qau1hc9uv"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "canal-sur-radio-andalucia",
+    "name": "Canal Sur Radio Andalucía",
+    "category": "news",
+    "streams": [
+      "https://rtva-live-radio.flumotion.com/rtva/csr.mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "cadena-ser",
+    "name": "Cadena Ser +",
+    "category": "news",
+    "streams": [
+      "https://27953.live.streamtheworld.com/CADENASER_ALT1AAC.aac"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "hits-1-ibiza",
+    "name": "Hits 1 Ibiza",
+    "category": "music",
+    "streams": [
+      "https://hits1spain-audiomediaradio.radioca.st/hits1mallorca"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

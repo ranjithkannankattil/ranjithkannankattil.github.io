@@ -259,6 +259,24 @@ window.STATIONS = [
       "https://webtvstream.bhtelecom.ba/moj_radio.m3u8"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "radio-bosanski-petrovac",
+    "name": "Radio Bosanski Petrovac",
+    "category": "music",
+    "streams": [
+      "https://webtvstream.bhtelecom.ba/radio_bosanski_petrovac.m3u8"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-bosanska-krupa",
+    "name": "Radio Bosanska Krupa",
+    "category": "music",
+    "streams": [
+      "https://webtvstream.bhtelecom.ba/radio_bosanska_krupa.m3u8"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

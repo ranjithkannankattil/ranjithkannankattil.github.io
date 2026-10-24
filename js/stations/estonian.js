@@ -211,7 +211,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://le11.euddn.net/d15d071d4f73afad16807c29a8cfe7447ef9fb6dc8928de64be3300e8ca0f3ca5c5b547137da3e2640917468e13ac1d7701b052f6ec9a2a3e207246d31ad7e936db6e1331b35e581cf1c988b303c617e81caf69b44a4afdcaceb809a218d0a9dd4aec230d75e57587a911bdb0faaaaa126ba9f040b7014729c340e2ab241ccfc0af5a1112d14756b8f322bf7a153eace53f699eeebaffdff8ab7ca1c91e4b2505f8f7dee05e2d8150305addddea91bd3/elmarikuld.aac"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "raadio-2-eesti-rahvusringhaaling-r2-err-",
@@ -459,6 +460,33 @@ window.STATIONS = [
       "https://icecast.err.ee/r2pop.opus"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "elmari-tantsuohtu",
+    "name": "Elmari tantsuõhtu",
+    "category": "music",
+    "streams": [
+      "https://le303.euddn.net/5f20979051399149309be13d13511ca5b860aa0a11b077085c418677f98193b62a8242840c650bdc369550f4355e3b79b0d9236e886ab9d5cf38bb890c0179c14c741b27035cdd81249cd9a252241191490e1ae1e8caad5b33e5f5340532ed96a5d6a2609c6f3f80300162c9ca736782d5aa39e7f9310c9315a581dbe85d953585b346e9e8b1eee24212ec9834b8f498119f48e37909cd91189328ccb7b0df78d7bf3f48b04b2334059f8ee4ec971d41b7d23f613cd81d546604952901159bc9/elmaritantsuohtu.aac"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "elmari-ballaadid",
+    "name": "Elmari ballaadid",
+    "category": "music",
+    "streams": [
+      "https://le305.euddn.net/203b22924acd9edf6df0f55dc2c5b925bcc0a26c9bf7bc77af90d37abb4f40e557c3cf0db9fe245805fcf30f1339e86e681101d873559975ca3bda5b8bfe0d1a94106a4d339795adc9792e0224c1144bdc9bf93be7197994c622c79e09ec1918fa689afa79215ccc7121e4171201edb23300b02f7732c0767dfece4753b8da5d8009d214f74e467c213837156d81d9ffd6b8941a4826f5eea67a7e95c74293035cd93b24084852218c179fe2dc7a485586ac5c05c7cd1043715e6bc7ebdd365f/EB_elmariballaadid.aac"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "r2chill",
+    "name": "R2Chill",
+    "category": "music",
+    "streams": [
+      "https://icecast.err.ee/r2chill.opus"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

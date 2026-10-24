@@ -456,6 +456,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "where": "US"
+  },
+  {
+    "id": "nu-metal-radio",
+    "name": "Nu Metal Radio",
+    "category": "rock",
+    "streams": [
+      "https://stream.revma.ihrhls.com/zc9483/hls.m3u8"
+    ],
+    "added": "2026-10-24",
+    "where": "US"
+  },
+  {
+    "id": "classic-fm-movies",
+    "name": "Classic FM Movies",
+    "category": "classical",
+    "streams": [
+      "https://media-ice.musicradio.com/ClassicFMMoviesMP3"
+    ],
+    "added": "2026-10-24",
+    "where": "UK"
+  },
+  {
+    "id": "1-oldies",
+    "name": "__1 oldies",
+    "category": "rock",
+    "streams": [
+      "https://80sexitos.stream.laut.fm/80sexitos"
+    ],
+    "added": "2026-10-24",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

@@ -431,6 +431,33 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_MEXICOAAC.aac"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "fieramix",
+    "name": "FieraMix",
+    "category": "music",
+    "streams": [
+      "https://c11.radioboss.fm:18269/stream"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "besame-medellin-94-9-fm",
+    "name": "Bésame (Medellín) 94.9 FM",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/BESAME_MEDELLINAAC.aac"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "bachata-radio",
+    "name": "Bachata Radio",
+    "category": "music",
+    "streams": [
+      "https://radio.domiplay.net:8002/;"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

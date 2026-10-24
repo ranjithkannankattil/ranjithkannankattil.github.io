@@ -278,6 +278,33 @@ window.STATIONS = [
       "https://live.radio101.hr:9531/stream.mp3"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "radio-centar-studio-porec",
+    "name": "Radio Centar - Studio Poreč",
+    "category": "music",
+    "streams": [
+      "https://radiocentar.hr:8282/stream.aac"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "jr-radio",
+    "name": "JR Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/pdkt234k698uv.mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "hrvatski-radio-rock",
+    "name": "Hrvatski radio - Rock",
+    "category": "music",
+    "streams": [
+      "https://29345.live.streamtheworld.com/HR_ROCK_SC"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

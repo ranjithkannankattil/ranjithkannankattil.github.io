@@ -386,7 +386,8 @@ window.STATIONS = [
     "streams": [
       "https://enacast.com/radioribarroja/streams/SD"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "radio-vilablareix",
@@ -450,6 +451,33 @@ window.STATIONS = [
       "https://enacast.com/radiomanlleu/streams/HD"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "ona-mediterrania",
+    "name": "Ona Mediterrània",
+    "category": "music",
+    "streams": [
+      "https://streaming.enacast.com/onamediterrania128.mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-seu",
+    "name": "Ràdio Seu",
+    "category": "music",
+    "streams": [
+      "https://streaming.enacast.com/radiolaseu128.mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-santvi-107-4fm",
+    "name": "Radio SantVi 107.4FM",
+    "category": "music",
+    "streams": [
+      "https://dhits.frilab.com:8443/santvi"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

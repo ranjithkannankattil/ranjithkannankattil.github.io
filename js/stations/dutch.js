@@ -470,6 +470,33 @@ window.STATIONS = [
       "https://d2od87akyl46nm.cloudfront.net/icecast/omroepgelderland/radiogelderland"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "vrt-radio-2-vlaams-brabant",
+    "name": "VRT Radio 2 Vlaams-Brabant",
+    "category": "music",
+    "streams": [
+      "https://icecast.vrtcdn.be/ra2vlb.aac"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "alternative-rock-radio",
+    "name": "Alternative Rock Radio",
+    "category": "music",
+    "streams": [
+      "https://25243.live.streamtheworld.com/KINK_SC"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "omroep-zeeland-radio",
+    "name": "Omroep Zeeland Radio",
+    "category": "news",
+    "streams": [
+      "https://d3isaxd2t6q8zm.cloudfront.net/icecast/omroepzeeland/omroepzeeland_radio"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

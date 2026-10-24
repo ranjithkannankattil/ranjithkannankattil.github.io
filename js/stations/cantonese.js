@@ -265,8 +265,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ptmirror3.passiontimes.hk/hls3/stream.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "chkt-am1430-fairchild",
@@ -441,6 +440,33 @@ window.STATIONS = [
       "https://sk.cri.cn/hxfh.m3u8"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "23-11",
+    "name": "恐怖在線（周一至周五23:11）",
+    "category": "music",
+    "streams": [
+      "https://acast01.kolorboxlab.com/radio/8010/radio.mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "record-fm-100-3-macau",
+    "name": "Record FM 100.3 Macau",
+    "category": "news",
+    "streams": [
+      "https://nl.digitalrm.pt:8028/stream"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "station-29",
+    "name": "化州融媒体中心综合广播",
+    "category": "music",
+    "streams": [
+      "https://lhttp-hw.qtfm.cn/live/15318689/64k.mp3"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";

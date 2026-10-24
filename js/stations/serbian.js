@@ -411,6 +411,33 @@ window.STATIONS = [
       "https://naxidigital-gold128ssl.streaming.rs:8062/;stream.nsv"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "radio-s3-folk-stars",
+    "name": "Radio S3 Folk stars",
+    "category": "music",
+    "streams": [
+      "https://stream.radios.rs:9024/;"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "domus-radio",
+    "name": "Domus Radio",
+    "category": "music",
+    "streams": [
+      "https://libretime.domusradio.com/icecast/main"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-lola",
+    "name": "Radio Lola",
+    "category": "music",
+    "streams": [
+      "https://streaming.tdiradio.com/radiolola.mp3"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-23T18:14Z";
+window.STATIONS_CHECKED = "2026-10-24T05:21Z";
