@@ -491,7 +491,8 @@
   }
 
   let ownPauseAt = 0, interruptTimer = null;  // see the "pause" listener further down
-  let interruptedAt = 0;                      // set while paused by a phone call, waiting to resume
+  let interruptedAt = 0;                      // set while held paused: only play restarts it
+  let callHeldAt = 0;                         // set while paused by a call: comes back when it ends
   function teardown() {
     clearTimeout(failTimer); clearTimeout(stallTimer); clearTimeout(retryTimer);
     if (hls) { hls.destroy(); hls = null; }
@@ -574,7 +575,7 @@
   function attempt() {
     teardown();
     wants = true;
-    interruptedAt = 0;
+    interruptedAt = 0; callHeldAt = 0;
     const s = current, url = s.streams[tryIndex];
     if (!url) {
       if (everPlayed) { tryIndex = 0; everPlayed = false; reconnect("Reconnecting"); return; }  // was on air: start over
@@ -604,7 +605,7 @@
 
   function toggle() {
     if (!current) return;
-    interruptedAt = 0;
+    interruptedAt = 0; callHeldAt = 0;
     if (audio.paused) { retries = 0; attempt(); } else { wants = false; teardown(); setState("idle"); status("Paused"); }
   }
 
@@ -644,7 +645,7 @@
     dbgBox.textContent = `${ts} ${msg} | paused=${audio.paused} wants=${wants} held=${!!interruptedAt} session=${AS ? AS.state : "n/a"} vis=${document.visibilityState}\n` + dbgBox.textContent;
   }
   if (dbgOn) {
-    dbg(`debug on · player v30 · ${navigator.userAgent}`);
+    dbg(`debug on · player v31 · ${navigator.userAgent}`);
     for (const ev of ["play", "playing", "pause", "waiting", "stalled", "ended", "error", "emptied"]) audio.addEventListener(ev, () => dbg(`audio ${ev}`));
     if (AS && AS.addEventListener) AS.addEventListener("statechange", () => dbg("audioSession statechange"));
     document.addEventListener("visibilitychange", () => dbg("visibilitychange"));
@@ -678,9 +679,26 @@
   if (AS && typeof AS.addEventListener === "function") {
     AS.addEventListener("statechange", () => { if (callHoldsAudio()) holdForCall("audio session interrupted"); });
   }
+  // After a call: come back on air (a fresh connection, so it plays live) when iOS sends
+  // "play", restarts the audio itself, or when the listener returns to the page.
+  const CALL_WINDOW = 60 * 60 * 1000;
+  function resumeAfterCall(why) {
+    if (!callHeldAt || !current) return;
+    const fresh = Date.now() - callHeldAt < CALL_WINDOW;
+    callHeldAt = 0; interruptedAt = 0;
+    dbg(`resume after call (${why}, fresh=${fresh})`);
+    if (!fresh) { ownPauseAt = Date.now(); audio.pause(); setState("idle"); status("Paused"); return; }
+    retries = 0; tryIndex = 0; attempt();
+  }
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible" && callHeldAt) setTimeout(() => {
+      if (document.visibilityState === "visible") resumeAfterCall("back on the page");
+    }, 800);
+  });
   // Something other than this page started the audio while it was held: pause it again.
   const holdPaused = () => {
     if (wants || !interruptedAt) return false;
+    if (callHeldAt) { dbg("phone restarted the audio after the call"); resumeAfterCall("phone restarted audio"); return true; }
     dbg("blocked a restart the page didn't ask for");
     ownPauseAt = Date.now(); audio.pause();
     setState("idle"); status("Paused");
@@ -791,7 +809,7 @@
   // close: stop the stream, cancel any sleep timer, hide the bar (and don't bring it back on the next visit)
   const pageTitle = document.title.replace(/^▶ .*? — /, "");
   function closePlayer() {
-    wants = false; interruptedAt = 0; teardown(); if (sleepAt) setSleep(0); setState("idle");
+    wants = false; interruptedAt = 0; callHeldAt = 0; teardown(); if (sleepAt) setSleep(0); setState("idle");
     openSleep(false); closeStationPanel();
     current = null; currentCol = null;
     document.querySelectorAll(".radio-card.on, .rp.on").forEach((el) => el.classList.remove("on"));
@@ -818,10 +836,14 @@
     // Never a toggle: when a call starts, iOS has already silenced the audio and then sends
     // "pause" — a toggle saw "paused" and started the station again over the call.
     const sysPause = (why) => {
-      dbg(`media key: ${why}`);
+      // iOS silences the audio *before* sending "pause" for a call; the listener's own pause
+      // (lock screen, headphones button) arrives while it is still playing.
+      const byCall = wants && audio.paused;
+      dbg(`media key: ${why} (${byCall ? "call" : "listener"})`);
       if (!current) return;
       wants = false; interruptedAt = Date.now();     // held: nothing but play restarts it
-      teardown(); setState("idle"); status("Paused");
+      callHeldAt = byCall ? Date.now() : 0;
+      teardown(); setState("idle"); status(byCall ? "Paused for a call" : "Paused");
     };
     navigator.mediaSession.setActionHandler("play", () => {
       dbg("media key: play");
