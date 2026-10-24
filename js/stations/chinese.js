@@ -201,7 +201,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-17",
@@ -421,6 +422,33 @@ window.STATIONS = [
       "https://lhttp.qtfm.cn/live/339/64k.mp3"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "sdba-classics-94-7-shanghai",
+    "name": "SDBA Classics 94.7 Shanghai",
+    "category": "music",
+    "streams": [
+      "https://lhttp.qingting.fm/live/267/64k.mp3?listening-from-radio-garden=1696445196"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "ma",
+    "name": "Ma",
+    "category": "news",
+    "streams": [
+      "https://rfimandingue64k.ice.infomaniak.ch/rfimandingue-64k.mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "eight-fm",
+    "name": "Eight无限 FM",
+    "category": "music",
+    "streams": [
+      "https://stream.rcs.revma.com/qp0xrd9mtd3vv"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

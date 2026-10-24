@@ -428,6 +428,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "where": "UK"
+  },
+  {
+    "id": "cgtn-radio",
+    "name": "CGTN Radio",
+    "category": "world",
+    "streams": [
+      "https://sk.cri.cn/am846.m3u8"
+    ],
+    "added": "2026-10-24",
+    "where": "China"
+  },
+  {
+    "id": "power-98-7",
+    "name": "Power 98.7",
+    "category": "world",
+    "streams": [
+      "https://edge.iono.fm/xice/65_medium.aac"
+    ],
+    "added": "2026-10-24",
+    "where": "South Africa"
+  },
+  {
+    "id": "cjad-800",
+    "name": "CJAD 800",
+    "category": "canada",
+    "streams": [
+      "https://26183.live.streamtheworld.com/CJADAM_SC"
+    ],
+    "added": "2026-10-24",
+    "where": "Canada"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

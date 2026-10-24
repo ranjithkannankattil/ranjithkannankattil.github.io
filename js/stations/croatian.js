@@ -305,6 +305,33 @@ window.STATIONS = [
       "https://29345.live.streamtheworld.com/HR_ROCK_SC"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "hrt-radio-split",
+    "name": "HRT Radio Split",
+    "category": "music",
+    "streams": [
+      "https://23623.live.streamtheworld.com/SPLITAAC_SC"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "tranzistor",
+    "name": "Tranzistor",
+    "category": "music",
+    "streams": [
+      "https://ec2s.crolive.com.hr/tranzistor"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "ckwr-98-5-real-community-radio-kitchener",
+    "name": "CKWR 98.5 \"Real Community Radio\" Kitchener, ON",
+    "category": "music",
+    "streams": [
+      "https://stream2.statsradio.com:8150/stream"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

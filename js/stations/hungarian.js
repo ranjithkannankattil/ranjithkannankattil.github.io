@@ -421,6 +421,33 @@ window.STATIONS = [
       "https://radio.streamxradio.live/listen/streamx_radio/radio.mp3"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "rabakoz-radio",
+    "name": "Rábaköz Rádió",
+    "category": "music",
+    "streams": [
+      "https://radio.molnarkft.hu/rabakozradio"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "coolfm-trance-elektro",
+    "name": "COOLFM Trance / Elektro",
+    "category": "music",
+    "streams": [
+      "https://mediagw.e-tiger.net/stream/zc14"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "superdj-radio-magyar",
+    "name": "SuperDJ Rádió - Magyar",
+    "category": "music",
+    "streams": [
+      "https://s03.diazol.hu:35152/stream3"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

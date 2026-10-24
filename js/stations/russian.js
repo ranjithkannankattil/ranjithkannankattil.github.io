@@ -348,8 +348,7 @@ window.STATIONS = [
     "streams": [
       "https://aircast.breaking-bass.ru:8443/air"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "101-ru",
@@ -458,6 +457,33 @@ window.STATIONS = [
       "https://srv01.gpmradio.ru/stream/pro/aac/64/52"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "95-6-fm",
+    "name": "Звезда 95.6 FM",
+    "category": "news",
+    "streams": [
+      "https://radio.mediacdn.ru/radio/zvezda/zvezda_96"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-shanson",
+    "name": "Радио Шансон - Radio Shanson",
+    "category": "music",
+    "streams": [
+      "https://chanson.hostingradio.ru:8041/chanson256.mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "96-2fm",
+    "name": "Мелодии Века 96.2fm",
+    "category": "music",
+    "streams": [
+      "https://radiorecord.hostingradio.ru/sd9096.aacp"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

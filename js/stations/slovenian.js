@@ -276,6 +276,15 @@ window.STATIONS = [
       "https://live.radio1.si/Radio80"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "radio-roska",
+    "name": "Radio Roška",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/q7300aptbwzuv"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

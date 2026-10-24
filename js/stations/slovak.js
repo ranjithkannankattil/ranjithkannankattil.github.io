@@ -168,8 +168,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream3.bestfm.sk:8000/128.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-vlna-60-70",
@@ -440,6 +439,33 @@ window.STATIONS = [
       "https://icecast.stv.livebox.sk/rsi_128.mp3"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "radio-metropolitan",
+    "name": "radio metropolitan",
+    "category": "music",
+    "streams": [
+      "https://mpc2.mediacp.eu:8214/stream"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "fresh-radio",
+    "name": "FRESH rádio",
+    "category": "music",
+    "streams": [
+      "https://icecast2.radionet.sk/freshradio.sk"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-sebastian",
+    "name": "Rádio Sebastián",
+    "category": "music",
+    "streams": [
+      "https://s2.ssl-stream.com/listen/radiosebastian/radio.mp3"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

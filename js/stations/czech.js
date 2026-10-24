@@ -467,6 +467,33 @@ window.STATIONS = [
       "https://ice.abradio.cz/rockzabava128.mp3"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "rock-max",
+    "name": "ROCK MAX",
+    "category": "music",
+    "streams": [
+      "https://ice.abradio.cz/rockmax256.mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "pigy-cz-pisnicky-z-pohadek",
+    "name": "Pigy.cz – Písničky z pohádek",
+    "category": "music",
+    "streams": [
+      "https://ice.actve.net/web-pg-pisnicky"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "helax-93-7",
+    "name": "Helax 93,7",
+    "category": "music",
+    "streams": [
+      "https://ice.abradio.cz/helax128.mp3"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

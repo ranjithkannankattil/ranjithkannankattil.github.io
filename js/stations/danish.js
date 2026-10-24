@@ -442,6 +442,24 @@ window.STATIONS = [
       "https://stream.probroadcast.dk/guldcountrymp3"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "charlie-tourist-sydvest",
+    "name": "Charlie Tourist (Sydvest)",
+    "category": "news",
+    "streams": [
+      "https://ec6.yesstreaming.net:4385/stream"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "vlr-kolding",
+    "name": "VLR Kolding",
+    "category": "music",
+    "streams": [
+      "https://webradio.vlr.dk/vlrkolding"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

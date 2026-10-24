@@ -431,6 +431,33 @@ window.STATIONS = [
       "https://radio.mdkband.com/stream.mp3"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "ia-music-news-japanese",
+    "name": "IA Music & News - Japanese",
+    "category": "news",
+    "streams": [
+      "https://ianewsja.ice.infomaniak.ch/ianewsja-128.mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "doujinstyle-radio",
+    "name": "Doujinstyle Radio",
+    "category": "music",
+    "streams": [
+      "https://streams.radio.co:80/s5ff57669c/listen"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "eden-radio",
+    "name": "Eden Radio",
+    "category": "music",
+    "streams": [
+      "https://edenofthewest.com/listen/eden-radio/radio.mp3"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

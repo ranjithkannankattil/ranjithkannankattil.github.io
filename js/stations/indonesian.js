@@ -266,7 +266,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:8500/;super.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "bahtera-yudha-fm-surabaya",
@@ -322,7 +323,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/14/9314/rrisngliatpro1.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "mosh-head-black-metal-id",
@@ -457,7 +459,35 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:9622/stream"
     ],
+    "added": "2026-10-24",
+    "offline": true
+  },
+  {
+    "id": "rri-pro1-banjarmasin",
+    "name": "RRI Pro1 Banjarmasin",
+    "category": "news",
+    "streams": [
+      "https://stream-node0.rri.co.id/streaming/19/9019/rribanjarmasinpro1.mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "pop-fm-semarang",
+    "name": "POP FM Semarang",
+    "category": "music",
+    "streams": [
+      "https://i.klikhost.com:9612/stream.aac"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "kiara-4u",
+    "name": "KIARA 4U",
+    "category": "music",
+    "streams": [
+      "https://eu1.fastcast4u.com/proxy/kiarafm?mp=/1"
+    ],
     "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

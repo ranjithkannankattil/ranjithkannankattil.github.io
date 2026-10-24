@@ -426,6 +426,33 @@ window.STATIONS = [
       "https://stream.rds.radio/audio/rds.stream_aac/chunklist.m3u8"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "radio-company",
+    "name": "Radio Company",
+    "category": "news",
+    "streams": [
+      "https://sphera.fluidstream.eu/company.aac"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-m2o-dance",
+    "name": "Radio m2o - Dance",
+    "category": "music",
+    "streams": [
+      "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/radiom2odance/radiom2odance/master_ma.m3u8"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "musica-jazz-radio",
+    "name": "Musica Jazz Radio",
+    "category": "music",
+    "streams": [
+      "https://ice03.fluidstream.net/mjr.aac"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

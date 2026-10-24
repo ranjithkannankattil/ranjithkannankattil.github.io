@@ -431,6 +431,33 @@ window.STATIONS = [
       "https://radyo.ilef.net/stream"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "yaren-fm",
+    "name": "Yaren FM",
+    "category": "music",
+    "streams": [
+      "https://yarenfmn.80.yayin.com.tr//stream"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radyo-7-turku",
+    "name": "Radyo 7 Türkü",
+    "category": "music",
+    "streams": [
+      "https://moondigitaledge2.radyotvonline.net/radyo7turku/playlist.m3u8"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "24-radyo",
+    "name": "24 Radyo",
+    "category": "news",
+    "streams": [
+      "https://radyo24.radyotvonline.net/radyo24"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

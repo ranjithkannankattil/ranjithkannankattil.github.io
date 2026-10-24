@@ -497,6 +497,33 @@ window.STATIONS = [
       "https://d3isaxd2t6q8zm.cloudfront.net/icecast/omroepzeeland/omroepzeeland_radio"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "joe-70s-80s",
+    "name": "Joe 70s & 80s",
+    "category": "music",
+    "streams": [
+      "https://icecast-qmusicnl-cdp.triple-it.nl/Joe_nl_high.aac"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-m-utrecht",
+    "name": "Radio M Utrecht",
+    "category": "news",
+    "streams": [
+      "https://d18rwjdhpr8dcw.cloudfront.net/icecast/rtvutrecht/radiomutrecht-bb-mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "willy-class-x",
+    "name": "Willy Class X",
+    "category": "music",
+    "streams": [
+      "https://streams.radio.dpgmedia.cloud/redirect/willy_be_class_x/aac"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

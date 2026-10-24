@@ -232,8 +232,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.brokenbeats.net/tune"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-shanson",
@@ -466,6 +465,33 @@ window.STATIONS = [
       "https://lux.radio.tvstitch.com/k-pop-sd"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "radio-alesia",
+    "name": "Radio ALESIA",
+    "category": "music",
+    "streams": [
+      "https://air.alesia.live/alesia"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "classic-radio",
+    "name": "Classic Radio",
+    "category": "music",
+    "streams": [
+      "https://online.classicradio.ua/ClassicRadio_HD"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "int",
+    "name": "Мелодія Int",
+    "category": "music",
+    "streams": [
+      "https://online.melodiafm.ua/MelodiaFM_Int_Live"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

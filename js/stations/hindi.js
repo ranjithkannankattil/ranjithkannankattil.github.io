@@ -450,6 +450,33 @@ window.STATIONS = [
       "https://streamasiacdn.atc-labs.com/radiomaharani.aac"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "raagam-air-24-7",
+    "name": "Raagam AIR 24*7",
+    "category": "music",
+    "streams": [
+      "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudioragam/hlspbaudioragam_Auto.m3u8"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "ar-radio",
+    "name": "AR RADIO",
+    "category": "music",
+    "streams": [
+      "https://free.rcast.net/200660"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "live-fm",
+    "name": "Live FM",
+    "category": "music",
+    "streams": [
+      "https://stream.aiir.com/dbv0rxpwp6ytv"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

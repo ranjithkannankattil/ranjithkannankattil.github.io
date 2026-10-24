@@ -487,6 +487,33 @@ window.STATIONS = [
       "https://icecast.err.ee/r2chill.opus"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "r2extra-altpop",
+    "name": "R2Extra - AltPop",
+    "category": "music",
+    "streams": [
+      "https://live.err.ee/live/r2alt.m3u8?short=true"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "r2extra-rock",
+    "name": "R2Extra - Rock",
+    "category": "music",
+    "streams": [
+      "https://sb.err.ee/live/r2rock.m3u8"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "retro-fm-eestikas",
+    "name": "Retro FM Eestikas",
+    "category": "music",
+    "streams": [
+      "https://stream.skymedia.ee/live/retro2.mp3"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

@@ -424,6 +424,33 @@ window.STATIONS = [
       "https://dreamsiteradiocp2.com/proxy/rmphilippine?mp=/stream?ver=748140"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "dxbh-hope-radio-103-7mhz",
+    "name": "DXBH Hope Radio 103.7Mhz",
+    "category": "devotional",
+    "streams": [
+      "https://stream.dxbh.net/main_mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "basco-radio-93-3-studio-2",
+    "name": "Basco Radio 93.3 Studio 2\n",
+    "category": "devotional",
+    "streams": [
+      "https://stream.zeno.fm/a3th9bd1fs8uv"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "28-2-goodvibes-fm",
+    "name": "28.2 GoodVibes Fm",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/fu24r3f24c9uv"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

@@ -478,6 +478,24 @@ window.STATIONS = [
       "https://dhits.frilab.com:8443/santvi"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "esplugues-fm",
+    "name": "Esplugues FM",
+    "category": "news",
+    "streams": [
+      "https://antares.dribbcast.com/proxy/espluguesfm?mp=/stream"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-sitges",
+    "name": "Radio Sitges",
+    "category": "news",
+    "streams": [
+      "https://s2.radio.co/s8e5dffe5e/listen"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

@@ -440,6 +440,15 @@ window.STATIONS = [
       "https://25453.live.streamtheworld.com/RADIO_NOVAAAC_H.aac"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "99-7-fm",
+    "name": "Радио Фокус Русе 99.7 FM",
+    "category": "music",
+    "streams": [
+      "https://focusradio.dataserv.cc/1"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

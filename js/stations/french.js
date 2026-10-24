@@ -437,6 +437,33 @@ window.STATIONS = [
       "https://icecast.radiofrance.fr/fipreggae-hifi.aac"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "tropiques-fm",
+    "name": "Tropiques FM",
+    "category": "music",
+    "streams": [
+      "https://listen.radioking.com/radio/8916/stream/19088"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "nrj-nouveaux-hits-2026",
+    "name": "NRJ Nouveaux Hits 2026",
+    "category": "music",
+    "streams": [
+      "https://streaming.nrjaudio.fm/ouucqs5n3nje"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "rtbf-classic-21",
+    "name": "RTBF Classic 21",
+    "category": "music",
+    "streams": [
+      "https://radios.rtbf.be/classic21-128.mp3"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

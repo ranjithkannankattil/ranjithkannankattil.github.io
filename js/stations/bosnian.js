@@ -277,6 +277,33 @@ window.STATIONS = [
       "https://webtvstream.bhtelecom.ba/radio_bosanska_krupa.m3u8"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "radio-ljubuski",
+    "name": "Radio Ljubuški",
+    "category": "music",
+    "streams": [
+      "https://s8.iqstreaming.com:8044/stream"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "banjalucki-sevdah-radio-sehercani",
+    "name": "Banjalučki Sevdah Radio Šeherčani",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/wazhcyi9ak5vv"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-feral-kalesija",
+    "name": "Radio Feral Kalesija",
+    "category": "music",
+    "streams": [
+      "https://webtvstream.bhtelecom.ba/radio_feral_kalesija.m3u8"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

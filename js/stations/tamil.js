@@ -467,6 +467,33 @@ window.STATIONS = [
       "https://stream.aiir.com/dbv0rxpwp6ytv"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "shaiva-lahari",
+    "name": "Shaiva Lahari",
+    "category": "music",
+    "streams": [
+      "https://radio.shaivam.org/listen/shaiva-lahari/radio.mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "tamil-amuthu-trichy-radio",
+    "name": "Tamil Amuthu Trichy Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/feyrkb9htp8uv"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "vadivelucomedyradio",
+    "name": "Vadivelucomedyradio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/02n962ezyp8uv"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

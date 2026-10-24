@@ -458,6 +458,33 @@ window.STATIONS = [
       "https://streamer.mada.ps:8208/ajyal"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "zitouna-zitouna-fm",
+    "name": "Zitouna Zitouna FM",
+    "category": "devotional",
+    "streams": [
+      "https://radio.radiotunisienne.tn/radiozaitouna"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "station-11",
+    "name": "إذاعة القرآن الكريم (مكة المكرمة)",
+    "category": "devotional",
+    "streams": [
+      "https://edge.mixlr.com/channel/rwumx"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "huna-aden-fm",
+    "name": "Huna Aden FM",
+    "category": "music",
+    "streams": [
+      "https://c30.radioboss.fm:18267/stream"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

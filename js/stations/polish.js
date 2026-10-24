@@ -413,6 +413,33 @@ window.STATIONS = [
       "https://s2.radioparty.pl:8025/vocaltrance"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "polskie-radio-czworka",
+    "name": "Polskie Radio Czwórka",
+    "category": "music",
+    "streams": [
+      "https://stream14.polskieradio.pl/pr4/pr4.sdp/playlist.m3u8"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-zet-128",
+    "name": "Radio ZET 128",
+    "category": "music",
+    "streams": [
+      "https://n-11-21.dcs.redcdn.pl/sc/o2/Eurozet/live/audio.livx?audio=5"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "eska-impreska",
+    "name": "ESKA IMPRESKA",
+    "category": "music",
+    "streams": [
+      "https://ic1.smcdn.pl/6030-1.mp3"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

@@ -411,6 +411,15 @@ window.STATIONS = [
       "https://stream.saunaradio.com/live"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "sveriges-radio-p4-malmohus",
+    "name": "Sveriges Radio P4 Malmöhus",
+    "category": "music",
+    "streams": [
+      "https://live1.sr.se/p4malm-aac-32"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

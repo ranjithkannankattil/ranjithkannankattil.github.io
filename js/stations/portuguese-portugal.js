@@ -92,8 +92,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "m80-radio-ballads",
@@ -279,7 +278,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR",
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rca-radio-clube-de-armamar",
@@ -355,8 +355,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -456,6 +455,33 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m80pop.aac"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "ruc-radio-universidade-de-coimbra",
+    "name": "RUC Rádio Universidade de Coimbra",
+    "category": "music",
+    "streams": [
+      "https://stream.ruc.pt/high"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "m80-radio-dance",
+    "name": "M80 Rádio – Dance",
+    "category": "music",
+    "streams": [
+      "https://stream-icy.bauermedia.pt/m80dance.aac"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "ntr-network-radio",
+    "name": "NTR - Network Radio",
+    "category": "music",
+    "streams": [
+      "https://is.ntradio.pt/ntr"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

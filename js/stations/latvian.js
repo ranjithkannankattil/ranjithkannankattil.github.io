@@ -112,8 +112,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.xo.fm/xofm128"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "lounge-fm",
@@ -430,6 +429,33 @@ window.STATIONS = [
       "https://listen.radio7.lv:2053/Radio7"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "ehr-gold",
+    "name": "EHR Gold",
+    "category": "music",
+    "streams": [
+      "https://stream.ehrhiti.lv:8000/Stream_64.mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "latvijas-radio-lr6-naba",
+    "name": "Latvijas Radio - LR6 Naba",
+    "category": "music",
+    "streams": [
+      "https://muste.latvijasradio.lv/shoutcast/mp4:naba.stream/playlist.m3u8"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "ehr-rise-shine",
+    "name": "EHR Rise & Shine",
+    "category": "music",
+    "streams": [
+      "https://stream.ehrhiti.lv:8000/Stream_36.mp3"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

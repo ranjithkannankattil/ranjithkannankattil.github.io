@@ -360,6 +360,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "where": "Nepal"
+  },
+  {
+    "id": "redfm",
+    "name": "REDfm",
+    "category": "world",
+    "streams": [
+      "https://22273.live.streamtheworld.com/RED_FMAAC.aac"
+    ],
+    "added": "2026-10-24",
+    "where": "Malaysia"
+  },
+  {
+    "id": "falklands-radio-530-stanley",
+    "name": "Falklands Radio 530 Stanley",
+    "category": "world",
+    "streams": [
+      "https://streaming.broadcastradio.com:8332/flklnd"
+    ],
+    "added": "2026-10-24",
+    "where": "The Falkland Islands Malvinas"
+  },
+  {
+    "id": "kcrw-88-9-fm-live",
+    "name": "KCRW 88.9 FM - Live",
+    "category": "us",
+    "streams": [
+      "https://streams.kcrw.com/kcrw_mp3?aw_0_1st.playerid=radio-browser.info"
+    ],
+    "added": "2026-10-24",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

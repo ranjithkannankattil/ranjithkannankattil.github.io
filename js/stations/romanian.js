@@ -402,6 +402,33 @@ window.STATIONS = [
       "https://asculta.muzicaok.de:8002/stream"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "radio-liberty-muzica-romaneasca-bucurest",
+    "name": "Radio Liberty Muzică Românească -București",
+    "category": "music",
+    "streams": [
+      "https://sonicssl.namehost.ro/7060/stream"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "tranquila-manele-romania",
+    "name": "Tranquila Manele România",
+    "category": "music",
+    "streams": [
+      "https://live.radiotranquila.net:8032/stream"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "clasic-radio-bach-bucuresti",
+    "name": "Clasic Radio_Bach -București",
+    "category": "music",
+    "streams": [
+      "https://live.radioclasic.com/listen/radio_clasic_bach/live.mp3"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

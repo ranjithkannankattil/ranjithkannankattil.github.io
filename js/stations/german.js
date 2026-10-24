@@ -463,6 +463,33 @@ window.STATIONS = [
       "https://wdr-wdr2-rheinruhr.icecast.wdr.de/wdr/wdr2/rheinruhr/mp3/128/stream.mp3"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "schwarzwaldradio",
+    "name": "Schwarzwaldradio",
+    "category": "music",
+    "streams": [
+      "https://edge61.streamonkey.net/fho-schwarzwaldradiolive/stream/mp3?aggregator=smk-m3u-mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "n-joy",
+    "name": "N-JOY",
+    "category": "news",
+    "streams": [
+      "https://icecast.ndr.de/ndr/njoy/live/mp3/128/stream.mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "br-klassik",
+    "name": "BR-Klassik",
+    "category": "music",
+    "streams": [
+      "https://dispatcher.rndfnk.com/br/brklassik/live/mp3/high"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

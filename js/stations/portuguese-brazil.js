@@ -290,7 +290,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://server01.ouvir.radio.br:8018/stream?1771866095421"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "fita-cassete",
@@ -298,7 +299,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://server01.ouvir.radio.br:8018/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-energia-97-fm",
@@ -467,6 +469,33 @@ window.STATIONS = [
       "https://cast4.audiostream.com.br:2653/mp3"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "antena-1-porto-alegre",
+    "name": "Antena 1 - Porto Alegre",
+    "category": "music",
+    "streams": [
+      "https://antenaone.crossradio.com.br/stream/1"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-joli-mpb",
+    "name": "Rádio Joli MPB",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/mrutsyhkc3quv"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-metropolitana-98-5-fm-sertanejo",
+    "name": "Rádio Metropolitana 98.5 FM Sertanejo",
+    "category": "music",
+    "streams": [
+      "https://ice.fabricahost.com.br/metrospsertanejo"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

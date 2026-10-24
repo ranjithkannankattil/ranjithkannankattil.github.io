@@ -486,6 +486,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "where": "US"
+  },
+  {
+    "id": "metal-rock-radio",
+    "name": "metal rock radio",
+    "category": "rock",
+    "streams": [
+      "https://kathy.torontocast.com:2800/;"
+    ],
+    "added": "2026-10-24",
+    "where": "US"
+  },
+  {
+    "id": "bluegrass-country",
+    "name": "Bluegrass Country",
+    "category": "country",
+    "streams": [
+      "https://ice24.securenetsystems.net/WAMU"
+    ],
+    "added": "2026-10-24",
+    "where": "US"
+  },
+  {
+    "id": "static-90s-2000s-alt-rock",
+    "name": "Static – 90s & 2000s Alt Rock",
+    "category": "rock",
+    "streams": [
+      "https://r.bgp.rodeo/listen/static/radio.mp3"
+    ],
+    "added": "2026-10-24",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

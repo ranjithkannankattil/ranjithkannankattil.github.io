@@ -438,6 +438,33 @@ window.STATIONS = [
       "https://streaming.tdiradio.com/radiolola.mp3"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "202",
+    "name": "РТС - Радио Београд - 202",
+    "category": "news",
+    "streams": [
+      "https://rtsradio-live.morescreens.com/RTS_2_004/audio/chunklist.m3u8"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "a-radio-banja-luka",
+    "name": "A Radio Banja Luka",
+    "category": "music",
+    "streams": [
+      "https://aradiostream.atvbl.com/live"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-bobar",
+    "name": "Radio Bobar",
+    "category": "music",
+    "streams": [
+      "https://stream.radios.rs:9082/stream"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

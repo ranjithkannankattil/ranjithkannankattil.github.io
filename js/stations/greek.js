@@ -484,6 +484,33 @@ window.STATIONS = [
       "https://solid9.streamupsolutions.com/proxy/zvbgdllc?mp=/stream"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "happy-104",
+    "name": "Happy 104",
+    "category": "music",
+    "streams": [
+      "https://ath10400fm-radioplayer.live24.gr/ath10400fm"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "kids-radio",
+    "name": "Kids Radio",
+    "category": "music",
+    "streams": [
+      "https://n03.rcs.revma.com/n7d6z9ez1duvv"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "mixfm-cyprus",
+    "name": "MixFM Cyprus",
+    "category": "music",
+    "streams": [
+      "https://link.radiojar.com/c27wx6pdh8vtv"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

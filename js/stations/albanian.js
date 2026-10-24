@@ -440,6 +440,33 @@ window.STATIONS = [
       "https://cp1.sednastream.com/proxy/deephouse/stream"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "radio-4",
+    "name": "Radio 4+",
+    "category": "news",
+    "streams": [
+      "https://play.4plusmedia.tv/radio.mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "lefutur-radio",
+    "name": "LeFutur Radio",
+    "category": "music",
+    "streams": [
+      "https://listen.radioking.com/radio/320837/stream/503612"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "radio-club-bar-bit",
+    "name": "Radio Club Bar Bit",
+    "category": "music",
+    "streams": [
+      "https://cp1.sednastream.com/proxy/clubbit/stream"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

@@ -458,6 +458,33 @@ window.STATIONS = [
       "https://radio.domiplay.net:8002/;"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "raxies-fm",
+    "name": "Raxies FM",
+    "category": "news",
+    "streams": [
+      "https://stream.zeno.fm/annpmyskb4jtv"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "la-noventera",
+    "name": "La Noventera",
+    "category": "music",
+    "streams": [
+      "https://host.gometri.com/proxy/lanoventera/stream/"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "la-salsa-cubana",
+    "name": "La salsa cubana",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/uf2r0d5ny39uv"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

@@ -40,8 +40,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiokaleva.digitacdn.net/radio/kaleva/master.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "yle-radio-suomi-hameenlinna",
@@ -458,6 +457,24 @@ window.STATIONS = [
       "https://stream.dei.fi:8443/lahti"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "radio-dei-kajaani",
+    "name": "Radio Dei Kajaani",
+    "category": "devotional",
+    "streams": [
+      "https://stream.dei.fi:8443/kajaani"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "sss-radio",
+    "name": "SSS-Radio",
+    "category": "news",
+    "streams": [
+      "https://uvn-67-97.tll01.zonevs.eu/sss-radio"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";

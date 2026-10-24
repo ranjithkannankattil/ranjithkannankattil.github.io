@@ -56,7 +56,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://1716664847.rsc.cdn77.org/1716664847/tracks-a1/mono.ts.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-6",
@@ -467,6 +468,33 @@ window.STATIONS = [
       "https://lhttp-hw.qtfm.cn/live/15318689/64k.mp3"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "asia-fm-106-9",
+    "name": "Asia FM 106.9",
+    "category": "music",
+    "streams": [
+      "https://lhttp.qingting.fm/live/20071/64k.mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "station-30",
+    "name": "广州经济交通广播电台",
+    "category": "news",
+    "streams": [
+      "https://lhttp.qingting.fm/live/4955/64k.mp3"
+    ],
+    "added": "2026-10-24"
+  },
+  {
+    "id": "szr-fm-97-1-macau-hd2",
+    "name": "SZR 城市 FM 97.1 Macau - HD2",
+    "category": "music",
+    "streams": [
+      "https://stream-hls.bauermedia.pt/cidade.aac/playlist.m3u8"
+    ],
+    "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T05:21Z";
+window.STATIONS_CHECKED = "2026-10-24T17:12Z";
