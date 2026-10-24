@@ -644,7 +644,7 @@
     dbgBox.textContent = `${ts} ${msg} | paused=${audio.paused} wants=${wants} held=${!!interruptedAt} session=${AS ? AS.state : "n/a"} vis=${document.visibilityState}\n` + dbgBox.textContent;
   }
   if (dbgOn) {
-    dbg(`debug on · player v29 · ${navigator.userAgent}`);
+    dbg(`debug on · player v30 · ${navigator.userAgent}`);
     for (const ev of ["play", "playing", "pause", "waiting", "stalled", "ended", "error", "emptied"]) audio.addEventListener(ev, () => dbg(`audio ${ev}`));
     if (AS && AS.addEventListener) AS.addEventListener("statechange", () => dbg("audioSession statechange"));
     document.addEventListener("visibilitychange", () => dbg("visibilitychange"));
@@ -815,8 +815,20 @@
     if (e.key === "/" && e.target !== q) { e.preventDefault(); q.focus(); }
   });
   if ("mediaSession" in navigator) {
-    navigator.mediaSession.setActionHandler("play", toggle);
-    navigator.mediaSession.setActionHandler("pause", toggle);
+    // Never a toggle: when a call starts, iOS has already silenced the audio and then sends
+    // "pause" — a toggle saw "paused" and started the station again over the call.
+    const sysPause = (why) => {
+      dbg(`media key: ${why}`);
+      if (!current) return;
+      wants = false; interruptedAt = Date.now();     // held: nothing but play restarts it
+      teardown(); setState("idle"); status("Paused");
+    };
+    navigator.mediaSession.setActionHandler("play", () => {
+      dbg("media key: play");
+      if (!current || (!audio.paused && wants)) return;
+      interruptedAt = 0; retries = 0; attempt();
+    });
+    navigator.mediaSession.setActionHandler("pause", () => sysPause("pause"));
     // steering-wheel / Bluetooth / lock-screen buttons
     for (const [a, d] of [["nexttrack", 1], ["previoustrack", -1]]) {
       try { navigator.mediaSession.setActionHandler(a, () => skip(d, true)); } catch { /* not supported */ }
@@ -825,7 +837,7 @@
     for (const [a, d] of [["seekforward", 1], ["seekbackward", -1]]) {
       try { navigator.mediaSession.setActionHandler(a, () => skip(d, true)); } catch { /* not supported */ }
     }
-    try { navigator.mediaSession.setActionHandler("stop", () => { if (current && !audio.paused) toggle(); }); } catch { /* not supported */ }
+    try { navigator.mediaSession.setActionHandler("stop", () => sysPause("stop")); } catch { /* not supported */ }
   }
 
   // ---- recently played, across languages
