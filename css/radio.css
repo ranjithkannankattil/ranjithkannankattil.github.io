@@ -348,3 +348,15 @@ body[data-section="radio"] .ad-link{ font-family:var(--f-mono); font-size:.75rem
 .ad-text{ margin:.35rem 0 .6rem; white-space:pre-line; overflow-wrap:anywhere; }
 .ad-act{ display:flex; gap:.5rem; }
 .ad-empty{ color:var(--ink-soft); }
+
+/* Inside the Android app: "new version available" banner (js/app-update.js) */
+.app-update{ margin:1.25rem 0 0; padding:1rem 1.15rem; background:var(--accent-soft); border-left:3px solid var(--accent); max-width:62ch; }
+.app-update p{ margin:0; }
+.app-update .au-title{ font-family:var(--f-display); font-weight:600; font-size:1.05rem; }
+.app-update .au-sub{ font-size:.85rem; color:var(--ink-soft); margin-top:.15rem; }
+.app-update ul{ margin:.5rem 0 0; padding-left:1.1rem; font-size:.88rem; color:var(--ink-soft); }
+.app-update li{ margin:.15rem 0; }
+.app-update .au-tip{ font-size:.8rem; color:var(--ink-soft); margin-top:.5rem; }
+.app-update .au-row{ display:flex; gap:.75rem; margin-top:.75rem; align-items:center; }
+.app-update .au-go{ background:var(--accent); color:#fff; padding:.6rem 1.2rem; font-weight:600; font-family:var(--f-display); }
+.app-update .au-later{ background:none; border:0; padding:.6rem .4rem; font:inherit; color:var(--ink-soft); text-decoration:underline; cursor:pointer; }
