@@ -803,3 +803,8 @@ nav.tabs .nav-menu a.current{ background:var(--accent-soft); box-shadow:inset 3p
   .nav-menu{ box-shadow:0 14px 40px -16px rgba(0,0,0,.8) !important; }
   body .scroll-nav .sn-btn{ background:var(--paper-2); border-color:#55555E; box-shadow:0 6px 18px -6px rgba(0,0,0,.95); }
 }
+
+/* copyheart line in the footer and on the home page */
+footer .cheart{ max-width:62ch; line-height:1.6; text-transform:none; letter-spacing:.02em; }
+footer .cheart a, .cheart-note a{ text-decoration:underline; text-underline-offset:2px; }
+.cheart-note{ font-size:.92rem; color:var(--ink-soft); }
