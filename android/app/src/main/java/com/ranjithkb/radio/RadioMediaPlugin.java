@@ -36,6 +36,20 @@ public class RadioMediaPlugin extends Plugin {
         p.notifyListeners("action", data);
     }
 
+    /** The app's version, so the page can tell people when a newer app is out. */
+    @PluginMethod
+    public void getInfo(PluginCall call) {
+        JSObject ret = new JSObject();
+        try {
+            android.content.pm.PackageInfo info = getContext().getPackageManager()
+                .getPackageInfo(getContext().getPackageName(), 0);
+            ret.put("version", info.versionName);
+        } catch (Exception e) {
+            ret.put("version", "");
+        }
+        call.resolve(ret);
+    }
+
     @PluginMethod
     public void setMetadata(PluginCall call) {
         RadioMediaService.setMeta(
