@@ -232,8 +232,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.brokenbeats.net/tune"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-shanson",
@@ -520,6 +519,33 @@ window.STATIONS = [
       "https://cast.megapolis.fm/listen/kamyanske/radio.mp3"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "k-pop-radio",
+    "name": "K-Pop Radio",
+    "category": "music",
+    "streams": [
+      "https://online.radioplayer.ua/KpopRadio"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "galychyna",
+    "name": "Galychyna",
+    "category": "music",
+    "streams": [
+      "https://stream320.galychyna.fm/WebSite"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "mdk-space-radio",
+    "name": "MDK Space Radio",
+    "category": "music",
+    "streams": [
+      "https://radio.mdkband.com/stream.mp3"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

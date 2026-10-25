@@ -162,6 +162,15 @@ window.STATIONS = [
     "streams": [
       "https://live.livestreamtv.ca/azstar/amlst:azstar/playlist.m3u8"
     ]
+  },
+  {
+    "id": "max-tv-azerbaycan",
+    "name": "Max tv Azerbaycan",
+    "category": "music",
+    "streams": [
+      "https://cdn4.yayin.com.tr/maxtv/tracks-v1a1/mono.m3u8"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

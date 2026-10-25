@@ -514,6 +514,33 @@ window.STATIONS = [
       "https://stream.laut.fm/80sexitos"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "informa-radio",
+    "name": "INFORMA RADIO",
+    "category": "devotional",
+    "streams": [
+      "https://24x7.red:42045/informa"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "blue-marlin-ibiza",
+    "name": "Blue Marlin Ibiza",
+    "category": "music",
+    "streams": [
+      "https://ibizasonica.streaming-pro.com:8001/bluemarlin"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "radio-maria-espana",
+    "name": "Radio María España",
+    "category": "devotional",
+    "streams": [
+      "https://dreamsiteradiocp4.com/proxy/rmspain1?mp=/stream/1/"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

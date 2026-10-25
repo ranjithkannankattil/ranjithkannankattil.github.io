@@ -449,7 +449,8 @@ window.STATIONS = [
     "streams": [
       "https://streamasiacdn.atc-labs.com/radiomaharani.aac"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "raagam-air-24-7",
@@ -504,6 +505,33 @@ window.STATIONS = [
       "https://dard.out.airtime.pro:8000/dard_a"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "radio-gyansthali-89-6-fm",
+    "name": "Radio Gyansthali 89.6 FM",
+    "category": "music",
+    "streams": [
+      "https://streamasiacdn.atc-labs.com/gyansthali.aac"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "2b-radio-sangam-devi-maa",
+    "name": "2B! Radio Sangam Devi Maa",
+    "category": "devotional",
+    "streams": [
+      "https://ibadat.out.airtime.pro:8000/ibadat_a"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "radio-sangwari",
+    "name": "Radio Sangwari",
+    "category": "music",
+    "streams": [
+      "https://servidor19.brlogic.com:7002/live"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

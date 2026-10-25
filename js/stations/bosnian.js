@@ -160,7 +160,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_gradacac.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-usk-1",
@@ -322,6 +323,15 @@ window.STATIONS = [
       "https://stream.rcast.net/70602"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "radio-vogosca",
+    "name": "Radio Vogošća",
+    "category": "music",
+    "streams": [
+      "https://webtvstream.bhtelecom.ba/radio_vogosca.m3u8"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

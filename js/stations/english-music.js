@@ -546,6 +546,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "where": "Canada"
+  },
+  {
+    "id": "bbc-radio-1xtra",
+    "name": "BBC Radio 1Xtra",
+    "category": "pop",
+    "streams": [
+      "https://as-hls-ww-live.akamaized.net/pool_92079267/live/ww/bbc_1xtra/bbc_1xtra.isml/bbc_1xtra-audio%3d128000.norewind.m3u8"
+    ],
+    "added": "2026-10-25",
+    "where": "UK"
+  },
+  {
+    "id": "heart-uk",
+    "name": "Heart UK",
+    "category": "pop",
+    "streams": [
+      "https://media-ice.musicradio.com/HeartUKMP3"
+    ],
+    "added": "2026-10-25",
+    "where": "UK"
+  },
+  {
+    "id": "94-7-kumu",
+    "name": "94.7 KUMU",
+    "category": "rock",
+    "streams": [
+      "https://pacificmedia.cdnstream1.com/2783_128.mp3"
+    ],
+    "added": "2026-10-25",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

@@ -92,7 +92,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "m80-radio-ballads",
@@ -229,7 +230,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "cidade-fm-2",
@@ -276,8 +278,8 @@ window.STATIONS = [
     "name": "Antena 2",
     "category": "music",
     "streams": [
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR",
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8"
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8",
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
     ]
   },
   {
@@ -508,6 +510,33 @@ window.STATIONS = [
       "https://radiometalon.com/radio/8000/radio.mp3"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "radio-movimento",
+    "name": "Rádio Movimento",
+    "category": "music",
+    "streams": [
+      "https://stream.rcast.net/61025"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "nove3cinco",
+    "name": "Nove3cinco",
+    "category": "music",
+    "streams": [
+      "https://centova.radio.com.pt/proxy/522?mp=/stream&1715267171"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "m80-radio-90s",
+    "name": "M80 Rádio – 90s",
+    "category": "music",
+    "streams": [
+      "https://stream-icy.bauermedia.pt/m8090.aac"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

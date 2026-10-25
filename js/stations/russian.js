@@ -348,8 +348,7 @@ window.STATIONS = [
     "streams": [
       "https://aircast.breaking-bass.ru:8443/air"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "101-ru",
@@ -512,6 +511,33 @@ window.STATIONS = [
       "https://retro90.hostingradio.ru:8025/retro90-128.mp3"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "station-23",
+    "name": "Радио Шоколад",
+    "category": "music",
+    "streams": [
+      "https://choco.hostingradio.ru:10010/fm"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "dfm",
+    "name": "DFM",
+    "category": "music",
+    "streams": [
+      "https://dfm.hostingradio.ru/dfm96.aacp?0.28225617725168517"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "station-24",
+    "name": "Радио МИР",
+    "category": "music",
+    "streams": [
+      "https://icecast-mirtv.cdnvideo.ru/radio_mir_256"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

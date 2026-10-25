@@ -468,7 +468,8 @@ window.STATIONS = [
     "streams": [
       "https://cast4.audiostream.com.br:2653/mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "antena-1-porto-alegre",
@@ -523,6 +524,33 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/MIXFM_SAOPAULOAAC.aac?dist=mix-web-player-radio-ao-vivo&934992.6600449783"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "jovem-pan-fm-belo-horizonte-mg-99-1-mhz",
+    "name": "Jovem Pan FM - Belo Horizonte - MG - 99.1 Mhz",
+    "category": "music",
+    "streams": [
+      "https://8062.brasilstream.com.br/stream?origem=task_site"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "radio-energia-dance",
+    "name": "Radio Energia Dance",
+    "category": "music",
+    "streams": [
+      "https://s05.w3bserver.com:20025/;"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "radio-bandeirantes-90-9-fm",
+    "name": "Rádio Bandeirantes 90.9 FM",
+    "category": "news",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/RadioBandeirantesAAC.m3u8?dist=radios.com.br"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

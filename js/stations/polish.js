@@ -467,6 +467,15 @@ window.STATIONS = [
       "https://stream.radiosar.pl/hdmain.mp3"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "radio-mirage-italo-dance",
+    "name": "Radio Mirage - Italo Dance",
+    "category": "music",
+    "streams": [
+      "https://ssl-1.radiohost.pl:9569/stream"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

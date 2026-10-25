@@ -475,6 +475,24 @@ window.STATIONS = [
       "https://stream.zeno.fm/gvz27wezgghtv"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "cool-fm-remix-music",
+    "name": "Cool.FM REMIX MUSIC",
+    "category": "music",
+    "streams": [
+      "https://mediagw.e-tiger.net/stream/zc23?ver=266114"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "oxygen-music-gyor",
+    "name": "Oxygen Music Győr",
+    "category": "music",
+    "streams": [
+      "https://oxygenmusic.hu:8443/oxygenmusic_gyor_hd"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

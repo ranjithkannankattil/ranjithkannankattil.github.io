@@ -483,6 +483,24 @@ window.STATIONS = [
       "https://28993.live.streamtheworld.com/EHR_LMT_STRAUMEAAC.aac"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "european-hit-radio-kool-hits",
+    "name": "European Hit Radio - KOOL hits",
+    "category": "music",
+    "streams": [
+      "https://25583.live.streamtheworld.com/EHR_KOOLAAC.aac"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "skonto-hiti",
+    "name": "SKONTO hiti",
+    "category": "music",
+    "streams": [
+      "https://streams.radioskonto.lv:8443/skonto-hiti"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

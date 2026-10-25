@@ -320,8 +320,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://solid1.streamupsolutions.com/proxy/vhhggmih/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "subfm",
@@ -493,6 +492,24 @@ window.STATIONS = [
       "https://icecast.stv.livebox.sk/klasika_128.mp3"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "fred-film-radio-25-slovencina",
+    "name": "Fred Film Radio-25 Slovenčina",
+    "category": "music",
+    "streams": [
+      "https://s10.webradio-hosting.com/proxy/fredradiosk/stream"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "party-radio",
+    "name": "Party Radio",
+    "category": "music",
+    "streams": [
+      "https://mpc1.mediacp.eu/stream/partyradio"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

@@ -242,8 +242,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sc.mpbnl.nl/radionostalgia.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-1-1-0-ruse-88-9-fm",
@@ -468,6 +467,33 @@ window.STATIONS = [
       "https://lb-hls.cdn.bg/2032/fls/Vidin.stream/playlist.m3u8"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "radio-bella",
+    "name": "Radio Bella",
+    "category": "news",
+    "streams": [
+      "https://online.radiobella.com/listen/radio.bella/radio.mp3"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "bulgaria-on-air-103-9-fm",
+    "name": "Радио Bulgaria ON AIR Русе 103.9 FM",
+    "category": "music",
+    "streams": [
+      "https://live.radio.bgonair.bg/RadioBOA"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "petipolk-radio",
+    "name": "PetiPolk Radio",
+    "category": "music",
+    "streams": [
+      "https://cast4.my-control-panel.com/proxy/anatoli1/stream"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

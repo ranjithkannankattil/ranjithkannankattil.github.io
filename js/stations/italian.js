@@ -480,6 +480,33 @@ window.STATIONS = [
       "https://icestreaming.rai.it/13.mp3"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "radio-swiss-pop",
+    "name": "Radio Swiss Pop",
+    "category": "music",
+    "streams": [
+      "https://stream.srg-ssr.ch/srgssr/rsp/aac/96"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "mc2-cafe-del-mar-collection",
+    "name": "MC2 Cafè Del Mar Collection",
+    "category": "music",
+    "streams": [
+      "https://n13a-eu.rcs.revma.com/a2n83wxayk3vv?rj-ttl=5&rj-tok=AAABndIfXksAiTXrqw2SmfAauA"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "radio-popolare-milano",
+    "name": "Radio Popolare Milano",
+    "category": "news",
+    "streams": [
+      "https://livex.radiopopolare.it/radiopop2"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

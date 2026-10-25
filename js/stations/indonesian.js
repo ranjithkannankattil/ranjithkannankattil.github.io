@@ -88,8 +88,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://a8.siar.us/listen/campursari/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "rri-pro-2-92-1-fm-tanjungpinang",
@@ -169,7 +168,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://svara-stream.radioddns.net/yogyakarta_voksradio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "klcbs-new-age",
@@ -325,7 +325,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/14/9314/rrisngliatpro1.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "mosh-head-black-metal-id",
@@ -460,7 +461,8 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:9622/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "rri-pro1-banjarmasin",
@@ -515,6 +517,33 @@ window.STATIONS = [
       "https://stream01-ssl.arenastreaming.com:8043/stream"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "synchronize-radio",
+    "name": "Synchronize Radio",
+    "category": "music",
+    "streams": [
+      "https://streaming.shoutcast.com/synchronizeradio"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "radio-suara-al-iman-846-am-surabaya",
+    "name": "\tRadio Suara Al-Iman 846 AM Surabaya",
+    "category": "music",
+    "streams": [
+      "https://radioislamindonesia.com/aliman.mp3"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "rri-pro-2-bandung",
+    "name": "RRI Pro 2 Bandung",
+    "category": "news",
+    "streams": [
+      "https://stream-node0.rri.co.id/streaming/15/9015/rribandungpro2.mp3"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

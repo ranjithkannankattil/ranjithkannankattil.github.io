@@ -551,6 +551,33 @@ window.STATIONS = [
       "https://icecast.omroep.nl/npoblend-bb-mp3"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "piraten-fm-1",
+    "name": "Piraten.FM - 1",
+    "category": "music",
+    "streams": [
+      "https://piraten.fm/top/1"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "vrt-radio-2-bene-bene",
+    "name": "VRT Radio 2 Bene Bene",
+    "category": "music",
+    "streams": [
+      "https://icecast.vrtcdn.be/radio2_benebene-high.mp3"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "studio-brussel-vuurland",
+    "name": "Studio Brussel - Vuurland",
+    "category": "music",
+    "streams": [
+      "https://icecast.vrtcdn.be/stubru_tgs.aac"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

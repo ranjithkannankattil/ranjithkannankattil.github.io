@@ -8,7 +8,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.convoynetwork.com/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "la-100-99-9-fm-grupo-clarin-buenos-aires",
@@ -512,6 +513,33 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/MIX_BOGOTAAAC.aac"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "le-bon-mix-hifi-flac-1411-kbps",
+    "name": "Le Bon Mix HiFi Flac 1411 Kbps",
+    "category": "music",
+    "streams": [
+      "https://stream10.xdevel.com/audio17s976748-2218/stream/icecast.audio"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "colombia-salsa-dura",
+    "name": "Colombia Salsa Dura",
+    "category": "music",
+    "streams": [
+      "https://play10.tikast.com/proxy/colsalsadura?mp=/stream"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "olimpica-stereo-bogota",
+    "name": "Olímpica Stereo(Bogotá)",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/OLP_BOGOTAAAC.aac"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

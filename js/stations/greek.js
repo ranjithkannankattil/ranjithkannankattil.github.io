@@ -539,6 +539,33 @@ window.STATIONS = [
       "https://fresh.vanillaradio.com:8028/live"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "1st-greek-folk-flac-radio",
+    "name": "1st Greek Folk FLAC Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.newageradio.gr/listen/folk_gr/radio.aac"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "90-5",
+    "name": "ΕΝΑ 90.5",
+    "category": "music",
+    "streams": [
+      "https://rdst.win:48000/stream?type=.mp3"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "focus-103-6",
+    "name": "Focus 103.6",
+    "category": "news",
+    "streams": [
+      "https://ice.greekstream.net/focusfm"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

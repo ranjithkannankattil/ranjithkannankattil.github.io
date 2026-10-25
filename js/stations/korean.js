@@ -322,6 +322,33 @@ window.STATIONS = [
       "https://ebsonairios.ebs.co.kr/plus1familypc/familypc1m/playlist.m3u8"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "gukak-tv",
+    "name": "Gukak TV",
+    "category": "music",
+    "streams": [
+      "https://mgugaklive.nowcdn.co.kr/gugakvideo/gugakvideo.stream/playlist.m3u8"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "96-kool-fm",
+    "name": "96 KOOL FM",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/97qzdqafuqzuv"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "vibe-radio",
+    "name": "Vibe Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/zf0ac4raqy8uv"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

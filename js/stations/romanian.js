@@ -456,6 +456,33 @@ window.STATIONS = [
       "https://live.radioclasic.com/listen/radio_clasic_romanesc/live.mp3"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "clasic-radio-rnb-soul-bucuresti",
+    "name": "Clasic Radio_R’n’B/Soul -București",
+    "category": "music",
+    "streams": [
+      "https://live.radioclasic.com/listen/radio_clasic_rnb/live.mp3"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "romania-antena-satelor",
+    "name": "ROMÂNIA Antena Satelor",
+    "category": "news",
+    "streams": [
+      "https://stream4.srr.ro:8443/antena-satelor"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "radio-greu-de-difuzat",
+    "name": "Radio Greu De Difuzat",
+    "category": "music",
+    "streams": [
+      "https://greudedifuzat.ro/stream/"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

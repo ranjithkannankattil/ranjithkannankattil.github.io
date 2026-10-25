@@ -488,6 +488,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "where": "UK"
+  },
+  {
+    "id": "radio-poland",
+    "name": "Radio Poland",
+    "category": "world",
+    "streams": [
+      "https://stream85.polskieradio.pl/pr5/pr5.sdp/playlist.m3u8"
+    ],
+    "added": "2026-10-25",
+    "where": "Poland"
+  },
+  {
+    "id": "nhyira-104-5-fm",
+    "name": "Nhyira 104.5 FM",
+    "category": "sport",
+    "streams": [
+      "https://mmg.streamguys1.com/NhyiraFM-mp3?key=63d8990dfe4438ae984fd70d2d2b4bd31c842c474987bd810ac0e8e0fd62e8cf2015661105cced63ccfdca89a8422ab1"
+    ],
+    "added": "2026-10-25",
+    "where": "Ghana"
+  },
+  {
+    "id": "rokit-radio-comedy-gold",
+    "name": "ROKit Radio : Comedy Gold",
+    "category": "comedy",
+    "streams": [
+      "https://streaming06.liveboxstream.uk/proxy/rokstar8/stream"
+    ],
+    "added": "2026-10-25",
+    "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

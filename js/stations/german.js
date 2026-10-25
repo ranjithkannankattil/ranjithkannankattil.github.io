@@ -517,6 +517,33 @@ window.STATIONS = [
       "https://blasmusikradiomitbernd.stream.laut.fm/blasmusikradio_mit_bernd?t302=2026-10-22_11-14-48&uuid=1c862183-4ad1-31ac-d614-244ec1af5ae8"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "wdr-cosmo",
+    "name": "WDR COSMO",
+    "category": "music",
+    "streams": [
+      "https://wdr-cosmo-live.icecast.wdr.de/wdr/cosmo/live/mp3/128/stream.mp3"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "vintage-radio",
+    "name": "Vintage Radio",
+    "category": "music",
+    "streams": [
+      "https://vintageradio.ice.infomaniak.ch/vintageradio-high.mp3"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "ndr-2-hamburg",
+    "name": "NDR 2 Hamburg",
+    "category": "music",
+    "streams": [
+      "https://icecast.ndr.de/ndr/ndr2/hamburg/mp3/128/stream.mp3?1728423809880&aggregator=web"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

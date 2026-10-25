@@ -485,6 +485,33 @@ window.STATIONS = [
       "https://anadolu.liderhost.com.tr/9404/stream"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "radyo-karadeniz",
+    "name": "Radyo Karadeniz",
+    "category": "music",
+    "streams": [
+      "https://radyomar.80.yayin.com.tr/;"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "trt-trabzon",
+    "name": "TRT Trabzon",
+    "category": "music",
+    "streams": [
+      "https://radio-trttrabzon.medya.trt.com.tr/master.m3u8"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "dinamo-fm-legacy",
+    "name": "dinamo.fm legacy",
+    "category": "music",
+    "streams": [
+      "https://channels.dinamo.fm/legacy-mp3"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

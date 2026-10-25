@@ -523,6 +523,33 @@ window.STATIONS = [
       "https://enacast.com/radiocornella/streams/SD"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "radio-ulldecona",
+    "name": "Ràdio Ulldecona",
+    "category": "music",
+    "streams": [
+      "https://enacast.com/radioulldecona/streams/HD"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "radio-vilafant",
+    "name": "Radio Vilafant",
+    "category": "music",
+    "streams": [
+      "https://sonic.mediatelekom.net/9986/stream"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "radio-gava",
+    "name": "Ràdio Gavà",
+    "category": "music",
+    "streams": [
+      "https://enacast.com/radiogava/streams/SD"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

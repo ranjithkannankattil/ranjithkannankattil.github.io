@@ -483,6 +483,33 @@ window.STATIONS = [
       "https://centova.dukahosting.com/proxy/021domaca/stream"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "station-3",
+    "name": "РТС - Радио Београд - Вртешка",
+    "category": "music",
+    "streams": [
+      "https://rtsradio-live.morescreens.com/RTS_2_008/audio/chunklist.m3u8"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "radio-s3-narodni",
+    "name": "Radio S3 Narodni",
+    "category": "music",
+    "streams": [
+      "https://stream.radios.rs:9016/;"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "nas-radio-107-80-zabalj",
+    "name": "Nas Radio 107,80 Zabalj",
+    "category": "music",
+    "streams": [
+      "https://radio.dukahosting.com:7043/;"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

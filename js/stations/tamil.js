@@ -521,6 +521,33 @@ window.STATIONS = [
       "https://azuracast.vibesounds.in:8030/radio.mp3"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "g-tamil-fm",
+    "name": "G Tamil Fm",
+    "category": "music",
+    "streams": [
+      "https://gtr-unicast2u.radioca.st/stream"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "covai-fm",
+    "name": "Covai FM",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/kzd2e3tx24zuv"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "ajithfm",
+    "name": "Ajithfm",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/ntkhu40k17zuv"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

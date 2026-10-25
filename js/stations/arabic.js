@@ -240,8 +240,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://fm.alarabiya.net/fm/myStream/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "rayan-fm",
@@ -512,6 +511,33 @@ window.STATIONS = [
       "https://webradio1.tda.dz:8001/Chaine1_64K.mp3"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "station-12",
+    "name": "صوت المقاومة",
+    "category": "news",
+    "streams": [
+      "https://stream.zeno.fm/b67qheuk54zuv"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "station-13",
+    "name": "رحبانيات",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/4g8xck48kfhvv"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "algerie-internationale",
+    "name": "Algérie Internationale الجزائر الدولية",
+    "category": "news",
+    "streams": [
+      "https://webradio3.tda.dz:8001/Internationale_64K.mp3"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

@@ -187,7 +187,8 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://islamicbulletin.site:8030/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "gv-99-1",
@@ -478,6 +479,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/hqmmdrw2b48uv?aw_0_req_lsid=213084d0938e3fc5344aa1adb0f8fb3a&triton-uid=cookie%3A7cebc1db-d1a7-403b-87ca-ccba0eb42e6b"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "marino-news-fm-zamboanga",
+    "name": "Marino News FM Zamboanga",
+    "category": "news",
+    "streams": [
+      "https://stream.zeno.fm/4xq4cb6x6k0uv"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "taps-radio-alicia",
+    "name": "TAPS RADIO ALICIA",
+    "category": "music",
+    "streams": [
+      "https://us1.amfmph.com/ssl/tapsradi?mp=/stream&1642337283814"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "kizzfm-uk-90-9",
+    "name": "KizzFM UK 90.9",
+    "category": "music",
+    "streams": [
+      "https://azura.kizzfmuk90-9.com/listen/kizzfmuk/radio.mp3?1689855016244"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";

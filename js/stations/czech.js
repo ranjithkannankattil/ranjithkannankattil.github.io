@@ -521,6 +521,33 @@ window.STATIONS = [
       "https://ice.abradio.cz/fajnfresh128.mp3"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "cro-d-dur",
+    "name": "ČRo D-dur",
+    "category": "music",
+    "streams": [
+      "https://rozhlas.stream/ddur.mp3"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "county",
+    "name": "County",
+    "category": "music",
+    "streams": [
+      "https://icecast4.play.cz/country128.mp3"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "fresh-radio-103-6",
+    "name": "Fresh radio 103.6",
+    "category": "music",
+    "streams": [
+      "https://icecast.beatzone.cz/radio/8000/128.mp3"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T05:40Z";
+window.STATIONS_CHECKED = "2026-10-25T17:31Z";
