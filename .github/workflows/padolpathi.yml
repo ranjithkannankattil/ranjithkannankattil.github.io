@@ -6,7 +6,7 @@ on:
   schedule:
     - cron: "17 4 * * *"          # daily, 04:17 UTC
   push:
-    branches: [main, padolpathi]   # padolpathi: draft branch, remove before merging
+    branches: [main]
     paths: [scripts/import_padolpathi.py, scripts/build_padolpathi.py, .github/workflows/padolpathi.yml]
   workflow_dispatch: {}
 

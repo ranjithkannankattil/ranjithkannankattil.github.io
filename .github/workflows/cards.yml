@@ -6,7 +6,10 @@ name: Link-preview cards
 on:
   push:
     branches: [main]
-    paths: [js/posts.js, scripts/build_cards.py, .github/workflows/cards.yml]
+    paths: [js/posts.js, scripts/build_cards.py, scripts/padolpathi.json, .github/workflows/cards.yml]
+  workflow_run:                  # new Padolpathi words synced from WordPress need cards too
+    workflows: [Padolpathi]
+    types: [completed]
   workflow_dispatch: {}
 
 permissions:

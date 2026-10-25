@@ -45,6 +45,8 @@ SECTIONS = [
      "Plan phases, tasks and milestones, then download as Excel, PDF or an image.", "#5C4D7D", None),
     ("publications", ["publications.html"], "Publications", "Books and papers",
      "Malayalam essays and poetry, two free to download, and a paper from graduate research.", "#6B2740", None),
+    ("padolpathi", [], "Padolpathi", "പദോൽപത്തി — where Malayalam words come from",
+     "Notes on the roots of Malayalam words, written with the help of AI.", "#66702A", "#4E561F"),
     ("privacy", ["privacy.html"], "Privacy", "What this site stores, and why",
      "And how to have it removed.", "#2E4374", None),
 ]
@@ -128,6 +130,31 @@ def draw_card(out, kicker, title, sub, accent, accent_text=None, foot_right=""):
 
 def h8(*parts):
     return hashlib.sha1(json.dumps([DESIGN_V, *parts], ensure_ascii=False).encode()).hexdigest()[:8]
+
+
+def section_card_name(key):
+    for k, _pages, kicker, title, sub, accent, _at in SECTIONS:
+        if k == key:
+            return f"{k}-{h8(kicker, title, sub, accent)}.jpg"
+    raise KeyError(key)
+
+
+# ------------------------------------------------------------------ padolpathi words
+PD_ACCENT, PD_TEXT = "#66702A", "#4E561F"
+
+
+def padolpathi_words():
+    f = ROOT / "scripts/padolpathi.json"
+    return json.loads(f.read_text(encoding="utf-8")) if f.exists() else []
+
+
+def padolpathi_sub(w):
+    t = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", w["html"]))).strip()
+    return re.sub(r"\s*\[\d+\](\[\d+\])*", "", t)[:220]
+
+
+def padolpathi_card_name(w):
+    return f"padolpathi-{w['id']}-{h8(w['title'], padolpathi_sub(w), PD_ACCENT)}.jpg"
 
 
 # ------------------------------------------------------------------ posts
@@ -235,9 +262,15 @@ def main():
     for f in wdir.glob("*.html"):           # posts that were removed
         if f.name not in keep:
             f.unlink()
+    for w in padolpathi_words():
+        img = out / "cards" / padolpathi_card_name(w)
+        if not pages_only and not img.exists():
+            draw_card(img, "Ranjith Kannankattil · പദോൽപത്തി", w["title"], padolpathi_sub(w), PD_ACCENT, PD_TEXT,
+                      "Written with AI")
+            drawn += 1
     changed = 0
     for key, pages, kicker, title, sub, accent, accent_text in SECTIONS:
-        name = f"{key}-{h8(kicker, title, sub, accent)}.jpg"
+        name = section_card_name(key)
         if not pages_only and not (out / "sections" / name).exists():
             draw_card(out / "sections" / name, "Ranjith Kannankattil · " + kicker, title, sub, accent, accent_text)
             drawn += 1
