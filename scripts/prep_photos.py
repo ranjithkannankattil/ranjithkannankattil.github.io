@@ -1,6 +1,6 @@
 """Make web images for new photos and print their photos.json entries.
 
-    python3 -I scripts/prep_photos.py <place> <yyyy-mm> <original.jpg> [...]
+    python3 scripts/prep_photos.py <place> <yyyy-mm> <original.jpg> [...]
 
 For each original (in the order given): trims a plain white print border, writes
 assets/photos/web/<place>-<yyyy-mm>-<nn>-800.webp and a full-size copy (at most 1600 px wide),
