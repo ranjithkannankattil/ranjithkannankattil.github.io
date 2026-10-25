@@ -157,3 +157,32 @@ test("upgradeToGoogle links an anonymous account, or signs in when the Google ac
   await upgradeToGoogle({ currentUser: { isAnonymous: true } }, A, provider);
   assert.deepEqual(log, ["link", "signin", "cred:C"]);
 });
+
+test("upgradeToGoogle inside the iPhone app signs in with the app's tokens", async () => {
+  const { upgradeToGoogle } = await import("../../js/radio-ratings-core.js");
+  const log = [];
+  const A = {
+    linkWithPopup: async () => { log.push("popup!"); },
+    signInWithPopup: async () => { log.push("popup!"); },
+    linkWithCredential: async (u, c) => { log.push("link:" + c); },
+    signInWithCredential: async (a, c) => { log.push("cred:" + c); },
+    GoogleAuthProvider: { credential: (id, at) => `${id}/${at}`, credentialFromError: () => null },
+  };
+  let reply = { idToken: "ID", accessToken: "AT" };
+  globalThis.Capacitor = {
+    isNativePlatform: () => true, getPlatform: () => "ios",
+    isPluginAvailable: (n) => n === "RadioAuth",
+    nativePromise: async () => { if (reply === "cancel") throw new Error("cancelled"); return reply; },
+  };
+  try {
+    await upgradeToGoogle({ currentUser: null }, A, {});                     // signed out
+    await upgradeToGoogle({ currentUser: { isAnonymous: true } }, A, {});    // had rated anonymously
+    A.linkWithCredential = async () => { throw Object.assign(new Error("x"), { code: "auth/credential-already-in-use" }); };
+    await upgradeToGoogle({ currentUser: { isAnonymous: true } }, A, {});    // Google account already used
+    reply = "cancel";
+    await upgradeToGoogle({ currentUser: null }, A, {});                     // closed the sheet: no error
+    assert.deepEqual(log, ["cred:ID/AT", "link:ID/AT", "cred:ID/AT"]);
+    globalThis.Capacitor.isPluginAvailable = () => false;                     // old app without sign-in
+    await assert.rejects(upgradeToGoogle({ currentUser: null }, A, {}), (e) => e.code === "app/update-needed");
+  } finally { delete globalThis.Capacitor; }
+});

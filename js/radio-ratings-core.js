@@ -119,11 +119,45 @@ export function createRatings({ auth, db, A, F }) {
   };
 }
 
+// Inside the iPhone Radio app there are no popups and Google refuses sign-in in an app's
+// built-in browser, so the app signs in through Apple's secure sign-in sheet (its RadioAuth
+// plugin, which opens auth-app.html) and hands back Google tokens to sign in with here.
+function inIOSApp() {
+  const C = globalThis.Capacitor;
+  return !!(C && C.isNativePlatform && C.isNativePlatform() && C.getPlatform && C.getPlatform() === "ios");
+}
+async function appCredential(A) {
+  const C = globalThis.Capacitor;
+  if (!C.isPluginAvailable || !C.isPluginAvailable("RadioAuth")) {
+    const e = new Error("This version of the app can't sign in"); e.code = "app/update-needed"; throw e;
+  }
+  let r;
+  try { r = await C.nativePromise("RadioAuth", "signIn", {}); }
+  catch (e) { const x = new Error("cancelled"); x.code = "auth/popup-closed-by-user"; x.cause = e; throw x; }
+  if (!r || (!r.idToken && !r.accessToken)) { const x = new Error("cancelled"); x.code = "auth/popup-closed-by-user"; throw x; }
+  return A.GoogleAuthProvider.credential(r.idToken || null, r.accessToken || null);
+}
+
 // Google sign-in from a browser that already has an anonymous ID: link the two, so ratings
 // and comments made anonymously stay with the person. If that Google account already exists
 // elsewhere, sign in to it instead. A blocked popup falls back to a full-page redirect.
 export async function upgradeToGoogle(auth, A, provider) {
   const anon = auth.currentUser && auth.currentUser.isAnonymous;
+  if (inIOSApp()) {
+    let cred;
+    try { cred = await appCredential(A); }
+    catch (e) { if (e.code === "auth/popup-closed-by-user") return; throw e; }
+    try {
+      if (anon) await A.linkWithCredential(auth.currentUser, cred);
+      else await A.signInWithCredential(auth, cred);
+    } catch (e) {
+      const code = e && e.code;
+      if (anon && (code === "auth/credential-already-in-use" || code === "auth/email-already-in-use")) {
+        await A.signInWithCredential(auth, A.GoogleAuthProvider.credentialFromError(e) || cred);
+      } else throw e;
+    }
+    return;
+  }
   try {
     if (anon) await A.linkWithPopup(auth.currentUser, provider);
     else await A.signInWithPopup(auth, provider);

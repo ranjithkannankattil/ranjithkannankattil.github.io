@@ -8,7 +8,7 @@ if (cfg && cfg.apiKey && box) {
   const note = document.getElementById("acctNote");
   if (note) note.hidden = false;
   const V = "10.12.2";
-  const { upgradeToGoogle } = await import("./radio-ratings-core.js");
+  const { upgradeToGoogle } = await import("./radio-ratings-core.js?v=2");
   const [{ initializeApp, getApps, getApp }, A, F] = await Promise.all([
     import(`https://www.gstatic.com/firebasejs/${V}/firebase-app.js`),
     import(`https://www.gstatic.com/firebasejs/${V}/firebase-auth.js`),
@@ -51,7 +51,12 @@ if (cfg && cfg.apiKey && box) {
   // keeps any station ratings made before signing in (see upgradeToGoogle)
   async function signIn() {
     try { await upgradeToGoogle(auth, A, provider); }
-    catch { alertBox("Couldn't sign in — please try again."); return; }
+    catch (e) {
+      alertBox(e && e.code === "app/update-needed"
+        ? "This version of the app can't sign in yet — install the updated Radio app."
+        : "Couldn't sign in — please try again.");
+      return;
+    }
     // linking an anonymous ID keeps the same account, so no sign-in event fires: pick it up here
     await onUser(auth.currentUser);
   }
