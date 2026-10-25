@@ -1,5 +1,5 @@
 /* AUTO-GENERATED. Blog posts from Blogger Takeout (2026-08-12) + reviewed Facebook posts (2026-08-13), de-duplicated (>90% similarity) on 2026-08-13. */
-/* 123 blog posts + 242 Facebook posts = 365 total. */
+/* 123 blog posts + 242 Facebook posts = 365 total. Site articles added since. */
 const POSTS = [
  {
   "slug": "blog-post_27-1",
@@ -9356,6 +9356,93 @@ const POSTS = [
   "body": [
    "32 വർഷം ഗ്ലോബൽ എക്സ്പോഷർ കാര്യമായി ഇല്ലാതിരുന്ന ഒരാളാണ് ഞാൻ. ആദ്യമായി എന്റെ പാസ്പോർട്ടിൽ ഒരു സ്റ്റാമ്പ് പതിയുന്നത് ഈ വർഷം ജൂണിൽ ഹ്യൂസ്റ്റണിലേക്ക് പോയപ്പോഴാണ്. അതിനു ശേഷം നാലഞ്ച് രാജ്യങ്ങൾ സന്ദർശിക്കാനും, ഇറ്റലിയിലേയ്ക്ക് താമസം മാറാനും കഴിഞ്ഞു.",
    "യാത്രകളെ ഏറെ ഇഷ്ടപ്പെടുന്ന എനിക്ക് ലഭിച്ച ഏറ്റവും വലിയ ഭാഗ്യമായാണ് ഇതിനെയെല്ലാം കാണുന്നത്. ഈ ഒരു ഗ്രാറ്റിറ്റ്യൂഡോടെയാണ് ഞാൻ 2024നോട് വിട പറയാൻ തയ്യാറാകുന്നത്... നിങ്ങളോ?"
+  ],
+  "source_url": ""
+ },
+ {
+  "slug": "artcraft-ml",
+  "title_ml": "ആർട്ട്ക്രാഫ്റ്റ്: അഡോബിക്ക് ഒരു ഫ്രീ ബദൽ",
+  "title_en": "ArtCraft: The Free Suite Taking Aim at Adobe",
+  "date": "2026-10-25",
+  "source": "site",
+  "blog": "ranjithkb.com",
+  "tags": [
+   "ലേഖനം",
+   "സാങ്കേതികം"
+  ],
+  "body": [
+   "ഈ ലേഖനം എഴുതിയത് Claude ആണ് (Anthropic നിർമ്മിച്ച AI).",
+   "ഫോട്ടോഷോപ്പിനും പ്രീമിയറിനും ലൈറ്റ്‌റൂമിനുമൊക്കെ മാസാമാസം പണം അടച്ചു മടുത്തോ? എങ്കിൽ ആർട്ട്ക്രാഫ്റ്റ് (ArtCraft) ഒന്ന് നോക്കാം.",
+   "കുറേ വർഷങ്ങളായി ഡിസൈനർമാരുടെയും ഫോട്ടോഗ്രാഫർമാരുടെയും വീഡിയോ എഡിറ്റർമാരുടെയും അവസ്ഥ ഇതാണ്: പണി ചെയ്യാനുള്ള ടൂളുകൾ സ്വന്തമല്ല, വാടകയ്ക്കാണ്. അഡോബിയുടെ സബ്സ്ക്രിപ്ഷൻ നിർത്തിയാൽ പിന്നെ ആപ്പുമില്ല. ഇതിനൊരു മറുപടിയായാണ് ആർട്ട്ക്രാഫ്റ്റ് വരുന്നത്. അഡോബിയുടെ പ്രധാന ആപ്പുകൾക്ക് പകരം ഉപയോഗിക്കാവുന്ന, ഫ്രീയും ഓപ്പൺ സോഴ്സുമായ ഒരു കൂട്ടം ആപ്പുകൾ. വിൻഡോസിലും മാക്കിലും ലിനക്സിലും ഓടും.",
+   "◆ എന്തൊക്കെയാണ് ഉള്ളത്?",
+   "ഒറ്റ ആപ്പല്ല, ഒരു കൂട്ടമാണ്. പേര് കേട്ടാൽ തന്നെ ഏതിനു പകരമാണെന്ന് പിടികിട്ടും. അഡോബിയുടെ കോഡ് ഒന്നും എടുക്കാതെ, അതേ കാര്യങ്ങൾ ചെയ്യുന്ന ആപ്പുകൾ ആദ്യം മുതൽ എഴുതിയുണ്ടാക്കിയതാണ് — \"ക്ലീൻ-റൂം\" രീതി എന്നാണ് ഇതിനെ പറയുന്നത്. വേഗതയ്ക്കും സുരക്ഷയ്ക്കും പേരുകേട്ട Rust എന്ന പ്രോഗ്രാമിങ് ഭാഷയിലാണ് എല്ലാം.",
+   "PhotoCraft — ഫോട്ടോഷോപ്പിന് പകരം. ലെയറുകൾ, മാസ്കുകൾ, ടെക്സ്റ്റ് എല്ലാമുണ്ട്. PSD ഫയലുകളും തുറക്കാം.",
+   "LightCraft — ലൈറ്റ്‌റൂമിന് പകരം. ഫോട്ടോകൾ അടുക്കി വെക്കാനും RAW ഫയലുകൾ എഡിറ്റ് ചെയ്യാനും; എല്ലാം സ്വന്തം കമ്പ്യൂട്ടറിൽ തന്നെ.",
+   "VectorCraft — ഇല്ലസ്ട്രേറ്ററിന് പകരം.",
+   "FilmCraft — പ്രീമിയർ പ്രോയ്ക്ക് പകരം, വീഡിയോ എഡിറ്റിങ്ങിന്.",
+   "EffectCraft — ആഫ്റ്റർ ഇഫക്ട്സിന് പകരം, മോഷൻ ഗ്രാഫിക്സിന്.",
+   "DesignCraft — ഇൻഡിസൈനിന് പകരം, പേജ് ലേഔട്ടിന്.",
+   "PdfCraft — അക്രോബാറ്റിന് പകരം. PDF വായിക്കാം, കൂട്ടിച്ചേർക്കാം, മുറിക്കാം, പാസ്‌വേഡ് ഇടാം.",
+   "അഡോബിയിൽ മാത്രം നിൽക്കുന്നില്ല. വേഡ്, എക്സൽ, പവർപോയിന്റ് എന്നിവയ്ക്ക് പകരം WordCraft, GridCraft, DeckCraft; ഓട്ടോകാഡിന് പകരം CADCraft; ഓഡിയോയ്ക്ക് SoundCraft; ഫിഗ്മയ്ക്ക് പകരം FigCraft. ലിസ്റ്റ് നീളുകയാണ്.",
+   "◆ ശരിക്കും ഫ്രീ ആണോ?",
+   "എഡിറ്റിങ് ആപ്പുകൾക്ക് പൈസ വേണ്ട, അക്കൗണ്ട് ഉണ്ടാക്കുകയും വേണ്ട. കോഡ് ഓപ്പൺ സോഴ്സാണ് (MIT / Apache 2.0 ലൈസൻസ്). ആർക്കും വായിക്കാം, മാറ്റം വരുത്താം.",
+   "പിന്നെ എങ്ങനെ പണമുണ്ടാക്കും? ആപ്പിനുള്ളിൽ AI ഉപയോഗിക്കണമെങ്കിൽ അതിന് പണം കൊടുക്കണം. അതായത്, സാധാരണ എഡിറ്റിങ് ഫ്രീ; AI വേണ്ടവർ മാത്രം പണം കൊടുത്താൽ മതി.",
+   "◆ മാക്കിൽ എങ്ങനെ ഇൻസ്റ്റാൾ ചെയ്യാം",
+   "1. എളുപ്പവഴി ArtCraft Launcher ആണ്. ഓരോ ആപ്പും GitHub-ൽ നിന്ന് ഡൗൺലോഡ് ചെയ്ത്, ഫയൽ ശരിയാണോ എന്ന് പരിശോധിച്ച ശേഷമാണ് ഇത് ഇൻസ്റ്റാൾ ചെയ്യുന്നത്.",
+   "2. അല്ലെങ്കിൽ getartcraft.com-ൽ നിന്നോ GitHub-ലെ storytold പേജുകളിൽ നിന്നോ ആവശ്യമുള്ള ആപ്പ് മാത്രം എടുക്കാം. M1/M2/M3 പോലുള്ള ആപ്പിൾ ചിപ്പുള്ള മാക് ആണെങ്കിൽ universal അല്ലെങ്കിൽ arm64 എന്നെഴുതിയ .dmg ഫയൽ എടുക്കുക.",
+   "3. ആപ്പ് Applications ഫോൾഡറിലേക്ക് വലിച്ചിടുക. ആദ്യം തുറക്കുമ്പോൾ മാക് തടഞ്ഞാൽ System Settings → Privacy & Security-ൽ പോയി \"Open Anyway\" അമർത്തുക.",
+   "ഒരു കാര്യം ശ്രദ്ധിക്കണം: ഇതേ പേരിൽ \"AI Art Generator: ArtCraft\" എന്നൊരു ഐഫോൺ ആപ്പുണ്ട്. അതിന് ഇതുമായി ബന്ധമില്ല.",
+   "◆ പക്ഷേ, ഒരു കുഴപ്പമുണ്ട്",
+   "ഇതെല്ലാം ഇപ്പോഴും പണിപ്പുരയിലാണ് (alpha). PSD ഫയൽ സേവ് ചെയ്യുമ്പോൾ അത് മാറിപ്പോയേക്കാം, പ്ലഗിനുകൾ ഇല്ല, ബഗ്ഗുകൾ ഉറപ്പ്.",
+   "അതുകൊണ്ട് ഒറിജിനൽ ഫയലുകളിൽ നേരിട്ട് പണിയരുത്; ഒരു കോപ്പി എടുത്തിട്ട് മതി. അഡോബ് സബ്സ്ക്രിപ്ഷൻ ഉടനെ നിർത്താനും നിൽക്കണ്ട. തൽക്കാലം ഒരു കൂട്ടായി ഉപയോഗിച്ചു നോക്കാം.",
+   "◆ എന്നാലും എന്തിന് ശ്രദ്ധിക്കണം?",
+   "ഇന്നത്തെ നിലയിൽ ഫോട്ടോഷോപ്പിനെ തോൽപ്പിക്കാൻ ആർട്ട്ക്രാഫ്റ്റിന് ആവില്ല. പക്ഷേ, വലിയ കമ്പനികളുടെ സബ്സ്ക്രിപ്ഷൻ കെണിക്ക് പുറത്ത്, സ്വന്തം കമ്പ്യൂട്ടറിൽ ഓടുന്ന ഗൗരവമുള്ള ഒരു ബദൽ സാധ്യമാണെന്ന് ഇത് കാണിച്ചുതരുന്നു.",
+   "വിദ്യാർത്ഥികൾക്കും ഹോബിയായി ചെയ്യുന്നവർക്കും ഒന്ന് പരീക്ഷിച്ചു നോക്കാൻ ഇത് ധാരാളം. ഡൗൺലോഡ് ചെയ്യൂ, കളിച്ചു നോക്കൂ, ബഗ്ഗ് കണ്ടാൽ റിപ്പോർട്ട് ചെയ്യൂ.",
+   "സ്രോതസ്സുകൾ: pasqualepillitteri.it (ArtCraft ഡൗൺലോഡ് പേജ്), korben.info, smartworld.it, tech-insider.org"
+  ],
+  "source_url": ""
+ },
+ {
+  "slug": "artcraft-en",
+  "title_ml": "ArtCraft: The Free Suite Taking Aim at Adobe",
+  "title_en": "",
+  "date": "2026-10-25",
+  "source": "site",
+  "blog": "ranjithkb.com",
+  "tags": [
+   "ലേഖനം",
+   "സാങ്കേതികം"
+  ],
+  "body": [
+   "This article was written by Claude, an AI made by Anthropic.",
+   "Somewhere, a Creative Cloud invoice just landed in an inbox. And somewhere else, a free download button is quietly waiting.",
+   "For over a decade, creative work has come with a monthly bill. Photoshop, Premiere, Lightroom, Illustrator: the tools of the trade became a subscription you never stop paying. ArtCraft wants to break that habit. It is a free, open-source suite of desktop apps built to stand in for Adobe's heavy hitters, and it runs on Windows, Mac and Linux.",
+   "◆ Meet the Crafts",
+   "ArtCraft is not one app but a whole toolbox, each piece named so you know exactly what it is gunning for. Its creator calls it a \"clean-room\" reimplementation: the apps recreate what Adobe's software does without copying a line of its code or assets. Everything is written in Rust, a language prized for speed and safety.",
+   "PhotoCraft — stands in for Photoshop. Layers, masks, adjustment layers, text and real PSD files.",
+   "LightCraft — stands in for Lightroom. Photo library and RAW development on your own machine.",
+   "VectorCraft — stands in for Illustrator, for vector illustration.",
+   "FilmCraft — stands in for Premiere Pro, for desktop video editing.",
+   "EffectCraft — stands in for After Effects, for motion graphics and visual effects.",
+   "DesignCraft — stands in for InDesign, for layout and publishing.",
+   "PdfCraft — stands in for Acrobat Pro. Read, organise, merge, split and protect PDFs.",
+   "The ambition does not stop at Adobe. The family has grown to include WordCraft, GridCraft and DeckCraft for Word, Excel and PowerPoint files, CADCraft for AutoCAD-style drafting, SoundCraft for audio and FigCraft for interface design.",
+   "◆ Free Means Free (Mostly)",
+   "Here is the twist: the editing apps cost nothing and ask for no account. The code is released under the MIT or Apache 2.0 licences, so anyone can read it, fork it or improve it.",
+   "So how does anyone get paid? The team plans to sell access to its own AI model, offered inside the apps alongside third-party models. Edit for free; pay only if you want generative AI doing some of the work. It is a neat inversion of the usual deal, where the basics are locked and the extras are bundled in.",
+   "◆ Up and Running on a Mac in Minutes",
+   "Getting started takes less time than a Creative Cloud login screen.",
+   "1. Use the ArtCraft Launcher. It is signed by Learning Machines LLC, pulls each app from its official GitHub release and checks the file's SHA-256 fingerprint before installing.",
+   "2. Or grab apps one by one from getartcraft.com or the official storytold repositories on GitHub. On Apple Silicon Macs, choose the macOS .dmg marked universal or arm64.",
+   "3. Drag the app into Applications. If macOS blocks the first launch, open System Settings → Privacy & Security and click \"Open Anyway.\"",
+   "One word of caution: an unrelated iPhone app called \"AI Art Generator: ArtCraft\" shares the name. Stick to the official sources above.",
+   "◆ The Fine Print: It's Still an Alpha",
+   "Before you cancel anything, a reality check. These are early alpha builds. Saving a PSD can alter the file, plugins are not supported yet, and missing features and bugs come with the territory.",
+   "The golden rule: work on copies of your files, never the originals. Treat ArtCraft as something to explore alongside your current tools, not a replacement for them on day one.",
+   "◆ Why It Matters Anyway",
+   "ArtCraft does not have to beat Photoshop tomorrow to matter today. It proves that a serious, open alternative to the subscription giants can exist, run natively on your own computer and grow in public with every release.",
+   "For students, hobbyists and anyone tired of paying rent on their creativity, that is worth a download. Install it, poke around, report a bug or two, and watch this space. The Crafts are coming.",
+   "Sources: pasqualepillitteri.it (ArtCraft apps download page), korben.info, smartworld.it, tech-insider.org"
   ],
   "source_url": ""
  }

@@ -52,7 +52,7 @@
   if (p.u) { const o = el("a", null, "Original ↗"); o.href = p.u; o.target = "_blank"; o.rel = "noopener"; tools.append(o); }
   head.append(tools);
   const body = el("div", "post-body" + (form === "Poem" || p.v ? " poem" : ""));
-  body.lang = "ml";
+  body.lang = /[\u0D00-\u0D7F]/.test(p.t) ? "ml" : "en";
   body.append(el("p", "loading", "…"));
   main.replaceChildren(head, body);
 
