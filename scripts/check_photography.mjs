@@ -115,6 +115,22 @@ const checks = {
   },
 };
 
+checks['old link forwards'] = async () => {
+  const p = await open('/photography.html#tenby-4');
+  await p.waitForTimeout(600);
+  const v = await viewer(p);
+  ok(p.url().endsWith('/photography/tenby/2026-08/#4') && v.open && /04 \/ 19/.test(v.no), `photography.html#tenby-4 → Tenby photo 4 (${p.url()})`);
+  await p.close();
+  const q = await open('/photography.html#9');
+  await q.waitForTimeout(600);
+  ok(q.url().endsWith('/photography/florence/2026-04/#7') && (await viewer(q)).cap === 'Coronas Café, Firenze', `old Florence #9 → same photo, now #7 (${q.url()})`);
+  await q.close();
+  const r = await open('/photography.html');
+  await r.waitForTimeout(600);
+  ok(r.url().endsWith('/photography/'), `photography.html → /photography/ (${r.url()})`);
+  await r.close();
+};
+
 for (const [name, fn] of Object.entries(checks)) {
   try { await fn(); } catch (e) { ok(false, `${name}: ${e.message.split('\n')[0]}`); }
 }

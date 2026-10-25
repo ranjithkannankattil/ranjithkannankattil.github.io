@@ -6,7 +6,7 @@
     { id: "home", label: "Home", href: "index.html" },
     { label: "Creative", items: [
       { id: "writings", label: "Writings", desc: "Malayalam prose and poetry, 2009–2024", href: "writings.html" },
-      { id: "photography", label: "Photography", desc: "Street photography", href: "photography.html" },
+      { id: "photography", label: "Photography", desc: "Street photography", href: "photography/" },
       { id: "publications", label: "Publications", desc: "Three books and a paper", href: "publications.html" },
     ] },
     { label: "Tools", items: [
