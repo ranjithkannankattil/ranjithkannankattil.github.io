@@ -82,3 +82,21 @@ jobs:
             --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --latest \
             --title "Radio app 1.0.${GITHUB_RUN_NUMBER}" \
             --notes "Android app for ranjithkb.com/radio. Download Radio.apk, open it, and allow installs from your browser when asked."
+
+  ios-compile-check:
+    # Compiles the iPhone app (no signing) so Swift mistakes show up here, not in Xcode.
+    runs-on: macos-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build for the iOS simulator
+        run: |
+          npm ci
+          npx cap sync ios
+          xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Debug \
+            -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' \
+            CODE_SIGNING_ALLOWED=NO build | tail -30
+          test ${PIPESTATUS[0]} -eq 0

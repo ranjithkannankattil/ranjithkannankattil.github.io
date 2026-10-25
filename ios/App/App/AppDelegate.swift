@@ -15,7 +15,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } catch {
             try? AVAudioSession.sharedInstance().setCategory(.playback)
         }
+        // Calls, Siri, alarms: tell the Radio page when they start and end, so the station
+        // pauses for the call and comes back on when iOS says it may resume.
+        NotificationCenter.default.addObserver(self, selector: #selector(audioInterrupted(_:)),
+            name: AVAudioSession.interruptionNotification, object: AVAudioSession.sharedInstance())
         return true
+    }
+
+    @objc private func audioInterrupted(_ note: Notification) {
+        guard let info = note.userInfo,
+              let raw = info[AVAudioSessionInterruptionTypeKey] as? UInt,
+              let type = AVAudioSession.InterruptionType(rawValue: raw) else { return }
+        switch type {
+        case .began:
+            sendToPage("radio:interruption-began")
+        case .ended:
+            let opts = AVAudioSession.InterruptionOptions(rawValue: info[AVAudioSessionInterruptionOptionKey] as? UInt ?? 0)
+            guard opts.contains(.shouldResume) else { return }   // e.g. another music app took over
+            // Give the call's audio a moment to let go, then take the session back and resume.
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                try? AVAudioSession.sharedInstance().setActive(true)
+                self.sendToPage("radio:interruption-ended")
+            }
+        @unknown default:
+            break
+        }
+    }
+
+    private func sendToPage(_ event: String) {
+        DispatchQueue.main.async {
+            for scene in UIApplication.shared.connectedScenes {
+                guard let ws = scene as? UIWindowScene else { continue }
+                for w in ws.windows {
+                    (w.rootViewController as? CAPBridgeViewController)?.bridge?.triggerWindowJSEvent(eventName: event)
+                }
+            }
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
