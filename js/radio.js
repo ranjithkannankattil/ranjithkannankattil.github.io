@@ -822,11 +822,9 @@
     for (const [a, d] of [["nexttrack", 1], ["previoustrack", -1]]) {
       try { navigator.mediaSession.setActionHandler(a, () => skip(d, true)); } catch { /* not supported */ }
     }
-    // some cars only send seek buttons: treat them as next / previous too. Not on iPhone/iPad:
-    // there seek handlers replace the lock screen's next/previous with "skip 10 s" arrows,
-    // and CarPlay already sends next/previous.
-    const iOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || (/Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints > 1);
-    if (!iOS) for (const [a, d] of [["seekforward", 1], ["seekbackward", -1]]) {
+    // some cars only send seek buttons, and iPhones show "10 s" arrows on the lock screen for
+    // web radio whatever the page asks for: either way they change station.
+    for (const [a, d] of [["seekforward", 1], ["seekbackward", -1]]) {
       try { navigator.mediaSession.setActionHandler(a, () => skip(d, true)); } catch { /* not supported */ }
     }
     try { navigator.mediaSession.setActionHandler("stop", sysPause); } catch { /* not supported */ }
