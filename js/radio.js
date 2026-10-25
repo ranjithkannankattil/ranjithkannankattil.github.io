@@ -624,35 +624,8 @@
   };
   // Paused by something other than this page: a phone or WhatsApp call, Siri, an alarm,
   // headphones pulled out, another app taking the audio. From then on only the listener
-  // (play on the page or the lock screen) starts it again. iPhones report the audio as free
-  // again while a WhatsApp call is still ringing, and may restart it themselves, so any
-  // restart the page didn't ask for is paused straight away. A real drop-out reports an
-  // error or the stream ending and is still handled as a reconnect.
-  const AS = navigator.audioSession;
-  const callHoldsAudio = () => !!AS && AS.state === "interrupted";
-
-  // Diagnostics: open radio.html?debug to see what the phone reports, with timings.
-  const dbgOn = /[?&]debug\b/.test(location.search);
-  let dbgBox = null;
-  function dbg(msg) {
-    if (!dbgOn) return;
-    if (!dbgBox) {
-      dbgBox = document.createElement("pre");
-      dbgBox.style.cssText = "position:fixed;left:0;right:0;top:0;max-height:45vh;overflow:auto;margin:0;padding:6px 8px;background:rgba(0,0,0,.85);color:#9f9;font:11px/1.35 ui-monospace,monospace;z-index:9999;white-space:pre-wrap";
-      document.body.appendChild(dbgBox);
-    }
-    const t = new Date(); const ts = t.toTimeString().slice(0, 8) + "." + String(t.getMilliseconds()).padStart(3, "0");
-    dbgBox.textContent = `${ts} ${msg} | paused=${audio.paused} wants=${wants} held=${!!interruptedAt} session=${AS ? AS.state : "n/a"} vis=${document.visibilityState}\n` + dbgBox.textContent;
-  }
-  if (dbgOn) {
-    dbg(`debug on · player v31 · ${navigator.userAgent}`);
-    for (const ev of ["play", "playing", "pause", "waiting", "stalled", "ended", "error", "emptied"]) audio.addEventListener(ev, () => dbg(`audio ${ev}`));
-    if (AS && AS.addEventListener) AS.addEventListener("statechange", () => dbg("audioSession statechange"));
-    document.addEventListener("visibilitychange", () => dbg("visibilitychange"));
-    window.addEventListener("pagehide", () => dbg("pagehide"));
-    window.addEventListener("pageshow", () => dbg("pageshow"));
-  }
-
+  // (play on the page or the lock screen) starts it again, so it never plays over a call.
+  // A real drop-out reports an error or the stream ending and is still a reconnect.
   audio.addEventListener("pause", () => {
     if (Date.now() - ownPauseAt < 1000) return;
     if (!wants || !current) return;
@@ -663,43 +636,38 @@
       interruptedAt = Date.now();
       clearTimeout(failTimer); clearTimeout(stallTimer); clearTimeout(retryTimer);
       setState("idle"); status("Paused");
-      dbg(`held paused (call=${callHoldsAudio()})`);
     }, 400);
   });
-  // iPhone says a call (or another app) has taken the audio: pause and hold, even if the
-  // browser never sends a pause event for it.
-  function holdForCall(why) {
+  // The iPhone app (Capacitor) passes on iOS's call messages, which browsers never get:
+  // "radio:interruption-began" when a call takes the audio, "radio:interruption-ended" when
+  // iOS says the app may resume. In Brave/Safari these events simply never arrive.
+  window.addEventListener("radio:interruption-began", () => {
     if (!wants || !current) return;
-    dbg(`hold for call (${why})`);
-    wants = false; interruptedAt = Date.now();
+    wants = false; interruptedAt = callHeldAt = Date.now();
     clearTimeout(interruptTimer); clearTimeout(failTimer); clearTimeout(stallTimer); clearTimeout(retryTimer);
     ownPauseAt = Date.now(); audio.pause();
-    setState("idle"); status("Paused");
-  }
-  if (AS && typeof AS.addEventListener === "function") {
-    AS.addEventListener("statechange", () => { if (callHoldsAudio()) holdForCall("audio session interrupted"); });
-  }
+    setState("idle"); status("Paused for a call");
+  });
+  window.addEventListener("radio:interruption-ended", () => resumeAfterCall());
   // After a call: come back on air (a fresh connection, so it plays live) when iOS sends
   // "play", restarts the audio itself, or when the listener returns to the page.
   const CALL_WINDOW = 60 * 60 * 1000;
-  function resumeAfterCall(why) {
+  function resumeAfterCall() {
     if (!callHeldAt || !current) return;
     const fresh = Date.now() - callHeldAt < CALL_WINDOW;
     callHeldAt = 0; interruptedAt = 0;
-    dbg(`resume after call (${why}, fresh=${fresh})`);
     if (!fresh) { ownPauseAt = Date.now(); audio.pause(); setState("idle"); status("Paused"); return; }
     retries = 0; tryIndex = 0; attempt();
   }
   document.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "visible" && callHeldAt) setTimeout(() => {
-      if (document.visibilityState === "visible") resumeAfterCall("back on the page");
+      if (document.visibilityState === "visible") resumeAfterCall();
     }, 800);
   });
   // Something other than this page started the audio while it was held: pause it again.
   const holdPaused = () => {
     if (wants || !interruptedAt) return false;
-    if (callHeldAt) { dbg("phone restarted the audio after the call"); resumeAfterCall("phone restarted audio"); return true; }
-    dbg("blocked a restart the page didn't ask for");
+    if (callHeldAt) { resumeAfterCall(); return true; }
     ownPauseAt = Date.now(); audio.pause();
     setState("idle"); status("Paused");
     return true;
@@ -835,22 +803,21 @@
   if ("mediaSession" in navigator) {
     // Never a toggle: when a call starts, iOS has already silenced the audio and then sends
     // "pause" — a toggle saw "paused" and started the station again over the call.
-    const sysPause = (why) => {
+    const sysPause = () => {
       // iOS silences the audio *before* sending "pause" for a call; the listener's own pause
       // (lock screen, headphones button) arrives while it is still playing.
       const byCall = wants && audio.paused;
-      dbg(`media key: ${why} (${byCall ? "call" : "listener"})`);
       if (!current) return;
+      if (!wants && callHeldAt) return;              // already held for a call (iPhone app told us first)
       wants = false; interruptedAt = Date.now();     // held: nothing but play restarts it
       callHeldAt = byCall ? Date.now() : 0;
       teardown(); setState("idle"); status(byCall ? "Paused for a call" : "Paused");
     };
     navigator.mediaSession.setActionHandler("play", () => {
-      dbg("media key: play");
       if (!current || (!audio.paused && wants)) return;
       interruptedAt = 0; retries = 0; attempt();
     });
-    navigator.mediaSession.setActionHandler("pause", () => sysPause("pause"));
+    navigator.mediaSession.setActionHandler("pause", sysPause);
     // steering-wheel / Bluetooth / lock-screen buttons
     for (const [a, d] of [["nexttrack", 1], ["previoustrack", -1]]) {
       try { navigator.mediaSession.setActionHandler(a, () => skip(d, true)); } catch { /* not supported */ }
@@ -859,7 +826,7 @@
     for (const [a, d] of [["seekforward", 1], ["seekbackward", -1]]) {
       try { navigator.mediaSession.setActionHandler(a, () => skip(d, true)); } catch { /* not supported */ }
     }
-    try { navigator.mediaSession.setActionHandler("stop", () => sysPause("stop")); } catch { /* not supported */ }
+    try { navigator.mediaSession.setActionHandler("stop", sysPause); } catch { /* not supported */ }
   }
 
   // ---- recently played, across languages
