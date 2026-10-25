@@ -1,5 +1,6 @@
 """Tests for the photography data (photos.json) and page builder (build_photos.py)."""
 import copy
+import re
 import json
 from pathlib import Path
 
@@ -162,3 +163,56 @@ def test_captions_are_escaped(tmp_path, data):
 def test_links_file_written(built):
     js = (built / "js/photo-links.js").read_text()
     assert '"tenby-4": "/photography/tenby/2026-08/#4"' in js
+
+
+# ---------------------------------------------------------------- found in the final review
+import prep_photos as pp
+
+
+def test_prep_continues_numbering(tmp_path):
+    web = tmp_path / "web"; web.mkdir()
+    (web / "x-2026-05-03-800.webp").write_bytes(b"old")
+    src = tmp_path / "a.jpg"; Image.new("RGB", (400, 200), "red").save(src)
+    out = pp.prep("x", "2026-05", [str(src)], web=web)
+    assert out[0]["stem"] == "x-2026-05-04"
+    assert (web / "x-2026-05-03-800.webp").read_bytes() == b"old"
+
+
+def test_prep_respects_rotation(tmp_path):
+    src = tmp_path / "r.jpg"
+    im = Image.new("RGB", (400, 200), "blue")
+    ex = im.getexif(); ex[0x0112] = 6          # camera says: rotate 90° to view
+    im.save(src, exif=ex)
+    out = pp.prep("x", "2026-05", [str(src)], web=tmp_path)
+    assert out[0]["h"] > out[0]["w"] and out[0]["tall"] is True
+
+
+def test_preload_matches_lead(built):
+    html = (built / "photography/gower/2026-06/index.html").read_text()
+    pre = re.search(r'<link rel="preload" as="image"[^>]*>', html).group(0)
+    assert 'imagesrcset="/assets/photos/web/gower-01-800.webp 800w, /assets/photos/web/gower-01-1224.webp 1224w"' in pre
+    assert 'imagesizes="(max-width:900px) 100vw, 1100px"' in pre
+
+
+def test_build_removes_stale_pages(tmp_path, data):
+    (tmp_path / "sitemap.xml").write_text((ROOT / "sitemap.xml").read_text())
+    (tmp_path / "photography/oldplace/2025-01").mkdir(parents=True)
+    (tmp_path / "photography/oldplace/2025-01/index.html").write_text("old")
+    (tmp_path / "assets/og").mkdir(parents=True)
+    (tmp_path / "assets/og/photo-oldplace.jpg").write_bytes(b"x")
+    (tmp_path / "assets/og/site.jpg").write_bytes(b"keep")
+    bp.build(data, tmp_path, images=False)
+    assert not (tmp_path / "photography/oldplace").exists()
+    assert not (tmp_path / "assets/og/photo-oldplace.jpg").exists()
+    assert (tmp_path / "assets/og/site.jpg").exists()
+
+
+def test_forwarder_links_versioned(built):
+    fwd = (built / "photography.html").read_text()
+    v = re.search(r'/js/photo-links\.js\?v=([0-9a-f]{8})"', fwd)
+    assert v, "photo-links.js must carry a version"
+    assert "hasOwnProperty" in fwd
+
+
+def test_home_card_text_not_stale():
+    assert "Tenby, Gower and Florence so far" not in (ROOT / "index.html").read_text()

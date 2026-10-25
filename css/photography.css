@@ -85,7 +85,9 @@ body[data-section="photography"] .ph-share:hover{ border-color:var(--ink); }
 .ph-set-head .ph-share{ margin-left:auto; }
 .ph-one .ph-grid{ margin-top:2rem; }
 .ph-msg{ position:fixed; left:50%; bottom:1.4rem; transform:translateX(-50%); z-index:30; max-width:calc(100vw - 2rem); margin:0; padding:.6rem 1rem; border-radius:8px; background:var(--ink); color:var(--paper); font-family:var(--f-mono); font-size:.75rem; overflow-wrap:anywhere; box-shadow:0 10px 30px -10px rgba(0,0,0,.5); }
-.ph-msg[hidden]{ display:none; }
+.ph-msg:not(.show){ width:1px; height:1px; padding:0; overflow:hidden; clip-path:inset(50%); white-space:nowrap; box-shadow:none; }   /* kept for screen readers */
+.ph-msg input{ font:inherit; color:var(--ink); background:var(--paper); border:0; border-radius:4px; padding:.3rem .45rem; margin:.4rem 0 0; width:100%; box-sizing:border-box; }
+body[data-section="photography"] .ph-msg-x{ font:inherit; color:var(--paper); background:transparent; border:1px solid rgba(240,237,230,.5); border-radius:999px; padding:.25rem .7rem; margin-top:.5rem; cursor:pointer; }
 @media (max-width:640px){
   .pl-grid{ grid-template-columns:1fr; }
   .ph-set-head .ph-share{ margin-left:0; }

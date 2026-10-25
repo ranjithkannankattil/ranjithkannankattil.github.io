@@ -3,12 +3,27 @@
 // is one visit; the viewer moves within it. Links: #4 on a month page, #v2026-05-4 on a place page.
 // Share buttons (.ph-share) use the phone's share sheet, or copy the link.
 (function () {
+  // the status area stays in the page (so screen readers announce changes); it shows when it has text
   const msg = document.getElementById("phMsg");
   let msgTimer = 0;
-  function say(t, ms) {
+  function clear() { if (msg) { msg.textContent = ""; msg.classList.remove("show"); } }
+  function say(t) {
     if (!msg) return;
-    msg.textContent = t; msg.hidden = false;
-    clearTimeout(msgTimer); msgTimer = setTimeout(() => { msg.hidden = true; }, ms || 3000);
+    clearTimeout(msgTimer);
+    msg.textContent = t; msg.classList.add("show");
+    msgTimer = setTimeout(clear, 3000);
+  }
+  // no share sheet and copying blocked: show the address in a box, selected, until closed
+  function offer(url) {
+    if (!msg) return;
+    clearTimeout(msgTimer);
+    msg.textContent = "Copy this link: ";
+    const box = document.createElement("input");
+    box.readOnly = true; box.value = url; box.setAttribute("aria-label", "Link to copy");
+    const x = document.createElement("button");
+    x.className = "ph-msg-x"; x.textContent = "Close"; x.onclick = clear;
+    msg.append(box, x); msg.classList.add("show");
+    box.focus(); box.select();
   }
   document.querySelectorAll(".ph-share").forEach((b) => b.addEventListener("click", async () => {
     const url = b.dataset.url, title = b.dataset.title;
@@ -17,7 +32,7 @@
       catch (e) { if (e && e.name === "AbortError") return; }
     }
     try { await navigator.clipboard.writeText(url); say("Link copied"); }
-    catch { say(`Copy this link: ${url}`, 10000); }
+    catch { offer(url); }
   }));
 
   const figs = [...document.querySelectorAll(".ph")];

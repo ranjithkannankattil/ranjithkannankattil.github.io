@@ -91,7 +91,12 @@ const checks = {
     } });
     await p.click('.ph-place .ph-share');
     await p.waitForTimeout(150);
-    ok((await p.textContent('#phMsg')).includes('https://ranjithkb.com/photography/milan/'), 'clipboard blocked: the address is shown');
+    ok((await p.inputValue('#phMsg input')) === 'https://ranjithkb.com/photography/milan/', 'clipboard blocked: the address is shown in a box to copy');
+    await p.waitForTimeout(11000);
+    ok(await p.isVisible('#phMsg input'), 'the address stays up (still there after 11 s)');
+    await p.click('#phMsg .ph-msg-x');
+    ok(!(await p.isVisible('#phMsg input')), 'Close hides it');
+    ok((await p.getAttribute('#phMsg', 'role')) === 'status' && (await p.$eval('#phMsg', (e) => !e.hidden)), 'status area stays in the page for screen readers');
     await p.close();
   },
   async 'phone fits'() {
