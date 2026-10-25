@@ -6,7 +6,8 @@
 Uses WordPress.com's public API (no key). Each post keeps its title, date, categories and a cleaned
 copy of its text: paragraphs, headings, bold/italic, lists, rules and links (http/https only, opened
 in a new tab). Everything else (styles, scripts, embeds, WordPress markup) is dropped.
-Run by the "Padolpathi" GitHub Action once a day, so new words on WordPress appear on the site."""
+Used once (Oct 2026) to bring the blog onto the site; the blog is no longer updated, so nothing
+runs it automatically. After editing scripts/padolpathi.json, run scripts/build_padolpathi.py."""
 import html
 import json
 import re

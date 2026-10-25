@@ -5,8 +5,8 @@
 
 Writes padolpathi/index.html (every word, A–Z by the Malayalam alphabet, with search and topic
 filters), padolpathi/<id>.html (one word each) and the padolpathi entries in sitemap.xml.
-The words come from padolpathi.wordpress.com (scripts/import_padolpathi.py); they were written with
-the help of AI, which every page says."""
+The words were copied once from padolpathi.wordpress.com (scripts/import_padolpathi.py); they were
+written with the help of AI, which every page says."""
 import html
 import json
 import re
