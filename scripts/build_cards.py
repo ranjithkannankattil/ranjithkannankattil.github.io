@@ -30,7 +30,7 @@ E = lambda s: html.escape(str(s), quote=True)  # noqa: E731
 # section pages: file, kicker, title, line under it, accent, accent text
 SECTIONS = [
     ("writings", ["writings.html", "writing-post.html"], "Writings", "എഴുത്തുകൾ — Writings",
-     "Malayalam prose and poetry by Ranjith Kannankattil, written since 2009.", "#B8860B", "#7F5D06"),
+     "Malayalam prose and poetry by Ranjith Kannankattil.", "#B8860B", "#7F5D06"),
     ("radio", ["radio.html"], "Radio", "Live radio in many languages",
      "Malayalam, Hindi, Tamil, English news and talk, African languages, Italian, French and Korean.", "#2F6B4F", None),
     ("news", ["news.html"], "News", "News from trusted independent papers",

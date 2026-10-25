@@ -137,7 +137,7 @@ def index_page(words):
         groups.setdefault(letter(w), []).append(w)
     order = list(groups)
     all_topics = sorted({t for w in words for t in topics(w)})
-    desc = (f"{len(words)} Malayalam words and where they come from — Sanskrit, Persian, Tamil, Portuguese "
+    desc = ("Malayalam words and where they come from — Sanskrit, Persian, Tamil, Portuguese "
             "and older roots. Written with the help of AI.")
     out = [head("പദോൽപത്തി — Padolpathi — Ranjith Kannankattil", desc, "/padolpathi/",
                 f"{bc.MEDIA}/sections/{bc.section_card_name('padolpathi')}")]
@@ -146,7 +146,7 @@ def index_page(words):
   <div class="pd-intro">
     <h1 class="pd-h1"><span lang="ml">പദോൽപത്തി</span> <span class="en">Padolpathi</span></h1>
     <p class="pd-lead" lang="ml">മലയാളം വാക്കുകൾ എവിടെ നിന്നു വന്നു — ഭാഷാചരിത്രത്തിന്റെ ഏടുകളിലൂടെ ഒരു യാത്ര.</p>
-    <p class="pd-sub">Where Malayalam words come from. {len(words)} words so far, A–Z by the Malayalam alphabet.</p>
+    <p class="pd-sub">Where Malayalam words come from, A–Z by the Malayalam alphabet.</p>
     {AI_NOTE}
   </div>
 

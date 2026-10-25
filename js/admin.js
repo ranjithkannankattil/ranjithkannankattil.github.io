@@ -166,7 +166,7 @@
       const cats = (p.tags||[]).map(t => `<category>${esc(t)}</category>`).join('');
       return `  <item>\n    <title>${esc(title)}</title>\n    <link>${link}</link>\n    <guid isPermaLink="false">${esc(p.slug)}</guid>\n    <pubDate>${pubDate}</pubDate>\n    ${cats}\n  </item>`;
     }).join('\n');
-    return `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0">\n<channel>\n  <title>Ranjith — Writings</title>\n  <link>https://ranjithkb.com/writings.html</link>\n  <description>Malayalam prose and poetry, 2009–present.</description>\n  <language>ml</language>\n${items}\n</channel>\n</rss>\n`;
+    return `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0">\n<channel>\n  <title>Ranjith — Writings</title>\n  <link>https://ranjithkb.com/writings.html</link>\n  <description>Malayalam prose and poetry.</description>\n  <language>ml</language>\n${items}\n</channel>\n</rss>\n`;
   }
 
   form.addEventListener('submit', async (e) => {

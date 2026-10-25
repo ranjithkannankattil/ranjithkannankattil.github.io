@@ -12,11 +12,6 @@
 
   let query = "", tag = "", form = "", fullText = null, loadingText = false;
 
-  // ---- header numbers
-  const years = [...new Set(P.map((p) => p.d.slice(0, 4)))].sort();
-  const poems = P.filter((p) => formOf(p) === "Poem").length;
-  const stats = [[P.length, "pieces"], [`${years[0]}–${years.at(-1)}`, "years"], [poems, "poems"], [P.length - poems, "prose"]];
-  for (const [v, k] of stats) { const d = el("div"); d.append(el("dt", null, k), el("dd", null, v)); $("stats").append(d); }
 
   // ---- today's pick (same for everyone on a given day), and "another one"
   function showPick(p) {
@@ -41,7 +36,7 @@
   P.forEach((p) => p.tags.forEach((t) => { if (!FORM[t]) counts[t] = (counts[t] || 0) + 1; }));
   Object.entries(counts).sort((a, b) => b[1] - a[1]).slice(0, 12).forEach(([t, n]) => {
     const b = el("button", "chip-btn");
-    b.append(document.createTextNode(t + " "), el("span", "n", n));
+    b.append(document.createTextNode(t));
     b.dataset.tag = t;
     b.onclick = () => { tag = tag === t ? "" : t; render(); };
     $("popular-tags").append(b);
@@ -79,7 +74,7 @@
 
     const filtered = query || tag || form;
     $("result-count").textContent = filtered
-      ? `${list.length} of ${P.length}${query && !fullText ? " · searching the full text…" : ""}`
+      ? `${list.length} found${query && !fullText ? " · searching the full text…" : ""}`
       : "";
     $("pick").hidden = !!filtered;
 
@@ -92,7 +87,6 @@
     for (const y of ys) {
       const a = el("a", null, y);
       a.href = "#y" + y;
-      a.append(el("span", "n", byYear[y].length));
       yn.append(a);
     }
 
@@ -102,7 +96,7 @@
     for (const y of ys) {
       const g = el("section", "year-group");
       g.id = "y" + y;
-      const h = el("h2"); h.append(document.createTextNode(y), el("span", "year-count", `${byYear[y].length}`));
+      const h = el("h2"); h.append(document.createTextNode(y));
       g.append(h);
       const ul = el("ul", "entry-list");
       for (const p of byYear[y]) {
