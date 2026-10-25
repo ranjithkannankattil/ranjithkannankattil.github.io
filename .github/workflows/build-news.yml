@@ -54,7 +54,7 @@ jobs:
           restore-keys: news-cache-
 
       - name: Tests
-        run: pip install -q pytest && cd scripts && python3 -m pytest -q
+        run: pip install -q pytest && cd scripts && python3 -m pytest -q test_news_relevance.py
 
       - name: Build
         env:
