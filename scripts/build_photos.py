@@ -212,7 +212,7 @@ def visit_section(p, v, first, link_heading):
     label = f"{pd.month_label(v['month'])} · {len(v['photos'])} photos"
     title = f"{p['name']} · {pd.month_label(v['month'])}"
     h = f'<a href="{visit_url(p, v)}">{H(label)}</a>' if link_heading else H(label)
-    return f"""  <section class="ph-set" id="v{v['month']}" aria-labelledby="h{v['month']}">
+    return f"""  <section class="ph-set" id="v{v['month']}" data-name="{H(pd.month_label(v['month']))}" aria-labelledby="h{v['month']}">
     <header class="ph-set-head">
       <h2 class="ph-set-title" id="h{v['month']}">{h}</h2>
       <p class="ph-set-meta">{H(cameras(v['photos']))}</p>

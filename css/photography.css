@@ -61,3 +61,32 @@ body[data-section="photography"] .lb-close:hover{ opacity:1; }
   .lb-bar{ padding:.7rem 1rem calc(1rem + env(safe-area-inset-bottom)); flex-wrap:wrap; }
   body[data-section="photography"] .lb-btn{ top:auto; bottom:3.6rem; transform:none; height:3rem; }
 }
+
+/* ---------- places and visits (photography/, built by scripts/build_photos.py) ---------- */
+.pl-grid{ list-style:none; margin:2.4rem 0 0; padding:0; display:grid; grid-template-columns:repeat(auto-fill, minmax(320px, 1fr)); gap:1.2rem; }
+.pl-card{ position:relative; display:block; aspect-ratio:16 / 10; overflow:hidden; background:var(--paper-2); color:#F0EDE6; border-radius:4px; }
+.pl-card img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .6s ease; }
+.pl-card::after{ content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(10,10,12,.82) 0%, rgba(10,10,12,.35) 45%, rgba(10,10,12,0) 70%); }
+.pl-card:hover img, .pl-card:focus-visible img{ transform:scale(1.03); }
+.pl-card:focus-visible{ outline:3px solid var(--accent); outline-offset:3px; }
+.pl-text{ position:absolute; left:1.1rem; right:1.1rem; bottom:1rem; z-index:1; display:flex; flex-direction:column; gap:.2rem; }
+.pl-name{ font-family:var(--f-display); font-weight:600; font-size:1.7rem; line-height:1.1; }
+.pl-country{ font-family:var(--f-mono); font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; opacity:.9; }
+.pl-meta{ font-family:var(--f-mono); font-size:.7rem; opacity:.85; margin-top:.25rem; }
+.ph-crumb{ margin:0 0 .5rem; font-family:var(--f-mono); font-size:.72rem; letter-spacing:.06em; color:var(--ink-soft); }
+.ph-crumb a{ color:var(--ink-soft); text-decoration:underline; text-underline-offset:2px; }
+.ph-crumb a:hover{ color:var(--ink); }
+.ph-place{ align-items:flex-end; }
+.ph-set-title a{ color:inherit; }
+.ph-set-title a:hover{ color:var(--accent); }
+body[data-section="photography"] .ph-share{ display:inline-flex; align-items:center; gap:.45rem; font-family:var(--f-mono); font-size:.72rem; letter-spacing:.06em; color:var(--ink); background:transparent; border:1px solid var(--line); border-radius:999px; padding:.42rem .9rem; cursor:pointer; }
+body[data-section="photography"] .ph-share:hover{ border-color:var(--ink); }
+.ph-share svg{ width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.ph-set-head .ph-share{ margin-left:auto; }
+.ph-one .ph-grid{ margin-top:2rem; }
+.ph-msg{ position:fixed; left:50%; bottom:1.4rem; transform:translateX(-50%); z-index:30; max-width:calc(100vw - 2rem); margin:0; padding:.6rem 1rem; border-radius:8px; background:var(--ink); color:var(--paper); font-family:var(--f-mono); font-size:.75rem; overflow-wrap:anywhere; box-shadow:0 10px 30px -10px rgba(0,0,0,.5); }
+.ph-msg[hidden]{ display:none; }
+@media (max-width:640px){
+  .pl-grid{ grid-template-columns:1fr; }
+  .ph-set-head .ph-share{ margin-left:0; }
+}

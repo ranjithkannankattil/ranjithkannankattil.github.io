@@ -1,7 +1,25 @@
-// Photo viewer: tap a frame to open it large (in colour), arrows/swipe to move, Esc to close.
-// Each .ph-set is a series; the viewer moves within the series you opened. Links: #tenby-4, #florence-12
-// (a bare #12 still means Florence, for links shared before there were several series).
+// Photography pages (built by scripts/build_photos.py).
+// Viewer: tap a frame to open it large (in colour), arrows/swipe to move, Esc to close. Each .ph-set
+// is one visit; the viewer moves within it. Links: #4 on a month page, #v2026-05-4 on a place page.
+// Share buttons (.ph-share) use the phone's share sheet, or copy the link.
 (function () {
+  const msg = document.getElementById("phMsg");
+  let msgTimer = 0;
+  function say(t, ms) {
+    if (!msg) return;
+    msg.textContent = t; msg.hidden = false;
+    clearTimeout(msgTimer); msgTimer = setTimeout(() => { msg.hidden = true; }, ms || 3000);
+  }
+  document.querySelectorAll(".ph-share").forEach((b) => b.addEventListener("click", async () => {
+    const url = b.dataset.url, title = b.dataset.title;
+    if (navigator.share) {
+      try { await navigator.share({ title, url }); return; }
+      catch (e) { if (e && e.name === "AbortError") return; }
+    }
+    try { await navigator.clipboard.writeText(url); say("Link copied"); }
+    catch { say(`Copy this link: ${url}`, 10000); }
+  }));
+
   const figs = [...document.querySelectorAll(".ph")];
   const lb = document.getElementById("lb"), img = document.getElementById("lbImg");
   const no = document.getElementById("lbNo"), cap = document.getElementById("lbCap"), bw = document.getElementById("lbBw");
@@ -9,7 +27,9 @@
   let i = 0;
   const setOf = (f) => f.closest(".ph-set");
   const members = (f) => figs.filter((g) => setOf(g) === setOf(f));
-  const setName = (f) => { const t = setOf(f) && setOf(f).querySelector(".ph-set-title"); return t ? t.textContent.trim() : ""; };
+  const sets = [...document.querySelectorAll(".ph-set")];
+  const single = !!document.querySelector(".ph-one");   // a month page: one visit, plain #n links
+  const setName = (f) => (single ? "" : (setOf(f) && setOf(f).dataset.name) || "");
   const caption = (f) => f.querySelector("figcaption").lastChild.textContent.trim();
   const step = (d) => { const m = members(figs[i]), j = m.indexOf(figs[i]); return figs.indexOf(m[(j + d + m.length) % m.length]); };
   const preload = (k) => { const x = new Image(); x.src = figs[k].dataset.full; };
@@ -24,7 +44,7 @@
     no.textContent = (setName(f) ? setName(f) + " · " : "") + `${String(j + 1).padStart(2, "0")} / ${m.length}`;
     cap.textContent = caption(f);
     lb.classList.toggle("bw", bw.getAttribute("aria-pressed") === "true");
-    history.replaceState(null, "", "#" + (set && set.id ? set.id + "-" : "") + (j + 1));
+    history.replaceState(null, "", "#" + (!single && set && set.id ? set.id + "-" : "") + (j + 1));
     preload(step(1)); preload(step(-1));
   }
   function open(k) { show(k); if (!lb.open) lb.showModal(); document.body.style.overflow = "hidden"; }
@@ -54,7 +74,7 @@
 
   const m = location.hash.match(/^#(?:([a-z][\w-]*?)-)?(\d+)$/);
   if (m) {
-    const set = document.getElementById(m[1] || "florence");
+    const set = m[1] ? document.getElementById(m[1]) : sets[0];
     const list = set ? figs.filter((g) => setOf(g) === set) : [];
     const n = parseInt(m[2], 10);
     if (n >= 1 && n <= list.length) open(figs.indexOf(list[n - 1]));
