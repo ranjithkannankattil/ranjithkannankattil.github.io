@@ -27,7 +27,7 @@ ML = re.compile(r"[ഀ-ൿ]")
 AI_ML = "ഈ ലേഖനങ്ങൾ AI-യുടെ സഹായത്തോടെ തയ്യാറാക്കിയവയാണ്."
 AI_EN = "Written with the help of AI."
 TOPIC_EN = {"Food": "Food", "Modern words": "Modern words", "Others": "Other languages", "Places": "Places",
-            "Animals": "Animals", "Vulgar Words": "Rude words"}
+            "Animals": "Animals"}
 FONTS = ("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:"
          "ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap")
 
