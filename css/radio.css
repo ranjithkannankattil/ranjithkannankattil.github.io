@@ -68,6 +68,12 @@ nav.radio-chips button{ color:var(--ink-soft); padding-bottom:.3rem; border-bott
 .radio-app .ra-title{ font-family:var(--f-display); font-size:1.05rem; font-weight:600; margin:0 0 .2rem; }
 .radio-app .ra-desc{ margin:0; font-size:.92rem; color:var(--ink-soft); }
 .radio-app .ra-steps{ margin:.35rem 0 0; font-size:.82rem; color:var(--ink-soft); }
+.radio-app .ra-ver{ margin:.5rem 0 0; font-size:.82rem; font-family:var(--f-mono, ui-monospace, monospace); color:var(--ink); }
+.radio-app .ra-new{ margin:.5rem 0 0; font-size:.86rem; color:var(--ink-soft); }
+.radio-app .ra-new[hidden]{ display:none; }
+.radio-app .ra-new-h{ margin:0 0 .2rem; font-weight:600; color:var(--ink); font-size:.82rem; }
+.radio-app .ra-new ul{ margin:0; padding-left:1.1rem; }
+.radio-app .ra-new li{ margin:.15rem 0; }
 .radio-app .ra-count{ margin:.35rem 0 0; font-size:.82rem; color:var(--accent); font-weight:600; }
 .radio-app .ra-btn{ flex:none; display:inline-flex; align-items:baseline; gap:.5rem; background:var(--accent); color:#fff; padding:.65rem 1.1rem; font-weight:600; font-size:.95rem; }
 .radio-app .ra-btn:hover, .radio-app .ra-btn:focus-visible{ background:var(--ink); }

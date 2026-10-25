@@ -1,7 +1,7 @@
 // Loads Firebase and the ratings module for radio.html, then sets window.RadioRatings and
 // fires "radio:ratings-ready". Visitors who never signed in get an anonymous Firebase ID the
 // first time they rate (radio.html); radio-admin.html uses the same loader. If Firebase can't load, "radio:ratings-failed" fires instead.
-import { createRatings, keyFor, upgradeToGoogle } from "./radio-ratings-core.js?v=2";
+import { createRatings, keyFor, upgradeToGoogle } from "./radio-ratings-core.js?v=3";
 
 const cfg = window.FIREBASE_CONFIG;
 try {

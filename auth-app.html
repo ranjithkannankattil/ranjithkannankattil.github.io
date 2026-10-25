@@ -12,6 +12,8 @@
   .auth-app p{ margin:0; color:var(--ink-soft); max-width:30ch; }
   .auth-app .spin{ width:28px; height:28px; border:3px solid var(--accent-soft); border-top-color:var(--accent); border-radius:50%; animation:sp 0.9s linear infinite; }
   @keyframes sp{ to{ transform:rotate(360deg); } }
+  .auth-app .back-btn{ margin-top:.5rem; background:var(--accent); color:#fff; padding:.75rem 1.4rem; font-weight:600; font-family:var(--f-display); }
+  .auth-app .back-btn[hidden]{ display:none; }
 </style>
 </head>
 <body>
@@ -19,12 +21,13 @@
   <div class="spin" id="spin"></div>
   <h1 id="msg">Signing in…</h1>
   <p id="sub">This window closes by itself and takes you back to the Radio app.</p>
+  <a class="back-btn" id="backBtn" hidden>Return to the Radio app</a>
 </main>
 <script src="js/firebase-config.js?v=3"></script>
 <script type="module">
-// Sign-in hand-off for the iPhone Radio app. Google doesn't allow signing in inside an app's
-// built-in browser, so the app opens this page in Apple's secure sign-in sheet
-// (ASWebAuthenticationSession). Here it signs in on ranjithkb.com as usual, then sends the
+// Sign-in hand-off for the Radio apps. Google doesn't allow signing in inside an app's
+// built-in browser, so the app opens this page in Apple's secure sign-in sheet (iPhone,
+// ASWebAuthenticationSession) or a secure Chrome tab (Android, Custom Tabs). Here it signs in on ranjithkb.com as usual, then sends the
 // Google sign-in tokens back to the app through com.ranjithkb.radio://auth and the sheet
 // closes. Nothing is kept here: the session ends as soon as the tokens are handed over.
 const CALLBACK = "com.ranjithkb.radio://auth";
@@ -34,7 +37,15 @@ const msg = (t, s) => {
   if (s !== undefined) document.getElementById("sub").textContent = s;
   if (t !== "Signing in…") document.getElementById("spin").hidden = true;
 };
-const back = (params) => { location.replace(`${CALLBACK}#${new URLSearchParams(params)}`); };
+// Hand the result to the app. Some browsers (Chrome on Android) only follow an app link after
+// a tap, so a "Return to the Radio app" button appears too.
+const back = (params) => {
+  const url = `${CALLBACK}#${new URLSearchParams(params)}`;
+  const b = document.getElementById("backBtn");
+  b.href = url;
+  setTimeout(() => { b.hidden = false; }, 1200);
+  location.replace(url);
+};
 
 try {
   const [{ initializeApp }, A] = await Promise.all([

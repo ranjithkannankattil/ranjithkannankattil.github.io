@@ -119,12 +119,13 @@ export function createRatings({ auth, db, A, F }) {
   };
 }
 
-// Inside the iPhone Radio app there are no popups and Google refuses sign-in in an app's
-// built-in browser, so the app signs in through Apple's secure sign-in sheet (its RadioAuth
-// plugin, which opens auth-app.html) and hands back Google tokens to sign in with here.
-function inIOSApp() {
+// Inside the Radio apps there are no popups and Google refuses sign-in in an app's built-in
+// browser, so the app signs in through Apple's secure sign-in sheet (iPhone) or a secure Chrome
+// tab (Android) — its RadioAuth plugin, which opens auth-app.html — and hands back Google
+// tokens to sign in with here.
+function inApp() {
   const C = globalThis.Capacitor;
-  return !!(C && C.isNativePlatform && C.isNativePlatform() && C.getPlatform && C.getPlatform() === "ios");
+  return !!(C && C.isNativePlatform && C.isNativePlatform() && C.getPlatform && ["ios", "android"].includes(C.getPlatform()));
 }
 async function appCredential(A) {
   const C = globalThis.Capacitor;
@@ -143,7 +144,7 @@ async function appCredential(A) {
 // elsewhere, sign in to it instead. A blocked popup falls back to a full-page redirect.
 export async function upgradeToGoogle(auth, A, provider) {
   const anon = auth.currentUser && auth.currentUser.isAnonymous;
-  if (inIOSApp()) {
+  if (inApp()) {
     let cred;
     try { cred = await appCredential(A); }
     catch (e) { if (e.code === "auth/popup-closed-by-user") return; throw e; }

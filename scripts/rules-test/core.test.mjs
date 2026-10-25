@@ -184,5 +184,10 @@ test("upgradeToGoogle inside the iPhone app signs in with the app's tokens", asy
     assert.deepEqual(log, ["cred:ID/AT", "link:ID/AT", "cred:ID/AT"]);
     globalThis.Capacitor.isPluginAvailable = () => false;                     // old app without sign-in
     await assert.rejects(upgradeToGoogle({ currentUser: null }, A, {}), (e) => e.code === "app/update-needed");
+    globalThis.Capacitor.getPlatform = () => "android";                       // Android app, same path
+    globalThis.Capacitor.isPluginAvailable = (n) => n === "RadioAuth"; reply = { idToken: "I2", accessToken: "" };
+    log.length = 0; A.signInWithCredential = async (a, c) => { log.push("cred:" + c); };
+    await upgradeToGoogle({ currentUser: null }, A, {});
+    assert.deepEqual(log, ["cred:I2/null"]);
   } finally { delete globalThis.Capacitor; }
 });
