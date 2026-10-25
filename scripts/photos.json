@@ -1,0 +1,800 @@
+{
+ "places": [
+  {
+   "id": "swansea",
+   "name": "Swansea",
+   "country": "Wales",
+   "key": "swansea-2026-05-01",
+   "visits": [
+    {
+     "month": "2026-05",
+     "photos": [
+      {
+       "stem": "swansea-2026-05-01",
+       "full": "swansea-2026-05-01-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Sail Bridge over the marina",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "swansea-2026-05-02",
+       "full": "swansea-2026-05-02-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Under the Sail Bridge cables",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "swansea-2026-05-03",
+       "full": "swansea-2026-05-03-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Marina in evening light",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "swansea-2026-05-04",
+       "full": "swansea-2026-05-04-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Storm clouds over the marina",
+       "camera": "iPhone 15"
+      },
+      {
+       "stem": "swansea-2026-05-05",
+       "full": "swansea-2026-05-05-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Marina, houses on the hill behind",
+       "camera": "iPhone 15"
+      },
+      {
+       "stem": "swansea-2026-05-06",
+       "full": "swansea-2026-05-06-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Old brick pumphouse and new flats, River Tawe",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "swansea-2026-05-07",
+       "full": "swansea-2026-05-07-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Bus crossing the Tawe",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "swansea-2026-05-08",
+       "full": "swansea-2026-05-08-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Cranes over SA1",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "swansea-2026-05-09",
+       "full": "swansea-2026-05-09-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Tree-lined walk by the Tawe",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "swansea-2026-05-10",
+       "full": "swansea-2026-05-10-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "SA1 signpost",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "swansea-2026-05-11",
+       "full": "swansea-2026-05-11-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Footbridge into the city",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "swansea-2026-05-12",
+       "full": "swansea-2026-05-12-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Toward the City Gates",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "swansea-2026-05-13",
+       "full": "swansea-2026-05-13-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Gull over the rooftops at dusk",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "swansea-2026-05-14",
+       "full": "swansea-2026-05-14-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Terraces below Kilvey Hill",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "swansea-2026-05-15",
+       "full": "swansea-2026-05-15-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Rooftops climbing the hill",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "swansea-2026-05-16",
+       "full": "swansea-2026-05-16-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Houses on the hillside",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "swansea-2026-05-17",
+       "full": "swansea-2026-05-17-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Evening traffic toward the hill",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "swansea-2026-05-18",
+       "full": "swansea-2026-05-18-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Tree and church spire",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "swansea-2026-05-19",
+       "full": "swansea-2026-05-19-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Cycle path and a blank signboard",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "swansea-2026-05-20",
+       "full": "swansea-2026-05-20-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Sea thrift by the waterfront",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "swansea-2026-05-21",
+       "full": "swansea-2026-05-21-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Jellyfish in the dock",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "swansea-2026-05-22",
+       "full": "swansea-2026-05-22-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Daisy and its shadow",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "swansea-2026-05-23",
+       "full": "swansea-2026-05-23-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Daisies on dark ground",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "swansea-2026-05-24",
+       "full": "swansea-2026-05-24-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Daisies by the roadside",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "swansea-2026-05-25",
+       "full": "swansea-2026-05-25-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Odeon sign, upside down",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "swansea-2026-05-26",
+       "full": "swansea-2026-05-26-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Love Swansea wall",
+       "camera": "Sony ZV-E10"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "milan",
+   "name": "Milan",
+   "country": "Italy",
+   "key": "milan-2026-04-01",
+   "visits": [
+    {
+     "month": "2026-04",
+     "photos": [
+      {
+       "stem": "milan-2026-04-01",
+       "full": "milan-2026-04-01-1144.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Butterfly sculpture, Piazza Gae Aulenti",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "milan-2026-04-02",
+       "full": "milan-2026-04-02-1182.webp",
+       "w": 800,
+       "h": 450,
+       "caption": "Butterflies up close, Porta Nuova",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "milan-2026-04-03",
+       "full": "milan-2026-04-03-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Blooming Imperfection, the flowering brain",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "milan-2026-04-04",
+       "full": "milan-2026-04-04-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "BAM, Biblioteca degli Alberi",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "milan-2026-04-05",
+       "full": "milan-2026-04-05-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Walking the dog in the park",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "milan-2026-04-06",
+       "full": "milan-2026-04-06-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "A bicycle and two terriers",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "milan-2026-04-07",
+       "full": "milan-2026-04-07-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Horse chestnut in flower",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "milan-2026-04-08",
+       "full": "milan-2026-04-08-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Crossing at the corner",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "milan-2026-04-09",
+       "full": "milan-2026-04-09-1144.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Cyclists in the city centre",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "milan-2026-04-10",
+       "full": "milan-2026-04-10-1144.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Past the queue",
+       "camera": "Sony ZV-E10"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "florence",
+   "name": "Florence",
+   "country": "Italy",
+   "key": "DSC05412",
+   "visits": [
+    {
+     "month": "2026-04",
+     "photos": [
+      {
+       "stem": "DSC05412",
+       "full": "DSC05412-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Via de' Calzaiuoli, Duomo behind",
+       "size": "s6",
+       "old": "florence-1",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "DSC05397",
+       "full": "DSC05397-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Door knocker, Florence",
+       "size": "s6",
+       "old": "florence-2",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "DSC05400",
+       "full": "DSC05400-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Back alley, Florence",
+       "size": "s3",
+       "old": "florence-3",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "DSC05384",
+       "full": "DSC05384-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Tram, Piazza del Carmine",
+       "size": "s3",
+       "old": "florence-4",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "DSC05386",
+       "full": "DSC05386-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "On the phone, Florence",
+       "size": "s2",
+       "old": "florence-5",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "DSC05432",
+       "full": "DSC05432-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Fashion shoot, Piazza del Duomo",
+       "size": "s2",
+       "old": "florence-6",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "DSC05487",
+       "full": "DSC05487-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Coronas Café, Firenze",
+       "size": "s3",
+       "old": "florence-9",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "DSC05493",
+       "full": "DSC05493-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "La Rinascente, reflected",
+       "size": "s2",
+       "old": "florence-10",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "DSC05492",
+       "full": "DSC05492-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Piazza della Repubblica",
+       "size": "s2",
+       "old": "florence-11",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "DSC05512",
+       "full": "DSC05512-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Fontana del Nettuno, horses",
+       "size": "s2",
+       "old": "florence-12",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "DSC05508",
+       "full": "DSC05508-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Loggia dei Lanzi, market street",
+       "size": "s6",
+       "old": "florence-13",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "DSC05516",
+       "full": "DSC05516-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Fontana del Nettuno",
+       "size": "s3",
+       "old": "florence-14",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "DSC05519",
+       "full": "DSC05519-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Statue and shadow",
+       "size": "s3",
+       "old": "florence-15",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "DSC05576",
+       "full": "DSC05576-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Ponte Santa Trinita, Arno",
+       "size": "s2",
+       "old": "florence-16",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "DSC05579",
+       "full": "DSC05579-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Arno, looking toward the hills",
+       "size": "s2",
+       "old": "florence-17",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "DSC05584",
+       "full": "DSC05584-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "S.A.D.A Antichità, Volterra sign",
+       "size": "s2",
+       "old": "florence-18",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "DSC05604",
+       "full": "DSC05604-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Ponte Vecchio, from Ponte Santa Trinita",
+       "size": "s3",
+       "old": "florence-19",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "DSC05607",
+       "full": "DSC05607-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Alley toward the Duomo",
+       "size": "s3",
+       "old": "florence-20",
+       "camera": "Sony ZV-E10"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gower",
+   "name": "Gower",
+   "country": "Wales",
+   "key": "gower-01",
+   "visits": [
+    {
+     "month": "2026-06",
+     "photos": [
+      {
+       "stem": "gower-01",
+       "full": "gower-01-1224.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Rhossili Bay from the Down",
+       "size": "s6",
+       "old": "gower-1",
+       "camera": "iPhone 15"
+      },
+      {
+       "stem": "gower-02",
+       "full": "gower-02-1224.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Low tide, Worm's Head on the horizon",
+       "size": "s3",
+       "old": "gower-2",
+       "camera": "iPhone 15"
+      },
+      {
+       "stem": "gower-03",
+       "full": "gower-03-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Houses along the cliff top",
+       "size": "s3",
+       "old": "gower-3",
+       "camera": "iPhone 15"
+      },
+      {
+       "stem": "gower-04",
+       "full": "gower-04-1536.webp",
+       "w": 800,
+       "h": 1067,
+       "caption": "A hut on the rocks, Worm's Head beyond",
+       "size": "s3",
+       "old": "gower-4",
+       "tall": true,
+       "camera": "iPhone 15"
+      },
+      {
+       "stem": "gower-05",
+       "full": "gower-05-1536.webp",
+       "w": 800,
+       "h": 1067,
+       "caption": "Fishing off the rocks",
+       "size": "s3",
+       "old": "gower-5",
+       "tall": true,
+       "camera": "iPhone 15"
+      },
+      {
+       "stem": "gower-06",
+       "full": "gower-06-1600.webp",
+       "w": 800,
+       "h": 419,
+       "caption": "Climbers on the sea cliffs",
+       "size": "s6",
+       "old": "gower-6",
+       "camera": "iPhone 15"
+      },
+      {
+       "stem": "gower-07",
+       "full": "gower-07-1600.webp",
+       "w": 800,
+       "h": 800,
+       "caption": "Cliff face and Worm's Head",
+       "size": "s6",
+       "old": "gower-7",
+       "camera": "iPhone 15"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tenby",
+   "name": "Tenby",
+   "country": "Wales",
+   "key": "tenby-18",
+   "visits": [
+    {
+     "month": "2026-08",
+     "photos": [
+      {
+       "stem": "tenby-18",
+       "full": "tenby-18-1600.webp",
+       "w": 800,
+       "h": 417,
+       "caption": "Old lifeboat station, under scaffolding",
+       "size": "s6",
+       "old": "tenby-1",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "tenby-08",
+       "full": "tenby-08-1186.webp",
+       "w": 800,
+       "h": 418,
+       "caption": "Painted houses under St Mary's spire",
+       "size": "s6",
+       "old": "tenby-2",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "tenby-04",
+       "full": "tenby-04-1185.webp",
+       "w": 800,
+       "h": 417,
+       "caption": "Boy at the cannon, Castle Hill",
+       "size": "s3",
+       "old": "tenby-3",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "tenby-06",
+       "full": "tenby-06-1600.webp",
+       "w": 800,
+       "h": 417,
+       "caption": "Cannon and a quiet seat, Castle Hill",
+       "size": "s3",
+       "old": "tenby-4",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "tenby-01",
+       "full": "tenby-01-1600.webp",
+       "w": 800,
+       "h": 417,
+       "caption": "Benches on Castle Hill, tilted",
+       "size": "s2",
+       "old": "tenby-5",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "tenby-02",
+       "full": "tenby-02-1600.webp",
+       "w": 800,
+       "h": 416,
+       "caption": "Boat below the footbridge rocks",
+       "size": "s2",
+       "old": "tenby-6",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "tenby-05",
+       "full": "tenby-05-1600.webp",
+       "w": 800,
+       "h": 417,
+       "caption": "The arch, two lamps in front",
+       "size": "s2",
+       "old": "tenby-7",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "tenby-19",
+       "full": "tenby-19-1600.webp",
+       "w": 800,
+       "h": 417,
+       "caption": "Sergeant's Lane, Harbwr tap",
+       "size": "s6",
+       "old": "tenby-8",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "tenby-17",
+       "full": "tenby-17-1600.webp",
+       "w": 800,
+       "h": 417,
+       "caption": "Kayaks under the lifeboat slipway",
+       "size": "s3",
+       "old": "tenby-9",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "tenby-16",
+       "full": "tenby-16-1600.webp",
+       "w": 800,
+       "h": 417,
+       "caption": "Kayaks crossing the bay",
+       "size": "s3",
+       "old": "tenby-10",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "tenby-13",
+       "full": "tenby-13-1600.webp",
+       "w": 800,
+       "h": 417,
+       "caption": "Red lamp on the harbour wall",
+       "size": "s2",
+       "old": "tenby-11",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "tenby-15",
+       "full": "tenby-15-1600.webp",
+       "w": 800,
+       "h": 417,
+       "caption": "Boats heading out",
+       "size": "s2",
+       "old": "tenby-12",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "tenby-14",
+       "full": "tenby-14-1600.webp",
+       "w": 800,
+       "h": 417,
+       "caption": "Houses along the cliff top",
+       "size": "s2",
+       "old": "tenby-13",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "tenby-07",
+       "full": "tenby-07-1186.webp",
+       "w": 800,
+       "h": 418,
+       "caption": "Walkers at the waterline",
+       "size": "s6",
+       "old": "tenby-14",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "tenby-10",
+       "full": "tenby-10-1600.webp",
+       "w": 800,
+       "h": 417,
+       "caption": "Rusted hook, mossy wall",
+       "size": "s2",
+       "old": "tenby-15",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "tenby-12",
+       "full": "tenby-12-1600.webp",
+       "w": 800,
+       "h": 417,
+       "caption": "Rusted padlock",
+       "size": "s2",
+       "old": "tenby-16",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "tenby-09",
+       "full": "tenby-09-1600.webp",
+       "w": 800,
+       "h": 417,
+       "caption": "Window, white wall",
+       "size": "s2",
+       "old": "tenby-17",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "tenby-11",
+       "full": "tenby-11-1600.webp",
+       "w": 800,
+       "h": 417,
+       "caption": "Street lamp and cloud",
+       "size": "s3",
+       "old": "tenby-18",
+       "camera": "Sony ZV-E10"
+      },
+      {
+       "stem": "tenby-03",
+       "full": "tenby-03-661.webp",
+       "w": 661,
+       "h": 346,
+       "caption": "Headlands under cloud",
+       "size": "s3",
+       "old": "tenby-19",
+       "preview": "tenby-03-661.webp",
+       "camera": "Sony ZV-E10"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
