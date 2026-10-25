@@ -5,7 +5,7 @@ name: Media upload
 # The files are then removed from the repository, so the site stays small.
 on:
   push:
-    branches: [main, media-move]   # media-move: draft branch, remove before merging
+    branches: [main]
     paths: ["media-incoming/**"]
   workflow_dispatch: {}
 
