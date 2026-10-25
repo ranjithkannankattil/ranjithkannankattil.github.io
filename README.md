@@ -25,3 +25,9 @@ come from the page's own Media Session code.
 
 ## Changing things
 `npm install && npx cap sync` after editing `capacitor.config.json` or `www/`.
+
+## Releasing a new version
+Edit `release-notes.json`: bump `version` and list what changed for `android` and `ios`.
+Every push builds the APK and publishes GitHub release `radio-app-v<version>` with the notes and
+release date/time; the Radio page's download card shows them. For iOS, also set MARKETING_VERSION
+in `ios/App/App.xcodeproj/project.pbxproj` to the same version.

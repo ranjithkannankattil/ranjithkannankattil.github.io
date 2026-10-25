@@ -1,0 +1,14 @@
+{
+  "version": "1.1.0",
+  "android": [
+    "Sign in with Google now works inside the app: it opens a secure Google sign-in tab and comes straight back. You stay signed in after closing the app.",
+    "Lock-screen and headphone pause always pauses (it could restart the station instead).",
+    "Lock-screen skip buttons change to the next or previous station."
+  ],
+  "ios": [
+    "Sign in with Google now works inside the app: it opens Apple's secure sign-in sheet and comes straight back. You stay signed in after closing the app.",
+    "The radio pauses for phone and WhatsApp calls and comes back on by itself when the call ends.",
+    "Lock-screen pause always pauses (it could restart the station over a call).",
+    "Lock-screen \"10 s\" arrows change to the next or previous station."
+  ]
+}

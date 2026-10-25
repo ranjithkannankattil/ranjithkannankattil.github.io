@@ -26,6 +26,11 @@ jobs:
           java-version: 21
           cache: gradle
 
+      - name: Read version and release notes
+        run: |
+          echo "RADIO_VERSION=$(jq -r .version release-notes.json)" >> "$GITHUB_ENV"
+          echo "RADIO_RELEASED=$(TZ=Europe/Rome date '+%-d %b %Y, %H:%M %Z')" >> "$GITHUB_ENV"
+
       - name: Install and sync web layer
         run: |
           npm ci
@@ -73,15 +78,29 @@ jobs:
           git add -A && git commit -qm "Radio APK build $GITHUB_RUN_NUMBER"
           git push -f "https://x-access-token:${{ github.token }}@github.com/$GITHUB_REPOSITORY.git" radio-app-apk
 
-      - name: Publish GitHub release (download link + download counts)
+      - name: Publish GitHub release (download link, version notes, download counts)
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          TAG="radio-app-v1.0.${GITHUB_RUN_NUMBER}"
-          gh release create "$TAG" Radio.apk \
-            --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --latest \
-            --title "Radio app 1.0.${GITHUB_RUN_NUMBER}" \
-            --notes "Android app for ranjithkb.com/radio. Download Radio.apk, open it, and allow installs from your browser when asked."
+          TAG="radio-app-v${RADIO_VERSION}"
+          {
+            echo "Version ${RADIO_VERSION} · released ${RADIO_RELEASED}"
+            echo
+            echo "What's new:"
+            jq -r '.android[] | "- " + .' release-notes.json
+            echo
+            echo "Install: download Radio.apk on your Android phone, open it, and allow installs from your browser when asked."
+          } > notes.md
+          cat notes.md
+          if gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            # same version rebuilt: replace the file and refresh the notes/date
+            gh release upload "$TAG" Radio.apk --clobber --repo "$GITHUB_REPOSITORY"
+            gh release edit "$TAG" --repo "$GITHUB_REPOSITORY" --latest \
+              --title "Radio app ${RADIO_VERSION}" --notes-file notes.md
+          else
+            gh release create "$TAG" Radio.apk --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --latest \
+              --title "Radio app ${RADIO_VERSION}" --notes-file notes.md
+          fi
 
   ios-compile-check:
     # Compiles the iPhone app (no signing) so Swift mistakes show up here, not in Xcode.

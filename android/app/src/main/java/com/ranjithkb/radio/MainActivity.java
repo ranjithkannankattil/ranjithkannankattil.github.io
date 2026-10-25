@@ -12,6 +12,7 @@ public class MainActivity extends BridgeActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         registerPlugin(RadioMediaPlugin.class);
+        registerPlugin(RadioAuthPlugin.class);
         super.onCreate(savedInstanceState);
 
         // Back goes back within the site; on the first page it sends the app to the
