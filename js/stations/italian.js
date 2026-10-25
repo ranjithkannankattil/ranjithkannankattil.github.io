@@ -453,6 +453,33 @@ window.STATIONS = [
       "https://ice03.fluidstream.net/mjr.aac"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "radio-onda-rossa",
+    "name": "Radio Onda Rossa",
+    "category": "news",
+    "streams": [
+      "https://s.streampunk.cc/ondarossa.ogg"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "virgin-radio-rock-70",
+    "name": "Virgin Radio Rock '70",
+    "category": "music",
+    "streams": [
+      "https://icy.unitedradio.it/VirginRock70.mp3"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "rai-radio-1-sport",
+    "name": "Rai Radio 1 Sport",
+    "category": "news",
+    "streams": [
+      "https://icestreaming.rai.it/13.mp3"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

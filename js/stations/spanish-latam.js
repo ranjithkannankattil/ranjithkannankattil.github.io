@@ -485,6 +485,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/uf2r0d5ny39uv"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "ritmo-96-5-fm",
+    "name": "Ritmo 96.5 FM",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/y0br5ck4ququv"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "los40-colombia",
+    "name": "LOS40 Colombia",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_COLOMBIAAAC.aac"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "mix-bogota",
+    "name": "Mix Bogota",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/MIX_BOGOTAAAC.aac"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

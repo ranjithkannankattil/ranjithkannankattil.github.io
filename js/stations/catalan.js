@@ -496,6 +496,33 @@ window.STATIONS = [
       "https://s2.radio.co/s8e5dffe5e/listen"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "altafulla-radio",
+    "name": "Altafulla Ràdio",
+    "category": "music",
+    "streams": [
+      "https://enacast.com/altafullaradio/streams/HD"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "totradio",
+    "name": "TotRàdio",
+    "category": "music",
+    "streams": [
+      "https://www.totradio.com:8000/128kbps"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "radio-cornella",
+    "name": "Ràdio Cornellà",
+    "category": "music",
+    "streams": [
+      "https://enacast.com/radiocornella/streams/SD"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

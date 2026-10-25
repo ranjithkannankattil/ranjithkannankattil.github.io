@@ -432,6 +432,15 @@ window.STATIONS = [
       "https://uksoutha.streaming.broadcast.radio:20691/kolradio"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "wmdi-107-9-kol-bramah-lakewood-new-jerse",
+    "name": "WMDI 107.9 \"Kol Bramah\" Lakewood, New Jersey",
+    "category": "music",
+    "streams": [
+      "https://us2.maindigitalstream.com/stream/kolbramah"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

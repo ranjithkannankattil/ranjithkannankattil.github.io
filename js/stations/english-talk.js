@@ -458,6 +458,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "where": "Canada"
+  },
+  {
+    "id": "wrfz-rochester-free-radio",
+    "name": "WRFZ - Rochester Free Radio",
+    "category": "us",
+    "streams": [
+      "https://listen.rochesterfreeradio.com/live.mp3"
+    ],
+    "added": "2026-10-25",
+    "where": "US"
+  },
+  {
+    "id": "radio-jamaica-94fm",
+    "name": "Radio Jamaica 94FM",
+    "category": "world",
+    "streams": [
+      "https://stream.zeno.fm/cub84trbgy5tv"
+    ],
+    "added": "2026-10-25",
+    "where": "Jamaica"
+  },
+  {
+    "id": "britcom-4",
+    "name": "Britcom 4",
+    "category": "comedy",
+    "streams": [
+      "https://cast2.asurahosting.com/proxy/britcom4/stream.mp3"
+    ],
+    "added": "2026-10-25",
+    "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

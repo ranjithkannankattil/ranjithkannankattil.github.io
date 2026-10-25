@@ -348,7 +348,8 @@ window.STATIONS = [
     "streams": [
       "https://aircast.breaking-bass.ru:8443/air"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "101-ru",
@@ -484,6 +485,33 @@ window.STATIONS = [
       "https://radiorecord.hostingradio.ru/sd9096.aacp"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "xezer-fm",
+    "name": "Xezer FM",
+    "category": "music",
+    "streams": [
+      "https://s40.myradiostream.com/:22546/listen.mp3?"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "station-22",
+    "name": "Радио Ностальжи Россия",
+    "category": "music",
+    "streams": [
+      "https://listen7.myradio24.com/alexx333"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "fm-90e",
+    "name": "Ретро FM 90e",
+    "category": "music",
+    "streams": [
+      "https://retro90.hostingradio.ru:8025/retro90-128.mp3"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

@@ -40,7 +40,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://cast1.asurahosting.com/proxy/brightb1/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "usaku-fm-90-5",
@@ -98,8 +99,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/mwam2yirv1pvv"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "crest-91-1-fm-ibadan",
@@ -127,6 +127,15 @@ window.STATIONS = [
       "https://atunwadigital.streamguys1.com/yfm1025kumasi"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "ccc-worldwide-radio",
+    "name": "CCC Worldwide Radio",
+    "category": "devotional",
+    "streams": [
+      "https://cccworldwide.net/radio/live.mp3"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

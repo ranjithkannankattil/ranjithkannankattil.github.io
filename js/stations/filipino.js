@@ -451,6 +451,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/fu24r3f24c9uv"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "sayhifm",
+    "name": "SayHiFM",
+    "category": "music",
+    "streams": [
+      "https://play.radioking.io/sayhifm"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "tictoc-radio",
+    "name": "TicToc Radio",
+    "category": "music",
+    "streams": [
+      "https://usa5.fastcast4u.com/proxy/mcbntiktok?mp=/1"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "king-radio-tabuk-city",
+    "name": "King Radio Tabuk City",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/hqmmdrw2b48uv?aw_0_req_lsid=213084d0938e3fc5344aa1adb0f8fb3a&triton-uid=cookie%3A7cebc1db-d1a7-403b-87ca-ccba0eb42e6b"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

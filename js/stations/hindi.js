@@ -477,6 +477,33 @@ window.STATIONS = [
       "https://stream.aiir.com/dbv0rxpwp6ytv"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "shaiva-lahari",
+    "name": "Shaiva Lahari",
+    "category": "music",
+    "streams": [
+      "https://radio.shaivam.org/listen/shaiva-lahari/radio.mp3"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "harman-beats",
+    "name": "HARMAN BEATS",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/jmi0hwxrgmauv"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "2b-radio-sangam-shri-ram",
+    "name": "2B! Radio Sangam Shri Ram",
+    "category": "devotional",
+    "streams": [
+      "https://dard.out.airtime.pro:8000/dard_a"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

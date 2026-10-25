@@ -466,6 +466,33 @@ window.STATIONS = [
       "https://s2.ssl-stream.com/listen/radiosebastian/radio.mp3"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "radio-parada",
+    "name": "Rádio Paráda",
+    "category": "music",
+    "streams": [
+      "https://extra.mediacp.eu/stream/RadioParada,o.z."
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "metalscena-netradio",
+    "name": "METALSCENA netRADIO",
+    "category": "music",
+    "streams": [
+      "https://listen.radioking.com/radio/263218/stream/308365"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "radio-pyramida",
+    "name": "Rádio Pyramída",
+    "category": "music",
+    "streams": [
+      "https://icecast.stv.livebox.sk/klasika_128.mp3"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

@@ -295,6 +295,33 @@ window.STATIONS = [
       "https://ebsonair.ebs.co.kr/groundwavefamilypc/familypc1m/playlist.m3u8"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "cbs-joy4u",
+    "name": "CBS JOY4U",
+    "category": "devotional",
+    "streams": [
+      "https://m-aac.cbs.co.kr/mweb_cbscmc/_definst_/cbscmc.stream/playlist.m3u8"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "chkg-fm-96-1-fairchild-radio-vancouver-b",
+    "name": "CHKG-FM 96.1 \"Fairchild Radio\" Vancouver, BC",
+    "category": "music",
+    "streams": [
+      "https://5b2959fe11444.streamlock.net/radio/fm961.stream/playlist.m3u8"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "ebs-tv-i",
+    "name": "EBS TV-i",
+    "category": "music",
+    "streams": [
+      "https://ebsonairios.ebs.co.kr/plus1familypc/familypc1m/playlist.m3u8"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

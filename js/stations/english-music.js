@@ -516,6 +516,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "where": "US"
+  },
+  {
+    "id": "erotica-lounge",
+    "name": "EROTICA LOUNGE",
+    "category": "jazz",
+    "streams": [
+      "https://stream.zeno.fm/89asra0sfa0uv"
+    ],
+    "added": "2026-10-25",
+    "where": "US"
+  },
+  {
+    "id": "bbc-radio-1-dance",
+    "name": "BBC Radio 1 Dance",
+    "category": "pop",
+    "streams": [
+      "https://as-hls-ww-live.akamaized.net/pool_62063831/live/ww/bbc_radio_one_dance/bbc_radio_one_dance.isml/bbc_radio_one_dance-audio%3d128000.norewind.m3u8"
+    ],
+    "added": "2026-10-25",
+    "where": "UK"
+  },
+  {
+    "id": "sensual-lounge-radio",
+    "name": "SENSUAL LOUNGE RADIO",
+    "category": "jazz",
+    "streams": [
+      "https://kathy.torontocast.com:3590/;?type=http&nocache=1739707069"
+    ],
+    "added": "2026-10-25",
+    "where": "Canada"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

@@ -420,6 +420,33 @@ window.STATIONS = [
       "https://live1.sr.se/p4malm-aac-32"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "roslagen-live",
+    "name": "Roslagen Live",
+    "category": "music",
+    "streams": [
+      "https://radio.mediarosenqvist.com/listen/roslagen-live/radio.mp3"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "radio-uppsala",
+    "name": "Radio Uppsala",
+    "category": "music",
+    "streams": [
+      "https://radio.mediarosenqvist.com/listen/radio-uppsala/radio.mp3"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "sveriges-radio-p2-sprak-och-musik",
+    "name": "Sveriges Radio - P2 Språk och musik",
+    "category": "music",
+    "streams": [
+      "https://live1.sr.se/p2sm-aac-320"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

@@ -278,8 +278,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR",
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "rca-radio-clube-de-armamar",
@@ -482,6 +481,33 @@ window.STATIONS = [
       "https://is.ntradio.pt/ntr"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "radio-amor-portugal",
+    "name": "Rádio Amor Portugal",
+    "category": "music",
+    "streams": [
+      "https://stream.radioamorportugal.com:8443/rap.mp3"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "radio-onda-azul",
+    "name": "Rádio Onda Azul",
+    "category": "music",
+    "streams": [
+      "https://ecmanager4.pro-fhi.net:1540/stream"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "metalon-the-heavy",
+    "name": "MetalON - The Heavy",
+    "category": "music",
+    "streams": [
+      "https://radiometalon.com/radio/8000/radio.mp3"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

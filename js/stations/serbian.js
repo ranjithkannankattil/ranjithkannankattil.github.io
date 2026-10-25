@@ -465,6 +465,24 @@ window.STATIONS = [
       "https://stream.radios.rs:9082/stream"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "radio-sumadinac-juzni-vetar",
+    "name": "Radio Šumadinac Južni Vetar",
+    "category": "music",
+    "streams": [
+      "https://media.srb-streaming.com/stream/radio-sumadinac-juzni"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "radio-021-100-domace",
+    "name": "Radio 021 100% domaće",
+    "category": "music",
+    "streams": [
+      "https://centova.dukahosting.com/proxy/021domaca/stream"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

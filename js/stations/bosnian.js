@@ -304,6 +304,24 @@ window.STATIONS = [
       "https://webtvstream.bhtelecom.ba/radio_feral_kalesija.m3u8"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "radio-gbg-sevdah",
+    "name": "Radio Gbg Sevdah",
+    "category": "music",
+    "streams": [
+      "https://stream.radiogbg.se:8050/relay4"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "radio-postaja-odzak",
+    "name": "Radio Postaja Odzak",
+    "category": "music",
+    "streams": [
+      "https://stream.rcast.net/70602"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

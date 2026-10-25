@@ -232,7 +232,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.brokenbeats.net/tune"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-shanson",
@@ -492,6 +493,33 @@ window.STATIONS = [
       "https://online.melodiafm.ua/MelodiaFM_Int_Live"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "kiss-fm-digital-hd",
+    "name": "Kiss FM Digital HD",
+    "category": "music",
+    "streams": [
+      "https://online.kissfm.ua/KissFM_Digital_HD"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "radio-sunfm",
+    "name": "Radio SunFM",
+    "category": "music",
+    "streams": [
+      "https://ec5.yesstreaming.net:3650/stream"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "station-11",
+    "name": "Радіо Мегаполіс (Кам'янське)",
+    "category": "news",
+    "streams": [
+      "https://cast.megapolis.fm/listen/kamyanske/radio.mp3"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

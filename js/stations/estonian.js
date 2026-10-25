@@ -514,6 +514,15 @@ window.STATIONS = [
       "https://stream.skymedia.ee/live/retro2.mp3"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "tre-raadio-pohja-eesti",
+    "name": "Tre Raadio Põhja-Eesti",
+    "category": "music",
+    "streams": [
+      "https://cdn.treraadio.ee/pohja-tre"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

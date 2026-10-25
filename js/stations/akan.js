@@ -49,7 +49,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sunny-radio-server.cloud-ip.cc/radio/sunnyradio?t=1782488511159"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "agoo-96-9-fm",
@@ -105,7 +106,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://omanfm-atunwadigital.streamguys1.com/omanfm?amsparams=playerid%3ASGplayer%3Bskey%3A1611555812774%3B&awparams=playerid%3ASGplayer%3Bplayerid%3ASGplayer%3Bplayerid%3ASGplayer%3B&aw_0_req.gdpr=true&us_privacy=1YNN&aw_0_req.gdpr=true&us_privacy=1YNN&aw_0_req.gdpr=true&us_privacy=1YNN"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "opemsuo-fm",
@@ -478,4 +480,4 @@ window.STATIONS = [
     "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

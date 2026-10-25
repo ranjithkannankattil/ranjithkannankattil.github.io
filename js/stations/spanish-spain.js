@@ -487,6 +487,33 @@ window.STATIONS = [
       "https://hits1spain-audiomediaradio.radioca.st/hits1mallorca"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "1000-hits-spain",
+    "name": "1000 Hits Spain",
+    "category": "music",
+    "streams": [
+      "https://c2.auracast.net:8022/;"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "flamenco-radio",
+    "name": "Flamenco Radio",
+    "category": "music",
+    "streams": [
+      "https://rtva-live-radio.flumotion.com/rtva/flamenco.mp3"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "80-hits-barcelona",
+    "name": "80 Hits Barcelona",
+    "category": "music",
+    "streams": [
+      "https://stream.laut.fm/80sexitos"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

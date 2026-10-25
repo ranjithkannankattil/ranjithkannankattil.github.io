@@ -458,6 +458,33 @@ window.STATIONS = [
       "https://radyo24.radyotvonline.net/radyo24"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "radyo-sarkams",
+    "name": "Radyo Sarıkamış",
+    "category": "music",
+    "streams": [
+      "https://live.radyositesihazir.com:8004/stream"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "trt-tsr",
+    "name": "TRT TSR",
+    "category": "music",
+    "streams": [
+      "https://radio-trttsr.medya.trt.com.tr/master.m3u8"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "radyo-mezopotamya",
+    "name": "radyo mezopotamya",
+    "category": "music",
+    "streams": [
+      "https://anadolu.liderhost.com.tr/9404/stream"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

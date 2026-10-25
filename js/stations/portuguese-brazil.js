@@ -496,6 +496,33 @@ window.STATIONS = [
       "https://ice.fabricahost.com.br/metrospsertanejo"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "radio-i-love-anos-80-s",
+    "name": "Rádio I Love anos 80's",
+    "category": "music",
+    "streams": [
+      "https://shit-is-merda.stream.laut.fm/shit-is-merda"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "radio-furacao-2000",
+    "name": "Rádio Furacão 2000",
+    "category": "music",
+    "streams": [
+      "https://servidor24-1.brlogic.com:7516/live?source=website"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "mix-sao-paulo",
+    "name": "MIX São Paulo",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/MIXFM_SAOPAULOAAC.aac?dist=mix-web-player-radio-ao-vivo&934992.6600449783"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

@@ -448,6 +448,33 @@ window.STATIONS = [
       "https://s03.diazol.hu:35152/stream3"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "kpop-radio",
+    "name": "Kpop Radio",
+    "category": "music",
+    "streams": [
+      "https://s5.radio.co/s078df1838/listen"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "erdelyi-magyar-radio",
+    "name": "Erdélyi Magyar Rádió",
+    "category": "music",
+    "streams": [
+      "https://adas.erdelyimagyarradio.eu:8443/emr"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "chiqui-radio",
+    "name": "Chiqui Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/gvz27wezgghtv"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

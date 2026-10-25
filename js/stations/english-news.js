@@ -390,6 +390,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "where": "US"
+  },
+  {
+    "id": "abc-radio-sydney",
+    "name": "ABC Radio Sydney",
+    "category": "anz",
+    "streams": [
+      "https://mediaserviceslive.akamaized.net/hls/live/2038302/localsydney/masterhq.m3u8"
+    ],
+    "added": "2026-10-25",
+    "where": "Australia"
+  },
+  {
+    "id": "774-abc-melbourne",
+    "name": "774 ABC Melbourne",
+    "category": "anz",
+    "streams": [
+      "https://streaming.abc-cdn.net.au/audio/hls/localmelbourne.m3u8?source=web"
+    ],
+    "added": "2026-10-25",
+    "where": "Australia"
+  },
+  {
+    "id": "wtam-1100-cleveland-ohio",
+    "name": "WTAM 1100 - Cleveland, Ohio",
+    "category": "us",
+    "streams": [
+      "https://stream.revma.ihrhls.com/zc1749"
+    ],
+    "added": "2026-10-25",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

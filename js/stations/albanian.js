@@ -467,6 +467,15 @@ window.STATIONS = [
       "https://cp1.sednastream.com/proxy/clubbit/stream"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "radio-7",
+    "name": "Radio 7",
+    "category": "devotional",
+    "streams": [
+      "https://rpn.bozztv.com/radio/Med7-RadioTirana/icecast.audio"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

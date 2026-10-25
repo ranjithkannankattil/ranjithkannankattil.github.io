@@ -242,7 +242,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sc.mpbnl.nl/radionostalgia.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-1-1-0-ruse-88-9-fm",
@@ -449,6 +450,24 @@ window.STATIONS = [
       "https://focusradio.dataserv.cc/1"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "dark-wave-radomir",
+    "name": "Dark wave Radomir",
+    "category": "music",
+    "streams": [
+      "https://dwrstream.eu/?ver=209395"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "station-8",
+    "name": "БНР – Радио Видин",
+    "category": "news",
+    "streams": [
+      "https://lb-hls.cdn.bg/2032/fls/Vidin.stream/playlist.m3u8"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

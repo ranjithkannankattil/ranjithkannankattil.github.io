@@ -88,7 +88,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://a8.siar.us/listen/campursari/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rri-pro-2-92-1-fm-tanjungpinang",
@@ -208,7 +209,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:9154/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radiks-fm-semarang",
@@ -216,7 +218,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:9620/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-music-indonesia",
@@ -266,8 +269,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:8500/;super.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "bahtera-yudha-fm-surabaya",
@@ -323,8 +325,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/14/9314/rrisngliatpro1.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "mosh-head-black-metal-id",
@@ -459,8 +460,7 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:9622/stream"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "rri-pro1-banjarmasin",
@@ -488,6 +488,33 @@ window.STATIONS = [
       "https://eu1.fastcast4u.com/proxy/kiarafm?mp=/1"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "arif-channel",
+    "name": "Arif Channel",
+    "category": "music",
+    "streams": [
+      "https://ig.idstreamer.com/listen/arif_channel/stream"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "rri-pro-2-jakarta",
+    "name": "RRI Pro 2 Jakarta",
+    "category": "music",
+    "streams": [
+      "https://stream-node1.rri.co.id/streaming/25/9025/rrijakartapro2.mp3"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "mandarin-station-fm-98-3",
+    "name": "Mandarin station FM 98.3",
+    "category": "music",
+    "streams": [
+      "https://stream01-ssl.arenastreaming.com:8043/stream"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

@@ -490,6 +490,33 @@ window.STATIONS = [
       "https://dispatcher.rndfnk.com/br/brklassik/live/mp3/high"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "trancebase-fm",
+    "name": "TranceBase.FM",
+    "category": "music",
+    "streams": [
+      "https://listen.trancebase.fm/tunein-aac-hd-pls"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "sunshine-live-die-90er",
+    "name": "Sunshine Live - Die 90er",
+    "category": "music",
+    "streams": [
+      "https://stream.sunshine-live.de/90er/mp3-192/stream.sunshine-live.de"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "blasmusikradio-mit-bernd",
+    "name": "\tBlasmusikradio mit Bernd",
+    "category": "music",
+    "streams": [
+      "https://blasmusikradiomitbernd.stream.laut.fm/blasmusikradio_mit_bernd?t302=2026-10-22_11-14-48&uuid=1c862183-4ad1-31ac-d614-244ec1af5ae8"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

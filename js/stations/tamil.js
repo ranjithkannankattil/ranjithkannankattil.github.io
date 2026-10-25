@@ -494,6 +494,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/02n962ezyp8uv"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "vaigai-fm",
+    "name": "Vaigai FM",
+    "category": "music",
+    "streams": [
+      "https://cast1.my-control-panel.com/proxy/geethan3/stream"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "tamilkaterumbufm",
+    "name": "Tamilkaterumbufm",
+    "category": "music",
+    "streams": [
+      "https://tamilkaterumbufm-prabak78.radioca.st/stream"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "instrumental-music-radio",
+    "name": "Instrumental Music Radio",
+    "category": "music",
+    "streams": [
+      "https://azuracast.vibesounds.in:8030/radio.mp3"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

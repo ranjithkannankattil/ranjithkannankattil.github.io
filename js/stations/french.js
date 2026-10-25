@@ -464,6 +464,33 @@ window.STATIONS = [
       "https://radios.rtbf.be/classic21-128.mp3"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "hits-1-algerie",
+    "name": "Hits 1 Algérie",
+    "category": "music",
+    "streams": [
+      "https://radio12.pro-fhi.net/listen/whmnrlow/stream"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "chante-france-60-s",
+    "name": "Chante France 60's",
+    "category": "music",
+    "streams": [
+      "https://stream.chantefrance.com/cf-60"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "fip-jazz-hi-fi",
+    "name": "FIP Jazz (Hi-Fi)",
+    "category": "music",
+    "streams": [
+      "https://stream.radiofrance.fr/fipjazz/fipjazz_hifi.m3u8?id=radiofrance"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

@@ -494,6 +494,33 @@ window.STATIONS = [
       "https://ice.abradio.cz/helax128.mp3"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "cro-sever",
+    "name": "ČRo Sever",
+    "category": "music",
+    "streams": [
+      "https://rozhlas.stream/sever_high.aac"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "classic-praha",
+    "name": "Classic Praha",
+    "category": "music",
+    "streams": [
+      "https://icecast8.play.cz/classic128.mp3"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "fajn-fresh",
+    "name": "Fajn Fresh",
+    "category": "music",
+    "streams": [
+      "https://ice.abradio.cz/fajnfresh128.mp3"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

@@ -440,6 +440,33 @@ window.STATIONS = [
       "https://ic1.smcdn.pl/6030-1.mp3"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "radio-pogoda-poznan",
+    "name": "Radio Pogoda Poznań",
+    "category": "news",
+    "streams": [
+      "https://stream30.radiostream.pl/tuba138-1.mp3"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "house-of-funk",
+    "name": "House of Funk",
+    "category": "music",
+    "streams": [
+      "https://houseoffunk.eu:8443/live"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "radio-sar-studencka-agencja-radiowa",
+    "name": "Radio SAR - Studencka Agencja Radiowa",
+    "category": "music",
+    "streams": [
+      "https://stream.radiosar.pl/hdmain.mp3"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

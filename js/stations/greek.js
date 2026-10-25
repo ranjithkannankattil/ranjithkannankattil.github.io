@@ -393,7 +393,8 @@ window.STATIONS = [
     "streams": [
       "https://loki.mental-media.gr:8038/index.html"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "station-5",
@@ -511,6 +512,33 @@ window.STATIONS = [
       "https://link.radiojar.com/c27wx6pdh8vtv"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "1st-greek-hits-flac-radio-lossless",
+    "name": "1st Greek Hits FLAC Radio Lossless",
+    "category": "music",
+    "streams": [
+      "https://stream.newageradio.gr/listen/flac_gr/radio.flac"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "rebel-105-2",
+    "name": "REBEL 105.2",
+    "category": "music",
+    "streams": [
+      "https://netradio.live24.gr/rebel1052"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "vanilla-radio-com-fresh-flavours-stream",
+    "name": "Vanilla Radio.com - Fresh Flavours Stream",
+    "category": "music",
+    "streams": [
+      "https://fresh.vanillaradio.com:8028/live"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

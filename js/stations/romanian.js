@@ -429,6 +429,33 @@ window.STATIONS = [
       "https://live.radioclasic.com/listen/radio_clasic_bach/live.mp3"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "prob-radio",
+    "name": "ProB Radio",
+    "category": "music",
+    "streams": [
+      "https://live.radioprob.ro:8888/stream"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "play-radio-91-6",
+    "name": "Play Radio 91.6",
+    "category": "news",
+    "streams": [
+      "https://live.playradio.org:9090/FMHD"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "clasic-radio-100-romanesc-bucuresti",
+    "name": "Clasic Radio_100% Romanesc -București",
+    "category": "music",
+    "streams": [
+      "https://live.radioclasic.com/listen/radio_clasic_romanesc/live.mp3"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

@@ -458,6 +458,33 @@ window.STATIONS = [
       "https://edenofthewest.com/listen/eden-radio/radio.mp3"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "anime-radio",
+    "name": "Anime Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.laut.fm/animefm"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "cinz-net-radio",
+    "name": "CINZ NET Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.cinz.net/"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "dankfm",
+    "name": "DankFM",
+    "category": "music",
+    "streams": [
+      "https://internetradio.dankassassin368.com/DankFM.mp3"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

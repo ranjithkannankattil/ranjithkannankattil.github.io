@@ -485,6 +485,33 @@ window.STATIONS = [
       "https://c30.radioboss.fm:18267/stream"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "quran-radio-from-sharjah",
+    "name": "Quran Radio From Sharjah",
+    "category": "devotional",
+    "streams": [
+      "https://l3.itworkscdn.net/smcquranlive/quranradiolive/icecast.audio"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "sawt-al-farah",
+    "name": "Sawt Al Farah",
+    "category": "music",
+    "streams": [
+      "https://radio.garden/api/ara/content/listen/TBbZ87vu/channel.mp3"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "chaine-1",
+    "name": "Chaine 1 القناة الأولى",
+    "category": "news",
+    "streams": [
+      "https://webradio1.tda.dz:8001/Chaine1_64K.mp3"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

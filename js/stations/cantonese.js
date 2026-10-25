@@ -56,8 +56,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://1716664847.rsc.cdn77.org/1716664847/tracks-a1/mono.ts.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-6",
@@ -495,6 +494,33 @@ window.STATIONS = [
       "https://stream-hls.bauermedia.pt/cidade.aac/playlist.m3u8"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "station-31",
+    "name": "广东城市之声",
+    "category": "music",
+    "streams": [
+      "https://lhttp.qtfm.cn/live/469/64k.mp3"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "station-32",
+    "name": "江门旅游之声",
+    "category": "news",
+    "streams": [
+      "https://lhttp-hw.qtfm.cn/live/1283/64k.mp3"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "station-33",
+    "name": "肇庆高新之声",
+    "category": "news",
+    "streams": [
+      "https://lhttp-hw.qtfm.cn/live/20500213/64k.mp3"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

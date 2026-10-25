@@ -456,6 +456,33 @@ window.STATIONS = [
       "https://stream.ehrhiti.lv:8000/Stream_36.mp3"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "ehr-festivalu-hiti",
+    "name": "EHR Festivālu Hiti",
+    "category": "music",
+    "streams": [
+      "https://stream.ehrhiti.lv:8000/Stream_73.mp3"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "european-hit-radio-superhits-chillout-hi",
+    "name": "European Hit Radio - SuperHits Chillout Hits",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/EHR_SUPER_HITS_CHILLOUTAAC.aac"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "european-hit-radio-lmt-straume",
+    "name": "European Hit Radio - LMT Straume",
+    "category": "music",
+    "streams": [
+      "https://28993.live.streamtheworld.com/EHR_LMT_STRAUMEAAC.aac"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

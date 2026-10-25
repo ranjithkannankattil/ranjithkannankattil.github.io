@@ -524,6 +524,33 @@ window.STATIONS = [
       "https://streams.radio.dpgmedia.cloud/redirect/willy_be_class_x/aac"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "radio-noordzee",
+    "name": "Radio Noordzee",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR17.mp3"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "npo-funx-nl",
+    "name": "NPO FunX NL",
+    "category": "music",
+    "streams": [
+      "https://icecast.omroep.nl/funx-bb-mp3"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "npo-blend",
+    "name": "NPO BLEND",
+    "category": "music",
+    "streams": [
+      "https://icecast.omroep.nl/npoblend-bb-mp3"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";

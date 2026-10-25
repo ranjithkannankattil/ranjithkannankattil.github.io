@@ -332,6 +332,33 @@ window.STATIONS = [
       "https://stream2.statsradio.com:8150/stream"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "braniteljski-radio-nepokoreni-grad-osije",
+    "name": "Braniteljski radio \"Nepokoreni grad\" - Osijek",
+    "category": "music",
+    "streams": [
+      "https://s3.radio.co/se83499ee0/listen"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "hrvatski-radio-pop-glazba",
+    "name": "Hrvatski radio - Pop glazba",
+    "category": "music",
+    "streams": [
+      "https://28513.live.streamtheworld.com/HR_POP_SC"
+    ],
+    "added": "2026-10-25"
+  },
+  {
+    "id": "radio-rojc",
+    "name": "Radio Rojc",
+    "category": "music",
+    "streams": [
+      "https://cf.widecastcdn.live/Z07ww1NUNl/live.m3u8"
+    ],
+    "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-24T17:12Z";
+window.STATIONS_CHECKED = "2026-10-25T05:40Z";
