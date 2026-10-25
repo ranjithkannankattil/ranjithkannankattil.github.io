@@ -1,0 +1,53 @@
+name: Media upload
+
+# Anything committed under media-incoming/ goes to R2 (https://media.ranjithkb.com/) at the same
+# path, e.g. media-incoming/books/kintsugi.pdf -> https://media.ranjithkb.com/books/kintsugi.pdf.
+# The files are then removed from the repository, so the site stays small.
+on:
+  push:
+    branches: [main, media-move]   # media-move: draft branch, remove before merging
+    paths: ["media-incoming/**"]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: media-upload
+  cancel-in-progress: false
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Upload to R2
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          R2: https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
+        run: |
+          shopt -s nullglob globstar
+          cd media-incoming
+          for f in **/*; do
+            [ -f "$f" ] || continue
+            extra=()
+            case "$f" in
+              *.pdf) extra=(--content-type application/pdf --content-disposition "attachment; filename=\"$(basename "$f")\"") ;;
+              *.webp) extra=(--content-type image/webp) ;;
+              *.jpg|*.jpeg) extra=(--content-type image/jpeg) ;;
+              *.png) extra=(--content-type image/png) ;;
+            esac
+            aws s3 cp "$f" "s3://ranjithkb-media/$f" --endpoint-url "$R2" \
+              --cache-control "public, max-age=86400" "${extra[@]}" --only-show-errors
+            echo "uploaded $f"
+          done
+      - name: Remove uploaded files from the repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898732+github-actions[bot]@users.noreply.github.com"
+          git rm -rq media-incoming
+          git commit -m "Media: uploaded to R2, removed from repository"
+          git pull --rebase
+          git push
