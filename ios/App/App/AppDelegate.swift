@@ -1,5 +1,6 @@
 import UIKit
 import AVFoundation
+import AuthenticationServices
 import Capacitor
 
 @UIApplicationMain
@@ -82,5 +83,63 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                           sessionRole: connectingSceneSession.role)
         config.delegateClass = SceneDelegate.self
         return config
+    }
+}
+
+
+// MARK: - Google sign-in
+
+/// The app's web view, with the app's own plugins registered.
+class RadioViewController: CAPBridgeViewController {
+    override open func capacitorDidLoad() {
+        bridge?.registerPluginInstance(RadioAuthPlugin())
+    }
+}
+
+/// Google won't sign in inside an app's built-in browser, and the page's sign-in popup has
+/// nowhere to go in the app. So the page asks this plugin to sign in: it opens Apple's secure
+/// sign-in sheet on ranjithkb.com/auth-app.html, which signs in with Google as on the website
+/// and returns the Google tokens to com.ranjithkb.radio://auth. The page then signs in with them.
+@objc(RadioAuthPlugin)
+public class RadioAuthPlugin: CAPPlugin, CAPBridgedPlugin, ASWebAuthenticationPresentationContextProviding {
+    public let identifier = "RadioAuthPlugin"
+    public let jsName = "RadioAuth"
+    public let pluginMethods: [CAPPluginMethod] = [
+        CAPPluginMethod(name: "signIn", returnType: CAPPluginReturnPromise)
+    ]
+    private var session: ASWebAuthenticationSession?
+
+    @objc func signIn(_ call: CAPPluginCall) {
+        DispatchQueue.main.async {
+            guard let start = URL(string: "https://ranjithkb.com/auth-app.html?start=1") else {
+                call.reject("bad sign-in address"); return
+            }
+            let session = ASWebAuthenticationSession(url: start, callbackURLScheme: "com.ranjithkb.radio") { [weak self] url, error in
+                self?.session = nil
+                if let error = error {
+                    let cancelled = (error as? ASWebAuthenticationSessionError)?.code == .canceledLogin
+                    call.reject(cancelled ? "cancelled" : error.localizedDescription, cancelled ? "cancelled" : "failed")
+                    return
+                }
+                // tokens come back in the fragment: #id_token=…&access_token=…  (or #error=…)
+                var params: [String: String] = [:]
+                if let fragment = url.flatMap({ URLComponents(url: $0, resolvingAgainstBaseURL: false)?.fragment }) {
+                    var q = URLComponents(); q.percentEncodedQuery = fragment
+                    for item in q.queryItems ?? [] { params[item.name] = item.value ?? "" }
+                }
+                if let err = params["error"], !err.isEmpty { call.reject(err, err); return }
+                let idToken = params["id_token"] ?? "", accessToken = params["access_token"] ?? ""
+                if idToken.isEmpty && accessToken.isEmpty { call.reject("no sign-in came back", "failed"); return }
+                call.resolve(["idToken": idToken, "accessToken": accessToken])
+            }
+            session.presentationContextProvider = self
+            session.prefersEphemeralWebBrowserSession = false   // reuse a Google account already signed in on this iPhone
+            self.session = session
+            if !session.start() { self.session = nil; call.reject("couldn't open the sign-in sheet", "failed") }
+        }
+    }
+
+    public func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
+        return bridge?.viewController?.view.window ?? ASPresentationAnchor()
     }
 }
