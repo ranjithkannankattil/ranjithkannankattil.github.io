@@ -808,3 +808,4 @@ nav.tabs .nav-menu a.current{ background:var(--accent-soft); box-shadow:inset 3p
 footer .cheart{ max-width:62ch; line-height:1.6; text-transform:none; letter-spacing:.02em; }
 footer .cheart a, .cheart-note a{ text-decoration:underline; text-underline-offset:2px; }
 .cheart-note{ font-size:.92rem; color:var(--ink-soft); }
+.foot-r a[href^="mailto:"]{ text-transform:none; letter-spacing:0; }
