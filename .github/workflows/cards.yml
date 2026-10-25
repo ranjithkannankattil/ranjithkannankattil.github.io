@@ -1,0 +1,61 @@
+name: Link-preview cards
+
+# Draws a preview card for every writing and section page (scripts/build_cards.py),
+# uploads the images to R2 (https://media.ranjithkb.com/), then commits the share pages (w/)
+# and section-page og:image links. Images never go into this repository.
+on:
+  push:
+    branches: [main, media-move]   # media-move: draft branch, remove before merging
+    paths: [js/posts.js, scripts/build_cards.py, .github/workflows/cards.yml]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cards
+  cancel-in-progress: false
+
+jobs:
+  cards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Pillow with Malayalam text shaping
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq libraqm0 >/dev/null
+          pip install -q pillow
+          python3 -c "from PIL import features; assert features.check('raqm'), 'no raqm'"
+      - name: Fetch the site fonts
+        run: |
+          mkdir -p scripts/.fonts && cd scripts/.fonts
+          base=https://raw.githubusercontent.com/google/fonts/main/ofl
+          curl -sSfL -O "$base/manjari/Manjari-Bold.ttf"
+          curl -sSfL -O "$base/manjari/Manjari-Regular.ttf"
+          curl -sSfL -O "$base/ibmplexmono/IBMPlexMono-Medium.ttf"
+          curl -sSfL -o "SpaceGrotesk[wght].ttf" "$base/spacegrotesk/SpaceGrotesk%5Bwght%5D.ttf"
+          curl -sSfL -o "SourceSerif4-Italic[opsz,wght].ttf" "$base/sourceserif4/SourceSerif4-Italic%5Bopsz,wght%5D.ttf"
+      - name: Draw cards and write share pages
+        run: python3 scripts/build_cards.py --out build
+      - name: Upload new cards to R2
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          R2: https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
+        run: |
+          # names carry a content hash, so files already there are identical: skip them
+          for d in cards sections; do
+            aws s3 sync "build/$d" "s3://ranjithkb-media/$d" --endpoint-url "$R2" --size-only \
+              --content-type image/jpeg --cache-control "public, max-age=31536000, immutable" --only-show-errors
+          done
+          echo "uploaded"
+      - name: Commit share pages and section links
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898732+github-actions[bot]@users.noreply.github.com"
+          git add -A w *.html productivity/*.html
+          git diff --cached --quiet || { git commit -m "Cards: share pages and preview links"; git pull --rebase; git push; }

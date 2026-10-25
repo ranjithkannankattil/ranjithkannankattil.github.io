@@ -5,3 +5,4 @@ __pycache__/
 scripts/rules-test/node_modules/
 scripts/rules-test/out.txt
 scripts/rules-test/*.log
+build/

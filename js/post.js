@@ -65,10 +65,12 @@
   minus.onclick = () => setSize(size - .1);
   plus.onclick = () => setSize(size + .1);
   share.onclick = async () => {
-    const data = { title: p.t, url: location.href };
+    // the short /w/ address carries this piece's own link-preview card (scripts/build_cards.py)
+    const shareUrl = `https://ranjithkb.com/w/${p.f}.html`;
+    const data = { title: p.t, url: shareUrl };
     try {
       if (navigator.share) await navigator.share(data);
-      else { await navigator.clipboard.writeText(location.href); share.textContent = "Link copied"; setTimeout(() => (share.textContent = "Share"), 1800); }
+      else { await navigator.clipboard.writeText(shareUrl); share.textContent = "Link copied"; setTimeout(() => (share.textContent = "Share"), 1800); }
     } catch { /* cancelled */ }
   };
 
