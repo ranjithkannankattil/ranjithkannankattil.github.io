@@ -121,7 +121,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play-radio-stream3.hndt.com/now/WUBA5hW2/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-10",
@@ -201,7 +202,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-17",
@@ -531,4 +533,4 @@ window.STATIONS = [
     "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T05:41Z";
+window.STATIONS_CHECKED = "2026-10-26T19:52Z";

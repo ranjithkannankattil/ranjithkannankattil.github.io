@@ -56,7 +56,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "89-4-tamil-fm",
@@ -280,7 +281,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio129/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "tamil-ragam",
@@ -575,6 +577,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/p5k41f436qzuv"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "vanavilfm-radio-maestro",
+    "name": "Vanavilfm - Radio Maestro",
+    "category": "music",
+    "streams": [
+      "https://s7.yesstreaming.net:8092/stream"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "oli-968-radio",
+    "name": "Oli 968 Radio",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/OLI968FMAAC.aac"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "vividhbharathitamil",
+    "name": "Vividhbharathitamil",
+    "category": "music",
+    "streams": [
+      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio024/playlist.m3u8"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T05:41Z";
+window.STATIONS_CHECKED = "2026-10-26T19:52Z";

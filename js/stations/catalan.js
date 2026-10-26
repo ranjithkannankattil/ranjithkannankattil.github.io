@@ -322,8 +322,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://relay.stream.enacast-cloud.com:30048/rap56.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "flaixbac-andorra",
@@ -386,8 +385,7 @@ window.STATIONS = [
     "streams": [
       "https://enacast.com/radioribarroja/streams/SD"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "radio-vilablareix",
@@ -579,4 +577,4 @@ window.STATIONS = [
     "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T05:41Z";
+window.STATIONS_CHECKED = "2026-10-26T19:52Z";

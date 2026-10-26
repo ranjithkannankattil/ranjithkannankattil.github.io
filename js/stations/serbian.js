@@ -120,7 +120,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://centova.dukahosting.com/proxy/021kafe/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "naxi-love-radio",
@@ -537,6 +538,33 @@ window.STATIONS = [
       "https://onair.superfm.rs/superfm.mp3"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "big-radio-2-banja-luka",
+    "name": "BIG Radio 2 Banja Luka",
+    "category": "music",
+    "streams": [
+      "https://big2.bigportal.ba:8080/big2"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "radio-aparat",
+    "name": "Radio Aparat",
+    "category": "music",
+    "streams": [
+      "https://stream4.rcast.net/72355/"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "dah-provincije",
+    "name": "Dah provincije",
+    "category": "music",
+    "streams": [
+      "https://stream.iradio.pro/proxy/radioforca?mp=/stream"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T05:41Z";
+window.STATIONS_CHECKED = "2026-10-26T19:52Z";

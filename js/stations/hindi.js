@@ -558,6 +558,33 @@ window.STATIONS = [
       "https://c5.radioboss.fm:18125/stream"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "bollywood-mix",
+    "name": "Bollywood Mix",
+    "category": "music",
+    "streams": [
+      "https://drive.uber.radio/uber/bollywoodmix/icecast.audio"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "4lobos-bollywood-radio",
+    "name": "4lobos bollywood radio",
+    "category": "music",
+    "streams": [
+      "https://puma.streemlion.com:4130/stream"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "bollywood-alka-yagnik",
+    "name": "Bollywood Alka yagnik",
+    "category": "music",
+    "streams": [
+      "https://drive.uber.radio/uber/bollywoodalkayagnik/icecast.audio"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T05:41Z";
+window.STATIONS_CHECKED = "2026-10-26T19:52Z";

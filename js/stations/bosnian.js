@@ -160,8 +160,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_gradacac.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-usk-1",
@@ -359,6 +358,15 @@ window.STATIONS = [
       "https://webtvstream.bhtelecom.ba/radio_ask.m3u8"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "radio-roska",
+    "name": "Radio Roška",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/q7300aptbwzuv"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T05:41Z";
+window.STATIONS_CHECKED = "2026-10-26T19:52Z";

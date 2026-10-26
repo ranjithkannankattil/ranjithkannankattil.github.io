@@ -376,6 +376,33 @@ window.STATIONS = [
       "https://s10.webradio-hosting.com/proxy/fredradiokr/stream"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "ebs-tune-in",
+    "name": "ebs tune in",
+    "category": "music",
+    "streams": [
+      "https://ebsonair.ebs.co.kr/fmradiofamilypc/familypc1m/playlist.m3u8"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "rmf-k-pop",
+    "name": "RMF K-Pop",
+    "category": "music",
+    "streams": [
+      "https://rs8-krk2-cyfronet.rmfstream.pl/GAMEMUSIC"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "station-2",
+    "name": "아리랑모바일방송",
+    "category": "music",
+    "streams": [
+      "https://lhttp.qingting.fm/live/5022144/64k.mp3"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T05:41Z";
+window.STATIONS_CHECKED = "2026-10-26T19:52Z";

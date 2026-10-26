@@ -606,6 +606,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "where": "US"
+  },
+  {
+    "id": "somafm-metal-detector",
+    "name": "SomaFM Metal Detector",
+    "category": "rock",
+    "streams": [
+      "https://ice5.somafm.com/metal-128-aac"
+    ],
+    "added": "2026-10-26",
+    "where": "US"
+  },
+  {
+    "id": "kexp-90-3-fm-seattle",
+    "name": "KEXP 90.3 FM Seattle",
+    "category": "rock",
+    "streams": [
+      "https://kexp-mp3-128.streamguys1.com/kexp128.mp3"
+    ],
+    "added": "2026-10-26",
+    "where": "US"
+  },
+  {
+    "id": "101-1-wjrr-orlando-s-rock-station",
+    "name": "101.1 WJRR Orlando's Rock Station",
+    "category": "rock",
+    "streams": [
+      "https://stream.revma.ihrhls.com/zc593"
+    ],
+    "added": "2026-10-26",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T05:41Z";
+window.STATIONS_CHECKED = "2026-10-26T19:52Z";

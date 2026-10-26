@@ -518,6 +518,33 @@ window.STATIONS = [
       "https://webradio3.tda.dz:8001/Internationale_64K.mp3"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "00-radio-canada-montreal",
+    "name": "00-Radio Canada Montreal",
+    "category": "news",
+    "streams": [
+      "https://rcavliveaudio.akamaized.net/hls/live/2006635/P-2QMTL0_MTL/adaptive_192/master.m3u8"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "generations-funk",
+    "name": "Generations Funk",
+    "category": "music",
+    "streams": [
+      "https://gene-wr05.ice.infomaniak.ch/gene-wr05.mp3"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "mouv",
+    "name": "Mouv'",
+    "category": "music",
+    "streams": [
+      "https://icecast.radiofrance.fr/mouv-hifi.aac"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T05:41Z";
+window.STATIONS_CHECKED = "2026-10-26T19:52Z";

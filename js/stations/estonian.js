@@ -132,8 +132,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.skymedia.ee/live/RETRO"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "myhits-dance",
@@ -149,8 +148,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.relaxfm.ee/instrumental"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "hits-show-radio-est",
@@ -311,8 +309,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.relaxfm.ee/cafe"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "chat-raadio",
@@ -530,4 +527,4 @@ window.STATIONS = [
     "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T05:41Z";
+window.STATIONS_CHECKED = "2026-10-26T19:52Z";

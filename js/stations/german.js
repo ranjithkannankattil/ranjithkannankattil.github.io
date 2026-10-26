@@ -571,6 +571,33 @@ window.STATIONS = [
       "https://dispatcher.rndfnk.com/hr/hr3/live/mp3/128/stream.mp3"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "srf-4-news",
+    "name": "SRF 4 News",
+    "category": "news",
+    "streams": [
+      "https://stream.srg-ssr.ch/m/drs4news/mp3_128"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "radio-bob-classic-rock",
+    "name": "RADIO BOB! Classic Rock",
+    "category": "music",
+    "streams": [
+      "https://streams.radiobob.de/bob-classicrock/mp3-192/streams.radiobob.de/"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "orf-radio-wien",
+    "name": "ORF Radio Wien",
+    "category": "music",
+    "streams": [
+      "https://orf-live.ors-shoutcast.at/wie-q1a"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T05:41Z";
+window.STATIONS_CHECKED = "2026-10-26T19:52Z";

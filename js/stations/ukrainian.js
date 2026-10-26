@@ -96,8 +96,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast.mediaonline.net.ua/nrj320"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "107-9",
@@ -153,8 +152,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s5.radioforge.com:7908/live?n=77357"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "24-breaking-live",
@@ -234,7 +232,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.brokenbeats.net/tune"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-shanson",
@@ -290,8 +289,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast.mediaonline.net.ua/chillout320"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-2",
@@ -307,8 +305,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://cast.mediaonline.net.ua/prmfm320"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "russia-today-germany",
@@ -342,8 +339,7 @@ window.STATIONS = [
     "streams": [
       "https://cast.mediaonline.net.ua/avtoradio"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "station-3",
@@ -361,8 +357,7 @@ window.STATIONS = [
     "streams": [
       "https://cast.mediaonline.net.ua/loungefm320"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "radio-jazz-gold-fm",
@@ -398,8 +393,7 @@ window.STATIONS = [
     "streams": [
       "https://cast.mediaonline.net.ua/avtoradio320"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "station-6",
@@ -408,8 +402,7 @@ window.STATIONS = [
     "streams": [
       "https://cast.mediaonline.net.ua/radiopyatnica320"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "station-7",
@@ -583,4 +576,4 @@ window.STATIONS = [
     "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T05:41Z";
+window.STATIONS_CHECKED = "2026-10-26T19:52Z";

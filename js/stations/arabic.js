@@ -565,6 +565,33 @@ window.STATIONS = [
       "https://audio.osina.cloud:9323/stream"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "saudi-quran1",
+    "name": "Saudi Quran1",
+    "category": "music",
+    "streams": [
+      "https://n01.radiojar.com/0tpy1h0kxtzuv?rj-ttl=5&rj-tok=AAABjrUiYUAAxwNU2wDdcOap9w"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "turkmen-fm",
+    "name": "Turkmen FM تركمان إف إم",
+    "category": "news",
+    "streams": [
+      "https://radyo1.radyo-dinle.tc/8284/stream;"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "syria-tv",
+    "name": "Syria TV",
+    "category": "music",
+    "streams": [
+      "https://live.kwikmotion.com/syriatvlive/syriatv_audio/playlist.m3u8"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T05:41Z";
+window.STATIONS_CHECKED = "2026-10-26T19:52Z";

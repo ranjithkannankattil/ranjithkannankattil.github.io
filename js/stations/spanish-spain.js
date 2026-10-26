@@ -236,8 +236,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ztnr.rtve.es/ztnr/1694255.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "esradio-principal",
@@ -569,6 +568,33 @@ window.STATIONS = [
       "https://dispatcher.rndfnk.com/crtve/rneree/main/mp3/high"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "cope-gijon",
+    "name": "COPE Gijón",
+    "category": "news",
+    "streams": [
+      "https://wecast-bl01.flumotion.com/copesedes/gijon.mp3"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "megastarfm",
+    "name": "MegaStarFM",
+    "category": "music",
+    "streams": [
+      "https://flucast14-h-cloud.flumotion.com/cope/megastar.mp3"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "onda-cero-sevilla",
+    "name": "Onda Cero Sevilla",
+    "category": "news",
+    "streams": [
+      "https://atres-live.ondacero.es/live/delegaciones/oc/sevilla/master.m3u8"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T05:41Z";
+window.STATIONS_CHECKED = "2026-10-26T19:52Z";

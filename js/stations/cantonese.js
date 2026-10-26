@@ -57,8 +57,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://1716664847.rsc.cdn77.org/1716664847/tracks-a1/mono.ts.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-6",
@@ -267,8 +266,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ptmirror3.passiontimes.hk/hls3/stream.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "chkt-am1430-fairchild",
@@ -514,7 +512,8 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/1283/64k.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "station-33",
@@ -551,6 +550,33 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m8080.aac"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "station-36",
+    "name": "花都人民广播电台",
+    "category": "news",
+    "streams": [
+      "https://lhttp.qingting.fm/live/1263/64k.mp3"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "station-37",
+    "name": "恩平人民广播电台",
+    "category": "news",
+    "streams": [
+      "https://lhttp.qingting.fm/live/20701/64k.mp3"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "956",
+    "name": "开平电台 飞扬956",
+    "category": "music",
+    "streams": [
+      "https://lhttp-hw.qtfm.cn/live/5037/64k.mp3"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T05:41Z";
+window.STATIONS_CHECKED = "2026-10-26T19:52Z";

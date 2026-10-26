@@ -565,6 +565,33 @@ window.STATIONS = [
       "https://rr-sovclass.hostingradio.ru/sovclass96.aacp"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "101-ru-abba",
+    "name": "101.ru ABBA",
+    "category": "music",
+    "streams": [
+      "https://srv01.gpmradio.ru/stream/pro/aac/64/104"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "radio-ultra",
+    "name": "Radio Ultra",
+    "category": "music",
+    "streams": [
+      "https://nashe1.hostingradio.ru/ultra-192.mp3"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "echo-online",
+    "name": "Echo ЭХО Online",
+    "category": "news",
+    "streams": [
+      "https://i1.echofm.online:8443/stream"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T05:41Z";
+window.STATIONS_CHECKED = "2026-10-26T19:52Z";

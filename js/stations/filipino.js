@@ -187,8 +187,7 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://islamicbulletin.site:8030/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "gv-99-1",
@@ -517,4 +516,4 @@ window.STATIONS = [
     "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T05:41Z";
+window.STATIONS_CHECKED = "2026-10-26T19:52Z";

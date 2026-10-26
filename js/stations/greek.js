@@ -393,8 +393,7 @@ window.STATIONS = [
     "streams": [
       "https://loki.mental-media.gr:8038/index.html"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "station-5",
@@ -593,6 +592,33 @@ window.STATIONS = [
       "https://realfm.live24.gr/realfm"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "status-107-7",
+    "name": "Status 107.7",
+    "category": "news",
+    "streams": [
+      "https://loki.mental-media.gr/proxy/statusf1?mp=/stream:8000/;stream/1"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "mad-radio-106-2",
+    "name": "Mad Radio 106.2",
+    "category": "music",
+    "streams": [
+      "https://mediaserver.mad.tv/stream"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "105fm",
+    "name": "105FM",
+    "category": "news",
+    "streams": [
+      "https://105fm.espiv.net/listen/105fm/stream.mp3"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T05:41Z";
+window.STATIONS_CHECKED = "2026-10-26T19:52Z";

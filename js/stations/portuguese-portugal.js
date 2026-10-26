@@ -230,7 +230,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "cidade-fm-2",
@@ -277,8 +278,8 @@ window.STATIONS = [
     "name": "Antena 2",
     "category": "music",
     "streams": [
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8",
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR",
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8"
     ]
   },
   {
@@ -356,7 +357,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -383,8 +385,7 @@ window.STATIONS = [
     "streams": [
       "https://radioparalelo.indymedia.pt/listen/paralelo/radio.mp3"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "rfm-latinas",
@@ -565,6 +566,33 @@ window.STATIONS = [
       "https://servidor15-3.brlogic.com:7088/live?source=15118"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "radio-comercial-rock",
+    "name": "Radio Comercial Rock",
+    "category": "music",
+    "streams": [
+      "https://stream-icy.bauermedia.pt/rcrock.aac"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "smooth-jazz-portugal",
+    "name": "Smooth Jazz Portugal",
+    "category": "music",
+    "streams": [
+      "https://stream-hls.bauermedia.pt/smojazz.aac/playlist.m3u8"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "m80-radio-indie",
+    "name": "M80 Rádio – Indie",
+    "category": "music",
+    "streams": [
+      "https://stream-icy.bauermedia.pt/m80indie.aac"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T05:41Z";
+window.STATIONS_CHECKED = "2026-10-26T19:52Z";

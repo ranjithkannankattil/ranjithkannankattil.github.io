@@ -539,6 +539,33 @@ window.STATIONS = [
       "https://channels.dinamo.fm/fluent-mp3"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "trt-spor",
+    "name": "Trt Spor",
+    "category": "music",
+    "streams": [
+      "https://rd-trtradyo1.medya.trt.com.tr/master_128.m3u8"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "radyo-kent",
+    "name": "Radyo Kent",
+    "category": "music",
+    "streams": [
+      "https://kentfm955.ozelip.com/9306/stream"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "gol-radyo",
+    "name": "Göl Radyo",
+    "category": "music",
+    "streams": [
+      "https://28553.live.streamtheworld.com/SUPER_FM_ITUNES.mp3"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T05:41Z";
+window.STATIONS_CHECKED = "2026-10-26T19:52Z";

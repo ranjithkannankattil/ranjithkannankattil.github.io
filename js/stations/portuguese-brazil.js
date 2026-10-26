@@ -577,6 +577,33 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_89FM_ADP.aac"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "gold-instrumental",
+    "name": "GOLD INSTRUMENTAL",
+    "category": "music",
+    "streams": [
+      "https://centova2.svdns.com.br:20038/stream"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "radio-clube-105-5-fm",
+    "name": "Rádio Clube 105.5 FM",
+    "category": "music",
+    "streams": [
+      "https://8157.brasilstream.com.br/stream"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "radio-cbn-campinas-99-1-fm",
+    "name": "Rádio CBN Campinas 99.1 FM",
+    "category": "music",
+    "streams": [
+      "https://8214.brasilstream.com.br/stream"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T05:41Z";
+window.STATIONS_CHECKED = "2026-10-26T19:52Z";

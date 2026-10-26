@@ -566,6 +566,33 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/METRO.mp3"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "aspen-102-3",
+    "name": "Aspen 102.3",
+    "category": "music",
+    "streams": [
+      "https://24503.live.streamtheworld.com/ASPENAAC.aac"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "urbana-play-104-3-10-2026",
+    "name": "Urbana Play 104.3 (10-2026)",
+    "category": "news",
+    "streams": [
+      "https://live-ar1.cdnrad.com/hls/radio-285/live.m3u8"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "salsa-92-7-fm",
+    "name": "Salsa 92.7 FM",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/h7lnwv51bh5uv"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T05:41Z";
+window.STATIONS_CHECKED = "2026-10-26T19:52Z";

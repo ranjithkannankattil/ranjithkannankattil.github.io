@@ -229,8 +229,7 @@ window.STATIONS = [
     "streams": [
       "https://rogers-hls.leanstream.co/rogers/tor590.stream/playlist.m3u8"
     ],
-    "where": "Canada",
-    "offline": true
+    "where": "Canada"
   },
   {
     "id": "bloomberg-radio-boston",
@@ -549,6 +548,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "where": "Ghana"
+  },
+  {
+    "id": "rte-radio-1",
+    "name": "RTÉ Radio 1",
+    "category": "sport",
+    "streams": [
+      "https://liveaudio.rte.ie/hls-radio/radio1/chunklist.m3u8"
+    ],
+    "added": "2026-10-26",
+    "where": "Ireland"
+  },
+  {
+    "id": "truckers-radio-usa",
+    "name": "Truckers Radio USA",
+    "category": "us",
+    "streams": [
+      "https://streamer.radio.co/s81d30349a/low"
+    ],
+    "added": "2026-10-26",
+    "where": "US"
+  },
+  {
+    "id": "gb-news-uk-48k-eaac",
+    "name": "GB News (UK) 48k eAAC+",
+    "category": "uk",
+    "streams": [
+      "https://listen-gbnews.sharp-stream.com/gbnews.aac"
+    ],
+    "added": "2026-10-26",
+    "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T05:41Z";
+window.STATIONS_CHECKED = "2026-10-26T19:52Z";

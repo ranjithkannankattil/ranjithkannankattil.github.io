@@ -475,7 +475,8 @@ window.STATIONS = [
     "streams": [
       "https://ssl-1.radiohost.pl:9569/stream"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "radio-mbox-disco-polo",
@@ -494,6 +495,24 @@ window.STATIONS = [
       "https://rs6-krk2.rmfstream.pl/rmf_4"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "tyfloradio",
+    "name": "TyfloRadio",
+    "category": "music",
+    "streams": [
+      "https://radio.tyflopodcast.net/"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "folk-radio",
+    "name": "Folk Radio",
+    "category": "music",
+    "streams": [
+      "https://streaming.g-news.pl:8030/fr1"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T05:41Z";
+window.STATIONS_CHECKED = "2026-10-26T19:52Z";

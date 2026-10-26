@@ -521,6 +521,33 @@ window.STATIONS = [
       "https://lb-hls.cdn.bg/2032/fls/Shumen.stream/playlist.m3u8"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "radio-ruse",
+    "name": "Radio Ruse",
+    "category": "news",
+    "streams": [
+      "https://radio.ruse.bg:8010/radioruse"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "station-10",
+    "name": "Коледно радио",
+    "category": "music",
+    "streams": [
+      "https://play.global.audio/radio1-koledahi.aac"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "93-1-fm",
+    "name": "Радио Веселина Русе 93.1 FM",
+    "category": "news",
+    "streams": [
+      "https://bss1.neterra.tv/veselina/stream_0.m3u8"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T05:41Z";
+window.STATIONS_CHECKED = "2026-10-26T19:52Z";

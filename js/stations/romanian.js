@@ -510,6 +510,33 @@ window.STATIONS = [
       "https://live.radioclasic.com/listen/radio_clasic_60/live.mp3"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "radio-energy-cugir",
+    "name": "Radio Energy Cugir",
+    "category": "music",
+    "streams": [
+      "https://sonicssl.namehost.ro/8790/stream/;"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "radio-oradea",
+    "name": "Radio Oradea",
+    "category": "music",
+    "streams": [
+      "https://live.radiooradea.ro/9000/stream"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "love-pro-dj-radio-chisinau",
+    "name": "LOVE PRO Dj Radio Chisinau",
+    "category": "music",
+    "streams": [
+      "https://live.prodjradio.net:8000/;"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T05:41Z";
+window.STATIONS_CHECKED = "2026-10-26T19:52Z";
