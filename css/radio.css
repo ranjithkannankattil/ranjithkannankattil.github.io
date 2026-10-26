@@ -68,6 +68,7 @@ nav.radio-chips button{ color:var(--ink-soft); padding-bottom:.3rem; border-bott
 .radio-app .ra-title{ font-family:var(--f-display); font-size:1.05rem; font-weight:600; margin:0 0 .2rem; }
 .radio-app .ra-desc{ margin:0; font-size:.92rem; color:var(--ink-soft); }
 .radio-app .ra-steps{ margin:.35rem 0 0; font-size:.82rem; color:var(--ink-soft); }
+.radio-app .ra-ios{ margin:.5rem 0 0; font-size:.82rem; color:var(--ink-soft); }
 .radio-app .ra-ver{ margin:.5rem 0 0; font-size:.82rem; font-family:var(--f-mono, ui-monospace, monospace); color:var(--ink); }
 .radio-app .ra-new{ margin:.5rem 0 0; font-size:.86rem; color:var(--ink-soft); }
 .radio-app .ra-new[hidden]{ display:none; }

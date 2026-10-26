@@ -1,13 +1,11 @@
-// Android app download card on the Radio page. Shows the card (not on iPhone/iPad or inside
-// the app) with the latest version, its release date and time, what's new, and the download
+// Android app download card on the Radio page. Shown to everyone (with a note that there's no
+// iPhone app yet), except inside the apps themselves, with the latest version, its release date and time, what's new, and the download
 // total. All of it comes from the app's GitHub releases (radio-app-v<version>); GitHub does the
 // counting, this page only reads the public numbers. Nothing about visitors is stored here.
 (function () {
   const card = document.getElementById("radioApp");
   if (!card) return;
-  const ua = navigator.userAgent;
-  const ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
-  if (window.Capacitor || ios) return;
+  if (window.Capacitor) return;   // already in an app
   card.hidden = false;
 
   const $ = (id) => document.getElementById(id);
