@@ -449,8 +449,7 @@ window.STATIONS = [
     "streams": [
       "https://streamasiacdn.atc-labs.com/radiomaharani.aac"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "raagam-air-24-7",
@@ -532,6 +531,33 @@ window.STATIONS = [
       "https://servidor19.brlogic.com:7002/live"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "desi-hits-2000s",
+    "name": "Desi Hits 2000s",
+    "category": "music",
+    "streams": [
+      "https://www.desizoneradio.com/relay2"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "arijitsingh",
+    "name": "Arijitsingh",
+    "category": "music",
+    "streams": [
+      "https://drive.uber.radio/uber/bollywoodaruitsingh/icecast.audio"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "radio-manpasand",
+    "name": "Radio Manpasand",
+    "category": "music",
+    "streams": [
+      "https://c5.radioboss.fm:18125/stream"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

@@ -576,6 +576,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "where": "US"
+  },
+  {
+    "id": "jfsr-jazz-funk-soul-radio",
+    "name": "JFSR - Jazz Funk Soul Radio",
+    "category": "jazz",
+    "streams": [
+      "https://s2.radio.co/s22ae5a8a6/listen"
+    ],
+    "added": "2026-10-26",
+    "where": "UK"
+  },
+  {
+    "id": "hd-radio-classic-rock-usa",
+    "name": "HD Radio - Classic Rock (USA)",
+    "category": "rock",
+    "streams": [
+      "https://hdradioclassicrock-rfritschka.radioca.st/;"
+    ],
+    "added": "2026-10-26",
+    "where": "US"
+  },
+  {
+    "id": "181-fm-highway-181",
+    "name": "181.FM - Highway 181",
+    "category": "country",
+    "streams": [
+      "https://listen.181fm.com/181-highway_128k.mp3"
+    ],
+    "added": "2026-10-26",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

@@ -483,6 +483,33 @@ window.STATIONS = [
       "https://greudedifuzat.ro/stream/"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "activ-fm",
+    "name": "Activ FM",
+    "category": "news",
+    "streams": [
+      "https://stream.clever-host.ro/8008/stream"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "bistrita-fm-92-6",
+    "name": "Bistrița FM 92.6",
+    "category": "news",
+    "streams": [
+      "https://audio-edge-cmc51.fra.h.radiomast.io/66f238bb-8b61-4196-a8c3-28aea07235e8"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "clasic-radio-60-bucuresti",
+    "name": "Clasic Radio_60 -București",
+    "category": "music",
+    "streams": [
+      "https://live.radioclasic.com/listen/radio_clasic_60/live.mp3"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

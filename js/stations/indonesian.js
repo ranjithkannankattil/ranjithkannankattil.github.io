@@ -168,8 +168,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://svara-stream.radioddns.net/yogyakarta_voksradio"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "klcbs-new-age",
@@ -209,8 +208,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:9154/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radiks-fm-semarang",
@@ -218,8 +216,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:9620/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-music-indonesia",
@@ -325,8 +322,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/14/9314/rrisngliatpro1.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "mosh-head-black-metal-id",
@@ -461,8 +457,7 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:9622/stream"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "rri-pro1-banjarmasin",
@@ -544,6 +539,33 @@ window.STATIONS = [
       "https://stream-node0.rri.co.id/streaming/15/9015/rribandungpro2.mp3"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "trangkil-fm",
+    "name": "Trangkil FM",
+    "category": "devotional",
+    "streams": [
+      "https://i.klikhost.com/8228/;radio"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "bandung-death-metal-syndicate",
+    "name": "Bandung Death Metal Syndicate",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/t9wdzppre5zuv"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "666-forgotten-castle",
+    "name": "666 Forgotten Castle",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/j9tx7izezf4vv"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

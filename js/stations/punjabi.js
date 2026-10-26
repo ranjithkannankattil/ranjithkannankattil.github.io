@@ -211,8 +211,7 @@ window.STATIONS = [
     "streams": [
       "https://streamasiacdn.atc-labs.com/radiomaharani.aac"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "live-kirtan-sri-harmandir-sahib",
@@ -314,4 +313,4 @@ window.STATIONS = [
     "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

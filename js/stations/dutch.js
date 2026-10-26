@@ -578,6 +578,33 @@ window.STATIONS = [
       "https://icecast.vrtcdn.be/stubru_tgs.aac"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "alleen-klassiek",
+    "name": "Alleen Klassiek",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/SERVICE06.mp3"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "grand-prix-radio",
+    "name": "Grand Prix Radio",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/GRAND_PRIX_RADIO.mp3"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "sky-radio-lovesongs",
+    "name": "Sky Radio Lovesongs",
+    "category": "music",
+    "streams": [
+      "https://22723.live.streamtheworld.com/SRGSTR03AAC_SC"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

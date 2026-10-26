@@ -332,6 +332,33 @@ window.STATIONS = [
       "https://webtvstream.bhtelecom.ba/radio_vogosca.m3u8"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "radio-gracanica",
+    "name": "Radio Gračanica",
+    "category": "music",
+    "streams": [
+      "https://webtvstream.bhtelecom.ba/radio_gracanica.m3u8"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "radio-konjic",
+    "name": "Radio Konjic",
+    "category": "music",
+    "streams": [
+      "https://webtvstream.bhtelecom.ba/radio_konjic.m3u8"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "radio-ask-ilidza",
+    "name": "Radio ASK Ilidža",
+    "category": "music",
+    "streams": [
+      "https://webtvstream.bhtelecom.ba/radio_ask.m3u8"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

@@ -24,7 +24,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://edge03.cdn.bitflip.ee:8888/NRJdnb"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "vikerraadio",
@@ -131,7 +132,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.skymedia.ee/live/RETRO"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "myhits-dance",
@@ -147,7 +149,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.relaxfm.ee/instrumental"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "hits-show-radio-est",
@@ -308,7 +311,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.relaxfm.ee/cafe"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "chat-raadio",
@@ -333,7 +337,8 @@ window.STATIONS = [
     "streams": [
       "https://edge04.cdn.bitflip.ee:8888/rckmetal"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "duo-greatesthits-estonia",
@@ -525,4 +530,4 @@ window.STATIONS = [
     "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

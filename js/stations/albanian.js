@@ -476,6 +476,24 @@ window.STATIONS = [
       "https://rpn.bozztv.com/radio/Med7-RadioTirana/icecast.audio"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "paper-radio",
+    "name": "Paper Radio",
+    "category": "news",
+    "streams": [
+      "https://business.playfm.al:8170/paperplay"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "radio-dielli",
+    "name": "Radio Dielli",
+    "category": "news",
+    "streams": [
+      "https://radiodielli.synology.me/listen/radiodielli/radio.mp3"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

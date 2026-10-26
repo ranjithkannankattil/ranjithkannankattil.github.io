@@ -447,6 +447,24 @@ window.STATIONS = [
       "https://live1.sr.se/p2sm-aac-320"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "sr-p2",
+    "name": "SR P2",
+    "category": "music",
+    "streams": [
+      "https://ljud2-cdn.sr.se/lc/p2/p2_128.pls"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "radio-bubb-la",
+    "name": "Radio bubb.la",
+    "category": "music",
+    "streams": [
+      "https://live.radio.bubb.la/stream.mp3"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

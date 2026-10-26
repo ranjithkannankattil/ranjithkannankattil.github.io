@@ -468,8 +468,7 @@ window.STATIONS = [
     "streams": [
       "https://cast4.audiostream.com.br:2653/mp3"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "antena-1-porto-alegre",
@@ -551,6 +550,33 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RadioBandeirantesAAC.m3u8?dist=radios.com.br"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "radio-tmc-100-1-fm",
+    "name": "Rádio TMC 100.1 FM",
+    "category": "news",
+    "streams": [
+      "https://24373.live.streamtheworld.com/RT_SP.mp3?dist=RadiosComBr-TMC&1771879327541"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "102-fm-itaperuna",
+    "name": "102 FM Itaperuna",
+    "category": "music",
+    "streams": [
+      "https://radio.saopaulo01.com.br:10948/stream"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "89fm-radio-rock",
+    "name": "89FM Radio Rock",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_89FM_ADP.aac"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

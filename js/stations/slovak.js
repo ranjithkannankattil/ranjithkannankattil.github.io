@@ -510,6 +510,15 @@ window.STATIONS = [
       "https://mpc1.mediacp.eu/stream/partyradio"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "radio-vaticana-solvencina",
+    "name": "Radio Vaticana Solvenčina",
+    "category": "devotional",
+    "streams": [
+      "https://radio.vaticannews.va/stream-sk"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

@@ -96,7 +96,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast.mediaonline.net.ua/nrj320"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "107-9",
@@ -152,7 +153,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s5.radioforge.com:7908/live?n=77357"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "24-breaking-live",
@@ -288,7 +290,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast.mediaonline.net.ua/chillout320"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-2",
@@ -304,7 +307,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://cast.mediaonline.net.ua/prmfm320"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "russia-today-germany",
@@ -338,7 +342,8 @@ window.STATIONS = [
     "streams": [
       "https://cast.mediaonline.net.ua/avtoradio"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "station-3",
@@ -356,7 +361,8 @@ window.STATIONS = [
     "streams": [
       "https://cast.mediaonline.net.ua/loungefm320"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "radio-jazz-gold-fm",
@@ -392,7 +398,8 @@ window.STATIONS = [
     "streams": [
       "https://cast.mediaonline.net.ua/avtoradio320"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "station-6",
@@ -401,7 +408,8 @@ window.STATIONS = [
     "streams": [
       "https://cast.mediaonline.net.ua/radiopyatnica320"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "station-7",
@@ -546,6 +554,33 @@ window.STATIONS = [
       "https://radio.mdkband.com/stream.mp3"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "station-12",
+    "name": "Українські хіти",
+    "category": "music",
+    "streams": [
+      "https://radio.dobreff.com/ukraine.mp3"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "mj-play-fm",
+    "name": "Mj Play FM",
+    "category": "music",
+    "streams": [
+      "https://mjplay.empirecraft.lv/stream"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "tim-fm-chernihiv",
+    "name": "Tim FM Chernihiv",
+    "category": "news",
+    "streams": [
+      "https://tim-fm.tim.ua/mp3"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

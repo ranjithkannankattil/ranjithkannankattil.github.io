@@ -548,6 +548,33 @@ window.STATIONS = [
       "https://icecast.beatzone.cz/radio/8000/128.mp3"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "frekvence-1-youradio-osmdesatky",
+    "name": "Frekvence 1 - Youradio Osmdesátky",
+    "category": "music",
+    "streams": [
+      "https://ice.actve.net/web-80"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "radio-samson",
+    "name": "Rádio Samson",
+    "category": "music",
+    "streams": [
+      "https://icecast8.play.cz/samsonfm128.mp3"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "queenradio-net",
+    "name": "Queenradio.net",
+    "category": "music",
+    "streams": [
+      "https://stream.radiojar.com/4gw72qm8u68uv"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

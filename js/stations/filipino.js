@@ -506,6 +506,15 @@ window.STATIONS = [
       "https://azura.kizzfmuk90-9.com/listen/kizzfmuk/radio.mp3?1689855016244"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "kpmw-mix-105-5",
+    "name": "KPMW Mix 105.5",
+    "category": "music",
+    "streams": [
+      "https://s5.radio.co/s16a1d562a/listen"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

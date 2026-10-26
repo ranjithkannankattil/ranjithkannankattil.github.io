@@ -510,6 +510,33 @@ window.STATIONS = [
       "https://radio.dukahosting.com:7043/;"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "station-4",
+    "name": "РТС - Радио Београд - Џубокс",
+    "category": "music",
+    "streams": [
+      "https://rtsradio-live.morescreens.com/RTS_2_007/audio/chunklist.m3u8"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "radio-banja-2",
+    "name": "Radio Banja 2",
+    "category": "music",
+    "streams": [
+      "https://stream.iradio.pro/proxy/radiobanja2?mp=/stream"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "super-fm",
+    "name": "Super FM",
+    "category": "music",
+    "streams": [
+      "https://onair.superfm.rs/superfm.mp3"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

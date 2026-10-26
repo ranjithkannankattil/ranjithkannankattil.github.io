@@ -491,6 +491,33 @@ window.STATIONS = [
       "https://stream.radiofrance.fr/fipjazz/fipjazz_hifi.m3u8?id=radiofrance"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "le-bon-mix-hifi-flac-1411-kbps",
+    "name": "Le Bon Mix HiFi Flac 1411 Kbps",
+    "category": "music",
+    "streams": [
+      "https://stream10.xdevel.com/audio17s976748-2218/stream/icecast.audio"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "jazz-radio-swiss",
+    "name": "Jazz · Radio Swiss",
+    "category": "music",
+    "streams": [
+      "https://stream.srg-ssr.ch/m/rsj/mp3_128"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "algerie-internationale",
+    "name": "Algérie Internationale الجزائر الدولية",
+    "category": "news",
+    "streams": [
+      "https://webradio3.tda.dz:8001/Internationale_64K.mp3"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

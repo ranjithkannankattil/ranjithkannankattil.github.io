@@ -494,6 +494,33 @@ window.STATIONS = [
       "https://cast4.my-control-panel.com/proxy/anatoli1/stream"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "briefley-radio",
+    "name": "Briefley Radio",
+    "category": "music",
+    "streams": [
+      "https://listen.radioking.com/radio/772229/stream/839543"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "radio-retro-samokov",
+    "name": "Radio Retro Samokov",
+    "category": "music",
+    "streams": [
+      "https://radio.jump.bg/proxy/stanimi1/radioRETRO"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "station-9",
+    "name": "БНР – Радио Шумен",
+    "category": "news",
+    "streams": [
+      "https://lb-hls.cdn.bg/2032/fls/Shumen.stream/playlist.m3u8"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

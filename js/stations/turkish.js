@@ -512,6 +512,33 @@ window.STATIONS = [
       "https://channels.dinamo.fm/legacy-mp3"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "radiotedu-lo-fi",
+    "name": "RadioTEDU Lo-Fi",
+    "category": "music",
+    "streams": [
+      "https://stream.radiotedu.com/lofi"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "canliradyo-tr-canl-radyo-mac-dinle",
+    "name": "canliradyo.tr - Canlı Radyo & Maç Dinle",
+    "category": "music",
+    "streams": [
+      "https://dygedge.radyotvonline.net/kralpop/playlist.m3u8"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "dinamo-fm-fluent",
+    "name": "dinamo.fm fluent",
+    "category": "music",
+    "streams": [
+      "https://channels.dinamo.fm/fluent-mp3"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

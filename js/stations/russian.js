@@ -538,6 +538,33 @@ window.STATIONS = [
       "https://icecast-mirtv.cdnvideo.ru/radio_mir_256"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "radio-exterior-de-espana",
+    "name": "Radio Exterior de España",
+    "category": "news",
+    "streams": [
+      "https://dispatcher.rndfnk.com/crtve/rneree/main/mp3/high"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "hit-fm-2000s-hits",
+    "name": "Hit FM 2000s HITS",
+    "category": "music",
+    "streams": [
+      "https://radio3.dixi.md/listen/hit_fm_2000s_hits/hitfm2000hit128.aac"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "station-25",
+    "name": "Советская Классика",
+    "category": "music",
+    "streams": [
+      "https://rr-sovclass.hostingradio.ru/sovclass96.aacp"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

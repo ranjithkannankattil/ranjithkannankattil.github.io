@@ -493,6 +493,33 @@ window.STATIONS = [
       "https://oxygenmusic.hu:8443/oxygenmusic_gyor_hd"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "klasszik-radio-92-1",
+    "name": "Klasszik Rádió 92.1",
+    "category": "music",
+    "streams": [
+      "https://radio.musorok.org/listen/klasszik/radio.mp3"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "jazzy-cool",
+    "name": "Jazzy Cool",
+    "category": "music",
+    "streams": [
+      "https://radio.musorok.org/listen/jazzycool/jazzycool.mp3"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "149fm",
+    "name": "149FM",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/6vc4ddpr3ehvv"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

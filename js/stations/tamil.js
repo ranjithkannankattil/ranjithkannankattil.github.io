@@ -548,6 +548,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/ntkhu40k17zuv"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "anurata-fm",
+    "name": "Anurata_FM",
+    "category": "music",
+    "streams": [
+      "https://stream-175.surfernetwork.com/ozta21if4wiuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJvenRhMjFpZjR3aXV2IiwiaG9zdCI6InN0cmVhbS0xNzUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJyUkd6M0tLZFNyMlBZZGsyVnhnZjVnIiwiaWF0IjoxNzg0NTMwMTc0LCJleHAiOjE3ODQ1MzAyMzR9.Khjm_0DYMavj313kQ8M2rYQZDPcBu-rj5u9LKtSdsw8"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "swisstamilradio",
+    "name": "Swisstamilradio",
+    "category": "music",
+    "streams": [
+      "https://usa19.fastcast4u.com/swiss"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "tubetamilfm",
+    "name": "Tubetamilfm",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/p5k41f436qzuv"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

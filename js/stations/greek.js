@@ -566,6 +566,33 @@ window.STATIONS = [
       "https://ice.greekstream.net/focusfm"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "skylos-fm",
+    "name": "Skylos FM",
+    "category": "music",
+    "streams": [
+      "https://n04.radiojar.com/819r8wupdrruv?1776102680"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "coffee-web-radio",
+    "name": "Coffee Web Radio",
+    "category": "music",
+    "streams": [
+      "https://solid9.streamupsolutions.com/proxy/teqgebwz/stream"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "real-97-8",
+    "name": "Real 97.8",
+    "category": "news",
+    "streams": [
+      "https://realfm.live24.gr/realfm"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

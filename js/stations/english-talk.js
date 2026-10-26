@@ -229,7 +229,8 @@ window.STATIONS = [
     "streams": [
       "https://rogers-hls.leanstream.co/rogers/tor590.stream/playlist.m3u8"
     ],
-    "where": "Canada"
+    "where": "Canada",
+    "offline": true
   },
   {
     "id": "bloomberg-radio-boston",
@@ -518,6 +519,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "where": "UK"
+  },
+  {
+    "id": "102-7-star-fm-manila-dwsm",
+    "name": "102.7 Star FM Manila - DWSM",
+    "category": "world",
+    "streams": [
+      "https://stream-288.surfernetwork.com/g1pmt17nz9duv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJnMXBtdDE3bno5ZHV2IiwiaG9zdCI6InN0cmVhbS0yODguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJMaXZRVVVnMVJBNllJVm1CMzZweXlRIiwiaWF0IjoxNzgxNjc4NzM0LCJleHAiOjE3ODE2Nzg3OTR9.5G1wZmONFqXySurSj1Oj6_UtSmcJMwlc6JJy2oL7fX8"
+    ],
+    "added": "2026-10-26",
+    "where": "The Philippines"
+  },
+  {
+    "id": "kogo-am-600",
+    "name": "KOGO AM 600",
+    "category": "us",
+    "streams": [
+      "https://ample.revma.ihrhls.com/zc257"
+    ],
+    "added": "2026-10-26",
+    "where": "US"
+  },
+  {
+    "id": "ahenfie-fm-106-1mhz",
+    "name": "Ahenfie FM 106.1MHz",
+    "category": "sport",
+    "streams": [
+      "https://radio.localstreamgh.com/listen/ahenfie_radio_/radio.mp3"
+    ],
+    "added": "2026-10-26",
+    "where": "Ghana"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

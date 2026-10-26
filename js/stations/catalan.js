@@ -550,6 +550,33 @@ window.STATIONS = [
       "https://enacast.com/radiogava/streams/SD"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "cugat-radio",
+    "name": "Cugat Ràdio",
+    "category": "music",
+    "streams": [
+      "https://directe.cugat.cat/directeHQ.mp3"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "radio-gallinera",
+    "name": "Ràdio Gallinera",
+    "category": "music",
+    "streams": [
+      "https://radiobot.radioslibres.info/listen/radio_gallinera/radio.mp3"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "radio-sentmenat",
+    "name": "Ràdio Sentmenat",
+    "category": "music",
+    "streams": [
+      "https://enacast.com/radiosentmenat/streams/HD"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

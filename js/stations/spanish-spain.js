@@ -236,7 +236,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ztnr.rtve.es/ztnr/1694255.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "esradio-principal",
@@ -541,6 +542,33 @@ window.STATIONS = [
       "https://dreamsiteradiocp4.com/proxy/rmspain1?mp=/stream/1/"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "radio-marca-barcelona-2",
+    "name": "Radio Marca Barcelona 2",
+    "category": "news",
+    "streams": [
+      "https://radiomarcabcnmedia.dns-lcinternet.com:9000/stream"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "funky-corner-radio-spain",
+    "name": "_Funky Corner Radio (Spain)",
+    "category": "music",
+    "streams": [
+      "https://ais-sa2.cdnstream1.com/2447_96.aac"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "radio-exterior-de-espana",
+    "name": "Radio Exterior de España",
+    "category": "news",
+    "streams": [
+      "https://dispatcher.rndfnk.com/crtve/rneree/main/mp3/high"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

@@ -230,8 +230,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "cidade-fm-2",
@@ -347,7 +346,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/rdpafrica80a/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "antena-1-acores-portugal",
@@ -383,7 +383,8 @@ window.STATIONS = [
     "streams": [
       "https://radioparalelo.indymedia.pt/listen/paralelo/radio.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "rfm-latinas",
@@ -537,6 +538,33 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m8090.aac"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "radio-xl",
+    "name": "Rádio XL",
+    "category": "music",
+    "streams": [
+      "https://radios.justweb.pt/8002/stream"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "m80-radio-rock",
+    "name": "M80 Rádio – Rock",
+    "category": "music",
+    "streams": [
+      "https://stream-icy.bauermedia.pt/m80rock.aac"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "radio-clube-pacos-de-ferreira-101-8-fm",
+    "name": "Rádio Clube Paços de Ferreira 101.8 FM",
+    "category": "music",
+    "streams": [
+      "https://servidor15-3.brlogic.com:7088/live?source=15118"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

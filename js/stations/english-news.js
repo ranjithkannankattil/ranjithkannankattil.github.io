@@ -420,6 +420,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "where": "US"
+  },
+  {
+    "id": "radio-exterior-de-espana",
+    "name": "Radio Exterior de España",
+    "category": "world",
+    "streams": [
+      "https://dispatcher.rndfnk.com/crtve/rneree/main/mp3/high"
+    ],
+    "added": "2026-10-26",
+    "where": "Spain"
+  },
+  {
+    "id": "ctv-news-audio-channel",
+    "name": "CTV News Audio Channel",
+    "category": "canada",
+    "streams": [
+      "https://29324.live.streamtheworld.com/TV_CTV_NEWSAAC_SC"
+    ],
+    "added": "2026-10-26",
+    "where": "Canada"
+  },
+  {
+    "id": "fresh-105-9-fm-ibadan",
+    "name": "Fresh 105.9 FM Ibadan",
+    "category": "world",
+    "streams": [
+      "https://stream.zenolive.com/e9x2n97b9uduv"
+    ],
+    "added": "2026-10-26",
+    "where": "Nigeria"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

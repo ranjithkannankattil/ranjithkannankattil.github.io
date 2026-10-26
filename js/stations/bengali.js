@@ -8,8 +8,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiofoorti.fm/api/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "my-90s-bengali",
@@ -198,4 +197,4 @@ window.STATIONS = [
     "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

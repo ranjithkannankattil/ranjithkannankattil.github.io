@@ -507,6 +507,33 @@ window.STATIONS = [
       "https://livex.radiopopolare.it/radiopop2"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "radio-bianconera",
+    "name": "Radio Bianconera",
+    "category": "news",
+    "streams": [
+      "https://stream.tmwradio.com/bianconera.aac"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "deejay-suona-italia",
+    "name": "Deejay Suona Italia",
+    "category": "music",
+    "streams": [
+      "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/webradio/deejaysuonaitalia/playlist.m3u8"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "rigiriamo-web-radio",
+    "name": "Rigiriamo Web Radio",
+    "category": "music",
+    "streams": [
+      "https://onair7.xdevel.com/proxy/xautocloud_zswr_1060?mp=/;stream/;"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

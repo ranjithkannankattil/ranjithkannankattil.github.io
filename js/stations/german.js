@@ -544,6 +544,33 @@ window.STATIONS = [
       "https://icecast.ndr.de/ndr/ndr2/hamburg/mp3/128/stream.mp3?1728423809880&aggregator=web"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "ndr-1-niedersachsen",
+    "name": "NDR 1 Niedersachsen",
+    "category": "music",
+    "streams": [
+      "https://icecast.ndr.de/ndr/ndr1niedersachsen/hannover/mp3/128/stream.mp3?1728424471708&aggregator=web"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "radio-88-6",
+    "name": "radio 88.6",
+    "category": "music",
+    "streams": [
+      "https://radio886.at/streams/radio_88.6/mp3"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "hr3",
+    "name": "HR3",
+    "category": "music",
+    "streams": [
+      "https://dispatcher.rndfnk.com/hr/hr3/live/mp3/128/stream.mp3"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

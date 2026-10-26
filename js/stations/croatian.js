@@ -368,6 +368,15 @@ window.STATIONS = [
       "https://chopin.bizmusic.net/radio/8030/radio.mp3"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "hrt-radio-dubrovnik",
+    "name": "HRT Radio Dubrovnik",
+    "category": "music",
+    "streams": [
+      "https://28503.live.streamtheworld.com/DUBROVNIKAAC_SC"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

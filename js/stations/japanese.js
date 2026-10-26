@@ -394,7 +394,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.gjfm.my.id/listen/gjfm/siaran"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "j-club-powerplay-hiphop-asia-dream-radio",
@@ -485,6 +486,33 @@ window.STATIONS = [
       "https://internetradio.dankassassin368.com/DankFM.mp3"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "vocaloplus-vocaloid-more",
+    "name": "VocaloPlus! Vocaloid & More",
+    "category": "music",
+    "streams": [
+      "https://link.zeno.fm/h77s0pfrcseuv/source"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "animecol-radio",
+    "name": "Animecol Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/6bfysacxc6quv"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "wrep",
+    "name": "WREP",
+    "category": "music",
+    "streams": [
+      "https://c13.radioboss.fm:8200/stream"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

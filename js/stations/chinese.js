@@ -201,8 +201,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-17",
@@ -503,6 +502,33 @@ window.STATIONS = [
       "https://fm.hardbest.cn/listen/hardstyle/radio.mp3"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "891",
+    "name": "891线上音乐台 高清",
+    "category": "music",
+    "streams": [
+      "https://live.fm891.net/192k.aac"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "station-31",
+    "name": "飛碟聯播網 飛碟電台",
+    "category": "music",
+    "streams": [
+      "https://n10.rcs.revma.com/em90w4aeewzuv"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "asiafm-2",
+    "name": "AsiaFM 亞洲電台",
+    "category": "music",
+    "streams": [
+      "https://n13.rcs.revma.com/xpgtqc74hv8uv"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

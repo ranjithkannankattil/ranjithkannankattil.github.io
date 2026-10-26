@@ -538,6 +538,33 @@ window.STATIONS = [
       "https://webradio3.tda.dz:8001/Internationale_64K.mp3"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "maura-ar",
+    "name": "Maura ✨ ( AR )",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/fpasc3up26ptv"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "radio-exterior-de-espana",
+    "name": "Radio Exterior de España",
+    "category": "news",
+    "streams": [
+      "https://dispatcher.rndfnk.com/crtve/rneree/main/mp3/high"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "station-14",
+    "name": "صوت كل لبنان",
+    "category": "music",
+    "streams": [
+      "https://audio.osina.cloud:9323/stream"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

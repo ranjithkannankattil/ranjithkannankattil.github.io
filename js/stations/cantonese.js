@@ -32,7 +32,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/5022379/64k.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "903",
@@ -56,7 +57,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://1716664847.rsc.cdn77.org/1716664847/tracks-a1/mono.ts.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-6",
@@ -512,8 +514,7 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/1283/64k.mp3"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "station-33",
@@ -523,6 +524,33 @@ window.STATIONS = [
       "https://lhttp-hw.qtfm.cn/live/20500213/64k.mp3"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "station-34",
+    "name": "英德综合广播",
+    "category": "news",
+    "streams": [
+      "https://lhttp.qtfm.cn/live/5022392/64k.mp3"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "station-35",
+    "name": "江门新会电台",
+    "category": "music",
+    "streams": [
+      "https://lhttp-hw.qtfm.cn/live/5061/64k.mp3"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "m80-radio-macau-80s",
+    "name": "M80 Radio Macau - 80s",
+    "category": "music",
+    "streams": [
+      "https://stream-icy.bauermedia.pt/m8080.aac"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

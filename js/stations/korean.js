@@ -349,6 +349,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/zf0ac4raqy8uv"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "station",
+    "name": "韩国音乐台",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/r0tbse9jnbptv"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "cinz-net-radio",
+    "name": "CINZ NET Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.cinz.net/"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "fred-film-radio",
+    "name": "Fred Film Radio(한국어)",
+    "category": "music",
+    "streams": [
+      "https://s10.webradio-hosting.com/proxy/fredradiokr/stream"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

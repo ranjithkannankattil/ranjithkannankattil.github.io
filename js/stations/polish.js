@@ -476,6 +476,24 @@ window.STATIONS = [
       "https://ssl-1.radiohost.pl:9569/stream"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "radio-mbox-disco-polo",
+    "name": "Radio Mbox - Disco Polo",
+    "category": "music",
+    "streams": [
+      "https://s3.slotex.pl:7222/stream"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "rmf-4-dance-rnb",
+    "name": "RMF 4 DANCE & RNB",
+    "category": "music",
+    "streams": [
+      "https://rs6-krk2.rmfstream.pl/rmf_4"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";

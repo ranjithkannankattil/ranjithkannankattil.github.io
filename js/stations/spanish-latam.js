@@ -8,8 +8,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.convoynetwork.com/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "la-100-99-9-fm-grupo-clarin-buenos-aires",
@@ -540,6 +539,33 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/OLP_BOGOTAAAC.aac"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "emisoras-unidas-89-7",
+    "name": "Emisoras Unidas 89.7",
+    "category": "news",
+    "streams": [
+      "https://stream.zenolive.com/z96sq8tndseuv"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "radio-hrn-la-voz-de-honduras",
+    "name": "Radio HRN La Voz de Honduras",
+    "category": "news",
+    "streams": [
+      "https://ice42.securenetsystems.net/HRN"
+    ],
+    "added": "2026-10-26"
+  },
+  {
+    "id": "metro-95-1",
+    "name": "Metro 95.1",
+    "category": "news",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/METRO.mp3"
+    ],
+    "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-25T17:31Z";
+window.STATIONS_CHECKED = "2026-10-26T05:41Z";
