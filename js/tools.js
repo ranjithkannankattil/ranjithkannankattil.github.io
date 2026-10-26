@@ -26,6 +26,14 @@ window.TOOLS = [
     href: 'timeline.html',
     blurb: 'Phases, tasks, milestones and dependencies on a drag-and-drop Gantt chart. Download a live Excel workbook, a paged PDF or an image for slides.',
     meta: 'Gantt · Milestones · Excel · PDF · PNG'
+  },
+  {
+    id: 'keyboard',
+    name: 'Indic Keyboard for iPhone',
+    short: 'Keyboard',
+    href: 'keyboard.html',
+    blurb: 'A Malayalam keyboard for iPhone and iPad, with Swanalekha, Mozhi, InScript and Lalitha layouts, English suggestions and emoji. My open-source port of SMC\'s Android Indic Keyboard. Alpha.',
+    meta: 'iOS app · Malayalam · Open source · Alpha'
   }
 ];
 

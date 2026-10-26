@@ -45,7 +45,7 @@ print(len(index), "posts")
 # sitemap: public pages, then every post (same address js/post.js links to)
 SITE = "https://ranjithkb.com/"
 PAGES = ["", "photography.html", "writings.html", "publications.html", "radio.html", "news.html", "trip.html",
-         "productivity/", "productivity/meeting.html", "productivity/timeline.html", "privacy.html"]
+         "productivity/", "productivity/meeting.html", "productivity/timeline.html", "productivity/keyboard.html", "privacy.html"]
 urls = [f"  <url><loc>{SITE}{u}</loc></url>" for u in PAGES]
 urls += [f"  <url><loc>{SITE}writing-post.html?slug={quote(p['s'], safe="-_.!~*'()")}</loc><lastmod>{p['d']}</lastmod></url>"
          for p in reversed(index)]

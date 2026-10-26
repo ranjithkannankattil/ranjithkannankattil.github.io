@@ -1,0 +1,44 @@
+/* Tool 03 — Indic Keyboard for iPhone (an app page, not a browser tool) */
+.kb{ max-width:46rem; padding-bottom:1rem; }
+.kb a{ color:var(--accent); border-bottom:1px solid currentColor; }
+.kb a:hover{ opacity:.8; }
+.kb-head{ display:flex; gap:1.2rem; align-items:center; }
+.kb-icon{ width:96px; height:96px; border-radius:22px; flex:none; box-shadow:0 4px 14px rgba(20,40,120,.22); }
+.kb-status{ margin:.5rem 0 0; color:var(--ink-soft); font-size:.95rem; }
+.kb-badge{ display:inline-block; font-family:var(--f-mono); font-size:.66rem; letter-spacing:.12em; text-transform:uppercase; color:var(--paper); background:var(--accent); padding:.15rem .5rem; margin-right:.35rem; border-radius:2px; vertical-align:.12em; }
+
+.kb-facts{ list-style:none; margin:1.8rem 0 0; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); }
+.kb-facts li{ background:var(--paper); padding:.8rem 1rem; font-size:.92rem; }
+.kb-facts b{ display:block; font-family:var(--f-mono); font-weight:500; font-size:.64rem; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); margin-bottom:.2rem; }
+
+.kb-h{ font-family:var(--f-display); font-weight:600; font-size:1.3rem; margin:2.4rem 0 .8rem; }
+.kb-list{ margin:0; padding-left:1.2rem; }
+.kb-list li{ margin:.45rem 0; }
+.kb code{ font-family:var(--f-mono); font-size:.88em; background:var(--paper-2); padding:.05rem .3rem; border-radius:2px; }
+[lang="ml"]{ font-family:"Manjari", sans-serif; }
+
+.kb-try, .kb-who{ width:100%; border-collapse:collapse; font-size:.95rem; }
+.kb-try th, .kb-who th{ text-align:left; font-family:var(--f-mono); font-weight:500; font-size:.66rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-soft); padding:.5rem .6rem; border-bottom:1px solid var(--line); }
+.kb-try td, .kb-who td{ padding:.6rem; border-bottom:1px solid var(--line); vertical-align:top; }
+.kb-try td[lang="ml"]{ font-size:1.25rem; }
+.kb-alt{ font-family:var(--f-body, inherit); font-size:.85rem; color:var(--ink-soft); }
+.kb-who{ margin-top:1.8rem; }
+.kb-who td:first-child{ width:42%; }
+
+.kb-note{ border-left:3px solid var(--accent); background:var(--paper-2); padding:.9rem 1.1rem; }
+.kb-note p{ margin:0; }
+.kb-steps{ margin:1.1rem 0 0; padding-left:1.3rem; }
+.kb-steps li{ margin:.5rem 0; }
+.kb-small{ font-size:.9rem; color:var(--ink-soft); }
+
+.kb-actions{ display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1.2rem; }
+.kb .kb-btn{ font-family:var(--f-mono); font-size:.75rem; letter-spacing:.06em; text-transform:uppercase; padding:.6rem .9rem; border:1px solid var(--line); color:var(--ink); }
+.kb .kb-btn:hover{ border-color:var(--accent); color:var(--accent); opacity:1; }
+.kb .kb-btn-main{ background:var(--accent); border-color:var(--accent); color:var(--paper); }
+.kb .kb-btn-main:hover{ color:var(--paper); opacity:.9; }
+
+@media (max-width:520px){
+  .kb-head{ align-items:flex-start; }
+  .kb-icon{ width:72px; height:72px; border-radius:16px; }
+  .kb-who td:first-child{ width:auto; }
+}

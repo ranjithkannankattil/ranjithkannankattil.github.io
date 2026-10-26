@@ -43,6 +43,8 @@ SECTIONS = [
      "Find a time that works across cities, with daylight saving handled per date.", "#5C4D7D", None),
     ("timeline", ["productivity/timeline.html"], "Productivity · Timeline", "Timeline & Gantt",
      "Plan phases, tasks and milestones, then download as Excel, PDF or an image.", "#5C4D7D", None),
+    ("keyboard", ["productivity/keyboard.html"], "Productivity · Indic Keyboard", "Indic Keyboard for iPhone",
+     "Swanalekha and other Malayalam layouts on iPhone and iPad. Open source, alpha.", "#5C4D7D", None),
     ("publications", ["publications.html"], "Publications", "Books and papers",
      "Malayalam essays and poetry, two free to download, and a paper from graduate research.", "#6B2740", None),
     ("padolpathi", [], "Padolpathi", "പദോൽപത്തി — where Malayalam words come from",
