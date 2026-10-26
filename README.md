@@ -11,7 +11,7 @@ What the app adds over the browser:
 
 ## Android
 Every push to this branch builds `Radio.apk` in GitHub Actions (Actions tab -> latest run -> Artifacts).
-Optional: add repo secrets `RADIO_KEYSTORE_B64` and `RADIO_KEYSTORE_PASSWORD` so every build is signed
+Repo secrets `RADIO_KEYSTORE_B64` and `RADIO_KEYSTORE_PASSWORD` are set (26 Oct 2026), so every build is signed
 with the same key and new APKs install over old ones.
 
 Native code: `android/app/src/main/java/com/ranjithkb/radio/` (RadioMediaPlugin + RadioMediaService).
