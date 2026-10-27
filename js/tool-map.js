@@ -384,7 +384,7 @@
     function after() {
       $('mcStatus').textContent = '';
       view();
-      setupProjection(); draw(); renderAll(); updUndo();
+      setupProjection(); draw(); renderAll(); updUndo(); renderChips();
       try { history.replaceState(null, '', '#' + (cur === 'world' ? '' : 'c=' + cur)); } catch (e) {}
     }
   }
@@ -421,12 +421,17 @@
     }).join('');
   }
   function renderList() {
-    var q = $('mcSearch').value.trim().toLowerCase(), only = $('mcOnly').checked;
+    var q = $('mcSearch').value.trim(), only = $('mcOnly').checked, m = M();
     var list = feats().slice().sort(function (a, b) { return a.properties.name.localeCompare(b.properties.name); })
       .filter(function (f) {
         if (only && !groupOf(f.id)) return false;
-        return !q || f.properties.name.toLowerCase().indexOf(q) >= 0 || String(f.id).toLowerCase() === q;
+        return !q || m.matches(f.id, q);
       });
+    if (q && !list.length) {   // nothing contains it: fall back to typo-tolerant guesses
+      var guess = m.suggest(q, 5).map(function (x) { return x.id; });
+      list = feats().filter(function (f) { return guess.indexOf(f.id) >= 0 && (!only || groupOf(f.id)); })
+        .sort(function (a, b) { return guess.indexOf(a.id) - guess.indexOf(b.id); });
+    }
     $('mcList').innerHTML = list.map(function (f) {
       var g = groupOf(f.id), drill = cur === 'world' && subIndex[f.id] > 1;
       return '<li><button class="mc-item" data-t="' + esc(f.id) + '"><span class="mc-dot" style="background:' + (g ? g.color : 'transparent') + '"></span>' + esc(f.properties.name) + '</button>' +
@@ -507,24 +512,112 @@
     $('mcShareMsg').textContent = 'Cleared — Undo brings it back.';
   });
 
-  // paste a list of names or codes
-  $('mcPasteGo').addEventListener('click', function () {
-    var words = $('mcPaste').value.split(/[\n,;\t]+/).map(function (s) { return s.trim(); }).filter(Boolean);
-    var idx = {};
-    feats().forEach(function (f) {
-      idx[f.properties.name.toLowerCase()] = f.id; idx[String(f.id).toLowerCase()] = f.id;
-      var short = String(f.id).split('-')[1]; if (short) idx[short.toLowerCase()] = idx[short.toLowerCase()] || f.id;
+  /* ---------- paste a list: forgiving names, live suggestions ---------- */
+  function M() {
+    var d = cur === 'world' ? world : sub;
+    if (!d.match) d.match = MapMatch.index(d.feats);
+    return d.match;
+  }
+  var SEP = /([\n,;\t]+)/;
+  var paste = $('mcPaste'), sugEl = $('mcSug'), chipsEl = $('mcChips'), sugs = [], sugI = 0, tok = null;
+  function curToken() {
+    var v = paste.value, c = paste.selectionStart;
+    var s0 = Math.max(v.lastIndexOf('\n', c - 1), v.lastIndexOf(',', c - 1), v.lastIndexOf(';', c - 1), v.lastIndexOf('\t', c - 1)) + 1;
+    var rest = v.slice(c).search(/[\n,;\t]/), e0 = rest < 0 ? v.length : c + rest;
+    return { s: s0, e: e0, text: v.slice(s0, e0) };
+  }
+  function showSug() {
+    tok = curToken();
+    var q = tok.text.trim();
+    sugs = q ? M().suggest(q, 6) : [];
+    var r = q ? M().resolve(q) : null;
+    // hide when the word is already an exact name
+    if (!sugs.length || (r && r.how === 'exact' && sugs[0].id === r.id && sugs[0].name.toLowerCase() === q.toLowerCase())) { sugEl.hidden = true; return; }
+    sugI = 0;
+    drawSug();
+  }
+  function drawSug() {
+    sugEl.innerHTML = sugs.map(function (x, i) {
+      var g = groupOf(x.id);
+      return '<li role="option" data-si="' + i + '"' + (i === sugI ? ' class="on" aria-selected="true"' : '') + '>' +
+        '<span class="mc-dot" style="background:' + (g ? g.color : 'transparent') + '"></span>' + esc(x.name) + '</li>';
+    }).join('');
+    sugEl.hidden = false;
+  }
+  function acceptSug(i) {
+    var x = sugs[i]; if (!x || !tok) return;
+    var v = paste.value, lead = /^\s*/.exec(tok.text)[0];
+    var atEnd = tok.e >= v.length;
+    var ins = lead + x.name + (atEnd ? ', ' : '');
+    paste.value = v.slice(0, tok.s) + ins + v.slice(tok.e);
+    var c = tok.s + ins.length;
+    paste.setSelectionRange(c, c);
+    sugEl.hidden = true;
+    paste.focus();
+    renderChips();
+  }
+  sugEl.addEventListener('mousedown', function (e) {
+    var li = e.target.closest('[data-si]'); if (!li) return;
+    e.preventDefault(); acceptSug(+li.dataset.si);
+  });
+  paste.addEventListener('input', function () { showSug(); clearTimeout(chipsT); chipsT = setTimeout(renderChips, 120); });
+  paste.addEventListener('click', showSug);
+  paste.addEventListener('blur', function () { setTimeout(function () { sugEl.hidden = true; }, 150); });
+  paste.addEventListener('keydown', function (e) {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') { e.preventDefault(); applyPaste(); return; }
+    if (sugEl.hidden) return;
+    if (e.key === 'ArrowDown') { e.preventDefault(); sugI = (sugI + 1) % sugs.length; drawSug(); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); sugI = (sugI - 1 + sugs.length) % sugs.length; drawSug(); }
+    else if (e.key === 'Enter' || e.key === 'Tab') { e.preventDefault(); acceptSug(sugI); }
+    else if (e.key === 'Escape') { sugEl.hidden = true; }
+  });
+
+  // one chip per entry: matched, corrected (typed → name), or not found with guesses
+  var chipsT;
+  function parts() { return paste.value.split(SEP); }
+  function renderChips() {
+    var ps = parts(), html = [];
+    ps.forEach(function (p, i) {
+      if (i % 2) return;
+      var q = p.trim(); if (!q) return;
+      var r = M().resolve(q);
+      if (r && r.id) {
+        var fixed = r.how === 'prefix' || r.how === 'fuzzy', renamed = r.how === 'alias' && MapMatch.norm(q) !== MapMatch.norm(r.name);
+        html.push('<span class="mc-chip ' + (fixed ? 'fix' : 'ok') + '" title="' + (fixed ? 'Corrected' : 'Found') + '">' +
+          (fixed || renamed ? esc(q) + ' <i>→</i> ' : '') + '<b>' + esc(r.name) + '</b></span>');
+      } else {
+        var mb = (r && r.maybe || []).map(function (id) {
+          return '<button type="button" data-fix="' + i + '" data-to="' + esc(M().name(id)) + '">' + esc(M().name(id)) + '?</button>';
+        }).join('');
+        html.push('<span class="mc-chip miss" title="Not found">' + esc(q) + (mb ? ' <i>·</i> ' + mb : ' <i>· not found</i>') + '</span>');
+      }
     });
-    var a = activeGroup(), miss = [], n = 0, before = snap();
-    words.forEach(function (w) {
-      var id = idx[w.toLowerCase()];
-      if (!id) { miss.push(w); return; }
-      if (setPlace(id, a)) n++;
+    chipsEl.innerHTML = html.join('');
+    chipsEl.hidden = !html.length;
+  }
+  chipsEl.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-fix]'); if (!b) return;
+    var ps = parts(), i = +b.dataset.fix, lead = /^\s*/.exec(ps[i])[0];
+    ps[i] = lead + b.dataset.to;
+    paste.value = ps.join('');
+    renderChips();
+  });
+
+  function applyPaste() {
+    var ps = parts(), a = activeGroup(), before = snap(), n = 0, fixed = 0, miss = [];
+    ps.forEach(function (p, i) {
+      if (i % 2) return;
+      var q = p.trim(); if (!q) return;
+      var r = M().resolve(q);
+      if (!r || !r.id) { miss.push(q); return; }
+      if (r.how === 'prefix' || r.how === 'fuzzy') fixed++;
+      if (setPlace(r.id, a)) n++;
     });
     if (n) pushUndo(before);
-    $('mcPasteMsg').textContent = n + (a ? ' coloured' : ' cleared') + (miss.length ? ' · not found: ' + miss.join(', ') : '');
+    $('mcPasteMsg').textContent = n + (a ? ' coloured' : ' cleared') + (fixed ? ' · ' + fixed + ' corrected' : '') + (miss.length ? ' · not found: ' + miss.join(', ') : '');
     refresh();
-  });
+  }
+  $('mcPasteGo').addEventListener('click', applyPaste);
 
   function focusHide() { $('mcFocus').hidden = true; }
   $('mcErase').addEventListener('click', function () { pick(ERASE); });

@@ -28,7 +28,7 @@
 <link rel="stylesheet" href="../css/style.css?v=12">
 <link rel="stylesheet" href="../css/productivity.css?v=2">
 <link rel="stylesheet" href="../css/tool-timeline.css?v=2">
-<link rel="stylesheet" href="../css/tool-map.css?v=2">
+<link rel="stylesheet" href="../css/tool-map.css?v=3">
 </head>
 <body data-section="productivity" class="wide">
 
@@ -104,8 +104,12 @@
           <ul class="mc-list" id="mcList"></ul>
           <details class="mc-paste">
             <summary>Paste a list</summary>
-            <p class="mc-p">Names or codes, one per line or comma-separated (<i>India, France, BR</i> or <i>Kerala, Tamil Nadu, KA</i>). They take the ticked colour.</p>
-            <textarea id="mcPaste" rows="4"></textarea>
+            <p class="mc-p">Names or codes, one per line or comma-separated (<i>India, France, BR</i> or <i>Kerala, Tamil Nadu, KA</i>). Spelling slips and everyday names (<i>UK</i>, <i>Holland</i>, <i>Orissa</i>) are fixed for you; ↑ ↓ and Enter pick a suggestion. They take the colour you're holding.</p>
+            <div class="mc-ac">
+              <textarea id="mcPaste" rows="4" autocomplete="off" spellcheck="false" placeholder="South Korea, UK, Frnace…" aria-autocomplete="list" aria-controls="mcSug"></textarea>
+              <ul class="mc-sug" id="mcSug" role="listbox" hidden></ul>
+            </div>
+            <div class="mc-chips" id="mcChips" hidden></div>
             <div class="mc-row"><button class="tl-btn ink" id="mcPasteGo">Colour these</button><span class="mc-msg" id="mcPasteMsg"></span></div>
           </details>
         </div>
@@ -157,7 +161,8 @@
 <script src="../js/tools.js?v=5"></script>
 <script src="../js/vendor/d3-7.9.0.min.js"></script>
 <script src="../js/vendor/topojson-client-3.1.0.min.js"></script>
-<script src="../js/tool-map.js?v=2"></script>
+<script src="../js/tool-map-match.js?v=1"></script>
+<script src="../js/tool-map.js?v=3"></script>
 <script src="../js/nav.js?v=9" defer></script>
 <script src="../js/visits.js?v=2" defer></script>
 </body>
