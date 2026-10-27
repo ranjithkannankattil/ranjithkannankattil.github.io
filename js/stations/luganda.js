@@ -281,6 +281,15 @@ window.STATIONS = [
       "https://stream.zeno.fm/bphnslpg8p1uv"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "radio-simba",
+    "name": "Radio Simba",
+    "category": "news",
+    "streams": [
+      "https://radiosimba-atunwadigital.streamguys1.com/radiosimba"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

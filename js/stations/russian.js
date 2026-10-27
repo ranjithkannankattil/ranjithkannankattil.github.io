@@ -619,6 +619,33 @@ window.STATIONS = [
       "https://stream.1000hit.ru:8000/stream128"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "club-hits-2000s",
+    "name": "Club Hits 2000s",
+    "category": "music",
+    "streams": [
+      "https://radio.retrolan.party:8000/radio.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "radio-gameplay",
+    "name": "Radio Gameplay",
+    "category": "music",
+    "streams": [
+      "https://c22.radioboss.fm:8144/GamePlay"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "101-ru-modern-talking",
+    "name": "101.ru Modern Talking",
+    "category": "music",
+    "streams": [
+      "https://srv01.gpmradio.ru/stream/pro/aac/64/115"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

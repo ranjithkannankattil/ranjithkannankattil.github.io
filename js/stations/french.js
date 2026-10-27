@@ -572,6 +572,33 @@ window.STATIONS = [
       "https://flux.radiolabelleaventure.com/listen/radio_la_belle_aventure/radio.mp3"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "jazz-radio-funk",
+    "name": "Jazz Radio Funk",
+    "category": "music",
+    "streams": [
+      "https://jazz-wr06.ice.infomaniak.ch/jazz-wr06-128.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "cherie-fm-2000",
+    "name": "Chérie FM 2000",
+    "category": "music",
+    "streams": [
+      "https://streaming.nrjaudio.fm/ouf2ebtx4thg"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "fip-musiques-du-monde",
+    "name": "FIP Musiques du monde",
+    "category": "music",
+    "streams": [
+      "https://icecast.radiofrance.fr/fipworld-hifi.aac"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

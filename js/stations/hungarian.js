@@ -529,6 +529,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/rc1aaftwtuavv"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "mr7-danko-radio",
+    "name": "MR7 - Dankó Rádió",
+    "category": "music",
+    "streams": [
+      "https://mr-stream.connectmedia.hu/4748/mr7.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "hr-fm",
+    "name": "H�r FM",
+    "category": "news",
+    "streams": [
+      "https://stream.rcs.revma.com/ar1n48k8b2uvv"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "super-dj-radio",
+    "name": "Super DJ Radio",
+    "category": "music",
+    "streams": [
+      "https://s03.diazol.hu:35150/live"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

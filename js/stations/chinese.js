@@ -201,7 +201,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-17",
@@ -556,6 +557,33 @@ window.STATIONS = [
       "https://lhttp-hw.qtfm.cn/live/273/64k.mp3"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "voa-macau",
+    "name": "VOA Macau",
+    "category": "news",
+    "streams": [
+      "https://voa-ingest.akamaized.net/hls/live/2035206/151_124L/playlist.m3u8"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "m-radio",
+    "name": "M Radio 全國廣播",
+    "category": "music",
+    "streams": [
+      "https://n03.rcs.revma.com/044q61ha7a0uv"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "station-34",
+    "name": "台海之聲",
+    "category": "music",
+    "streams": [
+      "https://satellitepull.cnr.cn/live/wxzhzs/playlist.m3u8?wsSession=c650605f64c6488d38b66982-174761774475052&wsIPSercert=270c8446fe14303f2433a2f164ccd9e5"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

@@ -625,6 +625,33 @@ window.STATIONS = [
       "https://wdr-wdr2-ostwestfalenlippe.icecast.wdr.de/wdr/wdr2/ostwestfalenlippe/mp3/128/stream.mp3"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "ndr-1-welle-nord",
+    "name": "NDR 1 Welle Nord",
+    "category": "music",
+    "streams": [
+      "https://icecast.ndr.de/ndr/ndr1wellenord/kiel/mp3/128/stream.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "0-n-80s-on-radio",
+    "name": "0 N - 80s on Radio",
+    "category": "music",
+    "streams": [
+      "https://0n-80s.radionetz.de/0n-80s.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "radio-srf-3",
+    "name": "Radio SRF 3",
+    "category": "music",
+    "streams": [
+      "https://stream.srg-ssr.ch/m/drs3/aacp_96"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

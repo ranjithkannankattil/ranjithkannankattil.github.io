@@ -608,6 +608,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "where": "Australia"
+  },
+  {
+    "id": "drgnu-metallica",
+    "name": "DrGnu - Metallica",
+    "category": "world",
+    "streams": [
+      "https://streams.radiobob.de/metallica/mp3-192/mediaplayer/"
+    ],
+    "added": "2026-10-27",
+    "where": "Germany"
+  },
+  {
+    "id": "naija-fm-102-7-lagos",
+    "name": "Naija FM 102.7 Lagos",
+    "category": "world",
+    "streams": [
+      "https://naijafmlagos-atunwadigital.streamguys1.com/naijafmlagos/playlist.m3u8"
+    ],
+    "added": "2026-10-27",
+    "where": "Nigeria"
+  },
+  {
+    "id": "cfrb-news-talk-1010-toronto-on",
+    "name": "CFRB News/Talk 1010 (Toronto, ON)",
+    "category": "canada",
+    "streams": [
+      "https://29324.live.streamtheworld.com/CFRBAMAAC_SC"
+    ],
+    "added": "2026-10-27",
+    "where": "Canada"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

@@ -602,6 +602,33 @@ window.STATIONS = [
       "https://ice5.abradio.cz/hitvysocina128.mp3"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "radio-xaver",
+    "name": "Rádio Xaver",
+    "category": "news",
+    "streams": [
+      "https://icecast6.play.cz/radio-xaver.aac"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "radio-cas",
+    "name": "Radio Čas",
+    "category": "music",
+    "streams": [
+      "https://icecast6.play.cz/casradio128.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "jc1-televize-jizni-cechy",
+    "name": "JČ1 - Televize jižní Čechy",
+    "category": "news",
+    "streams": [
+      "https://stream.jc1.cz/hls/jc1.m3u8"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

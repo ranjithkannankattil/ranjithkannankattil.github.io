@@ -67,6 +67,15 @@ window.STATIONS = [
       "https://stream.zeno.fm/xs6zeac1ts8uv"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "umhlobo-wenene-fm",
+    "name": "Umhlobo Wenene FM",
+    "category": "news",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/UMHLOBOWENENEAAC.aac"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

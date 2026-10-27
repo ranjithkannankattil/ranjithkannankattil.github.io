@@ -114,7 +114,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://kancdn.medonecdn.net/livehls/oil/kancdn-live/live/radio/kan_88/live.livx/playlist.m3u8?renditions&dvr=7200000"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "galgalatz-91-8-fm",
@@ -443,4 +444,4 @@ window.STATIONS = [
     "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

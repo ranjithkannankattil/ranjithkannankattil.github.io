@@ -40,7 +40,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://live.netradio.pro/listen/angoni/radio.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "timveni-online",
@@ -300,4 +301,4 @@ window.STATIONS = [
     "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

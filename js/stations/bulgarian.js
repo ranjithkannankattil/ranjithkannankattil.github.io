@@ -48,8 +48,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nova-radio.neterra.tv/veselinaretro"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "badrock-hard-heavy",
@@ -576,6 +575,24 @@ window.STATIONS = [
       "https://pulsar.atlantis.bg:8443/fmplusnew"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "radio-nova-bulgaria",
+    "name": "Radio Nova Bulgaria",
+    "category": "music",
+    "streams": [
+      "https://play.global.audio/nova.opus"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "metro-love-xmas-radio",
+    "name": "Metro Love Xmas Radio",
+    "category": "music",
+    "streams": [
+      "https://radio.jump.bg/proxy/feedyyy02?mp=/MLR70S"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

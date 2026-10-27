@@ -591,6 +591,33 @@ window.STATIONS = [
       "https://naxidigital-evergreen128ssl.streaming.rs:8012/;"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "kiss-fm-balkan",
+    "name": "Kiss FM Balkan",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/kwku1q84p48uv"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "lolipop",
+    "name": "Lolipop",
+    "category": "music",
+    "streams": [
+      "https://streaming.tdiradio.com/lollipop.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "radio-021-disco-funk",
+    "name": "Radio 021 Disco & Funk",
+    "category": "music",
+    "streams": [
+      "https://centova.dukahosting.com/proxy/021disco/stream"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

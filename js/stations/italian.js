@@ -561,6 +561,33 @@ window.STATIONS = [
       "https://ice08.fluidstream.net/kk_hits.aac"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "rai-radio-classica-filodiffusione",
+    "name": "Rai Radio Classica Filodiffusione",
+    "category": "music",
+    "streams": [
+      "https://icestreaming.rai.it/5.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "radio-marte",
+    "name": "Radio Marte",
+    "category": "news",
+    "streams": [
+      "https://stream1.xdevel.com/audio0s975753-313/stream/icecast.audio"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "radio-105-zoo-radio",
+    "name": "Radio 105 - Zoo Radio",
+    "category": "news",
+    "streams": [
+      "https://icy.unitedradio.it/105Zoo.mp3"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

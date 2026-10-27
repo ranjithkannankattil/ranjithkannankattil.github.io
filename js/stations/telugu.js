@@ -98,7 +98,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/5d9989b5189a8f4a/5d9989b5189a8f4a.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "akashvani-tirupati",
@@ -137,4 +138,4 @@ window.STATIONS = [
     "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

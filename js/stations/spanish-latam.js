@@ -620,6 +620,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/4q99spjike0uv"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "caracas-salsa-romantica",
+    "name": "Caracas. Salsa Romántica...",
+    "category": "music",
+    "streams": [
+      "https://stream-285.surfernetwork.com/ftly191pojttv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJmdGx5MTkxcG9qdHR2IiwiaG9zdCI6InN0cmVhbS0yODUuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6ImM5anZ1QUtvVE1HMEVkOUpuNGEweEEiLCJpYXQiOjE3OTMxMDQyMDAsImV4cCI6MTc5MzEwNDI2MH0.hkktqROdPf-apppsb6jparXCjSqF-ctfagSrklnpO3s"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "100-9-play-fm",
+    "name": "100.9 Play FM",
+    "category": "music",
+    "streams": [
+      "https://mdstrm.com/audio/5c8d6406f98fbf269f57c82c/icecast.audio"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "beatles-radio",
+    "name": "BEATLES RADIO",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/e4auhdgm6cquv"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

@@ -236,8 +236,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ztnr.rtve.es/ztnr/1694255.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "esradio-principal",
@@ -623,6 +622,33 @@ window.STATIONS = [
       "https://libertaddigital-radio-live2.flumotion.com/libertaddigital/ld-live2-low.mp3"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "radio-espana",
+    "name": "Radio España",
+    "category": "news",
+    "streams": [
+      "https://stream-280.surfernetwork.com/7ywx2u45vv8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI3eXd4MnU0NXZ2OHV2IiwiaG9zdCI6InN0cmVhbS0yODAuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6Ik42WDBkd1ZZUV91SFppM21TV1l2WlEiLCJpYXQiOjE3OTMwNTI5NjIsImV4cCI6MTc5MzA1MzAyMn0._TALtfzf6AumrpbETHG5K6fF_FxkuulZxBV7rrxzioA"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "bikinifm",
+    "name": "BikiniFM",
+    "category": "music",
+    "streams": [
+      "https://stream.emisorasmusicales.net/listen/bikini_fm/bikinifm.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "cadena-ser-radio-zamora",
+    "name": "Cadena SER - Radio Zamora",
+    "category": "news",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/SER_ASO_ZAMORA.mp3"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

@@ -475,8 +475,7 @@ window.STATIONS = [
     "streams": [
       "https://ssl-1.radiohost.pl:9569/stream"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "radio-mbox-disco-polo",
@@ -531,6 +530,33 @@ window.STATIONS = [
       "https://s3.slotex.pl:7150/stream"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "kiss-fm-poland",
+    "name": "Kiss FM Poland",
+    "category": "music",
+    "streams": [
+      "https://streaming.g-news.pl:8090/kissfm"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "vox-fm",
+    "name": "VOX FM",
+    "category": "music",
+    "streams": [
+      "https://pldm.one.pl/radio?url=https://www.eskago.pl/radio/vox-fm"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "zet-90s",
+    "name": "Zet 90s",
+    "category": "music",
+    "streams": [
+      "https://zt02.cdn.eurozet.pl/ZET090.mp3"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

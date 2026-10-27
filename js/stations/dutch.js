@@ -632,6 +632,33 @@ window.STATIONS = [
       "https://22663.live.streamtheworld.com/KINK_90S_SC"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "only-80-s-radio",
+    "name": "Only 80's Radio",
+    "category": "music",
+    "streams": [
+      "https://server-28.stream-server.nl:8850/stream"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "jesus-is-lord-radio",
+    "name": "JESUS IS LORD radio",
+    "category": "devotional",
+    "streams": [
+      "https://stream-285.surfernetwork.com/thdtw5xd9eiuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ0aGR0dzV4ZDllaXV2IiwiaG9zdCI6InN0cmVhbS0yODUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiI0OUMxUU9PMFIyeTl5SThnTno0VTB3IiwiaWF0IjoxNzg1OTU0NjI0LCJleHAiOjE3ODU5NTQ2ODR9.TEC2qyYYTCv3OjNepwCqgyWWPAoxPRanj5XLmznekcA"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "vrt-radio-1-classics",
+    "name": "VRT Radio 1 Classics",
+    "category": "music",
+    "streams": [
+      "https://icecast.vrtcdn.be/radio1_classics-high.mp3"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

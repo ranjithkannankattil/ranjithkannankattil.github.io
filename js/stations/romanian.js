@@ -56,8 +56,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://astreaming.edi.ro:8443/EuropaFM_aac"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "magic-party-mix",
@@ -105,8 +104,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://astreaming.edi.ro:8443/VirginRadio_aac"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "balcan-radio-manele-braila",
@@ -529,7 +527,8 @@ window.STATIONS = [
     "streams": [
       "https://live.radiooradea.ro/9000/stream"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "offline": true
   },
   {
     "id": "love-pro-dj-radio-chisinau",
@@ -566,6 +565,33 @@ window.STATIONS = [
       "https://audio.jurnalfm.md/hq"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "clasic-radio-vivaldi-bucuresti",
+    "name": "Clasic Radio_Vivaldi -București",
+    "category": "music",
+    "streams": [
+      "https://live.radioclasic.com/listen/radio_clasic_vivaldi/live.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "radio-tequila-oldies",
+    "name": "Radio Tequila Oldies",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/5a1utt11fkhvv"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "kiss-millenium-hits",
+    "name": "Kiss Millenium Hits",
+    "category": "music",
+    "streams": [
+      "https://live.kissfm.ro/milleniumhits"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

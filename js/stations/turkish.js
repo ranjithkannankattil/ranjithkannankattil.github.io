@@ -593,6 +593,33 @@ window.STATIONS = [
       "https://yayin.radyoarabesk.com.tr:8000/stream"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "hey-radyo",
+    "name": "HEY RADYO",
+    "category": "music",
+    "streams": [
+      "https://usa4.fastcast4u.com/proxy/radyoizmirfm/mp3stream128"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "deva-fm-oyun-havas",
+    "name": "Deva FM Oyun Havası",
+    "category": "music",
+    "streams": [
+      "https://radyo.radyoimza.com/8034/stream"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "gevas-sesi-radyosu",
+    "name": "Gevaş Sesi Radyosu",
+    "category": "music",
+    "streams": [
+      "https://live.radyositesihazir.com:8056/stream"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

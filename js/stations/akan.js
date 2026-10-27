@@ -163,7 +163,8 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://listen.openstream.co/4103/audio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "parousia-radio",
@@ -307,7 +308,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://atunwadigital.streamguys1.com/yfm1079accra"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "ahotor-fm",
@@ -480,4 +482,4 @@ window.STATIONS = [
     "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

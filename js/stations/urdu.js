@@ -112,8 +112,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ice8.securenetsystems.net/SGTRADIO"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "fm-101-islamabad",
@@ -268,6 +267,15 @@ window.STATIONS = [
       "https://mediaserv68.live-streams.nl:8067/stream"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "power-radio-fm-99-islamabad",
+    "name": "Power Radio FM 99 Islamabad",
+    "category": "news",
+    "streams": [
+      "https://isb.power99.live/stream"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

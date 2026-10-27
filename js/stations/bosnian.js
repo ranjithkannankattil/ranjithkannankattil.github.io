@@ -128,7 +128,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_valentino.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-rujnica-zavidovici",
@@ -369,4 +370,4 @@ window.STATIONS = [
     "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

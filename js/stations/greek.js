@@ -646,6 +646,33 @@ window.STATIONS = [
       "https://metromedia.live24.gr/metropolis955thess"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "dromos-89-8",
+    "name": "Dromos 89,8",
+    "category": "music",
+    "streams": [
+      "https://n07-eu1.rcs.revma.com/10q3enqxbfhvv"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "n07-nature-meditation",
+    "name": "N07 Nature Meditation",
+    "category": "music",
+    "streams": [
+      "https://air.radioart.com/fMeditation.mp3?dlid="
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "republic-100-3",
+    "name": "Republic 100.3",
+    "category": "music",
+    "streams": [
+      "https://netradio.live24.gr/republicthess"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

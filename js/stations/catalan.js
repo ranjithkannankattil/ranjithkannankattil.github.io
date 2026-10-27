@@ -511,7 +511,8 @@ window.STATIONS = [
     "streams": [
       "https://www.totradio.com:8000/128kbps"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "radio-cornella",
@@ -602,6 +603,33 @@ window.STATIONS = [
       "https://enacast.com/radiorapita/streams/SD"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "radio-palafrugell",
+    "name": "Ràdio Palafrugell",
+    "category": "news",
+    "streams": [
+      "https://radio.martiproduccions.com/radiopalafrugell"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "radio-hostafrancs",
+    "name": "Radio Hostafrancs",
+    "category": "news",
+    "streams": [
+      "https://radiohostafrancs.cat/directe.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "radio-l-om",
+    "name": "Ràdio l'Om",
+    "category": "music",
+    "streams": [
+      "https://radiolom.es:8800/;stream.mp3"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

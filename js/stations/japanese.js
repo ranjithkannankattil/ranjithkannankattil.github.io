@@ -539,6 +539,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/umsptm6rvy8uv"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "anime",
+    "name": "ЯН-ФМ Anime",
+    "category": "music",
+    "streams": [
+      "https://animklatu.stream.laut.fm/animklatu?uuid=ee9a04b6-61e6-f283-01fd-49db913b1189&t302=2026-10-27_14-04-09"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "radi-fm-nippon",
+    "name": "Radi.fm クラシック Nippon",
+    "category": "music",
+    "streams": [
+      "https://live.radi.fm/stream/ja.aac"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "otaku-musicradio",
+    "name": "Otaku MusicRadio",
+    "category": "music",
+    "streams": [
+      "https://kathy.torontocast.com:2880/;"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

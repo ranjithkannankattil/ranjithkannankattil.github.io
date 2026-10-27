@@ -152,8 +152,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s5.radioforge.com:7908/live?n=77357"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "24-breaking-live",
@@ -297,7 +296,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://noasrv.caster.fm:10001/live"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "fm-3",
@@ -601,6 +601,33 @@ window.STATIONS = [
       "https://online.radiojazz.ua/RadioJazz"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "kiss-fm-digital-sd",
+    "name": "Kiss FM Digital SD",
+    "category": "music",
+    "streams": [
+      "https://online.kissfm.ua/KissFM_Digital"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "rus-ukr",
+    "name": "Крым Реалии (rus, ukr)",
+    "category": "music",
+    "streams": [
+      "https://stream.radiojar.com/wm9sntcpn3quv"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "megapolis-fm-105-2-kryvyi-rih",
+    "name": "Megapolis FM 105.2 Kryvyi Rih",
+    "category": "music",
+    "streams": [
+      "https://cast.megapolis.fm/listen/kryvyi_rih/radio.mp3"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

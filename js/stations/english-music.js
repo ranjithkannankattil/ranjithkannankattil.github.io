@@ -666,6 +666,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "where": "US"
+  },
+  {
+    "id": "smoothjazz-com",
+    "name": "SmoothJazz.com",
+    "category": "jazz",
+    "streams": [
+      "https://smoothjazz.cdnstream1.com/2585_128.mp3"
+    ],
+    "added": "2026-10-27",
+    "where": "US"
+  },
+  {
+    "id": "bbc-radio-3-unwind",
+    "name": "BBC Radio 3 Unwind",
+    "category": "classical",
+    "streams": [
+      "https://as-hls-ww-live.akamaized.net/pool_30624046/live/ww/bbc_radio_three_unwind/bbc_radio_three_unwind.isml/bbc_radio_three_unwind-audio%3d128000.norewind.m3u8"
+    ],
+    "added": "2026-10-27",
+    "where": "UK"
+  },
+  {
+    "id": "classic-fm-video-game-music",
+    "name": "Classic FM Video Game Music",
+    "category": "classical",
+    "streams": [
+      "https://icecast.thisisdax.com/ClassicFM-M-Gaming"
+    ],
+    "added": "2026-10-27",
+    "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

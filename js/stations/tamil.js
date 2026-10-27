@@ -629,6 +629,33 @@ window.STATIONS = [
       "https://stream-176.surfernetwork.com/amp1qadecchvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJhbXAxcWFkZWNjaHZ2IiwiaG9zdCI6InN0cmVhbS0xNzYuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJfUHA1bE93NlNRMk55bTg2bG9uMHV3IiwiaWF0IjoxNzg0NTI2Mjg1LCJleHAiOjE3ODQ1MjYzNDV9.Ofe0vRsrMX41iMh9rZe_LNXFMu99ZReEIt6qaY8Pzjw"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "thentamilradio",
+    "name": "Thentamilradio",
+    "category": "music",
+    "streams": [
+      "https://usa9.fastcast4u.com/proxy/thentamilfm?mp=/;"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "chellam-fm",
+    "name": "Chellam Fm",
+    "category": "music",
+    "streams": [
+      "https://sugu.radioca.st/stream/;stream/1"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "tamil-amuthu-mellisai-radio",
+    "name": "Tamil Amuthu Mellisai Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/bfh4ywts2f8uv"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

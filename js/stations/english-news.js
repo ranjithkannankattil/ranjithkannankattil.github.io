@@ -480,6 +480,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "where": "Chile"
+  },
+  {
+    "id": "ofm-94-97-fm-bloemfontein",
+    "name": "OFM 94 & 97 FM Bloemfontein",
+    "category": "world",
+    "streams": [
+      "https://edge.iono.fm/xice/ofm_live_medium.aac"
+    ],
+    "added": "2026-10-27",
+    "where": "South Africa"
+  },
+  {
+    "id": "wbbr-1130-bloomberg-radio-new-york-ny",
+    "name": "WBBR 1130 \"Bloomberg Radio\" New York, NY",
+    "category": "us",
+    "streams": [
+      "https://29308.live.streamtheworld.com/WBBRAMAAC_SC"
+    ],
+    "added": "2026-10-27",
+    "where": "US"
+  },
+  {
+    "id": "cgtn-english",
+    "name": "CGTN - English",
+    "category": "world",
+    "streams": [
+      "https://english-livetx.cgtn.com/hls/yypdyyctzb_sd.m3u8"
+    ],
+    "added": "2026-10-27",
+    "where": "China"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

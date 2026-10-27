@@ -193,7 +193,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.otvoreni.hr/hot"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "prolaznik-evergreen-lepoglava",
@@ -404,6 +405,24 @@ window.STATIONS = [
       "https://cmr-hosting.com/9700/stream"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "hrt-radio-osijek",
+    "name": "HRT Radio Osijek",
+    "category": "music",
+    "streams": [
+      "https://22193.live.streamtheworld.com/OSIJEKAAC_SC"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "radio-maestral",
+    "name": "Radio Maestral",
+    "category": "music",
+    "streams": [
+      "https://ec2s.crolive.com.hr:1630/stream"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

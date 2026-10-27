@@ -178,7 +178,8 @@ window.STATIONS = [
     "streams": [
       "https://us5new.listen2myradio.com:2199/listen.php?port=8138&type=ice&mount=stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "heavenly-altar-church-radio-kampala",
@@ -278,6 +279,24 @@ window.STATIONS = [
       "https://stream.zeno.fm/vstzctms6rhvv"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "radio-jambo",
+    "name": "Radio Jambo",
+    "category": "news",
+    "streams": [
+      "https://radiojambo-atunwadigital.streamguys1.com/radiojambo"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "radio-citizen",
+    "name": "Radio Citizen",
+    "category": "news",
+    "streams": [
+      "https://radiocitizen-atunwadigital.streamguys1.com/radiocitizen/playlist.m3u8"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

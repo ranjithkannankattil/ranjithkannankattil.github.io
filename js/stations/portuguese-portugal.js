@@ -92,7 +92,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "m80-radio-ballads",
@@ -229,7 +230,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "cidade-fm-2",
@@ -345,7 +347,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/rdpafrica80a/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "antena-1-acores-portugal",
@@ -354,7 +357,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -616,6 +620,33 @@ window.STATIONS = [
       "https://radio.streemlion.com:4515/stream"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "rds-romantica",
+    "name": "RDS Romantica",
+    "category": "music",
+    "streams": [
+      "https://s9.yesstreaming.net:9066/stream"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "cidade-hiphop",
+    "name": "cidade hiphop",
+    "category": "music",
+    "streams": [
+      "https://stream-hls.bauermedia.pt/cidhiphop.aac/playlist.m3u8"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "nitfm",
+    "name": "NiTfm",
+    "category": "music",
+    "streams": [
+      "https://sp0.redeaudio.com/8028/stream/"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

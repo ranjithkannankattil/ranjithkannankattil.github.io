@@ -606,6 +606,33 @@ window.STATIONS = [
       "https://lhttp.qingting.fm/live/15318668/64k.mp3"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "station-40",
+    "name": "新兴电台",
+    "category": "music",
+    "streams": [
+      "https://lhttp.qingting.fm/live/20211602/64k.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "station-41",
+    "name": "茂名综合广播",
+    "category": "news",
+    "streams": [
+      "https://lhttp.qingting.fm/live/20500088/64k.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "station-42",
+    "name": "增城人民广播电台",
+    "category": "news",
+    "streams": [
+      "https://lhttp.qingting.fm/live/20211702/64k.mp3"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

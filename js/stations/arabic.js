@@ -248,7 +248,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://broadcast.shoutstream.co.uk:8078/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "mp3quran-main",
@@ -619,6 +620,33 @@ window.STATIONS = [
       "https://streamer.radio.co/sb38bf6e66/listen"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "quran-radio-kuwait",
+    "name": "Quran Radio راديو القرآن - Kuwait الكويت",
+    "category": "devotional",
+    "streams": [
+      "https://radio.mp3islam.com/listen/quran_radio/radio.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "jil-fm",
+    "name": "Jil FM",
+    "category": "music",
+    "streams": [
+      "https://webradio1.tda.dz:8001/Jeunesse_64K.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "u-radio",
+    "name": "U RADIO",
+    "category": "music",
+    "streams": [
+      "https://uradio-aac.ice.infomaniak.ch/uradio.aac"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

@@ -81,6 +81,15 @@ window.STATIONS = [
     "streams": [
       "https://play.vovgiaothong.vn/live/gthcm/playlist.m3u8"
     ]
+  },
+  {
+    "id": "vov3",
+    "name": "VOV3",
+    "category": "news",
+    "streams": [
+      "https://audio-lss.vov.vn/live/vov3.m3u8"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

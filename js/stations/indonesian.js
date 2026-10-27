@@ -168,7 +168,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://svara-stream.radioddns.net/yogyakarta_voksradio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "klcbs-new-age",
@@ -208,7 +209,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:9154/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radiks-fm-semarang",
@@ -322,7 +324,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/14/9314/rrisngliatpro1.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "mosh-head-black-metal-id",
@@ -457,7 +460,8 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:9622/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "rri-pro1-banjarmasin",
@@ -547,7 +551,8 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com/8228/;radio"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "offline": true
   },
   {
     "id": "bandung-death-metal-syndicate",
@@ -574,7 +579,8 @@ window.STATIONS = [
     "streams": [
       "https://server.radioimeldafm.co.id/radio/8010/swarasemarang"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "offline": true
   },
   {
     "id": "radio-indah-siar-cirebon",
@@ -593,6 +599,33 @@ window.STATIONS = [
       "https://n06.radiojar.com/7csmg90fuqruv"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "arb-fm-jakarta",
+    "name": "ARB FM JAKARTA",
+    "category": "music",
+    "streams": [
+      "https://void.idserverhost.com/8018/stream"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "radio-pensiunan",
+    "name": "radio pensiunan",
+    "category": "music",
+    "streams": [
+      "https://pu.klikhost.com/proxy/radiopensiunan/stream"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "yasika-fm-jogja",
+    "name": "YASIKA FM JOGJA",
+    "category": "music",
+    "streams": [
+      "https://i.klikhost.com:9610/stream"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

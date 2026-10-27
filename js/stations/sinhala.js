@@ -148,6 +148,15 @@ window.STATIONS = [
       "https://s46.myradiostream.com:11156/listen.mp3"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "shaa-fm",
+    "name": "Shaa FM",
+    "category": "music",
+    "streams": [
+      "https://radio.lotustechnologieslk.net:2020/stream/shaafmgarden"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

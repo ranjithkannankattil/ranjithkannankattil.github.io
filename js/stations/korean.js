@@ -182,17 +182,18 @@ window.STATIONS = [
       "https://radiolive.sbs.co.kr/powerpc/powerfm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTMxMTgwMDUsInBhdGgiOiIvcG93ZXJmbS5zdHJlYW0iLCJkdXJhdGlvbiI6LTEsInVubyI6IjljN2Y3ZTNlLTRlMGYtNDg1OS1hMmM4LTZmNWMzYjhjMGRlNSIsImlhdCI6MTc5MzA3NDgwNX0.WzGnldj8JphnOaZD21yGsvd6Du3AZmqCnYInXI0wBRI",
       "https://radiolive.sbs.co.kr/powerpc/powerfm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTI2ODYwMTAsInBhdGgiOiIvcG93ZXJmbS5zdHJlYW0iLCJkdXJhdGlvbiI6LTEsInVubyI6IjlkMDFiOGE3LThlMDMtNDFkYS1iYWZhLTM1YzYyZGU5NzdlNCIsImlhdCI6MTc5MjY0MjgxMH0.PMNO73j0Gu8tDxuzEDDcbUuhW9OUZBZSYD__4ffU3R4"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "kbs-1radio",
     "name": "KBS 1Radio",
     "category": "music",
     "streams": [
+      "https://2radio-bora.gscdn.kbs.co.kr/2radio-bora-01/2radio-bora-01_hd.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8ycmFkaW8tYm9yYS5nc2Nkbi5rYnMuY28ua3IvMnJhZGlvLWJvcmEtMDEvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5MzI2MzE4OH19fV19&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=WNLXoLObthQ2TWktnOs04QShjQElhqeoGuib8x3cgcOyZEj9SBXItsnZ25l2Bbmts9OCfvWWHPOS8oGyq5K3dDQqwTWpoWEEJobTL5LFPb2r4Iq0HRHsWM~N-vbU369VOJunbzQfmwMs04KKnOvLBgjZGwxcV0hPBCpSKglU8lFc7X8YcaDd1dvWcPihmCPTXa1mxbPfXxyuSSI9XR6qMn4i8dpcMXGYsR8idNLx91uqw3rDAsmA8WkOy-JLl4gDRc7ziU3CMqPWTxjbGS1O8tyQnKG0YShr~UPctD7hg5H0yLRAy2QmD3YZexp5k7bE0MIq~jlq1Mo0k84qQgnXXQ__",
       "https://2radio-bora.gscdn.kbs.co.kr/2radio-bora-01/2radio-bora-01_hd.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8ycmFkaW8tYm9yYS5nc2Nkbi5rYnMuY28ua3IvMnJhZGlvLWJvcmEtMDEvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5MjgyOTk3OH19fV19&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=E8D8SD3Yu6sh1AA5e1zt8I6catGSMg4oIYNaJidlPY2oc~oHzwQftQ5Yzb6xvd2uZqc~E1L721kgKvVwfybyCcCxnJLbbfdGmewqhUfytnIP-2kJT3mM3nX85CdOTKV1SU6z85UT1toYA-4IgKtTNxdyh2f9hHCOtyid5hvEJSheYovtNvpjvgNzNUPG~ZJ4QZPpOzg5Xc32XY6vnqM7rWkvB6P~GA9JYbmMecMvquYFkMfxdnDp~2U13QmYmJle8iToe5na6gzjd7U33bXnSw1uvWFkyuw0zpg0klN~qNMvuF-0mjJ8G8JVbAJj09bqtPz0EZX0xS0MD4ifWnqW5Q__"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "kbs-cool-fm",
@@ -430,6 +431,33 @@ window.STATIONS = [
       "https://mgugaklive.nowcdn.co.kr/gugakradio/gugakradio.stream/playlist.m3u8"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "kbs-1r",
+    "name": "KBS 1R",
+    "category": "music",
+    "streams": [
+      "https://1radio-bora.gscdn.kbs.co.kr/1radio-bora-01/1radio-bora-01_hd.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8xcmFkaW8tYm9yYS5nc2Nkbi5rYnMuY28ua3IvMXJhZGlvLWJvcmEtMDEvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5MzI3NjQxNX19fV19&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=LDrgkbZlgCGiKeKLeqf1szbJljhsfs~5PzDQcGkQXcRXkS8aI5PtH6BdCaMQlrptdaLyZLCQI1cmfqF9J7eykFClvxQi~osK01JiX5LVLMXYcEQfmHyaum9Ws8-DxJvyfv1VNrQHH2uVCun3YBeSmMe4htaDBQwOMTMZ68Noatgfns7ZBxPoD1hNPWfAMbcz~PUabIwChZYQwpiFnafKBLfxDHJJ19k86FjI83bDYPbhAtIOjgdEGbXQ5megbkf8v3h0~3fjCyjc7IZT6Hn3ZqEMEBdn1ZoYiZ8jRGdC4JKM0Ld6~hLSUXT8YORyvwZMtBhiYzcTDR8WhrV9n~0axw__"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "kbs",
+    "name": "Kbs",
+    "category": "music",
+    "streams": [
+      "https://1fm.gscdn.kbs.co.kr/1fm_192_2.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8xZm0uZ3NjZG4ua2JzLmNvLmtyLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTMyNzAzNjB9fX1dfQ__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=A01oz7Vhs43nDl08CUHcSJ6pA1lNDj8fPazBKW4XkFZxD7dM5BZaG08-POCrCIBEVbT86DylG1m6Kc-ClD5a-RzU382FBs548PwZyMY3rs~M4zYjEboxx4NwF0jw70bYRT8z3Secrm6TNPkRLiXF2rc4mLsrvZPjFbV6rvaOWkjdyr~zgnClkfsX3aeky4fEtkCvdUDE2mN4IL6SN7JBsk-OIr8OTzm3cBplYiRPE-3OdBqMprqqKlep1qoiZoMvLsOV0gwhC6ZmZlg9o0hR6tNu5PtXL63gd2-gyqNVV7PDMFfNlQf4JQZHhCTNslhFFAzcXT6n~7DYiAHy4u9Xtw__"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "station-4",
+    "name": "黑龙江朝语广播",
+    "category": "music",
+    "streams": [
+      "https://satellitepull.cnr.cn/live/wx32hljcygb/playlist.m3u8?wsSession=a919bd0baf31a1a6f3966f08-174778330216034&wsIPSercert=2683acdad9e689f89519c7ec3f7e218b"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

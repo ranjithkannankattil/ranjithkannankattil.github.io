@@ -105,8 +105,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://servidor28.brlogic.com:8032/live"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "gaucha",
@@ -629,6 +628,33 @@ window.STATIONS = [
       "https://servidor36.brlogic.com:8300/live?1696916321806"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "radio-verdinha-92-5-fm",
+    "name": "Rádio Verdinha 92.5 FM",
+    "category": "news",
+    "streams": [
+      "https://jvcs2dtro0.zoeweb.tv/z18-live/stream/chunklist.m3u8"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "radio-arapuan-98-9-fm",
+    "name": "Rádio Arapuan 98.9 FM",
+    "category": "music",
+    "streams": [
+      "https://streaming.engelhosting.com.br:10036/stream"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "radio-jornal-de-recife-90-3-fm",
+    "name": "Rádio Jornal de Recife 90.3 FM",
+    "category": "news",
+    "streams": [
+      "https://player-ne10-radiojornal-app.stream.uol.com.br/live/radiojornalrecifeapp_lsd.m3u8?vhost=player-ne10-radiojornal-app.stream.uol.com.br"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";

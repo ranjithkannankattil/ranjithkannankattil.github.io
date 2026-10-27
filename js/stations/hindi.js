@@ -612,6 +612,33 @@ window.STATIONS = [
       "https://rangeelaradio.radioca.st/;"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "lyca-radio-1458-am",
+    "name": "Lyca Radio 1458 AM",
+    "category": "music",
+    "streams": [
+      "https://ads-direct.sharp-stream.com/1458.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "hitsofbollywood",
+    "name": "Hitsofbollywood",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/a2gyqzwpwfeuv"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "bollywoodandbeyond",
+    "name": "Bollywoodandbeyond",
+    "category": "music",
+    "streams": [
+      "https://s6.yesstreaming.net/proxy/john1237?mp=/live"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T05:58Z";
+window.STATIONS_CHECKED = "2026-10-27T19:16Z";
