@@ -592,6 +592,33 @@ window.STATIONS = [
       "https://i1.echofm.online:8443/stream"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "station-26",
+    "name": "Русское Радио: Русский Рок",
+    "category": "music",
+    "streams": [
+      "https://rmg.hostingradio.ru:80/russkijrok96.aacp"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "kommersant-fm-93-6-moscow",
+    "name": "комерсант (Kommersant FM) 93.6 Moscow",
+    "category": "news",
+    "streams": [
+      "https://kommersant77.hostingradio.ru:8016/kommersant64.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "1000-hits-radio",
+    "name": "1000 HITS RADIO",
+    "category": "music",
+    "streams": [
+      "https://stream.1000hit.ru:8000/stream128"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

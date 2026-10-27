@@ -593,6 +593,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/h7lnwv51bh5uv"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "la-100-clasicos-disco-retro-clasicos",
+    "name": "La 100 Clásicos - Disco Retro Clásicos",
+    "category": "music",
+    "streams": [
+      "https://27323.live.streamtheworld.com/FCLASICOS_56AAC.aac?"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "radio-la-romantica",
+    "name": "Radio La Romantica",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/28hgnyp8568uv"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "nuevaolera",
+    "name": "Nuevaolera",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/4q99spjike0uv"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

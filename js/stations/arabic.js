@@ -592,6 +592,33 @@ window.STATIONS = [
       "https://live.kwikmotion.com/syriatvlive/syriatv_audio/playlist.m3u8"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "mfm-radio",
+    "name": "MFM RADIO",
+    "category": "music",
+    "streams": [
+      "https://a5.asurahosting.com:7980/radio.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "fame-fm-lebanon",
+    "name": "Fame FM Lebanon",
+    "category": "music",
+    "streams": [
+      "https://l3.itworkscdn.net/itwaudio/9044/stream"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "al-bilad-radio-yaqoubi",
+    "name": "Al-bilad Radio/Yaqoubi",
+    "category": "devotional",
+    "streams": [
+      "https://streamer.radio.co/sb38bf6e66/listen"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

@@ -121,8 +121,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play-radio-stream3.hndt.com/now/WUBA5hW2/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-10",
@@ -202,8 +201,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-17",
@@ -531,6 +529,33 @@ window.STATIONS = [
       "https://n13.rcs.revma.com/xpgtqc74hv8uv"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "station-32",
+    "name": "北京交通广播",
+    "category": "music",
+    "streams": [
+      "https://lhttp.qingting.fm/live/336/64k.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "station-33",
+    "name": "广东音乐之声",
+    "category": "music",
+    "streams": [
+      "https://lhttp.qtfm.cn/live/1260/64k.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "fm103-7",
+    "name": "上海经典金曲广播 FM103.7",
+    "category": "music",
+    "streams": [
+      "https://lhttp-hw.qtfm.cn/live/273/64k.mp3"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

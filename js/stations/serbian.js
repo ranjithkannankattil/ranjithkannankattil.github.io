@@ -120,8 +120,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://centova.dukahosting.com/proxy/021kafe/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "naxi-love-radio",
@@ -565,6 +564,33 @@ window.STATIONS = [
       "https://stream.iradio.pro/proxy/radioforca?mp=/stream"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "jat-radio",
+    "name": "JAT Radio",
+    "category": "music",
+    "streams": [
+      "https://streaming.radiojat.rs/radiojat.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "radio-fruska-gora",
+    "name": "Radio Fruska Gora",
+    "category": "music",
+    "streams": [
+      "https://stream.iradio.pro/proxy/radiofruskagora?mp=/stream"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "naxi-evergreen-radio",
+    "name": "Naxi Evergreen Radio",
+    "category": "music",
+    "streams": [
+      "https://naxidigital-evergreen128ssl.streaming.rs:8012/;"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

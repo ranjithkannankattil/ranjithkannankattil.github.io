@@ -636,6 +636,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "where": "US"
+  },
+  {
+    "id": "977-country",
+    "name": ".977 Country",
+    "category": "country",
+    "streams": [
+      "https://24293.live.streamtheworld.com/977_COUNTRY_SC"
+    ],
+    "added": "2026-10-27",
+    "where": "US"
+  },
+  {
+    "id": "100-covers-lounge",
+    "name": "100 % COVERS LOUNGE",
+    "category": "jazz",
+    "streams": [
+      "https://az1.mediacp.eu/listen/100coverslounge/radio.mp3"
+    ],
+    "added": "2026-10-27",
+    "where": "Canada"
+  },
+  {
+    "id": "somafm-poptron",
+    "name": "SomaFM PopTron",
+    "category": "rock",
+    "streams": [
+      "https://ice2.somafm.com/poptron-128-mp3"
+    ],
+    "added": "2026-10-27",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

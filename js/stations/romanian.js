@@ -56,7 +56,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://astreaming.edi.ro:8443/EuropaFM_aac"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "magic-party-mix",
@@ -104,7 +105,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://astreaming.edi.ro:8443/VirginRadio_aac"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "balcan-radio-manele-braila",
@@ -537,6 +539,33 @@ window.STATIONS = [
       "https://live.prodjradio.net:8000/;"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "clasic-radio-popular-bucuresti",
+    "name": "Clasic Radio_Popular -București",
+    "category": "music",
+    "streams": [
+      "https://live.radioclasic.com/listen/radio_clasic_popular/live.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "kiss-fm-chisinau",
+    "name": "Kiss FM Chișinău",
+    "category": "music",
+    "streams": [
+      "https://dc.digi.live.kissfm.ro/kissfm.chisinau"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "jurnal-fm",
+    "name": "Jurnal Fm",
+    "category": "news",
+    "streams": [
+      "https://audio.jurnalfm.md/hq"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

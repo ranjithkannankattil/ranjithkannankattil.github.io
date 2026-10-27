@@ -168,8 +168,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://svara-stream.radioddns.net/yogyakarta_voksradio"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "klcbs-new-age",
@@ -209,8 +208,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:9154/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radiks-fm-semarang",
@@ -218,8 +216,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:9620/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-music-indonesia",
@@ -325,8 +322,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/14/9314/rrisngliatpro1.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "mosh-head-black-metal-id",
@@ -461,8 +457,7 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:9622/stream"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "rri-pro1-banjarmasin",
@@ -571,6 +566,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/j9tx7izezf4vv"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "radio-swara-semarang",
+    "name": "Radio Swara Semarang",
+    "category": "news",
+    "streams": [
+      "https://server.radioimeldafm.co.id/radio/8010/swarasemarang"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "radio-indah-siar-cirebon",
+    "name": "Radio Indah Siar Cirebon",
+    "category": "devotional",
+    "streams": [
+      "https://az2.radioislam.my.id:8150/;stream.nsv"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "hard-rock-fm",
+    "name": "Hard Rock FM",
+    "category": "music",
+    "streams": [
+      "https://n06.radiojar.com/7csmg90fuqruv"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

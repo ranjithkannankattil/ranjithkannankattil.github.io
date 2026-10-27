@@ -619,6 +619,33 @@ window.STATIONS = [
       "https://105fm.espiv.net/listen/105fm/stream.mp3"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "athens-rock-96-9",
+    "name": "Athens Rock 96.9",
+    "category": "music",
+    "streams": [
+      "https://az10.yesstreaming.net/radio/8060/radio.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "ert3-102-fm",
+    "name": "ERT3 102 FM",
+    "category": "music",
+    "streams": [
+      "https://radiostreaming.ert.gr/ert-102fm"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "metropolis",
+    "name": "Metropolis",
+    "category": "music",
+    "streams": [
+      "https://metromedia.live24.gr/metropolis955thess"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

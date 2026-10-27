@@ -585,6 +585,33 @@ window.STATIONS = [
       "https://drive.uber.radio/uber/bollywoodalkayagnik/icecast.audio"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "agra-radio",
+    "name": "Agra Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/m1krtxpk11zuv"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "mellow-bangla",
+    "name": "Mellow Bangla",
+    "category": "music",
+    "streams": [
+      "https://radio.mellowbangla.com/stream"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "rangeela-radio",
+    "name": "Rangeela Radio",
+    "category": "music",
+    "streams": [
+      "https://rangeelaradio.radioca.st/;"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

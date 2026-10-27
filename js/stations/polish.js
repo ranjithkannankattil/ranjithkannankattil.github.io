@@ -513,6 +513,24 @@ window.STATIONS = [
       "https://streaming.g-news.pl:8030/fr1"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "beat-city-krakow",
+    "name": "Beat City Kraków",
+    "category": "news",
+    "streams": [
+      "https://radio.beatcity.pl/listen/beat_city_krakow/radio.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "i-love-music",
+    "name": "I Love Music",
+    "category": "music",
+    "streams": [
+      "https://s3.slotex.pl:7150/stream"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

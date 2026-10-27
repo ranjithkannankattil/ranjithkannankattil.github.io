@@ -512,6 +512,33 @@ window.STATIONS = [
       "https://c13.radioboss.fm:8200/stream"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "hitsujikai-radio",
+    "name": "Hitsujikai Radio",
+    "category": "devotional",
+    "streams": [
+      "https://streaming.radio.co/se4a8e6a93/listen"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "phate",
+    "name": "Phate",
+    "category": "music",
+    "streams": [
+      "https://phate.io/listen"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "free-fm-love",
+    "name": "Free FM Love",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/umsptm6rvy8uv"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

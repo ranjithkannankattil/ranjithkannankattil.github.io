@@ -598,6 +598,33 @@ window.STATIONS = [
       "https://orf-live.ors-shoutcast.at/wie-q1a"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "trance-by-rautemusik-rm-fm",
+    "name": "__TRANCE__ by rautemusik (rm.fm)",
+    "category": "music",
+    "streams": [
+      "https://trance-high.rautemusik.fm/?ref=radiobrowser"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "wdr-2-ruhrgebiet",
+    "name": "WDR 2 Ruhrgebiet",
+    "category": "news",
+    "streams": [
+      "https://wdr-wdr2-ruhrgebiet.icecastssl.wdr.de/wdr/wdr2/ruhrgebiet/mp3/128/stream.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "wdr-2-ostwestfalen-lippe",
+    "name": "WDR 2 Ostwestfalen-Lippe",
+    "category": "news",
+    "streams": [
+      "https://wdr-wdr2-ostwestfalenlippe.icecast.wdr.de/wdr/wdr2/ostwestfalenlippe/mp3/128/stream.mp3"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

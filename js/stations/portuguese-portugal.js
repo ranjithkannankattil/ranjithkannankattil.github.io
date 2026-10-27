@@ -92,8 +92,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "m80-radio-ballads",
@@ -230,8 +229,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "cidade-fm-2",
@@ -347,8 +345,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/rdpafrica80a/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "antena-1-acores-portugal",
@@ -357,8 +354,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -593,6 +589,33 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m80indie.aac"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "00-s-rfm",
+    "name": "00's RFM",
+    "category": "music",
+    "streams": [
+      "https://27793.live.streamtheworld.com/LIVESTREAMAAC.aac"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "76-8-oceano-pacifico",
+    "name": "76,8 OCEANO PACIFICO",
+    "category": "music",
+    "streams": [
+      "https://cp-1.owh.radio.br/listen/owh_s35225/radio-mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "mrr-manitu-rock-radio",
+    "name": "MRR Manitu Rock Radio",
+    "category": "music",
+    "streams": [
+      "https://radio.streemlion.com:4515/stream"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

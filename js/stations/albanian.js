@@ -494,6 +494,15 @@ window.STATIONS = [
       "https://radiodielli.synology.me/listen/radiodielli/radio.mp3"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "prime-radio",
+    "name": "Prime Radio",
+    "category": "music",
+    "streams": [
+      "https://play.primeradio.al/prime"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

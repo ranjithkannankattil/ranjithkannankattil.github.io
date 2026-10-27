@@ -56,8 +56,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "89-4-tamil-fm",
@@ -281,8 +280,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio129/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "tamil-ragam",
@@ -604,6 +602,33 @@ window.STATIONS = [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio024/playlist.m3u8"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "oli-968",
+    "name": "OLI 968",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/OLI968FM_PREM.aac"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "aural-radio",
+    "name": "AURAL RADIO",
+    "category": "music",
+    "streams": [
+      "https://live.auralradiokerala.in/auralradio/mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "amma-fm",
+    "name": "Amma-Fm",
+    "category": "music",
+    "streams": [
+      "https://stream-176.surfernetwork.com/amp1qadecchvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJhbXAxcWFkZWNjaHZ2IiwiaG9zdCI6InN0cmVhbS0xNzYuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJfUHA1bE93NlNRMk55bTg2bG9uMHV3IiwiaWF0IjoxNzg0NTI2Mjg1LCJleHAiOjE3ODQ1MjYzNDV9.Ofe0vRsrMX41iMh9rZe_LNXFMu99ZReEIt6qaY8Pzjw"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

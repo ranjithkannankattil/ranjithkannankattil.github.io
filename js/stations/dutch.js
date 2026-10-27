@@ -605,6 +605,33 @@ window.STATIONS = [
       "https://22723.live.streamtheworld.com/SRGSTR03AAC_SC"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "pinguin-classics",
+    "name": "Pinguin Classics",
+    "category": "music",
+    "streams": [
+      "https://streams.pinguinradio.com/PinguinClassics192.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "groot-nieuws-radio",
+    "name": "Groot Nieuws Radio",
+    "category": "devotional",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/GNR.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "kink-90-s",
+    "name": "Kink 90's",
+    "category": "music",
+    "streams": [
+      "https://22663.live.streamtheworld.com/KINK_90S_SC"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

@@ -290,8 +290,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://server01.ouvir.radio.br:8018/stream?1771866095421"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "fita-cassete",
@@ -299,8 +298,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://server01.ouvir.radio.br:8018/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-energia-97-fm",
@@ -604,6 +602,33 @@ window.STATIONS = [
       "https://8214.brasilstream.com.br/stream"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "98-rock",
+    "name": "98 Rock",
+    "category": "music",
+    "streams": [
+      "https://8185.brasilstream.com.br/stream"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "so-brega",
+    "name": "Só Brega",
+    "category": "music",
+    "streams": [
+      "https://stm18.xcast.com.br:8290/;"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "sucesso-fm-88-3",
+    "name": "Sucesso FM 88,3",
+    "category": "music",
+    "streams": [
+      "https://servidor36.brlogic.com:8300/live?1696916321806"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

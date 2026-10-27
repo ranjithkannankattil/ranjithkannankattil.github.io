@@ -48,7 +48,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nova-radio.neterra.tv/veselinaretro"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "badrock-hard-heavy",
@@ -548,6 +549,33 @@ window.STATIONS = [
       "https://bss1.neterra.tv/veselina/stream_0.m3u8"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "btv-radio-89-9-fm",
+    "name": "bTV Radio Русе 89.9 FM",
+    "category": "news",
+    "streams": [
+      "https://cdn.btv.bg/radio/btv-radio.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "city-latin",
+    "name": "City Latin",
+    "category": "music",
+    "streams": [
+      "https://play.global.audio/citylatinhi.aac"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "fm-94-4-fm",
+    "name": "Радио FM+ Русе 94.4 FM",
+    "category": "music",
+    "streams": [
+      "https://pulsar.atlantis.bg:8443/fmplusnew"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

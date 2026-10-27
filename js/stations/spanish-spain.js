@@ -236,7 +236,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ztnr.rtve.es/ztnr/1694255.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "esradio-principal",
@@ -595,6 +596,33 @@ window.STATIONS = [
       "https://atres-live.ondacero.es/live/delegaciones/oc/sevilla/master.m3u8"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "rne-r5-madrid",
+    "name": "RNE - R5 --> Madrid",
+    "category": "music",
+    "streams": [
+      "https://d121.rndfnk.com/star/crtve/rne5/mad/mp3/128/stream.mp3?cid=01GEP4QN2TSXQQDS2JQA783NYX&sid=2HgHkKUje0YQl468xMDmJHKhDmz&token=bRjUW1ZmpjTaF8EgRmo3u6OCUep9WTHKjib0rpzUUzw&tvf=FG8P7Wd9KBdkMTIxLnJuZGZuay5jb20"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "cadena-ser-coruna",
+    "name": "Cadena SER Coruña",
+    "category": "news",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/SER_ASO_CORUNA.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "esradio-galicia",
+    "name": "esRadio Galicia",
+    "category": "news",
+    "streams": [
+      "https://libertaddigital-radio-live2.flumotion.com/libertaddigital/ld-live2-low.mp3"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

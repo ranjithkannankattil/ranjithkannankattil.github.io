@@ -349,8 +349,7 @@ window.STATIONS = [
       "https://ice31.securenetsystems.net/0079"
     ],
     "added": "2026-10-24",
-    "where": "Malawi",
-    "offline": true
+    "where": "Malawi"
   },
   {
     "id": "ujyaalo-90-network",
@@ -451,6 +450,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "where": "Nigeria"
+  },
+  {
+    "id": "rte-radio-1",
+    "name": "RTÉ Radio 1",
+    "category": "uk",
+    "streams": [
+      "https://liveaudio.rte.ie/hls-radio/radio1/chunklist.m3u8"
+    ],
+    "added": "2026-10-27",
+    "where": "Ireland"
+  },
+  {
+    "id": "radio-jamaica-94fm",
+    "name": "Radio Jamaica 94FM",
+    "category": "world",
+    "streams": [
+      "https://stream.zeno.fm/cub84trbgy5tv"
+    ],
+    "added": "2026-10-27",
+    "where": "Jamaica"
+  },
+  {
+    "id": "raxies-fm",
+    "name": "Raxies FM",
+    "category": "world",
+    "streams": [
+      "https://stream.zeno.fm/annpmyskb4jtv"
+    ],
+    "added": "2026-10-27",
+    "where": "Chile"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

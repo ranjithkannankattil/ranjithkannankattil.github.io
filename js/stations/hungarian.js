@@ -520,6 +520,15 @@ window.STATIONS = [
       "https://stream.zeno.fm/6vc4ddpr3ehvv"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "eurodisco80-radio",
+    "name": "Eurodisco80 Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/rc1aaftwtuavv"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

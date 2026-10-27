@@ -377,6 +377,33 @@ window.STATIONS = [
       "https://28503.live.streamtheworld.com/DUBROVNIKAAC_SC"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "hrt-radio-pula",
+    "name": "HRT Radio Pula",
+    "category": "music",
+    "streams": [
+      "https://29341.live.streamtheworld.com/PULAAAC_SC"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "radio-zelina",
+    "name": "Radio Zelina",
+    "category": "music",
+    "streams": [
+      "https://ec2s.crolive.com.hr:1690/stream"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "radio-krka",
+    "name": "Radio Krka",
+    "category": "music",
+    "streams": [
+      "https://cmr-hosting.com/9700/stream"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

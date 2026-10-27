@@ -566,6 +566,33 @@ window.STATIONS = [
       "https://28553.live.streamtheworld.com/SUPER_FM_ITUNES.mp3"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "radyo-eksen",
+    "name": "Radyo Eksen",
+    "category": "music",
+    "streams": [
+      "https://dygedge.radyotvonline.net/radyoeksen/playlist.m3u8"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "sizir-fm",
+    "name": "SIZIR FM",
+    "category": "music",
+    "streams": [
+      "https://stream.radiojar.com/tamm1f7kk48uv"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "s1lhoutte-arabesk-fm",
+    "name": "S1lhoutte Arabesk FM",
+    "category": "music",
+    "streams": [
+      "https://yayin.radyoarabesk.com.tr:8000/stream"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

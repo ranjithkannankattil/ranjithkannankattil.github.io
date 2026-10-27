@@ -169,20 +169,20 @@ window.STATIONS = [
     "name": "KBS Classic FM",
     "category": "music",
     "streams": [
+      "https://1fm.gscdn.kbs.co.kr/1fm_192_2.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8xZm0uZ3NjZG4ua2JzLmNvLmtyLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTMyMzMxNjl9fX1dfQ__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=PcEZaw2GMhk2iBwRI2NzcbhvjxunbSOee0crk~g63HFnWESlkbESwbAMfzZZka7jY92PfdNqL~xxLehH3wvM3noCyRmbSF7~c6uhoHnUcC7ypKVQGxl0Vor-8xZMHYuMVrQvcqaz8vefT-nbnilsfxQM~BegobIOoDuq56DCuyw3TA3u9SYmB50xf-oLedGv8ULJL-tvZUePTZ4apaQk21KeS3QQaZsdNhPyLUwNSIkgVqNThbQnkC9Tm8ZueiBxwr196jtbLkKHvJsAl6mGQHD3ZdO3diu4d6kayimK9do4zrYgYURrBoWPh-PeAjLrkrkUnqoddP7DEuGTex8KHA__",
       "https://1fm.gscdn.kbs.co.kr/1fm_192_2.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8xZm0uZ3NjZG4ua2JzLmNvLmtyLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTI4MTMwOTF9fX1dfQ__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=mvmj5AjA1l3fxWu7uzLkxU~-MhyOtzblLm7pJD55i7ZSj6aaU2dYgPq~42eYC81kaN97PEV~uvHMOv2FjQuk7nHy1HaEPTrsoM9wOcD45UCcszucF6Vh02ACY5F32OnfN~xTh-E2HJbCOenYmPIj4jLgQ0pCoH5NiYqv1lBYAiD~q4aQ0QG0o4tlA3k5KtMacs3zmEbEtKuyP~vvjS7dzE465TjNOuuEqYZCe9bPmpQbjyYdGDn3zpjM-vguLtvnzvJyvPPwkeq~ek~ruqfN7Yh~eQTPMHrQhlOSZFyImbf6jiZv~jyGhLBlLw3-HozLeR77O3y0BWe221OI7dulLw__"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "sbs-power-fm",
     "name": "SBS Power FM",
     "category": "music",
     "streams": [
+      "https://radiolive.sbs.co.kr/powerpc/powerfm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTMxMTgwMDUsInBhdGgiOiIvcG93ZXJmbS5zdHJlYW0iLCJkdXJhdGlvbiI6LTEsInVubyI6IjljN2Y3ZTNlLTRlMGYtNDg1OS1hMmM4LTZmNWMzYjhjMGRlNSIsImlhdCI6MTc5MzA3NDgwNX0.WzGnldj8JphnOaZD21yGsvd6Du3AZmqCnYInXI0wBRI",
       "https://radiolive.sbs.co.kr/powerpc/powerfm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTI2ODYwMTAsInBhdGgiOiIvcG93ZXJmbS5zdHJlYW0iLCJkdXJhdGlvbiI6LTEsInVubyI6IjlkMDFiOGE3LThlMDMtNDFkYS1iYWZhLTM1YzYyZGU5NzdlNCIsImlhdCI6MTc5MjY0MjgxMH0.PMNO73j0Gu8tDxuzEDDcbUuhW9OUZBZSYD__4ffU3R4"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "kbs-1radio",
@@ -199,10 +199,10 @@ window.STATIONS = [
     "name": "KBS Cool FM",
     "category": "music",
     "streams": [
+      "https://2fm.gscdn.kbs.co.kr/2fm_192_3.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8yZm0uZ3NjZG4ua2JzLmNvLmtyLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTMyMjYwMDl9fX1dfQ__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=Te94mMN79xB9uTWfKjhBKdy91JKoxN1Gxi9DY06xvJbEVVbu88kzjF5akoLtLLczxUY57PNdQHnZS6IOlwL-cTobkzKW5QvY9eeLSGA3c2uGekiOcbstI~s~Be1Yrv~PU45rTNno-jvp9I7MMOXbtTKOsMelJRorgUUxu4Qk5QKNZwTw9TOEk9zHzNF6PFNzxXsrjlhoK6j3NqBvY5AOov1WTGmcVuWkAHroH039DpTOYNu6NG0g8HKpheII0uOOKDFDeNO7WXBGktyxnPcoGhaMQlx-h2SYBNcCpTTsoOWgycWFwLePmnQROYrMA91WvhrisnbTm87YJzxBdpgzNA__",
       "https://2fm-ad.gscdn.kbs.co.kr/2fm_ad_192_1.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8yZm0tYWQuZ3NjZG4ua2JzLmNvLmtyLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTI3OTE1NjJ9fX1dfQ__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=QgtE3eaQycyAqCFRMR7EDWEx5BePNVRBT8XZgANvywVr2D6a6gL1irZIihZ3ji7aU7cgGUNMyPzJnw3h-oJlmCqrygP-x5tjOCZ2jQ~ihT1q5e~pqDbhbwxCVwxofGf9cuSZsmi~ZpBBRRNjS23tz6SLG6g0-Ya5ZX2FFvAxwALz68uEUm2gEmhrTJRUw9Y81B6QCx4~i6i3AZadtjfUGThWWEeAN872eAQfmwP8z--MV~Z05h1BxLEP9J9qZCw1T4IKKdVxUOt8Gr~oHbScMJI4APMqQfjrvolyXRiqWl2JWwEWOAKOQnO79mdAWIWfRHQZ~o70MnrUMlvtb3xEKw__"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "cjrk-fm-102-7-east-fm-toronto-on",
@@ -403,6 +403,33 @@ window.STATIONS = [
       "https://lhttp.qingting.fm/live/5022144/64k.mp3"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "gugakfm",
+    "name": "GugakFM",
+    "category": "music",
+    "streams": [
+      "https://mgugaklive.nowcdn.co.kr/gugakradio/gugakradio.stream/chunklist_w253831608.m3u8"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "station-3",
+    "name": "延边朝鲜语新闻综合广播",
+    "category": "music",
+    "streams": [
+      "https://lhttp-hw.qtfm.cn/live/20324/64k.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "gukak",
+    "name": "Gukak",
+    "category": "music",
+    "streams": [
+      "https://mgugaklive.nowcdn.co.kr/gugakradio/gugakradio.stream/playlist.m3u8"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

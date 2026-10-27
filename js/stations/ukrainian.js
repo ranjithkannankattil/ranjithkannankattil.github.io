@@ -152,7 +152,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s5.radioforge.com:7908/live?n=77357"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "24-breaking-live",
@@ -232,8 +233,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.brokenbeats.net/tune"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-shanson",
@@ -574,6 +574,33 @@ window.STATIONS = [
       "https://tim-fm.tim.ua/mp3"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "magic-radio",
+    "name": "MAGIC Radio",
+    "category": "news",
+    "streams": [
+      "https://cast.brg.ua/business_main_public_mp3_hq"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "fm-4",
+    "name": "Армия FM",
+    "category": "music",
+    "streams": [
+      "https://icecast.armyfm.com.ua:8443/ArmyFM"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "jazz-fm-104-6",
+    "name": "Jazz FM 104.6",
+    "category": "music",
+    "streams": [
+      "https://online.radiojazz.ua/RadioJazz"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

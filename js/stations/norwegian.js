@@ -197,7 +197,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-bauerno.sharp-stream.com/station17_no_mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "nrk-p1-finnmark",
@@ -391,4 +392,4 @@ window.STATIONS = [
     "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

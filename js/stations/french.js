@@ -545,6 +545,33 @@ window.STATIONS = [
       "https://icecast.radiofrance.fr/mouv-hifi.aac"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "couleur3",
+    "name": "Couleur3",
+    "category": "music",
+    "streams": [
+      "https://stream.srg-ssr.ch/m/couleur3/aacp_96"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "nostalgie-best-of-70-80-90",
+    "name": "Nostalgie Best Of 70 80 90",
+    "category": "music",
+    "streams": [
+      "https://streaming.nrjaudio.fm/oumrpo8fnozc"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "radio-la-belle-aventure",
+    "name": "Radio La Belle Aventure",
+    "category": "music",
+    "streams": [
+      "https://flux.radiolabelleaventure.com/listen/radio_la_belle_aventure/radio.mp3"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

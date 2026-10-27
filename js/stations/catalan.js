@@ -575,6 +575,33 @@ window.STATIONS = [
       "https://enacast.com/radiosentmenat/streams/HD"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "radio-el-vendrell",
+    "name": "Ràdio el Vendrell",
+    "category": "music",
+    "streams": [
+      "https://enacast.com/rtvelvendrell/streams/SD"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "radio-puig-reig",
+    "name": "Ràdio Puig-reig",
+    "category": "music",
+    "streams": [
+      "https://enacast.com/puigreig/streams/SD"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "radio-rapita",
+    "name": "Ràdio Ràpita",
+    "category": "music",
+    "streams": [
+      "https://enacast.com/radiorapita/streams/SD"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

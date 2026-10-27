@@ -32,8 +32,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/5022379/64k.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "903",
@@ -225,6 +224,7 @@ window.STATIONS = [
     "name": "Bridge Radio - 华语 HITS （2）",
     "category": "music",
     "streams": [
+      "https://streaming.live365.com/a57743_2",
       "https://das-edge14-live365-dal02.cdnstream.com/a57743_2"
     ]
   },
@@ -266,7 +266,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ptmirror3.passiontimes.hk/hls3/stream.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "chkt-am1430-fairchild",
@@ -330,6 +331,7 @@ window.STATIONS = [
     "name": "Bridge Radio - 华语 HITS",
     "category": "music",
     "streams": [
+      "https://das-edge14-live365-dal02.cdnstream.com/a57743_2",
       "https://das-edge11-live365-dal03.cdnstream.com/a57743_2"
     ],
     "added": "2026-10-22"
@@ -577,6 +579,33 @@ window.STATIONS = [
       "https://lhttp-hw.qtfm.cn/live/5037/64k.mp3"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "kradio",
+    "name": "KRadio 若望三電台",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/4uih7z8lxj9uv"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "station-38",
+    "name": "阳江综合广播",
+    "category": "news",
+    "streams": [
+      "https://lhttp.qtfm.cn/live/15318429/64k.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "station-39",
+    "name": "清远综合广播",
+    "category": "news",
+    "streams": [
+      "https://lhttp.qingting.fm/live/15318668/64k.mp3"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

@@ -465,6 +465,15 @@ window.STATIONS = [
       "https://live.radio.bubb.la/stream.mp3"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "sveriges-radio-p6",
+    "name": "Sveriges Radio - P6",
+    "category": "music",
+    "streams": [
+      "https://live1.sr.se/p6-aac-320"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

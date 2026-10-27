@@ -575,6 +575,33 @@ window.STATIONS = [
       "https://stream.radiojar.com/4gw72qm8u68uv"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "hitradio-city-brno",
+    "name": "Hitrádio City Brno",
+    "category": "music",
+    "streams": [
+      "https://ice.abradio.cz/magicbrno128.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "pigy-cz-disko-trysko",
+    "name": "Pigy.cz – Disko Trysko",
+    "category": "music",
+    "streams": [
+      "https://ice.actve.net/web-pg-disko"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "hitradio-vysocina",
+    "name": "Hitrádio Vysočina",
+    "category": "music",
+    "streams": [
+      "https://ice5.abradio.cz/hitvysocina128.mp3"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

@@ -534,6 +534,33 @@ window.STATIONS = [
       "https://onair7.xdevel.com/proxy/xautocloud_zswr_1060?mp=/;stream/;"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "virgin-radio-rock-80",
+    "name": "Virgin Radio Rock '80",
+    "category": "music",
+    "streams": [
+      "https://icy.unitedradio.it/VirginRock80.mp3"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "retesport-italia",
+    "name": "Retesport (Italia)",
+    "category": "news",
+    "streams": [
+      "https://icecast.ithost.it/retesport.ogg"
+    ],
+    "added": "2026-10-27"
+  },
+  {
+    "id": "radio-kiss-kiss-hits",
+    "name": "Radio Kiss Kiss Hits",
+    "category": "music",
+    "streams": [
+      "https://ice08.fluidstream.net/kk_hits.aac"
+    ],
+    "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";

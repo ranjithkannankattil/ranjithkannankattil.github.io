@@ -578,6 +578,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "where": "UK"
+  },
+  {
+    "id": "raxies-fm",
+    "name": "Raxies FM",
+    "category": "world",
+    "streams": [
+      "https://stream.zeno.fm/annpmyskb4jtv"
+    ],
+    "added": "2026-10-27",
+    "where": "Chile"
+  },
+  {
+    "id": "rokit-radio-british-comedy-2",
+    "name": "ROKit Radio : British Comedy 2",
+    "category": "comedy",
+    "streams": [
+      "https://streaming05.liveboxstream.uk/proxy/jondreas/stream"
+    ],
+    "added": "2026-10-27",
+    "where": "UK"
+  },
+  {
+    "id": "abc-radio-australia",
+    "name": "ABC Radio Australia",
+    "category": "anz",
+    "streams": [
+      "https://mediaserviceslive.akamaized.net/hls/live/2038266/ramulti/masterhq.m3u8"
+    ],
+    "added": "2026-10-27",
+    "where": "Australia"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-26T19:52Z";
+window.STATIONS_CHECKED = "2026-10-27T05:58Z";
