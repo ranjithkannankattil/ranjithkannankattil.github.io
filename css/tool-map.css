@@ -22,8 +22,6 @@
 #mcMap{ display:block; width:100%; height:auto; cursor:grab; user-select:none; -webkit-user-select:none; }
 #mcMap:active{ cursor:grabbing; }
 #mcMap .mc-places path{ cursor:pointer; transition:fill .12s; }
-#mcMap .mc-places path:hover{ fill-opacity:.75; stroke:#1B1B1F; stroke-opacity:.6; }
-#mcMap .mc-places path[fill="transparent"]:hover{ fill:#5C4D7D; fill-opacity:.16; }
 #mcMap .mc-mesh, #mcMap .mc-places path, #mcMap .mc-nb path{ vector-effect:non-scaling-stroke; stroke-linejoin:round; }
 #mcMap .mc-labels{ pointer-events:none; }
 .mc-tip{ position:absolute; pointer-events:none; background:#1B1B1F; color:#F0EDE6; font-family:var(--f-mono); font-size:.7rem; padding:.3rem .5rem; white-space:nowrap; z-index:3; }
@@ -95,3 +93,29 @@
 
 .mc-src{ font-size:.8rem; color:var(--ink-soft); margin:1.6rem 0 0; max-width:80ch; }
 .mc-src a{ border-bottom:1px solid var(--line); }
+
+/* ---------- paint bar (sits on the map's top edge) ---------- */
+.mc-tools{ display:flex; align-items:center; gap:.35rem; flex-wrap:wrap; padding:.45rem .5rem; border:1px solid var(--line); border-bottom:0; background:var(--paper-2); position:sticky; top:0; z-index:4; }
+.mc-sws{ display:flex; gap:.3rem; flex-wrap:wrap; }
+body[data-section="productivity"] .mc-sw{ position:relative; width:34px; height:34px; border-radius:50%; background:var(--c); box-shadow:inset 0 0 0 1px rgba(0,0,0,.18); transition:transform .1s; }
+body[data-section="productivity"] .mc-sw:hover{ transform:scale(1.08); }
+body[data-section="productivity"] .mc-sw.on{ box-shadow:0 0 0 2px var(--paper-2), 0 0 0 4px var(--ink); }
+.mc-sw i{ position:absolute; right:-5px; bottom:-4px; min-width:17px; height:17px; padding:0 3px; border-radius:9px; background:var(--paper); color:var(--ink); font:500 .58rem/17px var(--f-mono); font-style:normal; text-align:center; box-shadow:0 0 0 1px var(--line); }
+body[data-section="productivity"] .mc-tb{ height:34px; min-width:34px; padding:0 .6rem; display:inline-flex; align-items:center; justify-content:center; border:1px solid var(--line); background:var(--paper); font-family:var(--f-mono); font-size:.66rem; letter-spacing:.06em; text-transform:uppercase; }
+body[data-section="productivity"] .mc-tb:hover{ border-color:var(--accent); background:var(--accent-soft); }
+body[data-section="productivity"] .mc-tb.on{ background:var(--ink); border-color:var(--ink); color:var(--paper); }
+body[data-section="productivity"] .mc-tb:disabled{ opacity:.35; cursor:default; background:var(--paper); border-color:var(--line); }
+body[data-section="productivity"] .mc-add{ border-radius:50%; width:34px; padding:0; font-size:1.1rem; }
+.mc-mode{ display:flex; }
+.mc-mode .mc-tb + .mc-tb{ margin-left:-1px; }
+.mc-tsep{ width:1px; height:22px; background:var(--line); margin:0 .2rem; }
+@media (max-width: 520px){ .mc-tsep{ display:none; } body[data-section="productivity"] .mc-sw{ width:36px; height:36px; } }
+
+/* hover shows the place in the colour you're holding; eraser shows a strike */
+@media (hover:hover){
+.mc-wrap #mcMap .mc-places path:hover{ fill:var(--paint); fill-opacity:.55; stroke:#1B1B1F; stroke-opacity:.7; }
+.mc-wrap.is-erase #mcMap .mc-places path:hover{ fill:#ffffff; fill-opacity:.6; stroke:#C2463D; stroke-dasharray:3 2; }
+}
+.mc-wrap.is-brush #mcMap{ cursor:crosshair; }
+.mc-wrap.is-brush.is-pan #mcMap{ cursor:grab; }
+body[data-section="productivity"] #mcUndo, body[data-section="productivity"] #mcRedo{ font-size:1.05rem; letter-spacing:0; }

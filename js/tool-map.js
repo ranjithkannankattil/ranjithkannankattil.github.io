@@ -53,8 +53,10 @@
     for (var i = 0; i < gs.length; i++) if (gs[i].ids.indexOf(id) >= 0) return gs[i];
     return null;
   }
+  var ERASE = '__erase';
   function activeGroup() {
     var v = view();
+    if (v.active === ERASE) return null;
     return v.groups.filter(function (g) { return g.id === v.active; })[0] || v.groups[0];
   }
 
@@ -160,21 +162,29 @@
     var sel = gPlaces.selectAll('path').data(data.feats, function (f) { return f.id; });
     sel.exit().remove();
     sel.enter().append('path')
-      .on('click', function (ev, f) { toggle(f.id); })
+      .on('click', function (ev, f) { if (mode !== 'brush') toggle(f.id); })
       .on('mousemove', function (ev, f) { tip(ev, f); })
       .on('mouseleave', function () { tipEl.hidden = true; })
       .merge(sel)
       .attr('d', path)
-      .attr('fill', fillFor)
-      .attr('stroke', function (f) { return st.outlineColoured && groupOf(f.id) ? st.borderColor : 'none'; })
       .attr('stroke-width', .6 * sw);
 
+    paintFills();
     pInner.attr('d', st.borders === 'all' ? path(data.inner) : null).attr('stroke', st.borderColor).attr('stroke-width', .5 * sw);
     pOuter.attr('d', st.borders !== 'none' ? path(data.outer) : null).attr('stroke', st.borderColor).attr('stroke-width', .7 * sw);
     if (!lo) { drawLabels(); drawLegend(); drawTitle(); }
     else gLabels.selectAll('*').remove();
   }
 
+  function paintFills() {
+    var st = S.style;
+    gPlaces.selectAll('path')
+      .attr('fill', fillFor)
+      .attr('stroke', function (f) { return st.outlineColoured && groupOf(f.id) ? st.borderColor : 'none'; });
+    var a = activeGroup();
+    $('mcWrap').style.setProperty('--paint', a ? a.color : 'transparent');
+    $('mcWrap').classList.toggle('is-erase', !a);
+  }
   function visible(f) {
     if (!isGlobe) return true;
     var c = d3.geoCentroid(f), r = proj.rotate();
@@ -228,7 +238,14 @@
 
   /* ---------- zoom / rotate ---------- */
   var zoom = d3.zoom().scaleExtent([.6, 60])
-    .filter(function (ev) { return !ev.button && ev.type !== 'dblclick'; })
+    .filter(function (ev) {
+      if (ev.button || ev.type === 'dblclick') return false;
+      if (mode === 'brush' && !spaceDown) {
+        if (ev.type === 'mousedown') return false;
+        if (ev.type === 'touchstart' && ev.touches.length < 2) return false;
+      }
+      return true;
+    })
     .on('zoom', function (ev) {
       var t = ev.transform;
       if (isGlobe) {
@@ -255,14 +272,93 @@
   }
 
   /* ---------- actions ---------- */
+  var mode = 'tap', spaceDown = false, undoS = {}, redoS = {};
+  function snap() { return JSON.stringify(view().groups.map(function (g) { return g.ids; })); }
+  function pushUndo(before) {
+    (undoS[cur] = undoS[cur] || []).push(before);
+    if (undoS[cur].length > 200) undoS[cur].shift();
+    redoS[cur] = [];
+    updUndo();
+  }
+  function restore(json) {
+    var ids = JSON.parse(json);
+    view().groups.forEach(function (g, i) { g.ids = ids[i] || []; });
+  }
+  function undo(back) {
+    var from = back ? undoS[cur] : redoS[cur], to = back ? redoS : undoS;
+    if (!from || !from.length) return;
+    (to[cur] = to[cur] || []).push(snap());
+    restore(from.pop());
+    refresh(); updUndo();
+  }
+  function updUndo() {
+    $('mcUndo').disabled = !(undoS[cur] && undoS[cur].length);
+    $('mcRedo').disabled = !(redoS[cur] && redoS[cur].length);
+  }
+  // put a place in group g (null = clear); returns true if anything changed
+  function setPlace(id, g) {
+    var old = groupOf(id);
+    if (old === g) return false;
+    if (old) old.ids.splice(old.ids.indexOf(id), 1);
+    if (g) g.ids.push(id);
+    return true;
+  }
   function toggle(id) {
-    var g = groupOf(id), a = activeGroup();
-    if (g) g.ids.splice(g.ids.indexOf(id), 1);
-    if (g !== a) a.ids.push(id);
+    var before = snap(), a = activeGroup(), g = groupOf(id);
+    if (setPlace(id, a && g !== a ? a : null)) pushUndo(before);
     focus(id);
-    commit();
+    refresh();
+  }
+  // cheap redraw after colours change: fills, labels, legend, counts; the long list waits a frame
+  var listT;
+  function refresh() {
+    save(); paintFills(); drawLabels(); drawLegend(); renderGroups();
+    cancelAnimationFrame(listT); listT = requestAnimationFrame(renderList);
   }
   function commit() { save(); draw(); renderGroups(); renderList(); }
+
+  /* ---------- brush: drag across places to paint (or clear) them ---------- */
+  var stroke = null;
+  function placeAt(x, y) {
+    var el = document.elementFromPoint(x, y);
+    return el && el.parentNode === gPlaces.node() ? d3.select(el).datum() : null;
+  }
+  svg.on('pointerdown.brush', function (ev) {
+    if (mode !== 'brush' || spaceDown || ev.button) return;
+    if (ev.pointerType === 'touch' && !ev.isPrimary) { stroke = null; return; }
+    var f = placeAt(ev.clientX, ev.clientY), a = activeGroup();
+    stroke = { before: snap(), changed: false, target: null, erase: !a };
+    if (f && a && groupOf(f.id) === a) stroke.erase = true;   // starting on your own colour wipes instead
+    stroke.target = stroke.erase ? null : a;
+    try { this.setPointerCapture(ev.pointerId); } catch (e) {}
+    brushAt(ev);
+    ev.preventDefault();
+  });
+  svg.on('pointermove.brush', function (ev) { if (stroke) brushAt(ev); });
+  svg.on('pointerup.brush pointercancel.brush', function () {
+    if (!stroke) return;
+    if (stroke.changed) pushUndo(stroke.before);
+    stroke = null; refresh();
+  });
+  function brushAt(ev) {
+    var f = placeAt(ev.clientX, ev.clientY);
+    if (!f) return;
+    var g = groupOf(f.id);
+    if (stroke.erase && !g) return;
+    if (setPlace(f.id, stroke.target)) {
+      stroke.changed = true; paintFills(); focus(f.id);
+    }
+  }
+  function setMode(m) {
+    mode = m;
+    $('mcModeTap').classList.toggle('on', m === 'tap');
+    $('mcModeBrush').classList.toggle('on', m === 'brush');
+    $('mcWrap').classList.toggle('is-brush', m === 'brush');
+    $('mcHint').textContent = m === 'brush'
+      ? 'Brush: drag across places to colour them · start on your colour to wipe · hold Space or use two fingers to move'
+      : 'Tap to colour · drag to turn or pan · scroll or pinch to zoom';
+  }
+  function pick(id) { view().active = id; save(); renderGroups(); paintFills(); }
 
   function focus(id) {
     var f = feats().filter(function (x) { return x.id === id; })[0];
@@ -288,7 +384,7 @@
     function after() {
       $('mcStatus').textContent = '';
       view();
-      setupProjection(); draw(); renderAll();
+      setupProjection(); draw(); renderAll(); updUndo();
       try { history.replaceState(null, '', '#' + (cur === 'world' ? '' : 'c=' + cur)); } catch (e) {}
     }
   }
@@ -310,6 +406,10 @@
   }
   function renderGroups() {
     var v = view();
+    $('mcSw').innerHTML = v.groups.map(function (g, i) {
+      return '<button class="mc-sw' + (g.id === v.active ? ' on' : '') + '" data-pick="' + g.id + '" style="--c:' + g.color + '" title="' + esc((g.label || 'Colour ' + (i + 1)) + (i < 9 ? ' · key ' + (i + 1) : '')) + '" aria-label="' + esc(g.label || 'Colour ' + (i + 1)) + '"><i>' + g.ids.length + '</i></button>';
+    }).join('');
+    $('mcErase').classList.toggle('on', v.active === ERASE);
     $('mcGroups').innerHTML = v.groups.map(function (g, i) {
       return '<li class="mc-g' + (g.id === v.active ? ' on' : '') + '" data-g="' + g.id + '">' +
         '<label class="mc-g-pick" title="Paint with this colour"><input type="radio" name="mcActive" value="' + g.id + '"' + (g.id === v.active ? ' checked' : '') + '><span></span></label>' +
@@ -347,25 +447,32 @@
 
   /* ---------- events ---------- */
   document.addEventListener('click', function (e) {
-    var t = e.target.closest('[data-drill],[data-open],[data-t],[data-gx]');
+    var t = e.target.closest('[data-drill],[data-open],[data-t],[data-gx],[data-pick]');
     if (!t) return;
-    if (t.dataset.drill) open(t.dataset.drill);
+    if (t.dataset.pick) pick(t.dataset.pick);
+    else if (t.dataset.drill) open(t.dataset.drill);
     else if (t.dataset.open) open(t.dataset.open);
     else if (t.dataset.t) toggle(t.dataset.t);
     else if (t.dataset.gx) {
       var v = view(); v.groups = v.groups.filter(function (g) { return g.id !== t.dataset.gx; });
       if (v.active === t.dataset.gx) v.active = v.groups[0].id;
+      undoS[cur] = []; redoS[cur] = []; updUndo();
       commit();
     }
   });
   $('mcGroups').addEventListener('change', function (e) {
     var t = e.target, v = view();
-    if (t.name === 'mcActive') { v.active = t.value; save(); renderGroups(); }
+    if (t.name === 'mcActive') pick(t.value);
     if (t.dataset.gc) { v.groups.forEach(function (g) { if (g.id === t.dataset.gc) g.color = t.value; }); commit(); }
   });
   $('mcGroups').addEventListener('input', function (e) {
     var t = e.target, v = view();
-    if (t.dataset.gc) { v.groups.forEach(function (g) { if (g.id === t.dataset.gc) g.color = t.value; }); save(); draw(); renderList(); }
+    if (t.dataset.gc) {
+      v.groups.forEach(function (g) { if (g.id === t.dataset.gc) g.color = t.value; });
+      save(); paintFills(); drawLegend();
+      var sw = $('mcSw').querySelector('[data-pick="' + t.dataset.gc + '"]'); if (sw) sw.style.setProperty('--c', t.value);
+      cancelAnimationFrame(listT); listT = requestAnimationFrame(renderList);
+    }
     if (t.dataset.gl) { v.groups.forEach(function (g) { if (g.id === t.dataset.gl) g.label = t.value; }); save(); drawLegend(); }
   });
   $('mcAddG').addEventListener('click', function () {
@@ -394,9 +501,10 @@
   $('mcTitleIn').addEventListener('input', function () { S.title = this.value; save(); drawTitle(); });
   $('mcReset').addEventListener('click', resetView);
   $('mcClear').addEventListener('click', function () {
-    if (!confirm('Remove every colour from this map?')) return;
+    var before = snap();
     view().groups.forEach(function (g) { g.ids = []; });
-    commit();
+    pushUndo(before); refresh(); focusHide();
+    $('mcShareMsg').textContent = 'Cleared — Undo brings it back.';
   });
 
   // paste a list of names or codes
@@ -407,16 +515,37 @@
       idx[f.properties.name.toLowerCase()] = f.id; idx[String(f.id).toLowerCase()] = f.id;
       var short = String(f.id).split('-')[1]; if (short) idx[short.toLowerCase()] = idx[short.toLowerCase()] || f.id;
     });
-    var a = activeGroup(), miss = [], n = 0;
+    var a = activeGroup(), miss = [], n = 0, before = snap();
     words.forEach(function (w) {
       var id = idx[w.toLowerCase()];
       if (!id) { miss.push(w); return; }
-      var g = groupOf(id); if (g) g.ids.splice(g.ids.indexOf(id), 1);
-      a.ids.push(id); n++;
+      if (setPlace(id, a)) n++;
     });
-    $('mcPasteMsg').textContent = n + ' coloured' + (miss.length ? ' · not found: ' + miss.join(', ') : '');
-    commit();
+    if (n) pushUndo(before);
+    $('mcPasteMsg').textContent = n + (a ? ' coloured' : ' cleared') + (miss.length ? ' · not found: ' + miss.join(', ') : '');
+    refresh();
   });
+
+  function focusHide() { $('mcFocus').hidden = true; }
+  $('mcErase').addEventListener('click', function () { pick(ERASE); });
+  $('mcAddG2').addEventListener('click', function () { $('mcAddG').click(); });
+  $('mcModeTap').addEventListener('click', function () { setMode('tap'); });
+  $('mcModeBrush').addEventListener('click', function () { setMode('brush'); });
+  $('mcUndo').addEventListener('click', function () { undo(true); });
+  $('mcRedo').addEventListener('click', function () { undo(false); });
+  document.addEventListener('keydown', function (e) {
+    var tg = e.target, typing = tg && (/^(INPUT|TEXTAREA|SELECT)$/.test(tg.tagName) && tg.type !== 'checkbox' && tg.type !== 'radio');
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'z' && !typing) { e.preventDefault(); undo(!e.shiftKey); return; }
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'y' && !typing) { e.preventDefault(); undo(false); return; }
+    if (typing || e.ctrlKey || e.metaKey || e.altKey) return;
+    var gs = view().groups;
+    if (/^[1-9]$/.test(e.key) && gs[+e.key - 1]) { pick(gs[+e.key - 1].id); }
+    else if (e.key === 'e' || e.key === 'E' || e.key === '0') pick(ERASE);
+    else if (e.key === 'b' || e.key === 'B') setMode(mode === 'brush' ? 'tap' : 'brush');
+    else if (e.key === ' ' && mode === 'brush') { spaceDown = true; $('mcWrap').classList.add('is-pan'); e.preventDefault(); }
+  });
+  document.addEventListener('keyup', function (e) { if (e.key === ' ') { spaceDown = false; $('mcWrap').classList.remove('is-pan'); } });
+  setMode('tap');
 
   /* ---------- export ---------- */
   function svgString() {
