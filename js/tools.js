@@ -34,6 +34,14 @@ window.TOOLS = [
     href: 'keyboard.html',
     blurb: 'A Malayalam keyboard for iPhone and iPad, with Swanalekha, Mozhi, InScript and Lalitha layouts, English suggestions and emoji. My open-source port of SMC\'s Android Indic Keyboard. Alpha.',
     meta: 'iOS app · Malayalam · Open source · Alpha'
+  },
+  {
+    id: 'map',
+    name: 'Map colourer',
+    short: 'Map',
+    href: 'map.html',
+    blurb: 'Colour countries on a globe or world map in your own colours, then open any country to colour its states or provinces. India drawn as India maps it. Download PNG or SVG, or share a link.',
+    meta: 'Globe · States & provinces · PNG · SVG'
   }
 ];
 

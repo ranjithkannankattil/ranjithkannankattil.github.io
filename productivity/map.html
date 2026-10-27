@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Map colourer — Productivity — Ranjith Kannankattil</title>
+<meta name="description" content="Colour countries on a globe or world map, or drill down to colour the states and provinces of one country, in your own colours. Download as PNG or SVG. Runs in your browser.">
+<link rel="canonical" href="https://ranjithkb.com/productivity/map.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ranjith Kannankattil">
+<meta property="og:title" content="Map colourer — Productivity — Ranjith Kannankattil">
+<meta property="og:description" content="Colour countries on a globe or world map, or drill down to colour the states and provinces of one country, in your own colours.">
+<meta property="og:url" content="https://ranjithkb.com/productivity/map.html">
+<meta property="og:image" content="https://media.ranjithkb.com/sections/productivity-cd206556.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="icon" href="/assets/icons/site-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/icons/site-180.png">
+<meta name="theme-color" content="#F0EDE6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16161A" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
+<link rel="stylesheet" href="../css/style.css?v=12">
+<link rel="stylesheet" href="../css/productivity.css?v=2">
+<link rel="stylesheet" href="../css/tool-timeline.css?v=2">
+<link rel="stylesheet" href="../css/tool-map.css?v=1">
+</head>
+<body data-section="productivity" class="wide">
+
+<header class="titleblock">
+  <div>
+    <div class="id">RANJITH KANNANKATTIL</div>
+    <div class="name">Productivity</div>
+  </div>
+  <nav class="tabs" data-root="../" data-active="productivity" aria-label="Site">
+    <a href="../index.html">Home</a>
+    <a href="../radio.html">Radio</a>
+    <a href="./" class="active">Productivity</a>
+  </nav>
+</header>
+
+<main data-tool="map">
+  <div data-tool-nav></div>
+  <section class="mc" aria-labelledby="mcH">
+    <div class="tool-head">
+      <div class="tool-eyebrow" data-tool-eyebrow>Tool</div>
+      <h1 class="tool-title" id="mcH">Map colourer</h1>
+      <p class="tool-intro">Pick a colour, then click countries on the globe to fill them. Open any country to colour its states or provinces the same way. Only the places you pick take a colour; the rest stay blank, with or without borders. India is drawn as India maps it — Jammu &amp; Kashmir and Ladakh in full, Arunachal Pradesh within India. Your maps stay in this browser.</p>
+    </div>
+
+    <div class="tl-top">
+      <input class="tl-name" id="mcTitleIn" placeholder="Map title (optional)" aria-label="Map title" spellcheck="false">
+      <span class="tl-saved" id="mcSaved"></span>
+    </div>
+
+    <div class="mc-crumb" id="mcCrumb"></div>
+
+    <div class="mc-grid">
+      <div class="mc-stage">
+        <div class="mc-wrap" id="mcWrap">
+          <svg id="mcMap" role="img" aria-label="Map"></svg>
+          <div class="mc-tip" id="mcTip" hidden></div>
+          <div class="mc-status" id="mcStatus">Loading the map…</div>
+        </div>
+        <div class="mc-focus" id="mcFocus" hidden></div>
+        <div class="mc-under">
+          <span class="mc-hint">Drag to turn or pan · scroll or pinch to zoom</span>
+          <button class="tl-btn" id="mcReset">Reset view</button>
+        </div>
+      </div>
+
+      <aside class="mc-side">
+        <div class="mc-sec">
+          <h2 class="mc-h">Colours</h2>
+          <p class="mc-p">The ticked colour is the one you paint with. Click a coloured place again to clear it. Labels show in the legend.</p>
+          <ul class="mc-groups" id="mcGroups"></ul>
+          <button class="tl-btn" id="mcAddG">+ Colour</button>
+        </div>
+
+        <div class="mc-sec">
+          <h2 class="mc-h">Places <span class="mc-count" id="mcCount"></span></h2>
+          <div class="mc-find">
+            <input type="search" id="mcSearch" placeholder="Find a place" aria-label="Find a place" autocomplete="off">
+            <label class="mc-chk"><input type="checkbox" id="mcOnly"> Coloured only</label>
+          </div>
+          <ul class="mc-list" id="mcList"></ul>
+          <details class="mc-paste">
+            <summary>Paste a list</summary>
+            <p class="mc-p">Names or codes, one per line or comma-separated (<i>India, France, BR</i> or <i>Kerala, Tamil Nadu, KA</i>). They take the ticked colour.</p>
+            <textarea id="mcPaste" rows="4"></textarea>
+            <div class="mc-row"><button class="tl-btn ink" id="mcPasteGo">Colour these</button><span class="mc-msg" id="mcPasteMsg"></span></div>
+          </details>
+        </div>
+
+        <div class="mc-sec">
+          <h2 class="mc-h">Look</h2>
+          <label class="mc-field"><span>Projection</span><select id="mcProj"></select></label>
+          <label class="mc-field"><span>Other places</span>
+            <select id="mcOthers"><option value="none">Blank</option><option value="land">Light fill</option></select></label>
+          <label class="mc-field"><span>Borders</span>
+            <select id="mcBorders"><option value="all">All borders</option><option value="outline">Outer outline only</option><option value="none">No borders</option></select></label>
+          <label class="mc-chk"><input type="checkbox" id="mcOutline"> Outline coloured places</label>
+          <label class="mc-chk" id="mcNbRow"><input type="checkbox" id="mcNb"> Show neighbouring countries</label>
+          <div class="mc-swatches">
+            <label><input type="color" id="mcBorderC"> Borders</label>
+            <label><input type="color" id="mcLandC"> Fill</label>
+            <label><input type="color" id="mcOceanC"> Sea</label>
+          </div>
+          <label class="mc-chk"><input type="checkbox" id="mcOcean"> Colour the sea</label>
+          <label class="mc-chk"><input type="checkbox" id="mcGrat"> Latitude / longitude lines</label>
+          <label class="mc-chk"><input type="checkbox" id="mcLabels"> Name coloured places</label>
+          <label class="mc-chk"><input type="checkbox" id="mcLegend"> Legend</label>
+        </div>
+
+        <div class="mc-sec">
+          <h2 class="mc-h">Save &amp; share</h2>
+          <div class="mc-row">
+            <button class="tl-btn ink" id="mcPng">PNG</button>
+            <button class="tl-btn" id="mcSvg">SVG</button>
+            <button class="tl-btn" id="mcShare">Copy link</button>
+          </div>
+          <label class="mc-chk"><input type="checkbox" id="mcTransp"> Transparent PNG</label>
+          <span class="mc-msg" id="mcShareMsg"></span>
+          <button class="tl-btn danger mc-clear" id="mcClear">Clear this map</button>
+        </div>
+      </aside>
+    </div>
+
+    <p class="mc-src">Boundaries: <a href="https://www.naturalearthdata.com/" rel="noopener">Natural Earth</a> (public domain), India's point-of-view edition, with Gilgit-Baltistan, Aksai Chin and Siachen drawn in Ladakh and the Muzaffarabad–Mirpur area in Jammu &amp; Kashmir. Small-scale map for illustration, not a survey document.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="cheart">♡ <span id="year"></span> Ranjith Kannankattil · What I created here is free to copy — <a href="https://copyheart.org/" rel="noopener">copying is an act of love</a>. Others' work keeps its own terms.</div>
+  <div class="foot-r"><span class="visits" id="visits" hidden></span><a href="mailto:hello@ranjithkb.com">hello@ranjithkb.com</a><a href="../privacy.html">Privacy</a></div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/tools.js?v=5"></script>
+<script src="../js/vendor/d3-7.9.0.min.js"></script>
+<script src="../js/vendor/topojson-client-3.1.0.min.js"></script>
+<script src="../js/tool-map.js?v=1"></script>
+<script src="../js/nav.js?v=9" defer></script>
+<script src="../js/visits.js?v=2" defer></script>
+</body>
+</html>

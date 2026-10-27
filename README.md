@@ -12,6 +12,8 @@ radio.html              Live Malayalam radio
 productivity/           Productivity tools hub (index.html) + one page per tool
   meeting.html          Tool 01: meeting time finder (js/tool-meeting.js, css/tool-meeting.css)
                         City catalogue + default seven: js/cities.js (add cities there)
+  map.html              Map colourer (js/tool-map.js, css/tool-map.css); boundary data in
+                        assets/maps/ (Natural Earth, India point of view; a1/<ISO3>.json per country)
 productivity.html       Redirect from the old address (keeps meeting-finder links working)
 js/tools.js             Tool registry: builds the hub cards and the tool switcher
 css/productivity.css    Shared styles for the hub and every tool page
