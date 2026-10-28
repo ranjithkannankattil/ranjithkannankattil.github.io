@@ -19,7 +19,7 @@ import build_cards as bc
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://ranjithkb.com"
 BLOG = "https://padolpathi.wordpress.com/"
-CSS_V, STYLE_V, NAV_V = "1", "12", "9"
+CSS_V, STYLE_V, NAV_V = "1", "13", "10"
 E = lambda s: html.escape(str(s), quote=True)  # noqa: E731
 MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
           "October", "November", "December"]

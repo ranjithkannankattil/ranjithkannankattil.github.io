@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Passport photo maker — Productivity — Ranjith Kannankattil</title>
+<meta name="description" content="Free passport and visa photo maker: UK, Schengen, US, India, China, Canada and custom sizes, head-height guides, exact-pixel downloads under a file-size limit, and print sheets for 4×6, A4 or a Kodak Mini 2 Retro.">
+<link rel="canonical" href="https://ranjithkb.com/productivity/passport.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ranjith Kannankattil">
+<meta property="og:title" content="Passport photo maker — Productivity — Ranjith Kannankattil">
+<meta property="og:description" content="Free passport and visa photo maker: UK, Schengen, US, India, China, Canada and custom sizes, head-height guides, exact-pixel downloads under a file-size limit, and print sheets for 4×6, A4 or a Kodak Mini 2 Retro.">
+<meta property="og:url" content="https://ranjithkb.com/productivity/passport.html">
+<meta property="og:image" content="https://media.ranjithkb.com/sections/productivity-0a198efb.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="icon" href="/assets/icons/site-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/icons/site-180.png">
+<meta name="theme-color" content="#F0EDE6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16161A" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
+<link rel="stylesheet" href="../css/style.css?v=13">
+<link rel="stylesheet" href="../css/productivity.css?v=3">
+<link rel="stylesheet" href="../css/tool-timeline.css?v=2">
+<link rel="stylesheet" href="../css/tool-passport.css?v=1">
+</head>
+<body data-section="productivity" class="wide">
+
+<header class="titleblock">
+  <div>
+    <div class="id">RANJITH KANNANKATTIL</div>
+    <div class="name">Productivity</div>
+  </div>
+  <nav class="tabs" data-root="../" data-active="productivity" aria-label="Site">
+    <a href="../index.html">Home</a>
+    <a href="../radio.html">Radio</a>
+    <a href="./" class="active">Productivity</a>
+  </nav>
+</header>
+
+<main data-tool="passport">
+  <div data-tool-nav></div>
+  <section class="pp" aria-labelledby="ppTitle">
+    <div class="tool-head">
+      <div class="tool-eyebrow" data-tool-eyebrow>Tool</div>
+      <h1 class="tool-title" id="ppTitle">Passport photo maker</h1>
+      <p class="tool-intro">Pick the document, add a photo taken against a plain light wall, and line your chin and the top of your head up with the guides — or tap both and let it line them up for you. Download the single photo for an online form, or a print sheet that fits as many copies as your paper takes, ready for a home photo printer. Your photo never leaves this device.</p>
+    </div>
+
+    <div class="pp-steps">
+      <label class="pp-field">
+        <span class="k">1 · Document</span>
+        <select id="preset"></select>
+      </label>
+      <div class="pp-custom" id="customBox" hidden>
+        <label><span>Width</span><input type="number" id="cW" min="10" max="200" step="0.5" value="35"><i>mm</i></label>
+        <label><span>Height</span><input type="number" id="cH" min="10" max="200" step="0.5" value="45"><i>mm</i></label>
+        <label><span>Head</span><input type="number" id="cHead" min="5" max="150" step="0.5" value="34"><i>mm</i></label>
+      </div>
+      <p class="pp-spec" id="spec"></p>
+    </div>
+
+    <div class="pp-work">
+      <div class="pp-edit">
+        <div class="pp-stage" id="stage" tabindex="0" aria-label="Photo crop. Drag to move, scroll or pinch to zoom, arrow keys to nudge.">
+          <canvas id="photoCv"></canvas>
+          <svg id="guides" aria-hidden="true"></svg>
+          <div class="pp-empty" id="empty">
+            <input type="file" id="fileIn" accept="image/*">
+            <b>Add a photo</b>
+            <span>Drop it here, paste it, or <u>choose a file</u></span>
+            <small>Face the camera, plain light background, even light, no glasses glare.</small>
+          </div>
+          <div class="pp-mark-tip" id="markTip" hidden></div>
+        </div>
+
+        <div class="pp-ctl" id="ctl" hidden>
+          <div class="pp-auto">
+            <button class="tl-btn ink" type="button" id="autoBtn">Line up for me</button>
+            <span>Tap your chin, then the top of your head (hair included).</span>
+          </div>
+          <label class="pp-sl"><span>Zoom</span><input type="range" id="zoom" min="0" max="1000" value="500"></label>
+          <label class="pp-sl"><span>Straighten</span><input type="range" id="tilt" min="-150" max="150" value="0"><b id="tiltV">0°</b></label>
+          <label class="pp-sl"><span>Brightness</span><input type="range" id="bri" min="70" max="140" value="100"></label>
+          <label class="pp-sl"><span>Contrast</span><input type="range" id="con" min="70" max="140" value="100"></label>
+          <label class="pp-sl"><span>Colour</span><input type="range" id="sat" min="0" max="140" value="100"></label>
+          <div class="pp-ctl-acts">
+            <label class="pp-chk"><input type="checkbox" id="showGuides" checked><span>Guides</span></label>
+            <button class="tl-btn" type="button" id="resetBtn">Reset</button>
+            <button class="tl-btn" type="button" id="newPhoto">New photo</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="pp-out" id="outBox">
+        <div class="pp-box">
+          <div class="pp-box-h">2 · Single photo <small>for online forms</small></div>
+          <div class="pp-seg" role="radiogroup" aria-label="Size">
+            <label><input type="radio" name="single" value="300" checked><span>300 dpi</span></label>
+            <label><input type="radio" name="single" value="600"><span>600 dpi</span></label>
+            <label><input type="radio" name="single" value="px"><span>Exact pixels</span></label>
+          </div>
+          <div class="pp-px" id="pxBox" hidden>
+            <label><input type="number" id="pxW" min="100" max="6000"><i>×</i></label>
+            <label><input type="number" id="pxH" min="100" max="6000"><i>px</i></label>
+          </div>
+          <label class="pp-row"><span>Keep under<small>for upload limits; blank for none</small></span><span class="pp-kb"><input type="number" id="maxKB" min="10" max="20000" placeholder="—"><i>KB</i></span></label>
+          <p class="pp-out-sum" id="singleSum"></p>
+          <button class="pp-go" type="button" id="dlSingle" disabled>Download photo (JPG)</button>
+        </div>
+
+        <div class="pp-box">
+          <div class="pp-box-h">3 · Print sheet</div>
+          <label class="pp-row"><span>Paper</span><select id="paper"></select></label>
+          <div class="pp-custom" id="paperCustom" hidden>
+            <label><span>Width</span><input type="number" id="pW" min="20" max="1200" step="0.5"><i id="pUnit">mm</i></label>
+            <label><span>Height</span><input type="number" id="pH" min="20" max="1200" step="0.5"><i id="pUnit2">mm</i></label>
+          </div>
+          <div class="pp-grid2">
+            <label class="pp-row"><span>Copies</span><select id="copies"><option value="0">As many as fit</option></select></label>
+            <label class="pp-row"><span>Print quality</span><select id="sheetDpi"><option value="300">300 dpi</option><option value="600">600 dpi</option></select></label>
+            <label class="pp-row"><span>Edge margin</span><span class="pp-kb"><input type="number" id="margin" min="0" max="30" step="0.5"><i>mm</i></span></label>
+            <label class="pp-row"><span>Gap</span><span class="pp-kb"><input type="number" id="gap" min="0" max="20" step="0.5"><i>mm</i></span></label>
+          </div>
+          <label class="pp-chk"><input type="checkbox" id="cutLines" checked><span>Thin cutting lines</span></label>
+          <label class="pp-chk"><input type="checkbox" id="allowRot" checked><span>Turn copies sideways if more fit</span></label>
+          <div class="pp-sheet-wrap"><canvas id="sheetCv" class="pp-sheet" aria-label="Print sheet preview"></canvas></div>
+          <p class="pp-out-sum" id="sheetSum"></p>
+          <div class="pp-dl2">
+            <button class="pp-go" type="button" id="dlSheet" disabled>Download sheet (JPG)</button>
+            <button class="tl-btn" type="button" id="dlPdf" disabled>PDF</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="tool-note">Sizes and head heights follow each country's published photo rules, but they change — check the official guidance for your application before printing. When printing, choose <i>actual size</i> or <i>100%</i>, not <i>fit to page</i>. On a Kodak Mini 2 Retro, send the JPG sheet from the Kodak app and choose borderless. Most offices still want a plain light background, a neutral expression and no glasses.</p>
+  </section>
+
+  <div class="diamond-rule"><span class="diamond-mark">◆</span></div>
+</main>
+
+<footer>
+  <div class="cheart">♡ <span id="year"></span> Ranjith Kannankattil · What I created here is free to copy — <a href="https://copyheart.org/" rel="noopener">copying is an act of love</a>. Others' work keeps its own terms.</div>
+  <div class="foot-r"><span class="visits" id="visits" hidden></span><a href="mailto:hello@ranjithkb.com">hello@ranjithkb.com</a><a href="../privacy.html">Privacy</a></div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/tools.js?v=6"></script>
+<script src="../js/tool-passport.js?v=1"></script>
+<script src="../js/nav.js?v=10" defer></script>
+<script src="../js/visits.js?v=2" defer></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oil &amp; gas unit converter — Productivity — Ranjith Kannankattil</title>
+<meta name="description" content="Convert LNG, gas and oil units: MTPA to MMscfd, tonnes to MMBtu, barrels to cubic metres, psig to bara, °API to density, MMBtu to MWh — with your own LNG density and heating value.">
+<link rel="canonical" href="https://ranjithkb.com/productivity/units.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ranjith Kannankattil">
+<meta property="og:title" content="Oil &amp; gas unit converter — Productivity — Ranjith Kannankattil">
+<meta property="og:description" content="Convert LNG, gas and oil units: MTPA to MMscfd, tonnes to MMBtu, barrels to cubic metres, psig to bara, °API to density, MMBtu to MWh — with your own LNG density and heating value.">
+<meta property="og:url" content="https://ranjithkb.com/productivity/units.html">
+<meta property="og:image" content="https://media.ranjithkb.com/sections/productivity-0a198efb.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="icon" href="/assets/icons/site-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/icons/site-180.png">
+<meta name="theme-color" content="#F0EDE6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16161A" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
+<link rel="stylesheet" href="../css/style.css?v=13">
+<link rel="stylesheet" href="../css/productivity.css?v=3">
+<link rel="stylesheet" href="../css/tool-timeline.css?v=2">
+<link rel="stylesheet" href="../css/tool-units.css?v=1">
+</head>
+<body data-section="productivity" class="wide">
+
+<header class="titleblock">
+  <div>
+    <div class="id">RANJITH KANNANKATTIL</div>
+    <div class="name">Productivity</div>
+  </div>
+  <nav class="tabs" data-root="../" data-active="productivity" aria-label="Site">
+    <a href="../index.html">Home</a>
+    <a href="../radio.html">Radio</a>
+    <a href="./" class="active">Productivity</a>
+  </nav>
+</header>
+
+<main data-tool="units">
+  <div data-tool-nav></div>
+  <section class="uc" aria-labelledby="ucTitle">
+    <div class="tool-head">
+      <div class="tool-eyebrow" data-tool-eyebrow>Tool</div>
+      <h1 class="tool-title" id="ucTitle">Oil &amp; gas unit converter</h1>
+      <p class="tool-intro">The conversions I keep looking up on LNG and oil projects, on one page. Type a value — sums like <i>18.6*2</i> work too — and every unit in the group updates at once. Tap any result to make it the starting point. Conversions that cross from tonnes to gas volume or energy use the LNG density and heating value shown under <i>Assumptions</i>, which you can change.</p>
+    </div>
+
+    <nav class="uc-cats" id="cats" aria-label="Unit groups"></nav>
+
+    <div class="uc-wrap">
+      <div class="uc-main">
+        <div class="uc-in">
+          <label class="uc-val">
+            <span class="k">Value</span>
+            <input id="val" inputmode="decimal" autocomplete="off" spellcheck="false" aria-describedby="valErr">
+          </label>
+          <label class="uc-unit">
+            <span class="k">Unit</span>
+            <select id="unit"></select>
+          </label>
+        </div>
+        <div class="uc-err" id="valErr" role="status"></div>
+        <ul class="uc-list" id="list" aria-live="polite"></ul>
+        <p class="uc-hint" id="hint"></p>
+      </div>
+
+      <aside class="uc-side">
+        <div class="uc-box">
+          <div class="uc-box-h">Display</div>
+          <label class="uc-row"><span>Significant figures</span>
+            <select id="sig"><option>3</option><option>4</option><option selected>6</option><option>8</option><option>10</option></select>
+          </label>
+          <label class="uc-row"><span>Thousands separator</span>
+            <select id="sep"><option value="comma">1,234.5</option><option value="space">1 234.5</option><option value="none">1234.5</option><option value="euro">1.234,5</option></select>
+          </label>
+          <div class="uc-acts">
+            <button class="tl-btn" id="shareBtn" type="button">Copy link</button>
+            <button class="tl-btn" id="copyAll" type="button">Copy all as text</button>
+          </div>
+        </div>
+
+        <div class="uc-box" id="assume">
+          <div class="uc-box-h">Assumptions <button class="uc-reset" id="assumeReset" type="button">Reset</button></div>
+          <div class="uc-presets" id="presets"></div>
+          <label class="uc-row" data-for="lng"><span>LNG density<small>kg/m³ of liquid</small></span><input type="number" step="any" id="pRhoL"></label>
+          <label class="uc-row" data-for="lng"><span>Gas density<small>kg/Sm³ at 15 °C, 1.01325 bar</small></span><input type="number" step="any" id="pRhoS"></label>
+          <label class="uc-row" data-for="lng"><span>Gross heating value<small>MJ/kg (HHV)</small></span><input type="number" step="any" id="pGhv"></label>
+          <label class="uc-row" data-for="lng"><span>Cargo size<small>m³ of LNG</small></span><input type="number" step="any" id="pCargo"></label>
+          <label class="uc-row" data-for="year"><span>Days in a year<small>for per-year rates</small></span><input type="number" step="any" id="pDays"></label>
+          <label class="uc-row" data-for="pressure"><span>Atmosphere<small>bar, for gauge pressures</small></span><input type="number" step="any" id="pAtm"></label>
+          <p class="uc-derived" id="derived"></p>
+        </div>
+      </aside>
+    </div>
+
+    <p class="tool-note">Standard conditions: Sm³ at 15 °C and 1.01325 bar, Nm³ at 0 °C and 1.01325 bar, scf at 60 °F and 14.696 psia; gas volumes between them are converted as an ideal gas. A barrel is the 42-US-gallon oil barrel. Btu is the International Table Btu; a therm is 100,000 Btu and a boe is 5.8 MMBtu. Specific gravity is against water at 60 °F (999.016 kg/m³), and °API = 141.5 / SG − 131.5. Your settings stay in this browser.</p>
+  </section>
+
+  <div class="diamond-rule"><span class="diamond-mark">◆</span></div>
+</main>
+
+<footer>
+  <div class="cheart">♡ <span id="year"></span> Ranjith Kannankattil · What I created here is free to copy — <a href="https://copyheart.org/" rel="noopener">copying is an act of love</a>. Others' work keeps its own terms.</div>
+  <div class="foot-r"><span class="visits" id="visits" hidden></span><a href="mailto:hello@ranjithkb.com">hello@ranjithkb.com</a><a href="../privacy.html">Privacy</a></div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/tools.js?v=6"></script>
+<script src="../js/tool-units.js?v=1"></script>
+<script src="../js/nav.js?v=10" defer></script>
+<script src="../js/visits.js?v=2" defer></script>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDF toolkit — Productivity — Ranjith Kannankattil</title>
+<meta name="description" content="Merge, split, reorder, rotate and delete PDF pages, turn photos into a PDF, add page numbers, a watermark or a signature, and compress scans — all in your browser, files never uploaded.">
+<link rel="canonical" href="https://ranjithkb.com/productivity/pdf.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ranjith Kannankattil">
+<meta property="og:title" content="PDF toolkit — Productivity — Ranjith Kannankattil">
+<meta property="og:description" content="Merge, split, reorder, rotate and delete PDF pages, turn photos into a PDF, add page numbers, a watermark or a signature, and compress scans — all in your browser, files never uploaded.">
+<meta property="og:url" content="https://ranjithkb.com/productivity/pdf.html">
+<meta property="og:image" content="https://media.ranjithkb.com/sections/productivity-0a198efb.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="icon" href="/assets/icons/site-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/icons/site-180.png">
+<meta name="theme-color" content="#F0EDE6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16161A" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
+<link rel="stylesheet" href="../css/style.css?v=13">
+<link rel="stylesheet" href="../css/productivity.css?v=3">
+<link rel="stylesheet" href="../css/tool-timeline.css?v=2">
+<link rel="stylesheet" href="../css/tool-pdf.css?v=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Dancing+Script:wght@600&family=Homemade+Apple&display=swap">
+</head>
+<body data-section="productivity" class="wide">
+
+<header class="titleblock">
+  <div>
+    <div class="id">RANJITH KANNANKATTIL</div>
+    <div class="name">Productivity</div>
+  </div>
+  <nav class="tabs" data-root="../" data-active="productivity" aria-label="Site">
+    <a href="../index.html">Home</a>
+    <a href="../radio.html">Radio</a>
+    <a href="./" class="active">Productivity</a>
+  </nav>
+</header>
+
+<main data-tool="pdf">
+  <div data-tool-nav></div>
+  <section class="pk" aria-labelledby="pkTitle">
+    <div class="tool-head">
+      <div class="tool-eyebrow" data-tool-eyebrow>Tool</div>
+      <h1 class="tool-title" id="pkTitle">PDF toolkit</h1>
+      <p class="tool-intro">Drop in PDFs and photos, then arrange the pages: drag to reorder, rotate, delete, or pull a few out on their own. Add page numbers, a watermark or your signature, shrink a heavy scan, and download one PDF or split it into several. Everything happens on this device — your files are never uploaded.</p>
+    </div>
+
+    <div class="pk-drop" id="drop" tabindex="0" role="button" aria-label="Add PDFs or images">
+      <input type="file" id="fileIn" multiple accept="application/pdf,.pdf,image/*">
+      <div class="pk-drop-in">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 6h14l10 10v26H14z"/><path d="M28 6v10h10"/><path d="M26 24v12M20 30l6-6 6 6"/></svg>
+        <b>Drop PDFs or photos here</b>
+        <span>or <u>choose files</u> · PDF, JPG, PNG, WebP · as many as you like</span>
+      </div>
+    </div>
+
+    <div class="pk-work" id="work" hidden>
+      <div class="pk-files" id="files" aria-label="Files added"></div>
+
+      <div class="tl-bar pk-bar" role="toolbar" aria-label="Pages">
+        <div class="tl-grp">
+          <button class="tl-btn" type="button" id="selAll">Select all</button>
+          <button class="tl-btn" type="button" id="selNone">None</button>
+        </div>
+        <label class="pk-range"><span class="sr">Select pages</span><input id="rangeIn" placeholder="Select e.g. 1-3, 7" autocomplete="off" spellcheck="false"></label>
+        <span class="pk-count" id="selCount"></span>
+        <span class="tl-sp"></span>
+        <div class="tl-grp">
+          <button class="tl-btn ico" type="button" id="rotL" title="Rotate left (Shift+R)" aria-label="Rotate left">⟲</button>
+          <button class="tl-btn ico" type="button" id="rotR" title="Rotate right (R)" aria-label="Rotate right">⟳</button>
+        </div>
+        <div class="tl-grp">
+          <button class="tl-btn" type="button" id="dupBtn" title="Duplicate (D)">Duplicate</button>
+          <button class="tl-btn" type="button" id="blankBtn">+ Blank page</button>
+          <button class="tl-btn danger" type="button" id="delBtn" title="Delete (Del)">Delete</button>
+        </div>
+        <button class="tl-btn" type="button" id="extractBtn" title="Download only the selected pages">Extract selected</button>
+      </div>
+
+      <div class="pk-layout">
+        <div class="pk-grid" id="grid" role="listbox" aria-multiselectable="true" aria-label="Pages in order"></div>
+
+        <aside class="pk-side" aria-label="Finish">
+          <div class="pk-box">
+            <div class="pk-box-h">Output</div>
+            <div class="pk-seg" role="radiogroup" aria-label="Output">
+              <label><input type="radio" name="split" value="one" checked><span>One PDF</span></label>
+              <label><input type="radio" name="split" value="n"><span>Split every</span></label>
+              <label><input type="radio" name="split" value="file"><span>One per file</span></label>
+              <label><input type="radio" name="split" value="page"><span>Each page</span></label>
+            </div>
+            <label class="pk-row" id="splitNRow" hidden><span>Pages per file</span><input type="number" id="splitN" min="1" value="2"></label>
+            <label class="pk-row pk-col"><span>File name</span><input id="outName" spellcheck="false" autocomplete="off"></label>
+          </div>
+
+          <details class="pk-box pk-opt" id="optNum">
+            <summary><span>Page numbers</span><label class="pk-sw"><input type="checkbox" id="numOn"><i></i></label></summary>
+            <label class="pk-row"><span>Position</span><select id="numPos"><option value="bc">Bottom centre</option><option value="br">Bottom right</option><option value="bl">Bottom left</option><option value="tc">Top centre</option><option value="tr">Top right</option><option value="tl">Top left</option></select></label>
+            <label class="pk-row"><span>Format</span><select id="numFmt"><option value="n">1</option><option value="page">Page 1</option><option value="of">Page 1 of 9</option><option value="slash">1 / 9</option></select></label>
+            <label class="pk-row"><span>Start at</span><input type="number" id="numStart" value="1" min="0"></label>
+            <label class="pk-row"><span>Size</span><input type="number" id="numSize" value="10" min="6" max="36"></label>
+            <label class="pk-chk"><input type="checkbox" id="numSkip"><span>Leave the first page unnumbered</span></label>
+          </details>
+
+          <details class="pk-box pk-opt" id="optWm">
+            <summary><span>Watermark</span><label class="pk-sw"><input type="checkbox" id="wmOn"><i></i></label></summary>
+            <label class="pk-row pk-col"><span>Text</span><input id="wmText" value="DRAFT" maxlength="60"></label>
+            <label class="pk-row"><span>Colour</span><select id="wmCol"><option value="grey">Grey</option><option value="red">Red</option><option value="blue">Blue</option></select></label>
+            <label class="pk-row"><span>Opacity</span><input type="range" id="wmOp" min="5" max="60" value="18"></label>
+            <label class="pk-row"><span>Angle</span><select id="wmAng"><option value="45">Diagonal</option><option value="0">Level</option></select></label>
+          </details>
+
+          <div class="pk-box">
+            <div class="pk-box-h">Sign and fill</div>
+            <p class="pk-p">Make a signature once, then place it — or a name or date — on any page.</p>
+            <div class="pk-acts">
+              <button class="tl-btn" type="button" id="signBtn">Make signature</button>
+              <button class="tl-btn" type="button" id="placeBtn" title="Open the first selected page to place items">Place on a page</button>
+            </div>
+            <ul class="pk-placed" id="placedList"></ul>
+          </div>
+
+          <div class="pk-box">
+            <div class="pk-box-h">Size</div>
+            <div class="pk-seg three" role="radiogroup" aria-label="Compression">
+              <label><input type="radio" name="comp" value="none" checked><span>Keep</span></label>
+              <label><input type="radio" name="comp" value="mid"><span>Smaller</span></label>
+              <label><input type="radio" name="comp" value="max"><span>Smallest</span></label>
+            </div>
+            <p class="pk-p" id="compNote">Pages are copied exactly; text stays selectable.</p>
+            <label class="pk-row"><span>Photo pages</span><select id="imgFit"><option value="a4">Fit on A4</option><option value="letter">Fit on US Letter</option><option value="native">Same size as photo</option></select></label>
+            <label class="pk-chk"><input type="checkbox" id="stripMeta" checked><span>Remove author and app details</span></label>
+          </div>
+
+          <button class="pk-go" type="button" id="goBtn">Download PDF</button>
+          <p class="pk-result" id="result" role="status"></p>
+        </aside>
+      </div>
+    </div>
+
+    <p class="tool-note">Built on <a href="https://pdf-lib.js.org/" rel="noopener">pdf-lib</a> and Mozilla's <a href="https://mozilla.github.io/pdf.js/" rel="noopener">PDF.js</a>, both open source and loaded from this site. Password-protected PDFs open once you type the password; their pages are copied as images. <i>Smaller</i> and <i>Smallest</i> redraw each page as a picture, which shrinks scans a lot but makes text unselectable.</p>
+  </section>
+
+  <dialog class="tl-dlg pk-dlg" id="signDlg" aria-labelledby="signH">
+    <form method="dialog">
+      <h2 id="signH">Make a signature</h2>
+      <div class="pk-tabs" role="tablist">
+        <button type="button" role="tab" data-stab="draw" aria-selected="true">Draw</button>
+        <button type="button" role="tab" data-stab="type">Type</button>
+        <button type="button" role="tab" data-stab="upload">Photo</button>
+      </div>
+      <div class="pk-stab" data-pane="draw">
+        <canvas id="pad" class="pk-pad" width="1000" height="360" aria-label="Signature pad"></canvas>
+        <div class="pk-padbar">
+          <span>Ink</span>
+          <button type="button" class="pk-ink on" data-ink="#111111" aria-label="Black ink"></button>
+          <button type="button" class="pk-ink" data-ink="#1F3A93" aria-label="Blue ink"></button>
+          <span class="tl-sp"></span>
+          <button type="button" class="tl-btn" id="padClear">Clear</button>
+        </div>
+      </div>
+      <div class="pk-stab" data-pane="type" hidden>
+        <input id="sigType" class="pk-sigtype" placeholder="Your name" autocomplete="name" maxlength="60">
+        <div class="pk-fonts" id="sigFonts"></div>
+      </div>
+      <div class="pk-stab" data-pane="upload" hidden>
+        <p class="dlg-p">A photo of your signature on white paper. The white is made see-through.</p>
+        <input type="file" id="sigFile" accept="image/*">
+        <canvas id="sigPrev" class="pk-pad" width="1000" height="360" hidden></canvas>
+      </div>
+      <div class="dlg-act">
+        <button type="button" class="tl-btn" id="signCancel">Cancel</button>
+        <span class="tl-sp"></span>
+        <button type="button" class="tl-btn ink" id="signSave">Use this signature</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="tl-dlg pk-dlg pk-place" id="placeDlg" aria-labelledby="placeH">
+    <form method="dialog">
+      <div class="pk-place-head">
+        <h2 id="placeH">Place on page <span id="placeNo"></span></h2>
+        <div class="tl-grp">
+          <button type="button" class="tl-btn ico" id="placePrev" aria-label="Previous page">‹</button>
+          <button type="button" class="tl-btn ico" id="placeNext" aria-label="Next page">›</button>
+        </div>
+      </div>
+      <div class="pk-place-tools">
+        <button type="button" class="tl-btn" id="addSig">+ Signature</button>
+        <button type="button" class="tl-btn" id="addText">+ Text</button>
+        <button type="button" class="tl-btn" id="addDate">+ Today's date</button>
+        <button type="button" class="tl-btn" id="addTick" title="A tick mark for forms">+ ✓</button>
+      </div>
+      <div class="pk-stage" id="stage"><canvas id="stageCv"></canvas><div class="pk-items" id="items"></div></div>
+      <p class="dlg-p pk-place-tip">Drag to move, drag the corner to resize. Double-click text to change it.</p>
+      <div class="dlg-act">
+        <span class="tl-sp"></span>
+        <button type="button" class="tl-btn ink" id="placeDone">Done</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="diamond-rule"><span class="diamond-mark">◆</span></div>
+</main>
+
+<footer>
+  <div class="cheart">♡ <span id="year"></span> Ranjith Kannankattil · What I created here is free to copy — <a href="https://copyheart.org/" rel="noopener">copying is an act of love</a>. Others' work keeps its own terms.</div>
+  <div class="foot-r"><span class="visits" id="visits" hidden></span><a href="mailto:hello@ranjithkb.com">hello@ranjithkb.com</a><a href="../privacy.html">Privacy</a></div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/tools.js?v=6"></script>
+<script src="../js/tool-pdf.js?v=1"></script>
+<script src="../js/nav.js?v=10" defer></script>
+<script src="../js/visits.js?v=2" defer></script>
+</body>
+</html>

@@ -12,10 +12,15 @@ radio.html              Live Malayalam radio
 productivity/           Productivity tools hub (index.html) + one page per tool
   meeting.html          Tool 01: meeting time finder (js/tool-meeting.js, css/tool-meeting.css)
                         City catalogue + default seven: js/cities.js (add cities there)
+  raci.html             RACI matrix builder (js/tool-raci.js, css/tool-raci.css)
+  pdf.html              PDF toolkit (js/tool-pdf.js, css/tool-pdf.css; pdf-lib + PDF.js in js/vendor/)
+  passport.html         Passport photo maker (js/tool-passport.js, css/tool-passport.css)
+  units.html            Oil & gas unit converter (js/tool-units.js, css/tool-units.css)
   map.html              Map colourer (js/tool-map.js, css/tool-map.css); boundary data in
                         assets/maps/ (Natural Earth, India point of view; a1/<ISO3>.json per country)
 productivity.html       Redirect from the old address (keeps meeting-finder links working)
-js/tools.js             Tool registry: builds the hub cards and the tool switcher
+js/tools.js             Tool registry + groups: builds the grouped, searchable hub, and each tool
+                        page's breadcrumb, "All tools" switcher and previous / next links
 css/productivity.css    Shared styles for the hub and every tool page
 feed.xml                RSS feed (latest 50 writings, static — regenerate manually)
 CNAME                   Custom domain file for GitHub Pages (ranjithkb.com)
@@ -80,4 +85,6 @@ following the existing pattern (cover image, meta line, description, links).
 2. Copy `productivity/meeting.html` to `productivity/<id>.html`; keep the header,
    `<main data-tool="<id>">` and `<div data-tool-nav>`, replace the `<section>`.
 3. Put the tool's code in `js/tool-<id>.js` and `css/tool-<id>.css`.
-The hub card and the switcher on every tool page update by themselves.
+4. Add it to the PRODUCTIVITY list in `js/nav.js` so the site's Tools menu lists it.
+5. Add a line to SECTIONS in `scripts/build_cards.py` for its link-preview card, and a sitemap entry.
+The hub card, the switcher and previous / next links update by themselves.

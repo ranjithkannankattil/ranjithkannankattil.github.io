@@ -2,6 +2,20 @@
 // Each page keeps <nav class="tabs" data-root="" data-active="writings"></nav>;
 // data-root is the path back to the site root ("" or "../"), data-active the current page.
 (function () {
+  // Productivity tools, listed straight in the Tools menu. Keep in step with js/tools.js.
+  const PRODUCTIVITY = [
+    { id: "meeting", label: "Meeting time finder", href: "productivity/meeting.html" },
+    { id: "timeline", label: "Timeline & Gantt", href: "productivity/timeline.html" },
+    { id: "raci", label: "RACI matrix", href: "productivity/raci.html" },
+    { id: "pdf", label: "PDF toolkit", href: "productivity/pdf.html" },
+    { id: "passport", label: "Passport photo maker", href: "productivity/passport.html" },
+    { id: "units", label: "Oil & gas units", href: "productivity/units.html" },
+    { id: "map", label: "Map colourer", href: "productivity/map.html" },
+    { id: "keyboard", label: "Malayalam keyboard", href: "productivity/keyboard.html" },
+  ];
+  // which productivity tool is open, if any (from <main data-tool="…">)
+  const toolHere = (document.querySelector("main[data-tool]") || {}).dataset?.tool;
+
   const NAV = [
     { id: "home", label: "Home", href: "index.html" },
     { label: "Creative", items: [
@@ -14,8 +28,7 @@
       { id: "radio", label: "Radio", desc: "2,200 live stations in 70+ languages", href: "radio.html" },
       { id: "news", label: "News", desc: "Trusted papers, world to your town", href: "news.html" },
       { id: "trip", label: "Trip planner", desc: "Day-by-day walking plans, anywhere", href: "trip.html" },
-      { id: "productivity", label: "Productivity", desc: "Meeting finder, Gantt timelines, Malayalam iPhone keyboard", href: "productivity/" },
-    ] },
+    ], sub: { id: "productivity", label: "Productivity", href: "productivity/", items: PRODUCTIVITY } },
   ];
 
   document.querySelectorAll("nav.tabs[data-active]").forEach((nav) => {
@@ -30,7 +43,7 @@
         nav.append(a);
         continue;
       }
-      const here = entry.items.find((i) => i.id === active);
+      const here = entry.items.find((i) => i.id === active) || (entry.sub && entry.sub.id === active ? entry.sub : null);
       const d = document.createElement("details");
       d.className = "nav-group" + (here ? " active" : "");
       const s = document.createElement("summary");
@@ -47,6 +60,26 @@
         a.lastChild.textContent = it.desc;
         if (it.id === active) { a.className = "current"; a.setAttribute("aria-current", "page"); }
         menu.append(a);
+      }
+      if (entry.sub) {
+        // a second column listing every productivity tool by name
+        menu.classList.add("has-sub");
+        const col = document.createElement("div");
+        col.className = "nav-sub";
+        const h = document.createElement("a");
+        h.href = root + entry.sub.href; h.className = "nav-sub-h" + (active === entry.sub.id && !toolHere ? " current" : "");
+        h.innerHTML = "<b></b><small>All tools →</small>"; h.firstChild.textContent = entry.sub.label;
+        col.append(h);
+        for (const it of entry.sub.items) {
+          const a = document.createElement("a");
+          a.href = root + it.href; a.textContent = it.label;
+          if (it.id === toolHere) { a.className = "current"; a.setAttribute("aria-current", "page"); }
+          col.append(a);
+        }
+        const apps = document.createElement("div");
+        apps.className = "nav-apps";
+        apps.append(...menu.children);
+        menu.append(apps, col);
       }
       d.append(s, menu);
       nav.append(d);
