@@ -28,7 +28,7 @@
 <link rel="stylesheet" href="../css/style.css?v=13">
 <link rel="stylesheet" href="../css/productivity.css?v=4">
 <link rel="stylesheet" href="../css/tool-timeline.css?v=2">
-<link rel="stylesheet" href="../css/tool-pdf.css?v=1">
+<link rel="stylesheet" href="../css/tool-pdf.css?v=2">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Dancing+Script:wght@600&family=Homemade+Apple&display=swap">
 </head>
 <body data-section="productivity" class="wide">
@@ -141,13 +141,26 @@
             <label class="pk-chk"><input type="checkbox" id="stripMeta" checked><span>Remove author and app details</span></label>
           </div>
 
+          <details class="pk-box pk-opt" id="optOcr">
+            <summary><span>Text recognition (OCR)</span><label class="pk-sw"><input type="checkbox" id="ocrOn"><i></i></label></summary>
+            <p class="pk-p">Reads the words on scanned pages and photos, so the PDF can be searched and its text copied. Pages that already have text are left as they are.</p>
+            <label class="pk-row"><span>Language</span><select id="ocrLang">
+              <option value="eng">English</option>
+              <option value="eng+ita">English + Italian</option>
+              <option value="mal+eng">Malayalam + English</option>
+              <option value="hin+eng">Hindi + English</option>
+            </select></label>
+            <p class="pk-p" id="ocrNote">The searchable layer works for English and Italian. For Malayalam and Hindi, use <i>Get the text</i> below — PDF text layers can’t yet carry those scripts reliably.</p>
+            <button class="tl-btn" type="button" id="ocrTxt">Get the text (.txt)</button>
+          </details>
+
           <button class="pk-go" type="button" id="goBtn">Download PDF</button>
           <p class="pk-result" id="result" role="status"></p>
         </aside>
       </div>
     </div>
 
-    <p class="tool-note">Built on <a href="https://pdf-lib.js.org/" rel="noopener">pdf-lib</a> and Mozilla's <a href="https://mozilla.github.io/pdf.js/" rel="noopener">PDF.js</a>, both open source and loaded from this site. Password-protected PDFs open once you type the password; their pages are copied as images. <i>Smaller</i> and <i>Smallest</i> redraw each page as a picture, which shrinks scans a lot but makes text unselectable.</p>
+    <p class="tool-note">Built on <a href="https://pdf-lib.js.org/" rel="noopener">pdf-lib</a> and Mozilla's <a href="https://mozilla.github.io/pdf.js/" rel="noopener">PDF.js</a>, both open source and loaded from this site. Text recognition uses <a href="https://github.com/naptha/tesseract.js" rel="noopener">Tesseract.js</a>, also running on your device; the first use downloads its reading engine and language (about 7 MB), then the browser keeps it. Password-protected PDFs open once you type the password; their pages are copied as images. <i>Smaller</i> and <i>Smallest</i> redraw each page as a picture, which shrinks scans a lot but makes text unselectable.</p>
   </section>
 
   <dialog class="tl-dlg pk-dlg" id="signDlg" aria-labelledby="signH">
@@ -218,8 +231,8 @@
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-<script src="../js/tools.js?v=6"></script>
-<script src="../js/tool-pdf.js?v=1"></script>
+<script src="../js/tools.js?v=7"></script>
+<script src="../js/tool-pdf.js?v=2"></script>
 <script src="../js/nav.js?v=10" defer></script>
 <script src="../js/visits.js?v=2" defer></script>
 </body>

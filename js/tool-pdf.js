@@ -401,6 +401,15 @@
           if (onProgress) onProgress(k, list.length);
           var p = list[k], s = srcOf(p.src);
           var job;
+          if (ocrOn() && p.kind !== 'blank') {
+            job = (p.kind === 'pdf' && !s.encrypted ? hasText(s, p.idx) : Promise.resolve(false)).then(function (has) {
+              if (has) return normalPage();
+              if (onProgress) onProgress(k, list.length, 'Reading page ' + (k + 1) + ' of ' + list.length + '…');
+              return ocrWorker().then(function (w) { return ocrPage(L, out, p, s, comp === 'none' ? 200 : dpi, comp === 'none' ? 0.85 : q, fit, w); });
+            });
+          } else job = normalPage();
+          function normalPage() {
+          var job;
           if (p.kind === 'blank') {
             job = Promise.resolve(out.addPage([p.w, p.h]));
           } else if (comp !== 'none' || (s && s.encrypted)) {
@@ -415,6 +424,8 @@
                 return pg;
               });
             });
+          }
+          return job;
           }
           return job.then(function (pg) { pg.__uid = p.uid; return step(k + 1); });
         };
@@ -530,6 +541,109 @@
     });
   }
 
+  // ---------- text recognition (Tesseract.js, on the device) ----------
+  var TESS = VENDOR + 'tesseract-5.1.1/';
+  var ocr = { w: null, lang: '', ready: null };
+  function ocrOn() { return $('ocrOn').checked; }
+  function latinOnly() { return !/mal|hin/.test($('ocrLang').value); }
+  function abs(u) { return new URL(u, location.href).href; }
+  function ocrWorker() {
+    var lang = $('ocrLang').value;
+    if (ocr.w && ocr.lang === lang) return ocr.ready;
+    var old = ocr.w; ocr.w = null; if (old) old.terminate();
+    ocr.lang = lang;
+    ocr.ready = load('tesseract-5.1.1/tesseract.min.js', function () { return window.Tesseract; }).then(function () {
+      status('Loading the text reader (first time only)…');
+      return window.Tesseract.createWorker(lang.split('+'), 1, {
+        workerPath: abs(TESS + 'worker.min.js'), corePath: abs(TESS), langPath: abs(TESS + 'lang'), gzip: true,
+        logger: function (m) { if (m.status === 'loading language traineddata' || m.status === 'loading tesseract core') status('Loading the text reader… ' + Math.round((m.progress || 0) * 100) + '%'); }
+      });
+    }).then(function (w) { ocr.w = w; status(''); return w; }, function (e) { ocr.w = null; ocr.lang = ''; status(''); throw new Error('the text reader could not start (' + (e.message || e) + ')'); });
+    return ocr.ready;
+  }
+  function hasText(s, idx) {
+    return s.pdfjs.getPage(idx + 1).then(function (pg) { return pg.getTextContent(); })
+      .then(function (tc) { return tc.items.map(function (i) { return i.str; }).join('').replace(/\s+/g, '').length > 25; })
+      .catch(function () { return false; });
+  }
+  function nativeText(s, idx) {
+    return s.pdfjs.getPage(idx + 1).then(function (pg) { return pg.getTextContent(); }).then(function (tc) {
+      return tc.items.map(function (i) { return i.str + (i.hasEOL ? '\n' : ' '); }).join('').replace(/[ \t]+\n/g, '\n').trim();
+    });
+  }
+  // the page as seen — the user's rotation baked in, so the text reads upright for recognition
+  function seenCanvas(p, s, dpi, fit) {
+    var wPt = p.w, hPt = p.h;
+    if (p.kind === 'img') { var b = pageBoxFor(fit, s.img.w, s.img.h); wPt = b[0]; hPt = b[1]; }
+    var px = Math.min(3400, wPt / 72 * dpi);
+    var job = p.kind === 'img' ? imageOnCanvas(s, wPt, hPt, px, fit) : rasterize(s, p.idx, px);
+    return job.then(function (c) {
+      var r = ((p.rot % 360) + 360) % 360; if (!r) return { c: c, w: wPt, h: hPt };
+      var o = document.createElement('canvas'), side = r % 180;
+      o.width = side ? c.height : c.width; o.height = side ? c.width : c.height;
+      var x = o.getContext('2d'); x.translate(o.width / 2, o.height / 2); x.rotate(r * Math.PI / 180); x.drawImage(c, -c.width / 2, -c.height / 2);
+      return { c: o, w: side ? hPt : wPt, h: side ? wPt : hPt };
+    });
+  }
+  var WINANSI = /[^\x20-\x7E\xA0-\xFF–—‘’“”•€]/g;
+  function ocrPage(L, out, p, s, dpi, q, fit, worker) {
+    var seen;
+    return seenCanvas(p, s, Math.max(dpi, 200), fit).then(function (v) {
+      seen = v; return worker.recognize(v.c);
+    }).then(function (res) {
+      var data = res.data;
+      return new Promise(function (ok) { seen.c.toBlob(ok, 'image/jpeg', q); }).then(function (bl) { return bl.arrayBuffer(); })
+        .then(function (ab) { return out.embedJpg(new Uint8Array(ab)); })
+        .then(function (img) {
+          var pg = out.addPage([seen.w, seen.h]);
+          pg.drawImage(img, { x: 0, y: 0, width: seen.w, height: seen.h });
+          pg.__ocrText = data.text || '';
+          if (!latinOnly() || !data.words || !data.words.length) return pg;
+          return (out.__ocrFont || (out.__ocrFont = out.embedFont(L.StandardFonts.Helvetica))).then(function (font) {
+            var cw = seen.c.width, ch = seen.c.height, kx = seen.w / cw, ky = seen.h / ch;
+            pg.pushOperators(L.pushGraphicsState(), L.setTextRenderingMode(L.TextRenderingMode.Invisible));
+            data.words.forEach(function (wd) {
+              if (wd.confidence < 25) return;
+              var t = String(wd.text || '').replace(WINANSI, '').trim(); if (!t) return;
+              var b = wd.bbox, wPt = (b.x1 - b.x0) * kx, hPt = (b.y1 - b.y0) * ky, unit = font.widthOfTextAtSize(t, 1);
+              if (!unit || wPt <= 0 || hPt <= 0) return;
+              var size = Math.min(hPt * 1.25, wPt / unit); if (size < 2) return;
+              try { pg.drawText(t + ' ', { x: b.x0 * kx, y: seen.h - b.y1 * ky + hPt * 0.18, size: size, font: font }); } catch (e) { /* a glyph Helvetica can't encode */ }
+            });
+            pg.pushOperators(L.popGraphicsState());
+            return pg;
+          });
+        });
+    });
+  }
+  $('ocrOn').addEventListener('change', function () { if (this.checked) ocrWorker().catch(function (e) { toast(e.message); }); });
+  $('ocrLang').addEventListener('change', function () {
+    $('ocrOn').checked = true;
+    $('ocrNote').hidden = latinOnly();
+  });
+  $('ocrNote').hidden = true;
+  $('ocrTxt').onclick = function () {
+    if (!pages.length) { toast('Add a PDF or photo first.'); return; }
+    var btn = this, label = btn.textContent, parts = [], fit = $('imgFit').value;
+    btn.disabled = true;
+    var step = function (k) {
+      if (k >= pages.length) return Promise.resolve();
+      var p = pages[k], s = srcOf(p.src); btn.textContent = 'Page ' + (k + 1) + ' of ' + pages.length + '…';
+      if (p.kind === 'blank') { parts.push(''); return step(k + 1); }
+      var job = (p.kind === 'pdf' && !s.encrypted ? hasText(s, p.idx) : Promise.resolve(false)).then(function (has) {
+        if (has) return nativeText(s, p.idx);
+        return ocrWorker().then(function (w) { return seenCanvas(p, s, 220, fit).then(function (v) { return w.recognize(v.c); }); }).then(function (r) { return (r.data.text || '').trim(); });
+      });
+      return job.then(function (t) { parts.push(t); return step(k + 1); });
+    };
+    step(0).then(function () {
+      var txt = parts.map(function (t, i) { return '— Page ' + (i + 1) + ' —\n' + t; }).join('\n\n') + '\n';
+      save(new Blob([txt], { type: 'text/plain;charset=utf-8' }), fileBase() + '.txt');
+      $('result').innerHTML = 'Saved the text of <b>' + pages.length + ' page' + (pages.length > 1 ? 's' : '') + '</b> · ' + txt.replace(/\s+/g, ' ').split(' ').length + ' words';
+    }).catch(function (e) { $('result').textContent = 'Couldn’t read the text: ' + (e.message || e); })
+      .then(function () { btn.disabled = false; btn.textContent = label; });
+  };
+
   // ---------- download ----------
   function save(bytes, name) {
     var blob = bytes instanceof Blob ? bytes : new Blob([bytes], { type: 'application/pdf' });
@@ -554,7 +668,7 @@
     var t0 = Date.now(), total = pages.length, doneP = 0, files = [];
     var run = function (k) {
       if (k >= groups.length) return Promise.resolve();
-      return build(groups[k].pages, function (j) { btn.textContent = 'Working… ' + Math.round((doneP + j) / total * 100) + '%'; }).then(function (bytes) {
+      return build(groups[k].pages, function (j, n, msg) { btn.textContent = msg || ('Working… ' + Math.round((doneP + j) / total * 100) + '%'); }).then(function (bytes) {
         doneP += groups[k].pages.length; files.push({ name: groups[k].name, bytes: bytes }); return run(k + 1);
       });
     };

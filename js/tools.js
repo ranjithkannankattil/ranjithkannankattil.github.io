@@ -53,9 +53,9 @@ window.TOOLS = [
     name: 'PDF toolkit',
     short: 'PDF',
     href: 'pdf.html',
-    blurb: 'Merge, split, reorder, rotate and delete pages, turn photos into a PDF, add page numbers or a watermark, sign, and shrink scans. Your files never leave your device.',
-    meta: 'Merge · Split · Sign · Compress · Offline',
-    keys: 'pdf merge combine split extract rotate delete pages sign signature watermark page numbers compress jpg image'
+    blurb: 'Merge, split, reorder, rotate and delete pages, turn photos into a PDF, add page numbers or a watermark, sign, shrink scans, and make scans searchable with OCR. Your files never leave your device.',
+    meta: 'Merge · Split · Sign · OCR · Compress',
+    keys: 'ocr text recognition searchable scan pdf merge combine split extract rotate delete pages sign signature watermark page numbers compress jpg image'
   },
   {
     id: 'passport', group: 'docs',
