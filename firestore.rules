@@ -78,6 +78,13 @@ service cloud.firestore {
             && request.resource.data.status in ['approved', 'rejected']);
       allow delete: if isOwner() || (request.auth != null && resource.data.uid == request.auth.uid);
     }
+    // ---- Movies: the owner's private film log (movies.html). Only the owner can read or write it.
+    // movielog/{uid}/watches/{id} and movielog/{uid}/watchlist/{tmdb id}
+    match /movielog/{uid}/{coll}/{id} {
+      allow read, delete: if isOwner() && uid == ownerUid() && coll in ['watches', 'watchlist'];
+      allow create, update: if isOwner() && uid == ownerUid() && coll in ['watches', 'watchlist']
+        && request.resource.data.size() <= 20;
+    }
     match /{document=**} {
       allow read, write: if false;
     }

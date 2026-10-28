@@ -61,7 +61,7 @@
 
 <main class="privacy">
   <h1>Privacy</h1>
-  <div class="updated">Last updated 25 October 2026</div>
+  <div class="updated">Last updated 28 October 2026</div>
 
   <div class="summary" style="margin-top:1.6rem">
     <p><strong>In short:</strong> this is a personal website. There are no ads, no analytics and no tracking cookies.
@@ -83,6 +83,7 @@
     <li><strong>Radio</strong> — favourite stations, the last station played, volume, your default language and recently used languages.</li>
     <li><strong>News</strong> — the place you last looked at, your list of places, the languages you picked and whether other outlets are shown.</li>
     <li><strong>Trip planner</strong> — your last choices (how long, how you get around, interests) so the form opens the way you left it.</li>
+    <li><strong>Movies</strong> — your last few searches, the country you picked for streaming options, and how you like lists sorted.</li>
     <li><strong>Productivity</strong> — the cities, working hours and meeting title you set in the meeting finder, and the timelines you make in the Gantt tool. A timeline leaves your browser only if you share a link to it, and then the plan travels inside the link itself; nothing is stored on a server. Downloading a PDF or image fetches the site's fonts from Google Fonts so the file looks like the page.</li>
     <li><strong>Every page</strong> — the date your browser was last counted by the visitor counter.</li>
   </ul>
@@ -129,6 +130,7 @@
     <li><strong>GitHub (raw.githubusercontent.com)</strong> — serves the News page's headlines, which are rebuilt every two hours.</li>
     <li><strong>Newspapers</strong> — only when you open a story, which takes you to that paper's own website (occasionally through a Google News link). Their own privacy policies apply.</li>
     <li><strong>Trip planner</strong> — when you plan a trip, the places you type and the area you choose are sent straight from your browser to Photon by Komoot (place search), Wikidata and Wikipedia (sights and descriptions), OpenStreetMap services (opening hours and walking routes), Open-Meteo (weather) and the OpenStreetMap tile servers (the map). Nothing is stored on this site; a plan you share lives only in its link.</li>
+    <li><strong>Movies</strong> — searches and film pages are fetched through this site's own small service on Cloudflare (Cloudflare Workers), which asks TMDB, OMDb and Wikipedia on your behalf and passes the posters through too. Those services never see your IP address; Cloudflare handles the request like any web host, and the service itself saves nothing about who searched for what. The private film diary on that page belongs to me alone: no one else can sign in to it, and nothing about visitors is stored.</li>
     <li><strong>Radio broadcasters</strong> — when you press play, your browser connects directly to that station's streaming server, as it would on the station's own website. Their own privacy policies apply.</li>
     <li><strong>Google Firebase</strong> — to update and show the visitor total, for station ratings and comments, and if you sign in, as described above.</li>
   </ul>
@@ -163,7 +165,7 @@
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-<script src="js/nav.js?v=10" defer></script>
+<script src="js/nav.js?v=11" defer></script>
 <script src="js/visits.js?v=2" defer></script>
 </body>
 </html>

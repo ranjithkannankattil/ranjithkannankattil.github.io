@@ -28,6 +28,7 @@
       { id: "radio", label: "Radio", desc: "2,200 live stations in 70+ languages", href: "radio.html" },
       { id: "news", label: "News", desc: "Trusted papers, world to your town", href: "news.html" },
       { id: "trip", label: "Trip planner", desc: "Day-by-day walking plans, anywhere", href: "trip.html" },
+      { id: "movies", label: "Movies", desc: "Any film, every rating, what to watch next", href: "movies.html" },
     ], sub: { id: "productivity", label: "Productivity", href: "productivity/", items: PRODUCTIVITY } },
   ];
 

@@ -9,6 +9,11 @@ writings.html           Writings archive — 365 posts, search + tag filters
 writing-post.html       Single-post template (reads ?slug=...)
 publications.html       Books + academic publication
 radio.html              Live Malayalam radio
+movies.html             Movies: fuzzy film search, all ratings, similar-film rows, people pages; plus the
+                        owner-only diary, watchlist and dashboard (js/movies.js, js/movies-log.js,
+                        js/movies-dash.js, css/movies.css; settings in js/movies-config.js).
+                        Data from the movies-api Worker (worker/movies-api.js — setup in worker/README.md);
+                        the private log is in Firestore under movielog/{owner uid}/ (rules in firestore.rules)
 productivity/           Productivity tools hub (index.html) + one page per tool
   meeting.html          Tool 01: meeting time finder (js/tool-meeting.js, css/tool-meeting.css)
                         City catalogue + default seven: js/cities.js (add cities there)
