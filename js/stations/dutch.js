@@ -686,6 +686,33 @@ window.STATIONS = [
       "https://icecast.vrtcdn.be/stubru_untz.aac"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "538-dance-departmetn",
+    "name": "538 Dance Departmetn",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR01.mp3"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "slam-mixmarathon",
+    "name": "Slam! Mixmarathon",
+    "category": "music",
+    "streams": [
+      "https://stream.radiocorp.nl/web13_mp3"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "sublime-soul-classics",
+    "name": "Sublime Soul Classics",
+    "category": "music",
+    "streams": [
+      "https://stream.sublime.nl/web22_mp3"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

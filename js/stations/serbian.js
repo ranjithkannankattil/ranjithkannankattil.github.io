@@ -645,6 +645,33 @@ window.STATIONS = [
       "https://media.srb-streaming.com:9014/stream"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "naxi-jazz-radio",
+    "name": "Naxi Jazz Radio",
+    "category": "music",
+    "streams": [
+      "https://naxidigital-jazz128ssl.streaming.rs:8172/;stream.nsv"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "radio-subotica-104-4",
+    "name": "Radio Subotica 104.4",
+    "category": "music",
+    "streams": [
+      "https://vojvodjanski.com/radiosubotica"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "radio-996fm",
+    "name": "Radio 996FM",
+    "category": "music",
+    "streams": [
+      "https://radio.en.rs/radio/8000/radio.mp3"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

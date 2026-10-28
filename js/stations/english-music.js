@@ -726,6 +726,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "where": "US"
+  },
+  {
+    "id": "tmm-1",
+    "name": "TMM 1",
+    "category": "rock",
+    "streams": [
+      "https://listen-msmn.sharp-stream.com/nme1.mp3"
+    ],
+    "added": "2026-10-28",
+    "where": "UK"
+  },
+  {
+    "id": "cbc-music-atlantic-halifax-mp3-stream",
+    "name": "CBC Music Atlantic (Halifax) MP3 Stream",
+    "category": "jazz",
+    "streams": [
+      "https://26183.live.streamtheworld.com/CBH_CBC_SC"
+    ],
+    "added": "2026-10-28",
+    "where": "Canada"
+  },
+  {
+    "id": "hot-gold",
+    "name": "Hot Gold",
+    "category": "pop",
+    "streams": [
+      "https://stream1.hippynet.co.uk/stream/hotgold/dorset"
+    ],
+    "added": "2026-10-28",
+    "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

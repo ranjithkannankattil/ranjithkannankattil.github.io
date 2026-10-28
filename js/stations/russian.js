@@ -152,7 +152,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://chanson.hostingradio.ru:8041/chanson-uncensored256.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "anon-fm",
@@ -673,6 +674,33 @@ window.STATIONS = [
       "https://rfe-ingest.akamaized.net/hls/live/2035254/axia04/playlist.m3u8"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "anison",
+    "name": "Anison动漫音乐台",
+    "category": "music",
+    "streams": [
+      "https://pool.anison.fm:9000/AniSonFM(320)?"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "hit-fm",
+    "name": "HIT FM",
+    "category": "music",
+    "streams": [
+      "https://hitfm.hostingradio.ru/hitfm96.aacp"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "radio-record-ambient",
+    "name": "Radio Record Ambient",
+    "category": "music",
+    "streams": [
+      "https://radiorecord.hostingradio.ru/ambient96.aacp"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

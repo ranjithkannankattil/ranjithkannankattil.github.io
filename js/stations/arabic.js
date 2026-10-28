@@ -248,8 +248,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://broadcast.shoutstream.co.uk:8078/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "mp3quran-main",
@@ -322,7 +321,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.damasradio.fm/radio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-manarat",
@@ -430,7 +430,8 @@ window.STATIONS = [
     "streams": [
       "https://alifalifjobs.com/radio/8000/AlifAlifLive.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "skyrock-casablanca",
@@ -674,6 +675,33 @@ window.STATIONS = [
       "https://media2.streambrothers.com:2020/stream/8194"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "anghamy",
+    "name": "Anghamy",
+    "category": "music",
+    "streams": [
+      "https://radio.avazfarsi.com:8010/radio.mp3"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "sawt-el-ghad-tarab",
+    "name": "Sawt El Ghad - Tarab",
+    "category": "music",
+    "streams": [
+      "https://sawtelghad.org:7007/;"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "station-15",
+    "name": "ذكريات",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/ctmapun6ot5vv"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

@@ -129,7 +129,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/sg6x5m9nviltv"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "prof-k-online-radio",
@@ -301,4 +302,4 @@ window.STATIONS = [
     "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

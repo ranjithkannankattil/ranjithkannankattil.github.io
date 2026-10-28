@@ -540,6 +540,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "where": "Canada"
+  },
+  {
+    "id": "630-ched",
+    "name": "630 CHED",
+    "category": "canada",
+    "streams": [
+      "https://corus.leanstream.co/CHEDAM-MP3"
+    ],
+    "added": "2026-10-28",
+    "where": "Canada"
+  },
+  {
+    "id": "link-fm-rsa-ec",
+    "name": "Link FM (RSA-EC)",
+    "category": "world",
+    "streams": [
+      "https://de2.streamingpulse.com/ssl/LinkFM"
+    ],
+    "added": "2026-10-28",
+    "where": "South Africa"
+  },
+  {
+    "id": "cfrb-news-talk-1010-toronto-on",
+    "name": "CFRB News/Talk 1010 (Toronto, ON)",
+    "category": "canada",
+    "streams": [
+      "https://29324.live.streamtheworld.com/CFRBAMAAC_SC"
+    ],
+    "added": "2026-10-28",
+    "where": "Canada"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

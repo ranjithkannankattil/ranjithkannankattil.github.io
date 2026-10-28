@@ -619,6 +619,33 @@ window.STATIONS = [
       "https://livesptfm.com/SPTFM/Live/chunklist.m3u8"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "radio-cartier-romania",
+    "name": "Radio Cartier Romania",
+    "category": "music",
+    "streams": [
+      "https://live.radiocartier.eu:8048/stream"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "urban-fm",
+    "name": "Urban FM",
+    "category": "music",
+    "streams": [
+      "https://urbanfm.ro:8777/live"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "glasul-nordului-darabani-bt",
+    "name": "Glasul Nordului -Darabani BT",
+    "category": "news",
+    "streams": [
+      "https://ssl.asculta.live/8096/stream"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

@@ -356,7 +356,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -672,6 +673,33 @@ window.STATIONS = [
       "https://stream.expandenarrativa.pt/radio"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "2000-comercial-online-lisboa-portugal",
+    "name": "2000 Comercial Online Lisboa Portugal",
+    "category": "music",
+    "streams": [
+      "https://stream-hls.bauermedia.pt/rcbest2000.aac/playlist.m3u8"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "estacao-diaria-radio-viseu-96-8-fm",
+    "name": "Estação Diária Rádio, Viseu – 96.8 FM",
+    "category": "music",
+    "streams": [
+      "https://centova.radio.com.pt/proxy/430?mp=/stream"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "radio-algoritmo",
+    "name": "Rádio Algoritmo",
+    "category": "music",
+    "streams": [
+      "https://jagsilva.com/stream"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

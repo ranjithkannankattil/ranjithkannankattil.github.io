@@ -241,7 +241,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lb-media.mcot.net/RegionRadio/Loei.stream_aac/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "requestradio-string-alt",
@@ -286,4 +287,4 @@ window.STATIONS = [
     "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

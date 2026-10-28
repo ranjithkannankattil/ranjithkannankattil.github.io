@@ -80,8 +80,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://antares.dribbcast.com/proxy/kpop?mp=/s"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "listen-moe-k-pop",
@@ -242,8 +241,7 @@ window.STATIONS = [
     "streams": [
       "https://antares.dribbcast.com/proxy/apop?mp=/s?"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "fm105-2",
@@ -487,6 +485,33 @@ window.STATIONS = [
       "https://ebsonair.ebs.co.kr/plus3familypc/familypc1m/playlist.m3u8"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "ebs-tv-plus-2",
+    "name": "EBS TV-Plus 2",
+    "category": "music",
+    "streams": [
+      "https://ebsonairios.ebs.co.kr/plus2familypc/familypc1m/playlist.m3u8"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "cnr-8",
+    "name": "CNR-8 民族之声 조선어방송  ",
+    "category": "music",
+    "streams": [
+      "https://satellitepull.cnr.cn/live/wxmzzs/playlist.m3u8?wsSession=a919bd0baf31a1a6f3966f08-174761703245334&wsIPSercert=270c8446fe14303f2433a2f164ccd9e5"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "ebs-tv-2",
+    "name": "EBS TV-2",
+    "category": "music",
+    "streams": [
+      "https://ebsonair.ebs.co.kr/ebs2familypc/familypc1m/playlist.m3u8"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

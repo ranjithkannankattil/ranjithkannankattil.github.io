@@ -668,6 +668,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "where": "UK"
+  },
+  {
+    "id": "chennai-live",
+    "name": "Chennai live",
+    "category": "world",
+    "streams": [
+      "https://c2.radioboss.fm:8332/stream"
+    ],
+    "added": "2026-10-28",
+    "where": "India"
+  },
+  {
+    "id": "gen-x-radio",
+    "name": "Gen X Radio",
+    "category": "uk",
+    "streams": [
+      "https://s2.radio.co/sf25229e16/listen"
+    ],
+    "added": "2026-10-28",
+    "where": "UK"
+  },
+  {
+    "id": "mbc-radio-mauritius",
+    "name": "MBC Radio Mauritius",
+    "category": "world",
+    "streams": [
+      "https://radio.mbconline.xyz/hls/radiomauritus.m3u8"
+    ],
+    "added": "2026-10-28",
+    "where": "Mauritius"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

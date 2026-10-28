@@ -56,7 +56,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "89-4-tamil-fm",
@@ -502,8 +503,7 @@ window.STATIONS = [
     "streams": [
       "https://cast1.my-control-panel.com/proxy/geethan3/stream"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "tamilkaterumbufm",
@@ -684,6 +684,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/dcts7v7sef9uv"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "a9radionewhits",
+    "name": "A9Radionewhits",
+    "category": "music",
+    "streams": [
+      "https://a9newhits-a9media.radioca.st/stream"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "lifefmkarur",
+    "name": "Lifefmkarur",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/k0qrmtts91zuv"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "abinayamfm",
+    "name": "Abinayamfm",
+    "category": "music",
+    "streams": [
+      "https://usa11.fastcast4u.com/proxy/ajaydk?mp=/;"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

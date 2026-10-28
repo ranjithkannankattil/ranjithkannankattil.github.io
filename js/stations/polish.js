@@ -584,6 +584,33 @@ window.STATIONS = [
       "https://zt.cdn.eurozet.pl/ZETPL1.mp3"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "zet-dance",
+    "name": "ZET DANCE",
+    "category": "music",
+    "streams": [
+      "https://pl01.cdn.eurozet.pl/ZETDAN.mp3"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "rmf-maxx-poznan",
+    "name": "RMF MAXX POZNAŃ",
+    "category": "music",
+    "streams": [
+      "https://rs103-krk-cyfronet.rmfstream.pl/MAXXXPOZ"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "zote-przeboje-bydgoszcz",
+    "name": "Złote Przeboje Bydgoszcz",
+    "category": "music",
+    "streams": [
+      "https://radiostream.pl/tuba8902-1.mp3"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

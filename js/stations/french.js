@@ -626,6 +626,33 @@ window.STATIONS = [
       "https://icecast.radiofrance.fr/francemusiquebaroque-hifi.aac"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "latina-salsa",
+    "name": "Latina Salsa",
+    "category": "music",
+    "streams": [
+      "https://latinasalsa.ice.infomaniak.ch/latinasalsa.mp3"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "fip-rock",
+    "name": "FIP Rock",
+    "category": "music",
+    "streams": [
+      "https://icecast.radiofrance.fr/fiprock-hifi.aac"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "latina",
+    "name": "Latina",
+    "category": "music",
+    "streams": [
+      "https://start-latina.ice.infomaniak.ch/start-latina-high.mp3"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

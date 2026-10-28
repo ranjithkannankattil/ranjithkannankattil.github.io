@@ -201,7 +201,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-17",
@@ -610,6 +611,33 @@ window.STATIONS = [
       "https://stream.hndt.com/live/yinyue/playlist.m3u8"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "fm94-7",
+    "name": "加拿大中文电台FM94.7",
+    "category": "music",
+    "streams": [
+      "https://5b2959fe11444.streamlock.net/radio/fm947.stream/playlist.m3u8"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "russian-chinese-music-radio",
+    "name": "Russian Chinese Music Radio 俄中音乐台",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/txtltqtgns3vv"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "fm94-7-2",
+    "name": "上海经典音乐广播 FM94.7",
+    "category": "music",
+    "streams": [
+      "https://lhttp-hw.qtfm.cn/live/267/64k.mp3"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

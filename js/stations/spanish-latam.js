@@ -675,6 +675,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/7ans8mgv2ehvv"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "radio-boing-97-3-rosario",
+    "name": "Radio Boing 97.3 Rosario",
+    "category": "music",
+    "streams": [
+      "https://streaming.redboing.com/radio/8000/radio.aac"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "el-sol-medellin-107-9-fm",
+    "name": "El Sol (Medellín) 107.9 FM",
+    "category": "music",
+    "streams": [
+      "https://us-b4-p-e-qg12-audio.cdn.mdstrm.com/live-audio-aw/632c9d30aa9ace684913b853"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "blue-100-7-fm",
+    "name": "Blue 100.7 FM",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/BLUE_FM_100_7AAC.aac"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

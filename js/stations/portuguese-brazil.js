@@ -682,6 +682,33 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/DISNEY_BRA_SP.mp3"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "pool-fm",
+    "name": "Pool FM",
+    "category": "music",
+    "streams": [
+      "https://radios.poolwebwork.com.br/8010/stream"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "elektra-radio",
+    "name": "ELEKTRA RADIO",
+    "category": "music",
+    "streams": [
+      "https://cast3.hoost.com.br:8952/stream"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "radio-bandnews-rj-90-3-fm",
+    "name": "Rádio BandNews RJ 90.3 FM",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/BANDNEWSFM_RJAAC.aac?"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

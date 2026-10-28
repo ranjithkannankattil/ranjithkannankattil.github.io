@@ -178,8 +178,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://server7.streamserver24.com/proxy/turkiyemfm?mp=/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "90-lar-turkce-pop",
@@ -648,6 +647,33 @@ window.STATIONS = [
       "https://radyodinle.cansuyufm.com/17175/stream;"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "dinamo-fm-smog",
+    "name": "dinamo.fm smog",
+    "category": "music",
+    "streams": [
+      "https://channels.dinamo.fm/smog-mp3"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "radyo-gonul-msralar",
+    "name": "Radyo Gönül Mısraları",
+    "category": "music",
+    "streams": [
+      "https://radyo.gonulmisralari.com/listen/canli/radio.mp3"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "antakya-renk-fm-hatay",
+    "name": "ANTAKYA RENK FM HATAY",
+    "category": "music",
+    "streams": [
+      "https://radyo.yayindakiler.com:3016/renk"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

@@ -449,6 +449,33 @@ window.STATIONS = [
       "https://a9.asurahosting.com:7110/radio.mp3"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "hrt-radio-knin",
+    "name": "HRT Radio Knin",
+    "category": "music",
+    "streams": [
+      "https://28033.live.streamtheworld.com/KNINAAC_SC"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "radio-sunce",
+    "name": "Radio Sunce",
+    "category": "music",
+    "streams": [
+      "https://shoutcast.pondi.hr:8002/;*.mp3"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "hrt-glas-hrvatske",
+    "name": "HRT Glas Hrvatske",
+    "category": "music",
+    "streams": [
+      "https://25693.live.streamtheworld.com/VOICEOFCROATIAAAC_SC"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

@@ -129,8 +129,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://onair.armisa.it/listen/armisa/radio.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "virgin-radio-classic-rock",
@@ -616,6 +615,33 @@ window.STATIONS = [
       "https://m100.newradio.it/m100-64"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "italian-radio-only-romantic-italian-musi",
+    "name": "ITALIAN RADIO - Only (romantic) Italian Music",
+    "category": "music",
+    "streams": [
+      "https://italianradio.streamingmedia.it/play"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "radio-monte-carlo-fm",
+    "name": "Radio Monte Carlo FM",
+    "category": "music",
+    "streams": [
+      "https://icy.unitedradio.it/RMC.aac"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "italia-italia-70",
+    "name": "ITALIA Italia 70",
+    "category": "music",
+    "streams": [
+      "https://icy.unitedradio.it/um020.mp3"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

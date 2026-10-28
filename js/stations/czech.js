@@ -656,6 +656,33 @@ window.STATIONS = [
       "https://radio.chatradio.cz/chatradio"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "hitradio-fm",
+    "name": "Hitrádio FM",
+    "category": "music",
+    "streams": [
+      "https://ice.abradio.cz/hitradiofm128.mp3"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "radio7",
+    "name": "Radio7",
+    "category": "devotional",
+    "streams": [
+      "https://icecast8.play.cz/radio7-128.mp3"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "frekvence-1-youradio-ceskoslovenske-hity",
+    "name": "Frekvence 1 - Youradio Československé hity",
+    "category": "music",
+    "streams": [
+      "https://ice.actve.net/web-e2-csweb"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

@@ -523,7 +523,17 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/60cb36c29heuv"
     ],
+    "added": "2026-10-28",
+    "offline": true
+  },
+  {
+    "id": "105-9-energy-fm-dwla",
+    "name": "105.9 Energy FM - DWLA",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/dnddzf0osc1uv"
+    ],
     "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

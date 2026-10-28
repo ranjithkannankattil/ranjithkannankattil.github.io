@@ -152,8 +152,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s5.radioforge.com:7908/live?n=77357"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "24-breaking-live",
@@ -233,7 +232,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.brokenbeats.net/tune"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-shanson",
@@ -655,6 +655,33 @@ window.STATIONS = [
       "https://radio.social.net.ua/live.mp3"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "station-14",
+    "name": "Радіо Українська Пісня",
+    "category": "music",
+    "streams": [
+      "https://listen2.myradio24.com/50904"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "station-15",
+    "name": "Радіо Ми-Україна",
+    "category": "news",
+    "streams": [
+      "https://cast.mediaonline.net.ua/wau320"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "the-west-pole-radio",
+    "name": "The West Pole Radio",
+    "category": "music",
+    "streams": [
+      "https://online.z-polus.info/hq"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

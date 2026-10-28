@@ -583,6 +583,33 @@ window.STATIONS = [
       "https://mediagw.e-tiger.net/stream/zc15?ver=58649"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "coolfm-hazai-kedvencek",
+    "name": "COOLFM Hazai Kedvencek",
+    "category": "music",
+    "streams": [
+      "https://mediagw.e-tiger.net/stream/zc19"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "radio-gaga-haromszek",
+    "name": "Rádió GaGa Háromszék",
+    "category": "music",
+    "streams": [
+      "https://stream.igenbiza.com/sze"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "szent-korona-radio-forras",
+    "name": "Szent Korona Rádió - Forrás",
+    "category": "music",
+    "streams": [
+      "https://szkrcast.ddns.net/radio/8010/radio.mp3"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

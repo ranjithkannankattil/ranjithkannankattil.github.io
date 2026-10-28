@@ -236,8 +236,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ztnr.rtve.es/ztnr/1694255.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "esradio-principal",
@@ -677,6 +676,33 @@ window.STATIONS = [
       "https://intereconomia.emitironline.com/"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "a-punt",
+    "name": "À Punt",
+    "category": "music",
+    "streams": [
+      "https://fastly.live.brightcove.com/1854461588069069227/eu-central-1/6057955885001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoiZWFxNWh4LmVncmVzcy53YzQ3bTEiLCJhY2NvdW50X2lkIjoiNjA1Nzk1NTg4NTAwMSIsImVobiI6ImZhc3RseS5saXZlLmJyaWdodGNvdmUuY29tIiwiaXNzIjoiYmxpdmUtcGxheWJhY2stc291cmNlLWFwaSIsInN1YiI6InBhdGhtYXB0b2tlbiIsImF1ZCI6WyI2MDU3OTU1ODg1MDAxIl0sImp0aSI6IjE4NTQ0NjE1ODgwNjkwNjkyMjcifQ.RKqA-z0MRntFVph2G3tE9YzBp7vfdMXcynOKpyqvZTg/playlist-hls-dvr.m3u8"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "digital-hits-fm",
+    "name": "Digital Hits FM",
+    "category": "music",
+    "streams": [
+      "https://dhits.frilab.com:8443/dhits"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "onda-cero-valencia",
+    "name": "Onda Cero Valencia",
+    "category": "news",
+    "streams": [
+      "https://atres-live.ondacero.es/live/delegaciones/oc/valencia/master.m3u8"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

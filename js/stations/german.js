@@ -679,6 +679,33 @@ window.STATIONS = [
       "https://dispatcher.rndfnk.com/hr/hr1/live/mp3/128/stream.mp3"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "technolovers-edm",
+    "name": "Technolovers EDM",
+    "category": "music",
+    "streams": [
+      "https://stream.technolovers.fm/edm?ref=radiobrowser"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "0-n-70s-on-radio",
+    "name": "0 N - 70s on Radio",
+    "category": "music",
+    "streams": [
+      "https://0n-70s.radionetz.de/0n-70s.mp3"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "radio-swiss-classic-german",
+    "name": "Radio Swiss Classic German",
+    "category": "music",
+    "streams": [
+      "https://stream.srg-ssr.ch/m/rsc_de/mp3_128"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

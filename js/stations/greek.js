@@ -700,6 +700,33 @@ window.STATIONS = [
       "https://eu7.fastcast4u.com/proxy/sohosfm?mp=/1"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "proto-live",
+    "name": "Proto Live",
+    "category": "music",
+    "streams": [
+      "https://r1.cloudskep.com/cybcr/cybc1/icecast.audio"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "rainbow-89-pop",
+    "name": "Rainbow 89 Pop",
+    "category": "music",
+    "streams": [
+      "https://n05.radiojar.com/ztqh29c8ktuvv?rj-ttl=5&rj-tok=AAABjW_eWdoAP4LPpPaNlupsMA"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "corfu-dee-jay-97-5",
+    "name": "Corfu Dee Jay 97.5",
+    "category": "music",
+    "streams": [
+      "https://sh.onweb.gr:7083/stream?type=http&nocache=35812"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

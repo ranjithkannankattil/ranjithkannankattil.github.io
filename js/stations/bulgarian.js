@@ -48,8 +48,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nova-radio.neterra.tv/veselinaretro"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "badrock-hard-heavy",
@@ -621,6 +620,33 @@ window.STATIONS = [
       "https://s10.webradio-hosting.com/proxy/fredradiobg/stream"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "radio-fresh-ruse-93-6-fm",
+    "name": "Radio Fresh -Ruse 93,6 FM",
+    "category": "news",
+    "streams": [
+      "https://streamer2.atlantis.bg:8443/fresh"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "radio-1-rock",
+    "name": "Radio 1 Rock",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_1_ROCKAAC_H.aac"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "97-4-fm",
+    "name": "Радио БГ Русе 97.4 FM",
+    "category": "music",
+    "streams": [
+      "https://27913.live.streamtheworld.com/BG_RADIOAAC_H.aac"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

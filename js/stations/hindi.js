@@ -512,7 +512,8 @@ window.STATIONS = [
     "streams": [
       "https://streamasiacdn.atc-labs.com/gyansthali.aac"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "2b-radio-sangam-devi-maa",
@@ -665,7 +666,35 @@ window.STATIONS = [
     "streams": [
       "https://usa15.fastcast4u.com/proxy/hitsfm912?mp=/1"
     ],
+    "added": "2026-10-28",
+    "offline": true
+  },
+  {
+    "id": "mukesh-radio",
+    "name": "Mukesh Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/mrcz5sus1p8uv"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "radio-asikakana",
+    "name": "Radio asikakana",
+    "category": "music",
+    "streams": [
+      "https://mars.streamerr.co/8154/stream"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "bollywood-sonu-nigam",
+    "name": "bollywood Sonu nigam",
+    "category": "music",
+    "streams": [
+      "https://streaming.exclusive.radio/uber/bollywoodsonunigam/icecast.audio"
+    ],
     "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

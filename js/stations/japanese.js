@@ -177,8 +177,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://antares.dribbcast.com/proxy/jpop?mp=/s"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "neuro-21-station",
@@ -218,8 +217,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://antares.dribbcast.com/proxy/apop?mp=/s"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "real-love-music-radio-future-funk",
@@ -360,8 +358,7 @@ window.STATIONS = [
     "streams": [
       "https://antares.dribbcast.com/proxy/apop?mp=/s?"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "bbn-japanese",
@@ -596,6 +593,33 @@ window.STATIONS = [
       "https://radio.shadowfr69.eu/mp3"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "free-fm-x-mas",
+    "name": "Free FM X-Mas",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/h60er015v68uv"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "radio-doki",
+    "name": "Radio Doki",
+    "category": "music",
+    "streams": [
+      "https://kuronegai.radioca.st/stream"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "asia-dream-radio-japan-hits",
+    "name": "Asia DREAM Radio - Japan Hits",
+    "category": "music",
+    "streams": [
+      "https://quincy.torontocast.com:2020/;"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";

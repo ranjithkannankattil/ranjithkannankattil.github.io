@@ -177,8 +177,7 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://enacast.com/radioabadiademontserrat/streams/HD"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "antena-2000",
@@ -484,8 +483,7 @@ window.STATIONS = [
     "streams": [
       "https://antares.dribbcast.com/proxy/espluguesfm?mp=/stream"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "radio-sitges",
@@ -630,7 +628,8 @@ window.STATIONS = [
     "streams": [
       "https://radiolom.es:8800/;stream.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "offline": true
   },
   {
     "id": "radio-ponts",
@@ -651,4 +650,4 @@ window.STATIONS = [
     "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T06:41Z";
+window.STATIONS_CHECKED = "2026-10-28T19:27Z";
