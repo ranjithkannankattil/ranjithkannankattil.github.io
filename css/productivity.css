@@ -28,6 +28,10 @@ body[data-section="productivity"] button{ font:inherit; color:inherit; cursor:po
 .tool-switch-pop a span{ font-family:var(--f-display); font-weight:600; font-size:.93rem; }
 .tool-switch-pop a[aria-current="page"]{ background:var(--accent-soft); box-shadow:inset 3px 0 0 var(--accent); }
 .tool-switch-pop .tool-switch-all{ border-top:1px solid var(--line); margin-top:.35rem; padding-top:.65rem; font-family:var(--f-mono); font-size:.68rem; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); }
+@media (max-width:700px){
+  /* the switcher wraps under the breadcrumb on the left, so its menu opens rightwards */
+  .tool-switch-pop{ left:0; right:auto; width:min(20rem, 88vw); }
+}
 @media (max-width:600px){
   .tool-nav{ align-items:flex-start; }
   .tool-crumb em{ display:block; margin-top:.25rem; }
