@@ -168,8 +168,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://svara-stream.radioddns.net/yogyakarta_voksradio"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "klcbs-new-age",
@@ -209,8 +208,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:9154/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radiks-fm-semarang",
@@ -324,8 +322,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/14/9314/rrisngliatpro1.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "mosh-head-black-metal-id",
@@ -460,8 +457,7 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:9622/stream"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "rri-pro1-banjarmasin",
@@ -551,8 +547,7 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com/8228/;radio"
     ],
-    "added": "2026-10-26",
-    "offline": true
+    "added": "2026-10-26"
   },
   {
     "id": "bandung-death-metal-syndicate",
@@ -579,8 +574,7 @@ window.STATIONS = [
     "streams": [
       "https://server.radioimeldafm.co.id/radio/8010/swarasemarang"
     ],
-    "added": "2026-10-27",
-    "offline": true
+    "added": "2026-10-27"
   },
   {
     "id": "radio-indah-siar-cirebon",
@@ -626,6 +620,33 @@ window.STATIONS = [
       "https://i.klikhost.com:9610/stream"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "rri-pro-1-kupang",
+    "name": "RRI Pro 1 - Kupang",
+    "category": "news",
+    "streams": [
+      "https://stream-node2.rri.co.id/streaming/13/9213/rrikupangpro1.mp3"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "trax-fm-semarang",
+    "name": "trax fm semarang",
+    "category": "music",
+    "streams": [
+      "https://n0f.radiojar.com/fr9zqhv80k8uv"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "rri-pro-1-bandung",
+    "name": "RRI Pro 1 Bandung",
+    "category": "news",
+    "streams": [
+      "https://stream-node0.rri.co.id/streaming/15/9015/rribandungpro1.mp3"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

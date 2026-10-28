@@ -557,6 +557,33 @@ window.STATIONS = [
       "https://zt02.cdn.eurozet.pl/ZET090.mp3"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "rmf-classic-rock",
+    "name": "RMF Classic Rock",
+    "category": "music",
+    "streams": [
+      "https://rs201-krk.rmfstream.pl/rmf_classic_rock"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "rmf-fm-128-kbps",
+    "name": "RMF FM 128 Kbps",
+    "category": "music",
+    "streams": [
+      "https://rs101-krk.rmfstream.pl/rmf_fm"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "zet-po-polsku",
+    "name": "ZET Po Polsku",
+    "category": "music",
+    "streams": [
+      "https://zt.cdn.eurozet.pl/ZETPL1.mp3"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

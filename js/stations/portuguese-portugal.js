@@ -92,8 +92,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "m80-radio-ballads",
@@ -357,8 +356,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -647,6 +645,33 @@ window.STATIONS = [
       "https://sp0.redeaudio.com/8028/stream/"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "radio-comercial-dance",
+    "name": "Rádio Comercial Dance",
+    "category": "music",
+    "streams": [
+      "https://stream-icy.bauermedia.pt/rcdance.aac"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "radio-maria-portugal",
+    "name": "Radio Maria Portugal",
+    "category": "devotional",
+    "streams": [
+      "https://dreamsiteradiocp5.com/proxy/rmportugal1?mp=/stream"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "radio-medio-tejo",
+    "name": "Rádio Médio Tejo",
+    "category": "music",
+    "streams": [
+      "https://stream.expandenarrativa.pt/radio"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

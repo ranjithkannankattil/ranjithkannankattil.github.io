@@ -178,7 +178,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://server7.streamserver24.com/proxy/turkiyemfm?mp=/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "90-lar-turkce-pop",
@@ -620,6 +621,33 @@ window.STATIONS = [
       "https://live.radyositesihazir.com:8056/stream"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "radyo-nida",
+    "name": "Radyo Nida",
+    "category": "devotional",
+    "streams": [
+      "https://anadolu.liderhost.com.tr/8106/stream"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "koroglu-fm",
+    "name": "Köroğlu FM",
+    "category": "music",
+    "streams": [
+      "https://yayin.turkhosted.com:6068/stream?/;stream.mp3"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "mekke-fm",
+    "name": "Mekke Fm",
+    "category": "devotional",
+    "streams": [
+      "https://radyodinle.cansuyufm.com/17175/stream;"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

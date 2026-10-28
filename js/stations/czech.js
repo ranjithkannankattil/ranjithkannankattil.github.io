@@ -629,6 +629,33 @@ window.STATIONS = [
       "https://stream.jc1.cz/hls/jc1.m3u8"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "color-music-radio",
+    "name": "Color Music Radio",
+    "category": "music",
+    "streams": [
+      "https://icecast6.play.cz/color192.mp3"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "radio-bonton",
+    "name": "Rádio Bonton",
+    "category": "music",
+    "streams": [
+      "https://ice.actve.net/fm-bonton-128"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "chat-rdio",
+    "name": "Chat R�dio",
+    "category": "music",
+    "streams": [
+      "https://radio.chatradio.cz/chatradio"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

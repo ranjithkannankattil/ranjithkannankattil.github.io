@@ -510,6 +510,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "where": "China"
+  },
+  {
+    "id": "naija-fm-102-7-lagos",
+    "name": "Naija FM 102.7 Lagos",
+    "category": "world",
+    "streams": [
+      "https://naijafmlagos-atunwadigital.streamguys1.com/naijafmlagos/playlist.m3u8"
+    ],
+    "added": "2026-10-28",
+    "where": "Nigeria"
+  },
+  {
+    "id": "70-s-80-s-90-s-riw-vintage-channel",
+    "name": "70's 80's 90's Riw Vintage Channel",
+    "category": "world",
+    "streams": [
+      "https://stream.laut.fm/70s-80s-90s-riw-vintage-channel"
+    ],
+    "added": "2026-10-28",
+    "where": "Germany"
+  },
+  {
+    "id": "cbc-radio-one-toronto-on",
+    "name": "CBC Radio One - Toronto, ON",
+    "category": "canada",
+    "streams": [
+      "https://17813.live.streamtheworld.com/CBLAFM_CBC_SC"
+    ],
+    "added": "2026-10-28",
+    "where": "Canada"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

@@ -638,6 +638,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "where": "Canada"
+  },
+  {
+    "id": "radiostorm-comedy-104",
+    "name": "Radiostorm - Comedy 104",
+    "category": "comedy",
+    "streams": [
+      "https://streaming.live365.com/b42761_64mp3"
+    ],
+    "added": "2026-10-28",
+    "where": "US"
+  },
+  {
+    "id": "radio-vaticana-english",
+    "name": "Radio Vaticana English",
+    "category": "world",
+    "streams": [
+      "https://radio.vaticannews.va/stream-en"
+    ],
+    "added": "2026-10-28",
+    "where": "The Holy See"
+  },
+  {
+    "id": "rokit-radio-classic-old-time-radio-shows",
+    "name": "ROKit Radio : Classic Old Time Radio Shows",
+    "category": "comedy",
+    "streams": [
+      "https://streaming04.liveboxstream.uk/proxy/roksta18/stream"
+    ],
+    "added": "2026-10-28",
+    "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

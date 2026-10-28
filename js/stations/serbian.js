@@ -618,6 +618,33 @@ window.STATIONS = [
       "https://centova.dukahosting.com/proxy/021disco/stream"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "plus-radio-hit",
+    "name": "Plus Radio Hit",
+    "category": "music",
+    "streams": [
+      "https://26343.live.streamtheworld.com/SAM10AAC060_SC"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "yu-novi-pazar",
+    "name": "Yu Novi Pazar",
+    "category": "music",
+    "streams": [
+      "https://yuradio.ipradio.rs:9036/;"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "klas-radio",
+    "name": "KLAS Radio",
+    "category": "music",
+    "streams": [
+      "https://media.srb-streaming.com:9014/stream"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

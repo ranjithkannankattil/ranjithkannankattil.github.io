@@ -236,7 +236,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ztnr.rtve.es/ztnr/1694255.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "esradio-principal",
@@ -649,6 +650,33 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SER_ASO_ZAMORA.mp3"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "cadena-ser-radio-valencia",
+    "name": "Cadena SER - Radio Valencia",
+    "category": "news",
+    "streams": [
+      "https://20043.live.streamtheworld.com/SER_VALENCIA_SC"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "dark-city-signal",
+    "name": "Dark City Signal",
+    "category": "music",
+    "streams": [
+      "https://audiostream.hkprime.com/stream"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "radio-intereconomia",
+    "name": "Radio Intereconomía",
+    "category": "news",
+    "streams": [
+      "https://intereconomia.emitironline.com/"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

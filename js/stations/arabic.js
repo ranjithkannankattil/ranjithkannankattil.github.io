@@ -647,6 +647,33 @@ window.STATIONS = [
       "https://uradio-aac.ice.infomaniak.ch/uradio.aac"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "mx2",
+    "name": "_MX2✨",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/66gp9qukxaquv"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "a-shams",
+    "name": "اذاعة الشمس - A-Shams",
+    "category": "music",
+    "streams": [
+      "https://cdna.streamgates.net/Ashams/Live/icecast.audio"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "radio-liban",
+    "name": "Radio Liban",
+    "category": "news",
+    "streams": [
+      "https://media2.streambrothers.com:2020/stream/8194"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

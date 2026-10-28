@@ -639,6 +639,33 @@ window.STATIONS = [
       "https://s6.yesstreaming.net/proxy/john1237?mp=/live"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "lyca-gold",
+    "name": "Lyca Gold",
+    "category": "music",
+    "streams": [
+      "https://listen-lycaradio.sharp-stream.com/1035.mp3"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "bolly-102-9-fm",
+    "name": "Bolly 102.9 FM",
+    "category": "music",
+    "streams": [
+      "https://ice6.securenetsystems.net/INTRADIO?type=.mp3"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "hits-fm-91-2",
+    "name": "Hits FM 91.2",
+    "category": "music",
+    "streams": [
+      "https://usa15.fastcast4u.com/proxy/hitsfm912?mp=/1"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

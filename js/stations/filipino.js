@@ -367,6 +367,7 @@ window.STATIONS = [
     "name": "Star FM 92.7 Pampanga",
     "category": "news",
     "streams": [
+      "https://stream-13.zeno.fm/g1pmt17nz9duv",
       "https://stream.zeno.fm/g1pmt17nz9duv"
     ],
     "added": "2026-10-23"
@@ -514,6 +515,15 @@ window.STATIONS = [
       "https://s5.radio.co/s16a1d562a/listen"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "star-fm-95-5-cebu",
+    "name": "Star FM 95.5 Cebu",
+    "category": "news",
+    "streams": [
+      "https://stream.zeno.fm/60cb36c29heuv"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

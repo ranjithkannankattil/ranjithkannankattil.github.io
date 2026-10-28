@@ -129,7 +129,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://onair.armisa.it/listen/armisa/radio.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "virgin-radio-classic-rock",
@@ -588,6 +589,33 @@ window.STATIONS = [
       "https://icy.unitedradio.it/105Zoo.mp3"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "radio-romanista",
+    "name": "Radio Romanista",
+    "category": "news",
+    "streams": [
+      "https://romanista.newradio.it/stream"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "radio-sei-italia",
+    "name": "Radio Sei (Italia)",
+    "category": "news",
+    "streams": [
+      "https://icecast.ithost.it/radiosei.ogg"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "globo-vintage",
+    "name": "Globo Vintage",
+    "category": "music",
+    "streams": [
+      "https://m100.newradio.it/m100-64"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

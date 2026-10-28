@@ -98,8 +98,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/5d9989b5189a8f4a/5d9989b5189a8f4a.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "akashvani-tirupati",
@@ -136,6 +135,24 @@ window.STATIONS = [
       "https://radio.wavespb.com/live/b11784e3b37b7620/b11784e3b37b7620.m3u8"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "akashvani-visakhapatnam",
+    "name": "Akashvani Visakhapatnam",
+    "category": "news",
+    "streams": [
+      "https://radio.wavespb.com/live/8362d532bd498fd0/8362d532bd498fd0.m3u8"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "fm-simhapuri-nellore",
+    "name": "FM Simhapuri Nellore",
+    "category": "music",
+    "streams": [
+      "https://radio.wavespb.com/live/8bc9175bb717c13b/8bc9175bb717c13b.m3u8"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

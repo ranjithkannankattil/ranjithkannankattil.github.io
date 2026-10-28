@@ -241,7 +241,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://onlineradio.cfd/listen/muzeradio/radio.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "pri-radio",
@@ -475,8 +476,7 @@ window.STATIONS = [
     "streams": [
       "https://rpn.bozztv.com/radio/Med7-RadioTirana/icecast.audio"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "paper-radio",
@@ -506,4 +506,4 @@ window.STATIONS = [
     "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

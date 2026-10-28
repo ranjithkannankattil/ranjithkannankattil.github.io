@@ -652,6 +652,33 @@ window.STATIONS = [
       "https://stream.srg-ssr.ch/m/drs3/aacp_96"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "mdr-aktuell",
+    "name": "MDR Aktuell",
+    "category": "news",
+    "streams": [
+      "https://mdr-284340-0.sslcast.mdr.de/mdr/284340/0/mp3/high/stream.mp3"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "mdr-jump",
+    "name": "MDR Jump",
+    "category": "music",
+    "streams": [
+      "https://mdr-284320-0.sslcast.mdr.de/mdr/284320/0/mp3/high/stream.mp3"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "hr1",
+    "name": "HR1",
+    "category": "music",
+    "streams": [
+      "https://dispatcher.rndfnk.com/hr/hr1/live/mp3/128/stream.mp3"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

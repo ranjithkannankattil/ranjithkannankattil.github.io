@@ -80,7 +80,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://antares.dribbcast.com/proxy/kpop?mp=/s"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "listen-moe-k-pop",
@@ -229,10 +230,10 @@ window.STATIONS = [
     "name": "MBC FM",
     "category": "music",
     "streams": [
+      "https://minisw.imbc.com/dsfm/_definst_/sfm.stream/playlist.m3u8?_lsu_sa_=6C213512E3C43554E848B5673E913F49B59D3FC5B40AD2F731504DaDE68337067Ca0335932D2E64250DC392137b981CF67A36F3A6FEBBF4E377CAE80B9C5D70FC366EDDFB9A480245DF74EE8AEA1B20F31FD6B1C3F0D5138FAB535560F5C3DF5001B4C9A10D1D5DCD4FEF65BD33D045B",
       "https://minisw.imbc.com/dsfm/_definst_/sfm.stream/playlist.m3u8?_lsu_sa_=68919E1363883D34B742559934D1FF47259F32B5C000821F3840ABa5A6AF3726A6a663783BD25A45F0BF34A1B6bD71D5C345F4F61278F2959F0858196353AF9407330DA027CA0C6978619518ADDCED4D7A1637155985D2ECC6AAF778E76AED6B790730144F878DD339BEE1A3D0FAB467"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "big-b-radio-asian-pop",
@@ -241,7 +242,8 @@ window.STATIONS = [
     "streams": [
       "https://antares.dribbcast.com/proxy/apop?mp=/s?"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "fm105-2",
@@ -458,6 +460,33 @@ window.STATIONS = [
       "https://satellitepull.cnr.cn/live/wx32hljcygb/playlist.m3u8?wsSession=a919bd0baf31a1a6f3966f08-174778330216034&wsIPSercert=2683acdad9e689f89519c7ec3f7e218b"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "whrw-binghamton-90-5-fm",
+    "name": "WHRW Binghamton 90.5 FM",
+    "category": "music",
+    "streams": [
+      "https://stream.whrwfm.org/new"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "europa-plus-k-pop",
+    "name": "Europa Plus K-Pop",
+    "category": "music",
+    "streams": [
+      "https://hls-01-europaplus-kpop.emgsound.ru/europaplus-kpop/112/playlist.m3u8"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "ebs-tv-e",
+    "name": "EBS TV-e",
+    "category": "music",
+    "streams": [
+      "https://ebsonair.ebs.co.kr/plus3familypc/familypc1m/playlist.m3u8"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

@@ -673,6 +673,33 @@ window.STATIONS = [
       "https://netradio.live24.gr/republicthess"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "1st-greek-folk-flac-radio-lossless",
+    "name": "1st Greek Folk FLAC Radio Lossless",
+    "category": "music",
+    "streams": [
+      "https://stream.newageradio.gr/listen/folk_gr/radio.flac"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "1st-greek-new-age-flac-radio",
+    "name": "1st Greek New Age FLAC Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.newageradio.gr/listen/hq/radio.flac"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "sohos-88-7",
+    "name": "Sohos 88.7",
+    "category": "music",
+    "streams": [
+      "https://eu7.fastcast4u.com/proxy/sohosfm?mp=/1"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

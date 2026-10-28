@@ -201,8 +201,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-17",
@@ -584,6 +583,33 @@ window.STATIONS = [
       "https://satellitepull.cnr.cn/live/wxzhzs/playlist.m3u8?wsSession=c650605f64c6488d38b66982-174761774475052&wsIPSercert=270c8446fe14303f2433a2f164ccd9e5"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "asiafm-3",
+    "name": "AsiaFM亚洲经典台",
+    "category": "music",
+    "streams": [
+      "https://lhttp.qingting.fm/live/5021912/64k.mp3"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "needs-radio",
+    "name": "Needs Radio 全球華語廣播網",
+    "category": "music",
+    "streams": [
+      "https://cdn280.ccdntech.com/live-http/_definst_/vod280_Live/needs/chunklist.m3u8"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "station-35",
+    "name": "河南音乐广播",
+    "category": "music",
+    "streams": [
+      "https://stream.hndt.com/live/yinyue/playlist.m3u8"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

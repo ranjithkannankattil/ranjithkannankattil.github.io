@@ -392,6 +392,7 @@ window.STATIONS = [
     "name": "Radio Panamericana",
     "category": "news",
     "streams": [
+      "https://mdstrm.com/audio/6598b62dded1380470f4e539/icecast.audio",
       "https://stream.zeno.fm/pnwpbyfambruv"
     ],
     "added": "2026-10-23"
@@ -647,6 +648,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/e4auhdgm6cquv"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "love-fm-all-you-need-is-love",
+    "name": "LOVE FM: All You Need Is... Love",
+    "category": "music",
+    "streams": [
+      "https://mdstrm.com/audio/66a01759c5aa2b85d66b5933/live.m3u8"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "radio-canela-pichincha-106-5-fm",
+    "name": "Radio Canela Pichincha 106.5 FM",
+    "category": "music",
+    "streams": [
+      "https://canelaradio.makrodigital.com/stream/canelaradioquito"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "baladas-rs",
+    "name": "Baladas Rs",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/7ans8mgv2ehvv"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

@@ -502,7 +502,8 @@ window.STATIONS = [
     "streams": [
       "https://cast1.my-control-panel.com/proxy/geethan3/stream"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "tamilkaterumbufm",
@@ -656,6 +657,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/bfh4ywts2f8uv"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "arumbu-fm",
+    "name": "Arumbu Fm",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/22db1xmde2zuv"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "thayagam-tamil-radio",
+    "name": "Thayagam Tamil Radio",
+    "category": "music",
+    "streams": [
+      "https://s3.yesstreaming.net:17045/stream"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "valipokan-fm",
+    "name": "Valipokan Fm",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/dcts7v7sef9uv"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

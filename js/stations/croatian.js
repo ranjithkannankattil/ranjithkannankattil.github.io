@@ -193,8 +193,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.otvoreni.hr/hot"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "prolaznik-evergreen-lepoglava",
@@ -423,6 +422,33 @@ window.STATIONS = [
       "https://ec2s.crolive.com.hr:1630/stream"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "hrt-hr-3-treci-program",
+    "name": "HRT HR 3 - Treći program",
+    "category": "music",
+    "streams": [
+      "https://25443.live.streamtheworld.com/PROGRAM3AAC_SC"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "hkr",
+    "name": "HKR",
+    "category": "devotional",
+    "streams": [
+      "https://stream.hkr.hr:8000/hkr.mp3"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "hrvatski-radio-frankfurt",
+    "name": "Hrvatski Radio Frankfurt",
+    "category": "music",
+    "streams": [
+      "https://a9.asurahosting.com:7110/radio.mp3"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

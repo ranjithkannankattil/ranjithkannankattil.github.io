@@ -646,6 +646,33 @@ window.STATIONS = [
       "https://srv01.gpmradio.ru/stream/pro/aac/64/115"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "russian-chinese-music-radio",
+    "name": "Russian Chinese Music Radio 俄中音乐台",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/txtltqtgns3vv"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "maximum",
+    "name": "Радио Maximum",
+    "category": "music",
+    "streams": [
+      "https://maximum.hostingradio.ru/maximum128.mp3"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "station-27",
+    "name": "Свобода",
+    "category": "news",
+    "streams": [
+      "https://rfe-ingest.akamaized.net/hls/live/2035254/axia04/playlist.m3u8"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

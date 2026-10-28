@@ -599,6 +599,33 @@ window.STATIONS = [
       "https://icecast.radiofrance.fr/fipworld-hifi.aac"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "hit-radio-morocco",
+    "name": "Hit Radio (Morocco)",
+    "category": "music",
+    "streams": [
+      "https://hitradio-maroc.ice.infomaniak.ch/hitradio-maroc-128.mp3"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "innovation-fm",
+    "name": "Innovation FM",
+    "category": "news",
+    "streams": [
+      "https://radio.fdvi.org/live"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "france-musique-la-baroque",
+    "name": "France Musique La Baroque",
+    "category": "music",
+    "streams": [
+      "https://icecast.radiofrance.fr/francemusiquebaroque-hifi.aac"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

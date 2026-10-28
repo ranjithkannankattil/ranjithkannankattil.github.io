@@ -128,8 +128,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_valentino.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-rujnica-zavidovici",
@@ -368,6 +367,15 @@ window.STATIONS = [
       "https://stream.zeno.fm/q7300aptbwzuv"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "radio-usk-2",
+    "name": "Radio USK 2",
+    "category": "music",
+    "streams": [
+      "https://radiousk2.radioca.st/;"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

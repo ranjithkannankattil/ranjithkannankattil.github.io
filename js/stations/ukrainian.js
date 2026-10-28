@@ -152,7 +152,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s5.radioforge.com:7908/live?n=77357"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "24-breaking-live",
@@ -296,8 +297,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://noasrv.caster.fm:10001/live"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "fm-3",
@@ -628,6 +628,33 @@ window.STATIONS = [
       "https://cast.megapolis.fm/listen/kryvyi_rih/radio.mp3"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "7-rays-radio",
+    "name": "7 Rays Radio",
+    "category": "music",
+    "streams": [
+      "https://7rays.stream.laut.fm/7rays"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "station-13",
+    "name": "Голос Мира",
+    "category": "devotional",
+    "streams": [
+      "https://sv5.golosmira.com/radio/8020/rgm.mp3"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "radio-social-net-ua",
+    "name": "Radio Social.net.ua",
+    "category": "music",
+    "streams": [
+      "https://radio.social.net.ua/live.mp3"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

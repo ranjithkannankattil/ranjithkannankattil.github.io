@@ -556,6 +556,33 @@ window.STATIONS = [
       "https://s03.diazol.hu:35150/live"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "fm90-campus-radio",
+    "name": "FM90 Campus Rádió",
+    "category": "music",
+    "streams": [
+      "https://stream.fm90.hu:8000/;"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "sola-radio",
+    "name": "Sola Rádió",
+    "category": "devotional",
+    "streams": [
+      "https://stream1.virtualisan.net/prx/7000/live.mp3"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "cool-fm-girl-power",
+    "name": "Cool.FM GIRL POWER",
+    "category": "music",
+    "streams": [
+      "https://mediagw.e-tiger.net/stream/zc15?ver=58649"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

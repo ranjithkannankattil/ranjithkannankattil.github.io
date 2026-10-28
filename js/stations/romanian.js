@@ -592,6 +592,33 @@ window.STATIONS = [
       "https://live.kissfm.ro/milleniumhits"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "bitter-sweet-music-braila-128-0-fm",
+    "name": "Bitter Sweet Music -Braila 128,0 FM",
+    "category": "music",
+    "streams": [
+      "https://sonicssl.namehost.ro/8520/stream"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "radio-folclor-buzau",
+    "name": "Radio Folclor Buzau",
+    "category": "music",
+    "streams": [
+      "https://live.radiofolclorbuzaufm.ro:8910/stream"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "sport-total-fm-spt-fm-bucuresti-105-8-fm",
+    "name": "Sport Total FM (SPT FM) -București 105.8 FM",
+    "category": "news",
+    "streams": [
+      "https://livesptfm.com/SPTFM/Live/chunklist.m3u8"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

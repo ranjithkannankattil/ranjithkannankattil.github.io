@@ -659,6 +659,33 @@ window.STATIONS = [
       "https://icecast.vrtcdn.be/radio1_classics-high.mp3"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "538-90s",
+    "name": "538 90s",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR21AAC.aac"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "slam-housuh-in-de-pauzuh-96",
+    "name": "SLAM! Housuh In De Pauzuh 96",
+    "category": "music",
+    "streams": [
+      "https://stream.slam.nl/WEB16_AAC"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "studio-brussel-untz",
+    "name": "Studio Brussel UNTZ",
+    "category": "music",
+    "streams": [
+      "https://icecast.vrtcdn.be/stubru_untz.aac"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

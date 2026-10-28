@@ -696,6 +696,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "where": "UK"
+  },
+  {
+    "id": "radio-x-classic-rock",
+    "name": "Radio X Classic Rock",
+    "category": "rock",
+    "streams": [
+      "https://media-ice.musicradio.com/RadioXClassicRockMP3"
+    ],
+    "added": "2026-10-28",
+    "where": "UK"
+  },
+  {
+    "id": "capital-anthems-the-songs-capital-made-f",
+    "name": "CAPITAL ANTHEMS: The Songs Capital Made Famous",
+    "category": "rock",
+    "streams": [
+      "https://media-ssl.musicradio.com/CapitalAnthemsMP3"
+    ],
+    "added": "2026-10-28",
+    "where": "UK"
+  },
+  {
+    "id": "99-9-kiss-country",
+    "name": "99.9 Kiss Country",
+    "category": "country",
+    "streams": [
+      "https://stream.revma.ihrhls.com/zc1577"
+    ],
+    "added": "2026-10-28",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

@@ -655,6 +655,33 @@ window.STATIONS = [
       "https://player-ne10-radiojornal-app.stream.uol.com.br/live/radiojornalrecifeapp_lsd.m3u8?vhost=player-ne10-radiojornal-app.stream.uol.com.br"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "clube-fm-99-1",
+    "name": "Clube FM 99.1",
+    "category": "music",
+    "streams": [
+      "https://radio.saopaulo01.com.br:10913/stream"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "lovetimes-romantic-music-hits",
+    "name": "LOVETIMES - Romantic Music Hits",
+    "category": "music",
+    "streams": [
+      "https://c15.radioboss.fm:8152/stream"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "radio-disney-91-3-fm",
+    "name": "Rádio Disney 91.3 FM",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/DISNEY_BRA_SP.mp3"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

@@ -484,7 +484,8 @@ window.STATIONS = [
     "streams": [
       "https://antares.dribbcast.com/proxy/espluguesfm?mp=/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "radio-sitges",
@@ -630,6 +631,24 @@ window.STATIONS = [
       "https://radiolom.es:8800/;stream.mp3"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "radio-ponts",
+    "name": "Ràdio Ponts",
+    "category": "music",
+    "streams": [
+      "https://enacast.com/radioponts/streams/HD"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "tarragona-radio",
+    "name": "Tarragona Ràdio",
+    "category": "music",
+    "streams": [
+      "https://enacast.com/tarragonaradio/streams/SD"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

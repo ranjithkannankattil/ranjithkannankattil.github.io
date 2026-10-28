@@ -296,7 +296,8 @@ window.STATIONS = [
     "streams": [
       "https://radiocitizen-atunwadigital.streamguys1.com/radiocitizen/playlist.m3u8"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

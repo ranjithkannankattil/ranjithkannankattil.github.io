@@ -177,7 +177,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://antares.dribbcast.com/proxy/jpop?mp=/s"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "neuro-21-station",
@@ -217,7 +218,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://antares.dribbcast.com/proxy/apop?mp=/s"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "real-love-music-radio-future-funk",
@@ -358,7 +360,8 @@ window.STATIONS = [
     "streams": [
       "https://antares.dribbcast.com/proxy/apop?mp=/s?"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "bbn-japanese",
@@ -566,6 +569,33 @@ window.STATIONS = [
       "https://kathy.torontocast.com:2880/;"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "kawaii-music",
+    "name": "Kawaii Music",
+    "category": "music",
+    "streams": [
+      "https://kawaii-music.stream.laut.fm/kawaii-music"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "gensokyo-radio",
+    "name": "幻想乡电台Gensokyo Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.gensokyoradio.net/2"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "shadowfr69-radio",
+    "name": "shadowfr69 Radio",
+    "category": "music",
+    "streams": [
+      "https://radio.shadowfr69.eu/mp3"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";

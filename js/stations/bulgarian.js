@@ -48,7 +48,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nova-radio.neterra.tv/veselinaretro"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "badrock-hard-heavy",
@@ -593,6 +594,33 @@ window.STATIONS = [
       "https://radio.jump.bg/proxy/feedyyy02?mp=/MLR70S"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "radio-vaticana-bulgaria",
+    "name": "Radio Vaticana Bulgaria",
+    "category": "devotional",
+    "streams": [
+      "https://radio.vaticannews.va/stream-bg"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "metro-country-rock-hd",
+    "name": "Metro Country Rock HD",
+    "category": "music",
+    "streams": [
+      "https://radio.jump.bg/proxy/feed104?mp=/MSRR"
+    ],
+    "added": "2026-10-28"
+  },
+  {
+    "id": "fred-film-radio",
+    "name": "Fred Film Radio(Български език)",
+    "category": "music",
+    "streams": [
+      "https://s10.webradio-hosting.com/proxy/fredradiobg/stream"
+    ],
+    "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-27T19:16Z";
+window.STATIONS_CHECKED = "2026-10-28T06:41Z";
