@@ -242,7 +242,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://s1.slotex.pl/shoutcast/7102/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-rmf-classic",
@@ -638,6 +639,33 @@ window.STATIONS = [
       "https://waw.ic.smcdn.pl/2520-2.aac"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "radio-7",
+    "name": "Radio 7",
+    "category": "music",
+    "streams": [
+      "https://stream.radio7.pl:443/radio7.mp3"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "meloradio-hot-dance",
+    "name": "MELORADIO HOT DANCE",
+    "category": "music",
+    "streams": [
+      "https://ml02.cdn.eurozet.pl/MELHDN.mp3"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "bounce",
+    "name": "Bounce",
+    "category": "music",
+    "streams": [
+      "https://streaming.bounce.radio/streamhd"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

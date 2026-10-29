@@ -162,7 +162,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.rfm.fr/rfm-wr10.aac"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "jazz-radio",
@@ -680,6 +681,33 @@ window.STATIONS = [
       "https://cdn.live.easybroadcast.io/live/83_medi1radio-maghreb_8s9i4bn/playlist.m3u8"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "jil-fm",
+    "name": "Jil FM",
+    "category": "music",
+    "streams": [
+      "https://webradio1.tda.dz:8001/Jeunesse_64K.mp3"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "rci-martinique",
+    "name": "RCI Martinique",
+    "category": "news",
+    "streams": [
+      "https://stream.rcs.revma.com/t0abpqyspwzuv"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "tizi-ouzou",
+    "name": "Tizi Ouzou تيزي وزو",
+    "category": "news",
+    "streams": [
+      "https://webradio2.tda.dz:8001/TiziOuzou_64K.mp3"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

@@ -136,8 +136,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://relay.stream.enacast-cloud.com:40323/radiollancaHD.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-vila-real",
@@ -650,4 +649,4 @@ window.STATIONS = [
     "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

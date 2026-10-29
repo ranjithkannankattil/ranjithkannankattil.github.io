@@ -710,6 +710,33 @@ window.STATIONS = [
       "https://ice.actve.net/web-f1-legendy"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "radio-love-it",
+    "name": "Radio Love-it",
+    "category": "music",
+    "streams": [
+      "https://radio.ihypnosis.org.uk/stream"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "kiss-hady",
+    "name": "Kiss Hady",
+    "category": "music",
+    "streams": [
+      "https://icecast8.play.cz/kisshady128.mp3"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radio-povadka",
+    "name": "Rádio Povádka",
+    "category": "music",
+    "streams": [
+      "https://ice3.radia.cz/povidka128.mp3"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

@@ -690,6 +690,33 @@ window.STATIONS = [
       "https://naxidigital-latino128ssl.streaming.rs:8232/;stream.nsv"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "play-radio",
+    "name": "PLAY radio",
+    "category": "music",
+    "streams": [
+      "https://stream.playradio.rs:8443/play.mp3"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "naxi-fresh-radio",
+    "name": "Naxi Fresh Radio",
+    "category": "music",
+    "streams": [
+      "https://naxidigital-fresh128ssl.streaming.rs:8212/;stream.nsv"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radio-s2",
+    "name": "Radio S2",
+    "category": "music",
+    "streams": [
+      "https://stream.radios.rs:9002/;"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

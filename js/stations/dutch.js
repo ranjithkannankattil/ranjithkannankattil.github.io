@@ -740,6 +740,33 @@ window.STATIONS = [
       "https://icecast.vrtcdn.be/ra2ant-high.mp3"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "brf2-radio",
+    "name": "BRF2 Radio",
+    "category": "music",
+    "streams": [
+      "https://streaming.brf.be/brf2-high.mp3"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "q-music-belgie",
+    "name": "Q Music België",
+    "category": "music",
+    "streams": [
+      "https://streams.radio.dpgmedia.cloud/redirect/qmusic_be/aac"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radio-2-limburg",
+    "name": "Radio 2 Limburg",
+    "category": "music",
+    "streams": [
+      "https://icecast.vrtcdn.be/ra2lim-high.mp3"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

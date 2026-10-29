@@ -206,7 +206,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8",
       "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "golofm",
@@ -230,7 +231,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "cidade-fm-2",
@@ -320,8 +322,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-icy.bauermedia.pt/smoothsoul.aac"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "rewind-2000-s",
@@ -357,7 +358,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -447,7 +449,8 @@ window.STATIONS = [
     "streams": [
       "https://cast.redewt.net:9825/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "m80-radio-pop",
@@ -465,8 +468,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.ruc.pt/high"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "m80-radio-dance",
@@ -664,8 +666,7 @@ window.STATIONS = [
     "streams": [
       "https://dreamsiteradiocp5.com/proxy/rmportugal1?mp=/stream"
     ],
-    "added": "2026-10-28",
-    "offline": true
+    "added": "2026-10-28"
   },
   {
     "id": "radio-medio-tejo",
@@ -729,6 +730,33 @@ window.STATIONS = [
       "https://radios.justweb.pt/8034/stream"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "radio-palavra-antiga",
+    "name": "Rádio Palavra Antiga",
+    "category": "devotional",
+    "streams": [
+      "https://radio.palavraantiga.org/listen/palavraantiga/radio.mp3"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "porao-da-nau-radio",
+    "name": "Porão da nau radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/rwmao7mxxt8vv"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radio-biblia",
+    "name": "Radio Biblia",
+    "category": "devotional",
+    "streams": [
+      "https://servidor30-4.brlogic.com:7398/live?source=website"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

@@ -733,6 +733,33 @@ window.STATIONS = [
       "https://energyzuerich.ice.infomaniak.ch/energyzuerich-high.mp3"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "bremen-eins",
+    "name": "Bremen Eins",
+    "category": "music",
+    "streams": [
+      "https://icecast.radiobremen.de/rb/bremeneins/live/mp3/128/stream.mp3"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "techno-by-rautemusik-fm",
+    "name": "__TECHNO__ by rautemusik.fm",
+    "category": "music",
+    "streams": [
+      "https://streams.rautemusik.fm/techno/mp3-192/?ref=radiobrowser"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "bayern-1-niederbayern-oberpfalz",
+    "name": "Bayern 1 Niederbayern / Oberpfalz",
+    "category": "music",
+    "streams": [
+      "https://dispatcher.rndfnk.com/br/br1/nbopf/mp3/mid"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

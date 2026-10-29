@@ -48,8 +48,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nova-radio.neterra.tv/veselinaretro"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "badrock-hard-heavy",
@@ -675,6 +674,24 @@ window.STATIONS = [
       "https://play.global.audio/novanewshi.aac"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "station-12",
+    "name": "Радио Кюфте",
+    "category": "music",
+    "streams": [
+      "https://qft.monster/listen/radio_qfte/radio.mp3"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radio-tuturutka-97-4-evropa",
+    "name": "Radio Tuturutka 97.4 Evropa",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/uc2rmbyhvd5uv"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

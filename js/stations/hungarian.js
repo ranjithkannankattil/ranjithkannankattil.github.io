@@ -637,6 +637,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/kvqrsxeeafctv"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "radio-inside",
+    "name": "RADIO INSIDE",
+    "category": "music",
+    "streams": [
+      "https://radioinside.eu/live.mp3"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "manna-fm-98-6",
+    "name": "Manna FM 98.6",
+    "category": "devotional",
+    "streams": [
+      "https://icast.connectmedia.hu/4780/live.mp3"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radio-dikh",
+    "name": "Rádió Dikh",
+    "category": "music",
+    "streams": [
+      "https://icast.connectmedia.hu/6121/live.mp3"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

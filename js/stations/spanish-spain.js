@@ -236,8 +236,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ztnr.rtve.es/ztnr/1694255.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "esradio-principal",
@@ -731,6 +730,33 @@ window.STATIONS = [
       "https://dispatcher.rndfnk.com/crtve/rne1/mad/mp3/high"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "cadena-ser-madrid-sur",
+    "name": "Cadena Ser Madrid Sur",
+    "category": "news",
+    "streams": [
+      "https://25453.live.streamtheworld.com/SER_MAS_MADRID_SC"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "cadena-dial-arahal",
+    "name": "Cadena Dial - Arahal",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/DIAL_ASO_MORON.mp3"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "cope-zaragoza",
+    "name": "Cope Zaragoza",
+    "category": "music",
+    "streams": [
+      "https://zaragoza-copesedes-rrcast.flumotion.com/copesedes/zaragoza-low.mp3"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

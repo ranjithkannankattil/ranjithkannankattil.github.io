@@ -786,6 +786,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "where": "UK"
+  },
+  {
+    "id": "z100-whtz-fm-100-3-new-york",
+    "name": "Z100 - WHTZ-FM 100.3 New York",
+    "category": "pop",
+    "streams": [
+      "https://stream.revma.ihrhls.com/zc2509"
+    ],
+    "added": "2026-10-29",
+    "where": "US"
+  },
+  {
+    "id": "channel-955",
+    "name": "Channel 955",
+    "category": "pop",
+    "streams": [
+      "https://stream.revma.ihrhls.com/zc1145"
+    ],
+    "added": "2026-10-29",
+    "where": "US"
+  },
+  {
+    "id": "ancient-fm",
+    "name": "Ancient FM",
+    "category": "classical",
+    "streams": [
+      "https://mediaserv73.live-streams.nl:18058/stream"
+    ],
+    "added": "2026-10-29",
+    "where": "Canada"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

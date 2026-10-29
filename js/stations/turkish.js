@@ -430,7 +430,8 @@ window.STATIONS = [
     "streams": [
       "https://radyo.ilef.net/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "yaren-fm",
@@ -701,6 +702,33 @@ window.STATIONS = [
       "https://edge1.radyotvonline.net/shoutcast/play/radyogol"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "mirac-fm",
+    "name": "Miraç Fm",
+    "category": "devotional",
+    "streams": [
+      "https://anadolu.liderhost.com.tr:9416/stream"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radyo-dogubayazt-fm-104-4",
+    "name": "Radyo Doğubayazıt FM 104.4",
+    "category": "music",
+    "streams": [
+      "https://radyo1.radyo-dinle.tc/8156/stream"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radyoaura",
+    "name": "RadyoAura",
+    "category": "music",
+    "streams": [
+      "https://stream.radiaura.net/station-ea8ab46e-ae01-4b71-ad9a-fef58665b89c"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

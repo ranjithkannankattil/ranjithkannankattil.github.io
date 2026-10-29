@@ -728,6 +728,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "where": "Barbados"
+  },
+  {
+    "id": "dublin-s-98fm",
+    "name": "Dublin's 98FM",
+    "category": "uk",
+    "streams": [
+      "https://stream.audioxi.com/98"
+    ],
+    "added": "2026-10-29",
+    "where": "Ireland"
+  },
+  {
+    "id": "wtop-103-5-fm",
+    "name": "WTOP 103.5 FM",
+    "category": "us",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/WTOPFM.mp3"
+    ],
+    "added": "2026-10-29",
+    "where": "US"
+  },
+  {
+    "id": "cbc-radio-1-calgary",
+    "name": "CBC Radio 1 Calgary",
+    "category": "canada",
+    "streams": [
+      "https://cbcradiolive.akamaized.net/hls/live/2041039/ES_R1MCG/master.m3u8"
+    ],
+    "added": "2026-10-29",
+    "where": "Canada"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

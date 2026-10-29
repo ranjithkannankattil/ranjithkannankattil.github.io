@@ -503,6 +503,33 @@ window.STATIONS = [
       "https://onlineradiobox.com/json/hr/92fm/play?platform=web"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "mr4-nemzetisegi-adasok",
+    "name": "MR4 - Nemzetiségi Adások",
+    "category": "news",
+    "streams": [
+      "https://mr-stream.connectmedia.hu/4744/mr4.mp3"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radio-grubisno-polje",
+    "name": "Radio Grubišno Polje",
+    "category": "news",
+    "streams": [
+      "https://ec2s.crolive.com.hr:8215/stream"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radio-105-selnica-hr",
+    "name": "Radio 105 Selnica (HR)",
+    "category": "music",
+    "streams": [
+      "https://azuracast.novi-net.net/radio/8050/radio105.aac"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

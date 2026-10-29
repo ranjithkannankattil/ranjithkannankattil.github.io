@@ -266,8 +266,7 @@ window.STATIONS = [
     "streams": [
       "https://mediaserv68.live-streams.nl:8067/stream"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "power-radio-fm-99-islamabad",
@@ -279,4 +278,4 @@ window.STATIONS = [
     "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

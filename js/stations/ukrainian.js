@@ -232,7 +232,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.brokenbeats.net/tune"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-shanson",
@@ -708,6 +709,33 @@ window.STATIONS = [
       "https://online.radiojazz.ua/RadioJazz_Christmas"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "chill-and-relax",
+    "name": "Люкс ФМ – Chill and Relax",
+    "category": "music",
+    "streams": [
+      "https://lux.radio.tvstitch.com/chill-sd"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "192",
+    "name": "Радіоточка 192 кБ/с",
+    "category": "music",
+    "streams": [
+      "https://radio.ukr.radio/ur5-mp3"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "station-17",
+    "name": "Перше міське радіо (Одеса)",
+    "category": "news",
+    "streams": [
+      "https://live.1tv.od.ua/radio/stream/icecast.audio"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

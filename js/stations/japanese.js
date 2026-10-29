@@ -484,8 +484,7 @@ window.STATIONS = [
     "streams": [
       "https://internetradio.dankassassin368.com/DankFM.mp3"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "vocaloplus-vocaloid-more",
@@ -648,6 +647,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/ullfy4hf9lhtv"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "radio-nikey",
+    "name": "Rádio Nikey",
+    "category": "music",
+    "streams": [
+      "https://stm8.voxhd.com.br:7996/stream%22"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "soundlink",
+    "name": "SoundLink+",
+    "category": "music",
+    "streams": [
+      "https://howlingf-gecko.radioca.st/autodj"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radio-gambaru",
+    "name": "Radio Gambaru",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/b3tz3g94vv8uv"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

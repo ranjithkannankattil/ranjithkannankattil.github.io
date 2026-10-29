@@ -321,7 +321,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.damasradio.fm/radio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-manarat",
@@ -727,6 +728,33 @@ window.STATIONS = [
       "https://usa19.fastcast4u.com/adeem"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "radio-helmna",
+    "name": "Radio Helmna",
+    "category": "music",
+    "streams": [
+      "https://radiohelmna.com/stream/;"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "tizi-ouzou",
+    "name": "Tizi Ouzou تيزي وزو",
+    "category": "news",
+    "streams": [
+      "https://webradio2.tda.dz:8001/TiziOuzou_64K.mp3"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "coran",
+    "name": "Coran القرآن الكريم",
+    "category": "devotional",
+    "streams": [
+      "https://webradio1.tda.dz:8001/Coran_64K.mp3"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

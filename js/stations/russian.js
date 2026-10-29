@@ -120,7 +120,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://dorognoe.hostingradio.ru:8000/radio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "fm-3",
@@ -728,6 +729,33 @@ window.STATIONS = [
       "https://radiorecord.hostingradio.ru/deep96.aacp"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "station-29",
+    "name": "Радио Монте-Карло",
+    "category": "music",
+    "streams": [
+      "https://mc-mcgold.hostingradio.ru/mcgold96.aacp"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "relax-fm-smooth-jazz",
+    "name": "Relax FM Smooth Jazz",
+    "category": "music",
+    "streams": [
+      "https://pub0201.101.ru/stream/trust/mp3/128/31?"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "station-30",
+    "name": "Ретро ФМ",
+    "category": "music",
+    "streams": [
+      "https://retroserver.streamr.ru:8043/retro128"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

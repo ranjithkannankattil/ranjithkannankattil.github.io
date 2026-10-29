@@ -56,7 +56,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "89-4-tamil-fm",
@@ -738,6 +739,33 @@ window.STATIONS = [
       "https://usa9.fastcast4u.com/proxy/arnifm?mp=/1"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "mohanhits",
+    "name": "Mohanhits",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/wkqvzsg1238uv"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "ilctamil",
+    "name": "Ilctamil",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/vewxk5336qzuv"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "ibctamil",
+    "name": "Ibctamil",
+    "category": "music",
+    "streams": [
+      "https://rbx2.hnux.com/http://10454.cloudrad.io:6176/;stream.mp3"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

@@ -225,7 +225,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RT_SPAAC.aac"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "bandnews-fm",
@@ -736,6 +737,33 @@ window.STATIONS = [
       "https://s09.hstbr.net:8238/live"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "105-fm-sp",
+    "name": "105 FM - SP",
+    "category": "music",
+    "streams": [
+      "https://www.appradio.app:8010//live"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radio-grenal",
+    "name": "Rádio Grenal",
+    "category": "news",
+    "streams": [
+      "https://grenal.audiostream.com.br:20000/aac"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radio-dance-music-anos-2000",
+    "name": "Rádio Dance Music Anos 2000",
+    "category": "music",
+    "streams": [
+      "https://cloud1.cdnseguro.com:2190/;"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

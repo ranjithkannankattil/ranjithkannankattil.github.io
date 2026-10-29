@@ -669,6 +669,33 @@ window.STATIONS = [
       "https://ice04.fluidstream.net/ria60_bo.mp3"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "monte-carlo",
+    "name": "Monte Carlo",
+    "category": "music",
+    "streams": [
+      "https://montecarlo.hostingradio.ru/montecarlo96.aacp"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "funky-radio-only-funk-music-60-s-70-s",
+    "name": "FUNKY RADIO - Only Funk Music (60's & 70's)",
+    "category": "music",
+    "streams": [
+      "https://funkyradio.streamingmedia.it/audio.aac"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "rds-radio-dimensione-suono",
+    "name": "RDS - Radio Dimensione Suono",
+    "category": "news",
+    "streams": [
+      "https://stream.rds.radio/audio/rds.stream_aac/playlist.m3u8"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

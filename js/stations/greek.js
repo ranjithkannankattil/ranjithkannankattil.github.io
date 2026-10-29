@@ -297,7 +297,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.radiojar.com/kokkino-ath.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "kosmos-jazz",
@@ -528,8 +529,7 @@ window.STATIONS = [
     "streams": [
       "https://netradio.live24.gr/rebel1052"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "vanilla-radio-com-fresh-flavours-stream",
@@ -755,6 +755,33 @@ window.STATIONS = [
       "https://eu7.fastcast4u.com/proxy/nmarog02?mp=/1"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "ekrixi",
+    "name": "Ekrixi",
+    "category": "music",
+    "streams": [
+      "https://ice.greekstream.net/ekrixifm"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "sfera-94-4",
+    "name": "Sfera 94.4",
+    "category": "music",
+    "streams": [
+      "https://netradio.live24.gr/sfera941nauplio"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "yellow",
+    "name": "Yellow",
+    "category": "news",
+    "streams": [
+      "https://ice.greekstream.net/yellow"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

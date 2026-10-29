@@ -56,8 +56,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://astreaming.edi.ro:8443/EuropaFM_aac"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "magic-party-mix",
@@ -105,8 +104,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://astreaming.edi.ro:8443/VirginRadio_aac"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "balcan-radio-manele-braila",
@@ -675,6 +673,33 @@ window.STATIONS = [
       "https://shout.realitatea.net:8001/rfmweb"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "radio-plai",
+    "name": "Radio Plai",
+    "category": "music",
+    "streams": [
+      "https://stream.radioplai.md/live"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radio-ai-nostri",
+    "name": "Radio Ai Noștri",
+    "category": "news",
+    "streams": [
+      "https://s5.radio.co/sfd9f42d1d/listen"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radio-armonia-romania",
+    "name": "Radio Armonia Romania",
+    "category": "devotional",
+    "streams": [
+      "https://a1.bisericilive.com/mainradioarmoniaro.mp3"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

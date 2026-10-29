@@ -600,6 +600,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "where": "US"
+  },
+  {
+    "id": "dublin-s-98fm",
+    "name": "Dublin's 98FM",
+    "category": "uk",
+    "streams": [
+      "https://stream.audioxi.com/98"
+    ],
+    "added": "2026-10-29",
+    "where": "Ireland"
+  },
+  {
+    "id": "fox-news",
+    "name": "Fox News",
+    "category": "us",
+    "streams": [
+      "https://247preview.foxnews.com/hls/live/2020027/fncv3preview/primary.m3u8"
+    ],
+    "added": "2026-10-29",
+    "where": "US"
+  },
+  {
+    "id": "ifeng",
+    "name": "Ifeng",
+    "category": "world",
+    "streams": [
+      "https://playtv-live.ifeng.com/live/06OLEEWQKN4_audio.m3u8"
+    ],
+    "added": "2026-10-29",
+    "where": "Hong Kong"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

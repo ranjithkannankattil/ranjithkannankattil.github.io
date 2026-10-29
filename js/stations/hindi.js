@@ -369,7 +369,8 @@ window.STATIONS = [
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio011/hlspbaudio011_Auto.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "sandesh-radio",
@@ -513,7 +514,8 @@ window.STATIONS = [
     "streams": [
       "https://streamasiacdn.atc-labs.com/gyansthali.aac"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "2b-radio-sangam-devi-maa",
@@ -711,7 +713,8 @@ window.STATIONS = [
     "streams": [
       "https://streamasiacdn.atc-labs.com/radiorimjhim.aac"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "offline": true
   },
   {
     "id": "bhakti-sagar-durga-maa",
@@ -721,6 +724,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/syu0rdutvxhvv"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "bhaktisudha",
+    "name": "Bhaktisudha",
+    "category": "music",
+    "streams": [
+      "https://n0a.radiojar.com/cfqyfcspcv8uv"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "2b-radio-sangam-shiva",
+    "name": "2B! Radio Sangam Shiva",
+    "category": "devotional",
+    "streams": [
+      "https://hot.out.airtime.pro:8000/hot_a"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "all4masti",
+    "name": "All4Masti",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/bahhkuge5zhvv"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

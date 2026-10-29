@@ -729,6 +729,33 @@ window.STATIONS = [
       "https://stream.radiojar.com/5705c71sn2zuv"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "la-mega-medellin-92-9-fm",
+    "name": "La Mega (Medellín) 92.9 FM",
+    "category": "music",
+    "streams": [
+      "https://us-b4-p-e-qg12-audio.cdn.mdstrm.com/live-audio-aw/632cb48f613bac0856b931ab"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "rock-and-pop",
+    "name": "Rock and Pop",
+    "category": "music",
+    "streams": [
+      "https://27323.live.streamtheworld.com/ROCK_AND_POPAAC_SC"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "teletica-radio",
+    "name": "Teletica Radio",
+    "category": "news",
+    "streams": [
+      "https://g2qd375ol7an-hls-live.5centscdn.com/Radio/eae835e83c0494a376229f254f7d3392.sdp/chunks.m3u8"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";

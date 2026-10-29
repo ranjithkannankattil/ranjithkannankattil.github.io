@@ -201,7 +201,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-17",
@@ -664,6 +665,33 @@ window.STATIONS = [
       "https://lhttp.qingting.fm/live/274/64k.mp3"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "cnr-9",
+    "name": "CNR-9 文艺之声",
+    "category": "music",
+    "streams": [
+      "https://satellitepull.cnr.cn/live/wxwyzs/playlist.m3u8?wsSession=d8b4488aebb72eb396f72a83-174705706427289&wsIPSercert=29f90b67755e3a4646651f7aa8eb5fd6"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "cctv-8",
+    "name": "CCTV-8电视剧伴音",
+    "category": "music",
+    "streams": [
+      "https://piccpndali.v.myalicdn.com/audio/cctv8_2.m3u8"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "station-37",
+    "name": "江苏新闻广播",
+    "category": "news",
+    "streams": [
+      "https://lzlive.vojs.cn/5Fo8mMX/92/live.m3u8?"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T06:52Z";
+window.STATIONS_CHECKED = "2026-10-29T19:34Z";
