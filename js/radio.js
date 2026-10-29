@@ -18,6 +18,7 @@
   let col = null;              // current collection object
   let S = [], byId = {};       // its stations
   let cat = "all";
+  let view = "col";            // col: one language's stations | favs: favourites from every language
   let show = "all";            // all | live | down — set by the dashboard tiles
   let current = null, currentCol = null, hls = null, tryIndex = 0, failTimer = null;
 
@@ -45,11 +46,19 @@
     const quick = [def, ...recent.filter((id) => id !== def)].slice(0, 7);
     const box = $("#langQuick");
     box.innerHTML = "";
+    const fb = document.createElement("button");
+    fb.className = "lq lq-fav";
+    fb.setAttribute("aria-pressed", view === "favs");
+    fb.title = "Your favourite stations from every language";
+    fb.innerHTML = '<span class="heart" aria-hidden="true">♥</span><span>Favourites</span><span class="n"></span>';
+    fb.querySelector(".n").textContent = favs.size;
+    fb.onclick = () => openFavs(true);
+    box.append(fb);
     for (const id of quick) {
       const c = byCol[id];
       const b = document.createElement("button");
       b.className = "lq";
-      b.setAttribute("aria-pressed", id === col.id);
+      b.setAttribute("aria-pressed", view === "col" && id === col.id);
       b.innerHTML = (id === def ? '<span class="star" aria-label="Default">★</span>' : "") + "<span></span>";
       b.lastChild.textContent = c.name;
       b.onclick = () => openCollection(id, true);
@@ -129,6 +138,7 @@
   async function openCollection(id, user) {
     const c = byCol[id] || byCol.malayalam;
     col = c; cat = "all"; show = "all";
+    setView("col");
     recent = [c.id, ...recent.filter((x) => x !== c.id)].slice(0, 8);
     store.set("mr-recent", recent);
     const url = new URL(location.href);
@@ -183,6 +193,7 @@
   }
 
   function render() {
+    if (view === "favs") { renderFavs(); return; }
     const list = visibleList();
     grid.innerHTML = "";
     for (const s of list) {
@@ -203,7 +214,7 @@
       li.querySelector(".sub").textContent = sub;
       if (isNew && !s.offline) li.querySelector(".nm").insertAdjacentHTML("beforeend", ' <span class="new-tag">New</span>');
       li.querySelector(".hit").onclick = () => (isCur(s) ? toggle() : play(s, list));
-      li.querySelector(".fav").onclick = (e) => { e.stopPropagation(); toggleFav(key(s)); };
+      li.querySelector(".fav").onclick = (e) => { e.stopPropagation(); toggleFav(key(s), s); };
       grid.append(li);
     }
     $("#count").textContent = `${list.length} station${list.length === 1 ? "" : "s"}` +
@@ -227,10 +238,11 @@
     });
   }
 
-  function toggleFav(k) {
-    favs.has(k) ? favs.delete(k) : favs.add(k);
+  function toggleFav(k, s) {
+    if (favs.has(k)) favs.delete(k);
+    else { favs.add(k); if (s) remember(k, s); }   // new favourites go to the end of your order
     store.set("mr-favs2", [...favs]);
-    renderChips(); render(); syncPlayer();
+    renderBar(); renderChips(); render(); syncPlayer();
     // js/radio-sync.js saves this to the visitor's account when they are signed in
     window.dispatchEvent(new CustomEvent("radio:local-change", { detail: { favs: [...favs], def: getDefault() } }));
   }
@@ -243,6 +255,214 @@
     if (col) { renderBar(); renderChips(); render(); syncPlayer(); }
   });
   window.RadioApp = { getFavs: () => [...favs], getDefault: () => getDefault() };
+
+  // ---------------------------------------------------------- favourites, every language
+  // The Favourites chip opens one list of every favourite station, in your own order (the
+  // order of mr-favs2, which is also what's saved to your account). "Reorder" lets you drag
+  // or move stations up and down and remove them. Station details come from each language's
+  // station file; a small copy kept with each favourite shows the list straight away.
+  let favInfo = store.get("mr-favinfo", {});
+  let favEdit = false, favUndo = null, favUndoTimer = null, favLoaded = false;
+  const cache = {};          // collection id -> its stations (loaded on demand)
+  function remember(k, s) {
+    favInfo[k] = { id: s.id, name: s.name, streams: s.streams, category: s.category };
+    store.set("mr-favinfo", favInfo);
+  }
+  async function stationsOf(cId) {
+    if (col && col.id === cId && S.length) return S;
+    if (cache[cId]) return cache[cId];
+    const stamp = new Date().toISOString().slice(0, 10) + "-" + Math.floor(Date.now() / 36e5);
+    cache[cId] = fetch(`js/stations/${cId}.js?d=${stamp}`).then((r) => (r.ok ? r.text() : ""))
+      .then((t) => { const m = t.match(/window\.STATIONS\s*=\s*(\[[\s\S]*?\]);\s*window\.STATIONS_CHECKED/); return m ? JSON.parse(m[1]) : []; })
+      .catch(() => { delete cache[cId]; return null; });
+    return cache[cId];
+  }
+  const splitKey = (k) => { const i = k.indexOf(":"); return [k.slice(0, i), k.slice(i + 1)]; };
+  // your favourites as stations, in your order; _c is the station's language
+  function favStations() {
+    return [...favs].map((k) => {
+      const [c, id] = splitKey(k);
+      const s = (cache[c] && Array.isArray(cache[c]) && cache[c].find((x) => x.id === id)) ||
+                (col && col.id === c && byId[id]) || favInfo[k];
+      if (!byCol[c]) return null;
+      if (s) return { ...s, _c: c, _k: k };
+      return favLoaded ? { id, name: id, streams: [], _c: c, _k: k, gone: true }
+                       : { id, name: id, streams: [], _c: c, _k: k, loading: true };
+    }).filter(Boolean);
+  }
+  async function loadFavDetails() {
+    const need = [...new Set([...favs].map((k) => splitKey(k)[0]).filter((c) => byCol[c]))];
+    const lists = await Promise.all(need.map(async (c) => [c, await stationsOf(c)]));
+    let changed = false;
+    for (const [c, list] of lists) {
+      if (!Array.isArray(list)) continue;
+      cache[c] = list;
+      for (const k of favs) {
+        const [fc, id] = splitKey(k);
+        if (fc !== c) continue;
+        const s = list.find((x) => x.id === id);
+        if (s) { favInfo[k] = { id: s.id, name: s.name, streams: s.streams, category: s.category }; changed = true; }
+      }
+    }
+    if (changed) store.set("mr-favinfo", favInfo);
+    favLoaded = lists.every(([, l]) => Array.isArray(l));   // a failed load isn't "no longer listed"
+  }
+  function setView(v) {
+    view = v;
+    document.querySelector(".radio-stats").hidden = v === "favs";
+    chips.hidden = v === "favs";
+    $("#favTools").hidden = v !== "favs";
+    document.body.classList.toggle("fav-view", v === "favs");
+  }
+  async function openFavs(user) {
+    setView("favs");
+    favEdit = false;
+    const url = new URL(location.href);
+    url.searchParams.set("c", "favs");
+    history.replaceState(null, "", url);
+    renderBar();
+    $("#colName").textContent = "Favourites";
+    $("#colNative").textContent = "";
+    $("#colIntro").textContent = "Your favourite stations from every language, in your own order. Use Reorder to move or remove them.";
+    renderFavs();
+    if (user) $(".radio-bar").scrollIntoView({ behavior: "smooth", block: "nearest" });
+    await loadFavDetails();
+    if (view === "favs") renderFavs();
+  }
+  function saveOrder(keys) {
+    favs = new Set(keys);
+    store.set("mr-favs2", keys);
+    renderBar();
+    window.dispatchEvent(new CustomEvent("radio:local-change", { detail: { favs: keys, def: getDefault() } }));
+  }
+  function moveFav(k, to) {
+    const keys = [...favs].filter((x) => x !== k);
+    keys.splice(Math.max(0, Math.min(to, keys.length)), 0, k);
+    saveOrder(keys);
+    renderFavs();
+    const b = grid.querySelector(`[data-k="${CSS.escape(k)}"] .handle`);
+    if (b) b.focus({ preventScroll: true });
+  }
+  function removeFav(k) {
+    const keys = [...favs];
+    const at = keys.indexOf(k);
+    if (at < 0) return;
+    const name = (favStations().find((x) => x._k === k) || {}).name || "Station";
+    saveOrder(keys.filter((x) => x !== k));
+    favUndo = { k, at, name };
+    clearTimeout(favUndoTimer);
+    favUndoTimer = setTimeout(() => { favUndo = null; if (view === "favs") renderFavs(); }, 8000);
+    renderFavs(); syncPlayer();
+  }
+  function undoRemove() {
+    if (!favUndo) return;
+    const keys = [...favs].filter((x) => x !== favUndo.k);
+    keys.splice(favUndo.at, 0, favUndo.k);
+    favUndo = null; clearTimeout(favUndoTimer);
+    saveOrder(keys); renderFavs(); syncPlayer();
+  }
+
+  function renderFavs() {
+    const term = q.value.trim().toLowerCase();
+    const all = favStations();
+    const list = all.filter((s) => !term || s.name.toLowerCase().includes(term));
+    grid.innerHTML = "";
+    grid.classList.toggle("fav-edit", favEdit);
+    $("#favEdit").textContent = favEdit ? "Done" : "Reorder";
+    $("#favEdit").setAttribute("aria-pressed", favEdit);
+    $("#favEdit").hidden = all.length < 1;
+    list.forEach((s, i) => {
+      const li = document.createElement("li");
+      const cur = current && currentCol === s._c && current.id === s.id;
+      li.className = "radio-card fav-card" + (cur ? " on" : "") + (s.offline || s.gone || s.hidden ? " off" : "");
+      li.dataset.id = s.id; li.dataset.c = s._c; li.dataset.k = s._k;
+      const sub = [byCol[s._c].name, s.loading ? "Loading…" : s.gone ? "No longer listed" : s.offline || s.hidden ? "Not working today" : ""].filter(Boolean).join(" · ");
+      if (favEdit) {
+        const pos = all.indexOf(s);
+        li.innerHTML = `
+          <button class="handle" aria-label="Drag to move" title="Drag to move"><svg viewBox="0 0 24 24"><path d="M9 5h2v2H9zm4 0h2v2h-2zM9 11h2v2H9zm4 0h2v2h-2zM9 17h2v2H9zm4 0h2v2h-2z"/></svg></button>
+          <span class="txt"><div class="nm"></div><div class="sub"></div></span>
+          <span class="ord">
+            <button class="up" aria-label="Move up" ${pos === 0 || term ? "disabled" : ""}><svg viewBox="0 0 24 24"><path d="M12 7l6 7H6z"/></svg></button>
+            <button class="down" aria-label="Move down" ${pos === all.length - 1 || term ? "disabled" : ""}><svg viewBox="0 0 24 24"><path d="M12 17l-6-7h12z"/></svg></button>
+            <button class="rm" aria-label="Remove from favourites"><svg viewBox="0 0 24 24"><path d="M6.4 5 12 10.6 17.6 5 19 6.4 13.4 12 19 17.6 17.6 19 12 13.4 6.4 19 5 17.6 10.6 12 5 6.4z"/></svg></button>
+          </span>`;
+        li.querySelector(".nm").textContent = s.name;
+        li.querySelector(".sub").textContent = sub;
+        li.querySelector(".up").onclick = () => moveFav(s._k, pos - 1);
+        li.querySelector(".down").onclick = () => moveFav(s._k, pos + 1);
+        li.querySelector(".rm").onclick = () => removeFav(s._k);
+        li.querySelector(".handle").setAttribute("aria-label", `Move ${s.name}: drag, or use arrow keys`);
+        li.querySelector(".handle").onkeydown = (e) => {
+          if (e.key === "ArrowUp" && pos > 0) { e.preventDefault(); moveFav(s._k, pos - 1); }
+          if (e.key === "ArrowDown" && pos < all.length - 1) { e.preventDefault(); moveFav(s._k, pos + 1); }
+        };
+        if (!term) dragSort(li.querySelector(".handle"), li);
+      } else {
+        li.innerHTML = `
+          <button class="hit">
+            <span class="tile">${initials(s.name)}<span class="pl"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></svg></span></span>
+            <span class="txt"><div class="nm"></div><div class="sub"></div></span>
+          </button>
+          <button class="fav" aria-label="Remove from favourites" aria-pressed="true"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2Z"/></svg></button>`;
+        li.querySelector(".hit").setAttribute("aria-label", `Play ${s.name} (${byCol[s._c].name})`);
+        li.querySelector(".nm").textContent = s.name;
+        li.querySelector(".sub").textContent = sub;
+        li.querySelector(".hit").onclick = () => {
+          if (cur) { toggle(); return; }
+          if (s.loading) return;
+          if (s.gone || !s.streams || !s.streams.length) { notice("That station isn't listed any more", 5000); return; }
+          play(s, list.filter((x) => !x.gone && !x.loading), s._c);
+        };
+        li.querySelector(".fav").onclick = (e) => { e.stopPropagation(); removeFav(s._k); };
+      }
+      grid.append(li);
+    });
+    const c = $("#count");
+    c.textContent = all.length
+      ? `${all.length} favourite${all.length === 1 ? "" : "s"} in ${new Set(all.map((x) => x._c)).size} language${new Set(all.map((x) => x._c)).size === 1 ? "" : "s"}` + (term ? ` · ${list.length} match` : "")
+      : "";
+    if (favUndo) {
+      const u = document.createElement("span");
+      u.className = "fav-undo";
+      u.append(document.createTextNode(` · Removed ${favUndo.name} `));
+      const b = document.createElement("button"); b.textContent = "Undo"; b.onclick = undoRemove;
+      u.append(b);
+      c.append(u);
+    }
+    const empty = $("#empty");
+    empty.textContent = all.length ? "No favourites match." : "No favourites yet. Tap the ♥ on any station, in any language, to add it here.";
+    empty.hidden = list.length > 0;
+  }
+
+  // drag a favourite by its handle (mouse, touch or pen); the order is saved on release
+  function dragSort(handle, li) {
+    handle.addEventListener("pointerdown", (e) => {
+      if (e.button !== undefined && e.button !== 0) return;
+      e.preventDefault();
+      li.classList.add("dragging");
+      // follow the pointer on the whole page: moving the card in the list would drop a capture
+      const move = (ev) => {
+        ev.preventDefault();
+        const others = [...grid.children].filter((x) => x !== li);
+        const after = others.find((x) => { const r = x.getBoundingClientRect(); return ev.clientY < r.top + r.height / 2; });
+        if (after) { if (li.nextSibling !== after) grid.insertBefore(li, after); } else if (grid.lastChild !== li) grid.append(li);
+      };
+      const up = () => {
+        window.removeEventListener("pointermove", move);
+        window.removeEventListener("pointerup", up);
+        window.removeEventListener("pointercancel", up);
+        li.classList.remove("dragging");
+        const keys = [...grid.children].map((x) => x.dataset.k).filter(Boolean);
+        if (keys.join("|") !== [...favs].join("|")) saveOrder(keys);
+        renderFavs();
+      };
+      window.addEventListener("pointermove", move, { passive: false });
+      window.addEventListener("pointerup", up);
+      window.addEventListener("pointercancel", up);
+    });
+  }
+  $("#favEdit").onclick = () => { favEdit = !favEdit; renderFavs(); };
 
   // ---------------------------------------------------------- sharing
   const shareUrl = (cId, s) => `${location.origin}/radio.html?c=${cId}&s=${encodeURIComponent(s.id)}`;
@@ -480,7 +700,7 @@
     npFav.setAttribute("aria-pressed", favs.has(`${currentCol}:${current.id}`));
     document.querySelectorAll(".rp").forEach((b, i) => { const x = store.get("mr-played", [])[i]; b.classList.toggle("on", !!x && x.c === currentCol && x.s.id === current.id); });
     document.querySelectorAll(".radio-card").forEach((c) =>
-      c.classList.toggle("on", currentCol === col.id && c.dataset.id === current.id));
+      c.classList.toggle("on", (c.dataset.c || col.id) === currentCol && c.dataset.id === current.id));
   }
   function showNowPlaying(s, cId) {
     player.hidden = false;
@@ -512,16 +732,21 @@
   }
   function skip(dir, spoken) {
     if (!current) return;
-    let list = queue.length ? queue : (currentCol === col.id ? visibleList() : []);
-    const pool = currentCol === col.id ? S : list;
-    const favList = pool.filter((x) => favs.has(`${currentCol}:${x.id}`));
-    if (favs.has(`${currentCol}:${current.id}`) && favList.length >= 2) list = favList;
-    const live = list.filter((x) => !x.offline || x.id === current.id);
+    let list = queue.length ? queue : (currentCol === col.id && view === "col" ? visibleList() : []);
+    const cOf = (x) => x._c || currentCol;
+    const isNow = (x) => x.id === current.id && cOf(x) === currentCol;
+    const mixed = list.some((x) => x._c && x._c !== currentCol);   // the all-languages favourites list
+    if (!mixed) {
+      const pool = currentCol === col.id ? S : list;
+      const favList = pool.filter((x) => favs.has(`${currentCol}:${x.id}`));
+      if (favs.has(`${currentCol}:${current.id}`) && favList.length >= 2) list = favList;
+    }
+    const live = list.filter((x) => !x.offline || isNow(x));
     if (live.length < 2) { status("No other station in this list"); return; }
-    let i = live.findIndex((x) => x.id === current.id);
+    let i = live.findIndex(isNow);
     if (i < 0) i = dir > 0 ? -1 : 0;
     const s = live[(i + dir + live.length) % live.length];
-    play(s, list, currentCol, dir);
+    play(s, list, cOf(s), dir);
     if (spoken) speak(s.name);
   }
 
@@ -791,7 +1016,7 @@
   playBtn.onclick = toggle;
   $("#prevBtn").onclick = () => skip(-1);
   $("#nextBtn").onclick = () => skip(1);
-  npFav.onclick = () => current && toggleFav(`${currentCol}:${current.id}`);
+  npFav.onclick = () => current && toggleFav(`${currentCol}:${current.id}`, current);
   vol.value = store.get("mr-vol", 1); audio.volume = vol.value;
   vol.oninput = () => { audio.volume = vol.value; store.set("mr-vol", +vol.value); };
   q.oninput = render;
@@ -878,8 +1103,9 @@
   // a station link (?c=hindi&s=<id>) also shows that station ready to play
   const params = new URLSearchParams(location.search);
   const want = params.get("c") || getDefault(), sid = params.get("s");
-  const startCol = byCol[want] ? want : "malayalam";
+  const startCol = byCol[want] ? want : byCol[getDefault()] ? getDefault() : "malayalam";
   const opening = openCollection(startCol, false);
+  if (want === "favs" && !sid) opening.then(() => openFavs(false));
   if (sid) {
     opening.then(() => openStation(startCol, sid)).finally(() => {
       const url = new URL(location.href); url.searchParams.delete("s"); history.replaceState(null, "", url);
