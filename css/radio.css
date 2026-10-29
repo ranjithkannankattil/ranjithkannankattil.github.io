@@ -362,31 +362,55 @@ body[data-section="radio"] .ad-link{ font-family:var(--f-mono); font-size:.75rem
 .app-update .au-go{ background:var(--accent); color:#fff; padding:.6rem 1.2rem; font-weight:600; font-family:var(--f-display); }
 .app-update .au-later{ background:none; border:0; padding:.6rem .4rem; font:inherit; color:var(--ink-soft); text-decoration:underline; cursor:pointer; }
 
-/* Favourites from every language (Favourites chip in the language bar) */
-.radio-stats[hidden], nav.radio-chips[hidden]{ display:none; }
-body[data-section="radio"] .lq-fav .heart{ color:var(--accent); }
-body[data-section="radio"] .lq-fav .n{ opacity:.8; }
-.fav-tools{ display:flex; justify-content:flex-start; margin-top:1.4rem; }
+/* Stations | Favourites tabs, and the all-languages favourites list (js/radio.js) */
+.radio-tabs{ display:grid; grid-template-columns:1fr 1fr; margin-top:1.6rem; border:1px solid var(--ink); }
+body[data-section="radio"] .radio-tabs .rt{ min-height:52px; padding:.6rem .8rem; font-family:var(--f-display); font-weight:600; font-size:1rem; color:var(--ink); display:flex; align-items:center; justify-content:center; gap:.4rem; flex-wrap:wrap; }
+body[data-section="radio"] .radio-tabs .rt + .rt{ border-left:1px solid var(--ink); }
+body[data-section="radio"] .radio-tabs .rt[aria-selected="true"]{ background:var(--ink); color:var(--paper); }
+.radio-tabs .lang, .radio-tabs .n{ font-family:var(--f-mono); font-weight:400; font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; opacity:.8; }
+.radio-tabs .heart{ color:var(--accent); }
+.radio-tabs .rt[aria-selected="true"] .heart{ color:var(--paper); }
+/* in Favourites, only the list: no language picker, recent row, status tiles, filters or app card */
+body.fav-view .radio-bar, body.fav-view .recent-row, body.fav-view .radio-stats,
+body.fav-view nav.radio-chips, body.fav-view .diamond-rule, body.fav-view .radio-app{ display:none; }
+body.fav-view .col-head{ margin-top:1.4rem; }
+
+.fav-tools{ margin-top:1rem; }
 .fav-tools[hidden]{ display:none; }
-body[data-section="radio"] .fav-edit-btn{ font-family:var(--f-mono); font-size:.74rem; letter-spacing:.08em; text-transform:uppercase; padding:.45rem .9rem; border:1px solid var(--ink-soft); color:var(--ink); }
-body[data-section="radio"] .fav-edit-btn[aria-pressed="true"]{ background:var(--accent); border-color:var(--accent); color:#fff; }
+body[data-section="radio"] .fav-edit-btn{ min-height:46px; padding:.6rem 1.1rem; font-family:var(--f-display); font-weight:600; font-size:.95rem; border:1.5px solid var(--ink); color:var(--ink); }
+body[data-section="radio"] .fav-edit-btn[aria-pressed="true"]{ background:var(--accent); border-color:var(--accent); color:#fff; min-width:8rem; }
+.fav-help{ margin:.75rem 0 0; font-size:.95rem; color:var(--ink-soft); max-width:46ch; }
+.fav-help b{ color:var(--ink); font-weight:600; }
 .fav-undo{ text-transform:none; letter-spacing:0; }
-.fav-undo button{ font:inherit; color:var(--accent); text-decoration:underline; text-underline-offset:2px; }
+body[data-section="radio"] .fav-undo button{ font:inherit; font-weight:600; color:var(--accent); text-decoration:underline; text-underline-offset:2px; padding:.4rem .2rem; }
+
+/* edit rows: name on top, big labelled buttons underneath */
 .radio-grid.fav-edit{ grid-template-columns:1fr; }
-.fav-card .handle, .fav-card .ord{ display:none; }
-.radio-grid.fav-edit .fav-card{ display:flex; align-items:center; gap:.5rem; padding:.45rem .5rem .45rem .25rem; touch-action:none; }
+.fav-card .er-top, .fav-card .er-btns{ display:none; }
+.radio-grid.fav-edit .fav-card{ padding:.75rem .9rem .85rem; }
+.radio-grid.fav-edit .fav-card .er-top{ display:flex; align-items:center; gap:.7rem; }
 .radio-grid.fav-edit .fav-card .txt{ flex:1; min-width:0; }
-body[data-section="radio"] .radio-grid.fav-edit .fav-card .handle{ display:grid; place-items:center; width:40px; height:44px; flex:none; cursor:grab; color:var(--ink-soft); touch-action:none; }
-.radio-grid.fav-edit .fav-card .handle svg{ width:20px; height:20px; fill:currentColor; }
-.radio-grid.fav-edit .fav-card .ord{ display:flex; gap:.15rem; flex:none; }
-body[data-section="radio"] .radio-grid.fav-edit .fav-card .ord button{ width:40px; height:40px; display:grid; place-items:center; color:var(--ink); }
-.radio-grid.fav-edit .fav-card .ord button svg{ width:18px; height:18px; fill:currentColor; }
-.radio-grid.fav-edit .fav-card .ord button:disabled{ opacity:.25; }
-.radio-grid.fav-edit .fav-card .ord .rm{ color:#9B2C2C; }
-.radio-grid.fav-edit .fav-card.dragging{ background:var(--accent-soft); box-shadow:0 6px 18px rgba(0,0,0,.18); position:relative; z-index:2; }
-.radio-grid.fav-edit .fav-card.dragging .handle{ cursor:grabbing; }
-@media (max-width: 640px){
-  /* keep the remove / move buttons clear of the page's floating scroll arrows */
-  .radio-grid.fav-edit .fav-card{ padding-right:3.4rem; }
+.radio-grid.fav-edit .fav-card .nm{ white-space:normal; }
+.radio-grid.fav-edit .pos-no{ width:30px; height:30px; flex:none; display:grid; place-items:center; background:var(--accent-soft); color:var(--accent); font-family:var(--f-display); font-weight:600; font-size:.9rem; }
+.radio-grid.fav-edit .fav-card .er-btns{ display:flex; flex-wrap:wrap; align-items:center; gap:.4rem; margin-top:.6rem; }
+body[data-section="radio"] .radio-grid.fav-edit .er-btns button,
+body[data-section="radio"] .radio-grid.fav-edit .er-btns select{ min-height:44px; padding:.45rem .65rem; border:1px solid var(--ink-soft); color:var(--ink); font-family:var(--f-display); font-weight:600; font-size:.92rem; background:var(--paper); }
+body[data-section="radio"] .radio-grid.fav-edit .er-btns button:disabled{ opacity:.3; }
+.radio-grid.fav-edit .er-btns .pos{ display:flex; }
+.vh{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+body[data-section="radio"] .radio-grid.fav-edit .er-btns select{ padding-right:1.6rem; }
+body[data-section="radio"] .radio-grid.fav-edit .er-btns .rm{ margin-left:auto; color:#9B2C2C; border-color:#9B2C2C; }
+.radio-grid.fav-edit .fav-card.moved{ background:var(--accent-soft); transition:background .2s; }
+/* drag handle only with a mouse or trackpad; on touch screens the buttons do it */
+.radio-grid.fav-edit .fav-card .handle{ display:none; }
+@media (hover: hover) and (pointer: fine){
+  body[data-section="radio"] .radio-grid.fav-edit .fav-card .handle{ display:grid; place-items:center; width:32px; height:40px; flex:none; cursor:grab; color:var(--ink-soft); touch-action:none; }
+  .radio-grid.fav-edit .fav-card .handle svg{ width:20px; height:20px; fill:currentColor; }
 }
-body[data-section="radio"] .radio-grid.fav-edit .fav-card .ord .rm{ color:#9B2C2C; }
+.radio-grid.fav-edit .fav-card.dragging{ background:var(--accent-soft); box-shadow:0 6px 18px rgba(0,0,0,.18); position:relative; z-index:2; }
+/* while editing, the page's floating scroll arrows would sit on the Remove buttons */
+body.fav-editing .scroll-nav{ display:none; }
+@media (max-width: 400px){
+  body[data-section="radio"] .radio-grid.fav-edit .er-btns button,
+  body[data-section="radio"] .radio-grid.fav-edit .er-btns select{ padding-left:.55rem; padding-right:.55rem; font-size:.88rem; }
+}

@@ -26,7 +26,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap"></noscript>
 <link rel="stylesheet" href="css/style.css?v=13">
-<link rel="stylesheet" href="css/radio.css?v=25">
+<link rel="stylesheet" href="css/radio.css?v=28">
 </head>
 <body data-section="radio" class="wide">
 
@@ -57,6 +57,11 @@
       <input id="q" type="search" placeholder="Station name" autocomplete="off">
     </label>
   </div>
+
+  <nav class="radio-tabs" id="radioTabs" role="tablist" aria-label="Stations or favourites">
+    <button class="rt" id="tabStations" role="tab" aria-selected="true">Stations <span class="lang"></span></button>
+    <button class="rt" id="tabFavs" role="tab" aria-selected="false"><span class="heart" aria-hidden="true">♥</span> Favourites <span class="n" id="favN"></span></button>
+  </nav>
 
   <div class="radio-bar">
     <div class="lang-pick">
@@ -95,7 +100,8 @@
 
   <nav class="radio-chips" id="chips" aria-label="Filter by category"></nav>
   <div class="fav-tools" id="favTools" hidden>
-    <button class="fav-edit-btn" id="favEdit" aria-pressed="false">Reorder</button>
+    <button class="fav-edit-btn" id="favEdit" aria-pressed="false">Edit order / remove</button>
+    <p class="fav-help" id="favHelp" hidden>Tap <b>↑ Up</b> / <b>↓ Down</b>, or pick a number — <b>No. 1</b> is the top. Changes save as you go.</p>
   </div>
   <div class="diamond-rule"><span class="diamond-mark">◆</span></div>
 
@@ -193,7 +199,7 @@
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.5.13/hls.min.js"></script>
 <script src="js/collections.js?v=1"></script>
-<script src="js/radio.js?v=35"></script>
+<script src="js/radio.js?v=38"></script>
 <script src="js/firebase-config.js?v=3"></script>
 <script type="module" src="js/radio-sync.js?v=4"></script>
 <script type="module" src="js/radio-ratings.js?v=3"></script>

@@ -46,14 +46,7 @@
     const quick = [def, ...recent.filter((id) => id !== def)].slice(0, 7);
     const box = $("#langQuick");
     box.innerHTML = "";
-    const fb = document.createElement("button");
-    fb.className = "lq lq-fav";
-    fb.setAttribute("aria-pressed", view === "favs");
-    fb.title = "Your favourite stations from every language";
-    fb.innerHTML = '<span class="heart" aria-hidden="true">♥</span><span>Favourites</span><span class="n"></span>';
-    fb.querySelector(".n").textContent = favs.size;
-    fb.onclick = () => openFavs(true);
-    box.append(fb);
+    renderTabs();
     for (const id of quick) {
       const c = byCol[id];
       const b = document.createElement("button");
@@ -307,12 +300,22 @@
     if (changed) store.set("mr-favinfo", favInfo);
     favLoaded = lists.every(([, l]) => Array.isArray(l));   // a failed load isn't "no longer listed"
   }
+  // Stations | Favourites tabs at the top of the page. In Favourites the language picker,
+  // recently played, status tiles and filters are hidden (see body.fav-view in radio.css).
   function setView(v) {
     view = v;
-    document.querySelector(".radio-stats").hidden = v === "favs";
-    chips.hidden = v === "favs";
     $("#favTools").hidden = v !== "favs";
     document.body.classList.toggle("fav-view", v === "favs");
+    if (v !== "favs") document.body.classList.remove("fav-editing");
+    renderTabs();
+  }
+  function renderTabs() {
+    const a = $("#tabStations"), f = $("#tabFavs");
+    if (!a || !f) return;
+    a.setAttribute("aria-selected", view === "col");
+    f.setAttribute("aria-selected", view === "favs");
+    $("#favN").textContent = favs.size;
+    a.querySelector(".lang").textContent = col ? col.name : "";
   }
   async function openFavs(user) {
     setView("favs");
@@ -323,9 +326,9 @@
     renderBar();
     $("#colName").textContent = "Favourites";
     $("#colNative").textContent = "";
-    $("#colIntro").textContent = "Your favourite stations from every language, in your own order. Use Reorder to move or remove them.";
+    $("#colIntro").textContent = "Your favourite stations from every language, in your own order. Tap Edit to change the order or remove stations.";
     renderFavs();
-    if (user) $(".radio-bar").scrollIntoView({ behavior: "smooth", block: "nearest" });
+    if (user) $("#radioTabs").scrollIntoView({ behavior: "smooth", block: "start" });
     await loadFavDetails();
     if (view === "favs") renderFavs();
   }
@@ -340,8 +343,11 @@
     keys.splice(Math.max(0, Math.min(to, keys.length)), 0, k);
     saveOrder(keys);
     renderFavs();
-    const b = grid.querySelector(`[data-k="${CSS.escape(k)}"] .handle`);
-    if (b) b.focus({ preventScroll: true });
+    const row = grid.querySelector(`[data-k="${CSS.escape(k)}"]`);
+    if (row) {
+      row.classList.add("moved"); setTimeout(() => row.classList.remove("moved"), 900);
+      row.scrollIntoView({ block: "nearest", behavior: "smooth" });
+    }
   }
   function removeFav(k) {
     const keys = [...favs];
@@ -368,7 +374,9 @@
     const list = all.filter((s) => !term || s.name.toLowerCase().includes(term));
     grid.innerHTML = "";
     grid.classList.toggle("fav-edit", favEdit);
-    $("#favEdit").textContent = favEdit ? "Done" : "Reorder";
+    document.body.classList.toggle("fav-editing", favEdit && view === "favs");
+    $("#favEdit").textContent = favEdit ? "Done" : "Edit order / remove";
+    $("#favHelp").hidden = !favEdit;
     $("#favEdit").setAttribute("aria-pressed", favEdit);
     $("#favEdit").hidden = all.length < 1;
     list.forEach((s, i) => {
@@ -380,17 +388,35 @@
       if (favEdit) {
         const pos = all.indexOf(s);
         li.innerHTML = `
-          <button class="handle" aria-label="Drag to move" title="Drag to move"><svg viewBox="0 0 24 24"><path d="M9 5h2v2H9zm4 0h2v2h-2zM9 11h2v2H9zm4 0h2v2h-2zM9 17h2v2H9zm4 0h2v2h-2z"/></svg></button>
-          <span class="txt"><div class="nm"></div><div class="sub"></div></span>
-          <span class="ord">
-            <button class="up" aria-label="Move up" ${pos === 0 || term ? "disabled" : ""}><svg viewBox="0 0 24 24"><path d="M12 7l6 7H6z"/></svg></button>
-            <button class="down" aria-label="Move down" ${pos === all.length - 1 || term ? "disabled" : ""}><svg viewBox="0 0 24 24"><path d="M12 17l-6-7h12z"/></svg></button>
-            <button class="rm" aria-label="Remove from favourites"><svg viewBox="0 0 24 24"><path d="M6.4 5 12 10.6 17.6 5 19 6.4 13.4 12 19 17.6 17.6 19 12 13.4 6.4 19 5 17.6 10.6 12 5 6.4z"/></svg></button>
-          </span>`;
+          <div class="er-top">
+            <button class="handle" title="Drag to move"><svg viewBox="0 0 24 24"><path d="M9 5h2v2H9zm4 0h2v2h-2zM9 11h2v2H9zm4 0h2v2h-2zM9 17h2v2H9zm4 0h2v2h-2z"/></svg></button>
+            <span class="pos-no"></span>
+            <span class="txt"><div class="nm"></div><div class="sub"></div></span>
+          </div>
+          <div class="er-btns">
+            <button class="up">↑ Up</button>
+            <button class="down">↓ Down</button>
+            <label class="pos"><span class="vh">Position</span><select></select></label>
+            <button class="rm">Remove</button>
+          </div>`;
         li.querySelector(".nm").textContent = s.name;
         li.querySelector(".sub").textContent = sub;
-        li.querySelector(".up").onclick = () => moveFav(s._k, pos - 1);
-        li.querySelector(".down").onclick = () => moveFav(s._k, pos + 1);
+        li.querySelector(".pos-no").textContent = pos + 1;
+        const up = li.querySelector(".up"), down = li.querySelector(".down"), sel = li.querySelector("select");
+        up.disabled = pos === 0 || !!term; down.disabled = pos === all.length - 1 || !!term;
+        up.setAttribute("aria-label", `Move ${s.name} up`); down.setAttribute("aria-label", `Move ${s.name} down`);
+        sel.setAttribute("aria-label", `Position of ${s.name}`);
+        sel.disabled = !!term || all.length < 2;
+        for (let n = 1; n <= all.length; n++) {
+          const o = document.createElement("option");
+          o.value = n - 1; o.textContent = `No. ${n}`;
+          if (n - 1 === pos) o.selected = true;
+          sel.append(o);
+        }
+        up.onclick = () => moveFav(s._k, pos - 1);
+        down.onclick = () => moveFav(s._k, pos + 1);
+        sel.onchange = () => moveFav(s._k, +sel.value);
+        li.querySelector(".rm").setAttribute("aria-label", `Remove ${s.name} from favourites`);
         li.querySelector(".rm").onclick = () => removeFav(s._k);
         li.querySelector(".handle").setAttribute("aria-label", `Move ${s.name}: drag, or use arrow keys`);
         li.querySelector(".handle").onkeydown = (e) => {
@@ -463,6 +489,8 @@
     });
   }
   $("#favEdit").onclick = () => { favEdit = !favEdit; renderFavs(); };
+  $("#tabStations").onclick = () => { if (view !== "col") openCollection(col ? col.id : getDefault(), false); };
+  $("#tabFavs").onclick = () => { if (view !== "favs") openFavs(true); };
 
   // ---------------------------------------------------------- sharing
   const shareUrl = (cId, s) => `${location.origin}/radio.html?c=${cId}&s=${encodeURIComponent(s.id)}`;
