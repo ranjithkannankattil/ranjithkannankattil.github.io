@@ -28,6 +28,7 @@
 [data-section="trip"]         { --accent:#1F6F78; --accent-soft:#DCEBEC; }
 [data-section="productivity"] { --accent:#5C4D7D; --accent-soft:#E7E2EF; }
 [data-section="movies"]       { --accent:#8C2F39; --accent-soft:#F1DEDF; }
+[data-section="expats"]       { --accent:#8A3B66; --accent-soft:#F0DEE7; }
 
 *{ box-sizing:border-box; }
 html{ scroll-behavior:smooth; overflow-x:hidden; }
@@ -806,6 +807,7 @@ nav.tabs .nav-sub a.current{ background:var(--paper); box-shadow:inset 3px 0 0 v
   [data-section="productivity"] { --accent:#B4A2DE; --accent-soft:#28233A; }
   [data-section="trip"]         { --accent:#6CC3CB; --accent-soft:#1A2B2D; }
   [data-section="movies"]       { --accent:#E8848D; --accent-soft:#341D20; }
+  [data-section="expats"]       { --accent:#E38FBA; --accent-soft:#35202C; }
 
   img{ filter:brightness(.92); }
   .frame img, .hero-photo img{ filter:grayscale(1) contrast(1.05) brightness(.9); }

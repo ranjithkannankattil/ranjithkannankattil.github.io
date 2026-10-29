@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English films in original version — Milan &amp; Italy — Ranjith Kannankattil</title>
+<meta name="description" content="Today's English-language films in original version (VO, Italian subtitles) in Milan and other Italian cities, with times and booking links. Updated through the day.">
+<link rel="canonical" href="https://ranjithkb.com/expats/cinema.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ranjith Kannankattil">
+<meta property="og:title" content="English films in original version — Milan &amp; Italy">
+<meta property="og:description" content="Today's English-language films in original version in Milan and other Italian cities, with times and booking links.">
+<meta property="og:url" content="https://ranjithkb.com/expats/cinema.html">
+<meta name="twitter:card" content="summary">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="icon" href="/assets/icons/site-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/icons/site-180.png">
+<meta name="theme-color" content="#F0EDE6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16161A" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
+<link rel="stylesheet" href="../css/style.css?v=14">
+<link rel="stylesheet" href="../css/cinema.css?v=1">
+</head>
+<body data-section="expats">
+
+<header class="titleblock">
+  <div>
+    <div class="id">RANJITH KANNANKATTIL</div>
+    <div class="name">Living in Milan</div>
+  </div>
+  <nav class="tabs" data-root="../" data-active="cinema" aria-label="Site">
+    <a href="../index.html">Home</a>
+    <a href="../news.html">News</a>
+    <a href="../productivity/">Productivity</a>
+  </nav>
+</header>
+
+<main>
+  <div class="cn-head">
+    <div class="cn-eyebrow">Versione originale · sottotitoli in italiano</div>
+    <h1 class="cn-title">English films in original version</h1>
+    <p class="cn-intro">Most films in Italy are dubbed. These are today's screenings in the original language, with Italian subtitles. Pick a city and search for anything you half remember: a title, an actor, a cinema. Tap a time to book.</p>
+  </div>
+
+  <div class="cn-bar">
+    <div class="cn-controls">
+      <label class="cn-field"><span class="k">City</span><select id="city"></select></label>
+      <label class="cn-field cn-q"><span class="k">Search</span><input id="q" type="search" placeholder="Film, actor, director or cinema" autocomplete="off" spellcheck="false"></label>
+    </div>
+    <div class="cn-toggles">
+      <div class="cn-seg" role="group" aria-label="Language">
+        <button type="button" id="langEn" aria-pressed="true">English only</button>
+        <button type="button" id="langAll" aria-pressed="false">All languages</button>
+      </div>
+      <div class="cn-seg" role="group" aria-label="Times">
+        <button type="button" id="whenUp" aria-pressed="true">Still to come</button>
+        <button type="button" id="whenAll" aria-pressed="false">All today</button>
+      </div>
+    </div>
+    <div class="cn-status" id="status" role="status">Loading today's listings…</div>
+  </div>
+
+  <div class="cn-list" id="list" aria-live="polite"></div>
+
+  <p class="cn-note">Listings come from <a href="https://www.mymovies.it/" rel="noopener" target="_blank">MYmovies</a> and Anteo, refreshed five times a day. At Anteo Palazzo del Cinema a time opens that exact screening; elsewhere it opens the cinema's own ticket page. Check with the cinema before you go.</p>
+</main>
+
+<footer>
+  <div class="cheart">♡ <span id="year"></span> Ranjith Kannankattil · What I created here is free to copy — <a href="https://copyheart.org/" rel="noopener">copying is an act of love</a>. Others' work keeps its own terms.</div>
+  <div class="foot-r"><span class="visits" id="visits" hidden></span><a href="mailto:hello@ranjithkb.com">hello@ranjithkb.com</a><a href="../privacy.html">Privacy</a></div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/cinema.js?v=1"></script>
+<script src="../js/nav.js?v=12" defer></script>
+<script src="../js/visits.js?v=2" defer></script>
+</body>
+</html>

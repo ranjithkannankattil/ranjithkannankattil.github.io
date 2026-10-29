@@ -29,6 +29,7 @@
       { id: "news", label: "News", desc: "Trusted papers, world to your town", href: "news.html" },
       { id: "trip", label: "Trip planner", desc: "Day-by-day walking plans, anywhere", href: "trip.html" },
       { id: "movies", label: "Movies", desc: "Any film, every rating, what to watch next", href: "movies.html" },
+      { id: "cinema", label: "English cinema", desc: "Original-version films in Milan & Italy, today", href: "expats/cinema.html" },
     ], sub: { id: "productivity", label: "Productivity", href: "productivity/", items: PRODUCTIVITY } },
   ];
 
