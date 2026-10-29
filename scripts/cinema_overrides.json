@@ -1,4 +1,5 @@
 {
-  "_help": "Fix a film's language when the automatic guess is wrong. Key: the film's title (original or Italian). en: true if it should show under 'English only'.",
-  "Naza": {"lang": "Hebrew / English", "en": false}
+  "_help": "Fix a film when the automatic guess is wrong. Key: the film's Italian or original title as MYmovies lists it. 'title' sets the title shown; 'lang' and 'en' set the language (en: true shows it under 'English only').",
+  "Naza": {"lang": "Hebrew / English", "en": false},
+  "Ragione e Sentimento": {"title": "Sense and Sensibility", "lang": "English", "en": true}
 }

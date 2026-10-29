@@ -341,12 +341,21 @@ def enrich(films, anteo_langs, overrides):
         # Prefer the original title; Wikidata's English label fixes MYmovies' occasional typos in it.
         if orig and norm(orig) != norm(mm_title):
             f["t"], f["it"] = orig, mm_title
-        if wd and wd.get("label") and orig and lev_ratio(norm(wd["label"]), norm(orig)) >= 0.8:
-            f["t"] = wd["label"]
-        keys = title_keys(f)
+        if wd and wd.get("label"):
+            lab = norm(wd["label"])
+            if orig and lev_ratio(lab, norm(orig)) >= 0.8:
+                f["t"] = wd["label"]
+            elif not orig and len(lab) > 3 and norm(mm_title).startswith(lab) and lab != norm(mm_title):
+                # "Wildwood - I segreti del bosco proibito" → "Wildwood"
+                f["t"], f["it"] = wd["label"], mm_title
+        keys = title_keys(f) | {norm(mm_title)}
         al = next((v for k, v in anteo_langs.items() if match(keys, k)), None)
         ov = next((v for k, v in overrides.items() if k in keys), None)
-        if ov:
+        if ov and ov.get("title"):
+            if norm(ov["title"]) != norm(mm_title):
+                f["it"] = mm_title
+            f["t"] = ov["title"]
+        if ov and "en" in ov:
             f["lang"], f["en"], f["langSrc"] = ov.get("lang", f.get("lang")), bool(ov.get("en")), "manual"
         elif al:
             f["lang"], f["en"], f["langSrc"] = al[0], al[1], "anteo"
