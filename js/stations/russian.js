@@ -701,6 +701,33 @@ window.STATIONS = [
       "https://radiorecord.hostingradio.ru/ambient96.aacp"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "dfm-vocal-trance",
+    "name": "DFM - Vocal Trance",
+    "category": "music",
+    "streams": [
+      "https://dfm-trance.hostingradio.ru/trance96.aacp"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "station-28",
+    "name": "Русский Рок",
+    "category": "music",
+    "streams": [
+      "https://rr-russkijrok.hostingradio.ru/russkijrok96.aacp"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radio-record-deep",
+    "name": "Radio Record Deep",
+    "category": "music",
+    "streams": [
+      "https://radiorecord.hostingradio.ru/deep96.aacp"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

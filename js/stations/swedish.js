@@ -16,10 +16,10 @@ window.STATIONS = [
     "name": "Sveriges Radio - P1",
     "category": "news",
     "streams": [
-      "https://sverigesradio.se/topsy/direkt/srapi/132-hi-aac-http",
       "https://live1.sr.se/p1-mp3-96",
       "https://edge1.sr.se/p1-aac-320",
-      "https://live1.sr.se/p1-aac-32"
+      "https://live1.sr.se/p1-aac-32",
+      "https://sverigesradio.se/topsy/direkt/srapi/132-hi-aac-http"
     ]
   },
   {
@@ -476,4 +476,4 @@ window.STATIONS = [
     "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

@@ -672,6 +672,24 @@ window.STATIONS = [
       "https://radio.en.rs/radio/8000/radio.mp3"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "naxi-70e",
+    "name": "Naxi 70e",
+    "category": "music",
+    "streams": [
+      "https://naxidigital-70s128ssl.streaming.rs:8042/;"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "naxi-latino-radio",
+    "name": "Naxi Latino Radio",
+    "category": "music",
+    "streams": [
+      "https://naxidigital-latino128ssl.streaming.rs:8232/;stream.nsv"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

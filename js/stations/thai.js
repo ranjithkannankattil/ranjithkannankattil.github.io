@@ -285,6 +285,15 @@ window.STATIONS = [
       "https://nontawat3664.i234.me:8443/stream"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "cwk-radio",
+    "name": "CWK Radio",
+    "category": "music",
+    "streams": [
+      "https://radio11.plathong.net/7050/;stream.mp3"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

@@ -476,6 +476,33 @@ window.STATIONS = [
       "https://25693.live.streamtheworld.com/VOICEOFCROATIAAAC_SC"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "radio-postaja-odzak",
+    "name": "Radio Postaja Odzak",
+    "category": "music",
+    "streams": [
+      "https://stream.rcast.net/70602"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radio-vinkovci",
+    "name": "Radio Vinkovci",
+    "category": "news",
+    "streams": [
+      "https://onlineradiobox.com/json/hr/vinkovci/play?platform=web"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radio-92-fm",
+    "name": "Radio 92 FM",
+    "category": "news",
+    "streams": [
+      "https://onlineradiobox.com/json/hr/92fm/play?platform=web"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

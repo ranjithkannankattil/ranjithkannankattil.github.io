@@ -611,6 +611,33 @@ window.STATIONS = [
       "https://radiostream.pl/tuba8902-1.mp3"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "eska-biaystok",
+    "name": "Eska - Białystok",
+    "category": "music",
+    "streams": [
+      "https://waw.ic.smcdn.pl/2020-1.mp3"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "red7-kana-edm",
+    "name": "Red7 - Kanał EDM",
+    "category": "music",
+    "streams": [
+      "https://s.red7.pl/edm256"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radio-eska-braniewo",
+    "name": "Radio ESKA Braniewo",
+    "category": "music",
+    "streams": [
+      "https://waw.ic.smcdn.pl/2520-2.aac"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

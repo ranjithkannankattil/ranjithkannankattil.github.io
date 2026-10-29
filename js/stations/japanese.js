@@ -484,7 +484,8 @@ window.STATIONS = [
     "streams": [
       "https://internetradio.dankassassin368.com/DankFM.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "vocaloplus-vocaloid-more",
@@ -620,6 +621,33 @@ window.STATIONS = [
       "https://quincy.torontocast.com:2020/;"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "radio-animklatu",
+    "name": "Radio AnimKLATU",
+    "category": "music",
+    "streams": [
+      "https://animklatu.stream.laut.fm/animklatu?t302=2026-10-27_06-59-01&uuid=3522d895-e97b-14d8-a100-c196346bb007"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "j-pop-powerplay-kawaii-http",
+    "name": "J-Pop Powerplay Kawaii (http)",
+    "category": "music",
+    "streams": [
+      "https://kathy.torontocast.com:3060/;"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radio-spider",
+    "name": "Radio Spider",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/ullfy4hf9lhtv"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

@@ -321,8 +321,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.damasradio.fm/radio"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-manarat",
@@ -430,8 +429,7 @@ window.STATIONS = [
     "streams": [
       "https://alifalifjobs.com/radio/8000/AlifAlifLive.mp3"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "skyrock-casablanca",
@@ -702,6 +700,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/ctmapun6ot5vv"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "tarab-radio",
+    "name": "Tarab Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/fy8achbq97zuv"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "station-16",
+    "name": "راديو عالبال",
+    "category": "music",
+    "streams": [
+      "https://albal-lbnet2.radioca.st/stream.mp3"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "adeem",
+    "name": "Adeem",
+    "category": "music",
+    "streams": [
+      "https://usa19.fastcast4u.com/adeem"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

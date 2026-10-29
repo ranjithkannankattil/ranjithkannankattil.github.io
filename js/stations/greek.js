@@ -528,7 +528,8 @@ window.STATIONS = [
     "streams": [
       "https://netradio.live24.gr/rebel1052"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "vanilla-radio-com-fresh-flavours-stream",
@@ -727,6 +728,33 @@ window.STATIONS = [
       "https://sh.onweb.gr:7083/stream?type=http&nocache=35812"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "radio-saranda",
+    "name": "Radio Saranda",
+    "category": "music",
+    "streams": [
+      "https://s64.radiolize.com/radio/8050/radio.mp3"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "1st-greek-80s-flac-radio",
+    "name": "1st Greek 80s FLAC Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.newageradio.gr/listen/80s/radio.aac"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "thess-94-5",
+    "name": "Thess 94.5",
+    "category": "news",
+    "streams": [
+      "https://eu7.fastcast4u.com/proxy/nmarog02?mp=/1"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

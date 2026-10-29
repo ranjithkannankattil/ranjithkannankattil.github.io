@@ -570,6 +570,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "where": "Canada"
+  },
+  {
+    "id": "bloomberg-99-1-105-7-hd2",
+    "name": "Bloomberg 99.1/105.7 HD2",
+    "category": "us",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/WBBRDCAAC.aac"
+    ],
+    "added": "2026-10-29",
+    "where": "US"
+  },
+  {
+    "id": "agidigbo-88-7-fm",
+    "name": "Agidigbo 88.7 FM",
+    "category": "world",
+    "streams": [
+      "https://agidigbostream.com.ng/radio/8000/radio.mp3"
+    ],
+    "added": "2026-10-29",
+    "where": "Nigeria"
+  },
+  {
+    "id": "wrko-am-680",
+    "name": "WRKO-AM 680",
+    "category": "us",
+    "streams": [
+      "https://stream.revma.ihrhls.com/zc7750"
+    ],
+    "added": "2026-10-29",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

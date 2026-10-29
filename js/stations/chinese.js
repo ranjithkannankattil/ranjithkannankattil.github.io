@@ -201,8 +201,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-17",
@@ -638,6 +637,33 @@ window.STATIONS = [
       "https://lhttp-hw.qtfm.cn/live/267/64k.mp3"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "station-36",
+    "name": "济南故事广播",
+    "category": "news",
+    "streams": [
+      "https://lhttp.qtfm.cn/live/1672/64k.mp3"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "anison",
+    "name": "Anison动漫音乐台",
+    "category": "music",
+    "streams": [
+      "https://pool.anison.fm:9000/AniSonFM(320)?"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "shanghai-fm-101-101",
+    "name": "Shanghai FM 101 上海动感101",
+    "category": "music",
+    "streams": [
+      "https://lhttp.qingting.fm/live/274/64k.mp3"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

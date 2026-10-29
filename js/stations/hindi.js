@@ -256,7 +256,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio007/hlspbaudio007_Auto.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-mirchi-usa",
@@ -512,8 +513,7 @@ window.STATIONS = [
     "streams": [
       "https://streamasiacdn.atc-labs.com/gyansthali.aac"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "2b-radio-sangam-devi-maa",
@@ -666,8 +666,7 @@ window.STATIONS = [
     "streams": [
       "https://usa15.fastcast4u.com/proxy/hitsfm912?mp=/1"
     ],
-    "added": "2026-10-28",
-    "offline": true
+    "added": "2026-10-28"
   },
   {
     "id": "mukesh-radio",
@@ -695,6 +694,33 @@ window.STATIONS = [
       "https://streaming.exclusive.radio/uber/bollywoodsonunigam/icecast.audio"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "93-5-jamshedpur",
+    "name": "93.5 jamshedpur",
+    "category": "music",
+    "streams": [
+      "https://stream-281.surfernetwork.com/9phrkb1e3v8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI5cGhya2IxZTN2OHV2IiwiaG9zdCI6InN0cmVhbS0yODEuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJIc2hqLVN5dVJoMm5ZZ0Fvbi1Fbm13IiwiaWF0IjoxNzkzMTE2MDcxLCJleHAiOjE3OTMxMTYxMzF9.NyLqCeI1zRJzbG5WcSSBHDNUC07p0mSR-O9hsmopGUk"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radio-rimjhim",
+    "name": "Radio Rimjhim",
+    "category": "music",
+    "streams": [
+      "https://streamasiacdn.atc-labs.com/radiorimjhim.aac"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "bhakti-sagar-durga-maa",
+    "name": "bhakti Sagar durga maa",
+    "category": "devotional",
+    "streams": [
+      "https://stream.zeno.fm/syu0rdutvxhvv"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

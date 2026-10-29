@@ -642,6 +642,33 @@ window.STATIONS = [
       "https://icy.unitedradio.it/um020.mp3"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "italo-disco",
+    "name": "Italo Disco",
+    "category": "music",
+    "streams": [
+      "https://italo-disco.stream.laut.fm/italo-disco"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "venice-classic-radio",
+    "name": "Venice Classic Radio",
+    "category": "music",
+    "streams": [
+      "https://uk2.streamingpulse.com/ssl/vcr1"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radio-italia-anni-60",
+    "name": "Radio Italia Anni 60",
+    "category": "music",
+    "streams": [
+      "https://ice04.fluidstream.net/ria60_bo.mp3"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

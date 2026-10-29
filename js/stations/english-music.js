@@ -756,6 +756,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "where": "UK"
+  },
+  {
+    "id": "181-fm-the-eagle-classic",
+    "name": "181.FM - The Eagle (Classic)",
+    "category": "rock",
+    "streams": [
+      "https://listen.181fm.com/181-eagle_128k.mp3"
+    ],
+    "added": "2026-10-29",
+    "where": "US"
+  },
+  {
+    "id": "jazu-japanese-jazz",
+    "name": "JAZU - Japanese Jazz",
+    "category": "jazz",
+    "streams": [
+      "https://tunein-live-b.cdnstream1.com/3885_128.mp3?aw_0_1st.skey=1733919523&lat=37.751&lon=-97.822&aw_0_1st.abtest=&aw_0_1st.stationId=s321092&aw_0_1st.premium=false&source=TuneIn&aw_0_req.gdpr=true&aw_0_1st.platform=tunein&aw_0_1st.genre_id=g11&aw_0_1st.class=music&aw_0_1st.ads_partner_alias=ce.Other&aw_0_azn.planguage=en&aw_0_1st.is_ondemand=false&aw_0_1st.topicId=na&aw_0_1st.affiliateIds=a38725%2ca40075&aw_0_1st.bandId=16"
+    ],
+    "added": "2026-10-29",
+    "where": "Canada"
+  },
+  {
+    "id": "london-soul-radio",
+    "name": "London Soul Radio",
+    "category": "jazz",
+    "streams": [
+      "https://londonsoulradio.out.airtime.pro:8000/londonsoulradio_a"
+    ],
+    "added": "2026-10-29",
+    "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

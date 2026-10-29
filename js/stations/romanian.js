@@ -56,7 +56,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://astreaming.edi.ro:8443/EuropaFM_aac"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "magic-party-mix",
@@ -104,7 +105,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://astreaming.edi.ro:8443/VirginRadio_aac"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "balcan-radio-manele-braila",
@@ -646,6 +648,33 @@ window.STATIONS = [
       "https://ssl.asculta.live/8096/stream"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "radio-zum-1",
+    "name": "Radio ZUM 1",
+    "category": "music",
+    "streams": [
+      "https://streams.radiozum.md/listen/zum1/ZUM1"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "magic-fm-jazz",
+    "name": "Magic FM Jazz",
+    "category": "music",
+    "streams": [
+      "https://dc.digi.live.kissfm.ro/magic-jazz"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "realitatea-fm",
+    "name": "Realitatea FM",
+    "category": "news",
+    "streams": [
+      "https://shout.realitatea.net:8001/rfmweb"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

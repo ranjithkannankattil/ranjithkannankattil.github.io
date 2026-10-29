@@ -713,6 +713,33 @@ window.STATIONS = [
       "https://stream.sublime.nl/web22_mp3"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "alswin-ambient-music",
+    "name": "Alswin Ambient Music",
+    "category": "music",
+    "streams": [
+      "https://server7.radio-streams.net/proxy/jwoiiktx/stream"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "mega-hit-fm",
+    "name": "Mega Hit FM",
+    "category": "music",
+    "streams": [
+      "https://megahitfm.krioyohosting.com:1012/stream"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radio-2-antwerpen",
+    "name": "Radio 2 Antwerpen",
+    "category": "music",
+    "streams": [
+      "https://icecast.vrtcdn.be/ra2ant-high.mp3"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

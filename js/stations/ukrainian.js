@@ -232,8 +232,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.brokenbeats.net/tune"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-shanson",
@@ -682,6 +681,33 @@ window.STATIONS = [
       "https://online.z-polus.info/hq"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "48",
+    "name": "Радіоточка 48 кБ/с",
+    "category": "music",
+    "streams": [
+      "https://radio.ukr.radio/ur5-aacplus-l"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "station-16",
+    "name": "Радіо ПТРК",
+    "category": "news",
+    "streams": [
+      "https://service.ptrk.tv:8443/PTRK"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radio-jazz-fm",
+    "name": "Radio Jazz FM",
+    "category": "music",
+    "streams": [
+      "https://online.radiojazz.ua/RadioJazz_Christmas"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

@@ -709,6 +709,33 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/BANDNEWSFM_RJAAC.aac?"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "89-goiania",
+    "name": "89 Goiânia",
+    "category": "music",
+    "streams": [
+      "https://ice.fabricahost.com.br/89aradiorockgo"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "ilha-do-mel-fm",
+    "name": "Ilha do Mel FM",
+    "category": "news",
+    "streams": [
+      "https://str1.streamhostpg.com.br:8002/stream"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radio-brasil-de-fato",
+    "name": "Rádio Brasil de Fato",
+    "category": "music",
+    "streams": [
+      "https://s09.hstbr.net:8238/live"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

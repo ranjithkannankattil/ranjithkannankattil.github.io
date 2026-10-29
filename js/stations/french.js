@@ -653,6 +653,33 @@ window.STATIONS = [
       "https://start-latina.ice.infomaniak.ch/start-latina-high.mp3"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "skyrock-casablanca",
+    "name": "Skyrock Casablanca",
+    "category": "music",
+    "streams": [
+      "https://icecast.skyrock.net/s/casa_aac_64k"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "chaine-1",
+    "name": "Chaine 1 القناة الأولى",
+    "category": "news",
+    "streams": [
+      "https://webradio1.tda.dz:8001/Chaine1_64K.mp3"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "medi-1-radio",
+    "name": "MEDI 1 RADIO",
+    "category": "news",
+    "streams": [
+      "https://cdn.live.easybroadcast.io/live/83_medi1radio-maghreb_8s9i4bn/playlist.m3u8"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

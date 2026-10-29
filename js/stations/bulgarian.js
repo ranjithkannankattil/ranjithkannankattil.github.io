@@ -48,7 +48,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nova-radio.neterra.tv/veselinaretro"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "badrock-hard-heavy",
@@ -647,6 +648,33 @@ window.STATIONS = [
       "https://27913.live.streamtheworld.com/BG_RADIOAAC_H.aac"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "98-6-fm",
+    "name": "БНР Радио Русе 98.6 FM",
+    "category": "news",
+    "streams": [
+      "https://e106-ts.cdn.bg/regstations/fls/Shumen.stream/chunklist.m3u8"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "station-11",
+    "name": "БНР – Радио Бургас",
+    "category": "news",
+    "streams": [
+      "https://lb-hls.cdn.bg/2032/fls/Burgas.stream/playlist.m3u8"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "nova-news",
+    "name": "Nova News",
+    "category": "news",
+    "streams": [
+      "https://play.global.audio/novanewshi.aac"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

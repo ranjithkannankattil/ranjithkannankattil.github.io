@@ -674,6 +674,33 @@ window.STATIONS = [
       "https://radyo.yayindakiler.com:3016/renk"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "eregli-fm",
+    "name": "Ereğli FM",
+    "category": "news",
+    "streams": [
+      "https://radyo.yayindakiler.com:3000/stream"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "x-radio",
+    "name": "X Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.xradio.com.tr:8770/stream"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radyo-gol",
+    "name": "Radyo Gol",
+    "category": "music",
+    "streams": [
+      "https://edge1.radyotvonline.net/shoutcast/play/radyogol"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

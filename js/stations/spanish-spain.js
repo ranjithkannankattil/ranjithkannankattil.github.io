@@ -236,7 +236,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ztnr.rtve.es/ztnr/1694255.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "esradio-principal",
@@ -703,6 +704,33 @@ window.STATIONS = [
       "https://atres-live.ondacero.es/live/delegaciones/oc/valencia/master.m3u8"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "hkm-radio",
+    "name": "HKM radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zenolive.com/rhf9cqkz3yzuv.aac"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "esradio",
+    "name": "EsRadio",
+    "category": "music",
+    "streams": [
+      "https://libertaddigital-radio-live1.flumotion.com/libertaddigital/ld-live1-high.aac"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "rne-radio-nacional-de-espana",
+    "name": "RNE - Radio Nacional de España",
+    "category": "music",
+    "streams": [
+      "https://dispatcher.rndfnk.com/crtve/rne1/mad/mp3/high"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

@@ -168,8 +168,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://svara-stream.radioddns.net/yogyakarta_voksradio"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "klcbs-new-age",
@@ -209,8 +208,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:9154/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radiks-fm-semarang",
@@ -268,8 +266,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:8500/;super.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "bahtera-yudha-fm-surabaya",
@@ -325,8 +322,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/14/9314/rrisngliatpro1.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "mosh-head-black-metal-id",
@@ -389,7 +385,8 @@ window.STATIONS = [
     "streams": [
       "https://b.alhastream.com:5140/radio"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "klcbs-fusion",
@@ -461,8 +458,7 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:9622/stream"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "rri-pro1-banjarmasin",
@@ -552,8 +548,7 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com/8228/;radio"
     ],
-    "added": "2026-10-26",
-    "offline": true
+    "added": "2026-10-26"
   },
   {
     "id": "bandung-death-metal-syndicate",
@@ -680,6 +675,33 @@ window.STATIONS = [
       "https://a3.alhastream.com:4000/radio"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "tjandra-fm-cianjur",
+    "name": "TJANDRA FM CIANJUR",
+    "category": "music",
+    "streams": [
+      "https://live.tjandrafm.com/listen/tjandrafm/stream"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "mettaswara-slow-rock",
+    "name": "mettaswara slow rock",
+    "category": "music",
+    "streams": [
+      "https://mettaswara.com:8700//slowrock"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "rri-pro-4-101-3-fm-tanjungpinang",
+    "name": "RRI Pro 4 101,3 FM Tanjungpinang",
+    "category": "news",
+    "streams": [
+      "https://stream-node2.rri.co.id/streaming/21/9221/rritjpinangpro4.mp3"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

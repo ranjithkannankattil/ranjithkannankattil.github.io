@@ -8,7 +8,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://mmg.streamguys1.com/AdomFM-mp3?key=9099965b0e49394af3be11b42a71f0faa90378311d2d85f5983495217e350f0a4636df5ecf5ea3f63e53cb9026d89102&awparams=playerid%3ASGplayer%3B&amsparams=playerid%3ASGplayer%3Bskey%3A1609841442537%3B&aw_0_req.gdpr=true&us_privacy=1YNN"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "asempa-fm",
@@ -185,6 +186,7 @@ window.STATIONS = [
     "name": "Ghana Waves Radio",
     "category": "news",
     "streams": [
+      "https://node-10.zeno.fm/pg5c7zx3p0quv?rj-ttl=5&rj-tok=AAABdtd3XeAAU1f9o-yKlGaPXg",
       "https://stream.zeno.fm/pg5c7zx3p0quv"
     ]
   },
@@ -479,4 +481,4 @@ window.STATIONS = [
     "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

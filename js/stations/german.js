@@ -706,6 +706,33 @@ window.STATIONS = [
       "https://stream.srg-ssr.ch/m/rsc_de/mp3_128"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "bremen-vier",
+    "name": "Bremen Vier",
+    "category": "music",
+    "streams": [
+      "https://icecast.radiobremen.de/rb/bremenvier/live/mp3/128/stream.mp3"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "berliner-rundfunk-91-4",
+    "name": "Berliner Rundfunk 91.4",
+    "category": "music",
+    "streams": [
+      "https://stream.berliner-rundfunk.de/brf/mp3-128/internetradio/"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "energy-zurich-nrj",
+    "name": "Energy Zürich (NRJ)",
+    "category": "news",
+    "streams": [
+      "https://energyzuerich.ice.infomaniak.ch/energyzuerich-high.mp3"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

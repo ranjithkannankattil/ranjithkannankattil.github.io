@@ -171,6 +171,15 @@ window.STATIONS = [
       "https://cdn4.yayin.com.tr/maxtv/tracks-v1a1/mono.m3u8"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "106-3-fm-az",
+    "name": "106.3 fm.az",
+    "category": "news",
+    "streams": [
+      "https://audiostr.atv.az/106.3fm"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

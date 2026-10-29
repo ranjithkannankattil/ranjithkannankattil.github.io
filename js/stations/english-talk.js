@@ -698,6 +698,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "where": "Mauritius"
+  },
+  {
+    "id": "kaya-fm",
+    "name": "Kaya FM",
+    "category": "world",
+    "streams": [
+      "https://edge.iono.fm/xice/82_medium.aac"
+    ],
+    "added": "2026-10-29",
+    "where": "South Africa"
+  },
+  {
+    "id": "agidigbo-88-7-fm",
+    "name": "Agidigbo 88.7 FM",
+    "category": "world",
+    "streams": [
+      "https://agidigbostream.com.ng/radio/8000/radio.mp3"
+    ],
+    "added": "2026-10-29",
+    "where": "Nigeria"
+  },
+  {
+    "id": "vob-92-9-fm",
+    "name": "VOB 92.9 FM",
+    "category": "world",
+    "streams": [
+      "https://ice66.securenetsystems.net:80/VOB929"
+    ],
+    "added": "2026-10-29",
+    "where": "Barbados"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

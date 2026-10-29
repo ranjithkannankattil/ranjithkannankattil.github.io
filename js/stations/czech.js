@@ -683,6 +683,33 @@ window.STATIONS = [
       "https://ice.actve.net/web-e2-csweb"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "bikers-radio-doupe",
+    "name": "BIKERS RADIO DOUPE",
+    "category": "music",
+    "streams": [
+      "https://icecast7.play.cz/bikersradiodoupe128.mp3"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radio-city-fm",
+    "name": "Radio City FM",
+    "category": "music",
+    "streams": [
+      "https://ice.abradio.cz/cityfm128.mp3"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "frekvence-1-youradio-legendy",
+    "name": "Frekvence 1 - Youradio Legendy",
+    "category": "music",
+    "streams": [
+      "https://ice.actve.net/web-f1-legendy"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

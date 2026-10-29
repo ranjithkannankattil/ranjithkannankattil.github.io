@@ -610,6 +610,33 @@ window.STATIONS = [
       "https://szkrcast.ddns.net/radio/8010/radio.mp3"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "mr3-bartok-radio",
+    "name": "MR3 - Bartók Rádió",
+    "category": "music",
+    "streams": [
+      "https://mr-stream.connectmedia.hu/4741/mr3.mp3"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "passion-radio-hungary",
+    "name": "Passion Radió Hungary",
+    "category": "music",
+    "streams": [
+      "https://a9.asurahosting.com/listen/passion_radio_hungary/radio.mp3"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "zalan-radio",
+    "name": "Zalan Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/kvqrsxeeafctv"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

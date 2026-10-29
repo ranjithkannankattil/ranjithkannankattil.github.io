@@ -56,8 +56,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "89-4-tamil-fm",
@@ -503,7 +502,8 @@ window.STATIONS = [
     "streams": [
       "https://cast1.my-control-panel.com/proxy/geethan3/stream"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "tamilkaterumbufm",
@@ -711,6 +711,33 @@ window.STATIONS = [
       "https://usa11.fastcast4u.com/proxy/ajaydk?mp=/;"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "abctamil",
+    "name": "Abctamil",
+    "category": "music",
+    "streams": [
+      "https://eu8.fastcast4u.com/proxy/ailevdcu?mp=/;"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "aanmeega-sudar",
+    "name": "Aanmeega_Sudar",
+    "category": "music",
+    "streams": [
+      "https://stream-289.surfernetwork.com/ymkr7th4f2zuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ5bWtyN3RoNGYyenV2IiwiaG9zdCI6InN0cmVhbS0yODkuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJZNmNQQ3AteVJVbXRTSks2dVdlNXVBIiwiaWF0IjoxNzg0NTI4NzY1LCJleHAiOjE3ODQ1Mjg4MjV9.-PYWGdeUiHa1nlERt-tUNoOnxWj-FgqTK3i2Oi5sQ9s"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "arni-city-fm",
+    "name": "Arni City FM",
+    "category": "music",
+    "streams": [
+      "https://usa9.fastcast4u.com/proxy/arnifm?mp=/1"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";

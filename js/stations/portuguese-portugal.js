@@ -92,7 +92,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "m80-radio-ballads",
@@ -229,8 +230,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "cidade-fm-2",
@@ -320,7 +320,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-icy.bauermedia.pt/smoothsoul.aac"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rewind-2000-s",
@@ -356,8 +357,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -465,7 +465,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.ruc.pt/high"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "m80-radio-dance",
@@ -663,7 +664,8 @@ window.STATIONS = [
     "streams": [
       "https://dreamsiteradiocp5.com/proxy/rmportugal1?mp=/stream"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "offline": true
   },
   {
     "id": "radio-medio-tejo",
@@ -700,6 +702,33 @@ window.STATIONS = [
       "https://jagsilva.com/stream"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "palavra-antiga-kids",
+    "name": "Palavra Antiga Kids",
+    "category": "devotional",
+    "streams": [
+      "https://radio.palavraantiga.org/listen/kids/radio.mp3"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "m80-radio-soul",
+    "name": "M80 Rádio – Soul",
+    "category": "music",
+    "streams": [
+      "https://stream-icy.bauermedia.pt/m80soul.aac"
+    ],
+    "added": "2026-10-29"
+  },
+  {
+    "id": "radio-noar",
+    "name": "Rádio NoAr",
+    "category": "music",
+    "streams": [
+      "https://radios.justweb.pt/8034/stream"
+    ],
+    "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-28T19:27Z";
+window.STATIONS_CHECKED = "2026-10-29T06:52Z";
