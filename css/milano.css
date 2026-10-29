@@ -51,7 +51,7 @@
 .mg .line-head{ display:flex; align-items:center; gap:12px; margin-bottom:.4rem; }
 .mg .line-head .bullet{ width:38px; height:38px; font-size:.82rem; }
 .mg .line-sub{ color:var(--muted); margin-bottom:1.3rem; max-width:62ch; }
-.mg section.topic{ border-left:4px solid var(--line); padding-left:16px; margin-left:17px; padding-block:6px 26px; display:grid; gap:12px; min-width:0; }
+.mg section.topic{ scroll-margin-top:60px; border-left:4px solid var(--line); padding-left:16px; margin-left:17px; padding-block:6px 26px; display:grid; gap:12px; min-width:0; }
 .mg .g1 section.topic{ border-color:var(--m1); } .mg .g2 section.topic{ border-color:var(--m2); } .mg .g3 section.topic{ border-color:var(--m3); } .mg .g4 section.topic{ border-color:var(--m4); } .mg .g5 section.topic{ border-color:var(--m5); }
 .mg section.topic h3{ position:relative; }
 .mg section.topic h3::before{ content:""; position:absolute; left:-27px; top:.28em; width:14px; height:14px; border-radius:50%; background:var(--paper); border:3px solid currentColor; }
