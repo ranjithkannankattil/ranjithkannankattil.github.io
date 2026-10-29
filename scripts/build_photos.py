@@ -170,7 +170,7 @@ def foot(viewer=True):
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="/js/photography.js?v={JS_V}" defer></script>
-<script src="/js/nav.js?v=11" defer></script>
+<script src="/js/nav.js?v=12" defer></script>
 <script src="/js/visits.js?v=2" defer></script>
 </body>
 </html>
