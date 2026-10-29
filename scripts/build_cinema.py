@@ -10,7 +10,7 @@ Runs from .github/workflows/build-cinema.yml; output goes to the cinema-data bra
 Writes out/index.json and out/<city>.json. A city whose fetch fails keeps the
 previous run's file (from --prev) so the page never goes blank.
 """
-import argparse, datetime as dt, html, json, os, re, sys, time, unicodedata, urllib.request
+import argparse, datetime as dt, html, json, os, re, sys, time, unicodedata, urllib.parse, urllib.request
 from html.parser import HTMLParser
 from zoneinfo import ZoneInfo
 
@@ -44,7 +44,7 @@ LANG_EN = {"inglese": "English", "francese": "French", "tedesco": "German", "spa
            "danese": "Danish", "svedese": "Swedish", "norvegese": "Norwegian", "persiano": "Persian",
            "turco": "Turkish", "hindi": "Hindi", "olandese": "Dutch", "greco": "Greek"}
 
-TIME_RE = re.compile(r"(?<![\d,.])([01]?\d|2[0-3])[:.]([0-5]\d)(?![\d,])")
+TIME_RE = re.compile(r"(?<![\d,.:])([01]?\d|2[0-3]):([0-5]\d)(?![\d,.:])")
 FILM_RE = re.compile(r"^https?://(?:www\.)?mymovies\.it/film/(\d{4})/[^/?#]+/$")
 CINEMA_RE = re.compile(r"^https?://(?:www\.)?mymovies\.it/cinema/[a-z]+/(\d+)/$")
 
@@ -185,16 +185,15 @@ def parse_mymovies(page, city_name):
         for s in shows:
             s["times"].sort()
         f["shows"] = shows
-        first = norm(f["country"][0]) if f["country"] else ""
-        f["en"] = first in {norm(c) for c in ANGLO} or (f["country"][:1] == ["UK"])
-        f["lang"] = "English" if f["en"] else "Original language"
+        f["en"], f["lang"] = False, "Original language"
         out.append(f)
     return out
 
 
 def parse_anteo(page, today):
-    """Anteo 18tickets → {(norm title, 'HH:MM'): (url, language label, is_english)} for today's V.O. screenings."""
-    links, cur, lang, date, want_lang = {}, None, "", None, False
+    """Anteo 18tickets → ({(norm title, 'HH:MM'): url} for today's V.O. screenings,
+    {norm title: (language label, is_english)} for every V.O. film listed)."""
+    links, langs, cur, lang, date, want_lang = {}, {}, None, "", None, False
     datestr = today.strftime("%d/%m/%Y")
     for tok in tokens(page):
         if tok[0] == "a":
@@ -210,9 +209,7 @@ def parse_anteo(page, today):
                 tt = times_in(text)
                 if tt and not lang.startswith("italiano"):
                     url = href if href.startswith("http") else ANTEO_URL.rstrip("/") + href
-                    first = norm(lang).split()[0] if norm(lang) else ""
-                    label = " / ".join(LANG_EN[w] for w in norm(lang).split() if w in LANG_EN) or "Original language"
-                    links[(cur, tt[0])] = (url, label, first == "inglese")
+                    links[(cur, tt[0])] = url
             continue
         text = tok[1]
         low = text.lower()
@@ -221,30 +218,156 @@ def parse_anteo(page, today):
         if low.startswith("lingua:"):
             lang = norm(text[7:])
             want_lang = not lang
-            continue
-        if cur and want_lang:
+        elif cur and want_lang:
             lang, want_lang = norm(text), False
+        if cur and lang and not lang.startswith("italiano") and cur not in langs:
+            words = [w for w in lang.split() if w in LANG_EN]
+            if words:
+                langs[cur] = (" / ".join(LANG_EN[w] for w in words), words[0] == "inglese")
         d = re.search(r"\b(\d{2}/\d{2}/\d{4})\b", text)
         if d:
             date = d.group(1)
-    return links
+    return links, langs
+
+
+def title_keys(f):
+    return {k for k in (norm(f["t"]), norm(f.get("it", ""))) if k}
+
+
+def match(keys, title):
+    return any(k and (k == title or (len(k) > 3 and (k in title or title in k))) for k in keys)
 
 
 def attach_anteo(films, links):
     n = 0
     for f in films:
-        names = {norm(f["t"]), norm(f.get("it", ""))} - {""}
+        keys = title_keys(f)
         for s in f["shows"]:
             if "anteo palazzo" not in norm(s["cinema"]):
                 continue
             for t in s["times"]:
-                for (title, tm), (url, label, is_en) in links.items():
-                    if tm == t and any(n_ and (n_ in title or title in n_) for n_ in names):
+                for (title, tm), url in links.items():
+                    if tm == t and match(keys, title):
                         s.setdefault("links", {})[t] = url
-                        f["lang"], f["en"] = label, is_en
                         n += 1
                         break
     return n
+
+
+# ---------- film details: original title (MYmovies film page) and original language (Wikidata) ----------
+FILM_CACHE = {}
+WD_LANG = {"Q1860": "English", "Q150": "French", "Q188": "German", "Q7737": "Russian", "Q9288": "Hebrew",
+           "Q652": "Italian", "Q1321": "Spanish", "Q5146": "Portuguese", "Q13955": "Arabic", "Q5287": "Japanese",
+           "Q9176": "Korean", "Q809": "Polish", "Q7411": "Dutch", "Q9035": "Danish", "Q9027": "Swedish",
+           "Q9043": "Norwegian", "Q9168": "Persian", "Q256": "Turkish", "Q1568": "Hindi", "Q9056": "Czech",
+           "Q9067": "Hungarian", "Q7850": "Chinese", "Q727694": "Cantonese", "Q9186": "Cantonese", "Q36510": "Ukrainian",
+           "Q1412": "Finnish", "Q294": "Icelandic", "Q36236": "Malayalam", "Q5885": "Tamil", "Q8097": "Telugu", "Q36368": "Greek"}
+FILM_TYPES = {"Q11424", "Q93204", "Q24869", "Q506240", "Q20650540", "Q202866", "Q226730", "Q24862"}
+
+
+def wd_get(params):
+    q = urllib.parse.urlencode({**params, "format": "json"})
+    return json.loads(fetch("https://www.wikidata.org/w/api.php?" + q, tries=2))
+
+
+def wikidata_lang(title, year):
+    """Original language(s) of a film from Wikidata (P364), checked against the release year."""
+    try:
+        hits = wd_get({"action": "wbsearchentities", "search": title, "language": "en", "type": "item", "limit": 7}).get("search", [])
+        ids = [h["id"] for h in hits]
+        if not ids:
+            return None
+        ents = wd_get({"action": "wbgetentities", "ids": "|".join(ids), "props": "claims|labels", "languages": "en"}).get("entities", {})
+        for qid in ids:
+            c = ents.get(qid, {}).get("claims", {})
+            kinds = {x["mainsnak"].get("datavalue", {}).get("value", {}).get("id") for x in c.get("P31", [])}
+            if not kinds & FILM_TYPES:
+                continue
+            years = {int(x["mainsnak"]["datavalue"]["value"]["time"][1:5]) for x in c.get("P577", []) if x["mainsnak"].get("datavalue")}
+            if year and years and not any(abs(y - year) <= 1 for y in years):
+                continue
+            langs = [x["mainsnak"].get("datavalue", {}).get("value", {}).get("id") for x in c.get("P364", [])]
+            langs = [WD_LANG[l] for l in langs if l in WD_LANG]
+            if langs:
+                label = ents[qid].get("labels", {}).get("en", {}).get("value")
+                return {"lang": " / ".join(dict.fromkeys(langs)), "en": langs[0] == "English", "label": label}
+    except Exception:  # noqa: BLE001
+        return None
+    return None
+
+
+def film_details(f):
+    """Fills original title, country and language for one film (cached by MYmovies URL)."""
+    if f["url"] in FILM_CACHE:
+        return FILM_CACHE[f["url"]]
+    info = {}
+    try:
+        toks = tokens(fetch(f["url"], tries=2))
+        for i, tok in enumerate(toks):
+            if tok[0] == "t" and tok[1].lower().startswith("titolo originale"):
+                rest = tok[1][len("titolo originale"):].strip(" :|")
+                if not rest:
+                    rest = next((t[1] if t[0] == "t" else t[3] for t in toks[i + 1:i + 5] if (t[1] if t[0] == "t" else t[3]).strip(" \n:|")), "")
+                info["orig"] = rest.strip(" :|").strip()
+                break
+        if not f["country"]:
+            cs = [t[3] for t in toks if t[0] == "a" and "?country=" in t[1] and t[3]]
+            info["country"] = list(dict.fromkeys(COUNTRY_EN.get(norm(c), c) for c in cs))[:4]
+    except Exception:  # noqa: BLE001
+        pass
+    info["wd"] = wikidata_lang(info.get("orig") or f["t"], f.get("y"))
+    FILM_CACHE[f["url"]] = info
+    time.sleep(0.4)
+    return info
+
+
+def load_overrides():
+    p = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cinema_overrides.json")
+    try:
+        with open(p, encoding="utf-8") as fh:
+            return {norm(k): v for k, v in json.load(fh).items() if not k.startswith("_")}
+    except FileNotFoundError:
+        return {}
+
+
+def enrich(films, anteo_langs, overrides):
+    for f in films:
+        info = film_details(f)
+        if info.get("country"):
+            f["country"] = info["country"]
+        mm_title = f["t"]
+        orig = (info.get("orig") or "").strip()
+        wd = info.get("wd")
+        # Prefer the original title; Wikidata's English label fixes MYmovies' occasional typos in it.
+        if orig and norm(orig) != norm(mm_title):
+            f["t"], f["it"] = orig, mm_title
+        if wd and wd.get("label") and orig and lev_ratio(norm(wd["label"]), norm(orig)) >= 0.8:
+            f["t"] = wd["label"]
+        keys = title_keys(f)
+        al = next((v for k, v in anteo_langs.items() if match(keys, k)), None)
+        ov = next((v for k, v in overrides.items() if k in keys), None)
+        if ov:
+            f["lang"], f["en"], f["langSrc"] = ov.get("lang", f.get("lang")), bool(ov.get("en")), "manual"
+        elif al:
+            f["lang"], f["en"], f["langSrc"] = al[0], al[1], "anteo"
+        elif wd:
+            f["lang"], f["en"], f["langSrc"] = wd["lang"], wd["en"], "wikidata"
+        else:
+            first = norm(f["country"][0]) if f["country"] else ""
+            f["en"] = first in {norm(c) for c in ANGLO} or first == "uk"
+            f["lang"], f["langSrc"] = ("English" if f["en"] else "Original language"), "country"
+
+
+def lev_ratio(a, b):
+    if not a or not b:
+        return 0.0
+    prev = list(range(len(b) + 1))
+    for i, ca in enumerate(a, 1):
+        cur = [i]
+        for j, cb in enumerate(b, 1):
+            cur.append(min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (ca != cb)))
+        prev = cur
+    return 1 - prev[-1] / max(len(a), len(b))
 
 
 def main():
@@ -257,28 +380,31 @@ def main():
     today = now.date()
     stamp = dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
     report, index = [], []
+    overrides = load_overrides()
 
-    anteo = {}
+    links, langs = {}, {}
     try:
-        anteo = parse_anteo(fetch(ANTEO_URL), today)
-        report.append(f"Anteo booking links today: {len(anteo)}")
+        links, langs = parse_anteo(fetch(ANTEO_URL), today)
+        report.append(f"Anteo: {len(links)} bookable V.O. screenings left today, {len(langs)} V.O. films with a stated language")
     except Exception as e:  # noqa: BLE001
-        report.append(f"Anteo links failed: {e}")
+        report.append(f"Anteo failed: {e}")
 
     for slug, name in CITIES:
         cid = "monza" if slug == "monzabrianza" else slug
         path = os.path.join(a.out, cid + ".json")
         try:
-            films = parse_mymovies(fetch(MM_URL.format(slug=slug)), name if cid != "monza" else "Monza")
-            linked = attach_anteo(films, anteo) if cid == "milano" else 0
+            films = parse_mymovies(fetch(MM_URL.format(slug=slug)), name)
             if cid == "milano" and not films:
                 raise RuntimeError("no films parsed for Milano — page layout may have changed")
+            enrich(films, langs, overrides)
+            linked = attach_anteo(films, links) if cid == "milano" else 0
             doc = {"city": name, "date": today.isoformat(), "updatedAt": stamp,
                    "source": MM_URL.format(slug=slug), "films": films}
             with open(path, "w", encoding="utf-8") as fh:
                 json.dump(doc, fh, ensure_ascii=False, separators=(",", ":"))
             en = sum(1 for f in films if f["en"])
             report.append(f"{name}: {len(films)} films ({en} English), {linked} per-screening links")
+            report += [f"    {'EN' if f['en'] else '--'} {f['t']} [{f.get('lang')} via {f.get('langSrc')}]" for f in films]
             index.append({"id": cid, "name": name, "films": len(films), "english": en, "date": doc["date"]})
         except Exception as e:  # noqa: BLE001
             old = os.path.join(a.prev, cid + ".json")
@@ -295,7 +421,7 @@ def main():
     with open(os.path.join(a.out, "index.json"), "w", encoding="utf-8") as fh:
         json.dump({"updatedAt": stamp, "date": today.isoformat(), "cities": index}, fh, ensure_ascii=False)
     with open(os.path.join(a.out, "report.txt"), "w", encoding="utf-8") as fh:
-        fh.write("\n".join(["### Cinema build"] + [f"- {r}" for r in report]) + "\n")
+        fh.write("\n".join(["### Cinema build", "```"] + report + ["```"]) + "\n")
     print("\n".join(report))
     if not any(c["id"] == "milano" and not c.get("stale") for c in index):
         sys.exit(1)

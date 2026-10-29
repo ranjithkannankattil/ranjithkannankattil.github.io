@@ -9,6 +9,7 @@ on:
     branches: [main]
     paths:
       - scripts/build_cinema.py
+      - scripts/cinema_overrides.json
       - .github/workflows/build-cinema.yml
 
 permissions:

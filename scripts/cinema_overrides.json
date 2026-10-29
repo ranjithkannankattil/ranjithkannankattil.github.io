@@ -1,0 +1,4 @@
+{
+  "_help": "Fix a film's language when the automatic guess is wrong. Key: the film's title (original or Italian). en: true if it should show under 'English only'.",
+  "Naza": {"lang": "Hebrew / English", "en": false}
+}
