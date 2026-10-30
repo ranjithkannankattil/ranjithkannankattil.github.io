@@ -256,8 +256,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio007/hlspbaudio007_Auto.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-mirchi-usa",
@@ -369,8 +368,7 @@ window.STATIONS = [
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio011/hlspbaudio011_Auto.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "sandesh-radio",
@@ -514,7 +512,8 @@ window.STATIONS = [
     "streams": [
       "https://streamasiacdn.atc-labs.com/gyansthali.aac"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "2b-radio-sangam-devi-maa",
@@ -712,7 +711,8 @@ window.STATIONS = [
     "streams": [
       "https://streamasiacdn.atc-labs.com/radiorimjhim.aac"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "offline": true
   },
   {
     "id": "bhakti-sagar-durga-maa",
@@ -778,4 +778,4 @@ window.STATIONS = [
     "added": "2026-10-30"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T06:52Z";
+window.STATIONS_CHECKED = "2026-10-30T19:15Z";

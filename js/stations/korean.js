@@ -222,8 +222,7 @@ window.STATIONS = [
     "name": "MBC FM4U",
     "category": "music",
     "streams": [
-      "https://live.andongmbc.co.kr/live/fmlive/playlist.m3u8",
-      "https://minimw.imbc.com/dmfm/_definst_/mfm.stream/playlist.m3u8?_lsu_sa_=69B1841A83103904DB45D5B53A31F34E05893FF57800F2363B60E3a516B63EC69Ea8D3AF3FD22C47E01436A1A7bAB1A9EEEA0436F3BB215246FC2773FDDCCC9FF6C04EF472B03A7E6C74A6420BBABFD0BE4B65F3FF21D5C79980F3A1E519BFEF184543F44EFCDDF1FF6E44E347653B1F"
+      "https://live.andongmbc.co.kr/live/fmlive/playlist.m3u8"
     ],
     "added": "2026-10-23"
   },
@@ -547,4 +546,4 @@ window.STATIONS = [
     "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T06:52Z";
+window.STATIONS_CHECKED = "2026-10-30T19:15Z";

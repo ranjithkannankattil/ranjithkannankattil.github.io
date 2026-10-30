@@ -64,8 +64,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.nestnews.al/listen/nest-radio/radio.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-burimi",
@@ -504,4 +503,4 @@ window.STATIONS = [
     "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T06:52Z";
+window.STATIONS_CHECKED = "2026-10-30T19:15Z";

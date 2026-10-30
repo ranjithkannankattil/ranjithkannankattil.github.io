@@ -509,8 +509,7 @@ window.STATIONS = [
     "streams": [
       "https://www.totradio.com:8000/128kbps"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "radio-cornella",
@@ -627,8 +626,7 @@ window.STATIONS = [
     "streams": [
       "https://radiolom.es:8800/;stream.mp3"
     ],
-    "added": "2026-10-27",
-    "offline": true
+    "added": "2026-10-27"
   },
   {
     "id": "radio-ponts",
@@ -649,4 +647,4 @@ window.STATIONS = [
     "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T06:52Z";
+window.STATIONS_CHECKED = "2026-10-30T19:15Z";

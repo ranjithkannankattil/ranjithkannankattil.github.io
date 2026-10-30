@@ -583,8 +583,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.gensokyoradio.net/2"
     ],
-    "added": "2026-10-28",
-    "offline": true
+    "added": "2026-10-28"
   },
   {
     "id": "shadowfr69-radio",
@@ -704,4 +703,4 @@ window.STATIONS = [
     "added": "2026-10-30"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T06:52Z";
+window.STATIONS_CHECKED = "2026-10-30T19:15Z";

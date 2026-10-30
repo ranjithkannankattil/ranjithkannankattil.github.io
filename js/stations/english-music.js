@@ -236,7 +236,8 @@ window.STATIONS = [
     "streams": [
       "https://kexp.streamguys1.com/kexp160.aac?listenerid=f4bcb5c771d830fbdd4195088a946ea6&awparams=companionAds%3Atrue"
     ],
-    "where": "US"
+    "where": "US",
+    "offline": true
   },
   {
     "id": "planet-rock",
@@ -625,7 +626,8 @@ window.STATIONS = [
       "https://kexp-mp3-128.streamguys1.com/kexp128.mp3"
     ],
     "added": "2026-10-26",
-    "where": "US"
+    "where": "US",
+    "offline": true
   },
   {
     "id": "101-1-wjrr-orlando-s-rock-station",
@@ -848,4 +850,4 @@ window.STATIONS = [
     "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T06:52Z";
+window.STATIONS_CHECKED = "2026-10-30T19:15Z";

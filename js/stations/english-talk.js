@@ -327,7 +327,8 @@ window.STATIONS = [
       "https://kexp.streamguys1.com/kexp160.aac?listenerid=f4bcb5c771d830fbdd4195088a946ea6&awparams=companionAds%3Atrue"
     ],
     "added": "2026-10-22",
-    "where": "US"
+    "where": "US",
+    "offline": true
   },
   {
     "id": "sky-news-australia-radio",
@@ -790,4 +791,4 @@ window.STATIONS = [
     "where": "Zimbabwe"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T06:52Z";
+window.STATIONS_CHECKED = "2026-10-30T19:15Z";
