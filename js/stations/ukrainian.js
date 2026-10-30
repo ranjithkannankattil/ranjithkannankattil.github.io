@@ -232,8 +232,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.brokenbeats.net/tune"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-shanson",
@@ -736,6 +735,33 @@ window.STATIONS = [
       "https://live.1tv.od.ua/radio/stream/icecast.audio"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "fm-5",
+    "name": "Радіо Захід FM+",
+    "category": "news",
+    "streams": [
+      "https://radio.zfm.com.ua:8443/zfm"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "station-18",
+    "name": "Радіо Люкс",
+    "category": "music",
+    "streams": [
+      "https://lux.radio.tvstitch.com/kyiv/lux_adv_hd"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "style-fm",
+    "name": "STYLE FM",
+    "category": "music",
+    "streams": [
+      "https://myradio24.org/station"
+    ],
+    "added": "2026-10-30"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

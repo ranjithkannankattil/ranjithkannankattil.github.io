@@ -297,8 +297,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.radiojar.com/kokkino-ath.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "kosmos-jazz",
@@ -782,6 +781,33 @@ window.STATIONS = [
       "https://ice.greekstream.net/yellow"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "paranoise",
+    "name": "Paranoise",
+    "category": "music",
+    "streams": [
+      "https://paranoisewebcast.radioca.st/stream"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "laiko-107",
+    "name": "Laiko 107",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/58uqx820dnzuv"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "laikinota",
+    "name": "LaikiNota",
+    "category": "music",
+    "streams": [
+      "https://laikinota.gr/laikinota"
+    ],
+    "added": "2026-10-30"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

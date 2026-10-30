@@ -242,8 +242,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://s1.slotex.pl/shoutcast/7102/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-rmf-classic",
@@ -666,6 +665,33 @@ window.STATIONS = [
       "https://streaming.bounce.radio/streamhd"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "zet-same-hity",
+    "name": "ZET Same Hity",
+    "category": "music",
+    "streams": [
+      "https://zt.cdn.eurozet.pl/ZETHIT.mp3"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "wasze-radio-fm",
+    "name": "Wasze Radio FM",
+    "category": "music",
+    "streams": [
+      "https://sluchaj.link:5443/wasze"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "nasz-hajmat",
+    "name": "Nasz Hajmat",
+    "category": "music",
+    "streams": [
+      "https://s3.slotex.pl:7126/stream"
+    ],
+    "added": "2026-10-30"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

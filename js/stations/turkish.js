@@ -729,6 +729,33 @@ window.STATIONS = [
       "https://stream.radiaura.net/station-ea8ab46e-ae01-4b71-ad9a-fef58665b89c"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "ktu",
+    "name": "KTU",
+    "category": "music",
+    "streams": [
+      "https://sslyayin.netyayin.net/radyoktu/stream/;type=mp3"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "irvess",
+    "name": "Irvess",
+    "category": "music",
+    "streams": [
+      "https://irvess.com/stream/irvess"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "radyo-tulu",
+    "name": "Radyo Tulu",
+    "category": "devotional",
+    "streams": [
+      "https://yayin2.canliyayin.org:8248/;*.mp3"
+    ],
+    "added": "2026-10-30"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

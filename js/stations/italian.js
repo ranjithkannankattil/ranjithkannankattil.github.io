@@ -161,7 +161,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://classichitsradio.streamingmedia.it/play"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rtl-102-5-disco",
@@ -696,6 +697,33 @@ window.STATIONS = [
       "https://stream.rds.radio/audio/rds.stream_aac/playlist.m3u8"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "controradio",
+    "name": "Controradio",
+    "category": "news",
+    "streams": [
+      "https://s4.yesstreaming.net:17199/stream"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "radio-105-rap-italia",
+    "name": "Radio 105 - Rap Italia",
+    "category": "music",
+    "streams": [
+      "https://icy.unitedradio.it/105RapItalia.mp3"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "virgin-radio-hard-rock",
+    "name": "Virgin Radio Hard Rock",
+    "category": "music",
+    "streams": [
+      "https://icy.unitedradio.it/VirginHardRock.mp3"
+    ],
+    "added": "2026-10-30"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

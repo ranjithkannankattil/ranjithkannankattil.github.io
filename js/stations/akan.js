@@ -105,8 +105,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://omanfm-atunwadigital.streamguys1.com/omanfm?amsparams=playerid%3ASGplayer%3Bskey%3A1611555812774%3B&awparams=playerid%3ASGplayer%3Bplayerid%3ASGplayer%3Bplayerid%3ASGplayer%3B&aw_0_req.gdpr=true&us_privacy=1YNN&aw_0_req.gdpr=true&us_privacy=1YNN&aw_0_req.gdpr=true&us_privacy=1YNN"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "opemsuo-fm",
@@ -351,8 +350,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.streamgenial.stream/cxxs2usduv8uv"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "fruitful-radio",
@@ -481,4 +479,4 @@ window.STATIONS = [
     "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

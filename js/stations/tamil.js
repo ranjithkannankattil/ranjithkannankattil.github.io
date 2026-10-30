@@ -56,8 +56,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "89-4-tamil-fm",
@@ -766,6 +765,33 @@ window.STATIONS = [
       "https://rbx2.hnux.com/http://10454.cloudrad.io:6176/;stream.mp3"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "om-radio-singapore",
+    "name": "Om Radio Singapore",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/OMRADIO_S01AAC_SC"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "bakthi-malai-radio",
+    "name": "Bakthi Malai Radio",
+    "category": "music",
+    "streams": [
+      "https://bakthiisai-unicast2u.radioca.st/stream"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "dharisanam-fm",
+    "name": "Dharisanam Fm",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/b741tfumhm8uv"
+    ],
+    "added": "2026-10-30"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

@@ -700,6 +700,33 @@ window.STATIONS = [
       "https://a1.bisericilive.com/mainradioarmoniaro.mp3"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "cozy-fm",
+    "name": "Cozy FM",
+    "category": "music",
+    "streams": [
+      "https://live.cozyfm.ro:8010/live"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "radio-somes-bistrita-96-6-fm",
+    "name": "Radio Someș -Bistrița 96,6 FM",
+    "category": "news",
+    "streams": [
+      "https://radio.mediacp.eu/stream/radiosomes"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "super-fm-brasov-93-8-fm",
+    "name": "Super FM -Brașov 93,8 FM",
+    "category": "music",
+    "streams": [
+      "https://live.superfm.ro/stream.mp3"
+    ],
+    "added": "2026-10-30"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

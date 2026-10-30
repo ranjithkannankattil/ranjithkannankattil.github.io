@@ -184,7 +184,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://a3.alhastream.com:4010/radio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "suara-soneta",
@@ -208,8 +209,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:9154/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radiks-fm-semarang",
@@ -267,8 +267,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:8500/;super.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "bahtera-yudha-fm-surabaya",
@@ -324,8 +323,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/14/9314/rrisngliatpro1.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "mosh-head-black-metal-id",
@@ -550,8 +548,7 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com/8228/;radio"
     ],
-    "added": "2026-10-26",
-    "offline": true
+    "added": "2026-10-26"
   },
   {
     "id": "bandung-death-metal-syndicate",
@@ -578,8 +575,7 @@ window.STATIONS = [
     "streams": [
       "https://server.radioimeldafm.co.id/radio/8010/swarasemarang"
     ],
-    "added": "2026-10-27",
-    "offline": true
+    "added": "2026-10-27"
   },
   {
     "id": "radio-indah-siar-cirebon",
@@ -660,8 +656,7 @@ window.STATIONS = [
     "streams": [
       "https://svara-stream.radioddns.net/bali_voksradio_993fm"
     ],
-    "added": "2026-10-28",
-    "offline": true
+    "added": "2026-10-28"
   },
   {
     "id": "imelda-fm",
@@ -716,6 +711,33 @@ window.STATIONS = [
       "https://pu.klikhost.com/proxy/jizfm/stream"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "kinozal-tv",
+    "name": "Kinozal.TV",
+    "category": "music",
+    "streams": [
+      "https://listen7.myradio24.com/kinozaltv"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "braya-radio",
+    "name": "BRAYA RADIO",
+    "category": "music",
+    "streams": [
+      "https://live.brayaradio.com/listen/brayaradio/stream"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "hitz-91-2-fm-belitung",
+    "name": "Hitz 91.2 FM Belitung",
+    "category": "music",
+    "streams": [
+      "https://play.bilitonesefm.com/listen/radiohitzfm/stream"
+    ],
+    "added": "2026-10-30"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

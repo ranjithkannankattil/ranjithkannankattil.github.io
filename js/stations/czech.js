@@ -737,6 +737,33 @@ window.STATIONS = [
       "https://ice3.radia.cz/povidka128.mp3"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "netro-life-radio-100-8-fm",
+    "name": "Netro Life Radio 100,8 FM",
+    "category": "music",
+    "streams": [
+      "https://icecast9.play.cz/netro-life-radio.mp3"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "radio-folk",
+    "name": "Radio Folk",
+    "category": "music",
+    "streams": [
+      "https://ice2.abradio.cz/folk64a.aac"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "slagr-radio",
+    "name": "Šlágr Rádio",
+    "category": "music",
+    "streams": [
+      "https://stream.slagr-radio.cz/mp3"
+    ],
+    "added": "2026-10-30"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

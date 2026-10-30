@@ -717,6 +717,33 @@ window.STATIONS = [
       "https://stream.radios.rs:9002/;"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "lotel2",
+    "name": "Lotel2",
+    "category": "music",
+    "streams": [
+      "https://s1.skeletor.rs/lotel"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "radio-s-pop-folk",
+    "name": "Radio S Pop Folk",
+    "category": "music",
+    "streams": [
+      "https://stream.radios.rs:9046/stream"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "naxi-mix-radio",
+    "name": "Naxi Mix Radio",
+    "category": "music",
+    "streams": [
+      "https://naxidigital-mix128ssl.streaming.rs:8222/;stream.nsv"
+    ],
+    "added": "2026-10-30"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

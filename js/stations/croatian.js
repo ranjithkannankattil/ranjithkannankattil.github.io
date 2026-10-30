@@ -530,6 +530,33 @@ window.STATIONS = [
       "https://azuracast.novi-net.net/radio/8050/radio105.aac"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "radio-roska",
+    "name": "Radio Roška",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/q7300aptbwzuv"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "radio-akovo",
+    "name": "Radio Đakovo",
+    "category": "music",
+    "streams": [
+      "https://ec2s.crolive.com.hr:8305/stream"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "otvoreni-radio-love",
+    "name": "Otvoreni Radio - Love",
+    "category": "music",
+    "streams": [
+      "https://stream.otvoreni.hr/love"
+    ],
+    "added": "2026-10-30"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

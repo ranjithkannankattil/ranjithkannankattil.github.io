@@ -630,6 +630,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "where": "Hong Kong"
+  },
+  {
+    "id": "nhyira-104-5-fm",
+    "name": "Nhyira 104.5 FM",
+    "category": "world",
+    "streams": [
+      "https://mmg.streamguys1.com/NhyiraFM-mp3?key=63d8990dfe4438ae984fd70d2d2b4bd31c842c474987bd810ac0e8e0fd62e8cf2015661105cced63ccfdca89a8422ab1"
+    ],
+    "added": "2026-10-30",
+    "where": "Ghana"
+  },
+  {
+    "id": "bbc-radio-london",
+    "name": "BBC Radio London",
+    "category": "uk",
+    "streams": [
+      "https://as-hls-ww-live.akamaized.net/pool_98137350/live/ww/bbc_london/bbc_london.isml/bbc_london-audio%3d128000.norewind.m3u8"
+    ],
+    "added": "2026-10-30",
+    "where": "UK"
+  },
+  {
+    "id": "ahenfie-fm-106-1mhz",
+    "name": "Ahenfie FM 106.1MHz",
+    "category": "world",
+    "streams": [
+      "https://radio.localstreamgh.com/listen/ahenfie_radio_/radio.mp3"
+    ],
+    "added": "2026-10-30",
+    "where": "Ghana"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

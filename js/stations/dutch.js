@@ -767,6 +767,33 @@ window.STATIONS = [
       "https://icecast.vrtcdn.be/ra2lim-high.mp3"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "npo-funx-hip-hop",
+    "name": "NPO FunX Hip Hop",
+    "category": "music",
+    "streams": [
+      "https://icecast.omroep.nl/funx-hiphopfb-bb-mp3"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "npo-radio-4",
+    "name": "NPO Radio 4",
+    "category": "music",
+    "streams": [
+      "https://icecast.omroep.nl/radio4-sb-aac"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "npo-radio-4-concerten",
+    "name": "NPO Radio 4 - Concerten",
+    "category": "music",
+    "streams": [
+      "https://icecast.omroep.nl/radio4-eigentijds-mp3"
+    ],
+    "added": "2026-10-30"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

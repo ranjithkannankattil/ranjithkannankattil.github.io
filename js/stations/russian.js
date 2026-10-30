@@ -120,8 +120,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://dorognoe.hostingradio.ru:8000/radio"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "fm-3",
@@ -756,6 +755,33 @@ window.STATIONS = [
       "https://retroserver.streamr.ru:8043/retro128"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "eurodance",
+    "name": "Радио Рекорд Eurodance",
+    "category": "music",
+    "streams": [
+      "https://radiorecord.hostingradio.ru/eurodance96.aacp"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "retro-fm-moldova",
+    "name": "Retro FM Moldova",
+    "category": "music",
+    "streams": [
+      "https://efir.retrofm.md:8000/retro"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "dfm-party",
+    "name": "DFM - Party",
+    "category": "music",
+    "streams": [
+      "https://dfm-party.hostingradio.ru/dfmparty96.aacp"
+    ],
+    "added": "2026-10-30"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

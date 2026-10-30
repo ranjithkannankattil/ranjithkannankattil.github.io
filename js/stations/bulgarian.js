@@ -48,7 +48,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nova-radio.neterra.tv/veselinaretro"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "badrock-hard-heavy",
@@ -692,6 +693,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/uc2rmbyhvd5uv"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "note-fm",
+    "name": "Note FM",
+    "category": "music",
+    "streams": [
+      "https://sc.mpbnl.nl/notefm.mp3"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "mixx",
+    "name": "MIXX",
+    "category": "music",
+    "streams": [
+      "https://radio.comnet.bg:12301/radio-mixx.mp3"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "station-13",
+    "name": "БНР – Радио Благоевград",
+    "category": "news",
+    "streams": [
+      "https://lb-hls.cdn.bg/2032/fls/Blagoevgrad.stream/playlist.m3u8"
+    ],
+    "added": "2026-10-30"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

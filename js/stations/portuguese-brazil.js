@@ -225,8 +225,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RT_SPAAC.aac"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "bandnews-fm",
@@ -764,6 +763,33 @@ window.STATIONS = [
       "https://cloud1.cdnseguro.com:2190/;"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "radio-roberto-carlos",
+    "name": "Rádio Roberto Carlos",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/erbpkq1cz55vv"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "massa-fm-101-1-ponta-grossa-pr",
+    "name": "Massa FM 101,1 (Ponta Grossa - PR)",
+    "category": "music",
+    "streams": [
+      "https://stm01.virtualcast.com.br:8160/massapontagrossa"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "jovem-pan-fm-sorocaba-91-1",
+    "name": "Jovem Pan FM - Sorocaba 91.1",
+    "category": "news",
+    "streams": [
+      "https://cast2.hoost.com.br:8039/stream"
+    ],
+    "added": "2026-10-30"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

@@ -96,7 +96,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://liveaudio.lamusica.com/MIA_WCMQ_icy"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "mix-80-s-90-s-y-mas",
@@ -756,6 +757,33 @@ window.STATIONS = [
       "https://g2qd375ol7an-hls-live.5centscdn.com/Radio/eae835e83c0494a376229f254f7d3392.sdp/chunks.m3u8"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "radio-cumbia-90s",
+    "name": "Radio Cumbia 90s",
+    "category": "music",
+    "streams": [
+      "https://emiteradio.com/proxy/cumbia90s?mp=/stream"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "la-x-medellin-103-9-fm",
+    "name": "La X Medellín 103.9 FM",
+    "category": "music",
+    "streams": [
+      "https://tupanel.info:8000/stream"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "techno-live-sets",
+    "name": "Techno Live Sets",
+    "category": "music",
+    "streams": [
+      "https://streamlive1.hearthis.at:8000/1329668.ogg?time=1783357004"
+    ],
+    "added": "2026-10-30"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

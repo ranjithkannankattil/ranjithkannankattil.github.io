@@ -664,6 +664,33 @@ window.STATIONS = [
       "https://icast.connectmedia.hu/6121/live.mp3"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "patria-radio",
+    "name": "Pátria Rádió",
+    "category": "news",
+    "streams": [
+      "https://icecast.stv.livebox.sk/patria_128.mp3"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "next-fm",
+    "name": "Next FM",
+    "category": "music",
+    "streams": [
+      "https://stream.nextfm.hu/radio/8000/nextfmhu.mp3?1590416039"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "sarvar-radio",
+    "name": "Sárvár Rádió",
+    "category": "news",
+    "streams": [
+      "https://stream.42netmedia.com:8443/sarvar"
+    ],
+    "added": "2026-10-30"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

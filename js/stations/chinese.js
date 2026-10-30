@@ -201,8 +201,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-17",
@@ -298,7 +297,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/1951/64k.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "fm104",
@@ -349,7 +349,8 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/270/64k.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "50",
@@ -358,7 +359,8 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/5022308/64k.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "101-fm101-7",
@@ -692,6 +694,33 @@ window.STATIONS = [
       "https://lzlive.vojs.cn/5Fo8mMX/92/live.m3u8?"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "cctv-15",
+    "name": "CCTV-15音乐伴音",
+    "category": "music",
+    "streams": [
+      "https://piccpndali.v.myalicdn.com/audio/cctv15_2.m3u8"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "station-38",
+    "name": "北京文艺广播",
+    "category": "music",
+    "streams": [
+      "https://lhttp.qtfm.cn/live/333/64k.mp3"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "asiafm-hdhttps",
+    "name": "AsiaFM HD音乐台【HTTPS】",
+    "category": "music",
+    "streams": [
+      "https://lhttp.qtfm.cn/live/15318341/64k.mp3"
+    ],
+    "added": "2026-10-30"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

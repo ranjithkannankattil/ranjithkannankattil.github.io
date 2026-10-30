@@ -758,6 +758,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "where": "Canada"
+  },
+  {
+    "id": "gbc-uniiq-95-7-fm",
+    "name": "GBC Uniiq 95.7 FM",
+    "category": "sport",
+    "streams": [
+      "https://mediagh.us:2000/stream/uniiqfm"
+    ],
+    "added": "2026-10-30",
+    "where": "Ghana"
+  },
+  {
+    "id": "2sm-sydney-1269am",
+    "name": "2SM Sydney 1269AM",
+    "category": "anz",
+    "streams": [
+      "https://cast4.asurahosting.com/proxy/2sm1269/stream"
+    ],
+    "added": "2026-10-30",
+    "where": "Australia"
+  },
+  {
+    "id": "national-fm-zbc",
+    "name": "National FM ZBC",
+    "category": "world",
+    "streams": [
+      "https://mainradiostreaming.zbc.co.zw:8020/national.mp3"
+    ],
+    "added": "2026-10-30",
+    "where": "Zimbabwe"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

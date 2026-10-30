@@ -760,6 +760,33 @@ window.STATIONS = [
       "https://dispatcher.rndfnk.com/br/br1/nbopf/mp3/mid"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "orf-radio-oberosterreich-hq",
+    "name": "ORF Radio Oberösterreich · HQ",
+    "category": "music",
+    "streams": [
+      "https://orf-live.ors-shoutcast.at/ooe-q2a"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "lounge-by-rautemusik-rm-fm",
+    "name": "__LOUNGE__ by rautemusik (rm.fm)",
+    "category": "music",
+    "streams": [
+      "https://lounge-high.rautemusik.fm/?ref=radiobrowser"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "best-of-rock-fm-alternative-rock",
+    "name": "Best Of Rock.FM Alternative Rock",
+    "category": "music",
+    "streams": [
+      "https://bestofrockfm.stream.vip/altrock/mp3-256/bestofrock.fm/"
+    ],
+    "added": "2026-10-30"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

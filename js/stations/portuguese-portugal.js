@@ -92,8 +92,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "m80-radio-ballads",
@@ -206,8 +205,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8",
       "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "golofm",
@@ -231,8 +229,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "cidade-fm-2",
@@ -358,8 +355,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -449,8 +445,7 @@ window.STATIONS = [
     "streams": [
       "https://cast.redewt.net:9825/stream"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "m80-radio-pop",
@@ -576,7 +571,8 @@ window.STATIONS = [
     "streams": [
       "https://stream-icy.bauermedia.pt/rcrock.aac"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "offline": true
   },
   {
     "id": "smooth-jazz-portugal",
@@ -757,6 +753,33 @@ window.STATIONS = [
       "https://servidor30-4.brlogic.com:7398/live?source=website"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "radio-metal-on-toxic",
+    "name": "Radio Metal On: Toxic",
+    "category": "music",
+    "streams": [
+      "https://radiometalon.com/listen/radio_metal_on_toxic/radio.mp3"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "noite-fm",
+    "name": "NOITE FM",
+    "category": "music",
+    "streams": [
+      "https://servidor.noite.pt:9002/stream"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "rio-radio-internacional-odemira",
+    "name": "RIO - Rádio Internacional Odemira",
+    "category": "music",
+    "streams": [
+      "https://hts02.brascast.com:10476/live"
+    ],
+    "added": "2026-10-30"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

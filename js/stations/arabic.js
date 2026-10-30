@@ -321,8 +321,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.damasradio.fm/radio"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-manarat",
@@ -755,6 +754,33 @@ window.STATIONS = [
       "https://webradio1.tda.dz:8001/Coran_64K.mp3"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "zaman-fm",
+    "name": "Zaman FM زمان",
+    "category": "news",
+    "streams": [
+      "https://webradio2.tda.dz:8001/Zamen_64K.mp3"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "oran",
+    "name": "Oran وهران",
+    "category": "news",
+    "streams": [
+      "https://webradio2.tda.dz:8001/Oran_64K.mp3"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "chaine-3",
+    "name": "Chaine 3 القناة الثالثة",
+    "category": "news",
+    "streams": [
+      "https://webradio1.tda.dz:8001/Chaine3_64K.mp3"
+    ],
+    "added": "2026-10-30"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

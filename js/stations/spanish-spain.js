@@ -236,7 +236,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ztnr.rtve.es/ztnr/1694255.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "esradio-principal",
@@ -612,7 +613,8 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SER_ASO_CORUNA.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "offline": true
   },
   {
     "id": "esradio-galicia",
@@ -757,6 +759,33 @@ window.STATIONS = [
       "https://zaragoza-copesedes-rrcast.flumotion.com/copesedes/zaragoza-low.mp3"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "inselradio-mallorca",
+    "name": "Inselradio Mallorca",
+    "category": "music",
+    "streams": [
+      "https://addrad.io/445fxk9"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "ibiza-sonica",
+    "name": "Ibiza Sonica",
+    "category": "music",
+    "streams": [
+      "https://ibizasonica.streaming-pro.com:8000/ibizasonica"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "radio-nervion",
+    "name": "Radio Nervión",
+    "category": "news",
+    "streams": [
+      "https://gruponervion.streaming-pro.com:6131/"
+    ],
+    "added": "2026-10-30"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

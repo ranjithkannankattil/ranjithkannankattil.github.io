@@ -816,6 +816,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "where": "Canada"
+  },
+  {
+    "id": "cbc-music-pacific-vancouver-mp3-stream",
+    "name": "CBC Music Pacific (Vancouver) MP3 Stream",
+    "category": "jazz",
+    "streams": [
+      "https://26733.live.streamtheworld.com/CBUFM_CBC_SC"
+    ],
+    "added": "2026-10-30",
+    "where": "Canada"
+  },
+  {
+    "id": "christian-rock-dot-net",
+    "name": "Christian Rock Dot Net",
+    "category": "rock",
+    "streams": [
+      "https://listen.christianrock.net/stream/11/"
+    ],
+    "added": "2026-10-30",
+    "where": "US"
+  },
+  {
+    "id": "classic-fm-essential-classical",
+    "name": "Classic FM Essential Classical",
+    "category": "classical",
+    "streams": [
+      "https://icecast.thisisdax.com/ClassicFM-M-Essential"
+    ],
+    "added": "2026-10-30",
+    "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

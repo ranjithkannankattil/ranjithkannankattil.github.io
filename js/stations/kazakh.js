@@ -136,7 +136,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://lhttp.qingting.fm/live/5022692/64k.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "cnr-17",
@@ -147,4 +148,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

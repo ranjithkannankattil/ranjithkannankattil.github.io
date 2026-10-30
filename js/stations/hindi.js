@@ -514,8 +514,7 @@ window.STATIONS = [
     "streams": [
       "https://streamasiacdn.atc-labs.com/gyansthali.aac"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "2b-radio-sangam-devi-maa",
@@ -713,8 +712,7 @@ window.STATIONS = [
     "streams": [
       "https://streamasiacdn.atc-labs.com/radiorimjhim.aac"
     ],
-    "added": "2026-10-29",
-    "offline": true
+    "added": "2026-10-29"
   },
   {
     "id": "bhakti-sagar-durga-maa",
@@ -751,6 +749,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/bahhkuge5zhvv"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "anbu-fm-hindi",
+    "name": "Anbu FM Hindi",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/u7yaqq493v8uv"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "2b-radio-sangam-ganesha",
+    "name": "2B! Radio Sangam Ganesha",
+    "category": "devotional",
+    "streams": [
+      "https://radio2bindia.out.airtime.pro:8000/radio2bindia_a"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "hawamahal-radio",
+    "name": "HawaMahal Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/csw7fv7sz1zuv"
+    ],
+    "added": "2026-10-30"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";

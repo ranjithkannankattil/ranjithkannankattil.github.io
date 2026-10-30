@@ -583,7 +583,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.gensokyoradio.net/2"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "offline": true
   },
   {
     "id": "shadowfr69-radio",
@@ -674,6 +675,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/b3tz3g94vv8uv"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "kaizen-live-radio",
+    "name": "Kaizen Live Radio",
+    "category": "music",
+    "streams": [
+      "https://radiostreaming.pro/8386/stream"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "save-room-fm",
+    "name": "Save Room FM",
+    "category": "music",
+    "streams": [
+      "https://saveroomfm.duckdns.org/stream"
+    ],
+    "added": "2026-10-30"
+  },
+  {
+    "id": "radioroins",
+    "name": "Radioroins",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/dd3rxeuxznhvv"
+    ],
+    "added": "2026-10-30"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-29T19:34Z";
+window.STATIONS_CHECKED = "2026-10-30T06:52Z";
