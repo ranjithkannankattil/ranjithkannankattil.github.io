@@ -327,8 +327,7 @@ window.STATIONS = [
       "https://kexp.streamguys1.com/kexp160.aac?listenerid=f4bcb5c771d830fbdd4195088a946ea6&awparams=companionAds%3Atrue"
     ],
     "added": "2026-10-22",
-    "where": "US",
-    "offline": true
+    "where": "US"
   },
   {
     "id": "sky-news-australia-radio",
@@ -789,6 +788,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-30",
     "where": "Zimbabwe"
+  },
+  {
+    "id": "radio-sahar",
+    "name": "Radio Sahar",
+    "category": "world",
+    "streams": [
+      "https://live.ecast.co.il/stream/sahar/stream"
+    ],
+    "added": "2026-10-31",
+    "where": "Israel"
+  },
+  {
+    "id": "red-state-talk-radio",
+    "name": "Red State Talk Radio",
+    "category": "us",
+    "streams": [
+      "https://s2.radio.co/s572ad25f7/listen"
+    ],
+    "added": "2026-10-31",
+    "where": "US"
+  },
+  {
+    "id": "sexfm",
+    "name": "SexFM",
+    "category": "comedy",
+    "streams": [
+      "https://api.potat.bot/api/hls/live.m3u8"
+    ],
+    "added": "2026-10-31",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

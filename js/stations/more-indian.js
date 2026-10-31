@@ -16,7 +16,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio008/hlspbaudio008_Auto.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-4-public-health-marathi",
@@ -87,4 +88,4 @@ window.STATIONS = [
     "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

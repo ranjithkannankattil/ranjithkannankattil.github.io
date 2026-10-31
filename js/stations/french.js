@@ -735,6 +735,33 @@ window.STATIONS = [
       "https://webradio2.tda.dz:8001/Oran_64K.mp3"
     ],
     "added": "2026-10-30"
+  },
+  {
+    "id": "exo-fm-reunion",
+    "name": "Exo FM Réunion",
+    "category": "music",
+    "streams": [
+      "https://exofmreunion.ice.infomaniak.ch/exofmreunion-64.aac"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "rtl-100-80",
+    "name": "RTL 100% 80",
+    "category": "music",
+    "streams": [
+      "https://live.m6radio.quortex.io/webpHJPXnXrN7B6J7Q8mcqmxP/webradio/rtl100pc80/130/audio-64000/index.m3u8"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "jesus-is-lord-radio",
+    "name": "JESUS IS LORD Radio",
+    "category": "devotional",
+    "streams": [
+      "https://s3.radio.co/s97f38db97/listen"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

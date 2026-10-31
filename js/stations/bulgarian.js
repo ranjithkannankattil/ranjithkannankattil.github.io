@@ -719,6 +719,15 @@ window.STATIONS = [
       "https://lb-hls.cdn.bg/2032/fls/Blagoevgrad.stream/playlist.m3u8"
     ],
     "added": "2026-10-30"
+  },
+  {
+    "id": "n-joy-101-6-fm",
+    "name": "Радио N-JOY Русе 101.6 FM",
+    "category": "music",
+    "streams": [
+      "https://cdn.btv.bg/radio/njoy.mp3"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

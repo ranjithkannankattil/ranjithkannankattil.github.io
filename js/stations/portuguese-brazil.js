@@ -790,6 +790,33 @@ window.STATIONS = [
       "https://cast2.hoost.com.br:8039/stream"
     ],
     "added": "2026-10-30"
+  },
+  {
+    "id": "radio-mix-87-9-fm",
+    "name": "Rádio Mix 87.9 FM",
+    "category": "music",
+    "streams": [
+      "https://stm12.xcast.com.br:9454/stream"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "radio-reggae-brasil",
+    "name": "Radio Reggae Brasil",
+    "category": "music",
+    "streams": [
+      "https://casthttps.suaradionanet.net/13805/stream"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "radio-bandnews-sp-96-9-fm",
+    "name": "Rádio BandNews SP 96.9 FM",
+    "category": "news",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/BANDNEWSFM_SPAAC"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

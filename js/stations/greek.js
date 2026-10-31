@@ -808,6 +808,33 @@ window.STATIONS = [
       "https://laikinota.gr/laikinota"
     ],
     "added": "2026-10-30"
+  },
+  {
+    "id": "blue-space-107-2-fm-athens",
+    "name": "Blue Space 107,2 FM Athens",
+    "category": "music",
+    "streams": [
+      "https://sp1.19cloudsnetwork.gr/8008/stream?1701442520261"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "sokfm-104-8",
+    "name": "SokFM 104.8",
+    "category": "music",
+    "streams": [
+      "https://stream.radiojar.com/zeqcyyvu48hvv"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "zoo-90-8",
+    "name": "Zoo 90.8",
+    "category": "music",
+    "streams": [
+      "https://netradio.live24.gr/zoo908thess"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

@@ -604,7 +604,8 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/15318668/64k.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "offline": true
   },
   {
     "id": "station-40",
@@ -634,4 +635,4 @@ window.STATIONS = [
     "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

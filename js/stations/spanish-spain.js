@@ -784,6 +784,33 @@ window.STATIONS = [
       "https://gruponervion.streaming-pro.com:6131/"
     ],
     "added": "2026-10-30"
+  },
+  {
+    "id": "100-salsa",
+    "name": "100 % SALSA",
+    "category": "music",
+    "streams": [
+      "https://stm01.streammaximum.com:8194/;"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "energia-vintage",
+    "name": "Energía Vintage",
+    "category": "music",
+    "streams": [
+      "https://axarquia.emisiononline.es/radio/8000/radio.mp3"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "loca-fm-industrial",
+    "name": "Loca FM Industrial",
+    "category": "music",
+    "streams": [
+      "https://s02.fjperezdj.com:8076/live"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

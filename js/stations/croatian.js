@@ -557,6 +557,33 @@ window.STATIONS = [
       "https://stream.otvoreni.hr/love"
     ],
     "added": "2026-10-30"
+  },
+  {
+    "id": "otvoreni-radio-fitness",
+    "name": "Otvoreni Radio - Fitness",
+    "category": "music",
+    "streams": [
+      "https://stream.otvoreni.hr/fitness"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "balkan-beatz-radio",
+    "name": "Balkan Beatz Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.balkanbeatz.de/listen/balkan-beatz/radio.mp3"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "radio-biograd-na-moru",
+    "name": "Radio Biograd na Moru",
+    "category": "news",
+    "streams": [
+      "https://onlineradiobox.com/json/hr/bnm/play?platform=web"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

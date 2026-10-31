@@ -744,6 +744,33 @@ window.STATIONS = [
       "https://naxidigital-mix128ssl.streaming.rs:8222/;stream.nsv"
     ],
     "added": "2026-10-30"
+  },
+  {
+    "id": "zrenjanin-103-6",
+    "name": "Zrenjanin 103.6",
+    "category": "music",
+    "streams": [
+      "https://radio.dukahosting.com:7031/stream"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "radio-021-rock",
+    "name": "Radio 021 Rock",
+    "category": "music",
+    "streams": [
+      "https://centova.dukahosting.com/proxy/rock/stream"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "radio-s-rock",
+    "name": "Radio S Rock",
+    "category": "music",
+    "streams": [
+      "https://stream.radios.rs:9032/stream"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

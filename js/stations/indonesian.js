@@ -216,8 +216,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:9620/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-music-indonesia",
@@ -234,7 +233,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiojar.com/u7d8heq3bnzuv"
     ],
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "iradio-fm",
@@ -323,8 +323,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/14/9314/rrisngliatpro1.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "mosh-head-black-metal-id",
@@ -459,8 +458,7 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:9622/stream"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "rri-pro1-banjarmasin",
@@ -550,8 +548,7 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com/8228/;radio"
     ],
-    "added": "2026-10-26",
-    "offline": true
+    "added": "2026-10-26"
   },
   {
     "id": "bandung-death-metal-syndicate",
@@ -660,8 +657,7 @@ window.STATIONS = [
     "streams": [
       "https://svara-stream.radioddns.net/bali_voksradio_993fm"
     ],
-    "added": "2026-10-28",
-    "offline": true
+    "added": "2026-10-28"
   },
   {
     "id": "imelda-fm",
@@ -743,6 +739,33 @@ window.STATIONS = [
       "https://play.bilitonesefm.com/listen/radiohitzfm/stream"
     ],
     "added": "2026-10-30"
+  },
+  {
+    "id": "galuh-media-streaming-cianjur-indonesia",
+    "name": "Galuh Media Streaming Cianjur Indonesia",
+    "category": "music",
+    "streams": [
+      "https://stream-sg1.galuhmedia.co.id/listen/galuhmedia/stream"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "radio-salvator",
+    "name": "RADIO SALVATOR",
+    "category": "devotional",
+    "streams": [
+      "https://live.radiosalvator.com/listen/radiosalvator/radiosalvator"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "radio-streaming-sehati",
+    "name": "RADIO STREAMING SEHATI",
+    "category": "music",
+    "streams": [
+      "https://c4.siar.us:8092/autodj"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

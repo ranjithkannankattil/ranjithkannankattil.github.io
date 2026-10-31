@@ -502,7 +502,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.garden/api/ara/content/listen/TBbZ87vu/channel.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "chaine-1",
@@ -782,6 +783,33 @@ window.STATIONS = [
       "https://webradio1.tda.dz:8001/Chaine3_64K.mp3"
     ],
     "added": "2026-10-30"
+  },
+  {
+    "id": "fenn-radio",
+    "name": "راديو فن Fenn Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/76e9f1gsduhvv"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "marrakechplus",
+    "name": "Marrakechplus",
+    "category": "music",
+    "streams": [
+      "https://cast5.my-control-panel.com/proxy/marrakec/stream"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "tlemcen",
+    "name": "Tlemcen تلمسان",
+    "category": "news",
+    "streams": [
+      "https://webradio1.tda.dz:8001/Tlemcen_64K.mp3"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

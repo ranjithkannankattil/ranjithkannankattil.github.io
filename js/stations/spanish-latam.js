@@ -783,6 +783,33 @@ window.STATIONS = [
       "https://streamlive1.hearthis.at:8000/1329668.ogg?time=1783357004"
     ],
     "added": "2026-10-30"
+  },
+  {
+    "id": "radio-marti",
+    "name": "Radio Marti",
+    "category": "news",
+    "streams": [
+      "https://ocb01.akacast.akamaistream.net/7/365/437903/v1/ibb.akacast.akamaistream.net/ocb01"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "blu-radio-bogota-89-9",
+    "name": "Blu Radio Bogotá 89.9",
+    "category": "news",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/BLURADIO.mp3"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "mix-ochentas-new-wave-glam-y-rock-de-los",
+    "name": "MIX OCHENTAS: New Wave, Glam y Rock de los 80s",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/ACIR13_s01AAC.aac"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

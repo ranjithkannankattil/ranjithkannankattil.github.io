@@ -56,8 +56,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "89-4-tamil-fm",
@@ -793,6 +792,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/b741tfumhm8uv"
     ],
     "added": "2026-10-30"
+  },
+  {
+    "id": "tamil-murasam-fm",
+    "name": "Tamil_Murasam FM",
+    "category": "music",
+    "streams": [
+      "https://tamilmurasam.radioca.st/live"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "universal-health-radio",
+    "name": "Universal Health Radio (தமிழ்)",
+    "category": "news",
+    "streams": [
+      "https://radio.universalhealthradio.org/uhr-ta.mp3"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "eye-tamil-radio",
+    "name": "Eye Tamil Radio",
+    "category": "music",
+    "streams": [
+      "https://streams.radio.co/s937ac5492/listen"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

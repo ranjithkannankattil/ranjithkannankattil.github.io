@@ -727,6 +727,33 @@ window.STATIONS = [
       "https://live.superfm.ro/stream.mp3"
     ],
     "added": "2026-10-30"
+  },
+  {
+    "id": "play-radio-cafe",
+    "name": "Play Radio Cafe",
+    "category": "music",
+    "streams": [
+      "https://live.playradio.org:9090/CafeHD"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "alex-wolf-radio",
+    "name": "ALEX WOLF RADIO",
+    "category": "music",
+    "streams": [
+      "https://alexwolfradio.com:1040/stream"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "stil-mix-manele-107-9-mhz-fm",
+    "name": "Stil Mix Manele 107.9 MHz FM",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/zt84vax7ptzuv"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

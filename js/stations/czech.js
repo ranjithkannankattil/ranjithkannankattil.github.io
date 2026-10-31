@@ -764,6 +764,33 @@ window.STATIONS = [
       "https://stream.slagr-radio.cz/mp3"
     ],
     "added": "2026-10-30"
+  },
+  {
+    "id": "plzen-tv",
+    "name": "Plzeň TV",
+    "category": "news",
+    "streams": [
+      "https://vysilani.zaktv.cz/broadcast/hls/ptv/index.m3u8"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "radio-relax",
+    "name": "Rádio Relax",
+    "category": "music",
+    "streams": [
+      "https://icecast7.play.cz/relax128.mp3"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "hitradio-fm-crystal",
+    "name": "Hitrádio FM Crystal",
+    "category": "music",
+    "streams": [
+      "https://ice.abradio.cz/crystal128.mp3"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

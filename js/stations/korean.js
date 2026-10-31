@@ -544,6 +544,15 @@ window.STATIONS = [
       "https://radio3.dixi.md/listen/kpop_hits/kpop_hits.aac"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "station-6",
+    "name": "Радио Группы Солидарности с КНДР",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/i3q4bwnzxp1uv"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

@@ -201,8 +201,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-17",
@@ -719,6 +718,33 @@ window.STATIONS = [
       "https://lhttp.qtfm.cn/live/15318341/64k.mp3"
     ],
     "added": "2026-10-30"
+  },
+  {
+    "id": "jesus-is-lord-radio",
+    "name": "JESUS IS LORD Radio",
+    "category": "devotional",
+    "streams": [
+      "https://s3.radio.co/s97f38db97/listen"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "hardbestfm-hardcore",
+    "name": "HardBestFM-Hardcore",
+    "category": "music",
+    "streams": [
+      "https://fm.hardbest.cn/listen/hardcore/radio.mp3"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "china-fmfm89-5",
+    "name": "华夏之声China FM·意大利罗马FM89.5",
+    "category": "news",
+    "streams": [
+      "https://radioserver12.profesionalhosting.com/proxy/pkg152492/stream"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

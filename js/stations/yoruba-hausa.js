@@ -96,6 +96,7 @@ window.STATIONS = [
     "name": "Glow 99.1 FM Akure",
     "category": "news",
     "streams": [
+      "https://stream-176.zeno.fm/mwam2yirv1pvv",
       "https://stream.zeno.fm/mwam2yirv1pvv"
     ],
     "added": "2026-10-22"
@@ -137,4 +138,4 @@ window.STATIONS = [
     "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

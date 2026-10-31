@@ -272,7 +272,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.ticheradio.sk/tiche.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "fit-family-radio",
@@ -521,4 +522,4 @@ window.STATIONS = [
     "added": "2026-10-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

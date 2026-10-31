@@ -205,8 +205,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8",
       "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "golofm",
@@ -278,10 +277,9 @@ window.STATIONS = [
     "name": "Antena 2",
     "category": "music",
     "streams": [
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR",
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8"
-    ],
-    "offline": true
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8",
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
+    ]
   },
   {
     "id": "rca-radio-clube-de-armamar",
@@ -421,8 +419,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2opera80a/playlist.m3u8"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "radio-observador",
@@ -783,6 +780,33 @@ window.STATIONS = [
       "https://hts02.brascast.com:10476/live"
     ],
     "added": "2026-10-30"
+  },
+  {
+    "id": "radio-record-porto",
+    "name": "Radio Record Porto",
+    "category": "music",
+    "streams": [
+      "https://nl.digitalrm.pt:8028/stream"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "batida-fm",
+    "name": "Batida FM",
+    "category": "music",
+    "streams": [
+      "https://stream-icy.rayo.pt/batidafm.mp3?direct=true"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "msfs-radio",
+    "name": "MSFS Radio",
+    "category": "music",
+    "streams": [
+      "https://radio.msfsradio.com/listen/msfs/radio.mp3"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

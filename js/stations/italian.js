@@ -723,6 +723,33 @@ window.STATIONS = [
       "https://icy.unitedradio.it/VirginHardRock.mp3"
     ],
     "added": "2026-10-30"
+  },
+  {
+    "id": "disco-radio",
+    "name": "Disco Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.discoradio.radio/audio/disco.stream_aac64/chunklist.m3u8"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "futura-fm",
+    "name": "Futura FM",
+    "category": "music",
+    "streams": [
+      "https://futura.fm/stream.ogg"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "virgin-radio-rock-90",
+    "name": "Virgin Radio Rock '90",
+    "category": "music",
+    "streams": [
+      "https://icy.unitedradio.it/Virgin_03.mp3"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

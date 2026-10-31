@@ -782,6 +782,33 @@ window.STATIONS = [
       "https://dfm-party.hostingradio.ru/dfmparty96.aacp"
     ],
     "added": "2026-10-30"
+  },
+  {
+    "id": "station-31",
+    "name": "Михаил Круг Радио",
+    "category": "music",
+    "streams": [
+      "https://stream03.pcradio.app/Michail_Krug-hi"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "dnb-fm",
+    "name": "DNB FM",
+    "category": "music",
+    "streams": [
+      "https://air.dnbfm.ru/listen/player/play"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "maximum-2",
+    "name": "MAXIMUM",
+    "category": "music",
+    "streams": [
+      "https://maximum.hostingradio.ru/maximum96.aacp"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

@@ -787,6 +787,33 @@ window.STATIONS = [
       "https://bestofrockfm.stream.vip/altrock/mp3-256/bestofrock.fm/"
     ],
     "added": "2026-10-30"
+  },
+  {
+    "id": "swr-dasding",
+    "name": "SWR dasding",
+    "category": "music",
+    "streams": [
+      "https://liveradio.swr.de/d9zadj3/dasding/"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "radio-bob-nu-metal",
+    "name": "Radio BOB - Nu Metal",
+    "category": "music",
+    "streams": [
+      "https://streams.radiobob.de/numetal/mp3-192/"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "schlagerparadies",
+    "name": "Schlagerparadies",
+    "category": "music",
+    "streams": [
+      "https://webstream.schlagerparadies.de/schlager30842"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

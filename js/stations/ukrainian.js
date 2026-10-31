@@ -232,8 +232,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.brokenbeats.net/tune"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-shanson",
@@ -763,6 +762,33 @@ window.STATIONS = [
       "https://myradio24.org/station"
     ],
     "added": "2026-10-30"
+  },
+  {
+    "id": "ua",
+    "name": "Радіо Інді.UA",
+    "category": "music",
+    "streams": [
+      "https://online.radioplayer.ua/RadioIndieUA"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "lux-fm-lviv",
+    "name": "Lux FM Lviv",
+    "category": "music",
+    "streams": [
+      "https://lux.radio.tvstitch.com/lux_lviv_adv_sd"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "fm-6",
+    "name": "Пончо FM",
+    "category": "music",
+    "streams": [
+      "https://ponchofm.com/poncho"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

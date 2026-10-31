@@ -242,6 +242,15 @@ window.STATIONS = [
     "streams": [
       "https://c20.radioboss.fm:8752/stream"
     ]
+  },
+  {
+    "id": "haze-pub-radio",
+    "name": "Haze Pub Radio",
+    "category": "music",
+    "streams": [
+      "https://live.leproradio.com/rocks.ogg"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

@@ -692,6 +692,33 @@ window.STATIONS = [
       "https://s3.slotex.pl:7126/stream"
     ],
     "added": "2026-10-30"
+  },
+  {
+    "id": "radio-fest-100-2-fm",
+    "name": "Radio Fest 100.2 FM",
+    "category": "music",
+    "streams": [
+      "https://play.radiofest.pl:8443/fest"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "antyradio-katowice",
+    "name": "Antyradio (Katowice)",
+    "category": "music",
+    "streams": [
+      "https://an01.cdn.eurozet.pl/ant-kat.mp3"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "radio-disco-party-disco-impreza",
+    "name": "Radio Disco Party - Disco Impreza",
+    "category": "music",
+    "streams": [
+      "https://s3.slotex.pl/shoutcast/7046/stream"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

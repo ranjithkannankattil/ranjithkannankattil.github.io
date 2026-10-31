@@ -89,7 +89,8 @@ window.STATIONS = [
     "streams": [
       "https://str.yodacdn.net/radio_respublica/video.m3u8"
     ],
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "kn-music-tv",
@@ -182,4 +183,4 @@ window.STATIONS = [
     "added": "2026-10-29"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

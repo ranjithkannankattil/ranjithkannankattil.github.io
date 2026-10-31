@@ -256,7 +256,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio007/hlspbaudio007_Auto.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-mirchi-usa",
@@ -368,7 +369,8 @@ window.STATIONS = [
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio011/hlspbaudio011_Auto.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "sandesh-radio",
@@ -512,8 +514,7 @@ window.STATIONS = [
     "streams": [
       "https://streamasiacdn.atc-labs.com/gyansthali.aac"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "2b-radio-sangam-devi-maa",
@@ -711,8 +712,7 @@ window.STATIONS = [
     "streams": [
       "https://streamasiacdn.atc-labs.com/radiorimjhim.aac"
     ],
-    "added": "2026-10-29",
-    "offline": true
+    "added": "2026-10-29"
   },
   {
     "id": "bhakti-sagar-durga-maa",
@@ -776,6 +776,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/csw7fv7sz1zuv"
     ],
     "added": "2026-10-30"
+  },
+  {
+    "id": "radio-rang",
+    "name": "Radio Rang",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/n58tt09cqchvv"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "bollywoodmuziq",
+    "name": "Bollywoodmuziq",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/uy91e749fv8uv"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "radio-mirchi-bay-area",
+    "name": "Radio Mirchi Bay Area",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/SFO_HIN_PSTAAC.aac"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

@@ -236,8 +236,7 @@ window.STATIONS = [
     "streams": [
       "https://kexp.streamguys1.com/kexp160.aac?listenerid=f4bcb5c771d830fbdd4195088a946ea6&awparams=companionAds%3Atrue"
     ],
-    "where": "US",
-    "offline": true
+    "where": "US"
   },
   {
     "id": "planet-rock",
@@ -848,6 +847,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-30",
     "where": "UK"
+  },
+  {
+    "id": "classic-hits-109",
+    "name": "Classic Hits 109",
+    "category": "rock",
+    "streams": [
+      "https://broadcast.classichits109.com/70s-90s"
+    ],
+    "added": "2026-10-31",
+    "where": "US"
+  },
+  {
+    "id": "radio-x-90s",
+    "name": "Radio X 90s",
+    "category": "rock",
+    "streams": [
+      "https://media-ice.musicradio.com/RadioX90sMP3"
+    ],
+    "added": "2026-10-31",
+    "where": "UK"
+  },
+  {
+    "id": "kiss-uk",
+    "name": "KISS UK",
+    "category": "pop",
+    "streams": [
+      "https://live-kiss.sharp-stream.com/kiss100.mp3"
+    ],
+    "added": "2026-10-31",
+    "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

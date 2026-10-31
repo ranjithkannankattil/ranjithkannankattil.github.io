@@ -660,6 +660,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-30",
     "where": "Ghana"
+  },
+  {
+    "id": "truckers-radio-usa",
+    "name": "Truckers Radio USA",
+    "category": "us",
+    "streams": [
+      "https://streamer.radio.co/s81d30349a/low"
+    ],
+    "added": "2026-10-31",
+    "where": "US"
+  },
+  {
+    "id": "radio-vaticana-english",
+    "name": "Radio Vaticana English",
+    "category": "world",
+    "streams": [
+      "https://radio.vaticannews.va/stream-en"
+    ],
+    "added": "2026-10-31",
+    "where": "The Holy See"
+  },
+  {
+    "id": "cbc-radio-1-ottawa-cbo-fm",
+    "name": "CBC Radio 1 Ottawa (CBO-FM)",
+    "category": "canada",
+    "streams": [
+      "https://cbcradiolive.akamaized.net/hls/live/2041037/ES_R1ETT/adaptive_128/chunklist_ao.m3u8"
+    ],
+    "added": "2026-10-31",
+    "where": "Canada"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

@@ -613,7 +613,8 @@ window.STATIONS = [
     "streams": [
       "https://streams.pinguinradio.com/PinguinClassics192.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "offline": true
   },
   {
     "id": "groot-nieuws-radio",
@@ -794,6 +795,33 @@ window.STATIONS = [
       "https://icecast.omroep.nl/radio4-eigentijds-mp3"
     ],
     "added": "2026-10-30"
+  },
+  {
+    "id": "slam-hardstyle",
+    "name": "SLAM! HARDSTYLE",
+    "category": "music",
+    "streams": [
+      "https://streaming.slam.nl/web11_mp3"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "1achterhoek",
+    "name": "1Achterhoek",
+    "category": "music",
+    "streams": [
+      "https://nlpo.stream.vip/achterhoek/mp3-192/nlpo.stream.vip/"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "radio-538-party",
+    "name": "Radio 538 Party",
+    "category": "music",
+    "streams": [
+      "https://22533.live.streamtheworld.com/TLPSTR16_SC"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

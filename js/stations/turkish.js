@@ -440,7 +440,8 @@ window.STATIONS = [
     "streams": [
       "https://yarenfmn.80.yayin.com.tr//stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "radyo-7-turku",
@@ -756,6 +757,33 @@ window.STATIONS = [
       "https://yayin2.canliyayin.org:8248/;*.mp3"
     ],
     "added": "2026-10-30"
+  },
+  {
+    "id": "pal-station",
+    "name": "Pal Station",
+    "category": "music",
+    "streams": [
+      "https://moondigitaledge.radyotvonline.net/palstation/playlist.m3u8"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "erkam-radyo",
+    "name": "Erkam Radyo",
+    "category": "devotional",
+    "streams": [
+      "https://api-tv5.yayin.com.tr:8002/mp3"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "kayseri-gozdefm",
+    "name": "Kayseri GözdeFM",
+    "category": "music",
+    "streams": [
+      "https://sslyayin.radyoyayini.com:7067/stream"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";

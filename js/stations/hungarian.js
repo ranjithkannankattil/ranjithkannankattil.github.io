@@ -691,6 +691,33 @@ window.STATIONS = [
       "https://stream.42netmedia.com:8443/sarvar"
     ],
     "added": "2026-10-30"
+  },
+  {
+    "id": "oxygen-happy",
+    "name": "Oxygen Happy",
+    "category": "music",
+    "streams": [
+      "https://oxygenmusic.hu:8443/oxygenhappy_128"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "mr5-parlamenti-adasok",
+    "name": "MR5 - Parlamenti Adások",
+    "category": "news",
+    "streams": [
+      "https://mr-stream.connectmedia.hu/4746/mr5.mp3"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "magyar-evangeliumi-radio",
+    "name": "Magyar Evangéliumi Rádió",
+    "category": "devotional",
+    "streams": [
+      "https://stream.radio.co/s3fd8d173f/listen"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-30T19:15Z";
+window.STATIONS_CHECKED = "2026-10-31T06:43Z";
