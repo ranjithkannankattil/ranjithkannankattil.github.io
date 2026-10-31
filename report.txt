@@ -1,0 +1,445 @@
+2026-10-31 12:38 UTC
+feeds 881, failed 0
+world                en  trusted  25  other   0  topics  75
+world                ml  trusted  25  other   0  topics  79
+world                hi  trusted  25  other   0  topics  76
+world                ta  trusted  25  other   0  topics  75
+world                kn  trusted   5  other   0  topics   6
+world                te  trusted  22  other   0  topics  48
+world                bn  trusted  25  other   0  topics  46
+world                mr  trusted  24  other   0  topics  78
+world                it  trusted  24  other   0  topics  74
+world                fr  trusted  25  other   0  topics  50
+world                de  trusted  25  other   0  topics  40
+world                es  trusted  25  other   0  topics  65
+world                pt  trusted  25  other   0  topics  63
+world                zh  trusted  17  other   0  topics  50
+world                ko  trusted  25  other   0  topics  86
+world                ja  trusted  25  other   0  topics  44
+world                ar  trusted  16  other   0  topics  52
+india                en  trusted  25  other   0  topics  55
+india                ml  trusted  25  other   0  topics  79
+india                hi  trusted  25  other   0  topics  76
+india                ta  trusted  25  other   0  topics  75
+india                kn  trusted   4  other   0  topics   6
+india                te  trusted  25  other   0  topics  48
+india                bn  trusted  25  other   0  topics  46
+india                mr  trusted  25  other   0  topics  78
+kerala               en  trusted  24  other  12  topics   0  removed ai 1
+kerala               ml  trusted  22  other  12  topics   0  removed ai 3
+thrissur             en  trusted  20  other  12  topics   0  removed ai 5
+thrissur             ml  trusted  22  other  12  topics   0  removed ai 3  removed other-place 1
+kodungallur          en  trusted   5  other   3  topics   0  window 21d
+kodungallur          ml  trusted   4  other  12  topics   0  window 21d
+kochi                en  trusted  25  other  12  topics   0
+kochi                ml  trusted  24  other  12  topics   0  removed ai 1  removed other-place 1
+thiruvananthapuram   en  trusted  23  other  12  topics   0  removed ai 2  removed other-place 3
+thiruvananthapuram   ml  trusted  22  other  12  topics   0  removed ai 3  removed other-place 1
+kozhikode            en  trusted  25  other  12  topics   0  removed other-place 2
+kozhikode            ml  trusted  22  other  12  topics   0  removed ai 3  removed other-place 1
+karnataka            en  trusted  25  other  12  topics   0  window 21d
+karnataka            kn  trusted   0  other   5  topics   0  window 21d
+bengaluru            en  trusted  24  other  12  topics   0  removed ai 1
+bengaluru            kn  trusted   6  other   0  topics   0  removed ai 4
+bengaluru            ml  trusted  17  other  12  topics   0
+mangaluru            en  trusted  25  other  12  topics   0  window 21d  removed other-place 2
+mangaluru            kn  trusted   0  other   0  topics   0  window 21d
+tamil-nadu           en  trusted  23  other  12  topics   0  removed ai 2
+tamil-nadu           ta  trusted  25  other  12  topics   0
+chennai              en  trusted  24  other  12  topics   0  removed ai 1
+chennai              ta  trusted  25  other  12  topics   0
+coimbatore           en  trusted  23  other  12  topics   0  removed ai 2
+coimbatore           ta  trusted  25  other  12  topics   0
+maharashtra          en  trusted  25  other  12  topics   0
+maharashtra          mr  trusted  24  other  12  topics   0  removed ai 1
+maharashtra          hi  trusted  23  other  12  topics   0  removed ai 2
+mumbai               en  trusted  24  other  12  topics   0  removed ai 1
+mumbai               mr  trusted  24  other  12  topics   0  removed ai 1
+mumbai               hi  trusted  25  other  12  topics   0
+pune                 en  trusted  24  other  12  topics   0  removed ai 1
+pune                 mr  trusted  25  other  12  topics   0
+delhi                en  trusted  24  other  12  topics   0  removed ai 1
+delhi                hi  trusted  25  other  12  topics   0
+telangana            en  trusted  25  other  12  topics   0
+telangana            te  trusted  24  other  12  topics   0  removed ai 1
+hyderabad            en  trusted  22  other  12  topics   0  removed ai 3
+hyderabad            te  trusted  25  other  12  topics   0
+west-bengal          en  trusted  24  other  12  topics   0  removed ai 1
+west-bengal          bn  trusted  13  other  12  topics   0
+kolkata              en  trusted  24  other  12  topics   0  removed ai 1
+kolkata              bn  trusted  24  other  12  topics   0  removed ai 1
+uk                   en  trusted  25  other   0  topics  75
+wales                en  trusted  25  other  12  topics   0
+swansea              en  trusted  25  other   2  topics   0  removed club 32
+cardiff              en  trusted  25  other  12  topics   0  removed club 19
+england              en  trusted  25  other  12  topics   0
+london               en  trusted  25  other  12  topics   0  removed club 2
+manchester           en  trusted  13  other   1  topics   0  removed club 56
+birmingham           en  trusted  10  other   9  topics   0  removed club 12
+scotland             en  trusted  25  other  12  topics   0
+edinburgh            en  trusted  25  other  12  topics   0  removed club 6
+glasgow              en  trusted  23  other   9  topics   0  removed club 5
+italy                it  trusted  25  other   0  topics  74
+italy                en  trusted  18  other   0  topics   0
+lombardy             it  trusted  24  other  12  topics   0  window 21d  removed ai 1
+lombardy             en  trusted   4  other  12  topics   0  window 21d
+milan                it  trusted  25  other  11  topics   0  removed club 4
+milan                en  trusted  25  other   7  topics   0  removed club 26
+bergamo              it  trusted  25  other  12  topics   0  window 21d
+bergamo              en  trusted   1  other  12  topics   0  window 21d
+lazio                it  trusted  23  other  12  topics   0  removed ai 2
+lazio                en  trusted   3  other  12  topics   0
+rome                 it  trusted  25  other  12  topics   0  removed club 6
+rome                 en  trusted  12  other  12  topics   0  removed ai 2  removed club 1
+china                zh  trusted  25  other   0  topics  21
+china                en  trusted  25  other   0  topics   0
+shandong             zh  trusted   5  other  12  topics   0  window 21d
+shandong             en  trusted   7  other  12  topics   0  window 21d
+qingdao              zh  trusted   0  other  12  topics   0  window 21d
+qingdao              en  trusted   2  other  12  topics   0  window 21d
+jinan                zh  trusted   3  other  12  topics   0  window 21d
+jinan                en  trusted   0  other  12  topics   0  window 21d
+jiangsu              zh  trusted   3  other  12  topics   0  window 21d
+jiangsu              en  trusted  14  other  12  topics   0  window 21d
+qidong               zh  trusted   2  other  12  topics   0  window 21d
+qidong               en  trusted   0  other   2  topics   0  window 21d
+nantong              zh  trusted   3  other  12  topics   0  window 21d
+nantong              en  trusted   0  other  12  topics   0  window 21d  removed ai 1
+nanjing              zh  trusted  15  other  12  topics   0  window 21d
+nanjing              en  trusted   3  other  12  topics   0  window 21d  removed ai 1
+shanghai             zh  trusted  17  other  12  topics   0
+shanghai             en  trusted   5  other  12  topics   0
+beijing              zh  trusted  25  other  12  topics   0
+beijing              en  trusted  15  other  12  topics   0  removed ai 2
+uae                  en  trusted  25  other   0  topics  62
+uae                  ar  trusted  25  other   0  topics  52
+uae                  ml  trusted  10  other   0  topics   0
+dubai                en  trusted  25  other  12  topics   0
+dubai                ar  trusted  19  other  12  topics   0
+dubai                ml  trusted  24  other  12  topics   0  removed ai 1
+abu-dhabi            en  trusted  25  other  12  topics   0
+abu-dhabi            ar  trusted  21  other  12  topics   0
+abu-dhabi            ml  trusted  18  other  12  topics   0
+mozambique           pt  trusted  25  other   0  topics  63
+mozambique           en  trusted   5  other   0  topics   0
+cabo-delgado         pt  trusted  20  other  12  topics   0  window 21d
+cabo-delgado         en  trusted  12  other   8  topics   0  window 21d
+pemba                pt  trusted   0  other  12  topics   0  window 21d
+pemba                en  trusted   3  other   6  topics   0  window 21d
+maputo               pt  trusted   8  other  12  topics   0
+maputo               en  trusted   7  other  12  topics   0  removed ai 1
+usa                  en  trusted  25  other   0  topics  62
+usa                  es  trusted  16  other   0  topics  23
+new-york             en  trusted  25  other  12  topics   0
+new-york             es  trusted  14  other  12  topics   0
+washington           en  trusted  15  other  12  topics   0
+france               fr  trusted  25  other   0  topics  50
+france               en  trusted  24  other   0  topics   0
+paris                fr  trusted  25  other  12  topics   0
+paris                en  trusted  25  other  12  topics   0
+germany              de  trusted  25  other   0  topics  40
+germany              en  trusted  25  other   0  topics   0
+berlin               de  trusted  25  other  12  topics   0
+berlin               en  trusted   8  other   7  topics   0
+spain                es  trusted  25  other   0  topics  65
+spain                en  trusted  25  other   0  topics   0
+madrid               es  trusted  25  other  12  topics   0
+madrid               en  trusted  25  other  12  topics   0
+portugal             pt  trusted  25  other   0  topics  63
+portugal             en  trusted   1  other   0  topics   0
+lisbon               pt  trusted  25  other  12  topics   0
+lisbon               en  trusted   5  other  12  topics   0
+japan                ja  trusted  25  other   0  topics  44
+japan                en  trusted  19  other   0  topics   0
+tokyo                ja  trusted  24  other  12  topics   0  removed ai 1
+tokyo                en  trusted  20  other  12  topics   0
+south-korea          ko  trusted  25  other   0  topics  86
+south-korea          en  trusted  16  other   0  topics   0
+seoul                ko  trusted  25  other  12  topics   0
+seoul                en  trusted  15  other  12  topics   0
+singapore            en  trusted  24  other   0  topics  60
+singapore            zh  trusted  24  other   0  topics   0
+
+Thin places:
+kodungallur          ml  own   4  around   8 from thrissur
+karnataka            kn  own   0  around   0  (nothing to borrow)
+mangaluru            kn  own   0  around   0  (nothing to borrow)
+lombardy             en  own   4  around   8 from italy
+bergamo              en  own   1  around   4 from lombardy
+lazio                en  own   3  around   8 from italy
+qingdao              zh  own   0  around   5 from shandong
+qingdao              en  own   2  around   7 from shandong
+jinan                zh  own   3  around   5 from shandong
+jinan                en  own   0  around   7 from shandong
+jiangsu              zh  own   3  around   8 from china
+qidong               zh  own   2  around   2 from jiangsu
+qidong               en  own   0  around   8 from jiangsu
+nantong              zh  own   3  around   3 from jiangsu
+nantong              en  own   0  around   8 from jiangsu
+nanjing              en  own   3  around   8 from jiangsu
+pemba                pt  own   0  around   8 from cabo-delgado
+pemba                en  own   3  around   8 from cabo-delgado
+
+Local pages:
+{
+ "https://www.thehindu.com/news/national/kerala/feeder/default.rss": {
+  "ok": true,
+  "n": 40,
+  "sample": [
+   "Heavy pesticide use puts Keralam’s cardamom ecosystem under pressure",
+   "Chief Justice of India Surya Kant to inaugurate the platinum jubilee c",
+   "Bay of Bengal weather system set to revive rain in Keralam from Novemb",
+   "How brown mussels sustain livelihoods along Thiruvananthapuram’s coast"
+  ]
+ },
+ "https://www.thehindu.com/news/cities/Kochi/feeder/default.rss": {
+  "ok": true,
+  "n": 40,
+  "sample": [
+   "Chief Justice of India Surya Kant to inaugurate the platinum jubilee c",
+   "Amid accident deaths, Keralam Home Minister Ramesh Chennithala warns o",
+   "Punjab native detained for flying drone illegally in high-sensitive ar",
+   "Premium hotel in Kochi booked for unauthorised DJ party, liquor sale b"
+  ]
+ },
+ "https://www.mathrubhumi.com/thrissur": {
+  "ok": true,
+  "n": 24,
+  "sample": [
+   "കാൽ നൂറ്റാണ്ടിന്റെ ഇടവേളയ്ക്ക് ശേഷം കള്ളുഷാപ്പിലേക്ക് ആദ്യ ജീവനക്കാരിയ",
+   "പഠനത്തിൽ മിടുക്കൻ, ജീവിതം തെരുവിൽ; സർക്കാരിന്റെ എല്ലാ ക്ഷേമപദ്ധതികളുടെ",
+   "ഇനിയും വികസിപ്പിക്കണം, പാവറട്ടി",
+   "വിവാദങ്ങളും തർക്കങ്ങളും കാടുകയറി കായിക സ്വപ്നങ്ങൾ"
+  ]
+ },
+ "https://www.manoramaonline.com/district-news/thrissur.html": {
+  "ok": true,
+  "n": 13,
+  "sample": [
+   "OPINION AND ANALYSIS",
+   "NON-PARTISANSHIP POLICY",
+   "അന്ന് കണ്ടെയ്‌നർ ലോറി മറയാക്കി, ഇന്ന് സിസിടിവി ക്യാമറയിൽ പെയിന്റ് സ്‌പ",
+   "മദ്യപിക്കാൻ എത്തുന്നവരുടെ ആധാർ കാർഡ് പരിശോധിക്കണം; ഇനിയും വിട്ടുവീഴ്ചയ"
+  ]
+ },
+ "https://www.deshabhimani.com/district/thrissur": {
+  "ok": true,
+  "n": 19,
+  "sample": [
+   "സിപിഐ എം നാട്ടിക ഏരിയ സമ്മേളനം",
+   "സിപിഐ എം പുഴയ്ക്കൽ ഏരിയ സമ്മേളനം",
+   "സിപിഐ എം മാള ഏരിയ സമ്മേളനം",
+   "സിപിഐ എം ഇരിങ്ങാലക്കുട ഏരിയ സമ്മേളനം"
+  ]
+ },
+ "https://www.mathrubhumi.com/ernakulam": {
+  "ok": true,
+  "n": 25,
+  "sample": [
+   "മൂത്തകുന്നത്ത് തൂണുകളുടെ പണി പുരോഗമിക്കുന്നു",
+   "ചേരാനല്ലൂർ വാഹനാപകടം; സർക്കാർ ഒപ്പമുണ്ടാകും",
+   "നെടുമ്പാശ്ശേരി അപകടമരണം: പ്രതികളെ പോലീസ് കസ്റ്റഡിയിൽ വിട്ടു",
+   "എസ്.എഫ്.ഐ. പ്രതിഷേധം; മഹാരാജാസ് കോളേജിൽ ബിരുദദാനച്ചടങ്ങ് അലങ്കോലപ്പെട്"
+  ]
+ },
+ "https://www.manoramaonline.com/district-news/ernakulam.html": {
+  "ok": true,
+  "n": 12,
+  "sample": [
+   "OPINION AND ANALYSIS",
+   "NON-PARTISANSHIP POLICY",
+   "ലഹരിക്കെതിരെ പിങ്ക് തരംഗമായി മുവാറ്റുപുഴ; 'തൂഫാൻ 360 ഡിഗ്രി മിനി മാരത്",
+   "മഹാരാജാസിലെ എസ്എഫ്ഐ പ്രതിഷേധം: മുടങ്ങിയ ബിരുദദാനച്ചടങ്ങ് സ്കൂൾ മുറ്റത്"
+  ]
+ },
+ "https://www.deshabhimani.com/district/ernakulam": {
+  "ok": true,
+  "n": 20,
+  "sample": [
+   "അഭിഭാഷക ഡയറി പ്രകാശനം ചെയ്തു",
+   "അഭിമന്യു സ്‌മാരകത്തിനെതിരെ വ്യാജപ്രചാരണം ; പിന്നിൽ കൊലയാളിസംഘത്തിന്റെ ",
+   "എസ്‌എസ്‌കെയെ തകർക്കുന്ന നീക്കത്തിനെതിരെ അധ്യാപക പ്രതിഷേധം അലയടിച്ചു",
+   "കളമശേരിയിൽ മഞ്ഞപ്പിത്തം പടരുന്നു"
+  ]
+ },
+ "https://www.thehindu.com/news/cities/Thiruvananthapuram/feeder/default.rss": {
+  "ok": true,
+  "n": 40,
+  "sample": [
+   "IMD scouting for land to set up wind profiler radars in Kozhikode, Thi",
+   "Jadu, lone rhino at Thiruvananthapuram zoo, dead",
+   "Crime Branch nabs PSC additional secretary R. Hari in examination irre",
+   "Orders issued on Vigilance probe into KIIFB-financed land acquisition "
+  ]
+ },
+ "https://www.mathrubhumi.com/thiruvananthapuram": {
+  "ok": true,
+  "n": 25,
+  "sample": [
+   "തിരുവനന്തപുരം മൃഗശാലയിലെ ഏക ഒറ്റക്കൊമ്പൻ കാണ്ടാമൃഗം ശംഭു ഓർമയായി",
+   "വിവാഹം കഴിഞ്ഞ് പതിനൊന്നാം നാൾ യുവതി വീട്ടിനുള്ളിൽ മരിച്ച നിലയിൽ: ദുരൂഹ",
+   "തലത്തൂതക്കാവ് സ്കൂളിന്റെമതിൽ കാട്ടാനക്കൂട്ടം തകർത്തു",
+   "നാവായിക്കുളത്ത് കാടുകയറി റോഡുകൾ"
+  ]
+ },
+ "https://www.manoramaonline.com/district-news/thiruvananthapuram.html": {
+  "ok": true,
+  "n": 14,
+  "sample": [
+   "OPINION AND ANALYSIS",
+   "NON-PARTISANSHIP POLICY",
+   "കാരുണ്യ ലോട്ടറി KR-774 നറുക്കെടുപ്പ് ഫലം: ഒന്നാം സമ്മാനം 1 കോടി രൂപ KG",
+   "Kerala Lottery Results"
+  ]
+ },
+ "https://www.deshabhimani.com/district/thiruvananthapuram": {
+  "ok": true,
+  "n": 19,
+  "sample": [
+   "തുഴയെറിഞ്ഞു സമ്മേളനാവേശം",
+   "സിപിഐ എം ഏരിയ സെക്രട്ടറിയുടെ വീട്ടിൽ എസ്ഐയുടെ അതിക്രമം",
+   "പരമാവധി സൗജന്യ ചികിത്സ ഉറപ്പാക്കും: മന്ത്രി",
+   "ഡെസ്റ്റിനേഷൻ വെഡ്ഡിങ്‌: രണ്ടാംഘട്ടം തുറന്നു"
+  ]
+ },
+ "https://www.thehindu.com/news/cities/kozhikode/feeder/default.rss": {
+  "ok": true,
+  "n": 40,
+  "sample": [
+   "IMD scouting for land to set up wind profiler radars in Kozhikode, Thi",
+   "Most licensed traders at Palayam market ready to move to Kalluthankada",
+   "Cybersecurity awareness session held at Govt. Cyberpark",
+   "Malabar, Parashuram Express, other train numbers will change to reflec"
+  ]
+ },
+ "https://www.mathrubhumi.com/kozhikode": {
+  "ok": true,
+  "n": 23,
+  "sample": [
+   "ഇ.എസ്.എ.യുടെ പേരിൽ കർഷകരുടെ ഒരു തുണ്ടുഭൂമിപോലും നഷ്ടപ്പെടില്ല -മന്ത്രി",
+   "വില്ലേജ് ഒാഫീസർ സ്റ്റോപ്പ് മെമ്മോ നൽകി",
+   "കുപ്പിക്കഴുത്തിൽ കുടുങ്ങി കുറ്റ്യാടി ടൗൺ",
+   "വടകരയിൽ ജന്തർ മന്തർ സമരസായാഹ്നം"
+  ]
+ },
+ "https://www.manoramaonline.com/district-news/kozhikode.html": {
+  "ok": true,
+  "n": 13,
+  "sample": [
+   "OPINION AND ANALYSIS",
+   "NON-PARTISANSHIP POLICY",
+   "നാദാപുരത്ത് ഓടിക്കൊണ്ടിരുന്ന സ്വകാര്യ ബസിന്റെ ടയർ പൊട്ടിത്തെറിച്ചു; ഒഴ",
+   "കാരുണ്യ ലോട്ടറി KR-774 നറുക്കെടുപ്പ് ഫലം: ഒന്നാം സമ്മാനം 1 കോടി രൂപ KG"
+  ]
+ },
+ "https://www.deshabhimani.com/district/kozhikode": {
+  "ok": true,
+  "n": 20,
+  "sample": [
+   "517 നീര്‍ച്ചാലുകൾക്ക് പുതുജീവൻ",
+   "ദേശീയ ആരോഗ്യദൗത്യം ജീവനക്കാർ പണിമുടക്കി",
+   "കക്കോടിയിലെ ഓഫീസ് ഒരുവിഭാഗം പട്ടികയടിച്ച് പൂട്ടി",
+   "അധ്യാപകരും സമഗ്ര ശിക്ഷ ജീവനക്കാരും മാർച്ച്‌ നടത്തി"
+  ]
+ },
+ "https://www.thehindu.com/news/cities/bangalore/feeder/default.rss": {
+  "ok": true,
+  "n": 40,
+  "sample": [
+   "Fire breaks out in BMTC bus near St John’s Hospital in Koramangala; pa",
+   "Bengaluru Police trace source of ‘sting’ video; probe focuses on who h",
+   "Two foreigners die of suspected electrocution in Bengaluru five-star h",
+   "Police say alert of explosive-like material in vacant plot near Sunkad"
+  ]
+ },
+ "https://www.prajavani.net/district/bengaluru-city": {
+  "ok": true,
+  "n": 13,
+  "sample": [
+   "ಕೆಂಗೇರಿ ಕೊಮ್ಮಘಟ್ಟದಲ್ಲಿ ಚಿರತೆ ಪ್ರತ್ಯಕ್ಷ: ಜನರಲ್ಲಿ ಆತಂಕ Bengaluru Wildlif",
+   "ದೊಡ್ಡಬಳ್ಳಾಪುರ: ಉಪವಿಭಾಗಾಧಿಕಾರಿಯಾಗಿದ್ದ ದುರ್ಗಾಶ್ರೀ ವಿರುದ್ಧ ಎಫ್‌ಐಆರ್‌",
+   "ಚಿನಕುರುಳಿ: ಶುಕ್ರವಾರ, 30 ಅಕ್ಟೋಬರ್ 2026",
+   "ನಂದಿನಿ ಮೊಸರಿನ ದರ ಲೀಟರ್‌ಗೆ ₹14 ಹೆಚ್ಚಳ!"
+  ]
+ },
+ "https://www.thehindu.com/news/cities/Mangalore/feeder/default.rss": {
+  "ok": true,
+  "n": 40,
+  "sample": [
+   "Bengaluru–Mangaluru-Goa Vande Bharat Express timetable",
+   "Floral plants and native food products on display at Siri Sasyothsava",
+   "‘Vehicle owners should verify e-challans through official channels bef",
+   "Soujanya murder case: Chetan Singh Rathor appointed as new SIT chief"
+  ]
+ },
+ "https://www.prajavani.net/district/dakshina-kannada": {
+  "ok": true,
+  "n": 12,
+  "sample": [
+   "ಚಿನಕುರುಳಿ: ಶನಿವಾರ, 31 ಅಕ್ಟೋಬರ್ 2026",
+   "ಗುಂಡಣ್ಣ ಕಾರ್ಟೂನು: ಶನಿವಾರ, 31 ಅಕ್ಟೋಬರ್ 2026",
+   "ಚುರುಮುರಿ: ಸ್ಟಿಂಗರ ಬುಡ್ಡಣ್ಣ",
+   "ದೊಡ್ಡಬಳ್ಳಾಪುರ: ಉಪವಿಭಾಗಾಧಿಕಾರಿಯಾಗಿದ್ದ ದುರ್ಗಾಶ್ರೀ ವಿರುದ್ಧ ಎಫ್‌ಐಆರ್‌"
+  ]
+ },
+ "https://www.thehindu.com/news/cities/chennai/feeder/default.rss": {
+  "ok": true,
+  "n": 40,
+  "sample": [
+   "Chennai Corporation directs engineers to undertake milling before rela",
+   "DMK women cadre protest across Tamil Nadu over price rise, law and ord",
+   "Stolen Chola-era bronze idol of Kannappa Nayanar repatriated from Neth",
+   "The great escape from Theni jail"
+  ]
+ },
+ "https://www.thehindu.com/news/cities/Coimbatore/feeder/default.rss": {
+  "ok": true,
+  "n": 40,
+  "sample": [
+   "Deepavali gift hampers in Coimbatore: From millet sweets to artisanal ",
+   "Man escapes from police custody before being lodged in Coimbatore Cent",
+   "The great escape from Theni jail",
+   "High Court directs BU to collect charges from autonomous colleges only"
+  ]
+ },
+ "https://www.thehindu.com/news/cities/mumbai/feeder/default.rss": {
+  "ok": true,
+  "n": 40,
+  "sample": [
+   "IIT student death: Sahil Wakode’s parents move Bombay HC seeking CBI, ",
+   "Karishma Shahani Khan’s TARA showcase in Mumbai explores upcycled fash",
+   "High Court orders Maharashtra government to pay ₹2 lakh compensation t",
+   "Maharashtra MLC polls: Lessons for the BJP, hope for Maha Vikas Aghadi"
+  ]
+ },
+ "https://www.thehindu.com/news/cities/Delhi/feeder/default.rss": {
+  "ok": true,
+  "n": 40,
+  "sample": [
+   "Mangolpuri factory fire: Families recall workers’ final calls, two man",
+   "Dhruv Rathee defamation case: Delhi Court issues fresh bailable warran",
+   "Delhi government mandates registration of domestic help agencies; ₹50,",
+   "INDIA bloc Ramlila Maidan rally traffic curbs: Which roads to avoid, t"
+  ]
+ },
+ "https://www.thehindu.com/news/cities/Hyderabad/feeder/default.rss": {
+  "ok": true,
+  "n": 40,
+  "sample": [
+   "Depression over Bay of Bengal to bring rain to Telangana, heavy shower",
+   "Man held for altering Aadhaar, PAN card details; charged ₹300 to chang",
+   "New technologies adoption must go hand-in-hand with sound engineering ",
+   "Telangana CM Revanth wants Ashwini Vaishnaw’s nod for Vikarabad-Krishn"
+  ]
+ },
+ "https://www.thehindu.com/news/cities/kolkata/feeder/default.rss": {
+  "ok": true,
+  "n": 40,
+  "sample": [
+   "Is Bengali cinema losing its rootedness?",
+   "Election Commission’s appeals against 16.10 lakh cleared voters raise ",
+   "1.2 lakh electors deleted in Kolkata; West Bengal Congress asks poll b",
+   "Suvendu challenges Abhishek to contest from Diamond Harbour in 2029 Lo"
+  ]
+ }
+}
