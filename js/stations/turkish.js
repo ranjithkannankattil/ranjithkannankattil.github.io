@@ -440,8 +440,7 @@ window.STATIONS = [
     "streams": [
       "https://yarenfmn.80.yayin.com.tr//stream"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "radyo-7-turku",
@@ -585,7 +584,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiojar.com/tamm1f7kk48uv"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "offline": true
   },
   {
     "id": "s1lhoutte-arabesk-fm",
@@ -784,6 +784,33 @@ window.STATIONS = [
       "https://sslyayin.radyoyayini.com:7067/stream"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "metropol-fm-anadolu-nun-sesi",
+    "name": "Metropol FM Anadolu'nun Sesi",
+    "category": "music",
+    "streams": [
+      "https://metropolfm.streamabc.net/77_u5n4eyva95gt_xmxw-mp3-256-2656521"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "bizim-iller-radio",
+    "name": "Bizim İller Radio",
+    "category": "devotional",
+    "streams": [
+      "https://radyo.yayindakiler.com:4078/stream"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "metropol-fm-berlin",
+    "name": "Metropol FM Berlin",
+    "category": "music",
+    "streams": [
+      "https://metropolfm.streamabc.net/77_8dsw7gc1qgz6_lc0t-mp3-256-6796112"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

@@ -201,7 +201,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-17",
@@ -745,6 +746,33 @@ window.STATIONS = [
       "https://radioserver12.profesionalhosting.com/proxy/pkg152492/stream"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "fm-104-9",
+    "name": "警察廣播電臺 - 全國治安交通網 FM 104.9",
+    "category": "news",
+    "streams": [
+      "https://stream.pbs.gov.tw/live/PBS/playlist.m3u8"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "ai-radio-taiwan-ai",
+    "name": "Ai Radio TAIWAN 台灣AI電台",
+    "category": "news",
+    "streams": [
+      "https://n10.rcs.revma.com/h4ta80hbqwuvv"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "station-39",
+    "name": "台北古典廣播",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/w66d3dp6ynhvv"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

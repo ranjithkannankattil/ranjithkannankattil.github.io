@@ -814,6 +814,33 @@ window.STATIONS = [
       "https://webstream.schlagerparadies.de/schlager30842"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "absolut-relax",
+    "name": "Absolut Relax",
+    "category": "music",
+    "streams": [
+      "https://edge19.live-sm.absolutradio.de/absolut-relax/stream/aacp"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "fluxfm",
+    "name": "FluxFM",
+    "category": "music",
+    "streams": [
+      "https://streams.fluxfm.de/live/mp3-320/audio/"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "98-8-kiss-fm",
+    "name": "98.8 Kiss FM",
+    "category": "music",
+    "streams": [
+      "https://stream.kissfm.de/kissfm/mp3-128/internetradio/"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

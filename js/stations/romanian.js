@@ -754,6 +754,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/zt84vax7ptzuv"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "radio-guerrilla",
+    "name": "Radio Guerrilla",
+    "category": "music",
+    "streams": [
+      "https://live.guerrillaradio.ro:8443/guerrilla.aac"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "stil-mix-radio-manele",
+    "name": "Stil Mix -Radio Manele",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/87sktrysmuqtv"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "clasic-radio-blues-bucuresti",
+    "name": "Clasic Radio_Blues -București",
+    "category": "music",
+    "streams": [
+      "https://live.radioclasic.com/listen/radio_clasic_blues/live.mp3"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

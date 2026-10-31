@@ -161,7 +161,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://classichitsradio.streamingmedia.it/play"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rtl-102-5-disco",
@@ -750,6 +751,33 @@ window.STATIONS = [
       "https://icy.unitedradio.it/Virgin_03.mp3"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "radio-marilu",
+    "name": "Radio Marilù",
+    "category": "music",
+    "streams": [
+      "https://wma01.fluidstream.net/marilu"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "pop-radio-swiss",
+    "name": "Pop · Radio Swiss",
+    "category": "music",
+    "streams": [
+      "https://stream.srg-ssr.ch/m/rsp/mp3_128"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "forever-90",
+    "name": "FOREVER 90",
+    "category": "music",
+    "streams": [
+      "https://stream.laut.fm/forever90"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

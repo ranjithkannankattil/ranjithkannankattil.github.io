@@ -818,6 +818,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "where": "US"
+  },
+  {
+    "id": "drgnu-gothic",
+    "name": "DrGnu - Gothic",
+    "category": "world",
+    "streams": [
+      "https://streams.radiobob.de/gothic/mp3-192/mediaplayer"
+    ],
+    "added": "2026-10-31",
+    "where": "Germany"
+  },
+  {
+    "id": "glow-99-1-fm-akure",
+    "name": "Glow 99.1 FM Akure",
+    "category": "world",
+    "streams": [
+      "https://stream.zeno.fm/mwam2yirv1pvv"
+    ],
+    "added": "2026-10-31",
+    "where": "Nigeria"
+  },
+  {
+    "id": "bfm-89-9-malaysia",
+    "name": "BFM 89.9 Malaysia",
+    "category": "world",
+    "streams": [
+      "https://22253.live.streamtheworld.com/BFM_SC"
+    ],
+    "added": "2026-10-31",
+    "where": "Malaysia"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

@@ -202,7 +202,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/019324w4ez4tv",
       "https://stream.zenolive.com/019324w4ez4tv"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-maharani",
@@ -313,4 +314,4 @@ window.STATIONS = [
     "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

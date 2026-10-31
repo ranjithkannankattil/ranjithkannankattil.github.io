@@ -719,6 +719,15 @@ window.STATIONS = [
       "https://s3.slotex.pl/shoutcast/7046/stream"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "radioparty-pl-trance-party",
+    "name": "RadioParty.pl Trance Party",
+    "category": "music",
+    "streams": [
+      "https://trance.radioparty.pl:8015/"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

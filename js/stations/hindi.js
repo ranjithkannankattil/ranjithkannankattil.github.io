@@ -803,6 +803,33 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SFO_HIN_PSTAAC.aac"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "bhakti-world-hanuman",
+    "name": "Bhakti World - Hanuman",
+    "category": "devotional",
+    "streams": [
+      "https://2bhanuman.out.airtime.pro:8000/2bhanuman_a"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "2b-radio-sangam-guruvar",
+    "name": "2B! Radio Sangam Guruvar",
+    "category": "devotional",
+    "streams": [
+      "https://iskon2b.out.airtime.pro:8000/iskon2b_a"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "radioolive",
+    "name": "Radioolive",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/OLIVE1063.mp3"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

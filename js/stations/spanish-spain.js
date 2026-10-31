@@ -811,6 +811,33 @@ window.STATIONS = [
       "https://s02.fjperezdj.com:8076/live"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "buena-fm",
+    "name": "+Buena FM",
+    "category": "music",
+    "streams": [
+      "https://sonic.mediatelekom.net/8156/stream"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "ibiza-global-classics",
+    "name": "Ibiza Global Classics",
+    "category": "music",
+    "streams": [
+      "https://control.streaming-pro.com:8000/ibizaglobalclassics.mp3"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "radio-bob",
+    "name": "RADIO BOB",
+    "category": "music",
+    "streams": [
+      "https://streams.radiobob.de/bob-national/mp3-192/homepage?mode=preroll&aw_0_1st.skey=1671400102&cb=286873666&aw_0_1st.playerid=radiobob_web&aw_0_req.userConsentV2=CPkIkEAPkIkEAAFADBDECvCsAP_AAEPAAAYgI9td_H__bW9j-f5_aft0eY1P9_rz7uQzDhfNk-4F3L_W_LwX52E7NF36tq4KmR4ku1LBIQNlHMHUDUmwaokVryHsak2cpSNKJ7BEknMZOydYGF9Pmxtj-QKY5v5_d3bx2D-t_9v-39z338VXn3d53-_02PDdV599Dfn9fR_b89KP9958v4v8_____3_e__3_74I9gEmGrcQBdmWODNoGEUCIEYVhIRQKACCgGFogIAHBwU7KwCfWECABAKAIwIgQ4AowIBAAAJAEhEAEgRYIAAARAIAAQAIAEIAGBgEFgBYGAQAAgGgYohQACBIAZEBEUpgQFQJBAS2VCCUFUhphAFWWAFAIjYKABEEgIpAAEBYOAYIkBKxYIEmKN8gBGCFAKJUIAgaADAAEEexEAGAAII9ioAMAAQR7GQAYAAgj2AAA.YAAAAAAAAAAA&aw_0_1st.kuid=kppidff_PQ5ovBN7&aw_0_1st.ksg=%5B%22vz9c46692%22%5D&listenerid=c47683ff451bdf8ebe068dea8a897b50"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

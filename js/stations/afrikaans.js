@@ -177,6 +177,15 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiojar.com/n6c576nrga0uv"
     ]
+  },
+  {
+    "id": "kaleidoscope-online",
+    "name": "Kaleidoscope Online",
+    "category": "devotional",
+    "streams": [
+      "https://superagent-269bfe30.base44.app/functions/kaleidoscopeRadio?go=stream"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

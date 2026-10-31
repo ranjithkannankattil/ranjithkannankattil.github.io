@@ -251,6 +251,15 @@ window.STATIONS = [
       "https://live.leproradio.com/rocks.ogg"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "criminal-tribe",
+    "name": "Criminal Tribe",
+    "category": "music",
+    "streams": [
+      "https://live.leproradio.com/criminal.ogg"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

@@ -64,7 +64,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.rcs.revma.com/k02rmq48kxcwv"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "hardrock-87-6-fm-jakarta",
@@ -168,7 +169,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://svara-stream.radioddns.net/yogyakarta_voksradio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "klcbs-new-age",
@@ -208,7 +210,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:9154/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radiks-fm-semarang",
@@ -216,7 +219,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:9620/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-music-indonesia",
@@ -267,7 +271,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:8500/;super.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "bahtera-yudha-fm-surabaya",
@@ -315,7 +320,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://server.radioimeldafm.co.id/radio/8040/gajahmadafm"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rri-pro-1-sungailiat",
@@ -323,7 +329,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/14/9314/rrisngliatpro1.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "mosh-head-black-metal-id",
@@ -413,7 +420,8 @@ window.STATIONS = [
     "streams": [
       "https://server.radioimeldafm.co.id:8040/gajahmadafm"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "yaski-radio",
@@ -548,7 +556,8 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com/8228/;radio"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "offline": true
   },
   {
     "id": "bandung-death-metal-syndicate",
@@ -657,7 +666,8 @@ window.STATIONS = [
     "streams": [
       "https://svara-stream.radioddns.net/bali_voksradio_993fm"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "offline": true
   },
   {
     "id": "imelda-fm",
@@ -766,6 +776,33 @@ window.STATIONS = [
       "https://c4.siar.us:8092/autodj"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "hard-rock-fm-surabaya",
+    "name": "hard rock FM surabaya",
+    "category": "music",
+    "streams": [
+      "https://n0c.radiojar.com/yg8ne2v80k8uv"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "rri-pro-4-bandung",
+    "name": "RRI Pro 4 Bandung",
+    "category": "music",
+    "streams": [
+      "https://stream-node0.rri.co.id/streaming/15/9015/rribandungpro4.mp3"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "replay-news-bahasa-indonesia",
+    "name": "REPLAY NEWS - Bahasa Indonesia",
+    "category": "news",
+    "streams": [
+      "https://replaynewsin.ice.infomaniak.ch/replaynewsin-128.mp3"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

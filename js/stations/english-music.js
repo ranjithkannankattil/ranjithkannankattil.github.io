@@ -625,8 +625,7 @@ window.STATIONS = [
       "https://kexp-mp3-128.streamguys1.com/kexp128.mp3"
     ],
     "added": "2026-10-26",
-    "where": "US",
-    "offline": true
+    "where": "US"
   },
   {
     "id": "101-1-wjrr-orlando-s-rock-station",
@@ -877,6 +876,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "where": "UK"
+  },
+  {
+    "id": "hard-rock-halloween",
+    "name": "Hard Rock Halloween",
+    "category": "rock",
+    "streams": [
+      "https://streaming.live365.com/a10373"
+    ],
+    "added": "2026-10-31",
+    "where": "US"
+  },
+  {
+    "id": "104-9-max-country",
+    "name": "104.9 Max Country",
+    "category": "country",
+    "streams": [
+      "https://ais-sa1.streamon.fm/7246_48k.aac"
+    ],
+    "added": "2026-10-31",
+    "where": "US"
+  },
+  {
+    "id": "181-fm-beatles",
+    "name": "181.FM - Beatles",
+    "category": "rock",
+    "streams": [
+      "https://listen.181fm.com/181-beatles_128k.mp3"
+    ],
+    "added": "2026-10-31",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

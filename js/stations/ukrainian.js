@@ -232,7 +232,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.brokenbeats.net/tune"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-shanson",
@@ -789,6 +790,33 @@ window.STATIONS = [
       "https://ponchofm.com/poncho"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "radio-fiorda",
+    "name": "Radio Fiorda",
+    "category": "music",
+    "streams": [
+      "https://radiofiorda.pl/stream/"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "khvylia-shchastia",
+    "name": "Волна счастья Khvylia Shchastia",
+    "category": "devotional",
+    "streams": [
+      "https://listen.radioking.com/radio/562580/stream/622265"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "station-19",
+    "name": "Бізнес Радіо",
+    "category": "music",
+    "streams": [
+      "https://cast.brg.ua/businessradio_main_public_mp3_hq"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

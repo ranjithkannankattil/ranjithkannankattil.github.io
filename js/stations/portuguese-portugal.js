@@ -807,6 +807,33 @@ window.STATIONS = [
       "https://radio.msfsradio.com/listen/msfs/radio.mp3"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "radio-rock-pirata",
+    "name": "Radio Rock Pirata",
+    "category": "music",
+    "streams": [
+      "https://radio.softshell-octatonic.ts.net/stream"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "voz-do-neiva",
+    "name": "Voz do Neiva",
+    "category": "music",
+    "streams": [
+      "https://sp0.redeaudio.com/8092/stream"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "radio-rcp-var",
+    "name": "RADIO RCP-VAR",
+    "category": "music",
+    "streams": [
+      "https://sonic.servsonic.com/8028/stream"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

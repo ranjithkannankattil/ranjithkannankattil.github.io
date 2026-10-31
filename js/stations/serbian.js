@@ -771,6 +771,33 @@ window.STATIONS = [
       "https://stream.radios.rs:9032/stream"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "radio-s-80e",
+    "name": "Radio S 80e",
+    "category": "music",
+    "streams": [
+      "https://stream.radios.rs:9036/stream"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "radio-in",
+    "name": "Radio In",
+    "category": "music",
+    "streams": [
+      "https://radioinnis-naxinacional.streaming.rs:8622/;"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "radio-ritam-srca",
+    "name": "Radio Ritam Srca",
+    "category": "music",
+    "streams": [
+      "https://s4.radio.co/s0f65dad2d/listen"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

@@ -377,7 +377,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.kinshasafm.xyz/listen/kinshasafm/radio.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "chabad-org-torah-classes-radio",
@@ -443,4 +444,4 @@ window.STATIONS = [
     "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

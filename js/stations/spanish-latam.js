@@ -810,6 +810,33 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/ACIR13_s01AAC.aac"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "mega-98-3",
+    "name": "MEGA 98.3",
+    "category": "music",
+    "streams": [
+      "https://mega.stweb.tv/mega983/live/playlist.m3u8"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "fiesta-vallenata",
+    "name": "FIESTA VALLENATA",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/qlznh4yhpvytv"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "tropical-100-salsa",
+    "name": "Tropical 100 Salsa",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/cjgfujr8yhbvv"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

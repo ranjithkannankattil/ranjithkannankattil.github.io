@@ -613,8 +613,7 @@ window.STATIONS = [
     "streams": [
       "https://streams.pinguinradio.com/PinguinClassics192.mp3"
     ],
-    "added": "2026-10-27",
-    "offline": true
+    "added": "2026-10-27"
   },
   {
     "id": "groot-nieuws-radio",
@@ -822,6 +821,33 @@ window.STATIONS = [
       "https://22533.live.streamtheworld.com/TLPSTR16_SC"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "kink-classics",
+    "name": "KINK CLASSICS",
+    "category": "music",
+    "streams": [
+      "https://25243.live.streamtheworld.com/KINK_DNA_SC"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "radio-2-oost-vlaanderen",
+    "name": "Radio 2 Oost-Vlaanderen",
+    "category": "music",
+    "streams": [
+      "https://icecast.vrtcdn.be/ra2ovl-high.mp3"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "the-finest-amsterdam",
+    "name": "The Finest Amsterdam",
+    "category": "music",
+    "streams": [
+      "https://live.thefinest.amsterdam/hq"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

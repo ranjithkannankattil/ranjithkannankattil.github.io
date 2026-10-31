@@ -584,6 +584,33 @@ window.STATIONS = [
       "https://onlineradiobox.com/json/hr/bnm/play?platform=web"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "radio-baranja",
+    "name": "Radio Baranja",
+    "category": "news",
+    "streams": [
+      "https://s8.iqstreaming.com:2020/stream/radio_baranja/stream"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "radio-belisce",
+    "name": "Radio Belišće",
+    "category": "news",
+    "streams": [
+      "https://mcp1.mydataknox.com:8006/stream"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "radio-orahovica",
+    "name": "Radio Orahovica",
+    "category": "news",
+    "streams": [
+      "https://ec2s.crolive.com.hr:2595/stream"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

@@ -810,6 +810,33 @@ window.STATIONS = [
       "https://webradio1.tda.dz:8001/Tlemcen_64K.mp3"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "105-7-fm",
+    "name": "إذاعة نور الإيمان المسموعة 105.7 FM",
+    "category": "devotional",
+    "streams": [
+      "https://stream.zeno.fm/r6eprdta6nhvv"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "hala-fm",
+    "name": "Hala FM",
+    "category": "music",
+    "streams": [
+      "https://listen-halafm.sharp-stream.com/halafmlow.mp3"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "sba-riyadh-radio-91-5-fm",
+    "name": "SBA Riyadh Radio 91.5 FM",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/pdeizhgrtrstv"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

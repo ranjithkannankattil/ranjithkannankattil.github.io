@@ -817,6 +817,33 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/BANDNEWSFM_SPAAC"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "mix-fm-porto-alegre",
+    "name": "Mix FM - Porto Alegre",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/MIXFM_POAAAC.aac"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "radio-atlantida-94-3-fm-porto-alegre",
+    "name": "Rádio Atlântida 94.3 FM - Porto Alegre",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/RBS_RADIOSAAC.m3u8"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "jovem-pan-bh",
+    "name": "Jovem Pan BH",
+    "category": "music",
+    "streams": [
+      "https://8062.brasilstream.com.br/mp3"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

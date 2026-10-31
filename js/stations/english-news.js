@@ -690,6 +690,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "where": "Canada"
+  },
+  {
+    "id": "national-fm-zbc",
+    "name": "National FM ZBC",
+    "category": "world",
+    "streams": [
+      "https://mainradiostreaming.zbc.co.zw:8020/national.mp3"
+    ],
+    "added": "2026-10-31",
+    "where": "Zimbabwe"
+  },
+  {
+    "id": "wbez-91-5-chicago-public-radio",
+    "name": "WBEZ 91.5 Chicago Public Radio",
+    "category": "us",
+    "streams": [
+      "https://stream.wbez.org/wbez128.mp3"
+    ],
+    "added": "2026-10-31",
+    "where": "US"
+  },
+  {
+    "id": "vob-92-9-fm",
+    "name": "VOB 92.9 FM",
+    "category": "world",
+    "streams": [
+      "https://ice66.securenetsystems.net:80/VOB929"
+    ],
+    "added": "2026-10-31",
+    "where": "Barbados"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

@@ -791,6 +791,33 @@ window.STATIONS = [
       "https://ice.abradio.cz/crystal128.mp3"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "mnau-tv",
+    "name": "Mňau TV",
+    "category": "music",
+    "streams": [
+      "https://5ca49f2417d90.streamlock.net/mnau/livestream/playlist.m3u8"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "rock-radio-sumava",
+    "name": "Rock Rádio Šumava",
+    "category": "music",
+    "streams": [
+      "https://ice.abradio.cz/sumava128.mp3"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "signal-radio-brno",
+    "name": "Signál Rádio Brno",
+    "category": "music",
+    "streams": [
+      "https://icecast6.play.cz/signal-brno128.mp3"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

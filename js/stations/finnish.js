@@ -201,7 +201,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sohostream.djonline.fi:8008/radio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "kesaseuraradio",
@@ -477,4 +478,4 @@ window.STATIONS = [
     "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

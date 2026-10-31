@@ -216,7 +216,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_7_tuzla.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-rtrs",
@@ -378,4 +379,4 @@ window.STATIONS = [
     "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

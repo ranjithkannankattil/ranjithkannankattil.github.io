@@ -809,6 +809,33 @@ window.STATIONS = [
       "https://maximum.hostingradio.ru/maximum96.aacp"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "armenian-radio",
+    "name": "Armenian Radio",
+    "category": "music",
+    "streams": [
+      "https://cast.thiff.com/proxy/laarmeni?mp=/stream"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "russian-bards",
+    "name": "Russian Bards (Русские Барды)",
+    "category": "music",
+    "streams": [
+      "https://russianbards.com/stream"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "roks",
+    "name": "Радио ROKS",
+    "category": "music",
+    "streams": [
+      "https://stream.roks.com:8443/live256"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

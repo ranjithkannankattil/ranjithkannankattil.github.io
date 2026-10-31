@@ -762,6 +762,33 @@ window.STATIONS = [
       "https://s3.radio.co/s97f38db97/listen"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "marrakechplus",
+    "name": "Marrakechplus",
+    "category": "music",
+    "streams": [
+      "https://cast5.my-control-panel.com/proxy/marrakec/stream"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "meme-dans-les-orties",
+    "name": "* Meme dans les orties *",
+    "category": "music",
+    "streams": [
+      "https://radio.sk8ter.org:8443/stream"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "jazz-radio-soul",
+    "name": "Jazz Radio Soul",
+    "category": "music",
+    "streams": [
+      "https://jazz-wr10.ice.infomaniak.ch/jazz-wr10-128.mp3"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

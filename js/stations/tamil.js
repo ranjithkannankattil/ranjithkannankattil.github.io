@@ -819,6 +819,33 @@ window.STATIONS = [
       "https://streams.radio.co/s937ac5492/listen"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "pollachifm",
+    "name": "Pollachifm",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/f29eh57d3qzuv"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "tamilrockyfm",
+    "name": "Tamilrockyfm",
+    "category": "music",
+    "streams": [
+      "https://centova71.instainternet.com/proxy/tamilrockyfm?mp=/stream"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "shiva-tattvam",
+    "name": "Shiva Tattvam",
+    "category": "music",
+    "streams": [
+      "https://radio.shaivam.org/listen/shiva-tattvam/radio.mp3"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

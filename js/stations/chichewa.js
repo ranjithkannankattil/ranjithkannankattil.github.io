@@ -97,8 +97,7 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/ekhjwjjj0a0vv"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "choice-fm-malawi",
@@ -211,7 +210,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://s7.myradiostream.com:60218/;;"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "moyo-fm",
@@ -291,8 +291,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://lbsradio-dexterity.radioca.st/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "marweltan-radio59",
@@ -304,4 +303,4 @@ window.STATIONS = [
     "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

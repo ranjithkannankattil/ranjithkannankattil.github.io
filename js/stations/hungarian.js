@@ -718,6 +718,33 @@ window.STATIONS = [
       "https://stream.radio.co/s3fd8d173f/listen"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "roxy-radio",
+    "name": "Roxy Rádió",
+    "category": "music",
+    "streams": [
+      "https://s2.audiostream.hu/roxy_192k"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "coolfm-rap-hip-hop",
+    "name": "COOLFM Rap/Hip-hop",
+    "category": "music",
+    "streams": [
+      "https://mediagw.e-tiger.net/stream/zc08"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "remenyseg-hangja-radio",
+    "name": "Reménység Hangja Rádió",
+    "category": "devotional",
+    "streams": [
+      "https://live.rvs.ro/mg"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";

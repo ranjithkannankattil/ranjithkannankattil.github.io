@@ -835,6 +835,33 @@ window.STATIONS = [
       "https://netradio.live24.gr/zoo908thess"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "2000stafm",
+    "name": "2000staFM",
+    "category": "music",
+    "streams": [
+      "https://s3.unlimitedradiohosting.com/stream/two-thousand-on-fm"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "rebetiko-sealabs",
+    "name": "rebetiko sealabs",
+    "category": "music",
+    "streams": [
+      "https://rebetiko.sealabs.net/radio"
+    ],
+    "added": "2026-10-31"
+  },
+  {
+    "id": "radio-98-4",
+    "name": "Radio 98.4",
+    "category": "music",
+    "streams": [
+      "https://cast4.my-control-panel.com/proxy/anastas2/stream"
+    ],
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T06:43Z";
+window.STATIONS_CHECKED = "2026-10-31T18:18Z";
