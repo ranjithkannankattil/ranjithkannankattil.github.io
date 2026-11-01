@@ -698,10 +698,10 @@ def details(f, cache, today):
         time.sleep(0.4)
     mm = c.get("mm") or {}
     title = mm.get("orig") or f.get("orig") or f["t"]
-    if c.get("v") != 2:  # matches made before titles and years were checked
+    if c.get("v") != 3:  # matches made before titles, years and runtimes were checked
         for k in ("tmdb", "tm", "day"):
             c.pop(k, None)
-        c["v"] = 2
+        c["v"] = 3
     if "tmdb" not in c:
         try:
             c["tmdb"] = tmdb_match(f, mm)
@@ -710,6 +710,10 @@ def details(f, cache, today):
     if c.get("tmdb"):
         try:
             d = worker(f"/movie/{c['tmdb']}")
+            dur = f.get("dur") or mm.get("dur")
+            if dur and d.get("runtime") and abs(int(d["runtime"]) - int(dur)) > 20:
+                c["tmdb"] = None  # same title, different film ('The Devils' 1971 vs a 1970 Chinese film)
+                raise LookupError("runtime mismatch")
             it = (d.get("providers") or {}).get("IT") or {}
             c["tm"] = {
                 "title": d.get("title"), "original": d.get("original"), "year": d.get("year"), "runtime": d.get("runtime"),
@@ -947,6 +951,16 @@ def main():
                     upcoming.append({"date": d.isoformat(), "films": seeds})
                 sub.append(f"    {d.isoformat()}: {len(seeds)} films ({sum(1 for f in seeds if f['en'])} English)")
             ahead = sorted({s["cinema"] for u in upcoming for f in u["films"] for s in f["shows"]})
+            stated = {}
+            for f in [f for u in upcoming for f in u["films"]]:
+                if f.get("_t18lang") and f.get("_k"):
+                    stated.setdefault(f["_k"], f["_t18lang"])
+            for f in films + [f for u in upcoming for f in u["films"]]:
+                langs = f.pop("_t18lang", None) or stated.get(f.get("_k"))
+                if langs and f.get("langSrc") not in ("manual", "cinema"):
+                    f["lang"], f["en"], f["langSrc"] = " / ".join(dict.fromkeys(langs)), langs[0] == "English", "cinema"
+                if langs and f.get("_k") in cache:
+                    cache[f["_k"]]["t18lang"] = langs
             for f in films + [f for u in upcoming for f in u["films"]]:
                 cache.get(f.pop("_k", film_key(f)), {})["seen"] = today.isoformat()
                 f.pop("_done", None)
