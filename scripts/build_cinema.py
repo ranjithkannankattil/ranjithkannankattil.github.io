@@ -269,7 +269,8 @@ def nice_case(s, italian=None):
     if italian is None:
         italian = looks_italian(s)
     words = s.lower().split(" ")
-    cap = lambda w: re.sub(r"(^|[\-'’(“\"])([a-zà-ÿ])", lambda m: m.group(1) + m.group(2).upper(), w)
+    # capitalise after a hyphen or bracket, and after an elided article (L'Odio), not before a possessive 's
+    cap = lambda w: re.sub(r"(^|[\-(“\"]|(?<![a-zà-ÿ])[a-zà-ÿ]['’])([a-zà-ÿ])", lambda m: m.group(1) + m.group(2).upper(), w)
     out = []
     for i, w in enumerate(words):
         if i == 0 or (out and out[-1].endswith(":")):
@@ -656,6 +657,27 @@ def mymovies_page(url):
     return info
 
 
+def tmdb_match(f, mm):
+    """TMDB id via the Worker, accepted only when the title is close and the year agrees,
+    so 'It Ends' (2025) never becomes 'Soneriada 4: It Ends Now'."""
+    cands = []
+    for t in (f.get("_ovtitle"), mm.get("orig"), f.get("orig"), f["t"], f.get("it")):
+        if t:
+            for x in (t, re.split(r"\s+[-–:]\s+", t)[0]):
+                if x and norm(x) not in [norm(c) for c in cands]:
+                    cands.append(x)
+    y = f.get("y")
+    for t in cands:
+        hit = worker("/match", {"title": t, "year": y or ""})
+        if not hit:
+            continue
+        close = max(lev_ratio(norm(hit.get("t")), norm(c)) for c in cands) >= 0.85 or any(norm(hit.get("t")) == norm(c) for c in cands)
+        year_ok = not y or not hit.get("y") or abs(int(hit["y"]) - int(y)) <= 1
+        if close and year_ok and (hit.get("s") is None or hit["s"] >= 0.85):
+            return hit["id"]
+    return None
+
+
 def film_key(f):
     return f.get("url") or "t:" + norm(f.get("t")) + "|" + str(f.get("y") or "")
 
@@ -676,12 +698,13 @@ def details(f, cache, today):
         time.sleep(0.4)
     mm = c.get("mm") or {}
     title = mm.get("orig") or f.get("orig") or f["t"]
+    if c.get("v") != 2:  # matches made before titles and years were checked
+        for k in ("tmdb", "tm", "day"):
+            c.pop(k, None)
+        c["v"] = 2
     if "tmdb" not in c:
         try:
-            hit = worker("/match", {"title": title, "year": f.get("y") or ""})
-            if not hit and title != f["t"]:
-                hit = worker("/match", {"title": f["t"], "year": f.get("y") or ""})
-            c["tmdb"] = hit.get("id") if hit else None
+            c["tmdb"] = tmdb_match(f, mm)
         except Exception:  # noqa: BLE001
             pass  # try again next run
     if c.get("tmdb"):
@@ -728,6 +751,9 @@ def enrich(films, cache, overrides, today):
         if f.get("_done"):
             continue
         f["_done"] = True
+        ov0 = next((v for k, v in overrides.items() if k in title_keys(f)), None)
+        if ov0 and ov0.get("title"):
+            f["_ovtitle"] = ov0["title"]
         c = details(f, cache, today)
         mm, tm, wd = c.get("mm") or {}, c.get("tm") or {}, c.get("wd")
         if mm.get("country") and not f.get("country"):
@@ -743,7 +769,7 @@ def enrich(films, cache, overrides, today):
         # Show the original title. TMDB's English title fixes MYmovies' occasional typos in it.
         if orig and norm(orig) != norm(mm_title):
             f["t"], f["it"] = orig, f.get("it") or mm_title
-        if tm.get("title") and (not orig or lev_ratio(norm(tm["title"]), norm(orig)) >= 0.8) and tm.get("olang") == "en":
+        if tm.get("title") and orig and lev_ratio(norm(tm["title"]), norm(orig)) >= 0.8 and tm.get("olang") == "en":
             if norm(tm["title"]) != norm(f["t"]):
                 f.setdefault("it", mm_title)
                 f["t"] = tm["title"]
@@ -756,6 +782,9 @@ def enrich(films, cache, overrides, today):
                 f["it"] = f.get("it") or mm_title
             f["t"] = ov["title"]
         t18 = f.pop("_t18lang", None)
+        if t18:
+            c["t18lang"] = t18
+        t18 = t18 or c.get("t18lang")
         if ov and "en" in ov:
             f["lang"], f["en"], f["langSrc"] = ov.get("lang", f.get("lang")), bool(ov.get("en")), "manual"
         elif t18:
@@ -789,6 +818,7 @@ def enrich(films, cache, overrides, today):
         elif (rel.get("US") or {}).get("digital") or (rel.get("GB") or {}).get("digital"):
             f["ott"] = {"date": (rel.get("US") or {}).get("digital") or rel["GB"]["digital"], "where": "US" if (rel.get("US") or {}).get("digital") else "GB"}
         f.pop("orig", None)
+        f.pop("_ovtitle", None)
 
 
 def lev_ratio(a, b):
@@ -813,13 +843,13 @@ def official_site(mm_url, sites):
     url = None
     try:
         page = fetch(mm_url, tries=2)
-        m = re.search(r'<a href="(https?://[^"]+)"[^>]*>\s*<span[^>]*>\s*Sito(?:&nbsp;|\s)+ufficiale', page, re.I)
+        m = re.search(r'<a href="(https?://[^"]+)"[^>]*>\s*<span[^>]*>\s*Sito(?:&nbsp;?|\s|\xa0)+ufficiale', page, re.I)
         if m and "mymovies" not in m.group(1):
             url = html.unescape(m.group(1))
         time.sleep(0.4)
     except Exception:  # noqa: BLE001
         return None  # not cached: try again next run
-    sites[mm_url] = url
+    sites[mm_url] = url or ""  # "" = MYmovies names no website; don't ask again
     return url
 
 
@@ -831,6 +861,10 @@ def finish_shows(cid, films, sites, mm_pages=None):
             for c, name, eur in PRICES:
                 if c == cid and name_score(name, s["cinema"]) >= 2:
                     s["price"] = eur
+            if not s.get("book"):
+                host = next((h for h, c, al in SITES if c == cid and max(name_score(a, s["cinema"]) for a in al) >= 2), None)
+                if host:
+                    s["book"] = T18.format(host=host)
             if not s.get("book"):
                 site = official_site(s.get("mm"), sites)
                 if site:
@@ -860,7 +894,7 @@ def main():
     report, index = [], []
     overrides = load_overrides()
     cache = load_json(os.path.join(a.prev, "films.json"), {})
-    sites = load_json(os.path.join(a.prev, "sites.json"), {})
+    sites = {k: v for k, v in load_json(os.path.join(a.prev, "sites.json"), {}).items() if v is not None}
     # forget film details nobody has needed for a month
     cutoff = (today - dt.timedelta(days=30)).isoformat()
     cache = {k: v for k, v in cache.items() if (v.get("seen") or "") >= cutoff}
