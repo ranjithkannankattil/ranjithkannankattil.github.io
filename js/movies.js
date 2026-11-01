@@ -57,7 +57,7 @@
     var seen = seenIds().has(m.id);
     return '<a class="mv-card' + (seen ? ' seen' : '') + '" href="#/m/' + m.id + '" data-id="' + m.id + '">' +
       '<span class="mv-poster">' + (m.p ? '<img loading="lazy" decoding="async" src="' + esc(img(m.p, 'w185')) + '" alt="">' : '<span class="mv-noposter">' + esc(m.t) + '</span>') +
-      (m.v ? '<b class="mv-badge" title="TMDB rating">★ ' + m.v.toFixed(1) + '</b>' : '') +
+      (m.up ? '<b class="mv-badge up">' + (m.d ? 'Out ' + new Date(m.d + 'T12:00:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : 'Upcoming') + '</b>' : m.v ? '<b class="mv-badge" title="TMDB rating">★ ' + m.v.toFixed(1) + '</b>' : '') +
       (seen ? '<i class="mv-seen" title="Watched">✓</i>' : '') + '</span>' +
       '<span class="mv-ct">' + esc(m.t) + '</span>' +
       '<span class="mv-cm">' + [m.y, langName(m.l)].filter(Boolean).join(' · ') + (extra ? ' · ' + esc(extra) : '') + '</span></a>';
@@ -333,11 +333,13 @@
         }).join('') + '</nav>' +
         (langs.length > 1 ? '<div class="mv-filters"><label><span>Language</span><select id="pLang"><option value="">Any</option>' + langs.map(function (l) { return '<option value="' + l + '">' + langName(l) + '</option>'; }).join('') + '</select></label>' +
           '<label><span>Sort</span><select id="pSort"><option value="new">Newest first</option><option value="old">Oldest first</option><option value="top">Best rated</option><option value="pop">Most popular</option></select></label></div>' : '') +
-        '<div class="mv-grid" id="pgrid"></div></article>';
+        '<div class="mv-grid" id="pgrid"></div>' +
+        (p.upcoming && p.upcoming.length ? '<section class="mv-block"><h2 class="mv-h2">Announced and upcoming <i>' + p.upcoming.length + '</i></h2><p class="mv-meta" style="margin:-.4rem 0 1rem">Not released yet — some may never be.</p><div class="mv-grid">' + p.upcoming.map(function (m) { return cardHTML(m, r === 'cast' ? m.as : null); }).join('') + '</div></section>' : '') +
+        '</article>';
       function draw() {
         var fl = ($('#pLang') || {}).value, so = ($('#pSort') || {}).value || 'new';
         var list = p.items.filter(function (m) { return !fl || m.l === fl; }).slice();
-        if (so === 'old') list.sort(function (a, b) { return (a.y || 9999) - (b.y || 9999); });
+        if (so === 'old') list.sort(function (a, b) { return String(a.d || '9999').localeCompare(String(b.d || '9999')); });
         if (so === 'top') list = list.filter(function (m) { return m.n >= 20; }).sort(function (a, b) { return (b.v || 0) - (a.v || 0); });
         if (so === 'pop') list.sort(function (a, b) { return (b.pop || 0) - (a.pop || 0); });
         $('#pgrid').innerHTML = list.map(function (m) { return cardHTML(m, r === 'cast' ? m.as : null); }).join('') || '<p class="mv-none">Nothing here.</p>';

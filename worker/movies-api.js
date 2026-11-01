@@ -117,7 +117,10 @@ async function cached(name, ttl, make) {
 
 const year = (d) => (d ? Number(String(d).slice(0, 4)) || null : null);
 // the compact film card every row uses
-const card = (m) => ({ id: m.id, t: m.title || m.name, ot: m.original_title && m.original_title !== m.title ? m.original_title : undefined, y: year(m.release_date), l: m.original_language, p: m.poster_path || null, v: m.vote_average ? Math.round(m.vote_average * 10) / 10 : null, n: m.vote_count || 0, pop: m.popularity || 0 });
+// a film counts as released once its release date has passed; no date at all = only announced
+const todayISO = () => new Date().toISOString().slice(0, 10);
+const isReleased = (m) => !!m.release_date && m.release_date <= todayISO();
+const card = (m) => ({ id: m.id, up: isReleased(m) ? undefined : true, d: m.release_date || undefined, t: m.title || m.name, ot: m.original_title && m.original_title !== m.title ? m.original_title : undefined, y: year(m.release_date), l: m.original_language, p: m.poster_path || null, v: m.vote_average ? Math.round(m.vote_average * 10) / 10 : null, n: m.vote_count || 0, pop: m.popularity || 0 });
 const dedupe = (list, skip) => { const seen = new Set(skip ? [skip] : []); return list.filter((m) => m && !seen.has(m.id) && seen.add(m.id)); };
 
 // ---------------------------------------------------------------- search
@@ -276,15 +279,21 @@ export async function movie(id) {
   const directors = people("Director");
   const cast = (m.credits?.cast || []).slice(0, 15).map((c) => ({ id: c.id, name: c.name, char: c.character, p: c.profile_path || null }));
   // which rows the page should ask for, in order (rows with nothing to show are left out)
-  const rows = [{ kind: "more", title: "More like this" }, { kind: "thread", title: "Same thread", sub: kws.slice(0, 3).map((k) => k.name).join(" · ") }];
-  rows.push({ kind: "thrill", title: "Same thrill" });
+  const gNames = (m.genres || []).map((g) => g.name);
+  const mainGenre = ["Thriller", "Horror", "Crime", "Mystery"].find((x) => gNames.includes(x)) || gNames[0];
+  const PLURAL = { Thriller: "thrillers", Horror: "horror films", Comedy: "comedies", Drama: "dramas", Action: "action films", Romance: "romances", "Science Fiction": "sci-fi films", Crime: "crime films", Animation: "animated films", Mystery: "mysteries", Adventure: "adventures", Family: "family films", Fantasy: "fantasy films", War: "war films", Western: "westerns", Documentary: "documentaries", Music: "music films", History: "period films", "TV Movie": "TV films" };
+  const kindOf = PLURAL[mainGenre] || "films";
+  const yr0 = year(m.release_date) || 2000;
+  const langLabel = LANGS[m.original_language] || m.original_language;
+  const rows = [{ kind: "more", title: "Similar movies" }, { kind: "thread", title: "Similar stories", sub: kws.slice(0, 3).map((k) => k.name).join(" · ") }];
+  rows.push({ kind: "thrill", title: `Similar ${kindOf}`, sub: "matched on mood and pace" });
   if (m.belongs_to_collection) rows.push({ kind: "franchise", title: m.belongs_to_collection.name.replace(/ Collection$/, " films") });
   for (const d of directors.slice(0, 2)) rows.push({ kind: "person", id: d.id, role: "director", title: `Directed by ${d.name}` });
   for (const c of cast.slice(0, 3)) rows.push({ kind: "person", id: c.id, role: "cast", title: `With ${c.name}` });
-  rows.push({ kind: "world", title: "World cinema, same thread" });
-  rows.push({ kind: "language", title: `More in ${LANGS[m.original_language] || m.original_language}` });
-  rows.push({ kind: "genre", title: `Best of ${(m.genres || []).slice(0, 2).map((g) => g.name).join(" & ") || "the genre"}` });
-  rows.push({ kind: "era", title: `Same genre, ${(year(m.release_date) || 2000) - 5}–${(year(m.release_date) || 2000) + 5}` });
+  rows.push({ kind: "world", title: "Similar stories in other languages" });
+  rows.push({ kind: "language", title: `Similar movies in ${langLabel}` });
+  rows.push({ kind: "genre", title: `Top-rated ${kindOf}` });
+  rows.push({ kind: "era", title: `Similar ${kindOf} from ${yr0 - 5}–${yr0 + 5}` });
   rows.push({ kind: "remakes", title: "Remakes & namesakes" });
   const extraCrew = [["writer", "Written by", ["Screenplay", "Writer", "Story", "Novel", "Author"]], ["composer", "Music by", ["Original Music Composer", "Music", "Music Director"]], ["dop", "Shot by", ["Director of Photography", "Cinematography"]]];
   for (const [role, label, jobs] of extraCrew) for (const p of people(jobs).filter((p) => !directors.some((d) => d.id === p.id)).slice(0, 1)) rows.push({ kind: "person", id: p.id, role, title: `${label} ${p.name}`, crew: true });
@@ -416,7 +425,7 @@ export async function row(id, kind, opts = {}) {
   } else {
     return null;
   }
-  return { kind, items: dedupe(list.map(card), Number(id)).slice(0, 30) };
+  return { kind, items: dedupe(list.filter(isReleased).map(card), Number(id)).slice(0, 30) };
 }
 
 const ROLE_JOBS = {
@@ -431,20 +440,28 @@ export async function person(id, role) {
   const cast = (p.movie_credits?.cast || []).map((c) => ({ ...card(c), as: c.character || null }));
   const crewAll = p.movie_credits?.crew || [];
   const crewFor = (jobs) => dedupe(crewAll.filter((c) => jobs.includes(c.job)).map((c) => ({ ...card(c), as: c.job })));
-  const byNewest = (a, b) => (b.y || 9999) - (a.y || 9999);
-  const groups = {
-    cast: dedupe(cast).sort(byNewest),
-    director: crewFor(ROLE_JOBS.director).sort(byNewest),
-    writer: crewFor(ROLE_JOBS.writer).sort(byNewest),
-    composer: crewFor(ROLE_JOBS.composer).sort(byNewest),
-    dop: crewFor(ROLE_JOBS.dop).sort(byNewest),
+  // released films newest first; films with no date or a future date are only announced, so they sit apart
+  const byNewest = (a, b) => String(b.d || "").localeCompare(String(a.d || ""));
+  const bySoonest = (a, b) => String(a.d || "9999").localeCompare(String(b.d || "9999"));
+  const all = {
+    cast: dedupe(cast),
+    director: crewFor(ROLE_JOBS.director),
+    writer: crewFor(ROLE_JOBS.writer),
+    composer: crewFor(ROLE_JOBS.composer),
+    dop: crewFor(ROLE_JOBS.dop),
   };
+  const groups = {}, upcoming = {};
+  for (const [k, v] of Object.entries(all)) {
+    groups[k] = v.filter((x) => !x.up).sort(byNewest);
+    upcoming[k] = v.filter((x) => x.up).sort(bySoonest);
+  }
   return {
     id: p.id, name: p.name, dept, role: r, bio: p.biography || null, born: p.birthday || null, died: p.deathday || null,
     place: p.place_of_birth || null, p: p.profile_path || null, imdb: p.imdb_id || null,
-    counts: Object.fromEntries(Object.entries(groups).map(([k, v]) => [k, v.length])),
+    counts: Object.fromEntries(Object.entries(groups).map(([k, v]) => [k, v.length + upcoming[k].length])),
     films: groups,
-    items: groups[r] && groups[r].length ? groups[r] : groups.cast,
+    items: groups[r] && (groups[r].length || upcoming[r].length) ? groups[r] : groups.cast,
+    upcoming: groups[r] && (groups[r].length || upcoming[r].length) ? upcoming[r] : upcoming.cast,
   };
 }
 
