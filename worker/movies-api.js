@@ -18,6 +18,8 @@
 //   /lite/{id}                        the small film summary saved with each logged watch
 //   /img/{size}/{file}                TMDB poster/photo, proxied so visitors' IPs stay here
 
+import * as News from "./newsletter.js";
+
 const ALLOW = ["https://ranjithkb.com", "https://www.ranjithkb.com", "http://localhost:8765", "http://127.0.0.1:8765"];
 const TMDB = "https://api.themoviedb.org/3";
 const IMG = "https://image.tmdb.org/t/p";
@@ -272,6 +274,29 @@ function providers(wp) {
     out[c] = { link: r.link, stream: pick(r.flatrate), free: pick([...(r.free || []), ...(r.ads || [])]), rent: pick(r.rent), buy: pick(r.buy) };
   }
   return out;
+}
+
+// cinema and streaming (OTT) release dates per country, from TMDB's release types:
+// 2 limited / 3 theatrical = cinema, 4 = digital (streaming/VOD; the note often names the platform), 6 = TV
+const RELEASE_COUNTRIES = ["GB", "IT", "IN", "US"];
+export function releases(rd) {
+  const all = rd?.results || [];
+  const day = (d) => String(d || "").slice(0, 10) || null;
+  const pick = (list, types) => list.filter((x) => types.includes(x.type) && x.release_date).sort((a, b) => a.release_date.localeCompare(b.release_date));
+  const out = {};
+  for (const c of RELEASE_COUNTRIES) {
+    const list = (all.find((x) => x.iso_3166_1 === c) || {}).release_dates || [];
+    const cin = pick(list, [3, 2])[0], dig = pick(list, [4])[0], tv = pick(list, [6])[0];
+    if (cin || dig || tv) out[c] = {
+      cinema: cin ? day(cin.release_date) : null,
+      digital: dig ? { date: day(dig.release_date), note: (dig.note || "").trim() || null } : null,
+      tv: tv ? { date: day(tv.release_date), note: (tv.note || "").trim() || null } : null,
+    };
+  }
+  // the first streaming release anywhere, for films (often Indian) that only list one country
+  const firstDigital = all.flatMap((x) => (x.release_dates || []).filter((r) => r.type === 4 && r.release_date).map((r) => ({ c: x.iso_3166_1, date: day(r.release_date), note: (r.note || "").trim() || null })))
+    .sort((a, b) => a.date.localeCompare(b.date))[0] || null;
+  return { byCountry: out, firstDigital };
 }
 
 async function movieBase(id) {
@@ -530,10 +555,14 @@ export default {
   async fetch(req, env, ctx) {
     ENV = { ...env, ctx };
     const cors = corsFor(req);
-    if (req.method === "OPTIONS") return new Response(null, { headers: { ...cors, "Access-Control-Allow-Methods": "GET", "Access-Control-Max-Age": "86400" } });
-    if (req.method !== "GET") return json({ error: "GET only" }, cors, 0, 405);
+    if (req.method === "OPTIONS") return new Response(null, { headers: { ...cors, "Access-Control-Allow-Methods": "GET, POST", "Access-Control-Allow-Headers": "Content-Type", "Access-Control-Max-Age": "86400" } });
     const url = new URL(req.url);
     const parts = url.pathname.split("/").filter(Boolean);
+    if (parts[0] === "newsletter") {
+      try { return await News.handle(req, env, url, helpers, cors, json, ctx); }
+      catch (e) { return json({ error: String(e && e.message || e) }, cors, 0, 502); }
+    }
+    if (req.method !== "GET") return json({ error: "GET only" }, cors, 0, 405);
     const qp = (k) => url.searchParams.get(k);
 
     try {
@@ -560,4 +589,12 @@ export default {
       return json({ error: String(e && e.message || e) }, cors, 0, 502);
     }
   },
+  // Movie Friday: cron triggers at 06:00 and 07:00 UTC on Fridays (see worker/newsletter.js)
+  async scheduled(event, env, ctx) {
+    ENV = { ...env, ctx };
+    ctx.waitUntil(News.scheduled(event, env, helpers).then((r) => console.log("Movie Friday", JSON.stringify(r))));
+  },
 };
+
+// what the newsletter borrows from this file
+const helpers = { tmdb, omdb, cached };

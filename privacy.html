@@ -61,15 +61,16 @@
 
 <main class="privacy">
   <h1>Privacy</h1>
-  <div class="updated">Last updated 28 October 2026</div>
+  <div class="updated">Last updated 1 November 2026</div>
 
   <div class="summary" style="margin-top:1.6rem">
     <p><strong>In short:</strong> this is a personal website. There are no ads, no analytics and no tracking cookies.
     Your settings (favourite stations, volume, default language, news places and languages, meeting-finder cities) stay in your own browser.
     A visitor counter keeps one shared total — no names, addresses or identifiers.
-    The only things stored about you anywhere are what you choose to save on the Radio page: if you sign in,
+    The only things stored about you anywhere are what you choose to save: on the Radio page, if you sign in,
     your Google account ID and email, your favourite stations and your default language; if you rate a station or comment on it,
-    the rating and comment under an anonymous ID your browser creates. You can have any of it removed at any time.</p>
+    the rating and comment under an anonymous ID your browser creates; and on the Movies page, your email address if you sign up
+    for the Movie Friday newsletter. You can have any of it removed at any time.</p>
   </div>
 
   <h2>Who is responsible</h2>
@@ -121,6 +122,17 @@
     <li><strong>Removing it:</strong> to have a rating or comment removed, contact me (see above). Clearing this site's data in your browser removes the anonymous ID from your device; ratings already given stay counted unless you ask for them to be removed.</li>
   </ul>
 
+  <h2 id="newsletter">Movie Friday newsletter (optional)</h2>
+  <p>On the Movies page you can sign up for Movie Friday, a weekly email sent on Friday mornings about new films in UK cinemas.</p>
+  <ul>
+    <li><strong>What is stored:</strong> your email address, whether you have confirmed it, a random code for the confirm and unsubscribe links, and the date you signed up. Nothing else: no name, no tracking of opens or clicks.</li>
+    <li><strong>Confirmation:</strong> nothing is sent until you click the link in the confirmation email. An address that is never confirmed is deleted automatically after 7 days.</li>
+    <li><strong>Legal basis:</strong> your consent (GDPR Art. 6(1)(a)), which you can withdraw at any time.</li>
+    <li><strong>Who processes it:</strong> the list is kept in Cloudflare Workers KV (Cloudflare, Inc.), and the emails are sent by Resend (Resend, Inc.) from newsletter@ranjithkb.com. Both act as processors under their data processing terms; Resend is based in the USA and transfers rely on the EU–US Data Privacy Framework and standard contractual clauses.</li>
+    <li><strong>How long:</strong> until you unsubscribe. The unsubscribe link in every email deletes your address immediately; you can also email <a href="mailto:hello@ranjithkb.com">hello@ranjithkb.com</a>.</li>
+    <li>It is never sold, shared or used for anything else.</li>
+  </ul>
+
   <h2>Services your browser connects to</h2>
   <p>Like most websites, pages here load some parts from other services. Each one receives your IP address and basic browser information when it does:</p>
   <ul>
@@ -130,7 +142,7 @@
     <li><strong>GitHub (raw.githubusercontent.com)</strong> — serves the News page's headlines, which are rebuilt every two hours.</li>
     <li><strong>Newspapers</strong> — only when you open a story, which takes you to that paper's own website (occasionally through a Google News link). Their own privacy policies apply.</li>
     <li><strong>Trip planner</strong> — when you plan a trip, the places you type and the area you choose are sent straight from your browser to Photon by Komoot (place search), Wikidata and Wikipedia (sights and descriptions), OpenStreetMap services (opening hours and walking routes), Open-Meteo (weather) and the OpenStreetMap tile servers (the map). Nothing is stored on this site; a plan you share lives only in its link.</li>
-    <li><strong>Movies</strong> — searches and film pages are fetched through this site's own small service on Cloudflare (Cloudflare Workers), which asks TMDB, OMDb and Wikipedia on your behalf and passes the posters through too. Those services never see your IP address; Cloudflare handles the request like any web host, and the service itself saves nothing about who searched for what. The private film diary on that page belongs to me alone: no one else can sign in to it, and nothing about visitors is stored.</li>
+    <li><strong>Movies</strong> — searches and film pages are fetched through this site's own small service on Cloudflare (Cloudflare Workers), which asks TMDB, OMDb and Wikipedia on your behalf and passes the posters through too. Those services never see your IP address; Cloudflare handles the request like any web host, and the service itself saves nothing about who searched for what. The private film diary on that page belongs to me alone: no one else can sign in to it. Apart from newsletter sign-ups (above), nothing about visitors is stored.</li>
     <li><strong>Radio broadcasters</strong> — when you press play, your browser connects directly to that station's streaming server, as it would on the station's own website. Their own privacy policies apply.</li>
     <li><strong>Google Firebase</strong> — to update and show the visitor total, for station ratings and comments, and if you sign in, as described above.</li>
   </ul>

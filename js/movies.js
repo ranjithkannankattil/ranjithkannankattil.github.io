@@ -19,7 +19,7 @@
   var LANGS = { en: 'English', ml: 'Malayalam', hi: 'Hindi', ta: 'Tamil', te: 'Telugu', kn: 'Kannada', bn: 'Bengali', mr: 'Marathi', ko: 'Korean', ja: 'Japanese', zh: 'Chinese', cn: 'Cantonese', it: 'Italian', fr: 'French', es: 'Spanish', de: 'German', pt: 'Portuguese', ru: 'Russian', tr: 'Turkish', fa: 'Persian', ar: 'Arabic', sv: 'Swedish', da: 'Danish', no: 'Norwegian', pl: 'Polish', th: 'Thai', id: 'Indonesian', nl: 'Dutch', el: 'Greek', he: 'Hebrew', hu: 'Hungarian', cs: 'Czech', fi: 'Finnish', ro: 'Romanian', uk: 'Ukrainian', tl: 'Tagalog', ur: 'Urdu', pa: 'Punjabi', gu: 'Gujarati', si: 'Sinhala', vi: 'Vietnamese', ms: 'Malay' };
   var CHIPS = ['all', 'en', 'ml', 'hi', 'ta', 'te', 'ko', 'ja', 'it', 'fr', 'es'];
   var langName = function (l) { return LANGS[l] || (l ? l.toUpperCase() : ''); };
-  var REGIONS = { IT: 'Italy', GB: 'UK', IN: 'India', US: 'USA' };
+  var REGIONS = { GB: 'UK', IT: 'Italy', IN: 'India', US: 'USA' };
 
   var store = {
     get: function (k, d) { try { var v = localStorage.getItem('mv.' + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
@@ -162,11 +162,50 @@
   var token = 0; // drops answers for a view the person has already left
   function setTitle(t) { document.title = (t ? t + ' — ' : '') + 'Movies — Ranjith Kannankattil'; }
 
+  // ---------- Movie Friday newsletter ----------
+  function newsletterHTML(status) {
+    var msg = { confirmed: ['You’re in!', 'Movie Friday will arrive every Friday at 8am (Milan time). Every email has a one-click unsubscribe.'],
+      unsubscribed: ['Unsubscribed', 'Your address has been deleted. You won’t hear from Movie Friday again.'],
+      expired: ['That link has expired', 'Sign up again below and use the newest confirmation email.'],
+      invalid: ['That link didn’t work', 'Sign up again below.'] }[status];
+    return '<section class="mv-news" id="news">' +
+      (msg ? '<div class="mv-fix"><b>' + msg[0] + '</b> ' + msg[1] + '</div>' : '') +
+      '<div class="mv-news-in"><div><div class="mv-eyebrow">Free weekly email</div><h2>Movie Friday</h2>' +
+      '<p>Every Friday at 8am: the new English-language films in UK cinemas that week, and how last week’s are rating on IMDb and Rotten Tomatoes, with a short synopsis of each.</p></div>' +
+      '<form class="mv-news-f" id="newsForm" novalidate><label class="sr" for="newsEmail">Your email</label>' +
+      '<input id="newsEmail" type="email" autocomplete="email" placeholder="you@example.com" required>' +
+      '<button class="mv-btn" type="submit">Sign me up</button></form>' +
+      '<p class="mv-news-small" id="newsMsg">You’ll get one email to confirm. Your address is used only for this, and one click deletes it. <a href="privacy.html#newsletter">Privacy</a></p></div></section>';
+  }
+  function wireNewsletter() {
+    var f = $('#newsForm'); if (!f) return;
+    f.onsubmit = function (e) {
+      e.preventDefault();
+      var email = $('#newsEmail').value.trim(), out = $('#newsMsg'), btn = $('button', f);
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { out.textContent = 'That doesn’t look like an email address.'; return; }
+      if (!API) { out.textContent = 'Sign-up isn’t connected yet.'; return; }
+      btn.disabled = true; btn.textContent = 'Sending…';
+      fetch(API + '/newsletter/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email }) })
+        .then(function (r) { return r.json().catch(function () { return {}; }); })
+        .then(function (d) {
+          if (d.ok) { f.hidden = true; out.innerHTML = '<b>Check your inbox.</b> Click the link in the email from Movie Friday to confirm (look in spam if it isn’t there in a minute).'; }
+          else { out.textContent = d.error || 'Something went wrong. Please try again.'; btn.disabled = false; btn.textContent = 'Sign me up'; }
+        }).catch(function () { out.textContent = 'Couldn’t reach the server. Please try again.'; btn.disabled = false; btn.textContent = 'Sign me up'; });
+    };
+  }
+  function viewNewsletter(qs) {
+    setTitle('Movie Friday newsletter');
+    var st = (qs.match(/status=(\w+)/) || [])[1];
+    view.innerHTML = newsletterHTML(st) + (API ? '<p class="mv-note" style="margin-top:1rem"><a href="' + API + '/newsletter/preview" target="_blank" rel="noopener">See this week’s issue →</a></p>' : '');
+    wireNewsletter();
+  }
+
   function viewHome() {
     setTitle('');
     var my = token;
-    view.innerHTML = '<div class="mv-rows" id="rows">' + loading + '</div>';
-    api('/home?region=' + store.get('region', 'IT')).then(function (d) {
+    view.innerHTML = '<div class="mv-rows" id="rows">' + loading + '</div>' + newsletterHTML();
+    wireNewsletter();
+    api('/home?region=' + store.get('region', 'GB')).then(function (d) {
       if (my !== token) return;
       var holder = $('#rows'); holder.innerHTML = '';
       var l = log();
@@ -231,7 +270,7 @@
         '<span class="mv-rate mv-rate-me" id="myRate" hidden></span>'
       ].join('');
       var credit = function (label, list) { return list && list.length ? '<div><dt>' + label + '</dt><dd>' + list.map(function (p) { return '<a href="#/p/' + p.id + '">' + esc(p.name) + '</a>'; }).join(', ') + '</dd></div>' : ''; };
-      var region = store.get('region', 'IT');
+      var region = store.get('region', 'GB');
       var details = [
         m.budget ? ['Budget', money(m.budget)] : null,
         m.revenue ? ['Box office', money(m.revenue)] : (m.boxOffice ? ['Box office (US)', m.boxOffice] : null),
@@ -256,7 +295,7 @@
         (m.overview ? '<p class="mv-plot">' + esc(m.overview) + '</p>' : '') +
         '<dl class="mv-credits">' + credit('Directed by', m.directors) + credit('Written by', m.writers) + credit('Music', m.composer) + credit('Cinematography', m.dop) + '</dl>' +
         (m.cast && m.cast.length ? '<section class="mv-block"><h2 class="mv-h2">Cast</h2><div class="mv-strip people">' + m.cast.map(personCardHTML).join('') + '</div></section>' : '') +
-        '<section class="mv-block mv-watch"><h2 class="mv-h2">Where to watch <select id="region" aria-label="Country">' + Object.keys(REGIONS).map(function (c) { return '<option value="' + c + '"' + (c === region ? ' selected' : '') + '>' + REGIONS[c] + '</option>'; }).join('') + '</select></h2><div id="prov"></div></section>' +
+        '<section class="mv-block mv-watch"><h2 class="mv-h2">Releases &amp; where to watch <select id="region" aria-label="Country">' + Object.keys(REGIONS).map(function (c) { return '<option value="' + c + '"' + (c === region ? ' selected' : '') + '>' + REGIONS[c] + '</option>'; }).join('') + '</select></h2><div id="rel" class="mv-rel"></div><div id="prov"></div></section>' +
         (details.length ? '<dl class="mv-details">' + details.map(function (x) { return '<div><dt>' + x[0] + '</dt><dd>' + esc(x[1]) + '</dd></div>'; }).join('') + '</dl>' : '') +
         (m.keywords && m.keywords.length ? '<div class="mv-kw">' + m.keywords.slice(0, 14).map(function (k) { return '<span>' + esc(k.name) + '</span>'; }).join('') + '</div>' : '') +
         '<div class="mv-links">' + [
@@ -274,6 +313,7 @@
         var c = $('#region').value, p = (m.providers || {})[c];
         store.set('region', c);
         var group = function (label, list) { return list && list.length ? '<div class="mv-prov-g"><span>' + label + '</span>' + list.map(function (x) { return '<i title="' + esc(x.name) + '">' + (x.logo ? '<img src="' + esc(img(x.logo, 'w92')) + '" alt="' + esc(x.name) + '">' : esc(x.name)) + '</i>'; }).join('') + '</div>' : ''; };
+        $('#rel').innerHTML = releaseHTML(m, c);
         $('#prov').innerHTML = p && (p.stream.length || p.free.length || p.rent.length || p.buy.length) ?
           group('Stream', p.stream) + group('Free', p.free) + group('Rent', p.rent) + group('Buy', p.buy) + (p.link ? '<a class="mv-prov-link" href="' + esc(p.link) + '" target="_blank" rel="noopener">All options on JustWatch ↗</a>' : '') :
           '<p class="mv-none">Not streaming in ' + REGIONS[c] + ' as far as JustWatch knows.</p>';
@@ -310,6 +350,23 @@
     $('#logBtn').onclick = function () { l.openSheet({ film: m }); };
     $('#wlBtn').onclick = function () { l.toggleWatchlist(m); };
     $$('[data-edit]', acts).forEach(function (a) { a.onclick = function (e) { e.preventDefault(); l.openSheet({ film: m, edit: a.getAttribute('data-edit') }); }; });
+  }
+
+  // cinema and OTT (streaming) release dates for one country, with the platform where known
+  var COUNTRY = { GB: 'the UK', IT: 'Italy', IN: 'India', US: 'the USA' };
+  function releaseHTML(m, c) {
+    var R = m.releases || {}, r = (R.byCountry || {})[c] || {}, today = new Date().toISOString().slice(0, 10);
+    var fmt = function (d) { return new Date(d + 'T12:00:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }); };
+    var streamNames = (((m.providers || {})[c] || {}).stream || []).map(function (x) { return x.name; });
+    var platform = function (note) { return note || (streamNames.length ? streamNames.slice(0, 2).join(', ') : ''); };
+    var rows = [];
+    if (r.cinema) rows.push(['In cinemas', fmt(r.cinema), r.cinema > today ? 'coming' : '']);
+    if (r.digital) rows.push([r.digital.date > today ? 'Coming to streaming' : 'On streaming (OTT)', fmt(r.digital.date) + (platform(r.digital.note) ? ' · ' + platform(r.digital.note) : ''), r.digital.date > today ? 'coming' : '']);
+    else if (R.firstDigital && R.firstDigital.c !== c) rows.push([R.firstDigital.date > today ? 'Coming to streaming' : 'First on streaming', fmt(R.firstDigital.date) + ' in ' + (COUNTRY[R.firstDigital.c] || R.firstDigital.c) + (R.firstDigital.note ? ' · ' + R.firstDigital.note : ''), '']);
+    else if (streamNames.length) rows.push(['On streaming (OTT)', 'Now on ' + streamNames.slice(0, 3).join(', '), '']);
+    if (r.tv) rows.push(['On TV', fmt(r.tv.date) + (r.tv.note ? ' · ' + r.tv.note : ''), '']);
+    return rows.length ? '<dl>' + rows.map(function (x) { return '<div' + (x[2] ? ' class="' + x[2] + '"' : '') + '><dt>' + x[0] + '</dt><dd>' + esc(x[1]) + '</dd></div>'; }).join('') + '</dl>'
+      : '<p class="mv-none">No release dates recorded for ' + (COUNTRY[c] || c) + '.</p>';
   }
 
   var ROLES = { cast: 'Acting', director: 'Directing', writer: 'Writing', composer: 'Music', dop: 'Cinematography' };
@@ -376,6 +433,7 @@
     if (parts[0] === 'm' && /^\d+$/.test(parts[1])) viewFilm(parts[1]);
     else if (parts[0] === 'p' && /^\d+$/.test(parts[1])) viewPerson(parts[1], ROLES[parts[2]] ? parts[2] : '');
     else if (parts[0] === 's' && parts[1]) viewSearch(parts.slice(1).join('/'), /(^|&)exact/.test(qs));
+    else if (parts[0] === 'newsletter') viewNewsletter(qs);
     else if (parts[0] === 'diary' || parts[0] === 'watchlist' || parts[0] === 'dash') viewPrivate(parts[0], qs);
     else { current.view = 'home'; $('#q').value = ''; viewHome(); }
     if (route.ran) window.scrollTo(0, 0);
