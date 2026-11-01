@@ -280,14 +280,14 @@ export async function movie(id) {
   const cast = (m.credits?.cast || []).slice(0, 15).map((c) => ({ id: c.id, name: c.name, char: c.character, p: c.profile_path || null }));
   // which rows the page should ask for, in order (rows with nothing to show are left out)
   const gNames = (m.genres || []).map((g) => g.name);
-  const mainGenre = ["Thriller", "Horror", "Crime", "Mystery"].find((x) => gNames.includes(x)) || gNames[0];
+  const mainGenre = ["Thriller", "Horror", "Crime", "Mystery", "Science Fiction", "Animation", "War", "Western", "Romance", "Comedy", "Fantasy", "Documentary", "Action", "Family", "Music", "History", "Drama", "Adventure"].find((x) => gNames.includes(x)) || gNames[0];
   const PLURAL = { Thriller: "thrillers", Horror: "horror films", Comedy: "comedies", Drama: "dramas", Action: "action films", Romance: "romances", "Science Fiction": "sci-fi films", Crime: "crime films", Animation: "animated films", Mystery: "mysteries", Adventure: "adventures", Family: "family films", Fantasy: "fantasy films", War: "war films", Western: "westerns", Documentary: "documentaries", Music: "music films", History: "period films", "TV Movie": "TV films" };
   const kindOf = PLURAL[mainGenre] || "films";
   const yr0 = year(m.release_date) || 2000;
   const langLabel = LANGS[m.original_language] || m.original_language;
   const rows = [{ kind: "more", title: "Similar movies" }, { kind: "thread", title: "Similar stories", sub: kws.slice(0, 3).map((k) => k.name).join(" · ") }];
   rows.push({ kind: "thrill", title: `Similar ${kindOf}`, sub: "matched on mood and pace" });
-  if (m.belongs_to_collection) rows.push({ kind: "franchise", title: m.belongs_to_collection.name.replace(/ Collection$/, " films") });
+  if (m.belongs_to_collection) rows.push({ kind: "franchise", title: m.belongs_to_collection.name.replace(/ Collection$/, "") + " series" });
   for (const d of directors.slice(0, 2)) rows.push({ kind: "person", id: d.id, role: "director", title: `Directed by ${d.name}` });
   for (const c of cast.slice(0, 3)) rows.push({ kind: "person", id: c.id, role: "cast", title: `With ${c.name}` });
   rows.push({ kind: "world", title: "Similar stories in other languages" });
