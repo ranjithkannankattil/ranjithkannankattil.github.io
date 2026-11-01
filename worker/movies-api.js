@@ -92,7 +92,9 @@ const json = (data, cors, ttl = 0, status = 200) => new Response(JSON.stringify(
 });
 
 let ENV = {};
-async function tmdb(path, params = {}, ttl = DAY) {
+// opts.direct skips the edge cache: on the free plan every cache read/write counts against the
+// 50 outside requests a single run may make, which the weekly newsletter build would exceed
+async function tmdb(path, params = {}, ttl = DAY, opts = {}) {
   const u = new URL(TMDB + path);
   const key = ENV.TMDB_KEY || "";
   const headers = { accept: "application/json" };
@@ -100,7 +102,7 @@ async function tmdb(path, params = {}, ttl = DAY) {
   for (const [k, v] of Object.entries(params)) if (v !== undefined && v !== null && v !== "") u.searchParams.set(k, String(v));
   // cache key leaves the secret out
   const ck = new Request("https://cache.movies/tmdb" + path + "?" + [...u.searchParams].filter(([k]) => k !== "api_key").map(([k, v]) => `${k}=${v}`).sort().join("&"));
-  const cache = globalThis.caches ? caches.default : null;
+  const cache = globalThis.caches && !opts.direct ? caches.default : null;
   if (cache) { const hit = await cache.match(ck); if (hit) return hit.json(); }
   const r = await fetch(u, { headers });
   if (!r.ok) { if (r.status === 404) return null; throw new Error(`TMDB ${r.status}`); }
@@ -224,9 +226,10 @@ export async function search(q, opts = {}) {
 
 // ---------------------------------------------------------------- film
 
-async function omdb(imdb) {
+async function omdb(imdb, opts = {}) {
   if (!imdb || !ENV.OMDB_KEY) return null;
-  return cached("omdb:" + imdb, 7 * DAY, async () => {
+  const run = opts.direct ? (name, ttl, make) => make() : cached;
+  return run("omdb:" + imdb, 7 * DAY, async () => {
     try {
       const r = await fetch(`https://www.omdbapi.com/?i=${encodeURIComponent(imdb)}&apikey=${encodeURIComponent(ENV.OMDB_KEY)}&tomatoes=true`);
       if (!r.ok) { ENV.omdbError = `OMDb HTTP ${r.status}`; return null; }
@@ -295,7 +298,7 @@ export function releaseInfo(rd) {
   }
   // the first streaming release anywhere, for films (often Indian) that only list one country
   const firstDigital = all.flatMap((x) => (x.release_dates || []).filter((r) => r.type === 4 && r.release_date).map((r) => ({ c: x.iso_3166_1, date: day(r.release_date), note: (r.note || "").trim() || null })))
-    .sort((a, b) => a.date.localeCompare(b.date))[0] || null;
+    .sort((a, b) => (b.note ? 1 : 0) - (a.note ? 1 : 0) || (RELEASE_COUNTRIES.includes(b.c) ? 1 : 0) - (RELEASE_COUNTRIES.includes(a.c) ? 1 : 0) || a.date.localeCompare(b.date))[0] || null;
   return { byCountry: out, firstDigital };
 }
 
@@ -598,4 +601,4 @@ export default {
 };
 
 // what the newsletter borrows from this file
-const helpers = { tmdb, omdb, cached };
+const helpers = { tmdb: (p, q, t) => tmdb(p, q, t, { direct: true }), omdb: (i) => omdb(i, { direct: true }), cached };

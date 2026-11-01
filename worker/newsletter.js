@@ -44,17 +44,20 @@ async function weekFilms(h, from, to, limit) {
   return (d?.results || []).filter((m) => m.poster_path && m.overview).slice(0, limit);
 }
 
-async function detail(h, m, withRatings) {
+// one film in full; null when it isn't actually opening in UK cinemas inside [from, to]
+async function detail(h, m, withRatings, from, to) {
   const x = await h.tmdb(`/movie/${m.id}`, { append_to_response: "credits,videos,release_dates", language: "en-GB" }, DAY);
   if (!x) return null;
   const crew = x.credits?.crew || [];
   const gb = ((x.release_dates?.results || []).find((r) => r.iso_3166_1 === "GB")?.release_dates || []);
+  const ukDate = gb.filter((r) => (r.type === 3 || r.type === 2) && r.release_date).map((r) => r.release_date.slice(0, 10)).filter((d) => d >= from && d <= to).sort()[0];
+  if (!ukDate) return null;
   const cert = gb.map((r) => r.certification).find(Boolean) || null;
   const vids = (x.videos?.results || []).filter((v) => v.site === "YouTube");
   const tr = vids.find((v) => v.type === "Trailer" && v.official) || vids.find((v) => v.type === "Trailer");
   const om = withRatings && x.imdb_id ? await h.omdb(x.imdb_id) : null;
   return {
-    id: x.id, title: x.title, date: m.release_date, runtime: x.runtime || null, cert,
+    id: x.id, title: x.title, date: ukDate, runtime: x.runtime || null, cert,
     genres: (x.genres || []).map((g) => g.name).slice(0, 3),
     director: crew.filter((c) => c.job === "Director").map((c) => c.name).slice(0, 2),
     cast: (x.credits?.cast || []).slice(0, 3).map((c) => c.name),
@@ -77,10 +80,11 @@ export async function buildIssue(h, issueDate) {
   const fri = fridayOf(issueDate);
   const thisFrom = addDays(fri, -2), thisTo = addDays(fri, 6);   // Wed–Thu window: catches early openers
   const lastFrom = addDays(fri, -9), lastTo = addDays(fri, -3);
-  const [now, last] = await Promise.all([weekFilms(h, thisFrom, thisTo, 6), weekFilms(h, lastFrom, lastTo, 6)]);
-  const nowD = (await Promise.all(now.map((m) => detail(h, m, false)))).filter(Boolean);
+  // at most 8 + 7 films are looked at: with OMDb that keeps one run inside the free plan's 50 outside requests
+  const [now, last] = await Promise.all([weekFilms(h, thisFrom, thisTo, 8), weekFilms(h, lastFrom, lastTo, 7)]);
+  const nowD = (await Promise.all(now.map((m) => detail(h, m, false, thisFrom, thisTo)))).filter(Boolean).slice(0, 6);
   const lastIds = new Set(nowD.map((x) => x.id));
-  const lastD = (await Promise.all(last.filter((m) => !lastIds.has(m.id)).map((m) => detail(h, m, true)))).filter(Boolean);
+  const lastD = (await Promise.all(last.filter((m) => !lastIds.has(m.id)).map((m) => detail(h, m, true, lastFrom, lastTo)))).filter(Boolean).slice(0, 6);
   // last week's films, best-reviewed first
   const score = (f) => (f.imdb && f.imdb.n >= 500 ? f.imdb.v : 0) * 10 + (f.rt || 0) / 10;
   lastD.sort((a, b) => score(b) - score(a));
