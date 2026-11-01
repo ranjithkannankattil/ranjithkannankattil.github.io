@@ -204,11 +204,14 @@ export async function search(q, opts = {}) {
 
   movies = dedupe(movies.sort((a, b) => b._s - a._s)).slice(0, 20);
   people = dedupe(people.sort((a, b) => b._s - a._s)).slice(0, 6);
-  // a person whose name matches beats films that only half match
-  const topPerson = people[0] && sim(corrected || base, people[0].name) >= 0.9;
+  // person or film first: how well each matches, weighted by how well known it is
+  const qq = corrected || base;
+  const pScore = (p) => sim(qq, p.name) * (0.55 + 0.35 * Math.min(1, (p.popularity || 0) / 8) + (p.profile_path ? 0.1 : 0));
+  const mScore = (m) => Math.max(sim(qq, m.title), sim(qq, m.original_title || "")) * (0.6 + 0.4 * Math.min(1, Math.log10(1 + (m.vote_count || 0)) / 3));
+  const personFirst = !!people[0] && sim(qq, people[0].name) >= 0.85 && (!movies[0] || pScore(people[0]) > mScore(movies[0]));
   return {
     q, corrected,
-    personFirst: !!topPerson && (!movies[0] || sim(corrected || base, movies[0].title) < sim(corrected || base, people[0].name)),
+    personFirst,
     movies: movies.map((m) => ({ ...card(m), s: Math.round(m._s * 100) / 100 })),
     people: people.map((p) => ({ id: p.id, name: p.name, dept: p.known_for_department, p: p.profile_path || null, known: (p.known_for || []).filter((k) => k.media_type === "movie").slice(0, 3).map((k) => k.title) })),
   };
@@ -221,9 +224,9 @@ async function omdb(imdb) {
   return cached("omdb:" + imdb, 7 * DAY, async () => {
     try {
       const r = await fetch(`https://www.omdbapi.com/?i=${encodeURIComponent(imdb)}&apikey=${encodeURIComponent(ENV.OMDB_KEY)}&tomatoes=true`);
-      if (!r.ok) return null;
+      if (!r.ok) { ENV.omdbError = `OMDb HTTP ${r.status}`; return null; }
       const d = await r.json();
-      if (d.Response === "False") return null;
+      if (d.Response === "False") { ENV.omdbError = d.Error || "OMDb refused"; return null; }
       const by = (src) => (d.Ratings || []).find((x) => x.Source === src)?.Value || null;
       const num = (s) => { const n = parseFloat(String(s || "").replace(/,/g, "")); return isFinite(n) ? n : null; };
       return {
@@ -304,6 +307,7 @@ export async function movie(id) {
     collection: m.belongs_to_collection ? { id: m.belongs_to_collection.id, name: m.belongs_to_collection.name } : null,
     budget: m.budget || null, revenue: m.revenue || null, boxOffice: om?.boxOffice || null, awards: om?.awards || null,
     homepage: m.homepage || null,
+    ratingsNote: om ? undefined : (ENV.OMDB_KEY ? ENV.omdbError || "no OMDb entry" : "OMDB_KEY not set"),
     ratings: { imdb: om?.imdb || null, rt: om?.rt ?? null, mc: om?.mc ?? null, tmdb: m.vote_average ? { v: Math.round(m.vote_average * 10) / 10, n: m.vote_count } : null },
     links: {
       imdb: imdb ? `https://www.imdb.com/title/${imdb}/` : null,
@@ -361,13 +365,20 @@ export async function row(id, kind, opts = {}) {
     if (lang && list.length < 8) list = list.concat(await discover({ with_genres: g.slice(0, 2).join(","), with_original_language: lang, sort_by: "vote_count.desc", page }));
   } else if (kind === "thread") {
     if (!kws.length) return { kind, items: [] };
-    const top = kws.slice(0, 4).map((k) => k.id).join("|");
-    list = await discover({ with_keywords: top, with_original_language: lang, sort_by: "vote_count.desc", page }, 2);
-    // films sharing two keywords rank above films sharing one: ask again with the top two together
-    if (kws.length >= 2) {
-      const both = await discover({ with_keywords: `${kws[0].id},${kws[1].id}`, with_original_language: lang, sort_by: "vote_count.desc", "vote_count.gte": 20 });
-      list = [...both, ...list];
+    // one query per story keyword; a film that turns up for several keywords shares more of the story
+    const top = kws.slice(0, 6);
+    const lists = await Promise.all(top.map((k) => discover({ with_keywords: String(k.id), with_original_language: lang, sort_by: "vote_count.desc", "vote_count.gte": lang ? 10 : 40, page })));
+    const score = new Map();
+    lists.forEach((l, i) => l.forEach((x) => {
+      const e = score.get(x.id) || { x, s: 0 };
+      e.s += 1 + (top.length - i) * 0.05;                                      // earlier keywords matter a bit more
+      score.set(x.id, e);
+    }));
+    for (const e of score.values()) {
+      const shared = (e.x.genre_ids || []).filter((id) => g.includes(id)).length;
+      e.s += shared * 0.4 + Math.min(0.5, Math.log10(1 + (e.x.vote_count || 0)) / 10);
     }
+    list = [...score.values()].sort((a, b) => b.s - a.s).map((e) => e.x);
   } else if (kind === "thrill") {
     const mood = kws.filter((k) => MOOD_KW.test(k.name)).slice(0, 3).map((k) => k.id);
     const params = { with_genres: g.slice(0, 2).join(","), with_original_language: lang, sort_by: "vote_average.desc", "vote_count.gte": lang ? 60 : 300, page };
