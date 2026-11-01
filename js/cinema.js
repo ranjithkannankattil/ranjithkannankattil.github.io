@@ -144,32 +144,88 @@
       return;
     }
 
-    list.innerHTML = rows.map(({ f, shows, next }) => {
-      const venues = shows.map((s) => {
-        const chips = s.times.map((x) => {
-          let cls = "cn-t" + (x.past ? " past" : isToday && mins(x.t) === next ? " next" : "");
-          const href = x.past ? null : (s.links && s.links[x.t]) || s.book || s.mm;
-          return href
-            ? `<a class="${cls}" href="${esc(href)}" target="_blank" rel="noopener" title="Book the ${esc(x.t)} screening at ${esc(s.cinema)}">${esc(x.t)}</a>`
-            : `<span class="${cls}">${esc(x.t)}</span>`;
-        }).join("");
-        const maps = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent((/cinema/i.test(s.cinema) ? "" : "Cinema ") + s.cinema + ", " + name);
-        const links = [];
-        if (!s.deep && s.book) links.push(`<a class="book" href="${esc(s.book)}" target="_blank" rel="noopener">Book tickets ↗</a>`);
-        links.push(`<a href="${maps}" target="_blank" rel="noopener">Map ↗</a>`);
-        if (s.mm && s.mm !== s.book) links.push(`<a href="${esc(s.mm)}" target="_blank" rel="noopener">All times ↗</a>`);
-        const hint = s.deep ? `<div class="cn-hint">Tap a time to book that screening.</div>` : s.book ? "" : `<div class="cn-hint">Tickets at the box office or from the cinema's listing.</div>`;
-        return `<div class="cn-venue"><div class="cn-vname">${hl(s.cinema, state.q)}<span class="cn-vlinks">${links.join("")}</span></div><div class="cn-times">${chips}</div>${hint}</div>`;
-      }).join("");
-      const meta = [f.lang, f.y, (f.country || []).join(" / "), f.dur ? f.dur + " min" : "", f.dir ? "dir. " + f.dir : ""].filter(Boolean).map(esc).join(" · ");
-      const ttl = f.url ? `<a href="${esc(f.url)}" target="_blank" rel="noopener">${hl(f.t, state.q)}</a>` : hl(f.t, state.q);
-      const it = f.it && norm(f.it) !== norm(f.t) ? `<div class="cn-it">In Italy: ${hl(f.it, state.q)}</div>` : "";
-      return `<article class="cn-film"><div class="cn-stub"><span>${esc(f.en ? "English" : f.lang && f.lang !== "Original language" ? f.lang : "VO")}</span></div><div class="cn-body">
+    list.innerHTML = rows.map(({ f, shows, next }) => card(f, shows, next, isToday, name)).join("");
+  }
+
+  const hm = (m) => `${String(Math.floor(m / 60) % 24).padStart(2, "0")}:${String(m % 60).padStart(2, "0")}`;
+  const longDate = (d) => { try { return new Date(d + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" }); } catch { return d; } };
+  const fkey = (f) => f.url || f.t;
+
+  function chip(s, x, f, isNext) {
+    const end = f.dur ? "–" + hm(mins(x.t) + f.dur) : "";
+    const hall = s.halls && s.halls[x.t] ? `<span class="hall">${esc(s.halls[x.t])}</span>` : "";
+    const when = `<span class="when">${esc(x.t)}${end}</span>`;
+    const nx = isNext ? `<span class="nx">next</span>` : "";
+    if (x.past) return `<span class="cn-t past" title="Already started">${when}${hall}</span>`;
+    const deep = s.links && s.links[x.t];
+    const href = deep || s.book || s.mm;
+    if (!href) return `<span class="cn-t site">${nx}${when}${hall}<span class="act">Box office</span></span>`;
+    const act = deep ? "Book this show ›" : s.book ? "Cinema site ↗" : "Listing ↗";
+    const tip = deep ? `Book the ${x.t} show of ${f.t} at ${s.cinema}` : `Open ${s.cinema}'s site, then pick ${f.t} at ${x.t}`;
+    return `<a class="cn-t ${deep ? "deep" : "site"}" href="${esc(href)}" target="_blank" rel="noopener" title="${esc(tip)}">${nx}${when}${hall}<span class="act">${act}</span></a>`;
+  }
+
+  function venue(s, f, next, isToday, city) {
+    const chips = s.times.map((x) => chip(s, x, f, isToday && !x.past && mins(x.t) === next)).join("");
+    const maps = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent((/cinema/i.test(s.cinema) ? "" : "Cinema ") + s.cinema + ", " + city);
+    const links = [`<a href="${maps}" target="_blank" rel="noopener">Map ↗</a>`];
+    if (s.mm && s.mm !== s.book) links.push(`<a href="${esc(s.mm)}" target="_blank" rel="noopener">All times ↗</a>`);
+    const price = s.price ? `<span class="cn-price">Full price €${s.price.toFixed(2)}</span>` : "";
+    const openTimes = s.times.filter((x) => !x.past);
+    const anyDeep = openTimes.some((x) => s.links && s.links[x.t]);
+    let note = "";
+    if (openTimes.length && !anyDeep) {
+      note = s.book
+        ? `No direct booking for this cinema. Tap a time to open ${esc(s.cinema)}’s own site, then pick ${esc(f.t)} there.`
+        : s.mm ? `No direct booking for this cinema. Tap a time to see ${esc(s.cinema)}’s listing on MYmovies; tickets are sold at the box office.`
+          : `No online booking found for this cinema. Tickets are sold at the box office.`;
+    }
+    return `<div class="cn-venue"><div class="cn-vname">${hl(s.cinema, state.q)}${price}<span class="cn-vlinks">${links.join("")}</span></div>
+      ${note ? `<div class="cn-hint">${note}</div>` : ""}<div class="cn-times">${chips}</div></div>`;
+  }
+
+  function extras(f) {
+    const out = [];
+    const r = f.ratings || {};
+    const rt = [];
+    if (r.imdb) rt.push(`<a href="${esc(f.imdbUrl || "#")}" target="_blank" rel="noopener"><b>IMDb</b> ${r.imdb.v.toFixed(1)}</a>`);
+    if (r.rt != null) rt.push(`<a href="${esc(f.rtUrl || "#")}" target="_blank" rel="noopener"><b>Rotten Tomatoes</b> ${r.rt}%</a>`);
+    if (rt.length) out.push(`<div class="cn-rate">${rt.join("")}</div>`);
+    const today = romeNow().date;
+    if (f.stream && f.stream.on.length) {
+      const on = esc(f.stream.on.join(", "));
+      out.push(`<div class="cn-ott">Streaming in Italy on ${f.stream.link ? `<a href="${esc(f.stream.link)}" target="_blank" rel="noopener">${on}</a>` : on}</div>`);
+    } else if (f.ott && f.ott.date) {
+      const where = f.ott.where === "IT" ? "in Italy" : f.ott.where === "US" ? "in the US" : "in the UK";
+      out.push(`<div class="cn-ott">${f.ott.date > today ? "On streaming " + where + " from" : "Released for streaming " + where + " on"} ${esc(longDate(f.ott.date))}</div>`);
+    }
+    return out.join("");
+  }
+
+  function card(f, shows, next, isToday, city) {
+    const venues = shows.map((s) => venue(s, f, next, isToday, city)).join("");
+    const meta = [f.lang, f.y, (f.country || []).join(" / "), f.dur ? f.dur + " min" : "", f.dir ? "dir. " + f.dir : ""].filter(Boolean).map(esc).join(" · ");
+    const ttl = f.url ? `<a href="${esc(f.url)}" target="_blank" rel="noopener">${hl(f.t, state.q)}</a>` : hl(f.t, state.q);
+    const it = f.it && norm(f.it) !== norm(f.t) ? `<div class="cn-it">In Italy: ${hl(f.it, state.q)}</div>` : "";
+    const poster = f.poster ? `<img class="cn-poster" src="${esc(f.poster)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">` : "";
+    const k = fkey(f);
+    const plot = f.syn ? `<details class="cn-plot" data-k="${esc(k)}"${openPlots.has(k) ? " open" : ""}><summary>Plot</summary><p>${esc(f.syn)}</p></details>` : "";
+    return `<article class="cn-film"><div class="cn-stub"><span>${esc(f.en ? "English" : f.lang && f.lang !== "Original language" ? f.lang : "VO")}</span></div><div class="cn-body">
+      <div class="cn-top">${poster}<div class="cn-info">
         <h2 class="cn-ttl">${ttl}</h2>${it}<div class="cn-meta">${meta}</div>
         ${f.cast && f.cast.length ? `<div class="cn-cast">With ${hl(f.cast.join(", "), state.q)}</div>` : ""}
-        <div class="cn-venues">${venues}</div></div></article>`;
-    }).join("");
+        ${extras(f)}${plot}
+      </div></div>
+      <div class="cn-venues">${venues}</div></div></article>`;
   }
+
+  // keep opened plots open when the list redraws (every minute, and on new listings)
+  const openPlots = new Set();
+  document.getElementById("list").addEventListener("toggle", (e) => {
+    const d = e.target;
+    if (!d.matches || !d.matches("details.cn-plot")) return;
+    if (d.open) openPlots.add(d.dataset.k); else openPlots.delete(d.dataset.k);
+  }, true);
 
   /* ---------- controls ---------- */
   sel.addEventListener("change", () => {

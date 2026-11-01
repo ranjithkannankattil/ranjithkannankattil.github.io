@@ -22,7 +22,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
 <link rel="stylesheet" href="../css/style.css?v=16">
-<link rel="stylesheet" href="../css/cinema.css?v=1">
+<link rel="stylesheet" href="../css/cinema.css?v=2">
 </head>
 <body data-section="expats">
 
@@ -45,6 +45,14 @@
     <p class="cn-intro">Most films in Italy are dubbed. These are today's screenings in the original language, with Italian subtitles. Pick a city and search for anything you half remember: a title, an actor, a cinema. Tap a time to book.</p>
   </div>
 
+  <dl class="cn-legend" aria-label="How to read the showtimes">
+    <div><dt><span class="cn-t deep"><span class="when">21:30–23:40</span><span class="act">Book this show ›</span></span></dt><dd>Opens the ticket page for that exact show, ready to pick seats.</dd></div>
+    <div><dt><span class="cn-t site"><span class="when">21:30–23:40</span><span class="act">Cinema site ↗</span></span></dt><dd>This cinema has no per-show booking link. It opens the cinema's own site, where you pick the film and time.</dd></div>
+    <div><dt><span class="cn-t deep"><span class="nx">next</span><span class="when">19:15</span></span></dt><dd>The next show of that film still to start today.</dd></div>
+    <div><dt><span class="cn-t past"><span class="when">17:15</span></span></dt><dd>Already started.</dd></div>
+    <div class="wide"><dt><span class="k">End times</span></dt><dd>Approximate: start time plus the film's running time. Trailers and ads usually add 10–20 minutes before the film begins.</dd></div>
+  </dl>
+
   <div class="cn-bar">
     <div class="cn-controls">
       <label class="cn-field"><span class="k">City</span><select id="city"></select></label>
@@ -65,7 +73,7 @@
 
   <div class="cn-list" id="list" aria-live="polite"></div>
 
-  <p class="cn-note">Listings come from <a href="https://www.mymovies.it/" rel="noopener" target="_blank">MYmovies</a> and Anteo, refreshed five times a day. At Anteo Palazzo del Cinema a time opens that exact screening; elsewhere it opens the cinema's own ticket page. Check with the cinema before you go.</p>
+  <p class="cn-note">Listings come from <a href="https://www.mymovies.it/" rel="noopener" target="_blank">MYmovies</a> and the cinemas' own ticket sites, refreshed five times a day. Posters, plots, ratings and streaming come from <a href="https://www.themoviedb.org/" rel="noopener" target="_blank">TMDB</a> and OMDb; plots from MYmovies are machine-translated. Check with the cinema before you go.</p>
 </main>
 
 <footer>
@@ -74,7 +82,7 @@
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-<script src="../js/cinema.js?v=1"></script>
+<script src="../js/cinema.js?v=2"></script>
 <script src="../js/nav.js?v=16" defer></script>
 <script src="../js/visits.js?v=2" defer></script>
 </body>

@@ -251,6 +251,18 @@ function certification(rd) {
   }
   return null;
 }
+// release dates by kind for the countries the site cares about (TMDB types: 3 cinema, 4 digital/streaming, 5 disc, 6 TV)
+function releases(rd) {
+  const out = {};
+  for (const c of ["IT", "GB", "US"]) {
+    const r = (rd?.results || []).find((x) => x.iso_3166_1 === c);
+    if (!r) continue;
+    const first = (t) => r.release_dates.filter((x) => x.type === t).map((x) => (x.release_date || "").slice(0, 10)).filter(Boolean).sort()[0] || null;
+    const o = { cinema: first(3) || first(2), digital: first(4), disc: first(5), tv: first(6) };
+    if (Object.values(o).some(Boolean)) out[c] = o;
+  }
+  return out;
+}
 function providers(wp) {
   const out = {};
   for (const c of ["IT", "GB", "IN", "US"]) {
@@ -326,6 +338,7 @@ export async function movie(id) {
       mc: `https://www.metacritic.com/search/${encodeURIComponent(m.title)}/?category=2`,
     },
     providers: providers(m["watch/providers"]),
+    releases: releases(m.release_dates),
     rows,
   };
 }

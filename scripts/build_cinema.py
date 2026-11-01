@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """Build today's original-version (VO) cinema listings for the English OV cinema page.
 
-Source: MYmovies' "film in lingua originale" page per city, plus Anteo's own
-ticket site (18tickets) for per-screening booking links in Milan.
+Sources: MYmovies' "film in lingua originale" page per city (the base list), the cinemas' own
+18tickets sites (per-show booking links, halls, and V.O. shows MYmovies misses), Cinebot for
+Verona's Alcione, and the site's movies-api Worker (poster, ratings, streaming, release dates).
 Runs from .github/workflows/build-cinema.yml; output goes to the cinema-data branch.
 
     python3 scripts/build_cinema.py --out out --prev prev
 
-Writes out/index.json and out/<city>.json. A city whose fetch fails keeps the
-previous run's file (from --prev) so the page never goes blank.
+Writes out/index.json and out/<city>.json, plus two caches carried between runs:
+out/films.json (per-film details and English plots) and out/sites.json (cinemas' own websites).
+A city whose fetch fails keeps the previous run's file (from --prev) so the page never goes blank.
 """
 import argparse, datetime as dt, html, json, os, re, sys, time, unicodedata, urllib.parse, urllib.request
 from html.parser import HTMLParser
@@ -190,71 +192,308 @@ def parse_mymovies(page, city_name):
     return out
 
 
-def parse_anteo(page, today):
-    """Anteo 18tickets → ({(norm title, 'HH:MM'): url} for today's V.O. screenings,
-    {norm title: (language label, is_english)} for every V.O. film listed)."""
-    links, langs, cur, lang, date, want_lang = {}, {}, None, "", None, False
-    datestr = today.strftime("%d/%m/%Y")
-    for tok in tokens(page):
-        if tok[0] == "a":
-            _, href, _title, text = tok
-            if re.search(r"/film/\d+/?$", href) and text and not text.lower().startswith(("guarda", "programmazione")):
-                t = re.sub(r"v\.?\s*o\.?\s*sott\.?\s*ita\.?\s*-?", " ", text, flags=re.I)
-                t = re.sub(r"^\W+", "", t).strip()
-                if t:
-                    cur, lang, date = norm(t), "", None
+# ====================================================================== cinemas' own ticket sites
+T18 = "https://{host}.18tickets.it/"
+# host, city id, extra MYmovies names for the cinema(s) behind it. The venue names the site prints
+# ("Anteo Palazzo Del Cinema", "Filmclub", ...) are matched too, so aliases are only for odd cases.
+SITES = [
+    ("anteo.spaziocinema", "milano", ["Anteo Palazzo del Cinema"]),
+    ("citylife.spaziocinema", "milano", ["CityLife Anteo"]),
+    ("ariosto.spaziocinema", "milano", ["Ariosto spazioCinema"]),
+    ("arlecchino.cinetecadimilano", "milano", ["Cineteca Arlecchino"]),
+    ("mic.cinetecadimilano", "milano", ["Cineteca Milano MIC", "MIC"]),
+    ("capitol.spaziocinema", "monza", ["Capitol"]),
+    ("cinema.barberini", "roma", ["Barberini"]),
+    ("quattrofontane.ccroma", "roma", ["Quattro Fontane"]),
+    ("giuliocesare.ccroma", "roma", ["Giulio Cesare"]),
+    ("roma.andromeda", "roma", ["Andromeda"]),
+    ("lux.cdr", "roma", ["Lux"]),
+    ("nazionale.cctorino", "torino", ["Nazionale"]),
+    ("arlecchino.popupcinema", "bologna", ["Arlecchino"]),
+    ("medica.popupcinema", "bologna", ["Medica Palace", "Medica"]),
+    ("odeon.ccb", "bologna", ["Odeon"]),
+    ("rialto.ccb", "bologna", ["Rialto Studios", "Rialto"]),
+    ("roma.ccb", "bologna", ["Roma d'Essai", "Roma"]),
+    ("europa.ccb", "bologna", ["Europa"]),
+    ("lumiere.cinetecabologna", "bologna", ["Lumière", "Lumiere"]),
+    ("flora.ccroma", "firenze", ["Flora"]),
+    ("casacinema", "napoli", ["CasaCinema", "Casa Cinema"]),
+    ("corallo.ccgenova", "genova", ["Corallo"]),
+    ("city.ccgenova", "genova", ["City"]),
+    ("carignano.ccgenova", "genova", ["Circuito Filmclub", "Filmclub", "Carignano"]),
+    ("ariston.ccgenova", "genova", ["Ariston"]),
+    ("lab80", "bergamo", ["Lab 80", "Auditorium", "Conca Verde"]),
+]
+ALCIONE = ("https://ticket.cinebot.it/alcione/", "verona", "Alcione")
+# full-price tickets (city id, name the cinema is matched by, euros)
+PRICES = [("milano", "Anteo Palazzo del Cinema", 9.5), ("milano", "CityLife Anteo", 9.5),
+          ("milano", "Ariosto spazioCinema", 8.5), ("monza", "Capitol", 9.0),
+          ("firenze", "Giunti Odeon", 12.0), ("brescia", "Nuovo Eden", 6.5)]
+# chains whose booking sites can't be read automatically: link the cinema's own page instead
+CHAIN = re.compile(r"\b(uci|the space|space cinema)\b", re.I)
+
+VO_MARK = re.compile(r"\bv\.\s*o\b|\bv\.\s*o\.\s*s\b|\bvos\b|\bvo\b|\bsott(\.|otitol)|\boriginal\s*(language|version)|originalversion|\bsub\.?\s*ita|vers(\.|ione)\s*orig", re.I)
+CLEAN_PATTERNS = [
+    r"\(\s*\d+\s*h\s*\d*\W*\)",               # (2H13')
+    r"\(\s*ried[^)]*\)", r"\bvers\.?\s*rest\.?\s*4k\b", r"\b4k\b",
+    r"[-–]\s*\d+\w*\s+anniversary\b",
+    r"\boriginal\s*(language|version)\b", r"\bversione\s+originale\b", r"\blingua\s+originale\b",
+    r"\bv\.?\s*o\.?\s*s?\.?\s*sott(otitol\w*|\.)?\s*(ita(l\w*)?)?\.?", r"\bsott\.?\s*ita(l\w*)?\.?",
+    r"(?<![a-z])v\.\s*o\.(\s*s\.)?", r"\bv\.o\.s\b", r"\bvos\b", r"\bvo\b",
+]
+SMALL = {"a", "an", "and", "of", "the", "in", "on", "at", "to", "for", "or", "di", "del", "della", "e", "il",
+         "la", "le", "lo", "gli", "i", "un", "una", "da", "de", "des", "du", "et", "el", "y"}
+
+
+def nice_case(s):
+    """'GLI INTOCCABILI' → 'Gli intoccabili'-style title case that copes with apostrophes."""
+    if not s or s != s.upper():
+        return s
+    words = s.lower().split(" ")
+    out = []
+    for i, w in enumerate(words):
+        if i and w in SMALL:
+            out.append(w)
+        else:
+            out.append(re.sub(r"(^|[\-'’(“\"])([a-zà-ÿ])", lambda m: m.group(1) + m.group(2).upper(), w))
+    return " ".join(out)
+
+
+def clean_title(raw):
+    """'V.O.SOTT.ITA - RAGIONE E SENTIMENTO (SENSE AND SENSIBILITY)' → ('Ragione e Sentimento', 'Sense and Sensibility')."""
+    t = html.unescape(" ".join(raw.split()))
+    for p in CLEAN_PATTERNS:
+        t = re.sub(p, " ", t, flags=re.I)
+    alt = None
+    m = re.search(r"\(([^()]{2,})\)\s*$", t)
+    if m:
+        alt, t = m.group(1).strip(), t[:m.start()]
+    t = re.sub(r"\s+", " ", t).strip(" -–—:.,;")
+    t = re.sub(r"(\s*[-–—]\s*)+$", "", t).strip()
+    return nice_case(t), nice_case(alt) if alt else None
+
+
+def fetch_polite(url, tries=4):
+    """fetch() that waits out 18tickets' 'Slow down! Too many requests'."""
+    for i in range(tries):
+        try:
+            page = fetch(url, tries=1)
+            if len(page) < 200 and "too many requests" in page.lower():
+                raise RuntimeError("429")
+            return page
+        except Exception as e:  # noqa: BLE001
+            if i == tries - 1:
+                raise
+            time.sleep(12 * (i + 1) if "429" in str(e) else 4)
+    return ""
+
+
+def hall_name(h):
+    h = " ".join(html.unescape(h).split())
+    if re.fullmatch(r"\d+", h):
+        return "Sala " + h
+    m = re.fullmatch(r"(?i)sala\s*(\S.*)", h)
+    h = ("Sala " + m.group(1)) if m else h
+    return "" if h.lower() in ("sala", "") else h
+
+
+def parse_18tickets(page, host, today):
+    """One 18tickets homepage → film blocks with today's not-yet-started shows."""
+    rome = ZoneInfo("Europe/Rome")
+    ml = page.find("id='movie-list'")
+    body = page[ml:] if ml > 0 else page
+    out = []
+    for blk in body.split("<div class='movie movie--preview'>")[1:]:
+        tm = re.search(r"class='movie__title'[^>]*>\s*(.*?)\s*</a>", blk, re.S)
+        if not tm:
+            continue
+        raw = html.unescape(" ".join(tm.group(1).split()))
+        opt = lambda k: (lambda m: html.unescape(" ".join(m.group(1).split())) if m else "")(re.search(k + r"\s*</strong>\s*(.*?)\s*</p>", blk, re.S))
+        lingua, regia, con = opt("Lingua:"), opt("Regia:"), opt("Con:")
+        labels = [html.unescape(" ".join(x.split())) for x in re.findall(r"class='film-label[^']*'>\s*(.*?)\s*</div>", blk, re.S)]
+        lw = norm(lingua)
+        italian = lw.startswith("italian") or lw in ("ita", "it")
+        marked = bool(VO_MARK.search(raw) or any(VO_MARK.search(x) for x in labels) or re.search(r"sott|sub|originale", lw))
+        shows, venue, day = [], "", None
+        pos = re.compile(r"class='time-select__place'>(.*?)</div>|<a\b[^>]*\bdata-time='(\d+)'[^>]*href='([^']+)'[^>]*>(.*?)</a>|<a\b[^>]*href='([^']+)'[^>]*\bdata-time='(\d+)'[^>]*>(.*?)</a>", re.S)
+        for m in pos.finditer(blk):
+            if m.group(1) is not None:
+                txt = " ".join(re.sub(r"<[^>]+>", " ", html.unescape(m.group(1))).split())
+                d = re.search(r"(\d{2}/\d{2}/\d{4})", txt)
+                day = d.group(1) if d else day
+                venue = txt[d.end():].strip() if d else venue
                 continue
-            m = re.search(r"/film/\d+/[0-9a-f-]{36}", href)
-            if m and cur and lang and date == datestr:
-                tt = times_in(text)
-                if tt and not lang.startswith("italiano"):
-                    url = href if href.startswith("http") else ANTEO_URL.rstrip("/") + href
-                    links[(cur, tt[0])] = url
+            ms, href, inner = (m.group(2), m.group(3), m.group(4)) if m.group(2) else (m.group(6), m.group(5), m.group(7))
+            when = dt.datetime.fromtimestamp(int(ms) / 1000, rome)
+            if when.date() != today:
+                continue
+            text = " ".join(re.sub(r"<[^>]+>", " ", html.unescape(inner)).split())
+            hh = when.strftime("%H:%M")
+            hall = hall_name(re.sub(r"^\D*\d{1,2}[:.]\d{2}", "", text).strip())
+            url = href if href.startswith("http") else T18.format(host=host).rstrip("/") + href
+            shows.append({"t": hh, "url": url, "hall": hall, "venue": venue})
+        if not shows:
             continue
-        text = tok[1]
-        low = text.lower()
-        if text == "\n":
+        lang_words = [w for w in lw.split() if w in LANG_EN]
+        dur = None
+        h2 = re.search(r"\((\d)\s*h\s*(\d{1,2})", raw, re.I)
+        if h2:
+            dur = int(h2.group(1)) * 60 + int(h2.group(2))
+        main, alt = clean_title(raw)
+        out.append({"host": host, "raw": raw, "title": main, "alt": alt, "lingua": lingua, "italian": italian,
+                    "vo": marked and not italian, "langs": [LANG_EN[w] for w in lang_words],
+                    "dir": nice_case(regia), "cast": [c.strip() for c in con.split(",") if c.strip()][:3],
+                    "dur": dur, "shows": shows})
+    return out
+
+
+def parse_alcione(page, today):
+    """Cinebot (Verona Alcione): event cards with dates like 'Lun 02/11 21:00'. Only cards marked V.O."""
+    out, dm = [], today.strftime("%d/%m")
+    for m in re.finditer(r'<a href="(/alcione/evento/[^"]+)"[^>]*class="eventi-item.*?<h4 class="title">(.*?)</h4>(.*?)</a>', page, re.S):
+        href, title, rest = m.group(1), html.unescape(" ".join(m.group(2).split())), m.group(3)
+        if not VO_MARK.search(title):
             continue
-        if low.startswith("lingua:"):
-            lang = norm(text[7:])
-            want_lang = not lang
-        elif cur and want_lang:
-            lang, want_lang = norm(text), False
-        if cur and lang and not lang.startswith("italiano") and cur not in langs:
-            words = [w for w in lang.split() if w in LANG_EN]
-            if words:
-                langs[cur] = (" / ".join(LANG_EN[w] for w in words), words[0] == "inglese")
-        d = re.search(r"\b(\d{2}/\d{2}/\d{4})\b", text)
-        if d:
-            date = d.group(1)
-    return links, langs
+        txt = " ".join(re.sub(r"<[^>]+>", " ", html.unescape(rest)).split())
+        times = sorted({f"{int(h):02d}:{mi}" for d, h, mi in re.findall(r"(\d{2}/\d{2})\s+(\d{1,2}):(\d{2})", txt) if d == dm})
+        if re.search(r"\boggi\b", txt, re.I):
+            times = sorted(set(times) | set(times_in(txt)))
+        if not times:
+            continue
+        main, alt = clean_title(title)
+        out.append({"host": "alcione", "raw": title, "title": main, "alt": alt, "lingua": "", "italian": False, "vo": True,
+                    "langs": [], "dir": "", "cast": [], "dur": None, "book": "https://ticket.cinebot.it" + href,
+                    "shows": [{"t": t, "url": None, "hall": "", "venue": "Cinema Alcione"} for t in times]})
+    return out
+
+
+# ---------------------------------------------------------------------- matching
+GENERIC = {"cinema", "cine", "multisala", "multiplex", "sala", "sale", "the", "di", "del", "della", "dei", "d",
+           "spaziocinema", "spazio", "essai", "palazzo", "studios", "theatre", "theater", "il", "lo", "la", "le",
+           "milano", "roma", "torino", "bologna", "firenze", "napoli", "genova", "bergamo", "monza", "verona", "brescia",
+           "venezia", "padova", "pisa", "trieste", "cineteca", "circuito"}
+
+
+def ckey(name):
+    return [w for w in norm(name).split() if w not in GENERIC]
+
+
+def name_score(a, b):
+    """How sure we are that cinema names a and b are the same place (0 = no)."""
+    ka, kb = ckey(a), ckey(b)
+    ca, cb = "".join(ka), "".join(kb)
+    if not ca or not cb:
+        return 0
+    if ca == cb:
+        return 3
+    if len(min(ca, cb, key=len)) >= 4 and (ca in cb or cb in ca):
+        return 2
+    if set(w for w in ka if len(w) >= 5) & set(w for w in kb if len(w) >= 5):
+        return 1
+    return 0
 
 
 def title_keys(f):
-    return {k for k in (norm(f["t"]), norm(f.get("it", ""))) if k}
+    return {k for k in (norm(f.get("t")), norm(f.get("it")), norm(f.get("orig"))) if k}
 
 
 def match(keys, title):
     return any(k and (k == title or (len(k) > 3 and (k in title or title in k))) for k in keys)
 
 
-def attach_anteo(films, links):
-    n = 0
-    for f in films:
-        keys = title_keys(f)
-        for s in f["shows"]:
-            if "anteo palazzo" not in norm(s["cinema"]):
+def film_score(keys, blk):
+    """Does an 18tickets block show this MYmovies film? 0 = no, higher = surer."""
+    best = 0
+    for b in {norm(blk["title"]), norm(blk["alt"] or "")} - {""}:
+        for k in keys:
+            if k == b:
+                best = max(best, 3)
+            elif len(min(k, b, key=len)) >= 4 and (b.startswith(k + " ") or k.startswith(b + " ")):
+                best = max(best, 2)
+            elif min(len(k), len(b)) >= 6 and lev_ratio(k, b) >= 0.86:
+                best = max(best, 2)
+    return best
+
+
+def merge_city(cid, city_name, films, blocks, report):
+    """Adds per-show links, halls and missing V.O. shows from the cinemas' sites; drops times they list as Italian."""
+    # which MYmovies cinema name each site venue is (best name match within the city)
+    mm_names = {s["cinema"] for f in films for s in f["shows"]}
+    site_names = {}
+    for b in blocks:
+        for sh in b["shows"]:
+            v = sh["venue"] or b["host"]
+            if (b["host"], v) in site_names:
                 continue
-            for t in s["times"]:
-                for (title, tm), url in links.items():
-                    if tm == t and match(keys, title):
-                        s.setdefault("links", {})[t] = url
-                        n += 1
-                        break
-    return n
+            aliases = next((a for h, c, a in SITES if h == b["host"]), [])
+            cands = [(max([name_score(v, n)] + [name_score(a, n) for a in aliases]), n) for n in mm_names]
+            cands.sort(reverse=True)
+            ok = cands and cands[0][0] >= 2 or (cands and cands[0][0] == 1 and (len(cands) == 1 or cands[1][0] == 0))
+            site_names[(b["host"], v)] = cands[0][1] if ok else (aliases[0] if aliases else v)
+    added = linked = dropped = 0
+    for b in blocks:
+        keys_b = b
+        target = None
+        sc = [(film_score(title_keys(f), b), i) for i, f in enumerate(films)]
+        sc = [x for x in sc if x[0]]
+        if sc:
+            target = films[max(sc)[1]]
+        if b["italian"] and not b["vo"]:
+            # times this cinema sells as dubbed: drop them from the V.O. list unless also sold as V.O.
+            if not target:
+                continue
+            vo_times = {sh["t"] for bb in blocks if bb["vo"] and bb["host"] == b["host"] and film_score(title_keys(target), bb) for sh in bb["shows"]}
+            for sh in b["shows"]:
+                name = site_names[(b["host"], sh["venue"] or b["host"])]
+                for s in target["shows"]:
+                    if s["cinema"] == name and sh["t"] in s["times"] and sh["t"] not in vo_times:
+                        s["times"].remove(sh["t"])
+                        dropped += 1
+            continue
+        if not b["vo"]:
+            continue
+        if not target:
+            target = {"t": b["alt"] or b["title"], "it": b["title"] if b["alt"] else None, "url": None, "y": None,
+                      "country": [], "cast": b["cast"], "dir": b["dir"] or None, "dur": b["dur"], "shows": [],
+                      "en": False, "lang": "Original language", "src": b["host"]}
+            if not target["it"]:
+                target.pop("it")
+            films.append(target)
+            report.append(f"    + new from {b['host']}: {target['t']}")
+        if b.get("langs"):
+            target["_t18lang"] = b["langs"]
+        if not target.get("dur") and b.get("dur"):
+            target["dur"] = b["dur"]
+        for sh in b["shows"]:
+            name = site_names[(b["host"], sh["venue"] or b["host"])]
+            show = next((s for s in target["shows"] if s["cinema"] == name), None)
+            if not show:
+                show = {"cinema": name, "times": []}
+                target["shows"].append(show)
+            if sh["t"] not in show["times"]:
+                show["times"].append(sh["t"])
+                added += 1
+            if b["host"] == "alcione":
+                show["book"] = b["book"]
+            else:
+                show["book"] = T18.format(host=b["host"])
+            if sh["url"]:
+                show.setdefault("links", {})[sh["t"]] = sh["url"]
+                linked += 1
+            if sh["hall"]:
+                show.setdefault("halls", {})[sh["t"]] = sh["hall"]
+    for f in films:
+        f["shows"] = [s for s in f["shows"] if s["times"]]
+        for s in f["shows"]:
+            s["times"] = sorted(set(s["times"]))
+    films[:] = [f for f in films if f["shows"]]
+    unmatched = sorted({f"{h}:{v}→{n}" for (h, v), n in site_names.items() if n not in mm_names})
+    report.append(f"    sites: {linked} per-show links, {added} times added, {dropped} Italian times dropped"
+                  + (f"; venues not on MYmovies: {', '.join(unmatched)}" if unmatched else ""))
 
 
-# ---------- film details: original title (MYmovies film page) and original language (Wikidata) ----------
+# ---------------------------------------------------------------------- film details
+WORKER = "https://movies-api.ranjeethkkb.workers.dev"
 FILM_CACHE = {}
 WD_LANG = {"Q1860": "English", "Q150": "French", "Q188": "German", "Q7737": "Russian", "Q9288": "Hebrew",
            "Q652": "Italian", "Q1321": "Spanish", "Q5146": "Portuguese", "Q13955": "Arabic", "Q5287": "Japanese",
@@ -296,29 +535,126 @@ def wikidata_lang(title, year):
     return None
 
 
-def film_details(f):
-    """Fills original title, country and language for one film (cached by MYmovies URL)."""
-    if f["url"] in FILM_CACHE:
-        return FILM_CACHE[f["url"]]
-    info = {}
+def worker(path, params=None):
+    q = ("?" + urllib.parse.urlencode({k: v for k, v in (params or {}).items() if v})) if params else ""
+    return json.loads(fetch(WORKER + path + q, tries=2))
+
+
+def translate_en(text):
+    """Italian → English. Google's public endpoint first, MyMemory as backup. None if both fail."""
+    if not text:
+        return None
     try:
-        toks = tokens(fetch(f["url"], tries=2))
-        for i, tok in enumerate(toks):
-            if tok[0] == "t" and tok[1].lower().startswith("titolo originale"):
-                rest = tok[1][len("titolo originale"):].strip(" :|")
-                if not rest:
-                    rest = next((t[1] if t[0] == "t" else t[3] for t in toks[i + 1:i + 5] if (t[1] if t[0] == "t" else t[3]).strip(" \n:|")), "")
-                info["orig"] = rest.strip(" :|").strip()
-                break
-        if not f["country"]:
-            cs = [t[3] for t in toks if t[0] == "a" and "?country=" in t[1] and t[3]]
-            info["country"] = list(dict.fromkeys(COUNTRY_EN.get(norm(c), c) for c in cs))[:4]
+        u = "https://translate.googleapis.com/translate_a/single?" + urllib.parse.urlencode({"client": "gtx", "sl": "it", "tl": "en", "dt": "t", "q": text})
+        d = json.loads(fetch(u, tries=2))
+        out = "".join(seg[0] for seg in d[0] if seg and seg[0]).strip()
+        if out:
+            return out
     except Exception:  # noqa: BLE001
         pass
-    info["wd"] = wikidata_lang(info.get("orig") or f["t"], f.get("y"))
-    FILM_CACHE[f["url"]] = info
-    time.sleep(0.4)
+    try:
+        u = "https://api.mymemory.translated.net/get?" + urllib.parse.urlencode({"q": text[:480], "langpair": "it|en"})
+        out = json.loads(fetch(u, tries=2)).get("responseData", {}).get("translatedText", "").strip()
+        return out or None
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def two_sentences(text, limit=320):
+    text = " ".join((text or "").split())
+    parts = re.split(r"(?<=[.!?])\s+(?=[A-Z0-9“\"'])", text)
+    out = " ".join(parts[:2]).strip()
+    if len(out) > limit:
+        out = out[:limit].rsplit(" ", 1)[0].rstrip(",;:") + "…"
+    return out or None
+
+
+def mymovies_page(url):
+    """Original title, countries, Italian plot, poster and runtime from a MYmovies film page."""
+    info = {}
+    page = fetch(url, tries=2)
+    for blob in re.findall(r'<script type="application/ld\+json">(.*?)</script>', page, re.S):
+        try:
+            d = json.loads(blob, strict=False)
+        except ValueError:
+            continue
+        if isinstance(d, dict) and d.get("@type") == "Movie":
+            info["plot_it"] = html.unescape(d.get("description") or "").strip() or None
+            img = d.get("image")
+            if isinstance(img, list) and img:
+                img = img[0].get("url") if isinstance(img[0], dict) else img[0]
+            elif isinstance(img, dict):
+                img = img.get("url")
+            info["img"] = img if isinstance(img, str) else None
+            m = re.match(r"PT(\d+)M", d.get("duration") or "")
+            if m:
+                info["dur"] = int(m.group(1))
+    toks = tokens(page)
+    for i, tok in enumerate(toks):
+        if tok[0] == "t" and tok[1].lower().startswith("titolo originale"):
+            rest = tok[1][len("titolo originale"):].strip(" :|")
+            if not rest:
+                rest = next((t[1] if t[0] == "t" else t[3] for t in toks[i + 1:i + 5] if (t[1] if t[0] == "t" else t[3]).strip(" \n:|")), "")
+            info["orig"] = rest.strip(" :|").strip()
+            break
+    cs = [t[3] for t in toks if t[0] == "a" and "?country=" in t[1] and t[3]]
+    info["country"] = list(dict.fromkeys(COUNTRY_EN.get(norm(c), c) for c in cs))[:4]
     return info
+
+
+def film_key(f):
+    return f.get("url") or "t:" + norm(f.get("t")) + "|" + str(f.get("y") or "")
+
+
+def details(f, cache, today):
+    """Everything about a film that doesn't change with the showtimes, cached between runs.
+    Ratings/streaming are refreshed once a day; the plot and the rest are kept."""
+    key = film_key(f)
+    f["_k"] = key
+    c = cache.get(key) or {}
+    if c.get("day") == today:
+        return c
+    if f.get("url") and "mm" not in c:
+        try:
+            c["mm"] = mymovies_page(f["url"])
+        except Exception:  # noqa: BLE001
+            c["mm"] = {}
+        time.sleep(0.4)
+    mm = c.get("mm") or {}
+    title = mm.get("orig") or f.get("orig") or f["t"]
+    if "tmdb" not in c:
+        try:
+            hit = worker("/match", {"title": title, "year": f.get("y") or ""})
+            if not hit and title != f["t"]:
+                hit = worker("/match", {"title": f["t"], "year": f.get("y") or ""})
+            c["tmdb"] = hit.get("id") if hit else None
+        except Exception:  # noqa: BLE001
+            pass  # try again next run
+    if c.get("tmdb"):
+        try:
+            d = worker(f"/movie/{c['tmdb']}")
+            it = (d.get("providers") or {}).get("IT") or {}
+            c["tm"] = {
+                "title": d.get("title"), "original": d.get("original"), "year": d.get("year"), "runtime": d.get("runtime"),
+                "olang": d.get("olang"), "langName": d.get("langName"), "overview": d.get("overview"),
+                "poster": d.get("poster"), "imdb": d.get("imdb"),
+                "ratings": {k: v for k, v in (d.get("ratings") or {}).items() if k in ("imdb", "rt", "mc")},
+                "stream": [p["name"] for p in it.get("stream") or []], "streamLink": it.get("link"),
+                "releases": d.get("releases") or {}, "rtLink": (d.get("links") or {}).get("rt"),
+            }
+            c["day"] = today
+        except Exception:  # noqa: BLE001
+            pass
+    if "syn" not in c:
+        plot = translate_en(mm.get("plot_it")) if mm.get("plot_it") else None
+        c["syn"] = two_sentences(plot) or two_sentences((c.get("tm") or {}).get("overview"))
+        c["synSrc"] = "mymovies" if plot else ("tmdb" if c["syn"] else None)
+    elif not c["syn"] and (c.get("tm") or {}).get("overview"):
+        c["syn"], c["synSrc"] = two_sentences(c["tm"]["overview"]), "tmdb"
+    if "wd" not in c and not c.get("tm"):
+        c["wd"] = wikidata_lang(title, f.get("y"))
+    cache[key] = c
+    return c
 
 
 def load_overrides():
@@ -330,41 +666,72 @@ def load_overrides():
         return {}
 
 
-def enrich(films, anteo_langs, overrides):
+TMDB_LANG_EN = {"en"}
+
+
+def enrich(films, cache, overrides, today):
     for f in films:
-        info = film_details(f)
-        if info.get("country"):
-            f["country"] = info["country"]
+        c = details(f, cache, today)
+        mm, tm, wd = c.get("mm") or {}, c.get("tm") or {}, c.get("wd")
+        if mm.get("country") and not f.get("country"):
+            f["country"] = mm["country"]
+        if mm.get("dur") and not f.get("dur"):
+            f["dur"] = mm["dur"]
+        if tm.get("runtime") and not f.get("dur"):
+            f["dur"] = tm["runtime"]
+        if not f.get("y") and tm.get("year"):
+            f["y"] = tm["year"]
         mm_title = f["t"]
-        orig = (info.get("orig") or "").strip()
-        wd = info.get("wd")
-        # Prefer the original title; Wikidata's English label fixes MYmovies' occasional typos in it.
+        orig = (mm.get("orig") or "").strip()
+        # Show the original title. TMDB's English title fixes MYmovies' occasional typos in it.
         if orig and norm(orig) != norm(mm_title):
-            f["t"], f["it"] = orig, mm_title
-        if wd and wd.get("label"):
-            lab = norm(wd["label"])
-            if orig and lev_ratio(lab, norm(orig)) >= 0.8:
-                f["t"] = wd["label"]
-            elif not orig and len(lab) > 3 and norm(mm_title).startswith(lab) and lab != norm(mm_title):
-                # "Wildwood - I segreti del bosco proibito" → "Wildwood"
-                f["t"], f["it"] = wd["label"], mm_title
+            f["t"], f["it"] = orig, f.get("it") or mm_title
+        if tm.get("title") and (not orig or lev_ratio(norm(tm["title"]), norm(orig)) >= 0.8) and tm.get("olang") == "en":
+            if norm(tm["title"]) != norm(f["t"]):
+                f.setdefault("it", mm_title)
+                f["t"] = tm["title"]
+        if f.get("it") and norm(f["it"]) == norm(f["t"]):
+            f.pop("it")
         keys = title_keys(f) | {norm(mm_title)}
-        al = next((v for k, v in anteo_langs.items() if match(keys, k)), None)
         ov = next((v for k, v in overrides.items() if k in keys), None)
         if ov and ov.get("title"):
             if norm(ov["title"]) != norm(mm_title):
-                f["it"] = mm_title
+                f["it"] = f.get("it") or mm_title
             f["t"] = ov["title"]
+        t18 = f.pop("_t18lang", None)
         if ov and "en" in ov:
             f["lang"], f["en"], f["langSrc"] = ov.get("lang", f.get("lang")), bool(ov.get("en")), "manual"
-        elif al:
-            f["lang"], f["en"], f["langSrc"] = al[0], al[1], "anteo"
+        elif t18:
+            f["lang"], f["en"], f["langSrc"] = " / ".join(dict.fromkeys(t18)), t18[0] == "English", "cinema"
+        elif tm.get("olang"):
+            f["lang"], f["en"], f["langSrc"] = tm.get("langName") or tm["olang"], tm["olang"] in TMDB_LANG_EN, "tmdb"
         elif wd:
             f["lang"], f["en"], f["langSrc"] = wd["lang"], wd["en"], "wikidata"
         else:
-            first = norm(f["country"][0]) if f["country"] else ""
-            f["en"] = first in {norm(c) for c in ANGLO} or first == "uk"
+            first = norm(f["country"][0]) if f.get("country") else ""
+            f["en"] = first in {norm(x) for x in ANGLO} or first == "uk"
             f["lang"], f["langSrc"] = ("English" if f["en"] else "Original language"), "country"
+        # the extras the page shows
+        if c.get("syn"):
+            f["syn"] = c["syn"]
+        poster = tm.get("poster")
+        f["poster"] = f"{WORKER}/img/w185{poster}" if poster else (mm.get("img") or None)
+        r = tm.get("ratings") or {}
+        if r.get("imdb") or r.get("rt") is not None:
+            f["ratings"] = {k: v for k, v in r.items() if v is not None}
+            if tm.get("imdb"):
+                f["imdbUrl"] = f"https://www.imdb.com/title/{tm['imdb']}/"
+            if tm.get("rtLink"):
+                f["rtUrl"] = tm["rtLink"]
+        if tm.get("stream"):
+            f["stream"] = {"on": tm["stream"][:4], "link": tm.get("streamLink")}
+        rel = tm.get("releases") or {}
+        digital = (rel.get("IT") or {}).get("digital")
+        if digital:
+            f["ott"] = {"date": digital, "where": "IT"}
+        elif (rel.get("US") or {}).get("digital") or (rel.get("GB") or {}).get("digital"):
+            f["ott"] = {"date": (rel.get("US") or {}).get("digital") or rel["GB"]["digital"], "where": "US" if (rel.get("US") or {}).get("digital") else "GB"}
+        f.pop("orig", None)
 
 
 def lev_ratio(a, b):
@@ -379,6 +746,49 @@ def lev_ratio(a, b):
     return 1 - prev[-1] / max(len(a), len(b))
 
 
+# ---------------------------------------------------------------------- cinema websites and prices
+def official_site(mm_url, sites):
+    """A cinema's own website, from the 'Sito ufficiale' link on its MYmovies page (cached)."""
+    if not mm_url:
+        return None
+    if mm_url in sites:
+        return sites[mm_url]
+    url = None
+    try:
+        page = fetch(mm_url, tries=2)
+        m = re.search(r'<a href="(https?://[^"]+)"[^>]*>\s*<span[^>]*>\s*Sito(?:&nbsp;|\s)+ufficiale', page, re.I)
+        if m and "mymovies" not in m.group(1):
+            url = html.unescape(m.group(1))
+        time.sleep(0.4)
+    except Exception:  # noqa: BLE001
+        return None  # not cached: try again next run
+    sites[mm_url] = url
+    return url
+
+
+def finish_shows(cid, films, sites):
+    for f in films:
+        for s in f["shows"]:
+            for c, name, eur in PRICES:
+                if c == cid and name_score(name, s["cinema"]) >= 2:
+                    s["price"] = eur
+            if not s.get("book"):
+                site = official_site(s.get("mm"), sites)
+                if site:
+                    s["book"] = site
+            if CHAIN.search(s["cinema"]):
+                s["chain"] = True
+
+
+# ---------------------------------------------------------------------- run
+def load_json(path, default):
+    try:
+        with open(path, encoding="utf-8") as fh:
+            return json.load(fh)
+    except (FileNotFoundError, ValueError):
+        return default
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default="out")
@@ -390,13 +800,27 @@ def main():
     stamp = dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
     report, index = [], []
     overrides = load_overrides()
+    cache = load_json(os.path.join(a.prev, "films.json"), {})
+    sites = load_json(os.path.join(a.prev, "sites.json"), {})
+    # forget film details nobody has needed for a month
+    cutoff = (today - dt.timedelta(days=30)).isoformat()
+    cache = {k: v for k, v in cache.items() if (v.get("seen") or "") >= cutoff}
 
-    links, langs = {}, {}
+    blocks_by_city = {}
+    for host, cid, _aliases in SITES:
+        try:
+            bl = parse_18tickets(fetch_polite(T18.format(host=host)), host, today)
+            blocks_by_city.setdefault(cid, []).extend(bl)
+            report.append(f"{host}: {sum(1 for b in bl if b['vo'])} V.O. films today ({sum(len(b['shows']) for b in bl if b['vo'])} shows), {sum(1 for b in bl if b['italian'])} dubbed")
+        except Exception as e:  # noqa: BLE001
+            report.append(f"{host}: FAILED ({e})")
+        time.sleep(2.5)
     try:
-        links, langs = parse_anteo(fetch(ANTEO_URL), today)
-        report.append(f"Anteo: {len(links)} bookable V.O. screenings left today, {len(langs)} V.O. films with a stated language")
+        bl = parse_alcione(fetch_polite(ALCIONE[0]), today)
+        blocks_by_city.setdefault(ALCIONE[1], []).extend(bl)
+        report.append(f"alcione: {len(bl)} V.O. films today")
     except Exception as e:  # noqa: BLE001
-        report.append(f"Anteo failed: {e}")
+        report.append(f"alcione: FAILED ({e})")
 
     for slug, name in CITIES:
         cid = "monza" if slug == "monzabrianza" else slug
@@ -405,21 +829,28 @@ def main():
             films = parse_mymovies(fetch(MM_URL.format(slug=slug)), name)
             if cid == "milano" and not films:
                 raise RuntimeError("no films parsed for Milano — page layout may have changed")
-            enrich(films, langs, overrides)
-            linked = attach_anteo(films, links) if cid == "milano" else 0
+            sub = []
+            merge_city(cid, name, films, blocks_by_city.get(cid, []), sub)
+            enrich(films, cache, overrides, today.isoformat())
+            finish_shows(cid, films, sites)
+            for f in films:
+                cache.get(f.pop("_k", film_key(f)), {})["seen"] = today.isoformat()
             doc = {"city": name, "date": today.isoformat(), "updatedAt": stamp,
                    "source": MM_URL.format(slug=slug), "films": films}
             with open(path, "w", encoding="utf-8") as fh:
                 json.dump(doc, fh, ensure_ascii=False, separators=(",", ":"))
             en = sum(1 for f in films if f["en"])
-            report.append(f"{name}: {len(films)} films ({en} English), {linked} per-screening links")
-            report += [f"    {'EN' if f['en'] else '--'} {f['t']} [{f.get('lang')} via {f.get('langSrc')}]" for f in films]
+            report.append(f"{name}: {len(films)} films ({en} English)")
+            report += sub
+            report += [f"    {'EN' if f['en'] else '--'} {f['t']} [{f.get('lang')} via {f.get('langSrc')}]"
+                       f"{' syn' if f.get('syn') else ''}{' poster' if f.get('poster') else ''}{' imdb' if (f.get('ratings') or {}).get('imdb') else ''}"
+                       f"{' stream' if f.get('stream') else ''}{' ott' if f.get('ott') else ''}"
+                       f" · {sum(len(s.get('links') or {}) for s in f['shows'])} links" for f in films]
             index.append({"id": cid, "name": name, "films": len(films), "english": en, "date": doc["date"]})
         except Exception as e:  # noqa: BLE001
             old = os.path.join(a.prev, cid + ".json")
             if os.path.exists(old):
-                with open(old, encoding="utf-8") as fh:
-                    doc = json.load(fh)
+                doc = load_json(old, {})
                 with open(path, "w", encoding="utf-8") as fh:
                     json.dump(doc, fh, ensure_ascii=False, separators=(",", ":"))
                 index.append({"id": cid, "name": name, "films": len(doc.get("films", [])),
@@ -427,6 +858,9 @@ def main():
             report.append(f"{name}: FAILED ({e}){' — kept previous data' if os.path.exists(old) else ''}")
         time.sleep(1.5)
 
+    for fname, data in (("films.json", cache), ("sites.json", sites)):
+        with open(os.path.join(a.out, fname), "w", encoding="utf-8") as fh:
+            json.dump(data, fh, ensure_ascii=False, separators=(",", ":"))
     with open(os.path.join(a.out, "index.json"), "w", encoding="utf-8") as fh:
         json.dump({"updatedAt": stamp, "date": today.isoformat(), "cities": index}, fh, ensure_ascii=False)
     with open(os.path.join(a.out, "report.txt"), "w", encoding="utf-8") as fh:
