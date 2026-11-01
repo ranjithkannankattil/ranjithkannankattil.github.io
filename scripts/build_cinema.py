@@ -804,6 +804,8 @@ def enrich(films, cache, overrides, today):
         # the extras the page shows
         if c.get("syn"):
             f["syn"] = c["syn"]
+        if c.get("tmdb"):
+            f["tmdb"] = c["tmdb"]  # opens the film on ranjithkb.com/movies.html
         poster = tm.get("poster")
         f["poster"] = f"{WORKER}/img/w185{poster}" if poster else (mm.get("img") or None)
         r = tm.get("ratings") or {}

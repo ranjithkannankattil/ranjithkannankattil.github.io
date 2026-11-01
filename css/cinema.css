@@ -76,6 +76,7 @@ a.cn-t:hover .act{ color:var(--accent); }
 .cn-rate{ display:flex; flex-wrap:wrap; gap:.3rem .9rem; margin-top:.45rem; font-family:var(--f-mono); font-size:.76rem; }
 .cn-rate a{ border-bottom:1px solid var(--line); }
 .cn-rate a:hover{ color:var(--accent); border-color:var(--accent); }
+.cn-rate a.cn-mv{ color:var(--accent); border-color:var(--accent); }
 .cn-rate b{ font-weight:500; color:var(--ink-soft); margin-right:.2rem; }
 .cn-ott{ font-size:.86rem; color:var(--ink-soft); margin-top:.25rem; }
 .cn-ott a{ text-decoration:underline; text-underline-offset:2px; }

@@ -222,7 +222,9 @@
     const rt = [];
     if (r.imdb) rt.push(`<a href="${esc(f.imdbUrl || "#")}" target="_blank" rel="noopener"><b>IMDb</b> ${r.imdb.v.toFixed(1)}</a>`);
     if (r.rt != null) rt.push(`<a href="${esc(f.rtUrl || "#")}" target="_blank" rel="noopener"><b>Rotten Tomatoes</b> ${r.rt}%</a>`);
-    if (rt.length) out.push(`<div class="cn-rate">${rt.join("")}</div>`);
+    const mv = f.tmdb ? `../movies.html#/m/${encodeURIComponent(f.tmdb)}` : `../movies.html#/s/${encodeURIComponent(f.t)}`;
+    rt.push(`<a class="cn-mv" href="${mv}" title="${esc(f.tmdb ? "Cast, all ratings, trailer and similar films" : "Search for this film on the Movies page")}">Movies page ›</a>`);
+    out.push(`<div class="cn-rate">${rt.join("")}</div>`);
     const today = romeNow().date;
     if (f.stream && f.stream.on.length) {
       const on = esc(f.stream.on.join(", "));
