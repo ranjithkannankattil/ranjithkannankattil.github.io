@@ -30,7 +30,7 @@
       { id: "trip", label: "Trip planner", desc: "Day-by-day walking plans, anywhere", href: "trip.html" },
       { id: "expat", label: "Expat Life Saver", desc: "City guides: permits, homes, health, people", href: "expat/" },
       { id: "movies", label: "Movies", desc: "Any film, every rating, what to watch next", href: "movies.html" },
-      { id: "cinema", label: "English cinema", desc: "Original-version films in Milan & Italy, today", href: "expats/cinema.html" },
+      { id: "cinema", label: "English Cinema in Italy", desc: "Original-version films, times and booking", href: "expats/cinema.html" },
     ] },
     { label: "Workbench", hub: { id: "productivity", label: "All workbench tools →", href: "productivity/" }, items: PRODUCTIVITY },
   ];

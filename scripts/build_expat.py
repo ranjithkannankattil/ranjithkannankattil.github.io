@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "scripts" / "expat"
 OUT = ROOT / "expat"
 UPDATED = "November 2026"
-CSS_V = "3"
+CSS_V = "4"
 NAV_V = "16"
 
 GROUPS = [
@@ -302,6 +302,8 @@ def build_city_hub(city, cname, sub, blurb):
 
   <a class="ex-start" href="arrival.html"><span class="ex-start-k">Start here</span><b>First 90 days, in order</b><span>Permit, tax code, residence, health card, digital ID and bank, with a checklist that remembers your progress.</span><i aria-hidden="true">→</i></a>
 
+  <a class="ex-start ex-cine" href="../../expats/cinema.html#milano"><span class="ex-start-k">Tonight in Milan</span><b>English Cinema in Italy</b><span>Every original-version film in Milan today and this week, with show times, halls and a direct booking link for each show at Anteo, CityLife and the Cineteca.</span><i aria-hidden="true">→</i></a>
+
   <div class="sos ex-sos" aria-label="Emergency numbers">
     <div><span class="n">112</span><span>Any emergency</span></div>
     <div><span class="n">116117</span><span>Doctor out of hours</span></div>
@@ -317,7 +319,6 @@ def build_city_hub(city, cname, sub, blurb):
 
   {"".join(cards)}
 
-  <p class="ex-also">Also on this site: <a href="../../expats/cinema.html">English-language films in Milan cinemas today</a></p>
   <p class="ex-src-link">Checked {UPDATED}. <a href="sources.html">All sources</a></p>
 """
     page += foot("../../", HUB_JS)
