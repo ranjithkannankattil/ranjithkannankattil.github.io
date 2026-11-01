@@ -23,7 +23,7 @@ SRC = ROOT / "scripts" / "expat"
 OUT = ROOT / "expat"
 UPDATED = "November 2026"
 CSS_V = "3"
-NAV_V = "14"
+NAV_V = "15"
 
 GROUPS = [
     ("m1", "M1", "Papers & money"),

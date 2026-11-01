@@ -111,7 +111,7 @@ def head(title, desc, url, og, preload=None):
     <a href="/writings.html">Writings</a>
     <a href="/publications.html">Publications</a>
     <a href="/radio.html">Radio</a>
-    <a href="/productivity/">Productivity</a>
+    <a href="/productivity/">Workbench</a>
   </nav>
 </header>
 """
@@ -170,7 +170,7 @@ def foot(viewer=True):
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="/js/photography.js?v={JS_V}" defer></script>
-<script src="/js/nav.js?v=14" defer></script>
+<script src="/js/nav.js?v=15" defer></script>
 <script src="/js/visits.js?v=2" defer></script>
 </body>
 </html>

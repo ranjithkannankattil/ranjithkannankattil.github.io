@@ -162,7 +162,7 @@ window.TOOLS = [
     T.forEach(function (t, i) { if (t.id === cur) idx = i; });
     var tool = T[idx];
 
-    var crumb = '<div class="tool-crumb"><a href="./">Productivity</a><span>/</span>' +
+    var crumb = '<div class="tool-crumb"><a href="./">Workbench</a><span>/</span>' +
       (tool ? '<a href="./#g-' + tool.group + '">' + esc(groupName(tool.group)) + '</a><span>/</span><em>' + esc(tool.name) + '</em>' : '') + '</div>';
 
     var menu = '<details class="tool-switch"><summary><span>All tools</span><b>' + T.length + '</b><i aria-hidden="true">▾</i></summary>' +
@@ -173,7 +173,7 @@ window.TOOLS = [
           return '<a role="menuitem" href="' + esc(x.t.href) + '"' + (x.t.id === cur ? ' aria-current="page"' : '') + '>' +
             '<b>' + no(x.i) + '</b><span>' + esc(x.t.name) + '</span></a>';
         }).join('');
-      }).join('') + '<a class="tool-switch-all" href="./">Productivity home →</a></div></details>';
+      }).join('') + '<a class="tool-switch-all" href="./">All workbench tools →</a></div></details>';
 
     el.className = 'tool-nav';
     el.innerHTML = crumb + (T.length > 1 ? menu : '');

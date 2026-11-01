@@ -17,21 +17,21 @@
   const toolHere = (document.querySelector("main[data-tool]") || {}).dataset?.tool;
 
   const NAV = [
-    { id: "home", label: "Home", href: "index.html" },
-    { label: "Creative", items: [
+    { id: "home", label: "Hello", href: "index.html" },
+    { label: "Words & Pictures", items: [
       { id: "writings", label: "Writings", desc: "Malayalam prose and poetry", href: "writings.html" },
       { id: "photography", label: "Photography", desc: "Street photography", href: "photography/" },
       { id: "publications", label: "Publications", desc: "Three books and a paper", href: "publications.html" },
       { id: "padolpathi", label: "Padolpathi", desc: "Where Malayalam words come from", href: "padolpathi/" },
     ] },
-    { label: "Tools", items: [
+    { label: "Daily Life", items: [
       { id: "radio", label: "Radio", desc: "2,200 live stations in 70+ languages", href: "radio.html" },
       { id: "news", label: "News", desc: "Trusted papers, world to your town", href: "news.html" },
       { id: "trip", label: "Trip planner", desc: "Day-by-day walking plans, anywhere", href: "trip.html" },
       { id: "expat", label: "Expat Life Saver", desc: "City guides: permits, homes, health, people", href: "expat/" },
       { id: "movies", label: "Movies", desc: "Any film, every rating, what to watch next", href: "movies.html" },
       { id: "cinema", label: "English cinema", desc: "Original-version films in Milan & Italy, today", href: "expats/cinema.html" },
-    ], sub: { id: "productivity", label: "Productivity", href: "productivity/", items: PRODUCTIVITY } },
+    ], sub: { id: "productivity", label: "Workbench", href: "productivity/", items: PRODUCTIVITY } },
   ];
 
   document.querySelectorAll("nav.tabs[data-active]").forEach((nav) => {
@@ -130,7 +130,7 @@
     sheet.append(head);
     const body = document.createElement("div");
     body.className = "mnav-body";
-    const homeA = link("index.html", "Home", "", "mnav-home");
+    const homeA = link("index.html", "Hello", "", "mnav-home");
     if (active === "home") homeA.setAttribute("aria-current", "page");
     body.append(homeA);
     const section = (title, items, grid) => {
@@ -146,10 +146,10 @@
       s.append(list);
       return s;
     };
-    const tools = NAV.find((e) => e.label === "Tools");
+    const tools = NAV.find((e) => e.sub);
     // Productivity first among the tool groups: it holds the most pages
-    const prod = section("Productivity", tools.sub.items, true);
-    const all = link(tools.sub.href, "All productivity tools →", "", "mnav-all");
+    const prod = section(tools.sub.label, tools.sub.items, true);
+    const all = link(tools.sub.href, "All workbench tools →", "", "mnav-all");
     if (active === "productivity" && !toolHere) all.setAttribute("aria-current", "page");
     prod.querySelector("h2").after(all);
     NAV.filter((e) => e.items).forEach((e) => {
