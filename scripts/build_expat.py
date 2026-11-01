@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "scripts" / "expat"
 OUT = ROOT / "expat"
 UPDATED = "November 2026"
-CSS_V = "2"
+CSS_V = "3"
 NAV_V = "13"
 
 GROUPS = [
@@ -80,9 +80,9 @@ TOPICS = [
     ("communities", "m5", "Communities", "Communities",
      "Where to meet people: expat networks, nationality associations, chambers of commerce and free Italian classes.",
      "community expat internations meetup association malayali indian indonesian filipino chinese american"),
-    ("food", "m5", "Food from home", "Food",
-     "Indian, Sri Lankan and Asian restaurants and groceries, and the Milanese dishes to try.",
-     "food restaurant indian grocery asian indonesian milanese aperitivo"),
+    ("food", "m5", "Restaurants & food", "Restaurants",
+     "Restaurants rated 4.5 or higher on Google across every cuisine, from Indian, Kerala and Sri Lankan to Milanese, pizza, Japanese and Lebanese, plus groceries from home.",
+     "food restaurant indian kerala south indian banaras malabar taj mahal pasajo italian milanese pizza sushi japanese chinese korean thai vietnamese lebanese turkish greek peruvian mexican vegan vegetarian seafood steak burger brunch grocery"),
     ("language", "m5", "Language & customs", "Language & customs",
      "Survival Italian with pronunciation, how to learn Italian for free, and the unwritten rules of daily life in Milan.",
      "italian language phrases learn course cpia customs culture etiquette coffee"),
