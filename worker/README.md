@@ -32,3 +32,17 @@ Cloudflare's edge. Free plan: 100,000 requests a day.
 (Firestore, EU). Paste the whole of `firestore.rules` into Firebase console → Firestore Database →
 Rules → **Publish** once, so the new `movielog` block is live. Only the owner account in
 `js/movies-config.js` (`MOVIES_OWNER`) can sign in to it.
+
+## Movie Friday newsletter (part of movies-api)
+
+`newsletter.js` is uploaded with `movies-api.js` as a second module. It needs, on the movies-api Worker:
+- **KV binding** `SUBS` → namespace `movies-newsletter` (the subscriber list; one key per address, metadata only)
+- **Variables** `NEWS_FROM` = `Movie Friday <newsletter@ranjithkb.com>`, `SELF_URL` = the Worker's address
+- **Secret** `RESEND_KEY` = a Resend API key with sending access (domain ranjithkb.com verified in Resend, EU region)
+- **Cron triggers** `0 6 * * 5` and `0 7 * * 5` (UTC). The code sends only on the run that is 08:00 in Milan.
+
+Routes: `POST /newsletter/subscribe {email}` (sends the confirmation), `/newsletter/confirm`, `/newsletter/unsubscribe`
+(deletes the address), `/newsletter/preview?date=YYYY-MM-DD` (this week's issue as a web page) and
+`POST /newsletter/send-test {email}` (this week's issue to one already-confirmed subscriber, at most every 10 minutes).
+Resend DNS records on ranjithkb.com: TXT `resend._domainkey`, CNAME `rsend` and `send` (DNS only), TXT `_dmarc`.
+Don't add Resend's MX record: the root MX records belong to Cloudflare Email Routing (hello@ranjithkb.com).
