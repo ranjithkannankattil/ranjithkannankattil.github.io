@@ -730,8 +730,7 @@ window.STATIONS = [
     "streams": [
       "https://megahitfm.krioyohosting.com:1012/stream"
     ],
-    "added": "2026-10-29",
-    "offline": true
+    "added": "2026-10-29"
   },
   {
     "id": "radio-2-antwerpen",
@@ -876,6 +875,33 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/JOE.mp3"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "sublime-jazz",
+    "name": "Sublime Jazz",
+    "category": "music",
+    "streams": [
+      "https://stream.sublime.nl/web21_mp3"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "nostalgie-extra-what-a-feeling",
+    "name": "Nostalgie Extra (What a Feeling)",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/NOSTALGIEWAFEXTRA.mp3"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "sky-radio-smooth-hits",
+    "name": "Sky Radio Smooth Hits",
+    "category": "music",
+    "streams": [
+      "https://25223.live.streamtheworld.com/SRGSTR15AAC_SC"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

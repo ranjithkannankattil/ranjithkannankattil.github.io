@@ -441,6 +441,15 @@ window.STATIONS = [
       "https://us2.maindigitalstream.com/stream/kolbramah"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "kan-reshet-bet",
+    "name": "Kan Reshet Bet",
+    "category": "news",
+    "streams": [
+      "https://r.il.cdn-redge.media/livehls/oil/kancdn-live/live/radio/kan_reshet_bet/live.livx/playlist.m3u8?renditions"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

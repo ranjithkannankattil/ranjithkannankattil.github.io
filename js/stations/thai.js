@@ -293,7 +293,8 @@ window.STATIONS = [
     "streams": [
       "https://radio11.plathong.net/7050/;stream.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

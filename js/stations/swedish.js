@@ -159,7 +159,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://mediaserv38.live-streams.nl:8107/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-nostalgi-se",
@@ -476,4 +477,4 @@ window.STATIONS = [
     "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

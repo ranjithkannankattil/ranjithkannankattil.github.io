@@ -864,6 +864,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/7nqu31p6xg0uv"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "fm",
+    "name": "FM المستقبل",
+    "category": "music",
+    "streams": [
+      "https://edge.mixlr.com/channel/vnvcj"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "radio-express-fm",
+    "name": "Radio Express FM",
+    "category": "news",
+    "streams": [
+      "https://expressfm.ice.infomaniak.ch/expressfm-64.mp3"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "ghardaia",
+    "name": "Ghardaïa غرداية",
+    "category": "news",
+    "streams": [
+      "https://webradio1.tda.dz:8001/Ghardaia_64K.mp3"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

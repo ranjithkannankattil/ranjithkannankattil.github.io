@@ -640,6 +640,7 @@ window.STATIONS = [
     "name": "0 N - 80s on Radio",
     "category": "music",
     "streams": [
+      "https://0n-80s.radionetz.de/0n-80s.aac",
       "https://0n-80s.radionetz.de/0n-80s.mp3"
     ],
     "added": "2026-10-27"
@@ -696,7 +697,8 @@ window.STATIONS = [
     "streams": [
       "https://0n-70s.radionetz.de/0n-70s.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "offline": true
   },
   {
     "id": "radio-swiss-classic-german",
@@ -868,6 +870,33 @@ window.STATIONS = [
       "https://stream.technolovers.fm/electro-house?ref=radiobrowser"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "bytefm",
+    "name": "ByteFM",
+    "category": "music",
+    "streams": [
+      "https://bytefm.cast.addradio.de/bytefm/main/high/stream"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "antenne-steiermark",
+    "name": "Antenne Steiermark",
+    "category": "music",
+    "streams": [
+      "https://live.antenne.at/as"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "ndr-90-3",
+    "name": "NDR 90,3",
+    "category": "music",
+    "streams": [
+      "https://icecast.ndr.de/ndr/ndr903/hamburg/mp3/128/stream.mp3?1728425642817&aggregator=web"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

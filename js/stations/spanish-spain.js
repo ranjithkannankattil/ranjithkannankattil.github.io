@@ -865,6 +865,33 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SER_ASO_VIGO.mp3"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "radio-planeta-costa-del-sol",
+    "name": "Radio Planeta Costa del Sol",
+    "category": "music",
+    "streams": [
+      "https://radioplaneta.emitironline.com/radio"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "cope-tenerife",
+    "name": "COPE Tenerife",
+    "category": "news",
+    "streams": [
+      "https://wecast02-o-cloud.flumotion.com/copesedes/tenerife-mas.mp3"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "remember-the-music-fm-96-6",
+    "name": "Remember the music FM 96.6",
+    "category": "music",
+    "streams": [
+      "https://eu1.lhdserver.es:9041/stream"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

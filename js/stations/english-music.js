@@ -575,7 +575,8 @@ window.STATIONS = [
       "https://pacificmedia.cdnstream1.com/2783_128.mp3"
     ],
     "added": "2026-10-25",
-    "where": "US"
+    "where": "US",
+    "offline": true
   },
   {
     "id": "jfsr-jazz-funk-soul-radio",
@@ -936,6 +937,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-01",
     "where": "US"
+  },
+  {
+    "id": "jazz-88-minneapolis-kbem",
+    "name": "Jazz 88 Minneapolis KBEM",
+    "category": "jazz",
+    "streams": [
+      "https://kbem-live.streamguys1.com/kbem_aac"
+    ],
+    "added": "2026-11-01",
+    "where": "US"
+  },
+  {
+    "id": "wwoz-new-orleans-public-radio",
+    "name": "WWOZ - New Orleans Public Radio",
+    "category": "jazz",
+    "streams": [
+      "https://www.wwoz.org/listen/hi"
+    ],
+    "added": "2026-11-01",
+    "where": "US"
+  },
+  {
+    "id": "christmas-fm-classical-carols",
+    "name": "Christmas FM Classical & Carols",
+    "category": "classical",
+    "streams": [
+      "https://christmasfm.cdnstream1.com/2549_64.aac"
+    ],
+    "added": "2026-11-01",
+    "where": "Ireland"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

@@ -493,7 +493,8 @@ window.STATIONS = [
     "streams": [
       "https://oxygenmusic.hu:8443/oxygenmusic_gyor_hd"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "klasszik-radio-92-1",
@@ -764,6 +765,33 @@ window.STATIONS = [
       "https://stream.42netmedia.com:8443/sc_tamas"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "plusz-fm-nagyvarad",
+    "name": "Plusz FM - Nagyvarad",
+    "category": "news",
+    "streams": [
+      "https://stream2.radiotransilvania.ro/Nagyvarad"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "erdely-fm",
+    "name": "Erdély FM",
+    "category": "music",
+    "streams": [
+      "https://efm.radioca.st/stream"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "sepsi-radio",
+    "name": "Sepsi Rádió",
+    "category": "music",
+    "streams": [
+      "https://stream.sepsiradio.ro:8001/SepsiRadio"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

@@ -713,7 +713,8 @@ window.STATIONS = [
     "streams": [
       "https://streamasiacdn.atc-labs.com/radiorimjhim.aac"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "offline": true
   },
   {
     "id": "bhakti-sagar-durga-maa",
@@ -858,6 +859,33 @@ window.STATIONS = [
       "https://drive.uber.radio/uber/bollywood2000s/icecast.audio"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "radio-audio",
+    "name": "Radio Audio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/fvrx47wpg0quv"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "bollywood-diwali-party",
+    "name": "Bollywood Diwali party",
+    "category": "music",
+    "streams": [
+      "https://drive.uber.radio/uber/bollywooddiwali/icecast.audio"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "np-24-radio",
+    "name": "NP 24 Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/8wk1s0pt008uv"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

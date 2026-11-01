@@ -476,6 +476,15 @@ window.STATIONS = [
       "https://uvn-67-97.tll01.zonevs.eu/sss-radio"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "jouluradio",
+    "name": "Jouluradio",
+    "category": "music",
+    "streams": [
+      "https://aud-stream-jouluradio01.nm-elemental.nelonenmedia.fi/master.m3u8"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

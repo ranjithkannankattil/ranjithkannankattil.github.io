@@ -816,6 +816,33 @@ window.STATIONS = [
       "https://stream.rcs.revma.com/1g8a3ufsyp3vv"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "ghardaia",
+    "name": "Ghardaïa غرداية",
+    "category": "news",
+    "streams": [
+      "https://webradio1.tda.dz:8001/Ghardaia_64K.mp3"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "fip-electro",
+    "name": "FIP Electro",
+    "category": "music",
+    "streams": [
+      "https://icecast.radiofrance.fr/fipelectro-hifi.aac"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "medina-fm",
+    "name": "MEDINA FM",
+    "category": "news",
+    "streams": [
+      "https://medinafm.ice.infomaniak.ch/medinafm-64.mp3"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

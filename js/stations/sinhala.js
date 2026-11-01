@@ -40,7 +40,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://shaincast.caster.fm:48148/listen.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "jothi-fm",
@@ -158,4 +159,4 @@ window.STATIONS = [
     "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

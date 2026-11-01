@@ -217,7 +217,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s8.iqstreaming.com:8014/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-student",
@@ -331,8 +332,7 @@ window.STATIONS = [
     "streams": [
       "https://stream2.statsradio.com:8150/stream"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "braniteljski-radio-nepokoreni-grad-osije",
@@ -639,6 +639,24 @@ window.STATIONS = [
       "https://mcp1.mydataknox.com:8010/stream"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "hrt-radio-rijeka",
+    "name": "HRT Radio Rijeka",
+    "category": "music",
+    "streams": [
+      "https://29103.live.streamtheworld.com/RIJEKAAAC_SC"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "radio-vaticana-hrvatski",
+    "name": "Radio Vaticana Hrvatski",
+    "category": "devotional",
+    "streams": [
+      "https://radio.vaticannews.va/stream-hr"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

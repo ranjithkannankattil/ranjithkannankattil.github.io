@@ -863,6 +863,33 @@ window.STATIONS = [
       "https://air.sammit.tv:8443/retro"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "radio-record-disco-funk",
+    "name": "Radio Record - Disco Funk",
+    "category": "music",
+    "streams": [
+      "https://radiorecord.hostingradio.ru/discofunk96.aacp"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "station-32",
+    "name": "Авторадио Латвия",
+    "category": "music",
+    "streams": [
+      "https://live.relaxfm.lv/03"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "remix-fm",
+    "name": "Remix FM",
+    "category": "music",
+    "streams": [
+      "https://air4.amgradio.ru/RemixFM"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

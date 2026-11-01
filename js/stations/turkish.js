@@ -837,6 +837,33 @@ window.STATIONS = [
       "https://moondigitaledge.radyotvonline.net/90lar/playlist.m3u8"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "bars-fm-103-2",
+    "name": "Barış FM 103.2",
+    "category": "music",
+    "streams": [
+      "https://barisfm.ozelip.com:9588/stream"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "gul-fm",
+    "name": "Gül Fm",
+    "category": "devotional",
+    "streams": [
+      "https://yayin2.canliyayin.org:10989/;*.mp3"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "radyo-odtu-rock",
+    "name": "Radyo ODTU - Rock",
+    "category": "music",
+    "streams": [
+      "https://stream.radyoodtu.com.tr/rock"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

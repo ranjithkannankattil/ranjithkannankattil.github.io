@@ -136,8 +136,7 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://www.dn-radio.co.za/listen/world_gospel_radio/radio.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "mfm-92-6",
@@ -186,7 +185,8 @@ window.STATIONS = [
     "streams": [
       "https://superagent-269bfe30.base44.app/functions/kaleidoscopeRadio?go=stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

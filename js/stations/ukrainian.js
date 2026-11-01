@@ -843,6 +843,33 @@ window.STATIONS = [
       "https://radio.vaticannews.va/stream-uk"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "station-21",
+    "name": "Буковинська Хвиля",
+    "category": "news",
+    "streams": [
+      "https://100.cv.ua:8443/play"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "station-22",
+    "name": "Радіо КРИВБАС",
+    "category": "news",
+    "streams": [
+      "https://onair.kryvbas.fm/RadioKryvbas"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "worship",
+    "name": "Worship",
+    "category": "devotional",
+    "streams": [
+      "https://radio.dobreff.com/worship.mp3"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

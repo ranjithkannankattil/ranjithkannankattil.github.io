@@ -845,6 +845,33 @@ window.STATIONS = [
       "https://ice3.radia.cz/koleda_64.aac"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "radio-blanik-2",
+    "name": "Radio Blaník",
+    "category": "music",
+    "streams": [
+      "https://ice.abradio.cz/blanikfm64.mp3"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "radio-diana-retro-club",
+    "name": "Rádio Diana – Retro Club",
+    "category": "music",
+    "streams": [
+      "https://westradio.cz/radio/8000/radio.mp3"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "slow-down-radijo",
+    "name": "Slow Down Rádijo",
+    "category": "music",
+    "streams": [
+      "https://icecast9.play.cz/slowdown.mp3"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

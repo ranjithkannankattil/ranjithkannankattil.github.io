@@ -878,6 +878,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-01",
     "where": "US"
+  },
+  {
+    "id": "wabc",
+    "name": "WABC",
+    "category": "us",
+    "streams": [
+      "https://26223.live.streamtheworld.com/WABCAMAAC_SC"
+    ],
+    "added": "2026-11-01",
+    "where": "US"
+  },
+  {
+    "id": "radio-east",
+    "name": "Radio East",
+    "category": "world",
+    "streams": [
+      "https://stream.zeno.fm/7f4w4us5wp8uv"
+    ],
+    "added": "2026-11-01",
+    "where": "Nigeria"
+  },
+  {
+    "id": "capital-radio",
+    "name": "Capital Radio",
+    "category": "world",
+    "streams": [
+      "https://capitalradio.radioca.st/stream"
+    ],
+    "added": "2026-11-01",
+    "where": "United Republic Of Tanzania"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

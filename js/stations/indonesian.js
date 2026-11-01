@@ -64,8 +64,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.rcs.revma.com/k02rmq48kxcwv"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "hardrock-87-6-fm-jakarta",
@@ -169,7 +168,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://svara-stream.radioddns.net/yogyakarta_voksradio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "klcbs-new-age",
@@ -270,7 +270,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:8500/;super.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "bahtera-yudha-fm-surabaya",
@@ -326,7 +327,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/14/9314/rrisngliatpro1.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "mosh-head-black-metal-id",
@@ -407,8 +409,7 @@ window.STATIONS = [
     "streams": [
       "https://b.alhastream.com:5035/radio"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "gajahmada-fm",
@@ -462,7 +463,8 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:9622/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "rri-pro1-banjarmasin",
@@ -552,7 +554,8 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com/8228/;radio"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "offline": true
   },
   {
     "id": "bandung-death-metal-syndicate",
@@ -661,7 +664,8 @@ window.STATIONS = [
     "streams": [
       "https://svara-stream.radioddns.net/bali_voksradio_993fm"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "offline": true
   },
   {
     "id": "imelda-fm",
@@ -824,6 +828,24 @@ window.STATIONS = [
       "https://sc.dnafm.net/listen/dnafm/live"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "klcbs-tropical",
+    "name": "KLCBS Tropical",
+    "category": "music",
+    "streams": [
+      "https://streaming.klcbsofficial.com/listen/tropical/klcbs-tropical"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "sti-fm-nunukan",
+    "name": "STI FM Nunukan",
+    "category": "music",
+    "streams": [
+      "https://live.stifmnunukan.com/listen/stifm/stream"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

@@ -865,6 +865,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/prbf8rrgvzzuv"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "chilango-radio-la-radio-que-viene-viene",
+    "name": "CHILANGO RADIO: La Radio Que Viene, Viene",
+    "category": "news",
+    "streams": [
+      "https://stream.radio.co/s938b68214/listen"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "navidad-venezuela",
+    "name": "Navidad Venezuela",
+    "category": "devotional",
+    "streams": [
+      "https://stream.zeno.fm/vbvpvf6a6uvtv"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "96-7-radio-rebelde-fm",
+    "name": "96.7 Radio Rebelde FM",
+    "category": "news",
+    "streams": [
+      "https://theonestopradio.com/stream?url=https://icecast.teveo.cu/zrXXWK9F"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

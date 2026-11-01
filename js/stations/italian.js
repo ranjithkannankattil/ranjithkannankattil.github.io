@@ -804,6 +804,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/72k4a597rs8uv"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "radio-margherita",
+    "name": "\tRadio Margherita",
+    "category": "music",
+    "streams": [
+      "https://streaming.radiomargherita.com/stream/radiomargherita"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "radio-swiss-jazz",
+    "name": "Radio Swiss Jazz",
+    "category": "music",
+    "streams": [
+      "https://stream.srg-ssr.ch/srgssr/rsj/aac/96"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "lattemiele-marche-abruzzo",
+    "name": "LatteMiele Marche Abruzzo",
+    "category": "music",
+    "streams": [
+      "https://ice02.fluidstream.net/fluid016.aac"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

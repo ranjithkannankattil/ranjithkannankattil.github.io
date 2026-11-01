@@ -808,6 +808,33 @@ window.STATIONS = [
       "https://megapolisfm.md:8443/886"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "clasic-radio-90-bucuresti",
+    "name": "Clasic Radio_90 -București",
+    "category": "music",
+    "streams": [
+      "https://live.radioclasic.com/listen/radio_clasic_90/live.mp3"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "magic-slagare",
+    "name": "Magic Șlagăre",
+    "category": "music",
+    "streams": [
+      "https://dc.digi.live.kissfm.ro/slagare"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "magic-tv",
+    "name": "Magic tv",
+    "category": "music",
+    "streams": [
+      "https://tv.broadcasting.ro/magictv/925f90db-5c88-4190-a53d-5163cdffe6f4.m3u8"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

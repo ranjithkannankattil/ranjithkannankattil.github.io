@@ -889,6 +889,33 @@ window.STATIONS = [
       "https://n0f.radiojar.com/n4dzb3znn3quv.mp3?rj-ttl=5&rj-tok=AAABeKi_TokAUTY4EzBEHHiJzQ"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "blueswave-radio",
+    "name": "BluesWave Radio",
+    "category": "music",
+    "streams": [
+      "https://blueswave.radio:8100/hifiblues"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "radioactive",
+    "name": "RadioActive",
+    "category": "music",
+    "streams": [
+      "https://streamyourdream.org:8050/radioactive"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "super-sport-fm-104-0",
+    "name": "Super Sport FM 104.0",
+    "category": "news",
+    "streams": [
+      "https://r1.cloudskep.com/radio3/supersportfm/icecast.audio"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

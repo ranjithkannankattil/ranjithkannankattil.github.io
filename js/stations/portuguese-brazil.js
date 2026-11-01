@@ -726,8 +726,7 @@ window.STATIONS = [
     "streams": [
       "https://str1.streamhostpg.com.br:8002/stream"
     ],
-    "added": "2026-10-29",
-    "offline": true
+    "added": "2026-10-29"
   },
   {
     "id": "radio-brasil-de-fato",
@@ -872,6 +871,33 @@ window.STATIONS = [
       "https://stm6.xcast.com.br:9328/;?1685284162874"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "itapema-102-3-fm",
+    "name": "Itapema 102.3 FM",
+    "category": "music",
+    "streams": [
+      "https://liverd102fm.rbsdirect.com.br/primary/ita_poa.sdp/chunklist_0ac85862-caaa-446f-93bf-3e12816c36a0.m3u8"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "phonkio-radio-og-phonk-in-hq-24-7",
+    "name": "Phonkio Radio · OG Phonk in HQ 24/7",
+    "category": "music",
+    "streams": [
+      "https://stream.phonkioradio.com/listen/phonkio_radio/radio.mp3"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "jazz-medley-webradio",
+    "name": "Jazz Medley Webradio",
+    "category": "music",
+    "streams": [
+      "https://server01.ouvir.radio.br:8006/stream"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

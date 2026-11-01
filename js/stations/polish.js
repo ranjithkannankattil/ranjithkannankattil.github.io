@@ -755,6 +755,24 @@ window.STATIONS = [
       "https://streaming.g-news.pl:8040/rzeszow"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "polskie-radio-dwojka-2",
+    "name": "Polskie Radio: Dwójka (2)",
+    "category": "news",
+    "streams": [
+      "https://stream12.polskieradio.pl/pr2/pr2.sdp/playlist.m3u8"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "dzikieradio",
+    "name": "DzikieRadio",
+    "category": "music",
+    "streams": [
+      "https://ssl-1.radiohost.pl:11250/stream"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

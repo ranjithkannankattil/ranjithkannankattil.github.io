@@ -121,8 +121,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play-radio-stream3.hndt.com/now/WUBA5hW2/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-10",
@@ -202,7 +201,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-17",
@@ -800,6 +800,33 @@ window.STATIONS = [
       "https://stream.ginnet.cloud/live0119lo-p4rb/_definst_/classic/playlist.m3u8"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "radi-fm",
+    "name": "Radi.fm 中文古典音乐",
+    "category": "music",
+    "streams": [
+      "https://live.radi.fm/stream/zh.aac"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "tbs-efm-101-3",
+    "name": "TBS eFM 101.3",
+    "category": "music",
+    "streams": [
+      "https://cdnefm.tbs.seoul.kr/tbs/_definst_/tbs_efm_web_360.smil/chunklist.m3u8"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "wkdm",
+    "name": "WKDM 纽约华语广播国语台",
+    "category": "news",
+    "streams": [
+      "https://video1.getstreamhosting.com:8292/stream?.mp3"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";

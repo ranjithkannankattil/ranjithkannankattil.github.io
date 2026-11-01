@@ -205,7 +205,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8",
       "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "golofm",
@@ -279,8 +280,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8",
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "rca-radio-clube-de-armamar",
@@ -358,7 +358,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -421,7 +422,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2opera80a/playlist.m3u8"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "radio-observador",
@@ -863,6 +865,33 @@ window.STATIONS = [
       "https://player.radiocalheta.pt/listen/radiocalheta/live"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "radio-comercial-natal",
+    "name": "Rádio Comercial Natal",
+    "category": "music",
+    "streams": [
+      "https://stream-icy.bauermedia.pt/rcxmas.aac"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "radio-clube-madeira-106-8-fm",
+    "name": "Rádio Clube Madeira (106.8 FM)",
+    "category": "music",
+    "streams": [
+      "https://audio.serv.pt/8020/stream.mp3"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "radio-foz-do-mondego",
+    "name": "Rádio Foz do Mondego",
+    "category": "news",
+    "streams": [
+      "https://nl.digitalrm.pt:8216/stream"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T07:15Z";
+window.STATIONS_CHECKED = "2026-11-01T18:56Z";
