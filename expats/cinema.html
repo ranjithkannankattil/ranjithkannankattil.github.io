@@ -22,7 +22,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
 <link rel="stylesheet" href="../css/style.css?v=16">
-<link rel="stylesheet" href="../css/cinema.css?v=2">
+<link rel="stylesheet" href="../css/cinema.css?v=3">
 </head>
 <body data-section="expats">
 
@@ -42,7 +42,7 @@
   <div class="cn-head">
     <div class="cn-eyebrow">Versione originale · sottotitoli in italiano</div>
     <h1 class="cn-title">English films in original version</h1>
-    <p class="cn-intro">Most films in Italy are dubbed. These are today's screenings in the original language, with Italian subtitles. Pick a city and search for anything you half remember: a title, an actor, a cinema. Tap a time to book.</p>
+    <p class="cn-intro">Most films in Italy are dubbed. These are screenings in the original language, today and over the coming days, with Italian subtitles. Pick a city and search for anything you half remember: a title, an actor, a cinema. Tap a time to book.</p>
   </div>
 
   <dl class="cn-legend" aria-label="How to read the showtimes">
@@ -63,11 +63,12 @@
         <button type="button" id="langEn" aria-pressed="true">English only</button>
         <button type="button" id="langAll" aria-pressed="false">All languages</button>
       </div>
-      <div class="cn-seg" role="group" aria-label="Times">
+      <div class="cn-seg" role="group" aria-label="Times" id="whenGroup">
         <button type="button" id="whenUp" aria-pressed="true">Still to come</button>
         <button type="button" id="whenAll" aria-pressed="false">All today</button>
       </div>
     </div>
+    <div class="cn-days" id="days" role="tablist" aria-label="Day" hidden></div>
     <div class="cn-status" id="status" role="status">Loading today's listings…</div>
   </div>
 
@@ -82,7 +83,7 @@
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-<script src="../js/cinema.js?v=2"></script>
+<script src="../js/cinema.js?v=3"></script>
 <script src="../js/nav.js?v=16" defer></script>
 <script src="../js/visits.js?v=2" defer></script>
 </body>

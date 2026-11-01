@@ -21,7 +21,7 @@
   const fromHash = (location.hash || "").slice(1);
   const state = {
     city: CITIES.some((c) => c[0] === fromHash) ? fromHash : store.get("cn-city") || "milano",
-    q: "", lang: store.get("cn-lang") || "en", when: "up", docs: {}, failed: false,
+    q: "", lang: store.get("cn-lang") || "en", when: "up", docs: {}, failed: false, day: null,
   };
 
   const sel = $("#city");
@@ -119,10 +119,19 @@
       list.innerHTML = `<div class="cn-empty"><b>No listings for ${esc(name)} yet</b>They appear after the next scheduled update.</div>`;
       return;
     }
-    const isToday = doc.date === now.date;
-    status.innerHTML = `<span class="dot${isToday ? "" : " stale"}"></span>${isToday ? `Today, ${day(doc.date)}` : `Listings for ${day(doc.date)} · today's are on the way`} · updated ${clock(doc.updatedAt)}`;
+    // the days on offer: MYmovies' today plus what the cinemas sell ahead on their own sites
+    const dayList = [{ date: doc.date, films: doc.films || [] }, ...(doc.upcoming || [])].filter((d) => d.date >= now.date || d.date === doc.date);
+    if (!state.day || !dayList.some((d) => d.date === state.day)) state.day = dayList.some((d) => d.date === now.date) ? now.date : doc.date;
+    const sel_ = dayList.find((d) => d.date === state.day);
+    const isToday = state.day === now.date;
+    const ahead = state.day !== doc.date;
+    renderDays(dayList, now);
+    $("#whenGroup").hidden = !isToday;
+    status.innerHTML = ahead
+      ? `<span class="dot"></span>${day(state.day)} · from the cinemas' own ticket sites · updated ${clock(doc.updatedAt)}`
+      : `<span class="dot${isToday ? "" : " stale"}"></span>${isToday ? `Today, ${day(doc.date)}` : `Listings for ${day(doc.date)} · today's are on the way`} · updated ${clock(doc.updatedAt)}`;
 
-    const all = doc.films || [];
+    const all = sel_.films || [];
     const films = all.filter((f) => state.lang === "all" || f.en);
     const rows = films.map((f) => {
       const shows = (f.shows || []).map((s) => {
@@ -135,8 +144,15 @@
     }).filter((r) => r.score > 0 && r.shows.length);
     rows.sort((a, b) => (state.q ? b.score - a.score : 0) || a.next - b.next || a.f.t.localeCompare(b.f.t));
 
+    const aheadNote = ahead
+      ? `<p class="cn-ahead">Later days list only the cinemas that sell ahead on their own ticket sites${doc.ahead && doc.ahead.length ? ` (${doc.ahead.map(esc).join(", ")})` : ""}. Cinemas such as UCI, The Space and Beltrade post their times on the day, and most cinemas publish the next week's programme on Wednesday or Thursday, so check back.</p>`
+      : "";
     if (!rows.length) {
       const hidden = all.length - films.length;
+      if (ahead && !state.q) {
+        list.innerHTML = aheadNote + `<div class="cn-empty"><b>Nothing published yet for ${esc(day(state.day))}</b>No ${state.lang === "en" ? "English-language " : ""}original-version shows are on the cinemas' sites for that day yet.${hidden && state.lang === "en" ? ` ${hidden} film${hidden > 1 ? "s" : ""} in other languages hidden.` : ""}</div>`;
+        return;
+      }
       const why = state.q ? `Nothing matches “${esc(state.q)}”. Try fewer letters or another spelling.`
         : isToday && state.when === "up" && films.length ? `Today's ${state.lang === "en" ? "English " : ""}screenings in ${esc(name)} have all started. Switch to “All today” to see them.`
         : `No ${state.lang === "en" ? "English-language " : ""}original-version screenings listed in ${esc(name)} today.`;
@@ -144,7 +160,23 @@
       return;
     }
 
-    list.innerHTML = rows.map(({ f, shows, next }) => card(f, shows, next, isToday, name)).join("");
+    list.innerHTML = aheadNote + rows.map(({ f, shows, next }) => card(f, shows, next, isToday, name)).join("");
+  }
+
+  function renderDays(dayList, now) {
+    const box = $("#days");
+    if (dayList.length < 2) { box.hidden = true; return; }
+    box.hidden = false;
+    const tomorrow = (() => { const d = new Date(now.date + "T12:00:00"); d.setDate(d.getDate() + 1); return d.toISOString().slice(0, 10); })();
+    box.innerHTML = dayList.map((d) => {
+      const n = (d.films || []).filter((f) => state.lang === "all" || f.en).length;
+      const wd = (() => { try { return new Date(d.date + "T12:00:00").toLocaleDateString("en-GB", { weekday: "short" }); } catch { return ""; } })();
+      const dn = Number(d.date.slice(8, 10));
+      const label = d.date === now.date ? "Today" : d.date === tomorrow ? "Tomorrow" : wd;
+      return `<button type="button" role="tab" data-day="${d.date}" aria-selected="${d.date === state.day}" class="${n ? "" : "none"}"><span class="d">${label}</span><span class="n">${label === wd ? dn + " · " : ""}${n} film${n === 1 ? "" : "s"}</span></button>`;
+    }).join("");
+    const on = box.querySelector('[aria-selected="true"]');
+    if (on && (on.offsetLeft < box.scrollLeft || on.offsetLeft + on.offsetWidth > box.scrollLeft + box.clientWidth)) box.scrollLeft = on.offsetLeft - 8;
   }
 
   const hm = (m) => `${String(Math.floor(m / 60) % 24).padStart(2, "0")}:${String(m % 60).padStart(2, "0")}`;
@@ -228,6 +260,13 @@
   }, true);
 
   /* ---------- controls ---------- */
+  $("#days").addEventListener("click", (e) => {
+    const b = e.target.closest("button[data-day]");
+    if (!b) return;
+    state.day = b.dataset.day;
+    render();
+    $("#list").scrollIntoView({ block: "nearest" });
+  });
   sel.addEventListener("change", () => {
     state.city = sel.value; store.set("cn-city", state.city);
     history.replaceState(null, "", "#" + state.city);

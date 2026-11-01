@@ -12,7 +12,7 @@ Writes out/index.json and out/<city>.json, plus two caches carried between runs:
 out/films.json (per-film details and English plots) and out/sites.json (cinemas' own websites).
 A city whose fetch fails keeps the previous run's file (from --prev) so the page never goes blank.
 """
-import argparse, datetime as dt, html, json, os, re, sys, time, unicodedata, urllib.parse, urllib.request
+import argparse, copy, datetime as dt, html, json, os, re, sys, time, unicodedata, urllib.parse, urllib.request
 from html.parser import HTMLParser
 from zoneinfo import ZoneInfo
 
@@ -194,6 +194,7 @@ def parse_mymovies(page, city_name):
 
 # ====================================================================== cinemas' own ticket sites
 T18 = "https://{host}.18tickets.it/"
+AHEAD = 6  # days after today to list (from the cinemas' own sites)
 # host, city id, extra MYmovies names for the cinema(s) behind it. The venue names the site prints
 # ("Anteo Palazzo Del Cinema", "Filmclub", ...) are matched too, so aliases are only for odd cases.
 SITES = [
@@ -242,35 +243,75 @@ CLEAN_PATTERNS = [
     r"(?<![a-z])v\.\s*o\.(\s*s\.)?", r"\bv\.o\.s\b", r"\bvos\b", r"\bvo\b",
 ]
 SMALL = {"a", "an", "and", "of", "the", "in", "on", "at", "to", "for", "or", "di", "del", "della", "e", "il",
-         "la", "le", "lo", "gli", "i", "un", "una", "da", "de", "des", "du", "et", "el", "y"}
+         "la", "le", "lo", "gli", "un", "una", "da", "de", "des", "du", "et", "el", "y"}
+# words that mark a title as Italian (not the ones it shares with French or Spanish, like la, le, de, una)
+IT_WORDS = {"il", "lo", "gli", "di", "della", "dei", "delle", "degli", "nel", "nella", "nei", "sul", "sulla",
+            "tra", "fra", "per", "è", "alla", "dal", "dalla", "dello", "allo", "ai", "agli",
+            "ritorno", "mistero", "segreti", "notte", "storia", "uomo", "donne", "donna", "vita", "amore", "cuore"}
+EN_WORDS = {"the", "of", "and", "a", "an", "to", "in", "on", "my", "your", "will", "me", "you", "is", "it", "we",
+            "they", "go", "story", "night", "man", "woman", "love", "life", "world", "house", "girl", "boy"}
 
 
-def nice_case(s):
-    """'GLI INTOCCABILI' → 'Gli intoccabili'-style title case that copes with apostrophes."""
+def looks_italian(s):
+    w = norm(s).split()
+    return sum(x in IT_WORDS for x in w) > sum(x in EN_WORDS for x in w)
+
+
+def latin(s):
+    return bool(s) and all(ord(c) < 0x250 or not c.isalpha() for c in s)
+
+
+def nice_case(s, italian=None):
+    """Shouting titles to normal case: Italian ones in sentence case ('Gli intoccabili'),
+    others in title case ('If I Go Will They Miss Me')."""
     if not s or s != s.upper():
         return s
+    if italian is None:
+        italian = looks_italian(s)
     words = s.lower().split(" ")
+    cap = lambda w: re.sub(r"(^|[\-'’(“\"])([a-zà-ÿ])", lambda m: m.group(1) + m.group(2).upper(), w)
     out = []
     for i, w in enumerate(words):
-        if i and w in SMALL:
+        if i == 0 or (out and out[-1].endswith(":")):
+            out.append(cap(w))
+        elif italian or w in SMALL:
             out.append(w)
         else:
-            out.append(re.sub(r"(^|[\-'’(“\"])([a-zà-ÿ])", lambda m: m.group(1) + m.group(2).upper(), w))
-    return " ".join(out)
+            out.append(cap(w))
+    return re.sub(r"\bi\b", "I", " ".join(out)) if not italian else " ".join(out)
 
 
 def clean_title(raw):
-    """'V.O.SOTT.ITA - RAGIONE E SENTIMENTO (SENSE AND SENSIBILITY)' → ('Ragione e Sentimento', 'Sense and Sensibility')."""
+    """'V.O.SOTT.ITA - RAGIONE E SENTIMENTO (SENSE AND SENSIBILITY)' → ('Ragione e sentimento', 'Sense and Sensibility').
+    Returns (main, alt) as printed; pick_titles() decides which one is the original."""
     t = html.unescape(" ".join(raw.split()))
     for p in CLEAN_PATTERNS:
         t = re.sub(p, " ", t, flags=re.I)
     alt = None
+    t = re.sub(r"(\s*[-–—:.,;]\s*)+$", "", t)
     m = re.search(r"\(([^()]{2,})\)\s*$", t)
     if m:
         alt, t = m.group(1).strip(), t[:m.start()]
     t = re.sub(r"\s+", " ", t).strip(" -–—:.,;")
     t = re.sub(r"(\s*[-–—]\s*)+$", "", t).strip()
+    if alt and (not latin(alt) or re.match(r"(?i)pinyin\b", alt)):
+        alt = None  # 'MEMORIZU (メモリィズ)', 'YOUTH (PINYIN: QING CHUN KU)': keep the readable one
     return nice_case(t), nice_case(alt) if alt else None
+
+
+def pick_titles(main, alt):
+    """(original title, Italian title or None) from a site's 'MAIN (ALT)'. Cinemas write it both ways round:
+    'GLI INTOCCABILI (THE UNTOUCHABLES)' at Barberini, 'REAR WINDOW (LA FINESTRA SUL CORTILE)' at the Cineteca."""
+    if not alt:
+        return main, None
+    if looks_italian(main) and not looks_italian(alt):
+        return alt, main
+    if looks_italian(alt) and not looks_italian(main):
+        return main, alt
+    en = lambda x: sum(w in EN_WORDS for w in norm(x).split())
+    if en(main) > en(alt):
+        return main, alt  # 'THE EXORCIST (L'ESORCISTA)'
+    return alt, main  # most sites put the Italian title first
 
 
 def fetch_polite(url, tries=4):
@@ -298,7 +339,7 @@ def hall_name(h):
 
 
 def parse_18tickets(page, host, today):
-    """One 18tickets homepage → film blocks with today's not-yet-started shows."""
+    """One 18tickets homepage → film blocks with every listed show still to start (each show carries its date)."""
     rome = ZoneInfo("Europe/Rome")
     ml = page.find("id='movie-list'")
     body = page[ml:] if ml > 0 else page
@@ -325,13 +366,13 @@ def parse_18tickets(page, host, today):
                 continue
             ms, href, inner = (m.group(2), m.group(3), m.group(4)) if m.group(2) else (m.group(6), m.group(5), m.group(7))
             when = dt.datetime.fromtimestamp(int(ms) / 1000, rome)
-            if when.date() != today:
+            if when.date() < today:
                 continue
             text = " ".join(re.sub(r"<[^>]+>", " ", html.unescape(inner)).split())
             hh = when.strftime("%H:%M")
             hall = hall_name(re.sub(r"^\D*\d{1,2}[:.]\d{2}", "", text).strip())
             url = href if href.startswith("http") else T18.format(host=host).rstrip("/") + href
-            shows.append({"t": hh, "url": url, "hall": hall, "venue": venue})
+            shows.append({"t": hh, "url": url, "hall": hall, "venue": venue, "date": when.date().isoformat()})
         if not shows:
             continue
         lang_words = [w for w in lw.split() if w in LANG_EN]
@@ -344,6 +385,17 @@ def parse_18tickets(page, host, today):
                     "vo": marked and not italian, "langs": [LANG_EN[w] for w in lang_words],
                     "dir": nice_case(regia), "cast": [c.strip() for c in con.split(",") if c.strip()][:3],
                     "dur": dur, "shows": shows})
+    return out
+
+
+def on_day(blocks, day):
+    """The same blocks with only the shows on one day."""
+    iso = day.isoformat()
+    out = []
+    for b in blocks:
+        sh = [x for x in b["shows"] if x.get("date", iso) == iso]
+        if sh:
+            out.append({**b, "shows": sh})
     return out
 
 
@@ -363,7 +415,7 @@ def parse_alcione(page, today):
         main, alt = clean_title(title)
         out.append({"host": "alcione", "raw": title, "title": main, "alt": alt, "lingua": "", "italian": False, "vo": True,
                     "langs": [], "dir": "", "cast": [], "dur": None, "book": "https://ticket.cinebot.it" + href,
-                    "shows": [{"t": t, "url": None, "hall": "", "venue": "Cinema Alcione"} for t in times]})
+                    "shows": [{"t": t, "url": None, "hall": "", "venue": "Cinema Alcione", "date": today.isoformat()} for t in times]})
     return out
 
 
@@ -415,10 +467,11 @@ def film_score(keys, blk):
     return best
 
 
-def merge_city(cid, city_name, films, blocks, report):
-    """Adds per-show links, halls and missing V.O. shows from the cinemas' sites; drops times they list as Italian."""
+def merge_city(cid, city_name, films, blocks, report, known=()):
+    """Adds per-show links, halls and missing V.O. shows from the cinemas' sites; drops times they list as Italian.
+    known: MYmovies cinema names seen today, so later days (which start with no MYmovies shows) map venues the same way."""
     # which MYmovies cinema name each site venue is (best name match within the city)
-    mm_names = {s["cinema"] for f in films for s in f["shows"]}
+    mm_names = {s["cinema"] for f in films for s in f["shows"]} | set(known)
     site_names = {}
     for b in blocks:
         for sh in b["shows"]:
@@ -453,7 +506,8 @@ def merge_city(cid, city_name, films, blocks, report):
         if not b["vo"]:
             continue
         if not target:
-            target = {"t": b["alt"] or b["title"], "it": b["title"] if b["alt"] else None, "url": None, "y": None,
+            orig_t, it_t = pick_titles(b["title"], b["alt"])
+            target = {"t": orig_t, "it": it_t, "url": None, "y": None,
                       "country": [], "cast": b["cast"], "dir": b["dir"] or None, "dur": b["dur"], "shows": [],
                       "en": False, "lang": "Original language", "src": b["host"]}
             if not target["it"]:
@@ -671,6 +725,9 @@ TMDB_LANG_EN = {"en"}
 
 def enrich(films, cache, overrides, today):
     for f in films:
+        if f.get("_done"):
+            continue
+        f["_done"] = True
         c = details(f, cache, today)
         mm, tm, wd = c.get("mm") or {}, c.get("tm") or {}, c.get("wd")
         if mm.get("country") and not f.get("country"):
@@ -766,9 +823,11 @@ def official_site(mm_url, sites):
     return url
 
 
-def finish_shows(cid, films, sites):
+def finish_shows(cid, films, sites, mm_pages=None):
     for f in films:
         for s in f["shows"]:
+            if not s.get("mm") and mm_pages and s["cinema"] in mm_pages:
+                s["mm"] = mm_pages[s["cinema"]]
             for c, name, eur in PRICES:
                 if c == cid and name_score(name, s["cinema"]) >= 2:
                     s["price"] = eur
@@ -806,19 +865,25 @@ def main():
     cutoff = (today - dt.timedelta(days=30)).isoformat()
     cache = {k: v for k, v in cache.items() if (v.get("seen") or "") >= cutoff}
 
-    blocks_by_city = {}
+    days = [today + dt.timedelta(days=i) for i in range(AHEAD + 1)]
+    blocks_by_city, ahead_hosts = {}, {}
     for host, cid, _aliases in SITES:
         try:
             bl = parse_18tickets(fetch_polite(T18.format(host=host)), host, today)
             blocks_by_city.setdefault(cid, []).extend(bl)
-            report.append(f"{host}: {sum(1 for b in bl if b['vo'])} V.O. films today ({sum(len(b['shows']) for b in bl if b['vo'])} shows), {sum(1 for b in bl if b['italian'])} dubbed")
+            ahead_hosts.setdefault(cid, set()).add(host)
+            vo = [b for b in bl if b["vo"]]
+            per = [len([x for b in vo for x in b["shows"] if x["date"] == d.isoformat()]) for d in days]
+            report.append(f"{host}: {len(vo)} V.O. films; V.O. shows by day {per}; {sum(1 for b in bl if b['italian'])} dubbed")
         except Exception as e:  # noqa: BLE001
             report.append(f"{host}: FAILED ({e})")
         time.sleep(2.5)
     try:
-        bl = parse_alcione(fetch_polite(ALCIONE[0]), today)
-        blocks_by_city.setdefault(ALCIONE[1], []).extend(bl)
-        report.append(f"alcione: {len(bl)} V.O. films today")
+        page = fetch_polite(ALCIONE[0])
+        for d in days:
+            blocks_by_city.setdefault(ALCIONE[1], []).extend(parse_alcione(page, d))
+        ahead_hosts.setdefault(ALCIONE[1], set()).add("alcione")
+        report.append(f"alcione: {sum(1 for b in blocks_by_city.get(ALCIONE[1], []) if b['host'] == 'alcione')} V.O. film-days")
     except Exception as e:  # noqa: BLE001
         report.append(f"alcione: FAILED ({e})")
 
@@ -830,13 +895,29 @@ def main():
             if cid == "milano" and not films:
                 raise RuntimeError("no films parsed for Milano — page layout may have changed")
             sub = []
-            merge_city(cid, name, films, blocks_by_city.get(cid, []), sub)
+            city_blocks = blocks_by_city.get(cid, [])
+            merge_city(cid, name, films, on_day(city_blocks, today), sub)
             enrich(films, cache, overrides, today.isoformat())
             finish_shows(cid, films, sites)
-            for f in films:
+            mm_pages = {s["cinema"]: s["mm"] for f in films for s in f["shows"] if s.get("mm")}
+            known = set(mm_pages)
+            # later days: only the cinemas that sell ahead on their own sites (MYmovies lists today only)
+            upcoming = []
+            for d in days[1:]:
+                seeds = [{**copy.deepcopy(f), "shows": []} for f in films]
+                dsub = []
+                merge_city(cid, name, seeds, on_day(city_blocks, d), dsub, known=known)
+                enrich(seeds, cache, overrides, today.isoformat())
+                finish_shows(cid, seeds, sites, mm_pages)
+                if seeds:
+                    upcoming.append({"date": d.isoformat(), "films": seeds})
+                sub.append(f"    {d.isoformat()}: {len(seeds)} films ({sum(1 for f in seeds if f['en'])} English)")
+            ahead = sorted({s["cinema"] for u in upcoming for f in u["films"] for s in f["shows"]})
+            for f in films + [f for u in upcoming for f in u["films"]]:
                 cache.get(f.pop("_k", film_key(f)), {})["seen"] = today.isoformat()
+                f.pop("_done", None)
             doc = {"city": name, "date": today.isoformat(), "updatedAt": stamp,
-                   "source": MM_URL.format(slug=slug), "films": films}
+                   "source": MM_URL.format(slug=slug), "films": films, "upcoming": upcoming, "ahead": ahead}
             with open(path, "w", encoding="utf-8") as fh:
                 json.dump(doc, fh, ensure_ascii=False, separators=(",", ":"))
             en = sum(1 for f in films if f["en"])

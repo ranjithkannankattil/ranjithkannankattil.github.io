@@ -15,6 +15,16 @@
 .cn-seg button{ font-family:var(--f-mono); font-size:.68rem; letter-spacing:.06em; text-transform:uppercase; border:0; background:var(--paper); color:var(--ink-soft); padding:.48rem .7rem; cursor:pointer; }
 .cn-seg button + button{ border-left:1px solid var(--line); }
 .cn-seg button[aria-pressed="true"]{ background:var(--accent); color:var(--paper); }
+.cn-seg[hidden], .cn-days[hidden]{ display:none; }
+.cn-days{ display:flex; gap:.35rem; margin-top:.7rem; overflow-x:auto; scrollbar-width:thin; padding-bottom:.15rem; }
+.cn-days button{ flex:0 0 auto; display:grid; gap:.05rem; text-align:left; font:inherit; background:var(--paper); color:var(--ink); border:1px solid var(--line); padding:.35rem .6rem; cursor:pointer; min-width:4.6rem; }
+.cn-days button .d{ font-family:var(--f-display); font-weight:600; font-size:.92rem; }
+.cn-days button .n{ font-family:var(--f-mono); font-size:.62rem; letter-spacing:.04em; color:var(--ink-soft); white-space:nowrap; }
+.cn-days button.none .d{ color:var(--ink-soft); }
+.cn-days button:hover{ border-color:var(--accent); }
+.cn-days button[aria-selected="true"]{ background:var(--accent); border-color:var(--accent); color:var(--paper); }
+.cn-days button[aria-selected="true"] .n{ color:var(--paper); opacity:.85; }
+.cn-ahead{ margin:0; font-size:.86rem; color:var(--ink-soft); border-left:2px solid var(--accent); padding:.1rem 0 .1rem .7rem; max-width:70ch; }
 .cn-status{ font-family:var(--f-mono); font-size:.7rem; letter-spacing:.04em; color:var(--ink-soft); margin-top:.6rem; }
 .cn-status .dot{ display:inline-block; width:.5rem; height:.5rem; border-radius:50%; background:var(--accent); margin-right:.4rem; vertical-align:.05rem; }
 .cn-status .dot.stale{ background:var(--line); }
