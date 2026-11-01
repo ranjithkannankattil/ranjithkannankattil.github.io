@@ -1,0 +1,25 @@
+name: Cinema probe (temporary)
+on:
+  push:
+    branches: [cinema-probe]
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          mkdir raw && cd raw
+          UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"
+          for h in anteo.spaziocinema citylife.spaziocinema ariosto.spaziocinema arlecchino.cinetecadimilano mic.cinetecadimilano capitol.spaziocinema cinema.barberini quattrofontane.ccroma giuliocesare.ccroma roma.andromeda lux.cdr nazionale.cctorino arlecchino.popupcinema medica.popupcinema odeon.ccb rialto.ccb roma.ccb europa.ccb lumiere.cinetecabologna flora.ccroma casacinema corallo.ccgenova city.ccgenova carignano.ccgenova ariston.ccgenova lab80; do
+            curl -sSL -m 40 -A "$UA" -o "$h.html" -w "%{http_code} %{size_download} %{url_effective} $h\n" "https://$h.18tickets.it/" || echo "FAIL $h"
+          done
+          curl -sSL -m 40 -A "$UA" -o cinebot-alcione.html -w "%{http_code} %{size_download} cinebot\n" https://ticket.cinebot.it/alcione/ || true
+          curl -sSL -m 40 -A "$UA" -o mm-film.html -w "%{http_code} mmfilm\n" https://www.mymovies.it/film/2026/primetime/ || true
+          curl -sSL -m 40 -A "$UA" -o mm-vo-milano.html -w "%{http_code} mmvo\n" https://www.mymovies.it/cinema/milano/versione-originale/ || true
+          curl -sSL -m 40 -A "$UA" -o mm-vo-verona.html -w "%{http_code} mmvo-verona\n" https://www.mymovies.it/cinema/verona/versione-originale/ || true
+          curl -sSL -m 40 -A "$UA" -o uci.html -w "%{http_code} uci\n" https://ucicinemas.it/cinema/lombardia/milano/uci-cinemas-bicocca-milano/ || true
+          curl -sSL -m 40 -A "$UA" -o thespace.html -w "%{http_code} thespace\n" https://www.thespacecinema.it/ || true
+          ls -la
+      - uses: actions/upload-artifact@v4
+        with:
+          name: raw
+          path: raw
