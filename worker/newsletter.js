@@ -78,7 +78,8 @@ const OPENERS = [
 
 export async function buildIssue(h, issueDate) {
   const fri = fridayOf(issueDate);
-  const thisFrom = addDays(fri, -2), thisTo = addDays(fri, 6);   // Wed–Thu window: catches early openers
+  // each issue covers Wednesday to Tuesday, so early openers (Wednesday previews) fall into exactly one issue
+  const thisFrom = addDays(fri, -2), thisTo = addDays(fri, 4);
   const lastFrom = addDays(fri, -9), lastTo = addDays(fri, -3);
   // at most 8 + 7 films are looked at: with OMDb that keeps one run inside the free plan's 50 outside requests
   const [now, last] = await Promise.all([weekFilms(h, thisFrom, thisTo, 8), weekFilms(h, lastFrom, lastTo, 7)]);
@@ -225,7 +226,7 @@ export async function handle(req, env, url, h, cors, json, ctx) {
 
   if (parts[1] === "preview") {
     const date = /^\d{4}-\d{2}-\d{2}$/.test(url.searchParams.get("date") || "") ? url.searchParams.get("date") : zoned(new Date(), "Europe/Rome").ymd;
-    const issue = await h.cached("issue:" + fridayOf(date), 6 * 3600, () => buildIssue(h, date));
+    const issue = await h.cached("issue3:" + fridayOf(date), 6 * 3600, () => buildIssue(h, date));
     const { html } = renderEmail(issue, self, `${SITE}#/newsletter`);
     return new Response(html, { headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "public, max-age=3600" } });
   }
