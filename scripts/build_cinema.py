@@ -688,6 +688,10 @@ def details(f, cache, today):
     key = film_key(f)
     f["_k"] = key
     c = cache.get(key) or {}
+    if c.get("v") != 3:  # matches made before titles, years and runtimes were checked
+        for k in ("tmdb", "tm", "day"):
+            c.pop(k, None)
+        c["v"] = 3
     if c.get("day") == today:
         return c
     if f.get("url") and "mm" not in c:
@@ -698,10 +702,6 @@ def details(f, cache, today):
         time.sleep(0.4)
     mm = c.get("mm") or {}
     title = mm.get("orig") or f.get("orig") or f["t"]
-    if c.get("v") != 3:  # matches made before titles, years and runtimes were checked
-        for k in ("tmdb", "tm", "day"):
-            c.pop(k, None)
-        c["v"] = 3
     if "tmdb" not in c:
         try:
             c["tmdb"] = tmdb_match(f, mm)
