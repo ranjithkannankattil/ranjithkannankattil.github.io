@@ -11,15 +11,16 @@ jobs:
       - run: |
           mkdir raw && cd raw
           UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"
-          for h in anteo.spaziocinema citylife.spaziocinema ariosto.spaziocinema arlecchino.cinetecadimilano mic.cinetecadimilano capitol.spaziocinema cinema.barberini quattrofontane.ccroma giuliocesare.ccroma roma.andromeda lux.cdr nazionale.cctorino arlecchino.popupcinema medica.popupcinema odeon.ccb rialto.ccb roma.ccb europa.ccb lumiere.cinetecabologna flora.ccroma casacinema corallo.ccgenova city.ccgenova carignano.ccgenova ariston.ccgenova lab80; do
-            curl -sSL -m 40 -A "$UA" -o "$h.html" -w "%{http_code} %{size_download} %{url_effective} $h\n" "https://$h.18tickets.it/" || echo "FAIL $h"
+          for h in odeon.ccb arlecchino.popupcinema medica.popupcinema rialto.ccb roma.ccb europa.ccb; do
+            sleep 20
+            curl -sSL -m 40 -A "$UA" -o "$h.html" -w "%{http_code} %{size_download} $h\n" "https://$h.18tickets.it/" || echo "FAIL $h"
+            head -c 80 "$h.html"; echo
           done
-          curl -sSL -m 40 -A "$UA" -o cinebot-alcione.html -w "%{http_code} %{size_download} cinebot\n" https://ticket.cinebot.it/alcione/ || true
-          curl -sSL -m 40 -A "$UA" -o mm-film.html -w "%{http_code} mmfilm\n" https://www.mymovies.it/film/2026/primetime/ || true
-          curl -sSL -m 40 -A "$UA" -o mm-vo-milano.html -w "%{http_code} mmvo\n" https://www.mymovies.it/cinema/milano/versione-originale/ || true
-          curl -sSL -m 40 -A "$UA" -o mm-vo-verona.html -w "%{http_code} mmvo-verona\n" https://www.mymovies.it/cinema/verona/versione-originale/ || true
-          curl -sSL -m 40 -A "$UA" -o uci.html -w "%{http_code} uci\n" https://ucicinemas.it/cinema/lombardia/milano/uci-cinemas-bicocca-milano/ || true
-          curl -sSL -m 40 -A "$UA" -o thespace.html -w "%{http_code} thespace\n" https://www.thespacecinema.it/ || true
+          for c in 5445 6748 5431 6528; do curl -sSL -m 40 -A "$UA" -o "mmc-$c.html" -w "%{http_code} mmc $c\n" "https://www.mymovies.it/cinema/milano/$c/"; sleep 2; done
+          curl -sSL -m 40 -A "$UA" -o mm-vo-roma.html -w "%{http_code} mmvo-roma\n" https://www.mymovies.it/cinema/roma/versione-originale/
+          curl -sSL -m 40 -A "$UA" -o mm-vo-firenze.html -w "%{http_code} mmvo-firenze\n" https://www.mymovies.it/cinema/firenze/versione-originale/
+          curl -sSL -m 40 -A "$UA" -o mm-vo-brescia.html -w "%{http_code} mmvo-brescia\n" https://www.mymovies.it/cinema/brescia/versione-originale/
+          curl -sSL -m 40 -A "$UA" -o cinebot-prog.html -w "%{http_code} cinebot-prog\n" https://ticket.cinebot.it/alcione/programmazione
           ls -la
       - run: |
           cd raw
