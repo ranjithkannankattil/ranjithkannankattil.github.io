@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "scripts" / "expat"
 OUT = ROOT / "expat"
 UPDATED = "November 2026"
-CSS_V = "1"
+CSS_V = "2"
 NAV_V = "13"
 
 GROUPS = [
@@ -53,6 +53,9 @@ TOPICS = [
     ("renting", "m2", "Renting a flat", "Renting",
      "Contract types (4+4, 3+2, transitorio), deposits, scams to avoid, setting up utilities and TARI, and moving out.",
      "contract lease 4+4 3+2 transitorio deposit cauzione agency scam utilities electricity gas tari broadband"),
+    ("landlord", "m2", "Documents from your landlord", "Landlord documents",
+     "The papers only the flat's owner can give you, for residence, the housing-suitability certificate your family's visas need, and the 48-hour hosting declaration.",
+     "landlord owner proprietario documents idoneita alloggiativa housing suitability family reunification residence assenso planimetria ospitalita"),
     ("transport", "m3", "Public transport", "Public transport",
      "ATM fares and passes, tapping in with your card, airports, regional and high-speed trains, strikes and night service.",
      "atm metro tram bus ticket abbonamento contactless malpensa linate bergamo trenord strike sciopero"),
@@ -314,6 +317,7 @@ def build_city_hub(city, cname, sub, blurb):
 
   {"".join(cards)}
 
+  <p class="ex-also">Also on this site: <a href="../../expats/cinema.html">English-language films in Milan cinemas today</a></p>
   <p class="ex-src-link">Checked {UPDATED}. <a href="sources.html">All sources</a></p>
 """
     page += foot("../../", HUB_JS)

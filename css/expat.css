@@ -214,3 +214,4 @@
 .ex .app .dl{ display:flex; flex-wrap:wrap; gap:6px; margin-top:.5rem; }
 .ex .app .dl a{ font-family:var(--f-mono); font-size:.7rem; letter-spacing:.04em; text-decoration:none; padding:3px 9px; border:1px solid var(--line); border-radius:999px; color:var(--accent); }
 .ex .app .dl a:hover{ border-color:var(--accent); background:var(--accent-soft); }
+.ex .ex-also{ margin-top:2rem; padding-top:1rem; border-top:1px solid var(--line); }
