@@ -100,6 +100,79 @@
     document.addEventListener("click", (e) => { if (!nav.contains(e.target)) groups.forEach((g) => (g.open = false)); });
     document.addEventListener("keydown", (e) => { if (e.key === "Escape") groups.forEach((g) => (g.open = false)); });
   });
+  // Phones: one "Menu" button that opens a full-screen panel listing every section at once
+  // (the dropdowns are hidden under 600px by css/style.css). Built from the same NAV list.
+  (function mobileMenu() {
+    const nav = document.querySelector("nav.tabs[data-active]");
+    if (!nav) return;
+    const root = nav.dataset.root || "";
+    const active = nav.dataset.active;
+    const btn = document.createElement("button");
+    btn.type = "button"; btn.className = "mnav-btn";
+    btn.setAttribute("aria-expanded", "false"); btn.setAttribute("aria-controls", "mnav");
+    btn.innerHTML = '<span class="mnav-bars" aria-hidden="true"><i></i><i></i><i></i></span><span>Menu</span>';
+    nav.append(btn);
+
+    const sheet = document.createElement("div");
+    sheet.id = "mnav"; sheet.className = "mnav"; sheet.hidden = true;
+    sheet.setAttribute("role", "dialog"); sheet.setAttribute("aria-modal", "true"); sheet.setAttribute("aria-label", "Site menu");
+    const link = (href, label, desc, cls) => {
+      const a = document.createElement("a");
+      a.href = root + href; a.className = cls || "";
+      a.innerHTML = "<b></b>" + (desc ? "<small></small>" : "");
+      a.firstChild.textContent = label;
+      if (desc) a.lastChild.textContent = desc;
+      return a;
+    };
+    const head = document.createElement("div");
+    head.className = "mnav-head";
+    head.innerHTML = '<span>Ranjith Kannankattil</span><button type="button" class="mnav-close" aria-label="Close menu">✕</button>';
+    sheet.append(head);
+    const body = document.createElement("div");
+    body.className = "mnav-body";
+    const homeA = link("index.html", "Home", "", "mnav-home");
+    if (active === "home") homeA.setAttribute("aria-current", "page");
+    body.append(homeA);
+    const section = (title, items, grid) => {
+      const s = document.createElement("section");
+      s.className = "mnav-sec" + (grid ? " mnav-grid" : "");
+      const h = document.createElement("h2"); h.textContent = title; s.append(h);
+      const list = document.createElement("div"); list.className = "mnav-list";
+      items.forEach((it) => {
+        const a = link(it.href, it.label, grid ? "" : it.desc);
+        if (it.id === active || (grid && it.id === toolHere)) a.setAttribute("aria-current", "page");
+        list.append(a);
+      });
+      s.append(list);
+      return s;
+    };
+    const tools = NAV.find((e) => e.label === "Tools");
+    // Productivity first among the tool groups: it holds the most pages
+    const prod = section("Productivity", tools.sub.items, true);
+    const all = link(tools.sub.href, "All productivity tools →", "", "mnav-all");
+    if (active === "productivity" && !toolHere) all.setAttribute("aria-current", "page");
+    prod.querySelector("h2").after(all);
+    NAV.filter((e) => e.items).forEach((e) => {
+      body.append(section(e.label, e.items, true));
+      if (e === tools) body.append(prod);
+    });
+    sheet.append(body);
+    document.body.append(sheet);
+
+    const open = (yes) => {
+      sheet.hidden = !yes;
+      btn.setAttribute("aria-expanded", String(yes));
+      document.documentElement.classList.toggle("mnav-open", yes);
+      if (yes) { sheet.scrollTop = 0; (sheet.querySelector('[aria-current="page"]') || sheet.querySelector(".mnav-close")).focus({ preventScroll: true }); }
+      else btn.focus({ preventScroll: true });
+    };
+    btn.addEventListener("click", () => open(true));
+    sheet.querySelector(".mnav-close").addEventListener("click", () => open(false));
+    sheet.addEventListener("click", (e) => { if (e.target.closest("a")) open(false); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !sheet.hidden) open(false); });
+    addEventListener("pageshow", () => { if (!sheet.hidden) open(false); });   // back button from a page opened via the menu
+  })();
+
   // Floating "top / bottom" buttons on every long page.
   // Up appears once you've scrolled down a little; down hides near the end of the page.
   // Sits above any bar pinned to the bottom of the screen (e.g. the radio player).
