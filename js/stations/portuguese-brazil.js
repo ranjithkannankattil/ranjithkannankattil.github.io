@@ -726,7 +726,8 @@ window.STATIONS = [
     "streams": [
       "https://str1.streamhostpg.com.br:8002/stream"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "offline": true
   },
   {
     "id": "radio-brasil-de-fato",
@@ -844,6 +845,33 @@ window.STATIONS = [
       "https://8062.brasilstream.com.br/mp3"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "radio-bandeirantes-85-7-fm",
+    "name": "Rádio Bandeirantes 85.7 FM",
+    "category": "music",
+    "streams": [
+      "https://stm23.xcast.com.br:11284/stream"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "radio-buteco-sertanejo",
+    "name": "Rádio Buteco Sertanejo",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/6kumndewqbruv"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "radio-cafe-viola",
+    "name": "Rádio Café Viola",
+    "category": "music",
+    "streams": [
+      "https://stm6.xcast.com.br:9328/;?1685284162874"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

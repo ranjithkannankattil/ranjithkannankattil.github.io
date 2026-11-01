@@ -837,6 +837,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/pdeizhgrtrstv"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "med-radio",
+    "name": "Med Radio",
+    "category": "music",
+    "streams": [
+      "https://medradio.ice.infomaniak.ch/medradio-128.mp3"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "almunir-radio-tripoli",
+    "name": "Almunir Radio – Tripoli",
+    "category": "devotional",
+    "streams": [
+      "https://live.munir.ly/proxy/almunirtip/stream"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "radio-yan-plus",
+    "name": "radio yan plus",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/7nqu31p6xg0uv"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

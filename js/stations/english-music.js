@@ -906,6 +906,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "where": "US"
+  },
+  {
+    "id": "abc-jazz",
+    "name": "ABC Jazz",
+    "category": "jazz",
+    "streams": [
+      "https://mediaserviceslive.akamaized.net/hls/live/2038319/abcjazz/index.m3u8"
+    ],
+    "added": "2026-11-01",
+    "where": "Australia"
+  },
+  {
+    "id": "sbs-popasia",
+    "name": "SBS PopAsia",
+    "category": "pop",
+    "streams": [
+      "https://sbs-ice.streamguys1.com/sbs-popasia-sbs-web"
+    ],
+    "added": "2026-11-01",
+    "where": "Australia"
+  },
+  {
+    "id": "181-fm-the-rock-hardrock",
+    "name": "181.FM - The Rock! (HardRock)",
+    "category": "rock",
+    "streams": [
+      "https://listen.181fm.com/181-hardrock_128k.mp3"
+    ],
+    "added": "2026-11-01",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

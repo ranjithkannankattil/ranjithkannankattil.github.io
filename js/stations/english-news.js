@@ -720,6 +720,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "where": "Barbados"
+  },
+  {
+    "id": "arirang-radio",
+    "name": "Arirang Radio",
+    "category": "world",
+    "streams": [
+      "https://amdlive-ch03-ctnd-com.akamaized.net/arirang_3ch/arirang_3ch_audio/chunklist_b128000.m3u8"
+    ],
+    "added": "2026-11-01",
+    "where": "The Republic Of Korea"
+  },
+  {
+    "id": "axr-hong-kong",
+    "name": "AXR Hong Kong",
+    "category": "world",
+    "streams": [
+      "https://hongkongstream.axr.online/"
+    ],
+    "added": "2026-11-01",
+    "where": "Hong Kong"
+  },
+  {
+    "id": "bfm-89-9-malaysia",
+    "name": "BFM 89.9 Malaysia",
+    "category": "world",
+    "streams": [
+      "https://22253.live.streamtheworld.com/BFM_SC"
+    ],
+    "added": "2026-11-01",
+    "where": "Malaysia"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

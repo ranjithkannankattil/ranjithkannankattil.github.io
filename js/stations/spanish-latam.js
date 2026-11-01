@@ -728,7 +728,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiojar.com/5705c71sn2zuv"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "offline": true
   },
   {
     "id": "la-mega-medellin-92-9-fm",
@@ -837,6 +838,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/cjgfujr8yhbvv"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "onda-cero-te-activa",
+    "name": "Onda Cero Te Activa",
+    "category": "music",
+    "streams": [
+      "https://mdstrm.com/audio/6598b65ab398c90871aff8cc/icecast.audio"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "neverland",
+    "name": "Neverland",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/oaqigxpfjzqvv"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "bachata-hits",
+    "name": "Bachata Hits",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/prbf8rrgvzzuv"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

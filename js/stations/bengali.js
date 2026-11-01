@@ -144,8 +144,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/eabgu655puquv"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-malda",
@@ -198,4 +197,4 @@ window.STATIONS = [
     "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

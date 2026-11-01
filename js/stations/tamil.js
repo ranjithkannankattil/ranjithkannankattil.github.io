@@ -846,6 +846,33 @@ window.STATIONS = [
       "https://radio.shaivam.org/listen/shiva-tattvam/radio.mp3"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "tamil-amuthu-madurai-radio",
+    "name": "Tamil Amuthu Madurai Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/utmhndkgtp8uv"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "tamil-amuthu-nellai-radio",
+    "name": "Tamil Amuthu Nellai Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/gdkvpstgtp8uv"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "a9-radio",
+    "name": "A9 Radio",
+    "category": "music",
+    "streams": [
+      "https://a9radio1-a9media.radioca.st/stream"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

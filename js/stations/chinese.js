@@ -121,7 +121,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play-radio-stream3.hndt.com/now/WUBA5hW2/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-10",
@@ -201,8 +202,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-17",
@@ -773,6 +773,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/w66d3dp6ynhvv"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "fm89-5",
+    "name": "飛揚調頻FM89.5",
+    "category": "music",
+    "streams": [
+      "https://n13.rcs.revma.com/e0tdah74hv8uv"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "station-40",
+    "name": "高雄港都廣播",
+    "category": "music",
+    "streams": [
+      "https://n10.rcs.revma.com/q2m07dc59duvv"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "station-41",
+    "name": "佳音經典音樂網",
+    "category": "music",
+    "streams": [
+      "https://stream.ginnet.cloud/live0119lo-p4rb/_definst_/classic/playlist.m3u8"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

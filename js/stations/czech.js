@@ -818,6 +818,33 @@ window.STATIONS = [
       "https://icecast6.play.cz/signal-brno128.mp3"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "bojlerroom",
+    "name": "BojlerRoom",
+    "category": "music",
+    "streams": [
+      "https://ice4.abradio.cz/bojler_room_128.aac"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "gold-impuls",
+    "name": "Gold Impuls",
+    "category": "music",
+    "streams": [
+      "https://stream.sepia.sk/gold128.mp3"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "radio-koleda",
+    "name": "Rádio Koleda",
+    "category": "music",
+    "streams": [
+      "https://ice3.radia.cz/koleda_64.aac"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

@@ -848,6 +848,36 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "where": "Malaysia"
+  },
+  {
+    "id": "cna-938-live-singapore",
+    "name": "CNA 938 Live Singapore",
+    "category": "world",
+    "streams": [
+      "https://28373.live.streamtheworld.com/938NOW_PREM_SC"
+    ],
+    "added": "2026-11-01",
+    "where": "Singapore"
+  },
+  {
+    "id": "historyradio-org",
+    "name": "Historyradio Org",
+    "category": "world",
+    "streams": [
+      "https://stream.radiojar.com/6bmecgg3wd5tv"
+    ],
+    "added": "2026-11-01",
+    "where": "Norway"
+  },
+  {
+    "id": "northwest-public-broadcasting-news",
+    "name": "Northwest Public Broadcasting - News",
+    "category": "us",
+    "streams": [
+      "https://nwpb.streamguys1.com/nwprnews-aac-128-icy"
+    ],
+    "added": "2026-11-01",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

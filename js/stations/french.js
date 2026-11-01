@@ -789,6 +789,33 @@ window.STATIONS = [
       "https://jazz-wr10.ice.infomaniak.ch/jazz-wr10-128.mp3"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "radio-express-fm",
+    "name": "Radio Express FM",
+    "category": "news",
+    "streams": [
+      "https://expressfm.ice.infomaniak.ch/expressfm-64.mp3"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "monte-carlo",
+    "name": "Monte Carlo",
+    "category": "music",
+    "streams": [
+      "https://montecarlo.hostingradio.ru/montecarlo96.aacp"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "la-grande-musique-baroque",
+    "name": "LA GRANDE MUSIQUE Baroque",
+    "category": "music",
+    "streams": [
+      "https://stream.rcs.revma.com/1g8a3ufsyp3vv"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

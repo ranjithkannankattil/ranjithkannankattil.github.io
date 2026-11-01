@@ -781,6 +781,33 @@ window.STATIONS = [
       "https://live.radioclasic.com/listen/radio_clasic_blues/live.mp3"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "clasic-radio-folk-bucuresti",
+    "name": "Clasic Radio_Folk -București",
+    "category": "music",
+    "streams": [
+      "https://live.radioclasic.com/listen/radio_clasic_folk/live.mp3"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "club-radio",
+    "name": "Club Radio",
+    "category": "music",
+    "streams": [
+      "https://live.clubradio.ro/listen/clubradio/live"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "megapolis-fm",
+    "name": "Megapolis Fm",
+    "category": "music",
+    "streams": [
+      "https://megapolisfm.md:8443/886"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

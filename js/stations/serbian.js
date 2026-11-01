@@ -798,6 +798,33 @@ window.STATIONS = [
       "https://s4.radio.co/s0f65dad2d/listen"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "radio-s-mix",
+    "name": "Radio S Mix",
+    "category": "music",
+    "streams": [
+      "https://stream.radios.rs:9010/stream"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "bigfm-balkan",
+    "name": "BigFM Balkan",
+    "category": "music",
+    "streams": [
+      "https://stream.bigfm.de/balkan/mp3-128/onlineradiobox"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "radio-sumadinac",
+    "name": "Radio Šumadinac",
+    "category": "music",
+    "streams": [
+      "https://media.srb-streaming.com/stream/radio-sumadinac-uzivo"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

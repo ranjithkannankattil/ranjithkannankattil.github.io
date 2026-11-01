@@ -169,8 +169,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://svara-stream.radioddns.net/yogyakarta_voksradio"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "klcbs-new-age",
@@ -271,8 +270,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:8500/;super.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "bahtera-yudha-fm-surabaya",
@@ -320,8 +318,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://server.radioimeldafm.co.id/radio/8040/gajahmadafm"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "rri-pro-1-sungailiat",
@@ -329,8 +326,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/14/9314/rrisngliatpro1.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "mosh-head-black-metal-id",
@@ -411,7 +407,8 @@ window.STATIONS = [
     "streams": [
       "https://b.alhastream.com:5035/radio"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "gajahmada-fm",
@@ -420,8 +417,7 @@ window.STATIONS = [
     "streams": [
       "https://server.radioimeldafm.co.id:8040/gajahmadafm"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "yaski-radio",
@@ -556,8 +552,7 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com/8228/;radio"
     ],
-    "added": "2026-10-26",
-    "offline": true
+    "added": "2026-10-26"
   },
   {
     "id": "bandung-death-metal-syndicate",
@@ -666,8 +661,7 @@ window.STATIONS = [
     "streams": [
       "https://svara-stream.radioddns.net/bali_voksradio_993fm"
     ],
-    "added": "2026-10-28",
-    "offline": true
+    "added": "2026-10-28"
   },
   {
     "id": "imelda-fm",
@@ -803,6 +797,33 @@ window.STATIONS = [
       "https://replaynewsin.ice.infomaniak.ch/replaynewsin-128.mp3"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "radar-cbs-tegal",
+    "name": "Radar CBS Tegal",
+    "category": "music",
+    "streams": [
+      "https://a5.siar.us/radio/8010/radio"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "radio-bola",
+    "name": "Radio Bola",
+    "category": "music",
+    "streams": [
+      "https://live.radiobola.co.id/listen/radiobola/stream"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "dna-fm-jepara",
+    "name": "DNA FM JEPARA",
+    "category": "music",
+    "streams": [
+      "https://sc.dnafm.net/listen/dnafm/live"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

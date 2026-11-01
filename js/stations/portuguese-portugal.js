@@ -279,7 +279,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8",
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rca-radio-clube-de-armamar",
@@ -312,7 +313,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.streamaudio.de:8000/radio-dom-bosco-fm"
     ],
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "smoothfm-soul",
@@ -834,6 +836,33 @@ window.STATIONS = [
       "https://sonic.servsonic.com/8028/stream"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "rfm-dance-it",
+    "name": "RFM DANCE IT",
+    "category": "music",
+    "streams": [
+      "https://25453.live.streamtheworld.com/DANCEONTHEFLOORAAC.aac"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "posto-emissor-do-funchal-pef-canal-2-fm",
+    "name": "Posto Emissor do Funchal (PEF) - Canal 2 FM",
+    "category": "music",
+    "streams": [
+      "https://centova.radio.com.pt/proxy/426?mp=/stream;"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "radio-calheta",
+    "name": "Rádio Calheta",
+    "category": "music",
+    "streams": [
+      "https://player.radiocalheta.pt/listen/radiocalheta/live"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

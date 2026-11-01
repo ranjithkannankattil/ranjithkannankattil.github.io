@@ -161,8 +161,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://classichitsradio.streamingmedia.it/play"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "rtl-102-5-disco",
@@ -778,6 +777,33 @@ window.STATIONS = [
       "https://stream.laut.fm/forever90"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "deejay-time",
+    "name": "Deejay Time",
+    "category": "music",
+    "streams": [
+      "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/webradio/deejaytime/playlist.m3u8"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "radio-kiss-kiss-history-hits",
+    "name": "Radio Kiss Kiss History Hits",
+    "category": "music",
+    "streams": [
+      "https://ice08.fluidstream.net/kk_history.aac"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "radio-romantic",
+    "name": "Radio Romantic",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/72k4a597rs8uv"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

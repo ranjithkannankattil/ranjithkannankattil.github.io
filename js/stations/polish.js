@@ -728,6 +728,33 @@ window.STATIONS = [
       "https://trance.radioparty.pl:8015/"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "planeta-fm",
+    "name": "PLANETA FM",
+    "category": "music",
+    "streams": [
+      "https://pl01.cdn.eurozet.pl/pla-net.mp3"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "radio-7-poland",
+    "name": "Radio 7 Poland",
+    "category": "music",
+    "streams": [
+      "https://stream.radio7.pl/;"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "radio-rzeszow",
+    "name": "Radio Rzeszów",
+    "category": "music",
+    "streams": [
+      "https://streaming.g-news.pl:8040/rzeszow"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

@@ -730,7 +730,8 @@ window.STATIONS = [
     "streams": [
       "https://megahitfm.krioyohosting.com:1012/stream"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "offline": true
   },
   {
     "id": "radio-2-antwerpen",
@@ -848,6 +849,33 @@ window.STATIONS = [
       "https://live.thefinest.amsterdam/hq"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "kink80s",
+    "name": "KINK80s",
+    "category": "music",
+    "streams": [
+      "https://29043.live.streamtheworld.com/KINK_DNA_SC"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "pinguin-on-the-rocks",
+    "name": "Pinguin On the Rocks",
+    "category": "music",
+    "streams": [
+      "https://streams.pinguinradio.com/PinguinOnTheRocks192.mp3"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "joe-all-the-way",
+    "name": "Joe - All the way",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/JOE.mp3"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

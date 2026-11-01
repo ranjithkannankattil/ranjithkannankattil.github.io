@@ -841,6 +841,33 @@ window.STATIONS = [
       "https://stream.kissfm.de/kissfm/mp3-128/internetradio/"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "mdr-kultur",
+    "name": "MDR Kultur",
+    "category": "music",
+    "streams": [
+      "https://mdr-284310-0.sslcast.mdr.de/mdr/284310/0/mp3/high/stream.mp3"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "90s90s-eurodance",
+    "name": "90s90s - Eurodance",
+    "category": "music",
+    "streams": [
+      "https://regiocast.streamabc.net/regc-90s90seurodance7558633-mp3-192-3419489?sABC=6nr0n036%230%23nq59s62359o2nr38nsp8150610pq18p9%23fgernzf.90f90f.qr&aw_0_1st.playerid=streams.90s90s.de&amsparams=playerid:streams.90s90s.de;skey:1793105974"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "technolovers-electro-house",
+    "name": "Technolovers ELECTRO HOUSE",
+    "category": "music",
+    "streams": [
+      "https://stream.technolovers.fm/electro-house?ref=radiobrowser"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

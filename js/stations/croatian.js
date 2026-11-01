@@ -331,7 +331,8 @@ window.STATIONS = [
     "streams": [
       "https://stream2.statsradio.com:8150/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "braniteljski-radio-nepokoreni-grad-osije",
@@ -611,6 +612,33 @@ window.STATIONS = [
       "https://ec2s.crolive.com.hr:2595/stream"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "hrvatski-radio-klasik",
+    "name": "Hrvatski radio - Klasik",
+    "category": "music",
+    "streams": [
+      "https://28513.live.streamtheworld.com/HR_CLASSICS_SC"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "hrt-radio-zadar",
+    "name": "HRT Radio Zadar",
+    "category": "music",
+    "streams": [
+      "https://28563.live.streamtheworld.com/ZADARAAC_SC"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "super-radio",
+    "name": "Super Radio",
+    "category": "news",
+    "streams": [
+      "https://mcp1.mydataknox.com:8010/stream"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

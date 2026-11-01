@@ -838,6 +838,33 @@ window.STATIONS = [
       "https://streams.radiobob.de/bob-national/mp3-192/homepage?mode=preroll&aw_0_1st.skey=1671400102&cb=286873666&aw_0_1st.playerid=radiobob_web&aw_0_req.userConsentV2=CPkIkEAPkIkEAAFADBDECvCsAP_AAEPAAAYgI9td_H__bW9j-f5_aft0eY1P9_rz7uQzDhfNk-4F3L_W_LwX52E7NF36tq4KmR4ku1LBIQNlHMHUDUmwaokVryHsak2cpSNKJ7BEknMZOydYGF9Pmxtj-QKY5v5_d3bx2D-t_9v-39z338VXn3d53-_02PDdV599Dfn9fR_b89KP9958v4v8_____3_e__3_74I9gEmGrcQBdmWODNoGEUCIEYVhIRQKACCgGFogIAHBwU7KwCfWECABAKAIwIgQ4AowIBAAAJAEhEAEgRYIAAARAIAAQAIAEIAGBgEFgBYGAQAAgGgYohQACBIAZEBEUpgQFQJBAS2VCCUFUhphAFWWAFAIjYKABEEgIpAAEBYOAYIkBKxYIEmKN8gBGCFAKJUIAgaADAAEEexEAGAAII9ioAMAAQR7GQAYAAgj2AAA.YAAAAAAAAAAA&aw_0_1st.kuid=kppidff_PQ5ovBN7&aw_0_1st.ksg=%5B%22vz9c46692%22%5D&listenerid=c47683ff451bdf8ebe068dea8a897b50"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "mariskal-rock",
+    "name": "Mariskal Rock",
+    "category": "music",
+    "streams": [
+      "https://media.profesionalhosting.com:8047/stream"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "costa-del-mar-smooth-jazz",
+    "name": "Costa Del Mar Smooth Jazz",
+    "category": "music",
+    "streams": [
+      "https://radio4.cdm-radio.com:18024/stream-mp3-Smooth"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "cadena-ser-radio-vigo",
+    "name": "Cadena SER - Radio Vigo",
+    "category": "news",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/SER_ASO_VIGO.mp3"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

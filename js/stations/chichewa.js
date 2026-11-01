@@ -138,7 +138,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://play.streamafrica.net/profkradio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "nathenje-community-radio",
@@ -202,7 +203,8 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://play.streamafrica.net/tigabane"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "yoneco-fm",
@@ -303,4 +305,4 @@ window.STATIONS = [
     "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

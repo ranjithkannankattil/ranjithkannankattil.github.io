@@ -232,8 +232,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.brokenbeats.net/tune"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-shanson",
@@ -817,6 +816,33 @@ window.STATIONS = [
       "https://cast.brg.ua/businessradio_main_public_mp3_hq"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "west-pole",
+    "name": "Західний полюс West Pole",
+    "category": "music",
+    "streams": [
+      "https://online.z-polus.info/mobile"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "station-20",
+    "name": "Крым.Реалии",
+    "category": "news",
+    "streams": [
+      "https://rfe-ingest.akamaized.net/hls/live/2035288/axia19/playlist.m3u8"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "radio-vaticana-ukraine",
+    "name": "Radio Vaticana Ukraine",
+    "category": "devotional",
+    "streams": [
+      "https://radio.vaticannews.va/stream-uk"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

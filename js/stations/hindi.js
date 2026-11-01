@@ -667,7 +667,8 @@ window.STATIONS = [
     "streams": [
       "https://usa15.fastcast4u.com/proxy/hitsfm912?mp=/1"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "offline": true
   },
   {
     "id": "mukesh-radio",
@@ -830,6 +831,33 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/OLIVE1063.mp3"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "bollywood-workout",
+    "name": "Bollywood Workout",
+    "category": "music",
+    "streams": [
+      "https://drive.uber.radio/uber/bollywoodworkout/icecast.audio"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "aakashvani",
+    "name": "Aakashvani",
+    "category": "music",
+    "streams": [
+      "https://audio-edge-fvq45.ams.d.radiomast.io/3ccc1156-fcf8-4ba7-9a0c-28e3a465e1ae?listening-from-radio-garden=1607152226837"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "bollywood-2000-s-radio",
+    "name": "Bollywood 2000's Radio",
+    "category": "music",
+    "streams": [
+      "https://drive.uber.radio/uber/bollywood2000s/icecast.audio"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

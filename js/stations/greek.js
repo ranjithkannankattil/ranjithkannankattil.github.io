@@ -862,6 +862,33 @@ window.STATIONS = [
       "https://cast4.my-control-panel.com/proxy/anastas2/stream"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "memories-radio",
+    "name": "Memories Radio",
+    "category": "music",
+    "streams": [
+      "https://stream1.468.gr/8108/stream"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "athens-free-radio",
+    "name": "Athens Free Radio",
+    "category": "music",
+    "streams": [
+      "https://n12.radiojar.com/e206r95qsp8uv?rj-ttl=5&rj-tok=AAABhMPbz3sAf9_4FoIJiUmkoA"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "chillout-tree-pines",
+    "name": "Chillout Tree Pines",
+    "category": "music",
+    "streams": [
+      "https://n0f.radiojar.com/n4dzb3znn3quv.mp3?rj-ttl=5&rj-tok=AAABeKi_TokAUTY4EzBEHHiJzQ"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

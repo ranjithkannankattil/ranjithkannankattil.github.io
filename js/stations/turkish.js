@@ -584,8 +584,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiojar.com/tamm1f7kk48uv"
     ],
-    "added": "2026-10-27",
-    "offline": true
+    "added": "2026-10-27"
   },
   {
     "id": "s1lhoutte-arabesk-fm",
@@ -811,6 +810,33 @@ window.STATIONS = [
       "https://metropolfm.streamabc.net/77_8dsw7gc1qgz6_lc0t-mp3-256-6796112"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "mayday-records",
+    "name": "Mayday Records",
+    "category": "music",
+    "streams": [
+      "https://stream.maydayrecords.net/radio/8000/maydayrecords.mp3"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "gurbetci-fm",
+    "name": "Gurbetçi FM",
+    "category": "music",
+    "streams": [
+      "https://live.radyositesihazir.com/8062/stream"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "90-lar-pop",
+    "name": "90 LAR POP",
+    "category": "music",
+    "streams": [
+      "https://moondigitaledge.radyotvonline.net/90lar/playlist.m3u8"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

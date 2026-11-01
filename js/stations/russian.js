@@ -836,6 +836,33 @@ window.STATIONS = [
       "https://stream.roks.com:8443/live256"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "monte-carlo",
+    "name": "Monte Carlo",
+    "category": "music",
+    "streams": [
+      "https://montecarlo.hostingradio.ru/montecarlo96.aacp"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "sova",
+    "name": "Диско-радио SOVA",
+    "category": "music",
+    "streams": [
+      "https://evcast.mediacp.eu:1965/stream"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "retro-belarus",
+    "name": "Retro Belarus",
+    "category": "music",
+    "streams": [
+      "https://air.sammit.tv:8443/retro"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

@@ -357,7 +357,8 @@ window.STATIONS = [
     "streams": [
       "https://icast.connectmedia.hu/4656/mr11.aac"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "adventnet-radio",
@@ -745,6 +746,24 @@ window.STATIONS = [
       "https://live.rvs.ro/mg"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "radio-88-szeged",
+    "name": "Rádió 88 Szeged",
+    "category": "news",
+    "streams": [
+      "https://stream.radio88.hu/onair.mp3"
+    ],
+    "added": "2026-11-01"
+  },
+  {
+    "id": "tamasi-radio",
+    "name": "Tamási Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.42netmedia.com:8443/sc_tamas"
+    ],
+    "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";

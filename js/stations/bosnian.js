@@ -176,7 +176,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_usora.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-busovaca",
@@ -216,8 +217,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_7_tuzla.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-rtrs",
@@ -379,4 +379,4 @@ window.STATIONS = [
     "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-10-31T18:18Z";
+window.STATIONS_CHECKED = "2026-11-01T07:15Z";
