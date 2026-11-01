@@ -23,7 +23,7 @@ SRC = ROOT / "scripts" / "expat"
 OUT = ROOT / "expat"
 UPDATED = "November 2026"
 CSS_V = "3"
-NAV_V = "15"
+NAV_V = "16"
 
 GROUPS = [
     ("m1", "M1", "Papers & money"),
@@ -127,7 +127,7 @@ def head(title, desc, canonical, root):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="{FONTS}" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="{FONTS}"></noscript>
-<link rel="stylesheet" href="{root}css/style.css?v=15">
+<link rel="stylesheet" href="{root}css/style.css?v=16">
 <link rel="stylesheet" href="{root}css/expat.css?v={CSS_V}">
 </head>
 <body data-section="expat">

@@ -1,17 +1,17 @@
-// Header navigation: Home plus two small menus (Creative, Tools), shared by every page.
+// Header navigation: Hello plus three menus (Words & Pictures, Daily Life, Workbench), shared by every page.
 // Each page keeps <nav class="tabs" data-root="" data-active="writings"></nav>;
 // data-root is the path back to the site root ("" or "../"), data-active the current page.
 (function () {
-  // Productivity tools, listed straight in the Tools menu. Keep in step with js/tools.js.
+  // Workbench (productivity) tools, the Workbench menu. Keep in step with js/tools.js.
   const PRODUCTIVITY = [
-    { id: "meeting", label: "Meeting time finder", href: "productivity/meeting.html" },
-    { id: "timeline", label: "Timeline & Gantt", href: "productivity/timeline.html" },
-    { id: "raci", label: "RACI matrix", href: "productivity/raci.html" },
-    { id: "pdf", label: "PDF toolkit", href: "productivity/pdf.html" },
-    { id: "passport", label: "Passport photo maker", href: "productivity/passport.html" },
-    { id: "units", label: "Oil & gas units", href: "productivity/units.html" },
-    { id: "map", label: "Map colourer", href: "productivity/map.html" },
-    { id: "keyboard", label: "Malayalam keyboard", href: "productivity/keyboard.html" },
+    { id: "meeting", label: "Meeting time finder", desc: "Time zones and working hours", href: "productivity/meeting.html" },
+    { id: "timeline", label: "Timeline & Gantt", desc: "Plans to Excel, PDF or image", href: "productivity/timeline.html" },
+    { id: "raci", label: "RACI matrix", desc: "Who does what, at a glance", href: "productivity/raci.html" },
+    { id: "pdf", label: "PDF toolkit", desc: "Merge, split, sign, OCR", href: "productivity/pdf.html" },
+    { id: "passport", label: "Passport photo maker", desc: "Visa photos and print sheets", href: "productivity/passport.html" },
+    { id: "units", label: "Oil & gas units", desc: "LNG, gas, oil and energy", href: "productivity/units.html" },
+    { id: "map", label: "Map colourer", desc: "Colour countries and regions", href: "productivity/map.html" },
+    { id: "keyboard", label: "Malayalam keyboard", desc: "Malayalam typing on iPhone", href: "productivity/keyboard.html" },
   ];
   // which productivity tool is open, if any (from <main data-tool="…">)
   const toolHere = (document.querySelector("main[data-tool]") || {}).dataset?.tool;
@@ -31,7 +31,8 @@
       { id: "expat", label: "Expat Life Saver", desc: "City guides: permits, homes, health, people", href: "expat/" },
       { id: "movies", label: "Movies", desc: "Any film, every rating, what to watch next", href: "movies.html" },
       { id: "cinema", label: "English cinema", desc: "Original-version films in Milan & Italy, today", href: "expats/cinema.html" },
-    ], sub: { id: "productivity", label: "Workbench", href: "productivity/", items: PRODUCTIVITY } },
+    ] },
+    { label: "Workbench", hub: { id: "productivity", label: "All workbench tools →", href: "productivity/" }, items: PRODUCTIVITY },
   ];
 
   document.querySelectorAll("nav.tabs[data-active]").forEach((nav) => {
@@ -46,7 +47,7 @@
         nav.append(a);
         continue;
       }
-      const here = entry.items.find((i) => i.id === active) || (entry.sub && entry.sub.id === active ? entry.sub : null);
+      const here = entry.items.find((i) => i.id === active || (entry.hub && i.id === toolHere)) || (entry.hub && entry.hub.id === active ? entry.hub : null);
       const d = document.createElement("details");
       d.className = "nav-group" + (here ? " active" : "");
       const s = document.createElement("summary");
@@ -54,35 +55,21 @@
       s.firstChild.textContent = entry.label;
       if (here) s.title = `${entry.label}: ${here.label}`;
       const menu = document.createElement("div");
-      menu.className = "nav-menu";
+      menu.className = "nav-menu" + (entry.hub ? " nav-menu-2" : "");
+      if (entry.hub) {
+        const h = document.createElement("a");
+        h.href = root + entry.hub.href; h.className = "nav-hub" + (active === entry.hub.id && !toolHere ? " current" : "");
+        h.textContent = entry.hub.label;
+        menu.append(h);
+      }
       for (const it of entry.items) {
         const a = document.createElement("a");
         a.href = root + it.href;
         a.innerHTML = "<b></b><small></small>";
         a.firstChild.textContent = it.label;
-        a.lastChild.textContent = it.desc;
-        if (it.id === active) { a.className = "current"; a.setAttribute("aria-current", "page"); }
+        a.lastChild.textContent = it.desc || "";
+        if (it.id === active || (entry.hub && it.id === toolHere)) { a.className = "current"; a.setAttribute("aria-current", "page"); }
         menu.append(a);
-      }
-      if (entry.sub) {
-        // a second column listing every productivity tool by name
-        menu.classList.add("has-sub");
-        const col = document.createElement("div");
-        col.className = "nav-sub";
-        const h = document.createElement("a");
-        h.href = root + entry.sub.href; h.className = "nav-sub-h" + (active === entry.sub.id && !toolHere ? " current" : "");
-        h.innerHTML = "<b></b><small>All tools →</small>"; h.firstChild.textContent = entry.sub.label;
-        col.append(h);
-        for (const it of entry.sub.items) {
-          const a = document.createElement("a");
-          a.href = root + it.href; a.textContent = it.label;
-          if (it.id === toolHere) { a.className = "current"; a.setAttribute("aria-current", "page"); }
-          col.append(a);
-        }
-        const apps = document.createElement("div");
-        apps.className = "nav-apps";
-        apps.append(...menu.children);
-        menu.append(apps, col);
       }
       d.append(s, menu);
       nav.append(d);
@@ -140,21 +127,20 @@
       const list = document.createElement("div"); list.className = "mnav-list";
       items.forEach((it) => {
         const a = link(it.href, it.label, grid ? "" : it.desc);
-        if (it.id === active || (grid && it.id === toolHere)) a.setAttribute("aria-current", "page");
+        if (it.id === active || it.id === toolHere) a.setAttribute("aria-current", "page");
         list.append(a);
       });
       s.append(list);
       return s;
     };
-    const tools = NAV.find((e) => e.sub);
-    // Productivity first among the tool groups: it holds the most pages
-    const prod = section(tools.sub.label, tools.sub.items, true);
-    const all = link(tools.sub.href, "All workbench tools →", "", "mnav-all");
-    if (active === "productivity" && !toolHere) all.setAttribute("aria-current", "page");
-    prod.querySelector("h2").after(all);
     NAV.filter((e) => e.items).forEach((e) => {
-      body.append(section(e.label, e.items, true));
-      if (e === tools) body.append(prod);
+      const sec = section(e.label, e.items, true);
+      if (e.hub) {
+        const all = link(e.hub.href, e.hub.label, "", "mnav-all");
+        if (active === e.hub.id && !toolHere) all.setAttribute("aria-current", "page");
+        sec.querySelector("h2").after(all);
+      }
+      body.append(sec);
     });
     sheet.append(body);
     document.body.append(sheet);

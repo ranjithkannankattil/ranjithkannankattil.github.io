@@ -829,6 +829,12 @@ footer .cheart a, .cheart-note a{ text-decoration:underline; text-underline-offs
 .cheart-note{ font-size:.92rem; color:var(--ink-soft); }
 .foot-r a[href^="mailto:"]{ text-transform:none; letter-spacing:0; }
 
+/* Workbench menu: tools in two columns under an "All workbench tools" link */
+.nav-menu.nav-menu-2{ grid-template-columns:1fr 1fr; min-width:32rem; }
+nav.tabs .nav-menu a.nav-hub{ grid-column:1 / -1; font-family:var(--f-mono); font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; color:var(--accent-text, var(--accent)); border-bottom:1px solid var(--line); margin-bottom:.2rem; }
+nav.tabs .nav-menu a.nav-hub.current{ background:var(--accent-soft); box-shadow:inset 3px 0 0 var(--accent); }
+@media (max-width:900px){ .nav-menu.nav-menu-2{ min-width:26rem; } }
+
 /* ============================================================
    PHONE MENU — one "Menu" button and a full-screen panel (js/nav.js)
    Under 600px the dropdowns are hidden; every section shows at once.
