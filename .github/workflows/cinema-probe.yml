@@ -1,0 +1,25 @@
+name: Cinema probe (temporary)
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/cinema-probe.yml]
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Fetch pages
+        run: |
+          mkdir out && cd out
+          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
+          for h in anteo.spaziocinema citylife.spaziocinema ariosto.spaziocinema arlecchino.cinetecadimilano mic.cinetecadimilano capitol.spaziocinema cinema.barberini quattrofontane.ccroma giuliocesare.ccroma roma.andromeda lux.cdr nazionale.cctorino arlecchino.popupcinema medica.popupcinema odeon.ccb rialto.ccb roma.ccb europa.ccb lumiere.cinetecabologna flora.ccroma casacinema corallo.ccgenova city.ccgenova carignano.ccgenova ariston.ccgenova lab80; do
+            curl -sSL -m 40 -A "$UA" -o "$h.html" -w "$h %{http_code} %{size_download}\n" "https://$h.18tickets.it/" || echo "$h FAIL"
+          done | tee status.txt
+          curl -sSL -m 40 -A "$UA" -o alcione.html -w "alcione %{http_code} %{size_download}\n" "https://ticket.cinebot.it/alcione/" | tee -a status.txt
+          curl -sSL -m 40 -A "$UA" -o mm_film.html "https://www.mymovies.it/film/2026/primetime/"
+          curl -sSL -m 40 -A "$UA" -o mm_milano.html "https://www.mymovies.it/cinema/milano/versione-originale/"
+          git init -q -b cinema-debug && git config user.name bot && git config user.email bot@example.com
+          git add -A && git commit -qm probe
+          git push -qf "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" cinema-debug
