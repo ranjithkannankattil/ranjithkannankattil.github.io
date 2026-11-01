@@ -806,6 +806,8 @@ def enrich(films, cache, overrides, today):
             f["syn"] = c["syn"]
         if c.get("tmdb"):
             f["tmdb"] = c["tmdb"]  # opens the film on ranjithkb.com/movies.html
+        elif "tmdb" in c:
+            f["tmdb"] = 0  # TMDB's best guess was a different film: the page links to a search instead
         poster = tm.get("poster")
         f["poster"] = f"{WORKER}/img/w185{poster}" if poster else (mm.get("img") or None)
         r = tm.get("ratings") or {}
