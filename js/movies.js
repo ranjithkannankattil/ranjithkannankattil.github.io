@@ -355,7 +355,7 @@
   // cinema and OTT (streaming) release dates for one country, with the platform where known
   var COUNTRY = { GB: 'the UK', IT: 'Italy', IN: 'India', US: 'the USA' };
   function releaseHTML(m, c) {
-    var R = m.releases || {}, r = (R.byCountry || {})[c] || {}, today = new Date().toISOString().slice(0, 10);
+    var R = m.releaseInfo || {}, r = (R.byCountry || {})[c] || {}, today = new Date().toISOString().slice(0, 10);
     var fmt = function (d) { return new Date(d + 'T12:00:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }); };
     var streamNames = (((m.providers || {})[c] || {}).stream || []).map(function (x) { return x.name; });
     var platform = function (note) { return note || (streamNames.length ? streamNames.slice(0, 2).join(', ') : ''); };

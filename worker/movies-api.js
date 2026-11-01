@@ -279,7 +279,7 @@ function providers(wp) {
 // cinema and streaming (OTT) release dates per country, from TMDB's release types:
 // 2 limited / 3 theatrical = cinema, 4 = digital (streaming/VOD; the note often names the platform), 6 = TV
 const RELEASE_COUNTRIES = ["GB", "IT", "IN", "US"];
-export function releases(rd) {
+export function releaseInfo(rd) {
   const all = rd?.results || [];
   const day = (d) => String(d || "").slice(0, 10) || null;
   const pick = (list, types) => list.filter((x) => types.includes(x.type) && x.release_date).sort((a, b) => a.release_date.localeCompare(b.release_date));
@@ -364,6 +364,7 @@ export async function movie(id) {
     },
     providers: providers(m["watch/providers"]),
     releases: releases(m.release_dates),
+    releaseInfo: releaseInfo(m.release_dates),   // per-country cinema/OTT dates with platform notes (film page)
     rows,
   };
 }
