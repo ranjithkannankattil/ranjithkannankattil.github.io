@@ -1,0 +1,6 @@
+arlecchino.popupcinema 200 70562
+medica.popupcinema 200 81357
+odeon.ccb 200 118081
+rialto.ccb 200 54915
+roma.ccb 200 42275
+europa.ccb 200 74754
