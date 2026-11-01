@@ -223,7 +223,7 @@
     if (r.imdb) rt.push(`<a href="${esc(f.imdbUrl || "#")}" target="_blank" rel="noopener"><b>IMDb</b> ${r.imdb.v.toFixed(1)}</a>`);
     if (r.rt != null) rt.push(`<a href="${esc(f.rtUrl || "#")}" target="_blank" rel="noopener"><b>Rotten Tomatoes</b> ${r.rt}%</a>`);
     const mv = f.tmdb ? `../movies.html#/m/${encodeURIComponent(f.tmdb)}` : `../movies.html#/s/${encodeURIComponent(f.t)}`;
-    rt.push(`<a class="cn-mv" href="${mv}" title="${esc(f.tmdb ? "Cast, all ratings, trailer and similar films" : "Search for this film on the Movies page")}">Movies page ›</a>`);
+    rt.push(`<a class="cn-mv" href="${mv}" target="_blank" rel="noopener"${f.tmdb ? "" : ` data-t="${esc(f.t)}" data-y="${esc(f.y || "")}"`} title="Cast, all ratings, trailer and similar films">Movies page ↗</a>`);
     out.push(`<div class="cn-rate">${rt.join("")}</div>`);
     const today = romeNow().date;
     if (f.stream && f.stream.on.length) {
@@ -260,6 +260,21 @@
     if (!d.matches || !d.matches("details.cn-plot")) return;
     if (d.open) openPlots.add(d.dataset.k); else openPlots.delete(d.dataset.k);
   }, true);
+
+  // A film without a TMDB id in the listings yet: look it up on the Movies service when tapped,
+  // so the link still opens the film's own page (falls back to a title search).
+  document.getElementById("list").addEventListener("click", (e) => {
+    const a = e.target.closest("a.cn-mv[data-t]");
+    if (!a) return;
+    e.preventDefault();
+    const win = window.open("", "_blank");
+    const go = (url) => { if (win) { win.opener = null; win.location.href = url; } else location.href = url; };
+    const api = window.MOVIES_API || "https://movies-api.ranjeethkkb.workers.dev";
+    fetch(`${api}/match?title=${encodeURIComponent(a.dataset.t)}&year=${encodeURIComponent(a.dataset.y)}`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((m) => go(m && m.id ? `../movies.html#/m/${m.id}` : a.href))
+      .catch(() => go(a.href));
+  });
 
   /* ---------- controls ---------- */
   $("#days").addEventListener("click", (e) => {
