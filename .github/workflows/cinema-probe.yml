@@ -2,6 +2,8 @@ name: Cinema probe (temporary)
 on:
   push:
     branches: [cinema-probe]
+permissions:
+  contents: write
 jobs:
   probe:
     runs-on: ubuntu-latest
@@ -19,7 +21,9 @@ jobs:
           curl -sSL -m 40 -A "$UA" -o uci.html -w "%{http_code} uci\n" https://ucicinemas.it/cinema/lombardia/milano/uci-cinemas-bicocca-milano/ || true
           curl -sSL -m 40 -A "$UA" -o thespace.html -w "%{http_code} thespace\n" https://www.thespacecinema.it/ || true
           ls -la
-      - uses: actions/upload-artifact@v4
-        with:
-          name: raw
-          path: raw
+      - run: |
+          cd raw
+          git init -q -b cinema-probe-raw
+          git config user.name bot; git config user.email bot@example.com
+          git add -A; git commit -qm raw
+          git push -qf "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" cinema-probe-raw
