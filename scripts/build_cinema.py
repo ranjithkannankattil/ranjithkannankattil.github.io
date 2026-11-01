@@ -688,10 +688,10 @@ def details(f, cache, today):
     key = film_key(f)
     f["_k"] = key
     c = cache.get(key) or {}
-    if c.get("v") != 3:  # matches made before titles, years and runtimes were checked
+    if c.get("v") != 4:  # matches made before titles, years and runtimes were checked
         for k in ("tmdb", "tm", "day"):
             c.pop(k, None)
-        c["v"] = 3
+        c["v"] = 4
     if c.get("day") == today:
         return c
     if f.get("url") and "mm" not in c:
