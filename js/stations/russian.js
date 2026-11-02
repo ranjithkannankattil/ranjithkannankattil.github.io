@@ -226,7 +226,8 @@ window.STATIONS = [
     "streams": [
       "https://jfm1.hostingradio.ru:14536/ijstream.mp3"
     ],
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "radio-svoboda-rfe-rl-russian-ch-4",
@@ -862,7 +863,8 @@ window.STATIONS = [
     "streams": [
       "https://air.sammit.tv:8443/retro"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "offline": true
   },
   {
     "id": "radio-record-disco-funk",
@@ -890,6 +892,33 @@ window.STATIONS = [
       "https://air4.amgradio.ru/RemixFM"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "station-33",
+    "name": "Русское Радио",
+    "category": "music",
+    "streams": [
+      "https://rusradio.hostingradio.ru/rusradio96.aacp"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "station-34",
+    "name": "Радио АСТВ",
+    "category": "music",
+    "streams": [
+      "https://stream.astv.ru/stream.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "fm-5",
+    "name": "Ретро FM — Вечеринка",
+    "category": "music",
+    "streams": [
+      "https://hls-01-retro-vecherinka.emgsound.ru/20/playlist.m3u8"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

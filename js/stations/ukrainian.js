@@ -88,7 +88,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.mfm.ua/online128"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "nrj-ukraine",
@@ -152,7 +153,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s5.radioforge.com:7908/live?n=77357"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "24-breaking-live",
@@ -232,7 +234,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.brokenbeats.net/tune"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-shanson",
@@ -870,6 +873,33 @@ window.STATIONS = [
       "https://radio.dobreff.com/worship.mp3"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "station-23",
+    "name": "Радіо Сяйво",
+    "category": "music",
+    "streams": [
+      "https://stream.ntktv.ua/syaivo.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "station-24",
+    "name": "Радіо Нікополя",
+    "category": "music",
+    "streams": [
+      "https://stream.nikopolnews.net/listen/radio_nikopol/high"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "station-25",
+    "name": "Місто над Бугом",
+    "category": "news",
+    "streams": [
+      "https://stream.mistonadbugom.com.ua/radiomistonadbugom"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

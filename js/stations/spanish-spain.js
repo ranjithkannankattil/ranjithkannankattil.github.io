@@ -212,7 +212,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://shoutcast.ccma.cat/ccma/catalunyainformacioHD.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "1000-hits-80s",
@@ -360,7 +361,8 @@ window.STATIONS = [
     "streams": [
       "https://rtva-live-radio.flumotion.com/rtva/cfr.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "80s-90s-absolute-hits",
@@ -468,7 +470,8 @@ window.STATIONS = [
     "streams": [
       "https://rtva-live-radio.flumotion.com/rtva/csr.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "cadena-ser",
@@ -504,7 +507,8 @@ window.STATIONS = [
     "streams": [
       "https://rtva-live-radio.flumotion.com/rtva/flamenco.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "80-hits-barcelona",
@@ -892,6 +896,33 @@ window.STATIONS = [
       "https://eu1.lhdserver.es:9041/stream"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "rne-radio-5-galicia",
+    "name": "RNE Radio 5 Galicia",
+    "category": "news",
+    "streams": [
+      "https://d141.rndfnk.com/star/crtve/rne5/lcg/mp3/128/stream.mp3?cid=01GEP53FAF08XXF9WHNDFYA8SJ&sid=3LVX7yIAfVTJLH6YianctF4gINJ&token=sUP2SSTA5wtZHC1qQKu2JDea_sxI13_Wm69Hu766qvY&tvf=ZKodW9AC5BhkMTQxLnJuZGZuay5jb20"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "cope-albacete",
+    "name": "COPE Albacete",
+    "category": "music",
+    "streams": [
+      "https://wecast-bl01.flumotion.com/copesedes/albacete.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "rne-radio-5",
+    "name": "RNE Radio 5",
+    "category": "music",
+    "streams": [
+      "https://d141.rndfnk.com/star/crtve/rne5/cad/mp3/128/stream.mp3?cid=01GEPXNR2GD70SEGJYN9G1TQCA&sid=3LUDtXqmZdLddZCoAwZ0R31njVT&token=RLz5WDGirQu2ATInCYFWKLZ1hmXWZDILXbXriaQoivw&tvf=XpqjDV3e4xhkMTQxLnJuZGZuay5jb20"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

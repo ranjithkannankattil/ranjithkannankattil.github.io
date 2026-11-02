@@ -324,8 +324,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streamnavs.net:8133/live"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "rmn-dyri-iloilo",
@@ -524,8 +523,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/60cb36c29heuv"
     ],
-    "added": "2026-10-28",
-    "offline": true
+    "added": "2026-10-28"
   },
   {
     "id": "105-9-energy-fm-dwla",
@@ -535,6 +533,15 @@ window.STATIONS = [
       "https://stream.zeno.fm/dnddzf0osc1uv"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "newsline-central-luzon-103-1-fm",
+    "name": "Newsline Central Luzon 103.1 FM",
+    "category": "news",
+    "streams": [
+      "https://gvamaudio.tail160f79.ts.net/stream"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

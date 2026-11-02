@@ -864,6 +864,33 @@ window.STATIONS = [
       "https://stream.radyoodtu.com.tr/rock"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "self-fm",
+    "name": "Self FM",
+    "category": "music",
+    "streams": [
+      "https://ssl22.radyotelekom.com/8084/stream"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radyo-dede-bilisim-test-yayn",
+    "name": "Radyo Dede Bilişim Test Yayını",
+    "category": "music",
+    "streams": [
+      "https://live.sinirsizhost.com.tr/8080/stream"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radyo-mavi-denizim",
+    "name": "Radyo Mavi Denizim",
+    "category": "music",
+    "streams": [
+      "https://live.radyositesihazir.com/8076/stream"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

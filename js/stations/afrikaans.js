@@ -185,8 +185,7 @@ window.STATIONS = [
     "streams": [
       "https://superagent-269bfe30.base44.app/functions/kaleidoscopeRadio?go=stream"
     ],
-    "added": "2026-10-31",
-    "offline": true
+    "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

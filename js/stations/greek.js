@@ -916,6 +916,33 @@ window.STATIONS = [
       "https://r1.cloudskep.com/radio3/supersportfm/icecast.audio"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "hyevibes",
+    "name": "HyeVibes",
+    "category": "music",
+    "streams": [
+      "https://stream.hyevibes.com/listen/hyevibes/radio.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "easy-fm-972",
+    "name": "Easy FM 972",
+    "category": "music",
+    "streams": [
+      "https://stream.radiojar.com/cthtwxk5yvduv.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radio-sfera-102-2",
+    "name": "Radio Sfera 102.2",
+    "category": "music",
+    "streams": [
+      "https://securestreams3.autopo.st:1417/sfera"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

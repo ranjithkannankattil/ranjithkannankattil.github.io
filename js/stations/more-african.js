@@ -76,8 +76,7 @@ window.STATIONS = [
     "streams": [
       "https://www.radioking.com/play/alefamusic"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "radio-rsf-109-antanifotsy",
@@ -89,4 +88,4 @@ window.STATIONS = [
     "added": "2026-10-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

@@ -56,8 +56,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "89-4-tamil-fm",
@@ -282,8 +281,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio129/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "tamil-ragam",
@@ -903,6 +901,33 @@ window.STATIONS = [
       "https://cp1.hostcrate.com/8910/stream"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "friendstamilchatfm",
+    "name": "Friendstamilchatfm",
+    "category": "music",
+    "streams": [
+      "https://usa3.fastcast4u.com/proxy/dhayanib?mp=/;"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "trt-tamil-oli-fm",
+    "name": "TRT Tamil Oli FM",
+    "category": "music",
+    "streams": [
+      "https://radio13.pro-fhi.net:19236/stream.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "muthamilradio",
+    "name": "Muthamilradio",
+    "category": "music",
+    "streams": [
+      "https://ec2.yesstreaming.net:2540/stream"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

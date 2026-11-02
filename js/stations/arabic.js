@@ -891,6 +891,33 @@ window.STATIONS = [
       "https://webradio1.tda.dz:8001/Ghardaia_64K.mp3"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "101-4-hatay-tempo-fm",
+    "name": "101.4 HATAY TEMPO FM",
+    "category": "music",
+    "streams": [
+      "https://sslyayin.netyayin.net:1215/stream"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "tamanrasset",
+    "name": "Tamanrasset تمنراست",
+    "category": "news",
+    "streams": [
+      "https://webradio1.tda.dz:8001/Tamanrasset_64K.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "chaine-2",
+    "name": "Chaine 2 القناة الثانية",
+    "category": "news",
+    "streams": [
+      "https://webradio2.tda.dz:8001/Chaine2_64K.mp3"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

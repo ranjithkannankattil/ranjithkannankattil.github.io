@@ -902,6 +902,33 @@ window.STATIONS = [
       "https://25223.live.streamtheworld.com/SRGSTR15AAC_SC"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "radio-veronica-de-beste-90-s",
+    "name": "Radio Veronica – De Beste 90's",
+    "category": "music",
+    "streams": [
+      "https://21633.live.streamtheworld.com/DAB02_AAC.aac"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "q-foute-radio",
+    "name": "Q-Foute Radio",
+    "category": "music",
+    "streams": [
+      "https://streams.radio.dpgmedia.cloud/redirect/foute_radio_be/mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "fantasy-radio-italo-disco",
+    "name": "Fantasy Radio - Italo Disco",
+    "category": "music",
+    "streams": [
+      "https://italo.live-streams.nl/fantasy"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

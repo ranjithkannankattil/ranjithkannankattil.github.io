@@ -908,6 +908,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-01",
     "where": "United Republic Of Tanzania"
+  },
+  {
+    "id": "nettalk-america",
+    "name": "NetTalk America",
+    "category": "us",
+    "streams": [
+      "https://stream.zeno.fm/st9bhqvgvceuv"
+    ],
+    "added": "2026-11-02",
+    "where": "US"
+  },
+  {
+    "id": "102-5-abc-perth",
+    "name": "102.5 ABC Perth",
+    "category": "anz",
+    "streams": [
+      "https://streaming.abc-cdn.net.au/audio/hls/localperth.m3u8?source=web"
+    ],
+    "added": "2026-11-02",
+    "where": "Australia"
+  },
+  {
+    "id": "npr-news-radio-107-7-fm",
+    "name": "NPR News Radio 107.7 FM",
+    "category": "world",
+    "streams": [
+      "https://npr-ice.streamguys1.com/live.aac"
+    ],
+    "added": "2026-11-02",
+    "where": "Saudi Arabia"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

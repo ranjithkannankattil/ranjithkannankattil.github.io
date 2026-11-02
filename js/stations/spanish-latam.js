@@ -892,6 +892,33 @@ window.STATIONS = [
       "https://theonestopradio.com/stream?url=https://icecast.teveo.cu/zrXXWK9F"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "tropical-100-mix",
+    "name": "Tropical 100 Mix",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/esgo1lafgtstv"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "80s-hits",
+    "name": "__80s HITS",
+    "category": "music",
+    "streams": [
+      "https://stream.laut.fm/80sexitos"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "alternativa-by-mix-rock-alternativo",
+    "name": "ALTERNATIVA by Mix: Rock Alternativo",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/ACIR12_s01AAC.aac"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

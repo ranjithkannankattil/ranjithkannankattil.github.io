@@ -898,6 +898,33 @@ window.STATIONS = [
       "https://server01.ouvir.radio.br:8006/stream"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "radio-nova-paradiso-rio",
+    "name": "Rádio Nova Paradiso Rio",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/NOVABRASIL_RIOAAC.aac"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "antena1",
+    "name": "Antena1",
+    "category": "music",
+    "streams": [
+      "https://antenaone.crossradio.com.br/stream/2;"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "instrumentales",
+    "name": "Instrumentales",
+    "category": "music",
+    "streams": [
+      "https://protvradiostream.com:8350/live"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

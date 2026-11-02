@@ -831,6 +831,33 @@ window.STATIONS = [
       "https://ice02.fluidstream.net/fluid016.aac"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "radio-gamma-5",
+    "name": "Radio Gamma 5",
+    "category": "news",
+    "streams": [
+      "https://ice09.fluidstream.net/fluid0902.aac?FLID=6"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radio-105-hiphop-rnb",
+    "name": "Radio 105 - HipHop & RnB",
+    "category": "music",
+    "streams": [
+      "https://icy.unitedradio.it/105HipHopRnB.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "70-80-disco-funk-modernsoul-e-boogie",
+    "name": "70 80 Disco Funk ModernSoul e Boogie",
+    "category": "music",
+    "streams": [
+      "https://discofunk.streamingmedia.it/play"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

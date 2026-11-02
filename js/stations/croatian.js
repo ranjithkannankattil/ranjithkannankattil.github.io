@@ -217,8 +217,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s8.iqstreaming.com:8014/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-student",
@@ -657,6 +656,24 @@ window.STATIONS = [
       "https://radio.vaticannews.va/stream-hr"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "radio-jaska",
+    "name": "Radio Jaska",
+    "category": "news",
+    "streams": [
+      "https://uk1.streamingpulse.com/ssl/RadioJaska"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "otvoreni-love",
+    "name": "Otvoreni Love",
+    "category": "music",
+    "streams": [
+      "https://stream2.otvoreni.hr/love"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

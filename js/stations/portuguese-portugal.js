@@ -92,7 +92,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "m80-radio-ballads",
@@ -205,8 +206,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8",
       "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "golofm",
@@ -230,8 +230,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "cidade-fm-2",
@@ -358,8 +357,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -892,6 +890,33 @@ window.STATIONS = [
       "https://nl.digitalrm.pt:8216/stream"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "radio-vizela",
+    "name": "Rádio Vizela",
+    "category": "news",
+    "streams": [
+      "https://proxy-audio.ptisp.com:8100/stream"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radio-freguesia-de-belem",
+    "name": "Rádio Freguesia de Belém",
+    "category": "news",
+    "streams": [
+      "https://s2.radio.co/s0ddea4a53/listen"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "gongas-radio",
+    "name": "Gongas Radio",
+    "category": "music",
+    "streams": [
+      "https://a6.asurahosting.com:7930/radio.mp3"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

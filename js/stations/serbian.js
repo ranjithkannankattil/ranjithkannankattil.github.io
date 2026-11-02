@@ -96,7 +96,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.tdiradio.com/tdiradiobezreklama.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-s-ex-yu",
@@ -826,6 +827,24 @@ window.STATIONS = [
       "https://media.srb-streaming.com/stream/radio-sumadinac-uzivo"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "hit-radio-istok",
+    "name": "Hit Radio Istok",
+    "category": "music",
+    "streams": [
+      "https://radio.tvistok.com/radio/8000/live"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "play-radio-party",
+    "name": "Play Radio Party",
+    "category": "music",
+    "streams": [
+      "https://stream.playradio.rs:8443/party.mp3"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

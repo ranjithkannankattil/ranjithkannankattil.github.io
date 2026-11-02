@@ -493,8 +493,7 @@ window.STATIONS = [
     "streams": [
       "https://oxygenmusic.hu:8443/oxygenmusic_gyor_hd"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "klasszik-radio-92-1",
@@ -792,6 +791,33 @@ window.STATIONS = [
       "https://stream.sepsiradio.ro:8001/SepsiRadio"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "best-fm-pecs",
+    "name": "Best FM - Pécs",
+    "category": "news",
+    "streams": [
+      "https://icast.connectmedia.hu/5128/live.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "best-fm-szekesfehervar",
+    "name": "Best FM - Székesfehérvár",
+    "category": "news",
+    "streams": [
+      "https://icast.connectmedia.hu/5113/live.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "clubflashh-radio",
+    "name": "CLUBFLASHH RADIO",
+    "category": "music",
+    "streams": [
+      "https://clubflashh.streammachine.co.uk/stream/clubflashh"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

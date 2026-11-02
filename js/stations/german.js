@@ -697,8 +697,7 @@ window.STATIONS = [
     "streams": [
       "https://0n-70s.radionetz.de/0n-70s.mp3"
     ],
-    "added": "2026-10-28",
-    "offline": true
+    "added": "2026-10-28"
   },
   {
     "id": "radio-swiss-classic-german",
@@ -897,6 +896,33 @@ window.STATIONS = [
       "https://icecast.ndr.de/ndr/ndr903/hamburg/mp3/128/stream.mp3?1728425642817&aggregator=web"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "perfect-deep-house",
+    "name": "Perfect Deep House",
+    "category": "music",
+    "streams": [
+      "https://stream.radiojar.com/asngk2sg798uv?1659885393"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "die-maus",
+    "name": "Die Maus",
+    "category": "music",
+    "streams": [
+      "https://wdr-diemaus-live.icecastssl.wdr.de/wdr/diemaus/live/mp3/128/stream.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "0-n-60s-on-radio",
+    "name": "0 N - 60s on Radio",
+    "category": "music",
+    "streams": [
+      "https://0n-60s.radionetz.de/0n-60s.mp3"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

@@ -16,8 +16,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://usa15.fastcast4u.com/proxy/hitsfm912?mp=/1"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "bbc-nepali",
@@ -121,4 +120,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

@@ -750,6 +750,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-01",
     "where": "Malaysia"
+  },
+  {
+    "id": "talksport",
+    "name": "talkSPORT",
+    "category": "uk",
+    "streams": [
+      "https://radio.talksport.com/stream"
+    ],
+    "added": "2026-11-02",
+    "where": "UK"
+  },
+  {
+    "id": "y-fm",
+    "name": "Y FM",
+    "category": "world",
+    "streams": [
+      "https://mbc.thestreamtech.com:7032/index.html"
+    ],
+    "added": "2026-11-02",
+    "where": "Sri Lanka"
+  },
+  {
+    "id": "2gb-873-sydney",
+    "name": "2GB 873 Sydney",
+    "category": "anz",
+    "streams": [
+      "https://28093.live.streamtheworld.com/2GBAAC_O/HLS/playlist.m3u8"
+    ],
+    "added": "2026-11-02",
+    "where": "Australia"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

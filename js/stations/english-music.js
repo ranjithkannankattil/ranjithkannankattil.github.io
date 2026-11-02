@@ -967,6 +967,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-01",
     "where": "Ireland"
+  },
+  {
+    "id": "102-5-wdve",
+    "name": "102.5 WDVE",
+    "category": "rock",
+    "streams": [
+      "https://stream.revma.ihrhls.com/zc2017"
+    ],
+    "added": "2026-11-02",
+    "where": "US"
+  },
+  {
+    "id": "97-3-the-rock",
+    "name": "97.3 The Rock",
+    "category": "rock",
+    "streams": [
+      "https://us9.maindigitalstream.com/ssl/kgrr"
+    ],
+    "added": "2026-11-02",
+    "where": "US"
+  },
+  {
+    "id": "smooth-jazz-wnua-95-5-chicago-il",
+    "name": "Smooth Jazz WNUA 95.5 Chicago, IL",
+    "category": "jazz",
+    "streams": [
+      "https://vip2.fastcast4u.com/proxy/wnua?mp=/1"
+    ],
+    "added": "2026-11-02",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

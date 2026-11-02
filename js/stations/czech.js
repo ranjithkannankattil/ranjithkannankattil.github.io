@@ -872,6 +872,33 @@ window.STATIONS = [
       "https://icecast9.play.cz/slowdown.mp3"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "black-hornet-radio",
+    "name": "Black Hornet Radio",
+    "category": "music",
+    "streams": [
+      "https://icecast2.play.cz/bhradio-192.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "underground-radio",
+    "name": "Underground Radio",
+    "category": "music",
+    "streams": [
+      "https://icecast2.play.cz/Underground128.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radio-jazzinec",
+    "name": "Radio Jazzinec",
+    "category": "music",
+    "streams": [
+      "https://ice3.abradio.cz/jazzinec128.mp3"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

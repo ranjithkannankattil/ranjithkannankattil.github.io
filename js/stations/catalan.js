@@ -32,7 +32,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://shoutcast.ccma.cat/ccma/catalunyainformacioHD.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rac105",
@@ -88,7 +89,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://shoutcast.ccma.cat/ccma/catalunyamusicaHD.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "flaix-fm-andorra",
@@ -200,8 +202,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://directe.eixamplebarcelonaradio.com:8443/radioOnline"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "comboi-la-radio-de-la-terreta",
@@ -648,4 +649,4 @@ window.STATIONS = [
     "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

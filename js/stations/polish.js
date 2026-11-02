@@ -773,6 +773,33 @@ window.STATIONS = [
       "https://ssl-1.radiohost.pl:11250/stream"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "antyradio-greatest",
+    "name": "Antyradio Greatest",
+    "category": "music",
+    "streams": [
+      "https://an02.cdn.eurozet.pl/ANTGRE.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "meloradio-poznan",
+    "name": "MELORADIO POZNAŃ",
+    "category": "music",
+    "streams": [
+      "https://ml03.cdn.eurozet.pl/mel-poz.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "polskie-radio-1030-chicago-wnvr",
+    "name": "Polskie Radio 1030 Chicago WNVR",
+    "category": "news",
+    "streams": [
+      "https://s1.reliastream.com/proxy/polskieradio?mp=/stream"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

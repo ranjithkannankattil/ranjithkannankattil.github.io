@@ -40,8 +40,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://881903.fishtv.dpdns.org/proxy/903"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-4",
@@ -73,8 +72,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://881903.fishtv.dpdns.org/proxy/881"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-7",
@@ -268,7 +266,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ptmirror3.passiontimes.hk/hls3/stream.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "chkt-am1430-fairchild",
@@ -636,4 +635,4 @@ window.STATIONS = [
     "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

@@ -256,8 +256,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio007/hlspbaudio007_Auto.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-mirchi-usa",
@@ -369,8 +368,7 @@ window.STATIONS = [
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio011/hlspbaudio011_Auto.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "sandesh-radio",
@@ -667,8 +665,7 @@ window.STATIONS = [
     "streams": [
       "https://usa15.fastcast4u.com/proxy/hitsfm912?mp=/1"
     ],
-    "added": "2026-10-28",
-    "offline": true
+    "added": "2026-10-28"
   },
   {
     "id": "mukesh-radio",
@@ -713,8 +710,7 @@ window.STATIONS = [
     "streams": [
       "https://streamasiacdn.atc-labs.com/radiorimjhim.aac"
     ],
-    "added": "2026-10-29",
-    "offline": true
+    "added": "2026-10-29"
   },
   {
     "id": "bhakti-sagar-durga-maa",
@@ -886,6 +882,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/8wk1s0pt008uv"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "hitsbollywood",
+    "name": "Hitsbollywood",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/rqqps6cbe3quv"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "cjrk-fm-102-7-east-fm-toronto-on",
+    "name": "CJRK-FM 102.7 \"East FM\" Toronto, ON",
+    "category": "music",
+    "streams": [
+      "https://centova.radioservers.biz/proxy/eastfmc1/stream"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "himal-radio",
+    "name": "Himal Radio",
+    "category": "music",
+    "streams": [
+      "https://streaming.webhostnepal.com/8020/stream"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

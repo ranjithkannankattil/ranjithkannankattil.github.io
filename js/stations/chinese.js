@@ -185,7 +185,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/15318569/64k.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-16",
@@ -201,8 +202,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-17",
@@ -827,6 +827,33 @@ window.STATIONS = [
       "https://video1.getstreamhosting.com:8292/stream?.mp3"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "music-of-china",
+    "name": "Music of China 中国音乐",
+    "category": "music",
+    "streams": [
+      "https://vip.wongsong.cn/proxy/wongsong/stream-mp3-WongSong"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "cnr-2",
+    "name": "CNR-2 经济之声",
+    "category": "music",
+    "streams": [
+      "https://satellitepull.cnr.cn/live/wxjjzs/playlist.m3u8?wsSession=5849bb6c90cf7fc1a7e3eae9-174908108209742&wsIPSercert=f7b6cfa8467acd0836b62cf14aa786d3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "cctv-3",
+    "name": "CCTV-3综艺伴音",
+    "category": "music",
+    "streams": [
+      "https://piccpndali.v.myalicdn.com/audio/cctv3_2.m3u8"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

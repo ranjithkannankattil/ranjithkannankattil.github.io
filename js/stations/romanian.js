@@ -835,6 +835,33 @@ window.STATIONS = [
       "https://tv.broadcasting.ro/magictv/925f90db-5c88-4190-a53d-5163cdffe6f4.m3u8"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "clasic-radio-80-bucuresti",
+    "name": "Clasic Radio_80 -București",
+    "category": "music",
+    "streams": [
+      "https://live.radioclasic.com/listen/radio_clasic_80/live.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "stil-romania-radio-stil-manele",
+    "name": "Stil România -Radio Stil Manele",
+    "category": "music",
+    "streams": [
+      "https://mp3.radiostill.ro:8888/stream"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "fun-radio-romania",
+    "name": "FUN Radio Romania",
+    "category": "music",
+    "streams": [
+      "https://online.webcastradio.ro/fun"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";

@@ -298,7 +298,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://atunwadigital.streamguys1.com/yfm979takoradi"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "yfm-107-9-accra",
@@ -479,4 +480,4 @@ window.STATIONS = [
     "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-01T18:56Z";
+window.STATIONS_CHECKED = "2026-11-02T07:18Z";
