@@ -7,8 +7,8 @@ window.STATIONS = [
     "name": "Classic Vinyl HD",
     "category": "pop",
     "streams": [
-      "https://icecast.walmradio.com:8443/classic",
-      "https://icecast.walmradio.com:8443/classic_opus"
+      "https://icecast.walmradio.com:8443/classic_opus",
+      "https://icecast.walmradio.com:8443/classic"
     ],
     "where": "US"
   },
@@ -1058,7 +1058,8 @@ window.STATIONS = [
       "https://puma.streemlion.com:2125/stream"
     ],
     "where": "Canada",
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "offline": true
   },
   {
     "id": "radio-country-live-new-york",
@@ -1146,6 +1147,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-02",
     "where": "UK"
+  },
+  {
+    "id": "triple-j-nsw",
+    "name": "triple j (NSW)",
+    "category": "rock",
+    "streams": [
+      "https://mediaserviceslive.akamaized.net/hls/live/2038308/triplejnsw/master.m3u8"
+    ],
+    "added": "2026-11-02",
+    "where": "Australia"
+  },
+  {
+    "id": "indie-x-fm",
+    "name": "Indie X FM",
+    "category": "rock",
+    "streams": [
+      "https://kathy.torontocast.com:2695/stream"
+    ],
+    "added": "2026-11-02",
+    "where": "US"
+  },
+  {
+    "id": "gritty-rock-radio",
+    "name": "Gritty Rock Radio",
+    "category": "rock",
+    "streams": [
+      "https://listen.radioking.com/radio/10713/stream/224413"
+    ],
+    "added": "2026-11-02",
+    "where": "Canada"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

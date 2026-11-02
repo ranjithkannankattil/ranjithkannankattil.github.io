@@ -367,8 +367,7 @@ window.STATIONS = [
     "streams": [
       "https://ice2.radia.cz/rockzabava128.aac"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "evropa-2-actve",
@@ -755,8 +754,7 @@ window.STATIONS = [
     "streams": [
       "https://ice2.abradio.cz/folk64a.aac"
     ],
-    "added": "2026-10-30",
-    "offline": true
+    "added": "2026-10-30"
   },
   {
     "id": "slagr-radio",
@@ -928,6 +926,33 @@ window.STATIONS = [
       "https://icecast1.play.cz/fajnrock128.mp3"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "radio-nostalgie",
+    "name": "Rádio Nostalgie",
+    "category": "music",
+    "streams": [
+      "https://icecast3.play.cz/radio-nostalgie128.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "cro-radiozurnal-sport-adhoc-stream-1",
+    "name": "čro Radiožurnál Sport AdHoc stream 1",
+    "category": "music",
+    "streams": [
+      "https://rozhlas.stream/radiozurnal_sport_adhoc_1_high.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radio-ostravan",
+    "name": "Radio Ostravan",
+    "category": "music",
+    "streams": [
+      "https://icecast9.play.cz/radio-ostravan-256.mp3"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

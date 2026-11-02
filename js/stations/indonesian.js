@@ -215,6 +215,7 @@ window.STATIONS = [
     "name": "RADIKS FM SEMARANG",
     "category": "music",
     "streams": [
+      "https://i.klikhost.com:9620/;",
       "https://i.klikhost.com:9620/stream"
     ]
   },
@@ -657,7 +658,8 @@ window.STATIONS = [
     "streams": [
       "https://svara-stream.radioddns.net/bali_voksradio_993fm"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "offline": true
   },
   {
     "id": "imelda-fm",
@@ -892,6 +894,33 @@ window.STATIONS = [
       "https://stream-node0.rri.co.id/streaming/22/9022/rrimakasarpro1.mp3"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "style-94-6-fm-tasikmalaya",
+    "name": "Style 94.6 FM Tasikmalaya",
+    "category": "music",
+    "streams": [
+      "https://stream.stylefmtasik.com/listen/stylefmtasik/stream"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "joss-885-am",
+    "name": "Joss 885 AM",
+    "category": "music",
+    "streams": [
+      "https://stream.swadesifm.com/radio/8000/radio.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "rri-pro-1-manado",
+    "name": "RRI Pro 1 Manado",
+    "category": "music",
+    "streams": [
+      "https://stream-node1.rri.co.id/streaming/40/9040/rrimanadopro1.mp3"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

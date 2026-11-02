@@ -96,8 +96,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.tdiradio.com/tdiradiobezreklama.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-s-ex-yu",
@@ -537,8 +536,7 @@ window.STATIONS = [
     "streams": [
       "https://onair.superfm.rs/superfm.mp3"
     ],
-    "added": "2026-10-26",
-    "offline": true
+    "added": "2026-10-26"
   },
   {
     "id": "big-radio-2-banja-luka",
@@ -610,8 +608,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming.tdiradio.com/lollipop.mp3"
     ],
-    "added": "2026-10-27",
-    "offline": true
+    "added": "2026-10-27"
   },
   {
     "id": "radio-021-disco-funk",
@@ -873,6 +870,15 @@ window.STATIONS = [
       "https://naxidigital-rnb128ssl.streaming.rs:8122/;stream.nsv"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "radio-kiss-lazarevac-106-1",
+    "name": "Radio KISS Lazarevac 106.1",
+    "category": "music",
+    "streams": [
+      "https://cast2.asurahosting.com/proxy/kissdoog/stream"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

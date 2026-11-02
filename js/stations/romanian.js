@@ -681,8 +681,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.radioplai.md/live"
     ],
-    "added": "2026-10-29",
-    "offline": true
+    "added": "2026-10-29"
   },
   {
     "id": "radio-ai-nostri",
@@ -890,6 +889,33 @@ window.STATIONS = [
       "https://rlive.doxologia.ro/stream.mp3"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "smile-fm",
+    "name": "Smile FM",
+    "category": "music",
+    "streams": [
+      "https://sonicssl.namehost.ro/8050/;"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "vocea-basarabiei",
+    "name": "Vocea Basarabiei",
+    "category": "news",
+    "streams": [
+      "https://stream.noroc.tv/radiovb_aac"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radio-flo-manele",
+    "name": "Radio Flo Manele",
+    "category": "music",
+    "streams": [
+      "https://live.radioflomanele.ro/8084/stream"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

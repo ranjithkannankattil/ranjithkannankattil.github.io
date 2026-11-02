@@ -357,7 +357,8 @@ window.STATIONS = [
     "streams": [
       "https://lyssna.bananradion.se/listen/bananradion/128aac"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "sveriges-radio-sr-sisuradio",
@@ -477,4 +478,4 @@ window.STATIONS = [
     "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

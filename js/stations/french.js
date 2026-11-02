@@ -897,6 +897,33 @@ window.STATIONS = [
       "https://a2.asurahosting.com:6100/radio.mp3"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "setif",
+    "name": "Setif سطيف",
+    "category": "news",
+    "streams": [
+      "https://webradio3.tda.dz:8001/Setif_64K.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "tlemcen",
+    "name": "Tlemcen تلمسان",
+    "category": "news",
+    "streams": [
+      "https://webradio1.tda.dz:8001/Tlemcen_64K.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "constantine",
+    "name": "Constantine قسنطينة",
+    "category": "news",
+    "streams": [
+      "https://webradio3.tda.dz:8001/Constantine_64K.mp3"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

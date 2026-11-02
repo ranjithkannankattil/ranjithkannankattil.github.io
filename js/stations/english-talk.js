@@ -837,7 +837,8 @@ window.STATIONS = [
       "https://stream.zeno.fm/mwam2yirv1pvv"
     ],
     "added": "2026-10-31",
-    "where": "Nigeria"
+    "where": "Nigeria",
+    "offline": true
   },
   {
     "id": "bfm-89-9-malaysia",
@@ -968,6 +969,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-02",
     "where": "Australia"
+  },
+  {
+    "id": "radio-england-pumpkin-fm",
+    "name": "Radio England - Pumpkin FM",
+    "category": "comedy",
+    "streams": [
+      "https://cast2.asurahosting.com/proxy/radioengland/stream"
+    ],
+    "added": "2026-11-02",
+    "where": "UK"
+  },
+  {
+    "id": "conspiracy-radio",
+    "name": "Conspiracy Radio",
+    "category": "us",
+    "streams": [
+      "https://stream.radiojar.com/sqxkmtks1d5tv"
+    ],
+    "added": "2026-11-02",
+    "where": "US"
+  },
+  {
+    "id": "drgnu-metal-2",
+    "name": "DrGnu - Metal 2",
+    "category": "world",
+    "streams": [
+      "https://fluxfm.streamabc.net/flx-metalfm-mp3-320-9154971?sABC=6202r2p8%230%23sorr1p583723p06268o324o2ps5n399q%23fgernzf.syhksz.qr&amsparams=playerid:streams.fluxfm.de;skey:1644356296"
+    ],
+    "added": "2026-11-02",
+    "where": "Germany"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

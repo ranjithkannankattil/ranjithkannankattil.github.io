@@ -816,8 +816,7 @@ window.STATIONS = [
     "streams": [
       "https://sp1.19cloudsnetwork.gr/8008/stream?1701442520261"
     ],
-    "added": "2026-10-31",
-    "offline": true
+    "added": "2026-10-31"
   },
   {
     "id": "sokfm-104-8",
@@ -971,6 +970,33 @@ window.STATIONS = [
       "https://stream.newageradio.gr/listen/folk_gr/radio.mp3"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "radio-art-solo-piano",
+    "name": "Radio Art - Solo Piano",
+    "category": "music",
+    "streams": [
+      "https://live.radioart.com/fSolo_piano.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radio-9",
+    "name": "Radio 9 Θεσσαλονίκη",
+    "category": "music",
+    "streams": [
+      "https://solid55.streamupsolutions.com/proxy/gygasbfj?mp=/live"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "prime-100-3",
+    "name": "Prime 100.3",
+    "category": "music",
+    "streams": [
+      "https://s20.myradiostream.com:6738/;listen.pls"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

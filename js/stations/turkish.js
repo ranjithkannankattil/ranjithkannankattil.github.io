@@ -242,7 +242,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radiotedu.com/cazz-flac"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radyo-ilahi",
@@ -521,7 +522,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiotedu.com/lofi"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "offline": true
   },
   {
     "id": "canliradyo-tr-canl-radyo-mac-dinle",
@@ -584,7 +586,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiojar.com/tamm1f7kk48uv"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "offline": true
   },
   {
     "id": "s1lhoutte-arabesk-fm",
@@ -899,7 +902,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiotedu.com/classic-flac"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "offline": true
   },
   {
     "id": "lp-roman-fm",
@@ -918,6 +922,33 @@ window.STATIONS = [
       "https://radyokarakocan.ozelip.com/8006/stream"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "radyo-d",
+    "name": "Radyo D",
+    "category": "music",
+    "streams": [
+      "https://moondigitaledge2.radyotvonline.net/radyod/playlist.m3u8"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "trt-antalya",
+    "name": "TRT Antalya",
+    "category": "music",
+    "streams": [
+      "https://radio-trtantalya.medya.trt.com.tr/master.m3u8"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "bestefm",
+    "name": "BesteFM",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/tnvnovtgozstv"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

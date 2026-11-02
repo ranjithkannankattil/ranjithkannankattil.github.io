@@ -728,8 +728,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiojar.com/5705c71sn2zuv"
     ],
-    "added": "2026-10-29",
-    "offline": true
+    "added": "2026-10-29"
   },
   {
     "id": "la-mega-medellin-92-9-fm",
@@ -946,6 +945,33 @@ window.STATIONS = [
       "https://usa18.fastcast4u.com/proxy/rmoohhrw?mp=/1"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "radio-salsa-peru",
+    "name": "Radio Salsa Peru",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/f19941g3teruv"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "reggaeton-92-3-fm",
+    "name": "Reggaeton 92.3 FM",
+    "category": "music",
+    "streams": [
+      "https://streampanel.online/8495/stream"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "la-kalle-96-1-lima",
+    "name": "La Kalle 96.1 Lima",
+    "category": "music",
+    "streams": [
+      "https://lakalle.egostreaming.pe/radio/a7b9c3e4567f8d0123456789/"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

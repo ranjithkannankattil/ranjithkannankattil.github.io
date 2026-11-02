@@ -56,7 +56,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "89-4-tamil-fm",
@@ -280,7 +281,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio129/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "tamil-ragam",
@@ -954,6 +956,33 @@ window.STATIONS = [
       "https://fra-ranger01.dedicateware.com:8008/stream"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "mukil-fm",
+    "name": "Mukil Fm",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/9s8119m1rzzuv"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "yet-radio",
+    "name": "Yet Radio",
+    "category": "music",
+    "streams": [
+      "https://play.yetradio.com/stream/yetradio"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radio-paramankurichi",
+    "name": "Radio Paramankurichi",
+    "category": "music",
+    "streams": [
+      "https://vpmurugun.radioca.st/autodj"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

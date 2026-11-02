@@ -956,6 +956,33 @@ window.STATIONS = [
       "https://stream2.rgrfm.be/"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "tis-vloms-affligem-be-ns",
+    "name": "'tis Vloms - Affligem, be (ns)",
+    "category": "music",
+    "streams": [
+      "https://cast1.torontocast.com:4605/stream"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radio-texel",
+    "name": "Radio Texel",
+    "category": "news",
+    "streams": [
+      "https://cast6.asurahosting.com/proxy/radiotex/stream"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "opsinjoor-volksradio",
+    "name": "Opsinjoor Volksradio",
+    "category": "music",
+    "streams": [
+      "https://media2.hostin.cc/volksradio.mp3"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

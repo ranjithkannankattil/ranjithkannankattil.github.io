@@ -186,6 +186,15 @@ window.STATIONS = [
       "https://superagent-269bfe30.base44.app/functions/kaleidoscopeRadio?go=stream"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "radio-overberg-2",
+    "name": "Radio Overberg 2",
+    "category": "music",
+    "streams": [
+      "https://zas7.ndx.co.za:8040/stream"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

@@ -121,8 +121,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play-radio-stream3.hndt.com/now/WUBA5hW2/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-10",
@@ -881,6 +880,33 @@ window.STATIONS = [
       "https://lhttp.qingting.fm/live/20071/64k.mp3"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "station-43",
+    "name": "雨声",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/ckptaagp6x8uv"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "station-44",
+    "name": "北京音乐广播",
+    "category": "music",
+    "streams": [
+      "https://lhttp.qtfm.cn/live/332/64k.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "bridge-radio-hits-2",
+    "name": "Bridge Radio - 华语 HITS （2）",
+    "category": "music",
+    "streams": [
+      "https://das-edge14-live365-dal02.cdnstream.com/a57743_2"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

@@ -248,7 +248,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://broadcast.shoutstream.co.uk:8078/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "mp3quran-main",
@@ -944,6 +945,33 @@ window.STATIONS = [
       "https://stream.live.vc.bbcmedia.co.uk/bbc_world_service"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "setif",
+    "name": "Setif سطيف",
+    "category": "news",
+    "streams": [
+      "https://webradio3.tda.dz:8001/Setif_64K.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "constantine",
+    "name": "Constantine قسنطينة",
+    "category": "news",
+    "streams": [
+      "https://webradio3.tda.dz:8001/Constantine_64K.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "medina-fm",
+    "name": "MEDINA FM",
+    "category": "news",
+    "streams": [
+      "https://medinafm.ice.infomaniak.ch/medinafm-64.mp3"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

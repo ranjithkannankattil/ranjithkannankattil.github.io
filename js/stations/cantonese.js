@@ -40,8 +40,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://881903.fishtv.dpdns.org/proxy/903"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-4",
@@ -57,8 +56,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://1716664847.rsc.cdn77.org/1716664847/tracks-a1/mono.ts.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-6",
@@ -74,8 +72,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://881903.fishtv.dpdns.org/proxy/881"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-7",
@@ -180,7 +177,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://1946218710.rsc.cdn77.org/1946218710/index.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-15",
@@ -269,8 +267,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ptmirror3.passiontimes.hk/hls3/stream.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "chkt-am1430-fairchild",
@@ -608,8 +605,7 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/15318668/64k.mp3"
     ],
-    "added": "2026-10-27",
-    "offline": true
+    "added": "2026-10-27"
   },
   {
     "id": "station-40",
@@ -639,4 +635,4 @@ window.STATIONS = [
     "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

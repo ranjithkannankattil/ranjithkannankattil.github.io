@@ -827,6 +827,33 @@ window.STATIONS = [
       "https://panel.macabrismix.com.pl/listen/macabris_mix_radio_station_1-2c6_ghz/autodj.mp3"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "radio-misiek",
+    "name": "Radio Misiek",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/5hfdntgf8yzuv"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "rmf-muzyka-filmowa",
+    "name": "RMF Muzyka_Filmowa",
+    "category": "music",
+    "streams": [
+      "https://rs102-krk.rmfstream.pl/rmf_muzyka_filmowa"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radio-max-hit-polska",
+    "name": "Radio Max Hit Polska",
+    "category": "music",
+    "streams": [
+      "https://s3.slotex.pl:7370/stream"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

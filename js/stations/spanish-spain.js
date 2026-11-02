@@ -946,6 +946,33 @@ window.STATIONS = [
       "https://atres-live.ondacero.es/live/delegaciones/oc/cadiz/master.m3u8"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "china-fmfm92-9",
+    "name": "华夏之声China FM·西班牙马德里FM92.9",
+    "category": "news",
+    "streams": [
+      "https://radioserver12.profesionalhosting.com/proxy/pkg152387/stream"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "misterio-fm",
+    "name": "Misterio FM",
+    "category": "news",
+    "streams": [
+      "https://stream.zeno.fm/zr1ntv61fchvv"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "cadena-ser-zaragoza",
+    "name": "Cadena Ser + Zaragoza",
+    "category": "news",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/SER_MAS_ZARAGOZA.mp3"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

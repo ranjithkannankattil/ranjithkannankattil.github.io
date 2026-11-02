@@ -952,6 +952,33 @@ window.STATIONS = [
       "https://webradio.amsolution.com.br/radio/8320/lideranca"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "94-fm-natal-radio-cidade",
+    "name": "94 FM Natal · Rádio Cidade",
+    "category": "music",
+    "streams": [
+      "https://cidadedosolaac.jmvstream.com/stream"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "viola-viva-caipira",
+    "name": "VIOLA VIVA CAIPIRA",
+    "category": "music",
+    "streams": [
+      "https://centova.euroti.com.br:20055/stream"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radio-mec-fm",
+    "name": "Rádio MEC FM",
+    "category": "music",
+    "streams": [
+      "https://radiomecfm-stream.ebc.com.br/ebc/radiomecfm/MEC_FM-mp4a_277200_eng=20000.m3u8"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

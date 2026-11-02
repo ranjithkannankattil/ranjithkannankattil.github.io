@@ -950,6 +950,33 @@ window.STATIONS = [
       "https://mp3channels.webradio.rockantenne.de/classic-perlen"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "lounge-fm-100-austria",
+    "name": "Lounge.FM - 100% Austria",
+    "category": "music",
+    "streams": [
+      "https://s35.derstream.net/100austria.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "wdr-4-rhein-und-ruhr",
+    "name": "WDR 4 Rhein und Ruhr",
+    "category": "music",
+    "streams": [
+      "https://icecast.wdr.de/wdr/wdr4/rheinruhr/mp3/128/stream.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "antenne-brandenburg",
+    "name": "Antenne Brandenburg",
+    "category": "news",
+    "streams": [
+      "https://dispatcher.rndfnk.com/rbb/antennebrandenburg/live/mp3/mid"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

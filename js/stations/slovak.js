@@ -521,6 +521,15 @@ window.STATIONS = [
       "https://radio.vaticannews.va/stream-sk"
     ],
     "added": "2026-10-26"
+  },
+  {
+    "id": "radio-laskaro",
+    "name": "Rádio LASKARO",
+    "category": "music",
+    "streams": [
+      "https://servidor38-1.brlogic.com:7204/live"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

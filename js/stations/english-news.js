@@ -810,6 +810,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-02",
     "where": "Thailand"
+  },
+  {
+    "id": "deutsche-welle-radio",
+    "name": "Deutsche Welle Radio",
+    "category": "world",
+    "streams": [
+      "https://dw.audiostream.io/dw/1027/mp3/64/dw08"
+    ],
+    "added": "2026-11-02",
+    "where": "Germany"
+  },
+  {
+    "id": "npr-news-radio-107-7-fm",
+    "name": "NPR News Radio 107.7 FM",
+    "category": "world",
+    "streams": [
+      "https://npr-ice.streamguys1.com/live.aac"
+    ],
+    "added": "2026-11-02",
+    "where": "Saudi Arabia"
+  },
+  {
+    "id": "radiumfm-world",
+    "name": "RadiumFM World",
+    "category": "world",
+    "streams": [
+      "https://stream.radiumfm.com/world"
+    ],
+    "added": "2026-11-02",
+    "where": "Antarctica"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

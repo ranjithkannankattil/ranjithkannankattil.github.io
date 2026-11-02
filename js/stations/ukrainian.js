@@ -88,8 +88,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.mfm.ua/online128"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "nrj-ukraine",
@@ -153,8 +152,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s5.radioforge.com:7908/live?n=77357"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "24-breaking-live",
@@ -234,8 +232,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.brokenbeats.net/tune"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-shanson",
@@ -927,6 +924,33 @@ window.STATIONS = [
       "https://myradio24.org/7934"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "station-27",
+    "name": "Радіо Голос Надії",
+    "category": "devotional",
+    "streams": [
+      "https://s4.radio.co/s052c88338/low"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "fm-7",
+    "name": "Жидачів FM",
+    "category": "news",
+    "streams": [
+      "https://complex.in.ua/zhudachiv"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "teren-fm",
+    "name": "Teren.fm",
+    "category": "music",
+    "streams": [
+      "https://online.teren.fm/teren_320"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

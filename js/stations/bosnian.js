@@ -24,8 +24,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://team-data.ba:10000/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-studio-m",
@@ -177,8 +176,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_usora.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-busovaca",
@@ -380,4 +378,4 @@ window.STATIONS = [
     "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

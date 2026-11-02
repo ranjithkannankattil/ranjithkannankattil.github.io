@@ -24,8 +24,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostar.pro/stream/exyuretro.php"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "time-fm-gevgelija",
@@ -113,8 +112,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostar.pro/stream/mknarodna.php"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "star-radio-live-skopje-macedonia",
@@ -130,8 +128,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostar.pro/stream/boemi.php"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "sky-radio-hits-skopje-macedonia",
@@ -155,8 +152,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostar.pro/stream/narodna.php"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "star-radio-plus-skopje-macedonia",
@@ -201,4 +197,4 @@ window.STATIONS = [
     "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

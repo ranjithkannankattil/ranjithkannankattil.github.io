@@ -48,8 +48,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nova-radio.neterra.tv/veselinaretro"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "badrock-hard-heavy",
@@ -243,7 +242,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sc.mpbnl.nl/radionostalgia.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-1-1-0-ruse-88-9-fm",
@@ -512,8 +512,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.jump.bg/proxy/stanimi1/radioRETRO"
     ],
-    "added": "2026-10-26",
-    "offline": true
+    "added": "2026-10-26"
   },
   {
     "id": "station-9",
@@ -702,7 +701,8 @@ window.STATIONS = [
     "streams": [
       "https://sc.mpbnl.nl/notefm.mp3"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "offline": true
   },
   {
     "id": "mixx",
@@ -730,6 +730,33 @@ window.STATIONS = [
       "https://cdn.btv.bg/radio/njoy.mp3"
     ],
     "added": "2026-10-31"
+  },
+  {
+    "id": "radio-caribrod",
+    "name": "Radio Caribrod",
+    "category": "news",
+    "streams": [
+      "https://as1.radioserveri.com:8220/radio.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radioto-bg",
+    "name": "Radioto.bg",
+    "category": "music",
+    "streams": [
+      "https://radio.jump.bg/proxy/radiotobg2?mp=/stream"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radio-atlantic",
+    "name": "Radio Atlantic",
+    "category": "music",
+    "streams": [
+      "https://c32.radioboss.fm:8853/stream"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

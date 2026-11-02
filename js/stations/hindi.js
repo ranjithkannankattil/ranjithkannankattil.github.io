@@ -938,6 +938,33 @@ window.STATIONS = [
       "https://stream.fixupcare.com/live.mp3"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "radio-wow-bollywood",
+    "name": "Radio wow bollywood",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/d22wrdbst5quv.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "mahakatha-radio",
+    "name": "Mahakatha Radio",
+    "category": "devotional",
+    "streams": [
+      "https://mahakatharadio.com/api/station/live.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "indianlinkradio",
+    "name": "Indianlinkradio",
+    "category": "music",
+    "streams": [
+      "https://indianlink1.radioca.st/;"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

@@ -885,6 +885,33 @@ window.STATIONS = [
       "https://icy.unitedradio.it/105Miami.mp3"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "radio-swiss-classic",
+    "name": "Radio Swiss Classic",
+    "category": "music",
+    "streams": [
+      "https://stream.srg-ssr.ch/srgssr/rsc_de/aac/96"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "cafe-del-mar-collection",
+    "name": "Cafè Del Mar Collection",
+    "category": "music",
+    "streams": [
+      "https://stream.rcs.revma.com/bn68enmp81uvv.xspf"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radio-party-groove",
+    "name": "Radio Party Groove",
+    "category": "music",
+    "streams": [
+      "https://stream15.top-ix.org/partygroove"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

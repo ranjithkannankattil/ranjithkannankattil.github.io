@@ -92,8 +92,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "m80-radio-ballads",
@@ -230,8 +229,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "cidade-fm-2",
@@ -359,8 +357,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -558,8 +555,7 @@ window.STATIONS = [
     "streams": [
       "https://stream-icy.bauermedia.pt/m80rock.aac"
     ],
-    "added": "2026-10-26",
-    "offline": true
+    "added": "2026-10-26"
   },
   {
     "id": "radio-clube-pacos-de-ferreira-101-8-fm",
@@ -947,6 +943,33 @@ window.STATIONS = [
       "https://sp0.redeaudio.com/9304/stream"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "total-fm",
+    "name": "Total FM",
+    "category": "music",
+    "streams": [
+      "https://eu57-sonic.instainternet.com:8068/stream"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "posto-emissor-do-funchal-pef-canal-1-om",
+    "name": "Posto Emissor do Funchal (PEF) - Canal 1 OM",
+    "category": "music",
+    "streams": [
+      "https://centova.radio.com.pt/proxy/422?mp=/stream;"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radio-marginal",
+    "name": "Rádio Marginal",
+    "category": "music",
+    "streams": [
+      "https://centova.radios.pt/proxy/499?mp=/stream"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

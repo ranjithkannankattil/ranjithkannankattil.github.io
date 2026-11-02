@@ -217,7 +217,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://azura-cast.radiokansk.ru/listen/radiokansk/live"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "instrumental-jazz",
@@ -863,8 +864,7 @@ window.STATIONS = [
     "streams": [
       "https://air.sammit.tv:8443/retro"
     ],
-    "added": "2026-11-01",
-    "offline": true
+    "added": "2026-11-01"
   },
   {
     "id": "radio-record-disco-funk",
@@ -946,6 +946,33 @@ window.STATIONS = [
       "https://radiorecord.hostingradio.ru/chillhouse96.aacp"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "station-35",
+    "name": "Радио Эрмитаж",
+    "category": "music",
+    "streams": [
+      "https://hermitage.hostingradio.ru/hermitage128.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "101-ru-italo-disco",
+    "name": "101.ru Italo Disco",
+    "category": "music",
+    "streams": [
+      "https://srv01.gpmradio.ru/stream/pro/aac/64/161"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "station-36",
+    "name": "Радио Забытая Кассета",
+    "category": "music",
+    "streams": [
+      "https://casseta-disco.ru:6275/stream?x=1711899723831"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

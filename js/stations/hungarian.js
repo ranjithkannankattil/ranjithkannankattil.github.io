@@ -846,6 +846,33 @@ window.STATIONS = [
       "https://icast.connectmedia.hu/5112/live.mp3/;"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "lahmacun-radio",
+    "name": "Lahmacun Radio",
+    "category": "music",
+    "streams": [
+      "https://streaming.lahmacun.hu/radio/8000/radio.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "sunshinefm-nyiregyhaza",
+    "name": "SunshineFM Nyíregyháza",
+    "category": "music",
+    "streams": [
+      "https://sunshine1.stream.composeit.hu/sunshine"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "plusz-fm-margitta",
+    "name": "Plusz FM - Margitta",
+    "category": "news",
+    "streams": [
+      "https://stream2.radiotransilvania.ro/Margitta"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";

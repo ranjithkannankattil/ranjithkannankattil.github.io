@@ -40,7 +40,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiokaleva.digitacdn.net/radio/kaleva/master.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "yle-radio-suomi-hameenlinna",
@@ -485,6 +486,15 @@ window.STATIONS = [
       "https://aud-stream-jouluradio01.nm-elemental.nelonenmedia.fi/master.m3u8"
     ],
     "added": "2026-11-01"
+  },
+  {
+    "id": "rouhea-joulu",
+    "name": "Rouhea Joulu",
+    "category": "music",
+    "streams": [
+      "https://aud-stream-jouluradio06.nm-elemental.nelonenmedia.fi/master.m3u8"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T09:42Z";
+window.STATIONS_CHECKED = "2026-11-02T22:52Z";
