@@ -938,6 +938,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-02",
     "where": "Saudi Arabia"
+  },
+  {
+    "id": "670-the-score-wscr",
+    "name": "670 The Score (WSCR)",
+    "category": "sport",
+    "streams": [
+      "https://stream.abacast.net/direct/audacy-wscrfmaac-imc"
+    ],
+    "added": "2026-11-02",
+    "where": "US"
+  },
+  {
+    "id": "newstalk-zb-wellington",
+    "name": "Newstalk ZB Wellington",
+    "category": "anz",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/NZME_31AAC.m3u8"
+    ],
+    "added": "2026-11-02",
+    "where": "New Zealand"
+  },
+  {
+    "id": "101-fm-logan-101-1-fm",
+    "name": "101 FM - Logan - 101.1 FM",
+    "category": "anz",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/4CBL.mp3"
+    ],
+    "added": "2026-11-02",
+    "where": "Australia"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T07:18Z";
+window.STATIONS_CHECKED = "2026-11-02T09:42Z";

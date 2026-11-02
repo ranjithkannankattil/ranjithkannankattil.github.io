@@ -1116,6 +1116,36 @@ window.STATIONS = [
       "https://nl4.mystreaming.net/er/randytravis/icecast.audio"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "top-hits",
+    "name": "Top Hits",
+    "category": "pop",
+    "streams": [
+      "https://api.onlyhit.us/tophits"
+    ],
+    "added": "2026-11-02",
+    "where": "US"
+  },
+  {
+    "id": "rte-lyric-fm",
+    "name": "RTÉ lyric fm",
+    "category": "classical",
+    "streams": [
+      "https://icecast.rte.ie/lyric"
+    ],
+    "added": "2026-11-02",
+    "where": "Ireland"
+  },
+  {
+    "id": "bbc-radio-1",
+    "name": "BBC Radio 1",
+    "category": "pop",
+    "streams": [
+      "https://as-hls-ww-live.akamaized.net/pool_01505109/live/ww/bbc_radio_one/bbc_radio_one.isml/bbc_radio_one-audio%3d128000.norewind.m3u8"
+    ],
+    "added": "2026-11-02",
+    "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T07:18Z";
+window.STATIONS_CHECKED = "2026-11-02T09:42Z";

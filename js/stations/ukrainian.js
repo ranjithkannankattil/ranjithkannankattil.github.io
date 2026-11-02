@@ -900,6 +900,33 @@ window.STATIONS = [
       "https://stream.mistonadbugom.com.ua/radiomistonadbugom"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "station-26",
+    "name": "Сфера-ФМ",
+    "category": "news",
+    "streams": [
+      "https://cdn-br2.live-tv.cloud/sferarvFM/320k/icecast.audio"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "novaline",
+    "name": "Радіо NovaLine",
+    "category": "news",
+    "streams": [
+      "https://stream.novaline.net.ua/Novaline_320"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "meder-fm",
+    "name": "Meder FM",
+    "category": "music",
+    "streams": [
+      "https://myradio24.org/7934"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T07:18Z";
+window.STATIONS_CHECKED = "2026-11-02T09:42Z";

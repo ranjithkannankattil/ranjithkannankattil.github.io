@@ -925,6 +925,33 @@ window.STATIONS = [
       "https://protvradiostream.com:8350/live"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "elite-studio-fm",
+    "name": "Elite Studio FM",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/jjgtqyoqkpvuv"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "urbania-underground",
+    "name": "Urbania Underground",
+    "category": "music",
+    "streams": [
+      "https://s11.w3bserver.com/listen/urbaniaunderground_a93984/radio.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radio-lideranca-fm",
+    "name": "Rádio Liderança FM",
+    "category": "news",
+    "streams": [
+      "https://webradio.amsolution.com.br/radio/8320/lideranca"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T07:18Z";
+window.STATIONS_CHECKED = "2026-11-02T09:42Z";

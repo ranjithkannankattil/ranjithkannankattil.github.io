@@ -858,6 +858,33 @@ window.STATIONS = [
       "https://discofunk.streamingmedia.it/play"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "radioone",
+    "name": "RadioOne",
+    "category": "music",
+    "streams": [
+      "https://cp1.sednastream.com/proxy/radioone94?mp=/stream"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "easy-network-jazz-soul",
+    "name": "Easy Network Jazz & Soul",
+    "category": "music",
+    "streams": [
+      "https://sphera.fluidstream.eu/easy_jazz.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radio-105-miami",
+    "name": "Radio 105 - Miami",
+    "category": "music",
+    "streams": [
+      "https://icy.unitedradio.it/105Miami.mp3"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T07:18Z";
+window.STATIONS_CHECKED = "2026-11-02T09:42Z";

@@ -919,6 +919,33 @@ window.STATIONS = [
       "https://hls-01-retro-vecherinka.emgsound.ru/20/playlist.m3u8"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "87-9-fm",
+    "name": "Народное радио Минск 87.9 FM",
+    "category": "music",
+    "streams": [
+      "https://live.novoeradio.by:444/live/narodnoeradio_aac128/icecast.audio"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "relax-fm-instrumental",
+    "name": "Relax FM Instrumental",
+    "category": "music",
+    "streams": [
+      "https://pub0201.101.ru/stream/pro/aac/64/28?"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "record-chill-house",
+    "name": "Record Chill House",
+    "category": "music",
+    "streams": [
+      "https://radiorecord.hostingradio.ru/chillhouse96.aacp"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T07:18Z";
+window.STATIONS_CHECKED = "2026-11-02T09:42Z";

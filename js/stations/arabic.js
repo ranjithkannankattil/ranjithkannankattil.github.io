@@ -502,8 +502,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.garden/api/ara/content/listen/TBbZ87vu/channel.mp3"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "chaine-1",
@@ -918,6 +917,33 @@ window.STATIONS = [
       "https://webradio2.tda.dz:8001/Chaine2_64K.mp3"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "tripoli-fm-lebanon",
+    "name": "Tripoli FM Lebanon",
+    "category": "music",
+    "streams": [
+      "https://cast4.my-control-panel.com/proxy/tripolifm/stream"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "fred-film-radio",
+    "name": "Fred Film Radio(لغة عربية)",
+    "category": "music",
+    "streams": [
+      "https://s10.webradio-hosting.com/proxy/fredradioar/stream"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "bbc-arabic-1413-am",
+    "name": "BBC Arabic 1413 AM",
+    "category": "news",
+    "streams": [
+      "https://stream.live.vc.bbcmedia.co.uk/bbc_world_service"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T07:18Z";
+window.STATIONS_CHECKED = "2026-11-02T09:42Z";

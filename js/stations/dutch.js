@@ -929,6 +929,33 @@ window.STATIONS = [
       "https://italo.live-streams.nl/fantasy"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "groot-nieuws-radio-blijde-klanken",
+    "name": "Groot Nieuws Radio Blijde Klanken",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/GNRBK.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "vrt-radio-2-oost-vlaanderen",
+    "name": "VRT Radio 2 Oost-Vlaanderen",
+    "category": "music",
+    "streams": [
+      "https://icecast.vrtcdn.be/ra2ovl.aac"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radio-rgr-dance-rotselaar-be",
+    "name": "Radio RGR Dance Rotselaar, Be",
+    "category": "music",
+    "streams": [
+      "https://stream2.rgrfm.be/"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T07:18Z";
+window.STATIONS_CHECKED = "2026-11-02T09:42Z";

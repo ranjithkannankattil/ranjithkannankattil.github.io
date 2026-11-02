@@ -97,7 +97,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.phost.hu:8004/retro"
     ],
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "jazzy-soul",
@@ -818,6 +819,33 @@ window.STATIONS = [
       "https://clubflashh.streammachine.co.uk/stream/clubflashh"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "szent-korona-radio",
+    "name": "Szent Korona Rádió",
+    "category": "music",
+    "streams": [
+      "https://szkrcast.ddns.net/radio/8000/radio.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "pecs-aktual-radio",
+    "name": "Pécs Aktuál Rádió",
+    "category": "music",
+    "streams": [
+      "https://stream.pecsaktual.hu/paradio.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "best-fm-szolnok",
+    "name": "Best FM - Szolnok",
+    "category": "news",
+    "streams": [
+      "https://icast.connectmedia.hu/5112/live.mp3/;"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T07:18Z";
+window.STATIONS_CHECKED = "2026-11-02T09:42Z";

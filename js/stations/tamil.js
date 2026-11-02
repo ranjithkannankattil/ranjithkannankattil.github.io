@@ -160,8 +160,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio062/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "harris-jayaraj-fm",
@@ -928,6 +927,33 @@ window.STATIONS = [
       "https://ec2.yesstreaming.net:2540/stream"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "kummalamradio",
+    "name": "Kummalamradio",
+    "category": "music",
+    "streams": [
+      "https://kummalam.stream.laut.fm/kummalam"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "pudugai-isai-fm",
+    "name": "Pudugai Isai Fm",
+    "category": "music",
+    "streams": [
+      "https://pudhugaisaifm-prabak78.radioca.st/stream"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "vaanam-fm-hd",
+    "name": "Vaanam Fm Hd",
+    "category": "music",
+    "streams": [
+      "https://fra-ranger01.dedicateware.com:8008/stream"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T07:18Z";
+window.STATIONS_CHECKED = "2026-11-02T09:42Z";

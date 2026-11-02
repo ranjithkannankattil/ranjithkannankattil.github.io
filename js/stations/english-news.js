@@ -780,6 +780,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-02",
     "where": "Australia"
+  },
+  {
+    "id": "abc-triple-j-queensland-20220701",
+    "name": "ABC Triple J Queensland 20220701",
+    "category": "anz",
+    "streams": [
+      "https://mediaserviceslive.akamaized.net/hls/live/2038347/triplejqld/masterhq.m3u8"
+    ],
+    "added": "2026-11-02",
+    "where": "Australia"
+  },
+  {
+    "id": "gb-news-uk-48k-eaac",
+    "name": "GB News (UK) 48k eAAC+",
+    "category": "uk",
+    "streams": [
+      "https://listen-gbnews.sharp-stream.com/gbnews.aac"
+    ],
+    "added": "2026-11-02",
+    "where": "UK"
+  },
+  {
+    "id": "fabulous-103",
+    "name": "Fabulous 103",
+    "category": "world",
+    "streams": [
+      "https://fabulous.thailandstreaming.net/fabulous.mp3"
+    ],
+    "added": "2026-11-02",
+    "where": "Thailand"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T07:18Z";
+window.STATIONS_CHECKED = "2026-11-02T09:42Z";

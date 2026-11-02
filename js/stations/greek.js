@@ -816,7 +816,8 @@ window.STATIONS = [
     "streams": [
       "https://sp1.19cloudsnetwork.gr/8008/stream?1701442520261"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "offline": true
   },
   {
     "id": "sokfm-104-8",
@@ -943,6 +944,33 @@ window.STATIONS = [
       "https://securestreams3.autopo.st:1417/sfera"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "1o",
+    "name": "1o Ερασιτεχνικό Πρόγραμμα Γαργαλιάνων",
+    "category": "music",
+    "streams": [
+      "https://i2.streams.ovh:7109/stream?type=http&nocache=11373"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "skai-patras",
+    "name": "Skai Patras",
+    "category": "news",
+    "streams": [
+      "https://i.streams.ovh:9519/stream?type=http&nocache=5"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "1st-greek-folk-flac-radio-mp3",
+    "name": "1st Greek Folk FLAC Radio MP3",
+    "category": "music",
+    "streams": [
+      "https://stream.newageradio.gr/listen/folk_gr/radio.mp3"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T07:18Z";
+window.STATIONS_CHECKED = "2026-11-02T09:42Z";

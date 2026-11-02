@@ -24,7 +24,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://team-data.ba:10000/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-studio-m",
@@ -379,4 +380,4 @@ window.STATIONS = [
     "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T07:18Z";
+window.STATIONS_CHECKED = "2026-11-02T09:42Z";

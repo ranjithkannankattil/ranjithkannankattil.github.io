@@ -256,7 +256,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio007/hlspbaudio007_Auto.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-mirchi-usa",
@@ -368,7 +369,8 @@ window.STATIONS = [
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio011/hlspbaudio011_Auto.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "sandesh-radio",
@@ -909,6 +911,33 @@ window.STATIONS = [
       "https://streaming.webhostnepal.com/8020/stream"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "radio-bollywood-gaane-purane",
+    "name": "Radio Bollywood Gaane Purane",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/hem5rrfn07zuv"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "suno-sharda-90-8fm",
+    "name": "Suno Sharda - 90.8FM",
+    "category": "news",
+    "streams": [
+      "https://streamasiacdn.atc-labs.com/shardaradio.aac"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "redflow",
+    "name": "RedFlow",
+    "category": "music",
+    "streams": [
+      "https://stream.fixupcare.com/live.mp3"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T07:18Z";
+window.STATIONS_CHECKED = "2026-11-02T09:42Z";

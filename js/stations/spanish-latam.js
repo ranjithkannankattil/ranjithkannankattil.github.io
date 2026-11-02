@@ -919,6 +919,33 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/ACIR12_s01AAC.aac"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "boleros-inolvidables-fmlima",
+    "name": "Boleros Inolvidables (FMLima)",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/5t45zksv7mruv"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "la-kalle",
+    "name": "La Kalle",
+    "category": "music",
+    "streams": [
+      "https://24273.live.streamtheworld.com/LA_KALLE_SC"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "urbano-106-105-9-fm-san-jose-costa-rica",
+    "name": "Urbano 106 - 105.9 FM - San José, Costa Rica",
+    "category": "music",
+    "streams": [
+      "https://usa18.fastcast4u.com/proxy/rmoohhrw?mp=/1"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T07:18Z";
+window.STATIONS_CHECKED = "2026-11-02T09:42Z";

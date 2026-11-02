@@ -800,6 +800,33 @@ window.STATIONS = [
       "https://s1.reliastream.com/proxy/polskieradio?mp=/stream"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "rmf-k-pop",
+    "name": "RMF K-Pop",
+    "category": "music",
+    "streams": [
+      "https://rs8-krk2-cyfronet.rmfstream.pl/GAMEMUSIC"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "r357",
+    "name": "R357",
+    "category": "music",
+    "streams": [
+      "https://radio357.s3.eu-central-1.amazonaws.com/stream/29ce0221-3d37-47d9-97b9-559cfad16ed3.m3u8"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radio-macabrismix",
+    "name": "Radio Macabrismix",
+    "category": "music",
+    "streams": [
+      "https://panel.macabrismix.com.pl/listen/macabris_mix_radio_station_1-2c6_ghz/autodj.mp3"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T07:18Z";
+window.STATIONS_CHECKED = "2026-11-02T09:42Z";

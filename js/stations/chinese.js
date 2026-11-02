@@ -121,7 +121,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play-radio-stream3.hndt.com/now/WUBA5hW2/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-10",
@@ -185,8 +186,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/15318569/64k.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-16",
@@ -854,6 +854,33 @@ window.STATIONS = [
       "https://piccpndali.v.myalicdn.com/audio/cctv3_2.m3u8"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "station-42",
+    "name": "中国风的歌曲",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/ftaareifzcyvv"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "cctv-5",
+    "name": "CCTV-5体育伴音",
+    "category": "news",
+    "streams": [
+      "https://piccpndali.v.myalicdn.com/audio/cctv5_2.m3u8"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "asiafm-4",
+    "name": "AsiaFM亚洲天空台",
+    "category": "music",
+    "streams": [
+      "https://lhttp.qingting.fm/live/20071/64k.mp3"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T07:18Z";
+window.STATIONS_CHECKED = "2026-11-02T09:42Z";

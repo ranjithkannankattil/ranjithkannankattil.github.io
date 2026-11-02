@@ -674,6 +674,15 @@ window.STATIONS = [
       "https://stream2.otvoreni.hr/love"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "radio-marija-hrvatska",
+    "name": "Radio Marija Hrvatska",
+    "category": "devotional",
+    "streams": [
+      "https://dreamsiteradiocp2.com/proxy/rmcroatia?mp=/stream"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T07:18Z";
+window.STATIONS_CHECKED = "2026-11-02T09:42Z";

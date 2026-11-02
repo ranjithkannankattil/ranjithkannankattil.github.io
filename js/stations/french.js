@@ -870,6 +870,33 @@ window.STATIONS = [
       "https://a5.asurahosting.com:7980/radio.mp3"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "radio-exterior-de-espana",
+    "name": "Radio Exterior de España",
+    "category": "news",
+    "streams": [
+      "https://dispatcher.rndfnk.com/crtve/rneree/main/mp3/high"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "chaine-3",
+    "name": "Chaine 3 القناة الثالثة",
+    "category": "news",
+    "streams": [
+      "https://webradio1.tda.dz:8001/Chaine3_64K.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radio-star-maroc-fm",
+    "name": "Radio Star Maroc FM",
+    "category": "music",
+    "streams": [
+      "https://a2.asurahosting.com:6100/radio.mp3"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T07:18Z";
+window.STATIONS_CHECKED = "2026-11-02T09:42Z";

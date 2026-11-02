@@ -230,7 +230,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "cidade-fm-2",
@@ -279,7 +280,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8",
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rca-radio-clube-de-armamar",
@@ -357,7 +359,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -420,8 +423,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2opera80a/playlist.m3u8"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "radio-observador",
@@ -556,7 +558,8 @@ window.STATIONS = [
     "streams": [
       "https://stream-icy.bauermedia.pt/m80rock.aac"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "offline": true
   },
   {
     "id": "radio-clube-pacos-de-ferreira-101-8-fm",
@@ -917,6 +920,33 @@ window.STATIONS = [
       "https://a6.asurahosting.com:7930/radio.mp3"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "97fm-radio-clube-de-pombal",
+    "name": "97fm Rádio Clube de Pombal",
+    "category": "music",
+    "streams": [
+      "https://centova.radios.com.pt/proxy/410?mp=/stream"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "m80-radio-70s",
+    "name": "M80 Rádio – 70s",
+    "category": "music",
+    "streams": [
+      "https://stream-icy.bauermedia.pt/m8070.aac"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radio-lafoes-fm",
+    "name": "Rádio Lafões FM",
+    "category": "music",
+    "streams": [
+      "https://sp0.redeaudio.com/9304/stream"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T07:18Z";
+window.STATIONS_CHECKED = "2026-11-02T09:42Z";

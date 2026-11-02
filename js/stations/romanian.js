@@ -681,7 +681,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.radioplai.md/live"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "offline": true
   },
   {
     "id": "radio-ai-nostri",
@@ -862,6 +863,33 @@ window.STATIONS = [
       "https://online.webcastradio.ro/fun"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "total-radio-bucuresti-94-2-fm",
+    "name": "Total Radio -București 94.2 FM",
+    "category": "music",
+    "streams": [
+      "https://radiototal.radioca.st/stream"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radio-goldies",
+    "name": "Radio Goldies",
+    "category": "music",
+    "streams": [
+      "https://s10.streamingcloud.online/stream/13664"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radio-doxologia",
+    "name": "Radio Doxologia",
+    "category": "music",
+    "streams": [
+      "https://rlive.doxologia.ro/stream.mp3"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T07:18Z";
+window.STATIONS_CHECKED = "2026-11-02T09:42Z";

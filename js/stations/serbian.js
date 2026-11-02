@@ -537,7 +537,8 @@ window.STATIONS = [
     "streams": [
       "https://onair.superfm.rs/superfm.mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "offline": true
   },
   {
     "id": "big-radio-2-banja-luka",
@@ -564,8 +565,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.iradio.pro/proxy/radioforca?mp=/stream"
     ],
-    "added": "2026-10-26",
-    "offline": true
+    "added": "2026-10-26"
   },
   {
     "id": "jat-radio",
@@ -610,7 +610,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming.tdiradio.com/lollipop.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "offline": true
   },
   {
     "id": "radio-021-disco-funk",
@@ -845,6 +846,33 @@ window.STATIONS = [
       "https://stream.playradio.rs:8443/party.mp3"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "kolubara-96-9",
+    "name": "Kolubara 96.9",
+    "category": "music",
+    "streams": [
+      "https://kolubara.name.ba:8000/stream/1/"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "play-radio-rock",
+    "name": "Play Radio Rock",
+    "category": "music",
+    "streams": [
+      "https://stream.playradio.rs:8443/rock.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "naxi-r-n-b-radio",
+    "name": "Naxi R'n'B Radio",
+    "category": "music",
+    "streams": [
+      "https://naxidigital-rnb128ssl.streaming.rs:8122/;stream.nsv"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T07:18Z";
+window.STATIONS_CHECKED = "2026-11-02T09:42Z";

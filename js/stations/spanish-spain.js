@@ -212,8 +212,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://shoutcast.ccma.cat/ccma/catalunyainformacioHD.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "1000-hits-80s",
@@ -361,8 +360,7 @@ window.STATIONS = [
     "streams": [
       "https://rtva-live-radio.flumotion.com/rtva/cfr.mp3"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "80s-90s-absolute-hits",
@@ -470,8 +468,7 @@ window.STATIONS = [
     "streams": [
       "https://rtva-live-radio.flumotion.com/rtva/csr.mp3"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "cadena-ser",
@@ -507,8 +504,7 @@ window.STATIONS = [
     "streams": [
       "https://rtva-live-radio.flumotion.com/rtva/flamenco.mp3"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "80-hits-barcelona",
@@ -923,6 +919,33 @@ window.STATIONS = [
       "https://d141.rndfnk.com/star/crtve/rne5/cad/mp3/128/stream.mp3?cid=01GEPXNR2GD70SEGJYN9G1TQCA&sid=3LUDtXqmZdLddZCoAwZ0R31njVT&token=RLz5WDGirQu2ATInCYFWKLZ1hmXWZDILXbXriaQoivw&tvf=XpqjDV3e4xhkMTQxLnJuZGZuay5jb20"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "radio-nature",
+    "name": "Radio Nature",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/3ac97ysh6f0uv.aac"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "deep-nu-house-radio-by-so-so",
+    "name": "DEEP NU HOUSE Radio by SO&SO",
+    "category": "music",
+    "streams": [
+      "https://c4.radioboss.fm:18286/dnh"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "onda-cero-cadiz",
+    "name": "Onda Cero Cádiz",
+    "category": "news",
+    "streams": [
+      "https://atres-live.ondacero.es/live/delegaciones/oc/cadiz/master.m3u8"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T07:18Z";
+window.STATIONS_CHECKED = "2026-11-02T09:42Z";

@@ -891,6 +891,33 @@ window.STATIONS = [
       "https://live.radyositesihazir.com/8076/stream"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "radiotedu-classic",
+    "name": "RadioTEDU Classic",
+    "category": "music",
+    "streams": [
+      "https://stream.radiotedu.com/classic-flac"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "lp-roman-fm",
+    "name": "LP Roman Fm",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/netvowp5t54uv"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radyo-karakocan",
+    "name": "Radyo Karakoçan",
+    "category": "music",
+    "streams": [
+      "https://radyokarakocan.ozelip.com/8006/stream"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T07:18Z";
+window.STATIONS_CHECKED = "2026-11-02T09:42Z";

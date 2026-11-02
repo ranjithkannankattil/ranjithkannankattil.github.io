@@ -865,6 +865,33 @@ window.STATIONS = [
       "https://live.elpasradio.com/listen/elpasradio/stream"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "istara-fm-surabaya",
+    "name": "ISTARA FM SURABAYA",
+    "category": "music",
+    "streams": [
+      "https://live.radioistara.com/listen/radioistara/radioistara"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "rri-pro-2-yogyakarta",
+    "name": "RRI Pro 2 Yogyakarta",
+    "category": "music",
+    "streams": [
+      "https://stream-node0.rri.co.id/streaming/17/9017/rrijogjapro2.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "pro-1-rri-makassar",
+    "name": "PRO 1 RRI MAKASSAR",
+    "category": "music",
+    "streams": [
+      "https://stream-node0.rri.co.id/streaming/22/9022/rrimakasarpro1.mp3"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T07:18Z";
+window.STATIONS_CHECKED = "2026-11-02T09:42Z";

@@ -923,6 +923,33 @@ window.STATIONS = [
       "https://0n-60s.radionetz.de/0n-60s.mp3"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "wdr-3",
+    "name": "WDR 3",
+    "category": "music",
+    "streams": [
+      "https://wdr-wdr3-live.icecast.wdr.de/wdr/wdr3/live/mp3/128/stream.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "sex-by-rautemusik-rm-fm",
+    "name": "__SEX__ by rautemusik (rm.fm)",
+    "category": "music",
+    "streams": [
+      "https://sex-high.rautemusik.fm/?ref=radiobrowser"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "rock-antenne-classic-perlen",
+    "name": "ROCK ANTENNE Classic Perlen",
+    "category": "music",
+    "streams": [
+      "https://mp3channels.webradio.rockantenne.de/classic-perlen"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T07:18Z";
+window.STATIONS_CHECKED = "2026-11-02T09:42Z";

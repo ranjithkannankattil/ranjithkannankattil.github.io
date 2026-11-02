@@ -367,7 +367,8 @@ window.STATIONS = [
     "streams": [
       "https://ice2.radia.cz/rockzabava128.aac"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "evropa-2-actve",
@@ -754,7 +755,8 @@ window.STATIONS = [
     "streams": [
       "https://ice2.abradio.cz/folk64a.aac"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "offline": true
   },
   {
     "id": "slagr-radio",
@@ -899,6 +901,33 @@ window.STATIONS = [
       "https://ice3.abradio.cz/jazzinec128.mp3"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "radio-energic",
+    "name": "Rádio Energic",
+    "category": "music",
+    "streams": [
+      "https://icecast9.play.cz/energic.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radio-wave",
+    "name": "Radio Wave",
+    "category": "music",
+    "streams": [
+      "https://rozhlas.stream/wave_mp3_256.mp3"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radio-frm",
+    "name": "Radio FRM",
+    "category": "music",
+    "streams": [
+      "https://icecast1.play.cz/fajnrock128.mp3"
+    ],
+    "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T07:18Z";
+window.STATIONS_CHECKED = "2026-11-02T09:42Z";
