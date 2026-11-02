@@ -158,15 +158,6 @@ window.STATIONS = [
     "where": "US"
   },
   {
-    "id": "america-s-country",
-    "name": "America's Country",
-    "category": "country",
-    "streams": [
-      "https://ais-sa2.cdnstream1.com/1976_128.mp3"
-    ],
-    "where": "US"
-  },
-  {
     "id": "80s-drive",
     "name": "80s Drive",
     "category": "pop",
@@ -370,7 +361,7 @@ window.STATIONS = [
   {
     "id": "outlaw-country-music-radio",
     "name": "Outlaw – Country Music Radio",
-    "category": "rock",
+    "category": "country",
     "streams": [
       "https://r.bgp.rodeo/listen/outlaw/radio.mp3"
     ],
@@ -410,7 +401,7 @@ window.STATIONS = [
   {
     "id": "181-fm-kickin-country",
     "name": "181.FM - Kickin' Country",
-    "category": "rock",
+    "category": "country",
     "streams": [
       "https://listen.181fm.com/181-kickincountry_128k.mp3"
     ],
@@ -493,16 +484,6 @@ window.STATIONS = [
     "category": "rock",
     "streams": [
       "https://kathy.torontocast.com:2800/;"
-    ],
-    "added": "2026-10-24",
-    "where": "US"
-  },
-  {
-    "id": "bluegrass-country",
-    "name": "Bluegrass Country",
-    "category": "country",
-    "streams": [
-      "https://ice24.securenetsystems.net/WAMU"
     ],
     "added": "2026-10-24",
     "where": "US"
@@ -639,16 +620,6 @@ window.STATIONS = [
     "where": "US"
   },
   {
-    "id": "977-country",
-    "name": ".977 Country",
-    "category": "country",
-    "streams": [
-      "https://24293.live.streamtheworld.com/977_COUNTRY_SC"
-    ],
-    "added": "2026-10-27",
-    "where": "US"
-  },
-  {
     "id": "100-covers-lounge",
     "name": "100 % COVERS LOUNGE",
     "category": "jazz",
@@ -717,16 +688,6 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "where": "UK"
-  },
-  {
-    "id": "99-9-kiss-country",
-    "name": "99.9 Kiss Country",
-    "category": "country",
-    "streams": [
-      "https://stream.revma.ihrhls.com/zc1577"
-    ],
-    "added": "2026-10-28",
-    "where": "US"
   },
   {
     "id": "tmm-1",
@@ -889,16 +850,6 @@ window.STATIONS = [
     "where": "US"
   },
   {
-    "id": "104-9-max-country",
-    "name": "104.9 Max Country",
-    "category": "country",
-    "streams": [
-      "https://ais-sa1.streamon.fm/7246_48k.aac"
-    ],
-    "added": "2026-10-31",
-    "where": "US"
-  },
-  {
     "id": "181-fm-beatles",
     "name": "181.FM - Beatles",
     "category": "rock",
@@ -997,6 +948,174 @@ window.STATIONS = [
     ],
     "added": "2026-11-02",
     "where": "US"
+  },
+  {
+    "id": "rautemusik-country",
+    "name": "RauteMusik Country",
+    "category": "country",
+    "streams": [
+      "https://country-high.rautemusik.fm/"
+    ],
+    "where": "Germany",
+    "added": "2026-11-02"
+  },
+  {
+    "id": "0nlineradio-country",
+    "name": "0nlineradio Country",
+    "category": "country",
+    "streams": [
+      "https://stream.0nlineradio.com/country"
+    ],
+    "where": "Germany",
+    "added": "2026-11-02"
+  },
+  {
+    "id": "country-108",
+    "name": "Country 108",
+    "category": "country",
+    "streams": [
+      "https://icepool.silvacast.com/COUNTRY108.mp3"
+    ],
+    "where": "Denmark",
+    "added": "2026-11-02"
+  },
+  {
+    "id": "backroad-country-radio",
+    "name": "Backroad Country Radio",
+    "category": "country",
+    "streams": [
+      "https://stream.backroadcountryradio.com/listen/backroad/radio.mp3"
+    ],
+    "where": "Germany",
+    "added": "2026-11-02"
+  },
+  {
+    "id": "smooth-country",
+    "name": "Smooth Country",
+    "category": "country",
+    "streams": [
+      "https://media-ssl.musicradio.com/SmoothCountry"
+    ],
+    "where": "UK",
+    "added": "2026-11-02"
+  },
+  {
+    "id": "abc-country",
+    "name": "ABC Country",
+    "category": "country",
+    "streams": [
+      "https://mediaserviceslive.akamaized.net/hls/live/2038322/abccountry/index.m3u8"
+    ],
+    "where": "Australia",
+    "added": "2026-11-02"
+  },
+  {
+    "id": "somafm-boot-liquor",
+    "name": "SomaFM Boot Liquor",
+    "category": "country",
+    "streams": [
+      "https://ice6.somafm.com/bootliquor-320-mp3",
+      "https://ice5.somafm.com/bootliquor-128-aac"
+    ],
+    "where": "US",
+    "added": "2026-11-02"
+  },
+  {
+    "id": "181-fm-real-country",
+    "name": "181.FM - Real Country",
+    "category": "country",
+    "streams": [
+      "https://listen.181fm.com/181-realcountry_128k.mp3"
+    ],
+    "where": "US",
+    "added": "2026-11-02"
+  },
+  {
+    "id": "181-fm-front-porch",
+    "name": "181.FM - Front Porch (Bluegrass)",
+    "category": "country",
+    "streams": [
+      "https://listen.181fm.com/181-frontporch_128k.mp3"
+    ],
+    "where": "US",
+    "added": "2026-11-02"
+  },
+  {
+    "id": "hpr1-traditional-classic-country",
+    "name": "HPR1 Traditional Classic Country",
+    "category": "country",
+    "streams": [
+      "https://us2.maindigitalstream.com/ssl/7713"
+    ],
+    "where": "US",
+    "added": "2026-11-02"
+  },
+  {
+    "id": "highway-country-radio",
+    "name": "Highway Country Radio",
+    "category": "country",
+    "streams": [
+      "https://puma.streemlion.com:2125/stream"
+    ],
+    "where": "Canada",
+    "added": "2026-11-02"
+  },
+  {
+    "id": "radio-country-live-new-york",
+    "name": "Radio Country Live New York",
+    "category": "country",
+    "streams": [
+      "https://streaming.radiostreamlive.com/radiocountrylive_devices"
+    ],
+    "where": "US",
+    "added": "2026-11-02"
+  },
+  {
+    "id": "folk-alley-freshgrass",
+    "name": "Folk Alley FreshGrass",
+    "category": "country",
+    "streams": [
+      "https://freshgrass.streamguys1.com/ss1-128mp3"
+    ],
+    "where": "US",
+    "added": "2026-11-02"
+  },
+  {
+    "id": "the-bluegrass-jamboree",
+    "name": "The Bluegrass Jamboree",
+    "category": "country",
+    "streams": [
+      "https://the-bluegrass-jamboree.radiocult.fm/stream"
+    ],
+    "where": "US",
+    "added": "2026-11-02"
+  },
+  {
+    "id": "exclusively-shania-twain",
+    "name": "Exclusively Shania Twain",
+    "category": "country",
+    "streams": [
+      "https://streaming.exclusive.radio/er/shaniatwain/icecast.audio"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "exclusively-george-strait",
+    "name": "Exclusively George Strait",
+    "category": "country",
+    "streams": [
+      "https://nl4.mystreaming.net/er/georgestrait/icecast.audio"
+    ],
+    "added": "2026-11-02"
+  },
+  {
+    "id": "exclusively-randy-travis",
+    "name": "Exclusively Randy Travis",
+    "category": "country",
+    "streams": [
+      "https://nl4.mystreaming.net/er/randytravis/icecast.audio"
+    ],
+    "added": "2026-11-02"
   }
 ];
 window.STATIONS_CHECKED = "2026-11-02T07:18Z";

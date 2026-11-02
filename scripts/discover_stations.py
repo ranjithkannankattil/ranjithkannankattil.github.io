@@ -24,6 +24,10 @@ GENRES = [("rock", r"rock|metal|punk|grunge|alternative|indie"), ("jazz", r"jazz
 
 # state propaganda and mislabelled foreign services that the directory files under other languages
 PROPAGANDA = re.compile(r"pyongyang|voice of korea|\bkcbs\b|sputnik|russia today|\brt (news|radio)\b|rfi russia|radio rossii|vesti fm", re.I)
+# Streaming hosts that US broadcasters use to stream only to listeners in the US. Their US
+# stations play for GitHub's US servers (so they pass the check) but stay silent in Europe and
+# India, so US stations on these hosts aren't added. (Other countries use them unrestricted.)
+REGION_LOCKED = re.compile(r"ihrhls\.com|streamtheworld\.com|cdnstream1?\.com|streamon\.fm|securenetsystems\.net", re.I)
 MUSIC_WORDS = re.compile(r"\b(house|deep|dance|hits|retro|oldies|50s|60s|70s|80s|90s|lounge|chill|edm|techno|trance|music|mix|charts?|remix|beats|jazz|rock|pop)\b", re.I)
 
 
@@ -114,7 +118,8 @@ def discover(cols: list[dict], files: dict, health: dict, test_stream, OK: str) 
             nk = re.sub(r"[^\w]", "", name.lower())
             if not nk or u in have_urls or nk in have_names or u in tried or nk in seen or bc.BLOCK.search(name):
                 continue
-            if not sane_name(name) or PROPAGANDA.search(name):
+            if not sane_name(name) or PROPAGANDA.search(name) or (
+                    REGION_LOCKED.search(u) and (r.get("countrycode") or "").upper() == "US"):
                 continue
             if col["id"] == "english-music" and (r.get("countrycode") or "") not in ("GB", "IE", "US", "CA", "AU", "NZ", ""):
                 continue                              # English-language music from English-speaking countries
