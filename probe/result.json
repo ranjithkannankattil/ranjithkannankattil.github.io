@@ -1,0 +1,2079 @@
+{
+ "current": [
+  {
+   "id": "america-s-country",
+   "name": "America's Country",
+   "url": "https://ais-sa2.cdnstream1.com/1976_128.mp3",
+   "runner": [
+    "ok",
+    "656 KB in 10s"
+   ],
+   "rb": [
+    {
+     "name": "America's Country",
+     "country": "US",
+     "lastcheckok": 1,
+     "checks": {
+      "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+      "rb-radiobrowser-api-worker-74545fd88-xh6r9": "0/1"
+     }
+    },
+    {
+     "name": "Americas Country",
+     "country": "",
+     "lastcheckok": 1,
+     "checks": {
+      "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+      "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "outlaw-country-music-radio",
+   "name": "Outlaw – Country Music Radio",
+   "url": "https://r.bgp.rodeo/listen/outlaw/radio.mp3",
+   "runner": [
+    "ok",
+    "399 KB in 10s"
+   ],
+   "rb": [
+    {
+     "name": "Outlaw – Country Music Radio",
+     "country": "US",
+     "lastcheckok": 1,
+     "checks": {
+      "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+      "rb-radiobrowser-api-worker-74545fd88-fjxw7": "1/1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "181-fm-kickin-country",
+   "name": "181.FM - Kickin' Country",
+   "url": "https://listen.181fm.com/181-kickincountry_128k.mp3",
+   "runner": [
+    "ok",
+    "641 KB in 10s"
+   ],
+   "rb": [
+    {
+     "name": "Kickin' Country",
+     "country": "US",
+     "lastcheckok": 1,
+     "checks": {
+      "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+      "rb-radiobrowser-api-worker-74545fd88-ppczm": "1/1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "181-fm-80-s-country",
+   "name": "181.FM - 80's Country",
+   "url": "https://listen.181fm.com/181-80scountry_128k.mp3",
+   "runner": [
+    "ok",
+    "657 KB in 10s"
+   ],
+   "rb": []
+  },
+  {
+   "id": "181-fm-90-s-country",
+   "name": "181.FM - 90's Country",
+   "url": "https://listen.181fm.com/181-90scountry_128k.mp3",
+   "runner": [
+    "ok",
+    "641 KB in 10s"
+   ],
+   "rb": []
+  },
+  {
+   "id": "bluegrass-country",
+   "name": "Bluegrass Country",
+   "url": "https://ice24.securenetsystems.net/WAMU",
+   "runner": [
+    "ok",
+    "136 KB in 10s"
+   ],
+   "rb": [
+    {
+     "name": "Bluegrass Country",
+     "country": "US",
+     "lastcheckok": 1,
+     "checks": {
+      "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+      "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+     }
+    },
+    {
+     "name": "WAMU",
+     "country": "US",
+     "lastcheckok": 1,
+     "checks": {
+      "rb-radiobrowser-api-worker-74545fd88-xtccb": "1/1",
+      "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "181-fm-highway-181",
+   "name": "181.FM - Highway 181",
+   "url": "https://listen.181fm.com/181-highway_128k.mp3",
+   "runner": [
+    "ok",
+    "610 KB in 10s"
+   ],
+   "rb": []
+  },
+  {
+   "id": "977-country",
+   "name": ".977 Country",
+   "url": "https://24293.live.streamtheworld.com/977_COUNTRY_SC",
+   "runner": [
+    "ok",
+    "300 KB in 10s"
+   ],
+   "rb": []
+  },
+  {
+   "id": "99-9-kiss-country",
+   "name": "99.9 Kiss Country",
+   "url": "https://stream.revma.ihrhls.com/zc1577",
+   "runner": [
+    "ok",
+    "181 KB in 10s"
+   ],
+   "rb": [
+    {
+     "name": "99.9 Kiss Country",
+     "country": "US",
+     "lastcheckok": 1,
+     "checks": {
+      "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+      "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+     }
+    },
+    {
+     "name": "WKSF Kiss Country 99.9 FM",
+     "country": "US",
+     "lastcheckok": 1,
+     "checks": {
+      "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+      "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+     }
+    }
+   ]
+  },
+  {
+   "id": "104-9-max-country",
+   "name": "104.9 Max Country",
+   "url": "https://ais-sa1.streamon.fm/7246_48k.aac",
+   "runner": [
+    "ok",
+    "236 KB in 10s"
+   ],
+   "rb": [
+    {
+     "name": "104.9 Max Country",
+     "country": "US",
+     "lastcheckok": 1,
+     "checks": {
+      "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+      "rb-radiobrowser-api-worker-74545fd88-s2lwv": "1/1"
+     }
+    }
+   ]
+  }
+ ],
+ "candidates": [
+  {
+   "name": "# RdMix Classic Rock 70s 80s 90s",
+   "url": "https://cast1.torontocast.com:4610/stream",
+   "homepage": "https://radiodimensionemix.torontocast.stream/",
+   "country": "CA",
+   "tags": "60s,60s and 70s.,70's,70er,70s,80's,80er,80s,90's,90er,90s,blues,blues rock,classic blues,classic hits,classic hits 60s 70a 80s,classic rock,classic rock  50's 60's 70's 80's 90's,classic rock music,classic rock oldies,classic rock oldies soul,classic rock; alternative rock indie,country,entretenimiento,fm,hard rock,high quality audio,hits,local radio,melodic hard rock,music,music 70s 80s 90s,musica,oldies,pop rock,public radio,radio,real classic rock,rhythm and blues,rock,soft rock",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 182,
+   "votes": 4954,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "413 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "America's Country",
+   "url": "https://ais-sa2.cdnstream1.com/1976_128.mp3",
+   "homepage": "https://americascountry.us/",
+   "country": "US",
+   "tags": "2000's country,90's country,america's country,classic country,country,country music,hot country hits,three decades of country",
+   "codec": "AAC",
+   "bitrate": 128,
+   "clicks": 80,
+   "votes": 2947,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "656 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "0/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "A MISSISSIPPI BLUES",
+   "url": "https://cast1.torontocast.com:4450/;?type=http&nocache=1745625391",
+   "homepage": "https://radiosuitenetwork.torontocast.stream/amississippiblues/",
+   "country": "CA",
+   "tags": "blues,bluesrock,canada,country,delta blues,guitar,guitarist,jazz,mississippi,rock,rock and blues,soft blues",
+   "codec": "MP3",
+   "bitrate": 320,
+   "clicks": 55,
+   "votes": 845,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "642 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "99.9 Kiss Country",
+   "url": "https://stream.revma.ihrhls.com/zc1577",
+   "homepage": "https://99kisscountry.iheart.com/",
+   "country": "US",
+   "tags": "country",
+   "codec": "AAC",
+   "bitrate": 0,
+   "clicks": 33,
+   "votes": 132,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "180 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "#joint radio Blues Rock",
+   "url": "https://jointil.com/stream-blues",
+   "homepage": "https://www.jointil.com/",
+   "country": "IL",
+   "tags": "60s,70s,80s,alternative rock,bluegrass,blues,blues rock,chicago blues,classic blues,classic hits,classic rock,country blues,hits,pop rock,rhythm and blues (1960s randb (eg. the rolling stones)),rock,soft rock,top hits",
+   "codec": "MP3",
+   "bitrate": 320,
+   "clicks": 32,
+   "votes": 570,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "615 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Outlaw – Country Music Radio",
+   "url": "https://r.bgp.rodeo/listen/outlaw/radio.mp3",
+   "homepage": "https://r.bgp.rodeo/public/outlaw",
+   "country": "US",
+   "tags": "alt-country,americana,country,country rock,honky tonk,outlaw country,red dirt,southern rock,texas country",
+   "codec": "MP3",
+   "bitrate": 320,
+   "clicks": 30,
+   "votes": 44,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "420 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-xtccb": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "* COUNTRY || Country Pop, Country Rock, Nashville, Americana, Folk, Southern Rock, Roadtrip, Storytelling, Acoustic, Feel Good, Heartland, Modern Country, Classic Country, Chill, Roots",
+   "url": "https://0nlineradio.radioho.st/0r-country?ref=rb26",
+   "homepage": "https://plus.rm.fm/",
+   "country": "DE",
+   "tags": "alternative country,blues rock,classic country,classic rock,contemporary country,country,country blues,country music,country pop,country rock,outlaw country,rock,soft rock",
+   "codec": "MP3",
+   "bitrate": 192,
+   "clicks": 27,
+   "votes": 158,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "413 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-xtccb": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "181.FM - Highway 181",
+   "url": "https://listen.181fm.com/181-highway_128k.mp3",
+   "homepage": "http://www.181.fm/",
+   "country": "US",
+   "tags": "classic country,waynesboro",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 26,
+   "votes": 20649,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "641 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Hot Tejano (Austin) - Online - www.hottejano.com - hottejano.com LLC - Austin, Texas",
+   "url": "https://ithaca.cdnstream.com/1113_96",
+   "homepage": "https://hottejano.com/",
+   "country": "US",
+   "tags": "austin,country,country music,entretenimiento,estación,inglés,moi merino,music,música,música en español e inglés,online,online only,radio,radio online,texas,usa",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 21,
+   "votes": 205,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "656 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Bluegrass Country",
+   "url": "https://ice24.securenetsystems.net/WAMU",
+   "homepage": "https://bluegrasscountry.org/",
+   "country": "US",
+   "tags": "bluegrass,country",
+   "codec": "AAC",
+   "bitrate": 64,
+   "clicks": 20,
+   "votes": 3920,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "135 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Biloela 4BRZ 89.7MHz FM The Breeze Central Queensland",
+   "url": "https://s8.yesstreaming.net:17065/BrzCNQ",
+   "homepage": "https://thebreeze.com.au/",
+   "country": "AU",
+   "tags": "ballads,country,news,old skool,soft rock,weather",
+   "codec": "AAC",
+   "bitrate": 64,
+   "clicks": 18,
+   "votes": 121,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "145 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "sky news arabia radio",
+   "url": "https://stream.skynewsarabia.com/hls/sna.m3u8",
+   "homepage": "https://skynewsarabia.com/",
+   "country": "AE",
+   "tags": "country",
+   "codec": "AAC",
+   "bitrate": 530,
+   "clicks": 17,
+   "votes": 3001,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "HLS ok"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 1
+  },
+  {
+   "name": "HPR1: Traditional Classic Country",
+   "url": "https://us2.maindigitalstream.com/ssl/7713",
+   "homepage": "https://hpr.org/",
+   "country": "US",
+   "tags": "country",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 17,
+   "votes": 208,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "415 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "__COUNTRYHITS.FM__ by rautemusik (rm.fm)",
+   "url": "https://country-high.rautemusik.fm/?ref=radiobrowser",
+   "homepage": "https://countryhits.fm/",
+   "country": "DE",
+   "tags": "alternative country,alternative rock,americana,classic country,classic rock,country,hits,nashville,new country,rock,texas country",
+   "codec": "MP3",
+   "bitrate": 192,
+   "clicks": 16,
+   "votes": 859,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "422 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Radio Country Live New York",
+   "url": "https://streaming.radiostreamlive.com/radiocountrylive_devices",
+   "homepage": "http://www.radiocountrylive.com/",
+   "country": "US",
+   "tags": "country,new york city,rsl",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 16,
+   "votes": 5718,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "216 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-xtccb": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "0nlineradio COUNTRY",
+   "url": "https://stream.0nlineradio.com/country?ref=radiobrowser",
+   "homepage": "https://0nlineradio.com/",
+   "country": "DE",
+   "tags": "alternative country,classic country,classic rock,country,country music,country rock,new country,rock,texas country",
+   "codec": "MP3",
+   "bitrate": 192,
+   "clicks": 15,
+   "votes": 620,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "431 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "MRC:-Hip Hop Soul Radio \tRadio Music",
+   "url": "https://stream.zeno.fm/k7cdrm450s8uv",
+   "homepage": "https://stream.zeno.fm/k7cdrm450s8uv",
+   "country": "MA",
+   "tags": "country",
+   "codec": "MP3",
+   "bitrate": 192,
+   "clicks": 13,
+   "votes": 1234,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "464 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "WSM",
+   "url": "https://ais-sa8.cdnstream1.com/3666_96.aac",
+   "homepage": "https://wsmradio.com/",
+   "country": "US",
+   "tags": "americana,bluegrass,country,grand ole opry",
+   "codec": "AAC",
+   "bitrate": 96,
+   "clicks": 12,
+   "votes": 8,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "493 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-ppczm": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Smooth Country",
+   "url": "https://media-ssl.musicradio.com/SmoothCountry",
+   "homepage": "https://www.smoothradio.com/country/",
+   "country": "GB",
+   "tags": "country,country music",
+   "codec": "AAC",
+   "bitrate": 48,
+   "clicks": 12,
+   "votes": 502,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "146 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "181.FM - Real Country",
+   "url": "https://listen.181fm.com/181-realcountry_128k.mp3",
+   "homepage": "http://www.181.fm/",
+   "country": "US",
+   "tags": "country,waynesboro",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 11,
+   "votes": 3365,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "674 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Exclusively The Eagles",
+   "url": "https://streaming.exclusive.radio/er/eagles/icecast.audio",
+   "homepage": "https://exclusive.radio/",
+   "country": "AE",
+   "tags": "country,rock,rock music",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 11,
+   "votes": 649,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "474 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-xtccb": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Piratenpower",
+   "url": "https://stream.piratenpower.nl:8010/stream",
+   "homepage": "https://www.piratenpower.nl/",
+   "country": "NL",
+   "tags": "country music,duits,dutch",
+   "codec": "MP3",
+   "bitrate": 192,
+   "clicks": 11,
+   "votes": 76,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "481 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-xtccb": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "101.5 Hank FM",
+   "url": "https://ais-sa1.streamon.fm/7169_48k.aac",
+   "homepage": "https://hankfmutah.com/",
+   "country": "US",
+   "tags": "classic country,country",
+   "codec": "AAC",
+   "bitrate": 96,
+   "clicks": 10,
+   "votes": 56,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "482 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Exclusively Taylor Swift",
+   "url": "https://streaming.exclusive.radio/er/taylorswift/icecast.audio",
+   "homepage": "https://play.exclusive.radio/",
+   "country": "AE",
+   "tags": "contemporary country,country,pop,singer-songwriter",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 10,
+   "votes": 873,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "477 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Vividh Bharati 102.8 FM in Hyderabad",
+   "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio034/playlist.m3u8",
+   "homepage": "",
+   "country": "IN",
+   "tags": "country",
+   "codec": "AAC",
+   "bitrate": 95,
+   "clicks": 10,
+   "votes": 1191,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "HLS ok"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-xtccb": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 1
+  },
+  {
+   "name": "kbs해피fm",
+   "url": "https://2radio-bora.gscdn.kbs.co.kr/2radio-bora-01/2radio-bora-01_hd.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8ycmFkaW8tYm9yYS5nc2Nkbi5rYnMuY28ua3IvMnJhZGlvLWJvcmEtMDEvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5MzQxNjc3MX19fV19&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=aDb2fw6uRuJ0amRINufWDtApUVmtJV6-iQjTpqY102JDpcrPd72K-h~lHYwBSyfouiy-hu8YYsYrLkIycbH-FfA14WUFHEet9gW2TirhVfGBTeCydbrYGB4j~WarvzU2DzkhbIIm-LkfMhkMI3W-pPrlVKy2pQ3-bAlDqU1RKjZv6HygpB2q7mwUWAxla3it7X8Ar~kciOXwQldHiJb4IEcrnnaiaxE0UChke5AJaBK0cdG7Jr-5O4sAVvMsLhFJ~ZrBhmjLaTa8wYtHQAdmfJT77MnyS2xMePHtgBidXpu0A-SfZ7vfZ6nCndwjFomzKOmVGUIxG4hAjwDUoARROw__",
+   "homepage": "",
+   "country": "KR",
+   "tags": "country",
+   "codec": "UNKNOWN",
+   "bitrate": 0,
+   "clicks": 10,
+   "votes": 273,
+   "lastcheckok": 1,
+   "runner": [
+    "dead",
+    "playlist HTTP 403"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-475jf": "1/1"
+   },
+   "hls": 1
+  },
+  {
+   "name": "MA:-Radio Sawt Alamal",
+   "url": "https://stream.zeno.fm/d4u7zbqh5qruv",
+   "homepage": "https://stream.zeno.fm/d4u7zbqh5qruv",
+   "country": "MA",
+   "tags": "country",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 10,
+   "votes": 1588,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "326 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "SomaFM Boot Liquor (320k MP3)",
+   "url": "https://ice6.somafm.com/bootliquor-320-mp3",
+   "homepage": "https://somafm.com/bootliquor/",
+   "country": "US",
+   "tags": "americana,country",
+   "codec": "MP3",
+   "bitrate": 320,
+   "clicks": 10,
+   "votes": 2603,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "639 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Classic Country Legends Radio",
+   "url": "https://stream-178.surfernetwork.com/wf3w5y2rjdhvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ3ZjN3NXkycmpkaHZ2IiwiaG9zdCI6InN0cmVhbS0xNzguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJFM1FWVGQ4eVNmdXBlbWRuSllHa2pnIiwiaWF0IjoxNzg1MTczMjEzLCJleHAiOjE3ODUxNzMyNzN9.dPM3C02OEnU6dj4DHGiC4_0QK07CO86tjQlDOYWARj8",
+   "homepage": "https://classiccountrylegendsradio.neocities.org/",
+   "country": "US",
+   "tags": "christmas music,classic country,classics,country,country music,golden,legends,music for study,music radio,oldies,radio,retro,roots",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 9,
+   "votes": 8,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "326 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Radio W&M",
+   "url": "https://stream.zeno.fm/qgeotx9vzpluv",
+   "homepage": "https://catskinrex.net/radio-wm/",
+   "country": "FI",
+   "tags": "americana,blues,classical,country,dance,disco,english,finnish,funk,gothic,jazz,latin pop,pop,poprock,rock,rockabilly,swedish",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 9,
+   "votes": 3,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "309 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-s2lwv": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "99.9 WFRE Free Country",
+   "url": "https://14843.live.streamtheworld.com/WFREFM.mp3",
+   "homepage": "https://www.wfre.com/",
+   "country": "US",
+   "tags": "country music",
+   "codec": "MP3",
+   "bitrate": 96,
+   "clicks": 9,
+   "votes": 10,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "255 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-xtccb": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Exclusively Lana Del Rey",
+   "url": "https://streaming.exclusive.radio/er/lanadelrey/icecast.audio",
+   "homepage": "https://play.exclusive.radio/",
+   "country": "US",
+   "tags": "americana,ballads,beautiful music,cinematic,downtempo,female vocalists,femalevocals,jazz,pop,pop ballads,sadcore,slow,soft,soft pop,vocal jazz",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 9,
+   "votes": 325,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "479 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "104.9 Max Country",
+   "url": "https://ais-sa1.streamon.fm/7246_48k.aac",
+   "homepage": "https://1049maxcountry.com/",
+   "country": "US",
+   "tags": "country",
+   "codec": "AAC+",
+   "bitrate": 48,
+   "clicks": 8,
+   "votes": 1113,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "239 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-s2lwv": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "KORA 98.3 The Texas Country Original",
+   "url": "https://ais-sa1.streamon.fm/7410_48k.aac/playlist.m3u8?aw_0_1st.playerid=esPlayer&aw_0_1st.skey=1562173335",
+   "homepage": "https://www.983korafm.com/",
+   "country": "US",
+   "tags": "americana,country,red dirt,texas,texas country",
+   "codec": "AAC",
+   "bitrate": 48,
+   "clicks": 8,
+   "votes": 793,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "HLS ok"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 1
+  },
+  {
+   "name": "CatRàdio",
+   "url": "https://shoutcast.ccma.cat/ccma/catalunyaradioHD.mp3",
+   "homepage": "https://www.ccma.cat/catradio/",
+   "country": "ES",
+   "tags": "country",
+   "codec": "AAC",
+   "bitrate": 56,
+   "clicks": 8,
+   "votes": 182,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "255 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Texas Rebel Radio",
+   "url": "https://ice41.securenetsystems.net/KNAF?playSessionID=6CC4A665-B891-1B7E-1922BD6BD5D4109F",
+   "homepage": "https://texasrebelradio.com/",
+   "country": "US",
+   "tags": "blues,country,sports",
+   "codec": "AAC+",
+   "bitrate": 32,
+   "clicks": 8,
+   "votes": 271,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "99 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "KNON 89.3 FM Dallas",
+   "url": "https://knon.streamguys1.com/live",
+   "homepage": "https://www.knon.org/",
+   "country": "US",
+   "tags": "country,gospel,heavy metal,hip hop,jazz,latin,reggae,rock,talk",
+   "codec": "MP3",
+   "bitrate": 80,
+   "clicks": 8,
+   "votes": 2,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "161 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-h2w2q": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "91.7 The Mix",
+   "url": "https://cast1.typicalmedia.net/stream/91-7-the-mix/mp3",
+   "homepage": "https://cast1.typicalmedia.net/player/91-7-the-mix",
+   "country": "US",
+   "tags": "classic rock,country",
+   "codec": "MP3",
+   "bitrate": 192,
+   "clicks": 8,
+   "votes": 1,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "327 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-fjxw7": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "MRC:-Radio plus",
+   "url": "https://stream.radio.co/s8cc7a5da4/listen",
+   "homepage": "https://stream.radio.co/s8cc7a5da4/listen",
+   "country": "MA",
+   "tags": "country",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 8,
+   "votes": 2334,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "210 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "3/3"
+   },
+   "hls": 0
+  },
+  {
+   "name": "MRC:-Radio Adwaa ATFAL 4",
+   "url": "https://stream.zeno.fm/8wrs2bh0x1zuv",
+   "homepage": "https://stream.zeno.fm/8wrs2bh0x1zuv",
+   "country": "MA",
+   "tags": "country",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 7,
+   "votes": 1033,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "326 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Hotmix Country Hits",
+   "url": "https://streaming.hotmixradio.com/hotmix-country-hits-en-mp3?provider=radiobrowser",
+   "homepage": "https://hotmixradio.com/",
+   "country": "FR",
+   "tags": "country,country music,new country",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 7,
+   "votes": 6,
+   "lastcheckok": 1,
+   "runner": [
+    "unknown",
+    "finished downloading: a file, or blocked in GitHub's region"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-xtccb": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Highway Country Radio",
+   "url": "https://puma.streemlion.com:2125/stream",
+   "homepage": "https://highwaycountryradio.com/",
+   "country": "CA",
+   "tags": "americana,bluegrass,blues,country",
+   "codec": "MP3",
+   "bitrate": 320,
+   "clicks": 7,
+   "votes": 3,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "480 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-475jf": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "The Bluegrass Jamboree",
+   "url": "https://the-bluegrass-jamboree.radiocult.fm/stream",
+   "homepage": "https://www.thebluegrassjamboree.com/",
+   "country": "US",
+   "tags": "americana,bluegrass,bluegrass gospel,bluegrass music,classic country,gospel music,traditional country",
+   "codec": "MP3",
+   "bitrate": 192,
+   "clicks": 7,
+   "votes": 36,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "295 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "MRC:-Radio Adwaa Music 3",
+   "url": "https://stream.zeno.fm/x4451xh0x1zuv",
+   "homepage": "https://stream.zeno.fm/x4451xh0x1zuv",
+   "country": "MA",
+   "tags": "country",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 6,
+   "votes": 1350,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "326 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Radio Free Texas",
+   "url": "https://server10.reliastream.com/proxy/damiller?mp=/stream",
+   "homepage": "https://radiofreetexas.com/",
+   "country": "US",
+   "tags": "americana,country",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 6,
+   "votes": 944,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "407 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "SomaFM Boot Liquor (128k AAC)",
+   "url": "https://ice5.somafm.com/bootliquor-128-aac",
+   "homepage": "https://somafm.com/bootliquor/",
+   "country": "US",
+   "tags": "americana,country",
+   "codec": "AAC",
+   "bitrate": 128,
+   "clicks": 6,
+   "votes": 973,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "413 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-xtccb": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Celtic Music Radio",
+   "url": "https://uksoutha.streaming.broadcast.radio/celtic",
+   "homepage": "https://www.celticmusicradio.net/",
+   "country": "GB",
+   "tags": "americana,celtic,community,contemporary folk,listener supported,roots,scottish,traditional folk,world",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 6,
+   "votes": 42,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "210 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Sweet Radio SVG",
+   "url": "https://streaming.radio.co/sdf4651481/listen",
+   "homepage": "https://sweetradiosvg.com/",
+   "country": "VC",
+   "tags": "calypso,country,dancehall,jazz,r&b,reggae,soca,vincy",
+   "codec": "MP3",
+   "bitrate": 0,
+   "clicks": 5,
+   "votes": 19,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "219 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Exclusively Shania Twain",
+   "url": "https://streaming.exclusive.radio/er/shaniatwain/icecast.audio",
+   "homepage": "https://exclusive.radio/",
+   "country": "AE",
+   "tags": "country",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 5,
+   "votes": 608,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "476 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "HPR4 Bluegrass Gospel",
+   "url": "https://us2.maindigitalstream.com/ssl/7739",
+   "homepage": "https://hpr.org/",
+   "country": "US",
+   "tags": "country",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 5,
+   "votes": 391,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "412 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Grolloo Radio",
+   "url": "https://uk1.streamingpulse.com/ssl/grollooradio",
+   "homepage": "https://grollooradio.nl/",
+   "country": "NL",
+   "tags": "americana,blues,cajun,country,nederpop,soul",
+   "codec": "MP3",
+   "bitrate": 320,
+   "clicks": 5,
+   "votes": 2583,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "449 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-xtccb": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "iH Country Radio",
+   "url": "https://stream.revma.ihrhls.com/zc4418",
+   "homepage": "https://www.iheart.com/",
+   "country": "US",
+   "tags": "country",
+   "codec": "AAC",
+   "bitrate": 0,
+   "clicks": 5,
+   "votes": 157,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "179 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "MRC:-Radio Adwaa FM 2",
+   "url": "https://stream.zeno.fm/5bxh2nh0x1zuv",
+   "homepage": "https://stream.zeno.fm/5bxh2nh0x1zuv",
+   "country": "MA",
+   "tags": "country",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 5,
+   "votes": 1993,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "326 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "95.5 The Bull",
+   "url": "https://stream.revma.ihrhls.com/zc1345",
+   "homepage": "https://955thebull.iheart.com/",
+   "country": "US",
+   "tags": "country",
+   "codec": "AAC",
+   "bitrate": 0,
+   "clicks": 5,
+   "votes": 110,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "180 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "RADIO UNIQUE FM /HI-RES",
+   "url": "https://hilversumdrie.beheerstream.nl/8038/stream",
+   "homepage": "https://radiouniquefm.nl/",
+   "country": "NL",
+   "tags": "adult contemporary,nederlandstalig,new country,pop,tipparade,top 40",
+   "codec": "AAC+",
+   "bitrate": 320,
+   "clicks": 5,
+   "votes": 87,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "408 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "ABC Country HLS",
+   "url": "https://mediaserviceslive.akamaized.net/hls/live/2038322/abccountry/index.m3u8",
+   "homepage": "https://www.abc.net.au/country",
+   "country": "AU",
+   "tags": "abc,country,public radio",
+   "codec": "AAC",
+   "bitrate": 252,
+   "clicks": 4,
+   "votes": 353,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "HLS ok"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 1
+  },
+  {
+   "name": "Hospital Radio Norwich",
+   "url": "https://hospita1.radioca.st/;",
+   "homepage": "https://hospitalradionorwich.co.uk/",
+   "country": "GB",
+   "tags": "classical,comedy,country,eighties,fifties,folk,instrumental,oldies,pop,rock,seventies,showtunes,sixties",
+   "codec": "MP3",
+   "bitrate": 50,
+   "clicks": 4,
+   "votes": 43,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "309 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Americas Country",
+   "url": "https://ais-sa2.cdnstream1.com/1976_128.mp3",
+   "homepage": "https://americascountry.us/",
+   "country": "",
+   "tags": "country,heidi,john,music,show",
+   "codec": "AAC",
+   "bitrate": 128,
+   "clicks": 4,
+   "votes": 2046,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "656 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Y96.9",
+   "url": "https://stream.revma.ihrhls.com/zc349",
+   "homepage": "https://y969.iheart.com/",
+   "country": "US",
+   "tags": "country",
+   "codec": "AAC",
+   "bitrate": 0,
+   "clicks": 4,
+   "votes": 69,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "179 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Backroad Country Radio",
+   "url": "https://stream.backroadcountryradio.com/listen/backroad/radio.mp3",
+   "homepage": "https://backroadcountryradio.com/",
+   "country": "DE",
+   "tags": "americana,country,country rock,ryan robson,singer-songwriter",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 4,
+   "votes": 0,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "211 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Folk Alley FreshGrass",
+   "url": "https://freshgrass.streamguys1.com/ss1-128mp3",
+   "homepage": "https://www.folkalley.com/music/playlist/today/freshgrass",
+   "country": "US",
+   "tags": "bluegrass,folk",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 4,
+   "votes": 127,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "274 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "181.FM - Front Porch (Bluegrass)",
+   "url": "https://listen.181fm.com/181-frontporch_128k.mp3",
+   "homepage": "http://www.181.fm/",
+   "country": "US",
+   "tags": "bluegrass,waynesboro",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 4,
+   "votes": 561,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "657 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-p84b4": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "XRaydio 1 – Your Kaleidoscope Of Sounds",
+   "url": "https://xraydio.ddns.net/live",
+   "homepage": "https://xraydio.net/",
+   "country": "BG",
+   "tags": "acid house,americana,disco,dream pop,electro,garage punk,indie,noise rock,post punk,psychedelic,shoegaze,synthwave,techno,vaporwave,yacht rock",
+   "codec": "AAC",
+   "bitrate": 160,
+   "clicks": 4,
+   "votes": 56,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "254 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "0nlineradio AMERICAN CHRISTMAS",
+   "url": "https://stream.0nlineradio.com/us-christmas?ref=radiobrowser",
+   "homepage": "https://0nlineradio.com/",
+   "country": "DE",
+   "tags": "americana,ballads,christian,christian contemporary,christian music,christmas,christmas music,holiday,seasonal",
+   "codec": "MP3",
+   "bitrate": 192,
+   "clicks": 4,
+   "votes": 120,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "422 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-xtccb": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Black Sparrow Radio KBSR",
+   "url": "https://streams.radio.co/sb821fbb0a/listen",
+   "homepage": "https://www.blacksparrowmusicparlor.com/radio-1",
+   "country": "US",
+   "tags": "country,dj sets,independent radio,jazz,rockabilly",
+   "codec": "MP3",
+   "bitrate": 192,
+   "clicks": 3,
+   "votes": 3,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "288 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Country 108",
+   "url": "https://icepool.silvacast.com/COUNTRY108.mp3",
+   "homepage": "https://www.country108.com/",
+   "country": "DK",
+   "tags": "country",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 3,
+   "votes": 4,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "397 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "NFRS Radio",
+   "url": "https://securestreams.autopo.st:2592/stream?t=1769818665235",
+   "homepage": "https://www.nfrsradio.com/",
+   "country": "JP",
+   "tags": "country,dj sets,pop",
+   "codec": "MP3",
+   "bitrate": 96,
+   "clicks": 3,
+   "votes": 27,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "167 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Highway 98",
+   "url": "https://ais-sa1.streamon.fm/10473_96k.mp3",
+   "homepage": "https://www.highway98country.com/",
+   "country": "US",
+   "tags": "country,radio",
+   "codec": "MP3",
+   "bitrate": 98,
+   "clicks": 3,
+   "votes": 0,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "537 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-xtccb": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Blues Radio UK",
+   "url": "https://blues-radio-uk-3f77be5c.radiocult.fm/stream",
+   "homepage": "https://www.rockradiouk.com/",
+   "country": "GB",
+   "tags": "blues,country,rock",
+   "codec": "MP3",
+   "bitrate": 160,
+   "clicks": 3,
+   "votes": 4,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "252 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Country Classics KOUU 1290 AM 96.5 FM",
+   "url": "https://a10.asurahosting.com:8560/radio.mp3",
+   "homepage": "https://countryclassicsidaho.com/",
+   "country": "US",
+   "tags": "classic country,country",
+   "codec": "MP3",
+   "bitrate": 192,
+   "clicks": 3,
+   "votes": 67,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "295 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Dansbandskanalen.se*",
+   "url": "https://stream.dbmedia.se/dbkMP3",
+   "homepage": "https://dansbandskanalen.se/",
+   "country": "SE",
+   "tags": "country",
+   "codec": "MP3",
+   "bitrate": 192,
+   "clicks": 3,
+   "votes": 250,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "277 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "KTU",
+   "url": "https://sslyayin.netyayin.net/radyoktu/stream/;type=mp3",
+   "homepage": "https://www4.ktu.edu.tr/radyoktu/player2/index.html",
+   "country": "TR",
+   "tags": "country,pop,pop rock,rock,slow,slow rock",
+   "codec": "AAC+",
+   "bitrate": 96,
+   "clicks": 3,
+   "votes": 26,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "228 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "181.FM - Christmas Kountry",
+   "url": "https://listen.181fm.com/181-xkkountry_128k.mp3",
+   "homepage": "http://www.181.fm/",
+   "country": "US",
+   "tags": "christmas music,country,waynesboro",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 3,
+   "votes": 281,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "641 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-xtccb": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "La voz de Jesús",
+   "url": "https://stream-289.surfernetwork.com/phybdd3ph98uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJwaHliZGQzcGg5OHV2IiwiaG9zdCI6InN0cmVhbS0yODkuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6Ikg1X3VSWlFkUmQyeV9TQmZSRENIU3ciLCJpYXQiOjE3OTM1NzM4ODcsImV4cCI6MTc5MzU3Mzk0N30.eq5E5dfRhhau8s7Wa_q0Niek0NMrCdoF0A4eqUJNt1w",
+   "homepage": "https://zeno.fm/radio/lavozdejesus",
+   "country": "CO",
+   "tags": "country",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 3,
+   "votes": 680,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "326 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-xtccb": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Onic Country",
+   "url": "https://live.onic.ie/stream-country?_=267164",
+   "homepage": "https://www.onic.ie/player/onic-country/",
+   "country": "IE",
+   "tags": "country",
+   "codec": "AAC",
+   "bitrate": 128,
+   "clicks": 3,
+   "votes": 17,
+   "lastcheckok": 1,
+   "runner": [
+    "unknown",
+    "finished downloading: a file, or blocked in GitHub's region"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Big Foot Country",
+   "url": "https://ice23.securenetsystems.net/WPGI?playSessionID=2DD9E710-AEF2-1987-FED616F21719FB70",
+   "homepage": "https://bigfootcountryradio.com/",
+   "country": "US",
+   "tags": "country",
+   "codec": "AAC+",
+   "bitrate": 32,
+   "clicks": 3,
+   "votes": 68,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "98 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "CKMR-FM 104.5 \"More Country\" Strathmore, AB",
+   "url": "https://bhs-live2-ais-relay1.leanstream.co/goldenwest/CKMRFM.stream/playlist.m3u8",
+   "homepage": "https://strathmorenow.com/morecountry",
+   "country": "CA",
+   "tags": "country",
+   "codec": "AAC+",
+   "bitrate": 64,
+   "clicks": 3,
+   "votes": 20,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "HLS ok"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 1
+  },
+  {
+   "name": "K-SUN66 - THE RIVER",
+   "url": "https://stream.zeno.fm/ghuzk7au2gruv",
+   "homepage": "https://www.ksun66.com/",
+   "country": "DZ",
+   "tags": "country,folk",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 3,
+   "votes": 1,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "309 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-h2w2q": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "92.3 WCOL",
+   "url": "https://stream.revma.ihrhls.com/zc1757",
+   "homepage": "https://wcol.iheart.com/",
+   "country": "US",
+   "tags": "country",
+   "codec": "AAC",
+   "bitrate": 0,
+   "clicks": 3,
+   "votes": 113,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "179 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-fjxw7": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "CHMT \"93.1 Country FM\" Timmins, ON",
+   "url": "https://vistaradio.streamb.live/SB00105",
+   "homepage": "https://www.mytimminsnow.com/",
+   "country": "CA",
+   "tags": "country",
+   "codec": "AAC+",
+   "bitrate": 57,
+   "clicks": 3,
+   "votes": 12,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "98 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Country-Road-58,AutoDJ",
+   "url": "https://country-road-58.spcast.eu/stream",
+   "homepage": "",
+   "country": "DE",
+   "tags": "americana usw,bluegrass,country",
+   "codec": "MP3",
+   "bitrate": 320,
+   "clicks": 3,
+   "votes": 21,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "449 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-xtccb": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "GTA SA:  K-Rose",
+   "url": "https://stream-165.zeno.fm/hvnu0rfuifguv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJodm51MHJmdWlmZ3V2IiwiaG9zdCI6InN0cmVhbS0xNjUuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6Ijl6b1VUSVJ4UUhPRlNiUkJmaUJXQkEiLCJpYXQiOjE3NjkyNjEzNjMsImV4cCI6MTc2OTI2MTQyM30.0Tfu80xMnbHmdrbJlsrABdokqoab9_35SQiusVbcuLU",
+   "homepage": "https://zeno.fm/radio/k-rose-gta-san-andreas/",
+   "country": "ES",
+   "tags": "country,videogames",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 3,
+   "votes": 10,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "326 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Miss 103",
+   "url": "https://stream.revma.ihrhls.com/zc1241",
+   "homepage": "https://miss103.iheart.com/",
+   "country": "US",
+   "tags": "country",
+   "codec": "AAC",
+   "bitrate": 0,
+   "clicks": 3,
+   "votes": 71,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "180 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-xtccb": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "CBN Cross Country Christmas",
+   "url": "https://streams.cbnradio.com/christmas-128K?%20Title1=CBN%20Cross%20Country%20Christmas",
+   "homepage": "http://www1.cbn.com/radio/crosscountrychristmas",
+   "country": "US",
+   "tags": "christmas,country",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 3,
+   "votes": 556,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "209 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-xtccb": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "N10.AS",
+   "url": "https://n10as.radiocult.fm/stream",
+   "homepage": "https://n10.as/",
+   "country": "CA",
+   "tags": "ambient,blues,classical,country,dance,disco,dub,electronic,experimental,groove,heavy metal,hiphop,house,indie,jazz,lifestyle,other,pop,post-punk,psychedelic,rap,reggae,rnb,rock,soul,special broadcast,talk,techno,world",
+   "codec": "MP3",
+   "bitrate": 320,
+   "clicks": 3,
+   "votes": 8,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "446 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-xtccb": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Radio Jamboree - Blues – Country – Rockabilly – Rock & Roll – Soul",
+   "url": "https://s5.radio.co/s6ceee59fd/listen",
+   "homepage": "https://www.radiojamboree.it/",
+   "country": "IT",
+   "tags": "blues,country,rockabilly,soul",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 3,
+   "votes": 0,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "151 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-475jf": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "99.1 The Ranch",
+   "url": "https://ice9.securenetsystems.net/KWSV",
+   "homepage": "https://www.991theranch.com/",
+   "country": "US",
+   "tags": "country",
+   "codec": "AAC",
+   "bitrate": 32,
+   "clicks": 3,
+   "votes": 281,
+   "lastcheckok": 1,
+   "runner": [
+    "dead",
+    "HTTP 404 error page"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-vhp7j": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "CKVX-FM 104.9 \"Country 104\" Kindersley, SK",
+   "url": "https://hel-ais-relay3.leanstream.co/goldenwest/CKVXFM.stream/playlist.m3u8",
+   "homepage": "https://westcentralonline.com/",
+   "country": "CA",
+   "tags": "country music",
+   "codec": "AAC+",
+   "bitrate": 63,
+   "clicks": 3,
+   "votes": 15,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "HLS ok"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 1
+  },
+  {
+   "name": "Exclusively Randy Travis",
+   "url": "https://nl4.mystreaming.net/er/randytravis/icecast.audio",
+   "homepage": "https://you.radio/",
+   "country": "AE",
+   "tags": "country music",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 3,
+   "votes": 5,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "474 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-2x6tt": "1/1"
+   },
+   "hls": 0
+  },
+  {
+   "name": "Exclusively George Strait",
+   "url": "https://nl4.mystreaming.net/er/georgestrait/icecast.audio",
+   "homepage": "https://you.radio/",
+   "country": "AE",
+   "tags": "country music",
+   "codec": "MP3",
+   "bitrate": 128,
+   "clicks": 3,
+   "votes": 4,
+   "lastcheckok": 1,
+   "runner": [
+    "ok",
+    "476 KB in 10s"
+   ],
+   "checks": {
+    "rb-radiobrowser-api-worker-74545fd88-5g8qr": "1/1",
+    "rb-radiobrowser-api-worker-74545fd88-xh6r9": "1/1"
+   },
+   "hls": 0
+  }
+ ]
+}
