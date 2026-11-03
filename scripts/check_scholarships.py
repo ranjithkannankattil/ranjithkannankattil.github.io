@@ -94,7 +94,7 @@ def report(changed, failed, used, day):
         if len(added) > 8 or len(removed) > 8:
             out.append("- More changes on the page.")
         out.append("")
-    stuck = [f for f in failed if f[2] >= 3]
+    stuck = [f for f in failed if f[2] == 3 or f[2] % 30 == 0]  # say so once, then monthly
     if stuck:
         out += ["## Could not read for three days or more", ""]
         out += [f"- {', '.join(used[u])}: {u} ({e})" for u, e, _ in stuck]
