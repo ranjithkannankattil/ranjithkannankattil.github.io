@@ -23,7 +23,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "js/scholarships-data.js"
 STATE = ROOT / "scripts/scholarship-watch.json"
 PAGE = ROOT / "productivity/scholarships.html"
-MAX_CALLS = 10  # the key is shared with the News tool, so stay well inside the free limit
+MAX_CALLS = 10  # stay well inside the free limit
 MONTHS = ["january", "february", "march", "april", "may", "june", "july", "august",
           "september", "october", "november", "december"]
 BLOCK = re.compile(r"  \{\n    id: '([^']+)'.*?checked: '\d{4}-\d\d-\d\d'\n  \}", re.S)

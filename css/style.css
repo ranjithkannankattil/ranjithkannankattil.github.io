@@ -893,8 +893,7 @@ nav.tabs .nav-menu a.nav-hub.current{ background:var(--accent-soft); box-shadow:
    ============================================================ */
 .home-new{ margin-top:1.4rem; }
 .home-new ul{ list-style:none; margin:.8rem 0 0; padding:0; border-top:1px solid var(--line); }
-.home-new li{ display:grid; grid-template-columns:7.5rem minmax(0,1fr); gap:1rem; align-items:baseline; border-bottom:1px solid var(--line); }
-.home-new time{ font-family:var(--f-mono); font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft); padding:.85rem 0; }
+.home-new li{ border-bottom:1px solid var(--line); }
 .home-new a{ display:block; padding:.75rem 0; }
 .home-new a b{ font-family:var(--f-display); font-weight:600; margin-right:.6rem; }
 .home-new a span{ color:var(--ink-soft); }
@@ -902,9 +901,6 @@ nav.tabs .nav-menu a.nav-hub.current{ background:var(--accent-soft); box-shadow:
 .home-new a b::after{ content:" →"; opacity:0; transition:opacity .15s ease; }
 .home-new a:hover b::after{ opacity:1; }
 @media (max-width:560px){
-  .home-new li{ grid-template-columns:1fr; gap:0; }
-  .home-new time{ padding:.75rem 0 0; }
-  .home-new a{ padding:.15rem 0 .75rem; }
   .home-new a b{ display:block; }
 }
 .practice h3 .ml{ display:block; font-family:var(--f-ml); font-weight:700; font-size:.85em; color:var(--ink-soft); margin-top:.1rem; }

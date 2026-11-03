@@ -1,18 +1,8 @@
 name: Build news
 
+# Archived on 3 Nov 2026: News is switched off. Run by hand only if it is brought back.
 on:
-  schedule:
-    - cron: "17 */2 * * *"   # every two hours
   workflow_dispatch: {}
-  push:
-    branches: [main]
-    paths:
-      - scripts/build_news.py
-      - scripts/news_config.py
-      - scripts/news_extras.py
-      - scripts/news_relevance.py
-      - scripts/test_news_relevance.py
-      - .github/workflows/build-news.yml
 
 permissions:
   contents: write

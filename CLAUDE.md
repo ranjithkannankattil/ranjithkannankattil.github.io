@@ -1,7 +1,7 @@
 # ranjithkb.com — notes for Claude
 
 Ranjith Kannankattil's personal "master site": writing, photography, publications, and a set of
-everyday tools (Radio, News, Movies, Trip planner, Workbench tools, an expat guide for Milan).
+everyday tools (Radio, Movies, Trip planner, Workbench tools, an expat guide for Milan).
 Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom domain ranjithkb.com
 (DNS on Cloudflare, registered at Namecheap). README.md has the file-by-file structure.
 
@@ -34,7 +34,7 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
 - **Cache-busting**: when you change a CSS/JS file, bump its `?v=N` in every HTML page that loads it.
   `sw.js` is an offline cache — don't let it cache large or frequently-changing files.
 - Pages deploys in about a minute after a push; phones may hold the old version up to ~10 minutes.
-- Several workflows commit to `main` on a schedule (stream checks, news, cinema). Always
+- Several workflows commit to `main` on a schedule (stream checks, cinema, scholarships). Always
   `git fetch` + rebase before pushing, and never hand-edit generated files mid-run.
 - Commit messages: plain English, say what changed for a visitor and why.
 - Explain things to him in plain words; he isn't a developer and often works from his phone.
@@ -69,10 +69,14 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
 Runs without the owner on GitHub. Don't add scheduled Claude tasks: he doesn't want to spend Claude tokens.
 `scripts/check_scholarships.py` runs daily and writes `js/scholarships-status.json`; the page shows when
 each official page was last read and flags a card if its page changed after the record's `checked` date.
-`scripts/refresh_scholarships.py` then asks Gemini (the free `GEMINI_API_KEY` shared with News, at most 10
+`scripts/refresh_scholarships.py` then asks Gemini (the free `GEMINI_API_KEY`, at most 10
 calls a run) for new deadlines. A date is used only if its exact quote is on the page and it's in the future.
 Dates only: amounts and rules change when he asks. If the free limit is hit, move the job to every 3 days,
 as he suggested. Keep the disclaimer at the top of the page.
+
+## News (archived)
+Archived by the owner: unlinked, `noindex`, and `build-news.yml` runs by hand only. `news.html` is a short
+note; the full page is saved at `docs/archived/news-page.html` and the code is still in the repo.
 
 ## Adding a Workbench tool
 See "Adding a productivity tool" in README.md (registry in `js/tools.js`, page in `productivity/`,

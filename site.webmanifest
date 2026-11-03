@@ -1,7 +1,7 @@
 {
  "name": "Ranjith Kannankattil",
  "short_name": "ranjithkb",
- "description": "Writings, photography, radio and news",
+ "description": "Writings, photography and radio",
  "start_url": "/",
  "scope": "/",
  "id": "/",
@@ -29,16 +29,6 @@
    "icons": [
     {
      "src": "/assets/icons/radio-192.png",
-     "sizes": "192x192"
-    }
-   ]
-  },
-  {
-   "name": "News",
-   "url": "/news.html",
-   "icons": [
-    {
-     "src": "/assets/icons/news-192.png",
      "sizes": "192x192"
     }
    ]

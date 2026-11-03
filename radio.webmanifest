@@ -1,5 +1,5 @@
 {
- "name": "Radio \u2014 ranjithkb.com",
+ "name": "Radio — ranjithkb.com",
  "short_name": "Radio",
  "description": "Live radio in 70+ languages",
  "start_url": "/radio.html",
@@ -20,18 +20,6 @@
    "sizes": "512x512",
    "type": "image/png",
    "purpose": "any maskable"
-  }
- ],
- "shortcuts": [
-  {
-   "name": "News",
-   "url": "/news.html",
-   "icons": [
-    {
-     "src": "/assets/icons/news-192.png",
-     "sizes": "192x192"
-    }
-   ]
   }
  ]
 }

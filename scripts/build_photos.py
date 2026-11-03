@@ -95,7 +95,7 @@ def head(title, desc, url, og, preload=None):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap"></noscript>
-<link rel="stylesheet" href="/css/style.css?v=16">
+<link rel="stylesheet" href="/css/style.css?v=17">
 <link rel="stylesheet" href="/css/photography.css?v={CSS_V}">{pre}
 </head>
 <body data-section="photography" class="wide">
@@ -170,7 +170,7 @@ def foot(viewer=True):
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="/js/photography.js?v={JS_V}" defer></script>
-<script src="/js/nav.js?v=18" defer></script>
+<script src="/js/nav.js?v=19" defer></script>
 <script src="/js/visits.js?v=2" defer></script>
 </body>
 </html>

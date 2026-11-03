@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap"></noscript>
-<link rel="stylesheet" href="css/style.css?v=16">
+<link rel="stylesheet" href="css/style.css?v=17">
 <style>
   .privacy h1{ font-family:var(--f-display); font-weight:600; font-size:clamp(2rem,5vw,2.6rem); margin:2.5rem 0 .4rem; }
   .privacy .updated{ font-family:var(--f-mono); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); }
@@ -65,7 +65,7 @@
 
   <div class="summary" style="margin-top:1.6rem">
     <p><strong>In short:</strong> this is a personal website. There are no ads, no analytics and no tracking cookies.
-    Your settings (favourite stations, volume, default language, news places and languages, meeting-finder cities) stay in your own browser.
+    Your settings (favourite stations, volume, default language, meeting-finder cities) stay in your own browser.
     A visitor counter keeps one shared total — no names, addresses or identifiers.
     The only things stored about you anywhere are what you choose to save: on the Radio page, if you sign in,
     your Google account ID and email, your favourite stations and your default language; if you rate a station or comment on it,
@@ -82,7 +82,6 @@
   <p>Some pages remember your choices using your browser's local storage. This never leaves your device and is not sent to me:</p>
   <ul>
     <li><strong>Radio</strong> — favourite stations, the last station played, volume, your default language and recently used languages.</li>
-    <li><strong>News</strong> — the place you last looked at, your list of places, the languages you picked and whether other outlets are shown.</li>
     <li><strong>Trip planner</strong> — your last choices (how long, how you get around, interests) so the form opens the way you left it.</li>
     <li><strong>Movies</strong> — your last few searches, the country you picked for streaming options, and how you like lists sorted.</li>
     <li><strong>Workbench</strong> (productivity tools) — the cities, working hours and meeting title you set in the meeting finder, and the timelines you make in the Gantt tool. A timeline leaves your browser only if you share a link to it, and then the plan travels inside the link itself; nothing is stored on a server. Downloading a PDF or image fetches the site's fonts from Google Fonts so the file looks like the page.</li>
@@ -139,8 +138,6 @@
     <li><strong>GitHub Pages</strong> — hosts this site (GitHub keeps standard server logs).</li>
     <li><strong>Google Fonts</strong> — the typefaces.</li>
     <li><strong>cdnjs (Cloudflare)</strong> — the player library used for some radio streams.</li>
-    <li><strong>GitHub (raw.githubusercontent.com)</strong> — serves the News page's headlines, which are rebuilt every two hours.</li>
-    <li><strong>Newspapers</strong> — only when you open a story, which takes you to that paper's own website (occasionally through a Google News link). Their own privacy policies apply.</li>
     <li><strong>Trip planner</strong> — when you plan a trip, the places you type and the area you choose are sent straight from your browser to Photon by Komoot (place search), Wikidata and Wikipedia (sights and descriptions), OpenStreetMap services (opening hours and walking routes), Open-Meteo (weather) and the OpenStreetMap tile servers (the map). Nothing is stored on this site; a plan you share lives only in its link.</li>
     <li><strong>Movies</strong> — searches and film pages are fetched through this site's own small service on Cloudflare (Cloudflare Workers), which asks TMDB, OMDb and Wikipedia on your behalf and passes the posters through too. Those services never see your IP address; Cloudflare handles the request like any web host, and the service itself saves nothing about who searched for what. The private film diary on that page belongs to me alone: no one else can sign in to it. Apart from newsletter sign-ups (above), nothing about visitors is stored.</li>
     <li><strong>Radio broadcasters</strong> — when you press play, your browser connects directly to that station's streaming server, as it would on the station's own website. Their own privacy policies apply.</li>
@@ -161,7 +158,7 @@
   <p>What I created for this site — my writing, my photographs and the tools — is free to copy,
   share and reuse, in the spirit of <a href="https://copyheart.org/" rel="noopener">copyheart</a>:
   ♡ copying is an act of love. This is a wish, not a legal licence, and it covers only my own work.
-  Other people's work keeps its own terms: the radio stations and their names, news headlines and
+  Other people's work keeps its own terms: the radio stations and their names, and
   the papers they link to, the poetry collection I co-wrote, and <em>Kintsugi</em>, which is published
   under Creative Commons BY-NC-SA.</p>
 
@@ -177,7 +174,7 @@
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-<script src="js/nav.js?v=18" defer></script>
+<script src="js/nav.js?v=19" defer></script>
 <script src="js/visits.js?v=2" defer></script>
 </body>
 </html>
