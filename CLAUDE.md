@@ -27,8 +27,9 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
   link to `https://media.ranjithkb.com/<path>`. (Small UI icons and favicons in `assets/icons/` stay.)
 
 ## How to work here
-- He mostly uses the site **on an iPhone 15** (Brave/Safari) and an Android app. Test every UI change
-  at phone width (390 px and 360 px) with touch, as well as desktop. Buttons ≥ 44 px, nothing
+- His main phone is a **Pixel 10a** (Chrome/Brave and the Radio Android app); he also uses an
+  iPhone 15 (Brave/Safari, iPhone Radio app). Test every UI change at phone width (412 px, 390 px
+  and 360 px) with touch, as well as desktop. Buttons ≥ 44 px, nothing
   hidden under the floating scroll arrows (`.scroll-nav`) or the Radio player bar.
 - **Cache-busting**: when you change a CSS/JS file, bump its `?v=N` in every HTML page that loads it.
   `sw.js` is an offline cache — don't let it cache large or frequently-changing files.
