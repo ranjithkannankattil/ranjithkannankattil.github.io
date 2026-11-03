@@ -12,6 +12,7 @@
     { id: "units", label: "Oil & gas units", desc: "LNG, gas, oil and energy", href: "productivity/units.html" },
     { id: "map", label: "Map colourer", desc: "Colour countries and regions", href: "productivity/map.html" },
     { id: "keyboard", label: "Malayalam keyboard", desc: "Malayalam typing on iPhone", href: "productivity/keyboard.html" },
+    { id: "scholarships", label: "Scholarship finder", desc: "Study abroad funding for Indians", href: "productivity/scholarships.html" },
   ];
   // which productivity tool is open, if any (from <main data-tool="…">)
   const toolHere = (document.querySelector("main[data-tool]") || {}).dataset?.tool;

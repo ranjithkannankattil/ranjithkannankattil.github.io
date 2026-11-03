@@ -17,7 +17,8 @@ window.TOOL_GROUPS = [
   { id: 'plan', name: 'Planning & projects' },
   { id: 'docs', name: 'Documents & photos' },
   { id: 'eng', name: 'Engineering' },
-  { id: 'lang', name: 'Maps & language' }
+  { id: 'lang', name: 'Maps & language' },
+  { id: 'study', name: 'Study abroad' }
 ];
 
 window.TOOLS = [
@@ -92,6 +93,15 @@ window.TOOLS = [
     blurb: 'A Malayalam keyboard for iPhone and iPad, with Swanalekha, Mozhi, InScript and Lalitha layouts, English suggestions and emoji. My open-source port of SMC\'s Android Indic Keyboard. Alpha.',
     meta: 'iOS app · Malayalam · Open source · Alpha',
     keys: 'malayalam keyboard ios iphone ipad swanalekha mozhi inscript typing'
+  },
+  {
+    id: 'scholarships', group: 'study',
+    name: 'Scholarship finder',
+    short: 'Scholarships',
+    href: 'scholarships.html',
+    blurb: 'Scholarships for Indian students in Europe, the UK, Australia, America, China, Japan, Korea and the Middle East. Filter by level, funding, age and work experience, then go straight to the official page.',
+    meta: 'India · Study abroad · Deadlines · Official links',
+    keys: 'scholarship fellowship grant study abroad india indian students university masters phd chevening commonwealth erasmus fulbright mext gks kaust funding'
   }
 ];
 
