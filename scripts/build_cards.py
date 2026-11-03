@@ -54,7 +54,7 @@ SECTIONS = [
     ("map", ["productivity/map.html"], "Productivity · Map colourer", "Map colourer",
      "Colour countries on a globe, or the states and provinces of any country, in your own colours.", "#5C4D7D", None),
     ("scholarships", ["productivity/scholarships.html"], "Workbench · Scholarship finder", "Scholarship finder for Indian students",
-     "Europe, the UK, Australia, America, China, Japan, Korea and the Middle East, with official links.", "#5C4D7D", None),
+     "Study abroad funding on every continent, with official links and deadlines.", "#5C4D7D", None),
     ("keyboard", ["productivity/keyboard.html"], "Productivity · Indic Keyboard", "Indic Keyboard for iPhone",
      "Swanalekha and other Malayalam layouts on iPhone and iPad. Open source, alpha.", "#5C4D7D", None),
     ("publications", ["publications.html"], "Publications", "Books and papers",

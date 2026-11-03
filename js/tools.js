@@ -99,7 +99,7 @@ window.TOOLS = [
     name: 'Scholarship finder',
     short: 'Scholarships',
     href: 'scholarships.html',
-    blurb: 'Scholarships for Indian students in Europe, the UK, Australia, America, China, Japan, Korea and the Middle East. Filter by level, funding, age and work experience, then go straight to the official page.',
+    blurb: 'Scholarships for Indian students on every continent. Filter by country, level, funding, age and work experience, then go straight to the official page.',
     meta: 'India · Study abroad · Deadlines · Official links',
     keys: 'scholarship fellowship grant study abroad india indian students university masters phd chevening commonwealth erasmus fulbright mext gks kaust funding'
   }

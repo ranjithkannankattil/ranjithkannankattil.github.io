@@ -65,6 +65,11 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
 - iPhone app: free Apple ID, installed from his Mac with Xcode (re-run every 7 days); there is no
   iPhone app for other people — the site says so.
 
+## Scholarship finder (productivity/scholarships.html, js/scholarships-data.js)
+Each record links its official page and has a `checked` date. `scripts/check_scholarships.py` runs
+daily (GitHub Actions) and opens a "Scholarship pages to review" issue when a page's dates or rules
+change; it never edits the list. After reviewing, update the record and its `checked` date by hand.
+
 ## Adding a Workbench tool
 See "Adding a productivity tool" in README.md (registry in `js/tools.js`, page in `productivity/`,
 `js/tool-<id>.js` + `css/tool-<id>.css`, nav entry, link-preview card, sitemap).

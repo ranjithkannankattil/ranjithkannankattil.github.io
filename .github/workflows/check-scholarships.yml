@@ -1,0 +1,45 @@
+name: Check scholarship pages
+
+# Every morning, compares each official scholarship page with the last copy.
+# It never changes the list on the site. When something changes, it adds a note
+# to one open review issue, and GitHub sends the owner a notification.
+on:
+  schedule:
+    - cron: "37 3 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: scholarship-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compare the official pages
+        run: python3 scripts/check_scholarships.py count.txt
+      - name: Save today's copies
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898732+github-actions[bot]@users.noreply.github.com"
+          git add scripts/scholarship-watch.json scripts/scholarship-report.md
+          git diff --cached --quiet && exit 0
+          git commit -qm "Scholarship check $(date -u '+%F')"
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep 10; done
+      - name: Raise changes for review
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [ "$(cat count.txt)" -gt 0 ] || exit 0
+          title="Scholarship pages to review"
+          n=$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$n" ]; then gh issue comment "$n" --body-file scripts/scholarship-report.md
+          else gh issue create --title "$title" --body-file scripts/scholarship-report.md; fi

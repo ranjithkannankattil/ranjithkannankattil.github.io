@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Scholarship finder for Indian students — Workbench — Ranjith Kannankattil</title>
-<meta name="description" content="Find scholarships for Indian students in Europe, the UK, Australia, America, China, Japan, Korea and the Middle East. Filter by level, funding and age, with official links and deadlines.">
+<meta name="description" content="Find scholarships for Indian students on every continent. Filter by country, level, funding and age, with official links and deadlines.">
 <link rel="canonical" href="https://ranjithkb.com/productivity/scholarships.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ranjith Kannankattil">
 <meta property="og:title" content="Scholarship finder for Indian students — Workbench — Ranjith Kannankattil">
-<meta property="og:description" content="Find scholarships for Indian students in Europe, the UK, Australia, America, China, Japan, Korea and the Middle East. Filter by level, funding and age, with official links and deadlines.">
+<meta property="og:description" content="Find scholarships for Indian students on every continent. Filter by country, level, funding and age, with official links and deadlines.">
 <meta property="og:url" content="https://ranjithkb.com/productivity/scholarships.html">
 <meta property="og:image" content="https://media.ranjithkb.com/sections/scholarships-3b9c8fa3.jpg">
 <meta property="og:image:width" content="1200">
@@ -27,7 +27,7 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
 <link rel="stylesheet" href="../css/style.css?v=16">
 <link rel="stylesheet" href="../css/productivity.css?v=4">
-<link rel="stylesheet" href="../css/tool-scholarships.css?v=1">
+<link rel="stylesheet" href="../css/tool-scholarships.css?v=2">
 </head>
 <body data-section="productivity" class="wide">
 
@@ -49,13 +49,14 @@
     <div class="tool-head">
       <div class="tool-eyebrow" data-tool-eyebrow>Tool</div>
       <h1 class="tool-title" id="scTitle">Scholarship finder for Indian students</h1>
-      <p class="tool-intro">Scholarships for study in Europe, the UK, Australia, America, China, Japan, Korea and the Middle East, each linked to its official page. Choose a region and level, or add your age and work experience to hide what you can’t apply for. Nothing you enter leaves this page.</p>
+      <p class="tool-intro">Scholarships for Indian students, from Europe and the Americas to Asia, the Middle East, Africa and Oceania, each linked to its official page. Choose a continent, country and level, or add your age and work experience to hide what you can’t apply for. Nothing you enter leaves this page.</p>
     </div>
 
-    <nav class="sc-regions" id="scRegions" aria-label="Regions"></nav>
+    <nav class="sc-regions" id="scRegions" aria-label="Continents"></nav>
 
     <div class="sc-filters">
       <label class="sc-q"><span>Search</span><input type="search" id="scQ" placeholder="Name, country or field" autocomplete="off"></label>
+      <label><span>Country</span><select id="scCountry"><option value="">All countries</option></select></label>
       <label><span>Level</span><select id="scLevel"><option value="">All levels</option><option value="ug">Bachelor’s</option><option value="masters">Master’s</option><option value="phd">PhD &amp; research</option></select></label>
       <label><span>Funding</span><select id="scFunding"><option value="">Any funding</option><option value="full">Full funding</option><option value="part">Part funding</option><option value="check">Check funding</option></select></label>
       <label><span>Your age</span><input type="number" id="scAge" min="15" max="70" inputmode="numeric" placeholder="Optional"></label>
@@ -71,7 +72,7 @@
     </div>
 
     <ul class="sc-list" id="scList"></ul>
-    <p class="sc-none" id="scNone" hidden>Nothing matches those filters. Try clearing your age, work years or funding choice.</p>
+    <p class="sc-none" id="scNone" hidden>Nothing matches those filters yet. Try another country, or clear your age, work years or funding choice.</p>
 
     <div class="sc-info">
       <section>
@@ -81,6 +82,11 @@
       <section>
         <h2>Check before you rely on a list</h2>
         <ul id="scWatch"></ul>
+      </section>
+      <section>
+        <h2>Still being confirmed</h2>
+        <p>These may suit you, but India’s eligibility or the terms are not confirmed yet. Check the official page first.</p>
+        <ul id="scUnconfirmed"></ul>
       </section>
     </div>
 
@@ -96,9 +102,9 @@
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-<script src="../js/tools.js?v=9"></script>
-<script src="../js/scholarships-data.js?v=1"></script>
-<script src="../js/tool-scholarships.js?v=1"></script>
+<script src="../js/tools.js?v=10"></script>
+<script src="../js/scholarships-data.js?v=2"></script>
+<script src="../js/tool-scholarships.js?v=2"></script>
 <script src="../js/nav.js?v=18" defer></script>
 <script src="../js/visits.js?v=2" defer></script>
 </body>

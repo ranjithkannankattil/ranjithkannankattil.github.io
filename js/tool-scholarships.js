@@ -41,7 +41,7 @@
     return a.name.localeCompare(b.name);
   }
 
-  var state = { region: '', level: '', funding: '', q: '', age: '', work: '', open: false };
+  var state = { region: '', country: '', level: '', funding: '', q: '', age: '', work: '', open: false };
 
   function ageLimit(s) {
     if (s.ageBy) {
@@ -52,6 +52,7 @@
   }
   function match(s) {
     if (state.region && s.regions.indexOf(state.region) < 0 && s.regions.indexOf('any') < 0) return false;
+    if (state.country && s.countries.indexOf(state.country) < 0 && s.countries.indexOf('Any country') < 0) return false;
     if (state.level && s.levels.indexOf(state.level) < 0) return false;
     if (state.funding && s.funding !== state.funding) return false;
     if (state.open) { var k = status(s).k; if (k !== 'open' && k !== 'upcoming') return false; }
@@ -99,7 +100,7 @@
 
   function syncUrl() {
     var p = new URLSearchParams();
-    ['region', 'level', 'funding', 'q', 'age', 'work'].forEach(function (k) { if (state[k] !== '') p.set(k, state[k]); });
+    ['region', 'country', 'level', 'funding', 'q', 'age', 'work'].forEach(function (k) { if (state[k] !== '') p.set(k, state[k]); });
     if (state.open) p.set('open', '1');
     var qs = p.toString();
     history.replaceState(null, '', location.pathname + (qs ? '?' + qs : ''));
@@ -108,6 +109,7 @@
   function readUrl() {
     var p = new URLSearchParams(location.search);
     if (REGIONS.some(function (r) { return r.id === p.get('region'); })) state.region = p.get('region');
+    state.country = (p.get('country') || '').slice(0, 40);
     if (LEVEL[p.get('level')]) state.level = p.get('level');
     if (FUND[p.get('funding')]) state.funding = p.get('funding');
     state.q = (p.get('q') || '').slice(0, 80);
@@ -121,6 +123,21 @@
     $('scRegions').innerHTML = items.map(function (r) {
       return '<button type="button" data-region="' + r.id + '" aria-pressed="' + (state.region === r.id) + '">' + esc(r.name) + '</button>';
     }).join('');
+  }
+
+  // countries on offer for the chosen continent
+  function drawCountries() {
+    var seen = {};
+    ALL.forEach(function (s) {
+      if (state.region && s.regions.indexOf(state.region) < 0) return;
+      s.countries.forEach(function (c) { if (c !== 'Any country') seen[c] = 1; });
+    });
+    var names = Object.keys(seen).sort();
+    if (names.indexOf(state.country) < 0) state.country = '';
+    $('scCountry').innerHTML = '<option value="">All countries</option>' + names.map(function (c) {
+      return '<option value="' + esc(c) + '">' + esc(c) + '</option>';
+    }).join('');
+    $('scCountry').value = state.country;
   }
 
   function saveIcs(s) {
@@ -144,6 +161,7 @@
   // ---------- wire up ----------
   readUrl();
   drawRegions();
+  drawCountries();
   $('scLevel').value = state.level;
   $('scFunding').value = state.funding;
   $('scQ').value = state.q;
@@ -155,17 +173,17 @@
     var b = e.target.closest('[data-region]');
     if (!b) return;
     state.region = b.getAttribute('data-region');
-    drawRegions(); render();
+    drawRegions(); drawCountries(); render();
   });
-  [['scLevel', 'level'], ['scFunding', 'funding'], ['scQ', 'q'], ['scAge', 'age'], ['scWork', 'work']].forEach(function (x) {
+  [['scCountry', 'country'], ['scLevel', 'level'], ['scFunding', 'funding'], ['scQ', 'q'], ['scAge', 'age'], ['scWork', 'work']].forEach(function (x) {
     $(x[0]).addEventListener('input', function (e) { state[x[1]] = e.target.value.trim(); render(); });
   });
   $('scOpen').addEventListener('change', function (e) { state.open = e.target.checked; render(); });
   $('scReset').addEventListener('click', function () {
-    state = { region: '', level: '', funding: '', q: '', age: '', work: '', open: false };
+    state = { region: '', country: '', level: '', funding: '', q: '', age: '', work: '', open: false };
     ['scLevel', 'scFunding', 'scQ', 'scAge', 'scWork'].forEach(function (id) { $(id).value = ''; });
     $('scOpen').checked = false;
-    drawRegions(); render();
+    drawRegions(); drawCountries(); render();
   });
   $('scList').addEventListener('click', function (e) {
     var b = e.target.closest('[data-cal]');
@@ -176,6 +194,9 @@
 
   $('scWatch').innerHTML = WATCH.map(function (w) {
     return '<li><a href="' + esc(w.url) + '" target="_blank" rel="noopener">' + esc(w.name) + '</a> ' + esc(w.note) + '</li>';
+  }).join('');
+  $('scUnconfirmed').innerHTML = window.SCHOLARSHIP_UNCONFIRMED.map(function (u) {
+    return '<li><a href="' + esc(u.url) + '" target="_blank" rel="noopener">' + esc(u.name) + '</a></li>';
   }).join('');
   render();
 })();
