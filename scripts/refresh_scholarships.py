@@ -23,7 +23,6 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "js/scholarships-data.js"
 STATE = ROOT / "scripts/scholarship-watch.json"
 PAGE = ROOT / "productivity/scholarships.html"
-MAX_CALLS = 10  # stay well inside the free limit
 MONTHS = ["january", "february", "march", "april", "may", "june", "july", "august",
           "september", "october", "november", "december"]
 BLOCK = re.compile(r"  \{\n    id: '([^']+)'.*?checked: '\d{4}-\d\d-\d\d'\n  \}", re.S)
@@ -154,13 +153,15 @@ def main():
 
     jobs, updated = todo(recs, state), 0
     print(len(jobs), "listings to look at")
-    for _, rid, url in jobs[:MAX_CALLS]:
+    for _, rid, url in jobs:
         block = recs[rid]
         page = "\n".join(state[url]["lines"])
         try:
             answer = ask(prompt_for(block, page), key, model)
         except Exception as e:  # noqa: BLE001  leave the warning on the card and carry on
             print(rid, "no answer:", type(e).__name__)
+            if getattr(e, "code", None) == 429:  # free limit reached: the rest wait for the next run
+                break
             continue
         time.sleep(5)  # stay under the free tier's per-minute limit
         ok = validate(answer, page, block, today)

@@ -69,8 +69,8 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
 Runs without the owner on GitHub. Don't add scheduled Claude tasks: he doesn't want to spend Claude tokens.
 `scripts/check_scholarships.py` runs daily and writes `js/scholarships-status.json`; the page shows when
 each official page was last read and flags a card if its page changed after the record's `checked` date.
-`scripts/refresh_scholarships.py` then asks Gemini (the free `GEMINI_API_KEY`, at most 10
-calls a run) for new deadlines. A date is used only if its exact quote is on the page and it's in the future.
+`scripts/refresh_scholarships.py` then asks Gemini (the free `GEMINI_API_KEY`, no page cap;
+it stops for the day if the free limit is hit) for new deadlines. A date is used only if its exact quote is on the page and it's in the future.
 Dates only: amounts and rules change when he asks. If the free limit is hit, move the job to every 3 days,
 as he suggested. Keep the disclaimer at the top of the page.
 
