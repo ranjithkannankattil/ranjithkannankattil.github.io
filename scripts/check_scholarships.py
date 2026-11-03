@@ -4,8 +4,8 @@
 Reads the links in js/scholarships-data.js, keeps the lines on each page that
 talk about dates, deadlines or eligibility, and compares them with the copy in
 scripts/scholarship-watch.json. It writes a plain report to
-scripts/scholarship-report.md, for a person to review. It never edits the list
-on the site. The first time a page is seen, it just records the copy.
+scripts/scholarship-report.md, which a daily scheduled Claude task reads to
+update the list. This script never edits the list itself. The first time a page is seen, it just records the copy.
 """
 import hashlib
 import html
@@ -86,7 +86,7 @@ def compare(old, results, used):
 def report(changed, failed, used, day):
     out = [f"# Scholarship page check, {day}", ""]
     if changed:
-        out += ["Review these and update `js/scholarships-data.js` if the facts changed.", ""]
+        out += ["These pages changed. Update `js/scholarships-data.js` if the facts changed.", ""]
     for url, added, removed in changed:
         out += [f"## {', '.join(used[url])}", url, ""]
         out += [f"- New: {x}" for x in added[:8]]
@@ -94,11 +94,10 @@ def report(changed, failed, used, day):
         if len(added) > 8 or len(removed) > 8:
             out.append("- More changes on the page.")
         out.append("")
-    stuck = [f for f in failed if f[2] == 3 or f[2] % 30 == 0]  # say so once, then monthly
-    if stuck:
-        out += ["## Could not read for three days or more", ""]
-        out += [f"- {', '.join(used[u])}: {u} ({e})" for u, e, _ in stuck]
-    return "\n".join(out) + "\n", len(changed) + len(stuck)
+    if failed:
+        out += ["## Could not read from GitHub today", ""]
+        out += [f"- {', '.join(used[u])}: {u} ({e})" for u, e, _ in failed]
+    return "\n".join(out) + "\n", len(changed)
 
 
 def main():

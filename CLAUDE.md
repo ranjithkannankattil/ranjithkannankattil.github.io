@@ -66,9 +66,11 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
   iPhone app for other people — the site says so.
 
 ## Scholarship finder (productivity/scholarships.html, js/scholarships-data.js)
-Each record links its official page and has a `checked` date. `scripts/check_scholarships.py` runs
-daily (GitHub Actions) and opens a "Scholarship pages to review" issue when a page's dates or rules
-change; it never edits the list. After reviewing, update the record and its `checked` date by hand.
+Fully automated; the owner does not review it. `scripts/check_scholarships.py` runs daily (GitHub
+Actions) and writes `scripts/scholarship-report.md`. A daily scheduled Claude task reads that report,
+updates changed records from their official pages, and re-checks the five oldest `checked` records,
+which also covers sites that block GitHub. Only change facts confirmed on an official page. Keep the
+disclaimer at the top of the page.
 
 ## Adding a Workbench tool
 See "Adding a productivity tool" in README.md (registry in `js/tools.js`, page in `productivity/`,

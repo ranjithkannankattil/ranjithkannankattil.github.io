@@ -2,7 +2,8 @@
    TOOL — Scholarship finder  (productivity/scholarships.html)
    ============================================================ */
 .sc input, .sc select{ font:inherit; color:inherit; }
-.sc-regions{ display:flex; flex-wrap:wrap; gap:.4rem; margin-top:2rem; }
+.sc-disclaimer{ margin-top:1.4rem; padding:.8rem 1rem; border-left:3px solid var(--accent); background:var(--accent-soft); font-size:.92rem; line-height:1.45; }
+.sc-regions{ display:flex; flex-wrap:wrap; gap:.4rem; margin-top:1.2rem; }
 body[data-section="productivity"] .sc-regions button{ min-height:44px; font-family:var(--f-mono); font-size:.7rem; letter-spacing:.06em; text-transform:uppercase; padding:.5rem .75rem; border:1px solid var(--line); background:var(--paper); white-space:nowrap; }
 body[data-section="productivity"] .sc-regions button:hover{ border-color:var(--accent); }
 body[data-section="productivity"] .sc-regions button[aria-pressed="true"]{ background:var(--accent); border-color:var(--accent); color:var(--paper); }
