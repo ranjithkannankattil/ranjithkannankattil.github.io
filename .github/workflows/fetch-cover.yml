@@ -11,15 +11,28 @@ jobs:
       - name: Try the known locations
         run: |
           mkdir -p media-incoming/books
-          P='www.saikathambooks.com/image/cache/catalog/Book%20Covers/Vinda%20PAdiloode%20Thirke%20Po%20VEnale-550x550h.jpg'
-          O='www.saikathambooks.com/image/catalog/Book%20Covers/Vinda%20PAdiloode%20Thirke%20Po%20VEnale.jpg'
-          for u in "https://$P" "http://$P" "https://$O" "https://web.archive.org/web/2024id_/https://$P" "https://web.archive.org/web/2022id_/https://$P" "https://web.archive.org/web/2019id_/https://$P"; do
-            code=$(curl -sSL -m 40 -A 'Mozilla/5.0' -e 'https://www.saikathambooks.com/' -o c.bin -w '%{http_code} %{content_type} %{size_download}' "$u" || echo failed)
-            echo "$u -> $code ($(file -b c.bin 2>/dev/null | cut -c1-50))"
-            if file -b --mime-type c.bin 2>/dev/null | grep -q '^image/' && [ "$(stat -c%s c.bin)" -gt 3000 ]; then
+          curl -sSL -m 30 -A 'Mozilla/5.0' 'https://www.saikathambooks.com/image/cache/catalog/Book%20Covers/Vinda%20PAdiloode%20Thirke%20Po%20VEnale-550x550h.jpg' | head -c 300; echo
+          for q in Vinda PAdiloode Padiloode; do
+            curl -sSL -m 30 -A 'Mozilla/5.0' "https://www.saikatham.com/wp-json/wp/v2/media?search=$q&per_page=20" -o m.json -w "media $q %{http_code} %{content_type}\n"
+            python3 - <<'P' >> urls.txt || true
+          import json
+          try:
+              for x in json.load(open('m.json')):
+                  print(x.get('source_url',''))
+          except Exception as e:
+              print('', end='')
+          P
+          done
+          curl -sSL -m 30 -A 'Mozilla/5.0' 'https://www.saikatham.com/?s=Vinda+PAdiloode' -o s.html -w "search %{http_code}\n"
+          grep -oiE 'https?://[^"'"'"' )]*vinda[^"'"'"' )]*' s.html >> urls.txt || true
+          sort -u urls.txt | grep -i -E 'vinda|padiloode' | head -20 | tee list.txt
+          while read -r u; do
+            curl -sSL -m 40 -A 'Mozilla/5.0' -o c.bin "$u"
+            echo "$u -> $(file -b c.bin | cut -c1-60)"
+            if file -b --mime-type c.bin | grep -q '^image/' && [ "$(stat -c%s c.bin)" -gt 3000 ]; then
               cp c.bin media-incoming/books/vinda-padiloode-cover.jpg; echo FOUND; break
             fi
-          done
+          done < list.txt
       - name: Save it
         run: |
           [ -f media-incoming/books/vinda-padiloode-cover.jpg ] || exit 0
