@@ -178,7 +178,8 @@ window.STATIONS = [
     "streams": [
       "https://us5new.listen2myradio.com:2199/listen.php?port=8138&type=ice&mount=stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "heavenly-altar-church-radio-kampala",
@@ -296,6 +297,24 @@ window.STATIONS = [
       "https://radiocitizen-atunwadigital.streamguys1.com/radiocitizen/playlist.m3u8"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "tafsir-in-swahili",
+    "name": "Tafsir in swahili",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8176/;"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "translation-of-the-quran-in-swahili",
+    "name": "Translation of the Quran in Swahili",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8262/;"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

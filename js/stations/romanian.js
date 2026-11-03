@@ -916,6 +916,33 @@ window.STATIONS = [
       "https://live.radioflomanele.ro/8084/stream"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "clasic-radio-soundtrack-bucuresti",
+    "name": "Clasic Radio_Soundtrack -București",
+    "category": "music",
+    "streams": [
+      "https://live.radioclasic.com/listen/radio_clasic_soundtrack/live.mp3"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "radio-brasov",
+    "name": "Radio Brașov",
+    "category": "music",
+    "streams": [
+      "https://live.radiobrasov.ro/stream.mp3?nocache=${Math.random()}"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "radio-liberty-manele-bucuresti",
+    "name": "Radio Liberty Manele -București",
+    "category": "music",
+    "streams": [
+      "https://sonicssl.namehost.ro/7770/stream"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

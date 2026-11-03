@@ -376,6 +376,15 @@ window.STATIONS = [
       "https://radiousk2.radioca.st/;"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "translation-of-the-quran-in-bosnian",
+    "name": "Translation of the Quran in Bosnian",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8030/;"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

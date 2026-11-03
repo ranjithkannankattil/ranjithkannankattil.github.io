@@ -90,6 +90,15 @@ window.STATIONS = [
       "https://audio-lss.vov.vn/live/vov3.m3u8"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "translation-of-the-quran-in-vietnamese",
+    "name": "Translation of the Quran in Vietnamese",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8120/;"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

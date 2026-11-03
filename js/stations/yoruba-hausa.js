@@ -48,7 +48,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://eu8.fastcast4u.com/proxy/usakufm?mp=/1"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "vicinity-95-3-fm",
@@ -99,8 +100,7 @@ window.STATIONS = [
       "https://stream-176.zeno.fm/mwam2yirv1pvv",
       "https://stream.zeno.fm/mwam2yirv1pvv"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "crest-91-1-fm-ibadan",
@@ -137,6 +137,15 @@ window.STATIONS = [
       "https://cccworldwide.net/radio/live.mp3"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "translation-of-the-quran-in-yoruba",
+    "name": "Translation of the Quran in Yoruba",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8038/;"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

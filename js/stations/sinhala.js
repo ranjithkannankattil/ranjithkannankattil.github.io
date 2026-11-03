@@ -157,6 +157,15 @@ window.STATIONS = [
       "https://radio.lotustechnologieslk.net:2020/stream/shaafmgarden"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "translation-of-the-quran-in-sinhalese",
+    "name": "Translation of the Quran in Sinhalese",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8118/;"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

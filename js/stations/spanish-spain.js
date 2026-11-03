@@ -66,7 +66,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://net1-cope-rrcast.flumotion.com/cope/net1-low.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "cadena-dial",
@@ -973,6 +974,33 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SER_MAS_ZARAGOZA.mp3"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "99-9-plaza-radio-valencia",
+    "name": "99.9 Plaza Radio Valencia",
+    "category": "news",
+    "streams": [
+      "https://stream1.solstreaming.com:8112/stream"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "rockfm-101-7",
+    "name": "RockFM 101.7",
+    "category": "music",
+    "streams": [
+      "https://flucast10-o-cloud.flumotion.com/cope/rockfm.aac"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "ibiza-deep-house",
+    "name": "Ibiza - Deep House",
+    "category": "music",
+    "streams": [
+      "https://radio2.vip-radios.fm:18027/stream-128kmp3-IbizaDeep"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

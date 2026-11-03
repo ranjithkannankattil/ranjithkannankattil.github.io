@@ -983,6 +983,33 @@ window.STATIONS = [
       "https://media2.hostin.cc/volksradio.mp3"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "radio-538-ibiza",
+    "name": "Radio 538 Ibiza",
+    "category": "music",
+    "streams": [
+      "https://22613.live.streamtheworld.com/TLPSTR19_SC"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "bnl",
+    "name": "BNL",
+    "category": "music",
+    "streams": [
+      "https://stream.bnlradio.be/stream.mp3"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "citymusic",
+    "name": "CityMusic",
+    "category": "music",
+    "streams": [
+      "https://play.citymusic.be/citymusic.mp3"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

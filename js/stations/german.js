@@ -977,6 +977,33 @@ window.STATIONS = [
       "https://dispatcher.rndfnk.com/rbb/antennebrandenburg/live/mp3/mid"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "0-n-smooth-jazz-on-radio",
+    "name": "0 N - Smooth Jazz on Radio",
+    "category": "music",
+    "streams": [
+      "https://0n-smoothjazz.radionetz.de/0n-smoothjazz.aac"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "technolovers-deep-house",
+    "name": "Technolovers DEEP HOUSE",
+    "category": "music",
+    "streams": [
+      "https://stream.technolovers.fm/deep-house?ref=radiobrowser"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "swr-aktuell",
+    "name": "SWR Aktuell",
+    "category": "news",
+    "streams": [
+      "https://liveradio.swr.de/sw282p3/swraktuell/play.aac"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

@@ -161,7 +161,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://classichitsradio.streamingmedia.it/play"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rtl-102-5-disco",
@@ -912,6 +913,33 @@ window.STATIONS = [
       "https://stream15.top-ix.org/partygroove"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "jungle-planet-radio",
+    "name": "Jungle Planet Radio",
+    "category": "music",
+    "streams": [
+      "https://phoebe.streamerr.co:3650/;?type=http&nocache=1739137731"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "rai-isoradio",
+    "name": "Rai Isoradio",
+    "category": "music",
+    "streams": [
+      "https://icestreaming.rai.it/6.mp3"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "radio-capital-classic-rock",
+    "name": "Radio Capital Classic Rock",
+    "category": "music",
+    "streams": [
+      "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/webradio/capitalclassicrock/playlist.m3u8"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

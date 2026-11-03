@@ -393,7 +393,8 @@ window.STATIONS = [
     "streams": [
       "https://loki.mental-media.gr:8038/index.html"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "station-5",
@@ -997,6 +998,33 @@ window.STATIONS = [
       "https://s20.myradiostream.com:6738/;listen.pls"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "91-4-fm",
+    "name": "Στο Κόκκινο ΘΕΣΣΑΛΟΝΙΚΗ 91,4 FM",
+    "category": "music",
+    "streams": [
+      "https://n09.radiojar.com/275p8ssmb?rj-ttl=5&rj-tok=AAABe5KoPq0A-SETCU2cfsnBjA"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "studio-19",
+    "name": "Studio 19",
+    "category": "music",
+    "streams": [
+      "https://stream.crete.ovh:8443/1"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "d-code-96-2",
+    "name": "D-code 96.2",
+    "category": "music",
+    "streams": [
+      "https://s15.myradiostream.com/:13980/listen.mp3"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

@@ -129,6 +129,15 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/WAI_FM_BK.mp3"
     ]
+  },
+  {
+    "id": "translation-of-the-quran-in-malay",
+    "name": "Translation of the Quran in Malay",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8016/;"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

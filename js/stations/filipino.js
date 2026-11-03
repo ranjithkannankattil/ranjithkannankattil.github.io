@@ -470,7 +470,8 @@ window.STATIONS = [
     "streams": [
       "https://usa5.fastcast4u.com/proxy/mcbntiktok?mp=/1"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "king-radio-tabuk-city",
@@ -543,6 +544,24 @@ window.STATIONS = [
       "https://gvamaudio.tail160f79.ts.net/stream"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "99-5-dzyw-koolfm",
+    "name": "99.5 DZYW koolFM",
+    "category": "news",
+    "streams": [
+      "https://listen.smilemediaph.com/listen/koolfm/radio.mp3"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "translation-of-the-quran-in-tagalog",
+    "name": "Translation of the Quran in Tagalog",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8114/;"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

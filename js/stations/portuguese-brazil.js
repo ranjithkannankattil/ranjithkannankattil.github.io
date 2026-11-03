@@ -726,7 +726,8 @@ window.STATIONS = [
     "streams": [
       "https://str1.streamhostpg.com.br:8002/stream"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "offline": true
   },
   {
     "id": "radio-brasil-de-fato",
@@ -979,6 +980,33 @@ window.STATIONS = [
       "https://radiomecfm-stream.ebc.com.br/ebc/radiomecfm/MEC_FM-mp4a_277200_eng=20000.m3u8"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "radio-clube-do-para",
+    "name": "Radio Clube do Pará",
+    "category": "news",
+    "streams": [
+      "https://carajas2.jmvstream.com/live"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "radio-liberdade-92-9",
+    "name": "Radio Liberdade 92.9",
+    "category": "music",
+    "streams": [
+      "https://8335.brasilstream.com.br/stream"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "casa-dos-caipiras",
+    "name": "Casa dos Caipiras",
+    "category": "music",
+    "streams": [
+      "https://8758.brasilstream.com.br/stream"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

@@ -683,6 +683,15 @@ window.STATIONS = [
       "https://dreamsiteradiocp2.com/proxy/rmcroatia?mp=/stream"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "radio-sova",
+    "name": "Radio Sova",
+    "category": "news",
+    "streams": [
+      "https://evcast.mediacp.eu:1960/stream"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

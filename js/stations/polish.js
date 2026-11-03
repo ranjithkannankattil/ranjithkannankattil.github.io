@@ -854,6 +854,33 @@ window.STATIONS = [
       "https://s3.slotex.pl:7370/stream"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "radio-plus-106-1-krakow",
+    "name": "Radio Plus 106.1 Kraków",
+    "category": "music",
+    "streams": [
+      "https://waw.ic.smcdn.pl/4070-1.mp3"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "radio-super-fm-97-5-fm-szczecin",
+    "name": "Radio Super FM 97,5 FM - Szczecin",
+    "category": "music",
+    "streams": [
+      "https://stream.super.fm:8443/superfm.mp3?1703660705890"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "dj-tekness",
+    "name": "DJ Tekness",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/xcmv558wquhvv"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

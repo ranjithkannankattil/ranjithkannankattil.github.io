@@ -86,6 +86,15 @@ window.STATIONS = [
       "https://listen.tropicastradio.com/stations/3freccr11b/live.mp3"
     ],
     "added": "2026-10-23"
+  },
+  {
+    "id": "translation-of-the-quran-in-somali",
+    "name": "Translation of the Quran in Somali",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8020/;"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

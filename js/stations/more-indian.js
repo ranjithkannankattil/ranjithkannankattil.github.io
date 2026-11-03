@@ -76,8 +76,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio072/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "air-kolhapur",
@@ -86,8 +85,25 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio063/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
+  },
+  {
+    "id": "translation-of-the-quran-in-kashmiri",
+    "name": "Translation of the Quran in Kashmiri",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8108/;"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "translation-of-the-quran-in-assamese",
+    "name": "Translation of the Quran in Assamese",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8384/;"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

@@ -586,8 +586,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiojar.com/tamm1f7kk48uv"
     ],
-    "added": "2026-10-27",
-    "offline": true
+    "added": "2026-10-27"
   },
   {
     "id": "s1lhoutte-arabesk-fm",
@@ -605,7 +604,8 @@ window.STATIONS = [
     "streams": [
       "https://usa4.fastcast4u.com/proxy/radyoizmirfm/mp3stream128"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "offline": true
   },
   {
     "id": "deva-fm-oyun-havas",
@@ -949,6 +949,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/tnvnovtgozstv"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "super-2-fm",
+    "name": "Süper 2 FM",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/SUPER2_SC.mp3"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "radyo-gul",
+    "name": "Radyo Gül",
+    "category": "music",
+    "streams": [
+      "https://yayin2.canliyayin.org:8866/;*.mp3"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "fenomen-2010-lar-256",
+    "name": "Fenomen 2010'lar 256",
+    "category": "music",
+    "streams": [
+      "https://live.radyofenomen.com/fenomen2010/256/chunks.m3u8"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

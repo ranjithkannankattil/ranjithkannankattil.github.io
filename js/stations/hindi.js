@@ -8,7 +8,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://eu8.fastcast4u.com/proxy/clyedupq/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "mirchi-top-20",
@@ -965,6 +966,33 @@ window.STATIONS = [
       "https://indianlink1.radioca.st/;"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "radio-active-90-4-fm",
+    "name": "Radio Active 90.4 FM",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/xwhhyc5nyk8uv"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "air-kozhikode-real-fm",
+    "name": "AIR Kozhikode Real FM",
+    "category": "music",
+    "streams": [
+      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio083/playlist.m3u8"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "aural-radio",
+    "name": "AURAL RADIO",
+    "category": "music",
+    "streams": [
+      "https://live.auralradiokerala.in/auralradio/mp3"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

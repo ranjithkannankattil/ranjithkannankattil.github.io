@@ -837,8 +837,7 @@ window.STATIONS = [
       "https://stream.zeno.fm/mwam2yirv1pvv"
     ],
     "added": "2026-10-31",
-    "where": "Nigeria",
-    "offline": true
+    "where": "Nigeria"
   },
   {
     "id": "bfm-89-9-malaysia",
@@ -999,6 +998,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-02",
     "where": "Germany"
+  },
+  {
+    "id": "classic-105",
+    "name": "Classic 105",
+    "category": "world",
+    "streams": [
+      "https://classic105-atunwadigital.streamguys1.com/classic105"
+    ],
+    "added": "2026-11-03",
+    "where": "Kenya"
+  },
+  {
+    "id": "612-abc-brisbane",
+    "name": "612 ABC Brisbane",
+    "category": "anz",
+    "streams": [
+      "https://streaming.abc-cdn.net.au/audio/hls/localbrisbane.m3u8?source=web"
+    ],
+    "added": "2026-11-03",
+    "where": "Australia"
+  },
+  {
+    "id": "christian-talk-fm",
+    "name": "Christian Talk FM",
+    "category": "us",
+    "streams": [
+      "https://ample.radiojar.com/cm4by4kt2ceuv"
+    ],
+    "added": "2026-11-03",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

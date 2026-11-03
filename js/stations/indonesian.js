@@ -284,7 +284,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.heartline.co.id:8443/djati_aceh"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "sebayu-fm-tegal",
@@ -378,7 +379,8 @@ window.STATIONS = [
     "streams": [
       "https://usa3.fastcast4u.com/proxy/pandumusikradio?mp=/1"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "elgangga-fm",
@@ -423,7 +425,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.heartline.co.id:8443/radio_yaski_stereo"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "heartline-tangerang",
@@ -432,7 +435,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.heartline.co.id:8443/heartline_tangerang"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "rri-pro-4-jakarta",
@@ -658,8 +662,7 @@ window.STATIONS = [
     "streams": [
       "https://svara-stream.radioddns.net/bali_voksradio_993fm"
     ],
-    "added": "2026-10-28",
-    "offline": true
+    "added": "2026-10-28"
   },
   {
     "id": "imelda-fm",
@@ -921,6 +924,33 @@ window.STATIONS = [
       "https://stream-node1.rri.co.id/streaming/40/9040/rrimanadopro1.mp3"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "camajaya-fm",
+    "name": "Camajaya FM",
+    "category": "music",
+    "streams": [
+      "https://ssg.streamingmurah.com:8078/;"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "wawa-radio-101-2-fm",
+    "name": "_Wawa Radio 101.2 FM",
+    "category": "music",
+    "streams": [
+      "https://xn--tmz.xn--6frz82g/streams"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "wawa-radio-101-2",
+    "name": "Wawa Radio 101.2",
+    "category": "music",
+    "streams": [
+      "https://securestream.casthost.net:8219/stream"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

@@ -205,7 +205,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8",
       "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "golofm",
@@ -229,7 +230,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "cidade-fm-2",
@@ -278,8 +280,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8",
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "rca-radio-clube-de-armamar",
@@ -357,7 +358,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -970,6 +972,33 @@ window.STATIONS = [
       "https://centova.radios.pt/proxy/499?mp=/stream"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "radio-metal-on-the-heavy",
+    "name": "Radio Metal On: The Heavy",
+    "category": "music",
+    "streams": [
+      "https://radiometalon.com/listen/radio_metal_on_the_heavy/radio.mp3"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "antena-2-main",
+    "name": "Antena 2 - Main",
+    "category": "music",
+    "streams": [
+      "https://radiocast.rtp.pt/antena280a.mp3"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "80rock-pt",
+    "name": "80ROCK.pt",
+    "category": "music",
+    "streams": [
+      "https://rs2.ptservidor.com:2199/proxy/febrites?mp=/stream"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

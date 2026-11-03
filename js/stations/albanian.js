@@ -217,7 +217,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radios.albaniadigitalradio.al/albanialoveradio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-lushnja",
@@ -366,7 +367,8 @@ window.STATIONS = [
     "streams": [
       "https://radios.albaniadigitalradio.al/albaniaradiodj"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "radio-popullore",
@@ -502,6 +504,24 @@ window.STATIONS = [
       "https://play.primeradio.al/prime"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "truth-fm-albania",
+    "name": "Truth FM Albania",
+    "category": "devotional",
+    "streams": [
+      "https://radio.truth.fm:8000/tfmal"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "translation-of-the-quran-in-albanian",
+    "name": "Translation of the Quran in Albanian",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8116/;"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

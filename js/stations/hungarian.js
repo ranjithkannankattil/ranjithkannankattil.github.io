@@ -873,6 +873,24 @@ window.STATIONS = [
       "https://stream2.radiotransilvania.ro/Margitta"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "elo-viz-radio-living-water-radio",
+    "name": "Élő Víz Rádió - Living Water Radio",
+    "category": "devotional",
+    "streams": [
+      "https://radio.truth.fm:8000/hungary"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "mr4-nemzetisegi-adasok",
+    "name": "MR4 - Nemzetiségi Adások",
+    "category": "news",
+    "streams": [
+      "https://mr-stream.connectmedia.hu/4744/mr4.mp3"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

@@ -113,6 +113,15 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/pd13h8kft68uv"
     ]
+  },
+  {
+    "id": "tafsir-in-amharic",
+    "name": "Tafsir in Amharic",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8148/;"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

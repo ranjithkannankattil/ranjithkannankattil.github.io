@@ -241,8 +241,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lb-media.mcot.net/RegionRadio/Loei.stream_aac/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "requestradio-string-alt",
@@ -293,8 +292,16 @@ window.STATIONS = [
     "streams": [
       "https://radio11.plathong.net/7050/;stream.mp3"
     ],
-    "added": "2026-10-29",
-    "offline": true
+    "added": "2026-10-29"
+  },
+  {
+    "id": "translation-of-the-quran-in-thai",
+    "name": "Translation of the Quran in Thai",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8134/;"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

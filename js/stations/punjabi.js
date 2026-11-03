@@ -311,6 +311,15 @@ window.STATIONS = [
       "https://s8.voscast.com/cdn/?k=67baed255b875&m=;stream1740303687963/1"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "translation-of-the-quran-in-punjabi",
+    "name": "Translation of the Quran in Punjabi",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8140/;"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

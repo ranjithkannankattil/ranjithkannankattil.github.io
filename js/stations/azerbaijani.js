@@ -181,6 +181,15 @@ window.STATIONS = [
       "https://audiostr.atv.az/106.3fm"
     ],
     "added": "2026-10-29"
+  },
+  {
+    "id": "translation-of-the-quran-in-azerbaijani",
+    "name": "Translation of the Quran in Azerbaijani",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8386/;"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

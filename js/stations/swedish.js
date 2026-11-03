@@ -476,6 +476,15 @@ window.STATIONS = [
       "https://live1.sr.se/p6-aac-320"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "translation-of-the-quran-in-swedish",
+    "name": "Translation of the Quran in Swedish",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8232/;"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

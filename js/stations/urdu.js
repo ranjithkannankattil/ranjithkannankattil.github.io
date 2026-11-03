@@ -72,7 +72,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://whmsonic.radio.gov.pk:8026/relay?type=http&nocache=9"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "universal-health-radio",
@@ -136,7 +137,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://whmsonic.radio.gov.pk:8076/relay?type=http&nocache=9"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-pakistan-bahawalpur",
@@ -276,6 +278,15 @@ window.STATIONS = [
       "https://isb.power99.live/stream"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "translation-of-the-quran-in-urdu",
+    "name": "Translation of the Quran in urdu",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8006/;"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

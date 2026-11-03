@@ -359,7 +359,8 @@ window.STATIONS = [
       "https://stream.zenolive.com/wtuvp08xq1duv"
     ],
     "added": "2026-10-24",
-    "where": "Nepal"
+    "where": "Nepal",
+    "offline": true
   },
   {
     "id": "redfm",
@@ -840,6 +841,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-02",
     "where": "Antarctica"
+  },
+  {
+    "id": "lbc-london-news",
+    "name": "LBC London News",
+    "category": "uk",
+    "streams": [
+      "https://media-ice.musicradio.com/LBC1152"
+    ],
+    "added": "2026-11-03",
+    "where": "UK"
+  },
+  {
+    "id": "dreamstar-radio-ksa-94-3-fm",
+    "name": "Dreamstar Radio KSA 94.3 FM",
+    "category": "world",
+    "streams": [
+      "https://stream.zeno.fm/h0y9yu8hzk8uv"
+    ],
+    "added": "2026-11-03",
+    "where": "Saudi Arabia"
+  },
+  {
+    "id": "4bc-brisbane-882-am",
+    "name": "4BC - Brisbane - 882 AM",
+    "category": "anz",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/4BC.mp3"
+    ],
+    "added": "2026-11-03",
+    "where": "Australia"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

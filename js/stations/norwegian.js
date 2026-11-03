@@ -213,7 +213,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.rcast.net/67165"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "p9-retro",
@@ -391,4 +392,4 @@ window.STATIONS = [
     "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

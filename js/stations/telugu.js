@@ -98,8 +98,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/5d9989b5189a8f4a/5d9989b5189a8f4a.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "akashvani-tirupati",
@@ -153,8 +152,25 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/8bc9175bb717c13b/8bc9175bb717c13b.m3u8"
     ],
-    "added": "2026-10-28",
-    "offline": true
+    "added": "2026-10-28"
+  },
+  {
+    "id": "voice-of-truth-radio-telugu",
+    "name": "Voice of Truth Radio - Telugu",
+    "category": "devotional",
+    "streams": [
+      "https://radio.truth.fm:8000/telugu"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "translation-of-the-quran-in-telugu",
+    "name": "Translation of the Quran in Telugu",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8130/;"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

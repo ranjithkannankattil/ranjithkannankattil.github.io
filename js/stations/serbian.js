@@ -879,6 +879,15 @@ window.STATIONS = [
       "https://cast2.asurahosting.com/proxy/kissdoog/stream"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "radio-s-classic",
+    "name": "Radio S Classic",
+    "category": "music",
+    "streams": [
+      "https://stream.radios.rs:9074/stream"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

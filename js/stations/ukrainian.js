@@ -152,7 +152,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s5.radioforge.com:7908/live?n=77357"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "24-breaking-live",
@@ -176,7 +177,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://online-radio.nv.ua/radionv.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "fm-95-2",
@@ -951,6 +953,33 @@ window.STATIONS = [
       "https://online.teren.fm/teren_320"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "radio-tourist",
+    "name": "Radio Tourist",
+    "category": "music",
+    "streams": [
+      "https://stream.radiojar.com/av2rrf6547zuv"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "druzi",
+    "name": "Радіо DrUzi",
+    "category": "news",
+    "streams": [
+      "https://druzi.fm:8443/192mp3"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "ulyublene-radio-horodyshche-98-fm",
+    "name": "Ulyublene radio Horodyshche 98 FM",
+    "category": "music",
+    "streams": [
+      "https://listen7.myradio24.com/ulyublene"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

@@ -953,6 +953,33 @@ window.STATIONS = [
       "https://icecast9.play.cz/radio-ostravan-256.mp3"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "radio-vaticana-cestina",
+    "name": "Radio Vaticana Čeština",
+    "category": "devotional",
+    "streams": [
+      "https://radio.vaticannews.va/stream-cs"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "radia-cz-fire",
+    "name": "Radia.cz - Fire",
+    "category": "music",
+    "streams": [
+      "https://ice2.radia.cz/relax-fire64.aac"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "coop-tip-radio",
+    "name": "COOP TIP Radio",
+    "category": "music",
+    "streams": [
+      "https://ice4.abradio.cz/coop128.mp3"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

@@ -972,6 +972,33 @@ window.STATIONS = [
       "https://lakalle.egostreaming.pe/radio/a7b9c3e4567f8d0123456789/"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "rumba-98-1-fm",
+    "name": "Rumba 98.1 FM",
+    "category": "music",
+    "streams": [
+      "https://cast20.plugstreaming.com:2020/stream/r981/;"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "babel",
+    "name": "Babel",
+    "category": "music",
+    "streams": [
+      "https://radios.iwstreaming.uy/8030/stream"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "instrumentales",
+    "name": "Instrumentales",
+    "category": "music",
+    "streams": [
+      "https://protvradiostream.com:8350/live"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

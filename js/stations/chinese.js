@@ -907,6 +907,33 @@ window.STATIONS = [
       "https://das-edge14-live365-dal02.cdnstream.com/a57743_2"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "station-45",
+    "name": "上海经典音乐广播",
+    "category": "music",
+    "streams": [
+      "https://lhttp.qingting.fm/live/267/64k.mp3"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "hi-fi-radio",
+    "name": "天籁之音 - Hi-Fi Radio",
+    "category": "music",
+    "streams": [
+      "https://play-radio-stream3.hndt.com/now/JxkyN5mR/chunklist.m3u8"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "cctv-9",
+    "name": "CCTV-9纪录伴音",
+    "category": "music",
+    "streams": [
+      "https://piccpndali.v.myalicdn.com/audio/cctv9_2.m3u8"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

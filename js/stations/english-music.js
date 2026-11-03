@@ -1177,6 +1177,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-02",
     "where": "Canada"
+  },
+  {
+    "id": "70-80-90-vibrazioni-rock-radio",
+    "name": "70 80 90 Vibrazioni Rock Radio",
+    "category": "rock",
+    "streams": [
+      "https://maggie.torontocast.com:2020/stream/vibrazionirockradio"
+    ],
+    "added": "2026-11-03",
+    "where": "Canada"
+  },
+  {
+    "id": "181-fm-the-mix",
+    "name": "181.FM - The Mix",
+    "category": "pop",
+    "streams": [
+      "https://listen.181fm.com/181-themix_128k.mp3"
+    ],
+    "added": "2026-11-03",
+    "where": "US"
+  },
+  {
+    "id": "midnite-radio-the-original",
+    "name": "Midnite Radio - The Original!",
+    "category": "rock",
+    "streams": [
+      "https://a7.asurahosting.com:7510/radio.mp3"
+    ],
+    "added": "2026-11-03",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

@@ -186,6 +186,15 @@ window.STATIONS = [
     "streams": [
       "https://stream.hyevibes.com/listen/hyevibes/radio.mp3"
     ]
+  },
+  {
+    "id": "translation-of-the-quran-in-farsi",
+    "name": "Translation of the Quran in Farsi",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8144/;"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

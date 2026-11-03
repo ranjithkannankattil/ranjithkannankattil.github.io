@@ -217,8 +217,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://azura-cast.radiokansk.ru/listen/radiokansk/live"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "instrumental-jazz",
@@ -973,6 +972,33 @@ window.STATIONS = [
       "https://casseta-disco.ru:6275/stream?x=1711899723831"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "station-37",
+    "name": "Авторадио Минск",
+    "category": "music",
+    "streams": [
+      "https://live.humorfm.by:8443/avtoradio"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "station-38",
+    "name": "Искатель",
+    "category": "music",
+    "streams": [
+      "https://iskatel.hostingradio.ru:8015/iskatel-128.mp3"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "russian-lounge",
+    "name": "Russian Lounge",
+    "category": "music",
+    "streams": [
+      "https://muzdolet.com/radio.mp3"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

@@ -248,8 +248,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://broadcast.shoutstream.co.uk:8078/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "mp3quran-main",
@@ -972,6 +971,33 @@ window.STATIONS = [
       "https://medinafm.ice.infomaniak.ch/medinafm-64.mp3"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "mbc-mood",
+    "name": "MBC Mood",
+    "category": "music",
+    "streams": [
+      "https://radio-mbc-mood.mbc.net/radio-mbc-mood.m3u8"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "annaba",
+    "name": "Annaba عنابة",
+    "category": "news",
+    "streams": [
+      "https://webradio1.tda.dz:8001/Annaba_64K.mp3"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "omniradio-sheikh-mahmoud-ali-al-banna",
+    "name": "OmniRadio - Sheikh Mahmoud Ali Al-Banna",
+    "category": "devotional",
+    "streams": [
+      "https://radio.xecod.com/station/albanna"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

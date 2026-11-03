@@ -89,8 +89,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://a00.w3gradle.com/a21.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "kente-radio",
@@ -299,8 +298,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://atunwadigital.streamguys1.com/yfm979takoradi"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "yfm-107-9-accra",
@@ -481,4 +479,4 @@ window.STATIONS = [
     "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

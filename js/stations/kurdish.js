@@ -194,6 +194,15 @@ window.STATIONS = [
     "streams": [
       "https://sslyayin.netyayin.net/radyozergan/;"
     ]
+  },
+  {
+    "id": "translation-of-the-quran-in-kurdish",
+    "name": "Translation of the Quran in Kurdish",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8110/;"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";

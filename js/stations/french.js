@@ -924,6 +924,33 @@ window.STATIONS = [
       "https://webradio3.tda.dz:8001/Constantine_64K.mp3"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "ancient-fm",
+    "name": "Ancient FM",
+    "category": "music",
+    "streams": [
+      "https://mediaserv73.live-streams.nl:18058/stream"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "radio-swiss-classic",
+    "name": "Radio Swiss Classic",
+    "category": "music",
+    "streams": [
+      "https://stream.srg-ssr.ch/srgssr/rsc_de/aac/96"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "radio-contact",
+    "name": "Radio Contact",
+    "category": "music",
+    "streams": [
+      "https://n22a-eu.rcs.revma.com/6gygqc1gy7uvv"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-02T22:52Z";
+window.STATIONS_CHECKED = "2026-11-03T07:42Z";
