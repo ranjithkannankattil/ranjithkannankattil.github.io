@@ -1,0 +1,29 @@
+name: Fetch book cover (one-off)
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Try the known locations
+        run: |
+          mkdir -p media-incoming/books
+          P='www.saikathambooks.com/image/cache/catalog/Book%20Covers/Vinda%20PAdiloode%20Thirke%20Po%20VEnale-550x550h.jpg'
+          O='www.saikathambooks.com/image/catalog/Book%20Covers/Vinda%20PAdiloode%20Thirke%20Po%20VEnale.jpg'
+          for u in "https://$P" "http://$P" "https://$O" "https://web.archive.org/web/2024id_/https://$P" "https://web.archive.org/web/2022id_/https://$P" "https://web.archive.org/web/2019id_/https://$P"; do
+            code=$(curl -sSL -m 40 -A 'Mozilla/5.0' -e 'https://www.saikathambooks.com/' -o c.bin -w '%{http_code} %{content_type} %{size_download}' "$u" || echo failed)
+            echo "$u -> $code ($(file -b c.bin 2>/dev/null | cut -c1-50))"
+            if file -b --mime-type c.bin 2>/dev/null | grep -q '^image/' && [ "$(stat -c%s c.bin)" -gt 3000 ]; then
+              cp c.bin media-incoming/books/vinda-padiloode-cover.jpg; echo FOUND; break
+            fi
+          done
+      - name: Save it
+        run: |
+          [ -f media-incoming/books/vinda-padiloode-cover.jpg ] || exit 0
+          git config user.name "github-actions[bot]"
+          git config user.email "41898732+github-actions[bot]@users.noreply.github.com"
+          git add media-incoming && git commit -qm "Recover the Vinda Padiloode book cover"
+          git pull -q --rebase origin main && git push -q origin HEAD:main
