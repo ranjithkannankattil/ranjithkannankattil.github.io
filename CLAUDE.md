@@ -66,11 +66,11 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
   iPhone app for other people — the site says so.
 
 ## Scholarship finder (productivity/scholarships.html, js/scholarships-data.js)
-Fully automated; the owner does not review it. `scripts/check_scholarships.py` runs daily (GitHub
-Actions) and writes `scripts/scholarship-report.md`. A daily scheduled Claude task reads that report,
-updates changed records from their official pages, and re-checks the five oldest `checked` records,
-which also covers sites that block GitHub. Only change facts confirmed on an official page. Keep the
-disclaimer at the top of the page.
+Runs without the owner and uses no AI: don't add scheduled AI tasks, he doesn't want to spend tokens.
+`scripts/check_scholarships.py` runs daily (GitHub Actions) and writes `js/scholarships-status.json`;
+the page shows when each official page was last read and flags a card if its page changed after the
+record's `checked` date. Open/closed labels follow the dates. The script can't rewrite the facts, so
+they change only when he asks. Keep the disclaimer at the top of the page.
 
 ## Adding a Workbench tool
 See "Adding a productivity tool" in README.md (registry in `js/tools.js`, page in `productivity/`,

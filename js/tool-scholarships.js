@@ -41,6 +41,7 @@
     return a.name.localeCompare(b.name);
   }
 
+  var PAGE = {};   // official-page status from the daily GitHub check
   var state = { region: '', country: '', level: '', funding: '', q: '', age: '', work: '', open: false };
 
   function ageLimit(s) {
@@ -70,9 +71,13 @@
     var st = status(s);
     var canSave = s.closes && daysTo(s.closes) >= 0;
     var soon = st.k === 'open' && daysTo(s.closes) <= 30;
+    var pg = PAGE[s.url] || {};
+    var read = pg.checked && pg.checked > s.checked ? pg.checked : s.checked;
+    var moved = pg.changed && pg.changed > s.checked;
     return '<li class="sc-card">' +
       '<div class="sc-top"><span class="sc-status ' + st.k + (soon ? ' soon' : '') + '">' + esc(st.label) + '</span><span class="sc-fund ' + s.funding + '">' + FUND[s.funding] + '</span></div>' +
       '<h3>' + esc(s.name) + '</h3>' +
+      (moved ? '<p class="sc-changed">The official page changed on ' + pretty(pg.changed) + '. Details here may be out of date.</p>' : '') +
       '<p class="sc-by">' + esc(s.by) + ' · ' + esc(s.place) + '</p>' +
       '<p class="sc-levels">' + s.levels.map(function (l) { return LEVEL[l]; }).join(' · ') + '</p>' +
       '<dl>' +
@@ -85,7 +90,7 @@
       '<a class="sc-go" href="' + esc(s.url) + '" target="_blank" rel="noopener">Official page ↗</a>' +
       (canSave ? '<button class="sc-cal" type="button" data-cal="' + esc(s.id) + '">Add deadline to calendar</button>' : '') +
       '</div>' +
-      '<p class="sc-checked">Last checked ' + pretty(s.checked) + '</p>' +
+      '<p class="sc-checked">Official page last read ' + pretty(read) + '</p>' +
       '</li>';
   }
 
@@ -199,4 +204,10 @@
     return '<li><a href="' + esc(u.url) + '" target="_blank" rel="noopener">' + esc(u.name) + '</a></li>';
   }).join('');
   render();
+
+  // the date in the address makes sure each day's status file is fetched fresh
+  fetch('../js/scholarships-status.json?d=' + now.toISOString().slice(0, 10))
+    .then(function (r) { return r.ok ? r.json() : {}; })
+    .then(function (d) { PAGE = d; render(); })
+    .catch(function () {});
 })();

@@ -1,18 +1,17 @@
 #!/usr/bin/env python3
-"""Daily check of every official scholarship page.
+"""Daily check of every official scholarship page. Uses no AI.
 
 Reads the links in js/scholarships-data.js, keeps the lines on each page that
 talk about dates, deadlines or eligibility, and compares them with the copy in
-scripts/scholarship-watch.json. It writes a plain report to
-scripts/scholarship-report.md, which a daily scheduled Claude task reads to
-update the list. This script never edits the list itself. The first time a page is seen, it just records the copy.
+scripts/scholarship-watch.json. It writes js/scholarships-status.json, which the
+page reads to show when each official page was last read and to flag a card when
+its page has changed. It never edits the list itself.
 """
 import hashlib
 import html
 import json
 import re
 import ssl
-import sys
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
@@ -21,6 +20,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "js/scholarships-data.js"
 STATE = ROOT / "scripts/scholarship-watch.json"
 REPORT = ROOT / "scripts/scholarship-report.md"
+STATUS = ROOT / "js/scholarships-status.json"
 UA = "Mozilla/5.0 (compatible; ranjithkb-scholarship-check; +https://ranjithkb.com/)"
 KEY = re.compile(
     r"deadline|closing|closes|closed|opens|open now|applications?\b|apply|eligib|"
@@ -65,18 +65,21 @@ def fetch(url):
         return url, None, str(e)[:120]
 
 
-def compare(old, results, used):
+def compare(old, results, used, day):
     """Returns the new state, the changed pages and the unreadable ones."""
     state, changed, failed = {}, [], []
     for url, lines, err in results:
-        before = old.get(url)
-        if lines is None or not lines:
-            misses = (before or {}).get("misses", 0) + 1
-            state[url] = {**(before or {"lines": []}), "misses": misses}
+        before = old.get(url) or {}
+        if not lines:
+            misses = before.get("misses", 0) + 1
+            state[url] = {"lines": [], **before, "misses": misses}
             failed.append((url, err or "no readable text", misses))
             continue
-        state[url] = {"lines": lines, "misses": 0}
-        if before and before.get("lines") and before["lines"] != lines:
+        state[url] = {"lines": lines, "misses": 0, "checked": day}
+        if before.get("changed"):
+            state[url]["changed"] = before["changed"]
+        if before.get("lines") and before["lines"] != lines:
+            state[url]["changed"] = day
             added = [x for x in lines if x not in before["lines"]]
             removed = [x for x in before["lines"] if x not in lines]
             changed.append((url, added, removed))
@@ -103,17 +106,18 @@ def report(changed, failed, used, day):
 def main():
     from datetime import date
 
+    day = date.today().isoformat()
     used = links(DATA.read_text(encoding="utf-8"))
     old = json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() else {}
     with ThreadPoolExecutor(8) as ex:
         results = list(ex.map(fetch, used))
-    state, changed, failed = compare(old, results, used)
+    state, changed, failed = compare(old, results, used, day)
     STATE.write_text(json.dumps(state, ensure_ascii=False, indent=0, sort_keys=True) + "\n", encoding="utf-8")
-    text, issues = report(changed, failed, used, date.today().isoformat())
+    public = {u: {k: v[k] for k in ("checked", "changed") if k in v} for u, v in state.items()}
+    STATUS.write_text(json.dumps(public, indent=0, sort_keys=True) + "\n", encoding="utf-8")
+    text, _ = report(changed, failed, used, day)
     REPORT.write_text(text, encoding="utf-8")
-    print(f"{len(used)} pages, {len(changed)} changed, {len(failed)} unreadable, {issues} to review")
-    if len(sys.argv) > 1:  # tell the workflow whether to raise a review note
-        Path(sys.argv[1]).write_text(str(issues), encoding="utf-8")
+    print(f"{len(used)} pages, {len(changed)} changed, {len(failed)} unreadable")
 
 
 if __name__ == "__main__":

@@ -34,6 +34,7 @@ body[data-section="productivity"] .sc-reset:hover{ color:var(--accent); }
 .sc-fund{ color:var(--ink-soft); }
 .sc-fund.full{ color:var(--accent-text, var(--accent)); }
 .sc-card h3{ font-family:var(--f-display); font-weight:600; font-size:1.18rem; line-height:1.2; margin:.65rem 0 0; }
+.sc-changed{ margin:.5rem 0 0; padding:.4rem .55rem; border-left:3px solid var(--accent); background:var(--accent-soft); font-size:.86rem; line-height:1.35; }
 .sc-by{ font-size:.86rem; color:var(--ink-soft); margin:.25rem 0 0; }
 .sc-levels{ font-family:var(--f-mono); font-size:.68rem; color:var(--ink-soft); margin:.4rem 0 0; }
 .sc-card dl{ margin:.75rem 0 0; flex:1; }
