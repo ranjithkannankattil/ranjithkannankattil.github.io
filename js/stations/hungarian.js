@@ -891,6 +891,33 @@ window.STATIONS = [
       "https://mr-stream.connectmedia.hu/4744/mr4.mp3"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "radio-gaga-udvarhelyszek",
+    "name": "Rádió GaGa Udvarhelyszék",
+    "category": "music",
+    "streams": [
+      "https://stream.igenbiza.com/udv"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "zemplen-fm",
+    "name": "Zemplén FM",
+    "category": "news",
+    "streams": [
+      "https://oxygenmusic.hu:8443/zemplen"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "translation-of-the-quran-in-hungarian",
+    "name": "Translation of the Quran in Hungarian",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8104/;"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

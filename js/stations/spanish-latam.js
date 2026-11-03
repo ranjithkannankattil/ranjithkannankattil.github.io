@@ -999,6 +999,33 @@ window.STATIONS = [
       "https://protvradiostream.com:8350/live"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "tropicana-medellin-98-9-fm",
+    "name": "Tropicana (Medellín) 98.9 FM",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/TR_MEDELLINAAC.aac"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "los40-chile",
+    "name": "LOS40 Chile",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_CHILEAAC.aac"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "radio-romantica",
+    "name": "Radio Romántica",
+    "category": "music",
+    "streams": [
+      "https://stream-282.surfernetwork.com/cploshirboutv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJjcGxvc2hpcmJvdXR2IiwiaG9zdCI6InN0cmVhbS0yODIuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6IjdpN1NPUlRPUUl5dmhpWng4UnFzOFEiLCJpYXQiOjE3OTM1NTUwNjYsImV4cCI6MTc5MzU1NTEyNn0.gCfV82he_ksRQrq0-4ox3eug0u_ZAG_jrJVqXhdNXME"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

@@ -359,8 +359,7 @@ window.STATIONS = [
       "https://stream.zenolive.com/wtuvp08xq1duv"
     ],
     "added": "2026-10-24",
-    "where": "Nepal",
-    "offline": true
+    "where": "Nepal"
   },
   {
     "id": "redfm",
@@ -871,6 +870,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "where": "Australia"
+  },
+  {
+    "id": "al-jazeera-english-live",
+    "name": "Al Jazeera English (Live)",
+    "category": "world",
+    "streams": [
+      "https://live-hls-web-aje-gcp.thehlive.com/AJE/index.m3u8"
+    ],
+    "added": "2026-11-03",
+    "where": "Qatar"
+  },
+  {
+    "id": "dw-english-hd",
+    "name": "DW English HD",
+    "category": "world",
+    "streams": [
+      "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8"
+    ],
+    "added": "2026-11-03",
+    "where": "Germany"
+  },
+  {
+    "id": "612-abc-brisbane",
+    "name": "612 ABC Brisbane",
+    "category": "anz",
+    "streams": [
+      "https://streaming.abc-cdn.net.au/audio/hls/localbrisbane.m3u8?source=web"
+    ],
+    "added": "2026-11-03",
+    "where": "Australia"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

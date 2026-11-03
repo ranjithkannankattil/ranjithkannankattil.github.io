@@ -998,6 +998,33 @@ window.STATIONS = [
       "https://radio.xecod.com/station/albanna"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "mp3quran",
+    "name": "محمود خليل الحصري - حفص عن عاصم مرتل - mp3quran",
+    "category": "devotional",
+    "streams": [
+      "https://qurango.net/radio/mahmoud_khalil_alhussary"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "omniradio-sheikh-abdulbasit-abdulsamad",
+    "name": "OmniRadio - Sheikh Abdulbasit Abdulsamad",
+    "category": "devotional",
+    "streams": [
+      "https://radio.xecod.com/station/abdulbasit"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "hala-sabratha",
+    "name": "Hala Sabratha",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/1dy2395z3k8uv"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

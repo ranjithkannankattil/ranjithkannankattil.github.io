@@ -1004,6 +1004,33 @@ window.STATIONS = [
       "https://liveradio.swr.de/sw282p3/swraktuell/play.aac"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "swr1",
+    "name": "SWR1",
+    "category": "music",
+    "streams": [
+      "https://dispatcher.rndfnk.com/swr/swr1/bw/mp3/128/stream.mp3"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "antenne-bayern-oldies-but-goldies",
+    "name": "Antenne Bayern - Oldies but Goldies",
+    "category": "music",
+    "streams": [
+      "https://mp3channels.webradio.antenne.de/oldies-but-goldies"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "0-n-christmas-on-radio",
+    "name": "0 N - Christmas on Radio",
+    "category": "music",
+    "streams": [
+      "https://0n-christmas.radionetz.de/0n-christmas.mp3"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

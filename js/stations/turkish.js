@@ -242,8 +242,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radiotedu.com/cazz-flac"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radyo-ilahi",
@@ -522,8 +521,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiotedu.com/lofi"
     ],
-    "added": "2026-10-26",
-    "offline": true
+    "added": "2026-10-26"
   },
   {
     "id": "canliradyo-tr-canl-radyo-mac-dinle",
@@ -604,8 +602,7 @@ window.STATIONS = [
     "streams": [
       "https://usa4.fastcast4u.com/proxy/radyoizmirfm/mp3stream128"
     ],
-    "added": "2026-10-27",
-    "offline": true
+    "added": "2026-10-27"
   },
   {
     "id": "deva-fm-oyun-havas",
@@ -902,8 +899,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiotedu.com/classic-flac"
     ],
-    "added": "2026-11-02",
-    "offline": true
+    "added": "2026-11-02"
   },
   {
     "id": "lp-roman-fm",
@@ -976,6 +972,33 @@ window.STATIONS = [
       "https://live.radyofenomen.com/fenomen2010/256/chunks.m3u8"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "fenomen-256",
+    "name": "Fenomen 256",
+    "category": "music",
+    "streams": [
+      "https://live.radyofenomen.com/fenomen/256/chunks.m3u8"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "bestefm-lounge",
+    "name": "BesteFM Lounge",
+    "category": "music",
+    "streams": [
+      "https://stream.epic-lounge.com/shisha-lounge?ref=streema"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "bloomberg-ht-radyo",
+    "name": "Bloomberg HT Radyo",
+    "category": "news",
+    "streams": [
+      "https://bloomberghtradyo.radyotvonline.net/bloomberghtradyo"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

@@ -48,8 +48,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nova-radio.neterra.tv/veselinaretro"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "badrock-hard-heavy",
@@ -243,8 +242,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sc.mpbnl.nl/radionostalgia.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-1-1-0-ruse-88-9-fm",
@@ -702,8 +700,7 @@ window.STATIONS = [
     "streams": [
       "https://sc.mpbnl.nl/notefm.mp3"
     ],
-    "added": "2026-10-30",
-    "offline": true
+    "added": "2026-10-30"
   },
   {
     "id": "mixx",
@@ -760,4 +757,4 @@ window.STATIONS = [
     "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

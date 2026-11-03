@@ -162,8 +162,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.rfm.fr/rfm-wr10.aac"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "jazz-radio",
@@ -951,6 +950,33 @@ window.STATIONS = [
       "https://n22a-eu.rcs.revma.com/6gygqc1gy7uvv"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "fip-groove",
+    "name": "FIP Groove",
+    "category": "music",
+    "streams": [
+      "https://icecast.radiofrance.fr/fipgroove-hifi.aac"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "jazz-radio-piano-jazz",
+    "name": "Jazz Radio Piano Jazz",
+    "category": "music",
+    "streams": [
+      "https://jzr-piano.ice.infomaniak.ch/jzr-piano.mp3"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "radio-caroline-la-radio-de-bretagne",
+    "name": "Radio Caroline - La Radio de Bretagne",
+    "category": "music",
+    "streams": [
+      "https://radiocaroline.ice.infomaniak.ch/radiocaroline-128.mp3"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

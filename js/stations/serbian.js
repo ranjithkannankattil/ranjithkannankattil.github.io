@@ -888,6 +888,33 @@ window.STATIONS = [
       "https://stream.radios.rs:9074/stream"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "radio-s-latino",
+    "name": "Radio S Latino",
+    "category": "music",
+    "streams": [
+      "https://stream.radios.rs:9054/stream"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "civijas-radio",
+    "name": "Čivijaš Radio",
+    "category": "music",
+    "streams": [
+      "https://media.srb-streaming.com:9078/stream"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "radio-patrola-021",
+    "name": "Radio Patrola 021",
+    "category": "music",
+    "streams": [
+      "https://srv.mediastriming.com/8444/stream"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

@@ -152,8 +152,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s5.radioforge.com:7908/live?n=77357"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "24-breaking-live",
@@ -177,8 +176,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://online-radio.nv.ua/radionv.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "fm-95-2",
@@ -982,4 +980,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

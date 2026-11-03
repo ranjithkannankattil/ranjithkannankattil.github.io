@@ -943,6 +943,33 @@ window.STATIONS = [
       "https://sonicssl.namehost.ro/7770/stream"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "traditional-radio-manele",
+    "name": "Tradițional Radio - Manele",
+    "category": "music",
+    "streams": [
+      "https://radio.ascultatare.ro/7000/stream"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "clasic-radio-bluejazz-bucuresti",
+    "name": "Clasic Radio_BlueJazz -București",
+    "category": "music",
+    "streams": [
+      "https://live.radioclasic.com/listen/radio_clasic_bluejazz/live.mp3"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "magic-de-pahar",
+    "name": "Magic De Pahar",
+    "category": "music",
+    "streams": [
+      "https://dc.digi.live.kissfm.ro/magicdepahar"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

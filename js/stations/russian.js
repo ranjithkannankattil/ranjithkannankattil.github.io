@@ -999,6 +999,33 @@ window.STATIONS = [
       "https://muzdolet.com/radio.mp3"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "brokenbeats",
+    "name": "Brokenbeats",
+    "category": "music",
+    "streams": [
+      "https://stream.brokenbeats.net/tune"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "station-39",
+    "name": "Радио Лента",
+    "category": "news",
+    "streams": [
+      "https://stream1.unknownclient.com/radio-lenta.mp3"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "record-minimal",
+    "name": "Record Minimal",
+    "category": "music",
+    "streams": [
+      "https://radiorecord.hostingradio.ru/mini96.aacp"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

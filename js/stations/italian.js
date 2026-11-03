@@ -161,8 +161,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://classichitsradio.streamingmedia.it/play"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "rtl-102-5-disco",
@@ -282,7 +281,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nr9.newradio.it/proxy/ebaruffa?mp=/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-italia-solo-musica-italiana",
@@ -940,6 +940,33 @@ window.STATIONS = [
       "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/webradio/capitalclassicrock/playlist.m3u8"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "classic-radio-swiss",
+    "name": "Classic · Radio Swiss",
+    "category": "music",
+    "streams": [
+      "https://stream.srg-ssr.ch/m/rsc_de/mp3_128"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "antenna-1-fm-107-1-roma",
+    "name": "Antenna 1 FM 107.1 Roma",
+    "category": "music",
+    "streams": [
+      "https://a1-it.newradio.it/stream"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "r101-la-banda-di-r101",
+    "name": "R101 La Banda di R101",
+    "category": "news",
+    "streams": [
+      "https://icy.unitedradio.it/R101LaBanda.aac"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

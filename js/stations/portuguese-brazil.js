@@ -726,8 +726,7 @@ window.STATIONS = [
     "streams": [
       "https://str1.streamhostpg.com.br:8002/stream"
     ],
-    "added": "2026-10-29",
-    "offline": true
+    "added": "2026-10-29"
   },
   {
     "id": "radio-brasil-de-fato",
@@ -1007,6 +1006,33 @@ window.STATIONS = [
       "https://8758.brasilstream.com.br/stream"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "radio-rap-brasil",
+    "name": "Rádio Rap Brasil",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/7c83b37e32quv"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "corazon-do-latino-radio-latina-24h-sao-p",
+    "name": "Corazón do Latino - Radio latina 24h São Paulo",
+    "category": "music",
+    "streams": [
+      "https://xn--coraodolatino-zeb3d.com.br/listen/radio_magic/radio.mp3"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "radio-clube-fm-99-1-recife-oficial",
+    "name": "Rádio Clube FM 99.1 - Recife (Oficial)",
+    "category": "music",
+    "streams": [
+      "https://radio.saopaulo01.com.br/8016/stream"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

@@ -56,7 +56,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "89-4-tamil-fm",
@@ -280,7 +281,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio129/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "tamil-ragam",
@@ -313,8 +315,7 @@ window.STATIONS = [
     "streams": [
       "https://usa3.fastcast4u.com/proxy/jeifm?mp=/1"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "britishindiantamilradio",
@@ -720,8 +721,7 @@ window.STATIONS = [
     "streams": [
       "https://eu8.fastcast4u.com/proxy/ailevdcu?mp=/;"
     ],
-    "added": "2026-10-29",
-    "offline": true
+    "added": "2026-10-29"
   },
   {
     "id": "aanmeega-sudar",
@@ -757,8 +757,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/vewxk5336qzuv"
     ],
-    "added": "2026-10-29",
-    "offline": true
+    "added": "2026-10-29"
   },
   {
     "id": "ibctamil",
@@ -911,8 +910,7 @@ window.STATIONS = [
     "streams": [
       "https://usa3.fastcast4u.com/proxy/dhayanib?mp=/;"
     ],
-    "added": "2026-11-02",
-    "offline": true
+    "added": "2026-11-02"
   },
   {
     "id": "trt-tamil-oli-fm",
@@ -1012,6 +1010,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/phv06yfkwzzuv"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "isai-fm",
+    "name": "Isai Fm",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/7b78sdv2x1zuv"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "isaiolifm",
+    "name": "Isaiolifm",
+    "category": "music",
+    "streams": [
+      "https://centova71.instainternet.com/proxy/isaiolifmadmin?mp=/stream&1691245966241"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "cheemaifm",
+    "name": "Cheemaifm",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/oogj1rc9cdctv"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

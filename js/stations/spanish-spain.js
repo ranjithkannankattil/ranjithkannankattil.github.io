@@ -66,8 +66,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://net1-cope-rrcast.flumotion.com/cope/net1-low.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "cadena-dial",
@@ -1001,6 +1000,33 @@ window.STATIONS = [
       "https://radio2.vip-radios.fm:18027/stream-128kmp3-IbizaDeep"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "radio-galega",
+    "name": "Radio Galega",
+    "category": "music",
+    "streams": [
+      "https://crtvg-radiogalega-hls.flumotion.cloud/playlist.m3u8"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "ibiza-sonica-club",
+    "name": "Ibiza Sonica Club",
+    "category": "music",
+    "streams": [
+      "https://ibizasonica.streaming-pro.com:8011/sonicaclub"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "1000-80s-hits",
+    "name": "1000 80s Hits",
+    "category": "music",
+    "streams": [
+      "https://ais-sa9.cdnstream1.com/1898_128"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

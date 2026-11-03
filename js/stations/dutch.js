@@ -1010,6 +1010,33 @@ window.STATIONS = [
       "https://play.citymusic.be/citymusic.mp3"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "192-radio-hq",
+    "name": "192 Radio (HQ)",
+    "category": "music",
+    "streams": [
+      "https://server-27.stream-server.nl:8192/stream"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "radio-continu",
+    "name": "Radio Continu",
+    "category": "music",
+    "streams": [
+      "https://stream.radiocontinu.nl/radiocontinu"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "vlaamse-wonderjaren",
+    "name": "Vlaamse Wonderjaren",
+    "category": "music",
+    "streams": [
+      "https://cast1.torontocast.com:3305/stream"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

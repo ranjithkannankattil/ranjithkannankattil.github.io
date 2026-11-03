@@ -24,8 +24,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostar.pro/stream/exyuretro.php"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "time-fm-gevgelija",
@@ -97,7 +96,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://vod-c57.interspace.com/channel_abr/47/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "metropolis-radio-network",
@@ -113,8 +113,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostar.pro/stream/mknarodna.php"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "star-radio-live-skopje-macedonia",
@@ -162,8 +161,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostar.pro/stream/starplus.php"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "plenty-valley-fm-mill-park-melbourne-88-",
@@ -200,4 +198,4 @@ window.STATIONS = [
     "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

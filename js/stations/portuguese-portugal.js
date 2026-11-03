@@ -92,7 +92,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "m80-radio-ballads",
@@ -205,8 +206,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8",
       "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "golofm",
@@ -230,8 +230,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "cidade-fm-2",
@@ -999,6 +998,33 @@ window.STATIONS = [
       "https://rs2.ptservidor.com:2199/proxy/febrites?mp=/stream"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "radio-fronteira",
+    "name": "Rádio Fronteira",
+    "category": "music",
+    "streams": [
+      "https://radios2.justweb.pt/8074/stream"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "radio-meio-do-mato",
+    "name": "Radio Meio Do Mato",
+    "category": "music",
+    "streams": [
+      "https://radio.meiodomato.com/stream"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "radio-amigos-do-mundo",
+    "name": "Radio Amigos do Mundo",
+    "category": "music",
+    "streams": [
+      "https://sonic.servsonic.com:7004/stream"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

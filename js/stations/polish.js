@@ -242,7 +242,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://s1.slotex.pl/shoutcast/7102/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-rmf-classic",
@@ -881,6 +882,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/xcmv558wquhvv"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "eska-katowice",
+    "name": "Eska Katowice",
+    "category": "music",
+    "streams": [
+      "https://ic2.smcdn.pl/2220-1.mp3"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "radio-silesia-fm",
+    "name": "Radio Silesia FM",
+    "category": "music",
+    "streams": [
+      "https://s1.slotex.pl/shoutcast/7926/stream?sid=1"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "wesoa-43",
+    "name": "Wesoła 43",
+    "category": "music",
+    "streams": [
+      "https://s1.slotex.pl:7650/stream"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

@@ -556,8 +556,7 @@ window.STATIONS = [
       "https://pacificmedia.cdnstream1.com/2783_128.mp3"
     ],
     "added": "2026-10-25",
-    "where": "US",
-    "offline": true
+    "where": "US"
   },
   {
     "id": "jfsr-jazz-funk-soul-radio",
@@ -1207,6 +1206,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "where": "US"
+  },
+  {
+    "id": "radio-essex",
+    "name": "Radio Essex",
+    "category": "pop",
+    "streams": [
+      "https://stream.aiir.com/ujzy590c3stvv"
+    ],
+    "added": "2026-11-03",
+    "where": "UK"
+  },
+  {
+    "id": "truckers-radio-usa",
+    "name": "Truckers Radio USA",
+    "category": "country",
+    "streams": [
+      "https://streamer.radio.co/s81d30349a/low"
+    ],
+    "added": "2026-11-03",
+    "where": "US"
+  },
+  {
+    "id": "heart-london-106-2",
+    "name": "Heart London 106.2",
+    "category": "rock",
+    "streams": [
+      "https://media-ice.musicradio.com/HeartLondon"
+    ],
+    "added": "2026-11-03",
+    "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

@@ -40,8 +40,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zenolive.com/wtuvp08xq1duv"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-audio",
@@ -120,4 +119,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

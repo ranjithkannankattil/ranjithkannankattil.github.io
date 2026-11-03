@@ -121,7 +121,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play-radio-stream3.hndt.com/now/WUBA5hW2/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-10",
@@ -201,7 +202,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-17",
@@ -934,6 +936,33 @@ window.STATIONS = [
       "https://piccpndali.v.myalicdn.com/audio/cctv9_2.m3u8"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "melody-fm",
+    "name": "Melody FM",
+    "category": "music",
+    "streams": [
+      "https://stream.rcs.revma.com/2u1n6dtbv4uvv/hls.m3u8"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "station-46",
+    "name": "台海新闻",
+    "category": "news",
+    "streams": [
+      "https://rscdn.ajmide.com/r_3133/nglive_3133.m3u8"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "station-47",
+    "name": "历史档案",
+    "category": "music",
+    "streams": [
+      "https://rscdn.ajmide.com/r_3179/nglive_3179.m3u8"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

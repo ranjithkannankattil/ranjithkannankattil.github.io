@@ -1028,6 +1028,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "where": "US"
+  },
+  {
+    "id": "newstalk-zb-christchurch",
+    "name": "Newstalk ZB Christchurch",
+    "category": "anz",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/NZME_41AAC.m3u8"
+    ],
+    "added": "2026-11-03",
+    "where": "New Zealand"
+  },
+  {
+    "id": "abc-radio-national-nt",
+    "name": "ABC Radio National NT",
+    "category": "us",
+    "streams": [
+      "https://mediaserviceslive.akamaized.net/hls/live/2038332/rnnt/index.m3u8"
+    ],
+    "added": "2026-11-03",
+    "where": "US"
+  },
+  {
+    "id": "tbc-radio-88-5-fm",
+    "name": "TBC Radio 88.5 FM",
+    "category": "world",
+    "streams": [
+      "https://stream.zeno.fm/004dvn2qqy5tv"
+    ],
+    "added": "2026-11-03",
+    "where": "Jamaica"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

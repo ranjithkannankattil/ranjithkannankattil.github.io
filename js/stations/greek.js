@@ -393,8 +393,7 @@ window.STATIONS = [
     "streams": [
       "https://loki.mental-media.gr:8038/index.html"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "station-5",
@@ -1025,6 +1024,33 @@ window.STATIONS = [
       "https://s15.myradiostream.com/:13980/listen.mp3"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "ert-pirgos-102-4",
+    "name": "ERT Pirgos 102.4",
+    "category": "music",
+    "streams": [
+      "https://radiostreaming.ert.gr/ert-pyrgos"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "radio-art-fusion",
+    "name": "Radio Art - Fusion",
+    "category": "music",
+    "streams": [
+      "https://live.radioart.com/fFusion.mp3"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "rainbow-89-christmas",
+    "name": "Rainbow 89 Christmas",
+    "category": "music",
+    "streams": [
+      "https://stream.radiojar.com/4nwwcyesv8hvv"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

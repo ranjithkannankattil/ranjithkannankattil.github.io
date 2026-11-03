@@ -340,7 +340,8 @@ window.STATIONS = [
     "streams": [
       "https://hls.hvezda.info/session01/128k/s.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "express-fm",
@@ -980,6 +981,33 @@ window.STATIONS = [
       "https://ice4.abradio.cz/coop128.mp3"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "cesky-rozhlas-karlovy-vary",
+    "name": "Český rozhlas Karlovy Vary",
+    "category": "news",
+    "streams": [
+      "https://rozhlas.stream/karlovy_vary.mp3"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "cesky-rozhlas-stredni-cechy",
+    "name": "Český rozhlas Střední Čechy",
+    "category": "news",
+    "streams": [
+      "https://rozhlas.stream/region.mp3"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "radio-prostor",
+    "name": "Radio Prostor",
+    "category": "news",
+    "streams": [
+      "https://bcast.spmmedia.cz/prostor-mp3"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

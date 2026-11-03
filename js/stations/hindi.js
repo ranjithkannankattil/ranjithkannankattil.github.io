@@ -8,8 +8,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://eu8.fastcast4u.com/proxy/clyedupq/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "mirchi-top-20",
@@ -993,6 +992,33 @@ window.STATIONS = [
       "https://live.auralradiokerala.in/auralradio/mp3"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "radio-saptarang",
+    "name": "Radio Saptarang",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/ttcsc4tf8yzuv"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "bharat-fm",
+    "name": "Bharat FM",
+    "category": "music",
+    "streams": [
+      "https://s2.radio.co/s44bb88930/listen#.mp3?ver=997168"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "radio-bula-masti",
+    "name": "Radio Bula Masti",
+    "category": "music",
+    "streams": [
+      "https://c7.radioboss.fm:18052/stream"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

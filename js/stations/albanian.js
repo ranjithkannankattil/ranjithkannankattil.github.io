@@ -64,8 +64,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.nestnews.al/listen/nest-radio/radio.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-burimi",
@@ -217,8 +216,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radios.albaniadigitalradio.al/albanialoveradio"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-lushnja",
@@ -367,8 +365,7 @@ window.STATIONS = [
     "streams": [
       "https://radios.albaniadigitalradio.al/albaniaradiodj"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "radio-popullore",
@@ -524,4 +521,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

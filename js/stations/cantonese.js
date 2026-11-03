@@ -161,8 +161,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qingting.fm/live/1277/64k.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-13",
@@ -178,7 +177,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://1946218710.rsc.cdn77.org/1946218710/index.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-15",
@@ -635,4 +635,4 @@ window.STATIONS = [
     "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

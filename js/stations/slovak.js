@@ -530,6 +530,24 @@ window.STATIONS = [
       "https://servidor38-1.brlogic.com:7204/live"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "europa-2-fitness",
+    "name": "Europa 2 - Fitness",
+    "category": "music",
+    "streams": [
+      "https://stream.bauermedia.sk/fitness-hi.aac"
+    ],
+    "added": "2026-11-03"
+  },
+  {
+    "id": "europa-2-zvuk-ulice",
+    "name": "Europa 2 - Zvuk ulice",
+    "category": "music",
+    "streams": [
+      "https://stream.bauermedia.sk/zvuk-ulice-hi.aac"
+    ],
+    "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";

@@ -470,8 +470,7 @@ window.STATIONS = [
     "streams": [
       "https://usa5.fastcast4u.com/proxy/mcbntiktok?mp=/1"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "king-radio-tabuk-city",
@@ -525,7 +524,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/60cb36c29heuv"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "offline": true
   },
   {
     "id": "105-9-energy-fm-dwla",
@@ -564,4 +564,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T07:42Z";
+window.STATIONS_CHECKED = "2026-11-03T20:42Z";
