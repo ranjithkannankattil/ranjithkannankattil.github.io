@@ -66,11 +66,13 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
   iPhone app for other people — the site says so.
 
 ## Scholarship finder (productivity/scholarships.html, js/scholarships-data.js)
-Runs without the owner and uses no AI: don't add scheduled AI tasks, he doesn't want to spend tokens.
-`scripts/check_scholarships.py` runs daily (GitHub Actions) and writes `js/scholarships-status.json`;
-the page shows when each official page was last read and flags a card if its page changed after the
-record's `checked` date. Open/closed labels follow the dates. The script can't rewrite the facts, so
-they change only when he asks. Keep the disclaimer at the top of the page.
+Runs without the owner on GitHub. Don't add scheduled Claude tasks: he doesn't want to spend Claude tokens.
+`scripts/check_scholarships.py` runs daily and writes `js/scholarships-status.json`; the page shows when
+each official page was last read and flags a card if its page changed after the record's `checked` date.
+`scripts/refresh_scholarships.py` then asks Gemini (the free `GEMINI_API_KEY` shared with News, at most 10
+calls a run) for new deadlines. A date is used only if its exact quote is on the page and it's in the future.
+Dates only: amounts and rules change when he asks. If the free limit is hit, move the job to every 3 days,
+as he suggested. Keep the disclaimer at the top of the page.
 
 ## Adding a Workbench tool
 See "Adding a productivity tool" in README.md (registry in `js/tools.js`, page in `productivity/`,
