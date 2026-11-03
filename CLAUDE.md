@@ -20,8 +20,11 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
   Blog version of a post is canonical over the Facebook copy.
 - **Copyheart**: his own work is free to copy (say so for his work only, not everything on the site).
 - The site is English-only — no translated pages.
-- Heavy media (book PDFs, photos, link-preview cards) lives on Cloudflare R2 at
-  `media.ranjithkb.com`, not in the repo.
+- **All media goes to Cloudflare R2**, served from `https://media.ranjithkb.com/` — photos, book
+  PDFs, link-preview cards, audio, video and any other new images or files. Never commit media to
+  the repo for the site to serve. To add some: commit it under `media-incoming/<path>`; the
+  "Media upload" workflow copies it to R2 at the same `<path>` and removes it from the repo, then
+  link to `https://media.ranjithkb.com/<path>`. (Small UI icons and favicons in `assets/icons/` stay.)
 
 ## How to work here
 - He mostly uses the site **on an iPhone 15** (Brave/Safari) and an Android app. Test every UI change
