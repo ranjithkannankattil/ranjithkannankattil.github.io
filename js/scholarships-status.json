@@ -69,7 +69,9 @@
 "https://www.chevening.org/scholarship/india/": {
 "checked": "2026-11-03"
 },
-"https://www.daad.in/en/study-research-in-germany/studying-in-germany/daad-scholarships/": {},
+"https://www.daad.in/en/study-research-in-germany/studying-in-germany/daad-scholarships/": {
+"checked": "2026-11-03"
+},
 "https://www.dfat.gov.au/people-to-people/australia-awards/participating-countries": {},
 "https://www.felixscholarship.org/": {
 "checked": "2026-11-03"
@@ -111,6 +113,7 @@
 "checked": "2026-11-03"
 },
 "https://www.turkiyeburslari.gov.tr/announcements/turkiye-scholarships-2026-applications-121": {
+"changed": "2026-11-03",
 "checked": "2026-11-03"
 },
 "https://www.ugc.edu.hk/eng/rgc/funding_opport/hkpfs/": {
@@ -125,7 +128,9 @@
 "https://www.usief.org.in/fulbright-fellowships/fellowships-for-indian-citizen/fulbright-nehru-masters-fellowships/": {
 "checked": "2026-11-03"
 },
-"https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=57504697": {},
+"https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=57504697": {
+"checked": "2026-11-03"
+},
 "https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm": {
 "checked": "2026-11-03"
 }

@@ -94,7 +94,7 @@
 },
 "https://cdn.auckland.ac.nz/assets/Scholarships/regulations/university-of-auckland-india-high-achievers-scholarship.pdf": {
 "lines": [],
-"misses": 2
+"misses": 3
 },
 "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-masters-scholarships/": {
 "checked": "2026-11-03",
@@ -248,7 +248,7 @@
 },
 "https://darmasiswa.kemdikbud.go.id/": {
 "lines": [],
-"misses": 2
+"misses": 3
 },
 "https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/erasmus-mundus-joint-masters": {
 "checked": "2026-11-03",
@@ -353,7 +353,7 @@
 },
 "https://mbzuai.ac.ae/study/undergraduate-program/": {
 "lines": [],
-"misses": 2
+"misses": 3
 },
 "https://nawa.gov.pl/en/students/foreign-students/poland-my-first-choice-programme": {
 "checked": "2026-11-03",
@@ -410,11 +410,11 @@
 },
 "https://overseas.tribal.gov.in/": {
 "lines": [],
-"misses": 2
+"misses": 3
 },
 "https://socialjustice.gov.in/schemes/28": {
 "lines": [],
-"misses": 2
+"misses": 3
 },
 "https://stipendiumhungaricum.hu/wp-content/uploads/2025/10/BA_MA_OTM_Call_for_Applications_2026_27.pdf": {
 "checked": "2026-11-03",
@@ -425,7 +425,7 @@
 },
 "https://study.unimelb.edu.au/connect-with-us/international/india": {
 "lines": [],
-"misses": 2
+"misses": 3
 },
 "https://the.akdn/en/what-we-do/developing-human-capacity/education/international-scholarships": {
 "checked": "2026-11-03",
@@ -510,7 +510,7 @@
 },
 "https://www.campuschina.org/": {
 "lines": [],
-"misses": 2
+"misses": 3
 },
 "https://www.campusfrance.org/en/actu/call-for-france-excellence-eiffel-applications-2027": {
 "checked": "2026-11-03",
@@ -548,14 +548,15 @@
 "misses": 0
 },
 "https://www.daad.in/en/study-research-in-germany/studying-in-germany/daad-scholarships/": {
+"checked": "2026-11-03",
 "lines": [
 "Find out which of the DAAD scholarships are available for students - during or for their Bachelors, Masters, PhD and Post-Doc. This is a selection of scholarships that the DAAD sees as its flagship programmes. Any eligible individual can apply for these."
 ],
-"misses": 1
+"misses": 0
 },
 "https://www.dfat.gov.au/people-to-people/australia-awards/participating-countries": {
 "lines": [],
-"misses": 2
+"misses": 3
 },
 "https://www.felixscholarship.org/": {
 "checked": "2026-11-03",
@@ -608,15 +609,15 @@
 },
 "https://www.gov.il/en/service/scholarships_application_for_academic_studies_in_israel": {
 "lines": [],
-"misses": 2
+"misses": 3
 },
 "https://www.in.emb-japan.go.jp/education/Research_Student.html": {
 "lines": [],
-"misses": 2
+"misses": 3
 },
 "https://www.in.emb-japan.go.jp/education/undergraduate_student.html": {
 "lines": [],
-"misses": 2
+"misses": 3
 },
 "https://www.ku.ac.ae/scholarship/graduate-research-teaching-scholarship-for-international-students": {
 "checked": "2026-11-03",
@@ -643,7 +644,7 @@
 },
 "https://www.monash.edu/india/study/scholarships-and-finance-options": {
 "lines": [],
-"misses": 2
+"misses": 3
 },
 "https://www.rhodeshouse.ox.ac.uk/scholarships/applications/india/": {
 "checked": "2026-11-03",
@@ -660,7 +661,7 @@
 },
 "https://www.roc-taiwan.org/in_en/post/7920.html": {
 "lines": [],
-"misses": 2
+"misses": 3
 },
 "https://www.sbfi.admin.ch/en/swiss-government-excellence-scholarships": {
 "checked": "2026-11-03",
@@ -785,7 +786,7 @@
 },
 "https://www.studywithnewzealand.govt.nz/en/study-options/scholarships": {
 "lines": [],
-"misses": 2
+"misses": 3
 },
 "https://www.sydney.edu.au/scholarships/e/sydney-scholars-india-scholarship-program.html": {
 "checked": "2026-11-03",
@@ -816,6 +817,7 @@
 "misses": 0
 },
 "https://www.turkiyeburslari.gov.tr/announcements/turkiye-scholarships-2026-applications-121": {
+"changed": "2026-11-03",
 "checked": "2026-11-03",
 "lines": [
 "Türkiye Scholarships 2026 Applications",
@@ -833,7 +835,9 @@
 "1/29/2026 1:51:39 PM",
 "3/21/2025 1:12:34 PM",
 "YTB-IsDB Joint Scholarship Program 2025 Applications",
-"3/11/2025 12:04:04 PM"
+"3/11/2025 12:04:04 PM",
+"Türkiye Scholarships 2025 Applications Are Closed!",
+"2/26/2025 6:26:47 AM"
 ],
 "misses": 0
 },
@@ -931,6 +935,7 @@
 "misses": 0
 },
 "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=57504697": {
+"checked": "2026-11-03",
 "lines": [
 "Application requirements",
 "Application Procedure",
@@ -969,7 +974,7 @@
 "„Country“ is the country in which you are living and from which you are applying. If you come from another country, please contact us to find out whether you are eligible for the programme of your choice. More Information",
 "If your status and/or country is not included in the list, you cannot apply for this scholarship programme. To ensure that only scholarship programmes for which you are eligible to apply are shown, please select your status and your country in the results list (left-hand column)."
 ],
-"misses": 1
+"misses": 0
 },
 "https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm": {
 "checked": "2026-11-03",
