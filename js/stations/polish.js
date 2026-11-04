@@ -194,8 +194,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.24dubstep.pl/radio/8000/mp3_normal"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "zote-przeboje-poznan",
@@ -315,8 +314,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.rcs.revma.com/q18ty3qhwzzuv"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "paranormalium",
@@ -937,6 +935,33 @@ window.STATIONS = [
       "https://ic1.smcdn.pl/2400-1.mp3"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "radio-kacik-rodzinny",
+    "name": "Radio Kącik Rodzinny",
+    "category": "music",
+    "streams": [
+      "https://s3.slotex.pl:7374/stream"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "ckwr-98-5-real-community-radio-kitchener",
+    "name": "CKWR 98.5 \"Real Community Radio\" Kitchener, ON",
+    "category": "music",
+    "streams": [
+      "https://stream2.statsradio.com:8150/stream"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "radio-kolor",
+    "name": "Radio Kolor",
+    "category": "music",
+    "streams": [
+      "https://stream.rcs.revma.com/zbq79057xd3vv"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";

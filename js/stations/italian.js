@@ -993,6 +993,33 @@ window.STATIONS = [
       "https://icy.unitedradio.it/Subasio.mp3"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "radio-bellla-monella",
+    "name": "Radio Bellla & Monella",
+    "category": "music",
+    "streams": [
+      "https://ice02.fluidstream.net/bella.mp3"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "chkg-fm-96-1-fairchild-radio-vancouver-b",
+    "name": "CHKG-FM 96.1 \"Fairchild Radio\" Vancouver, BC",
+    "category": "music",
+    "streams": [
+      "https://5b2959fe11444.streamlock.net/radio/fm961.stream/playlist.m3u8"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "radio-wow",
+    "name": "Radio WoW",
+    "category": "music",
+    "streams": [
+      "https://sphera.fluidstream.eu/fluid_wow.mp3?FLID=6"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";

@@ -1078,6 +1078,33 @@ window.STATIONS = [
       "https://n12a-eu.rcs.revma.com/trm75ret4c3vv?rj-ttl=5&rj-tok=AAABnHLBW28A7OTR3a298An3Yg"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "bwin-fm-94-6",
+    "name": "bwin ΣΠΟΡ FM 94,6",
+    "category": "news",
+    "streams": [
+      "https://sportfm.live24.gr/sportfm7712"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "new-wave-80s-earth-radio",
+    "name": "New Wave 80s Earth Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/uv6z1a5rxrhvv?n=c591a1f389cfb97e3358"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "karamela-92-4",
+    "name": "Karamela 92.4",
+    "category": "music",
+    "streams": [
+      "https://netradio.live24.gr/924fm-thess"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";

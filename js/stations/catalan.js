@@ -232,8 +232,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://server10.emitironline.com:8040/"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "icat-fm",
@@ -649,4 +648,4 @@ window.STATIONS = [
     "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";

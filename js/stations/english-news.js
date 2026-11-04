@@ -199,8 +199,7 @@ window.STATIONS = [
     "streams": [
       "https://wamu.cdnstream1.com/wamu.mp3"
     ],
-    "where": "US",
-    "offline": true
+    "where": "US"
   },
   {
     "id": "bbc-radio-4",
@@ -931,6 +930,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-04",
     "where": "UK"
+  },
+  {
+    "id": "2sm-srn-sydney",
+    "name": "2SM SRN Sydney",
+    "category": "anz",
+    "streams": [
+      "https://cast4.asurahosting.com/proxy/2sm1269/stream"
+    ],
+    "added": "2026-11-04",
+    "where": "Australia"
+  },
+  {
+    "id": "730-cknw",
+    "name": "730 CKNW",
+    "category": "canada",
+    "streams": [
+      "https://corus.leanstream.co/CKNWAM-MP3?type=.mp3&playertype=dplayer"
+    ],
+    "added": "2026-11-04",
+    "where": "Canada"
+  },
+  {
+    "id": "whyy-90-9-philadelphia-pa",
+    "name": "WHYY 90.9 Philadelphia, PA",
+    "category": "us",
+    "streams": [
+      "https://whyy.streamguys1.com/whyy-mp3"
+    ],
+    "added": "2026-11-04",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";

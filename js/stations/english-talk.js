@@ -387,8 +387,7 @@ window.STATIONS = [
       "https://wamu.cdnstream1.com/wamu.mp3"
     ],
     "added": "2026-10-23",
-    "where": "US",
-    "offline": true
+    "where": "US"
   },
   {
     "id": "comedy-104-radiostorm",
@@ -1089,6 +1088,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-04",
     "where": "Canada"
+  },
+  {
+    "id": "radio-vivid-voice",
+    "name": "Radio Vivid Voice",
+    "category": "world",
+    "streams": [
+      "https://stream.zeno.fm/xuin6ocdc2juv"
+    ],
+    "added": "2026-11-04",
+    "where": "Bangladesh"
+  },
+  {
+    "id": "albania-360-radio",
+    "name": "Albania 360 Radio",
+    "category": "world",
+    "streams": [
+      "https://radio.albania360.net/listen/albania_360_radio/radio.mp3"
+    ],
+    "added": "2026-11-04",
+    "where": "Albania"
+  },
+  {
+    "id": "zifm-stereo",
+    "name": "ZiFM Stereo",
+    "category": "world",
+    "streams": [
+      "https://edge.iono.fm/xice/134_high.aac"
+    ],
+    "added": "2026-11-04",
+    "where": "Zimbabwe"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";

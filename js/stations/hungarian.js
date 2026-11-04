@@ -936,6 +936,33 @@ window.STATIONS = [
       "https://stream.igenbiza.com/vas"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "best-fm-zalaegerszeg",
+    "name": "Best FM - Zalaegerszeg",
+    "category": "news",
+    "streams": [
+      "https://icast.connectmedia.hu/5111/live.mp3/;"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "wksu-hd4-news-more",
+    "name": "WKSU HD4 News & More",
+    "category": "news",
+    "streams": [
+      "https://live.ideastream.org/wksu4.128.mp3"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "best-fm-eger",
+    "name": "Best FM - Eger",
+    "category": "news",
+    "streams": [
+      "https://icast.connectmedia.hu/5116/live.mp3/;"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";

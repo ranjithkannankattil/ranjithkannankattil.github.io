@@ -236,7 +236,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ztnr.rtve.es/ztnr/1694255.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "esradio-principal",
@@ -1054,6 +1055,33 @@ window.STATIONS = [
       "https://s02.fjperezdj.com:8066/live"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "remember-vip-techno",
+    "name": "Remember Vip Techno",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/xilwjn4t17qvv"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "catalunya-musica-catmusica",
+    "name": "Catalunya Música (CatMúsica)",
+    "category": "music",
+    "streams": [
+      "https://shoutcast.ccma.cat/ccma/catalunyamusicaHD.mp3"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "radio-moscatel-107-1-fm-axarquia-espana",
+    "name": "Radio Moscatel 107.1 FM Axarquía - España",
+    "category": "music",
+    "streams": [
+      "https://axarquia.emisiononline.es/radio/8040/radio.mp3"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";

@@ -440,8 +440,7 @@ window.STATIONS = [
     "streams": [
       "https://yarenfmn.80.yayin.com.tr//stream"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "radyo-7-turku",
@@ -1027,6 +1026,33 @@ window.STATIONS = [
       "https://yayin.radyomadyo.com:8002/"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "radio-lora-97-5",
+    "name": "Radio LoRa 97.5",
+    "category": "music",
+    "streams": [
+      "https://livestream.lora.ch/lora.mp3"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "mixia-radio",
+    "name": "MIXIA RADIO",
+    "category": "music",
+    "streams": [
+      "https://radiomixia.fr/stream/mixia.mp3"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "joyturk-rock",
+    "name": "JoyTürk Rock",
+    "category": "music",
+    "streams": [
+      "https://23613.live.streamtheworld.com/JOYTURK_ROCK128AAC.aac"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";

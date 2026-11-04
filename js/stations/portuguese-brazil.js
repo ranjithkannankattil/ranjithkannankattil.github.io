@@ -1060,6 +1060,33 @@ window.STATIONS = [
       "https://stream-177.surfernetwork.com/pfsm8zen0lguv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJwZnNtOHplbjBsZ3V2IiwiaG9zdCI6InN0cmVhbS0xNzcuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6Ijc1OHRuX0lQVFRhOHd1aGFaODFNbEEiLCJpYXQiOjE3OTM1ODMxMDIsImV4cCI6MTc5MzU4MzE2Mn0.yLiCQvpODw4sZialJFhn-VeWA9Fr_pW1953TixVzn5U&1740248741087"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "91-rock-curitiba-web",
+    "name": "91 Rock - Curitiba (web)",
+    "category": "music",
+    "streams": [
+      "https://servidor40.brlogic.com:8044/live"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "jovem-pan-fm-manaus-am-104-1",
+    "name": "Jovem Pan FM - Manaus - AM - 104.1",
+    "category": "music",
+    "streams": [
+      "https://directradios.net/proxy/jpmaceio?mp=/stream"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "gfm-salvador-bahia-fm-90-1",
+    "name": "GFM Salvador Bahia FM 90.1",
+    "category": "music",
+    "streams": [
+      "https://ice.fabricahost.com.br/radiogfm"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";

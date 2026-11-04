@@ -96,7 +96,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://liveaudio.lamusica.com/MIA_WCMQ_icy"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "mix-80-s-90-s-y-mas",
@@ -1053,6 +1054,33 @@ window.STATIONS = [
       "https://streamingecuador.net:8287/hcjb"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "atb-radio",
+    "name": "ATB Radio",
+    "category": "news",
+    "streams": [
+      "https://streamingenbolivia.com/8006/stream"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "esplendida-91-9-fm",
+    "name": "ESPLENDIDA 91.9 FM",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/jyrqyy8he4tvv"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "radio-el-conquistador-fm-santiago",
+    "name": "Radio El Conquistador FM (Santiago)",
+    "category": "music",
+    "streams": [
+      "https://stream10.usastreams.com/9314/stream/"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";

@@ -40,7 +40,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://881903.fishtv.dpdns.org/proxy/903"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-4",
@@ -72,7 +73,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://881903.fishtv.dpdns.org/proxy/881"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-7",
@@ -96,8 +98,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://1603884249.rsc.cdn77.org/1603884249/index.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "fm94-7",
@@ -561,7 +562,8 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/1263/64k.mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "offline": true
   },
   {
     "id": "station-37",
@@ -636,4 +638,4 @@ window.STATIONS = [
     "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";

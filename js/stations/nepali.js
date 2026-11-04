@@ -8,7 +8,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio-broadcast.ekantipur.com/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "hits-fm-91-2",
@@ -119,4 +120,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";

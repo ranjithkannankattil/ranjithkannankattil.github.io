@@ -56,7 +56,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "89-4-tamil-fm",
@@ -1062,6 +1063,33 @@ window.STATIONS = [
       "https://thaalam.out.airtime.pro/thaalam_b"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "tamil-amuthu-kovilpatti-radio",
+    "name": "Tamil Amuthu Kovilpatti Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/4cmhxc3ktp8uv"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "thavakalai-radio",
+    "name": "Thavakalai Radio",
+    "category": "music",
+    "streams": [
+      "https://mars.streamerr.co/8274/stream"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "radiovaanam",
+    "name": "Radiovaanam",
+    "category": "music",
+    "streams": [
+      "https://sathees.radioca.st/;"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";

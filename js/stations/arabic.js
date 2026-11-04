@@ -24,7 +24,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://qurango.net/radio/mahmoud_khalil_alhussary_warsh"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "sanaa-radio",
@@ -403,8 +404,7 @@ window.STATIONS = [
     "streams": [
       "https://streams.radio.co/s0975ec186/listen"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "5-replay-news",
@@ -1053,6 +1053,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/4luag56o066uv"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "sawt-el-ghad",
+    "name": "Sawt El Ghad",
+    "category": "music",
+    "streams": [
+      "https://l3.itworkscdn.net/itwaudio/9030/stream"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "sba-jeddah-radio-98-0-fm",
+    "name": "SBA Jeddah Radio 98.0 FM",
+    "category": "music",
+    "streams": [
+      "https://live.kwikmotion.com/sbrksajeddahradiolive/ksajeddahradio/chunks.m3u8"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "medina-fm-tarab",
+    "name": "Medina FM Tarab",
+    "category": "music",
+    "streams": [
+      "https://medinatarab.ice.infomaniak.ch/medinatarab-128.mp3"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";

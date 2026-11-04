@@ -1007,7 +1007,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.brokenbeats.net/tune"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "offline": true
   },
   {
     "id": "station-39",
@@ -1053,6 +1054,33 @@ window.STATIONS = [
       "https://stream.purewave.ru:8443/live128.mp3"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "radio-unistar",
+    "name": "Radio Unistar",
+    "category": "music",
+    "streams": [
+      "https://edge2.usp.unistar.by/hls/unistar_main/96k.m3u8"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "station-42",
+    "name": "Гарик Сукачёв",
+    "category": "music",
+    "streams": [
+      "https://stream03.pcradio.app/Garik_Sukachov-hi"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "station-43",
+    "name": "НАШЕ Радио Тюмень",
+    "category": "music",
+    "streams": [
+      "https://nashe1.hostingradio.ru/nashe-256"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";

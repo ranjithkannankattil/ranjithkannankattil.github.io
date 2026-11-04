@@ -1266,6 +1266,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-04",
     "where": "US"
+  },
+  {
+    "id": "suite-jazz-radio",
+    "name": "Suite Jazz Radio",
+    "category": "jazz",
+    "streams": [
+      "https://jenny.torontocast.com:2000/stream/suitejazzradio"
+    ],
+    "added": "2026-11-04",
+    "where": "Canada"
+  },
+  {
+    "id": "neuro-21-station",
+    "name": "Neuro 21 Station",
+    "category": "rock",
+    "streams": [
+      "https://radio.twinskaraoke.com/listen/neuro_21/radio.mp3"
+    ],
+    "added": "2026-11-04",
+    "where": "US"
+  },
+  {
+    "id": "crucial-velocity-radio",
+    "name": "Crucial Velocity Radio",
+    "category": "rock",
+    "streams": [
+      "https://ais-sa2.cdnstream1.com/1369_128"
+    ],
+    "added": "2026-11-04",
+    "where": "Canada"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";

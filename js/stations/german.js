@@ -1058,6 +1058,33 @@ window.STATIONS = [
       "https://1a-christmas.radionetz.de/1a-christmas.aac"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "housetime-fm",
+    "name": "HouseTime.FM",
+    "category": "music",
+    "streams": [
+      "https://listen.housetime.fm/tunein-aac-hd-pls"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "best-of-techno",
+    "name": "Best Of Techno",
+    "category": "music",
+    "streams": [
+      "https://stream.laut.fm/best-of-techno"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "br-heimat",
+    "name": "BR Heimat",
+    "category": "music",
+    "streams": [
+      "https://dispatcher.rndfnk.com/br/brheimat/live/mp3/mid"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";

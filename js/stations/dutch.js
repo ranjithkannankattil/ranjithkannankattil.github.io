@@ -1064,6 +1064,33 @@ window.STATIONS = [
       "https://icecast.vrtcdn.be/radiobene.aac"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "candlelight-radio",
+    "name": "Candlelight Radio",
+    "category": "music",
+    "streams": [
+      "https://candlelight.nl/candlelight.mp3"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "simone-fm",
+    "name": "Simone FM",
+    "category": "music",
+    "streams": [
+      "https://stream.simone.nl/simone"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "qmusic-maximum-hits",
+    "name": "Qmusic Maximum Hits",
+    "category": "music",
+    "streams": [
+      "https://audio-streaming.qmusic.be/q-maximum-hits.aac"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";

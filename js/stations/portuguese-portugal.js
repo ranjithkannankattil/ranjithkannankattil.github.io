@@ -312,7 +312,6 @@ window.STATIONS = [
     "streams": [
       "https://stream.streamaudio.de:8000/radio-dom-bosco-fm"
     ],
-    "offline": true,
     "hidden": true
   },
   {
@@ -447,7 +446,8 @@ window.STATIONS = [
     "streams": [
       "https://cast.redewt.net:9825/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "m80-radio-pop",
@@ -1051,6 +1051,33 @@ window.STATIONS = [
       "https://ec2.yesstreaming.net:3705/stream"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "jovembsk-mix",
+    "name": "jovembsk mix",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/4nc1mzdp81xuv"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "jovembsk",
+    "name": "Jovembsk",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/ppgb4k7vhqztv"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "radio-metal-on-the-brutal",
+    "name": "Radio Metal On: The Brutal",
+    "category": "music",
+    "streams": [
+      "https://radiometalon.com/listen/radio_metal_on_the_brutal/radio.mp3"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";

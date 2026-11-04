@@ -942,6 +942,33 @@ window.STATIONS = [
       "https://stream.radios.rs:9064/stream"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "radio-s-pop-ballads",
+    "name": "Radio S Pop Ballads",
+    "category": "music",
+    "streams": [
+      "https://stream.radios.rs:9056/stream"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "radio-sloboda-kraljevo",
+    "name": "Radio Sloboda Kraljevo",
+    "category": "music",
+    "streams": [
+      "https://audio.slobodafm.com:8000/radio.mp3"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "radio-s-2000-e",
+    "name": "Radio S 2000-e",
+    "category": "music",
+    "streams": [
+      "https://stream.radios.rs:9052/stream"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";

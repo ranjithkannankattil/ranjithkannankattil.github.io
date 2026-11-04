@@ -1004,6 +1004,33 @@ window.STATIONS = [
       "https://direct.francebleu.fr/live/fb1071-midfi.mp3"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "nostalgie-60-70",
+    "name": "Nostalgie 60 70",
+    "category": "music",
+    "streams": [
+      "https://streaming.nrjaudio.fm/ougfkxrb92oc"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "rcf",
+    "name": "RCF",
+    "category": "devotional",
+    "streams": [
+      "https://rcf.streamakaci.com/rcfdigital.mp3?platform=site"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "cherie-fm-rap-2000",
+    "name": "Chérie FM Rap 2000",
+    "category": "music",
+    "streams": [
+      "https://streaming.nrjaudio.fm/ouv6enoarp52"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";

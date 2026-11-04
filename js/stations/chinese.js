@@ -201,7 +201,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-17",
@@ -988,6 +989,33 @@ window.STATIONS = [
       "https://s10.webradio-hosting.com/proxy/fredradiocn/stream"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "fm-94-3",
+    "name": "警察廣播電臺 - 臺北分臺 FM 94.3",
+    "category": "news",
+    "streams": [
+      "https://stream.pbs.gov.tw/live/TPS/playlist.m3u8"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "kvto-am1400-fm93-7",
+    "name": "KVTO AM1400 FM93.7 旧金山湾区中文电台",
+    "category": "news",
+    "streams": [
+      "https://us2.maindigitalstream.com/ssl/KVTO"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "sbs-popasia",
+    "name": "SBS PopAsia",
+    "category": "music",
+    "streams": [
+      "https://sbs-ice.streamguys1.com/sbs-popasia-sbs-web"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";

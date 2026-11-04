@@ -152,8 +152,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s5.radioforge.com:7908/live?n=77357"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "24-breaking-live",
@@ -233,7 +232,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.brokenbeats.net/tune"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-shanson",
@@ -1006,6 +1006,24 @@ window.STATIONS = [
       "https://complex.in.ua/Yavir320"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "station-28",
+    "name": "Сфера-ФМ (Рівне)",
+    "category": "news",
+    "streams": [
+      "https://cdn-br2.live-tv.cloud/sferarvFM/64k/icecast.audio"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "fm-9",
+    "name": "Бліц-FM (Фастів)",
+    "category": "news",
+    "streams": [
+      "https://stream.blits-fm.ua/stream64"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";

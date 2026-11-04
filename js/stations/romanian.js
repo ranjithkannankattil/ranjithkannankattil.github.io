@@ -32,7 +32,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live7digi.antenaplay.ro/radiozu/radiozu-48000.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "play-90-s",
@@ -997,6 +998,33 @@ window.STATIONS = [
       "https://radio.sonicpanel.ro/8068/stream"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "activ-romania",
+    "name": "Activ România",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/72xsfrg0bfhvv"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "duxradio-brasov",
+    "name": "DuxRadio -Brașov",
+    "category": "music",
+    "streams": [
+      "https://radio.duxradio.ro:8002/stream"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "radio-doza-urban",
+    "name": "Radio Doza Urban",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/cezx5b1nw98uv"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";

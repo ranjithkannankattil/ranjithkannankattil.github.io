@@ -40,7 +40,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiokaleva.digitacdn.net/radio/kaleva/master.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "yle-radio-suomi-hameenlinna",
@@ -201,7 +202,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sohostream.djonline.fi:8008/radio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "kesaseuraradio",
@@ -495,4 +497,4 @@ window.STATIONS = [
     "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";

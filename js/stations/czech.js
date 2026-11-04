@@ -827,8 +827,7 @@ window.STATIONS = [
     "streams": [
       "https://ice4.abradio.cz/bojler_room_128.aac"
     ],
-    "added": "2026-11-01",
-    "offline": true
+    "added": "2026-11-01"
   },
   {
     "id": "gold-impuls",
@@ -1036,6 +1035,33 @@ window.STATIONS = [
       "https://stream.mediawork.cz/retrotv/retrotvHQ1/chunklist_w627639048.m3u8"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "skyrock",
+    "name": "SKYROCK",
+    "category": "music",
+    "streams": [
+      "https://icecast8.play.cz/skyrock128.mp3"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "radio-daruvar",
+    "name": "Radio Daruvar",
+    "category": "music",
+    "streams": [
+      "https://mcp1.mydataknox.com:8020/live.mp3"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "radio-jih",
+    "name": "Rádio Jih",
+    "category": "music",
+    "streams": [
+      "https://icecast6.play.cz/jih32.mp3"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";

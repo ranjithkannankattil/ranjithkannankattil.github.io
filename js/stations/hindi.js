@@ -658,8 +658,7 @@ window.STATIONS = [
     "streams": [
       "https://ice6.securenetsystems.net/INTRADIO?type=.mp3"
     ],
-    "added": "2026-10-28",
-    "offline": true
+    "added": "2026-10-28"
   },
   {
     "id": "hits-fm-91-2",
@@ -1047,6 +1046,33 @@ window.STATIONS = [
       "https://radio.mbconline.xyz/hls/radiomauritus.m3u8"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "dance-asia-radio",
+    "name": "Dance Asia Radio",
+    "category": "music",
+    "streams": [
+      "https://s1.citrus3.com:8124/stream"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "bbcasiannetwork",
+    "name": "Bbcasiannetwork",
+    "category": "music",
+    "streams": [
+      "https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/cfs/bbc_asian_network.m3u8"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "goldenvoiceradio",
+    "name": "Goldenvoiceradio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/s3sqemewrg0uv"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T07:25Z";
+window.STATIONS_CHECKED = "2026-11-04T20:57Z";
