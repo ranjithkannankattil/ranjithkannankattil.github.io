@@ -28,7 +28,7 @@
 <link rel="stylesheet" href="../css/style.css?v=17">
 <link rel="stylesheet" href="../css/productivity.css?v=4">
 <link rel="stylesheet" href="../css/tool-timeline.css?v=2">
-<link rel="stylesheet" href="../css/tool-orgchart.css?v=4">
+<link rel="stylesheet" href="../css/tool-orgchart.css?v=5">
 </head>
 <body data-section="productivity" class="wide">
 
@@ -70,7 +70,7 @@
       <details class="tl-menu">
         <summary class="tl-btn">New <i>▾</i></summary>
         <div class="tl-pop">
-          <button class="tl-mi" type="button" id="newBlank"><b>Blank chart</b><span>Keeps your text rows</span></button>
+          <button class="tl-mi" type="button" id="newBlank"><b>Blank chart</b><span>Keeps your text rows, look and sizes</span></button>
           <button class="tl-mi" type="button" id="newSample"><b>Sample chart</b><span>A made-up project team</span></button>
         </div>
       </details>
@@ -102,6 +102,12 @@
     <div class="oc-chart">
       <div>
         <div class="oc-view">
+          <label>Sizing
+            <select id="sizing">
+              <option value="fit">Fit to page</option>
+              <option value="fixed">Fixed box and font</option>
+            </select>
+          </label>
           <label>Page <select id="page"></select></label>
           <label>Arrangement
             <select id="arrange">
@@ -116,6 +122,12 @@
             <button class="tl-btn" type="button" data-zoom="fit">Fit</button>
             <button class="tl-btn ico" type="button" data-zoom="1.25" aria-label="Zoom in">+</button>
           </span>
+        </div>
+        <div class="oc-fixed" id="fixedBar" hidden>
+          <label>Box width <input type="number" id="fxW" min="1" max="30" step="0.1" inputmode="decimal"> cm</label>
+          <label>Box height <input type="number" id="fxH" min="0.5" max="20" step="0.1" inputmode="decimal"> cm</label>
+          <label>Font size <input type="number" id="fxPt" min="4" max="40" step="0.5" inputmode="decimal"> pt</label>
+          <span class="oc-hint">Sizes stay exactly as set; only the arrangement changes to fit. New charts in this browser keep them.</span>
         </div>
         <div class="oc-canvas"><div class="oc-stage" id="stage"></div></div>
         <p class="oc-pagenote" id="pageNote"></p>
@@ -265,8 +277,8 @@
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="../js/tools.js?v=12"></script>
-<script src="../js/tool-orgchart-core.js?v=5"></script>
-<script src="../js/tool-orgchart.js?v=5"></script>
+<script src="../js/tool-orgchart-core.js?v=6"></script>
+<script src="../js/tool-orgchart.js?v=6"></script>
 <script src="../js/nav.js?v=20" defer></script>
 <script src="../js/visits.js?v=2" defer></script>
 </body>

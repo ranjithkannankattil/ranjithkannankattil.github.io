@@ -100,6 +100,20 @@ window.OrgCore = (function () {
     return items;
   }
 
+  // For fixed sizes: try tidier ways of folding teams up. leafC = columns for teams with no reports
+  // under them, upC = columns for managers' teams; 0 leaves them side by side. Boxes the user
+  // arranged by hand are left alone.
+  function autoItems(t, items, leafC, upC) {
+    var out = {};
+    Object.keys(items).forEach(function (id) {
+      var k = t.kids[id], plain = items[id].every(function (it) { return !it.block; });
+      var c = k.every(function (x) { return !t.kids[x].length; }) ? leafC : upC;
+      // 't' = a column tucked directly under its manager, with the line down its left side: the narrowest fold
+      out[id] = plain && k.length >= 2 && c ? [{ block: k.slice(), cols: c === 't' ? 1 : c, tuck: c === 't' }] : items[id].map(function (it) { return Object.assign({}, it); });
+    });
+    return out;
+  }
+
   // Lay out in "em" units. D = each box's width and height. mode: wide | stack1 | stack2
   // (the last level hangs down in one or two columns). Rows line up by depth.
   function arrange(t, D, items, hg, vg, mode) {
@@ -116,7 +130,7 @@ window.OrgCore = (function () {
       ms.forEach(function (m, i) { var j = i % c, r = Math.floor(i / c); colW[j] = Math.max(colW[j] || 0, m.w); rowH[r] = Math.max(rowH[r] || 0, m.h); });
       var xs = [], x = 0; colW.forEach(function (w, j) { xs[j] = x; x += w + hg; });
       var side = c === 1, sp, w;
-      if (side) { sp = 0; w = IND + colW[0]; } else { var g = Math.floor(c / 2) - 1; sp = xs[g] + colW[g] + hg / 2; w = x - hg; }
+      if (side) { sp = b.tuck ? IND + colW[0] / 2 : 0; w = IND + colW[0]; } else { var g = Math.floor(c / 2) - 1; sp = xs[g] + colW[g] + hg / 2; w = x - hg; }
       var gap = side ? SG : RG, h = rowH.reduce(function (m, v) { return m + v; }, 0) + gap * (rows - 1);
       b.m = { ms: ms, c: c, colW: colW, rowH: rowH, xs: xs, side: side, gap: gap };
       return { w: w, a: sp, h: h };
@@ -149,7 +163,7 @@ window.OrgCore = (function () {
       size[id] = s; return s;
     }
     function placeBlock(b, left, top) {
-      var m = b.m, sp = left + b.s.a, y = top;
+      var m = b.m, sp = b.tuck ? left : left + b.s.a, y = top;
       b.block.forEach(function (c, i) {
         var j = i % m.c, r = Math.floor(i / m.c);
         if (j === 0 && r) y += m.rowH[r - 1] + m.gap;
@@ -271,7 +285,35 @@ window.OrgCore = (function () {
       chart.people.forEach(function (p) { D[p.id].h = Math.max(D[p.id].h, base * (p.sh || 1)); });
       return D;
     }
-    widths.forEach(function (W) {
+    var fx = chart.fixed && chart.fixed.on ? chart.fixed : null;
+    if (fx) {
+      // Fixed sizes: the box and text never change, only the arrangement does.
+      var CM = 28.3465, FW = fx.w * CM / fx.pt, FH = fx.h * CM / fx.pt, D0 = {};
+      HG = 0.5; VG = 1.2;
+      var tight = 0;
+      chart.people.forEach(function (p) {
+        var w = FW * (p.sw || 1), h = FH * (p.sh || 1), inner = w - 2 * PADX, c = 0, wide = false;
+        linesOf[p.id].forEach(function (l) {
+          if (l.multi) { if (splitWidth(l, k) > inner) wide = true; c += l.size; }
+          else c += l.size * wrap(l.cells[0].t, inner / (k * l.size), l.cells[0].bold).length;
+        });
+        if (wide || c * LH > h) tight++;
+        D0[p.id] = { w: w, h: h };
+      });
+      res.tight = tight;
+      var forced = { wide: [0], stack1: [1], stack2: [2] }[chart.arrange];
+      var ups = forced ? [0] : [0, 4, 3, 2, 1], leaves0 = forced || [0, 1, 't', 2, 3, 4, 5];
+      ups.forEach(function (up) {
+        leaves0.forEach(function (lc) {
+          if (best && best.over <= 1) return;
+          var it = autoItems(t, items, lc, up), La = arrange(t, D0, it, HG, VG, 'wide');
+          var over = Math.max(La.ext.w * fx.pt / aw, La.ext.h * fx.pt / ah);
+          if (!best || over < best.over) best = { over: over, D: D0, m: 'wide', f: fx.pt, W: FW, items: it };
+        });
+      });
+      items = best.items;
+      res.over = best.over > 1.0005;
+    } else widths.forEach(function (W) {
       var D = dims(W);
       modes.forEach(function (m) {
         var L = arrange(t, D, items, HG, VG, m);
@@ -288,12 +330,16 @@ window.OrgCore = (function () {
     var hg = Math.min(3.2, HG + Math.max(0, aw / f - L0.ext.w) / Math.max(1, leaves - 1));
     var vg = Math.min(9, VG + Math.max(0, ah / f - L0.ext.h) / Math.max(1, rows));
     var L = arrange(t, best.D, items, hg, vg, best.m);
-    f = Math.min(f, aw / L.ext.w, ah / L.ext.h);
-    res.f = Math.floor(f * 10) / 10; f = res.f;
-    res.tooSmall = f < MIN_PT; res.mode = best.m;
+    if (fx) { res.f = f; } else {
+      f = Math.min(f, aw / L.ext.w, ah / L.ext.h);
+      res.f = Math.floor(f * 10) / 10; f = res.f;
+      res.tooSmall = f < MIN_PT;
+    }
+    res.mode = best.m;
 
-    var ox = page.m + 2 + (aw - L.ext.w * f) / 2 - L.ext.x0 * f;
-    var oy = page.m + 2 + titleH + (ah - L.ext.h * f) / 2;
+    var ox = page.m + 2 + Math.max(0, (aw - L.ext.w * f) / 2) - L.ext.x0 * f;
+    var oy = page.m + 2 + titleH + Math.max(0, (ah - L.ext.h * f) / 2);
+    if (res.over) res.bounds = { w: page.m + 4 + L.ext.w * f + page.m, h: page.m + 4 + titleH + L.ext.h * f + page.m };
     var map = {};
     chart.people.forEach(function (p) {
       var q = L.pos[p.id]; if (!q) return;
@@ -374,6 +420,7 @@ window.OrgCore = (function () {
     opt = opt || {};
     var SVGFONT = (FONTS[chart.font] || FONTS.Arial).css;
     var p = r.page, vb = opt.inner ? [p.m, p.m, p.w - 2 * p.m, p.h - 2 * p.m] : [0, 0, p.w, p.h];
+    if (opt.live && r.bounds) vb = [0, 0, Math.max(p.w, r.bounds.w), Math.max(p.h, r.bounds.h)]; // show what falls off the page
     var o = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="' + vb.join(' ') + '"' +
       (opt.px ? ' width="' + opt.px + '" height="' + Math.round(opt.px * vb[3] / vb[2]) + '"' : '') +
       ' font-family="' + SVGFONT + '" role="img" aria-label="Org chart">'];
@@ -385,7 +432,8 @@ window.OrgCore = (function () {
         return '<linearGradient id="ocg' + i + '" x1="0" y1="0" x2="' + (ver ? 0 : 1) + '" y2="' + (ver ? 1 : 0) + '"><stop offset="0" stop-color="' + n.fill + '"/><stop offset="1" stop-color="' + n.fill2 + '"/></linearGradient>';
       }).join('') + '</defs>');
     }
-    o.push('<rect x="' + vb[0] + '" y="' + vb[1] + '" width="' + vb[2] + '" height="' + vb[3] + '" fill="#FFFFFF"/>');
+    if (opt.live && r.bounds) o.push('<rect width="' + vb[2] + '" height="' + vb[3] + '" fill="#F6DDD9"/><rect width="' + p.w + '" height="' + p.h + '" fill="#FFFFFF" stroke="#C2463D" stroke-width="1.5" stroke-dasharray="6 4"/>');
+    else o.push('<rect x="' + vb[0] + '" y="' + vb[1] + '" width="' + vb[2] + '" height="' + vb[3] + '" fill="#FFFFFF"/>');
     if (r.title) o.push('<text x="' + (p.w / 2) + '" y="' + (p.m + 18) + '" text-anchor="middle" font-size="18" font-weight="bold" fill="#1B1B1F">' + esc(r.title) + '</text>');
     r.edges.forEach(function (e) {
       var d = e.pts.map(function (q, i) { return (i ? 'L' : 'M') + q[0].toFixed(2) + ' ' + q[1].toFixed(2); }).join('');

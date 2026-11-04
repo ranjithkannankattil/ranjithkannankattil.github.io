@@ -90,6 +90,11 @@
     }
     return out;
   }
+  function fixedOf(x) {
+    x = x || {};
+    var n = function (v, lo, hi, d) { v = +v; return v > 0 ? Math.max(lo, Math.min(hi, v)) : d; };
+    return { on: !!x.on, w: n(x.w, 1, 30, 4.5), h: n(x.h, 0.5, 20, 1.8), pt: n(x.pt, 4, 40, 10) };
+  }
   function normalise(c) {
     var d = base(), col = function (v, alt) { return O.HEX.test(v) ? v : alt; };
     var st = function (s) { var o = {}; s = s || {}; ['fill', 'border', 'text', 'fill2'].forEach(function (k) { if (O.HEX.test(s[k])) o[k] = s[k]; }); if (s.fill2 === 'none') o.fill2 = 'none'; return o; };
@@ -124,7 +129,7 @@
       v: 1, title: String(c.title || ''), page: O.PAGES[c.page] ? c.page : 'ppt169',
       arrange: /^(auto|wide|stack1|stack2)$/.test(c.arrange) ? c.arrange : 'auto',
       corners: c.corners === 'round' ? 'round' : 'square', fields: fields, people: people,
-      font: O.FONTS[c.font] ? c.font : 'Arial', gradDir: c.gradDir === 'v' ? 'v' : 'h',
+      fixed: fixedOf(c.fixed), font: O.FONTS[c.font] ? c.font : 'Arial', gradDir: c.gradDir === 'v' ? 'v' : 'h',
       box: Object.assign(st(bx), { fill: col(bx.fill, d.box.fill), border: col(bx.border, d.box.border), text: col(bx.text, d.box.text) }),
       levels: (Array.isArray(c.levels) ? c.levels : []).slice(0, 30).map(st), line: ln(c.line, true)
     };
@@ -359,11 +364,17 @@
     st.innerHTML = chart.people.length ? O.toSvg(last, chart, { live: true }) : '<p class="oc-blank">Your chart appears here.</p>';
     markSel();
     var p = last.page;
-    $('pageNote').textContent = chart.people.length ? 'Text size ' + last.f + ' pt · ' + p.group + ' ' + p.label : p.group + ' ' + p.label;
-    var w = $('smallWarn');
-    w.hidden = !last.tooSmall;
-    if (last.tooSmall) w.innerHTML = smallText();
+    var fx = chart.fixed.on;
+    $('pageNote').textContent = chart.people.length ? (fx ? 'Fixed: ' + chart.fixed.w + ' × ' + chart.fixed.h + ' cm, ' + chart.fixed.pt + ' pt' : 'Text size ' + last.f + ' pt') + ' · ' + p.group + ' ' + p.label : p.group + ' ' + p.label;
+    var w = $('smallWarn'), msg = warnText();
+    w.hidden = !msg;
+    if (msg) w.innerHTML = msg;
     renderLevels();
+  }
+  function warnText() {
+    if (last.over) return '<b>This doesn’t fit the page at these sizes, even rearranged.</b> The part in red would be cut off. Try a smaller box or font, a bigger or wider page, or one chart for each team.';
+    if (last.tight) return '<b>Text is too long for ' + last.tight + (last.tight === 1 ? ' box' : ' boxes') + ' at this size.</b> Make the box bigger, the font smaller, or shorten the text.';
+    return last.tooSmall ? smallText() : '';
   }
   function smallText() {
     var tips = [];
@@ -496,10 +507,34 @@
   // ---------- page and arrangement ----------
   function syncPage() {
     $('page').value = chart.page; $('arrange').value = chart.arrange;
+    $('sizing').value = chart.fixed.on ? 'fixed' : 'fit';
+    $('fixedBar').hidden = !chart.fixed.on;
+    [['fxW', 'w'], ['fxH', 'h'], ['fxPt', 'pt']].forEach(function (x) { if ($(x[0]) !== document.activeElement) $(x[0]).value = chart.fixed[x[1]]; });
     if ($('title') !== document.activeElement) $('title').value = chart.title;
     if ($('dlTitle') !== document.activeElement) $('dlTitle').value = chart.title;
   }
   $('page').addEventListener('change', function () { chart.page = this.value; draw(); commit(); });
+  // Fixed sizes start from what's on screen, and carry over to the next chart.
+  function rememberFixed() { store.set('fixed', JSON.stringify(chart.fixed)); }
+  $('sizing').addEventListener('change', function () {
+    var on = this.value === 'fixed';
+    if (on) {
+      var saved = null; try { saved = JSON.parse(store.get('fixed') || 'null'); } catch (e) { saved = null; }
+      if (saved) chart.fixed = fixedOf(saved);
+      else if (last && last.nodes.length) {
+        var w = last.nodes.reduce(function (m, n) { return Math.max(m, n.w); }, 0), h = last.nodes.reduce(function (m, n) { return Math.max(m, n.h); }, 0);
+        chart.fixed = fixedOf({ w: Math.round(w / 28.3465 * 10) / 10, h: Math.round(h / 28.3465 * 10) / 10, pt: Math.round(last.f * 2) / 2 });
+      }
+    }
+    chart.fixed.on = on; rememberFixed(); syncPage(); draw(); commit();
+  });
+  [['fxW', 'w'], ['fxH', 'h'], ['fxPt', 'pt']].forEach(function (x) {
+    $(x[0]).addEventListener('input', function () {
+      if (!(+this.value > 0)) return;
+      var f = fixedOf(Object.assign({}, chart.fixed, (function () { var o = {}; o[x[1]] = +$(x[0]).value; return o; })()));
+      f.on = true; chart.fixed = f; rememberFixed(); draw(); commitSoon();
+    });
+  });
   $('arrange').addEventListener('change', function () { chart.arrange = this.value; draw(); commit(); });
   ['title', 'dlTitle'].forEach(function (id) {
     $(id).addEventListener('input', function () { chart.title = this.value; syncPage(); draw(); commitSoon(); });
@@ -523,7 +558,8 @@
   document.addEventListener('click', function (e) { document.querySelectorAll('.oc details.tl-menu[open]').forEach(function (d) { if (!d.contains(e.target)) d.open = false; }); });
   $('newBlank').addEventListener('click', function () {
     closeMenus();
-    var c = base(); c.fields = chart.fields; c.people = []; c.page = chart.page;
+    var c = base(); c.people = []; // a new chart keeps the look, so a set of charts matches
+    ['fields', 'page', 'fixed', 'font', 'corners', 'gradDir', 'box', 'levels', 'line', 'arrange'].forEach(function (k) { c[k] = chart[k]; });
     replace(c); addPerson(null);
   });
   $('newSample').addEventListener('click', function () { closeMenus(); replace(sample()); });
@@ -695,7 +731,7 @@
     return {
       text: 'Found ' + c.people.length + (c.people.length === 1 ? ' box, ' : ' boxes, ') + edges + (edges === 1 ? ' reporting line and ' : ' reporting lines and ') + c.fields.length + (c.fields.length === 1 ? ' row' : ' rows') + ' of text' + (s.flavour === 'SmartArt' ? ' in a SmartArt chart' : '') + '. ' +
         (unsure.length ? unsure.length + (unsure.length === 1 ? ' needs' : ' need') + ' checking, and will be marked in the table.' : 'Nothing looks unclear.') + ' This replaces the chart on screen; Undo brings it back.',
-      list: list, slides: slides, use: function () { var k = +$('revSlide').value || 0; replace(slides[k].chart); toast('Loaded. Check the reporting lines in the table.'); }
+      list: list, slides: slides, use: function () { var k = +$('revSlide').value || 0; slides[k].chart.fixed = chart.fixed; replace(slides[k].chart); toast('Loaded. Check the reporting lines in the table.'); }
     };
   }
   function savedEdits(c, slides) {
@@ -806,7 +842,7 @@
     drawNowQuiet();
     var p = last.page, n = $('dlNote');
     n.innerHTML = (p.kind === 'pptx' ? 'Boxes and lines stay editable in PowerPoint, and lines stay attached when you move a box.' : p.kind === 'docx' ? 'The chart goes in as a sharp picture that fills the page. Upload this file here to edit it again.' : 'A high-resolution PNG on a white background. Images can’t be uploaded back here, so use Save chart file if you want to edit it later.') +
-      (last.tooSmall ? '<span class="oc-warnline">' + smallText() + '</span>' : '<span class="oc-okline">Text will be ' + last.f + ' pt on this page.</span>');
+      (warnText() ? '<span class="oc-warnline">' + warnText() + '</span>' : '<span class="oc-okline">Text will be ' + last.f + ' pt on this page.</span>');
   }
   function drawNowQuiet() { clearTimeout(drawT); drawNow(); }
   $('dlOpts').addEventListener('change', function (e) { chart.page = e.target.value; syncPage(); syncDl(); commit(); });
