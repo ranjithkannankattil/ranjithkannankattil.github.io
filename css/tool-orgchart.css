@@ -27,8 +27,8 @@ body[data-section="productivity"]{ --oc-bad:#C2463D; --oc-warn:#8A6508; }
 .oc-view label{ display:flex; align-items:center; gap:.4rem; font-family:var(--f-mono); font-size:.64rem; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); }
 .oc-view select, .oc-look select{ font-family:var(--f-body) !important; font-size:.88rem !important; letter-spacing:0; text-transform:none; border:1px solid var(--line); background:var(--paper); padding:.4rem .4rem; min-height:2.1rem; color:var(--ink); max-width:14.5rem; }
 .oc-canvas{ overflow:auto; border:1px solid var(--line); background:var(--paper-2); padding:.6rem; max-height:78vh; overscroll-behavior:contain; }
-.oc-stage{ min-width:100%; }
-.oc-stage svg{ display:block; width:100%; height:auto; box-shadow:0 1px 6px rgba(0,0,0,.18); }
+.oc-stage{ min-width:100%; margin:0 auto; }
+.oc-stage svg{ display:block; width:100%; height:auto; margin:0 auto; box-shadow:0 1px 6px rgba(0,0,0,.18); }
 .oc-blank{ background:#fff; color:#5A5A60; text-align:center; padding:4rem 1rem; margin:0; }
 .oc-box{ cursor:pointer; }
 .oc-box.sel rect{ stroke:#D97706; stroke-width:2.5; }
@@ -36,9 +36,16 @@ body[data-section="productivity"]{ --oc-bad:#C2463D; --oc-warn:#8A6508; }
 .oc-stage.painting .oc-box{ cursor:copy; }
 .oc-pagenote{ font-family:var(--f-mono); font-size:.66rem; letter-spacing:.04em; color:var(--ink-soft); margin:.45rem 0 0; }
 .oc-small{ margin-top:.6rem; padding:.55rem .75rem; font-size:.88rem; border-left:3px solid var(--oc-bad); background:var(--paper-2); }
-.oc-look{ border:1px solid var(--line); padding:.85rem; display:grid; gap:.9rem; }
+.oc-look{ border:1px solid var(--line); padding:.8rem; display:grid; gap:.75rem; }
+.oc-lsec{ display:grid; gap:.75rem; }
+.oc-lsec[hidden]{ display:none; }
+.oc-ltabs{ display:grid; grid-template-columns:repeat(3,1fr); }
+body[data-section="productivity"] .oc-ltabs .tl-btn{ justify-content:center; margin-left:-1px; }
+.oc-look select{ font-family:var(--f-body); }
 .oc-look > div{ min-width:0; }
-.oc-scope{ font-family:var(--f-display); font-weight:600; font-size:.98rem; margin:0 0 .45rem; }
+.oc-scope{ font-family:var(--f-display); font-weight:600; font-size:.98rem; margin:0 0 .4rem; }
+.oc-scope .oc-h{ margin:0 .35rem 0 0; }
+.oc-lsec .oc-h{ margin-bottom:.35rem; }
 .oc-lv{ display:flex; flex-wrap:wrap; gap:.3rem; }
 .oc-sws{ display:grid; grid-template-columns:repeat(9,1fr); gap:.25rem; }
 body[data-section="productivity"] .oc-sw{ display:block; aspect-ratio:1; min-height:1.55rem; border:1px solid var(--line); position:relative; cursor:pointer; }
@@ -99,7 +106,17 @@ body[data-section="productivity"] .oc-ab:disabled{ opacity:.25; cursor:default; 
 .oc-slide select{ margin-left:.4rem; padding:.35rem; border:1px solid var(--line); background:var(--paper); }
 .oc-toast{ position:fixed; left:50%; bottom:1.2rem; transform:translateX(-50%); z-index:60; background:var(--ink); color:var(--paper); padding:.6rem .9rem; font-size:.9rem; max-width:min(30rem, calc(100vw - 2rem)); box-shadow:0 8px 24px rgba(0,0,0,.3); }
 
-@media (min-width:1001px){ .oc-chart > div:first-child{ position:sticky; top:.6rem; } }
+/* computers: the tool takes the whole screen width, the chart as much of it as the page shape allows */
+@media (min-width:1001px){
+  main[data-tool="orgchart"]{ max-width:none; padding-left:2.5vw; padding-right:2.5vw; }
+  .oc .tool-intro{ max-width:none; }
+  .oc .tool-head{ padding-top:1rem; }
+  .oc-chart{ grid-template-columns:minmax(0,1fr) 21rem; gap:1.1rem; }
+  .oc-chart > div:first-child{ position:sticky; top:.6rem; }
+  .oc-stage:not(.zoomed) svg{ width:min(100%, calc((100vh - 9.5rem) * var(--ar, 1.78))); }
+  .oc-canvas{ max-height:calc(100vh - 8rem); }
+  .oc-sws{ grid-template-columns:repeat(9,1fr); }
+}
 @media (max-width:1000px){
   .oc-chart{ grid-template-columns:1fr; }
 }

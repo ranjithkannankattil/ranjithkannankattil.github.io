@@ -28,7 +28,7 @@
 <link rel="stylesheet" href="../css/style.css?v=17">
 <link rel="stylesheet" href="../css/productivity.css?v=4">
 <link rel="stylesheet" href="../css/tool-timeline.css?v=2">
-<link rel="stylesheet" href="../css/tool-orgchart.css?v=2">
+<link rel="stylesheet" href="../css/tool-orgchart.css?v=3">
 </head>
 <body data-section="productivity" class="wide">
 
@@ -122,52 +122,52 @@
         <div class="oc-small" id="smallWarn" hidden></div>
       </div>
 
-      <div class="oc-look" aria-label="Colours and lines">
+      <div class="oc-look" aria-label="Colours, fonts and lines">
         <div>
-          <h2 class="oc-h">Colour what?</h2>
-          <p class="oc-scope" id="scopeName"></p>
+          <p class="oc-scope"><span class="oc-h">Change</span> <span id="scopeName"></span></p>
           <div class="oc-lv" id="levels"></div>
-          <div class="oc-row" style="margin-top:.45rem">
+          <div class="oc-row" style="margin-top:.4rem">
             <button class="tl-btn" type="button" id="many" aria-pressed="false" title="On a computer you can also hold Ctrl or Shift and click">Select several</button>
             <button class="tl-btn" type="button" id="painter">Copy format</button>
           </div>
         </div>
-        <div><h2 class="oc-h">Box shade</h2><div class="oc-sws" id="swFill"></div></div>
-        <div>
-          <h2 class="oc-h">Gradient: fade box into</h2>
-          <div class="oc-sws" id="swFill2"></div>
-          <div class="oc-row" style="margin-top:.45rem">
-            <span class="tl-grp"><button class="tl-btn" type="button" data-gdir="h">Left to right</button><button class="tl-btn" type="button" data-gdir="v">Top to bottom</button></span>
-          </div>
-          <p class="oc-hint">Starts from the box shade, so a move from Milan to Maputo can run from one location's colour to the other. The crossed square removes it.</p>
+        <div class="oc-ltabs" role="tablist" aria-label="Settings">
+          <button class="tl-btn on" type="button" role="tab" data-lt="box" aria-selected="true">Boxes</button>
+          <button class="tl-btn" type="button" role="tab" data-lt="text" aria-selected="false">Text</button>
+          <button class="tl-btn" type="button" role="tab" data-lt="lines" aria-selected="false">Lines</button>
         </div>
-        <div><h2 class="oc-h">Text colour</h2><div class="oc-sws" id="swText"></div></div>
-        <div><h2 class="oc-h">Border colour</h2><div class="oc-sws" id="swBorder"></div></div>
-        <div>
-          <h2 class="oc-h">Shade by level</h2>
+        <div class="oc-lsec" data-ls="box">
+          <div><h2 class="oc-h">Box shade</h2><div class="oc-sws" id="swFill"></div></div>
+          <div>
+            <h2 class="oc-h">Gradient: fade box into</h2>
+            <div class="oc-sws" id="swFill2"></div>
+            <div class="oc-row" style="margin-top:.4rem"><span class="tl-grp"><button class="tl-btn" type="button" data-gdir="h">Left to right</button><button class="tl-btn" type="button" data-gdir="v">Top to bottom</button></span></div>
+            <p class="oc-hint">Fades from the box shade, for example for a move between locations. The crossed square removes it.</p>
+          </div>
+          <div><h2 class="oc-h">Border colour</h2><div class="oc-sws" id="swBorder"></div></div>
           <div class="oc-row">
+            <span class="tl-grp"><button class="tl-btn" type="button" data-corner="square">Rectangle</button><button class="tl-btn" type="button" data-corner="round">Rounded</button></span>
+          </div>
+          <div>
+            <h2 class="oc-h">Shade by level</h2>
             <span class="oc-shade"><input type="color" id="shadeBase" value="#5C4D7D" aria-label="Base colour"><button class="tl-btn" type="button" id="shade">Dark to light</button></span>
           </div>
         </div>
-        <div>
-          <h2 class="oc-h">Box shape</h2>
-          <span class="tl-grp"><button class="tl-btn" type="button" data-corner="square">Rectangle</button><button class="tl-btn" type="button" data-corner="round">Rounded corners</button></span>
+        <div class="oc-lsec" data-ls="text" hidden>
+          <div><h2 class="oc-h">Text colour</h2><div class="oc-sws" id="swText"></div></div>
+          <div>
+            <h2 class="oc-h">Font</h2>
+            <select id="font" aria-label="Font"></select>
+            <p class="oc-hint">Bold, italic, underline and size are set for each row of text, below the chart. The preview uses the closest font on this device.</p>
+          </div>
         </div>
-        <div>
-          <h2 class="oc-h">Font</h2>
-          <select id="font" aria-label="Font"></select>
-          <p class="oc-hint">Bold, italic, underline and size are set for each row of text, below the chart. The preview uses the closest font on this device.</p>
-        </div>
-        <div>
-          <h2 class="oc-h">Lines</h2>
+        <div class="oc-lsec" data-ls="lines" hidden>
           <p class="oc-scope" id="scopeLine"></p>
           <div class="oc-row">
             <span class="tl-grp"><button class="tl-btn" type="button" data-dash="solid">Solid</button><button class="tl-btn" type="button" data-dash="dash">Dashed</button></span>
-            <label class="oc-row" style="font-size:.85rem">Thickness
-              <select id="lineW"><option value="0.75">0.75 pt</option><option value="1">1 pt</option><option value="1.25">1.25 pt</option><option value="1.5">1.5 pt</option><option value="2">2 pt</option><option value="3">3 pt</option></select>
-            </label>
+            <select id="lineW" aria-label="Line thickness"><option value="0.75">0.75 pt</option><option value="1">1 pt</option><option value="1.25">1.25 pt</option><option value="1.5">1.5 pt</option><option value="2">2 pt</option><option value="3">3 pt</option></select>
           </div>
-          <div class="oc-sws" id="swLine" style="margin-top:.5rem"></div>
+          <div><h2 class="oc-h">Line colour</h2><div class="oc-sws" id="swLine"></div></div>
         </div>
         <div><button class="tl-btn" type="button" id="resetLook">Reset colours and lines</button></div>
       </div>
@@ -239,7 +239,7 @@
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="../js/tools.js?v=11"></script>
 <script src="../js/tool-orgchart-core.js?v=2"></script>
-<script src="../js/tool-orgchart.js?v=2"></script>
+<script src="../js/tool-orgchart.js?v=3"></script>
 <script src="../js/nav.js?v=20" defer></script>
 <script src="../js/visits.js?v=2" defer></script>
 </body>

@@ -254,7 +254,7 @@
         '<td data-label="Dotted line to"><input data-k="dotted" list="names" aria-label="Dotted line to" placeholder="—" autocomplete="off" value="' + esc(p.dottedText || (dot ? labelOf(dot, c) : '')) + '"></td>' +
         COLS.map(function (x) {
           var bad = p.badColour && p.badColour[x.k], v = bad || (p.style[x.k] || '');
-          return '<td data-label="' + x.h + '"><input class="oc-col" data-c="' + x.k + '" aria-label="' + x.h + '" placeholder="#5C4D7D" autocomplete="off" spellcheck="false" value="' + esc(v) + '"' + (O.HEX.test(v) ? ' style="box-shadow:inset 6px 0 0 ' + v + '"' : '') + '></td>';
+          return '<td data-label="' + x.h + '"><input class="oc-col" data-c="' + x.k + '" aria-label="' + x.h + ' code, such as #5C4D7D" placeholder="—" autocomplete="off" spellcheck="false" value="' + esc(v) + '"' + (O.HEX.test(v) ? ' style="box-shadow:inset 6px 0 0 ' + v + '"' : '') + '></td>';
         }).join('') +
         '<td class="oc-act"><button type="button" class="oc-ab" data-rep aria-label="Add someone reporting to this person" title="Add a report">+</button><button type="button" class="oc-ab" data-mv="-1" aria-label="Move up"' + (i ? '' : ' disabled') + '>↑</button><button type="button" class="oc-ab" data-mv="1" aria-label="Move down"' + (i < chart.people.length - 1 ? '' : ' disabled') + '>↓</button><button type="button" class="oc-ab del" data-del aria-label="Delete this person">×</button></td></tr>';
     }).join('');
@@ -351,6 +351,8 @@
     last = O.fit(chart);
     var st = $('stage');
     st.style.width = (zoom * 100) + '%';
+    st.classList.toggle('zoomed', zoom > 1);
+    st.style.setProperty('--ar', (last.page.w / last.page.h).toFixed(4));
     st.innerHTML = chart.people.length ? O.toSvg(last, chart, { live: true }) : '<p class="oc-blank">Your chart appears here.</p>';
     markSel();
     var p = last.page;
@@ -504,6 +506,7 @@
     b.addEventListener('click', function () {
       var v = b.dataset.zoom; zoom = v === 'fit' ? 1 : Math.max(1, Math.min(5, zoom * (+v)));
       $('stage').style.width = (zoom * 100) + '%';
+      $('stage').classList.toggle('zoomed', zoom > 1);
     });
   });
 
@@ -831,6 +834,14 @@
     }).then(function (blob) {
       saveBlob(blob, fileBase() + '.' + kind); $('dlDlg').close();
     }).catch(function (e) { toast('Download failed: ' + e.message); }).then(function () { b.disabled = false; b.textContent = 'Download'; });
+  });
+
+  // ---------- settings tabs ----------
+  document.querySelectorAll('[data-lt]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      document.querySelectorAll('[data-lt]').forEach(function (x) { var on = x === b; x.classList.toggle('on', on); x.setAttribute('aria-selected', on); });
+      document.querySelectorAll('[data-ls]').forEach(function (x) { x.hidden = x.dataset.ls !== b.dataset.lt; });
+    });
   });
 
   // ---------- phone tabs ----------
