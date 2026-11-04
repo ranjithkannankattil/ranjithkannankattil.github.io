@@ -794,7 +794,7 @@
 
   // ---------- download ----------
   function renderDl() {
-    var groups = ['PowerPoint', 'Word'], P = O.PAGES;
+    var groups = ['PowerPoint', 'Word', 'Image'], P = O.PAGES;
     $('dlOpts').innerHTML = groups.map(function (g) {
       return '<fieldset><legend>' + g + '</legend>' + Object.keys(P).filter(function (k) { return P[k].group === g; }).map(function (k) {
         return '<label class="oc-radio"><input type="radio" name="dlp" value="' + k + '"' + (chart.page === k ? ' checked' : '') + '><span>' + P[k].label + '</span></label>';
@@ -805,7 +805,7 @@
   function syncDl() {
     drawNowQuiet();
     var p = last.page, n = $('dlNote');
-    n.innerHTML = (p.kind === 'pptx' ? 'Boxes and lines stay editable in PowerPoint, and lines stay attached when you move a box.' : 'The chart goes in as a sharp picture that fills the page. Upload this file here to edit it again.') +
+    n.innerHTML = (p.kind === 'pptx' ? 'Boxes and lines stay editable in PowerPoint, and lines stay attached when you move a box.' : p.kind === 'docx' ? 'The chart goes in as a sharp picture that fills the page. Upload this file here to edit it again.' : 'A high-resolution PNG on a white background. Images can’t be uploaded back here, so use Save chart file if you want to edit it later.') +
       (last.tooSmall ? '<span class="oc-warnline">' + smallText() + '</span>' : '<span class="oc-okline">Text will be ' + last.f + ' pt on this page.</span>');
   }
   function drawNowQuiet() { clearTimeout(drawT); drawNow(); }
@@ -817,10 +817,11 @@
   $('dlCancel').addEventListener('click', function () { $('dlDlg').close(); });
   function svgToPng(r) {
     return new Promise(function (ok, no) {
-      var px = Math.round((r.page.w - 2 * r.page.m) * 4.2);
-      var svg = O.toSvg(r, chart, { inner: true, px: px }), img = new Image();
+      var whole = r.page.kind === 'png', vw = whole ? r.page.w : r.page.w - 2 * r.page.m, vh = whole ? r.page.h : r.page.h - 2 * r.page.m;
+      var px = Math.round(vw * 4);
+      var svg = O.toSvg(r, chart, { inner: !whole, px: px }), img = new Image();
       img.onload = function () {
-        var c = document.createElement('canvas'); c.width = img.naturalWidth || px; c.height = img.naturalHeight || Math.round(px * (r.page.h - 2 * r.page.m) / (r.page.w - 2 * r.page.m));
+        var c = document.createElement('canvas'); c.width = img.naturalWidth || px; c.height = img.naturalHeight || Math.round(px * vh / vw);
         c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
         c.toBlob(function (b) { if (b) ok(b); else no(new Error('The picture could not be made.')); }, 'image/png');
       };
@@ -832,6 +833,7 @@
     var b = this, r = O.fit(chart), kind = r.page.kind;
     b.disabled = true; b.textContent = 'Making…';
     load(LIBS.jszip).then(function () {
+      if (kind === 'png') return svgToPng(r);
       if (kind === 'pptx') return O.buildPptx(chart, r);
       return svgToPng(r).then(function (png) { return O.buildDocx(chart, r, png); });
     }).then(function (blob) {

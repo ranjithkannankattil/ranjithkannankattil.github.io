@@ -55,7 +55,7 @@ window.TOOLS = [
     short: 'Org chart',
     href: 'orgchart.html',
     blurb: 'Build an org chart from a table or an Excel template, or upload an older PowerPoint or Word chart and edit it. Your own rows of text, colours and line styles, fitted to your page.',
-    meta: 'Excel template · PowerPoint · Word',
+    meta: 'Excel template · PowerPoint · Word · Image',
     keys: 'org chart organisation organization hierarchy reporting lines structure team manager reports dotted line powerpoint word smartart'
   },
   {

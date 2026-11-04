@@ -18,7 +18,11 @@ window.OrgCore = (function () {
     ppt169: { label: 'Widescreen (16:9)', group: 'PowerPoint', kind: 'pptx', w: 960, h: 540, m: 22 },
     ppt43: { label: 'Standard (4:3)', group: 'PowerPoint', kind: 'pptx', w: 720, h: 540, m: 20 },
     a4l: { label: 'A4 landscape', group: 'Word', kind: 'docx', w: 841.89, h: 595.28, m: 36 },
-    a4p: { label: 'A4 portrait', group: 'Word', kind: 'docx', w: 595.28, h: 841.89, m: 36 }
+    a4p: { label: 'A4 portrait', group: 'Word', kind: 'docx', w: 595.28, h: 841.89, m: 36 },
+    img169: { label: 'Widescreen (16:9)', group: 'Image', kind: 'png', w: 960, h: 540, m: 22 },
+    img43: { label: 'Standard (4:3)', group: 'Image', kind: 'png', w: 720, h: 540, m: 20 },
+    imga4l: { label: 'A4 landscape', group: 'Image', kind: 'png', w: 841.89, h: 595.28, m: 24 },
+    imga4p: { label: 'A4 portrait', group: 'Image', kind: 'png', w: 595.28, h: 841.89, m: 24 }
   };
   // k = how wide the font runs compared with Arial, so sizes stay right on devices without it
   var FONTS = {
