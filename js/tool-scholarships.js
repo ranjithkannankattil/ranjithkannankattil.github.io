@@ -67,11 +67,22 @@
     return true;
   }
 
+  // Android: try the LinkedIn app first, and use the browser if it isn't installed.
+  // Other phones get the normal link, which their system may hand to the app.
+  function linkedInLink(q) {
+    var path = 'www.linkedin.com/search/results/people/?keywords=' + encodeURIComponent(q);
+    var web = 'https://' + path;
+    if (/Android/i.test(navigator.userAgent)) {
+      return '<a href="intent://' + esc(path) + '#Intent;scheme=https;package=com.linkedin.android;S.browser_fallback_url=' + encodeURIComponent(web) + ';end" rel="nofollow">Search on LinkedIn ↗</a>';
+    }
+    return '<a href="' + esc(web) + '" target="_blank" rel="noopener nofollow">Search on LinkedIn ↗</a>';
+  }
+
   function peopleLinks(s) {
     var q = (window.SCHOLARSHIP_PEOPLE || {})[s.id] || '"' + s.name + '" India';
     var page = (window.SCHOLARSHIP_PEOPLE_PAGES || {})[s.id];
     return (page ? '<a href="' + esc(page) + '" target="_blank" rel="noopener">Official scholar list ↗</a>' : '') +
-      '<a href="https://www.linkedin.com/search/results/people/?keywords=' + encodeURIComponent(q) + '" target="_blank" rel="noopener nofollow">Search on LinkedIn ↗</a>';
+      linkedInLink(q);
   }
 
   function card(s) {
