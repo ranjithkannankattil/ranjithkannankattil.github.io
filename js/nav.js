@@ -7,6 +7,7 @@
     { id: "meeting", label: "Meeting time finder", desc: "Time zones and working hours", href: "productivity/meeting.html" },
     { id: "timeline", label: "Timeline & Gantt", desc: "Plans to Excel, PDF or image", href: "productivity/timeline.html" },
     { id: "raci", label: "RACI matrix", desc: "Who does what, at a glance", href: "productivity/raci.html" },
+    { id: "orgchart", label: "Org chart generator", desc: "Table to PowerPoint or Word", href: "productivity/orgchart.html" },
     { id: "pdf", label: "PDF toolkit", desc: "Merge, split, sign, OCR", href: "productivity/pdf.html" },
     { id: "passport", label: "Passport photo maker", desc: "Visa photos and print sheets", href: "productivity/passport.html" },
     { id: "units", label: "Oil & gas units", desc: "LNG, gas, oil and energy", href: "productivity/units.html" },

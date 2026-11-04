@@ -45,6 +45,8 @@ SECTIONS = [
      "Plan phases, tasks and milestones, then download as Excel, PDF or an image.", "#5C4D7D", None),
     ("raci", ["productivity/raci.html"], "Productivity · RACI", "RACI matrix builder",
      "Who is responsible, accountable, consulted and informed — with checks, and Excel or PDF out.", "#5C4D7D", None),
+    ("orgchart", ["productivity/orgchart.html"], "Productivity · Org chart", "Org chart generator",
+     "From a table or Excel template to PowerPoint or Word, sized to your page.", "#5C4D7D", None),
     ("pdf", ["productivity/pdf.html"], "Productivity · PDF toolkit", "PDF toolkit",
      "Merge, split, reorder, sign and shrink PDFs in your browser. Files never leave your device.", "#5C4D7D", None),
     ("passport", ["productivity/passport.html"], "Productivity · Passport photos", "Passport photo maker",

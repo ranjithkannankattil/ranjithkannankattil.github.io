@@ -50,6 +50,15 @@ window.TOOLS = [
     keys: 'responsibility matrix roles raci rasci accountable owner org chart'
   },
   {
+    id: 'orgchart', group: 'plan',
+    name: 'Org chart generator',
+    short: 'Org chart',
+    href: 'orgchart.html',
+    blurb: 'Build an org chart from a table or an Excel template, or upload an older PowerPoint or Word chart and edit it. Your own rows of text, colours and line styles, fitted to your page.',
+    meta: 'Excel template · PowerPoint · Word',
+    keys: 'org chart organisation organization hierarchy reporting lines structure team manager reports dotted line powerpoint word smartart'
+  },
+  {
     id: 'pdf', group: 'docs',
     name: 'PDF toolkit',
     short: 'PDF',

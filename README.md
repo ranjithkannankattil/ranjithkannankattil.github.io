@@ -18,6 +18,7 @@ productivity/           Productivity tools hub (index.html) + one page per tool
   meeting.html          Tool 01: meeting time finder (js/tool-meeting.js, css/tool-meeting.css)
                         City catalogue + default seven: js/cities.js (add cities there)
   raci.html             RACI matrix builder (js/tool-raci.js, css/tool-raci.css)
+  orgchart.html         Org chart generator (js/tool-orgchart.js, js/tool-orgchart-core.js, css/tool-orgchart.css)
   pdf.html              PDF toolkit (js/tool-pdf.js, css/tool-pdf.css; pdf-lib + PDF.js in js/vendor/)
   passport.html         Passport photo maker (js/tool-passport.js, css/tool-passport.css)
   units.html            Oil & gas unit converter (js/tool-units.js, css/tool-units.css)

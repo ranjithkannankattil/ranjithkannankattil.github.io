@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Org chart generator — Workbench — Ranjith Kannankattil</title>
+<meta name="description" content="Build an org chart from a table or an Excel template, or upload an older one. Choose text rows, colours and line styles, then download PowerPoint or Word sized to your page. Runs in your browser.">
+<link rel="canonical" href="https://ranjithkb.com/productivity/orgchart.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ranjith Kannankattil">
+<meta property="og:title" content="Org chart generator — Workbench — Ranjith Kannankattil">
+<meta property="og:description" content="Build an org chart from a table or an Excel template, or upload an older one. Choose text rows, colours and line styles, then download PowerPoint or Word sized to your page. Runs in your browser.">
+<meta property="og:url" content="https://ranjithkb.com/productivity/orgchart.html">
+<meta property="og:image" content="https://media.ranjithkb.com/sections/productivity-ebe459f9.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="icon" href="/assets/icons/site-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/icons/site-180.png">
+<meta name="theme-color" content="#F0EDE6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16161A" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
+<link rel="stylesheet" href="../css/style.css?v=17">
+<link rel="stylesheet" href="../css/productivity.css?v=4">
+<link rel="stylesheet" href="../css/tool-timeline.css?v=2">
+<link rel="stylesheet" href="../css/tool-orgchart.css?v=1">
+</head>
+<body data-section="productivity" class="wide">
+
+<header class="titleblock">
+  <div>
+    <div class="id">RANJITH KANNANKATTIL</div>
+    <div class="name">Workbench</div>
+  </div>
+  <nav class="tabs" data-root="../" data-active="productivity" aria-label="Site">
+    <a href="../index.html">Home</a>
+    <a href="../radio.html">Radio</a>
+    <a href="./" class="active">Workbench</a>
+  </nav>
+</header>
+
+<main data-tool="orgchart">
+  <div data-tool-nav></div>
+  <section class="oc" aria-labelledby="ocTitle">
+    <div class="tool-head">
+      <div class="tool-eyebrow" data-tool-eyebrow>Tool</div>
+      <h1 class="tool-title" id="ocTitle">Org chart generator</h1>
+      <p class="tool-intro">Type people into the table, fill in the Excel template, or upload an older PowerPoint or Word chart. The chart redraws as you go and fits itself to the page you choose. Everything stays in this browser; nothing is uploaded to the site.</p>
+    </div>
+
+    <div class="tl-top">
+      <input class="tl-name" id="title" aria-label="Chart title" placeholder="Chart title (optional)" spellcheck="false">
+      <span class="tl-saved" id="saved"></span>
+    </div>
+
+    <div class="tl-bar" role="toolbar" aria-label="Chart">
+      <div class="tl-grp">
+        <button class="tl-btn ico" type="button" id="undo" aria-label="Undo">↶</button>
+        <button class="tl-btn ico" type="button" id="redo" aria-label="Redo">↷</button>
+      </div>
+      <details class="tl-menu">
+        <summary class="tl-btn">New <i>▾</i></summary>
+        <div class="tl-pop">
+          <button class="tl-mi" type="button" id="newBlank"><b>Blank chart</b><span>Keeps your text rows</span></button>
+          <button class="tl-mi" type="button" id="newSample"><b>Sample chart</b><span>A made-up project team</span></button>
+        </div>
+      </details>
+      <details class="tl-menu">
+        <summary class="tl-btn">Excel template <i>▾</i></summary>
+        <div class="tl-pop">
+          <button class="tl-mi" type="button" id="tplBlank"><b>Blank template</b><span>A column for each of your text rows</span></button>
+          <button class="tl-mi" type="button" id="tplData"><b>Template with my data</b><span>Your table, ready to edit in Excel</span></button>
+          <button class="tl-mi" type="button" id="pasteOpen"><b>Paste from Excel</b><span>Add rows copied from a spreadsheet</span></button>
+        </div>
+      </details>
+      <label class="tl-btn oc-file">Upload<input type="file" id="fileIn" accept=".xlsx,.csv,.tsv,.pptx,.docx,.json"></label>
+      <span class="tl-sp"></span>
+      <details class="tl-menu">
+        <summary class="tl-btn">Save <i>▾</i></summary>
+        <div class="tl-pop right">
+          <button class="tl-mi" type="button" id="saveFile"><b>Save chart file</b><span>Upload it later to carry on exactly here</span></button>
+        </div>
+      </details>
+      <button class="tl-btn ink" type="button" id="download">Download</button>
+    </div>
+    <div class="oc-issues" id="issues" hidden></div>
+
+    <div class="oc-tabs" role="tablist" aria-label="View">
+      <button class="tl-btn" type="button" role="tab" data-tab="people">Table</button>
+      <button class="tl-btn" type="button" role="tab" data-tab="chart">Chart</button>
+    </div>
+
+    <div class="oc-chart">
+      <div>
+        <div class="oc-view">
+          <label>Page <select id="page"></select></label>
+          <label>Arrangement
+            <select id="arrange">
+              <option value="auto">Automatic</option>
+              <option value="wide">All side by side</option>
+              <option value="stack1">Last level in a column</option>
+              <option value="stack2">Last level in two columns</option>
+            </select>
+          </label>
+          <span class="tl-grp">
+            <button class="tl-btn ico" type="button" data-zoom="0.8" aria-label="Zoom out">−</button>
+            <button class="tl-btn" type="button" data-zoom="fit">Fit</button>
+            <button class="tl-btn ico" type="button" data-zoom="1.25" aria-label="Zoom in">+</button>
+          </span>
+        </div>
+        <div class="oc-canvas"><div class="oc-stage" id="stage"></div></div>
+        <p class="oc-pagenote" id="pageNote"></p>
+        <div class="oc-small" id="smallWarn" hidden></div>
+      </div>
+
+      <div class="oc-look" aria-label="Colours and lines">
+        <div>
+          <h2 class="oc-h">Colour what?</h2>
+          <p class="oc-scope" id="scopeName"></p>
+          <div class="oc-lv" id="levels"></div>
+          <div class="oc-row" style="margin-top:.45rem">
+            <button class="tl-btn" type="button" id="many" aria-pressed="false" title="On a computer you can also hold Ctrl or Shift and click">Select several</button>
+            <button class="tl-btn" type="button" id="painter">Copy format</button>
+          </div>
+        </div>
+        <div><h2 class="oc-h">Box shade</h2><div class="oc-sws" id="swFill"></div></div>
+        <div><h2 class="oc-h">Text colour</h2><div class="oc-sws" id="swText"></div></div>
+        <div><h2 class="oc-h">Border colour</h2><div class="oc-sws" id="swBorder"></div></div>
+        <div>
+          <h2 class="oc-h">Shade by level</h2>
+          <div class="oc-row">
+            <span class="oc-shade"><input type="color" id="shadeBase" value="#5C4D7D" aria-label="Base colour"><button class="tl-btn" type="button" id="shade">Dark to light</button></span>
+            <span class="tl-grp"><button class="tl-btn" type="button" data-corner="square">Square</button><button class="tl-btn" type="button" data-corner="round">Round</button></span>
+          </div>
+        </div>
+        <div>
+          <h2 class="oc-h">Lines</h2>
+          <p class="oc-scope" id="scopeLine"></p>
+          <div class="oc-row">
+            <span class="tl-grp"><button class="tl-btn" type="button" data-dash="solid">Solid</button><button class="tl-btn" type="button" data-dash="dash">Dashed</button></span>
+            <label class="oc-row" style="font-size:.85rem">Thickness
+              <select id="lineW"><option value="0.75">0.75 pt</option><option value="1">1 pt</option><option value="1.25">1.25 pt</option><option value="1.5">1.5 pt</option><option value="2">2 pt</option><option value="3">3 pt</option></select>
+            </label>
+          </div>
+          <div class="oc-sws" id="swLine" style="margin-top:.5rem"></div>
+        </div>
+        <div><button class="tl-btn" type="button" id="resetLook">Reset colours and lines</button></div>
+      </div>
+    </div>
+
+    <div class="oc-people">
+      <h2 class="tool-h2">Rows of text in each box</h2>
+      <p class="oc-note">Name them whatever you like. Each one becomes a column in the table and the Excel template.</p>
+      <ul class="oc-fields" id="fields"></ul>
+      <button class="tl-btn" type="button" id="addField">+ Row of text</button>
+
+      <h2 class="tool-h2" style="margin-top:1.6rem">People</h2>
+      <div class="oc-tablebox"><table class="oc-table" id="table" aria-label="People on the chart"></table></div>
+      <datalist id="names"></datalist>
+      <div class="oc-add"><button class="tl-btn" type="button" id="addPerson">+ Person</button></div>
+    </div>
+  </section>
+
+  <dialog class="tl-dlg" id="dlDlg" aria-labelledby="dlH">
+    <form method="dialog" class="oc-dl">
+      <h2 id="dlH">Download as</h2>
+      <div id="dlOpts"></div>
+      <p class="oc-note" id="dlNote"></p>
+      <div class="dlg-act">
+        <button type="button" class="tl-btn" id="dlCancel">Cancel</button>
+        <span class="tl-sp"></span>
+        <button type="button" class="tl-btn ink" id="dlGo">Download</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="tl-dlg" id="revDlg" aria-labelledby="revH">
+    <form method="dialog">
+      <h2 id="revH">Your file</h2>
+      <p class="dlg-p" id="revText"></p>
+      <label class="oc-slide" hidden>Use <select id="revSlide"></select></label>
+      <ul class="oc-revlist" id="revList" hidden></ul>
+      <div class="dlg-act">
+        <button type="button" class="tl-btn" id="revCancel">Cancel</button>
+        <span class="tl-sp"></span>
+        <button type="button" class="tl-btn ink" id="revUse" hidden>Use this chart</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="tl-dlg" id="pasteDlg" aria-labelledby="pasteH">
+    <form method="dialog">
+      <h2 id="pasteH">Paste from Excel</h2>
+      <p class="dlg-p">Copy the cells in Excel or Google Sheets and paste them here. Columns follow your text rows, then Reports to, then Dotted line to. If you include the heading row, it replaces the table instead of adding to it.</p>
+      <textarea id="pasteTx" rows="9" aria-label="Rows to paste"></textarea>
+      <div class="dlg-act">
+        <button type="button" class="tl-btn" id="pasteCancel">Cancel</button>
+        <span class="tl-sp"></span>
+        <button type="button" class="tl-btn ink" id="pasteGo">Add</button>
+      </div>
+    </form>
+  </dialog>
+  <div class="oc-toast" id="toast" role="status" hidden></div>
+
+  <div class="diamond-rule"><span class="diamond-mark">◆</span></div>
+</main>
+
+<footer>
+  <div class="cheart">♡ <span id="year"></span> Ranjith Kannankattil · What I created here is free to copy — <a href="https://copyheart.org/" rel="noopener">copying is an act of love</a>. Others' work keeps its own terms.</div>
+  <div class="foot-r"><span class="visits" id="visits" hidden></span><a href="mailto:hello@ranjithkb.com">hello@ranjithkb.com</a><a href="../privacy.html">Privacy</a></div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/tools.js?v=11"></script>
+<script src="../js/tool-orgchart-core.js?v=1"></script>
+<script src="../js/tool-orgchart.js?v=1"></script>
+<script src="../js/nav.js?v=20" defer></script>
+<script src="../js/visits.js?v=2" defer></script>
+</body>
+</html>
