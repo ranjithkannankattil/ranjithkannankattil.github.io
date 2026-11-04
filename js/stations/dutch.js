@@ -1037,6 +1037,33 @@ window.STATIONS = [
       "https://cast1.torontocast.com:3305/stream"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "translation-of-the-quran-in-dutch",
+    "name": "Translation of the Quran in Dutch",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8382/;"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "boo",
+    "name": "Boo",
+    "category": "music",
+    "streams": [
+      "https://stream03.level27.be/;stream.mp3"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "vrt-radio-bene",
+    "name": "VRT Radio Bene",
+    "category": "music",
+    "streams": [
+      "https://icecast.vrtcdn.be/radiobene.aac"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

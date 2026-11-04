@@ -970,6 +970,33 @@ window.STATIONS = [
       "https://dc.digi.live.kissfm.ro/magicdepahar"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "moinesti-fm",
+    "name": "Moinesti FM",
+    "category": "music",
+    "streams": [
+      "https://listen.moinestifm.ro/radio.mp3"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "sighet-fm-sighetu-marmatiei-89-3-fm",
+    "name": "Sighet FM -Sighetu Marmației 89.3 FM",
+    "category": "news",
+    "streams": [
+      "https://radio.zifer.ro/SighetFM"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "love-marilena-galati",
+    "name": "Love Marilena Galați",
+    "category": "music",
+    "streams": [
+      "https://radio.sonicpanel.ro/8068/stream"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

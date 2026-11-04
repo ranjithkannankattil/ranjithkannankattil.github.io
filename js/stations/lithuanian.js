@@ -48,8 +48,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://netradio.ziniur.lt/ziniur_64.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-3",
@@ -263,4 +262,4 @@ window.STATIONS = [
     "added": "2026-10-31"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

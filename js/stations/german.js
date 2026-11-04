@@ -1031,6 +1031,33 @@ window.STATIONS = [
       "https://0n-christmas.radionetz.de/0n-christmas.mp3"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "jazz-radio-swiss",
+    "name": "Jazz · Radio Swiss",
+    "category": "music",
+    "streams": [
+      "https://stream.srg-ssr.ch/m/rsj/mp3_128"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "chillout-piano-by-epic-piano",
+    "name": "CHILLOUT PIANO by Epic Piano",
+    "category": "music",
+    "streams": [
+      "https://stream.epic-piano.com/chillout-piano?ref=radiobrowser"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "1-a-christmas-on-radio",
+    "name": "1 A - Christmas on Radio",
+    "category": "music",
+    "streams": [
+      "https://1a-christmas.radionetz.de/1a-christmas.aac"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

@@ -915,6 +915,33 @@ window.STATIONS = [
       "https://srv.mediastriming.com/8444/stream"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "ok-prelo-radio",
+    "name": "OK Prelo Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.okplus.rs/listen/prelo/radio.mp3"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "lux-radio",
+    "name": "Lux Radio",
+    "category": "music",
+    "streams": [
+      "https://lux-naxinacional.streaming.rs:8607/;"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "radio-s-starogradski",
+    "name": "Radio S Starogradski",
+    "category": "music",
+    "streams": [
+      "https://stream.radios.rs:9064/stream"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

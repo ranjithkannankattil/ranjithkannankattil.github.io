@@ -199,7 +199,8 @@ window.STATIONS = [
     "streams": [
       "https://wamu.cdnstream1.com/wamu.mp3"
     ],
-    "where": "US"
+    "where": "US",
+    "offline": true
   },
   {
     "id": "bbc-radio-4",
@@ -900,6 +901,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "where": "Australia"
+  },
+  {
+    "id": "bbc-sounds-news",
+    "name": "BBC Sounds News",
+    "category": "uk",
+    "streams": [
+      "https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/pc_hd_abr_v2/ak/bbc_sounds_news.m3u8"
+    ],
+    "added": "2026-11-04",
+    "where": "UK"
+  },
+  {
+    "id": "capricorn-fm",
+    "name": "Capricorn FM",
+    "category": "world",
+    "streams": [
+      "https://edge.iono.fm/xice/67_medium.aac"
+    ],
+    "added": "2026-11-04",
+    "where": "South Africa"
+  },
+  {
+    "id": "monocle-radio",
+    "name": "Monocle Radio",
+    "category": "uk",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/MONOCLE_24.mp3"
+    ],
+    "added": "2026-11-04",
+    "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

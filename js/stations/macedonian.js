@@ -96,8 +96,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://vod-c57.interspace.com/channel_abr/47/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "metropolis-radio-network",
@@ -198,4 +197,4 @@ window.STATIONS = [
     "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

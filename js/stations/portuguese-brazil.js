@@ -1033,6 +1033,33 @@ window.STATIONS = [
       "https://radio.saopaulo01.com.br/8016/stream"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "massa-fm-sao-paulo",
+    "name": "Massa FM São Paulo",
+    "category": "music",
+    "streams": [
+      "https://stm01.virtualcast.com.br:8000/massasaopaulo"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "radio-viva-o-samba",
+    "name": "Radio Viva O Samba",
+    "category": "music",
+    "streams": [
+      "https://servidor33-3.brlogic.com:8020/live"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "radio-uenf",
+    "name": "Radio UENF",
+    "category": "music",
+    "streams": [
+      "https://stream-177.surfernetwork.com/pfsm8zen0lguv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJwZnNtOHplbjBsZ3V2IiwiaG9zdCI6InN0cmVhbS0xNzcuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6Ijc1OHRuX0lQVFRhOHd1aGFaODFNbEEiLCJpYXQiOjE3OTM1ODMxMDIsImV4cCI6MTc5MzU4MzE2Mn0.yLiCQvpODw4sZialJFhn-VeWA9Fr_pW1953TixVzn5U&1740248741087"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

@@ -281,8 +281,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nr9.newradio.it/proxy/ebaruffa?mp=/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-italia-solo-musica-italiana",
@@ -967,6 +966,33 @@ window.STATIONS = [
       "https://icy.unitedradio.it/R101LaBanda.aac"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "hostal-azul-radio",
+    "name": "Hostal Azul Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/b4m2tic2ibbtv"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "ram-power-102-7",
+    "name": "Ram Power 102.7",
+    "category": "music",
+    "streams": [
+      "https://stream.ram.radio/audio/ram.stream_aac64/chunklist.m3u8"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "radio-subasio",
+    "name": "Radio Subasio",
+    "category": "music",
+    "streams": [
+      "https://icy.unitedradio.it/Subasio.mp3"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

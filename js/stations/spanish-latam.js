@@ -1026,6 +1026,33 @@ window.STATIONS = [
       "https://stream-282.surfernetwork.com/cploshirboutv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJjcGxvc2hpcmJvdXR2IiwiaG9zdCI6InN0cmVhbS0yODIuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6IjdpN1NPUlRPUUl5dmhpWng4UnFzOFEiLCJpYXQiOjE3OTM1NTUwNjYsImV4cCI6MTc5MzU1NTEyNn0.gCfV82he_ksRQrq0-4ox3eug0u_ZAG_jrJVqXhdNXME"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "radio-campesina-cubana",
+    "name": "Radio Campesina Cubana",
+    "category": "music",
+    "streams": [
+      "https://radiocampesinacubana.stream.laut.fm/radiocampesinacubana?uuid=8b1edfba-38e5-c401-17c0-ed80dff25234&t302=2026-11-01_23-25-05"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "beethoven-santiago-fm",
+    "name": "Beethoven - Santiago FM",
+    "category": "music",
+    "streams": [
+      "https://unlimited4-us.dps.live/beethovenfm/aac/icecast.audio"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "hcjb-la-voz-de-los-andes-89-3-fm",
+    "name": "HCJB La Voz de los Andes 89.3 FM",
+    "category": "devotional",
+    "streams": [
+      "https://streamingecuador.net:8287/hcjb"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

@@ -977,6 +977,33 @@ window.STATIONS = [
       "https://radiocaroline.ice.infomaniak.ch/radiocaroline-128.mp3"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "cherie-fm-poitiers-dab",
+    "name": "Chérie FM Poitiers DAB",
+    "category": "music",
+    "streams": [
+      "https://streaming.nrjaudio.fm/ougo42rb92oc"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "jazz-radio-electro-swing",
+    "name": "Jazz Radio Electro Swing",
+    "category": "music",
+    "streams": [
+      "https://jazz-wr04.ice.infomaniak.ch/jazz-wr04-128.mp3"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "france-bleu-paris",
+    "name": "France Bleu Paris",
+    "category": "music",
+    "streams": [
+      "https://direct.francebleu.fr/live/fb1071-midfi.mp3"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

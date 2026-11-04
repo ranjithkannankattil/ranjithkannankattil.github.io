@@ -25,7 +25,8 @@ window.STATIONS = [
     "streams": [
       "https://edge03.cdn.bitflip.ee:8888/NRJdnb"
     ],
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "vikerraadio",
@@ -336,7 +337,8 @@ window.STATIONS = [
       "https://edge04.cdn.bitflip.ee:8888/rckmetal"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "duo-greatesthits-estonia",
@@ -528,4 +530,4 @@ window.STATIONS = [
     "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

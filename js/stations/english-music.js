@@ -1236,6 +1236,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "where": "UK"
+  },
+  {
+    "id": "abc-triple-j-queensland-20220701",
+    "name": "ABC Triple J Queensland 20220701",
+    "category": "rock",
+    "streams": [
+      "https://mediaserviceslive.akamaized.net/hls/live/2038347/triplejqld/masterhq.m3u8"
+    ],
+    "added": "2026-11-04",
+    "where": "Australia"
+  },
+  {
+    "id": "only-hits",
+    "name": "Only Hits",
+    "category": "pop",
+    "streams": [
+      "https://api.onlyhit.us/play"
+    ],
+    "added": "2026-11-04",
+    "where": "US"
+  },
+  {
+    "id": "all-classical-portland",
+    "name": "All Classical Portland",
+    "category": "classical",
+    "streams": [
+      "https://allclassical.streamguys1.com/ac96k"
+    ],
+    "added": "2026-11-04",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

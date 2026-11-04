@@ -1051,6 +1051,33 @@ window.STATIONS = [
       "https://stream.radiojar.com/4nwwcyesv8hvv"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "87-6",
+    "name": "Λαϊκός 87,6",
+    "category": "music",
+    "streams": [
+      "https://derti.live24.gr/laikos876"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "cosmoradio-95-1",
+    "name": "Cosmoradio 95.1",
+    "category": "music",
+    "streams": [
+      "https://eco.onestreaming.com/proxy/cosmoradio/stream"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "station-6",
+    "name": "Εν Λευκώ",
+    "category": "music",
+    "streams": [
+      "https://n12a-eu.rcs.revma.com/trm75ret4c3vv?rj-ttl=5&rj-tok=AAABnHLBW28A7OTR3a298An3Yg"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

@@ -387,7 +387,8 @@ window.STATIONS = [
       "https://wamu.cdnstream1.com/wamu.mp3"
     ],
     "added": "2026-10-23",
-    "where": "US"
+    "where": "US",
+    "offline": true
   },
   {
     "id": "comedy-104-radiostorm",
@@ -1058,6 +1059,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "where": "Jamaica"
+  },
+  {
+    "id": "bbc-sounds-news",
+    "name": "BBC Sounds News",
+    "category": "uk",
+    "streams": [
+      "https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/pc_hd_abr_v2/ak/bbc_sounds_news.m3u8"
+    ],
+    "added": "2026-11-04",
+    "where": "UK"
+  },
+  {
+    "id": "star-fm",
+    "name": "Star FM",
+    "category": "world",
+    "streams": [
+      "https://stream.zeno.fm/66qwf50nw98uv"
+    ],
+    "added": "2026-11-04",
+    "where": "Zimbabwe"
+  },
+  {
+    "id": "730-cknw",
+    "name": "730 CKNW",
+    "category": "canada",
+    "streams": [
+      "https://corus.leanstream.co/CKNWAM-MP3?type=.mp3&playertype=dplayer"
+    ],
+    "added": "2026-11-04",
+    "where": "Canada"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

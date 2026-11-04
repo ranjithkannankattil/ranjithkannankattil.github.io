@@ -827,7 +827,8 @@ window.STATIONS = [
     "streams": [
       "https://ice4.abradio.cz/bojler_room_128.aac"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "offline": true
   },
   {
     "id": "gold-impuls",
@@ -1008,6 +1009,33 @@ window.STATIONS = [
       "https://bcast.spmmedia.cz/prostor-mp3"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "radio-praha",
+    "name": "Rádio Praha",
+    "category": "music",
+    "streams": [
+      "https://rozhlas.stream/radio_dab_praha_high.aac"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "chat-radio",
+    "name": "Chat Rádio",
+    "category": "music",
+    "streams": [
+      "https://radio.chatujme.cz:8000/chatradio"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "retro-music-tv",
+    "name": "Retro Music TV",
+    "category": "music",
+    "streams": [
+      "https://stream.mediawork.cz/retrotv/retrotvHQ1/chunklist_w627639048.m3u8"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

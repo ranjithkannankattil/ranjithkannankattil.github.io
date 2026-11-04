@@ -152,7 +152,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s5.radioforge.com:7908/live?n=77357"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "24-breaking-live",
@@ -978,6 +979,33 @@ window.STATIONS = [
       "https://listen7.myradio24.com/ulyublene"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "4",
+    "name": "Радіо С4",
+    "category": "music",
+    "streams": [
+      "https://radio.c4.com.ua:8443/320"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "west-pole-64k",
+    "name": "Західний полюс West Pole 64k",
+    "category": "music",
+    "streams": [
+      "https://online.z-polus.info/mobilehq"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "fm-8",
+    "name": "Явір FM",
+    "category": "news",
+    "streams": [
+      "https://complex.in.ua/Yavir320"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

@@ -403,7 +403,8 @@ window.STATIONS = [
     "streams": [
       "https://streams.radio.co/s0975ec186/listen"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "5-replay-news",
@@ -1025,6 +1026,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/1dy2395z3k8uv"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "arta-radio",
+    "name": "Arta Radio",
+    "category": "music",
+    "streams": [
+      "https://edge.mixlr.com/channel/qtgru"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "medina-fm-nostalgie",
+    "name": "Medina FM Nostalgie",
+    "category": "music",
+    "streams": [
+      "https://medinanachat.ice.infomaniak.ch/medinanachat-128.mp3"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "emaar-fm-radio",
+    "name": "Emaar FM Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/4luag56o066uv"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

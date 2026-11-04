@@ -357,8 +357,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -1025,6 +1024,33 @@ window.STATIONS = [
       "https://sonic.servsonic.com:7004/stream"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "antenna-2-opera",
+    "name": "Antenna 2 Opera",
+    "category": "music",
+    "streams": [
+      "https://radiocast.rtp.pt/antena2opera80a.mp3"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "rfm-jazzy",
+    "name": "RFM JAZZY",
+    "category": "music",
+    "streams": [
+      "https://27753.live.streamtheworld.com/RFM_JAZZYAAC.aac"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "radio-alto-minho",
+    "name": "Rádio Alto Minho",
+    "category": "music",
+    "streams": [
+      "https://ec2.yesstreaming.net:3705/stream"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

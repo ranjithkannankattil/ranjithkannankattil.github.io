@@ -440,7 +440,8 @@ window.STATIONS = [
     "streams": [
       "https://yarenfmn.80.yayin.com.tr//stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "radyo-7-turku",
@@ -999,6 +1000,33 @@ window.STATIONS = [
       "https://bloomberghtradyo.radyotvonline.net/bloomberghtradyo"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "trt-diyarbakr",
+    "name": "TRT Diyarbakır",
+    "category": "music",
+    "streams": [
+      "https://radio-trtgap.medya.trt.com.tr/master.m3u8"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "gonul-fm-97-3",
+    "name": "Gönül FM 97.3",
+    "category": "music",
+    "streams": [
+      "https://sslyayin.netyayin.net/gonulfm/stream"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "bestefm-mix",
+    "name": "BesteFM Mix",
+    "category": "music",
+    "streams": [
+      "https://yayin.radyomadyo.com:8002/"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

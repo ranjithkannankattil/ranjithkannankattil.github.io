@@ -918,6 +918,24 @@ window.STATIONS = [
       "https://serverkw.quran-uni.com:8104/;"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "club-dance-2",
+    "name": "club dance 2",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/pssclobh1rhuv"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "radio-gaga-marosszek",
+    "name": "Rádió GaGa Marosszék",
+    "category": "news",
+    "streams": [
+      "https://stream.igenbiza.com/vas"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

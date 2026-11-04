@@ -145,6 +145,15 @@ window.STATIONS = [
       "https://serverkw.quran-uni.com:8038/;"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "voice-of-hope-africa",
+    "name": "Voice of Hope Africa",
+    "category": "music",
+    "streams": [
+      "https://fm.imediaport.com/voha"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

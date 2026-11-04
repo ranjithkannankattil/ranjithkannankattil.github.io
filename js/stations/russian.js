@@ -1026,6 +1026,33 @@ window.STATIONS = [
       "https://radiorecord.hostingradio.ru/mini96.aacp"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "station-40",
+    "name": "Радио Родных Дорог",
+    "category": "news",
+    "streams": [
+      "https://stream1.radiord.ru:8000/live96.aac"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "russian-mix",
+    "name": "Радио Рекорд Russian Mix",
+    "category": "music",
+    "streams": [
+      "https://radiorecord.hostingradio.ru/rus96.aacp"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "station-41",
+    "name": "ЧИСТАЯ ВОЛНА",
+    "category": "devotional",
+    "streams": [
+      "https://stream.purewave.ru:8443/live128.mp3"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

@@ -121,8 +121,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play-radio-stream3.hndt.com/now/WUBA5hW2/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-10",
@@ -202,8 +201,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-17",
@@ -963,6 +961,33 @@ window.STATIONS = [
       "https://rscdn.ajmide.com/r_3179/nglive_3179.m3u8"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "station-48",
+    "name": "广东股市广播",
+    "category": "music",
+    "streams": [
+      "https://lhttp.qtfm.cn/live/4847/64k.mp3"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "station-49",
+    "name": "格莱美音乐台",
+    "category": "music",
+    "streams": [
+      "https://play-radio-stream3.hndt.com/now/yorSd1X2/chunklist.m3u8"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "fred-film-radio",
+    "name": "Fred Film Radio(中文)",
+    "category": "music",
+    "streams": [
+      "https://s10.webradio-hosting.com/proxy/fredradiocn/stream"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

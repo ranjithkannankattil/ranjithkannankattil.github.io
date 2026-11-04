@@ -194,7 +194,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.24dubstep.pl/radio/8000/mp3_normal"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "zote-przeboje-poznan",
@@ -242,8 +243,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://s1.slotex.pl/shoutcast/7102/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-rmf-classic",
@@ -315,7 +315,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.rcs.revma.com/q18ty3qhwzzuv"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "paranormalium",
@@ -909,6 +910,33 @@ window.STATIONS = [
       "https://s1.slotex.pl:7650/stream"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "radio-tango-uno",
+    "name": "Radio Tango Uno",
+    "category": "music",
+    "streams": [
+      "https://radiotangouno-online.pl/radio/8000/radio.mp3"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "meloradio-opole",
+    "name": "Meloradio Opole",
+    "category": "music",
+    "streams": [
+      "https://ml02.cdn.eurozet.pl/mel-opl.mp3"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "radio-eska-starachowice",
+    "name": "Radio Eska Starachowice",
+    "category": "music",
+    "streams": [
+      "https://ic1.smcdn.pl/2400-1.mp3"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

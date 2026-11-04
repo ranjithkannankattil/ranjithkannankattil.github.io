@@ -1027,6 +1027,33 @@ window.STATIONS = [
       "https://ais-sa9.cdnstream1.com/1898_128"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "rne-radio-1-galicia",
+    "name": "RNE Radio 1 Galicia",
+    "category": "news",
+    "streams": [
+      "https://dispatcher.rndfnk.com/crtve/rne1/gal/mp3/high"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "hitz-latino-fm",
+    "name": "Hitz Latino FM",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/aq899a53rs8uv"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "loca-fm-deep-techno",
+    "name": "Loca FM Deep Techno",
+    "category": "music",
+    "streams": [
+      "https://s02.fjperezdj.com:8066/live"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

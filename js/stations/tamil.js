@@ -56,8 +56,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "89-4-tamil-fm",
@@ -281,8 +280,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio129/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "tamil-ragam",
@@ -1037,6 +1035,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/oogj1rc9cdctv"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "ullasamfm",
+    "name": "Ullasamfm",
+    "category": "music",
+    "streams": [
+      "https://eu10.fastcast4u.com:6740/stream"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "asal-fm",
+    "name": "Asal Fm",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/pzgws1kc41zuv"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "thaalam-radio",
+    "name": "Thaalam Radio",
+    "category": "music",
+    "streams": [
+      "https://thaalam.out.airtime.pro/thaalam_b"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

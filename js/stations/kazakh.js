@@ -24,7 +24,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio-streams.kaztrk.kz/shalqar/shalqar/icecast.audio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "beu",
@@ -72,7 +73,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio-streams.kaztrk.kz/classic/classic/icecast.audio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-azamat",
@@ -88,7 +90,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://okeyradio.ru/okey"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "pioner-fm",
@@ -147,4 +150,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";

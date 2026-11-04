@@ -658,7 +658,8 @@ window.STATIONS = [
     "streams": [
       "https://ice6.securenetsystems.net/INTRADIO?type=.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "offline": true
   },
   {
     "id": "hits-fm-91-2",
@@ -1019,6 +1020,33 @@ window.STATIONS = [
       "https://c7.radioboss.fm:18052/stream"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "gurgaon-ki-awaaz-fm",
+    "name": "Gurgaon Ki Awaaz FM",
+    "category": "music",
+    "streams": [
+      "https://gurgaonradio.out.airtime.pro/gurgaonradio_a"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "sunrise-radio",
+    "name": "Sunrise Radio",
+    "category": "music",
+    "streams": [
+      "https://stream1.themediasite.co.uk/8070/stream"
+    ],
+    "added": "2026-11-04"
+  },
+  {
+    "id": "mbc-radio-mauritius",
+    "name": "MBC Radio Mauritius",
+    "category": "news",
+    "streams": [
+      "https://radio.mbconline.xyz/hls/radiomauritus.m3u8"
+    ],
+    "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-03T20:42Z";
+window.STATIONS_CHECKED = "2026-11-04T07:25Z";
