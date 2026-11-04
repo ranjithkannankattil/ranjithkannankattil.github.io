@@ -77,55 +77,110 @@ window.OrgCore = (function () {
     return { by: by, kids: kids, roots: roots, depth: depth, inLoop: inLoop };
   }
 
-  // Lay out in "em" units. mode: wide | stack1 | stack2 (last level hangs down in one or two columns)
-  function arrange(t, W, H, hg, vg, mode) {
-    var pos = {}, IND = 1.1, SG = 0.5, stackOf = {};
+  // Boxes chosen to sit together in a column or matrix: siblings sharing p.grp, in table order
+  function blocksOf(chart, t) {
+    var by = {}, items = {};
+    chart.people.forEach(function (p) {
+      if (p.grp && t.by[p.parent] && !t.inLoop[p.id]) { var k = p.parent + '|' + p.grp; (by[k] = by[k] || []).push(p); }
+    });
+    Object.keys(t.kids).forEach(function (id) {
+      var done = {}, list = [];
+      t.kids[id].forEach(function (c) {
+        var p = t.by[c], k = p.grp ? id + '|' + p.grp : null;
+        if (k && by[k] && by[k].length > 1) {
+          if (!done[k]) { done[k] = 1; list.push({ block: by[k].map(function (x) { return x.id; }), cols: Math.max(1, by[k][0].cols || 1) }); }
+        } else list.push({ id: c });
+      });
+      items[id] = list;
+    });
+    return items;
+  }
+
+  // Lay out in "em" units. D = each box's width and height. mode: wide | stack1 | stack2
+  // (the last level hangs down in one or two columns). Rows line up by depth.
+  function arrange(t, D, items, hg, vg, mode) {
+    var pos = {}, IND = 1.1, SG = 0.5, RG = 1, BUS = 0.5, stackOf = {}, size = {}, lvl = {};
+    Object.keys(D).forEach(function (i) { var d = t.depth[i] || 0; lvl[d] = Math.max(lvl[d] || 0, D[i].h); });
     function isStack(id) {
       var k = t.kids[id];
-      return mode !== 'wide' && k.length >= 2 && k.every(function (c) { return !t.kids[c].length; });
+      return mode !== 'wide' && k.length >= 2 && items[id].length === k.length && k.every(function (c) { return !t.kids[c].length; });
     }
-    var size = {};
+    function widest(ids) { return ids.reduce(function (m, i) { return Math.max(m, D[i].w); }, 0); }
+    function sumH(ids, step) { return ids.reduce(function (m, i) { return m + D[i].h + step; }, 0); }
+    function blockSize(b) {
+      var ms = b.block.map(measure), c = Math.min(b.cols, ms.length), rows = Math.ceil(ms.length / c), colW = [], rowH = [];
+      ms.forEach(function (m, i) { var j = i % c, r = Math.floor(i / c); colW[j] = Math.max(colW[j] || 0, m.w); rowH[r] = Math.max(rowH[r] || 0, m.h); });
+      var xs = [], x = 0; colW.forEach(function (w, j) { xs[j] = x; x += w + hg; });
+      var side = c === 1, sp, w;
+      if (side) { sp = 0; w = IND + colW[0]; } else { var g = Math.floor(c / 2) - 1; sp = xs[g] + colW[g] + hg / 2; w = x - hg; }
+      var gap = side ? SG : RG, h = rowH.reduce(function (m, v) { return m + v; }, 0) + gap * (rows - 1);
+      b.m = { ms: ms, c: c, colW: colW, rowH: rowH, xs: xs, side: side, gap: gap };
+      return { w: w, a: sp, h: h };
+    }
     function measure(id) {
-      var k = t.kids[id], s;
-      if (!k.length) s = { w: W, a: W / 2 };
+      var k = t.kids[id], s, pw = D[id].w, ph = lvl[t.depth[id] || 0];
+      if (!k.length) s = { w: pw, a: pw / 2, h: D[id].h };
       else if (isStack(id)) {
         stackOf[id] = mode;
-        s = mode === 'stack1' ? { w: W / 2 + IND + W, a: W / 2 } : { w: 2 * (W + IND), a: W + IND };
+        if (mode === 'stack1') {
+          var mw = widest(k);
+          s = { w: Math.max(pw, pw / 2 + IND + mw), a: pw / 2, h: D[id].h + vg * 0.75 + sumH(k, SG) };
+        } else {
+          var L = k.filter(function (_, i) { return i % 2 === 0; }), R = k.filter(function (_, i) { return i % 2 === 1; });
+          var a = Math.max(widest(L) + IND, pw / 2);
+          s = { w: a + Math.max(widest(R) + IND, pw / 2), a: a, h: D[id].h + vg * 0.75 + Math.max(sumH(L, SG), sumH(R, SG)) };
+        }
       } else {
-        var sum = 0, first = 0, last = 0;
-        k.forEach(function (c, i) {
-          var m = measure(c);
+        var sum = 0, first = 0, last = 0, tall = 0, n = items[id].length;
+        items[id].forEach(function (it, i) {
+          var m = it.block ? blockSize(it) : measure(it.id);
+          it.s = m;
           if (i === 0) first = sum + m.a;
-          if (i === k.length - 1) last = sum + m.a;
-          sum += m.w + (i < k.length - 1 ? hg : 0);
+          if (i === n - 1) last = sum + m.a;
+          sum += m.w + (i < n - 1 ? hg : 0); tall = Math.max(tall, m.h);
         });
-        var a = (first + last) / 2, shift = Math.max(0, W / 2 - a);
-        s = { w: Math.max(sum + shift, a + shift + W / 2), a: a + shift, shift: shift };
+        var c0 = (first + last) / 2, shift = Math.max(0, pw / 2 - c0);
+        s = { w: Math.max(sum + shift, c0 + shift + pw / 2), a: c0 + shift, shift: shift, h: ph + vg + tall };
       }
       size[id] = s; return s;
     }
+    function placeBlock(b, left, top) {
+      var m = b.m, sp = left + b.s.a, y = top;
+      b.block.forEach(function (c, i) {
+        var j = i % m.c, r = Math.floor(i / m.c);
+        if (j === 0 && r) y += m.rowH[r - 1] + m.gap;
+        var cell = left + m.xs[j], mm = m.ms[i];
+        if (m.side) place(c, sp + IND, y); // whole team stays right of the line, so it never crosses a box
+        else place(c, cell + (m.colW[j] - mm.w) / 2, y);
+        pos[c].blk = { spine: sp, bus: y - BUS, side: m.side, top: top };
+      });
+    }
     function place(id, left, top) {
-      var s = size[id], k = t.kids[id], cx = left + s.a;
-      pos[id] = { x: cx - W / 2, y: top };
+      var s = size[id], k = t.kids[id], cx = left + s.a, h = D[id].h;
+      pos[id] = { x: cx - D[id].w / 2, y: top };
       if (!k.length) return;
-      var y0 = top + H + vg * 0.75;
+      var y0 = top + h + vg * 0.75;
       if (stackOf[id] === 'stack1') {
-        k.forEach(function (c, i) { pos[c] = { x: cx + IND, y: y0 + i * (H + SG), side: 'r' }; });
+        k.forEach(function (c) { pos[c] = { x: cx + IND, y: y0, side: 'r' }; y0 += D[c].h + SG; });
       } else if (stackOf[id]) {
+        var yl = y0, yr = y0;
         k.forEach(function (c, i) {
-          var r = Math.floor(i / 2), right = i % 2 === 1;
-          pos[c] = { x: right ? cx + IND : cx - IND - W, y: y0 + r * (H + SG), side: right ? 'r' : 'l' };
+          if (i % 2) { pos[c] = { x: cx + IND, y: yr, side: 'r' }; yr += D[c].h + SG; }
+          else { pos[c] = { x: cx - IND - D[c].w, y: yl, side: 'l' }; yl += D[c].h + SG; }
         });
       } else {
-        var x = left + (s.shift || 0);
-        k.forEach(function (c) { place(c, x, top + H + vg); x += size[c].w + hg; });
+        var x = left + (s.shift || 0), yk = top + lvl[t.depth[id] || 0] + vg;
+        items[id].forEach(function (it) {
+          if (it.block) placeBlock(it, x, yk); else place(it.id, x, yk);
+          x += it.s.w + hg;
+        });
       }
     }
     var x = 0;
     t.roots.forEach(function (r) { measure(r); place(r, x, 0); x += size[r].w + hg * 1.5; });
     var maxX = 0, maxY = 0, minX = 0;
     Object.keys(pos).forEach(function (i) {
-      maxX = Math.max(maxX, pos[i].x + W); maxY = Math.max(maxY, pos[i].y + H); minX = Math.min(minX, pos[i].x);
+      maxX = Math.max(maxX, pos[i].x + D[i].w); maxY = Math.max(maxY, pos[i].y + D[i].h); minX = Math.min(minX, pos[i].x);
     });
     return { pos: pos, stack: stackOf, ext: { w: maxX - minX, h: maxY, x0: minX } };
   }
@@ -188,40 +243,57 @@ window.OrgCore = (function () {
       .filter(function (w, i, a) { return a.indexOf(w) === i; });
     var modes = chart.arrange === 'auto' || !chart.arrange ? ['wide', 'stack1', 'stack2'] : [chart.arrange];
     var best = null, HG = 0.8, VG = 1.7;
-    widths.forEach(function (W) {
-      var inner = W - 2 * PADX, n = 1;
-      chart.people.forEach(function (p) {
-        var c = 0;
-        linesOf[p.id].forEach(function (l) {
-          c += l.size * (l.multi ? 1 : wrap(l.cells[0].t, inner / (k * l.size), l.cells[0].bold).length);
-        });
-        n = Math.max(n, c);
+    // Box sizes for one base width: resized boxes scale from the base, but never below their own text.
+    var items = blocksOf(chart, t), ownMin = {};
+    chart.people.forEach(function (p) {
+      var m = 3;
+      linesOf[p.id].forEach(function (l) {
+        if (l.multi) m = Math.max(m, splitWidth(l, k));
+        else String(l.cells[0].t).split(/\s+/).forEach(function (w) { m = Math.max(m, em(w, l.cells[0].bold) * k * l.size); });
       });
-      var H = n * LH + 2 * PADY;
+      ownMin[p.id] = m + 2 * PADX + 0.1;
+    });
+    function dims(W) {
+      var D = {}, base = 0, any = 0;
+      chart.people.forEach(function (p) {
+        var w = Math.max(W * (p.sw || 1), ownMin[p.id]), inner = w - 2 * PADX, c = 0;
+        linesOf[p.id].forEach(function (l) { c += l.size * (l.multi ? 1 : wrap(l.cells[0].t, inner / (k * l.size), l.cells[0].bold).length); });
+        var nat = Math.max(1, c) * LH + 2 * PADY;
+        D[p.id] = { w: w, h: nat };
+        any = Math.max(any, nat);
+        if (!p.sh || p.sh === 1) base = Math.max(base, nat);
+      });
+      base = base || any;
+      chart.people.forEach(function (p) { D[p.id].h = Math.max(D[p.id].h, base * (p.sh || 1)); });
+      return D;
+    }
+    widths.forEach(function (W) {
+      var D = dims(W);
       modes.forEach(function (m) {
-        var L = arrange(t, W, H, HG, VG, m);
+        var L = arrange(t, D, items, HG, VG, m);
         var f = Math.min(aw / L.ext.w, ah / L.ext.h), used = Math.min(f, MAX_PT);
         var fill = (L.ext.w * used * L.ext.h * used) / (aw * ah);
         var score = used * (1 + 0.25 * fill) - (m === 'wide' ? 0 : 0.02);
-        if (!best || score > best.score) best = { score: score, W: W, H: H, m: m, f: used };
+        if (!best || score > best.score) best = { score: score, W: W, D: D, m: m, f: used };
       });
     });
     // Spread the spare room into the gaps so the chart fills the page, then settle the final size.
     var f = best.f, leaves = 0, rows = 0;
     Object.keys(t.kids).forEach(function (i) { if (!t.kids[i].length) leaves++; rows = Math.max(rows, t.depth[i] || 0); });
-    var L0 = arrange(t, best.W, best.H, HG, VG, best.m);
+    var L0 = arrange(t, best.D, items, HG, VG, best.m);
     var hg = Math.min(3.2, HG + Math.max(0, aw / f - L0.ext.w) / Math.max(1, leaves - 1));
     var vg = Math.min(9, VG + Math.max(0, ah / f - L0.ext.h) / Math.max(1, rows));
-    var L = arrange(t, best.W, best.H, hg, vg, best.m);
+    var L = arrange(t, best.D, items, hg, vg, best.m);
     f = Math.min(f, aw / L.ext.w, ah / L.ext.h);
     res.f = Math.floor(f * 10) / 10; f = res.f;
     res.tooSmall = f < MIN_PT; res.mode = best.m;
 
     var ox = page.m + 2 + (aw - L.ext.w * f) / 2 - L.ext.x0 * f;
     var oy = page.m + 2 + titleH + (ah - L.ext.h * f) / 2;
-    var bw = best.W * f, bh = best.H * f, inner = best.W - 2 * PADX, map = {};
+    var map = {};
     chart.people.forEach(function (p) {
       var q = L.pos[p.id]; if (!q) return;
+      var dd = best.D[p.id], inner = dd.w - 2 * PADX, bw = dd.w * f, bh = dd.h * f;
       var d = t.depth[p.id] || 0, st = styleOf(chart, p, d), lines = [];
       var paras = linesOf[p.id];
       paras.forEach(function (l) {
@@ -231,7 +303,7 @@ window.OrgCore = (function () {
           lines.push({ size: l.size, cells: [{ t: s, pos: c.pos, bold: c.bold, italic: c.italic, underline: c.underline }] });
         });
       });
-      var n = { id: p.id, x: ox + q.x * f, y: oy + q.y * f, w: bw, h: bh, depth: d, lines: lines, paras: paras, side: q.side, fill2: st.fill2, fill: st.fill, border: st.border, text: st.text };
+      var n = { id: p.id, x: ox + q.x * f, y: oy + q.y * f, w: bw, h: bh, depth: d, lines: lines, paras: paras, side: q.side, blk: q.blk ? { spine: ox + q.blk.spine * f, bus: oy + q.blk.bus * f, side: q.blk.side, top: oy + q.blk.top * f } : null, fill2: st.fill2, fill: st.fill, border: st.border, text: st.text };
       map[p.id] = n; res.nodes.push(n);
     });
     var lineOf = function (p) {
@@ -242,7 +314,19 @@ window.OrgCore = (function () {
       var c = map[p.id], par = !t.inLoop[p.id] && map[p.parent];
       if (c && par) {
         var px = par.x + par.w / 2, py = par.y + par.h, cx = c.x + c.w / 2, cy = c.y, st = lineOf(p), e;
-        if (c.side) {
+        if (c.blk) {
+          var b = c.blk, sp = b.spine, mid = py + (b.top - py) / 2, same = Math.abs(sp - px) < 0.5, ey2 = c.y + c.h / 2;
+          var dx = Math.abs(cx - px) < 1 ? 1 : cx - px, dxs = Math.abs(c.x - px) < 1 ? 1 : c.x - px;
+          if (b.side) {
+            e = same
+              ? { type: 'bent2', from: par.id, to: c.id, sf: 2, st: 1, pts: [[px, py], [px, ey2], [c.x, ey2]] }
+              : { type: 'bent4', from: par.id, to: c.id, sf: 2, st: 1, pts: [[px, py], [px, mid], [sp, mid], [sp, ey2], [c.x, ey2]], adj: [(mid - py) / (ey2 - py), (sp - px) / dxs] };
+          } else {
+            e = same
+              ? { type: 'bent3', from: par.id, to: c.id, sf: 2, st: 0, pts: [[px, py], [px, b.bus], [cx, b.bus], [cx, cy]], adj: [(b.bus - py) / (cy - py)] }
+              : { type: 'bent5', from: par.id, to: c.id, sf: 2, st: 0, pts: [[px, py], [px, mid], [sp, mid], [sp, b.bus], [cx, b.bus], [cx, cy]], adj: [(mid - py) / (cy - py), (sp - px) / dx, (b.bus - py) / (cy - py)] };
+          }
+        } else if (c.side) {
           var ey = c.y + c.h / 2, ex = c.side === 'r' ? c.x : c.x + c.w;
           e = { type: 'bent2', from: par.id, to: c.id, sf: 2, st: c.side === 'r' ? 1 : 3, pts: [[px, py], [px, ey], [ex, ey]] };
         } else if (Math.abs(px - cx) < 0.5) {
@@ -355,12 +439,13 @@ window.OrgCore = (function () {
       geom = 'straightConnector1';
     } else {
       // vertical-first elbows are PowerPoint's elbow turned a quarter: rot 90° = runs to the left, 270° + flip = to the right
-      var cx = (a[0] + b[0]) / 2, cy = (a[1] + b[1]) / 2, l = Math.abs(dy), s = Math.abs(dx);
+      var cx = (a[0] + b[0]) / 2, cy = (a[1] + b[1]) / 2, l = Math.abs(dy), s = Math.max(Math.abs(dx), /bent[45]/.test(e.type) ? 1 : 0);
       var attr = dx < 0 ? ' rot="5400000"' : ' rot="16200000" flipH="1"';
       xf = '<a:xfrm' + attr + '><a:off x="' + E(cx - l / 2) + '" y="' + E(cy - s / 2) + '"/><a:ext cx="' + E(l) + '" cy="' + E(s) + '"/></a:xfrm>';
-      geom = e.type === 'bent2' ? 'bentConnector2' : 'bentConnector3';
+      geom = { bent2: 'bentConnector2', bent3: 'bentConnector3', bent4: 'bentConnector4', bent5: 'bentConnector5' }[e.type];
     }
-    var av = geom === 'bentConnector3' ? '<a:avLst><a:gd name="adj1" fmla="val 50000"/></a:avLst>' : '<a:avLst/>';
+    var adj = e.adj || (geom === 'bentConnector3' ? [0.5] : []);
+    var av = adj.length ? '<a:avLst>' + adj.map(function (v, i) { return '<a:gd name="adj' + (i + 1) + '" fmla="val ' + Math.round(v * 100000) + '"/>'; }).join('') + '</a:avLst>' : '<a:avLst/>';
     return '<p:cxnSp><p:nvCxnSpPr><p:cNvPr id="' + id + '" name="' + (e.kind === 'dotted' ? 'Dotted line ' : 'Reporting line ') + id + '"/><p:cNvCxnSpPr>' +
       '<a:stCxn id="' + ids[e.from] + '" idx="' + e.sf + '"/><a:endCxn id="' + ids[e.to] + '" idx="' + e.st + '"/></p:cNvCxnSpPr><p:nvPr/></p:nvCxnSpPr>' +
       '<p:spPr>' + xf + '<a:prstGeom prst="' + geom + '">' + av + '</a:prstGeom><a:ln w="' + E(e.width) + '"><a:solidFill><a:srgbClr val="' + RGB(e.color) + '"/></a:solidFill><a:prstDash val="' + (e.dash === 'dash' ? 'dash' : 'solid') + '"/></a:ln></p:spPr></p:cxnSp>';

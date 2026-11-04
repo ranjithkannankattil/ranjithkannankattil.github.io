@@ -28,7 +28,7 @@
 <link rel="stylesheet" href="../css/style.css?v=17">
 <link rel="stylesheet" href="../css/productivity.css?v=4">
 <link rel="stylesheet" href="../css/tool-timeline.css?v=2">
-<link rel="stylesheet" href="../css/tool-orgchart.css?v=3">
+<link rel="stylesheet" href="../css/tool-orgchart.css?v=4">
 </head>
 <body data-section="productivity" class="wide">
 
@@ -135,6 +135,7 @@
           <button class="tl-btn on" type="button" role="tab" data-lt="box" aria-selected="true">Boxes</button>
           <button class="tl-btn" type="button" role="tab" data-lt="text" aria-selected="false">Text</button>
           <button class="tl-btn" type="button" role="tab" data-lt="lines" aria-selected="false">Lines</button>
+          <button class="tl-btn" type="button" role="tab" data-lt="layout" aria-selected="false">Layout</button>
         </div>
         <div class="oc-lsec" data-ls="box">
           <div><h2 class="oc-h">Box shade</h2><div class="oc-sws" id="swFill"></div></div>
@@ -168,6 +169,32 @@
             <select id="lineW" aria-label="Line thickness"><option value="0.75">0.75 pt</option><option value="1">1 pt</option><option value="1.25">1.25 pt</option><option value="1.5">1.5 pt</option><option value="2">2 pt</option><option value="3">3 pt</option></select>
           </div>
           <div><h2 class="oc-h">Line colour</h2><div class="oc-sws" id="swLine"></div></div>
+        </div>
+        <div class="oc-lsec" data-ls="layout" hidden>
+          <div>
+            <h2 class="oc-h">Box size</h2>
+            <div class="oc-size">
+              <span>Width</span><span class="tl-grp"><button class="tl-btn ico" type="button" data-rs="sw" data-step="0.87" aria-label="Narrower">−</button><button class="tl-btn ico" type="button" data-rs="sw" data-step="1.15" aria-label="Wider">+</button></span>
+              <span>Height</span><span class="tl-grp"><button class="tl-btn ico" type="button" data-rs="sh" data-step="0.87" aria-label="Shorter">−</button><button class="tl-btn ico" type="button" data-rs="sh" data-step="1.15" aria-label="Taller">+</button></span>
+            </div>
+            <div class="oc-row" style="margin-top:.4rem"><button class="tl-btn" type="button" id="rsReset">Reset size</button></div>
+            <p class="oc-hint">Applies to the choice above, or the whole chart. Boxes never get smaller than their text, and the chart refits to the page, so bigger boxes can make the text smaller.</p>
+          </div>
+          <div>
+            <h2 class="oc-h">Arrange selected boxes</h2>
+            <p class="oc-hint" style="margin-top:0">Select two or more boxes with the same manager. Reporting lines stay the same.</p>
+            <div class="oc-row" style="margin-top:.4rem">
+              <button class="tl-btn" type="button" id="layKids">Select their reports</button>
+              <button class="tl-btn" type="button" id="layCol">Column</button>
+            </div>
+            <div class="oc-row oc-matrix" style="margin-top:.4rem">
+              <label>Rows <input type="number" id="layR" min="1" max="50" value="2" inputmode="numeric"></label>
+              <span>×</span>
+              <label>Columns <input type="number" id="layC" min="1" max="50" value="3" inputmode="numeric"></label>
+              <button class="tl-btn" type="button" id="layGrid">Matrix</button>
+            </div>
+            <div class="oc-row" style="margin-top:.4rem"><button class="tl-btn" type="button" id="layReset">Back to normal</button></div>
+          </div>
         </div>
         <div><button class="tl-btn" type="button" id="resetLook">Reset colours and lines</button></div>
       </div>
@@ -238,8 +265,8 @@
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="../js/tools.js?v=11"></script>
-<script src="../js/tool-orgchart-core.js?v=2"></script>
-<script src="../js/tool-orgchart.js?v=3"></script>
+<script src="../js/tool-orgchart-core.js?v=4"></script>
+<script src="../js/tool-orgchart.js?v=4"></script>
 <script src="../js/nav.js?v=20" defer></script>
 <script src="../js/visits.js?v=2" defer></script>
 </body>

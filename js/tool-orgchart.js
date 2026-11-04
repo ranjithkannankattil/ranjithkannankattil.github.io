@@ -113,6 +113,9 @@
       if (p.parentText) o.parentText = String(p.parentText);
       if (p.dottedText) o.dottedText = String(p.dottedText);
       if (p.unsure) o.unsure = true;
+      if (p.grp) { o.grp = String(p.grp); o.cols = Math.max(1, Math.min(50, Math.round(+p.cols) || 1)); }
+      if (+p.sw > 0 && +p.sw !== 1) o.sw = Math.max(0.4, Math.min(4, +p.sw));
+      if (+p.sh > 0 && +p.sh !== 1) o.sh = Math.max(0.4, Math.min(4, +p.sh));
       if (p.badColour && typeof p.badColour === 'object') { var bc = {}; Object.keys(p.badColour).forEach(function (k) { if (COLS.some(function (c) { return c.k === k; })) bc[k] = String(p.badColour[k]); }); if (Object.keys(bc).length) o.badColour = bc; }
       return o;
     });
@@ -631,7 +634,7 @@
       var vals = {}; map.forEach(function (m) { if (r[m.i]) vals[m.f.id] = r[m.i]; });
       var was = keep[String(vals[first.id] || '').toLowerCase()];
       var p = { id: uid(), parent: null, dotted: null, vals: vals, style: was ? was.style : {} };
-      if (was && was.line) p.line = was.line;
+      if (was) ['line', 'grp', 'cols', 'sw', 'sh'].forEach(function (k) { if (was[k]) p[k] = was[k]; });
       var cols = {}; Object.keys(colIdx).forEach(function (k) { if (r[colIdx[k]]) cols[k] = r[colIdx[k]]; });
       c.people.push(p); raw.push({ p: p, rep: r[rIdx] || '', dot: dIdx >= 0 ? r[dIdx] || '' : '', cols: cols });
     });
@@ -835,6 +838,54 @@
       saveBlob(blob, fileBase() + '.' + kind); $('dlDlg').close();
     }).catch(function (e) { toast('Download failed: ' + e.message); }).then(function () { b.disabled = false; b.textContent = 'Download'; });
   });
+
+  // ---------- layout of selected boxes ----------
+  function needSel() {
+    if (sel.type === 'all') { toast('First select the boxes on the chart.'); return false; }
+    return true;
+  }
+  function group(cols, r) {
+    if (!needSel()) return;
+    var byBoss = {}, skipped = 0, over = 0;
+    selectedIds().forEach(function (id) { var p = byId(id); if (byId(p.parent)) (byBoss[p.parent] = byBoss[p.parent] || []).push(p); else skipped++; });
+    var made = 0;
+    Object.keys(byBoss).forEach(function (k) {
+      var list = byBoss[k];
+      if (list.length < 2) { skipped++; return; }
+      var g = uid(); list.forEach(function (p) { p.grp = g; p.cols = cols; });
+      made++; if (r && list.length > r * cols) over = 1;
+    });
+    if (!made) { toast('Select two or more boxes with the same manager.'); return; }
+    draw(); commit();
+    toast(over ? 'More boxes than cells, so extra rows were added.' : skipped ? 'Done. Boxes without a teammate selected stayed where they were.' : 'Arranged. Reporting lines are unchanged.');
+  }
+  $('layCol').addEventListener('click', function () { group(1); });
+  $('layGrid').addEventListener('click', function () {
+    var r = Math.max(1, Math.round(+$('layR').value) || 1), c = Math.max(1, Math.round(+$('layC').value) || 1);
+    group(c, r);
+  });
+  $('layReset').addEventListener('click', function () {
+    selectedIds().forEach(function (id) { var p = byId(id); delete p.grp; delete p.cols; });
+    draw(); commit();
+  });
+  $('layKids').addEventListener('click', function () {
+    if (sel.type === 'all') { toast('First select a manager on the chart.'); return; }
+    var ids = selectedIds(), kids = chart.people.filter(function (p) { return ids.indexOf(p.parent) >= 0; }).map(function (p) { return p.id; });
+    if (!kids.length) { toast('Those boxes have nobody reporting to them.'); return; }
+    sel = { type: 'ids', ids: kids }; markSel();
+  });
+  function resize(k, step) {
+    selectedIds().forEach(function (id) {
+      var p = byId(id), v = step ? (p[k] || 1) * step : 1;
+      v = Math.max(0.4, Math.min(4, Math.round(v * 100) / 100));
+      if (Math.abs(v - 1) < 0.01) delete p[k]; else p[k] = v;
+    });
+    draw(); commit();
+  }
+  document.querySelectorAll('[data-rs]').forEach(function (b) {
+    b.addEventListener('click', function () { resize(b.dataset.rs, +b.dataset.step); });
+  });
+  $('rsReset').addEventListener('click', function () { resize('sw'); resize('sh'); });
 
   // ---------- settings tabs ----------
   document.querySelectorAll('[data-lt]').forEach(function (b) {
