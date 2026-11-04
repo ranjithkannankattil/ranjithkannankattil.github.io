@@ -18,6 +18,26 @@
     }));
   }
   var uid = O.uid;
+  // colour columns in the table and the Excel template
+  var COLS = [{ k: 'fill', h: 'Box colour' }, { k: 'fill2', h: 'Gradient to' }, { k: 'text', h: 'Text colour' }];
+  var colCtx = null;
+  function parseColour(v) { // #RRGGBB, RRGGBB, #RGB or a colour name such as "navy"
+    v = String(v || '').trim(); if (!v) return null;
+    if (/^[0-9a-f]{6}$/i.test(v) || /^[0-9a-f]{3}$/i.test(v)) v = '#' + v;
+    colCtx = colCtx || document.createElement('canvas').getContext('2d');
+    colCtx.fillStyle = '#010203'; colCtx.fillStyle = v; var a = colCtx.fillStyle;
+    colCtx.fillStyle = '#FEFDFC'; colCtx.fillStyle = v; var b = colCtx.fillStyle;
+    return a === b && /^#[0-9a-f]{6}$/i.test(a) ? a.toUpperCase() : null;
+  }
+  function setColour(p, key, v) {
+    v = String(v || '').trim();
+    if (p.badColour) { delete p.badColour[key]; if (!Object.keys(p.badColour).length) delete p.badColour; }
+    if (!v) { delete p.style[key]; return; }
+    if (/^none$/i.test(v)) { if (key === 'fill2') p.style.fill2 = 'none'; else delete p.style[key]; return; }
+    var c = parseColour(v);
+    if (c) { p.style[key] = c; return; }
+    delete p.style[key]; p.badColour = p.badColour || {}; p.badColour[key] = v;
+  }
   var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
   var store = {
     get: function (k) { try { return localStorage.getItem('oc:' + k); } catch (e) { return null; } },
@@ -25,9 +45,10 @@
   };
 
   // ---------- chart data ----------
+  var SAMPLE_TITLE = 'Project team';
   function base() {
     return {
-      v: 1, title: '', page: 'ppt169', arrange: 'auto', corners: 'square',
+      v: 1, title: '', page: 'ppt169', arrange: 'auto', corners: 'square', font: 'Arial', gradDir: 'h',
       fields: [{ id: uid(), name: 'Name', align: 'c', bold: true }, { id: uid(), name: 'Job title', align: 'c', bold: false }, { id: uid(), name: 'Location', align: 'c', bold: false }],
       people: [], box: { fill: '#EDEAF4', border: '#5C4D7D', text: '#1B1B1F' }, levels: [],
       line: { dash: 'solid', color: '#5C4D7D', width: 1.25 }
@@ -35,21 +56,22 @@
   }
   function sample() {
     var c = base(), f = c.fields, ids = {};
-    var add = function (key, n, j, l, boss, dot) {
-      var v = {}; v[f[0].id] = n; v[f[1].id] = j; v[f[2].id] = l;
+    c.fields = f = [f[0], f[1], { id: uid(), name: 'Employee or contractor', align: 'l', bold: false, size: 's' }, { id: uid(), name: 'Home country', align: 'r', bold: false, size: 's', join: true }];
+    var add = function (key, n, j, t, h, boss, dot) {
+      var v = {}; v[f[0].id] = n; v[f[1].id] = j; v[f[2].id] = t; v[f[3].id] = h;
       ids[key] = uid(); c.people.push({ id: ids[key], parent: boss ? ids[boss] : null, dotted: dot ? ids[dot] : null, vals: v, style: {} });
     };
-    add('a', 'Anna Rossi', 'Project Director', 'Milan');
-    add('b', 'Mark Lee', 'Engineering Manager', 'Houston', 'a');
-    add('c', 'Priya Nair', 'Construction Manager', 'Maputo', 'a');
-    add('d', 'Tom Evans', 'Project Controls Lead', 'London', 'a');
-    add('e', 'Sara Conti', 'Process Lead', 'Milan', 'b');
-    add('f', 'Ken Park', 'Piping Lead', 'Seoul', 'b');
-    add('g', 'Luís Matos', 'Site Manager', 'Maputo', 'c');
-    add('h', 'Asha Menon', 'Marine Lead', 'Bangalore', 'c', 'd');
-    add('i', 'Ben Clark', 'Planner', 'London', 'd');
-    add('j', 'Mei Lin', 'Cost Engineer', 'Qingdao', 'd');
-    c.title = 'Project team'; c.levels = shades('#5C4D7D', 3);
+    add('a', 'Anna Rossi', 'Project Director', 'Employee', 'Italy');
+    add('b', 'Mark Lee', 'Engineering Manager', 'Employee', 'USA', 'a');
+    add('c', 'Priya Nair', 'Construction Manager', 'Employee', 'India', 'a');
+    add('d', 'Tom Evans', 'Project Controls Lead', 'Contractor', 'UK', 'a');
+    add('e', 'Sara Conti', 'Process Lead', 'Employee', 'Italy', 'b');
+    add('f', 'Ken Park', 'Piping Lead', 'Contractor', 'Korea', 'b');
+    add('g', 'Luís Matos', 'Site Manager', 'Employee', 'Mozambique', 'c');
+    add('h', 'Asha Menon', 'Marine Lead', 'Contractor', 'India', 'c', 'd');
+    add('i', 'Ben Clark', 'Planner', 'Employee', 'UK', 'd');
+    add('j', 'Mei Lin', 'Cost Engineer', 'Contractor', 'China', 'd');
+    c.title = SAMPLE_TITLE; c.levels = shades('#5C4D7D', 3);
     return c;
   }
   function textOn(hex) {
@@ -70,7 +92,7 @@
   }
   function normalise(c) {
     var d = base(), col = function (v, alt) { return O.HEX.test(v) ? v : alt; };
-    var st = function (s) { var o = {}; s = s || {}; ['fill', 'border', 'text'].forEach(function (k) { if (O.HEX.test(s[k])) o[k] = s[k]; }); return o; };
+    var st = function (s) { var o = {}; s = s || {}; ['fill', 'border', 'text', 'fill2'].forEach(function (k) { if (O.HEX.test(s[k])) o[k] = s[k]; }); if (s.fill2 === 'none') o.fill2 = 'none'; return o; };
     var ln = function (s, whole) {
       var o = {}; s = s || {};
       if (s.dash === 'dash' || s.dash === 'solid') o.dash = s.dash;
@@ -80,9 +102,10 @@
     };
     c = c && typeof c === 'object' ? c : {};
     var fields = (Array.isArray(c.fields) ? c.fields : d.fields).slice(0, 30).map(function (f) {
-      return { id: String(f.id || uid()), name: String(f.name || 'Row'), align: /^[lcr]$/.test(f.align) ? f.align : 'c', bold: !!f.bold };
+      return { id: String(f.id || uid()), name: String(f.name || 'Row'), align: /^[lcr]$/.test(f.align) ? f.align : 'c', bold: !!f.bold, italic: !!f.italic, underline: !!f.underline, size: /^(s|m|l|xl)$/.test(f.size) ? f.size : 'm', join: !!f.join };
     });
     if (!fields.length) fields = d.fields;
+    fields[0].join = false;
     var people = (Array.isArray(c.people) ? c.people : []).slice(0, 3000).map(function (p) {
       var v = {}; fields.forEach(function (f) { if (p.vals && p.vals[f.id] != null) v[f.id] = String(p.vals[f.id]); });
       var o = { id: String(p.id || uid()), parent: p.parent ? String(p.parent) : null, dotted: p.dotted ? String(p.dotted) : null, vals: v, style: st(p.style) };
@@ -90,6 +113,7 @@
       if (p.parentText) o.parentText = String(p.parentText);
       if (p.dottedText) o.dottedText = String(p.dottedText);
       if (p.unsure) o.unsure = true;
+      if (p.badColour && typeof p.badColour === 'object') { var bc = {}; Object.keys(p.badColour).forEach(function (k) { if (COLS.some(function (c) { return c.k === k; })) bc[k] = String(p.badColour[k]); }); if (Object.keys(bc).length) o.badColour = bc; }
       return o;
     });
     var bx = c.box || {};
@@ -97,7 +121,8 @@
       v: 1, title: String(c.title || ''), page: O.PAGES[c.page] ? c.page : 'ppt169',
       arrange: /^(auto|wide|stack1|stack2)$/.test(c.arrange) ? c.arrange : 'auto',
       corners: c.corners === 'round' ? 'round' : 'square', fields: fields, people: people,
-      box: { fill: col(bx.fill, d.box.fill), border: col(bx.border, d.box.border), text: col(bx.text, d.box.text) },
+      font: O.FONTS[c.font] ? c.font : 'Arial', gradDir: c.gradDir === 'v' ? 'v' : 'h',
+      box: Object.assign(st(bx), { fill: col(bx.fill, d.box.fill), border: col(bx.border, d.box.border), text: col(bx.text, d.box.text) }),
       levels: (Array.isArray(c.levels) ? c.levels : []).slice(0, 30).map(st), line: ln(c.line, true)
     };
   }
@@ -134,6 +159,7 @@
       if (p.parentText) add(p.id, (resolve(p.parentText, p.id).many ? '“' + p.parentText + '” matches more than one person — pick one.' : '“' + p.parentText + '” isn’t in the list.'), true);
       if (p.dottedText) add(p.id, 'Dotted line: “' + p.dottedText + '” isn’t in the list.', true);
       if (t.inLoop[p.id]) add(p.id, 'Reporting loop — this person ends up reporting to themselves.', true);
+      if (p.badColour) Object.keys(p.badColour).forEach(function (k) { add(p.id, '“' + p.badColour[k] + '” isn’t a colour. Use a code like #5C4D7D.', true); });
       if (p.unsure) add(p.id, 'Manager is a best guess from the old chart — please check.', true);
       if (n && c[n.toLowerCase()] > 1 && !soft.test(n)) add(p.id, 'Same name as someone else.', false);
     });
@@ -159,13 +185,17 @@
   // ---------- text rows ----------
   function renderFields() {
     $('fields').innerHTML = chart.fields.map(function (f, i) {
-      var seg = ['l', 'c', 'r'].map(function (a) {
-        return '<button type="button" class="tl-btn' + (f.align === a ? ' on' : '') + '" data-falign="' + a + '" aria-pressed="' + (f.align === a) + '" aria-label="Align ' + { l: 'left', c: 'centre', r: 'right' }[a] + '">' + { l: 'Left', c: 'Centre', r: 'Right' }[a] + '</button>';
+      var locked = !!f.join && i > 0, seg = ['l', 'c', 'r'].map(function (a) {
+        return '<button type="button" class="tl-btn' + (f.align === a && !locked ? ' on' : '') + '" data-falign="' + a + '" aria-pressed="' + (f.align === a) + '"' + (locked ? ' disabled' : '') + '>' + { l: 'Left', c: 'Centre', r: 'Right' }[a] + '</button>';
       }).join('');
+      var style = [['bold', 'B', 'Bold'], ['italic', 'I', 'Italic'], ['underline', 'U', 'Underline']].map(function (x) {
+        return '<button type="button" class="tl-btn oc-fmt ' + x[0] + (f[x[0]] ? ' on' : '') + '" data-ffmt="' + x[0] + '" aria-pressed="' + !!f[x[0]] + '" aria-label="' + x[2] + '">' + x[1] + '</button>';
+      }).join('');
+      var size = '<select class="oc-fsize" data-fsize aria-label="Text size of this row">' + [['s', 'Small'], ['m', 'Normal'], ['l', 'Large'], ['xl', 'Extra large']].map(function (x) { return '<option value="' + x[0] + '"' + (f.size === x[0] ? ' selected' : '') + '>' + x[1] + '</option>'; }).join('') + '</select>';
       return '<li data-f="' + f.id + '"><span class="oc-fno">' + (i + 1) + '</span>' +
         '<input class="oc-fname" value="' + esc(f.name) + '" aria-label="Name of row ' + (i + 1) + '">' +
-        '<span class="tl-grp">' + seg + '</span>' +
-        '<button type="button" class="tl-btn' + (f.bold ? ' on' : '') + '" data-fbold aria-pressed="' + f.bold + '" aria-label="Bold"><b>B</b></button>' +
+        '<span class="tl-grp">' + seg + '</span><span class="tl-grp">' + style + '</span>' + size +
+        '<button type="button" class="tl-btn' + (f.join ? ' on' : '') + '" data-fjoin aria-pressed="' + !!f.join + '" title="Puts this next to the row above: two sit left and right, three sit left, centre and right"' + (i ? '' : ' disabled') + '>Same line as above</button>' +
         '<span class="tl-grp"><button type="button" class="tl-btn ico" data-fmove="-1" aria-label="Move up"' + (i ? '' : ' disabled') + '>↑</button><button type="button" class="tl-btn ico" data-fmove="1" aria-label="Move down"' + (i < chart.fields.length - 1 ? '' : ' disabled') + '>↓</button></span>' +
         '<button type="button" class="tl-btn ico" data-fdel aria-label="Remove row"' + (chart.fields.length > 1 ? '' : ' disabled') + '>×</button></li>';
     }).join('');
@@ -183,19 +213,26 @@
     var b = e.target.closest('button'); if (!b) return;
     var li = b.closest('li'), i = chart.fields.findIndex(function (x) { return x.id === li.dataset.f; }), f = chart.fields[i];
     if (b.dataset.falign) f.align = b.dataset.falign;
-    else if ('fbold' in b.dataset) f.bold = !f.bold;
+    else if (b.dataset.ffmt) f[b.dataset.ffmt] = !f[b.dataset.ffmt];
+    else if ('fjoin' in b.dataset) f.join = !f.join;
     else if (b.dataset.fmove) { var j = i + (+b.dataset.fmove); chart.fields.splice(j, 0, chart.fields.splice(i, 1)[0]); }
     else if ('fdel' in b.dataset) {
       var used = chart.people.some(function (p) { return p.vals[f.id]; });
       chart.fields.splice(i, 1); chart.people.forEach(function (p) { delete p.vals[f.id]; });
       if (used) toast('Removed “' + f.name + '”. Undo brings it back.');
     }
+    chart.fields[0].join = false;
     renderFields(); renderTable(); draw(); commit();
   });
+  $('fields').addEventListener('change', function (e) {
+    if (!('fsize' in e.target.dataset)) return;
+    var f = chart.fields.filter(function (x) { return x.id === e.target.closest('li').dataset.f; })[0];
+    f.size = e.target.value; draw(); commit();
+  });
   $('addField').addEventListener('click', function () {
-    var names = ['Department', 'Location', 'Company', 'Phone', 'Email'], have = chart.fields.map(function (f) { return f.name.toLowerCase(); });
+    var names = ['Department', 'Location', 'Employee or contractor', 'Home country', 'Host country', 'Company', 'Phone', 'Email'], have = chart.fields.map(function (f) { return f.name.toLowerCase(); });
     var n = names.filter(function (x) { return have.indexOf(x.toLowerCase()) < 0; })[0] || 'Row ' + (chart.fields.length + 1);
-    chart.fields.push({ id: uid(), name: n, align: 'c', bold: false });
+    chart.fields.push({ id: uid(), name: n, align: 'c', bold: false, size: 'm' });
     renderFields(); renderTable(); draw(); commit();
     var all = $('fields').querySelectorAll('.oc-fname'); all[all.length - 1].select();
   });
@@ -207,7 +244,7 @@
   }
   function renderTable() {
     var c = nameCounts(), T = $('table');
-    var head = '<thead><tr><th class="oc-n">#</th>' + chart.fields.map(function (f) { return '<th data-fh="' + f.id + '">' + esc(f.name) + '</th>'; }).join('') + '<th>Reports to</th><th>Dotted line to</th><th class="oc-act"><span class="sr">Actions</span></th></tr></thead>';
+    var head = '<thead><tr><th class="oc-n">#</th>' + chart.fields.map(function (f) { return '<th data-fh="' + f.id + '">' + esc(f.name) + '</th>'; }).join('') + '<th>Reports to</th><th>Dotted line to</th>' + COLS.map(function (x) { return '<th>' + x.h + '</th>'; }).join('') + '<th class="oc-act"><span class="sr">Actions</span></th></tr></thead>';
     var body = chart.people.map(function (p, i) {
       var par = byId(p.parent), dot = byId(p.dotted);
       return '<tr data-p="' + p.id + '"><td class="oc-n">' + (i + 1) + '</td>' + chart.fields.map(function (f) {
@@ -215,9 +252,13 @@
       }).join('') +
         '<td data-label="Reports to"><input data-k="parent" list="names" aria-label="Reports to" placeholder="Nobody (top)" autocomplete="off" value="' + esc(p.parentText || (par ? labelOf(par, c) : '')) + '"></td>' +
         '<td data-label="Dotted line to"><input data-k="dotted" list="names" aria-label="Dotted line to" placeholder="—" autocomplete="off" value="' + esc(p.dottedText || (dot ? labelOf(dot, c) : '')) + '"></td>' +
+        COLS.map(function (x) {
+          var bad = p.badColour && p.badColour[x.k], v = bad || (p.style[x.k] || '');
+          return '<td data-label="' + x.h + '"><input class="oc-col" data-c="' + x.k + '" aria-label="' + x.h + '" placeholder="#5C4D7D" autocomplete="off" spellcheck="false" value="' + esc(v) + '"' + (O.HEX.test(v) ? ' style="box-shadow:inset 6px 0 0 ' + v + '"' : '') + '></td>';
+        }).join('') +
         '<td class="oc-act"><button type="button" class="oc-ab" data-rep aria-label="Add someone reporting to this person" title="Add a report">+</button><button type="button" class="oc-ab" data-mv="-1" aria-label="Move up"' + (i ? '' : ' disabled') + '>↑</button><button type="button" class="oc-ab" data-mv="1" aria-label="Move down"' + (i < chart.people.length - 1 ? '' : ' disabled') + '>↓</button><button type="button" class="oc-ab del" data-del aria-label="Delete this person">×</button></td></tr>';
     }).join('');
-    T.innerHTML = head + '<tbody>' + (body || '<tr class="oc-empty"><td colspan="' + (chart.fields.length + 4) + '">Nobody yet. Add a person, or upload the Excel template.</td></tr>') + '</tbody>';
+    T.innerHTML = head + '<tbody>' + (body || '<tr class="oc-empty"><td colspan="' + (chart.fields.length + 7) + '">Nobody yet. Add a person, or upload the Excel template.</td></tr>') + '</tbody>';
     renderNames(); refreshIssues();
   }
   function refreshIssues() {
@@ -261,6 +302,11 @@
     if (key === 'parent') delete p.unsure;
   }
   $('table').addEventListener('input', function (e) {
+    if (e.target.dataset.c) {
+      setColour(byId(e.target.closest('tr').dataset.p), e.target.dataset.c, e.target.value);
+      e.target.style.boxShadow = parseColour(e.target.value) ? 'inset 6px 0 0 ' + parseColour(e.target.value) : '';
+      refreshIssues(); draw(); commitSoon(); return;
+    }
     var k = e.target.dataset.k; if (!k) return;
     var p = byId(e.target.closest('tr').dataset.p);
     if (k === 'parent' || k === 'dotted') { setRef(p, k, e.target.value); }
@@ -268,11 +314,11 @@
     syncRefs(); draw(); commitSoon();
   });
   $('table').addEventListener('keydown', function (e) {
-    if (e.key !== 'Enter' || !e.target.dataset.k) return;
+    if (e.key !== 'Enter' || !(e.target.dataset.k || e.target.dataset.c)) return;
     e.preventDefault();
     var tr = e.target.closest('tr'), k = e.target.dataset.k, nx = tr.nextElementSibling;
     if (!nx) { addPerson(); nx = $('table').querySelector('tbody tr:last-child'); }
-    var t = nx.querySelector('[data-k="' + k + '"]'); if (t) t.focus();
+    var t = nx.querySelector(k ? '[data-k="' + k + '"]' : '[data-c="' + e.target.dataset.c + '"]'); if (t) t.focus();
   });
   $('table').addEventListener('click', function (e) {
     var b = e.target.closest('button'); if (!b) return;
@@ -353,7 +399,7 @@
     markSel();
   });
   function pick(id, add) {
-    if (painter) { var p = byId(id); p.style = JSON.parse(JSON.stringify(painter)); draw(); commit(); return; }
+    if (painter) { var p = byId(id); p.style = JSON.parse(JSON.stringify(painter)); renderTable(); draw(); commit(); return; }
     var cur = sel.type === 'ids' ? sel.ids : [];
     if (add || many) {
       var i = cur.indexOf(id); if (i >= 0) cur.splice(i, 1); else cur.push(id);
@@ -373,13 +419,17 @@
   function swatches(el, key) {
     el.innerHTML = SW.map(function (c) {
       return '<button type="button" class="oc-sw" style="background:' + c + '" data-c="' + c + '" aria-label="' + c + '"></button>';
-    }).join('') + '<label class="oc-sw oc-custom" title="Any colour"><span class="sr">Any colour</span><input type="color" value="#5C4D7D"></label>';
+    }).join('') + (key === 'fill2' ? '<button type="button" class="oc-sw oc-none" data-c="none" aria-label="No gradient" title="No gradient"></button>' : '') + '<label class="oc-sw oc-custom" title="Any colour"><span class="sr">Any colour</span><input type="color" value="#5C4D7D"></label>';
     el.addEventListener('click', function (e) { var b = e.target.closest('[data-c]'); if (b) paint(key, b.dataset.c); });
     el.querySelector('input').addEventListener('change', function () { paint(key, this.value.toUpperCase()); });
   }
   function paint(key, c) {
     var pair = key === 'fill';
     if (key === 'line') { setLine('color', c); return; }
+    if (key === 'fill2' && c === 'none' && sel.type === 'all') {
+      delete chart.box.fill2; chart.levels.forEach(function (l) { delete l.fill2; }); chart.people.forEach(function (p) { delete p.style.fill2; });
+      renderTable(); draw(); commit(); return;
+    }
     if (sel.type === 'all') {
       chart.box[key] = c; if (pair) chart.box.text = textOn(c);
       chart.levels.forEach(function (l) { delete l[key]; if (pair) delete l.text; });
@@ -390,7 +440,7 @@
       l[key] = c; if (pair) l.text = textOn(c);
       selectedIds().forEach(function (id) { var p = byId(id); delete p.style[key]; if (pair) delete p.style.text; });
     } else selectedIds().forEach(function (id) { var p = byId(id); p.style[key] = c; if (pair) p.style.text = textOn(c); });
-    draw(); commit();
+    renderTable(); draw(); commit();
   }
   function setLine(k, v) {
     if (sel.type === 'all') { chart.line[k] = v; chart.people.forEach(function (p) { if (p.line) { delete p.line[k]; if (!Object.keys(p.line).length) delete p.line; } }); }
@@ -401,29 +451,33 @@
     var d = chart.line.dash;
     document.querySelectorAll('[data-dash]').forEach(function (b) { b.classList.toggle('on', sel.type === 'all' && b.dataset.dash === d); });
     $('lineW').value = String(chart.line.width);
-    document.querySelectorAll('[data-corner]').forEach(function (b) { b.classList.toggle('on', b.dataset.corner === chart.corners); });
+    document.querySelectorAll('[data-corner]').forEach(function (b) { b.classList.toggle('on', b.dataset.corner === chart.corners); b.setAttribute('aria-pressed', b.dataset.corner === chart.corners); });
+    document.querySelectorAll('[data-gdir]').forEach(function (b) { b.classList.toggle('on', b.dataset.gdir === chart.gradDir); });
+    $('font').value = chart.font;
   }
   document.querySelectorAll('[data-dash]').forEach(function (b) { b.addEventListener('click', function () { setLine('dash', b.dataset.dash); }); });
   $('lineW').addEventListener('change', function () { setLine('width', +this.value); });
   document.querySelectorAll('[data-corner]').forEach(function (b) { b.addEventListener('click', function () { chart.corners = b.dataset.corner; syncLine(); draw(); commit(); }); });
+  document.querySelectorAll('[data-gdir]').forEach(function (b) { b.addEventListener('click', function () { chart.gradDir = b.dataset.gdir; syncLine(); draw(); commit(); }); });
+  $('font').addEventListener('change', function () { chart.font = this.value; draw(); commit(); });
   $('shade').addEventListener('click', function () {
     var depth = O.forest(chart).depth, mx = 0;
     Object.keys(depth).forEach(function (k) { mx = Math.max(mx, depth[k]); });
     chart.levels = shades($('shadeBase').value.toUpperCase(), mx + 1);
-    chart.people.forEach(function (p) { p.style = {}; });
-    draw(); commit();
+    chart.people.forEach(function (p) { p.style = {}; delete p.badColour; });
+    renderTable(); draw(); commit();
   });
   $('resetLook').addEventListener('click', function () {
     var d = base(); chart.box = d.box; chart.levels = []; chart.line = d.line;
-    chart.people.forEach(function (p) { p.style = {}; delete p.line; });
-    syncLine(); draw(); commit(); toast('Colours and lines reset. Undo brings them back.');
+    chart.people.forEach(function (p) { p.style = {}; delete p.line; delete p.badColour; });
+    renderTable(); syncLine(); draw(); commit(); toast('Colours and lines reset. Undo brings them back.');
   });
   $('painter').addEventListener('click', function () {
     if (painter) { stopPaint(); return; }
     var id = sel.type === 'ids' ? sel.ids[0] : null;
     if (!id) { toast('First tap the box whose look you want to copy.'); return; }
     var p = byId(id), d = O.forest(chart).depth[id], lv = chart.levels[d] || {}, s = p.style;
-    painter = { fill: s.fill || lv.fill || chart.box.fill, border: s.border || lv.border || chart.box.border, text: s.text || lv.text || chart.box.text };
+    painter = { fill2: s.fill2 || lv.fill2 || chart.box.fill2 || 'none', fill: s.fill || lv.fill || chart.box.fill, border: s.border || lv.border || chart.box.border, text: s.text || lv.text || chart.box.text };
     this.classList.add('on'); this.textContent = 'Stop copying';
     $('stage').classList.add('painting');
     toast('Now tap the boxes that should look the same.');
@@ -436,11 +490,16 @@
 
   // ---------- page and arrangement ----------
   function syncPage() {
-    $('page').value = chart.page; $('arrange').value = chart.arrange; $('title').value = chart.title;
+    $('page').value = chart.page; $('arrange').value = chart.arrange;
+    if ($('title') !== document.activeElement) $('title').value = chart.title;
+    if ($('dlTitle') !== document.activeElement) $('dlTitle').value = chart.title;
   }
   $('page').addEventListener('change', function () { chart.page = this.value; draw(); commit(); });
   $('arrange').addEventListener('change', function () { chart.arrange = this.value; draw(); commit(); });
-  $('title').addEventListener('input', function () { chart.title = this.value; draw(); commitSoon(); });
+  ['title', 'dlTitle'].forEach(function (id) {
+    $(id).addEventListener('input', function () { chart.title = this.value; syncPage(); draw(); commitSoon(); });
+  });
+  $('titleClear').addEventListener('click', function () { chart.title = ''; syncPage(); draw(); commit(); $('title').focus(); });
   document.querySelectorAll('[data-zoom]').forEach(function (b) {
     b.addEventListener('click', function () {
       var v = b.dataset.zoom; zoom = v === 'fit' ? 1 : Math.max(1, Math.min(5, zoom * (+v)));
@@ -477,6 +536,13 @@
   // ---------- Excel template ----------
   var isReports = function (h) { return /^(reports?\s*to|manager|line manager|reporting to)\b/i.test(h); };
   var isDotted = function (h) { return /^dotted(\s*line)?(\s*to)?/i.test(h); };
+  var colourKey = function (h) {
+    h = String(h).trim();
+    if (/^(box\s*)?colou?r(\s*code)?$|^box\s*shade$/i.test(h)) return 'fill';
+    if (/^gradient(\s*to)?$|^(box\s*)?colou?r\s*2$/i.test(h)) return 'fill2';
+    if (/^text\s*colou?r(\s*code)?$/i.test(h)) return 'text';
+    return null;
+  };
   function sampleValue(f, i) {
     var map = { 'job title': 'Project Director', title: 'Project Director', role: 'Project Director', department: 'Projects', location: 'Milan', company: 'Your company', phone: '+00 000 000', email: 'name@example.com' };
     if (i === 0) return 'Example: Anna Rossi';
@@ -486,7 +552,7 @@
     closeMenus();
     return load(LIBS.exceljs).then(function () {
       var wb = new window.ExcelJS.Workbook(), ws = wb.addWorksheet('Org chart', { views: [{ state: 'frozen', ySplit: 1 }] });
-      var heads = chart.fields.map(function (f) { return f.name; }).concat(['Reports to', 'Dotted line to']), n = heads.length, c = nameCounts();
+      var heads = chart.fields.map(function (f) { return f.name; }).concat(['Reports to', 'Dotted line to'], COLS.map(function (x) { return x.h; })), n = heads.length, nf = chart.fields.length, c = nameCounts();
       ws.addRow(heads);
       ws.getRow(1).eachCell(function (cell) {
         cell.font = { name: 'Arial', bold: true, color: { argb: 'FFFFFFFF' } };
@@ -494,20 +560,23 @@
         cell.alignment = { vertical: 'middle', wrapText: true };
       });
       ws.getRow(1).height = 24;
-      heads.forEach(function (h, i) { ws.getColumn(i + 1).width = i >= n - 2 ? 24 : Math.max(20, h.length + 4); });
+      heads.forEach(function (h, i) { ws.getColumn(i + 1).width = i >= nf + 2 ? 14 : i >= nf ? 24 : Math.max(20, h.length + 4); });
       if (withData) {
         chart.people.forEach(function (p) {
           var par = byId(p.parent), dot = byId(p.dotted);
-          ws.addRow(chart.fields.map(function (f) { return p.vals[f.id] || ''; }).concat([p.parentText || (par ? labelOf(par, c) : ''), p.dottedText || (dot ? labelOf(dot, c) : '')]));
+          var row = ws.addRow(chart.fields.map(function (f) { return p.vals[f.id] || ''; }).concat([p.parentText || (par ? labelOf(par, c) : ''), p.dottedText || (dot ? labelOf(dot, c) : '')], COLS.map(function (x) { return (p.badColour && p.badColour[x.k]) || p.style[x.k] || ''; })));
+          COLS.forEach(function (x, i) {
+            if (O.HEX.test(p.style[x.k])) row.getCell(nf + 3 + i).fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF' + p.style[x.k].slice(1) } };
+          });
         });
       } else {
-        var r = ws.addRow(chart.fields.map(sampleValue).concat(['', '']));
+        var r = ws.addRow(chart.fields.map(sampleValue).concat(['', '', '#5C4D7D', '', '#FFFFFF']));
         r.font = { italic: true, color: { argb: 'FF7A7A80' } };
       }
       var col = function (i) { return String.fromCharCode(65 + i); };
       if (n <= 26) {
         var v = { type: 'list', allowBlank: true, showErrorMessage: false, formulae: ["'Org chart'!$A$2:$A$1000"] };
-        ws.dataValidations.add(col(n - 2) + '2:' + col(n - 1) + '1000', v);
+        ws.dataValidations.add(col(nf) + '2:' + col(nf + 1) + '1000', v);
       }
       var h = wb.addWorksheet('Instructions');
       h.getColumn(1).width = 92;
@@ -517,9 +586,10 @@
         '3. In "Reports to", type the manager\'s ' + chart.fields[0].name.toLowerCase() + ' exactly as it appears in the first column. Leave it empty for the person at the top.',
         '4. "Dotted line to" is optional. It draws a second, dashed line to another manager.',
         '5. Two people with the same name? Write the manager as: Name (' + (chart.fields[1] ? chart.fields[1].name.toLowerCase() : 'second column') + ').',
-        '6. Rows that start with "Example:" are ignored, so you can delete the sample or leave it.',
-        '7. Upload this file on the Org chart generator at ranjithkb.com. Colours and line styles are set there, and are kept if you upload an updated copy.',
-        '', 'Want another column? Add the row in the tool and download the template again, or add a column before "Reports to" and it becomes a new row of text.'
+        '6. Box colour, Gradient to and Text colour are optional. Type a colour code such as #5C4D7D, or just fill the Box colour cell with a colour. Use Gradient to when a box should fade into a second colour, for example someone moving between locations. Empty cells keep the colour set on the site; type none to clear one.',
+        '7. Rows that start with "Example:" are ignored, so you can delete the sample or leave it.',
+        '8. Upload this file on the Org chart generator at ranjithkb.com. Fonts, line styles and the chart title are set there, and are kept if you upload an updated copy.',
+        '', 'Want another column? Add the row in the tool and download the template again, or add a column and it becomes a new row of text.'
       ].forEach(function (t, i) { var r = h.addRow([t]); r.alignment = { wrapText: true }; r.font = { name: 'Arial', bold: i === 0, size: i === 0 ? 14 : 11 }; });
       return wb.xlsx.writeBuffer();
     }).then(function (buf) {
@@ -535,11 +605,14 @@
     var head = rows.shift() || [];
     var rIdx = head.findIndex(isReports), dIdx = head.findIndex(isDotted);
     if (rIdx < 0) return { error: 'I couldn’t find a “Reports to” column. Download the template and use its first row as headings.' };
-    var fields = [], map = [];
+    var fields = [], map = [], colIdx = {};
     head.forEach(function (h, i) {
       if (i === rIdx || i === dIdx || !h) return;
+      var ck = colourKey(h);
+      if (ck) { colIdx[ck] = i; return; }
       var old = chart.fields.filter(function (f) { return f.name.toLowerCase() === h.toLowerCase(); })[0];
-      var f = old ? { id: old.id, name: h, align: old.align, bold: old.bold } : { id: uid(), name: h, align: 'c', bold: !fields.length };
+      var f = old ? JSON.parse(JSON.stringify(old)) : { id: uid(), name: h, align: 'c', bold: !fields.length };
+      f.name = h;
       fields.push(f); map.push({ i: i, f: f });
     });
     if (!fields.length) return { error: 'There are no text columns in that sheet.' };
@@ -547,6 +620,7 @@
     chart.people.forEach(function (p) { keep[labelOf(p, oldC).toLowerCase()] = p; });
     var c = JSON.parse(JSON.stringify(chart)), first = fields[0];
     c.fields = fields;
+    if (c.title === SAMPLE_TITLE) c.title = ''; // the sample's title shouldn't land on someone's real chart
     var raw = [];
     c.people = [];
     rows.forEach(function (r) {
@@ -555,7 +629,8 @@
       var was = keep[String(vals[first.id] || '').toLowerCase()];
       var p = { id: uid(), parent: null, dotted: null, vals: vals, style: was ? was.style : {} };
       if (was && was.line) p.line = was.line;
-      c.people.push(p); raw.push({ p: p, rep: r[rIdx] || '', dot: dIdx >= 0 ? r[dIdx] || '' : '' });
+      var cols = {}; Object.keys(colIdx).forEach(function (k) { if (r[colIdx[k]]) cols[k] = r[colIdx[k]]; });
+      c.people.push(p); raw.push({ p: p, rep: r[rIdx] || '', dot: dIdx >= 0 ? r[dIdx] || '' : '', cols: cols });
     });
     if (!c.people.length) return { error: 'That sheet has no people in it yet.' };
     return { chart: c, raw: raw };
@@ -568,6 +643,7 @@
         var p = byId(x.p.id);
         if (x.rep) setRef(p, 'parent', x.rep);
         if (x.dot) setRef(p, 'dotted', x.dot);
+        Object.keys(x.cols).forEach(function (k) { setColour(p, k, x.cols[k]); });
       });
     });
     toast(n + (n === 1 ? ' person' : ' people') + ' loaded. Undo goes back.');
@@ -624,12 +700,10 @@
       var m = /^oc:(.+)$/.exec(s.name || ''); if (!m) return;
       seen[m[1]] = 1;
       var p = c.people.filter(function (x) { return x.id === m[1]; })[0]; if (!p) { odd++; return; }
-      var fs = c.fields.filter(function (f) { return String(p.vals[f.id] || '').trim(); });
-      if (fs.length !== s.info.paras.length) {
-        if (fs.map(function (f) { return p.vals[f.id].trim(); }).join('|') !== s.info.paras.join('|')) odd++;
-        return;
-      }
-      fs.forEach(function (f, i) { if (p.vals[f.id].trim() !== s.info.paras[i]) { p.vals[f.id] = s.info.paras[i]; changed++; } });
+      var lines = O.fieldLines(c, p), now = s.info.paras.map(function (t) { return t.split(/\t+/).map(function (x) { return x.trim(); }).filter(Boolean); });
+      var same = lines.length === now.length && lines.every(function (l, i) { return l.cells.length === now[i].length; });
+      if (!same) { if (lines.map(function (l) { return l.cells.map(function (x) { return x.t; }).join('|'); }).join('/') !== now.map(function (l) { return l.join('|'); }).join('/')) odd++; return; }
+      lines.forEach(function (l, i) { l.cells.forEach(function (x, j) { if (x.t !== now[i][j]) { p.vals[x.fd.id] = now[i][j]; changed++; } }); });
     });
     if (raw.length && c.people.some(function (p) { return !seen[p.id]; })) odd++;
     if (changed) note = 'Picked up ' + changed + ' text change' + (changed === 1 ? '' : 's') + ' made in PowerPoint. ';
@@ -652,8 +726,16 @@
         var wb = new window.ExcelJS.Workbook();
         return wb.xlsx.load(buf).then(function () {
           var ws = wb.getWorksheet('Org chart') || wb.worksheets[0], rows = [];
+          var keys = {};
           ws.eachRow({ includeEmpty: false }, function (r) {
-            var a = []; for (var i = 1; i <= ws.columnCount; i++) { var t = r.getCell(i).text; a.push(t); }
+            var a = [];
+            for (var i = 1; i <= ws.columnCount; i++) {
+              var cell = r.getCell(i), t = cell.text;
+              if (!rows.length) keys[i] = colourKey(t);
+              // a cell simply filled with a colour counts as that colour
+              else if (!t && keys[i] && cell.fill && cell.fill.fgColor && /^[0-9A-F]{8}$/i.test(cell.fill.fgColor.argb || '')) t = '#' + cell.fill.fgColor.argb.slice(2);
+              a.push(t);
+            }
             rows.push(a);
           });
           applyGrid(fromGrid(rows));
@@ -698,6 +780,7 @@
       chart.fields.forEach(function (f, i) { var v = (r[i] || '').trim(); if (v) p.vals[f.id] = v; });
       chart.people.push(p); added++;
       later.push({ p: p, rep: (r[chart.fields.length] || '').trim(), dot: (r[chart.fields.length + 1] || '').trim() });
+      COLS.forEach(function (x, i) { var v = (r[chart.fields.length + 2 + i] || '').trim(); if (v) setColour(p, x.k, v); });
     });
     later.forEach(function (x) { if (x.rep) setRef(x.p, 'parent', x.rep); if (x.dot) setRef(x.p, 'dotted', x.dot); });
     renderTable(); draw(); commit(); toast(added + ' added to the table.');
@@ -766,10 +849,11 @@
     Object.keys(O.PAGES).forEach(function (k) {
       var p = O.PAGES[k], o = document.createElement('option'); o.value = k; o.textContent = p.group + ' · ' + p.label; $('page').appendChild(o);
     });
-    swatches($('swFill'), 'fill'); swatches($('swBorder'), 'border'); swatches($('swText'), 'text'); swatches($('swLine'), 'line');
+    Object.keys(O.FONTS).forEach(function (k) { var o = document.createElement('option'); o.value = k; o.textContent = k; $('font').appendChild(o); });
+    swatches($('swFill'), 'fill'); swatches($('swFill2'), 'fill2'); swatches($('swBorder'), 'border'); swatches($('swText'), 'text'); swatches($('swLine'), 'line');
     var saved = store.get('current'), c = null;
     if (saved) { try { c = normalise(JSON.parse(saved)); } catch (e) { c = null; } }
-    chart = c || sample();
+    chart = c || normalise(sample());
     lastJson = snapshot();
     $('saved').textContent = c ? 'Saved in this browser' : 'Sample chart';
     setTab('people'); renderAll(); syncUndo();

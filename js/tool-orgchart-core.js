@@ -20,7 +20,22 @@ window.OrgCore = (function () {
     a4l: { label: 'A4 landscape', group: 'Word', kind: 'docx', w: 841.89, h: 595.28, m: 36 },
     a4p: { label: 'A4 portrait', group: 'Word', kind: 'docx', w: 595.28, h: 841.89, m: 36 }
   };
-  var FONT = 'Arial', MAX_PT = 16, MIN_PT = 8, NS = 'https://ranjithkb.com/orgchart';
+  // k = how wide the font runs compared with Arial, so sizes stay right on devices without it
+  var FONTS = {
+    'Arial': { k: 1, css: "Arial, Helvetica, 'Liberation Sans', sans-serif" },
+    'Calibri': { k: 0.95, css: "Calibri, Carlito, Arial, sans-serif" },
+    'Aptos': { k: 1.02, css: "Aptos, Calibri, Carlito, Arial, sans-serif" },
+    'Segoe UI': { k: 1.02, css: "'Segoe UI', Arial, sans-serif" },
+    'Tahoma': { k: 1.02, css: "Tahoma, Verdana, Arial, sans-serif" },
+    'Trebuchet MS': { k: 1.02, css: "'Trebuchet MS', Arial, sans-serif" },
+    'Verdana': { k: 1.18, css: "Verdana, Arial, sans-serif" },
+    'Cambria': { k: 1, css: "Cambria, Caladea, Georgia, serif" },
+    'Georgia': { k: 1.08, css: "Georgia, 'Liberation Serif', serif" },
+    'Times New Roman': { k: 0.94, css: "'Times New Roman', Times, 'Liberation Serif', serif" },
+    'Courier New': { k: 1.25, css: "'Courier New', Courier, 'Liberation Mono', monospace" }
+  };
+  var SIZES = { s: 0.85, m: 1, l: 1.2, xl: 1.45 };
+  var MAX_PT = 16, MIN_PT = 8, NS = 'https://ranjithkb.com/orgchart';
   var LH = 1.2, PADX = 0.55, PADY = 0.42;
   var HEX = /^#[0-9A-Fa-f]{6}$/;
   var uid = function () { return Math.random().toString(36).slice(2, 9); };
@@ -115,9 +130,37 @@ window.OrgCore = (function () {
     return { pos: pos, stack: stackOf, ext: { w: maxX - minX, h: maxY, x0: minX } };
   }
 
+  // Rows of text grouped into lines: a row marked "same line" joins the one above (up to three on a line).
+  // Two on a line sit left and right; three sit left, centre and right.
+  function lineGroups(chart) {
+    var g = [];
+    chart.fields.forEach(function (fd) {
+      if (fd.join && g.length && g[g.length - 1].length < 3) g[g.length - 1].push(fd); else g.push([fd]);
+    });
+    return g;
+  }
+  function fieldLines(chart, p) {
+    var out = [];
+    lineGroups(chart).forEach(function (fs) {
+      var pos = fs.length === 1 ? [fs[0].align] : fs.length === 2 ? ['l', 'r'] : ['l', 'c', 'r'], size = 0, cells = [];
+      fs.forEach(function (fd, i) {
+        var v = String(p.vals[fd.id] || '').trim(); size = Math.max(size, SIZES[fd.size] || 1);
+        if (v) cells.push({ t: v, pos: pos[i], bold: !!fd.bold, italic: !!fd.italic, underline: !!fd.underline, fd: fd });
+      });
+      if (cells.length) out.push({ cells: cells, size: size, multi: fs.length > 1, slots: fs.length });
+    });
+    return out;
+  }
+  function splitWidth(l, k) { // width a shared line needs, in em, at this font
+    var w = function (c) { return c ? em(c.t, c.bold) * k * l.size : 0; }, by = function (q) { return l.cells.filter(function (c) { return c.pos === q; })[0]; };
+    var a = w(by('l')), b = w(by('c')), c = w(by('r'));
+    return Math.max(a + b + c + 2 * l.size, 2 * Math.max(a, c) + b + (b ? 2 : 1) * l.size);
+  }
+
   function styleOf(chart, p, d) {
-    var lv = chart.levels[d] || {}, s = p.style || {};
+    var lv = chart.levels[d] || {}, s = p.style || {}, f2 = s.fill2 || lv.fill2 || chart.box.fill2;
     return {
+      fill2: f2 && f2 !== 'none' ? f2 : null,
       fill: s.fill || lv.fill || chart.box.fill,
       border: s.border || lv.border || chart.box.border,
       text: s.text || lv.text || chart.box.text
@@ -132,10 +175,12 @@ window.OrgCore = (function () {
     var res = { page: page, nodes: [], edges: [], f: MAX_PT, tooSmall: false, title: chart.title || '', tree: t };
     if (!chart.people.length) return res;
 
-    var longestWord = 3;
+    var longestWord = 3, k = (FONTS[chart.font] || FONTS.Arial).k, linesOf = {};
     chart.people.forEach(function (p) {
-      chart.fields.forEach(function (fd) {
-        String(p.vals[fd.id] || '').split(/\s+/).forEach(function (w) { longestWord = Math.max(longestWord, em(w, fd.bold)); });
+      var ls = fieldLines(chart, p); linesOf[p.id] = ls;
+      ls.forEach(function (l) {
+        if (l.multi) longestWord = Math.max(longestWord, splitWidth(l, k));
+        else String(l.cells[0].t).split(/\s+/).forEach(function (w) { longestWord = Math.max(longestWord, em(w, l.cells[0].bold) * k * l.size); });
       });
     });
     var minW = longestWord + 2 * PADX + 0.1;
@@ -147,7 +192,9 @@ window.OrgCore = (function () {
       var inner = W - 2 * PADX, n = 1;
       chart.people.forEach(function (p) {
         var c = 0;
-        chart.fields.forEach(function (fd) { var v = p.vals[fd.id]; if (v) c += wrap(v, inner, fd.bold).length; });
+        linesOf[p.id].forEach(function (l) {
+          c += l.size * (l.multi ? 1 : wrap(l.cells[0].t, inner / (k * l.size), l.cells[0].bold).length);
+        });
         n = Math.max(n, c);
       });
       var H = n * LH + 2 * PADY;
@@ -164,7 +211,7 @@ window.OrgCore = (function () {
     Object.keys(t.kids).forEach(function (i) { if (!t.kids[i].length) leaves++; rows = Math.max(rows, t.depth[i] || 0); });
     var L0 = arrange(t, best.W, best.H, HG, VG, best.m);
     var hg = Math.min(3.2, HG + Math.max(0, aw / f - L0.ext.w) / Math.max(1, leaves - 1));
-    var vg = Math.min(5, VG + Math.max(0, ah / f - L0.ext.h) / Math.max(1, rows));
+    var vg = Math.min(9, VG + Math.max(0, ah / f - L0.ext.h) / Math.max(1, rows));
     var L = arrange(t, best.W, best.H, hg, vg, best.m);
     f = Math.min(f, aw / L.ext.w, ah / L.ext.h);
     res.f = Math.floor(f * 10) / 10; f = res.f;
@@ -175,13 +222,16 @@ window.OrgCore = (function () {
     var bw = best.W * f, bh = best.H * f, inner = best.W - 2 * PADX, map = {};
     chart.people.forEach(function (p) {
       var q = L.pos[p.id]; if (!q) return;
-      var d = t.depth[p.id] || 0, st = styleOf(chart, p, d), lines = [], paras = [];
-      chart.fields.forEach(function (fd) {
-        var v = String(p.vals[fd.id] || '').trim(); if (!v) return;
-        paras.push({ t: v, align: fd.align, bold: !!fd.bold });
-        wrap(v, inner, fd.bold).forEach(function (s) { lines.push({ t: s, align: fd.align, bold: !!fd.bold }); });
+      var d = t.depth[p.id] || 0, st = styleOf(chart, p, d), lines = [];
+      var paras = linesOf[p.id];
+      paras.forEach(function (l) {
+        if (l.multi) { lines.push(l); return; }
+        var c = l.cells[0];
+        wrap(c.t, inner / (k * l.size), c.bold).forEach(function (s) {
+          lines.push({ size: l.size, cells: [{ t: s, pos: c.pos, bold: c.bold, italic: c.italic, underline: c.underline }] });
+        });
       });
-      var n = { id: p.id, x: ox + q.x * f, y: oy + q.y * f, w: bw, h: bh, depth: d, lines: lines, paras: paras, side: q.side, fill: st.fill, border: st.border, text: st.text };
+      var n = { id: p.id, x: ox + q.x * f, y: oy + q.y * f, w: bw, h: bh, depth: d, lines: lines, paras: paras, side: q.side, fill2: st.fill2, fill: st.fill, border: st.border, text: st.text };
       map[p.id] = n; res.nodes.push(n);
     });
     var lineOf = function (p) {
@@ -231,14 +281,22 @@ window.OrgCore = (function () {
 
   // ---------- SVG (preview and the Word picture) ----------
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
-  var SVGFONT = 'Arial, Helvetica, &quot;Liberation Sans&quot;, sans-serif';
   function dashArray(w) { return (w * 4) + ' ' + (w * 3); }
   function toSvg(r, chart, opt) {
     opt = opt || {};
+    var SVGFONT = (FONTS[chart.font] || FONTS.Arial).css;
     var p = r.page, vb = opt.inner ? [p.m, p.m, p.w - 2 * p.m, p.h - 2 * p.m] : [0, 0, p.w, p.h];
     var o = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="' + vb.join(' ') + '"' +
       (opt.px ? ' width="' + opt.px + '" height="' + Math.round(opt.px * vb[3] / vb[2]) + '"' : '') +
       ' font-family="' + SVGFONT + '" role="img" aria-label="Org chart">'];
+    var grads = r.nodes.filter(function (n) { return n.fill2; });
+    if (grads.length) {
+      var ver = chart.gradDir === 'v';
+      o.push('<defs>' + grads.map(function (n, i) {
+        n.gid = 'ocg' + i;
+        return '<linearGradient id="ocg' + i + '" x1="0" y1="0" x2="' + (ver ? 0 : 1) + '" y2="' + (ver ? 1 : 0) + '"><stop offset="0" stop-color="' + n.fill + '"/><stop offset="1" stop-color="' + n.fill2 + '"/></linearGradient>';
+      }).join('') + '</defs>');
+    }
     o.push('<rect x="' + vb[0] + '" y="' + vb[1] + '" width="' + vb[2] + '" height="' + vb[3] + '" fill="#FFFFFF"/>');
     if (r.title) o.push('<text x="' + (p.w / 2) + '" y="' + (p.m + 18) + '" text-anchor="middle" font-size="18" font-weight="bold" fill="#1B1B1F">' + esc(r.title) + '</text>');
     r.edges.forEach(function (e) {
@@ -250,12 +308,16 @@ window.OrgCore = (function () {
     var rad = chart.corners === 'round' ? Math.min(8, r.f * 0.6) : 0;
     r.nodes.forEach(function (n) {
       o.push('<g' + (opt.live ? ' class="oc-box" data-id="' + n.id + '"' : '') + '>');
-      o.push('<rect x="' + n.x.toFixed(2) + '" y="' + n.y.toFixed(2) + '" width="' + n.w.toFixed(2) + '" height="' + n.h.toFixed(2) + '"' + (rad ? ' rx="' + rad + '"' : '') + ' fill="' + n.fill + '" stroke="' + n.border + '" stroke-width="1"/>');
-      var lh = r.f * LH, y = n.y + (n.h - n.lines.length * lh) / 2 + lh * 0.8, pad = PADX * r.f;
+      o.push('<rect x="' + n.x.toFixed(2) + '" y="' + n.y.toFixed(2) + '" width="' + n.w.toFixed(2) + '" height="' + n.h.toFixed(2) + '"' + (rad ? ' rx="' + rad + '"' : '') + ' fill="' + (n.fill2 ? 'url(#' + n.gid + ')' : n.fill) + '" stroke="' + n.border + '" stroke-width="1"/>');
+      var total = n.lines.reduce(function (m, l) { return m + l.size * r.f * LH; }, 0), y = n.y + (n.h - total) / 2, pad = PADX * r.f;
       n.lines.forEach(function (l) {
-        var x = l.align === 'l' ? n.x + pad : l.align === 'r' ? n.x + n.w - pad : n.x + n.w / 2;
-        o.push('<text x="' + x.toFixed(2) + '" y="' + y.toFixed(2) + '" font-size="' + r.f + '" fill="' + n.text + '"' +
-          (l.bold ? ' font-weight="bold"' : '') + ' text-anchor="' + (l.align === 'l' ? 'start' : l.align === 'r' ? 'end' : 'middle') + '">' + esc(l.t) + '</text>');
+        var fs = r.f * l.size, lh = fs * LH, base = y + lh * 0.8;
+        l.cells.forEach(function (c) {
+          var x = c.pos === 'l' ? n.x + pad : c.pos === 'r' ? n.x + n.w - pad : n.x + n.w / 2;
+          o.push('<text x="' + x.toFixed(2) + '" y="' + base.toFixed(2) + '" font-size="' + fs.toFixed(2) + '" fill="' + n.text + '"' +
+            (c.bold ? ' font-weight="bold"' : '') + (c.italic ? ' font-style="italic"' : '') + (c.underline ? ' text-decoration="underline"' : '') +
+            ' text-anchor="' + (c.pos === 'l' ? 'start' : c.pos === 'r' ? 'end' : 'middle') + '">' + esc(c.t) + '</text>');
+        });
         y += lh;
       });
       o.push('</g>');
@@ -304,17 +366,37 @@ window.OrgCore = (function () {
       '<p:spPr>' + xf + '<a:prstGeom prst="' + geom + '">' + av + '</a:prstGeom><a:ln w="' + E(e.width) + '"><a:solidFill><a:srgbClr val="' + RGB(e.color) + '"/></a:solidFill><a:prstDash val="' + (e.dash === 'dash' ? 'dash' : 'solid') + '"/></a:ln></p:spPr></p:cxnSp>';
   }
   function boxXml(n, id, r, chart) {
-    var sz = Math.max(100, Math.round(r.f * 100));
+    var FONT = chart.font || 'Arial', inset = E(PADX * r.f * 0.8), insetY = E(PADY * r.f * 0.5), width = E(n.w) - 2 * inset;
+    var rPr = function (c, sz) {
+      return '<a:rPr lang="en-GB" sz="' + sz + '" b="' + (c.bold ? 1 : 0) + '" i="' + (c.italic ? 1 : 0) + '"' + (c.underline ? ' u="sng"' : '') + ' dirty="0"><a:solidFill><a:srgbClr val="' + RGB(n.text) + '"/></a:solidFill><a:latin typeface="' + xe(FONT) + '"/><a:cs typeface="' + xe(FONT) + '"/></a:rPr>';
+    };
+    var run = function (c, sz, t) { return '<a:r>' + rPr(c, sz) + '<a:t>' + xe(t) + '</a:t></a:r>'; };
+    var sz0 = Math.max(100, Math.round(r.f * 100));
     var paras = n.paras.map(function (l) {
-      return '<a:p><a:pPr algn="' + (l.align === 'l' ? 'l' : l.align === 'r' ? 'r' : 'ctr') + '"/><a:r><a:rPr lang="en-GB" sz="' + sz + '" b="' + (l.bold ? 1 : 0) + '" dirty="0"><a:solidFill><a:srgbClr val="' + RGB(n.text) + '"/></a:solidFill><a:latin typeface="' + FONT + '"/><a:cs typeface="' + FONT + '"/></a:rPr><a:t>' + xe(l.t) + '</a:t></a:r></a:p>';
-    }).join('') || '<a:p><a:endParaRPr lang="en-GB" sz="' + sz + '"/></a:p>';
-    var inset = E(PADX * r.f * 0.8), insetY = E(PADY * r.f * 0.5);
+      var sz = Math.max(100, Math.round(r.f * l.size * 100));
+      if (!l.multi) {
+        var c = l.cells[0];
+        return '<a:p><a:pPr algn="' + (c.pos === 'l' ? 'l' : c.pos === 'r' ? 'r' : 'ctr') + '"/>' + run(c, sz, c.t) + '</a:p>';
+      }
+      // a shared line is one paragraph with tab stops, so it stays editable text
+      var order = l.slots === 2 ? ['l', 'r'] : ['l', 'c', 'r'], rEdge = width - 12700, runs = '';
+      var tabs = (l.slots === 3 ? '<a:tab pos="' + Math.round(width / 2) + '" algn="ctr"/>' : '') + '<a:tab pos="' + rEdge + '" algn="r"/>';
+      order.forEach(function (q, i) {
+        var c = l.cells.filter(function (x) { return x.pos === q; })[0], any = c || l.cells[0];
+        if (i) runs += run(any, sz, '\t');
+        if (c) runs += run(c, sz, c.t);
+      });
+      return '<a:p><a:pPr algn="l"><a:tabLst>' + tabs + '</a:tabLst></a:pPr>' + runs + '</a:p>';
+    }).join('') || '<a:p><a:endParaRPr lang="en-GB" sz="' + sz0 + '"/></a:p>';
+    var fillXml = n.fill2
+      ? '<a:gradFill rotWithShape="1"><a:gsLst><a:gs pos="0"><a:srgbClr val="' + RGB(n.fill) + '"/></a:gs><a:gs pos="100000"><a:srgbClr val="' + RGB(n.fill2) + '"/></a:gs></a:gsLst><a:lin ang="' + (chart.gradDir === 'v' ? 5400000 : 0) + '" scaled="0"/></a:gradFill>'
+      : '<a:solidFill><a:srgbClr val="' + RGB(n.fill) + '"/></a:solidFill>';
     return '<p:sp><p:nvSpPr><p:cNvPr id="' + id + '" name="oc:' + xe(n.id) + '"/><p:cNvSpPr/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x="' + E(n.x) + '" y="' + E(n.y) + '"/><a:ext cx="' + E(n.w) + '" cy="' + E(n.h) + '"/></a:xfrm>' +
-      '<a:prstGeom prst="' + (chart.corners === 'round' ? 'roundRect' : 'rect') + '"><a:avLst/></a:prstGeom><a:solidFill><a:srgbClr val="' + RGB(n.fill) + '"/></a:solidFill><a:ln w="12700"><a:solidFill><a:srgbClr val="' + RGB(n.border) + '"/></a:solidFill></a:ln></p:spPr>' +
+      '<a:prstGeom prst="' + (chart.corners === 'round' ? 'roundRect' : 'rect') + '"><a:avLst/></a:prstGeom>' + fillXml + '<a:ln w="12700"><a:solidFill><a:srgbClr val="' + RGB(n.border) + '"/></a:solidFill></a:ln></p:spPr>' +
       '<p:txBody><a:bodyPr wrap="square" lIns="' + inset + '" tIns="' + insetY + '" rIns="' + inset + '" bIns="' + insetY + '" rtlCol="0" anchor="ctr"><a:noAutofit/></a:bodyPr><a:lstStyle/>' + paras + '</p:txBody></p:sp>';
   }
   function buildPptx(chart, r) {
-    var p = r.page, z = new window.JSZip(), id = 2, ids = {}, shapes = [], cx = E(p.w), cy = E(p.h);
+    var p = r.page, z = new window.JSZip(), id = 2, ids = {}, shapes = [], cx = E(p.w), cy = E(p.h), FONT = xe(chart.font || 'Arial');
     r.nodes.forEach(function (n) { ids[n.id] = id++; });
     if (r.title) {
       shapes.push('<p:sp><p:nvSpPr><p:cNvPr id="' + id + '" name="Chart title"/><p:cNvSpPr txBox="1"/><p:nvPr/></p:nvSpPr><p:spPr><a:xfrm><a:off x="' + E(p.m) + '" y="' + E(p.m - 4) + '"/><a:ext cx="' + E(p.w - 2 * p.m) + '" cy="' + E(30) + '"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/></p:spPr><p:txBody><a:bodyPr wrap="square" rtlCol="0" anchor="ctr"/><a:lstStyle/><a:p><a:pPr algn="ctr"/><a:r><a:rPr lang="en-GB" sz="1800" b="1" dirty="0"><a:solidFill><a:srgbClr val="1B1B1F"/></a:solidFill><a:latin typeface="' + FONT + '"/><a:cs typeface="' + FONT + '"/></a:rPr><a:t>' + xe(r.title) + '</a:t></a:r></a:p></p:txBody></p:sp>');
@@ -395,7 +477,11 @@ window.OrgCore = (function () {
     var pr = kid(sp, 'spPr'), style = kid(sp, 'style'), geo = pr && kid(pr, 'prstGeom'), ln = pr && kid(pr, 'ln'), out = {};
     out.geom = geo ? geo.getAttribute('prst') : '';
     var nf = pr && kid(pr, 'noFill'), sf = pr && kid(pr, 'solidFill');
-    if (sf) out.fill = colourIn(sf, theme);
+    var gf = pr && kid(pr, 'gradFill');
+    if (gf) {
+      var stops = deep(gf, 'gs').sort(function (a, b) { return +a.getAttribute('pos') - +b.getAttribute('pos'); });
+      if (stops.length) { out.fill = colourIn(stops[0], theme); out.fill2 = colourIn(stops[stops.length - 1], theme); }
+    } else if (sf) out.fill = colourIn(sf, theme);
     else if (!nf && style && kid(style, 'fillRef') && +kid(style, 'fillRef').getAttribute('idx') > 0) out.fill = colourIn(kid(style, 'fillRef'), theme);
     var lnOff = ln && kid(ln, 'noFill');
     if (ln && kid(ln, 'solidFill')) out.border = colourIn(kid(ln, 'solidFill'), theme);
@@ -596,12 +682,13 @@ window.OrgCore = (function () {
     var people = tree.map(function (b) {
       var paras = b.paras || b.info.paras, als = b.alignments || b.info.alignments, vals = {};
       paras.forEach(function (t, i) {
+        t = String(t).replace(/\t+/g, ' ');
         var j = Math.min(i, fields.length - 1), fid = fields[j].id;
         vals[fid] = vals[fid] ? vals[fid] + ' ' + t : t;
         aligns[j][als[i] || 'c'] = (aligns[j][als[i] || 'c'] || 0) + 1;
       });
       var inf = b.info || {}, style = {};
-      if (inf.fill) style.fill = inf.fill; if (inf.border) style.border = inf.border; if (inf.text) style.text = inf.text;
+      if (inf.fill) style.fill = inf.fill; if (inf.fill2 && inf.fill2 !== inf.fill) style.fill2 = inf.fill2; if (inf.border) style.border = inf.border; if (inf.text) style.text = inf.text;
       var p = { id: ids[b.key], parent: b.parent ? ids[b.parent] : null, dotted: b.dotted ? ids[b.dotted] : null, vals: vals, style: style };
       if (b.unsure) p.unsure = true;
       if (b.lineStyle && (b.lineStyle.color || b.lineStyle.dash)) p.line = { color: b.lineStyle.color || undefined, width: b.lineStyle.width || undefined };
@@ -611,6 +698,8 @@ window.OrgCore = (function () {
       var a = aligns[i]; f.align = Object.keys(a).sort(function (x, y) { return a[y] - a[x]; })[0] || 'c';
     });
     var c = base();
+    var round = tree.filter(function (b) { return b.info && b.info.geom === 'roundRect'; }).length;
+    if (round > tree.length / 2) c.corners = 'round';
     c.title = title || ''; c.fields = fields; c.people = people; c.levels = [];
     return c;
   }
@@ -679,5 +768,5 @@ window.OrgCore = (function () {
     collect(holder, theme, IDENT, shapes, lines, pos);
   }
 
-  return { PAGES: PAGES, MIN_PT: MIN_PT, HEX: HEX, uid: uid, forest: forest, fit: fit, toSvg: toSvg, buildPptx: buildPptx, buildDocx: buildDocx, readOffice: readOffice };
+  return { PAGES: PAGES, FONTS: FONTS, fieldLines: fieldLines, MIN_PT: MIN_PT, HEX: HEX, uid: uid, forest: forest, fit: fit, toSvg: toSvg, buildPptx: buildPptx, buildDocx: buildDocx, readOffice: readOffice };
 })();

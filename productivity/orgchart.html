@@ -28,7 +28,7 @@
 <link rel="stylesheet" href="../css/style.css?v=17">
 <link rel="stylesheet" href="../css/productivity.css?v=4">
 <link rel="stylesheet" href="../css/tool-timeline.css?v=2">
-<link rel="stylesheet" href="../css/tool-orgchart.css?v=1">
+<link rel="stylesheet" href="../css/tool-orgchart.css?v=2">
 </head>
 <body data-section="productivity" class="wide">
 
@@ -53,8 +53,12 @@
       <p class="tool-intro">Type people into the table, fill in the Excel template, or upload an older PowerPoint or Word chart. The chart redraws as you go and fits itself to the page you choose. Everything stays in this browser; nothing is uploaded to the site.</p>
     </div>
 
-    <div class="tl-top">
-      <input class="tl-name" id="title" aria-label="Chart title" placeholder="Chart title (optional)" spellcheck="false">
+    <div class="oc-titlebar">
+      <label class="oc-titlefield">
+        <span>Chart title</span>
+        <input id="title" placeholder="Type any title, or leave empty for none" spellcheck="false">
+      </label>
+      <button class="tl-btn" type="button" id="titleClear">No title</button>
       <span class="tl-saved" id="saved"></span>
     </div>
 
@@ -129,14 +133,30 @@
           </div>
         </div>
         <div><h2 class="oc-h">Box shade</h2><div class="oc-sws" id="swFill"></div></div>
+        <div>
+          <h2 class="oc-h">Gradient: fade box into</h2>
+          <div class="oc-sws" id="swFill2"></div>
+          <div class="oc-row" style="margin-top:.45rem">
+            <span class="tl-grp"><button class="tl-btn" type="button" data-gdir="h">Left to right</button><button class="tl-btn" type="button" data-gdir="v">Top to bottom</button></span>
+          </div>
+          <p class="oc-hint">Starts from the box shade, so a move from Milan to Maputo can run from one location's colour to the other. The crossed square removes it.</p>
+        </div>
         <div><h2 class="oc-h">Text colour</h2><div class="oc-sws" id="swText"></div></div>
         <div><h2 class="oc-h">Border colour</h2><div class="oc-sws" id="swBorder"></div></div>
         <div>
           <h2 class="oc-h">Shade by level</h2>
           <div class="oc-row">
             <span class="oc-shade"><input type="color" id="shadeBase" value="#5C4D7D" aria-label="Base colour"><button class="tl-btn" type="button" id="shade">Dark to light</button></span>
-            <span class="tl-grp"><button class="tl-btn" type="button" data-corner="square">Square</button><button class="tl-btn" type="button" data-corner="round">Round</button></span>
           </div>
+        </div>
+        <div>
+          <h2 class="oc-h">Box shape</h2>
+          <span class="tl-grp"><button class="tl-btn" type="button" data-corner="square">Rectangle</button><button class="tl-btn" type="button" data-corner="round">Rounded corners</button></span>
+        </div>
+        <div>
+          <h2 class="oc-h">Font</h2>
+          <select id="font" aria-label="Font"></select>
+          <p class="oc-hint">Bold, italic, underline and size are set for each row of text, below the chart. The preview uses the closest font on this device.</p>
         </div>
         <div>
           <h2 class="oc-h">Lines</h2>
@@ -155,7 +175,7 @@
 
     <div class="oc-people">
       <h2 class="tool-h2">Rows of text in each box</h2>
-      <p class="oc-note">Name them whatever you like. Each one becomes a column in the table and the Excel template.</p>
+      <p class="oc-note">Name them whatever you like. Each one becomes a column in the table and the Excel template. To split a line, press “Same line as above”: two rows sit left and right, three sit left, centre and right.</p>
       <ul class="oc-fields" id="fields"></ul>
       <button class="tl-btn" type="button" id="addField">+ Row of text</button>
 
@@ -169,6 +189,7 @@
   <dialog class="tl-dlg" id="dlDlg" aria-labelledby="dlH">
     <form method="dialog" class="oc-dl">
       <h2 id="dlH">Download as</h2>
+      <label class="f"><span>Chart title</span><input id="dlTitle" placeholder="Leave empty for no title" spellcheck="false"></label>
       <div id="dlOpts"></div>
       <p class="oc-note" id="dlNote"></p>
       <div class="dlg-act">
@@ -196,7 +217,7 @@
   <dialog class="tl-dlg" id="pasteDlg" aria-labelledby="pasteH">
     <form method="dialog">
       <h2 id="pasteH">Paste from Excel</h2>
-      <p class="dlg-p">Copy the cells in Excel or Google Sheets and paste them here. Columns follow your text rows, then Reports to, then Dotted line to. If you include the heading row, it replaces the table instead of adding to it.</p>
+      <p class="dlg-p">Copy the cells in Excel or Google Sheets and paste them here. Columns follow your text rows, then Reports to, Dotted line to, Box colour, Gradient to and Text colour. If you include the heading row, it replaces the table instead of adding to it.</p>
       <textarea id="pasteTx" rows="9" aria-label="Rows to paste"></textarea>
       <div class="dlg-act">
         <button type="button" class="tl-btn" id="pasteCancel">Cancel</button>
@@ -217,8 +238,8 @@
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="../js/tools.js?v=11"></script>
-<script src="../js/tool-orgchart-core.js?v=1"></script>
-<script src="../js/tool-orgchart.js?v=1"></script>
+<script src="../js/tool-orgchart-core.js?v=2"></script>
+<script src="../js/tool-orgchart.js?v=2"></script>
 <script src="../js/nav.js?v=20" defer></script>
 <script src="../js/visits.js?v=2" defer></script>
 </body>
