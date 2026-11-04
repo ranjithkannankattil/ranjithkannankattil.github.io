@@ -467,3 +467,60 @@ window.SCHOLARSHIP_UNCONFIRMED = [
   { name: 'Darmasiswa, Indonesia', url: 'https://darmasiswa.kemdikbud.go.id/' },
   { name: 'Study in Kazakhstan', url: 'https://bolashak.gov.kz/en/allnews/results-study-kazakhstan-selection-550-scholarships-studying-kazakhstan' }
 ];
+
+/* Ways to meet past scholars. No names are stored here. LinkedIn links only run a
+   search for the visitor. Pages must be official lists that the scholarship
+   publishes itself. Keep this block last: the daily check reads the links above. */
+window.SCHOLARSHIP_PEOPLE = {
+  'chevening': '"Chevening Scholar" India',
+  'commonwealth-masters': '"Commonwealth Scholar" India',
+  'rhodes': '"Rhodes Scholar" India',
+  'gates': '"Gates Cambridge" India',
+  'felix': '"Felix Scholar" India',
+  'inlaks': '"Inlaks Scholar"',
+  'erasmus-mundus': '"Erasmus Mundus" India',
+  'eiffel': '"Eiffel Scholar" India',
+  'swiss': '"Swiss Government Excellence" India',
+  'daad-epos': '"DAAD Scholar" India',
+  'daad-phd': '"DAAD Scholar" India',
+  'daad-kospie': '"DAAD" KOSPIE India',
+  'maeci': 'MAECI scholarship India',
+  'ireland': '"Government of Ireland" scholarship India',
+  'fulbright-masters': '"Fulbright-Nehru"',
+  'fulbright-doctoral': '"Fulbright-Nehru"',
+  'knight-hennessy': '"Knight-Hennessy Scholar" India',
+  'tata-cornell': '"Tata Scholar" Cornell',
+  'aga-khan': '"Aga Khan Foundation" scholar India',
+  'rtp': '"Research Training Program" India',
+  'sydney-india': '"University of Sydney" India scholarship',
+  'monash': '"Monash University" India scholarship',
+  'melbourne': '"University of Melbourne" India scholarship',
+  'cgs': '"Chinese Government Scholarship" India',
+  'yenching': '"Yenching Scholar" India',
+  'schwarzman': '"Schwarzman Scholar" India',
+  'mext-research': 'MEXT scholar India',
+  'mext-ug': 'MEXT scholar India',
+  'gks-g': '"Global Korea Scholarship" India',
+  'gks-u': '"Global Korea Scholarship" India',
+  'kaust': 'KAUST student India',
+  'khalifa': '"Khalifa University" student India',
+  'mbzuai': 'MBZUAI student India',
+  'nos-sc': '"National Overseas Scholarship"',
+  'nos-st': '"National Overseas Scholarship"',
+  'hungary': '"Stipendium Hungaricum" India',
+  'turkiye': '"Türkiye Scholarships" India',
+  'pearson': '"Pearson Scholar" Toronto India',
+  'auckland-india': '"University of Auckland" India scholarship',
+  'nus': '"NUS" research scholar India',
+  'hkpfs': '"Hong Kong PhD Fellowship" India',
+  'taiwan': '"Taiwan Scholarship" India',
+  'malaysia': '"Malaysia International Scholarship" India',
+  'colombia': '"Beca Colombia" India',
+  'uct': '"University of Cape Town" student India'
+};
+window.SCHOLARSHIP_PEOPLE_PAGES = {
+  'gates': 'https://www.gatescambridge.org/current-scholars/',
+  'pearson': 'https://future.utoronto.ca/meet-2026-pearson-scholars',
+  'fulbright-masters': 'https://www.usief.org.in/indian-fulbrighters/',
+  'fulbright-doctoral': 'https://www.usief.org.in/indian-fulbrighters/'
+};

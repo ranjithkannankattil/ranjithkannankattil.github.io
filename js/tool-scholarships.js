@@ -67,6 +67,13 @@
     return true;
   }
 
+  function peopleLinks(s) {
+    var q = (window.SCHOLARSHIP_PEOPLE || {})[s.id] || '"' + s.name + '" India';
+    var page = (window.SCHOLARSHIP_PEOPLE_PAGES || {})[s.id];
+    return (page ? '<a href="' + esc(page) + '" target="_blank" rel="noopener">Official scholar list ↗</a>' : '') +
+      '<a href="https://www.linkedin.com/search/results/people/?keywords=' + encodeURIComponent(q) + '" target="_blank" rel="noopener nofollow">Search on LinkedIn ↗</a>';
+  }
+
   function card(s) {
     var st = status(s);
     var canSave = s.closes && daysTo(s.closes) >= 0;
@@ -85,6 +92,7 @@
       '<dt>Who can apply</dt><dd>' + esc(s.who) + '</dd>' +
       '<dt>How to apply</dt><dd>' + esc(s.how) + '</dd>' +
       '<dt>Dates</dt><dd>' + esc(s.when) + '</dd>' +
+      '<dt>Meet past scholars</dt><dd class="sc-people">' + peopleLinks(s) + '</dd>' +
       '</dl>' +
       '<div class="sc-acts">' +
       '<a class="sc-go" href="' + esc(s.url) + '" target="_blank" rel="noopener">Official page ↗</a>' +
