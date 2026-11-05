@@ -981,6 +981,33 @@ window.STATIONS = [
       "https://online.webcastradio.ro/star"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "radio-gaga-gyergyoszek",
+    "name": "Rádió GaGa Gyergyószék",
+    "category": "music",
+    "streams": [
+      "https://stream.igenbiza.com/gye"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "regio-radio",
+    "name": "Régió Rádió",
+    "category": "news",
+    "streams": [
+      "https://stream.regioradio.info:8000/radio.mp3"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "ordongosfuzes-radio-fm-fizesu-gherlii",
+    "name": "Ördöngösfüzes Rádió FM -Fizeșu Gherlii",
+    "category": "music",
+    "streams": [
+      "https://stream-175.surfernetwork.com/skwcpsuh60mvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJza3djcHN1aDYwbXZ2IiwiaG9zdCI6InN0cmVhbS0xNzUuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6Ikd2U2JPTldoUjVpUXVIbzBGUFg4bGciLCJpYXQiOjE3OTM1Nzc0NjYsImV4cCI6MTc5MzU3NzUyNn0.dhOtlHJgZ_HDKqbC-GITdjlP-Y9edCITczJCvzcDdyI"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T07:53Z";
+window.STATIONS_CHECKED = "2026-11-05T21:16Z";

@@ -56,7 +56,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "89-4-tamil-fm",
@@ -224,7 +225,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio098/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "vagai-tamil-fm",
@@ -1116,6 +1118,33 @@ window.STATIONS = [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio021/chunklist.m3u8"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "sweety-fm",
+    "name": "Sweety FM",
+    "category": "music",
+    "streams": [
+      "https://centova71.instainternet.com/proxy/sweetyfm?mp=/stream2"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "tamil-amuthu-chennai-radio",
+    "name": "Tamil Amuthu Chennai Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/k9e5pmbktp8uv"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "thandora-fm",
+    "name": "Thandora FM",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/7us8bucomafvv"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T07:53Z";
+window.STATIONS_CHECKED = "2026-11-05T21:16Z";

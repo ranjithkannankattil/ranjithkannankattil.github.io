@@ -1112,6 +1112,33 @@ window.STATIONS = [
       "https://wdr-wdr2-muensterland.icecast.wdr.de/wdr/wdr2/muensterland/mp3/128/stream.mp3"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "techno-lovers-fm-vocal-trance",
+    "name": "Techno Lovers FM Vocal Trance",
+    "category": "music",
+    "streams": [
+      "https://stream.technolovers.fm/vocal-trance"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "bremen-zwei-neu",
+    "name": "Bremen Zwei NEU",
+    "category": "news",
+    "streams": [
+      "https://icecast.radiobremen.de/rb/bremenzwei/live/mp3/128/stream.mp3"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "jesus-is-lord-radio",
+    "name": "JESUS IS LORD radio",
+    "category": "devotional",
+    "streams": [
+      "https://stream-285.surfernetwork.com/thdtw5xd9eiuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ0aGR0dzV4ZDllaXV2IiwiaG9zdCI6InN0cmVhbS0yODUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiI0OUMxUU9PMFIyeTl5SThnTno0VTB3IiwiaWF0IjoxNzg1OTU0NjI0LCJleHAiOjE3ODU5NTQ2ODR9.TEC2qyYYTCv3OjNepwCqgyWWPAoxPRanj5XLmznekcA"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T07:53Z";
+window.STATIONS_CHECKED = "2026-11-05T21:16Z";

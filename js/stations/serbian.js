@@ -662,7 +662,8 @@ window.STATIONS = [
     "streams": [
       "https://vojvodjanski.com/radiosubotica"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "offline": true
   },
   {
     "id": "radio-996fm",
@@ -996,6 +997,33 @@ window.STATIONS = [
       "https://e3.radiomorava.rs/radio/8010/resavskiradio128.mp3"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "naxi-rock-radio",
+    "name": "Naxi Rock radio",
+    "category": "music",
+    "streams": [
+      "https://naxidigital-rock128ssl.streaming.rs:8182/;"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "play-radio-balkan",
+    "name": "Play Radio Balkan",
+    "category": "music",
+    "streams": [
+      "https://stream.playradio.rs:8443/balkan.mp3"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "radio-novosti-ex-yu",
+    "name": "Radio Novosti Ex-Yu",
+    "category": "music",
+    "streams": [
+      "https://novosti.radiostreaming.rs/novosti2"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T07:53Z";
+window.STATIONS_CHECKED = "2026-11-05T21:16Z";

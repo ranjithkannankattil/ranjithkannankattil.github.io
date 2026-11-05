@@ -1058,6 +1058,33 @@ window.STATIONS = [
       "https://radios.rtbf.be/laprem1erebxl-128.mp3"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "radio-chablais",
+    "name": "Radio Chablais",
+    "category": "music",
+    "streams": [
+      "https://radiochablais.ice.infomaniak.ch/radiochablais-high.mp3"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "nrj-clermont",
+    "name": "NRJ Clermont",
+    "category": "music",
+    "streams": [
+      "https://streaming.nrjaudio.fm/oumrck8fnozc"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "tipik",
+    "name": "Tipik",
+    "category": "music",
+    "streams": [
+      "https://radios.rtbf.be/pure-128.mp3"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T07:53Z";
+window.STATIONS_CHECKED = "2026-11-05T21:16Z";

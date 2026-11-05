@@ -990,6 +990,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "where": "New Zealand"
+  },
+  {
+    "id": "cbc-north-iqaluit-nu",
+    "name": "CBC North - Iqaluit, NU",
+    "category": "canada",
+    "streams": [
+      "https://27033.live.streamtheworld.com/CFFBAM_CBC_SC"
+    ],
+    "added": "2026-11-05",
+    "where": "Canada"
+  },
+  {
+    "id": "abc-classic-fm-20220701",
+    "name": "ABC Classic FM 20220701",
+    "category": "anz",
+    "streams": [
+      "https://mediaserviceslive.akamaized.net/hls/live/2038316/classicfmnsw/masterhq.m3u8"
+    ],
+    "added": "2026-11-05",
+    "where": "Australia"
+  },
+  {
+    "id": "cbc-radio-one-winnipeg-mb",
+    "name": "CBC Radio One - Winnipeg, MB",
+    "category": "canada",
+    "streams": [
+      "https://22983.live.streamtheworld.com/CBWAM_CBC_SC"
+    ],
+    "added": "2026-11-05",
+    "where": "Canada"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T07:53Z";
+window.STATIONS_CHECKED = "2026-11-05T21:16Z";

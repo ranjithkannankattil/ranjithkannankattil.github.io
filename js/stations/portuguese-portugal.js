@@ -204,8 +204,8 @@ window.STATIONS = [
     "name": "Antena 3",
     "category": "music",
     "streams": [
-      "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8",
-      "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
+      "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8",
+      "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8"
     ]
   },
   {
@@ -349,8 +349,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/rdpafrica80a/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "antena-1-acores-portugal",
@@ -359,8 +358,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -450,8 +448,7 @@ window.STATIONS = [
     "streams": [
       "https://cast.redewt.net:9825/stream"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "m80-radio-pop",
@@ -730,8 +727,7 @@ window.STATIONS = [
     "streams": [
       "https://radios.justweb.pt/8034/stream"
     ],
-    "added": "2026-10-29",
-    "offline": true
+    "added": "2026-10-29"
   },
   {
     "id": "radio-palavra-antiga",
@@ -1110,6 +1106,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/1wux17cbfkcuv"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "radio-marinahais",
+    "name": "Rádio Marinahais",
+    "category": "music",
+    "streams": [
+      "https://radios2.justweb.pt/8052/stream"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "rtp-mundo",
+    "name": "RTP Mundo",
+    "category": "music",
+    "streams": [
+      "https://streaming-live.rtp.pt/liveradio/rdpint80a/chunklist_DVR.m3u"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "terranova-105",
+    "name": "Terranova 105",
+    "category": "music",
+    "streams": [
+      "https://centova.radios.pt/proxy/404?mp=/stream"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T07:53Z";
+window.STATIONS_CHECKED = "2026-11-05T21:16Z";

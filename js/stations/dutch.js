@@ -730,8 +730,7 @@ window.STATIONS = [
     "streams": [
       "https://megahitfm.krioyohosting.com:1012/stream"
     ],
-    "added": "2026-10-29",
-    "offline": true
+    "added": "2026-10-29"
   },
   {
     "id": "radio-2-antwerpen",
@@ -1119,6 +1118,33 @@ window.STATIONS = [
       "https://everestcast.live-streams.nl:18015/stream"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "frenchcore24fm-radio",
+    "name": "FRENCHCORE24FM Radio",
+    "category": "music",
+    "streams": [
+      "https://a8.asurahosting.com:7890/radio.mp3"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "qmusic-10s",
+    "name": "Qmusic 10s",
+    "category": "music",
+    "streams": [
+      "https://stream.qmusic.nl/10s/aac"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "br6-radio",
+    "name": "BR6 Radio",
+    "category": "news",
+    "streams": [
+      "https://qxjr001.digiplay.nl/stream/9160/stream"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T07:53Z";
+window.STATIONS_CHECKED = "2026-11-05T21:16Z";

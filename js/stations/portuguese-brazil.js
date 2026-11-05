@@ -789,8 +789,7 @@ window.STATIONS = [
     "streams": [
       "https://cast2.hoost.com.br:8039/stream"
     ],
-    "added": "2026-10-30",
-    "offline": true
+    "added": "2026-10-30"
   },
   {
     "id": "radio-mix-87-9-fm",
@@ -1115,6 +1114,33 @@ window.STATIONS = [
       "https://grenal.audiostream.com.br:20000/aac?1771934582309"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "piata-fm",
+    "name": "Piatã FM",
+    "category": "news",
+    "streams": [
+      "https://streaming.livespanel.com:9430/stream"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "radio-conda",
+    "name": "Rádio Condá",
+    "category": "music",
+    "streams": [
+      "https://stm10.virtualcast.com.br:8292/conda"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "mgt-forro",
+    "name": "MGT FORRÓ",
+    "category": "music",
+    "streams": [
+      "https://cast.mgtradio.net/radio/8050/aac"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T07:53Z";
+window.STATIONS_CHECKED = "2026-11-05T21:16Z";

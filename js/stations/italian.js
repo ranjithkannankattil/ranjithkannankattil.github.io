@@ -57,7 +57,8 @@ window.STATIONS = [
     "streams": [
       "https://icecast.unitedradio.it/Virgin.mp3",
       "https://icy.unitedradio.it/Virgin.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rmc-radio-monte-carlo",
@@ -407,7 +408,8 @@ window.STATIONS = [
     "streams": [
       "https://streamcdnb3-8e7439fdb1694c8da3a0fd63e4dda518.msvdn.net/rainews1/hls/rainews_2400/chunklist.m3u8"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "radio-italia-anni-60-trentino-alto-adige",
@@ -1047,6 +1049,33 @@ window.STATIONS = [
       "https://s1.forstream.it:8070/radiocentrale.mp3"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "radio-manila",
+    "name": "Radio Manila",
+    "category": "music",
+    "streams": [
+      "https://stream15.top-ix.org:8000/radiomanila"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "ritmo-80",
+    "name": "Ritmo 80",
+    "category": "music",
+    "streams": [
+      "https://ice02.fluidstream.net/ritmo80.aac"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "giornale-radio",
+    "name": "Giornale Radio",
+    "category": "news",
+    "streams": [
+      "https://gr.fluidstream.eu/gr1.mp3"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T07:53Z";
+window.STATIONS_CHECKED = "2026-11-05T21:16Z";

@@ -195,6 +195,15 @@ window.STATIONS = [
       "https://zas7.ndx.co.za:8040/stream"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "radio-daspoort",
+    "name": "Radio Daspoort",
+    "category": "music",
+    "streams": [
+      "https://c32.radioboss.fm:8899/stream"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T07:53Z";
+window.STATIONS_CHECKED = "2026-11-05T21:16Z";

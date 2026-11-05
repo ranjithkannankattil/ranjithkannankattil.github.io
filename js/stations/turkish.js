@@ -917,7 +917,8 @@ window.STATIONS = [
     "streams": [
       "https://radyokarakocan.ozelip.com/8006/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "offline": true
   },
   {
     "id": "radyo-d",
@@ -1080,6 +1081,33 @@ window.STATIONS = [
       "https://anadolu.liderhost.com.tr/9078/stream"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "loops-radio-elektronica-station",
+    "name": "Loops Radio Elektronica Station",
+    "category": "music",
+    "streams": [
+      "https://ssl22.radyotelekom.com/8232/stream"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "beyaz-tv",
+    "name": "Beyaz TV",
+    "category": "music",
+    "streams": [
+      "https://beyaztv-live.daioncdn.net/beyaztv/beyaztv_1080p.m3u8"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "radyo-13-fm-96",
+    "name": "Radyo 13 FM 96",
+    "category": "music",
+    "streams": [
+      "https://radyo.yayindakiler.com:3050/stream"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T07:53Z";
+window.STATIONS_CHECKED = "2026-11-05T21:16Z";

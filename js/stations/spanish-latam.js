@@ -683,8 +683,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming.redboing.com/radio/8000/radio.aac"
     ],
-    "added": "2026-10-28",
-    "offline": true
+    "added": "2026-10-28"
   },
   {
     "id": "el-sol-medellin-107-9-fm",
@@ -1108,6 +1107,33 @@ window.STATIONS = [
       "https://stream.radiojar.com/sf65dpxy9vzuv"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "la-rancherita-91-7-fm-los-mochis",
+    "name": "La Rancherita 91.7 FM Los Mochis",
+    "category": "music",
+    "streams": [
+      "https://radios.blumhost.es/8124/;"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "la-tukka-ec",
+    "name": "La tukka Ec",
+    "category": "music",
+    "streams": [
+      "https://grupomundodigital.com:8673/live"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "rt-espanol",
+    "name": "RT Español",
+    "category": "news",
+    "streams": [
+      "https://rt-esp.rttv.com/dvr/rtesp/playlist_64Kb.m3u8"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T07:53Z";
+window.STATIONS_CHECKED = "2026-11-05T21:16Z";

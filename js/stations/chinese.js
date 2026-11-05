@@ -201,7 +201,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-17",
@@ -717,8 +718,7 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qtfm.cn/live/15318341/64k.mp3"
     ],
-    "added": "2026-10-30",
-    "offline": true
+    "added": "2026-10-30"
   },
   {
     "id": "jesus-is-lord-radio",
@@ -979,8 +979,7 @@ window.STATIONS = [
     "streams": [
       "https://play-radio-stream3.hndt.com/now/yorSd1X2/chunklist.m3u8"
     ],
-    "added": "2026-11-04",
-    "offline": true
+    "added": "2026-11-04"
   },
   {
     "id": "fred-film-radio",
@@ -1044,6 +1043,33 @@ window.STATIONS = [
       "https://radio.twinskaraoke.com/listen/neuro_21/radio.mp3"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "station-51",
+    "name": "美以袭击伊朗最新资讯",
+    "category": "news",
+    "streams": [
+      "https://rscdn.ajmide.com/r_3848/nglive_3848.m3u8"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "fm90-9",
+    "name": "上海第一财经广播 FM90.9",
+    "category": "music",
+    "streams": [
+      "https://lhttp-hw.qtfm.cn/live/276/64k.mp3"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "happyradio",
+    "name": "HappyRadio",
+    "category": "news",
+    "streams": [
+      "https://happyradio.com.tw/live"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T07:53Z";
+window.STATIONS_CHECKED = "2026-11-05T21:16Z";

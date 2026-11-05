@@ -529,7 +529,8 @@ window.STATIONS = [
       "https://live.radiooradea.ro/9000/stream"
     ],
     "added": "2026-10-26",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "love-pro-dj-radio-chisinau",
@@ -1052,6 +1053,33 @@ window.STATIONS = [
       "https://live.radioclasic.com/listen/radio_clasic_jazz/live.mp3"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "radio-teatru-rominia-braila",
+    "name": "radio teatru romînia -Brăila",
+    "category": "music",
+    "streams": [
+      "https://stream-179.surfernetwork.com/cb4dyqnat4itv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJjYjRkeXFuYXQ0aXR2IiwiaG9zdCI6InN0cmVhbS0xNzkuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6IjZ5d2M1TUlwU2xDSGU1ZDRJU2luVWciLCJpYXQiOjE3OTM1Njk2MDQsImV4cCI6MTc5MzU2OTY2NH0.eD1Jw79ilAFpjrrPIddg0QIqFQQozOv8pU-ClOeYS6w"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "romania-cultural",
+    "name": "ROMÂNIA Cultural",
+    "category": "music",
+    "streams": [
+      "https://stream4.srr.ro:8443/romania-cultural"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "getarum-radio",
+    "name": "Getarum Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.clever-host.ro/8010/stream"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T07:53Z";
+window.STATIONS_CHECKED = "2026-11-05T21:16Z";

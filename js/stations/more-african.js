@@ -95,6 +95,15 @@ window.STATIONS = [
       "https://serverkw.quran-uni.com:8020/;"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "radio-zimbabwe",
+    "name": "Radio Zimbabwe",
+    "category": "news",
+    "streams": [
+      "https://mainradiostreaming.zbc.co.zw:8040/nhepfenuro.mp3"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T07:53Z";
+window.STATIONS_CHECKED = "2026-11-05T21:16Z";

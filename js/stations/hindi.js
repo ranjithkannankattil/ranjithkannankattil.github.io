@@ -1100,6 +1100,33 @@ window.STATIONS = [
       "https://casper.radioca.st/stream"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "radio-vivid-voice",
+    "name": "Radio Vivid Voice",
+    "category": "news",
+    "streams": [
+      "https://stream.zeno.fm/xuin6ocdc2juv"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "air-bhopal",
+    "name": "AIR bhopal",
+    "category": "music",
+    "streams": [
+      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio212/chunklist.m3u8"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "retrobollywood",
+    "name": "Retrobollywood",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/g372rxef798uv"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T07:53Z";
+window.STATIONS_CHECKED = "2026-11-05T21:16Z";

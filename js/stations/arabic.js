@@ -1107,6 +1107,33 @@ window.STATIONS = [
       "https://asmaki.ma:8000/radio.mp3"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "radio-hala",
+    "name": "Radio Hala",
+    "category": "news",
+    "streams": [
+      "https://hala-alrayamedia.radioca.st/;"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "radio-misk",
+    "name": "Radio Misk",
+    "category": "music",
+    "streams": [
+      "https://live.misk.art/stream"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "ayat-al-quran-radio",
+    "name": "Ayat Al Quran Radio",
+    "category": "devotional",
+    "streams": [
+      "https://stream.zeno.fm/1fatuk10fkhvv"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T07:53Z";
+window.STATIONS_CHECKED = "2026-11-05T21:16Z";

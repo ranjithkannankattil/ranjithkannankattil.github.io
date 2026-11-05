@@ -88,7 +88,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.mfm.ua/online128"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "nrj-ukraine",
@@ -152,8 +153,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s5.radioforge.com:7908/live?n=77357"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "24-breaking-live",
@@ -233,7 +233,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.brokenbeats.net/tune"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-shanson",
@@ -257,7 +258,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://rockradioua.online:8433/rock_256"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-rocks-103-6fm-hd",
@@ -1053,4 +1055,4 @@ window.STATIONS = [
     "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T07:53Z";
+window.STATIONS_CHECKED = "2026-11-05T21:16Z";

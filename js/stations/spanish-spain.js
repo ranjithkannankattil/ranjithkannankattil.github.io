@@ -1108,6 +1108,33 @@ window.STATIONS = [
       "https://azura.abcorp.es/listen/esradio_granada/radio.mp3"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "el-toro-tv",
+    "name": "El Toro TV",
+    "category": "music",
+    "streams": [
+      "https://edge-nodo-002.streaming.hitcloser.net/eltorotv-streaming-web/tracks-v1a1/mono.m3u8"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "cadena-ser-extremadura",
+    "name": "Cadena SER Extremadura",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/SER_EXTREMADURAAAC.aac"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "rock-fm-espana-128",
+    "name": "Rock FM Espana 128",
+    "category": "music",
+    "streams": [
+      "https://rockfm-cope.flumotion.com/chunks.m3u8"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T07:53Z";
+window.STATIONS_CHECKED = "2026-11-05T21:16Z";

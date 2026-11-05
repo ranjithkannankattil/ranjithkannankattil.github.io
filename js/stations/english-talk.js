@@ -837,8 +837,7 @@ window.STATIONS = [
       "https://stream.zeno.fm/mwam2yirv1pvv"
     ],
     "added": "2026-10-31",
-    "where": "Nigeria",
-    "offline": true
+    "where": "Nigeria"
   },
   {
     "id": "bfm-89-9-malaysia",
@@ -1149,6 +1148,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "where": "UK"
+  },
+  {
+    "id": "2gb-sydney-873-am",
+    "name": "2GB - Sydney - 873 AM",
+    "category": "anz",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/2GB.mp3"
+    ],
+    "added": "2026-11-05",
+    "where": "Australia"
+  },
+  {
+    "id": "britcom-1-pumpkin-fm",
+    "name": "BritCom 1 - Pumpkin FM",
+    "category": "comedy",
+    "streams": [
+      "https://cast2.asurahosting.com/proxy/britcom1/stream"
+    ],
+    "added": "2026-11-05",
+    "where": "UK"
+  },
+  {
+    "id": "salem-news-channel-audio-stream",
+    "name": "Salem News Channel Audio Stream",
+    "category": "us",
+    "streams": [
+      "https://tc1.bahamatel.net:7928/;?type=http&nocache=6029555"
+    ],
+    "added": "2026-11-05",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T07:53Z";
+window.STATIONS_CHECKED = "2026-11-05T21:16Z";

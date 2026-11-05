@@ -1326,6 +1326,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "where": "Australia"
+  },
+  {
+    "id": "today-fm",
+    "name": "Today FM",
+    "category": "rock",
+    "streams": [
+      "https://stream.audioxi.com/TD"
+    ],
+    "added": "2026-11-05",
+    "where": "Ireland"
+  },
+  {
+    "id": "absolute-classic-rock",
+    "name": "Absolute Classic Rock",
+    "category": "rock",
+    "streams": [
+      "https://stream-ar.hellorayo.co.uk/absoluteclassicrock.aac?aw_0_1st.skey=1602676850&direct=true&rp_source=1"
+    ],
+    "added": "2026-11-05",
+    "where": "UK"
+  },
+  {
+    "id": "classic-fm-uk",
+    "name": "Classic FM UK",
+    "category": "classical",
+    "streams": [
+      "https://media-the.musicradio.com/ClassicFM"
+    ],
+    "added": "2026-11-05",
+    "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T07:53Z";
+window.STATIONS_CHECKED = "2026-11-05T21:16Z";

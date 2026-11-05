@@ -475,8 +475,7 @@ window.STATIONS = [
     "streams": [
       "https://ssl-1.radiohost.pl:9569/stream"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "radio-mbox-disco-polo",
@@ -990,6 +989,33 @@ window.STATIONS = [
       "https://rs103-krk.rmfstream.pl/audioxi_elka"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "radio-warszawa-106-2-fm",
+    "name": "Radio Warszawa 106.2 FM",
+    "category": "devotional",
+    "streams": [
+      "https://stream2.technologicznie.net/radio_warszawa.mp3"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "woods-hit-radio-ac",
+    "name": "Woods Hit Radio AC",
+    "category": "music",
+    "streams": [
+      "https://cast4.asurahosting.com/proxy/nigel/stream"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "jazzkultura",
+    "name": "Jazzkultura",
+    "category": "music",
+    "streams": [
+      "https://stream.radio.co/s1136b59f3/listen"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T07:53Z";
+window.STATIONS_CHECKED = "2026-11-05T21:16Z";

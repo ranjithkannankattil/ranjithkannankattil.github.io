@@ -1132,6 +1132,33 @@ window.STATIONS = [
       "https://sp1.19cloudsnetwork.gr/8008/stream"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "aktina-104-7",
+    "name": "Aktina 104.7 Της Καρδιάς σου Λαϊκά",
+    "category": "music",
+    "streams": [
+      "https://sc2.streamwithq.com:2000/stream/Tiskardiassoulaika/stream"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "sfera-96-6",
+    "name": "Sfera 96.6",
+    "category": "music",
+    "streams": [
+      "https://n01.radiojar.com/mg2vq26eewzuv?rj-ttl=5&rj-tok=AAABePDKYnkA9kVa1QYWTKFxIQ"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "aktina-104-7-2",
+    "name": "Aktina 104.7",
+    "category": "music",
+    "streams": [
+      "https://sc2.streamwithq.com:8016/stream?type=http&nocache=65312"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T07:53Z";
+window.STATIONS_CHECKED = "2026-11-05T21:16Z";

@@ -1089,6 +1089,33 @@ window.STATIONS = [
       "https://icecast3.play.cz/radiomb.mp3"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "ocko-star",
+    "name": "Óčko Star",
+    "category": "music",
+    "streams": [
+      "https://ocko-live-dash.ssl.cdn.cra.cz/cra_live2/ocko_gold.stream.1.smil/playlist.m3u8"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "radio-jih-cimbalka",
+    "name": "Radio JIH Cimbalka",
+    "category": "music",
+    "streams": [
+      "https://icecast6.play.cz/jihcimbalka128.mp3"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "webradio-epigon",
+    "name": "WebRadio Epigon",
+    "category": "music",
+    "streams": [
+      "https://ice3.abradio.cz/epigon128.mp3"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T07:53Z";
+window.STATIONS_CHECKED = "2026-11-05T21:16Z";

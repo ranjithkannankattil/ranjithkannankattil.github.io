@@ -217,8 +217,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://azura-cast.radiokansk.ru/listen/radiokansk/live"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "instrumental-jazz",
@@ -1008,7 +1007,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.brokenbeats.net/tune"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "offline": true
   },
   {
     "id": "station-39",
@@ -1108,6 +1108,33 @@ window.STATIONS = [
       "https://ice.coldstar.online/low.mp3"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "18",
+    "name": "Дядя Ваня на даче (18+)",
+    "category": "music",
+    "streams": [
+      "https://ic1.radiosignal.one/vanya-mp3"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "record-trancemission",
+    "name": "Record Trancemission",
+    "category": "music",
+    "streams": [
+      "https://radiorecord.hostingradio.ru/tm96.aacp"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "radio-record-phonk",
+    "name": "Radio Record Phonk",
+    "category": "music",
+    "streams": [
+      "https://radiorecord.hostingradio.ru/phonk96.aacp"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T07:53Z";
+window.STATIONS_CHECKED = "2026-11-05T21:16Z";
