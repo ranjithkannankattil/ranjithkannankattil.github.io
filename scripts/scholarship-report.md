@@ -1,22 +1,13 @@
-# Scholarship page check, 2026-11-04
-
-These pages changed. Update `js/scholarships-data.js` if the facts changed.
-
-## Türkiye Scholarships
-https://www.turkiyeburslari.gov.tr/announcements/turkiye-scholarships-2026-applications-121
-
-- Gone: Türkiye Scholarships 2025 Applications Are Closed!
-- Gone: 2/26/2025 6:26:47 AM
+# Scholarship page check, 2026-11-05
 
 ## Could not read from GitHub today
 
-- DAAD EPOS courses, DAAD Research Grants, DAAD IIT Delhi In-Country Scholarship: https://www.daad.in/en/study-research-in-germany/studying-in-germany/daad-scholarships/ (HTTP Error 403: Forbidden)
-- DAAD KOSPIE for IIT students: https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=57504697 (HTTP Error 403: Forbidden)
 - Monash international scholarships: https://www.monash.edu/india/study/scholarships-and-finance-options (HTTP Error 403: Forbidden)
 - University of Melbourne scholarships: https://study.unimelb.edu.au/connect-with-us/international/india (HTTP Error 403: Forbidden)
-- Chinese Government Scholarship: https://www.campuschina.org/ (<urlopen error [Errno -2] Name or service not known>)
+- Chinese Government Scholarship: https://www.campuschina.org/ (<urlopen error [Errno 101] Network is unreachable>)
 - MEXT Research Student Scholarship: https://www.in.emb-japan.go.jp/education/Research_Student.html (HTTP Error 403: Forbidden)
 - MEXT Undergraduate Scholarship: https://www.in.emb-japan.go.jp/education/undergraduate_student.html (HTTP Error 403: Forbidden)
+- KAUST Fellowship: https://admissions.kaust.edu.sa/study/ms-phd-degree (no readable text)
 - MBZUAI Undergraduate Scholarship: https://mbzuai.ac.ae/study/undergraduate-program/ (HTTP Error 403: Forbidden)
 - National Overseas Scholarship (SC and others): https://socialjustice.gov.in/schemes/28 (HTTP Error 503: Service Unavailable)
 - National Overseas Scholarship (ST): https://overseas.tribal.gov.in/ (<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.)
