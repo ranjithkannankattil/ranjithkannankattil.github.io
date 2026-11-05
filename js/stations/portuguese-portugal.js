@@ -230,7 +230,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "cidade-fm-2",
@@ -279,7 +280,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8",
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rca-radio-clube-de-armamar",
@@ -312,7 +314,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.streamaudio.de:8000/radio-dom-bosco-fm"
     ],
-    "hidden": true
+    "hidden": true,
+    "offline": true
   },
   {
     "id": "smoothfm-soul",
@@ -356,7 +359,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -726,7 +730,8 @@ window.STATIONS = [
     "streams": [
       "https://radios.justweb.pt/8034/stream"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "offline": true
   },
   {
     "id": "radio-palavra-antiga",
@@ -1078,6 +1083,33 @@ window.STATIONS = [
       "https://radiometalon.com/listen/radio_metal_on_the_brutal/radio.mp3"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "radio-lusitania",
+    "name": "Rádio Lusitânia",
+    "category": "music",
+    "streams": [
+      "https://streaming-live.rtp.pt/liveradio/lusitania80a/playlist.m3u8"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "radio-viseu",
+    "name": "Radio Viseu",
+    "category": "music",
+    "streams": [
+      "https://s2.radio.co/sf5c3ab01d/listen"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "jovembsk-dance",
+    "name": "jovembsk dance",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/1wux17cbfkcuv"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T20:57Z";
+window.STATIONS_CHECKED = "2026-11-05T07:53Z";

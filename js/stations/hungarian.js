@@ -963,6 +963,24 @@ window.STATIONS = [
       "https://icast.connectmedia.hu/5116/live.mp3/;"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "radio-gaga-csikszek",
+    "name": "Rádió GaGa Csíkszék",
+    "category": "music",
+    "streams": [
+      "https://stream.igenbiza.com/csi"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "star-radio",
+    "name": "Star rádió",
+    "category": "news",
+    "streams": [
+      "https://online.webcastradio.ro/star"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T20:57Z";
+window.STATIONS_CHECKED = "2026-11-05T07:53Z";

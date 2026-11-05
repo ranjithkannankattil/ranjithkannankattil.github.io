@@ -201,8 +201,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-17",
@@ -718,7 +717,8 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qtfm.cn/live/15318341/64k.mp3"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "offline": true
   },
   {
     "id": "jesus-is-lord-radio",
@@ -979,7 +979,8 @@ window.STATIONS = [
     "streams": [
       "https://play-radio-stream3.hndt.com/now/yorSd1X2/chunklist.m3u8"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "offline": true
   },
   {
     "id": "fred-film-radio",
@@ -1016,6 +1017,33 @@ window.STATIONS = [
       "https://sbs-ice.streamguys1.com/sbs-popasia-sbs-web"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "ac878-fm",
+    "name": "AC878 澳洲华语FM电台",
+    "category": "music",
+    "streams": [
+      "https://stream4.rcast.net/71937/#?.mp3"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "station-50",
+    "name": "深圳新闻广播",
+    "category": "news",
+    "streams": [
+      "https://lhttp.qingting.fm/live/1270/64k.mp3"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "neuro-21-station",
+    "name": "Neuro 21 Station",
+    "category": "music",
+    "streams": [
+      "https://radio.twinskaraoke.com/listen/neuro_21/radio.mp3"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T20:57Z";
+window.STATIONS_CHECKED = "2026-11-05T07:53Z";

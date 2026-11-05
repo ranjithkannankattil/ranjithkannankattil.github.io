@@ -960,6 +960,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-04",
     "where": "US"
+  },
+  {
+    "id": "qbs-radio-97-5",
+    "name": "QBS Radio 97.5",
+    "category": "world",
+    "streams": [
+      "https://live.kwikmotion.com/qmcqbsradiolive/qbsradio/playlist.m3u8"
+    ],
+    "added": "2026-11-05",
+    "where": "Qatar"
+  },
+  {
+    "id": "6pr-perth-882-am",
+    "name": "6PR - Perth - 882 AM",
+    "category": "anz",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/6PR.mp3"
+    ],
+    "added": "2026-11-05",
+    "where": "Australia"
+  },
+  {
+    "id": "newstalk-zb-christchurch",
+    "name": "Newstalk ZB Christchurch",
+    "category": "anz",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/NZME_41AAC.m3u8"
+    ],
+    "added": "2026-11-05",
+    "where": "New Zealand"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T20:57Z";
+window.STATIONS_CHECKED = "2026-11-05T07:53Z";

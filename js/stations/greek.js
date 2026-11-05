@@ -1105,6 +1105,33 @@ window.STATIONS = [
       "https://netradio.live24.gr/924fm-thess"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "101-1",
+    "name": "Γλέντι 101.1",
+    "category": "music",
+    "streams": [
+      "https://onairmediagroup.live24.gr/glenti1011xanthi"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "jackson-palace",
+    "name": "Jackson Palace",
+    "category": "music",
+    "streams": [
+      "https://jacksonspalace.radioca.st/stream?type=http&nocache=220"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "blue-space",
+    "name": "BLUE SPACE",
+    "category": "music",
+    "streams": [
+      "https://sp1.19cloudsnetwork.gr/8008/stream"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T20:57Z";
+window.STATIONS_CHECKED = "2026-11-05T07:53Z";

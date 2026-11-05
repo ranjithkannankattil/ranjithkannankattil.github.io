@@ -692,6 +692,15 @@ window.STATIONS = [
       "https://evcast.mediacp.eu:1960/stream"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "raido-slatina",
+    "name": "Raido Slatina",
+    "category": "music",
+    "streams": [
+      "https://a1.asurahosting.com/listen/radio_slatina/radio.mp3"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T20:57Z";
+window.STATIONS_CHECKED = "2026-11-05T07:53Z";

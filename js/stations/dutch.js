@@ -730,7 +730,8 @@ window.STATIONS = [
     "streams": [
       "https://megahitfm.krioyohosting.com:1012/stream"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "offline": true
   },
   {
     "id": "radio-2-antwerpen",
@@ -1091,6 +1092,33 @@ window.STATIONS = [
       "https://audio-streaming.qmusic.be/q-maximum-hits.aac"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "vrt-radio-1-low",
+    "name": "VRT Radio 1 (low)",
+    "category": "news",
+    "streams": [
+      "https://icecast.vrtcdn.be/radio1-mid.mp3"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "funx-slow-jamz",
+    "name": "FunX Slow Jamz",
+    "category": "music",
+    "streams": [
+      "https://icecast.omroep.nl/funx-slowjamzfb-bb-mp3"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "radio-hulchul",
+    "name": "Radio Hulchul",
+    "category": "music",
+    "streams": [
+      "https://everestcast.live-streams.nl:18015/stream"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T20:57Z";
+window.STATIONS_CHECKED = "2026-11-05T07:53Z";

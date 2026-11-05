@@ -217,7 +217,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://azura-cast.radiokansk.ru/listen/radiokansk/live"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "instrumental-jazz",
@@ -1007,8 +1008,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.brokenbeats.net/tune"
     ],
-    "added": "2026-11-03",
-    "offline": true
+    "added": "2026-11-03"
   },
   {
     "id": "station-39",
@@ -1081,6 +1081,33 @@ window.STATIONS = [
       "https://nashe1.hostingradio.ru/nashe-256"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "deep-one",
+    "name": "Deep One",
+    "category": "music",
+    "streams": [
+      "https://stream.deep1.ru/deep1mp3"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "fm-retro-fm",
+    "name": "Ретро FM Рига (Retro FM)",
+    "category": "music",
+    "streams": [
+      "https://live.retrofm.lv/retrofmlatvia"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "coldstar-radio-low-quality",
+    "name": "Coldstar Radio (low quality)",
+    "category": "music",
+    "streams": [
+      "https://ice.coldstar.online/low.mp3"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T20:57Z";
+window.STATIONS_CHECKED = "2026-11-05T07:53Z";

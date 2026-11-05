@@ -1025,6 +1025,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/cezx5b1nw98uv"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "black-rhino-radio",
+    "name": "Black Rhino Radio",
+    "category": "music",
+    "streams": [
+      "https://blackrhinoradio.out.airtime.pro/blackrhinoradio_a"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "hit-fm-chisinau-101-7-fm",
+    "name": "Hit FM Chișinău 101.7 fm",
+    "category": "music",
+    "streams": [
+      "https://stream.dixi.md:9443/HitFM"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "clasic-radio-jazz-bucuresti",
+    "name": "Clasic Radio_Jazz -București",
+    "category": "music",
+    "streams": [
+      "https://live.radioclasic.com/listen/radio_clasic_jazz/live.mp3"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T20:57Z";
+window.STATIONS_CHECKED = "2026-11-05T07:53Z";

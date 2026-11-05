@@ -664,7 +664,8 @@ window.STATIONS = [
     "streams": [
       "https://howlingf-gecko.radioca.st/autodj"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "offline": true
   },
   {
     "id": "radio-gambaru",
@@ -701,6 +702,15 @@ window.STATIONS = [
       "https://stream.zeno.fm/dd3rxeuxznhvv"
     ],
     "added": "2026-10-30"
+  },
+  {
+    "id": "t-spigot-radio",
+    "name": "t spigot radio",
+    "category": "music",
+    "streams": [
+      "https://radio.tspigot.net/radio/radio.mp3"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T20:57Z";
+window.STATIONS_CHECKED = "2026-11-05T07:53Z";

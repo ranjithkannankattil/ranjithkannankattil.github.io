@@ -837,7 +837,8 @@ window.STATIONS = [
       "https://stream.zeno.fm/mwam2yirv1pvv"
     ],
     "added": "2026-10-31",
-    "where": "Nigeria"
+    "where": "Nigeria",
+    "offline": true
   },
   {
     "id": "bfm-89-9-malaysia",
@@ -1118,6 +1119,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-04",
     "where": "Zimbabwe"
+  },
+  {
+    "id": "classic-old-time-radio",
+    "name": "Classic Old Time Radio",
+    "category": "comedy",
+    "streams": [
+      "https://stream.zeno.fm/b6v6nu8uhnruv"
+    ],
+    "added": "2026-11-05",
+    "where": "Spain"
+  },
+  {
+    "id": "qbs-radio-97-5",
+    "name": "QBS Radio 97.5",
+    "category": "world",
+    "streams": [
+      "https://live.kwikmotion.com/qmcqbsradiolive/qbsradio/playlist.m3u8"
+    ],
+    "added": "2026-11-05",
+    "where": "Qatar"
+  },
+  {
+    "id": "britcom-3-pumpkin-fm",
+    "name": "BritCom 3 - Pumpkin FM",
+    "category": "comedy",
+    "streams": [
+      "https://cast2.asurahosting.com/proxy/britcom3/stream"
+    ],
+    "added": "2026-11-05",
+    "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T20:57Z";
+window.STATIONS_CHECKED = "2026-11-05T07:53Z";

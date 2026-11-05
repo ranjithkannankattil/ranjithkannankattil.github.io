@@ -1020,6 +1020,33 @@ window.STATIONS = [
       "https://sphera.fluidstream.eu/fluid_wow.mp3?FLID=6"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "radio-furgoncino",
+    "name": "Radio Furgoncino",
+    "category": "music",
+    "streams": [
+      "https://stream.radiojar.com/sf65dpxy9vzuv"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "radio-crc",
+    "name": "Radio CRC",
+    "category": "news",
+    "streams": [
+      "https://stream9.xdevel.com/audio2s975936-745/stream/icecast.audio"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "radio-centrale-montorio-al-vomano",
+    "name": "Radio Centrale - Montorio al Vomano",
+    "category": "news",
+    "streams": [
+      "https://s1.forstream.it:8070/radiocentrale.mp3"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T20:57Z";
+window.STATIONS_CHECKED = "2026-11-05T07:53Z";

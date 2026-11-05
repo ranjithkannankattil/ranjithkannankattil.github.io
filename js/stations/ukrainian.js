@@ -152,7 +152,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s5.radioforge.com:7908/live?n=77357"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "24-breaking-live",
@@ -232,8 +233,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.brokenbeats.net/tune"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-shanson",
@@ -1024,6 +1024,33 @@ window.STATIONS = [
       "https://stream.blits-fm.ua/stream64"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "happy-radio",
+    "name": "Happy Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/nkeaps48xg0uv"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "station-29",
+    "name": "На своїй хвилі Новодністровськ",
+    "category": "music",
+    "streams": [
+      "https://online-novodnistrovsk.pp.ua:8443/playHD"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "station-30",
+    "name": "Твоє радіо",
+    "category": "music",
+    "streams": [
+      "https://complex.in.ua/tvoeRadio"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T20:57Z";
+window.STATIONS_CHECKED = "2026-11-05T07:53Z";

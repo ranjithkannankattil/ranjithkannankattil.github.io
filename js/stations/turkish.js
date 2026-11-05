@@ -1053,6 +1053,33 @@ window.STATIONS = [
       "https://23613.live.streamtheworld.com/JOYTURK_ROCK128AAC.aac"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "edizfm",
+    "name": "Edizfm",
+    "category": "music",
+    "streams": [
+      "https://edizfm.ozelip.com/8030/stream"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "radyo-kaptan",
+    "name": "Radyo Kaptan",
+    "category": "music",
+    "streams": [
+      "https://live.sinirsizhost.com.tr/8008/stream"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "star-fm-95-5",
+    "name": "Star FM 95.5",
+    "category": "music",
+    "streams": [
+      "https://anadolu.liderhost.com.tr/9078/stream"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T20:57Z";
+window.STATIONS_CHECKED = "2026-11-05T07:53Z";

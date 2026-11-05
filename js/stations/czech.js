@@ -1062,6 +1062,33 @@ window.STATIONS = [
       "https://icecast6.play.cz/jih32.mp3"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "ocko-expres",
+    "name": "Óčko Expres",
+    "category": "music",
+    "streams": [
+      "https://ocko-live.ssl.cdn.cra.cz/channels/ocko_expres/playlist/cze/live_lq.m3u8"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "spitzkunnersdorfer-dancewelle",
+    "name": "Spitzkunnersdorfer Dancewelle",
+    "category": "music",
+    "streams": [
+      "https://sachsen3.stream.laut.fm/sachsen3?t302=2026-11-01_20-32-00&aggregator=AmeliusCoppola&ref=Radioautistentroll&uuid=8734aa60-1d09-e44e-116e-3604734cb94d"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "radio-mb",
+    "name": "Rádio MB",
+    "category": "music",
+    "streams": [
+      "https://icecast3.play.cz/radiomb.mp3"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T20:57Z";
+window.STATIONS_CHECKED = "2026-11-05T07:53Z";

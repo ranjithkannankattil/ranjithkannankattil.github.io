@@ -475,7 +475,8 @@ window.STATIONS = [
     "streams": [
       "https://ssl-1.radiohost.pl:9569/stream"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "radio-mbox-disco-polo",
@@ -962,6 +963,33 @@ window.STATIONS = [
       "https://stream.rcs.revma.com/zbq79057xd3vv"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "radio-muzyka-dwoch-serc",
+    "name": "Radio Muzyka Dwoch Serc",
+    "category": "music",
+    "streams": [
+      "https://s3.slotex.pl:7272/stream"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "meloradio-wrocaw",
+    "name": "Meloradio Wrocław",
+    "category": "music",
+    "streams": [
+      "https://ml02.cdn.eurozet.pl/mel-wro.mp3"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "radio-elka-leszno",
+    "name": "Radio Elka Leszno",
+    "category": "news",
+    "streams": [
+      "https://rs103-krk.rmfstream.pl/audioxi_elka"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T20:57Z";
+window.STATIONS_CHECKED = "2026-11-05T07:53Z";

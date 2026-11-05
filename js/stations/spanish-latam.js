@@ -96,8 +96,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://liveaudio.lamusica.com/MIA_WCMQ_icy"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "mix-80-s-90-s-y-mas",
@@ -684,7 +683,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming.redboing.com/radio/8000/radio.aac"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "offline": true
   },
   {
     "id": "el-sol-medellin-107-9-fm",
@@ -1081,6 +1081,33 @@ window.STATIONS = [
       "https://stream10.usastreams.com/9314/stream/"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "radio-activa-89-7-fm-hermosillo-sonora",
+    "name": "\tRADIO ACTIVA 89.7 FM ⚡ Hermosillo, Sonora",
+    "category": "music",
+    "streams": [
+      "https://mdstrm.com/audio/66ad14f0917845e9b7570bf2/live.m3u8"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "neuro-21-station",
+    "name": "Neuro 21 Station",
+    "category": "music",
+    "streams": [
+      "https://radio.twinskaraoke.com/listen/neuro_21/radio.mp3"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "radio-furgoncino",
+    "name": "Radio Furgoncino",
+    "category": "music",
+    "streams": [
+      "https://stream.radiojar.com/sf65dpxy9vzuv"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T20:57Z";
+window.STATIONS_CHECKED = "2026-11-05T07:53Z";

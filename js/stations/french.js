@@ -1031,6 +1031,33 @@ window.STATIONS = [
       "https://streaming.nrjaudio.fm/ouv6enoarp52"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "radio-kassara-barikama-107-4-kayes",
+    "name": "Radio Kassara Barikama 107.4 Kayes",
+    "category": "news",
+    "streams": [
+      "https://stream.zeno.fm/0ef19uaxh4duv"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "ici-100-chanson-francaise",
+    "name": "ICI 100% Chanson française",
+    "category": "music",
+    "streams": [
+      "https://icecast.radiofrance.fr/fbchansonfrancaise-hifi.aac"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "la-premiere-bruxelles",
+    "name": "La Première - Bruxelles",
+    "category": "music",
+    "streams": [
+      "https://radios.rtbf.be/laprem1erebxl-128.mp3"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T20:57Z";
+window.STATIONS_CHECKED = "2026-11-05T07:53Z";

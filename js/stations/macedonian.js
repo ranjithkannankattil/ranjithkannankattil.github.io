@@ -56,7 +56,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostar.pro/stream/worldretro.php"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "sky-folk",
@@ -160,7 +161,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostar.pro/stream/starplus.php"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "plenty-valley-fm-mill-park-melbourne-88-",
@@ -197,4 +199,4 @@ window.STATIONS = [
     "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T20:57Z";
+window.STATIONS_CHECKED = "2026-11-05T07:53Z";

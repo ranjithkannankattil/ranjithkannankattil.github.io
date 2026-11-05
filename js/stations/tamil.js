@@ -56,8 +56,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "89-4-tamil-fm",
@@ -1090,6 +1089,33 @@ window.STATIONS = [
       "https://sathees.radioca.st/;"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "tamilaruvifm",
+    "name": "Tamilaruvifm",
+    "category": "music",
+    "streams": [
+      "https://servidor18-4.brlogic.com:7740/live"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "thendralradio",
+    "name": "Thendralradio",
+    "category": "music",
+    "streams": [
+      "https://thenralw.radioca.st/LiveStream"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "fm-gold-chennai",
+    "name": "Fm Gold Chennai",
+    "category": "music",
+    "streams": [
+      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio021/chunklist.m3u8"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T20:57Z";
+window.STATIONS_CHECKED = "2026-11-05T07:53Z";

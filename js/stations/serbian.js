@@ -969,6 +969,33 @@ window.STATIONS = [
       "https://stream.radios.rs:9052/stream"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "red-radio-beograd",
+    "name": "Red radio Beograd",
+    "category": "music",
+    "streams": [
+      "https://stream.redradio.rs/sid=1"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "sun-radio-novi-sad",
+    "name": "Sun Radio Novi Sad",
+    "category": "music",
+    "streams": [
+      "https://stream.radiojar.com/4qawu2xta2zuv.mp3"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "resavski-radio",
+    "name": "Resavski radio",
+    "category": "music",
+    "streams": [
+      "https://e3.radiomorava.rs/radio/8010/resavskiradio128.mp3"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T20:57Z";
+window.STATIONS_CHECKED = "2026-11-05T07:53Z";

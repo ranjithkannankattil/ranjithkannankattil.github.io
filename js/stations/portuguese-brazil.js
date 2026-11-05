@@ -789,7 +789,8 @@ window.STATIONS = [
     "streams": [
       "https://cast2.hoost.com.br:8039/stream"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "offline": true
   },
   {
     "id": "radio-mix-87-9-fm",
@@ -1087,6 +1088,33 @@ window.STATIONS = [
       "https://ice.fabricahost.com.br/radiogfm"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "radio-disney-brasil-fm-91-3",
+    "name": "Rádio Disney - Brasil FM 91.3",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/DISNEY_BRA_SP_ADP.aac"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "radio-inconfidencia-fm-100-9",
+    "name": "Rádio Inconfidência FM 100,9",
+    "category": "music",
+    "streams": [
+      "https://ssl.zoeweb.net/proxy/inconfidencia?mp=/stream"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "radio-grenal-95-9-fm",
+    "name": "Rádio Grenal 95.9 FM",
+    "category": "news",
+    "streams": [
+      "https://grenal.audiostream.com.br:20000/aac?1771934582309"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T20:57Z";
+window.STATIONS_CHECKED = "2026-11-05T07:53Z";

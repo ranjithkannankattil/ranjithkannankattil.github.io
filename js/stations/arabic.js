@@ -1080,6 +1080,33 @@ window.STATIONS = [
       "https://medinatarab.ice.infomaniak.ch/medinatarab-128.mp3"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "virgin-radio-lebanon",
+    "name": "Virgin Radio Lebanon",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/dwxw3p9vea0uv"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "almunir-radio-benghazi",
+    "name": "Almunir Radio – Benghazi",
+    "category": "devotional",
+    "streams": [
+      "https://live.munir.ly/proxy/almunir/stream"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "zine-bladi",
+    "name": "ZINE BLADI",
+    "category": "music",
+    "streams": [
+      "https://asmaki.ma:8000/radio.mp3"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T20:57Z";
+window.STATIONS_CHECKED = "2026-11-05T07:53Z";

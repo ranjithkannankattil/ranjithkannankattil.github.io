@@ -236,8 +236,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ztnr.rtve.es/ztnr/1694255.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "esradio-principal",
@@ -1082,6 +1081,33 @@ window.STATIONS = [
       "https://axarquia.emisiononline.es/radio/8040/radio.mp3"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "esradio-castilla-y-leon",
+    "name": "esRadio Castilla y León",
+    "category": "news",
+    "streams": [
+      "https://libertaddigital-radio-live4.flumotion.com/libertaddigital/ld-live4-med.aac"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "copesal",
+    "name": "Copesal",
+    "category": "news",
+    "streams": [
+      "https://salamanca-copesedes-rrcast.flumotion.com/copesedes/salamanca-low.mp3"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "esradio-granada",
+    "name": "esRadio Granada",
+    "category": "news",
+    "streams": [
+      "https://azura.abcorp.es/listen/esradio_granada/radio.mp3"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T20:57Z";
+window.STATIONS_CHECKED = "2026-11-05T07:53Z";

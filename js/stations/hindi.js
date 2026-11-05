@@ -1073,6 +1073,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/s3sqemewrg0uv"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "abee-radio",
+    "name": "Abee Radio",
+    "category": "music",
+    "streams": [
+      "https://abee.radioca.st/stream"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "radio-krishna",
+    "name": "Radio Krishna",
+    "category": "devotional",
+    "streams": [
+      "https://millenniumhits.out.airtime.pro:8000/millenniumhits_a?fbclid=IwAR0qP_F8RgDCq3gX8g7U8Dmm_uZedtPrqxCf8iIDAW5Jcd5ktA0XMs6BJu4"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "radio-central-24",
+    "name": "Radio Central 24",
+    "category": "music",
+    "streams": [
+      "https://casper.radioca.st/stream"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T20:57Z";
+window.STATIONS_CHECKED = "2026-11-05T07:53Z";

@@ -1296,6 +1296,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-04",
     "where": "Canada"
+  },
+  {
+    "id": "hearme-classic-hard-rock",
+    "name": "HearMe - Classic Hard Rock",
+    "category": "rock",
+    "streams": [
+      "https://radio.hearme.fm:8250/stream"
+    ],
+    "added": "2026-11-05",
+    "where": "UK"
+  },
+  {
+    "id": "truckersfm",
+    "name": "TruckersFM",
+    "category": "pop",
+    "streams": [
+      "https://radio.truckers.fm/"
+    ],
+    "added": "2026-11-05",
+    "where": "UK"
+  },
+  {
+    "id": "70s-classics-sydney",
+    "name": "70s Classics - Sydney",
+    "category": "rock",
+    "streams": [
+      "https://stream.zeno.fm/glsntnn7et8vv"
+    ],
+    "added": "2026-11-05",
+    "where": "Australia"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T20:57Z";
+window.STATIONS_CHECKED = "2026-11-05T07:53Z";

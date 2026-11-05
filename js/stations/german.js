@@ -1085,6 +1085,33 @@ window.STATIONS = [
       "https://dispatcher.rndfnk.com/br/brheimat/live/mp3/mid"
     ],
     "added": "2026-11-04"
+  },
+  {
+    "id": "rbb-88-8-radio-berlin",
+    "name": "RBB 88.8 Radio Berlin",
+    "category": "music",
+    "streams": [
+      "https://dispatcher.rndfnk.com/rbb/rbb888/live/mp3/mid"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "sunshine-live-vocal-trance",
+    "name": "sunshine live - Vocal Trance",
+    "category": "music",
+    "streams": [
+      "https://sunsl.streamabc.net/sunsl-vocaltrance-mp3-192-5826863?sABC=6nr69n80%230%23nq59s62359o2nr38nsp8150610pq18p9%23fgernz.fhafuvar-yvir.qr&aw_0_1st.playerid=stream.sunshine-live.de&amsparams=playerid:stream.sunshine-live.de;skey:1793497728"
+    ],
+    "added": "2026-11-05"
+  },
+  {
+    "id": "wdr-2-munsterland",
+    "name": "WDR 2 Münsterland",
+    "category": "news",
+    "streams": [
+      "https://wdr-wdr2-muensterland.icecast.wdr.de/wdr/wdr2/muensterland/mp3/128/stream.mp3"
+    ],
+    "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-04T20:57Z";
+window.STATIONS_CHECKED = "2026-11-05T07:53Z";
