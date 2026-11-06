@@ -304,8 +304,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://relay.stream.enacast-cloud.com:30049/mataroradioHD.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-sant-fruitos",
@@ -648,4 +647,4 @@ window.STATIONS = [
     "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T07:54Z";
+window.STATIONS_CHECKED = "2026-11-06T20:33Z";

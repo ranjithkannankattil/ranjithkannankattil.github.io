@@ -132,7 +132,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/sg6x5m9nviltv"
     ],
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "prof-k-online-radio",
@@ -294,8 +295,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://lbsradio-dexterity.radioca.st/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "marweltan-radio59",
@@ -307,4 +307,4 @@ window.STATIONS = [
     "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T07:54Z";
+window.STATIONS_CHECKED = "2026-11-06T20:33Z";

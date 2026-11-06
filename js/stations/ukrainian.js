@@ -232,8 +232,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.brokenbeats.net/tune"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-shanson",
@@ -1051,6 +1050,15 @@ window.STATIONS = [
       "https://complex.in.ua/tvoeRadio"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "fm-10",
+    "name": "Бліц-FM (Умань)",
+    "category": "news",
+    "streams": [
+      "https://stream.blits-fm.ua/aac32"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T07:54Z";
+window.STATIONS_CHECKED = "2026-11-06T20:33Z";

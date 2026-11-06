@@ -256,7 +256,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio007/hlspbaudio007_Auto.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-mirchi-usa",
@@ -368,7 +369,8 @@ window.STATIONS = [
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio011/hlspbaudio011_Auto.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "sandesh-radio",
@@ -1116,7 +1118,8 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio212/chunklist.m3u8"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "offline": true
   },
   {
     "id": "retrobollywood",
@@ -1144,6 +1147,15 @@ window.STATIONS = [
       "https://stream.ujala.nl/ujala"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "shuddh-desi-radio",
+    "name": "Shuddh Desi Radio",
+    "category": "music",
+    "streams": [
+      "https://streamer.radio.co/se30891e37/listen"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T07:54Z";
+window.STATIONS_CHECKED = "2026-11-06T20:33Z";

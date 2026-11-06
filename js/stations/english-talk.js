@@ -1208,6 +1208,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-06",
     "where": "Tonga"
+  },
+  {
+    "id": "bloomberg-uk",
+    "name": "Bloomberg UK",
+    "category": "uk",
+    "streams": [
+      "https://bloomberg-live-prod-us-east-1.s3.amazonaws.com/rad/Channel-RAD-AWS-virginia-1/Source-RadUK-96-1_live.m3u8"
+    ],
+    "added": "2026-11-06",
+    "where": "UK"
+  },
+  {
+    "id": "2cc-talking-canberra",
+    "name": "2CC Talking Canberra",
+    "category": "anz",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/2CCAAC.aac"
+    ],
+    "added": "2026-11-06",
+    "where": "Australia"
+  },
+  {
+    "id": "cape-talk-567",
+    "name": "Cape Talk 567",
+    "category": "world",
+    "streams": [
+      "https://27863.live.streamtheworld.com/CAPE_TALKAAC_SC?dist=CapeTalkWeb&pname=TDSdk"
+    ],
+    "added": "2026-11-06",
+    "where": "South Africa"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T07:54Z";
+window.STATIONS_CHECKED = "2026-11-06T20:33Z";

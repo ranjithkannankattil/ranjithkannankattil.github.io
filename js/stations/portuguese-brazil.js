@@ -81,7 +81,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stm5.painelcast.com:7662/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-studio-flashback",
@@ -1168,6 +1169,33 @@ window.STATIONS = [
       "https://paineldj5.com.br:20028/stream"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "radio-stereo-mix",
+    "name": "Rádio Stereo Mix",
+    "category": "music",
+    "streams": [
+      "https://servidor24.brlogic.com:7134/live"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "conecta-fm-marilia",
+    "name": "Conecta FM - Marília",
+    "category": "music",
+    "streams": [
+      "https://paineldj.com.br:20184/stream"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "eldorado-fm-sao-paulo",
+    "name": "Eldorado FM - São Paulo",
+    "category": "news",
+    "streams": [
+      "https://24253.live.streamtheworld.com/RADIO_ELDORADOAAC/HLS/playlist.m3u8"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T07:54Z";
+window.STATIONS_CHECKED = "2026-11-06T20:33Z";

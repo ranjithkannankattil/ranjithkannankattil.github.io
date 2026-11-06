@@ -818,7 +818,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/r6eprdta6nhvv"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "offline": true
   },
   {
     "id": "hala-fm",
@@ -1161,6 +1162,33 @@ window.STATIONS = [
       "https://radio.babnet.net/?type=https"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "radio-alhara",
+    "name": "Radio alHara",
+    "category": "music",
+    "streams": [
+      "https://stream.radioalhara.net/ra"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "culture",
+    "name": "Culture",
+    "category": "news",
+    "streams": [
+      "https://webradio3.tda.dz:8001/Culture_64K.mp3"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "virgin-radio-lebanon-stars",
+    "name": "Virgin Radio Lebanon Stars",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/h66yxnapga0uv"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T07:54Z";
+window.STATIONS_CHECKED = "2026-11-06T20:33Z";

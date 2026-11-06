@@ -1166,6 +1166,33 @@ window.STATIONS = [
       "https://radiobzlive.rai.it/RAIBZ_Livestream"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "radio-paloma",
+    "name": "Radio Paloma",
+    "category": "music",
+    "streams": [
+      "https://icepool.silvacast.com/RADIOPALOMA.mp3"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "radio-bob-livestream-national",
+    "name": "RADIO BOB! Livestream National",
+    "category": "music",
+    "streams": [
+      "https://streams.radiobob.de/bob-national/mp3-192/mediaplayer"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "the-wolf-new-country-and-the-legends",
+    "name": "The WOLF - New Country and the Legends",
+    "category": "music",
+    "streams": [
+      "https://radio21.streamabc.net/radio21-radio21dabns-mp3-192-3908190"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T07:54Z";
+window.STATIONS_CHECKED = "2026-11-06T20:33Z";

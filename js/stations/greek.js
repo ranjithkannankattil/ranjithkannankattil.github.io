@@ -1186,6 +1186,33 @@ window.STATIONS = [
       "https://radio.libero.fm:10770/live?178383342258"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "best-radio-92-6",
+    "name": "Best Radio 92.6",
+    "category": "music",
+    "streams": [
+      "https://netradio.live24.gr/best1222"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "1st-greek-hits-radio",
+    "name": "1st Greek Hits Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.newageradio.gr/listen/flac_gr/radio.mp3"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "splash-online",
+    "name": "Splash Online",
+    "category": "music",
+    "streams": [
+      "https://rdst.win:48198/live"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T07:54Z";
+window.STATIONS_CHECKED = "2026-11-06T20:33Z";

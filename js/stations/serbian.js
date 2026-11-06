@@ -1051,6 +1051,24 @@ window.STATIONS = [
       "https://rtsradio-live.morescreens.com/RTS_2_003/audio/chunklist.m3u8"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "radio-futog-krajina",
+    "name": "Radio Futog Krajina",
+    "category": "music",
+    "streams": [
+      "https://centova.dukahosting.com/proxy/futog/stream"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "radio-osvit",
+    "name": "﻿﻿Radio Osvit",
+    "category": "music",
+    "streams": [
+      "https://radio.dukahosting.com/8020/stream"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T07:54Z";
+window.STATIONS_CHECKED = "2026-11-06T20:33Z";

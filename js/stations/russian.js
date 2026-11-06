@@ -153,7 +153,8 @@ window.STATIONS = [
     "streams": [
       "https://chanson.hostingradio.ru:8041/chanson-uncensored256.mp3"
     ],
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "anon-fm",
@@ -217,7 +218,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://azura-cast.radiokansk.ru/listen/radiokansk/live"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "instrumental-jazz",
@@ -908,8 +910,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.astv.ru/stream.mp3"
     ],
-    "added": "2026-11-02",
-    "offline": true
+    "added": "2026-11-02"
   },
   {
     "id": "fm-5",
@@ -1008,8 +1009,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.brokenbeats.net/tune"
     ],
-    "added": "2026-11-03",
-    "offline": true
+    "added": "2026-11-03"
   },
   {
     "id": "station-39",
@@ -1163,6 +1163,33 @@ window.STATIONS = [
       "https://webradio.mcm.fm:10443/hit128"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "radio-7-semey",
+    "name": "RADIO 7 SEMEY",
+    "category": "music",
+    "streams": [
+      "https://listen2.myradio24.com/8334"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "fm-80e",
+    "name": "Ретро FM 80e",
+    "category": "music",
+    "streams": [
+      "https://retro80.hostingradio.ru:8025/retro80-128.mp3"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "nrj-russia",
+    "name": "NRJ Russia",
+    "category": "music",
+    "streams": [
+      "https://srv02.gpmradio.ru:8443/stream/air/aac/64/99"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T07:54Z";
+window.STATIONS_CHECKED = "2026-11-06T20:33Z";

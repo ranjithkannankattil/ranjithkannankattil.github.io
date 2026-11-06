@@ -944,8 +944,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/tnvnovtgozstv"
     ],
-    "added": "2026-11-02",
-    "offline": true
+    "added": "2026-11-02"
   },
   {
     "id": "super-2-fm",
@@ -1135,6 +1134,33 @@ window.STATIONS = [
       "https://anadolu.liderhost.com.tr:10924/stream"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "tum-zamanlarn-en-iyileri",
+    "name": "Tüm Zamanların En İyileri",
+    "category": "music",
+    "streams": [
+      "https://25453.live.streamtheworld.com:443/GHOAT_TR128AAC.aac"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "tarkan",
+    "name": "Tarkan",
+    "category": "music",
+    "streams": [
+      "https://stream.pcradio.ru/tarkan-hi"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "ahmet-kaya-anne-bul-beni-anne",
+    "name": "Ahmet Kaya - Anne Bul Beni Anne",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/mk6qxx8hpm0uv"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T07:54Z";
+window.STATIONS_CHECKED = "2026-11-06T20:33Z";

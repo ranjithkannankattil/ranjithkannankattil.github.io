@@ -1050,6 +1050,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-06",
     "where": "Albania"
+  },
+  {
+    "id": "cbc-radio-one-vancouver-bc",
+    "name": "CBC Radio One - Vancouver, BC",
+    "category": "canada",
+    "streams": [
+      "https://22983.live.streamtheworld.com/CBU2FM_CBC_SC"
+    ],
+    "added": "2026-11-06",
+    "where": "Canada"
+  },
+  {
+    "id": "98-4-capital-fm",
+    "name": "98.4 Capital FM",
+    "category": "world",
+    "streams": [
+      "https://atunwadigital.streamguys1.com/capitalfm"
+    ],
+    "added": "2026-11-06",
+    "where": "Kenya"
+  },
+  {
+    "id": "107-3-bbc-radio-uganda",
+    "name": "107.3 BBC Radio Uganda",
+    "category": "world",
+    "streams": [
+      "https://stream.live.vc.bbcmedia.co.uk/bbc_world_service_west_africa"
+    ],
+    "added": "2026-11-06",
+    "where": "Uganda"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T07:54Z";
+window.STATIONS_CHECKED = "2026-11-06T20:33Z";

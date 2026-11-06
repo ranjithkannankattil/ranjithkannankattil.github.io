@@ -1107,6 +1107,33 @@ window.STATIONS = [
       "https://s37.radiolize.com/radio/8100/radio.mp3"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "hit-fm-eurovision-hits",
+    "name": "HIT FM Eurovision Hits",
+    "category": "music",
+    "streams": [
+      "https://radio7.dixi.md/listen/hit_fm_eurovision_hits/eurovisionhits.aac"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "radio-vaticana-romania",
+    "name": "Radio Vaticana România",
+    "category": "devotional",
+    "streams": [
+      "https://radio.vaticannews.va/stream-ro"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "extravaganza-radio",
+    "name": "Extravaganza Radio",
+    "category": "music",
+    "streams": [
+      "https://s3.radio.co/s1492c0564/listen"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T07:54Z";
+window.STATIONS_CHECKED = "2026-11-06T20:33Z";

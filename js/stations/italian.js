@@ -129,8 +129,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://onair.armisa.it/listen/armisa/radio.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "virgin-radio-classic-rock",
@@ -1103,6 +1102,33 @@ window.STATIONS = [
       "https://radio.albania360.net/listen/albania_360_radio/radio.mp3"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "rsc-radio-studio-centrale",
+    "name": "RSC Radio Studio Centrale",
+    "category": "music",
+    "streams": [
+      "https://stream.studiocentrale.it/radio/8020/radio.mp3?_=1"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "radio-gelosa",
+    "name": "Radio Gelosa",
+    "category": "music",
+    "streams": [
+      "https://ice02.fluidstream.net/gelosa"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "radio-napoli",
+    "name": "Radio Napoli",
+    "category": "music",
+    "streams": [
+      "https://ice06.fluidstream.net/RadioNapoli.mp3?FLID=6"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T07:54Z";
+window.STATIONS_CHECKED = "2026-11-06T20:33Z";

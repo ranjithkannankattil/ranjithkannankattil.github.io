@@ -1043,6 +1043,33 @@ window.STATIONS = [
       "https://radiokapitalpl.out.airtime.pro/radiokapitalpl_a"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "radio-vaticana-polska",
+    "name": "Radio Vaticana Polska",
+    "category": "devotional",
+    "streams": [
+      "https://radio.vaticannews.va/stream-pl"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "radio-alesia",
+    "name": "Radio ALESIA",
+    "category": "music",
+    "streams": [
+      "https://air.alesia.live/alesia"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "chillizet-ladies-om",
+    "name": "Chillizet Ladies -om",
+    "category": "music",
+    "streams": [
+      "https://ch01.cdn.eurozet.pl/CHILAD.mp3?t=1709721264195?redirected=01"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T07:54Z";
+window.STATIONS_CHECKED = "2026-11-06T20:33Z";

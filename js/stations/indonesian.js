@@ -72,8 +72,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radiojar.com/7csmg90fuqruv"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "campursari-fm-jakarta",
@@ -97,7 +96,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/21/9221/rritjpinangpro2.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "sb-fm-tembang-kenangan",
@@ -153,7 +153,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/21/9221/rritjpinangpro1.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "pas-fm-jakarta",
@@ -209,7 +210,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:9154/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radiks-fm-semarang",
@@ -218,7 +220,8 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:9620/;",
       "https://i.klikhost.com:9620/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-music-indonesia",
@@ -269,7 +272,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:8500/;super.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "bahtera-yudha-fm-surabaya",
@@ -317,7 +321,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://server.radioimeldafm.co.id/radio/8040/gajahmadafm"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rri-pro-1-sungailiat",
@@ -325,7 +330,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/14/9314/rrisngliatpro1.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "mosh-head-black-metal-id",
@@ -415,7 +421,8 @@ window.STATIONS = [
     "streams": [
       "https://server.radioimeldafm.co.id:8040/gajahmadafm"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "yaski-radio",
@@ -460,7 +467,8 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:9622/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "rri-pro1-banjarmasin",
@@ -550,7 +558,8 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com/8228/;radio"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "offline": true
   },
   {
     "id": "bandung-death-metal-syndicate",
@@ -659,7 +668,8 @@ window.STATIONS = [
     "streams": [
       "https://svara-stream.radioddns.net/bali_voksradio_993fm"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "offline": true
   },
   {
     "id": "imelda-fm",
@@ -704,7 +714,8 @@ window.STATIONS = [
     "streams": [
       "https://stream-node2.rri.co.id/streaming/21/9221/rritjpinangpro4.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "offline": true
   },
   {
     "id": "jiz-89-5-fm",
@@ -929,7 +940,8 @@ window.STATIONS = [
     "streams": [
       "https://ssg.streamingmurah.com:8078/;"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "offline": true
   },
   {
     "id": "wawa-radio-101-2-fm",
@@ -1110,6 +1122,33 @@ window.STATIONS = [
       "https://radio.safasindo.com/listen/radio_safasindo/radio.mp3"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "rri-pro-3-palembang",
+    "name": "RRI Pro 3 Palembang",
+    "category": "news",
+    "streams": [
+      "https://stream-node0.rri.go.id/streaming/14/9014/kbrn.mp3"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "96-1-fm-radio-bravo-fm-kebumen",
+    "name": "96.1 FM - Radio Bravo FM Kebumen",
+    "category": "music",
+    "streams": [
+      "https://stream.swadesifm.com/radio/8090/radio.mp3"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "hot-93-2-fm",
+    "name": "Hot 93.2 FM",
+    "category": "music",
+    "streams": [
+      "https://wz.mari.co.id:1936/web_hotfm/hotfm/playlist.m3u8"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T07:54Z";
+window.STATIONS_CHECKED = "2026-11-06T20:33Z";

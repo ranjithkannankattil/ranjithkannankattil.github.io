@@ -1162,6 +1162,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/fqmu9c005hhvv"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "esradio-madrid",
+    "name": "esRadio Madrid",
+    "category": "music",
+    "streams": [
+      "https://libertaddigital-radio-live1.flumotion.com/libertaddigital/ld-live1-med.aac"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "loca-progressive-house",
+    "name": "Loca Progressive House",
+    "category": "music",
+    "streams": [
+      "https://s02.fjperezdj.com:8056/live?listening-from-radio-garden=1647634146"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "loca-fm-ambient",
+    "name": "Loca FM Ambient",
+    "category": "music",
+    "streams": [
+      "https://s02.fjperezdj.com:8036/live"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T07:54Z";
+window.STATIONS_CHECKED = "2026-11-06T20:33Z";

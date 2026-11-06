@@ -1134,6 +1134,24 @@ window.STATIONS = [
       "https://icecast1.play.cz/kissproton128.mp3"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "shinto",
+    "name": "Shinto",
+    "category": "music",
+    "streams": [
+      "https://s49.myradiostream.com/8142/listen.mp3"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "hitradio-contact",
+    "name": "Hitrádio Contact",
+    "category": "music",
+    "streams": [
+      "https://ice3.abradio.cz/hitradiocontact128.mp3"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T07:54Z";
+window.STATIONS_CHECKED = "2026-11-06T20:33Z";

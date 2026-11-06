@@ -431,8 +431,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.molnarkft.hu/rabakozradio"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "coolfm-trance-elektro",
@@ -1018,6 +1017,33 @@ window.STATIONS = [
       "https://mediagw.e-tiger.net/stream/krehq"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "radio-sunrise",
+    "name": "Radio Sunrise",
+    "category": "music",
+    "streams": [
+      "https://s03.diazol.hu:7172/stream"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "mnews-radio",
+    "name": "MNEWS Rádió",
+    "category": "news",
+    "streams": [
+      "https://a5.asurahosting.com:6680/radio.mp3"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "radio-brand",
+    "name": "Radio Brand",
+    "category": "music",
+    "streams": [
+      "https://radiobrand.es:8084/RadioBrand"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T07:54Z";
+window.STATIONS_CHECKED = "2026-11-06T20:33Z";

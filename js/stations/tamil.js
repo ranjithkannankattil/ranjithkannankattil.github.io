@@ -56,7 +56,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "89-4-tamil-fm",
@@ -280,7 +281,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio129/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "tamil-ragam",
@@ -836,8 +838,7 @@ window.STATIONS = [
     "streams": [
       "https://centova71.instainternet.com/proxy/tamilrockyfm?mp=/stream"
     ],
-    "added": "2026-10-31",
-    "offline": true
+    "added": "2026-10-31"
   },
   {
     "id": "shiva-tattvam",
@@ -1026,8 +1027,7 @@ window.STATIONS = [
     "streams": [
       "https://centova71.instainternet.com/proxy/isaiolifmadmin?mp=/stream&1691245966241"
     ],
-    "added": "2026-11-03",
-    "offline": true
+    "added": "2026-11-03"
   },
   {
     "id": "cheemaifm",
@@ -1126,8 +1126,7 @@ window.STATIONS = [
     "streams": [
       "https://centova71.instainternet.com/proxy/sweetyfm?mp=/stream2"
     ],
-    "added": "2026-11-05",
-    "offline": true
+    "added": "2026-11-05"
   },
   {
     "id": "tamil-amuthu-chennai-radio",
@@ -1173,6 +1172,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/ssnf4ya44d0uv"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "sstamilradio",
+    "name": "Sstamilradio",
+    "category": "music",
+    "streams": [
+      "https://stream.rcast.net/68750"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "thiruneriya-thamizhosai",
+    "name": "Thiruneriya Thamizhosai",
+    "category": "music",
+    "streams": [
+      "https://radio.shaivam.org/listen/thiruneriya-thamizhosai/radio.mp3"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "subikshafm",
+    "name": "Subikshafm",
+    "category": "music",
+    "streams": [
+      "https://usa8.fastcast4u.com/proxy/subikshafm?mp=/1"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T07:54Z";
+window.STATIONS_CHECKED = "2026-11-06T20:33Z";

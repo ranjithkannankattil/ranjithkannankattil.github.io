@@ -121,7 +121,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play-radio-stream3.hndt.com/now/WUBA5hW2/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-10",
@@ -201,7 +202,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-17",
@@ -1096,6 +1098,33 @@ window.STATIONS = [
       "https://piccpndali.v.myalicdn.com/audio/dongfang_2.m3u8"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "fm93-4-am990",
+    "name": "上海新闻广播 FM93.4 AM990",
+    "category": "music",
+    "streams": [
+      "https://lhttp-hw.qtfm.cn/live/270/64k.mp3"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "bigcowfm",
+    "name": "BIGCOWFM大牛网络电台 · 马来西亚中文网络电台",
+    "category": "news",
+    "streams": [
+      "https://a.tunzilla.com/http://onairnow.ddns.net:8000/chinese.mp3"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "fm-24",
+    "name": ".听梦想FM（原态度电台）24小时音乐不打烊",
+    "category": "music",
+    "streams": [
+      "https://lhttp-hw.qtfm.cn/live/4917/64k.mp3"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T07:54Z";
+window.STATIONS_CHECKED = "2026-11-06T20:33Z";

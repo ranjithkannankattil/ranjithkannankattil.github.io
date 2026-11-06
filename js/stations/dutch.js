@@ -1172,6 +1172,33 @@ window.STATIONS = [
       "https://icecast-qmusicbe-cdp.triple-it.nl/q-allstars.aac"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "100-nl-liefde",
+    "name": "100% NL Liefde",
+    "category": "music",
+    "streams": [
+      "https://www.mp3streams.nl/zender/100-nl-liefde/stream/105-aac-96"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "nrj-belgie",
+    "name": "NRJ België",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/NRJBELGIE.mp3?dist=radiobrowser"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "omrop-fryslan-radio",
+    "name": "Omrop Fryslân Radio",
+    "category": "music",
+    "streams": [
+      "https://d3pvma9xb2775h.cloudfront.net/icecast/omropfryslan/radio.mp3"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T07:54Z";
+window.STATIONS_CHECKED = "2026-11-06T20:33Z";

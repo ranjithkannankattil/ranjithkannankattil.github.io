@@ -92,8 +92,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "m80-radio-ballads",
@@ -204,10 +203,9 @@ window.STATIONS = [
     "name": "Antena 3",
     "category": "music",
     "streams": [
-      "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8",
-      "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8"
-    ],
-    "offline": true
+      "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8",
+      "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
+    ]
   },
   {
     "id": "golofm",
@@ -278,10 +276,9 @@ window.STATIONS = [
     "name": "Antena 2",
     "category": "music",
     "streams": [
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8",
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
-    ],
-    "offline": true
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR",
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8"
+    ]
   },
   {
     "id": "rca-radio-clube-de-armamar",
@@ -359,7 +356,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -449,7 +447,8 @@ window.STATIONS = [
     "streams": [
       "https://cast.redewt.net:9825/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "m80-radio-pop",
@@ -1161,6 +1160,33 @@ window.STATIONS = [
       "https://radios.justweb.pt/8074/stream"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "radio-musgo",
+    "name": "Radio Musgo",
+    "category": "music",
+    "streams": [
+      "https://stream.radiomusgo.com/main"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "radio-clube-de-lamego",
+    "name": "Rádio Clube de Lamego",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/9prct7k8h0hvv"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "radio-metal-on-the-thrasher",
+    "name": "Radio Metal On: The Thrasher",
+    "category": "music",
+    "streams": [
+      "https://radiometalon.com/listen/radio_metal_on_the_thrasher/radio.mp3"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T07:54Z";
+window.STATIONS_CHECKED = "2026-11-06T20:33Z";

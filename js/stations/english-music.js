@@ -1386,6 +1386,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-06",
     "where": "Canada"
+  },
+  {
+    "id": "calm-radio-bach",
+    "name": "Calm Radio - Bach",
+    "category": "classical",
+    "streams": [
+      "https://streams.calmradio.com:6828/stream"
+    ],
+    "added": "2026-11-06",
+    "where": "Canada"
+  },
+  {
+    "id": "the-jazz-groove-west",
+    "name": "The Jazz Groove (West)",
+    "category": "jazz",
+    "streams": [
+      "https://west-aac-64.streamthejazzgroove.com/stream"
+    ],
+    "added": "2026-11-06",
+    "where": "US"
+  },
+  {
+    "id": "80-hits",
+    "name": "__80 HITS",
+    "category": "rock",
+    "streams": [
+      "https://stream.laut.fm/80sexitos"
+    ],
+    "added": "2026-11-06",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T07:54Z";
+window.STATIONS_CHECKED = "2026-11-06T20:33Z";

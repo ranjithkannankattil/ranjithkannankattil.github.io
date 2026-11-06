@@ -1112,6 +1112,33 @@ window.STATIONS = [
       "https://icecast.rtl.fr/rtl-1-44-128"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "100-radio-hit",
+    "name": "100% Radio Hit",
+    "category": "music",
+    "streams": [
+      "https://100radio-hit.ice.infomaniak.ch/100radio-hit-128.mp3"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "grrif",
+    "name": "GRRIF",
+    "category": "music",
+    "streams": [
+      "https://rjb.ice.infomaniak.ch/rjb-high.mp3"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "radio-tchad",
+    "name": "Radio Tchad",
+    "category": "music",
+    "streams": [
+      "https://strhls.streamakaci.tv/str_tchad_radio/str_tchad_radio/icecast.audio?fbclid=IwAR32Ir_eHaV-HSrh46OVT_VeTZt5KoNggoq8qzeSiAeZTJNBKKUtsSNUtcY"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T07:54Z";
+window.STATIONS_CHECKED = "2026-11-06T20:33Z";

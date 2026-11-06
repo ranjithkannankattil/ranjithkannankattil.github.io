@@ -1161,6 +1161,33 @@ window.STATIONS = [
       "https://streaming01.shockmedia.com.ar:10728/stream"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "clasica-102-5-guatemala",
+    "name": "Clásica 102.5 Guatemala",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/CLASICA_1065AAC.aac"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "radio-cristiana-venezuela",
+    "name": "Radio Cristiana Venezuela",
+    "category": "devotional",
+    "streams": [
+      "https://stream.zeno.fm/r7zrx18xcfhvv"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "los-40-republica-dominicana",
+    "name": "Los 40 República Dominicana",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/sse58hcighnvv?dist=los40-web-live_streaming_play"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T07:54Z";
+window.STATIONS_CHECKED = "2026-11-06T20:33Z";
