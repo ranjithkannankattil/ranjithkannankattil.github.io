@@ -206,7 +206,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8",
       "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "golofm",
@@ -230,8 +231,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "cidade-fm-2",
@@ -349,7 +349,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/rdpafrica80a/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "antena-1-acores-portugal",
@@ -1133,6 +1134,33 @@ window.STATIONS = [
       "https://centova.radios.pt/proxy/404?mp=/stream"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "radio-tagide",
+    "name": "Rádio Tágide",
+    "category": "music",
+    "streams": [
+      "https://azuracast.rhoster.pt/listen/radio_tagide/radio.mp3"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "esr-east-side-radio",
+    "name": "ESR - East Side Radio",
+    "category": "music",
+    "streams": [
+      "https://ice.ether.esr.li/esr-ch1.aac"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "radio-metropolitana-portugal",
+    "name": "radio metropolitana portugal",
+    "category": "music",
+    "streams": [
+      "https://radios.justweb.pt/8074/stream"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T21:16Z";
+window.STATIONS_CHECKED = "2026-11-06T07:54Z";

@@ -431,7 +431,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.molnarkft.hu/rabakozradio"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "coolfm-trance-elektro",
@@ -1008,6 +1009,15 @@ window.STATIONS = [
       "https://stream-175.surfernetwork.com/skwcpsuh60mvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJza3djcHN1aDYwbXZ2IiwiaG9zdCI6InN0cmVhbS0xNzUuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6Ikd2U2JPTldoUjVpUXVIbzBGUFg4bGciLCJpYXQiOjE3OTM1Nzc0NjYsImV4cCI6MTc5MzU3NzUyNn0.dhOtlHJgZ_HDKqbC-GITdjlP-Y9edCITczJCvzcDdyI"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "cool-fm-kultx",
+    "name": "Cool FM - kultX",
+    "category": "music",
+    "streams": [
+      "https://mediagw.e-tiger.net/stream/krehq"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T21:16Z";
+window.STATIONS_CHECKED = "2026-11-06T07:54Z";

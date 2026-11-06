@@ -917,8 +917,7 @@ window.STATIONS = [
     "streams": [
       "https://radyokarakocan.ozelip.com/8006/stream"
     ],
-    "added": "2026-11-02",
-    "offline": true
+    "added": "2026-11-02"
   },
   {
     "id": "radyo-d",
@@ -945,7 +944,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/tnvnovtgozstv"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "offline": true
   },
   {
     "id": "super-2-fm",
@@ -1108,6 +1108,33 @@ window.STATIONS = [
       "https://radyo.yayindakiler.com:3050/stream"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "radyo-fikir",
+    "name": "Radyo Fikir",
+    "category": "music",
+    "streams": [
+      "https://studio21.radiolize.com/radio/8100/radio.mp3?1647021999"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "romantik-ses-isparta",
+    "name": "Romantik Ses ISPARTA",
+    "category": "music",
+    "streams": [
+      "https://radyo.romantikses.com/romantiksesispart/stream"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "yenikoy-fm",
+    "name": "Yeniköy FM",
+    "category": "music",
+    "streams": [
+      "https://anadolu.liderhost.com.tr:10924/stream"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T21:16Z";
+window.STATIONS_CHECKED = "2026-11-06T07:54Z";

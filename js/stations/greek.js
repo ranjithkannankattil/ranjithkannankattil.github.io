@@ -1159,6 +1159,33 @@ window.STATIONS = [
       "https://sc2.streamwithq.com:8016/stream?type=http&nocache=65312"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "makedonia-1386",
+    "name": "Makedonia 1386",
+    "category": "music",
+    "streams": [
+      "https://webinternetradio.eu:48238/"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "ekfrasi",
+    "name": "Ekfrasi",
+    "category": "music",
+    "streams": [
+      "https://neos.win:59340/stream"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "libero-107-4-fm",
+    "name": "Libero 107.4 FM",
+    "category": "news",
+    "streams": [
+      "https://radio.libero.fm:10770/live?178383342258"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T21:16Z";
+window.STATIONS_CHECKED = "2026-11-06T07:54Z";

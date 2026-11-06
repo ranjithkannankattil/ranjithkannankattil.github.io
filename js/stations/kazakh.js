@@ -64,8 +64,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.ns.kz/radions"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "classic",
@@ -121,8 +120,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/1908/64k.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-bulbul",
@@ -149,4 +147,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T21:16Z";
+window.STATIONS_CHECKED = "2026-11-06T07:54Z";

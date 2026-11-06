@@ -256,8 +256,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio007/hlspbaudio007_Auto.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-mirchi-usa",
@@ -369,8 +368,7 @@ window.STATIONS = [
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio011/hlspbaudio011_Auto.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "sandesh-radio",
@@ -847,7 +845,8 @@ window.STATIONS = [
     "streams": [
       "https://audio-edge-fvq45.ams.d.radiomast.io/3ccc1156-fcf8-4ba7-9a0c-28e3a465e1ae?listening-from-radio-garden=1607152226837"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "offline": true
   },
   {
     "id": "bollywood-2000-s-radio",
@@ -1127,6 +1126,24 @@ window.STATIONS = [
       "https://stream.zeno.fm/g372rxef798uv"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "tinder-radio",
+    "name": "Tinder Radio",
+    "category": "music",
+    "streams": [
+      "https://streaming.exclusive.radio/er/bollywood/icecast.audio"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "ujala-radio",
+    "name": "Ujala Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.ujala.nl/ujala"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T21:16Z";
+window.STATIONS_CHECKED = "2026-11-06T07:54Z";

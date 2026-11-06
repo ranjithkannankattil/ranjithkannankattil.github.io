@@ -57,8 +57,7 @@ window.STATIONS = [
     "streams": [
       "https://icecast.unitedradio.it/Virgin.mp3",
       "https://icy.unitedradio.it/Virgin.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "rmc-radio-monte-carlo",
@@ -130,7 +129,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://onair.armisa.it/listen/armisa/radio.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "virgin-radio-classic-rock",
@@ -1076,6 +1076,33 @@ window.STATIONS = [
       "https://gr.fluidstream.eu/gr1.mp3"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "radio-capital-music",
+    "name": "Radio Capital Music",
+    "category": "music",
+    "streams": [
+      "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/webradio/capitalmusic/playlist.m3u8"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "radio-sud-orientale-rso",
+    "name": "Radio Sud Orientale RSO",
+    "category": "music",
+    "streams": [
+      "https://nrf1.newradio.it/stream/9750"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "albania-360-radio",
+    "name": "Albania 360 Radio",
+    "category": "news",
+    "streams": [
+      "https://radio.albania360.net/listen/albania_360_radio/radio.mp3"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T21:16Z";
+window.STATIONS_CHECKED = "2026-11-06T07:54Z";

@@ -1356,6 +1356,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "where": "UK"
+  },
+  {
+    "id": "cafe-80-s",
+    "name": "Cafe 80's",
+    "category": "rock",
+    "streams": [
+      "https://streams.loudspeaker.org/listen/cafe-80s/channel_8"
+    ],
+    "added": "2026-11-06",
+    "where": "US"
+  },
+  {
+    "id": "bbc-radio-1-anthems",
+    "name": "BBC Radio 1 Anthems",
+    "category": "pop",
+    "streams": [
+      "https://as-hls-ww-live.akamaized.net/pool_11351741/live/ww/bbc_radio_one_anthems/bbc_radio_one_anthems.isml/bbc_radio_one_anthems-audio%3d128000.norewind.m3u8"
+    ],
+    "added": "2026-11-06",
+    "where": "UK"
+  },
+  {
+    "id": "cbc-music-eastern-toronto-mp3-stream",
+    "name": "CBC Music Eastern (Toronto) MP3 Stream",
+    "category": "jazz",
+    "streams": [
+      "https://22983.live.streamtheworld.com/CBLFM_CBC_SC"
+    ],
+    "added": "2026-11-06",
+    "where": "Canada"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T21:16Z";
+window.STATIONS_CHECKED = "2026-11-06T07:54Z";

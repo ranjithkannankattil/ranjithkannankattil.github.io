@@ -88,8 +88,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.mfm.ua/online128"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "nrj-ukraine",
@@ -258,8 +257,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://rockradioua.online:8433/rock_256"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-rocks-103-6fm-hd",
@@ -1055,4 +1053,4 @@ window.STATIONS = [
     "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T21:16Z";
+window.STATIONS_CHECKED = "2026-11-06T07:54Z";

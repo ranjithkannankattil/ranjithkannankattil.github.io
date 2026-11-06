@@ -1116,6 +1116,24 @@ window.STATIONS = [
       "https://ice3.abradio.cz/epigon128.mp3"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "cro-radiozurnal-sport-stream-adhoc-2",
+    "name": "čro radiožurnál sport Stream AdHoc 2",
+    "category": "news",
+    "streams": [
+      "https://rozhlas.stream/radiozurnal_sport_adhoc_2_high.mp3"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "kiss-proton",
+    "name": "Kiss proton",
+    "category": "music",
+    "streams": [
+      "https://icecast1.play.cz/kissproton128.mp3"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T21:16Z";
+window.STATIONS_CHECKED = "2026-11-06T07:54Z";

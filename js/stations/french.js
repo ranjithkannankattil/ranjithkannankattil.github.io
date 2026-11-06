@@ -1085,6 +1085,33 @@ window.STATIONS = [
       "https://radios.rtbf.be/pure-128.mp3"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "rts-matam-89-1",
+    "name": "RTS Matam 89.1",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/kxud8vhqt1duv"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "radio-misk",
+    "name": "Radio Misk",
+    "category": "music",
+    "streams": [
+      "https://live.misk.art/stream"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "rtl-france",
+    "name": "RTL France",
+    "category": "music",
+    "streams": [
+      "https://icecast.rtl.fr/rtl-1-44-128"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T21:16Z";
+window.STATIONS_CHECKED = "2026-11-06T07:54Z";

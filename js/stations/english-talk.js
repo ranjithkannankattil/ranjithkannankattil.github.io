@@ -1178,6 +1178,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "where": "US"
+  },
+  {
+    "id": "105fm",
+    "name": "105FM",
+    "category": "world",
+    "streams": [
+      "https://105fm.espiv.net/listen/105fm/stream.mp3"
+    ],
+    "added": "2026-11-06",
+    "where": "Greece"
+  },
+  {
+    "id": "702-abc-sydney",
+    "name": "702 ABC Sydney",
+    "category": "anz",
+    "streams": [
+      "https://streaming.abc-cdn.net.au/audio/hls/localsydney.m3u8?source=web"
+    ],
+    "added": "2026-11-06",
+    "where": "Australia"
+  },
+  {
+    "id": "letio-tonga",
+    "name": "Letio Tonga",
+    "category": "world",
+    "streams": [
+      "https://stream.zeno.fm/wnd22q3485quv"
+    ],
+    "added": "2026-11-06",
+    "where": "Tonga"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T21:16Z";
+window.STATIONS_CHECKED = "2026-11-06T07:54Z";

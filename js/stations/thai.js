@@ -293,8 +293,7 @@ window.STATIONS = [
     "streams": [
       "https://radio11.plathong.net/7050/;stream.mp3"
     ],
-    "added": "2026-10-29",
-    "offline": true
+    "added": "2026-10-29"
   },
   {
     "id": "translation-of-the-quran-in-thai",
@@ -304,6 +303,33 @@ window.STATIONS = [
       "https://serverkw.quran-uni.com:8134/;"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "mun-forward-103",
+    "name": "MUN Forward 103",
+    "category": "music",
+    "streams": [
+      "https://cdn-th2.livestreaming.in.th/shoutcast/8730"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "mun-forward-xtra-88",
+    "name": "MUN Forward Xtra 88",
+    "category": "music",
+    "streams": [
+      "https://cdn-th2.livestreaming.in.th/shoutcast/8795"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "friends-bangkok",
+    "name": "Friends Bangkok",
+    "category": "music",
+    "streams": [
+      "https://c14.radioboss.fm:8369/stream"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T21:16Z";
+window.STATIONS_CHECKED = "2026-11-06T07:54Z";

@@ -908,7 +908,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.astv.ru/stream.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "offline": true
   },
   {
     "id": "fm-5",
@@ -1135,6 +1136,33 @@ window.STATIONS = [
       "https://radiorecord.hostingradio.ru/phonk96.aacp"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "fm-qazaqstan",
+    "name": "Ретро FM Qazaqstan",
+    "category": "music",
+    "streams": [
+      "https://radiohub.kz/s/retrofm/112/playlist.m3u8"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "stand-up",
+    "name": "Женский Stand Up",
+    "category": "music",
+    "streams": [
+      "https://pub0102.101.ru:8443/stream/pro/aac/64/448"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "mcm",
+    "name": "MCM",
+    "category": "music",
+    "streams": [
+      "https://webradio.mcm.fm:10443/hit128"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T21:16Z";
+window.STATIONS_CHECKED = "2026-11-06T07:54Z";

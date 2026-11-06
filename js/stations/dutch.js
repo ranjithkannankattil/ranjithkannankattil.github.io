@@ -1145,6 +1145,33 @@ window.STATIONS = [
       "https://qxjr001.digiplay.nl/stream/9160/stream"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "funx",
+    "name": "FunX",
+    "category": "music",
+    "streams": [
+      "https://icecast.omroep.nl/funx-sb-aac"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "rivierenland-radio",
+    "name": "Rivierenland Radio",
+    "category": "news",
+    "streams": [
+      "https://server-28.stream-server.nl:8802/stream"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "qmusic-q-allstars",
+    "name": "Qmusic Q-Allstars",
+    "category": "music",
+    "streams": [
+      "https://icecast-qmusicbe-cdp.triple-it.nl/q-allstars.aac"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T21:16Z";
+window.STATIONS_CHECKED = "2026-11-06T07:54Z";

@@ -1080,6 +1080,33 @@ window.STATIONS = [
       "https://stream.clever-host.ro/8010/stream"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "rock-fm-blues",
+    "name": "Rock Fm Blues",
+    "category": "music",
+    "streams": [
+      "https://live.rockfm.ro/blues"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "rock-fm-ballads",
+    "name": "Rock Fm Ballads",
+    "category": "music",
+    "streams": [
+      "https://live.rockfm.ro/ballads.rock"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "radio-marketescu-reggae-trip-hop",
+    "name": "Radio Marketescu Reggae&Trip-Hop",
+    "category": "music",
+    "streams": [
+      "https://s37.radiolize.com/radio/8100/radio.mp3"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T21:16Z";
+window.STATIONS_CHECKED = "2026-11-06T07:54Z";

@@ -1139,6 +1139,33 @@ window.STATIONS = [
       "https://stream-285.surfernetwork.com/thdtw5xd9eiuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ0aGR0dzV4ZDllaXV2IiwiaG9zdCI6InN0cmVhbS0yODUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiI0OUMxUU9PMFIyeTl5SThnTno0VTB3IiwiaWF0IjoxNzg1OTU0NjI0LCJleHAiOjE3ODU5NTQ2ODR9.TEC2qyYYTCv3OjNepwCqgyWWPAoxPRanj5XLmznekcA"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "0-n-90s-on-radio",
+    "name": "0 N - 90s on Radio",
+    "category": "music",
+    "streams": [
+      "https://0n-90s.radionetz.de/0n-90s.mp3"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "wdr-1live-diggi",
+    "name": "WDR 1Live Diggi",
+    "category": "music",
+    "streams": [
+      "https://wdr-1live-diggi.icecast.wdr.de/wdr/1live/diggi/mp3/128/stream.mp3"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "rai-sudtirol",
+    "name": "Rai Südtirol",
+    "category": "music",
+    "streams": [
+      "https://radiobzlive.rai.it/RAIBZ_Livestream"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T21:16Z";
+window.STATIONS_CHECKED = "2026-11-06T07:54Z";

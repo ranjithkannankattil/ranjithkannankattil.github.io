@@ -89,8 +89,8 @@ window.STATIONS = [
     "name": "Radio Marca",
     "category": "music",
     "streams": [
-      "https://www.marca.com/radio/geoblock/getSrcApp.php?dial=Nacional&dist=radiomarcaweb",
-      "https://sonic.mediatelekom.net/9316/stream"
+      "https://sonic.mediatelekom.net/9316/stream",
+      "https://www.marca.com/radio/geoblock/getSrcApp.php?dial=Nacional&dist=radiomarcaweb"
     ]
   },
   {
@@ -1135,6 +1135,33 @@ window.STATIONS = [
       "https://rockfm-cope.flumotion.com/chunks.m3u8"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "negocios-com",
+    "name": "NEGOCIOS.COM",
+    "category": "news",
+    "streams": [
+      "https://streaming013.gestec-video.com/hls/negociostv.m3u8"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "capital-radio-madrid",
+    "name": "Capital Radio Madrid",
+    "category": "news",
+    "streams": [
+      "https://mdstrm.com/audio/67d2a8685ae4234de49e40f6/live.m3u8?_=1748201428470&dnt=true&player=67bf8d9eb8fdbbe59cb3dc1e&uid=ZGjN46saKhxpR9l4R89Rah2jvFyKlii2&sid=Ylu5J6JhzLU9YYjHNlrKub2B78xqLdvG&pid=FM2735sWw0sy8ShSstpnBPcUEKzC3DWC&an=lightning-player&at=web-app&av=v1.0.19&sc=0&ds=67bf8b74ff9cc60dd3e575b4&ref=www.capitalradio.es&res=1600x900"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "amor-fm",
+    "name": "Amor FM",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/fqmu9c005hhvv"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T21:16Z";
+window.STATIONS_CHECKED = "2026-11-06T07:54Z";

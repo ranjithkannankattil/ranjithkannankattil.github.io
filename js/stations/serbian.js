@@ -1024,6 +1024,33 @@ window.STATIONS = [
       "https://novosti.radiostreaming.rs/novosti2"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "rsg-relax",
+    "name": "RSG Relax",
+    "category": "music",
+    "streams": [
+      "https://stream.rsg.rs/relax/"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "radio-sumadinac-narodna",
+    "name": "Radio Šumadinac Narodna",
+    "category": "music",
+    "streams": [
+      "https://media.srb-streaming.com/stream/radio-sumadinac-narodna"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "3",
+    "name": "РТС - Радио Београд - 3",
+    "category": "news",
+    "streams": [
+      "https://rtsradio-live.morescreens.com/RTS_2_003/audio/chunklist.m3u8"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T21:16Z";
+window.STATIONS_CHECKED = "2026-11-06T07:54Z";

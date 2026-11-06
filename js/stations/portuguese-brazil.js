@@ -1141,6 +1141,33 @@ window.STATIONS = [
       "https://cast.mgtradio.net/radio/8050/aac"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "radio-gospel-hits",
+    "name": "Rádio Gospel Hits",
+    "category": "devotional",
+    "streams": [
+      "https://webradio.bsoundradio.com.br/listen/gospelhits/live"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "012-rock-news",
+    "name": "012 Rock News",
+    "category": "music",
+    "streams": [
+      "https://9881.brasilstream.com.br/stream"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "radio-jovem-pan-94-3-fm",
+    "name": "Rádio Jovem Pan 94.3 FM",
+    "category": "music",
+    "streams": [
+      "https://paineldj5.com.br:20028/stream"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T21:16Z";
+window.STATIONS_CHECKED = "2026-11-06T07:54Z";

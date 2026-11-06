@@ -1016,6 +1016,33 @@ window.STATIONS = [
       "https://stream.radio.co/s1136b59f3/listen"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "radio-rmf-maxx-warszawa",
+    "name": "Radio RMF MAXX Warszawa",
+    "category": "music",
+    "streams": [
+      "https://rs202-krk.rmfstream.pl/MAXXXWAW"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "zet-latino",
+    "name": "ZET Latino",
+    "category": "music",
+    "streams": [
+      "https://ch.cdn.eurozet.pl/ZETLTN.mp3"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "kapita",
+    "name": "Kapitał",
+    "category": "music",
+    "streams": [
+      "https://radiokapitalpl.out.airtime.pro/radiokapitalpl_a"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T21:16Z";
+window.STATIONS_CHECKED = "2026-11-06T07:54Z";

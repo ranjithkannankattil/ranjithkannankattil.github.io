@@ -1134,6 +1134,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/1fatuk10fkhvv"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "radio-arts-tripoli",
+    "name": "راديو فنون طرابلس - Radio Arts Tripoli",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/z9wfrdpmgg0uv"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "mosaiquefm",
+    "name": "Mosaiquefm",
+    "category": "news",
+    "streams": [
+      "https://radio.mosaiquefm.net/mosalive"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "babnet-tunisie",
+    "name": "Babnet Tunisie",
+    "category": "news",
+    "streams": [
+      "https://radio.babnet.net/?type=https"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T21:16Z";
+window.STATIONS_CHECKED = "2026-11-06T07:54Z";

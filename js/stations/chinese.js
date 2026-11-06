@@ -201,8 +201,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-17",
@@ -1070,6 +1069,33 @@ window.STATIONS = [
       "https://happyradio.com.tw/live"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "china-fmfm92-9",
+    "name": "华夏之声China FM·西班牙马德里FM92.9",
+    "category": "news",
+    "streams": [
+      "https://radioserver12.profesionalhosting.com/proxy/pkg152387/stream"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "station-52",
+    "name": "正聲廣播公司",
+    "category": "music",
+    "streams": [
+      "https://flv.ccdntech.com/live/_definst_/mp4:vod117_Live/live1/playlist.m3u8"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "station-53",
+    "name": "东方卫视伴音",
+    "category": "music",
+    "streams": [
+      "https://piccpndali.v.myalicdn.com/audio/dongfang_2.m3u8"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T21:16Z";
+window.STATIONS_CHECKED = "2026-11-06T07:54Z";

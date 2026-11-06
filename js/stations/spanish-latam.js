@@ -1134,6 +1134,33 @@ window.STATIONS = [
       "https://rt-esp.rttv.com/dvr/rtesp/playlist_64Kb.m3u8"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "olimpica-stereo-104-5-cali",
+    "name": "Olímpica Stéreo 104.5 Cali",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/OLP_CALI.mp3"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "el-espectador-810",
+    "name": "El Espectador 810",
+    "category": "news",
+    "streams": [
+      "https://espectador-1.nty.uy/"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "el-club-de-la-pluma",
+    "name": "EL CLUB DE LA PLUMA",
+    "category": "music",
+    "streams": [
+      "https://streaming01.shockmedia.com.ar:10728/stream"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T21:16Z";
+window.STATIONS_CHECKED = "2026-11-06T07:54Z";

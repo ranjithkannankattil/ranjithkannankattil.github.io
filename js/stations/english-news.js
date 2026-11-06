@@ -1020,6 +1020,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "where": "Canada"
+  },
+  {
+    "id": "bbc-radio-ulster",
+    "name": "BBC Radio Ulster",
+    "category": "uk",
+    "streams": [
+      "https://as-hls-ww-live.akamaized.net/pool_31244774/live/ww/bbc_radio_ulster/bbc_radio_ulster.isml/bbc_radio_ulster-audio%3d128000.norewind.m3u8"
+    ],
+    "added": "2026-11-06",
+    "where": "UK"
+  },
+  {
+    "id": "cbc-radio-1-calgary",
+    "name": "CBC Radio 1 Calgary",
+    "category": "canada",
+    "streams": [
+      "https://cbcradiolive.akamaized.net/hls/live/2041039/ES_R1MCG/master.m3u8"
+    ],
+    "added": "2026-11-06",
+    "where": "Canada"
+  },
+  {
+    "id": "albania-360-radio",
+    "name": "Albania 360 Radio",
+    "category": "world",
+    "streams": [
+      "https://radio.albania360.net/listen/albania_360_radio/radio.mp3"
+    ],
+    "added": "2026-11-06",
+    "where": "Albania"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T21:16Z";
+window.STATIONS_CHECKED = "2026-11-06T07:54Z";

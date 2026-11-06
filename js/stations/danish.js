@@ -460,6 +460,15 @@ window.STATIONS = [
       "https://webradio.vlr.dk/vlrkolding"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "magic-lumora-radio",
+    "name": "Magic Lumora Radio",
+    "category": "music",
+    "streams": [
+      "https://streaming.radio.co/sea3f7bae2/listen"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T21:16Z";
+window.STATIONS_CHECKED = "2026-11-06T07:54Z";

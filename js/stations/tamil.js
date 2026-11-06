@@ -56,8 +56,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "89-4-tamil-fm",
@@ -225,8 +224,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio098/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "vagai-tamil-fm",
@@ -838,7 +836,8 @@ window.STATIONS = [
     "streams": [
       "https://centova71.instainternet.com/proxy/tamilrockyfm?mp=/stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "offline": true
   },
   {
     "id": "shiva-tattvam",
@@ -1027,7 +1026,8 @@ window.STATIONS = [
     "streams": [
       "https://centova71.instainternet.com/proxy/isaiolifmadmin?mp=/stream&1691245966241"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "offline": true
   },
   {
     "id": "cheemaifm",
@@ -1126,7 +1126,8 @@ window.STATIONS = [
     "streams": [
       "https://centova71.instainternet.com/proxy/sweetyfm?mp=/stream2"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "offline": true
   },
   {
     "id": "tamil-amuthu-chennai-radio",
@@ -1145,6 +1146,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/7us8bucomafvv"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "thendral-fm-radio",
+    "name": "Thendral Fm Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/xzt706p3h2zuv"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "sirpifm",
+    "name": "Sirpifm",
+    "category": "music",
+    "streams": [
+      "https://sirpifmhd-unicast2u.radioca.st/stream"
+    ],
+    "added": "2026-11-06"
+  },
+  {
+    "id": "pozhil-fm",
+    "name": "Pozhil Fm",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/ssnf4ya44d0uv"
+    ],
+    "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-05T21:16Z";
+window.STATIONS_CHECKED = "2026-11-06T07:54Z";
