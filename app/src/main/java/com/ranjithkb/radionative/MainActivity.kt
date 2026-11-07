@@ -568,26 +568,27 @@ fun MiniPlayer(now: NowState, c: MediaController?, isFav: Boolean, onFav: () -> 
                 }
             }
             HorizontalDivider(Modifier.padding(horizontal = 12.dp), color = Color(0x14FFFFFF))
-            // bottom: favourite · sleep · share | previous next
-            Row(Modifier.fillMaxWidth().padding(horizontal = 6.dp, vertical = 2.dp), verticalAlignment = Alignment.CenterVertically) {
-                Row(Modifier.weight(1f), horizontalArrangement = Arrangement.SpaceAround, verticalAlignment = Alignment.CenterVertically) {
-                    IconButton(onFav, Modifier.size(48.dp)) {
-                        Icon(if (isFav) Icons.Filled.Favorite else Icons.Outlined.FavoriteBorder,
-                            if (isFav) "Remove from favourites" else "Add to favourites", tint = if (isFav) Gold else dim) }
-                    val on = SleepTimer.at > 0
-                    Column(Modifier.size(width = 64.dp, height = 48.dp).clip(RoundedCornerShape(8.dp)).clickable { sleep = true },
-                        horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
-                        Icon(painterResource(R.drawable.ic_sleep), if (on) "Sleep timer on" else "Sleep timer",
-                            Modifier.size(24.dp), tint = if (on) Gold else dim)
-                        if (on) Text(sleepLeft(), color = Gold, fontSize = 10.sp, lineHeight = 11.sp)
-                    }
-                    IconButton({ share = true }, Modifier.size(48.dp)) { Icon(Icons.Filled.Share, "Share", tint = dim) }
+            // bottom: favourite · sleep · share | previous next — each button fills its share of the row (easy to hit)
+            Row(Modifier.fillMaxWidth().height(64.dp).padding(horizontal = 4.dp), verticalAlignment = Alignment.CenterVertically) {
+                @Composable fun Cell(label: String, onClick: () -> Unit, content: @Composable ColumnScope.() -> Unit) =
+                    Column(Modifier.weight(1f).fillMaxHeight().clip(RoundedCornerShape(12.dp))
+                        .clickable(onClickLabel = label, onClick = onClick),
+                        horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center, content = content)
+                Cell(if (isFav) "Remove from favourites" else "Add to favourites", onFav) {
+                    Icon(if (isFav) Icons.Filled.Favorite else Icons.Outlined.FavoriteBorder,
+                        if (isFav) "Remove from favourites" else "Add to favourites", Modifier.size(30.dp), tint = if (isFav) Gold else dim) }
+                val on = SleepTimer.at > 0
+                Cell("Sleep timer", { sleep = true }) {
+                    Icon(painterResource(R.drawable.ic_sleep), if (on) "Sleep timer on" else "Sleep timer",
+                        Modifier.size(30.dp), tint = if (on) Gold else dim)
+                    if (on) Text(sleepLeft(), color = Gold, fontSize = 11.sp, lineHeight = 12.sp)
                 }
-                Box(Modifier.width(1.dp).height(26.dp).background(Color(0x1FFFFFFF)))
-                Row(Modifier.padding(horizontal = 8.dp)) {
-                    IconButton({ c?.seekToPreviousMediaItem() }, Modifier.size(48.dp)) { Icon(Icons.Filled.SkipPrevious, "Previous station", tint = dim) }
-                    IconButton({ c?.seekToNextMediaItem() }, Modifier.size(48.dp)) { Icon(Icons.Filled.SkipNext, "Next station", tint = dim) }
-                }
+                Cell("Share", { share = true }) { Icon(Icons.Filled.Share, "Share", Modifier.size(28.dp), tint = dim) }
+                Box(Modifier.width(1.dp).height(30.dp).background(Color(0x1FFFFFFF)))
+                Cell("Previous station", { c?.seekToPreviousMediaItem() }) {
+                    Icon(Icons.Filled.SkipPrevious, "Previous station", Modifier.size(34.dp), tint = dim) }
+                Cell("Next station", { c?.seekToNextMediaItem() }) {
+                    Icon(Icons.Filled.SkipNext, "Next station", Modifier.size(34.dp), tint = dim) }
             }
         }
     }
