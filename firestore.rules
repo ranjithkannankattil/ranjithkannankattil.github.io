@@ -85,7 +85,7 @@ service cloud.firestore {
       allow create, update: if isOwner() && uid == ownerUid() && coll in ['watches', 'watchlist']
         && request.resource.data.size() <= 20;
     }
-    // ---- Ranjith's picks: the owner's favourite stations, shared with everyone (apps and Radio page).
+    // ---- Velvet Selection (picks/ranjith): the owner's hand-picked stations, shared with everyone (apps and Radio page).
     match /picks/{id} {
       allow read: if true;
       allow write: if isOwner() && id == 'ranjith'

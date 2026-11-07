@@ -206,7 +206,7 @@ test("rating cannot wipe the comment limit", async () => {
   await assertSucceeds(b.commit());
 });
 
-test("anyone can read Ranjith's picks; only the owner can set them", async () => {
+test("anyone can read the Velvet Selection; only the owner can set them", async () => {
   await assertSucceeds(getDoc(doc(db(null), "picks/ranjith")));
   await assertSucceeds(setDoc(doc(db("owner"), "picks/ranjith"), { favs: [K.replace("~", ":")], updated: serverTimestamp() }));
   await assertFails(setDoc(doc(db("someone"), "picks/ranjith"), { favs: [] }));
