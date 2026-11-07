@@ -49,7 +49,7 @@ private fun newer(a: String, b: String): Boolean {
 }
 
 /** A shareable picture of the song that's playing: cover, song, artist, station, app name. */
-suspend fun shareSongCard(ctx: Context, song: String, artist: String, station: String, artUrl: String?) {
+suspend fun shareSongCard(ctx: Context, song: String, artist: String, station: String, artUrl: String?, link: String = "https://ranjithkb.com/radio.html") {
     val file = withContext(Dispatchers.IO) {
         val w = 1080; val h = 1350
         val bmp = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888)
@@ -66,26 +66,50 @@ suspend fun shareSongCard(ctx: Context, song: String, artist: String, station: S
             for (r in listOf(110f, 200f)) { cv.drawArc(RectF(540 - r, 550 - r, 540 + r, 550 + r), 135f, 90f, false, wave); cv.drawArc(RectF(540 - r, 550 - r, 540 + r, 550 + r), -45f, 90f, false, wave) }
             cv.drawCircle(540f, 550f, 34f, Paint(Paint.ANTI_ALIAS_FLAG).apply { color = 0xFFC9A86A.toInt() })
         }
+        val semi = try { androidx.core.content.res.ResourcesCompat.getFont(ctx, R.font.poppins_semibold) } catch (e: Exception) { null }
+        val reg = try { androidx.core.content.res.ResourcesCompat.getFont(ctx, R.font.poppins_regular) } catch (e: Exception) { null }
         fun text(s: String, y: Float, size: Float, color: Int, bold: Boolean) {
             val p = Paint(Paint.ANTI_ALIAS_FLAG).apply { this.color = color; textSize = size; textAlign = Paint.Align.CENTER
-                typeface = Typeface.create(Typeface.SANS_SERIF, if (bold) Typeface.BOLD else Typeface.NORMAL) }
+                typeface = (if (bold) semi else reg) ?: Typeface.create(Typeface.SANS_SERIF, if (bold) Typeface.BOLD else Typeface.NORMAL) }
             var t = s; while (p.measureText(t) > 900 && t.length > 4) t = t.dropLast(2)
             if (t != s) t = t.trimEnd() + "…"
             cv.drawText(t, 540f, y, p)
         }
-        text(song, 1060f, 60f, 0xFFFFFFFF.toInt(), true)
-        if (artist.isNotBlank()) text(artist, 1130f, 42f, 0xFFE8D9C5.toInt(), false)
-        if (song != station) text("on $station", 1190f, 36f, 0xFFC9A86A.toInt(), false)
+        // long titles wrap onto a second line instead of being cut short
+        val tp = Paint().apply { textSize = 56f; typeface = semi ?: Typeface.DEFAULT_BOLD }
+        val words = song.split(' '); var l1 = ""; var cut = words.size
+        for ((i, w) in words.withIndex()) { val t = if (l1.isEmpty()) w else "$l1 $w"; if (tp.measureText(t) > 900 && l1.isNotEmpty()) { cut = i; break }; l1 = t }
+        val l2 = words.drop(cut).joinToString(" ")
+        var y = 1040f
+        text(l1, y, 56f, 0xFFFFFFFF.toInt(), true)
+        if (l2.isNotBlank()) { y += 66f; text(l2, y, 56f, 0xFFFFFFFF.toInt(), true) }
+        if (artist.isNotBlank()) { y += 70f; text(artist, y, 40f, 0xFFE8D9C5.toInt(), false) }
+        if (song != station) { y += 58f; text("on $station", y, 34f, 0xFFC9A86A.toInt(), false) }
         text("Radio Velvet · ranjithkb.com/radio", 1290f, 30f, 0x99FFFFFF.toInt(), false)
         val dir = File(ctx.cacheDir, "cards").apply { mkdirs() }
         File(dir, "song-card.png").also { f -> f.outputStream().use { bmp.compress(Bitmap.CompressFormat.PNG, 100, it) } }
     }
     val uri = FileProvider.getUriForFile(ctx, ctx.packageName + ".files", file)
     val send = Intent(Intent.ACTION_SEND).setType("image/png").putExtra(Intent.EXTRA_STREAM, uri)
-        .putExtra(Intent.EXTRA_TEXT, if (song == station) "Listening to $station live on Radio Velvet, https://ranjithkb.com/radio.html"
-            else "Listening to $song${if (artist.isNotBlank()) " by $artist" else ""} on $station — Radio Velvet, https://ranjithkb.com/radio.html")
+        .putExtra(Intent.EXTRA_TEXT, if (song == station) "Listening to $station live on Radio Velvet\n$link"
+            else "Listening to $song${if (artist.isNotBlank()) " by $artist" else ""} on $station · Radio Velvet\n$link")
         .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
     ctx.startActivity(Intent.createChooser(send, "Share song card"))
+}
+
+/** Link that opens this station on the Radio page (same format the website shares). */
+fun stationLink(stationKey: String) =
+    "https://ranjithkb.com/radio.html?c=${stationKey.substringBefore(':')}&s=${Uri.encode(stationKey.substringAfter(':'))}"
+
+fun shareTextOnly(ctx: Context, text: String) {
+    ctx.startActivity(Intent.createChooser(Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, text), "Share")
+        .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
+}
+
+fun copyText(ctx: Context, text: String) {
+    val cm = ctx.getSystemService(Context.CLIPBOARD_SERVICE) as android.content.ClipboardManager
+    cm.setPrimaryClip(android.content.ClipData.newPlainText("Radio Velvet", text))
+    if (android.os.Build.VERSION.SDK_INT < 33) android.widget.Toast.makeText(ctx, "Copied", android.widget.Toast.LENGTH_SHORT).show()
 }
 
 /**

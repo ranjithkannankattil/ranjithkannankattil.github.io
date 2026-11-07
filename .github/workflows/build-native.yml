@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 40
     env:
-      APP_VERSION: "2.1.4"
+      APP_VERSION: "2.1.5"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
@@ -39,6 +39,8 @@ jobs:
             echo "Version ${APP_VERSION} · released $(TZ=Europe/Rome date '+%-d %b %Y, %H:%M %Z')"
             echo
             echo "What's new:"
+            echo "- Share as a picture card, as text with a link to the station, or copy the text and link"
+            echo "- A ♥ Favourites filter inside each language"
             echo "- Easy scrolling: ↑ and ↓ buttons jump to the top or bottom of long lists"
             echo "- Stations: Velvet Selection and your recent languages as buttons along the top, plus All languages (press and hold a language to remove it)"
             echo "- A roomier player"

@@ -235,7 +235,8 @@ fun App(c: MediaController?) {
             if (tab == 2) InfoTab(cols.size, update, onSignIn = { openUrl(ctx, Account.SIGN_IN_URL) },
                 onSignOut = { Account.signOut(ctx); Session.name = null })
             else if (tab == 0) {
-                val shown = stations.filter { (cat == "all" || it.category == cat) && (q.isBlank() || it.name.contains(q, true)) }
+                val favKeys = favList.map { it.key }.toSet()
+                val shown = stations.filter { (cat == "all" || it.category == cat || (cat == "fav" && it.key in favKeys)) && (q.isBlank() || it.name.contains(q, true)) }
                     .sortedBy { it.offline }
                 Column {
                     // Where to listen: Velvet Selection first, then your recent languages, then every language
@@ -263,9 +264,12 @@ fun App(c: MediaController?) {
                     OutlinedTextField(q, { q = it }, Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 6.dp),
                         placeholder = { Text(if (colId == PICKS) "Search the Velvet Selection" else "Search ${col?.name ?: ""} stations") },
                         singleLine = true, leadingIcon = { Icon(Icons.Filled.Search, null) })
-                    if (colId != PICKS && col != null && col.cats.isNotEmpty()) LazyRow(contentPadding = PaddingValues(horizontal = 16.dp),
+                    val favHere = stations.count { it.key in favKeys }
+                    if (colId != PICKS && col != null && (col.cats.isNotEmpty() || favHere > 0)) LazyRow(contentPadding = PaddingValues(horizontal = 16.dp),
                         horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                         item { FilterChip(cat == "all", { cat = "all" }, { Text("All ${stations.size}") }) }
+                        if (favHere > 0) item { FilterChip(cat == "fav", { cat = if (cat == "fav") "all" else "fav" }, { Text("Favourites ($favHere)") },
+                            leadingIcon = { Icon(Icons.Filled.Favorite, null, Modifier.size(16.dp), tint = Accent) }) }
                         items(col.cats.filter { (k, _) -> stations.any { it.category == k } }) { (k, label) ->
                             FilterChip(cat == k, { cat = k }, { Text("$label ${stations.count { it.category == k }}") })
                         }
@@ -556,9 +560,24 @@ fun FullPlayer(now: NowState, c: MediaController?, close: () -> Unit) {
                     // Share is always there: a song card while a song is known, otherwise a station card
                     val songArtist = (now.md.artist?.toString() ?: "").split(" · ").filter { it != station }.joinToString(" · ")
                     Row(horizontalArrangement = Arrangement.spacedBy(10.dp), verticalAlignment = Alignment.CenterVertically) {
-                        OutlinedButton({ scope.launch {
-                            if (hasSong) shareSongCard(ctx, song, songArtist, station, now.md.artworkUri?.toString())
-                            else shareSongCard(ctx, station, "Live radio", station, null) } },
+                        var shareMenu by remember { mutableStateOf(false) }
+                        val link = stKey?.let { stationLink(it) } ?: "https://ranjithkb.com/radio.html"
+                        val shareText = if (hasSong) "Listening to $song${if (songArtist.isNotBlank()) " by $songArtist" else ""} on $station · Radio Velvet\n$link"
+                            else "Listening to $station live on Radio Velvet\n$link"
+                        if (shareMenu) AlertDialog(onDismissRequest = { shareMenu = false },
+                            title = { Text(if (hasSong) "Share this song" else "Share this station") },
+                            text = { Column {
+                                TextButton({ shareMenu = false; scope.launch {
+                                    if (hasSong) shareSongCard(ctx, song, songArtist, station, now.md.artworkUri?.toString(), link)
+                                    else shareSongCard(ctx, station, "Live radio", station, null, link) } }, Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
+                                    Icon(Icons.Filled.Image, null); Spacer(Modifier.width(10.dp)); Text("Picture card", Modifier.weight(1f)) }
+                                TextButton({ shareMenu = false; shareTextOnly(ctx, shareText) }, Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
+                                    Icon(Icons.Filled.Share, null); Spacer(Modifier.width(10.dp)); Text("Text with link", Modifier.weight(1f)) }
+                                TextButton({ shareMenu = false; copyText(ctx, shareText) }, Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
+                                    Icon(Icons.Filled.ContentCopy, null); Spacer(Modifier.width(10.dp)); Text("Copy text and link", Modifier.weight(1f)) }
+                            } },
+                            confirmButton = { TextButton({ shareMenu = false }) { Text("Cancel") } })
+                        OutlinedButton({ shareMenu = true },
                             Modifier.heightIn(min = 48.dp), border = BorderStroke(1.dp, Gold), contentPadding = PaddingValues(horizontal = 16.dp)) {
                             Icon(Icons.Filled.Share, null, tint = Gold); Spacer(Modifier.width(8.dp))
                             Text(if (hasSong) "Share song" else "Share station", color = Color.White)
