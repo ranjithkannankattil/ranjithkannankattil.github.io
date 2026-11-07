@@ -2,6 +2,8 @@ package com.ranjithkb.radionative
 
 import android.content.Context
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.withContext
 import org.json.JSONArray
 import org.json.JSONObject
@@ -76,6 +78,16 @@ object Repo {
         val js = cached(ctx, "st-$col.js", "$SITE/js/stations/$col.js?d=${System.currentTimeMillis() / 3600_000}", fresh) ?: return emptyList()
         val a = arrayIn(js, "STATIONS")
         return List(a.length()) { Station.fromJson(a.getJSONObject(it), col) }.filter { it.streams.isNotEmpty() }
+    }
+
+    /** Every station from every language, in language order (loaded in parallel, cached like the rest). */
+    suspend fun allStations(ctx: Context, cols: List<Collection>): List<Station> = kotlinx.coroutines.coroutineScope {
+        cols.map { c -> async { stations(ctx, c.id) } }.awaitAll().flatten()
+    }
+
+    /** Number of stations in each language. */
+    suspend fun counts(ctx: Context, cols: List<Collection>): Map<String, Int> = kotlinx.coroutines.coroutineScope {
+        cols.map { c -> async { c.id to stations(ctx, c.id).count { !it.offline } } }.awaitAll().toMap()
     }
 
     /** "Velvet Selection": the developer's favourite stations, from every language, in his order. */

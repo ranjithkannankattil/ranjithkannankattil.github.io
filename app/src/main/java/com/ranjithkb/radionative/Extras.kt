@@ -9,6 +9,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.core.content.FileProvider
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.json.JSONArray
 import java.io.File
@@ -135,6 +136,22 @@ suspend fun openInSpotify(ctx: Context, song: String, artist: String) {
     // open.spotify.com links open in the Spotify app when it's installed
     try { ctx.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(link)).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)) }
     catch (e: Exception) { openUrl(ctx, link) }
+}
+
+/**
+ * Sleep timer for the whole app: lives as long as the radio is playing (not tied to a screen),
+ * so it still stops the radio with the app closed. The player service fills in [pause].
+ */
+object SleepTimer {
+    var at by androidx.compose.runtime.mutableLongStateOf(0L)
+    var pause: (() -> Unit)? = null
+    private val scope = kotlinx.coroutines.CoroutineScope(kotlinx.coroutines.SupervisorJob() + Dispatchers.Main)
+    private var job: kotlinx.coroutines.Job? = null
+    fun set(minutes: Int) {
+        job?.cancel(); at = System.currentTimeMillis() + minutes * 60_000L
+        job = scope.launch { kotlinx.coroutines.delay(minutes * 60_000L); pause?.invoke(); at = 0 }
+    }
+    fun off() { job?.cancel(); at = 0 }
 }
 
 /** Download progress of an app update: null = idle, 0..100 = downloading, -1 = failed. */

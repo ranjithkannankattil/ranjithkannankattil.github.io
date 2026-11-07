@@ -67,6 +67,7 @@ class PlaybackService : MediaLibraryService() {
             override fun onPlayerError(error: PlaybackException) = nextSource()
         })
         session = MediaLibrarySession.Builder(this, player, Callback()).build()
+        SleepTimer.pause = { player.pause() }
     }
 
     /** "Artist - Song" from the stream: show it, and look up the cover. */
@@ -154,7 +155,7 @@ class PlaybackService : MediaLibraryService() {
     }
 
     override fun onDestroy() {
-        scope.cancel()
+        scope.cancel(); SleepTimer.pause = null
         session.release(); player.release()
         super.onDestroy()
     }

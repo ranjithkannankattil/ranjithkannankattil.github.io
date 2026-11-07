@@ -24,6 +24,8 @@ import sh.calvin.reorderable.rememberReorderableLazyListState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
+import androidx.compose.foundation.gestures.detectHorizontalDragGestures
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
@@ -189,12 +191,15 @@ fun App(c: MediaController?) {
     LaunchedEffect(lastCol) { prefs.edit().putString("lastCol", lastCol).apply() }
     // languages you've listened to, most recent first (shown as quick buttons on Stations)
     var recent by remember { mutableStateOf(prefs.getString("recent", "")!!.split(',').filter { it.isNotBlank() }) }
+    // languages pinned to the row, in the listener's own order (always shown)
+    var pinned by remember { mutableStateOf(prefs.getString("pinned", "")!!.split(',').filter { it.isNotBlank() }) }
+    fun savePins(l: List<String>) { pinned = l; prefs.edit().putString("pinned", l.joinToString(",")).apply() }
+    fun saveRecent(l: List<String>) { recent = l; prefs.edit().putString("recent", l.joinToString(",")).apply() }
     LaunchedEffect(colId) {
-        if (colId != PICKS) {
-            recent = (listOf(colId) + recent.filter { it != colId }).take(5)
-            prefs.edit().putString("recent", recent.joinToString(",")).apply()
-        }
+        if (colId != PICKS && colId != ALL) saveRecent((listOf(colId) + recent.filter { it != colId }).take(5))
     }
+    var pillMenu by remember { mutableStateOf<Collection?>(null) }
+    var arrangePins by remember { mutableStateOf(false) }
     var stations by remember { mutableStateOf<List<Station>>(emptyList()) }
     var loading by remember { mutableStateOf(true) }
     var tab by remember { mutableIntStateOf(prefs.getInt("tab", 0)) }
@@ -207,9 +212,9 @@ fun App(c: MediaController?) {
     LaunchedEffect(Unit) { cols = Repo.collections(ctx) }
     LaunchedEffect(colId) {
         loading = true; cat = "all"; prefs.edit().putString("col", colId).apply()
-        stations = if (colId == PICKS) Repo.picks(ctx) else Repo.stations(ctx, colId); loading = false
+        stations = when (colId) { PICKS -> Repo.picks(ctx); ALL -> Repo.allStations(ctx, cols.ifEmpty { Repo.collections(ctx) }); else -> Repo.stations(ctx, colId) }; loading = false
     }
-    val col = if (colId == PICKS) PICKS_COL else cols.find { it.id == colId }
+    val col = when (colId) { PICKS -> PICKS_COL; ALL -> ALL_COL; else -> cols.find { it.id == colId } }
     fun langOf(s: Station) = cols.find { it.id == s.col }?.name ?: ""
     fun play(list: List<Station>, s: Station) {
         val ctl = c ?: return
@@ -249,12 +254,8 @@ fun App(c: MediaController?) {
                                 Modifier.heightIn(min = 44.dp), colors = pillColors,
                                 leadingIcon = { Icon(Icons.Filled.Star, null, Modifier.size(18.dp), tint = if (colId == PICKS) Gold else Accent) })
                         }
-                        items(recent.mapNotNull { id -> cols.find { it.id == id } }, key = { it.id }) { c ->
-                            LangPill(c.name, colId == c.id, onClick = { colId = c.id }, onLongClick = {
-                                recent = recent.filter { it != c.id }
-                                prefs.edit().putString("recent", recent.joinToString(",")).apply()
-                                android.widget.Toast.makeText(ctx, "${c.name} removed from your quick buttons", android.widget.Toast.LENGTH_SHORT).show()
-                            })
+                        items((pinned + recent.filter { it !in pinned }).mapNotNull { id -> cols.find { it.id == id } }, key = { it.id }) { c ->
+                            LangPill(c.name, colId == c.id, c.id in pinned, onClick = { colId = c.id }, onLongClick = { pillMenu = c })
                         }
                         item {
                             AssistChip({ pickLang = true }, { Text("All languages") }, Modifier.heightIn(min = 44.dp),
@@ -262,7 +263,7 @@ fun App(c: MediaController?) {
                         }
                     }
                     OutlinedTextField(q, { q = it }, Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 6.dp),
-                        placeholder = { Text(if (colId == PICKS) "Search the Velvet Selection" else "Search ${col?.name ?: ""} stations") },
+                        placeholder = { Text(when (colId) { PICKS -> "Search the Velvet Selection"; ALL -> "Search every station"; else -> "Search ${col?.name ?: ""} stations" }) },
                         singleLine = true, leadingIcon = { Icon(Icons.Filled.Search, null) })
                     val favHere = stations.count { it.key in favKeys }
                     if (colId != PICKS && col != null && (col.cats.isNotEmpty() || favHere > 0)) LazyRow(contentPadding = PaddingValues(horizontal = 16.dp),
@@ -283,7 +284,7 @@ fun App(c: MediaController?) {
                     Box(Modifier.fillMaxSize()) {
 LazyColumn(state = stState, contentPadding = PaddingValues(bottom = 72.dp)) {
                         items(shown, key = { it.key }) { s ->
-                            StationRow(s, if (colId == PICKS) langOf(s) else col?.cats?.find { it.first == s.category }?.second ?: "", s.key in fk,
+                            StationRow(s, if (colId == PICKS || colId == ALL) langOf(s) else col?.cats?.find { it.first == s.category }?.second ?: "", s.key in fk,
                                 "st|${s.key}" == now.id, now.playing,
                                 onPlay = { play(shown, s) }, onFav = { favs.toggle(s); refreshFavs() })
                         }
@@ -311,6 +312,28 @@ ScrollButtons(stState, Modifier.align(Alignment.BottomEnd))
             NavigationBarItem(tab == 2, { go(2) }, { Icon(Icons.Filled.Info, null) }, label = { Text("Info") })
         }
     }
+    pillMenu?.let { c ->
+        val isPin = c.id in pinned; val i = pinned.indexOf(c.id)
+        fun done() { pillMenu = null }
+        AlertDialog(onDismissRequest = { done() }, title = { Text(c.name) },
+            text = { Column {
+                TextButton({ savePins(if (isPin) pinned - c.id else pinned + c.id); done() }, Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
+                    Icon(Icons.Filled.PushPin, null); Spacer(Modifier.width(10.dp))
+                    Text(if (isPin) "Unpin" else "Pin, so it always stays in the row", Modifier.weight(1f)) }
+                if (isPin && i > 0) TextButton({ savePins(pinned.toMutableList().apply { add(i - 1, removeAt(i)) }); done() },
+                    Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
+                    Icon(Icons.Filled.ChevronLeft, null); Spacer(Modifier.width(10.dp)); Text("Move left", Modifier.weight(1f)) }
+                if (isPin && i < pinned.size - 1) TextButton({ savePins(pinned.toMutableList().apply { add(i + 1, removeAt(i)) }); done() },
+                    Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
+                    Icon(Icons.Filled.ChevronRight, null); Spacer(Modifier.width(10.dp)); Text("Move right", Modifier.weight(1f)) }
+                if (pinned.size > 1) TextButton({ done(); arrangePins = true }, Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
+                    Icon(Icons.Filled.DragHandle, null); Spacer(Modifier.width(10.dp)); Text("Arrange pinned languages", Modifier.weight(1f)) }
+                TextButton({ savePins(pinned - c.id); saveRecent(recent - c.id); done() }, Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
+                    Icon(Icons.Filled.Close, null); Spacer(Modifier.width(10.dp)); Text("Remove from the row", Modifier.weight(1f)) }
+            } },
+            confirmButton = { TextButton({ done() }) { Text("Cancel") } })
+    }
+    if (arrangePins) ArrangePins(pinned.mapNotNull { id -> cols.find { it.id == id } }, onSave = { savePins(it) }) { arrangePins = false }
     if (pickLang) LanguageDialog(cols, colId, { if (it == PICKS && colId != PICKS) lastCol = colId; colId = it; go(0); pickLang = false }) { pickLang = false }
     if (full) FullPlayer(now, c) { full = false }
 }
@@ -424,6 +447,10 @@ ScrollButtons(listState, Modifier.align(Alignment.BottomEnd))
 @Composable
 fun LanguageDialog(cols: List<Collection>, current: String, onPick: (String) -> Unit, onClose: () -> Unit) {
     var q by remember { mutableStateOf("") }
+    val ctx = LocalContext.current
+    // number of stations in each language (loaded in the background; cached for a few hours)
+    var counts by remember { mutableStateOf<Map<String, Int>>(emptyMap()) }
+    LaunchedEffect(cols) { if (cols.isNotEmpty()) counts = Repo.counts(ctx, cols) }
     Dialog(onClose, DialogProperties(usePlatformDefaultWidth = false)) {
         Surface(Modifier.fillMaxSize(), color = Paper) {
             Column(Modifier.statusBarsPadding()) {
@@ -444,16 +471,35 @@ fun LanguageDialog(cols: List<Collection>, current: String, onPick: (String) -> 
                         }
                     }
                     val shown = cols.filter { q.isBlank() || it.name.contains(q, true) || it.native.contains(q, true) }
-                    shown.groupBy { it.group.ifBlank { "Languages" } }.forEach { (g, cs) ->
-                        item { Text(g.uppercase(), Modifier.padding(16.dp, 14.dp, 16.dp, 4.dp), fontSize = 12.sp, color = InkSoft, letterSpacing = 1.sp) }
-                        items(cs, key = { it.id }) { c ->
-                            Row(Modifier.fillMaxWidth().clickable { onPick(c.id) }.heightIn(min = 52.dp)
-                                .background(if (c.id == current) AccentSoft else Color.Transparent).padding(horizontal = 16.dp),
-                                verticalAlignment = Alignment.CenterVertically) {
-                                Text(c.name, Modifier.weight(1f), fontWeight = FontWeight.SemiBold)
-                                if (c.native.isNotBlank()) Text(c.native, color = InkSoft)
+                    val first = shown.filter { it.id == "malayalam" } + shown.filter { it.group.equals("English", true) }
+                    val rest = shown.filter { it !in first }
+                    @Composable fun LangRow(c: Collection) {
+                        Row(Modifier.fillMaxWidth().clickable { onPick(c.id) }.heightIn(min = 52.dp)
+                            .background(if (c.id == current) AccentSoft else Color.Transparent).padding(horizontal = 16.dp),
+                            verticalAlignment = Alignment.CenterVertically) {
+                            Column(Modifier.weight(1f)) {
+                                Text(c.name, fontWeight = FontWeight.SemiBold)
+                                if (c.native.isNotBlank()) Text(c.native, color = InkSoft, fontSize = 13.sp)
                             }
+                            counts[c.id]?.let { Text("$it", color = Accent, fontWeight = FontWeight.SemiBold, fontSize = 14.sp) }
                         }
+                    }
+                    items(first, key = { it.id }) { LangRow(it) }
+                    if (q.isBlank()) item {
+                        Row(Modifier.fillMaxWidth().clickable { onPick(ALL) }.heightIn(min = 60.dp)
+                            .background(if (current == ALL) AccentSoft else Color.Transparent).padding(horizontal = 16.dp),
+                            verticalAlignment = Alignment.CenterVertically) {
+                            Icon(Icons.Filled.Language, null, tint = Accent); Spacer(Modifier.width(10.dp))
+                            Column(Modifier.weight(1f)) {
+                                Text("Every station", fontWeight = FontWeight.SemiBold)
+                                Text("All languages in one list", fontSize = 13.sp, color = InkSoft)
+                            }
+                            if (counts.isNotEmpty()) Text("${counts.values.sum()}", color = Accent, fontWeight = FontWeight.SemiBold, fontSize = 14.sp)
+                        }
+                    }
+                    rest.groupBy { it.group.ifBlank { "Languages" } }.forEach { (g, cs) ->
+                        item { Text(g.uppercase(), Modifier.padding(16.dp, 14.dp, 16.dp, 4.dp), fontSize = 12.sp, color = InkSoft, letterSpacing = 1.sp) }
+                        items(cs, key = { it.id }) { LangRow(it) }
                     }
                 }
             }
@@ -480,9 +526,18 @@ fun Art(now: NowState, size: Int) {
 
 @Composable
 fun MiniPlayer(now: NowState, c: MediaController?, open: () -> Unit) {
+    var sleep by remember { mutableStateOf(false) }
+    var share by remember { mutableStateOf(false) }
+    var drag by remember { mutableFloatStateOf(0f) }
+    if (sleep) SleepDialog { sleep = false }
+    if (share) ShareMenu(now) { share = false }
+    // swipe the bar left or right to change station; tap to open the full player
     Row(Modifier.fillMaxWidth().background(Velvet).clickable(onClick = open)
+        .pointerInput(c) { detectHorizontalDragGestures(onDragEnd = {
+            if (drag < -120) c?.seekToNextMediaItem() else if (drag > 120) c?.seekToPreviousMediaItem(); drag = 0f },
+            onDragCancel = { drag = 0f }) { _, d -> drag += d } }
         .padding(12.dp, 10.dp), verticalAlignment = Alignment.CenterVertically) {
-        Art(now, 48)
+        Art(now, 44)
         val station = now.md.station?.toString() ?: ""
         val song = now.md.title?.toString() ?: ""
         val hasSong = song.isNotBlank() && song != station
@@ -495,12 +550,15 @@ fun MiniPlayer(now: NowState, c: MediaController?, open: () -> Unit) {
             Text(now.error ?: if (now.buffering) "Connecting…" else if (hasSong) artist else now.md.artist?.toString() ?: "",
                 color = Color(0xFFBDBDBD), fontSize = 13.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
         }
-        IconButton({ c?.seekToPreviousMediaItem() }, Modifier.size(48.dp)) { Icon(Icons.Filled.SkipPrevious, "Previous station", tint = Color.White) }
-        FilledIconButton({ c?.let { if (it.isPlaying) it.pause() else { it.prepare(); it.play() } } }, Modifier.size(52.dp),
+        val on = SleepTimer.at > 0
+        IconButton({ sleep = true }, Modifier.size(44.dp)) {
+            Icon(Icons.Filled.Bedtime, if (on) "Sleep timer on: ${sleepLeft()}" else "Sleep timer", tint = if (on) Gold else Color(0xFFBDBDBD)) }
+        IconButton({ share = true }, Modifier.size(44.dp)) { Icon(Icons.Filled.Share, "Share", tint = Color(0xFFBDBDBD)) }
+        FilledIconButton({ c?.let { if (it.isPlaying) it.pause() else { it.prepare(); it.play() } } }, Modifier.size(48.dp),
             colors = IconButtonDefaults.filledIconButtonColors(containerColor = Paper, contentColor = Ink)) {
             Icon(if (now.playing) Icons.Filled.Pause else Icons.Filled.PlayArrow, if (now.playing) "Pause" else "Play")
         }
-        IconButton({ c?.seekToNextMediaItem() }, Modifier.size(48.dp)) { Icon(Icons.Filled.SkipNext, "Next station", tint = Color.White) }
+        IconButton({ c?.seekToNextMediaItem() }, Modifier.size(44.dp)) { Icon(Icons.Filled.SkipNext, "Next station", tint = Color.White) }
     }
 }
 
@@ -508,15 +566,8 @@ fun MiniPlayer(now: NowState, c: MediaController?, open: () -> Unit) {
 fun FullPlayer(now: NowState, c: MediaController?, close: () -> Unit) {
     val scope = rememberCoroutineScope()
     val ctx = LocalContext.current
-    var sleepAt by remember { mutableLongStateOf(0L) }
-    var left by remember { mutableStateOf("") }
-    LaunchedEffect(sleepAt) {
-        while (sleepAt > 0) {
-            val ms = sleepAt - System.currentTimeMillis()
-            if (ms <= 0) { c?.pause(); sleepAt = 0; left = ""; break }
-            left = "Stops in ${ms / 60000 + 1} min"; delay(15000)
-        }
-    }
+    var customSleep by remember { mutableStateOf(false) }
+    if (customSleep) SleepDialog(customOnly = true) { customSleep = false }
     val station = now.md.station?.toString() ?: ""
     val song = now.md.title?.toString() ?: ""
     Dialog(close, DialogProperties(usePlatformDefaultWidth = false, decorFitsSystemWindows = false)) {
@@ -561,22 +612,7 @@ fun FullPlayer(now: NowState, c: MediaController?, close: () -> Unit) {
                     val songArtist = (now.md.artist?.toString() ?: "").split(" · ").filter { it != station }.joinToString(" · ")
                     Row(horizontalArrangement = Arrangement.spacedBy(10.dp), verticalAlignment = Alignment.CenterVertically) {
                         var shareMenu by remember { mutableStateOf(false) }
-                        val link = stKey?.let { stationLink(it) } ?: "https://ranjithkb.com/radio.html"
-                        val shareText = if (hasSong) "Listening to $song${if (songArtist.isNotBlank()) " by $songArtist" else ""} on $station · Radio Velvet\n$link"
-                            else "Listening to $station live on Radio Velvet\n$link"
-                        if (shareMenu) AlertDialog(onDismissRequest = { shareMenu = false },
-                            title = { Text(if (hasSong) "Share this song" else "Share this station") },
-                            text = { Column {
-                                TextButton({ shareMenu = false; scope.launch {
-                                    if (hasSong) shareSongCard(ctx, song, songArtist, station, now.md.artworkUri?.toString(), link)
-                                    else shareSongCard(ctx, station, "Live radio", station, null, link) } }, Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
-                                    Icon(Icons.Filled.Image, null); Spacer(Modifier.width(10.dp)); Text("Picture card", Modifier.weight(1f)) }
-                                TextButton({ shareMenu = false; shareTextOnly(ctx, shareText) }, Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
-                                    Icon(Icons.Filled.Share, null); Spacer(Modifier.width(10.dp)); Text("Text with link", Modifier.weight(1f)) }
-                                TextButton({ shareMenu = false; copyText(ctx, shareText) }, Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
-                                    Icon(Icons.Filled.ContentCopy, null); Spacer(Modifier.width(10.dp)); Text("Copy text and link", Modifier.weight(1f)) }
-                            } },
-                            confirmButton = { TextButton({ shareMenu = false }) { Text("Cancel") } })
+                        if (shareMenu) ShareMenu(now) { shareMenu = false }
                         OutlinedButton({ shareMenu = true },
                             Modifier.heightIn(min = 48.dp), border = BorderStroke(1.dp, Gold), contentPadding = PaddingValues(horizontal = 16.dp)) {
                             Icon(Icons.Filled.Share, null, tint = Gold); Spacer(Modifier.width(8.dp))
@@ -593,17 +629,10 @@ fun FullPlayer(now: NowState, c: MediaController?, close: () -> Unit) {
                     Spacer(Modifier.height(18.dp))
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Icon(Icons.Filled.Bedtime, null, tint = Gold, modifier = Modifier.size(18.dp))
-                        Text(left.ifEmpty { "Sleep timer" }, color = Color.White, fontSize = 14.sp, modifier = Modifier.padding(start = 6.dp))
+                        Text(if (SleepTimer.at > 0) "Stops in ${sleepLeft()}" else "Sleep timer", color = Color.White, fontSize = 14.sp,
+                            modifier = Modifier.padding(start = 6.dp))
                     }
-                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(top = 8.dp, bottom = 12.dp)) {
-                        listOf(15, 30, 60).forEach { m ->
-                            OutlinedButton({ sleepAt = System.currentTimeMillis() + m * 60_000L }, Modifier.heightIn(min = 48.dp),
-                                border = BorderStroke(1.dp, Color(0x66FFFFFF)), contentPadding = PaddingValues(horizontal = 14.dp)) {
-                                Text("$m min", color = Color.White) }
-                        }
-                        if (sleepAt > 0) OutlinedButton({ sleepAt = 0; left = "" }, Modifier.heightIn(min = 48.dp),
-                            border = BorderStroke(1.dp, Gold)) { Text("Off", color = Gold) }
-                    }
+                    SleepChoices(onCustom = { customSleep = true }, dark = true)
                 }
             }
         }
@@ -762,18 +791,136 @@ fun ScrollButtons(state: androidx.compose.foundation.lazy.LazyListState, modifie
     }
 }
 
-/** A recent-language button: tap to open, press and hold to remove it from the row. */
+/** A language button: tap to open, press and hold to pin, move or remove it. */
 @OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
 @Composable
-fun LangPill(label: String, selected: Boolean, onClick: () -> Unit, onLongClick: () -> Unit) {
+fun LangPill(label: String, selected: Boolean, pinned: Boolean, onClick: () -> Unit, onLongClick: () -> Unit) {
     val haptic = androidx.compose.ui.platform.LocalHapticFeedback.current
     Surface(shape = RoundedCornerShape(8.dp), color = if (selected) Accent else Color.Transparent,
         border = if (selected) null else BorderStroke(1.dp, Color(0x33000000)),
         modifier = Modifier.heightIn(min = 44.dp).padding(vertical = 4.dp).clip(RoundedCornerShape(8.dp))
-            .combinedClickable(onClick = onClick, onLongClickLabel = "Remove from quick buttons", onLongClick = {
+            .combinedClickable(onClick = onClick, onLongClickLabel = "Pin, move or remove", onLongClick = {
                 haptic.performHapticFeedback(androidx.compose.ui.hapticfeedback.HapticFeedbackType.LongPress); onLongClick() })) {
-        Box(Modifier.padding(horizontal = 14.dp, vertical = 6.dp), contentAlignment = Alignment.Center) {
+        Row(Modifier.padding(horizontal = 14.dp, vertical = 6.dp), verticalAlignment = Alignment.CenterVertically) {
+            if (pinned) { Icon(Icons.Filled.PushPin, "Pinned", Modifier.size(14.dp), tint = if (selected) Gold else Accent); Spacer(Modifier.width(5.dp)) }
             Text(label, fontWeight = FontWeight.SemiBold, fontSize = 14.sp, color = if (selected) Color.White else Ink)
+        }
+    }
+}
+
+const val ALL = "all"
+val ALL_COL = Collection(ALL, "Every station", "", "", emptyList())
+
+/** Time left on the sleep timer, e.g. "25 min" or "1 h 05 min"; ticks while shown. */
+@Composable
+fun sleepLeft(): String {
+    var nowMs by remember { mutableLongStateOf(System.currentTimeMillis()) }
+    LaunchedEffect(SleepTimer.at) { while (SleepTimer.at > 0) { nowMs = System.currentTimeMillis(); delay(10_000) } }
+    val min = ((SleepTimer.at - nowMs).coerceAtLeast(0) / 60_000 + 1).toInt()
+    return if (min >= 60) "${min / 60} h ${"%02d".format(min % 60)} min" else "$min min"
+}
+
+/** Sleep timer buttons: 15 / 30 / 60 minutes, Custom, and Off while it's running. */
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
+fun SleepChoices(onCustom: () -> Unit, dark: Boolean, after: () -> Unit = {}) {
+    val fg = if (dark) Color.White else Ink
+    val line = if (dark) Color(0x66FFFFFF) else Color(0x33000000)
+    FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally), verticalArrangement = Arrangement.spacedBy(8.dp),
+        modifier = Modifier.padding(top = 8.dp, bottom = 12.dp)) {
+        listOf(15, 30, 60).forEach { m ->
+            OutlinedButton({ SleepTimer.set(m); after() }, Modifier.heightIn(min = 48.dp), border = BorderStroke(1.dp, line),
+                contentPadding = PaddingValues(horizontal = 12.dp)) { Text("$m min", color = fg) }
+        }
+        OutlinedButton(onCustom, Modifier.heightIn(min = 48.dp), border = BorderStroke(1.dp, line),
+            contentPadding = PaddingValues(horizontal = 12.dp)) { Text("Custom", color = fg) }
+        if (SleepTimer.at > 0) OutlinedButton({ SleepTimer.off(); after() }, Modifier.heightIn(min = 48.dp), border = BorderStroke(1.dp, Gold),
+            contentPadding = PaddingValues(horizontal = 12.dp)) { Text("Off", color = if (dark) Gold else Accent) }
+    }
+}
+
+/** Sleep timer chooser (from the bottom bar), with a custom length from 5 minutes to 4 hours. */
+@Composable
+fun SleepDialog(customOnly: Boolean = false, close: () -> Unit) {
+    var custom by remember { mutableStateOf(customOnly) }
+    var mins by remember { mutableFloatStateOf(45f) }
+    AlertDialog(onDismissRequest = close,
+        title = { Text(if (custom) "Stop the radio after" else "Sleep timer") },
+        text = { Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            if (!custom) {
+                Text(if (SleepTimer.at > 0) "Stops in ${sleepLeft()}" else "Turn the radio off by itself after:", color = InkSoft)
+                SleepChoices(onCustom = { custom = true }, dark = false, after = close)
+            } else {
+                val m = (mins.toInt() / 5) * 5
+                Text(if (m >= 60) "${m / 60} h ${"%02d".format(m % 60)} min" else "$m min", fontSize = 28.sp, fontWeight = FontWeight.SemiBold, color = Accent)
+                Slider(mins, { mins = it }, valueRange = 5f..240f, steps = 46, modifier = Modifier.padding(top = 8.dp))
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    listOf(-15, -5, 5, 15).forEach { d ->
+                        OutlinedButton({ mins = (mins + d).coerceIn(5f, 240f) }, Modifier.heightIn(min = 44.dp),
+                            contentPadding = PaddingValues(horizontal = 10.dp)) { Text((if (d > 0) "+" else "−") + "${kotlin.math.abs(d)}") }
+                    }
+                }
+            }
+        } },
+        confirmButton = { if (custom) Button({ SleepTimer.set((mins.toInt() / 5) * 5); close() }) { Text("Start") } },
+        dismissButton = { TextButton(close) { Text("Cancel") } })
+}
+
+/** Share the song or station: picture card, text with a link, or copy the text and link. */
+@Composable
+fun ShareMenu(now: NowState, close: () -> Unit) {
+    val ctx = LocalContext.current
+    val scope = rememberCoroutineScope()
+    val station = now.md.station?.toString() ?: ""
+    val song = now.md.title?.toString() ?: ""
+    val hasSong = song.isNotBlank() && song != station
+    val artist = (now.md.artist?.toString() ?: "").split(" · ").filter { it != station }.joinToString(" · ")
+    val link = now.id?.removePrefix("st|")?.let { stationLink(it) } ?: "https://ranjithkb.com/radio.html"
+    val text = if (hasSong) "Listening to $song${if (artist.isNotBlank()) " by $artist" else ""} on $station · Radio Velvet\n$link"
+        else "Listening to $station live on Radio Velvet\n$link"
+    AlertDialog(onDismissRequest = close,
+        title = { Text(if (hasSong) "Share this song" else "Share this station") },
+        text = { Column {
+            TextButton({ close(); scope.launch {
+                if (hasSong) shareSongCard(ctx, song, artist, station, now.md.artworkUri?.toString(), link)
+                else shareSongCard(ctx, station, "Live radio", station, null, link) } }, Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
+                Icon(Icons.Filled.Image, null); Spacer(Modifier.width(10.dp)); Text("Picture card", Modifier.weight(1f)) }
+            TextButton({ close(); shareTextOnly(ctx, text) }, Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
+                Icon(Icons.Filled.Share, null); Spacer(Modifier.width(10.dp)); Text("Text with link", Modifier.weight(1f)) }
+            TextButton({ close(); copyText(ctx, text) }, Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
+                Icon(Icons.Filled.ContentCopy, null); Spacer(Modifier.width(10.dp)); Text("Copy text and link", Modifier.weight(1f)) }
+        } },
+        confirmButton = { TextButton(close) { Text("Cancel") } })
+}
+
+/** Drag the pinned languages into the order they appear in the row. */
+@Composable
+fun ArrangePins(list: List<Collection>, onSave: (List<String>) -> Unit, close: () -> Unit) {
+    var order by remember { mutableStateOf(list) }
+    val state = rememberLazyListState()
+    val re = rememberReorderableLazyListState(state) { from, to -> order = order.toMutableList().apply { add(to.index, removeAt(from.index)) } }
+    Dialog({ onSave(order.map { it.id }); close() }) {
+        Surface(shape = RoundedCornerShape(16.dp), color = Paper) {
+            Column(Modifier.padding(vertical = 16.dp)) {
+                Text("Arrange pinned languages", Modifier.padding(horizontal = 20.dp), fontWeight = FontWeight.SemiBold, fontSize = 18.sp)
+                Text("Drag ≡ to change the order in the row.", Modifier.padding(20.dp, 4.dp), color = InkSoft, fontSize = 14.sp)
+                LazyColumn(state = state, modifier = Modifier.heightIn(max = 420.dp)) {
+                    items(order, key = { it.id }) { c ->
+                        ReorderableItem(re, key = c.id) { dragging ->
+                            Surface(color = if (dragging) AccentSoft else Paper, shadowElevation = if (dragging) 6.dp else 0.dp) {
+                                Row(Modifier.fillMaxWidth().heightIn(min = 56.dp).padding(horizontal = 8.dp), verticalAlignment = Alignment.CenterVertically) {
+                                    Icon(Icons.Filled.DragHandle, "Drag to move ${c.name}", tint = Accent,
+                                        modifier = Modifier.draggableHandle().size(52.dp).padding(14.dp))
+                                    Text(c.name, fontWeight = FontWeight.SemiBold)
+                                }
+                            }
+                        }
+                    }
+                }
+                Row(Modifier.fillMaxWidth().padding(horizontal = 12.dp), horizontalArrangement = Arrangement.End) {
+                    Button({ onSave(order.map { it.id }); close() }, Modifier.heightIn(min = 48.dp)) { Text("Done") }
+                }
+            }
         }
     }
 }
