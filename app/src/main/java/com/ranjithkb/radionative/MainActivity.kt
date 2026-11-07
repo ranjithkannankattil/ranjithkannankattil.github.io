@@ -486,15 +486,24 @@ fun FullPlayer(now: NowState, c: MediaController?, close: () -> Unit) {
                             Icon(Icons.Filled.SkipNext, "Next station", Modifier.size(40.dp), tint = Color.White) }
                     }
                     Spacer(Modifier.height(18.dp))
-                    if (song.isNotBlank() && song != station) {
+                    // Share is always there: a song card while a song is known, otherwise a station card
+                    val songArtist = (now.md.artist?.toString() ?: "").split(" · ").filter { it != station }.joinToString(" · ")
+                    Row(horizontalArrangement = Arrangement.spacedBy(10.dp), verticalAlignment = Alignment.CenterVertically) {
                         OutlinedButton({ scope.launch {
-                            val artist = (now.md.artist?.toString() ?: "").split(" · ").filter { it != station }.joinToString(" · ")
-                            shareSongCard(ctx, song, artist, station, now.md.artworkUri?.toString()) } },
-                            Modifier.heightIn(min = 48.dp), border = BorderStroke(1.dp, Gold)) {
-                            Icon(Icons.Filled.Share, null, tint = Gold); Spacer(Modifier.width(8.dp)); Text("Share song card", color = Color.White)
+                            if (hasSong) shareSongCard(ctx, song, songArtist, station, now.md.artworkUri?.toString())
+                            else shareSongCard(ctx, station, "Live radio", station, null) } },
+                            Modifier.heightIn(min = 48.dp), border = BorderStroke(1.dp, Gold), contentPadding = PaddingValues(horizontal = 16.dp)) {
+                            Icon(Icons.Filled.Share, null, tint = Gold); Spacer(Modifier.width(8.dp))
+                            Text(if (hasSong) "Share song" else "Share station", color = Color.White)
                         }
-                        Spacer(Modifier.height(18.dp))
+                        if (hasSong) OutlinedButton({ openInSpotify(ctx, song, songArtist) },
+                            Modifier.heightIn(min = 48.dp), border = BorderStroke(1.dp, Color(0xFF1DB954)),
+                            contentPadding = PaddingValues(horizontal = 16.dp)) {
+                            Icon(Icons.Filled.PlayCircle, null, tint = Color(0xFF1DB954)); Spacer(Modifier.width(8.dp))
+                            Text("Spotify", color = Color.White)
+                        }
                     }
+                    Spacer(Modifier.height(18.dp))
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Icon(Icons.Filled.Bedtime, null, tint = Gold, modifier = Modifier.size(18.dp))
                         Text(left.ifEmpty { "Sleep timer" }, color = Color.White, fontSize = 14.sp, modifier = Modifier.padding(start = 6.dp))

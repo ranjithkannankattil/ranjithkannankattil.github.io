@@ -75,18 +75,26 @@ suspend fun shareSongCard(ctx: Context, song: String, artist: String, station: S
         }
         text(song, 1060f, 60f, 0xFFFFFFFF.toInt(), true)
         if (artist.isNotBlank()) text(artist, 1130f, 42f, 0xFFE8D9C5.toInt(), false)
-        text("on $station", 1190f, 36f, 0xFFC9A86A.toInt(), false)
+        if (song != station) text("on $station", 1190f, 36f, 0xFFC9A86A.toInt(), false)
         text("Radio Velvet · ranjithkb.com/radio", 1290f, 30f, 0x99FFFFFF.toInt(), false)
         val dir = File(ctx.cacheDir, "cards").apply { mkdirs() }
         File(dir, "song-card.png").also { f -> f.outputStream().use { bmp.compress(Bitmap.CompressFormat.PNG, 100, it) } }
     }
     val uri = FileProvider.getUriForFile(ctx, ctx.packageName + ".files", file)
     val send = Intent(Intent.ACTION_SEND).setType("image/png").putExtra(Intent.EXTRA_STREAM, uri)
-        .putExtra(Intent.EXTRA_TEXT, "Listening to $song${if (artist.isNotBlank()) " by $artist" else ""} on $station — Radio Velvet, https://ranjithkb.com/radio.html")
+        .putExtra(Intent.EXTRA_TEXT, if (song == station) "Listening to $station live on Radio Velvet, https://ranjithkb.com/radio.html"
+            else "Listening to $song${if (artist.isNotBlank()) " by $artist" else ""} on $station — Radio Velvet, https://ranjithkb.com/radio.html")
         .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
     ctx.startActivity(Intent.createChooser(send, "Share song card"))
 }
 
+/** Find the song that's playing in Spotify: the app if installed, otherwise Spotify on the web. */
+fun openInSpotify(ctx: Context, song: String, artist: String) {
+    val q = (song + " " + artist.substringBefore(',').substringBefore(" · ")).trim()
+    val app = Intent(Intent.ACTION_VIEW, Uri.parse("spotify:search:" + Uri.encode(q))).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+    try { ctx.startActivity(app) }
+    catch (e: Exception) { openUrl(ctx, "https://open.spotify.com/search/" + Uri.encode(q)) }
+}
 
 /** Download progress of an app update: null = idle, 0..100 = downloading, -1 = failed. */
 object Updater {

@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 40
     env:
-      APP_VERSION: "2.0.4"
+      APP_VERSION: "2.0.5"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
@@ -39,6 +39,7 @@ jobs:
             echo "Version ${APP_VERSION} · released $(TZ=Europe/Rome date '+%-d %b %Y, %H:%M %Z')"
             echo
             echo "What's new:"
+            echo "- Open the song that's playing in Spotify; Share is always on the player (song card, or the station when no song is shown)"
             echo "- Delete your account from Info if you ever want to; privacy policy linked there"
             echo "- The station's name shows with the song that's playing; favourites count in brackets"
             echo "- Updates download and install straight from the app, with a progress bar"
