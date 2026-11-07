@@ -11,6 +11,16 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.style.TextAlign
+import sh.calvin.reorderable.ReorderableItem
+import sh.calvin.reorderable.rememberReorderableLazyListState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -62,6 +72,23 @@ private val Gold = Color(0xFFC9A86A)
 /** Signed-in name (null = signed out) and a counter that bumps when favourites change from the account. */
 object Session { var name by mutableStateOf<String?>(null); var favsVersion by mutableIntStateOf(0); var busy by mutableStateOf(false) }
 
+val Poppins = FontFamily(
+    Font(R.font.poppins_regular, FontWeight.Normal),
+    Font(R.font.poppins_medium, FontWeight.Medium),
+    Font(R.font.poppins_semibold, FontWeight.SemiBold),
+    Font(R.font.poppins_semibold, FontWeight.Bold),
+    Font(R.font.poppins_italic, FontWeight.Normal, FontStyle.Italic))
+private val T = Typography()
+val PoppinsType = Typography(
+    displayLarge = T.displayLarge.copy(fontFamily = Poppins), displayMedium = T.displayMedium.copy(fontFamily = Poppins),
+    displaySmall = T.displaySmall.copy(fontFamily = Poppins), headlineLarge = T.headlineLarge.copy(fontFamily = Poppins),
+    headlineMedium = T.headlineMedium.copy(fontFamily = Poppins), headlineSmall = T.headlineSmall.copy(fontFamily = Poppins),
+    titleLarge = T.titleLarge.copy(fontFamily = Poppins), titleMedium = T.titleMedium.copy(fontFamily = Poppins),
+    titleSmall = T.titleSmall.copy(fontFamily = Poppins), bodyLarge = T.bodyLarge.copy(fontFamily = Poppins),
+    bodyMedium = T.bodyMedium.copy(fontFamily = Poppins), bodySmall = T.bodySmall.copy(fontFamily = Poppins),
+    labelLarge = T.labelLarge.copy(fontFamily = Poppins), labelMedium = T.labelMedium.copy(fontFamily = Poppins),
+    labelSmall = T.labelSmall.copy(fontFamily = Poppins))
+
 class MainActivity : ComponentActivity() {
     private var controller by mutableStateOf<MediaController?>(null)
 
@@ -93,7 +120,7 @@ class MainActivity : ComponentActivity() {
         Session.name = Account.name(this)
         handleSignIn(intent)
         setContent {
-            MaterialTheme(colorScheme = lightColorScheme(primary = Accent, onPrimary = Color.White, background = Paper,
+            MaterialTheme(typography = PoppinsType, colorScheme = lightColorScheme(primary = Accent, onPrimary = Color.White, background = Paper,
                 surface = Paper, onSurface = Ink, onBackground = Ink, secondaryContainer = AccentSoft,
                 surfaceVariant = Paper2, outline = InkSoft)) {
                 Surface(Modifier.fillMaxSize(), color = Paper) { App(controller) }
@@ -182,10 +209,9 @@ fun App(c: MediaController?) {
 
     fun go(t: Int) { tab = t; prefs.edit().putInt("tab", t).apply() }
     Column(Modifier.fillMaxSize().statusBarsPadding()) {
-        Row(Modifier.padding(start = 20.dp, top = 12.dp, bottom = 6.dp, end = 20.dp), verticalAlignment = Alignment.Bottom) {
-            Text("Radio Velvet", fontSize = 26.sp, fontWeight = FontWeight.SemiBold, color = Velvet)
-            Spacer(Modifier.width(10.dp))
-            Text("Elegant sounds, always free", fontSize = 13.sp, color = InkSoft, modifier = Modifier.padding(bottom = 4.dp))
+        Column(Modifier.padding(start = 20.dp, top = 14.dp, bottom = 10.dp, end = 20.dp)) {
+            Text("Radio Velvet", fontSize = 26.sp, fontWeight = FontWeight.SemiBold, color = Velvet, letterSpacing = 0.2.sp)
+            Text("Elegant sounds, always free", fontSize = 13.sp, fontStyle = FontStyle.Italic, color = Accent, letterSpacing = 0.6.sp)
         }
         update?.let { u ->
             Row(Modifier.fillMaxWidth().background(AccentSoft).padding(16.dp, 8.dp), verticalAlignment = Alignment.CenterVertically) {
@@ -284,13 +310,20 @@ fun FavsTab(list: List<Station>, now: NowState, langOf: (Station) -> String, onP
     var edit by remember { mutableStateOf(false) }
     var undo by remember { mutableStateOf<Pair<Station, Int>?>(null) }
     LaunchedEffect(undo) { if (undo != null) { delay(8000); undo = null } }
+    // while editing, the list is reordered here and saved when a drag ends
+    var order by remember(list, edit) { mutableStateOf(list) }
+    val listState = rememberLazyListState()
+    val reorder = rememberReorderableLazyListState(listState) { from, to ->
+        order = order.toMutableList().apply { add(to.index, removeAt(from.index)) }
+    }
+    fun commit() { favs.replaceAll(order); onChanged() }
     Column {
         Row(Modifier.fillMaxWidth().padding(16.dp, 10.dp), verticalAlignment = Alignment.CenterVertically) {
             Text(if (list.isEmpty()) "No favourites yet. Tap ♡ on any station, in any language."
-                 else "${list.size} favourites", Modifier.weight(1f), color = InkSoft)
+                 else if (edit) "Drag ≡ to move a station" else "${list.size} favourites", Modifier.weight(1f), color = InkSoft)
             if (list.isNotEmpty()) {
                 if (edit) Button({ edit = false }, Modifier.heightIn(min = 48.dp)) { Text("Done") }
-                else OutlinedButton({ edit = true }, Modifier.heightIn(min = 48.dp)) { Text("Edit order / remove") }
+                else OutlinedButton({ edit = true }, Modifier.heightIn(min = 48.dp)) { Text("Reorder / remove") }
             }
         }
         undo?.let { (s, at) ->
@@ -299,26 +332,30 @@ fun FavsTab(list: List<Station>, now: NowState, langOf: (Station) -> String, onP
                 TextButton({ favs.insert(s, at); undo = null; onChanged() }) { Text("Undo") }
             }
         }
-        LazyColumn {
-            itemsIndexed(list, key = { _, s -> s.key }) { i, s ->
-                if (!edit) StationRow(s, langOf(s), true, "st|${s.key}" == now.id, now.playing,
+        LazyColumn(state = listState) {
+            if (!edit) itemsIndexed(list, key = { _, s -> s.key }) { i, s ->
+                StationRow(s, langOf(s), true, "st|${s.key}" == now.id, now.playing,
                     onPlay = { onPlay(s) }, onFav = { undo = s to i; favs.remove(s.key); onChanged() })
-                else Column(Modifier.fillMaxWidth().padding(16.dp, 8.dp)) {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Box(Modifier.size(30.dp).background(AccentSoft), contentAlignment = Alignment.Center) {
-                            Text("${i + 1}", color = Accent, fontWeight = FontWeight.SemiBold)
+                HorizontalDivider(color = Paper2)
+            } else itemsIndexed(order, key = { _, s -> s.key }) { i, s ->
+                ReorderableItem(reorder, key = s.key) { dragging ->
+                    Surface(color = if (dragging) AccentSoft else Paper, shadowElevation = if (dragging) 8.dp else 0.dp) {
+                        Row(Modifier.fillMaxWidth().heightIn(min = 64.dp).padding(start = 4.dp, end = 4.dp),
+                            verticalAlignment = Alignment.CenterVertically) {
+                            Icon(Icons.Filled.DragHandle, "Drag to move ${s.name}", tint = Accent,
+                                modifier = Modifier.draggableHandle(onDragStopped = { commit() }).size(56.dp).padding(14.dp))
+                            Text("${i + 1}", color = Accent, fontWeight = FontWeight.SemiBold, modifier = Modifier.width(30.dp))
+                            Column(Modifier.weight(1f)) {
+                                Text(s.name, fontWeight = FontWeight.SemiBold, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                                Text(langOf(s), fontSize = 13.sp, color = InkSoft)
+                            }
+                            IconButton({ order = listOf(s) + order.filter { it.key != s.key }; commit() }, enabled = i > 0,
+                                modifier = Modifier.size(48.dp)) { Icon(Icons.Filled.VerticalAlignTop, "Move ${s.name} to the top") }
+                            IconButton({ order = order.filter { it.key != s.key } + s; commit() }, enabled = i < order.size - 1,
+                                modifier = Modifier.size(48.dp)) { Icon(Icons.Filled.VerticalAlignBottom, "Move ${s.name} to the bottom") }
+                            IconButton({ undo = s to i; favs.remove(s.key); onChanged() }, Modifier.size(48.dp)) {
+                                Icon(Icons.Filled.Close, "Remove ${s.name}", tint = Color(0xFF9B2C2C)) }
                         }
-                        Column(Modifier.padding(start = 10.dp)) {
-                            Text(s.name, fontWeight = FontWeight.SemiBold); Text(langOf(s), fontSize = 13.sp, color = InkSoft)
-                        }
-                    }
-                    Row(Modifier.padding(top = 6.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        OutlinedButton({ favs.move(s.key, i - 1); onChanged() }, enabled = i > 0) { Text("↑ Up") }
-                        OutlinedButton({ favs.move(s.key, i + 1); onChanged() }, enabled = i < list.size - 1) { Text("↓ Down") }
-                        OutlinedButton({ favs.move(s.key, 0); onChanged() }, enabled = i > 0) { Text("Top") }
-                        Spacer(Modifier.weight(1f))
-                        OutlinedButton({ undo = s to i; favs.remove(s.key); onChanged() },
-                            colors = ButtonDefaults.outlinedButtonColors(contentColor = Color(0xFF9B2C2C))) { Text("Remove") }
                     }
                 }
                 HorizontalDivider(color = Paper2)
@@ -395,6 +432,7 @@ fun MiniPlayer(now: NowState, c: MediaController?, open: () -> Unit) {
 @Composable
 fun FullPlayer(now: NowState, c: MediaController?, close: () -> Unit) {
     val scope = rememberCoroutineScope()
+    val ctx = LocalContext.current
     var sleepAt by remember { mutableLongStateOf(0L) }
     var left by remember { mutableStateOf("") }
     LaunchedEffect(sleepAt) {
@@ -404,56 +442,65 @@ fun FullPlayer(now: NowState, c: MediaController?, close: () -> Unit) {
             left = "Stops in ${ms / 60000 + 1} min"; delay(15000)
         }
     }
-    Dialog(close, DialogProperties(usePlatformDefaultWidth = false)) {
+    val station = now.md.station?.toString() ?: ""
+    val song = now.md.title?.toString() ?: ""
+    Dialog(close, DialogProperties(usePlatformDefaultWidth = false, decorFitsSystemWindows = false)) {
         Surface(Modifier.fillMaxSize(), color = Velvet) {
-            Column(Modifier.statusBarsPadding().navigationBarsPadding().padding(24.dp), horizontalAlignment = Alignment.CenterHorizontally) {
-                Row(Modifier.fillMaxWidth()) {
-                    IconButton(close) { Icon(Icons.Filled.KeyboardArrowDown, "Close", tint = Color.White) }
-                    Spacer(Modifier.weight(1f))
-                    Text(now.md.station?.toString() ?: "", color = Color(0xFFBDBDBD), modifier = Modifier.align(Alignment.CenterVertically))
-                    Spacer(Modifier.weight(1f)); Spacer(Modifier.width(48.dp))
-                }
-                Spacer(Modifier.weight(1f))
-                Art(now, 280)
-                Spacer(Modifier.height(28.dp))
-                Text(now.md.title?.toString() ?: "", color = Color.White, fontSize = 24.sp, fontWeight = FontWeight.SemiBold, maxLines = 2)
-                Text(now.error ?: if (now.buffering) "Connecting…" else now.md.artist?.toString() ?: "",
-                    color = Color(0xFFBDBDBD), fontSize = 16.sp, maxLines = 2, modifier = Modifier.padding(top = 6.dp))
-                Spacer(Modifier.weight(1f))
-                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(24.dp)) {
-                    IconButton({ c?.seekToPreviousMediaItem() }, Modifier.size(64.dp)) {
-                        Icon(Icons.Filled.SkipPrevious, "Previous station", Modifier.size(40.dp), tint = Color.White) }
-                    FilledIconButton({ c?.let { if (it.isPlaying) it.pause() else { it.prepare(); it.play() } } }, Modifier.size(84.dp),
-                        shape = CircleShape, colors = IconButtonDefaults.filledIconButtonColors(containerColor = Paper, contentColor = Ink)) {
-                        Icon(if (now.playing) Icons.Filled.Pause else Icons.Filled.PlayArrow, if (now.playing) "Pause" else "Play", Modifier.size(44.dp))
+            BoxWithConstraints(Modifier.fillMaxSize().statusBarsPadding().navigationBarsPadding()) {
+                val art = minOf(maxWidth.value * 0.72f, maxHeight.value * 0.38f, 320f).toInt()
+                Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(horizontal = 24.dp, vertical = 12.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally) {
+                    Box(Modifier.fillMaxWidth()) {
+                        IconButton(close, Modifier.align(Alignment.CenterStart)) { Icon(Icons.Filled.KeyboardArrowDown, "Close", tint = Color.White) }
+                        Text(station, color = Color(0xFFBDBDBD), modifier = Modifier.align(Alignment.Center))
                     }
-                    IconButton({ c?.seekToNextMediaItem() }, Modifier.size(64.dp)) {
-                        Icon(Icons.Filled.SkipNext, "Next station", Modifier.size(40.dp), tint = Color.White) }
-                }
-                val station = now.md.station?.toString() ?: ""
-                val song = now.md.title?.toString() ?: ""
-                if (song.isNotBlank() && song != station) {
-                    val ctx = LocalContext.current
-                    Spacer(Modifier.height(16.dp))
-                    OutlinedButton({ scope.launch {
-                        val artist = (now.md.artist?.toString() ?: "").split(" · ").filter { it != station }.joinToString(" · ")
-                        shareSongCard(ctx, song, artist, station, now.md.artworkUri?.toString()) } }, Modifier.heightIn(min = 48.dp)) {
-                        Icon(Icons.Filled.Share, null, tint = Gold); Spacer(Modifier.width(8.dp)); Text("Share song card", color = Color.White)
+                    Spacer(Modifier.height(20.dp))
+                    Art(now, art)
+                    Spacer(Modifier.height(22.dp))
+                    Text(song, color = Color.White, fontSize = 22.sp, fontWeight = FontWeight.SemiBold, maxLines = 2,
+                        overflow = TextOverflow.Ellipsis, textAlign = TextAlign.Center)
+                    Text(now.error ?: if (now.buffering) "Connecting…" else now.md.artist?.toString() ?: "",
+                        color = Color(0xFFBDBDBD), fontSize = 15.sp, maxLines = 2, textAlign = TextAlign.Center,
+                        modifier = Modifier.padding(top = 4.dp))
+                    Spacer(Modifier.height(22.dp))
+                    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(24.dp)) {
+                        IconButton({ c?.seekToPreviousMediaItem() }, Modifier.size(64.dp)) {
+                            Icon(Icons.Filled.SkipPrevious, "Previous station", Modifier.size(40.dp), tint = Color.White) }
+                        FilledIconButton({ c?.let { if (it.isPlaying) it.pause() else { it.prepare(); it.play() } } }, Modifier.size(80.dp),
+                            shape = CircleShape, colors = IconButtonDefaults.filledIconButtonColors(containerColor = Paper, contentColor = Ink)) {
+                            Icon(if (now.playing) Icons.Filled.Pause else Icons.Filled.PlayArrow, if (now.playing) "Pause" else "Play", Modifier.size(42.dp))
+                        }
+                        IconButton({ c?.seekToNextMediaItem() }, Modifier.size(64.dp)) {
+                            Icon(Icons.Filled.SkipNext, "Next station", Modifier.size(40.dp), tint = Color.White) }
                     }
-                }
-                Spacer(Modifier.height(16.dp))
-                Text(left.ifEmpty { "Sleep timer" }, color = Color(0xFFBDBDBD), fontSize = 13.sp)
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(top = 6.dp)) {
-                    listOf(15, 30, 60).forEach { m ->
-                        OutlinedButton({ scope.launch { sleepAt = System.currentTimeMillis() + m * 60_000L } }) { Text("$m min", color = Color.White) }
+                    Spacer(Modifier.height(18.dp))
+                    if (song.isNotBlank() && song != station) {
+                        OutlinedButton({ scope.launch {
+                            val artist = (now.md.artist?.toString() ?: "").split(" · ").filter { it != station }.joinToString(" · ")
+                            shareSongCard(ctx, song, artist, station, now.md.artworkUri?.toString()) } },
+                            Modifier.heightIn(min = 48.dp), border = BorderStroke(1.dp, Gold)) {
+                            Icon(Icons.Filled.Share, null, tint = Gold); Spacer(Modifier.width(8.dp)); Text("Share song card", color = Color.White)
+                        }
+                        Spacer(Modifier.height(18.dp))
                     }
-                    if (sleepAt > 0) TextButton({ sleepAt = 0; left = "" }) { Text("Off", color = Color.White) }
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Icon(Icons.Filled.Bedtime, null, tint = Gold, modifier = Modifier.size(18.dp))
+                        Text(left.ifEmpty { "Sleep timer" }, color = Color.White, fontSize = 14.sp, modifier = Modifier.padding(start = 6.dp))
+                    }
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(top = 8.dp, bottom = 12.dp)) {
+                        listOf(15, 30, 60).forEach { m ->
+                            OutlinedButton({ sleepAt = System.currentTimeMillis() + m * 60_000L }, Modifier.heightIn(min = 48.dp),
+                                border = BorderStroke(1.dp, Color(0x66FFFFFF)), contentPadding = PaddingValues(horizontal = 14.dp)) {
+                                Text("$m min", color = Color.White) }
+                        }
+                        if (sleepAt > 0) OutlinedButton({ sleepAt = 0; left = "" }, Modifier.heightIn(min = 48.dp),
+                            border = BorderStroke(1.dp, Gold)) { Text("Off", color = Gold) }
+                    }
                 }
             }
         }
     }
 }
-
 
 @Composable
 fun InfoTab(languages: Int, update: Update?, onSignIn: () -> Unit, onSignOut: () -> Unit) {

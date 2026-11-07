@@ -75,7 +75,9 @@ class PlaybackService : MediaLibraryService() {
         val item = player.currentMediaItem ?: return
         val station = item.mediaMetadata.extras?.getString("station") ?: item.mediaMetadata.station?.toString() ?: ""
         val parts = raw.split(" - ", limit = 2).map { it.trim() }
-        val (artist, song) = if (parts.size == 2) parts[0] to parts[1] else "" to raw.trim()
+        var (artist, song) = if (parts.size == 2) parts[0] to parts[1] else "" to raw.trim()
+        // Usual order is "Artist - Song"; some (e.g. Radio Mango) send "Song - Singer, Singer"
+        if (parts.size == 2 && song.contains(',') && !artist.contains(',')) { val t = artist; artist = song; song = t }
         if (song.isBlank() || song.equals(station, true)) return
         fun update(art: String?) {
             val cur = player.currentMediaItem ?: return
