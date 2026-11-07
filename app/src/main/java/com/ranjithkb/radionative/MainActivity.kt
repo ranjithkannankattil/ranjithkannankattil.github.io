@@ -186,6 +186,14 @@ fun App(c: MediaController?) {
     var colId by remember { mutableStateOf(prefs.getString("col", "malayalam")!!) }
     var lastCol by remember { mutableStateOf(prefs.getString("lastCol", "malayalam")!!) }
     LaunchedEffect(lastCol) { prefs.edit().putString("lastCol", lastCol).apply() }
+    // languages you've listened to, most recent first (shown as quick buttons on Stations)
+    var recent by remember { mutableStateOf(prefs.getString("recent", "")!!.split(',').filter { it.isNotBlank() }) }
+    LaunchedEffect(colId) {
+        if (colId != PICKS) {
+            recent = (listOf(colId) + recent.filter { it != colId }).take(5)
+            prefs.edit().putString("recent", recent.joinToString(",")).apply()
+        }
+    }
     var stations by remember { mutableStateOf<List<Station>>(emptyList()) }
     var loading by remember { mutableStateOf(true) }
     var tab by remember { mutableIntStateOf(prefs.getInt("tab", 0)) }
@@ -229,22 +237,32 @@ fun App(c: MediaController?) {
                 val shown = stations.filter { (cat == "all" || it.category == cat) && (q.isBlank() || it.name.contains(q, true)) }
                     .sortedBy { it.offline }
                 Column {
-                    Row(Modifier.padding(horizontal = 16.dp, vertical = 10.dp), verticalAlignment = Alignment.CenterVertically) {
-                        OutlinedButton({ pickLang = true }, Modifier.heightIn(min = 48.dp)) {
-                            Text(col?.name ?: "Language", fontWeight = FontWeight.SemiBold)
-                            Icon(Icons.Filled.ArrowDropDown, null)
-                        }
-                        Spacer(Modifier.width(10.dp))
-                        OutlinedTextField(q, { q = it }, Modifier.weight(1f), placeholder = { Text("Search") }, singleLine = true,
-                            leadingIcon = { Icon(Icons.Filled.Search, null) })
-                    }
-                    LazyRow(contentPadding = PaddingValues(horizontal = 16.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    // Where to listen: Velvet Selection first, then your recent languages, then every language
+                    val pillColors = FilterChipDefaults.filterChipColors(selectedContainerColor = Accent,
+                        selectedLabelColor = Color.White, selectedLeadingIconColor = Gold)
+                    LazyRow(Modifier.padding(top = 8.dp), contentPadding = PaddingValues(horizontal = 16.dp),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                         item {
-                            FilterChip(colId == PICKS, { if (colId != PICKS) { lastCol = colId; colId = PICKS } else colId = lastCol },
-                                { Text("Velvet Selection") }, leadingIcon = { Icon(Icons.Filled.Star, null, Modifier.size(18.dp), tint = Accent) })
+                            FilterChip(colId == PICKS, { colId = PICKS }, { Text("Velvet Selection", fontWeight = FontWeight.SemiBold) },
+                                Modifier.heightIn(min = 44.dp), colors = pillColors,
+                                leadingIcon = { Icon(Icons.Filled.Star, null, Modifier.size(18.dp), tint = if (colId == PICKS) Gold else Accent) })
                         }
-                        if (col != null && col.cats.isNotEmpty()) item { FilterChip(cat == "all", { cat = "all" }, { Text("All ${stations.size}") }) }
-                        if (col != null) items(col.cats.filter { (k, _) -> stations.any { it.category == k } }) { (k, label) ->
+                        items(recent.mapNotNull { id -> cols.find { it.id == id } }, key = { it.id }) { c ->
+                            FilterChip(colId == c.id, { colId = c.id }, { Text(c.name, fontWeight = FontWeight.SemiBold) },
+                                Modifier.heightIn(min = 44.dp), colors = pillColors)
+                        }
+                        item {
+                            AssistChip({ pickLang = true }, { Text("All languages") }, Modifier.heightIn(min = 44.dp),
+                                leadingIcon = { Icon(Icons.Filled.Language, null, Modifier.size(18.dp), tint = Accent) })
+                        }
+                    }
+                    OutlinedTextField(q, { q = it }, Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 6.dp),
+                        placeholder = { Text(if (colId == PICKS) "Search the Velvet Selection" else "Search ${col?.name ?: ""} stations") },
+                        singleLine = true, leadingIcon = { Icon(Icons.Filled.Search, null) })
+                    if (colId != PICKS && col != null && col.cats.isNotEmpty()) LazyRow(contentPadding = PaddingValues(horizontal = 16.dp),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        item { FilterChip(cat == "all", { cat = "all" }, { Text("All ${stations.size}") }) }
+                        items(col.cats.filter { (k, _) -> stations.any { it.category == k } }) { (k, label) ->
                             FilterChip(cat == k, { cat = k }, { Text("$label ${stations.count { it.category == k }}") })
                         }
                     }
@@ -711,7 +729,7 @@ fun ScrollButtons(state: androidx.compose.foundation.lazy.LazyListState, modifie
     if (total < 15) return
     val atTop = state.firstVisibleItemIndex == 0 && state.firstVisibleItemScrollOffset == 0
     val atEnd = !state.canScrollForward
-    Column(modifier.padding(end = 60.dp, bottom = 12.dp), verticalArrangement = Arrangement.spacedBy(10.dp))   // clear of the ♡ buttons {
+    Column(modifier.padding(end = 60.dp, bottom = 12.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {   // clear of the ♡ buttons
         if (!atTop) SmallFloatingActionButton({ scope.launch { state.animateScrollToItem(0) } },
             containerColor = Paper, contentColor = Accent, modifier = Modifier.size(48.dp)) {
             Icon(Icons.Filled.KeyboardArrowUp, "Back to the top") }

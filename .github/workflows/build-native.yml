@@ -40,7 +40,8 @@ jobs:
             echo
             echo "What's new:"
             echo "- Easy scrolling: ↑ and ↓ buttons jump to the top or bottom of long lists"
-            echo "- A roomier player, and a Velvet Selection button at the top of Stations"
+            echo "- Stations: Velvet Selection and your recent languages as buttons along the top, plus All languages"
+            echo "- A roomier player"
             echo "- Rate stations with stars in the player; ratings are shared with the Radio page on ranjithkb.com"
             echo "- Velvet Selection: hand-picked stations from every language, at the top of the language list (and in Android Auto)"
             echo "- Open the song that's playing straight in Spotify; Share is always on the player (song card, or the station when no song is shown)"
