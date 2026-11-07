@@ -580,7 +580,7 @@ fun InfoTab(languages: Int, update: Update?, onSignIn: () -> Unit, onSignOut: ()
             Section("On the web") {
                 TextButton({ openUrl(ctx, "https://ranjithkb.com/radio.html") }) { Text("Radio on ranjithkb.com") }
                 TextButton({ openUrl(ctx, "https://ranjithkb.com/") }) { Text("ranjithkb.com") }
-                TextButton({ openUrl(ctx, "https://ranjithkb.com/radio-privacy.html") }) { Text("Privacy policy") }
+                TextButton({ openUrl(ctx, "https://ranjithkb.com/privacy.html#radio-velvet") }) { Text("Privacy policy") }
                 TextButton({ ctx.startActivity(android.content.Intent(android.content.Intent.ACTION_SENDTO,
                     android.net.Uri.parse("mailto:hello@ranjithkb.com?subject=Radio%20Velvet"))) }) { Text("Suggest a station: hello@ranjithkb.com") }
             }
