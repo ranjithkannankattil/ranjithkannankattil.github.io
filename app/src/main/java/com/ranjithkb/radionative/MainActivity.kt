@@ -252,13 +252,18 @@ fun App(c: MediaController?) {
                         "Hand-picked by the developer, from every language.", Modifier.padding(16.dp, 4.dp), color = InkSoft, fontSize = 14.sp)
                     if (loading) LinearProgressIndicator(Modifier.fillMaxWidth().padding(top = 8.dp), color = Accent)
                     val fk = favList.map { it.key }.toSet()
-                    LazyColumn(contentPadding = PaddingValues(bottom = 12.dp)) {
+                    val stState = rememberLazyListState()
+                    LaunchedEffect(colId, cat, q) { stState.scrollToItem(0) }
+                    Box(Modifier.fillMaxSize()) {
+LazyColumn(state = stState, contentPadding = PaddingValues(bottom = 72.dp)) {
                         items(shown, key = { it.key }) { s ->
                             StationRow(s, if (colId == PICKS) langOf(s) else col?.cats?.find { it.first == s.category }?.second ?: "", s.key in fk,
                                 "st|${s.key}" == now.id, now.playing,
                                 onPlay = { play(shown, s) }, onFav = { favs.toggle(s); refreshFavs() })
                         }
                     }
+ScrollButtons(stState, Modifier.align(Alignment.BottomEnd))
+}
                 }
             } else {
                 Column {
@@ -355,7 +360,8 @@ fun FavsTab(list: List<Station>, now: NowState, langOf: (Station) -> String, onP
                 TextButton({ favs.insert(s, at); undo = null; onChanged() }) { Text("Undo") }
             }
         }
-        LazyColumn(state = listState) {
+        Box(Modifier.fillMaxSize()) {
+LazyColumn(state = listState, contentPadding = PaddingValues(bottom = 72.dp)) {
             if (!edit) itemsIndexed(list, key = { _, s -> s.key }) { i, s ->
                 StationRow(s, langOf(s), true, "st|${s.key}" == now.id, now.playing,
                     onPlay = { onPlay(s) }, onFav = { undo = s to i; favs.remove(s.key); onChanged() })
@@ -384,6 +390,8 @@ fun FavsTab(list: List<Station>, now: NowState, langOf: (Station) -> String, onP
                 HorizontalDivider(color = Paper2)
             }
         }
+ScrollButtons(listState, Modifier.align(Alignment.BottomEnd))
+}
     }
 }
 
@@ -692,5 +700,23 @@ fun RatingRow(stKey: String) {
             }
         }
         note?.let { Text(it, color = Color(0xFFBDBDBD), fontSize = 12.sp) }
+    }
+}
+
+/** Floating jump buttons for long lists: ↑ to the top, ↓ to the bottom (like the website's scroll arrows). */
+@Composable
+fun ScrollButtons(state: androidx.compose.foundation.lazy.LazyListState, modifier: Modifier = Modifier) {
+    val scope = rememberCoroutineScope()
+    val total = state.layoutInfo.totalItemsCount
+    if (total < 15) return
+    val atTop = state.firstVisibleItemIndex == 0 && state.firstVisibleItemScrollOffset == 0
+    val atEnd = !state.canScrollForward
+    Column(modifier.padding(end = 60.dp, bottom = 12.dp), verticalArrangement = Arrangement.spacedBy(10.dp))   // clear of the ♡ buttons {
+        if (!atTop) SmallFloatingActionButton({ scope.launch { state.animateScrollToItem(0) } },
+            containerColor = Paper, contentColor = Accent, modifier = Modifier.size(48.dp)) {
+            Icon(Icons.Filled.KeyboardArrowUp, "Back to the top") }
+        if (!atEnd) SmallFloatingActionButton({ scope.launch { state.scrollToItem((total - 1).coerceAtLeast(0)) } },
+            containerColor = Paper, contentColor = Accent, modifier = Modifier.size(48.dp)) {
+            Icon(Icons.Filled.KeyboardArrowDown, "Jump to the bottom") }
     }
 }
