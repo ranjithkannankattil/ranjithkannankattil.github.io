@@ -47,7 +47,8 @@ window.STATIONS = [
     "name": "Radio Suno",
     "category": "fm",
     "streams": [
-      "https://playerservices.streamtheworld.com/api/livestream-redirect/SUNO917_SC"
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/SUNO917_SC",
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/SUNO917.mp3"
     ]
   },
   {
@@ -1065,7 +1066,8 @@ window.STATIONS = [
     "name": "AURAL OLDIES",
     "category": "online",
     "streams": [
-      "https://stream.zeno.fm/anrf216cu68uv"
+      "https://stream.zeno.fm/anrf216cu68uv",
+      "https://stream.zeno.fm/tksfwb1mgzzuv"
     ],
     "added": "2026-10-22"
   },
