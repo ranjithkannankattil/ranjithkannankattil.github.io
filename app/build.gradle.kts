@@ -7,11 +7,11 @@ android {
     namespace = "com.ranjithkb.radionative"
     compileSdk = 35
     defaultConfig {
-        applicationId = "com.ranjithkb.radionative"
+        applicationId = "com.ranjithkb.radio"   // same as the earlier Radio app, so it updates in place
         minSdk = 26
         targetSdk = 35
-        versionCode = (System.getenv("GITHUB_RUN_NUMBER") ?: "1").toInt()
-        versionName = System.getenv("APP_VERSION") ?: "0.1.0"
+        versionCode = 2000 + (System.getenv("GITHUB_RUN_NUMBER") ?: "1").toInt()   // above every earlier Radio build
+        versionName = System.getenv("APP_VERSION") ?: "2.0.0"
     }
     signingConfigs {
         create("shared") {
@@ -45,6 +45,7 @@ dependencies {
     implementation("androidx.activity:activity-compose:1.9.3")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
+    implementation("androidx.browser:browser:1.8.0")
     implementation("com.google.guava:guava:33.3.1-android")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-guava:1.9.0")
 }

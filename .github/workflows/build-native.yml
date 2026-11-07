@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 40
     env:
-      APP_VERSION: "0.1.0"
+      APP_VERSION: "2.0.0"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
@@ -28,17 +28,28 @@ jobs:
           RADIO_KEYSTORE_PASSWORD: ${{ secrets.RADIO_KEYSTORE_PASSWORD }}
         run: |
           gradle --no-daemon :app:assembleRelease
-          cp app/build/outputs/apk/release/app-release.apk Radio-new.apk
-      - name: Publish (separate from the current app's releases)
+          cp app/build/outputs/apk/release/app-release.apk Radio.apk
+      - name: Publish as the Radio app release (website download + update banners read it)
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          TAG="radio-native-v${APP_VERSION}"
-          NOTES="New native Radio app ${APP_VERSION} (test build ${GITHUB_RUN_NUMBER}, $(TZ=Europe/Rome date '+%-d %b %Y, %H:%M %Z')). Installs next to the current Radio app."
+          TAG="radio-app-v${APP_VERSION}"
+          {
+            echo "Version ${APP_VERSION} · released $(TZ=Europe/Rome date '+%-d %b %Y, %H:%M %Z')"
+            echo
+            echo "What's new:"
+            echo "- Radio Velvet: a real Android app now, faster and easier to use, with a new name and icon"
+            echo "- Song name, artist and album cover while you listen, and a song card you can share"
+            echo "- Sign in with Google to keep favourites on every device and on ranjithkb.com"
+            echo "- Stations, Favourites and Info at the bottom of the screen; Android Auto support"
+            echo "- Pauses for calls and comes back on afterwards; sleep timer"
+            echo
+            echo "Install: download Radio.apk on your Android phone, open it, and allow the install. It updates the Radio app you have."
+          } > notes.md
           if gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
-            gh release upload "$TAG" Radio-new.apk --clobber --repo "$GITHUB_REPOSITORY"
-            gh release edit "$TAG" --repo "$GITHUB_REPOSITORY" --notes "$NOTES"
+            gh release upload "$TAG" Radio.apk --clobber --repo "$GITHUB_REPOSITORY"
+            gh release edit "$TAG" --repo "$GITHUB_REPOSITORY" --latest --title "Radio Velvet ${APP_VERSION}" --notes-file notes.md
           else
-            gh release create "$TAG" Radio-new.apk --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" \
-              --prerelease --latest=false --title "Radio (new app) ${APP_VERSION}" --notes "$NOTES"
+            gh release create "$TAG" Radio.apk --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --latest \
+              --title "Radio Velvet ${APP_VERSION}" --notes-file notes.md
           fi

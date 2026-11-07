@@ -38,6 +38,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
+import androidx.lifecycle.lifecycleScope
 import androidx.media3.common.MediaMetadata
 import androidx.media3.common.Player
 import androidx.media3.session.MediaController
@@ -53,16 +54,44 @@ private val Paper = Color(0xFFF0EDE6)
 private val Paper2 = Color(0xFFE7E2D6)
 private val Ink = Color(0xFF1B1B1F)
 private val InkSoft = Color(0xFF4A4A4C)
-private val Accent = Color(0xFF2F6B4F)
-private val AccentSoft = Color(0xFFDCE9E1)
+private val Accent = Color(0xFF6B2D5C)      // velvet plum
+private val AccentSoft = Color(0xFFEEDFE8)
+private val Velvet = Color(0xFF2A1424)
+private val Gold = Color(0xFFC9A86A)
+
+/** Signed-in name (null = signed out) and a counter that bumps when favourites change from the account. */
+object Session { var name by mutableStateOf<String?>(null); var favsVersion by mutableIntStateOf(0); var busy by mutableStateOf(false) }
 
 class MainActivity : ComponentActivity() {
     private var controller by mutableStateOf<MediaController?>(null)
+
+    override fun onNewIntent(intent: android.content.Intent) { super.onNewIntent(intent); handleSignIn(intent) }
+
+    private fun handleSignIn(intent: android.content.Intent?) {
+        val u = intent?.data ?: return
+        if (u.scheme != "com.ranjithkb.radio" || u.host != "auth") return
+        val q = android.net.Uri.parse("x://x?" + (u.encodedFragment ?: ""))
+        val id = q.getQueryParameter("id_token") ?: ""; val at = q.getQueryParameter("access_token") ?: ""
+        if (id.isEmpty() && at.isEmpty()) { android.widget.Toast.makeText(this, "Sign-in cancelled", android.widget.Toast.LENGTH_SHORT).show(); return }
+        Session.busy = true
+        lifecycleScope.launch {
+            try {
+                Account.finishSignIn(this@MainActivity, id, at)
+                Account.sync(this@MainActivity, Favs(this@MainActivity))
+                Session.name = Account.name(this@MainActivity); Session.favsVersion++
+                android.widget.Toast.makeText(this@MainActivity, "Signed in — favourites saved to your account", android.widget.Toast.LENGTH_LONG).show()
+            } catch (e: Exception) {
+                android.widget.Toast.makeText(this@MainActivity, "Couldn't sign in — please try again", android.widget.Toast.LENGTH_LONG).show()
+            } finally { Session.busy = false }
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         if (Build.VERSION.SDK_INT >= 33) requestPermissions(arrayOf(Manifest.permission.POST_NOTIFICATIONS), 1)
+        Session.name = Account.name(this)
+        handleSignIn(intent)
         setContent {
             MaterialTheme(colorScheme = lightColorScheme(primary = Accent, onPrimary = Color.White, background = Paper,
                 surface = Paper, onSurface = Ink, onBackground = Ink, secondaryContainer = AccentSoft,
@@ -117,7 +146,15 @@ fun App(c: MediaController?) {
     val prefs = remember { ctx.getSharedPreferences("app", Context.MODE_PRIVATE) }
     val favs = remember { Favs(ctx) }
     var favList by remember { mutableStateOf(favs.all()) }
-    fun refreshFavs() { favList = favs.all() }
+    val scope = rememberCoroutineScope()
+    fun refreshFavs() {
+        favList = favs.all()
+        if (Account.signedIn(ctx)) scope.launch { try { Account.saveFavs(ctx, favList.map { it.key }) } catch (e: Exception) { } }
+    }
+    LaunchedEffect(Session.favsVersion) { favList = favs.all() }
+    LaunchedEffect(Unit) { if (Account.signedIn(ctx)) try { Account.sync(ctx, favs); favList = favs.all() } catch (e: Exception) { } }
+    var update by remember { mutableStateOf<Update?>(null) }
+    LaunchedEffect(Unit) { update = checkUpdate(ctx) }
     var cols by remember { mutableStateOf<List<Collection>>(emptyList()) }
     var colId by remember { mutableStateOf(prefs.getString("col", "malayalam")!!) }
     var stations by remember { mutableStateOf<List<Station>>(emptyList()) }
@@ -143,16 +180,24 @@ fun App(c: MediaController?) {
         ctl.prepare(); ctl.play()
     }
 
+    fun go(t: Int) { tab = t; prefs.edit().putInt("tab", t).apply() }
     Column(Modifier.fillMaxSize().statusBarsPadding()) {
-        Text("Radio", fontSize = 28.sp, fontWeight = FontWeight.SemiBold, color = Ink,
-            modifier = Modifier.padding(start = 20.dp, top = 12.dp, bottom = 8.dp))
-        TabRow(selectedTabIndex = tab, containerColor = Paper, contentColor = Ink) {
-            Tab(tab == 0, { tab = 0; prefs.edit().putInt("tab", 0).apply() }, text = { Text("Stations") })
-            Tab(tab == 1, { tab = 1; prefs.edit().putInt("tab", 1).apply() },
-                text = { Text("♥ Favourites  ${favList.size}") })
+        Row(Modifier.padding(start = 20.dp, top = 12.dp, bottom = 6.dp, end = 20.dp), verticalAlignment = Alignment.Bottom) {
+            Text("Radio Velvet", fontSize = 26.sp, fontWeight = FontWeight.SemiBold, color = Velvet)
+            Spacer(Modifier.width(10.dp))
+            Text("Elegant sounds, always free", fontSize = 13.sp, color = InkSoft, modifier = Modifier.padding(bottom = 4.dp))
+        }
+        update?.let { u ->
+            Row(Modifier.fillMaxWidth().background(AccentSoft).padding(16.dp, 8.dp), verticalAlignment = Alignment.CenterVertically) {
+                Text("Radio Velvet ${u.version} is out", Modifier.weight(1f), fontWeight = FontWeight.SemiBold)
+                TextButton({ go(2) }) { Text("What's new") }
+                Button({ openUrl(ctx, u.url) }) { Text("Update") }
+            }
         }
         Box(Modifier.weight(1f)) {
-            if (tab == 0) {
+            if (tab == 2) InfoTab(cols.size, update, onSignIn = { openUrl(ctx, Account.SIGN_IN_URL) },
+                onSignOut = { Account.signOut(ctx); Session.name = null })
+            else if (tab == 0) {
                 val shown = stations.filter { (cat == "all" || it.category == cat) && (q.isBlank() || it.name.contains(q, true)) }
                     .sortedBy { it.offline }
                 Column {
@@ -183,13 +228,26 @@ fun App(c: MediaController?) {
                     }
                 }
             } else {
-                FavsTab(favList, now, langOf = ::langOf, onPlay = { s -> play(favList, s) },
-                    onChanged = { refreshFavs() }, favs = favs)
+                Column {
+                    if (Session.name == null) Row(Modifier.fillMaxWidth().background(AccentSoft).padding(16.dp, 10.dp),
+                        verticalAlignment = Alignment.CenterVertically) {
+                        Text(if (Session.busy) "Signing in…" else "Sign in to keep your favourites on every device and on ranjithkb.com.",
+                            Modifier.weight(1f), fontSize = 14.sp)
+                        if (!Session.busy) Button({ openUrl(ctx, Account.SIGN_IN_URL) }, Modifier.heightIn(min = 48.dp)) { Text("Sign in") }
+                    }
+                    FavsTab(favList, now, langOf = ::langOf, onPlay = { s -> play(favList, s) },
+                        onChanged = { refreshFavs() }, favs = favs)
+                }
             }
         }
         if (now.id != null) MiniPlayer(now, c) { full = true }
+        NavigationBar(containerColor = Paper2) {
+            NavigationBarItem(tab == 0, { go(0) }, { Icon(Icons.Filled.Radio, null) }, label = { Text("Stations") })
+            NavigationBarItem(tab == 1, { go(1) }, { Icon(Icons.Filled.Favorite, null) }, label = { Text("Favourites ${favList.size}") })
+            NavigationBarItem(tab == 2, { go(2) }, { Icon(Icons.Filled.Info, null) }, label = { Text("Info") })
+        }
     }
-    if (pickLang) LanguageDialog(cols, colId, { colId = it; tab = 0; pickLang = false }) { pickLang = false }
+    if (pickLang) LanguageDialog(cols, colId, { colId = it; go(0); pickLang = false }) { pickLang = false }
     if (full) FullPlayer(now, c) { full = false }
 }
 
@@ -317,7 +375,7 @@ fun Art(now: NowState, size: Int) {
 
 @Composable
 fun MiniPlayer(now: NowState, c: MediaController?, open: () -> Unit) {
-    Row(Modifier.fillMaxWidth().background(Ink).clickable(onClick = open).navigationBarsPadding()
+    Row(Modifier.fillMaxWidth().background(Velvet).clickable(onClick = open)
         .padding(12.dp, 10.dp), verticalAlignment = Alignment.CenterVertically) {
         Art(now, 48)
         Column(Modifier.weight(1f).padding(horizontal = 12.dp)) {
@@ -347,7 +405,7 @@ fun FullPlayer(now: NowState, c: MediaController?, close: () -> Unit) {
         }
     }
     Dialog(close, DialogProperties(usePlatformDefaultWidth = false)) {
-        Surface(Modifier.fillMaxSize(), color = Ink) {
+        Surface(Modifier.fillMaxSize(), color = Velvet) {
             Column(Modifier.statusBarsPadding().navigationBarsPadding().padding(24.dp), horizontalAlignment = Alignment.CenterHorizontally) {
                 Row(Modifier.fillMaxWidth()) {
                     IconButton(close) { Icon(Icons.Filled.KeyboardArrowDown, "Close", tint = Color.White) }
@@ -372,7 +430,18 @@ fun FullPlayer(now: NowState, c: MediaController?, close: () -> Unit) {
                     IconButton({ c?.seekToNextMediaItem() }, Modifier.size(64.dp)) {
                         Icon(Icons.Filled.SkipNext, "Next station", Modifier.size(40.dp), tint = Color.White) }
                 }
-                Spacer(Modifier.height(24.dp))
+                val station = now.md.station?.toString() ?: ""
+                val song = now.md.title?.toString() ?: ""
+                if (song.isNotBlank() && song != station) {
+                    val ctx = LocalContext.current
+                    Spacer(Modifier.height(16.dp))
+                    OutlinedButton({ scope.launch {
+                        val artist = (now.md.artist?.toString() ?: "").split(" · ").filter { it != station }.joinToString(" · ")
+                        shareSongCard(ctx, song, artist, station, now.md.artworkUri?.toString()) } }, Modifier.heightIn(min = 48.dp)) {
+                        Icon(Icons.Filled.Share, null, tint = Gold); Spacer(Modifier.width(8.dp)); Text("Share song card", color = Color.White)
+                    }
+                }
+                Spacer(Modifier.height(16.dp))
                 Text(left.ifEmpty { "Sleep timer" }, color = Color(0xFFBDBDBD), fontSize = 13.sp)
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(top = 6.dp)) {
                     listOf(15, 30, 60).forEach { m ->
@@ -382,5 +451,76 @@ fun FullPlayer(now: NowState, c: MediaController?, close: () -> Unit) {
                 }
             }
         }
+    }
+}
+
+
+@Composable
+fun InfoTab(languages: Int, update: Update?, onSignIn: () -> Unit, onSignOut: () -> Unit) {
+    val ctx = LocalContext.current
+    LazyColumn(contentPadding = PaddingValues(20.dp), verticalArrangement = Arrangement.spacedBy(18.dp)) {
+        item {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Image(androidx.compose.ui.res.painterResource(R.drawable.velvet_logo), null, Modifier.size(64.dp))
+                Column(Modifier.padding(start = 14.dp)) {
+                    Text("Radio Velvet", fontSize = 22.sp, fontWeight = FontWeight.SemiBold, color = Velvet)
+                    Text("Elegant sounds, always free", color = InkSoft)
+                    Text("Version ${appVersion(ctx)}", fontSize = 13.sp, color = InkSoft)
+                }
+            }
+        }
+        update?.let { u -> item {
+            Column(Modifier.fillMaxWidth().background(AccentSoft).padding(16.dp)) {
+                Text("New version ${u.version}", fontWeight = FontWeight.SemiBold)
+                u.notes.forEach { Text("• $it", fontSize = 14.sp, modifier = Modifier.padding(top = 4.dp)) }
+                Button({ openUrl(ctx, u.url) }, Modifier.padding(top = 10.dp).heightIn(min = 48.dp)) { Text("Download update") }
+                Text("Open the downloaded file and allow the install. Your favourites stay.", fontSize = 12.sp, color = InkSoft)
+            }
+        } }
+        item {
+            Section("Your account") {
+                if (Session.name != null) {
+                    Text("Signed in as ${Session.name}. Favourites are saved to your account and match ranjithkb.com.")
+                    OutlinedButton(onSignOut, Modifier.padding(top = 8.dp)) { Text("Sign out") }
+                } else {
+                    Text("Sign in with Google to keep favourites on every device and on the website.")
+                    Button(onSignIn, Modifier.padding(top = 8.dp).heightIn(min = 48.dp)) { Text("Sign in") }
+                }
+            }
+        }
+        item {
+            Section("Which stations play") {
+                Text("${if (languages > 0) "$languages lists" else "70+ languages"} and about 2,200 live stations, each tested twice a day. " +
+                    "Stations marked \"Not working today\" failed the last test. A few broadcasters only stream to listeners in their own " +
+                    "country, so a station can be silent where you are even when it's working.")
+                Text("If a station doesn't start, Radio Velvet tries its other sources, then you can skip to the next one.",
+                    Modifier.padding(top = 6.dp), color = InkSoft, fontSize = 14.sp)
+            }
+        }
+        item {
+            Section("Good to know") {
+                Text("• Plays with the screen off; controls on the lock screen, headphones and Bluetooth.")
+                Text("• Pauses for calls and comes back on afterwards.")
+                Text("• Song name and cover appear when the station sends them. Share them as a song card from the player.")
+                Text("• Works in Android Auto: Favourites and every language list.")
+            }
+        }
+        item {
+            Section("On the web") {
+                TextButton({ openUrl(ctx, "https://ranjithkb.com/radio.html") }) { Text("Radio on ranjithkb.com") }
+                TextButton({ openUrl(ctx, "https://ranjithkb.com/") }) { Text("ranjithkb.com") }
+                TextButton({ ctx.startActivity(android.content.Intent(android.content.Intent.ACTION_SENDTO,
+                    android.net.Uri.parse("mailto:hello@ranjithkb.com?subject=Radio%20Velvet"))) }) { Text("Suggest a station: hello@ranjithkb.com") }
+            }
+        }
+    }
+}
+
+@Composable
+fun Section(title: String, body: @Composable ColumnScope.() -> Unit) {
+    Column {
+        Text(title.uppercase(), fontSize = 12.sp, letterSpacing = 1.sp, color = Accent, fontWeight = FontWeight.SemiBold,
+            modifier = Modifier.padding(bottom = 6.dp))
+        body()
     }
 }

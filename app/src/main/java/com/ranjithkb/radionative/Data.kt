@@ -104,5 +104,6 @@ class Favs(ctx: Context) {
         val s = l.removeAt(i); l.add(to.coerceIn(0, l.size), s); save(l)
     }
     fun remove(key: String) = save(all().filter { it.key != key })
+    fun replaceAll(l: List<Station>) = save(l)
     fun insert(s: Station, at: Int) { val l = all().filter { it.key != s.key }.toMutableList(); l.add(at.coerceIn(0, l.size), s); save(l) }
 }
