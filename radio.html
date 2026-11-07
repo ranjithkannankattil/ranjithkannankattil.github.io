@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Radio — Ranjith Kannankattil</title>
+<title>Radio Velvet — Ranjith Kannankattil</title>
 <meta name="description" content="Live radio in many languages — Malayalam, Hindi, Tamil, English news, talk and music, African languages, Italian, French and Korean.">
 <link rel="canonical" href="https://ranjithkb.com/radio.html">
 <meta property="og:type" content="website">
@@ -25,15 +25,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap"></noscript>
-<link rel="stylesheet" href="css/style.css?v=17">
-<link rel="stylesheet" href="css/radio.css?v=28">
+<link rel="stylesheet" href="css/style.css?v=18">
+<link rel="stylesheet" href="css/radio.css?v=29">
 </head>
 <body data-section="radio" class="wide">
 
 <header class="titleblock">
   <div>
     <div class="id">RANJITH KANNANKATTIL</div>
-    <div class="name">Radio</div>
+    <div class="name">Radio Velvet</div>
   </div>
   <nav class="tabs" data-root="" data-active="radio" aria-label="Site">
     <a href="index.html">Home</a>
@@ -49,7 +49,8 @@
 <main>
   <div class="radio-head">
     <div>
-      <h1 class="radio-title">Radio</h1>
+      <h1 class="radio-title">Radio Velvet</h1>
+      <p class="radio-tag"><em>Elegant sounds, always free</em></p>
       <p class="radio-intro">Over 2,200 live stations in more than 70 languages, each one tested twice a day. Pick one and leave it on.</p>
     </div>
     <label class="radio-search">
@@ -57,6 +58,22 @@
       <input id="q" type="search" placeholder="Station name" autocomplete="off">
     </label>
   </div>
+
+  <aside class="radio-app" id="radioApp" hidden>
+    <img class="ra-icon" src="assets/icons/radio-velvet-192.png" width="56" height="56" alt="">
+    <div class="ra-text">
+      <h2 class="ra-title">Get the Android app</h2>
+      <p class="ra-desc">The same stations with song names and album covers, song cards to share, favourites saved to your account, the screen off and Android Auto.</p>
+      <details class="ra-more"><summary>About the app</summary>
+      <p class="ra-steps">Open the downloaded file and allow installs from your browser when asked.</p>
+      <p class="ra-ios">There's no iPhone app yet. On iPhone, use this page: in Safari, tap Share → Add to Home Screen for an icon that opens Radio directly.</p>
+      <p class="ra-ver" id="raVer" hidden></p>
+      <div class="ra-new" id="raNew" hidden><p class="ra-new-h">What's new</p><ul id="raNewList"></ul></div>
+      <p class="ra-count" id="raCount" hidden></p>
+      </details>
+    </div>
+    <a class="ra-btn" href="https://github.com/ranjithkannankattil/ranjithkannankattil.github.io/releases/latest/download/Radio.apk" rel="noopener">Download APK <span class="ra-size">14 MB</span></a>
+  </aside>
 
   <nav class="radio-tabs" id="radioTabs" role="tablist" aria-label="Stations or favourites">
     <button class="rt" id="tabStations" role="tab" aria-selected="true">Stations <span class="lang"></span></button>
@@ -109,19 +126,6 @@
   <ul class="radio-grid" id="grid"></ul>
   <p class="radio-empty" id="empty" hidden>No stations match.</p>
 
-  <aside class="radio-app" id="radioApp" hidden>
-    <img class="ra-icon" src="assets/icons/radio-velvet-192.png" width="56" height="56" alt="">
-    <div class="ra-text">
-      <h2 class="ra-title">Radio Velvet for Android</h2>
-      <p class="ra-desc"><em>Elegant sounds, always free.</em> The same stations as a real Android app: song names and album covers, shareable song cards, favourites saved to your account, plays with the screen off, Android Auto.</p>
-      <p class="ra-steps">Open the downloaded file and allow installs from your browser when asked.</p>
-      <p class="ra-ios">There's no iPhone app yet. On iPhone, use this page: in Safari, tap Share → Add to Home Screen for an icon that opens Radio directly.</p>
-      <p class="ra-ver" id="raVer" hidden></p>
-      <div class="ra-new" id="raNew" hidden><p class="ra-new-h">What's new</p><ul id="raNewList"></ul></div>
-      <p class="ra-count" id="raCount" hidden></p>
-    </div>
-    <a class="ra-btn" href="https://github.com/ranjithkannankattil/ranjithkannankattil.github.io/releases/latest/download/Radio.apk" rel="noopener">Download APK <span class="ra-size">14 MB</span></a>
-  </aside>
 
   <p class="radio-note">Streams belong to their broadcasters and some go offline from time to time. If one doesn't start, the next source is tried automatically.</p>
   <p class="radio-note acct-note" id="acctNote" hidden>Signing in is optional. It stores your Google account ID and email with your list of favourite stations and your default language, so they appear on any device you sign in on — nothing else. Sign out any time; to have your saved list deleted, get in touch. <a href="privacy.html">Privacy details</a>.</p>

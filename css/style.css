@@ -23,7 +23,7 @@
 [data-section="photography"] { --accent:#A8522E; --accent-soft:#EFE3DC; }
 [data-section="writings"]    { --accent:#B8860B; --accent-soft:#F1E6C8; --ink-accent:#6B1F1F; --accent-text:#7F5D06; /* gold text dark enough to read */ }
 [data-section="publications"]       { --accent:#6B2740; --accent-soft:#EBDCE1; }
-[data-section="radio"]       { --accent:#2F6B4F; --accent-soft:#DCE9E1; }
+[data-section="radio"]       { --accent:#6B2D5C; --accent-soft:#EEDFE8; } /* Radio Velvet plum, as in the app */
 [data-section="news"]        { --accent:#A33A2C; --accent-soft:#F2E0DB; }
 [data-section="trip"]         { --accent:#1F6F78; --accent-soft:#DCEBEC; }
 [data-section="productivity"] { --accent:#5C4D7D; --accent-soft:#E7E2EF; }
@@ -801,7 +801,7 @@ nav.tabs .nav-sub a.current{ background:var(--paper); box-shadow:inset 3px 0 0 v
   [data-section="photography"]  { --accent:#E08A63; --accent-soft:#33231C; }
   [data-section="writings"]     { --accent:#E0B54A; --accent-soft:#30291A; --ink-accent:#E39B8F; --accent-text:#E0B54A; }
   [data-section="publications"] { --accent:#D98AA7; --accent-soft:#33202A; }
-  [data-section="radio"]        { --accent:#6BC497; --accent-soft:#1B2D24; }
+  [data-section="radio"]        { --accent:#D9A0C9; --accent-soft:#2E1C29; }
   [data-section="news"]         { --accent:#EC8572; --accent-soft:#36201C; }
   [data-section="productivity"] { --accent:#B4A2DE; --accent-soft:#28233A; }
   [data-section="trip"]         { --accent:#6CC3CB; --accent-soft:#1A2B2D; }
