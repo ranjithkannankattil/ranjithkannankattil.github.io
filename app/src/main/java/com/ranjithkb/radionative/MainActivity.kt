@@ -196,9 +196,9 @@ fun App(c: MediaController?) {
     LaunchedEffect(Unit) { cols = Repo.collections(ctx) }
     LaunchedEffect(colId) {
         loading = true; cat = "all"; prefs.edit().putString("col", colId).apply()
-        stations = Repo.stations(ctx, colId); loading = false
+        stations = if (colId == PICKS) Repo.picks(ctx) else Repo.stations(ctx, colId); loading = false
     }
-    val col = cols.find { it.id == colId }
+    val col = if (colId == PICKS) PICKS_COL else cols.find { it.id == colId }
     fun langOf(s: Station) = cols.find { it.id == s.col }?.name ?: ""
     fun play(list: List<Station>, s: Station) {
         val ctl = c ?: return
@@ -243,11 +243,13 @@ fun App(c: MediaController?) {
                             FilterChip(cat == k, { cat = k }, { Text("$label ${stations.count { it.category == k }}") })
                         }
                     }
+                    if (colId == PICKS) Text(if (!loading && stations.isEmpty()) "No picks shared yet." else
+                        "The developer's own favourite stations, from every language.", Modifier.padding(16.dp, 4.dp), color = InkSoft, fontSize = 14.sp)
                     if (loading) LinearProgressIndicator(Modifier.fillMaxWidth().padding(top = 8.dp), color = Accent)
                     val fk = favList.map { it.key }.toSet()
                     LazyColumn(contentPadding = PaddingValues(bottom = 12.dp)) {
                         items(shown, key = { it.key }) { s ->
-                            StationRow(s, col?.cats?.find { it.first == s.category }?.second ?: "", s.key in fk,
+                            StationRow(s, if (colId == PICKS) langOf(s) else col?.cats?.find { it.first == s.category }?.second ?: "", s.key in fk,
                                 "st|${s.key}" == now.id, now.playing,
                                 onPlay = { play(shown, s) }, onFav = { favs.toggle(s); refreshFavs() })
                         }
@@ -262,7 +264,7 @@ fun App(c: MediaController?) {
                         if (!Session.busy) Button({ openUrl(ctx, Account.SIGN_IN_URL) }, Modifier.heightIn(min = 48.dp)) { Text("Sign in") }
                     }
                     FavsTab(favList, now, langOf = ::langOf, onPlay = { s -> play(favList, s) },
-                        onChanged = { refreshFavs() }, favs = favs)
+                        onChanged = { refreshFavs() }, favs = favs, onPicks = { colId = PICKS; go(0) })
                 }
             }
         }
@@ -306,7 +308,9 @@ fun Tile(name: String, on: Boolean, size: Int = 44) {
 
 @Composable
 fun FavsTab(list: List<Station>, now: NowState, langOf: (Station) -> String, onPlay: (Station) -> Unit,
-            onChanged: () -> Unit, favs: Favs) {
+            onChanged: () -> Unit, favs: Favs, onPicks: () -> Unit) {
+    val ctx = LocalContext.current
+    val scope = rememberCoroutineScope()
     var edit by remember { mutableStateOf(false) }
     var undo by remember { mutableStateOf<Pair<Station, Int>?>(null) }
     LaunchedEffect(undo) { if (undo != null) { delay(8000); undo = null } }
@@ -324,6 +328,20 @@ fun FavsTab(list: List<Station>, now: NowState, langOf: (Station) -> String, onP
             if (list.isNotEmpty()) {
                 if (edit) Button({ edit = false }, Modifier.heightIn(min = 48.dp)) { Text("Done") }
                 else OutlinedButton({ edit = true }, Modifier.heightIn(min = 48.dp)) { Text("Reorder / remove") }
+            }
+        }
+        if (list.isEmpty()) OutlinedButton(onPicks, Modifier.padding(horizontal = 16.dp).heightIn(min = 48.dp)) {
+            Icon(Icons.Filled.Star, null, tint = Accent); Spacer(Modifier.width(8.dp)); Text("Start with Ranjith's picks")
+        }
+        if (Account.isOwner(ctx) && list.isNotEmpty() && !edit) {
+            var busy by remember { mutableStateOf(false) }
+            TextButton({ if (!busy) scope.launch { busy = true
+                val msg = try { Account.publishPicks(ctx, list.map { it.key }); "Shared: everyone now sees these ${list.size} stations as Ranjith's picks." }
+                    catch (e: Exception) { "Couldn't share the picks. " + (if (e.message?.contains("403") == true) "The database rules need publishing first." else "Try again.") }
+                busy = false; android.widget.Toast.makeText(ctx, msg, android.widget.Toast.LENGTH_LONG).show() } },
+                Modifier.padding(horizontal = 8.dp).heightIn(min = 48.dp)) {
+                Icon(Icons.Filled.Star, null, tint = Accent); Spacer(Modifier.width(6.dp))
+                Text(if (busy) "Sharing…" else "Share this list as Ranjith's picks", color = Accent)
             }
         }
         undo?.let { (s, at) ->
@@ -375,6 +393,17 @@ fun LanguageDialog(cols: List<Collection>, current: String, onPick: (String) -> 
                     OutlinedTextField(q, { q = it }, Modifier.weight(1f), placeholder = { Text("Find a language") }, singleLine = true)
                 }
                 LazyColumn {
+                    if (q.isBlank()) item {
+                        Row(Modifier.fillMaxWidth().clickable { onPick(PICKS) }.heightIn(min = 60.dp)
+                            .background(if (current == PICKS) AccentSoft else Color.Transparent).padding(horizontal = 16.dp),
+                            verticalAlignment = Alignment.CenterVertically) {
+                            Icon(Icons.Filled.Star, null, tint = Accent); Spacer(Modifier.width(10.dp))
+                            Column(Modifier.weight(1f)) {
+                                Text("Ranjith's picks", fontWeight = FontWeight.SemiBold)
+                                Text("The developer's favourite stations", fontSize = 13.sp, color = InkSoft)
+                            }
+                        }
+                    }
                     val shown = cols.filter { q.isBlank() || it.name.contains(q, true) || it.native.contains(q, true) }
                     shown.groupBy { it.group.ifBlank { "Languages" } }.forEach { (g, cs) ->
                         item { Text(g.uppercase(), Modifier.padding(16.dp, 14.dp, 16.dp, 4.dp), fontSize = 12.sp, color = InkSoft, letterSpacing = 1.sp) }
@@ -474,6 +503,8 @@ fun FullPlayer(now: NowState, c: MediaController?, close: () -> Unit) {
                         modifier = Modifier.padding(top = 4.dp))
                     if (hasSong) Text("on $station", color = Gold, fontSize = 14.sp, fontWeight = FontWeight.Medium,
                         textAlign = TextAlign.Center, modifier = Modifier.padding(top = 6.dp))
+                    val stKey = now.id?.removePrefix("st|")
+                    if (stKey != null) RatingRow(stKey)
                     Spacer(Modifier.height(22.dp))
                     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(24.dp)) {
                         IconButton({ c?.seekToPreviousMediaItem() }, Modifier.size(64.dp)) {
@@ -621,5 +652,39 @@ fun UpdateButton(u: Update, label: String) {
         else -> Button({ scope.launch { Updater.install(ctx, u.url) } }, Modifier.heightIn(min = 48.dp)) {
             Text(if (p == -1) "Try again" else label)
         }
+    }
+}
+
+const val PICKS = "picks"
+val PICKS_COL = Collection(PICKS, "Ranjith's picks", "", "", emptyList())
+
+/** Station rating in the player: the average (shared with ranjithkb.com) and five stars to give your own. */
+@Composable
+fun RatingRow(stKey: String) {
+    val ctx = LocalContext.current
+    val scope = rememberCoroutineScope()
+    var sum by remember(stKey) { mutableStateOf<Ratings.Summary?>(null) }
+    var mine by remember(stKey) { mutableStateOf<Int?>(null) }
+    var note by remember(stKey) { mutableStateOf<String?>(null) }
+    LaunchedEffect(stKey) { sum = Ratings.summary(stKey); mine = Ratings.mine(ctx, stKey) }
+    Column(Modifier.padding(top = 14.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+        Text(when {
+            sum?.avg != null -> "★ " + String.format(java.util.Locale.UK, "%.1f", sum!!.avg) + " · ${sum!!.count} ratings"
+            (sum?.count ?: 0) > 0 -> "${sum!!.count} rating${if (sum!!.count == 1) "" else "s"} so far"
+            else -> "Be the first to rate this station"
+        }, color = Color(0xFFBDBDBD), fontSize = 13.sp)
+        Row {
+            (1..5).forEach { n ->
+                IconButton({ scope.launch {
+                    val old = mine; mine = n
+                    note = Ratings.rate(ctx, stKey, n)
+                    if (note != null) mine = old else { note = "Thanks for rating"; sum = Ratings.summary(stKey) }
+                } }, Modifier.size(44.dp)) {
+                    Icon(if ((mine ?: 0) >= n) Icons.Filled.Star else Icons.Filled.StarBorder,
+                        "Rate $n out of 5", tint = Gold, modifier = Modifier.size(28.dp))
+                }
+            }
+        }
+        note?.let { Text(it, color = Color(0xFFBDBDBD), fontSize = 12.sp) }
     }
 }

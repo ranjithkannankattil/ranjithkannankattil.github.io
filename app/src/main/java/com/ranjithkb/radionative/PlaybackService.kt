@@ -128,8 +128,9 @@ class PlaybackService : MediaLibraryService() {
             val ctx = this@PlaybackService
             val cols = Repo.collections(ctx)
             val list: List<MediaItem> = when {
-                parent == "root" -> listOf(folder("favs", "Favourites")) + cols.map { folder("col|${it.id}", it.name) }
+                parent == "root" -> listOf(folder("favs", "Favourites"), folder("picks", "Ranjith's picks")) + cols.map { folder("col|${it.id}", it.name) }
                 parent == "favs" -> Favs(ctx).all().map { st -> st.toItem(cols.find { it.id == st.col }?.name ?: "") }
+                parent == "picks" -> Repo.picks(ctx).map { st -> st.toItem(cols.find { it.id == st.col }?.name ?: "") }
                 parent.startsWith("col|") -> {
                     val id = parent.removePrefix("col|")
                     Repo.stations(ctx, id).filter { !it.offline }.map { it.toItem(cols.find { c -> c.id == id }?.name ?: "") }

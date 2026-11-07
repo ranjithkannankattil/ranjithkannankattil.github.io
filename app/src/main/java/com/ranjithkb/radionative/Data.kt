@@ -38,7 +38,7 @@ object Repo {
     private fun fetch(url: String): String {
         val c = URL(url).openConnection() as HttpURLConnection
         c.connectTimeout = 10000; c.readTimeout = 15000
-        c.setRequestProperty("User-Agent", "RanjithkbRadio-Android")
+        c.setRequestProperty("User-Agent", "RanjithkbRadio-Android"); c.setRequestProperty("Referer", "https://ranjithkb.com/")
         return c.inputStream.bufferedReader().use { it.readText() }
     }
 
@@ -76,6 +76,23 @@ object Repo {
         val js = cached(ctx, "st-$col.js", "$SITE/js/stations/$col.js?d=${System.currentTimeMillis() / 3600_000}", fresh) ?: return emptyList()
         val a = arrayIn(js, "STATIONS")
         return List(a.length()) { Station.fromJson(a.getJSONObject(it), col) }.filter { it.streams.isNotEmpty() }
+    }
+
+    /** "Ranjith's picks": the developer's favourite stations, from every language, in his order. */
+    suspend fun picks(ctx: Context, fresh: Boolean = false): List<Station> {
+        val keys = withContext(Dispatchers.IO) {
+            val f = File(ctx.cacheDir, "picks.json")
+            val text = if (!fresh && f.exists() && System.currentTimeMillis() - f.lastModified() < 3600_000) f.readText()
+                else try { fetch("https://firestore.googleapis.com/v1/projects/ranjithkb-radio/databases/(default)/documents/picks/ranjith?key=AIzaSyDGsaqqamWbS6RCtyU9v54o-oqZqYzdDEo").also { f.writeText(it) } }
+                     catch (e: Exception) { if (f.exists()) f.readText() else "{}" }
+            val vals = JSONObject(text).optJSONObject("fields")?.optJSONObject("favs")?.optJSONObject("arrayValue")?.optJSONArray("values") ?: JSONArray()
+            List(vals.length()) { vals.getJSONObject(it).optString("stringValue") }.filter { ':' in it }
+        }
+        val found = HashMap<String, Station>()
+        keys.groupBy { it.substringBefore(':') }.forEach { (col, ks) ->
+            val list = stations(ctx, col); ks.forEach { k -> list.find { it.key == k }?.let { found[k] = it } }
+        }
+        return keys.mapNotNull { found[it] }
     }
 
     /** Cover art for "Artist - Title" from Apple's free iTunes search (no key needed). */

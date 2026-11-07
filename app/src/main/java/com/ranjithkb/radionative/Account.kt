@@ -17,16 +17,31 @@ import java.net.URLEncoder
  * favourites are read and written at users/{uid} — the same document the website uses.
  */
 object Account {
-    private const val KEY = "AIzaSyDGsaqqamWbS6RCtyU9v54o-oqZqYzdDEo"   // public web key, as on the website
+    const val KEY = "AIzaSyDGsaqqamWbS6RCtyU9v54o-oqZqYzdDEo"   // public web key, as on the website
     const val SIGN_IN_URL = "https://ranjithkb.com/auth-app.html?start=1"
-    private const val DOCS = "https://firestore.googleapis.com/v1/projects/ranjithkb-radio/databases/(default)/documents"
+    const val DOCS = "https://firestore.googleapis.com/v1/projects/ranjithkb-radio/databases/(default)/documents"
 
     private fun prefs(ctx: Context) = ctx.getSharedPreferences("account", Context.MODE_PRIVATE)
     fun name(ctx: Context): String? = prefs(ctx).getString("name", null)
     fun signedIn(ctx: Context) = prefs(ctx).getString("refresh", null) != null
     fun signOut(ctx: Context) = prefs(ctx).edit().clear().apply()
+    fun uid(ctx: Context): String? = prefs(ctx).getString("uid", null)
+    /** The site owner's account: only he sees "Share as Ranjith's picks". */
+    const val OWNER_UID = "oidT4ydQi7aRffo0v6qvf4mMNM72"
+    fun isOwner(ctx: Context) = uid(ctx) == OWNER_UID
 
-    private fun http(url: String, method: String, body: String?, type: String = "application/json", bearer: String? = null): JSONObject {
+    /** Owner only: publish his favourites, in his order, as the public "Ranjith's picks". */
+    suspend fun publishPicks(ctx: Context, keys: List<String>) = withContext(Dispatchers.IO) {
+        val (_, t) = token(ctx) ?: throw RuntimeException("Not signed in")
+        val arr = JSONArray(keys.take(200).map { JSONObject().put("stringValue", it) })
+        http("$DOCS:commit", "POST", JSONObject().put("writes", JSONArray().put(JSONObject()
+            .put("update", JSONObject().put("name", "projects/ranjithkb-radio/databases/(default)/documents/picks/ranjith")
+                .put("fields", JSONObject().put("favs", JSONObject().put("arrayValue", JSONObject().put("values", arr)))))
+            .put("updateTransforms", JSONArray().put(JSONObject().put("fieldPath", "updated").put("setToServerValue", "REQUEST_TIME"))))).toString(),
+            bearer = t)
+    }
+
+    fun http(url: String, method: String, body: String?, type: String = "application/json", bearer: String? = null): JSONObject {
         val c = URL(url).openConnection() as HttpURLConnection
         c.requestMethod = method; c.connectTimeout = 15000; c.readTimeout = 15000
         c.setRequestProperty("Referer", "https://ranjithkb.com/")
@@ -50,7 +65,7 @@ object Account {
             .putString("name", r.optString("displayName").ifBlank { r.optString("email") }).apply()
     }
 
-    private fun token(ctx: Context): Pair<String, String>? {
+    fun token(ctx: Context): Pair<String, String>? {
         val p = prefs(ctx)
         val uid = p.getString("uid", null) ?: return null
         if (System.currentTimeMillis() < p.getLong("exp", 0)) return uid to p.getString("token", "")!!
