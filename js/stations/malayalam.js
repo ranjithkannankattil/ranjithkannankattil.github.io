@@ -11,8 +11,10 @@ window.STATIONS = [
     "name": "Mirchi Kochi",
     "category": "fm",
     "streams": [
-      "https://stream.aiir.com/dbv0rxpwp6ytv",
       "https://sp14.instainternet.com/8050/stream"
+    ],
+    "exclude": [
+      "https://stream.aiir.com/dbv0rxpwp6ytv"
     ]
   },
   {
