@@ -88,12 +88,29 @@ suspend fun shareSongCard(ctx: Context, song: String, artist: String, station: S
     ctx.startActivity(Intent.createChooser(send, "Share song card"))
 }
 
-/** Find the song that's playing in Spotify: the app if installed, otherwise Spotify on the web. */
-fun openInSpotify(ctx: Context, song: String, artist: String) {
+/**
+ * Open the song that's playing in Spotify. The exact song when it can be found (iTunes gives the
+ * song's ID, song.link turns it into the Spotify link; neither needs a key), otherwise Spotify search.
+ * The Spotify app opens if it's installed, otherwise Spotify on the web.
+ */
+suspend fun openInSpotify(ctx: Context, song: String, artist: String) {
     val q = (song + " " + artist.substringBefore(',').substringBefore(" · ")).trim()
-    val app = Intent(Intent.ACTION_VIEW, Uri.parse("spotify:search:" + Uri.encode(q))).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-    try { ctx.startActivity(app) }
-    catch (e: Exception) { openUrl(ctx, "https://open.spotify.com/search/" + Uri.encode(q)) }
+    val exact = withContext(Dispatchers.IO) {
+        try {
+            fun get(u: String) = (URL(u).openConnection() as HttpURLConnection).run {
+                connectTimeout = 6000; readTimeout = 8000; setRequestProperty("User-Agent", "RadioVelvet-Android")
+                inputStream.bufferedReader().use { it.readText() } }
+            val track = org.json.JSONObject(get("https://itunes.apple.com/search?entity=song&limit=1&term=" + Uri.encode(q)))
+                .optJSONArray("results")?.optJSONObject(0)?.optString("trackViewUrl")?.takeIf { it.isNotEmpty() }
+                ?: return@withContext null
+            org.json.JSONObject(get("https://api.song.link/v1-alpha.1/links?url=" + Uri.encode(track)))
+                .optJSONObject("linksByPlatform")?.optJSONObject("spotify")?.optString("url")?.takeIf { it.isNotEmpty() }
+        } catch (e: Exception) { null }
+    }
+    val link = exact ?: ("https://open.spotify.com/search/" + Uri.encode(q))
+    // open.spotify.com links open in the Spotify app when it's installed
+    try { ctx.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(link)).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)) }
+    catch (e: Exception) { openUrl(ctx, link) }
 }
 
 /** Download progress of an app update: null = idle, 0..100 = downloading, -1 = failed. */

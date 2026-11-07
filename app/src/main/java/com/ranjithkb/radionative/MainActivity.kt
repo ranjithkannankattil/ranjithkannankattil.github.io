@@ -496,11 +496,12 @@ fun FullPlayer(now: NowState, c: MediaController?, close: () -> Unit) {
                             Icon(Icons.Filled.Share, null, tint = Gold); Spacer(Modifier.width(8.dp))
                             Text(if (hasSong) "Share song" else "Share station", color = Color.White)
                         }
-                        if (hasSong) OutlinedButton({ openInSpotify(ctx, song, songArtist) },
+                        var finding by remember { mutableStateOf(false) }
+                        if (hasSong) OutlinedButton({ if (!finding) scope.launch { finding = true; openInSpotify(ctx, song, songArtist); finding = false } },
                             Modifier.heightIn(min = 48.dp), border = BorderStroke(1.dp, Color(0xFF1DB954)),
                             contentPadding = PaddingValues(horizontal = 16.dp)) {
                             Icon(Icons.Filled.PlayCircle, null, tint = Color(0xFF1DB954)); Spacer(Modifier.width(8.dp))
-                            Text("Spotify", color = Color.White)
+                            Text(if (finding) "Finding…" else "Spotify", color = Color.White)
                         }
                     }
                     Spacer(Modifier.height(18.dp))
