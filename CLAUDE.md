@@ -42,7 +42,7 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
 ## Radio (radio.html, js/radio.js, js/stations/*.js)
 - The page is branded **Radio Velvet** like the app: section accent is the app's plum (#6B2D5C), the
   Android app card sits at the top with details folded under "About the app". Menu label stays "Radio".
-- ~2,200 stations in 70+ languages, one file per collection in `js/stations/`, list of collections in
+- ~5,300 stations in 70+ languages, one file per collection in `js/stations/`, list of collections in
   `js/collections.js`. Favourites are stored as `"<collection>:<station id>"` in `mr-favs2`, in his
   chosen order, and synced to Firestore when signed in (`js/radio-sync.js`).
 - `scripts/check_streams.py` tests every stream twice a day (GitHub Actions) and

@@ -27,7 +27,7 @@
       { id: "padolpathi", label: "Padolpathi", desc: "Where Malayalam words come from", href: "padolpathi/" },
     ] },
     { label: "Daily Life", items: [
-      { id: "radio", label: "Radio", desc: "2,200 live stations in 70+ languages", href: "radio.html" },
+      { id: "radio", label: "Radio", desc: "5,000+ live stations in 70+ languages", href: "radio.html" },
       { id: "trip", label: "Trip planner", desc: "Day-by-day walking plans, anywhere", href: "trip.html" },
       { id: "expat", label: "Expat Life Saver", desc: "City guides: permits, homes, health, people", href: "expat/" },
       { id: "movies", label: "Movies", desc: "Any film, every rating, what to watch next", href: "movies.html" },
