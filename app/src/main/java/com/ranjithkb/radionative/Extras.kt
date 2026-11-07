@@ -5,6 +5,8 @@ import android.content.Intent
 import android.graphics.*
 import android.net.Uri
 import androidx.browser.customtabs.CustomTabsIntent
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
 import androidx.core.content.FileProvider
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -82,4 +84,53 @@ suspend fun shareSongCard(ctx: Context, song: String, artist: String, station: S
         .putExtra(Intent.EXTRA_TEXT, "Listening to $song${if (artist.isNotBlank()) " by $artist" else ""} on $station — Radio Velvet, https://ranjithkb.com/radio.html")
         .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
     ctx.startActivity(Intent.createChooser(send, "Share song card"))
+}
+
+
+/** Download progress of an app update: null = idle, 0..100 = downloading, -1 = failed. */
+object Updater {
+    var progress by androidx.compose.runtime.mutableStateOf<Int?>(null)
+
+    /** Download the new APK inside the app (no browser), then hand it to Android's installer. */
+    suspend fun install(ctx: Context, url: String) {
+        // Android asks once to allow installs from this app; open that setting if needed
+        if (android.os.Build.VERSION.SDK_INT >= 26 && !ctx.packageManager.canRequestPackageInstalls()) {
+            ctx.startActivity(Intent(android.provider.Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES,
+                Uri.parse("package:" + ctx.packageName)).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
+            android.widget.Toast.makeText(ctx, "Allow installs from Radio Velvet, then come back and tap Update again",
+                android.widget.Toast.LENGTH_LONG).show()
+            return
+        }
+        progress = 0
+        val file = withContext(Dispatchers.IO) {
+            try {
+                var link = url; var c: HttpURLConnection
+                var hops = 0
+                while (true) {          // follow GitHub's redirects to its download server
+                    c = URL(link).openConnection() as HttpURLConnection
+                    c.instanceFollowRedirects = false; c.connectTimeout = 15000; c.readTimeout = 30000
+                    c.setRequestProperty("User-Agent", "RadioVelvet-Android")
+                    if (c.responseCode in 300..399 && hops++ < 6) { link = c.getHeaderField("Location"); c.disconnect(); continue }
+                    break
+                }
+                if (c.responseCode != 200) throw RuntimeException("HTTP ${c.responseCode}")
+                val total = c.contentLengthLong
+                val dir = File(ctx.cacheDir, "updates").apply { mkdirs() }
+                val f = File(dir, "Radio-Velvet.apk")
+                c.inputStream.use { inp -> f.outputStream().use { out ->
+                    val buf = ByteArray(64 * 1024); var done = 0L; var n: Int
+                    while (inp.read(buf).also { n = it } > 0) {
+                        out.write(buf, 0, n); done += n
+                        if (total > 0) withContext(Dispatchers.Main) { progress = (done * 100 / total).toInt() }
+                    }
+                } }
+                f
+            } catch (e: Exception) { null }
+        }
+        if (file == null) { progress = -1; return }
+        progress = null
+        val uri = FileProvider.getUriForFile(ctx, ctx.packageName + ".files", file)
+        ctx.startActivity(Intent(Intent.ACTION_VIEW).setDataAndType(uri, "application/vnd.android.package-archive")
+            .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_ACTIVITY_NEW_TASK))
+    }
 }

@@ -217,7 +217,7 @@ fun App(c: MediaController?) {
             Row(Modifier.fillMaxWidth().background(AccentSoft).padding(16.dp, 8.dp), verticalAlignment = Alignment.CenterVertically) {
                 Text("Radio Velvet ${u.version} is out", Modifier.weight(1f), fontWeight = FontWeight.SemiBold)
                 TextButton({ go(2) }) { Text("What's new") }
-                Button({ openUrl(ctx, u.url) }) { Text("Update") }
+                UpdateButton(u, "Update")
             }
         }
         Box(Modifier.weight(1f)) {
@@ -520,7 +520,7 @@ fun InfoTab(languages: Int, update: Update?, onSignIn: () -> Unit, onSignOut: ()
             Column(Modifier.fillMaxWidth().background(AccentSoft).padding(16.dp)) {
                 Text("New version ${u.version}", fontWeight = FontWeight.SemiBold)
                 u.notes.forEach { Text("• $it", fontSize = 14.sp, modifier = Modifier.padding(top = 4.dp)) }
-                Button({ openUrl(ctx, u.url) }, Modifier.padding(top = 10.dp).heightIn(min = 48.dp)) { Text("Download update") }
+                Box(Modifier.padding(top = 10.dp)) { UpdateButton(u, "Download and install") }
                 Text("Open the downloaded file and allow the install. Your favourites stay.", fontSize = 12.sp, color = InkSoft)
             }
         } }
@@ -569,5 +569,22 @@ fun Section(title: String, body: @Composable ColumnScope.() -> Unit) {
         Text(title.uppercase(), fontSize = 12.sp, letterSpacing = 1.sp, color = Accent, fontWeight = FontWeight.SemiBold,
             modifier = Modifier.padding(bottom = 6.dp))
         body()
+    }
+}
+
+
+@Composable
+fun UpdateButton(u: Update, label: String) {
+    val ctx = LocalContext.current
+    val scope = rememberCoroutineScope()
+    val p = Updater.progress
+    when {
+        p != null && p >= 0 -> Column(Modifier.width(150.dp)) {
+            Text("Downloading $p%", fontSize = 13.sp)
+            LinearProgressIndicator(progress = { p / 100f }, Modifier.fillMaxWidth(), color = Accent)
+        }
+        else -> Button({ scope.launch { Updater.install(ctx, u.url) } }, Modifier.heightIn(min = 48.dp)) {
+            Text(if (p == -1) "Try again" else label)
+        }
     }
 }
