@@ -184,6 +184,8 @@ fun App(c: MediaController?) {
     LaunchedEffect(Unit) { update = checkUpdate(ctx) }
     var cols by remember { mutableStateOf<List<Collection>>(emptyList()) }
     var colId by remember { mutableStateOf(prefs.getString("col", "malayalam")!!) }
+    var lastCol by remember { mutableStateOf(prefs.getString("lastCol", "malayalam")!!) }
+    LaunchedEffect(lastCol) { prefs.edit().putString("lastCol", lastCol).apply() }
     var stations by remember { mutableStateOf<List<Station>>(emptyList()) }
     var loading by remember { mutableStateOf(true) }
     var tab by remember { mutableIntStateOf(prefs.getInt("tab", 0)) }
@@ -236,10 +238,13 @@ fun App(c: MediaController?) {
                         OutlinedTextField(q, { q = it }, Modifier.weight(1f), placeholder = { Text("Search") }, singleLine = true,
                             leadingIcon = { Icon(Icons.Filled.Search, null) })
                     }
-                    if (col != null && col.cats.isNotEmpty()) LazyRow(contentPadding = PaddingValues(horizontal = 16.dp),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        item { FilterChip(cat == "all", { cat = "all" }, { Text("All ${stations.size}") }) }
-                        items(col.cats.filter { (k, _) -> stations.any { it.category == k } }) { (k, label) ->
+                    LazyRow(contentPadding = PaddingValues(horizontal = 16.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        item {
+                            FilterChip(colId == PICKS, { if (colId != PICKS) { lastCol = colId; colId = PICKS } else colId = lastCol },
+                                { Text("Velvet Selection") }, leadingIcon = { Icon(Icons.Filled.Star, null, Modifier.size(18.dp), tint = Accent) })
+                        }
+                        if (col != null && col.cats.isNotEmpty()) item { FilterChip(cat == "all", { cat = "all" }, { Text("All ${stations.size}") }) }
+                        if (col != null) items(col.cats.filter { (k, _) -> stations.any { it.category == k } }) { (k, label) ->
                             FilterChip(cat == k, { cat = k }, { Text("$label ${stations.count { it.category == k }}") })
                         }
                     }
@@ -264,7 +269,7 @@ fun App(c: MediaController?) {
                         if (!Session.busy) Button({ openUrl(ctx, Account.SIGN_IN_URL) }, Modifier.heightIn(min = 48.dp)) { Text("Sign in") }
                     }
                     FavsTab(favList, now, langOf = ::langOf, onPlay = { s -> play(favList, s) },
-                        onChanged = { refreshFavs() }, favs = favs, onPicks = { colId = PICKS; go(0) })
+                        onChanged = { refreshFavs() }, favs = favs, onPicks = { if (colId != PICKS) lastCol = colId; colId = PICKS; go(0) })
                 }
             }
         }
@@ -275,7 +280,7 @@ fun App(c: MediaController?) {
             NavigationBarItem(tab == 2, { go(2) }, { Icon(Icons.Filled.Info, null) }, label = { Text("Info") })
         }
     }
-    if (pickLang) LanguageDialog(cols, colId, { colId = it; go(0); pickLang = false }) { pickLang = false }
+    if (pickLang) LanguageDialog(cols, colId, { if (it == PICKS && colId != PICKS) lastCol = colId; colId = it; go(0); pickLang = false }) { pickLang = false }
     if (full) FullPlayer(now, c) { full = false }
 }
 
@@ -483,16 +488,17 @@ fun FullPlayer(now: NowState, c: MediaController?, close: () -> Unit) {
     Dialog(close, DialogProperties(usePlatformDefaultWidth = false, decorFitsSystemWindows = false)) {
         Surface(Modifier.fillMaxSize(), color = Velvet) {
             BoxWithConstraints(Modifier.fillMaxSize().statusBarsPadding().navigationBarsPadding()) {
-                val art = minOf(maxWidth.value * 0.72f, maxHeight.value * 0.38f, 320f).toInt()
+                val art = minOf(maxWidth.value * 0.56f, maxHeight.value * 0.28f, 240f).toInt()
                 Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(horizontal = 24.dp, vertical = 12.dp),
                     horizontalAlignment = Alignment.CenterHorizontally) {
                     Box(Modifier.fillMaxWidth()) {
                         IconButton(close, Modifier.align(Alignment.CenterStart)) { Icon(Icons.Filled.KeyboardArrowDown, "Close", tint = Color.White) }
-                        Text(station, color = Color(0xFFBDBDBD), modifier = Modifier.align(Alignment.Center))
+                        Text(if (song.isNotBlank() && song != station) station else "Live radio", color = Color(0xFFBDBDBD),
+                            fontSize = 13.sp, letterSpacing = 1.sp, modifier = Modifier.align(Alignment.Center))
                     }
-                    Spacer(Modifier.height(20.dp))
+                    Spacer(Modifier.height(8.dp))
                     Art(now, art)
-                    Spacer(Modifier.height(22.dp))
+                    Spacer(Modifier.height(16.dp))
                     Text(song, color = Color.White, fontSize = 22.sp, fontWeight = FontWeight.SemiBold, maxLines = 2,
                         overflow = TextOverflow.Ellipsis, textAlign = TextAlign.Center)
                     val hasSong = song.isNotBlank() && song != station
@@ -505,7 +511,7 @@ fun FullPlayer(now: NowState, c: MediaController?, close: () -> Unit) {
                         textAlign = TextAlign.Center, modifier = Modifier.padding(top = 6.dp))
                     val stKey = now.id?.removePrefix("st|")
                     if (stKey != null) RatingRow(stKey)
-                    Spacer(Modifier.height(22.dp))
+                    Spacer(Modifier.height(10.dp))
                     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(24.dp)) {
                         IconButton({ c?.seekToPreviousMediaItem() }, Modifier.size(64.dp)) {
                             Icon(Icons.Filled.SkipPrevious, "Previous station", Modifier.size(40.dp), tint = Color.White) }
@@ -667,7 +673,7 @@ fun RatingRow(stKey: String) {
     var mine by remember(stKey) { mutableStateOf<Int?>(null) }
     var note by remember(stKey) { mutableStateOf<String?>(null) }
     LaunchedEffect(stKey) { sum = Ratings.summary(stKey); mine = Ratings.mine(ctx, stKey) }
-    Column(Modifier.padding(top = 14.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+    Column(Modifier.padding(top = 8.dp), horizontalAlignment = Alignment.CenterHorizontally) {
         Text(when {
             sum?.avg != null -> "★ " + String.format(java.util.Locale.UK, "%.1f", sum!!.avg) + " · ${sum!!.count} ratings"
             (sum?.count ?: 0) > 0 -> "${sum!!.count} rating${if (sum!!.count == 1) "" else "s"} so far"
@@ -681,7 +687,7 @@ fun RatingRow(stKey: String) {
                     if (note != null) mine = old else { note = "Thanks for rating"; sum = Ratings.summary(stKey) }
                 } }, Modifier.size(44.dp)) {
                     Icon(if ((mine ?: 0) >= n) Icons.Filled.Star else Icons.Filled.StarBorder,
-                        "Rate $n out of 5", tint = Gold, modifier = Modifier.size(28.dp))
+                        "Rate $n out of 5", tint = Gold, modifier = Modifier.size(24.dp))
                 }
             }
         }
