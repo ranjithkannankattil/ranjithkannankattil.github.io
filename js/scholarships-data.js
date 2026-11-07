@@ -94,8 +94,8 @@ window.SCHOLARSHIPS = [
     amount: '€1,200 a month for a master’s, €2,100 for a PhD, plus services such as travel and insurance. Tuition is not covered.',
     who: 'Excellent international students in seven broad fields, from engineering to law and economics.',
     how: 'You cannot apply alone. A French university must put your name forward, so contact its international office early.',
-    closes: '2027-01-06', when: 'Campus France shows both 6 and 8 January 2027, and universities set earlier internal dates.',
-    url: 'https://www.campusfrance.org/en/actu/call-for-france-excellence-eiffel-applications-2027', checked: '2026-11-03'
+    closes: '2027-01-08', when: 'The deadline is 8 January 2027. This date was updated automatically, so confirm it on the official page.',
+    url: 'https://www.campusfrance.org/en/actu/call-for-france-excellence-eiffel-applications-2027', checked: '2026-11-07'
   },
   {
     id: 'swiss', name: 'Swiss Government Excellence Scholarships', by: 'Swiss Government (ESKAS)', place: 'Switzerland',
