@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 40
     env:
-      APP_VERSION: "2.2.0"
+      APP_VERSION: "2.2.1"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
@@ -39,7 +39,7 @@ jobs:
             echo "Version ${APP_VERSION} · released $(TZ=Europe/Rome date '+%-d %b %Y, %H:%M %Z')"
             echo
             echo "What's new:"
-            echo "- Sleep timer and Share right on the bottom player bar; swipe the bar to change station"
+            echo "- New two-row player bar: song and play on top; favourite, sleep, share and previous/next below"
             echo "- Custom sleep timer: any length from 5 minutes to 4 hours"
             echo "- Pin languages so they always stay in the top row, and arrange them in your own order"
             echo "- All languages: station counts, Malayalam and English first, and an Every station list"

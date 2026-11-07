@@ -26,6 +26,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.gestures.detectHorizontalDragGestures
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.res.painterResource
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
@@ -305,7 +306,15 @@ ScrollButtons(stState, Modifier.align(Alignment.BottomEnd))
                 }
             }
         }
-        if (now.id != null) MiniPlayer(now, c) { full = true }
+        if (now.id != null) {
+            val key = now.id?.removePrefix("st|")
+            MiniPlayer(now, c, isFav = favList.any { it.key == key }, onFav = {
+                val st = favList.find { it.key == key } ?: stations.find { it.key == key }
+                if (st != null) { favs.toggle(st); refreshFavs() }
+                else if (key != null) scope.launch {
+                    Repo.stations(ctx, key.substringBefore(':')).find { it.key == key }?.let { favs.toggle(it); refreshFavs() } }
+            }) { full = true }
+        }
         NavigationBar(containerColor = Paper2) {
             NavigationBarItem(tab == 0, { go(0) }, { Icon(Icons.Filled.Radio, null) }, label = { Text("Stations") })
             NavigationBarItem(tab == 1, { go(1) }, { Icon(Icons.Filled.Favorite, null) }, label = { Text("Favourites (${favList.size})") })
@@ -525,40 +534,62 @@ fun Art(now: NowState, size: Int) {
 }
 
 @Composable
-fun MiniPlayer(now: NowState, c: MediaController?, open: () -> Unit) {
+fun MiniPlayer(now: NowState, c: MediaController?, isFav: Boolean, onFav: () -> Unit, open: () -> Unit) {
     var sleep by remember { mutableStateOf(false) }
     var share by remember { mutableStateOf(false) }
     var drag by remember { mutableFloatStateOf(0f) }
     if (sleep) SleepDialog { sleep = false }
     if (share) ShareMenu(now) { share = false }
-    // swipe the bar left or right to change station; tap to open the full player
-    Row(Modifier.fillMaxWidth().background(Velvet).clickable(onClick = open)
-        .pointerInput(c) { detectHorizontalDragGestures(onDragEnd = {
-            if (drag < -120) c?.seekToNextMediaItem() else if (drag > 120) c?.seekToPreviousMediaItem(); drag = 0f },
-            onDragCancel = { drag = 0f }) { _, d -> drag += d } }
-        .padding(12.dp, 10.dp), verticalAlignment = Alignment.CenterVertically) {
-        Art(now, 44)
-        val station = now.md.station?.toString() ?: ""
-        val song = now.md.title?.toString() ?: ""
-        val hasSong = song.isNotBlank() && song != station
-        val artist = (now.md.artist?.toString() ?: "").split(" · ").filter { it != station }.joinToString(" · ")
-        Column(Modifier.weight(1f).padding(horizontal = 12.dp)) {
-            if (hasSong) Text(station, color = Gold, fontSize = 11.sp, fontWeight = FontWeight.Medium, letterSpacing = 0.5.sp,
-                maxLines = 1, overflow = TextOverflow.Ellipsis)
-            Text(if (hasSong) song else station.ifBlank { song }, color = Color.White, fontWeight = FontWeight.SemiBold,
-                maxLines = 1, overflow = TextOverflow.Ellipsis)
-            Text(now.error ?: if (now.buffering) "Connecting…" else if (hasSong) artist else now.md.artist?.toString() ?: "",
-                color = Color(0xFFBDBDBD), fontSize = 13.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
+    val dim = Color(0xFFE8E3EA)
+    Surface(color = Velvet, shape = RoundedCornerShape(topStart = 18.dp, topEnd = 18.dp), shadowElevation = 10.dp) {
+        Column {
+            // top: what's playing (tap to open, swipe to change station) and play/pause
+            Row(Modifier.fillMaxWidth().clickable(onClick = open)
+                .pointerInput(c) { detectHorizontalDragGestures(onDragEnd = {
+                    if (drag < -120) c?.seekToNextMediaItem() else if (drag > 120) c?.seekToPreviousMediaItem(); drag = 0f },
+                    onDragCancel = { drag = 0f }) { _, d -> drag += d } }
+                .padding(start = 12.dp, end = 12.dp, top = 12.dp, bottom = 6.dp), verticalAlignment = Alignment.CenterVertically) {
+                Art(now, 52)
+                val station = now.md.station?.toString() ?: ""
+                val song = now.md.title?.toString() ?: ""
+                val hasSong = song.isNotBlank() && song != station
+                val artist = (now.md.artist?.toString() ?: "").split(" · ").filter { it != station }.joinToString(" · ")
+                Column(Modifier.weight(1f).padding(horizontal = 12.dp)) {
+                    if (hasSong) Text(station.uppercase(), color = Gold, fontSize = 11.sp, fontWeight = FontWeight.Medium, letterSpacing = 0.5.sp,
+                        maxLines = 1, overflow = TextOverflow.Ellipsis)
+                    Text(if (hasSong) song else station.ifBlank { song }, color = Color.White, fontWeight = FontWeight.SemiBold,
+                        maxLines = 1, overflow = TextOverflow.Ellipsis)
+                    Text(now.error ?: if (now.buffering) "Connecting…" else if (hasSong) artist else now.md.artist?.toString() ?: "",
+                        color = Color(0xFFBDBDBD), fontSize = 13.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                }
+                FilledIconButton({ c?.let { if (it.isPlaying) it.pause() else { it.prepare(); it.play() } } }, Modifier.size(52.dp),
+                    colors = IconButtonDefaults.filledIconButtonColors(containerColor = Paper, contentColor = Ink)) {
+                    Icon(if (now.playing) Icons.Filled.Pause else Icons.Filled.PlayArrow, if (now.playing) "Pause" else "Play", Modifier.size(28.dp))
+                }
+            }
+            HorizontalDivider(Modifier.padding(horizontal = 12.dp), color = Color(0x14FFFFFF))
+            // bottom: favourite · sleep · share | previous next
+            Row(Modifier.fillMaxWidth().padding(horizontal = 6.dp, vertical = 2.dp), verticalAlignment = Alignment.CenterVertically) {
+                Row(Modifier.weight(1f), horizontalArrangement = Arrangement.SpaceAround, verticalAlignment = Alignment.CenterVertically) {
+                    IconButton(onFav, Modifier.size(48.dp)) {
+                        Icon(if (isFav) Icons.Filled.Favorite else Icons.Outlined.FavoriteBorder,
+                            if (isFav) "Remove from favourites" else "Add to favourites", tint = if (isFav) Gold else dim) }
+                    val on = SleepTimer.at > 0
+                    Column(Modifier.size(width = 64.dp, height = 48.dp).clip(RoundedCornerShape(8.dp)).clickable { sleep = true },
+                        horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
+                        Icon(painterResource(R.drawable.ic_sleep), if (on) "Sleep timer on" else "Sleep timer",
+                            Modifier.size(24.dp), tint = if (on) Gold else dim)
+                        if (on) Text(sleepLeft(), color = Gold, fontSize = 10.sp, lineHeight = 11.sp)
+                    }
+                    IconButton({ share = true }, Modifier.size(48.dp)) { Icon(Icons.Filled.Share, "Share", tint = dim) }
+                }
+                Box(Modifier.width(1.dp).height(26.dp).background(Color(0x1FFFFFFF)))
+                Row(Modifier.padding(horizontal = 8.dp)) {
+                    IconButton({ c?.seekToPreviousMediaItem() }, Modifier.size(48.dp)) { Icon(Icons.Filled.SkipPrevious, "Previous station", tint = dim) }
+                    IconButton({ c?.seekToNextMediaItem() }, Modifier.size(48.dp)) { Icon(Icons.Filled.SkipNext, "Next station", tint = dim) }
+                }
+            }
         }
-        val on = SleepTimer.at > 0
-        IconButton({ sleep = true }, Modifier.size(44.dp)) {
-            Icon(Icons.Filled.Bedtime, if (on) "Sleep timer on: ${sleepLeft()}" else "Sleep timer", tint = if (on) Gold else Color(0xFFBDBDBD)) }
-        IconButton({ share = true }, Modifier.size(44.dp)) { Icon(Icons.Filled.Share, "Share", tint = Color(0xFFBDBDBD)) }
-        FilledIconButton({ c?.let { if (it.isPlaying) it.pause() else { it.prepare(); it.play() } } }, Modifier.size(48.dp),
-            colors = IconButtonDefaults.filledIconButtonColors(containerColor = Paper, contentColor = Ink)) {
-            Icon(if (now.playing) Icons.Filled.Pause else Icons.Filled.PlayArrow, if (now.playing) "Pause" else "Play")
-        }
-        IconButton({ c?.seekToNextMediaItem() }, Modifier.size(44.dp)) { Icon(Icons.Filled.SkipNext, "Next station", tint = Color.White) }
     }
 }
 
@@ -628,7 +659,7 @@ fun FullPlayer(now: NowState, c: MediaController?, close: () -> Unit) {
                     }
                     Spacer(Modifier.height(18.dp))
                     Row(verticalAlignment = Alignment.CenterVertically) {
-                        Icon(Icons.Filled.Bedtime, null, tint = Gold, modifier = Modifier.size(18.dp))
+                        Icon(painterResource(R.drawable.ic_sleep), null, tint = Gold, modifier = Modifier.size(20.dp))
                         Text(if (SleepTimer.at > 0) "Stops in ${sleepLeft()}" else "Sleep timer", color = Color.White, fontSize = 14.sp,
                             modifier = Modifier.padding(start = 6.dp))
                     }
