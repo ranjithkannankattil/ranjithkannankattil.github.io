@@ -1,0 +1,258 @@
+### Cinema build
+```
+anteo.spaziocinema: 39 V.O. films; V.O. shows by day [12, 19, 17, 16, 18, 3, 0]; 36 dubbed
+citylife.spaziocinema: 13 V.O. films; V.O. shows by day [5, 9, 10, 10, 8, 1, 1]; 24 dubbed
+ariosto.spaziocinema: 2 V.O. films; V.O. shows by day [0, 0, 0, 0, 0, 0, 0]; 10 dubbed
+arlecchino.cinetecadimilano: 57 V.O. films; V.O. shows by day [2, 5, 2, 4, 3, 2, 1]; 7 dubbed
+mic.cinetecadimilano: 23 V.O. films; V.O. shows by day [1, 1, 1, 2, 1, 2, 2]; 13 dubbed
+capitol.spaziocinema: 3 V.O. films; V.O. shows by day [1, 1, 6, 2, 2, 0, 0]; 21 dubbed
+cinema.barberini: 16 V.O. films; V.O. shows by day [17, 20, 0, 1, 1, 0, 0]; 17 dubbed
+quattrofontane.ccroma: 16 V.O. films; V.O. shows by day [7, 10, 7, 2, 1, 2, 0]; 7 dubbed
+giuliocesare.ccroma: 11 V.O. films; V.O. shows by day [5, 9, 5, 1, 1, 2, 0]; 14 dubbed
+roma.andromeda: 2 V.O. films; V.O. shows by day [3, 3, 3, 3, 0, 0, 0]; 12 dubbed
+lux.cdr: 8 V.O. films; V.O. shows by day [7, 5, 3, 3, 3, 0, 0]; 18 dubbed
+nazionale.cctorino: 1 V.O. films; V.O. shows by day [1, 1, 1, 1, 1, 0, 0]; 4 dubbed
+arlecchino.popupcinema: 4 V.O. films; V.O. shows by day [1, 2, 2, 0, 0, 0, 0]; 5 dubbed
+medica.popupcinema: 3 V.O. films; V.O. shows by day [2, 2, 1, 1, 2, 0, 0]; 2 dubbed
+odeon.ccb: 7 V.O. films; V.O. shows by day [0, 1, 0, 0, 0, 0, 0]; 10 dubbed
+rialto.ccb: 4 V.O. films; V.O. shows by day [0, 2, 2, 3, 2, 0, 0]; 2 dubbed
+roma.ccb: 1 V.O. films; V.O. shows by day [0, 1, 1, 1, 1, 0, 0]; 1 dubbed
+europa.ccb: 6 V.O. films; V.O. shows by day [0, 0, 1, 0, 0, 0, 0]; 2 dubbed
+lumiere.cinetecabologna: 5 V.O. films; V.O. shows by day [11, 12, 9, 8, 9, 0, 0]; 1 dubbed
+flora.ccroma: 17 V.O. films; V.O. shows by day [5, 5, 6, 1, 1, 2, 0]; 5 dubbed
+casacinema: 9 V.O. films; V.O. shows by day [11, 11, 7, 7, 7, 0, 0]; 4 dubbed
+corallo.ccgenova: 2 V.O. films; V.O. shows by day [0, 2, 0, 0, 0, 0, 0]; 2 dubbed
+city.ccgenova: 2 V.O. films; V.O. shows by day [0, 2, 0, 0, 0, 0, 0]; 5 dubbed
+carignano.ccgenova: 1 V.O. films; V.O. shows by day [1, 1, 1, 1, 1, 0, 0]; 3 dubbed
+ariston.ccgenova: 1 V.O. films; V.O. shows by day [0, 1, 0, 0, 0, 0, 0]; 2 dubbed
+lab80: 4 V.O. films; V.O. shows by day [2, 2, 1, 0, 0, 0, 0]; 5 dubbed
+alcione: 0 V.O. film-days
+Milano: 23 films (13 English)
+    + new from arlecchino.cinetecadimilano: Youth: Hard Times
+    + new from arlecchino.cinetecadimilano: Memorizu
+    sites: 20 per-show links, 4 times added, 1 Italian times dropped; venues not on MYmovies: ariosto.spaziocinema:Ariosto→Ariosto spazioCinema
+    2026-11-08: 18 films (13 English)
+    2026-11-09: 16 films (11 English)
+    2026-11-10: 19 films (12 English)
+    2026-11-11: 16 films (9 English)
+    2026-11-12: 8 films (5 English)
+    2026-11-13: 4 films (1 English)
+    EN Wild Horse Nine [English via cinema] syn poster · 3 links
+    EN Hope [English via cinema] syn poster imdb ott · 1 links
+    -- La Condition [French via cinema] syn poster · 1 links
+    EN George Michael - The Faith Tour [English via cinema] syn poster · 2 links
+    -- Rammstein - Live in Mexico City [German via tmdb] syn poster · 0 links
+    -- Fatherland [German via cinema] syn poster imdb · 2 links
+    EN Primetime [English via cinema] syn poster imdb ott · 2 links
+    EN Sense and Sensibility [English via manual] syn poster imdb ott · 1 links
+    -- Minotaur [Russian via cinema] syn poster imdb · 2 links
+    EN Clayface [English via tmdb] syn poster imdb · 0 links
+    -- No Other Land [Arabic via tmdb] syn poster imdb stream ott · 0 links
+    -- L'estranea [Italian via wikidata] syn poster · 0 links
+    EN The Invite [English via cinema] syn poster imdb ott · 0 links
+    -- Naza [Hebrew / English via manual] syn poster imdb · 2 links
+    EN Obsession [English via tmdb] syn poster imdb ott · 1 links
+    EN Digger [English via cinema] syn poster · 1 links
+    EN Palestine 36 [English via tmdb] syn poster imdb ott · 0 links
+    EN Wildwood - I segreti del bosco proibito [English via cinema] syn poster imdb ott · 0 links
+    -- Ken [Hebrew via tmdb] syn poster imdb · 0 links
+    EN East of Paradise [English via tmdb] syn poster imdb · 0 links
+    EN Douglas Gordon By Douglas Gordon [English via tmdb] syn poster · 0 links
+    -- Youth: Hard Times [Chinese via tmdb] syn poster imdb · 1 links
+    -- Memorizu [Japanese via tmdb] syn poster · 1 links
+Roma: 23 films (14 English)
+    + new from lux.cdr: Sense and Sensibility
+    sites: 39 per-show links, 3 times added, 18 Italian times dropped
+    2026-11-08: 13 films (8 English)
+    2026-11-09: 7 films (5 English)
+    2026-11-10: 4 films (3 English)
+    2026-11-11: 6 films (5 English)
+    2026-11-12: 1 films (0 English)
+    2026-11-13: 0 films (0 English)
+    EN Wild Horse Nine [English via cinema] syn poster · 11 links
+    EN Hope [English via cinema] syn poster imdb ott · 3 links
+    EN George Michael - The Faith Tour [English via cinema] syn poster · 6 links
+    -- La guerra dei prezzi [Original language via country] syn poster · 0 links
+    -- Rammstein - Live in Mexico City [German via tmdb] syn poster · 0 links
+    -- Fatherland [German via cinema] syn poster imdb · 2 links
+    EN Primetime [English via cinema] syn poster imdb ott · 2 links
+    EN Sense and Sensibility [English via manual] syn poster imdb ott · 3 links
+    -- Minotaur [Russian via cinema] syn poster imdb · 3 links
+    EN The Odyssey [English via tmdb] syn poster imdb ott · 0 links
+    EN Trainspotting [English via wikidata] syn poster · 0 links
+    EN The Deer Hunter [English via tmdb] syn poster imdb stream · 0 links
+    EN The Neon Demon [English via tmdb] syn poster imdb stream · 0 links
+    EN Digger [English via cinema] syn poster · 3 links
+    EN Touch of Evil [English via tmdb] syn poster imdb · 0 links
+    -- Adua e le compagne [Italian via wikidata] syn poster · 0 links
+    -- La visita [Italian via wikidata] syn poster · 0 links
+    EN Wildwood - I segreti del bosco proibito [English via cinema] syn poster imdb ott · 3 links
+    -- Un giorno senza donne [Original language via country] syn poster · 0 links
+    EN A Child is Waiting [English via tmdb] syn poster imdb · 0 links
+    -- Nina Roza [French / English via cinema] syn poster · 0 links
+    -- Stray Kids - World Tour - Run It - Live Viewing [Korean / English via cinema] syn poster · 2 links
+    EN Sense and Sensibility [English via cinema] syn poster imdb · 1 links
+Torino: 16 films (7 English)
+    sites: 1 per-show links, 0 times added, 0 Italian times dropped
+    2026-11-08: 1 films (1 English)
+    2026-11-09: 1 films (1 English)
+    2026-11-10: 1 films (1 English)
+    2026-11-11: 1 films (1 English)
+    2026-11-12: 0 films (0 English)
+    2026-11-13: 0 films (0 English)
+    EN Wild Horse Nine [English via cinema] syn poster · 1 links
+    EN Hope [English via cinema] syn poster imdb ott · 0 links
+    -- La Condition [French via cinema] syn poster · 0 links
+    EN George Michael - The Faith Tour [English via cinema] syn poster · 0 links
+    -- Rammstein - Live in Mexico City [German via tmdb] syn poster · 0 links
+    -- Fatherland [German via cinema] syn poster imdb · 0 links
+    EN Primetime [English via cinema] syn poster imdb ott · 0 links
+    EN Sense and Sensibility [English via manual] syn poster imdb ott · 0 links
+    -- Minotaur [Russian via cinema] syn poster imdb · 0 links
+    -- Naza [Hebrew / English via manual] syn poster imdb · 0 links
+    EN Digger [English via cinema] syn poster · 0 links
+    EN Wildwood - I segreti del bosco proibito [English via cinema] syn poster imdb ott · 0 links
+    -- Possible Love [Korean via cinema] syn poster imdb stream ott · 0 links
+    -- Fukushu suru wa ware ni ari [Japanese via wikidata] syn poster · 0 links
+    -- Comme un fils [French via wikidata] syn poster · 0 links
+    -- Stray Kids - World Tour - Run It - Live Viewing [Korean / English via cinema] syn poster · 0 links
+Bologna: 7 films (3 English)
+    + new from lumiere.cinetecabologna: Fatherland
+    + new from lumiere.cinetecabologna: Hope
+    sites: 14 per-show links, 8 times added, 0 Italian times dropped; venues not on MYmovies: europa.ccb:Europa→Europa, rialto.ccb:Rialto→Rialto Studios, roma.ccb:Roma→Roma d'Essai
+    2026-11-08: 7 films (4 English)
+    2026-11-09: 7 films (4 English)
+    2026-11-10: 5 films (1 English)
+    2026-11-11: 5 films (1 English)
+    2026-11-12: 0 films (0 English)
+    2026-11-13: 0 films (0 English)
+    EN Wild Horse Nine [English via cinema] syn poster · 6 links
+    EN It Ends [English via cinema] syn poster · 1 links
+    EN George Michael - The Faith Tour [English via cinema] syn poster · 0 links
+    -- Minotaur [Russian via cinema] syn poster imdb · 3 links
+    -- Stray Kids - World Tour - Run It - Live Viewing [Korean / English via cinema] syn poster · 0 links
+    -- Fatherland [German via cinema] syn poster imdb · 2 links
+    -- Hope [Korean via cinema] syn poster imdb · 2 links
+Firenze: 7 films (3 English)
+    sites: 5 per-show links, 0 times added, 0 Italian times dropped
+    2026-11-08: 4 films (2 English)
+    2026-11-09: 5 films (2 English)
+    2026-11-10: 1 films (1 English)
+    2026-11-11: 1 films (0 English)
+    2026-11-12: 1 films (0 English)
+    2026-11-13: 0 films (0 English)
+    EN Wild Horse Nine [English via cinema] syn poster · 2 links
+    EN George Michael - The Faith Tour [English via cinema] syn poster · 0 links
+    -- Fatherland [German via cinema] syn poster imdb · 1 links
+    -- Minotaur [Russian via cinema] syn poster imdb · 1 links
+    EN Digger [English via cinema] syn poster · 1 links
+    -- La Maison des Femmes - La casa delle donne [French via wikidata] syn poster · 0 links
+    -- Stray Kids - World Tour - Run It - Live Viewing [Korean / English via cinema] syn poster · 0 links
+Napoli: 8 films (4 English)
+    sites: 11 per-show links, 0 times added, 0 Italian times dropped
+    2026-11-08: 6 films (3 English)
+    2026-11-09: 4 films (2 English)
+    2026-11-10: 4 films (2 English)
+    2026-11-11: 5 films (2 English)
+    2026-11-12: 0 films (0 English)
+    2026-11-13: 0 films (0 English)
+    EN Wild Horse Nine [English via cinema] syn poster · 4 links
+    -- La Condition [French via cinema] syn poster · 2 links
+    EN It Ends [English via cinema] syn poster · 2 links
+    EN George Michael - The Faith Tour [English via cinema] syn poster · 0 links
+    -- Minotaur [Russian via cinema] syn poster imdb · 2 links
+    EN Digger [English via cinema] syn poster · 1 links
+    -- El topo [Spanish via cinema] syn poster imdb stream · 0 links
+    -- Stray Kids - World Tour - Run It - Live Viewing [Korean / English via cinema] syn poster · 0 links
+Genova: 5 films (3 English)
+    sites: 1 per-show links, 0 times added, 0 Italian times dropped; venues not on MYmovies: ariston.ccgenova:Ariston→Ariston, city.ccgenova:City→City, corallo.ccgenova:Corallo→Corallo
+    2026-11-08: 6 films (4 English)
+    2026-11-09: 1 films (1 English)
+    2026-11-10: 1 films (1 English)
+    2026-11-11: 1 films (1 English)
+    2026-11-12: 0 films (0 English)
+    2026-11-13: 0 films (0 English)
+    EN Wild Horse Nine [English via cinema] syn poster · 0 links
+    EN George Michael - The Faith Tour [English via cinema] syn poster · 0 links
+    -- Mio zio Jens [Norwegian via wikidata] syn poster · 0 links
+    EN Elon Musk Unveiled: The Tesla Experiment [English via cinema] syn poster imdb · 1 links
+    -- Stray Kids - World Tour - Run It - Live Viewing [Korean / English via cinema] syn poster · 0 links
+Venezia: 3 films (2 English)
+    sites: 0 per-show links, 0 times added, 0 Italian times dropped
+    2026-11-08: 0 films (0 English)
+    2026-11-09: 0 films (0 English)
+    2026-11-10: 0 films (0 English)
+    2026-11-11: 0 films (0 English)
+    2026-11-12: 0 films (0 English)
+    2026-11-13: 0 films (0 English)
+    EN Wild Horse Nine [English via cinema] syn poster · 0 links
+    EN Sense and Sensibility [English via manual] syn poster imdb ott · 0 links
+    -- Minotaur [Russian via cinema] syn poster imdb · 0 links
+Padova: 2 films (2 English)
+    sites: 0 per-show links, 0 times added, 0 Italian times dropped
+    2026-11-08: 0 films (0 English)
+    2026-11-09: 0 films (0 English)
+    2026-11-10: 0 films (0 English)
+    2026-11-11: 0 films (0 English)
+    2026-11-12: 0 films (0 English)
+    2026-11-13: 0 films (0 English)
+    EN Digger [English via cinema] syn poster · 0 links
+    EN Invasion of the Body Snatchers [English via tmdb] syn poster imdb stream ott · 0 links
+Verona: 0 films (0 English)
+    sites: 0 per-show links, 0 times added, 0 Italian times dropped
+    2026-11-08: 0 films (0 English)
+    2026-11-09: 0 films (0 English)
+    2026-11-10: 0 films (0 English)
+    2026-11-11: 0 films (0 English)
+    2026-11-12: 0 films (0 English)
+    2026-11-13: 0 films (0 English)
+Bergamo: 2 films (1 English)
+    + new from lab80: Possible Love
+    sites: 2 per-show links, 1 times added, 0 Italian times dropped
+    2026-11-08: 2 films (1 English)
+    2026-11-09: 1 films (1 English)
+    2026-11-10: 0 films (0 English)
+    2026-11-11: 0 films (0 English)
+    2026-11-12: 0 films (0 English)
+    2026-11-13: 0 films (0 English)
+    EN Hope [English via cinema] syn poster imdb ott · 1 links
+    -- Possible Love [Korean via cinema] syn poster imdb stream ott · 1 links
+Brescia: 0 films (0 English)
+    sites: 0 per-show links, 0 times added, 0 Italian times dropped
+    2026-11-08: 0 films (0 English)
+    2026-11-09: 0 films (0 English)
+    2026-11-10: 0 films (0 English)
+    2026-11-11: 0 films (0 English)
+    2026-11-12: 0 films (0 English)
+    2026-11-13: 0 films (0 English)
+Monza: 1 films (1 English)
+    + new from capitol.spaziocinema: George Michael - the Faith Tour
+    sites: 1 per-show links, 1 times added, 0 Italian times dropped; venues not on MYmovies: capitol.spaziocinema:Capitol Anteo Spazio Cinema→Capitol
+    2026-11-08: 1 films (1 English)
+    2026-11-09: 3 films (3 English)
+    2026-11-10: 2 films (2 English)
+    2026-11-11: 2 films (2 English)
+    2026-11-12: 0 films (0 English)
+    2026-11-13: 0 films (0 English)
+    EN George Michael - the Faith Tour [English via cinema] syn poster · 1 links
+Pisa: 0 films (0 English)
+    sites: 0 per-show links, 0 times added, 0 Italian times dropped
+    2026-11-08: 0 films (0 English)
+    2026-11-09: 0 films (0 English)
+    2026-11-10: 0 films (0 English)
+    2026-11-11: 0 films (0 English)
+    2026-11-12: 0 films (0 English)
+    2026-11-13: 0 films (0 English)
+Trieste: 4 films (3 English)
+    sites: 0 per-show links, 0 times added, 0 Italian times dropped
+    2026-11-08: 0 films (0 English)
+    2026-11-09: 0 films (0 English)
+    2026-11-10: 0 films (0 English)
+    2026-11-11: 0 films (0 English)
+    2026-11-12: 0 films (0 English)
+    2026-11-13: 0 films (0 English)
+    EN George Michael - The Faith Tour [English via cinema] syn poster · 0 links
+    EN Forbidden Planet [English via tmdb] syn poster imdb · 0 links
+    EN Katseye - Wild Hearts [English via tmdb] syn poster stream ott · 0 links
+    -- Stray Kids - World Tour - Run It - Live Viewing [Korean / English via cinema] syn poster · 0 links
+```
