@@ -23,6 +23,7 @@ import sh.calvin.reorderable.ReorderableItem
 import sh.calvin.reorderable.rememberReorderableLazyListState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
@@ -248,8 +249,11 @@ fun App(c: MediaController?) {
                                 leadingIcon = { Icon(Icons.Filled.Star, null, Modifier.size(18.dp), tint = if (colId == PICKS) Gold else Accent) })
                         }
                         items(recent.mapNotNull { id -> cols.find { it.id == id } }, key = { it.id }) { c ->
-                            FilterChip(colId == c.id, { colId = c.id }, { Text(c.name, fontWeight = FontWeight.SemiBold) },
-                                Modifier.heightIn(min = 44.dp), colors = pillColors)
+                            LangPill(c.name, colId == c.id, onClick = { colId = c.id }, onLongClick = {
+                                recent = recent.filter { it != c.id }
+                                prefs.edit().putString("recent", recent.joinToString(",")).apply()
+                                android.widget.Toast.makeText(ctx, "${c.name} removed from your quick buttons", android.widget.Toast.LENGTH_SHORT).show()
+                            })
                         }
                         item {
                             AssistChip({ pickLang = true }, { Text("All languages") }, Modifier.heightIn(min = 44.dp),
@@ -736,5 +740,21 @@ fun ScrollButtons(state: androidx.compose.foundation.lazy.LazyListState, modifie
         if (!atEnd) SmallFloatingActionButton({ scope.launch { state.scrollToItem((total - 1).coerceAtLeast(0)) } },
             containerColor = Paper, contentColor = Accent, modifier = Modifier.size(48.dp)) {
             Icon(Icons.Filled.KeyboardArrowDown, "Jump to the bottom") }
+    }
+}
+
+/** A recent-language button: tap to open, press and hold to remove it from the row. */
+@OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
+@Composable
+fun LangPill(label: String, selected: Boolean, onClick: () -> Unit, onLongClick: () -> Unit) {
+    val haptic = androidx.compose.ui.platform.LocalHapticFeedback.current
+    Surface(shape = RoundedCornerShape(8.dp), color = if (selected) Accent else Color.Transparent,
+        border = if (selected) null else BorderStroke(1.dp, Color(0x33000000)),
+        modifier = Modifier.heightIn(min = 44.dp).padding(vertical = 4.dp).clip(RoundedCornerShape(8.dp))
+            .combinedClickable(onClick = onClick, onLongClickLabel = "Remove from quick buttons", onLongClick = {
+                haptic.performHapticFeedback(androidx.compose.ui.hapticfeedback.HapticFeedbackType.LongPress); onLongClick() })) {
+        Box(Modifier.padding(horizontal = 14.dp, vertical = 6.dp), contentAlignment = Alignment.Center) {
+            Text(label, fontWeight = FontWeight.SemiBold, fontSize = 14.sp, color = if (selected) Color.White else Ink)
+        }
     }
 }
