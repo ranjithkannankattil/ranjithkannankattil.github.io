@@ -96,9 +96,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.phost.hu:8004/retro"
-    ],
-    "offline": true,
-    "hidden": true
+    ]
   },
   {
     "id": "jazzy-soul",
@@ -306,7 +304,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://slagerfm.netregator.hu:7813/slagerfm320.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "fm-103-9-a-rock",
@@ -953,7 +952,8 @@ window.STATIONS = [
     "streams": [
       "https://live.ideastream.org/wksu4.128.mp3"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "offline": true
   },
   {
     "id": "best-fm-eger",
@@ -1044,6 +1044,15 @@ window.STATIONS = [
       "https://radiobrand.es:8084/RadioBrand"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "tilos-radio-32-kbit-sec",
+    "name": "Tilos Rádió 32 kbit/sec",
+    "category": "music",
+    "streams": [
+      "https://stream.tilos.hu/tilos_32.mp3"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T07:05Z";
+window.STATIONS_CHECKED = "2026-11-07T18:45Z";

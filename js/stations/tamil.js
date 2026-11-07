@@ -1225,6 +1225,33 @@ window.STATIONS = [
       "https://neramfm.com:8000/stream"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "translation-of-the-quran-in-tamil",
+    "name": "Translation of the Quran in tamil",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8008/;"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "njsunriseradio",
+    "name": "Njsunriseradio",
+    "category": "music",
+    "streams": [
+      "https://njsunrise.out.airtime.pro/njsunrise_a"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "mtrfm",
+    "name": "Mtrfm",
+    "category": "music",
+    "streams": [
+      "https://radio.mediacp.eu/stream/mtr-fm/stream"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T07:05Z";
+window.STATIONS_CHECKED = "2026-11-07T18:45Z";

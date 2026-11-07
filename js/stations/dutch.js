@@ -1226,6 +1226,33 @@ window.STATIONS = [
       "https://29093.live.streamtheworld.com/SOULRADIOAAC_SC"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "radio-538-verruckte-stunde",
+    "name": "Radio 538 Verrückte Stunde",
+    "category": "music",
+    "streams": [
+      "https://22713.live.streamtheworld.com/TLPSTR21_SC"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "bnr-business-beats",
+    "name": "BNR Business Beats",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/BNR_BUSINESS_BEATS.mp3"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "pinguin-radio",
+    "name": "Pinguin Radio",
+    "category": "music",
+    "streams": [
+      "https://streams.pinguinradio.com/PinguinRadio320.mp3"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T07:05Z";
+window.STATIONS_CHECKED = "2026-11-07T18:45Z";

@@ -431,7 +431,8 @@ window.STATIONS = [
       "https://radyo.ilef.net/stream"
     ],
     "added": "2026-10-24",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "yaren-fm",
@@ -1190,4 +1191,4 @@ window.STATIONS = [
     "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T07:05Z";
+window.STATIONS_CHECKED = "2026-11-07T18:45Z";

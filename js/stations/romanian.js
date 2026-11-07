@@ -1161,6 +1161,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/1nykd3t9f7qtv"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "supravibe-radio",
+    "name": "Supravibe Radio",
+    "category": "music",
+    "streams": [
+      "https://supraviberadio-radiohosting.radioca.st/stream"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "radio-rfm",
+    "name": "Radio RFM",
+    "category": "news",
+    "streams": [
+      "https://shout.realitatea.net:8001/mixt"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "radio-relax-tricolor",
+    "name": "Radio Relax - Tricolor",
+    "category": "music",
+    "streams": [
+      "https://radio1.dixi.md/listen/relax_tricolor/relaxtricolor128.aac"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T07:05Z";
+window.STATIONS_CHECKED = "2026-11-07T18:45Z";

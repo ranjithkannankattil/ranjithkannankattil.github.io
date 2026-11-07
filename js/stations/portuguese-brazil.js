@@ -225,8 +225,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RT_SPAAC.aac"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "bandnews-fm",
@@ -556,8 +555,7 @@ window.STATIONS = [
     "streams": [
       "https://24373.live.streamtheworld.com/RT_SP.mp3?dist=RadiosComBr-TMC&1771879327541"
     ],
-    "added": "2026-10-26",
-    "offline": true
+    "added": "2026-10-26"
   },
   {
     "id": "102-fm-itaperuna",
@@ -800,7 +798,8 @@ window.STATIONS = [
     "streams": [
       "https://stm12.xcast.com.br:9454/stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "offline": true
   },
   {
     "id": "radio-reggae-brasil",
@@ -1224,6 +1223,33 @@ window.STATIONS = [
       "https://sc4s.cdn.upx.com:8075/stream"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "93fm",
+    "name": "93FM",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/FM93AAC.aac?dist=RadiosNet"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "imbe-fm",
+    "name": "Imbé FM",
+    "category": "music",
+    "streams": [
+      "https://cast4.audiostream.com.br:2660/mp3"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "terra-gaucha",
+    "name": "Terra Gaúcha",
+    "category": "music",
+    "streams": [
+      "https://5a57bda70564a.streamlock.net/terragaucha/terragaucha.stream/playlist.m3u8"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T07:05Z";
+window.STATIONS_CHECKED = "2026-11-07T18:45Z";

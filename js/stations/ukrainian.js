@@ -96,8 +96,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast.mediaonline.net.ua/nrj320"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "107-9",
@@ -153,8 +152,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s5.radioforge.com:7908/live?n=77357"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "24-breaking-live",
@@ -290,8 +288,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast.mediaonline.net.ua/chillout320"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-2",
@@ -307,8 +304,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://cast.mediaonline.net.ua/prmfm320"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "russia-today-germany",
@@ -342,8 +338,7 @@ window.STATIONS = [
     "streams": [
       "https://cast.mediaonline.net.ua/avtoradio"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "station-3",
@@ -361,8 +356,7 @@ window.STATIONS = [
     "streams": [
       "https://cast.mediaonline.net.ua/loungefm320"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "radio-jazz-gold-fm",
@@ -398,8 +392,7 @@ window.STATIONS = [
     "streams": [
       "https://cast.mediaonline.net.ua/avtoradio320"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "station-6",
@@ -408,8 +401,7 @@ window.STATIONS = [
     "streams": [
       "https://cast.mediaonline.net.ua/radiopyatnica320"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "station-7",
@@ -679,8 +671,7 @@ window.STATIONS = [
     "streams": [
       "https://cast.mediaonline.net.ua/wau320"
     ],
-    "added": "2026-10-28",
-    "offline": true
+    "added": "2026-10-28"
   },
   {
     "id": "the-west-pole-radio",
@@ -1049,7 +1040,8 @@ window.STATIONS = [
     "streams": [
       "https://online-novodnistrovsk.pp.ua:8443/playHD"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "offline": true
   },
   {
     "id": "station-30",
@@ -1068,6 +1060,15 @@ window.STATIONS = [
       "https://stream.blits-fm.ua/aac32"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "station-31",
+    "name": "Радіо Смак",
+    "category": "music",
+    "streams": [
+      "https://ipradio.net:8443/radiosmak"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T07:05Z";
+window.STATIONS_CHECKED = "2026-11-07T18:45Z";

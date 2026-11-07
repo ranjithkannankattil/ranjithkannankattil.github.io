@@ -1215,6 +1215,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/g7vk70rqr68uv"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "jumbo-deep-radio",
+    "name": "Jumbo Deep Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/juhqepbmmxqvv"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "super-estacion-88-9",
+    "name": "Super Estación 88.9",
+    "category": "music",
+    "streams": [
+      "https://emisorasdigitales2.com/8018/stream"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "navidad-grupera",
+    "name": "Navidad Grupera",
+    "category": "music",
+    "streams": [
+      "https://radioforte.com/8006/stream"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T07:05Z";
+window.STATIONS_CHECKED = "2026-11-07T18:45Z";

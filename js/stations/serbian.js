@@ -374,7 +374,8 @@ window.STATIONS = [
     "streams": [
       "https://edge9.pink.rs/rockstream"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "station-2",
@@ -1096,6 +1097,33 @@ window.STATIONS = [
       "https://stream.radios.rs:9080/stream"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "radio-roska",
+    "name": "Radio Roška",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/q7300aptbwzuv"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "jack-radio-varvarin",
+    "name": "Jack radio Varvarin",
+    "category": "music",
+    "streams": [
+      "https://media.radioexs.com/stream/jackradio"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "radio-krusevac-93-2",
+    "name": "Radio Kruševac 93.2",
+    "category": "music",
+    "streams": [
+      "https://krusevac.ipradio.rs:9014/;stream.mp3"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T07:05Z";
+window.STATIONS_CHECKED = "2026-11-07T18:45Z";

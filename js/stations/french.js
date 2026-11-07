@@ -1166,6 +1166,33 @@ window.STATIONS = [
       "https://direct.francemusique.fr/live/francemusiqueeasyclassique-hifi.mp3"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "france-info-lofi",
+    "name": "france info (lofi)",
+    "category": "news",
+    "streams": [
+      "https://direct.franceinfo.fr/live/franceinfo-lofi.mp3"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "azot-radio",
+    "name": "Azot Radio",
+    "category": "music",
+    "streams": [
+      "https://azotradio1.ice.infomaniak.ch/azotradio1-128.mp3"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "fip-cultes",
+    "name": "FIP Cultes",
+    "category": "music",
+    "streams": [
+      "https://stream.radiofrance.fr/fipcultes/fipcultes.m3u8?id=radiofranceBose"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T07:05Z";
+window.STATIONS_CHECKED = "2026-11-07T18:45Z";

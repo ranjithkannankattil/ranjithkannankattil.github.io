@@ -1240,6 +1240,33 @@ window.STATIONS = [
       "https://ams-pioneer02.dedicateware.com:1955/stream"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "skylos-69",
+    "name": "Skylos 69",
+    "category": "music",
+    "streams": [
+      "https://i6.streams.ovh/ic/skylos69/stream"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "active-107-4",
+    "name": "Active 107.4",
+    "category": "news",
+    "streams": [
+      "https://securestreams3.autopo.st:1417/active"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "02-radio-station",
+    "name": "02 radio station",
+    "category": "music",
+    "streams": [
+      "https://centova.gr-net.gr/proxy/dimitrio/stream"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T07:05Z";
+window.STATIONS_CHECKED = "2026-11-07T18:45Z";

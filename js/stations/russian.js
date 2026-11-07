@@ -218,8 +218,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://azura-cast.radiokansk.ru/listen/radiokansk/live"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "instrumental-jazz",
@@ -1217,6 +1216,33 @@ window.STATIONS = [
       "https://pub0101.101.ru/stream/pro/aac/64/36"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "89-1fm",
+    "name": "Радио Джаз 89,1FM",
+    "category": "music",
+    "streams": [
+      "https://jazz.streamr.ru/jazz-128.mp3"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "soloviev-fm",
+    "name": "Soloviev FM",
+    "category": "news",
+    "streams": [
+      "https://solovievfm.hostingradio.ru/solovievfm32.aacp"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "russian-rock-amg-radio",
+    "name": "Russian Rock - РУССКИЙ РОК - AMG Radio",
+    "category": "music",
+    "streams": [
+      "https://dirxiph.amgradio.ru/RusRock"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T07:05Z";
+window.STATIONS_CHECKED = "2026-11-07T18:45Z";

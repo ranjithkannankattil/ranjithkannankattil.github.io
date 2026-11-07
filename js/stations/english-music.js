@@ -1445,7 +1445,38 @@ window.STATIONS = [
       "https://chaosfm.com:8443/stream"
     ],
     "added": "2026-11-07",
+    "where": "UK",
+    "offline": true
+  },
+  {
+    "id": "progressive-rock-azusa",
+    "name": "Progressive Rock AZUSA",
+    "category": "rock",
+    "streams": [
+      "https://streaming.live365.com/a38225"
+    ],
+    "added": "2026-11-07",
+    "where": "US"
+  },
+  {
+    "id": "absolute-radio",
+    "name": "Absolute Radio",
+    "category": "rock",
+    "streams": [
+      "https://stream-ar.hellorayo.co.uk/absoluteradio.aac?aw_0_1st.skey=1602676850&direct=true&rp_source=1"
+    ],
+    "added": "2026-11-07",
+    "where": "UK"
+  },
+  {
+    "id": "psychedelicized-radio-music-for-your-hea",
+    "name": "Psychedelicized Radio – Music For Your Head!",
+    "category": "rock",
+    "streams": [
+      "https://stream.psychedelicized.com/listen/psychedelicized/radio.mp3"
+    ],
+    "added": "2026-11-07",
     "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T07:05Z";
+window.STATIONS_CHECKED = "2026-11-07T18:45Z";

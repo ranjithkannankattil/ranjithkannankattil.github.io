@@ -1216,6 +1216,33 @@ window.STATIONS = [
       "https://ice04.fluidstream.net/openlab.mp3"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "delicious-beach-formentera-lounge-radio",
+    "name": "delicious.beach - formentera lounge radio",
+    "category": "music",
+    "streams": [
+      "https://server31435.streamplus.de/;stream.mp3"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "radio-marca-asturias",
+    "name": "Radio MARCA Asturias",
+    "category": "news",
+    "streams": [
+      "https://streaming.enacast.com/radiomarcaasturiasHD.mp3"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "cafe-del-mar-channel-2",
+    "name": "Cafe del Mar Channel 2",
+    "category": "music",
+    "streams": [
+      "https://s4.radio.co/seeae9c220/listen"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T07:05Z";
+window.STATIONS_CHECKED = "2026-11-07T18:45Z";

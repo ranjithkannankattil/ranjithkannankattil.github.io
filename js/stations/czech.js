@@ -1142,8 +1142,7 @@ window.STATIONS = [
     "streams": [
       "https://s49.myradiostream.com/8142/listen.mp3"
     ],
-    "added": "2026-11-06",
-    "offline": true
+    "added": "2026-11-06"
   },
   {
     "id": "hitradio-contact",
@@ -1164,4 +1163,4 @@ window.STATIONS = [
     "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T07:05Z";
+window.STATIONS_CHECKED = "2026-11-07T18:45Z";

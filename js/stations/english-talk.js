@@ -527,8 +527,7 @@ window.STATIONS = [
       "https://stream-288.surfernetwork.com/g1pmt17nz9duv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJnMXBtdDE3bno5ZHV2IiwiaG9zdCI6InN0cmVhbS0yODguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJMaXZRVVVnMVJBNllJVm1CMzZweXlRIiwiaWF0IjoxNzgxNjc4NzM0LCJleHAiOjE3ODE2Nzg3OTR9.5G1wZmONFqXySurSj1Oj6_UtSmcJMwlc6JJy2oL7fX8"
     ],
     "added": "2026-10-26",
-    "where": "The Philippines",
-    "offline": true
+    "where": "The Philippines"
   },
   {
     "id": "kogo-am-600",
@@ -628,7 +627,8 @@ window.STATIONS = [
       "https://naijafmlagos-atunwadigital.streamguys1.com/naijafmlagos/playlist.m3u8"
     ],
     "added": "2026-10-27",
-    "where": "Nigeria"
+    "where": "Nigeria",
+    "offline": true
   },
   {
     "id": "cfrb-news-talk-1010-toronto-on",
@@ -1269,6 +1269,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "where": "United Republic Of Tanzania"
+  },
+  {
+    "id": "radio-tambrin-92-7-scarborough",
+    "name": "Radio Tambrin 92.7 - Scarborough",
+    "category": "world",
+    "streams": [
+      "https://ice42.securenetsystems.net/TAMBRIN"
+    ],
+    "added": "2026-11-07",
+    "where": "Trinidad And Tobago"
+  },
+  {
+    "id": "ghana-waves-radio",
+    "name": "Ghana Waves Radio",
+    "category": "sport",
+    "streams": [
+      "https://stream.zeno.fm/pg5c7zx3p0quv"
+    ],
+    "added": "2026-11-07",
+    "where": "Ghana"
+  },
+  {
+    "id": "891-abc-adelaide",
+    "name": "891 ABC Adelaide",
+    "category": "anz",
+    "streams": [
+      "https://streaming.abc-cdn.net.au/audio/hls/localadelaide.m3u8?source=web"
+    ],
+    "added": "2026-11-07",
+    "where": "Australia"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T07:05Z";
+window.STATIONS_CHECKED = "2026-11-07T18:45Z";

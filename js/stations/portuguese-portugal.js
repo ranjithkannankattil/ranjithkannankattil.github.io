@@ -92,7 +92,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "m80-radio-ballads",
@@ -205,7 +206,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8",
       "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "golofm",
@@ -229,8 +231,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "cidade-fm-2",
@@ -338,7 +339,8 @@ window.STATIONS = [
     "streams": [
       "https://stream-hls.bauermedia.pt/comercial.aac/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "rdp-africa-portugal",
@@ -1204,7 +1206,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena3madeira80a/playlist.m3u8"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "offline": true
   },
   {
     "id": "radio-quantica",
@@ -1214,6 +1217,15 @@ window.STATIONS = [
       "https://libretime.radioquantica.com/main.mp3"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "radialistas-de-viseu",
+    "name": "Radialistas de Viseu",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/77r7ufhaz98uv"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T07:05Z";
+window.STATIONS_CHECKED = "2026-11-07T18:45Z";

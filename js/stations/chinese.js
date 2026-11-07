@@ -201,7 +201,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-17",
@@ -1150,6 +1151,33 @@ window.STATIONS = [
       "https://22893.live.streamtheworld.com/YES933_SC?dist=radiosingapore"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "asiafm-5",
+    "name": "AsiaFM 亞太電台",
+    "category": "music",
+    "streams": [
+      "https://n13.rcs.revma.com/kydend74hv8uv"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "station-56",
+    "name": "上海音乐广播",
+    "category": "music",
+    "streams": [
+      "https://lhttp.qingting.fm/live/273/64k.mp3"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "fm89-9",
+    "name": "上海长三角之声广播 FM89.9",
+    "category": "music",
+    "streams": [
+      "https://lhttp-hw.qtfm.cn/live/275/64k.mp3"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T07:05Z";
+window.STATIONS_CHECKED = "2026-11-07T18:45Z";

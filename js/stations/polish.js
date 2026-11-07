@@ -194,7 +194,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.24dubstep.pl/radio/8000/mp3_normal"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "zote-przeboje-poznan",
@@ -1099,4 +1100,4 @@ window.STATIONS = [
     "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T07:05Z";
+window.STATIONS_CHECKED = "2026-11-07T18:45Z";

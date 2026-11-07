@@ -1165,6 +1165,33 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_OLIVE_RETRO_S03_SC"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "radio-terna-90-4-fm",
+    "name": "Radio Terna 90.4 FM",
+    "category": "music",
+    "streams": [
+      "https://radio.garden/api/ara/content/listen/MzpZd2nQ/channel.mp3"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "spice-fm",
+    "name": "Spice FM",
+    "category": "music",
+    "streams": [
+      "https://spice988fm.radioca.st/stream"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "bhakti-world-media-shri-ram",
+    "name": "Bhakti World Media Shri Ram",
+    "category": "devotional",
+    "streams": [
+      "https://dard.out.airtime.pro/dard_a"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T07:05Z";
+window.STATIONS_CHECKED = "2026-11-07T18:45Z";

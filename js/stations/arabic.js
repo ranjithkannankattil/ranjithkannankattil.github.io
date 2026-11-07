@@ -323,7 +323,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.damasradio.fm/radio"
     ],
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "radio-manarat",
@@ -818,8 +819,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/r6eprdta6nhvv"
     ],
-    "added": "2026-10-31",
-    "offline": true
+    "added": "2026-10-31"
   },
   {
     "id": "hala-fm",
@@ -1216,6 +1216,33 @@ window.STATIONS = [
       "https://atlantic-sonic.nindohost.net:9300/stream"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "asima-online-radio",
+    "name": "Asima Online Radio",
+    "category": "music",
+    "streams": [
+      "https://asima.out.airtime.pro/asima_a"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "fyrozzzz",
+    "name": "Fyrozzzz",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/k1o5gpvancntv"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "bbc-arabic",
+    "name": "BBC Arabic",
+    "category": "news",
+    "streams": [
+      "https://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T07:05Z";
+window.STATIONS_CHECKED = "2026-11-07T18:45Z";

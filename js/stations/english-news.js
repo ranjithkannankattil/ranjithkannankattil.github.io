@@ -519,7 +519,8 @@ window.STATIONS = [
       "https://naijafmlagos-atunwadigital.streamguys1.com/naijafmlagos/playlist.m3u8"
     ],
     "added": "2026-10-28",
-    "where": "Nigeria"
+    "where": "Nigeria",
+    "offline": true
   },
   {
     "id": "70-s-80-s-90-s-riw-vintage-channel",
@@ -1110,6 +1111,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "where": "New Zealand"
+  },
+  {
+    "id": "2gb-sydney-873-am",
+    "name": "2GB - Sydney - 873 AM",
+    "category": "anz",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/2GB.mp3"
+    ],
+    "added": "2026-11-07",
+    "where": "Australia"
+  },
+  {
+    "id": "ecr-east-coast-radio-kwazulu-natal",
+    "name": "ECR - East Coast Radio -KwaZulu Natal",
+    "category": "world",
+    "streams": [
+      "https://edge.iono.fm/xice/ecr_live_medium.aac"
+    ],
+    "added": "2026-11-07",
+    "where": "South Africa"
+  },
+  {
+    "id": "abc-radio-melbourne",
+    "name": "ABC Radio Melbourne",
+    "category": "anz",
+    "streams": [
+      "https://mediaserviceslive.akamaized.net/hls/live/2038300/localmelbourne/masterhq.m3u8"
+    ],
+    "added": "2026-11-07",
+    "where": "Australia"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T07:05Z";
+window.STATIONS_CHECKED = "2026-11-07T18:45Z";

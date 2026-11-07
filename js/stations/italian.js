@@ -161,8 +161,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://classichitsradio.streamingmedia.it/play"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "rtl-102-5-disco",
@@ -607,7 +606,8 @@ window.STATIONS = [
     "streams": [
       "https://icecast.ithost.it/radiosei.ogg"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "offline": true
   },
   {
     "id": "globo-vintage",
@@ -1093,7 +1093,8 @@ window.STATIONS = [
     "streams": [
       "https://nrf1.newradio.it/stream/9750"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "offline": true
   },
   {
     "id": "albania-360-radio",
@@ -1148,6 +1149,33 @@ window.STATIONS = [
       "https://ice.studiopiu.net/607080.aac"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "italia-italia-90",
+    "name": "ITALIA Italia 90",
+    "category": "music",
+    "streams": [
+      "https://icy.unitedradio.it/um018.mp3"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "70-80-it",
+    "name": "70 80 It",
+    "category": "music",
+    "streams": [
+      "https://onair18.xdevel.com/proxy/7080it?mp=/stream"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "lifegate-radio",
+    "name": "LifeGate Radio",
+    "category": "music",
+    "streams": [
+      "https://router.xdevel.com/audio0s975809-345/stream/icecast.audio"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T07:05Z";
+window.STATIONS_CHECKED = "2026-11-07T18:45Z";

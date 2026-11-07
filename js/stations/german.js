@@ -1220,6 +1220,33 @@ window.STATIONS = [
       "https://stream.epic-classical.com/classical-music-for-sleep"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "austria-first-osterreichs-patriotenradio",
+    "name": "AUSTRIA FIRST – Österreichs Patriotenradio",
+    "category": "news",
+    "streams": [
+      "https://n01a-eu.rcs.revma.com/3zudpqfxh0cwv?rj-ttl=5&rj-tok=AAABm8uuzlsAWVPrc0mLiKWX-Q"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "88-6-hard-rock",
+    "name": "88.6 Hard Rock",
+    "category": "music",
+    "streams": [
+      "https://radio886.at/streams/88.6_Hard_Rock/mp3"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "energy-hit-music-only",
+    "name": "Energy Hit Music Only!",
+    "category": "music",
+    "streams": [
+      "https://edge62.streamonkey.net/energy-digital/stream/mp3"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T07:05Z";
+window.STATIONS_CHECKED = "2026-11-07T18:45Z";
