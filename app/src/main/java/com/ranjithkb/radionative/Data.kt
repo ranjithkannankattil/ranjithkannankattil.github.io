@@ -78,7 +78,7 @@ object Repo {
         return List(a.length()) { Station.fromJson(a.getJSONObject(it), col) }.filter { it.streams.isNotEmpty() }
     }
 
-    /** "Ranjith's picks": the developer's favourite stations, from every language, in his order. */
+    /** "Velvet Selection": the developer's favourite stations, from every language, in his order. */
     suspend fun picks(ctx: Context, fresh: Boolean = false): List<Station> {
         val keys = withContext(Dispatchers.IO) {
             val f = File(ctx.cacheDir, "picks.json")

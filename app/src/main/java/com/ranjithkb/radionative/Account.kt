@@ -26,11 +26,11 @@ object Account {
     fun signedIn(ctx: Context) = prefs(ctx).getString("refresh", null) != null
     fun signOut(ctx: Context) = prefs(ctx).edit().clear().apply()
     fun uid(ctx: Context): String? = prefs(ctx).getString("uid", null)
-    /** The site owner's account: only he sees "Share as Ranjith's picks". */
+    /** The site owner's account: only he sees "Share as the Velvet Selection". */
     const val OWNER_UID = "oidT4ydQi7aRffo0v6qvf4mMNM72"
     fun isOwner(ctx: Context) = uid(ctx) == OWNER_UID
 
-    /** Owner only: publish his favourites, in his order, as the public "Ranjith's picks". */
+    /** Owner only: publish his favourites, in his order, as the public "Velvet Selection". */
     suspend fun publishPicks(ctx: Context, keys: List<String>) = withContext(Dispatchers.IO) {
         val (_, t) = token(ctx) ?: throw RuntimeException("Not signed in")
         val arr = JSONArray(keys.take(200).map { JSONObject().put("stringValue", it) })

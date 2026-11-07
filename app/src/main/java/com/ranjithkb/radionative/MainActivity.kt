@@ -243,8 +243,8 @@ fun App(c: MediaController?) {
                             FilterChip(cat == k, { cat = k }, { Text("$label ${stations.count { it.category == k }}") })
                         }
                     }
-                    if (colId == PICKS) Text(if (!loading && stations.isEmpty()) "No picks shared yet." else
-                        "The developer's own favourite stations, from every language.", Modifier.padding(16.dp, 4.dp), color = InkSoft, fontSize = 14.sp)
+                    if (colId == PICKS) Text(if (!loading && stations.isEmpty()) "The Velvet Selection is coming soon." else
+                        "Hand-picked by the developer, from every language.", Modifier.padding(16.dp, 4.dp), color = InkSoft, fontSize = 14.sp)
                     if (loading) LinearProgressIndicator(Modifier.fillMaxWidth().padding(top = 8.dp), color = Accent)
                     val fk = favList.map { it.key }.toSet()
                     LazyColumn(contentPadding = PaddingValues(bottom = 12.dp)) {
@@ -331,17 +331,17 @@ fun FavsTab(list: List<Station>, now: NowState, langOf: (Station) -> String, onP
             }
         }
         if (list.isEmpty()) OutlinedButton(onPicks, Modifier.padding(horizontal = 16.dp).heightIn(min = 48.dp)) {
-            Icon(Icons.Filled.Star, null, tint = Accent); Spacer(Modifier.width(8.dp)); Text("Start with Ranjith's picks")
+            Icon(Icons.Filled.Star, null, tint = Accent); Spacer(Modifier.width(8.dp)); Text("Start with the Velvet Selection")
         }
         if (Account.isOwner(ctx) && list.isNotEmpty() && !edit) {
             var busy by remember { mutableStateOf(false) }
             TextButton({ if (!busy) scope.launch { busy = true
-                val msg = try { Account.publishPicks(ctx, list.map { it.key }); "Shared: everyone now sees these ${list.size} stations as Ranjith's picks." }
+                val msg = try { Account.publishPicks(ctx, list.map { it.key }); "Shared: everyone now sees these ${list.size} stations as the Velvet Selection." }
                     catch (e: Exception) { "Couldn't share the picks. " + (if (e.message?.contains("403") == true) "The database rules need publishing first." else "Try again.") }
                 busy = false; android.widget.Toast.makeText(ctx, msg, android.widget.Toast.LENGTH_LONG).show() } },
                 Modifier.padding(horizontal = 8.dp).heightIn(min = 48.dp)) {
                 Icon(Icons.Filled.Star, null, tint = Accent); Spacer(Modifier.width(6.dp))
-                Text(if (busy) "Sharing…" else "Share this list as Ranjith's picks", color = Accent)
+                Text(if (busy) "Sharing…" else "Share this list as the Velvet Selection", color = Accent)
             }
         }
         undo?.let { (s, at) ->
@@ -399,8 +399,8 @@ fun LanguageDialog(cols: List<Collection>, current: String, onPick: (String) -> 
                             verticalAlignment = Alignment.CenterVertically) {
                             Icon(Icons.Filled.Star, null, tint = Accent); Spacer(Modifier.width(10.dp))
                             Column(Modifier.weight(1f)) {
-                                Text("Ranjith's picks", fontWeight = FontWeight.SemiBold)
-                                Text("The developer's favourite stations", fontSize = 13.sp, color = InkSoft)
+                                Text("Velvet Selection", fontWeight = FontWeight.SemiBold)
+                                Text("Hand-picked stations from every language", fontSize = 13.sp, color = InkSoft)
                             }
                         }
                     }
@@ -656,7 +656,7 @@ fun UpdateButton(u: Update, label: String) {
 }
 
 const val PICKS = "picks"
-val PICKS_COL = Collection(PICKS, "Ranjith's picks", "", "", emptyList())
+val PICKS_COL = Collection(PICKS, "Velvet Selection", "", "", emptyList())
 
 /** Station rating in the player: the average (shared with ranjithkb.com) and five stars to give your own. */
 @Composable
