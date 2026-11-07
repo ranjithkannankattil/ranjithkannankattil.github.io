@@ -540,7 +540,19 @@ fun InfoTab(languages: Int, update: Update?, onSignIn: () -> Unit, onSignOut: ()
             Section("Your account") {
                 if (Session.name != null) {
                     Text("Signed in as ${Session.name}. Favourites are saved to your account and match ranjithkb.com.")
-                    OutlinedButton(onSignOut, Modifier.padding(top = 8.dp)) { Text("Sign out") }
+                    var ask by remember { mutableStateOf(false) }
+                    var msg by remember { mutableStateOf<String?>(null) }
+                    val scope = rememberCoroutineScope()
+                    Row(Modifier.padding(top = 8.dp), verticalAlignment = Alignment.CenterVertically) {
+                        OutlinedButton(onSignOut, Modifier.heightIn(min = 48.dp)) { Text("Sign out") }
+                        TextButton({ ask = true }, Modifier.padding(start = 8.dp).heightIn(min = 48.dp)) { Text("Delete account", color = InkSoft) }
+                    }
+                    if (ask) AlertDialog(onDismissRequest = { ask = false },
+                        title = { Text("Delete your account?") },
+                        text = { Text("This removes your saved favourites and your sign-in from Radio Velvet and ranjithkb.com. Favourites on this phone stay until you remove them.") },
+                        confirmButton = { TextButton({ ask = false; scope.launch {
+                            msg = Account.deleteAccount(ctx) ?: "Your account is deleted."; Session.name = null } }) { Text("Delete") } },
+                        dismissButton = { TextButton({ ask = false }) { Text("Cancel") } })
                 } else {
                     Text("Sign in with Google to keep favourites on every device and on the website.")
                     Button(onSignIn, Modifier.padding(top = 8.dp).heightIn(min = 48.dp)) { Text("Sign in") }
@@ -568,6 +580,7 @@ fun InfoTab(languages: Int, update: Update?, onSignIn: () -> Unit, onSignOut: ()
             Section("On the web") {
                 TextButton({ openUrl(ctx, "https://ranjithkb.com/radio.html") }) { Text("Radio on ranjithkb.com") }
                 TextButton({ openUrl(ctx, "https://ranjithkb.com/") }) { Text("ranjithkb.com") }
+                TextButton({ openUrl(ctx, "https://ranjithkb.com/radio-privacy.html") }) { Text("Privacy policy") }
                 TextButton({ ctx.startActivity(android.content.Intent(android.content.Intent.ACTION_SENDTO,
                     android.net.Uri.parse("mailto:hello@ranjithkb.com?subject=Radio%20Velvet"))) }) { Text("Suggest a station: hello@ranjithkb.com") }
             }

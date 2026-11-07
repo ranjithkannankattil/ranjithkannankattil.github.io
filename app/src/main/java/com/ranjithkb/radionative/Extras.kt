@@ -27,6 +27,7 @@ data class Update(val version: String, val notes: List<String>, val url: String)
 
 /** Newer Radio app release on GitHub (tags radio-app-v<version>), if there is one. */
 suspend fun checkUpdate(ctx: Context): Update? = withContext(Dispatchers.IO) {
+    if (!BuildConfig.SELF_UPDATE) return@withContext null      // Play version: Play updates it
     try {
         val c = URL("https://api.github.com/repos/ranjithkannankattil/ranjithkannankattil.github.io/releases?per_page=20").openConnection() as HttpURLConnection
         c.setRequestProperty("Accept", "application/vnd.github+json"); c.connectTimeout = 10000

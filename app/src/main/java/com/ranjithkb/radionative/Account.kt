@@ -62,6 +62,26 @@ object Account {
         return uid to r.getString("id_token")
     }
 
+    /**
+     * Delete the account: the favourites saved at users/{uid}, then the sign-in itself.
+     * Returns null when done, or a message to show. Firebase asks for a fresh sign-in
+     * before deleting an old session; the saved data is gone either way.
+     */
+    suspend fun deleteAccount(ctx: Context): String? = withContext(Dispatchers.IO) {
+        val (uid, t) = try { token(ctx) } catch (e: Exception) { null } ?: return@withContext "Couldn't reach your account. Check the internet and try again."
+        try { http("$DOCS/users/$uid", "DELETE", null, bearer = t) }
+        catch (e: RuntimeException) { if (e.message?.startsWith("HTTP 404") != true) return@withContext "Couldn't delete right now. Try again in a moment." }
+        try {
+            http("https://identitytoolkit.googleapis.com/v1/accounts:delete?key=$KEY", "POST", JSONObject().put("idToken", t).toString())
+        } catch (e: RuntimeException) {
+            signOut(ctx)
+            return@withContext if (e.message?.contains("CREDENTIAL_TOO_OLD") == true)
+                "Your saved favourites are deleted. To remove the sign-in too, sign in again and tap Delete account once more."
+            else "Your saved favourites are deleted, but the sign-in couldn't be removed. Email hello@ranjithkb.com and it will be."
+        }
+        signOut(ctx); null
+    }
+
     /** Favourite keys saved in the account ("<collection>:<id>", in order). */
     suspend fun remoteFavs(ctx: Context): List<String>? = withContext(Dispatchers.IO) {
         val (uid, t) = token(ctx) ?: return@withContext null

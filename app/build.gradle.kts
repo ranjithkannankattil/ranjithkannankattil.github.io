@@ -5,11 +5,11 @@ plugins {
 }
 android {
     namespace = "com.ranjithkb.radionative"
-    compileSdk = 35
+    compileSdk = 36
     defaultConfig {
         applicationId = "com.ranjithkb.radio"   // same as the earlier Radio app, so it updates in place
         minSdk = 26
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 2000 + (System.getenv("GITHUB_RUN_NUMBER") ?: "1").toInt()   // above every earlier Radio build
         versionName = System.getenv("APP_VERSION") ?: "2.0.0"
     }
@@ -25,13 +25,19 @@ android {
             }
         }
     }
+    // "web" = the APK on ranjithkb.com (updates itself); "play" = Google Play (Play does the updating)
+    flavorDimensions += "store"
+    productFlavors {
+        create("web") { dimension = "store"; buildConfigField("boolean", "SELF_UPDATE", "true") }
+        create("play") { dimension = "store"; buildConfigField("boolean", "SELF_UPDATE", "false") }
+    }
     buildTypes {
         release { isMinifyEnabled = false; signingConfig = signingConfigs.getByName("shared") }
         debug { signingConfig = signingConfigs.getByName("shared") }
     }
     compileOptions { sourceCompatibility = JavaVersion.VERSION_17; targetCompatibility = JavaVersion.VERSION_17 }
     kotlinOptions { jvmTarget = "17" }
-    buildFeatures { compose = true }
+    buildFeatures { compose = true; buildConfig = true }
 }
 dependencies {
     val media3 = "1.5.1"
