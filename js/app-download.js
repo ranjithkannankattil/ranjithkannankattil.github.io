@@ -7,6 +7,8 @@
   if (!card) return;
   if (window.Capacitor) return;   // already in an app
   card.hidden = false;
+  const strip = document.getElementById("raStrip");   // short link at the top of the page to this card
+  if (strip) strip.hidden = false;
 
   const $ = (id) => document.getElementById(id);
   const API = "https://api.github.com/repos/ranjithkannankattil/ranjithkannankattil.github.io/releases?per_page=100";

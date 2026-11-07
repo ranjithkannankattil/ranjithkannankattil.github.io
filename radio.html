@@ -26,7 +26,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap"></noscript>
 <link rel="stylesheet" href="css/style.css?v=18">
-<link rel="stylesheet" href="css/radio.css?v=29">
+<link rel="stylesheet" href="css/radio.css?v=30">
 </head>
 <body data-section="radio" class="wide">
 
@@ -59,21 +59,12 @@
     </label>
   </div>
 
-  <aside class="radio-app" id="radioApp" hidden>
-    <img class="ra-icon" src="assets/icons/radio-velvet-192.png" width="56" height="56" alt="">
-    <div class="ra-text">
-      <h2 class="ra-title">Get the Android app</h2>
-      <p class="ra-desc">The same stations with song names and album covers, song cards to share, favourites saved to your account, the screen off and Android Auto.</p>
-      <details class="ra-more"><summary>About the app</summary>
-      <p class="ra-steps">Open the downloaded file and allow installs from your browser when asked.</p>
-      <p class="ra-ios">There's no iPhone app yet. On iPhone, use this page: in Safari, tap Share → Add to Home Screen for an icon that opens Radio directly.</p>
-      <p class="ra-ver" id="raVer" hidden></p>
-      <div class="ra-new" id="raNew" hidden><p class="ra-new-h">What's new</p><ul id="raNewList"></ul></div>
-      <p class="ra-count" id="raCount" hidden></p>
-      </details>
-    </div>
-    <a class="ra-btn" href="https://github.com/ranjithkannankattil/ranjithkannankattil.github.io/releases/latest/download/Radio.apk" rel="noopener">Download APK <span class="ra-size">14 MB</span></a>
-  </aside>
+
+  <a class="ra-strip" id="raStrip" href="#radioApp" hidden>
+    <img src="assets/icons/radio-velvet-192.png" width="32" height="32" alt="">
+    <span><b>Radio Velvet for Android</b> · free app with song names and covers</span>
+    <span class="go">Get it ↓</span>
+  </a>
 
   <nav class="radio-tabs" id="radioTabs" role="tablist" aria-label="Stations or favourites">
     <button class="rt" id="tabStations" role="tab" aria-selected="true">Stations <span class="lang"></span></button>
@@ -126,6 +117,21 @@
   <ul class="radio-grid" id="grid"></ul>
   <p class="radio-empty" id="empty" hidden>No stations match.</p>
 
+
+  <aside class="radio-app" id="radioApp" hidden>
+    <img class="ra-icon" src="assets/icons/radio-velvet-192.png" width="56" height="56" alt="">
+    <div class="ra-text">
+      <h2 class="ra-title">Radio Velvet for Android</h2>
+      <p class="ra-desc">The same stations with song names and album covers, song cards to share, favourites saved to your account, the screen off and Android Auto.</p>
+      <p class="ra-steps">Open the downloaded file and allow installs from your browser when asked.</p>
+      <p class="ra-ios">There's no iPhone app yet. On iPhone, use this page: in Safari, tap Share → Add to Home Screen for an icon that opens Radio directly.</p>
+      <p class="ra-ver" id="raVer" hidden></p>
+      <div class="ra-new" id="raNew" hidden><p class="ra-new-h">What's new</p><ul id="raNewList"></ul></div>
+      <p class="ra-count" id="raCount" hidden></p>
+      <p class="ra-gh"><a href="https://github.com/ranjithkannankattil/ranjithkannankattil.github.io/releases" rel="noopener">All versions and what changed, on GitHub →</a></p>
+    </div>
+    <a class="ra-btn" href="https://github.com/ranjithkannankattil/ranjithkannankattil.github.io/releases/latest/download/Radio.apk" rel="noopener">Download APK <span class="ra-size">14 MB</span></a>
+  </aside>
 
   <p class="radio-note">Streams belong to their broadcasters and some go offline from time to time. If one doesn't start, the next source is tried automatically.</p>
   <p class="radio-note acct-note" id="acctNote" hidden>Signing in is optional. It stores your Google account ID and email with your list of favourite stations and your default language, so they appear on any device you sign in on — nothing else. Sign out any time; to have your saved list deleted, get in touch. <a href="privacy.html">Privacy details</a>.</p>
@@ -209,7 +215,7 @@
 <script type="module" src="js/radio-ratings.js?v=3"></script>
 <script src="js/nav.js?v=20" defer></script>
 <script src="js/visits.js?v=2" defer></script>
-<script src="js/app-download.js?v=5" defer></script>
+<script src="js/app-download.js?v=6" defer></script>
 <script src="js/app-update.js?v=2" defer></script>
 </body>
 </html>
