@@ -1189,6 +1189,33 @@ window.STATIONS = [
       "https://s02.fjperezdj.com:8036/live"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "radio-matorral",
+    "name": "Radio Matorral",
+    "category": "music",
+    "streams": [
+      "https://topradio.uno/proxy/radiomatorral/stream"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "los40",
+    "name": "LOS40",
+    "category": "music",
+    "streams": [
+      "https://20103.live.streamtheworld.com/LOS40_SC"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "openlab-radio",
+    "name": "OpenLab Radio",
+    "category": "music",
+    "streams": [
+      "https://ice04.fluidstream.net/openlab.mp3"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T20:33Z";
+window.STATIONS_CHECKED = "2026-11-07T07:05Z";

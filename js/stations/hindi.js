@@ -1156,6 +1156,15 @@ window.STATIONS = [
       "https://streamer.radio.co/se30891e37/listen"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "radio-olive-retro",
+    "name": "Radio Olive Retro",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_OLIVE_RETRO_S03_SC"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T20:33Z";
+window.STATIONS_CHECKED = "2026-11-07T07:05Z";

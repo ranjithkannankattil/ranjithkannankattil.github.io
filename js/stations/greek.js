@@ -1213,6 +1213,33 @@ window.STATIONS = [
       "https://rdst.win:48198/live"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "deejay-97-5-greece-corfu",
+    "name": "DeeJay 97.5 Greece Corfu",
+    "category": "music",
+    "streams": [
+      "https://sh.onweb.gr:7083/stream"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "mousikos-98-6",
+    "name": "Mousikos 98.6",
+    "category": "music",
+    "streams": [
+      "https://netradio.live24.gr/derty1000"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "farsala-web-radio",
+    "name": "Farsala Web Radio",
+    "category": "music",
+    "streams": [
+      "https://ams-pioneer02.dedicateware.com:1955/stream"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T20:33Z";
+window.STATIONS_CHECKED = "2026-11-07T07:05Z";

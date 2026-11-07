@@ -1188,6 +1188,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/sse58hcighnvv?dist=los40-web-live_streaming_play"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "llaneros-por-venezuela",
+    "name": "Llaneros Por Venezuela",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/12bg6xa7hv8uv"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "radio-viva-95-3-guatemala",
+    "name": "Radio Viva 95.3 Guatemala",
+    "category": "devotional",
+    "streams": [
+      "https://stream.zeno.fm/uus2ugdadkhvv"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "baladas-del-recuerdo",
+    "name": "Baladas del Recuerdo",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/g7vk70rqr68uv"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T20:33Z";
+window.STATIONS_CHECKED = "2026-11-07T07:05Z";

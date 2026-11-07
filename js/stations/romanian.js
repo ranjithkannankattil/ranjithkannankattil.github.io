@@ -1134,6 +1134,33 @@ window.STATIONS = [
       "https://s3.radio.co/s1492c0564/listen"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "radio-rfi-moldova",
+    "name": "Radio RFI Moldova",
+    "category": "music",
+    "streams": [
+      "https://asculta.radiorfi.ro/live.mp3"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "radio-zum-2",
+    "name": "Radio ZUM 2",
+    "category": "music",
+    "streams": [
+      "https://streams.radiozum.md/listen/zum2/ZUM2"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "hm-radio",
+    "name": "HM Radio",
+    "category": "news",
+    "streams": [
+      "https://stream.zeno.fm/1nykd3t9f7qtv"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T20:33Z";
+window.STATIONS_CHECKED = "2026-11-07T07:05Z";

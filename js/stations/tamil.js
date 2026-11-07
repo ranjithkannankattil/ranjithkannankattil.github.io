@@ -56,8 +56,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "89-4-tamil-fm",
@@ -281,8 +280,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio129/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "tamil-ragam",
@@ -505,7 +503,8 @@ window.STATIONS = [
       "https://cast1.my-control-panel.com/proxy/geethan3/stream"
     ],
     "added": "2026-10-25",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "tamilkaterumbufm",
@@ -1199,6 +1198,33 @@ window.STATIONS = [
       "https://usa8.fastcast4u.com/proxy/subikshafm?mp=/1"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "tamizen",
+    "name": "Tamizen",
+    "category": "music",
+    "streams": [
+      "https://c34.radioboss.fm:18023/stream"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "tamil-amuthu-covai-radio",
+    "name": "Tamil Amuthu Covai Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/dzxv07vktp8uv"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "time-fm",
+    "name": "Time Fm",
+    "category": "music",
+    "streams": [
+      "https://neramfm.com:8000/stream"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T20:33Z";
+window.STATIONS_CHECKED = "2026-11-07T07:05Z";

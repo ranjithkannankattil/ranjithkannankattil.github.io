@@ -1190,6 +1190,33 @@ window.STATIONS = [
       "https://srv02.gpmradio.ru:8443/stream/air/aac/64/99"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "jurnal-fm",
+    "name": "Jurnal Fm",
+    "category": "news",
+    "streams": [
+      "https://audio.jurnalfm.md/hq"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "made-in-russia-dance-radio",
+    "name": "Made In Russia Dance Radio",
+    "category": "music",
+    "streams": [
+      "https://listen7.myradio24.com/9083"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "station-44",
+    "name": "ВИА СССР",
+    "category": "music",
+    "streams": [
+      "https://pub0101.101.ru/stream/pro/aac/64/36"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T20:33Z";
+window.STATIONS_CHECKED = "2026-11-07T07:05Z";

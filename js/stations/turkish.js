@@ -1161,6 +1161,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/mk6qxx8hpm0uv"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "radyo-zergan-47",
+    "name": "RADYO ZERGAN (47)",
+    "category": "music",
+    "streams": [
+      "https://sslyayin.netyayin.net/radyozergan/;"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "dinamo-fm-live-from-minimuzikhol",
+    "name": "dinamo.fm live from minimuzikhol",
+    "category": "music",
+    "streams": [
+      "https://channels.dinamo.fm/mmradyo-mp3"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "ada-fm-98-5",
+    "name": "Ada FM 98.5",
+    "category": "music",
+    "streams": [
+      "https://radyo.yayin.com.tr:6040/stream"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T20:33Z";
+window.STATIONS_CHECKED = "2026-11-07T07:05Z";

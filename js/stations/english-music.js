@@ -1416,6 +1416,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-06",
     "where": "US"
+  },
+  {
+    "id": "bbc-asian-network",
+    "name": "BBC Asian Network",
+    "category": "pop",
+    "streams": [
+      "https://as-hls-ww-live.akamaized.net/pool_22108647/live/ww/bbc_asian_network/bbc_asian_network.isml/bbc_asian_network-audio%3d128000.norewind.m3u8"
+    ],
+    "added": "2026-11-07",
+    "where": "UK"
+  },
+  {
+    "id": "teenage-kicks-radio",
+    "name": "Teenage Kicks Radio",
+    "category": "rock",
+    "streams": [
+      "https://onlineradiobox.com/json/fr/teenagekicks/play"
+    ],
+    "added": "2026-11-07",
+    "where": "UK"
+  },
+  {
+    "id": "chaos-fm",
+    "name": "Chaos FM",
+    "category": "rock",
+    "streams": [
+      "https://chaosfm.com:8443/stream"
+    ],
+    "added": "2026-11-07",
+    "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T20:33Z";
+window.STATIONS_CHECKED = "2026-11-07T07:05Z";

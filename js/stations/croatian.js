@@ -701,6 +701,15 @@ window.STATIONS = [
       "https://a1.asurahosting.com/listen/radio_slatina/radio.mp3"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "radio-nu",
+    "name": "Radio NU",
+    "category": "music",
+    "streams": [
+      "https://slusaj.hr:10445/stream?type=http&nocache=634"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T20:33Z";
+window.STATIONS_CHECKED = "2026-11-07T07:05Z";

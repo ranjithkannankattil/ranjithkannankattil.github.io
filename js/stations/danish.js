@@ -469,6 +469,15 @@ window.STATIONS = [
       "https://streaming.radio.co/sea3f7bae2/listen"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "partyradio-pro",
+    "name": "PartyRadio.pro",
+    "category": "music",
+    "streams": [
+      "https://stream.partyradio.pro/listen/partyradio/stream"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T20:33Z";
+window.STATIONS_CHECKED = "2026-11-07T07:05Z";

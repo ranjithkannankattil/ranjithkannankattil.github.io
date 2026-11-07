@@ -1199,6 +1199,33 @@ window.STATIONS = [
       "https://d3pvma9xb2775h.cloudfront.net/icecast/omropfryslan/radio.mp3"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "christmas-hits-radio-nl",
+    "name": "Christmas Hits Radio NL",
+    "category": "music",
+    "streams": [
+      "https://stream06.dotpoint.nl:8006/stream"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "npo-funx-arab",
+    "name": "NPO Funx Arab",
+    "category": "music",
+    "streams": [
+      "https://icecast.omroep.nl/funx-arabfb-bb-mp3"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "soulradio",
+    "name": "SoulRadio",
+    "category": "music",
+    "streams": [
+      "https://29093.live.streamtheworld.com/SOULRADIOAAC_SC"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T20:33Z";
+window.STATIONS_CHECKED = "2026-11-07T07:05Z";

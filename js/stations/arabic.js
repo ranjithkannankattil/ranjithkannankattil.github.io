@@ -1189,6 +1189,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/h66yxnapga0uv"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "omniradio-holy-quran-radio-cairo",
+    "name": "OmniRadio - Holy Quran Radio Cairo)",
+    "category": "devotional",
+    "streams": [
+      "https://radio.xecod.com/station/quran-cairo"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "ain-temouchent",
+    "name": "Aïn Témouchent عين تموشنت",
+    "category": "news",
+    "streams": [
+      "https://webradio1.tda.dz:8001/AinTimouchent_64K.mp3"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "atlantic-radio-maroc",
+    "name": "Atlantic Radio Maroc",
+    "category": "news",
+    "streams": [
+      "https://atlantic-sonic.nindohost.net:9300/stream"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T20:33Z";
+window.STATIONS_CHECKED = "2026-11-07T07:05Z";

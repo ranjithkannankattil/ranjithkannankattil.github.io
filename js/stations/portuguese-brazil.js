@@ -81,8 +81,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stm5.painelcast.com:7662/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-studio-flashback",
@@ -226,7 +225,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RT_SPAAC.aac"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "bandnews-fm",
@@ -556,7 +556,8 @@ window.STATIONS = [
     "streams": [
       "https://24373.live.streamtheworld.com/RT_SP.mp3?dist=RadiosComBr-TMC&1771879327541"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "offline": true
   },
   {
     "id": "102-fm-itaperuna",
@@ -1196,6 +1197,33 @@ window.STATIONS = [
       "https://24253.live.streamtheworld.com/RADIO_ELDORADOAAC/HLS/playlist.m3u8"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "radio-roquette-pinto",
+    "name": "Rádio Roquette Pinto",
+    "category": "music",
+    "streams": [
+      "https://radio.saopaulo01.com.br/8300/stream/"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "gold-classic",
+    "name": "GOLD CLASSIC",
+    "category": "music",
+    "streams": [
+      "https://centova2.svdns.com.br:20009/stream"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "91-1-fm-sertaneja",
+    "name": "91.1 FM Sertaneja",
+    "category": "music",
+    "streams": [
+      "https://sc4s.cdn.upx.com:8075/stream"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T20:33Z";
+window.STATIONS_CHECKED = "2026-11-07T07:05Z";

@@ -271,7 +271,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.skymedia.ee/live/RetroJ6ulud"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "punk-fm",
@@ -530,4 +531,4 @@ window.STATIONS = [
     "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T20:33Z";
+window.STATIONS_CHECKED = "2026-11-07T07:05Z";

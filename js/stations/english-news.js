@@ -1080,6 +1080,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-06",
     "where": "Uganda"
+  },
+  {
+    "id": "capital-radio",
+    "name": "Capital Radio",
+    "category": "world",
+    "streams": [
+      "https://capitalradio.radioca.st/stream"
+    ],
+    "added": "2026-11-07",
+    "where": "United Republic Of Tanzania"
+  },
+  {
+    "id": "102-5-abc-perth",
+    "name": "102.5 ABC Perth",
+    "category": "anz",
+    "streams": [
+      "https://streaming.abc-cdn.net.au/audio/hls/localperth.m3u8?source=web"
+    ],
+    "added": "2026-11-07",
+    "where": "Australia"
+  },
+  {
+    "id": "newstalk-zb-wellington",
+    "name": "Newstalk ZB Wellington",
+    "category": "anz",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/NZME_31AAC.m3u8"
+    ],
+    "added": "2026-11-07",
+    "where": "New Zealand"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T20:33Z";
+window.STATIONS_CHECKED = "2026-11-07T07:05Z";

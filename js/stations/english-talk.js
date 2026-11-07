@@ -527,7 +527,8 @@ window.STATIONS = [
       "https://stream-288.surfernetwork.com/g1pmt17nz9duv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJnMXBtdDE3bno5ZHV2IiwiaG9zdCI6InN0cmVhbS0yODguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJMaXZRVVVnMVJBNllJVm1CMzZweXlRIiwiaWF0IjoxNzgxNjc4NzM0LCJleHAiOjE3ODE2Nzg3OTR9.5G1wZmONFqXySurSj1Oj6_UtSmcJMwlc6JJy2oL7fX8"
     ],
     "added": "2026-10-26",
-    "where": "The Philippines"
+    "where": "The Philippines",
+    "offline": true
   },
   {
     "id": "kogo-am-600",
@@ -1238,6 +1239,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-06",
     "where": "South Africa"
+  },
+  {
+    "id": "detour-talk",
+    "name": "detour TALK",
+    "category": "us",
+    "streams": [
+      "https://ec1.yesstreaming.net:4350/;"
+    ],
+    "added": "2026-11-07",
+    "where": "US"
+  },
+  {
+    "id": "afn-360-naples",
+    "name": "AFN 360 Naples",
+    "category": "world",
+    "streams": [
+      "https://23623.live.streamtheworld.com/AFNE_NAP_SC"
+    ],
+    "added": "2026-11-07",
+    "where": "Italy"
+  },
+  {
+    "id": "fumba-town-radio",
+    "name": "Fumba Town Radio",
+    "category": "world",
+    "streams": [
+      "https://stream.perspektiveausland.app/listen/fumba_town_radio/radio.mp3"
+    ],
+    "added": "2026-11-07",
+    "where": "United Republic Of Tanzania"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T20:33Z";
+window.STATIONS_CHECKED = "2026-11-07T07:05Z";

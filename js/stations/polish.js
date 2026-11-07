@@ -1070,6 +1070,33 @@ window.STATIONS = [
       "https://ch01.cdn.eurozet.pl/CHILAD.mp3?t=1709721264195?redirected=01"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "radioff",
+    "name": "radiOFF",
+    "category": "music",
+    "streams": [
+      "https://stream.radioff.com/stream.mp3"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "beat-city-gdansk",
+    "name": "Beat City Gdańsk",
+    "category": "news",
+    "streams": [
+      "https://radio.beatcity.pl/listen/beat_city_gdansk/radio.mp3"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "happy-station",
+    "name": "Happy Station",
+    "category": "music",
+    "streams": [
+      "https://s3.slotex.pl/shoutcast/7496/stream"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T20:33Z";
+window.STATIONS_CHECKED = "2026-11-07T07:05Z";

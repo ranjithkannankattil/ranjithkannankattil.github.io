@@ -229,7 +229,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "cidade-fm-2",
@@ -276,8 +277,8 @@ window.STATIONS = [
     "name": "Antena 2",
     "category": "music",
     "streams": [
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR",
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8"
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8",
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
     ]
   },
   {
@@ -447,8 +448,7 @@ window.STATIONS = [
     "streams": [
       "https://cast.redewt.net:9825/stream"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "m80-radio-pop",
@@ -1187,6 +1187,33 @@ window.STATIONS = [
       "https://radiometalon.com/listen/radio_metal_on_the_thrasher/radio.mp3"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "radio-rds",
+    "name": "Rádio RDS",
+    "category": "music",
+    "streams": [
+      "https://s9.yesstreaming.net:7070/stream"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "antena-3-madeira-portugal",
+    "name": "Antena 3 Madeira (Portugal)",
+    "category": "music",
+    "streams": [
+      "https://streaming-live.rtp.pt/liveradio/antena3madeira80a/playlist.m3u8"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "radio-quantica",
+    "name": "Radio QUÂNTICA",
+    "category": "music",
+    "streams": [
+      "https://libretime.radioquantica.com/main.mp3"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T20:33Z";
+window.STATIONS_CHECKED = "2026-11-07T07:05Z";

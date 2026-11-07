@@ -90,7 +90,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream-288.surfernetwork.com/g1pmt17nz9duv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJnMXBtdDE3bno5ZHV2IiwiaG9zdCI6InN0cmVhbS0yODguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJMaXZRVVVnMVJBNllJVm1CMzZweXlRIiwiaWF0IjoxNzgxNjc4NzM0LCJleHAiOjE3ODE2Nzg3OTR9.5G1wZmONFqXySurSj1Oj6_UtSmcJMwlc6JJy2oL7fX8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rage-music-philippines",
@@ -524,8 +525,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/60cb36c29heuv"
     ],
-    "added": "2026-10-28",
-    "offline": true
+    "added": "2026-10-28"
   },
   {
     "id": "105-9-energy-fm-dwla",
@@ -543,7 +543,8 @@ window.STATIONS = [
     "streams": [
       "https://gvamaudio.tail160f79.ts.net/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "offline": true
   },
   {
     "id": "99-5-dzyw-koolfm",
@@ -564,4 +565,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T20:33Z";
+window.STATIONS_CHECKED = "2026-11-07T07:05Z";

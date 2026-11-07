@@ -161,7 +161,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://classichitsradio.streamingmedia.it/play"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rtl-102-5-disco",
@@ -1129,6 +1130,24 @@ window.STATIONS = [
       "https://ice06.fluidstream.net/RadioNapoli.mp3?FLID=6"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "rai-radio-kids",
+    "name": "Rai Radio Kids",
+    "category": "music",
+    "streams": [
+      "https://icestreaming.rai.it/11.mp3"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "radio-60-70-80",
+    "name": "Radio 60 70 80",
+    "category": "music",
+    "streams": [
+      "https://ice.studiopiu.net/607080.aac"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T20:33Z";
+window.STATIONS_CHECKED = "2026-11-07T07:05Z";

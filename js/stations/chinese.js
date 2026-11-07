@@ -121,8 +121,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play-radio-stream3.hndt.com/now/WUBA5hW2/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-10",
@@ -202,8 +201,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-17",
@@ -1125,6 +1123,33 @@ window.STATIONS = [
       "https://lhttp-hw.qtfm.cn/live/4917/64k.mp3"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "station-54",
+    "name": "一个个人私用的歌单",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/rzsc1h2izunuv"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "station-55",
+    "name": "大自然的声音",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/5wtp1dkamdluv"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "singapore-chinese-pop-yes-fm-933",
+    "name": "Singapore Chinese POP YES FM 933",
+    "category": "music",
+    "streams": [
+      "https://22893.live.streamtheworld.com/YES933_SC?dist=radiosingapore"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T20:33Z";
+window.STATIONS_CHECKED = "2026-11-07T07:05Z";

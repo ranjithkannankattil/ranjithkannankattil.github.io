@@ -1069,6 +1069,33 @@ window.STATIONS = [
       "https://radio.dukahosting.com/8020/stream"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "radio-sremac-102-7",
+    "name": "Radio Sremac 102.7",
+    "category": "music",
+    "streams": [
+      "https://mpc2.mediacp.eu:8282/sremac"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "rsg-party-time",
+    "name": "RSG Party time",
+    "category": "music",
+    "streams": [
+      "https://stream.rsg.rs/partytime/"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "radio-s-sport-urban",
+    "name": "Radio S Sport Urban",
+    "category": "news",
+    "streams": [
+      "https://stream.radios.rs:9080/stream"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T20:33Z";
+window.STATIONS_CHECKED = "2026-11-07T07:05Z";

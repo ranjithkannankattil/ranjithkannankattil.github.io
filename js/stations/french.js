@@ -1139,6 +1139,33 @@ window.STATIONS = [
       "https://strhls.streamakaci.tv/str_tchad_radio/str_tchad_radio/icecast.audio?fbclid=IwAR32Ir_eHaV-HSrh46OVT_VeTZt5KoNggoq8qzeSiAeZTJNBKKUtsSNUtcY"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "frequence-3-gold",
+    "name": "Frequence 3 Gold",
+    "category": "music",
+    "streams": [
+      "https://frequence3.net-radio.fr/frequence3gold.flac"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "culture",
+    "name": "Culture",
+    "category": "news",
+    "streams": [
+      "https://webradio3.tda.dz:8001/Culture_64K.mp3"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "france-musique-classique-easy",
+    "name": "France Musique · Classique Easy",
+    "category": "music",
+    "streams": [
+      "https://direct.francemusique.fr/live/francemusiqueeasyclassique-hifi.mp3"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T20:33Z";
+window.STATIONS_CHECKED = "2026-11-07T07:05Z";

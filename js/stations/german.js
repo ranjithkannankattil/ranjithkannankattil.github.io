@@ -1193,6 +1193,33 @@ window.STATIONS = [
       "https://radio21.streamabc.net/radio21-radio21dabns-mp3-192-3908190"
     ],
     "added": "2026-11-06"
+  },
+  {
+    "id": "0-n-chillout-on-radio",
+    "name": "0 N - Chillout on Radio",
+    "category": "music",
+    "streams": [
+      "https://0n-chillout.radionetz.de/0n-chillout.mp3"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "ballermann-radio",
+    "name": "Ballermann Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.bmr-radio.de/"
+    ],
+    "added": "2026-11-07"
+  },
+  {
+    "id": "epic-classical-classical-music-for-sleep",
+    "name": "EPIC CLASSICAL - Classical Music For Sleep",
+    "category": "music",
+    "streams": [
+      "https://stream.epic-classical.com/classical-music-for-sleep"
+    ],
+    "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-06T20:33Z";
+window.STATIONS_CHECKED = "2026-11-07T07:05Z";
