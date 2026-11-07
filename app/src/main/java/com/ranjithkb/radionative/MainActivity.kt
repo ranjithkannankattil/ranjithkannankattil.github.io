@@ -269,7 +269,7 @@ fun App(c: MediaController?) {
         if (now.id != null) MiniPlayer(now, c) { full = true }
         NavigationBar(containerColor = Paper2) {
             NavigationBarItem(tab == 0, { go(0) }, { Icon(Icons.Filled.Radio, null) }, label = { Text("Stations") })
-            NavigationBarItem(tab == 1, { go(1) }, { Icon(Icons.Filled.Favorite, null) }, label = { Text("Favourites ${favList.size}") })
+            NavigationBarItem(tab == 1, { go(1) }, { Icon(Icons.Filled.Favorite, null) }, label = { Text("Favourites (${favList.size})") })
             NavigationBarItem(tab == 2, { go(2) }, { Icon(Icons.Filled.Info, null) }, label = { Text("Info") })
         }
     }
@@ -415,9 +415,16 @@ fun MiniPlayer(now: NowState, c: MediaController?, open: () -> Unit) {
     Row(Modifier.fillMaxWidth().background(Velvet).clickable(onClick = open)
         .padding(12.dp, 10.dp), verticalAlignment = Alignment.CenterVertically) {
         Art(now, 48)
+        val station = now.md.station?.toString() ?: ""
+        val song = now.md.title?.toString() ?: ""
+        val hasSong = song.isNotBlank() && song != station
+        val artist = (now.md.artist?.toString() ?: "").split(" · ").filter { it != station }.joinToString(" · ")
         Column(Modifier.weight(1f).padding(horizontal = 12.dp)) {
-            Text(now.md.title?.toString() ?: "", color = Color.White, fontWeight = FontWeight.SemiBold, maxLines = 1, overflow = TextOverflow.Ellipsis)
-            Text(now.error ?: if (now.buffering) "Connecting…" else now.md.artist?.toString() ?: "",
+            if (hasSong) Text(station, color = Gold, fontSize = 11.sp, fontWeight = FontWeight.Medium, letterSpacing = 0.5.sp,
+                maxLines = 1, overflow = TextOverflow.Ellipsis)
+            Text(if (hasSong) song else station.ifBlank { song }, color = Color.White, fontWeight = FontWeight.SemiBold,
+                maxLines = 1, overflow = TextOverflow.Ellipsis)
+            Text(now.error ?: if (now.buffering) "Connecting…" else if (hasSong) artist else now.md.artist?.toString() ?: "",
                 color = Color(0xFFBDBDBD), fontSize = 13.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
         }
         IconButton({ c?.seekToPreviousMediaItem() }, Modifier.size(48.dp)) { Icon(Icons.Filled.SkipPrevious, "Previous station", tint = Color.White) }
@@ -459,9 +466,14 @@ fun FullPlayer(now: NowState, c: MediaController?, close: () -> Unit) {
                     Spacer(Modifier.height(22.dp))
                     Text(song, color = Color.White, fontSize = 22.sp, fontWeight = FontWeight.SemiBold, maxLines = 2,
                         overflow = TextOverflow.Ellipsis, textAlign = TextAlign.Center)
-                    Text(now.error ?: if (now.buffering) "Connecting…" else now.md.artist?.toString() ?: "",
+                    val hasSong = song.isNotBlank() && song != station
+                    Text(now.error ?: if (now.buffering) "Connecting…"
+                        else if (hasSong) (now.md.artist?.toString() ?: "").split(" · ").filter { it != station }.joinToString(" · ")
+                        else now.md.artist?.toString() ?: "",
                         color = Color(0xFFBDBDBD), fontSize = 15.sp, maxLines = 2, textAlign = TextAlign.Center,
                         modifier = Modifier.padding(top = 4.dp))
+                    if (hasSong) Text("on $station", color = Gold, fontSize = 14.sp, fontWeight = FontWeight.Medium,
+                        textAlign = TextAlign.Center, modifier = Modifier.padding(top = 6.dp))
                     Spacer(Modifier.height(22.dp))
                     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(24.dp)) {
                         IconButton({ c?.seekToPreviousMediaItem() }, Modifier.size(64.dp)) {
