@@ -39,7 +39,7 @@
     box.className = "app-update";
     box.setAttribute("role", "status");
     const h = document.createElement("p"); h.className = "au-title";
-    h.textContent = `New version of the Radio app: ${info.version}`;
+    h.textContent = parseInt(info.version, 10) >= 2 ? `New: Radio Velvet ${info.version}, a much better Radio app` : `New version of the Radio app: ${info.version}`;
     const sub = document.createElement("p"); sub.className = "au-sub";
     sub.textContent = `${have === "1.0" ? "You have an older version." : `You have ${have}.`}${info.date ? ` Released ${when(info.date)}.` : ""}`;
     box.append(h, sub);
@@ -49,7 +49,7 @@
       box.append(ul);
     }
     const tip = document.createElement("p"); tip.className = "au-tip";
-    tip.textContent = "Tap Update, open the downloaded file and install. If Android says the app isn't installed, uninstall this Radio app first, then install the new one.";
+    tip.textContent = "Tap Update, open the downloaded file and install — it replaces this app and keeps working the same way. If Android says the app isn't installed, uninstall this Radio app first, then install the new one.";
     const row = document.createElement("div"); row.className = "au-row";
     const go = document.createElement("a"); go.className = "au-go"; go.href = APK; go.textContent = "Update"; go.rel = "noopener";
     const later = document.createElement("button"); later.className = "au-later"; later.type = "button"; later.textContent = "Later";
