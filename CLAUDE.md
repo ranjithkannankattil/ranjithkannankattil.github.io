@@ -56,14 +56,20 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
   app's built-in browser. `firestore.rules` changes must also be published by hand in the Firebase
   console; tests in `scripts/rules-test/` run on push.
 
-## Radio apps (branch `radio-app`)
-- Capacitor 8 wrapper that loads the live radio.html; Android APK + iOS Xcode project.
-- Version and "what's new" live in `release-notes.json`; every push to `radio-app` builds the APK,
-  publishes GitHub release `radio-app-v<version>` (signed with the permanent key in repo secrets
-  `RADIO_KEYSTORE_B64` / `RADIO_KEYSTORE_PASSWORD`) and compiles the iOS app on macOS as a check.
-  The Radio page's download card and in-app update banner read those releases.
-- iPhone app: free Apple ID, installed from his Mac with Xcode (re-run every 7 days); there is no
-  iPhone app for other people — the site says so.
+## Radio Velvet — the Android app (branch `radio-native`)
+- Native Kotlin + Jetpack Compose + Media3 app named **Radio Velvet** ("Elegant sounds, always free"),
+  app id `com.ranjithkb.radio` (it replaced the old Capacitor wrapper in place, versionCode 2000+run).
+  Reads stations from the live site, plays in a MediaLibraryService (lock screen, calls, Android Auto),
+  live song info (ICY) + iTunes cover art, shareable song card, Google sign-in via `auth-app.html`
+  → Firebase REST, favourites synced with `users/{uid}` like the website.
+- Every push to `radio-native` builds and publishes release `radio-app-v<APP_VERSION>` (version in
+  `.github/workflows/build-native.yml`, notes written there), signed with the permanent key in repo
+  secrets `RADIO_KEYSTORE_B64` / `RADIO_KEYSTORE_PASSWORD`. Bump `APP_VERSION` for each release.
+  The Radio page's download card, the old app's update banner and the app's own Info/Update banner
+  all read those releases.
+- Old Capacitor wrapper: branch `radio-app` (don't push there — it would publish a 1.x release).
+  iPhone: still that wrapper, installed from his Mac with Xcode (free Apple ID, re-run every 7 days);
+  no iPhone app for other people — the site says so.
 
 ## Scholarship finder (productivity/scholarships.html, js/scholarships-data.js)
 Runs without the owner on GitHub. Don't add scheduled Claude tasks: he doesn't want to spend Claude tokens.
