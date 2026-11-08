@@ -1,0 +1,20 @@
+name: diag movies
+on:
+  push:
+    branches: [diag-movies]
+jobs:
+  d:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          curl -s "https://movies-api.ranjeethkkb.workers.dev/home?region=GB" > h.json
+          python3 - <<'PY'
+          import json
+          d=json.load(open("h.json"))
+          for r in d["rows"]:
+              print("ROW", r["kind"], r["title"], len(r["items"]))
+              if r["kind"]=="ml":
+                  print(json.dumps(r["items"][0]))
+                  for x in r["items"]: print("  ", {k:x.get(k) for k in x if k not in ("p","b","o")})
+          PY
+          for q in "kalamkaval" "lokah" "dies irae" "thudarum"; do curl -s "https://movies-api.ranjeethkkb.workers.dev/search?q=$(echo $q|sed 's/ /%20/g')" | head -c 600; echo; done
