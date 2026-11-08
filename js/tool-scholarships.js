@@ -110,6 +110,7 @@
       (canSave ? '<button class="sc-cal" type="button" data-cal="' + esc(s.id) + '">Add deadline to calendar</button>' : '') +
       '</div>' +
       '<p class="sc-checked">Official page last read ' + pretty(read) + '</p>' +
+      (s.found ? '<p class="sc-checked">Added by the weekly search on ' + pretty(s.found) + '. Confirm the details on the official page.</p>' : '') +
       '</li>';
   }
 

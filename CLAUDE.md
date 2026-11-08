@@ -79,7 +79,12 @@ Runs without the owner on GitHub. Don't add scheduled Claude tasks: he doesn't w
 each official page was last read and flags a card if its page changed after the record's `checked` date.
 `scripts/refresh_scholarships.py` then asks Gemini (the free `GEMINI_API_KEY`, no page cap;
 it stops for the day if the free limit is hit) for new deadlines. A date is used only if its exact quote is on the page and it's in the future.
-Dates only: amounts and rules change when he asks. If the free limit is hit, move the job to every 3 days,
+Dates only: amounts and rules change when he asks.
+Pages that block GitHub are retried, tried with curl, then read by Gemini's URL tool (`via: gemini` in the watch file;
+those are compared by dates only and never auto-update deadlines). Every Monday `discover-scholarships.yml` runs
+`scripts/discover_scholarships.py`: Gemini + Google Search suggests missing scholarships, the official page is read
+from GitHub, and a card goes **straight onto the page** (he chose this) only if the page quotes that Indians can apply
+and quotes every date. Max 5 a week; such cards carry `found:` and show an "Added by the weekly search" note. If the free limit is hit, move the job to every 3 days,
 as he suggested. Keep the disclaimer at the top of the page.
 
 ## Milan expat guide (expat/milan/, built by scripts/build_expat.py)

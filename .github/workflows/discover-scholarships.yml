@@ -1,0 +1,51 @@
+name: Find new scholarships
+
+# Every Monday, Gemini (with Google Search) looks for scholarships open to Indian
+# students that aren't on the page yet. Each one is added only if its official
+# page, read here, shows Indians can apply and quotes every date used. See
+# scripts/discover_scholarships.py. Uses the free Gemini key, no Claude.
+on:
+  schedule:
+    - cron: "23 4 * * 1"
+  push:
+    branches: [main]
+    paths: [scripts/discover_scholarships.py]
+  workflow_dispatch:
+    inputs:
+      dry:
+        description: "Only show what would be added (yes/no)"
+        required: false
+        default: "no"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scholarship-check
+  cancel-in-progress: false
+
+jobs:
+  find:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q pypdf
+      - name: Look for new scholarships
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          DRY: ${{ inputs.dry }}
+        run: |
+          if [ "$DRY" = "yes" ]; then python3 scripts/discover_scholarships.py --dry
+          else python3 scripts/discover_scholarships.py; fi
+      - name: Save new cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898732+github-actions[bot]@users.noreply.github.com"
+          git add js/scholarships-data.js productivity/scholarships.html
+          git diff --cached --quiet && exit 0
+          git commit -qm "New scholarships found $(date -u '+%F')"
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep 10; done
