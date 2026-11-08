@@ -15,14 +15,28 @@ To add a topic: write scripts/expat/milan/<id>.html, add it to TOPICS below, run
 and commit the generated pages. To add a city: add it to CITIES and give it a folder.
 """
 import html
+import json
 import re
+from datetime import date, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "scripts" / "expat"
 OUT = ROOT / "expat"
-UPDATED = "November 2026"
-CSS_V = "4"
+WATCH = ROOT / "scripts" / "expat-watch.json"
+CSS_V = "5"
+
+
+def _updated():
+    """Month of the last monthly source check (scripts/check_expat_sources.py), e.g. 'November 2026'."""
+    try:
+        d = date.fromisoformat(json.loads(WATCH.read_text())["last_run"][:10])
+        return d.strftime("%B %Y")
+    except Exception:  # noqa: BLE001  no check has run yet
+        return "November 2026"
+
+
+UPDATED = _updated()
 NAV_V = "19"
 
 GROUPS = [
@@ -227,6 +241,125 @@ HUB_JS = """<script>
 """
 
 
+# ---------- public holidays: always the next 12 months ----------
+HOLS = SRC / "milan" / "holidays.json"
+
+
+def easter(y):
+    """Easter Sunday (Gregorian), the same sum the page's script does."""
+    a, b, c = y % 19, y // 100, y % 100
+    d, e = b // 4, b % 4
+    g = (8 * b + 13) // 25
+    h = (19 * a + b - d - g + 15) % 30
+    i, k = c // 4, c % 4
+    l = (32 + 2 * e + 2 * i - h - k) % 7
+    m = (a + 11 * h + 22 * l) // 451
+    n = h + l - 7 * m + 114
+    return date(y, n // 31, n % 31 + 1)
+
+
+def next_holidays(data, today):
+    """Holidays from today up to the same day next year, in date order."""
+    end = date(today.year + 1, today.month, min(today.day, 28))
+    out = []
+    for y in (today.year, today.year + 1):
+        for r in data["rules"]:
+            if r.get("from") and y < r["from"] or r.get("until") and y > r["until"]:
+                continue
+            d = easter(y) + timedelta(days=r["easter"]) if "easter" in r else date(y, *map(int, r["md"].split("-")))
+            out.append((d, r))
+    for o in data.get("once", []):
+        out.append((date.fromisoformat(o["date"]), o))
+    return sorted(((d, r) for d, r in out if today <= d < end), key=lambda t: t[0])
+
+
+def hol_tag(d, r, days=()):
+    wd = d.weekday()
+    pair = {0: 1, 1: -1, 3: 1, 4: -1}.get(wd)  # Mon+Tue or Thu+Fri off together
+    if pair and d + timedelta(days=pair) in days:
+        return '<em class="t-long">4-day weekend</em>'
+    if wd == 6 and "easter" not in r:
+        return '<em class="t-off">Sunday · no extra day off</em>'
+    if wd == 5:
+        return '<em class="t-off">Saturday · no extra day off</em>'
+    if wd in (0, 4):
+        return '<em class="t-long">Long weekend</em>'
+    if wd in (1, 3):
+        return '<em class="t-ponte">Ponte likely · many take the ' + ("Monday" if wd == 1 else "Friday") + ' off</em>'
+    return ""
+
+
+def hol_row(d, r, days=()):
+    loc = ' <em class="t-local">Milan only</em>' if r.get("local") else ""
+    note = f'<small>{esc(r["note"])}</small>' if r.get("note") else ""
+    return (f'<li data-d="{d.isoformat()}"><time datetime="{d.isoformat()}"><b>{d.day}</b><span>{d.strftime("%b")}</span>'
+            f'<span>{d.strftime("%a")}</span></time><div><b>{esc(r["name"])}</b>{loc}<span lang="it">{esc(r["it"])}</span>'
+            f'{note}{hol_tag(d, r, days)}</div></li>')
+
+
+def holidays_block(today=None):
+    data = json.loads(HOLS.read_text())
+    rows = next_holidays(data, today or date.today())
+    days = {d for d, _ in rows}
+    first, rest = "".join(hol_row(*t, days) for t in rows[:3]), "".join(hol_row(*t, days) for t in rows[3:])
+    rules = json.dumps({"rules": data["rules"], "once": data.get("once", [])}, ensure_ascii=False).replace("</", "<\\/")
+    return f"""<section class="ex-hols" id="holidays" aria-labelledby="hols-h">
+    <div class="ex-hols-h"><h2 id="hols-h">Public holidays</h2><span class="ex-hols-k">Next 12 months · <span id="hols-next"></span></span></div>
+    <p class="muted">Banks, offices and most shops close; museums and many restaurants stay open. Italy doesn't move a holiday that falls on a weekend.</p>
+    <ol class="ex-hol" id="hols-a">{first}</ol>
+    <details class="ex-hols-more"><summary>All {len(rows)} holidays to {(rows[-1][0] if rows else date.today()).strftime("%B %Y")}</summary><ol class="ex-hol" id="hols-b">{rest}</ol></details>
+    <script type="application/json" id="hols-data">{rules}</script>
+  </section>"""
+
+HOLS_JS = """<script>
+(function(){
+  // Re-draws the holiday list from today, so it rolls forward every month without a rebuild.
+  var el=document.getElementById("hols-data"); if(!el) return;
+  var data; try{ data=JSON.parse(el.textContent); }catch(e){ return; }
+  var MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+      FULL=["January","February","March","April","May","June","July","August","September","October","November","December"],
+      WD=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  function easter(y){ var a=y%19,b=Math.floor(y/100),c=y%100,d=Math.floor(b/4),e=b%4,g=Math.floor((8*b+13)/25),
+    h=(19*a+b-d-g+15)%30,i=Math.floor(c/4),k=c%4,l=(32+2*e+2*i-h-k)%7,m=Math.floor((a+11*h+22*l)/451),n=h+l-7*m+114;
+    return new Date(y,Math.floor(n/31)-1,n%31+1); }
+  function iso(d){ return d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2); }
+  function esc(s){ return String(s).replace(/[&<>"]/g,function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+  var now=new Date(), today=new Date(now.getFullYear(),now.getMonth(),now.getDate()),
+      end=new Date(today.getFullYear()+1,today.getMonth(),Math.min(today.getDate(),28)), list=[];
+  [today.getFullYear(), today.getFullYear()+1].forEach(function(y){
+    data.rules.forEach(function(r){
+      if((r.from && y<r.from) || (r.until && y>r.until)) return;
+      var d; if("easter" in r){ d=easter(y); d.setDate(d.getDate()+r.easter); }
+      else { var p=r.md.split("-"); d=new Date(y,+p[0]-1,+p[1]); }
+      list.push([d,r]);
+    });
+  });
+  (data.once||[]).forEach(function(o){ var p=o.date.split("-"); list.push([new Date(+p[0],+p[1]-1,+p[2]),o]); });
+  list=list.filter(function(t){ return t[0]>=today && t[0]<end; }).sort(function(a,b){ return a[0]-b[0]; });
+  if(!list.length) return;
+  var on={}; list.forEach(function(t){ on[iso(t[0])]=1; });
+  function tag(d,r){ var w=d.getDay(), ea=("easter" in r), pr={1:1,2:-1,4:1,5:-1}[w];
+    if(pr){ var o=new Date(d); o.setDate(o.getDate()+pr); if(on[iso(o)]) return '<em class="t-long">4-day weekend</em>'; }
+    if(w===0 && !ea) return '<em class="t-off">Sunday · no extra day off</em>';
+    if(w===6) return '<em class="t-off">Saturday · no extra day off</em>';
+    if(w===1||w===5) return '<em class="t-long">Long weekend</em>';
+    if(w===2||w===4) return '<em class="t-ponte">Ponte likely · many take the '+(w===2?"Monday":"Friday")+' off</em>';
+    return ""; }
+  function row(t){ var d=t[0], r=t[1];
+    return '<li data-d="'+iso(d)+'"><time datetime="'+iso(d)+'"><b>'+d.getDate()+'</b><span>'+MON[d.getMonth()]+'</span><span>'+WD[d.getDay()]+'</span></time><div><b>'+esc(r.name)+'</b>'+
+      (r.local?' <em class="t-local">Milan only</em>':'')+'<span lang="it">'+esc(r.it)+'</span>'+(r.note?'<small>'+esc(r.note)+'</small>':'')+tag(d,r)+'</div></li>'; }
+  document.getElementById("hols-a").innerHTML=list.slice(0,3).map(row).join("");
+  document.getElementById("hols-b").innerHTML=list.slice(3).map(row).join("");
+  var last=list[list.length-1][0], sum=document.querySelector(".ex-hols-more summary");
+  if(sum) sum.textContent="All "+list.length+" holidays to "+FULL[last.getMonth()]+" "+last.getFullYear();
+  var days=Math.round((list[0][0]-today)/864e5), nx=document.getElementById("hols-next");
+  if(nx) nx.textContent= days===0 ? "today is a holiday" : days===1 ? "next one tomorrow" : "next in "+days+" days";
+  var first=document.querySelector("#hols-a li"); if(first) first.classList.add("is-next");
+})();
+</script>
+"""
+
+
 def build_topic(city, i):
     tid, gid, title, short, blurb, keys = TOPICS[i]
     body = (SRC / city / f"{tid}.html").read_text()
@@ -311,6 +444,8 @@ def build_city_hub(city, cname, sub, blurb):
     <div><span class="n">+39 02 290351</span><span>US Consulate</span></div>
   </div>
 
+  {holidays_block()}
+
   <div class="ex-find">
     <label for="ex-q">Find a topic</label>
     <input id="ex-q" type="search" placeholder="Try: licence, rent, Cigna, SIM, gym" autocomplete="off">
@@ -321,7 +456,7 @@ def build_city_hub(city, cname, sub, blurb):
 
   <p class="ex-src-link">Checked {UPDATED}. <a href="sources.html">All sources</a></p>
 """
-    page += foot("../../", HUB_JS)
+    page += foot("../../", HUB_JS + HOLS_JS)
     (OUT / city / "index.html").write_text(page)
 
 

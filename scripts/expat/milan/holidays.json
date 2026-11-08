@@ -1,0 +1,26 @@
+{
+  "_about": "Public holidays shown on the Milan page (expat/milan/). The page lists the next 12 months from today, so it rolls forward on its own. 'md' is month-day; 'easter' is days after Easter Sunday; 'from'/'until' limit a rule to some years; 'once' lists one-off dates (YYYY-MM-DD). scripts/check_expat_sources.py re-checks this list every month against 'sources' and may add a holiday it finds there, with the quote it found.",
+  "checked": "2026-11-08",
+  "sources": [
+    "https://en.wikipedia.org/wiki/Public_holidays_in_Italy",
+    "https://it.wikipedia.org/wiki/Festivit%C3%A0_in_Italia",
+    "https://www.fiscal-focus.it/quotidiano/il-quotidiano/articoli-lavoro/istituita-la-festa-nazionale-di-san-francesco-d-assisi-il-4-ottobre-diventa-giorno-festivo-dal-2026,3,178265"
+  ],
+  "rules": [
+    {"md": "01-01", "name": "New Year's Day", "it": "Capodanno"},
+    {"md": "01-06", "name": "Epiphany", "it": "Epifania"},
+    {"easter": 0, "name": "Easter Sunday", "it": "Pasqua"},
+    {"easter": 1, "name": "Easter Monday", "it": "Lunedì dell'Angelo · Pasquetta"},
+    {"md": "04-25", "name": "Liberation Day", "it": "Festa della Liberazione"},
+    {"md": "05-01", "name": "Labour Day", "it": "Festa dei Lavoratori"},
+    {"md": "06-02", "name": "Republic Day", "it": "Festa della Repubblica"},
+    {"md": "08-15", "name": "Ferragosto", "it": "Assunzione di Maria", "note": "The city empties for 2–3 weeks around it"},
+    {"md": "10-04", "name": "St Francis of Assisi", "it": "San Francesco d'Assisi", "from": 2026, "note": "National holiday again from 2026"},
+    {"md": "11-01", "name": "All Saints' Day", "it": "Ognissanti"},
+    {"md": "12-07", "name": "Sant'Ambrogio", "it": "Patron saint of Milan", "local": true, "note": "City offices, schools and many shops close; La Scala opens its season"},
+    {"md": "12-08", "name": "Immaculate Conception", "it": "Immacolata Concezione"},
+    {"md": "12-25", "name": "Christmas Day", "it": "Natale"},
+    {"md": "12-26", "name": "St Stephen's Day", "it": "Santo Stefano"}
+  ],
+  "once": []
+}

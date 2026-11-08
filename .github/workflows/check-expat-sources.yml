@@ -1,0 +1,54 @@
+name: Check Milan guide sources
+
+# On the 1st of every month, re-reads every source behind the Milan expat guide
+# (expat/milan/), lets Gemini correct figures that changed (fees, dates, prices,
+# percentages) when the source sentence proves it, re-checks the public-holiday
+# list, moves the guide's "Checked <month>" line on and rebuilds the pages.
+# Anything it can't safely change itself, and links that stopped loading, are
+# posted as a GitHub issue for the owner. Uses the free GEMINI_API_KEY, no Claude.
+# The holiday list on the page rolls forward by itself every day; this job only
+# checks that the list of holidays is still right.
+on:
+  schedule:
+    - cron: "17 4 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: expat-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Read the sources and update the guide
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+        run: python3 scripts/check_expat_sources.py
+      - name: Save the updated guide
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898732+github-actions[bot]@users.noreply.github.com"
+          git add scripts/expat-watch.json scripts/expat-report.md scripts/expat-review.md scripts/expat/milan expat
+          git diff --cached --quiet && exit 0
+          git commit -qm "Milan guide: monthly source check $(date -u '+%B %Y')"
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep 10; done
+      - name: Post anything that needs a person
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          [ -s scripts/expat-review.md ] || exit 0
+          title="Milan guide: things to check ($(date -u '+%B %Y'))"
+          for n in $(gh issue list --state open --search "Milan guide: things to check in:title" --json number -q '.[].number'); do
+            gh issue close "$n" --comment "Replaced by this month's check." || true
+          done
+          gh issue create --title "$title" --body-file scripts/expat-review.md

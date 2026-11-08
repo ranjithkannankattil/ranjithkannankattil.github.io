@@ -21,8 +21,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
-<link rel="stylesheet" href="../../css/style.css?v=18">
-<link rel="stylesheet" href="../../css/expat.css?v=4">
+<link rel="stylesheet" href="../../css/style.css?v=17">
+<link rel="stylesheet" href="../../css/expat.css?v=5">
 </head>
 <body data-section="expat">
 
@@ -63,6 +63,14 @@
     <div><span class="n">+39 02 290351</span><span>US Consulate</span></div>
   </div>
 
+  <section class="ex-hols" id="holidays" aria-labelledby="hols-h">
+    <div class="ex-hols-h"><h2 id="hols-h">Public holidays</h2><span class="ex-hols-k">Next 12 months · <span id="hols-next"></span></span></div>
+    <p class="muted">Banks, offices and most shops close; museums and many restaurants stay open. Italy doesn't move a holiday that falls on a weekend.</p>
+    <ol class="ex-hol" id="hols-a"><li data-d="2026-12-07"><time datetime="2026-12-07"><b>7</b><span>Dec</span><span>Mon</span></time><div><b>Sant&#x27;Ambrogio</b> <em class="t-local">Milan only</em><span lang="it">Patron saint of Milan</span><small>City offices, schools and many shops close; La Scala opens its season</small><em class="t-long">4-day weekend</em></div></li><li data-d="2026-12-08"><time datetime="2026-12-08"><b>8</b><span>Dec</span><span>Tue</span></time><div><b>Immaculate Conception</b><span lang="it">Immacolata Concezione</span><em class="t-long">4-day weekend</em></div></li><li data-d="2026-12-25"><time datetime="2026-12-25"><b>25</b><span>Dec</span><span>Fri</span></time><div><b>Christmas Day</b><span lang="it">Natale</span><em class="t-long">Long weekend</em></div></li></ol>
+    <details class="ex-hols-more"><summary>All 14 holidays to November 2027</summary><ol class="ex-hol" id="hols-b"><li data-d="2026-12-26"><time datetime="2026-12-26"><b>26</b><span>Dec</span><span>Sat</span></time><div><b>St Stephen&#x27;s Day</b><span lang="it">Santo Stefano</span><em class="t-off">Saturday · no extra day off</em></div></li><li data-d="2027-01-01"><time datetime="2027-01-01"><b>1</b><span>Jan</span><span>Fri</span></time><div><b>New Year&#x27;s Day</b><span lang="it">Capodanno</span><em class="t-long">Long weekend</em></div></li><li data-d="2027-01-06"><time datetime="2027-01-06"><b>6</b><span>Jan</span><span>Wed</span></time><div><b>Epiphany</b><span lang="it">Epifania</span></div></li><li data-d="2027-03-28"><time datetime="2027-03-28"><b>28</b><span>Mar</span><span>Sun</span></time><div><b>Easter Sunday</b><span lang="it">Pasqua</span></div></li><li data-d="2027-03-29"><time datetime="2027-03-29"><b>29</b><span>Mar</span><span>Mon</span></time><div><b>Easter Monday</b><span lang="it">Lunedì dell&#x27;Angelo · Pasquetta</span><em class="t-long">Long weekend</em></div></li><li data-d="2027-04-25"><time datetime="2027-04-25"><b>25</b><span>Apr</span><span>Sun</span></time><div><b>Liberation Day</b><span lang="it">Festa della Liberazione</span><em class="t-off">Sunday · no extra day off</em></div></li><li data-d="2027-05-01"><time datetime="2027-05-01"><b>1</b><span>May</span><span>Sat</span></time><div><b>Labour Day</b><span lang="it">Festa dei Lavoratori</span><em class="t-off">Saturday · no extra day off</em></div></li><li data-d="2027-06-02"><time datetime="2027-06-02"><b>2</b><span>Jun</span><span>Wed</span></time><div><b>Republic Day</b><span lang="it">Festa della Repubblica</span></div></li><li data-d="2027-08-15"><time datetime="2027-08-15"><b>15</b><span>Aug</span><span>Sun</span></time><div><b>Ferragosto</b><span lang="it">Assunzione di Maria</span><small>The city empties for 2–3 weeks around it</small><em class="t-off">Sunday · no extra day off</em></div></li><li data-d="2027-10-04"><time datetime="2027-10-04"><b>4</b><span>Oct</span><span>Mon</span></time><div><b>St Francis of Assisi</b><span lang="it">San Francesco d&#x27;Assisi</span><small>National holiday again from 2026</small><em class="t-long">Long weekend</em></div></li><li data-d="2027-11-01"><time datetime="2027-11-01"><b>1</b><span>Nov</span><span>Mon</span></time><div><b>All Saints&#x27; Day</b><span lang="it">Ognissanti</span><em class="t-long">Long weekend</em></div></li></ol></details>
+    <script type="application/json" id="hols-data">{"rules": [{"md": "01-01", "name": "New Year's Day", "it": "Capodanno"}, {"md": "01-06", "name": "Epiphany", "it": "Epifania"}, {"easter": 0, "name": "Easter Sunday", "it": "Pasqua"}, {"easter": 1, "name": "Easter Monday", "it": "Lunedì dell'Angelo · Pasquetta"}, {"md": "04-25", "name": "Liberation Day", "it": "Festa della Liberazione"}, {"md": "05-01", "name": "Labour Day", "it": "Festa dei Lavoratori"}, {"md": "06-02", "name": "Republic Day", "it": "Festa della Repubblica"}, {"md": "08-15", "name": "Ferragosto", "it": "Assunzione di Maria", "note": "The city empties for 2–3 weeks around it"}, {"md": "10-04", "name": "St Francis of Assisi", "it": "San Francesco d'Assisi", "from": 2026, "note": "National holiday again from 2026"}, {"md": "11-01", "name": "All Saints' Day", "it": "Ognissanti"}, {"md": "12-07", "name": "Sant'Ambrogio", "it": "Patron saint of Milan", "local": true, "note": "City offices, schools and many shops close; La Scala opens its season"}, {"md": "12-08", "name": "Immaculate Conception", "it": "Immacolata Concezione"}, {"md": "12-25", "name": "Christmas Day", "it": "Natale"}, {"md": "12-26", "name": "St Stephen's Day", "it": "Santo Stefano"}], "once": []}</script>
+  </section>
+
   <div class="ex-find">
     <label for="ex-q">Find a topic</label>
     <input id="ex-q" type="search" placeholder="Try: licence, rent, Cigna, SIM, gym" autocomplete="off">
@@ -93,7 +101,53 @@
   });
 })();
 </script>
-<script src="../../js/nav.js?v=21" defer></script>
+<script>
+(function(){
+  // Re-draws the holiday list from today, so it rolls forward every month without a rebuild.
+  var el=document.getElementById("hols-data"); if(!el) return;
+  var data; try{ data=JSON.parse(el.textContent); }catch(e){ return; }
+  var MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+      FULL=["January","February","March","April","May","June","July","August","September","October","November","December"],
+      WD=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  function easter(y){ var a=y%19,b=Math.floor(y/100),c=y%100,d=Math.floor(b/4),e=b%4,g=Math.floor((8*b+13)/25),
+    h=(19*a+b-d-g+15)%30,i=Math.floor(c/4),k=c%4,l=(32+2*e+2*i-h-k)%7,m=Math.floor((a+11*h+22*l)/451),n=h+l-7*m+114;
+    return new Date(y,Math.floor(n/31)-1,n%31+1); }
+  function iso(d){ return d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2); }
+  function esc(s){ return String(s).replace(/[&<>"]/g,function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+  var now=new Date(), today=new Date(now.getFullYear(),now.getMonth(),now.getDate()),
+      end=new Date(today.getFullYear()+1,today.getMonth(),Math.min(today.getDate(),28)), list=[];
+  [today.getFullYear(), today.getFullYear()+1].forEach(function(y){
+    data.rules.forEach(function(r){
+      if((r.from && y<r.from) || (r.until && y>r.until)) return;
+      var d; if("easter" in r){ d=easter(y); d.setDate(d.getDate()+r.easter); }
+      else { var p=r.md.split("-"); d=new Date(y,+p[0]-1,+p[1]); }
+      list.push([d,r]);
+    });
+  });
+  (data.once||[]).forEach(function(o){ var p=o.date.split("-"); list.push([new Date(+p[0],+p[1]-1,+p[2]),o]); });
+  list=list.filter(function(t){ return t[0]>=today && t[0]<end; }).sort(function(a,b){ return a[0]-b[0]; });
+  if(!list.length) return;
+  var on={}; list.forEach(function(t){ on[iso(t[0])]=1; });
+  function tag(d,r){ var w=d.getDay(), ea=("easter" in r), pr={1:1,2:-1,4:1,5:-1}[w];
+    if(pr){ var o=new Date(d); o.setDate(o.getDate()+pr); if(on[iso(o)]) return '<em class="t-long">4-day weekend</em>'; }
+    if(w===0 && !ea) return '<em class="t-off">Sunday · no extra day off</em>';
+    if(w===6) return '<em class="t-off">Saturday · no extra day off</em>';
+    if(w===1||w===5) return '<em class="t-long">Long weekend</em>';
+    if(w===2||w===4) return '<em class="t-ponte">Ponte likely · many take the '+(w===2?"Monday":"Friday")+' off</em>';
+    return ""; }
+  function row(t){ var d=t[0], r=t[1];
+    return '<li data-d="'+iso(d)+'"><time datetime="'+iso(d)+'"><b>'+d.getDate()+'</b><span>'+MON[d.getMonth()]+'</span><span>'+WD[d.getDay()]+'</span></time><div><b>'+esc(r.name)+'</b>'+
+      (r.local?' <em class="t-local">Milan only</em>':'')+'<span lang="it">'+esc(r.it)+'</span>'+(r.note?'<small>'+esc(r.note)+'</small>':'')+tag(d,r)+'</div></li>'; }
+  document.getElementById("hols-a").innerHTML=list.slice(0,3).map(row).join("");
+  document.getElementById("hols-b").innerHTML=list.slice(3).map(row).join("");
+  var last=list[list.length-1][0], sum=document.querySelector(".ex-hols-more summary");
+  if(sum) sum.textContent="All "+list.length+" holidays to "+FULL[last.getMonth()]+" "+last.getFullYear();
+  var days=Math.round((list[0][0]-today)/864e5), nx=document.getElementById("hols-next");
+  if(nx) nx.textContent= days===0 ? "today is a holiday" : days===1 ? "next one tomorrow" : "next in "+days+" days";
+  var first=document.querySelector("#hols-a li"); if(first) first.classList.add("is-next");
+})();
+</script>
+<script src="../../js/nav.js?v=19" defer></script>
 <script src="../../js/visits.js?v=2" defer></script>
 </body>
 </html>

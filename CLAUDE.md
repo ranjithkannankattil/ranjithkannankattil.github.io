@@ -82,6 +82,16 @@ it stops for the day if the free limit is hit) for new deadlines. A date is used
 Dates only: amounts and rules change when he asks. If the free limit is hit, move the job to every 3 days,
 as he suggested. Keep the disclaimer at the top of the page.
 
+## Milan expat guide (expat/milan/, built by scripts/build_expat.py)
+Edit the content in `scripts/expat/milan/<topic>.html`, then run `python3 scripts/build_expat.py` and commit both.
+The Milan hub shows public holidays for the next 12 months from `scripts/expat/milan/holidays.json`; a small
+script on the page redraws the list from today, so it rolls forward on its own. On the 1st of each month
+`check-expat-sources.yml` runs `scripts/check_expat_sources.py`: it re-reads every source (topic links plus
+`sources.html`, where `<li data-topics>` says which topics a source backs), lets Gemini (free key, no Claude)
+fix only figures/dates whose new value is quoted on the source page, checks the holiday list, moves the
+"Checked <month>" line on and opens a GitHub issue for anything a person must look at. Don't add a scheduled
+Claude task for it.
+
 ## News (archived)
 Archived by the owner: unlinked, `noindex`, and `build-news.yml` runs by hand only. `news.html` is a short
 note; the full page is saved at `docs/archived/news-page.html` and the code is still in the repo.

@@ -222,3 +222,28 @@
 .ex .ex-also{ margin-top:2rem; padding-top:1rem; border-top:1px solid var(--line); }
 .ex .tag-ok{ background:var(--ok-bg); color:var(--ok-fg); }
 .ex .tag-pick{ background:var(--accent-soft); color:var(--accent); }
+
+/* public holidays on the city hub (next 12 months, re-drawn from today) */
+.ex .ex-hols{ margin-top:1.6rem; padding:1.1rem 1.2rem 1rem; background:var(--surface); border:1px solid var(--line); border-radius:10px; }
+.ex .ex-hols-h{ display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:.2rem 1rem; }
+.ex .ex-hols-h h2{ font-size:1.3rem; margin:0; }
+.ex .ex-hols-k{ font-family:var(--f-mono); font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); }
+.ex .ex-hols > p{ margin:.4rem 0 .2rem; font-size:.92rem; }
+.ex .ex-hol{ list-style:none; margin:0; padding:0; display:grid; }
+.ex .ex-hol li{ display:grid; grid-template-columns:3.6rem 1fr; gap:.9rem; align-items:start; padding:.75rem 0; border-top:1px solid var(--line); }
+.ex .ex-hol li:first-child{ border-top:0; }
+.ex .ex-hol time{ display:grid; justify-items:center; padding:.35rem 0; border-radius:8px; background:var(--paper-2); font-family:var(--f-mono); font-size:.66rem; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft); line-height:1.3; }
+.ex .ex-hol time b{ font-family:var(--f-display); font-size:1.35rem; letter-spacing:0; color:var(--ink); line-height:1.1; }
+.ex .ex-hol li.is-next time{ background:var(--accent-soft); }
+.ex .ex-hol li.is-next time b{ color:var(--accent); }
+.ex .ex-hol div{ display:flex; flex-wrap:wrap; align-items:baseline; gap:.15rem .5rem; min-width:0; }
+.ex .ex-hol div > b{ font-family:var(--f-display); font-weight:600; font-size:1.02rem; }
+.ex .ex-hol div > span{ flex-basis:100%; font-size:.9rem; color:var(--ink-soft); font-style:italic; }
+.ex .ex-hol small{ flex-basis:100%; font-size:.85rem; color:var(--ink-soft); }
+.ex .ex-hol em{ font-style:normal; font-family:var(--f-mono); font-size:.64rem; letter-spacing:.05em; text-transform:uppercase; padding:2px 8px; border-radius:999px; border:1px solid var(--line); color:var(--ink-soft); }
+.ex .ex-hol em.t-local{ color:var(--accent); border-color:var(--accent); }
+.ex .ex-hol em.t-long, .ex .ex-hol em.t-ponte{ background:var(--ok-bg); color:var(--ok-fg); border-color:transparent; }
+.ex .ex-hol div > em:not(.t-local){ margin-top:.3rem; }
+.ex .ex-hols-more{ margin-top:.2rem; border-top:1px solid var(--line); }
+.ex .ex-hols-more summary{ cursor:pointer; min-height:44px; display:flex; align-items:center; font-family:var(--f-mono); font-size:.74rem; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); }
+.ex .ex-hols-more[open] summary{ border-bottom:1px solid var(--line); }
