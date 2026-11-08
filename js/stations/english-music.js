@@ -1057,8 +1057,7 @@ window.STATIONS = [
       "https://puma.streemlion.com:2125/stream"
     ],
     "where": "Canada",
-    "added": "2026-11-02",
-    "offline": true
+    "added": "2026-11-02"
   },
   {
     "id": "radio-country-live-new-york",
@@ -1479,4 +1478,4 @@ window.STATIONS = [
     "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

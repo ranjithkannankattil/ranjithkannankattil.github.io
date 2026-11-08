@@ -627,8 +627,7 @@ window.STATIONS = [
       "https://naijafmlagos-atunwadigital.streamguys1.com/naijafmlagos/playlist.m3u8"
     ],
     "added": "2026-10-27",
-    "where": "Nigeria",
-    "offline": true
+    "where": "Nigeria"
   },
   {
     "id": "cfrb-news-talk-1010-toronto-on",
@@ -1299,6 +1298,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "where": "Australia"
+  },
+  {
+    "id": "rri-voice-of-indonesia",
+    "name": "RRI Voice Of Indonesia",
+    "category": "world",
+    "streams": [
+      "https://stream-node0.rri.co.id/streaming/25/9125/voi.mp3"
+    ],
+    "added": "2026-11-08",
+    "where": "Indonesia"
+  },
+  {
+    "id": "drgnu-metalcore-1",
+    "name": "DrGnu - Metalcore 1",
+    "category": "world",
+    "streams": [
+      "https://streams.radiobob.de/metalcore/mp3-192/mediaplayer"
+    ],
+    "added": "2026-11-08",
+    "where": "Germany"
+  },
+  {
+    "id": "kyebi-radio",
+    "name": "Kyebi Radio",
+    "category": "sport",
+    "streams": [
+      "https://stream.zenolive.com/ep91zyvc9zquv"
+    ],
+    "added": "2026-11-08",
+    "where": "Ghana"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

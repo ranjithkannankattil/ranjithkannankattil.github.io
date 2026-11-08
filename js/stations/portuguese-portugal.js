@@ -92,8 +92,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "m80-radio-ballads",
@@ -206,8 +205,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8",
       "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "golofm",
@@ -231,7 +229,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "cidade-fm-2",
@@ -280,7 +279,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8",
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rca-radio-clube-de-armamar",
@@ -339,8 +339,7 @@ window.STATIONS = [
     "streams": [
       "https://stream-hls.bauermedia.pt/comercial.aac/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "rdp-africa-portugal",
@@ -359,8 +358,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -468,7 +466,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.ruc.pt/high"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "m80-radio-dance",
@@ -1206,8 +1205,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena3madeira80a/playlist.m3u8"
     ],
-    "added": "2026-11-07",
-    "offline": true
+    "added": "2026-11-07"
   },
   {
     "id": "radio-quantica",
@@ -1226,6 +1224,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/77r7ufhaz98uv"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "radio-portugal-mais",
+    "name": "Radio Portugal Mais",
+    "category": "music",
+    "streams": [
+      "https://sv15.hdradios.net:7432/stream"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "rua-fm",
+    "name": "RUA FM",
+    "category": "music",
+    "streams": [
+      "https://centova.radio.com.pt/proxy/037?mp=/stream"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "radiofutura-pt",
+    "name": "Radiofutura Pt",
+    "category": "music",
+    "streams": [
+      "https://s4.radio.co/s7e7b6c165/low"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

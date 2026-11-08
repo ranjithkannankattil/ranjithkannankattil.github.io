@@ -24,8 +24,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://atunwadigital.streamguys1.com/angelfm"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "nhyira-104-5-fm",
@@ -50,8 +49,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sunny-radio-server.cloud-ip.cc/radio/sunnyradio?t=1782488511159"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "agoo-96-9-fm",
@@ -481,4 +479,4 @@ window.STATIONS = [
     "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

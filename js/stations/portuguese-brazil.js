@@ -744,7 +744,8 @@ window.STATIONS = [
     "streams": [
       "https://www.appradio.app:8010//live"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "offline": true
   },
   {
     "id": "radio-grenal",
@@ -798,8 +799,7 @@ window.STATIONS = [
     "streams": [
       "https://stm12.xcast.com.br:9454/stream"
     ],
-    "added": "2026-10-31",
-    "offline": true
+    "added": "2026-10-31"
   },
   {
     "id": "radio-reggae-brasil",
@@ -1250,6 +1250,33 @@ window.STATIONS = [
       "https://5a57bda70564a.streamlock.net/terragaucha/terragaucha.stream/playlist.m3u8"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "gay-fm-brasil",
+    "name": "Gay FM Brasil",
+    "category": "music",
+    "streams": [
+      "https://gayfmbr.mooo.com/listen/gay_fm_br/radio.mp3"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "radio-animu",
+    "name": "Radio Animu",
+    "category": "music",
+    "streams": [
+      "https://stream.animu.moe/192"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "hunter-fm-lo-fi",
+    "name": "Hunter.FM Lo-Fi",
+    "category": "music",
+    "streams": [
+      "https://live.hunter.fm/lofi_normal"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

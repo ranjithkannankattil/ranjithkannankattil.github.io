@@ -65,7 +65,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://mdr13.ddns.net/radio/am1197"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "requestradio-inter-alt",
@@ -293,8 +294,7 @@ window.STATIONS = [
     "streams": [
       "https://radio11.plathong.net/7050/;stream.mp3"
     ],
-    "added": "2026-10-29",
-    "offline": true
+    "added": "2026-10-29"
   },
   {
     "id": "translation-of-the-quran-in-thai",
@@ -351,4 +351,4 @@ window.STATIONS = [
     "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

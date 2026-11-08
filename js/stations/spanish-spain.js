@@ -1243,6 +1243,33 @@ window.STATIONS = [
       "https://s4.radio.co/seeae9c220/listen"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "ibiza-world-club-tour-channel",
+    "name": "Ibiza World Club Tour Channel",
+    "category": "music",
+    "streams": [
+      "https://ibiza-audiomediaradio.radioca.st/ibiza"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "maxima-fm",
+    "name": "Maxima Fm",
+    "category": "music",
+    "streams": [
+      "https://en-directo.frequence-radio.com/amp/redirect.php?radio=maxima-fm"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "doom-radio-beats-to-rip-tear-to",
+    "name": "DOOM Radio - Beats to Rip/Tear to",
+    "category": "music",
+    "streams": [
+      "https://dcealopez.es/rip-tear-radio-live"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

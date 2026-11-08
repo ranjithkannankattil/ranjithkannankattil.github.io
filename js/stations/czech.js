@@ -1161,6 +1161,15 @@ window.STATIONS = [
       "https://ice.abradio.cz/hitpoprock128.mp3"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "aspira-radio",
+    "name": "Aspira Radio",
+    "category": "music",
+    "streams": [
+      "https://www.aspiraradio.cz/radio/8000/radio.mp3?aspira"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

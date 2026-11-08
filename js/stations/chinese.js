@@ -201,8 +201,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-17",
@@ -925,7 +924,8 @@ window.STATIONS = [
     "streams": [
       "https://play-radio-stream3.hndt.com/now/JxkyN5mR/chunklist.m3u8"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "offline": true
   },
   {
     "id": "cctv-9",
@@ -1178,6 +1178,33 @@ window.STATIONS = [
       "https://lhttp-hw.qtfm.cn/live/275/64k.mp3"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "my-fm",
+    "name": "MY FM",
+    "category": "music",
+    "streams": [
+      "https://stream.rcs.revma.com/hc3unrtbv4uvv/hls.m3u8"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "cityplus-fm",
+    "name": "CITYPlus FM",
+    "category": "music",
+    "streams": [
+      "https://stream.rcs.revma.com/9ykdmcawe1bwv"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "station-57",
+    "name": "军事新闻",
+    "category": "music",
+    "streams": [
+      "https://rscdn.ajmide.com/r_3124/nglive_3124.m3u8"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

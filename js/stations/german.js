@@ -1247,6 +1247,33 @@ window.STATIONS = [
       "https://edge62.streamonkey.net/energy-digital/stream/mp3"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "mosh-head-black-metal-id",
+    "name": "Mosh Head Black Metal ID",
+    "category": "music",
+    "streams": [
+      "https://moshhead-blackmetal.stream.laut.fm/moshhead-blackmetal"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "hr4",
+    "name": "Hr4",
+    "category": "music",
+    "streams": [
+      "https://dispatcher.rndfnk.com/hr/hr4/live/mp3/high"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "90s90s-grunge",
+    "name": "90s90s Grunge",
+    "category": "music",
+    "streams": [
+      "https://streams.90s90s.de/grunge/mp3-192/"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

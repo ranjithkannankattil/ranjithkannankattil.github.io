@@ -1115,7 +1115,8 @@ window.STATIONS = [
     "streams": [
       "https://radios.blumhost.es/8124/;"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "offline": true
   },
   {
     "id": "la-tukka-ec",
@@ -1242,6 +1243,33 @@ window.STATIONS = [
       "https://radioforte.com/8006/stream"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "sonar-105-3-fm",
+    "name": "Sonar 105.3 FM",
+    "category": "news",
+    "streams": [
+      "https://mdstrm.com/audio/5c915724519bce27671c4d15/icecast.audio?property=radiobox"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "jc-la-bruja",
+    "name": "JC La Bruja",
+    "category": "music",
+    "streams": [
+      "https://s7.yesstreaming.net:8040/stream?1655753305283"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "rosate-con-bachata",
+    "name": "Rosate con bachata",
+    "category": "music",
+    "streams": [
+      "https://stream-281.surfernetwork.com/uagzy1yc5uhvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ1YWd6eTF5YzV1aHZ2IiwiaG9zdCI6InN0cmVhbS0yODEuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6IjBFSV9vQVpBVEtHc0VBX3J3T0RrZlEiLCJpYXQiOjE3OTM5NDk3NTcsImV4cCI6MTc5Mzk0OTgxN30.yJdWIGTlnxbBPejAre1ZXxcIVLseydSl_SkNh8LF3AY"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

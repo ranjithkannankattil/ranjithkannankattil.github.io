@@ -1188,6 +1188,33 @@ window.STATIONS = [
       "https://radio1.dixi.md/listen/relax_tricolor/relaxtricolor128.aac"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "sky-fm-radio-sky-constanta-101-1-fm",
+    "name": "Sky FM - Radio Sky Constanța 101.1 FM",
+    "category": "music",
+    "streams": [
+      "https://live.radiosky.ro/radiosky.mp3"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "soft-rock-radio",
+    "name": "Soft Rock Radio",
+    "category": "music",
+    "streams": [
+      "https://gold.streamguys1.com/softrock.mp3"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "west-city-radio",
+    "name": "West City Radio",
+    "category": "music",
+    "streams": [
+      "https://live.westcityradio.ro:8000/mp3"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

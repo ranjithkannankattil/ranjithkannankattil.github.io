@@ -153,7 +153,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://r1.cloudskep.com/radio/diesi/icecast.audio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "99-1",
@@ -456,7 +457,8 @@ window.STATIONS = [
     "streams": [
       "https://r1.cloudskep.com/cybcr/cybc3/icecast.audio"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "athens-radio-trance",
@@ -708,7 +710,8 @@ window.STATIONS = [
     "streams": [
       "https://r1.cloudskep.com/cybcr/cybc1/icecast.audio"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "offline": true
   },
   {
     "id": "rainbow-89-pop",
@@ -1267,6 +1270,33 @@ window.STATIONS = [
       "https://centova.gr-net.gr/proxy/dimitrio/stream"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "velvet-ballads-96-8-fm",
+    "name": "Velvet Ballads 96.8 FM",
+    "category": "music",
+    "streams": [
+      "https://metromedia.live24.gr/velvet968thess"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "amvrakia-fm-91-9",
+    "name": "Amvrakia Fm 91.9",
+    "category": "music",
+    "streams": [
+      "https://ice.streams.ovh:1195/stream"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "chroma-105-8-thessaloniki",
+    "name": "Chroma 105.8 - Thessaloniki",
+    "category": "music",
+    "streams": [
+      "https://hroma1058thess.live24.gr/hroma1058thess"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

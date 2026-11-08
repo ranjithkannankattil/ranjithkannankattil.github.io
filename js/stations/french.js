@@ -1193,6 +1193,33 @@ window.STATIONS = [
       "https://stream.radiofrance.fr/fipcultes/fipcultes.m3u8?id=radiofranceBose"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "atlantic-radio-maroc",
+    "name": "Atlantic Radio Maroc",
+    "category": "news",
+    "streams": [
+      "https://atlantic-sonic.nindohost.net:9300/stream"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "radio-fg-at-work",
+    "name": "Radio FG at work",
+    "category": "music",
+    "streams": [
+      "https://stream.rcs.revma.com/2v1zz979n98uv"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "timtimol-fm-91-9-ourossogui",
+    "name": "Timtimol FM 91.9 Ourossogui",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/4yx608hnu1duv"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

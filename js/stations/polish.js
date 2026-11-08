@@ -194,8 +194,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.24dubstep.pl/radio/8000/mp3_normal"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "zote-przeboje-poznan",
@@ -1098,6 +1097,33 @@ window.STATIONS = [
       "https://s3.slotex.pl/shoutcast/7496/stream"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "zet-impreza",
+    "name": "ZET Impreza",
+    "category": "music",
+    "streams": [
+      "https://zt.cdn.eurozet.pl/ZETPAR.mp3"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "beat-city-warszawa",
+    "name": "Beat City Warszawa",
+    "category": "news",
+    "streams": [
+      "https://radio.beatcity.pl/listen/beat_city_warszawa/radio.mp3"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "vox-fm-disco-90",
+    "name": "VOX FM DISCO 90",
+    "category": "music",
+    "streams": [
+      "https://ic1.smcdn.pl/6170-1.mp3"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

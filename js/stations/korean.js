@@ -172,7 +172,8 @@ window.STATIONS = [
       "https://1fm.gscdn.kbs.co.kr/1fm_192_2.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8xZm0uZ3NjZG4ua2JzLmNvLmtyLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTQxMTAzODN9fX1dfQ__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=Q-6D8qKpBUZwUyDRv43aZSdAtZayES-JV07vz1zTBLAV9dG3e0VdwDTNPZ55~89~BCgMI0QK4ATbYQ8ZjcWm~0UW3uGX0wQtF4Iz87qYmg77u7BWv6qs3F1BAcVEc0-I2nCcrDF9vYoRnVf973jped9TWmi66Wc9Eg1r6ZgiK2-hin5Ked0~bxg~hEwuiqYuOXl~-I2EClps2JG1o9Yru6oD1vLoTBubFYsLcdJIqpga0jUJW3idgxR7uakuJiO01grtN0KAvIJdhaYXV7HdTtU2rPf~TEUoi3QykXo7QRYOhPaiPdOFZR8mF4dpmLJGINa~dkL40~~nKv1sdQSbgw__",
       "https://1fm.gscdn.kbs.co.kr/1fm_192_2.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8xZm0uZ3NjZG4ua2JzLmNvLmtyLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTM2NzgzOTd9fX1dfQ__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=nZk4tXIZP2vAT77B0qkqUFU83wdASgj5eseWijT4yh0IniIZZnh7VketzSW01~3H6imOR-Zv1h1tsTggh1H1x8LyxzE9Sai4vO~pjbcVctfhU6QaqRAQ0WrOIGXm2EWENXmPaNYWm-OX~1H8bp7TWt-961WekfMf3yhemJlPpsF9902-oFIGFHT1SDLzbdyGeDkMCRJOZmkRWYt4CZwmBU8BJmVTRjV9ZEjjjzKLk5RpocwkYgOUglfNRbZ0mU~0Tr6o0hoSf-am5ZM0AEdGKJ6KSnibi4UdR0c1Q-5rx~Ig8U5ZkZ~lsQY8DzbsKsY~Yz-sT5SLu2rKuBJQc1GYWA__"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "sbs-power-fm",
@@ -203,7 +204,8 @@ window.STATIONS = [
       "https://2fm-ad.gscdn.kbs.co.kr/2fm_ad_192_1.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8yZm0tYWQuZ3NjZG4ua2JzLmNvLmtyLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTQwOTIzOTR9fX1dfQ__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=C85jy7mKLZS7m5eb4hIXWKqN41hPtPovPwkvRrC-Hu~nMJWtm1xyUGKo06I7Clgc171a0JvPHdwbk58HMWlShYL36fcg0zCO9PwlkdqSneOZTLHH~QyZb0NTa219ZLoA~cGwjt8mD87BE7l8YaBPOh49lhXRJZ4-HheOjuZC584xyfj-XpwiZBz4iJ7peEp1BJD0Cpgo2F5GuWEIqz7l9Trqq7y2Xwnz7-FpiLXssWQtEFK~6SGNTx~WQp1cAK4O2~kulu21L2-TOI8mrgKAOw53ZggQhwqfwcLhWW5RELHFTJpKQ~XFB-cTJKbxpbIfRgf3u5nG1eGxG~StJylv2Q__",
       "https://2fm-ad.gscdn.kbs.co.kr/2fm_ad_192_1.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8yZm0tYWQuZ3NjZG4ua2JzLmNvLmtyLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTM2NTkxNjR9fX1dfQ__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=K971H~TYyRfroye4mfqpGrRI-oW1rXzrb30u6V9YbagzyvPPfWXg3RkyWzmrLQBZvn0vfc2DsXt0vL3XfkmO2OooAN4cl6UpAXybxYzYKj2CsAy~~BjCdQbDURZs-90p3zejrBX61BbutZkZYtKCUV1j8T2jzvbG8avxF0YYDotDL2CAoxb-M70XqafqkLHK9iT1RVoFbSKHI5N7Ng3Mc2c0ylhXB9Nit3YvkzNd25Ldtl3YBrOcdi2scWffTN4BiwUNpolCMZGcLLRUcbntjtBJK8dmodjbxU6EH3BGf2O2z~A2TRyRScg8yNnmsRDUQ2ahfGkZV~NTWi~LD6ciMw__"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "cjrk-fm-102-7-east-fm-toronto-on",
@@ -410,6 +412,7 @@ window.STATIONS = [
     "name": "GugakFM",
     "category": "music",
     "streams": [
+      "https://mgugaklive.nowcdn.co.kr/gugakradio/gugakradio.stream/chunklist_w1653570079.m3u8",
       "https://mgugaklive.nowcdn.co.kr/gugakradio/gugakradio.stream/chunklist_w253831608.m3u8"
     ],
     "added": "2026-10-27"
@@ -585,4 +588,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

@@ -304,8 +304,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://slagerfm.netregator.hu:7813/slagerfm320.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "fm-103-9-a-rock",
@@ -646,7 +645,8 @@ window.STATIONS = [
     "streams": [
       "https://radioinside.eu/live.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "offline": true
   },
   {
     "id": "manna-fm-98-6",
@@ -1053,6 +1053,15 @@ window.STATIONS = [
       "https://stream.tilos.hu/tilos_32.mp3"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "tilos-radio-fm-90-3",
+    "name": "Tilos Rádió FM 90.3",
+    "category": "music",
+    "streams": [
+      "https://stream.tilos.hu/tilos_128.mp3"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

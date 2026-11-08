@@ -1078,7 +1078,8 @@ window.STATIONS = [
     "streams": [
       "https://mpc2.mediacp.eu:8282/sremac"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "offline": true
   },
   {
     "id": "rsg-party-time",
@@ -1124,6 +1125,33 @@ window.STATIONS = [
       "https://krusevac.ipradio.rs:9014/;stream.mp3"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "egeta-radio-2-narodna-muzika",
+    "name": "Egeta Radio 2 (Narodna muzika)",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/g7awzbwvzutvv"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "egeta-radio-1-vlaska-muzika",
+    "name": "Egeta Radio 1 (Vlaška muzika)",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/agprfe1186dvv"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "radio-sumadinac-krajiska",
+    "name": "Radio Šumadinac Krajiška",
+    "category": "music",
+    "streams": [
+      "https://media.srb-streaming.com/stream/radio-sumadinac-krajiska"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

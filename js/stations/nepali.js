@@ -82,9 +82,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://studio.901nbcfm.com.au:8902/newstream"
-    ],
-    "offline": true,
-    "hidden": true
+    ]
   },
   {
     "id": "tinau-fm",
@@ -119,4 +117,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

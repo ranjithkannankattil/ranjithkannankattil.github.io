@@ -81,7 +81,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cdn.cybercdn.live/Radios_100FM/Audio/icecast.audio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "kol-rega-91-5-96",
@@ -196,7 +197,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cdn.cybercdn.live/Hatahana_1015/Live_Audio/icecast.audio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "kcm-fm-channel-01-live",
@@ -453,4 +455,4 @@ window.STATIONS = [
     "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

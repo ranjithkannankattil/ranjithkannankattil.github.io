@@ -236,7 +236,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://rfe04.akacast.akamaistream.net/7/509/437762/v1/ibb.akacast.akamaistream.net/rfe04.m3u"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-13",
@@ -1243,6 +1244,33 @@ window.STATIONS = [
       "https://dirxiph.amgradio.ru/RusRock"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "pirate-station",
+    "name": "Радио Рекорд Pirate Station",
+    "category": "music",
+    "streams": [
+      "https://radiorecord.hostingradio.ru/ps96.aacp"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "eldo-radio-101-4-st-petersburg",
+    "name": "эльдорадио (Eldo Radio) 101.4 St. Petersburg",
+    "category": "music",
+    "streams": [
+      "https://emgspb.hostingradio.ru/eldoradio128.mp3"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "rdtk",
+    "name": "Радио RDTK",
+    "category": "news",
+    "streams": [
+      "https://rdtk.out.airtime.pro/rdtk_a"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

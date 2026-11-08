@@ -1252,6 +1252,33 @@ window.STATIONS = [
       "https://radio.mediacp.eu/stream/mtr-fm/stream"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "the-leader-fm",
+    "name": "The Leader Fm",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/whwy245c2wzuv"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "sivan-radio",
+    "name": "Sivan Radio",
+    "category": "music",
+    "streams": [
+      "https://sivanradio.radioca.st/stream"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "ttrfm",
+    "name": "Ttrfm",
+    "category": "music",
+    "streams": [
+      "https://radio.massstream.net/8010/stream"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

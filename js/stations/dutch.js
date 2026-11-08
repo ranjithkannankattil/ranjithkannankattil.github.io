@@ -1253,6 +1253,33 @@ window.STATIONS = [
       "https://streams.pinguinradio.com/PinguinRadio320.mp3"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "mixstream-radio-dance",
+    "name": "MixStream Radio - Dance",
+    "category": "music",
+    "streams": [
+      "https://radio.mixstream.nl/dance.mp3"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "amsterdam-funk-channel-afc-low-bandwidth",
+    "name": "Amsterdam Funk Channel (AFC) low bandwidth",
+    "category": "music",
+    "streams": [
+      "https://stream.afc.fm/index.html?sid=2"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "veronica-goud-van-oud",
+    "name": "Veronica Goud van oud",
+    "category": "music",
+    "streams": [
+      "https://21633.live.streamtheworld.com/DAB01_AAC.aac"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

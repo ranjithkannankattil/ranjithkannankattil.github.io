@@ -783,7 +783,8 @@ window.STATIONS = [
     "streams": [
       "https://sslyayin.radyoyayini.com:7067/stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "offline": true
   },
   {
     "id": "metropol-fm-anadolu-nun-sesi",
@@ -1189,6 +1190,33 @@ window.STATIONS = [
       "https://radyo.yayin.com.tr:6040/stream"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "genc-fm",
+    "name": "Genç FM",
+    "category": "music",
+    "streams": [
+      "https://yayin1.canlitv.fun/radyo/gencfm/chunklist_w1257533803.m3u8"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "bitlis-fm-98-8",
+    "name": "Bitlis FM 98.8",
+    "category": "music",
+    "streams": [
+      "https://ssl22.radyotelekom.com:8172/;"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "tempo-fm-101-5",
+    "name": "Tempo FM 101.5",
+    "category": "music",
+    "streams": [
+      "https://live.radyo.in/8062/stream"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

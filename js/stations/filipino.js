@@ -524,8 +524,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/60cb36c29heuv"
     ],
-    "added": "2026-10-28",
-    "offline": true
+    "added": "2026-10-28"
   },
   {
     "id": "105-9-energy-fm-dwla",
@@ -543,8 +542,7 @@ window.STATIONS = [
     "streams": [
       "https://gvamaudio.tail160f79.ts.net/stream"
     ],
-    "added": "2026-11-02",
-    "offline": true
+    "added": "2026-11-02"
   },
   {
     "id": "99-5-dzyw-koolfm",
@@ -565,4 +563,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

@@ -1243,6 +1243,33 @@ window.STATIONS = [
       "https://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "quran-radio-jo",
+    "name": "Quran Radio (JO)",
+    "category": "devotional",
+    "streams": [
+      "https://jrtv-live.ercdn.net/jrradio/quranradio.m3u8"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "capradio",
+    "name": "Capradio",
+    "category": "music",
+    "streams": [
+      "https://listen.radioking.com/radio/710810/stream/776366"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "wa3-radio",
+    "name": "Wa3 Radio وع",
+    "category": "music",
+    "streams": [
+      "https://stream.wa3.live/wa3.mp3"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

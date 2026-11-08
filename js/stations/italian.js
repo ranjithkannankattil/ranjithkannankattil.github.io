@@ -1176,6 +1176,33 @@ window.STATIONS = [
       "https://router.xdevel.com/audio0s975809-345/stream/icecast.audio"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "rmi-euro-disco",
+    "name": "RMI Euro Disco",
+    "category": "music",
+    "streams": [
+      "https://ams-pioneer02.dedicateware.com:2655/stream"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "virgin-radio-rock-ballads",
+    "name": "Virgin Radio Rock Ballads",
+    "category": "music",
+    "streams": [
+      "https://icy.unitedradio.it/Virgin_06.mp3"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "mc2",
+    "name": "MC2",
+    "category": "music",
+    "streams": [
+      "https://stream.rcs.revma.com/fxp289cp81uvv.xspf"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

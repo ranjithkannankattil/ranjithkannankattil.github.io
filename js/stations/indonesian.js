@@ -88,8 +88,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://a8.siar.us/listen/campursari/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "rri-pro-2-92-1-fm-tanjungpinang",
@@ -97,8 +96,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/21/9221/rritjpinangpro2.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "sb-fm-tembang-kenangan",
@@ -154,8 +152,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/21/9221/rritjpinangpro1.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "pas-fm-jakarta",
@@ -211,7 +208,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:9154/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radiks-fm-semarang",
@@ -272,8 +270,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:8500/;super.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "bahtera-yudha-fm-surabaya",
@@ -329,8 +326,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/14/9314/rrisngliatpro1.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "mosh-head-black-metal-id",
@@ -465,8 +461,7 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:9622/stream"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "rri-pro1-banjarmasin",
@@ -556,8 +551,7 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com/8228/;radio"
     ],
-    "added": "2026-10-26",
-    "offline": true
+    "added": "2026-10-26"
   },
   {
     "id": "bandung-death-metal-syndicate",
@@ -666,8 +660,7 @@ window.STATIONS = [
     "streams": [
       "https://svara-stream.radioddns.net/bali_voksradio_993fm"
     ],
-    "added": "2026-10-28",
-    "offline": true
+    "added": "2026-10-28"
   },
   {
     "id": "imelda-fm",
@@ -676,8 +669,7 @@ window.STATIONS = [
     "streams": [
       "https://server.radioimeldafm.co.id:8030/imeldafm"
     ],
-    "added": "2026-10-28",
-    "offline": true
+    "added": "2026-10-28"
   },
   {
     "id": "voks-radio-bali",
@@ -713,8 +705,7 @@ window.STATIONS = [
     "streams": [
       "https://stream-node2.rri.co.id/streaming/21/9221/rritjpinangpro4.mp3"
     ],
-    "added": "2026-10-29",
-    "offline": true
+    "added": "2026-10-29"
   },
   {
     "id": "jiz-89-5-fm",
@@ -939,8 +930,7 @@ window.STATIONS = [
     "streams": [
       "https://ssg.streamingmurah.com:8078/;"
     ],
-    "added": "2026-11-03",
-    "offline": true
+    "added": "2026-11-03"
   },
   {
     "id": "wawa-radio-101-2-fm",
@@ -1203,6 +1193,33 @@ window.STATIONS = [
       "https://adaradio.kradionews.com/listen/adaradio/stream"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "nindy-radio-98-2-fm",
+    "name": "Nindy Radio 98.2 FM",
+    "category": "music",
+    "streams": [
+      "https://radio.garden/api/ara/content/listen/823zxnHk/channel.mp3"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "rri-pro-4-ambon",
+    "name": "RRI Pro 4 Ambon",
+    "category": "news",
+    "streams": [
+      "https://stream-node2.rri.co.id/streaming/15/9315/rriambonpro4.mp3"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "kiara-mpc-radio",
+    "name": "KIARA MPC RADIO",
+    "category": "music",
+    "streams": [
+      "https://mpc1.mediacp.eu/stream/kiara-radio"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

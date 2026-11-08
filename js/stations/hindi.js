@@ -1192,6 +1192,33 @@ window.STATIONS = [
       "https://dard.out.airtime.pro/dard_a"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "jaipur-radio",
+    "name": "Jaipur radio",
+    "category": "music",
+    "streams": [
+      "https://streamasiacdn.atc-labs.com/jaipurradio.aac"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "bollywood-vishal-shekhar",
+    "name": "Bollywood Vishal Shekhar",
+    "category": "music",
+    "streams": [
+      "https://drive.uber.radio/uber/bollywoodvishalandshekhar/icecast.audio"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "west-indian-vibes-radio",
+    "name": "West Indian Vibes Radio",
+    "category": "music",
+    "streams": [
+      "https://s6.citrus3.com:8396/stream"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

@@ -216,7 +216,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radios.albaniadigitalradio.al/albanialoveradio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-lushnja",
@@ -365,7 +366,8 @@ window.STATIONS = [
     "streams": [
       "https://radios.albaniadigitalradio.al/albaniaradiodj"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "radio-popullore",
@@ -521,4 +523,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";

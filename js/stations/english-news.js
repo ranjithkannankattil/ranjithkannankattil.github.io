@@ -519,8 +519,7 @@ window.STATIONS = [
       "https://naijafmlagos-atunwadigital.streamguys1.com/naijafmlagos/playlist.m3u8"
     ],
     "added": "2026-10-28",
-    "where": "Nigeria",
-    "offline": true
+    "where": "Nigeria"
   },
   {
     "id": "70-s-80-s-90-s-riw-vintage-channel",
@@ -1141,6 +1140,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "where": "Australia"
+  },
+  {
+    "id": "rri-voice-of-indonesia",
+    "name": "RRI Voice Of Indonesia",
+    "category": "world",
+    "streams": [
+      "https://stream-node0.rri.co.id/streaming/25/9125/voi.mp3"
+    ],
+    "added": "2026-11-08",
+    "where": "Indonesia"
+  },
+  {
+    "id": "702-abc-sydney",
+    "name": "702 ABC Sydney",
+    "category": "anz",
+    "streams": [
+      "https://streaming.abc-cdn.net.au/audio/hls/localsydney.m3u8?source=web"
+    ],
+    "added": "2026-11-08",
+    "where": "Australia"
+  },
+  {
+    "id": "bbc-tv",
+    "name": "BBC tv",
+    "category": "uk",
+    "streams": [
+      "https://stream.live.vc.bbcmedia.co.uk/bbc_world_service?s=1619733260&e=1619747660&h=f8bc47f18c4b24de16cf2efa7951f91d"
+    ],
+    "added": "2026-11-08",
+    "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-07T18:45Z";
+window.STATIONS_CHECKED = "2026-11-08T07:12Z";
