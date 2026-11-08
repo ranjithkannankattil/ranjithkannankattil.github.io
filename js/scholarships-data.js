@@ -445,6 +445,17 @@ window.SCHOLARSHIPS = [
     how: 'Open each notice, or ask pgfunding@uct.ac.za.',
     state: 'varies', when: 'Each notice has its own date.',
     url: 'https://uct.ac.za/students/fees-funding-postgraduate-degree-funding/postgraduate-degree-funding-noticeboard', checked: '2026-11-03'
+  },
+  /* ---------- Found by the weekly search ---------- */
+  {
+    id: 'government-of-flanders-master-mind-schol', name: 'Government of Flanders Master Mind Scholarships', by: 'Flemish Ministry of Education and Training', place: 'Flanders and Brussels',
+    regions: ['europe'], countries: ['Belgium'], levels: ['masters'], funding: 'full',
+    amount: 'The scholarship includes a grant of €10.225 and a tuition fee waiver per academic year.',
+    who: 'Outstanding students from around the world who apply for master’s programmes through a Flemish higher education institution.',
+    how: 'Apply through the host institution, as each Flemish higher education institution can submit applications.',
+    state: 'varies', when: 'The official page gives no single deadline. Check it for this year’s dates.',
+    found: '2026-11-08',
+    url: 'https://www.studyinflanders.be/scholarships/master-mind-scholarships', checked: '2026-11-08'
   }
 ];
 
