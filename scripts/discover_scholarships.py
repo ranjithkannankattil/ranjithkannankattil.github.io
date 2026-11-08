@@ -129,9 +129,20 @@ def suggest(names, key, model, today):
         # The free key often has no search quota. Gemini's own knowledge still gives real
         # programmes; every one must still pass the official-page checks below.
         print("No search today, asking without it")
-        body = {"contents": [{"parts": [{"text": prompt.replace("Search the web for", "List")}]}],
-                "generationConfig": {"temperature": 0.4}}
-        text = ask(body, key, model)
+        plain = (prompt.replace("Search the web for", "From what you know, list")
+                 .replace("Give up to 10, newest or least known first.",
+                          "Give exactly 15 different ones, spread across countries, least known first."))
+        body = {"contents": [{"parts": [{"text": plain}]}],
+                "generationConfig": {"temperature": 0.4, "responseMimeType": "application/json"}}
+        for m in ["gemini-flash-latest", model]:
+            try:
+                text = ask(body, key, m)
+                print("Asked", m)
+                break
+            except Exception as e:  # noqa: BLE001
+                print("Asking", m, "failed:", str(e)[:100])
+        if text is None:
+            raise err
     got = first_json(text, "[") or []
     return [g for g in got if isinstance(g, dict) and isinstance(g.get("name"), str)
             and isinstance(g.get("url"), str) and g["url"].startswith("https://")]
