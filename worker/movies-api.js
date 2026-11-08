@@ -507,14 +507,32 @@ export async function person(id, role) {
   };
 }
 
+// "New in <language>": films out in the last 4 months, newest first. New Indian films have only a handful of
+// TMDB votes for weeks, so no vote floor here (a poster is enough); if that gives too few, the year's most
+// popular releases fill the row.
+async function newIn(lang, today) {
+  const since = (days) => new Date(Date.now() - days * DAY * 1000).toISOString().slice(0, 10);
+  const [fresh, popular] = await Promise.all([
+    discover({ with_original_language: lang, "primary_release_date.gte": since(120), "primary_release_date.lte": today,
+      sort_by: "primary_release_date.desc", "vote_count.gte": 0 }, 2),
+    discover({ with_original_language: lang, "primary_release_date.gte": since(365), "primary_release_date.lte": today,
+      sort_by: "popularity.desc", "vote_count.gte": 10 }),
+  ]);
+  const seen = new Set(), out = [];
+  for (const m of [...fresh.filter((m) => m.poster_path), ...popular]) {
+    if (seen.has(m.id)) continue;
+    seen.add(m.id);
+    out.push(m);
+  }
+  return out.slice(0, 30);
+}
+
 export async function home(region = "IT") {
   const today = new Date().toISOString().slice(0, 10);
-  const yearAgo = new Date(Date.now() - 365 * DAY * 1000).toISOString().slice(0, 10);
-  const recent = { "primary_release_date.gte": yearAgo, "primary_release_date.lte": today, sort_by: "popularity.desc", "vote_count.gte": 10 };
   const [trend, ml, hi, ko, world, playing] = await Promise.all([
     tmdb("/trending/movie/week", {}, 6 * 3600),
-    discover({ ...recent, with_original_language: "ml" }),
-    discover({ ...recent, with_original_language: "hi" }),
+    newIn("ml", today),
+    newIn("hi", today),
     discover({ with_original_language: "ko", sort_by: "vote_average.desc", "vote_count.gte": 800 }),
     discover({ without_original_language: "en", sort_by: "vote_average.desc", "vote_count.gte": 3000 }),
     tmdb("/movie/now_playing", { region }, 6 * 3600),
