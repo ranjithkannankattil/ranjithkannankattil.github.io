@@ -1,12 +1,12 @@
-# Scholarship page check, 2026-11-07
+# Scholarship page check, 2026-11-08
 
 These pages changed. Update `js/scholarships-data.js` if the facts changed.
 
-## France Excellence Eiffel
-https://www.campusfrance.org/en/actu/call-for-france-excellence-eiffel-applications-2027
+## Global Korea Scholarship: Graduate, Global Korea Scholarship: Undergraduate
+https://www.studyinkorea.go.kr/
 
-- New: Financial Times 2026 Executive MBA Rankings: 13 French Programs Among the Best in the World
-- Gone: "Study in France" fair 2026: 44 French institutions meet Korean students and universities
+- Gone: 2026.11.6.~2026.11.7.
+- Gone: 2026-11-06 ~ 2026-11-07
 
 ## Could not read from GitHub today
 
@@ -15,7 +15,6 @@ https://www.campusfrance.org/en/actu/call-for-france-excellence-eiffel-applicati
 - Chinese Government Scholarship: https://www.campuschina.org/ (<urlopen error [Errno 101] Network is unreachable>)
 - MEXT Research Student Scholarship: https://www.in.emb-japan.go.jp/education/Research_Student.html (HTTP Error 403: Forbidden)
 - MEXT Undergraduate Scholarship: https://www.in.emb-japan.go.jp/education/undergraduate_student.html (HTTP Error 403: Forbidden)
-- KAUST Fellowship: https://admissions.kaust.edu.sa/study/ms-phd-degree (no readable text)
 - MBZUAI Undergraduate Scholarship: https://mbzuai.ac.ae/study/undergraduate-program/ (HTTP Error 403: Forbidden)
 - National Overseas Scholarship (SC and others): https://socialjustice.gov.in/schemes/28 (HTTP Error 503: Service Unavailable)
 - National Overseas Scholarship (ST): https://overseas.tribal.gov.in/ (<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.)
