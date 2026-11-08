@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Weekly search for scholarships that aren't on the page yet. Uses Gemini only.
 
-1. Gemini, with Google Search, suggests funded scholarships open to Indian citizens
+1. Gemini, with Google Search when the free key allows it (otherwise from its own
+   knowledge), suggests funded scholarships open to Indian citizens
    that are missing from js/scholarships-data.js, each with its official page.
 2. Each official page is read here, from GitHub (not trusted from Gemini).
 3. Gemini fills in a card from that page text only. A card is added only if:
@@ -33,7 +34,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "js/scholarships-data.js"
 PAGE = ROOT / "productivity/scholarships.html"
 MAX_NEW = 5
-SEARCH_MODELS = ["gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-flash-latest"]
+SEARCH_MODELS = ["gemini-flash-latest"]
 SECTION = "  /* ---------- Found by the weekly search ---------- */"
 REGIONS = {"europe", "northamerica", "southamerica", "asia", "middleeast", "africa", "oceania", "any"}
 LEVELS = {"ug", "masters", "phd"}
@@ -125,7 +126,12 @@ def suggest(names, key, model, today):
         if text is not None:
             break
     if text is None:
-        raise err
+        # The free key often has no search quota. Gemini's own knowledge still gives real
+        # programmes; every one must still pass the official-page checks below.
+        print("No search today, asking without it")
+        body = {"contents": [{"parts": [{"text": prompt.replace("Search the web for", "List")}]}],
+                "generationConfig": {"temperature": 0.4}}
+        text = ask(body, key, model)
     got = first_json(text, "[") or []
     return [g for g in got if isinstance(g, dict) and isinstance(g.get("name"), str)
             and isinstance(g.get("url"), str) and g["url"].startswith("https://")]
