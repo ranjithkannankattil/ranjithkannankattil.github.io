@@ -1215,6 +1215,33 @@ window.STATIONS = [
       "https://live.westcityradio.ro:8000/mp3"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "pro-fm-statia-cluj-napoca-99-8-fm",
+    "name": "Pro FM -stația Cluj Napoca 99,8 FM",
+    "category": "music",
+    "streams": [
+      "https://radioendirect.net/stream/125928"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "radio-balkan-romania",
+    "name": "Radio Balkan Romania",
+    "category": "music",
+    "streams": [
+      "https://live.radiobalkan.ro:8102/stream"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "radio-brasov-87-8-fm",
+    "name": "Radio Brașov -87,8 FM",
+    "category": "news",
+    "streams": [
+      "https://live.radiobrasov.ro/stream.mp3"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T07:12Z";
+window.STATIONS_CHECKED = "2026-11-08T18:57Z";

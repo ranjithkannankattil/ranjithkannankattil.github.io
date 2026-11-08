@@ -201,7 +201,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-17",
@@ -924,8 +925,7 @@ window.STATIONS = [
     "streams": [
       "https://play-radio-stream3.hndt.com/now/JxkyN5mR/chunklist.m3u8"
     ],
-    "added": "2026-11-03",
-    "offline": true
+    "added": "2026-11-03"
   },
   {
     "id": "cctv-9",
@@ -1205,6 +1205,33 @@ window.STATIONS = [
       "https://rscdn.ajmide.com/r_3124/nglive_3124.m3u8"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "chinese-music-world",
+    "name": "Chinese Music World",
+    "category": "music",
+    "streams": [
+      "https://radio.chinesemusicworld.com/chinesemusic.ogg"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "station-58",
+    "name": "高雄廣播電台",
+    "category": "music",
+    "streams": [
+      "https://n13.rcs.revma.com/pet2dvug1bkvv"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "station-59",
+    "name": "環宇廣播電台",
+    "category": "music",
+    "streams": [
+      "https://n06.rcs.revma.com/srn5f9kmwxhvv"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T07:12Z";
+window.STATIONS_CHECKED = "2026-11-08T18:57Z";

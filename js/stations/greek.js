@@ -153,8 +153,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://r1.cloudskep.com/radio/diesi/icecast.audio"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "99-1",
@@ -457,8 +456,7 @@ window.STATIONS = [
     "streams": [
       "https://r1.cloudskep.com/cybcr/cybc3/icecast.audio"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "athens-radio-trance",
@@ -710,8 +708,7 @@ window.STATIONS = [
     "streams": [
       "https://r1.cloudskep.com/cybcr/cybc1/icecast.audio"
     ],
-    "added": "2026-10-28",
-    "offline": true
+    "added": "2026-10-28"
   },
   {
     "id": "rainbow-89-pop",
@@ -1297,6 +1294,33 @@ window.STATIONS = [
       "https://hroma1058thess.live24.gr/hroma1058thess"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "rythmos-fm",
+    "name": "Rythmos FM",
+    "category": "music",
+    "streams": [
+      "https://ample.radiojar.com/aw1w2xfx1vduv.mp3"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "venus-radio-99-3",
+    "name": "Venus Radio 99.3",
+    "category": "music",
+    "streams": [
+      "https://sh.onweb.gr/8410/;"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "alpha-98-9",
+    "name": "Alpha 98.9",
+    "category": "news",
+    "streams": [
+      "https://stream.radiojar.com/xcdg6yggzfeuv"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T07:12Z";
+window.STATIONS_CHECKED = "2026-11-08T18:57Z";

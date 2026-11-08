@@ -1057,7 +1057,8 @@ window.STATIONS = [
       "https://puma.streemlion.com:2125/stream"
     ],
     "where": "Canada",
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "offline": true
   },
   {
     "id": "radio-country-live-new-york",
@@ -1444,8 +1445,7 @@ window.STATIONS = [
       "https://chaosfm.com:8443/stream"
     ],
     "added": "2026-11-07",
-    "where": "UK",
-    "offline": true
+    "where": "UK"
   },
   {
     "id": "progressive-rock-azusa",
@@ -1478,4 +1478,4 @@ window.STATIONS = [
     "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T07:12Z";
+window.STATIONS_CHECKED = "2026-11-08T18:57Z";

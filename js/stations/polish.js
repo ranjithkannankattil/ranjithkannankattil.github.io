@@ -1124,6 +1124,33 @@ window.STATIONS = [
       "https://ic1.smcdn.pl/6170-1.mp3"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "konin-fm",
+    "name": "Konin FM",
+    "category": "news",
+    "streams": [
+      "https://stream2.technologicznie.net/konin.fm"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "radio-zuawy",
+    "name": "Radio Żuławy",
+    "category": "music",
+    "streams": [
+      "https://stream.radiojar.com/q87xmtvrrg8uv"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "radio-olsztyn",
+    "name": "Radio Olsztyn",
+    "category": "music",
+    "streams": [
+      "https://rostr1.radioolsztyn.pl:8443/RO"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T07:12Z";
+window.STATIONS_CHECKED = "2026-11-08T18:57Z";

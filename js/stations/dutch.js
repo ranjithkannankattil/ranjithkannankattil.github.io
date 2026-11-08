@@ -1280,6 +1280,33 @@ window.STATIONS = [
       "https://21633.live.streamtheworld.com/DAB01_AAC.aac"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "sinterklaas-radio",
+    "name": "Sinterklaas Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.tbmp.nl:8000/sinterklaasradiohigh.mp3"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "pinguin-pluche",
+    "name": "Pinguin Pluche",
+    "category": "music",
+    "streams": [
+      "https://samcloud.spacial.com/api/listen?sid=98569&m=sc&rid=174384"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "rtv-oost-radio",
+    "name": "RTV Oost Radio",
+    "category": "news",
+    "streams": [
+      "https://streams.rtvoost.nl/audio/oost/mp3"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T07:12Z";
+window.STATIONS_CHECKED = "2026-11-08T18:57Z";

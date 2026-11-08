@@ -1170,6 +1170,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-08",
     "where": "UK"
+  },
+  {
+    "id": "fumba-town-radio",
+    "name": "Fumba Town Radio",
+    "category": "world",
+    "streams": [
+      "https://stream.perspektiveausland.app/listen/fumba_town_radio/radio.mp3"
+    ],
+    "added": "2026-11-08",
+    "where": "United Republic Of Tanzania"
+  },
+  {
+    "id": "99-5-dzyw-koolfm",
+    "name": "99.5 DZYW koolFM",
+    "category": "world",
+    "streams": [
+      "https://listen.smilemediaph.com/listen/koolfm/radio.mp3"
+    ],
+    "added": "2026-11-08",
+    "where": "The Philippines"
+  },
+  {
+    "id": "abc-radio-australia",
+    "name": "ABC Radio Australia",
+    "category": "anz",
+    "streams": [
+      "https://mediaserviceslive.akamaized.net/hls/live/2038266/ramulti/masterhq.m3u8"
+    ],
+    "added": "2026-11-08",
+    "where": "Australia"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T07:12Z";
+window.STATIONS_CHECKED = "2026-11-08T18:57Z";

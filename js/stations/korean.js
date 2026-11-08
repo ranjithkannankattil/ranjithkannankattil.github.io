@@ -194,7 +194,8 @@ window.STATIONS = [
       "https://2radio-bora.gscdn.kbs.co.kr/2radio-bora-01/2radio-bora-01_hd.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8ycmFkaW8tYm9yYS5nc2Nkbi5rYnMuY28ua3IvMnJhZGlvLWJvcmEtMDEvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5NDEyOTU5Mn19fV19&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=iuNprM-kmzIs3v44fdDDXSY9-tVxo~6G7MbzR8SLsrDIFi7goVjAqa4wRYp0FlhTojCapKDZlVouZIG2GWWP7A1bk-WnabZSe5UTCnHpIiK8rVLdbCBT9L3mlkZUpJqnn9Y7QpPfu6hZVrlD47zXgS6Kp28PCjNEGNCW30DQqbcpMt3fbd~P7SUn5kBg6zkFf8Bmf-0c0VxymxBppkAszbzFTBw9~20GwQpPErC8C531gwesQzcGRy-fUVOIjbYFlh4CqCgTMqGaIpiwf9bgwKDSaRWcDIsSW3DvYzlj6UHyaJ~BVrf2JGdroLuCkIdr6Dbf1MaV4-YVqBDrSyrnVQ__",
       "https://2radio-bora.gscdn.kbs.co.kr/2radio-bora-01/2radio-bora-01_hd.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8ycmFkaW8tYm9yYS5nc2Nkbi5rYnMuY28ua3IvMnJhZGlvLWJvcmEtMDEvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5MzY5NjM4MH19fV19&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=kaVuof3zZ71CkFHyxNd69O~qD1fnpfDRs~UedNhkMf4po1l7V0ht7GNtefxszGX85Ym0DruadEBhM6EGZTAzqqGQzVGnOa5iAi20z4Wo--MHccI7DUygt6bl0BBzjXMQfW44scqPN1JMRlijjmFP7IZVyv8jA97pIbpBt-YkOH1PuIa1sJYwfrf8AgH7EDM6v~2TUPrYQs4KBg-gl8as7UQZ3OwMa45YjBKS0YlB76jU3J248HRQydYINIKGTp2dLOCzK5P8rf6drOvWbQQMfMhUEvl5Pr~C1Mf164A4yQqFb727DJWeWvw6MPjEd-EOFvo1KSV-slwKJO3ft0OHew__"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "kbs-cool-fm",
@@ -443,7 +444,8 @@ window.STATIONS = [
       "https://1radio-bora.gscdn.kbs.co.kr/1radio-bora-01/1radio-bora-01_hd.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8xcmFkaW8tYm9yYS5nc2Nkbi5rYnMuY28ua3IvMXJhZGlvLWJvcmEtMDEvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5NDE0NjM5Mn19fV19&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=Ui7PH99GHvFk-9xkWhIwzGdzQVdbitKhTCw5uymNaSKcwufkjrDsPnFtjWhppgv7IxbWNxxsLB0Ks0ARvEUPAcQC3IKRaai3qRxl9uXJz6Bb7zN9052tmk7lop93d-HPZSPN5Ufe-zCvnAAGq7mufJWchYneRAlvRodOT58EOmlhLcqOinveEzAL6SNZEcYsxNVIZGadRP422BjfA7z~bf071TR2eMEgIfailRmLnhNvNT7hlWq0hDorP7yrDn55XqyZKhpucgGpmHRu16TB3BKDhYeU7twE38nz-nuMDp7as8db6f~FLr9SU2cuyqCJWaqq9HNP36LI~pTSnPc1GA__",
       "https://1radio-bora.gscdn.kbs.co.kr/1radio-bora-01/1radio-bora-01_hd.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8xcmFkaW8tYm9yYS5nc2Nkbi5rYnMuY28ua3IvMXJhZGlvLWJvcmEtMDEvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5MzcxMzIwNn19fV19&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=eDvDH75Q3QTu-J1j1tW17tGkLPSpFFGpFiUJAR~zTiWkjXE6GPnyYQVAvlfHBf2d8AeNsU0I-cCIC3jSRekiXEuB~iZgKOxSfBK0FDVtdnqNoWrr9vLOpAhjU51vINerSYfY0jcikHV~2at77yS4xNAQBsSb3gyWiRNn59rFNRUsH131rm3lUdegJNnKr3yv5v7Rt6hVH2hb~kNNs0D~rP5cdurNzftoPA6rB17Nn5h0GJQesefTqvIJh3h455QehRJ0pHUaMfKAb26AT0m1Ae7TyWExwFCvgOt8IhP9glRbRz7Qd5fTZYWRjJ-E8p5wbjRxV8ZwaBHk1s0HGNdAkg__"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "offline": true
   },
   {
     "id": "kbs",
@@ -453,7 +455,8 @@ window.STATIONS = [
       "https://1fm.gscdn.kbs.co.kr/1fm_192_2.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8xZm0uZ3NjZG4ua2JzLmNvLmtyLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTQxMzc5NjV9fX1dfQ__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=Z1SPqpRUd4kFiDaLk45PxR5i5uc3Y6dzIrJn~Ny2XIsZKOHMLJEA4uVCbrgDGPRiESX-LV5AkIKz8NknESFts5rfvLXaG7CZHyeGlx~SWbrGG~YtsUTLdWtqnrJil6DWav3iog6by8cjSRCtax8C9Ud2Hsk7N1Z51K2WyYOcHjZwBq1QFvxgjlR-gO~gU3jrNFeMN~9305lYzrxas9hFDCgy5XhZRAkyjocEcW7l1ImKC2OesvGnIGRfzREsl86Ph~cFuLSLL5Bj2iOaVIDwhZOk~guDhtBMHIbEMt4KRSs0u7~R4bIsK9erN-EgXdtzeGmZnNL6vHPOI9bN3b5GXA__",
       "https://1fm.gscdn.kbs.co.kr/1fm_192_2.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8xZm0uZ3NjZG4ua2JzLmNvLmtyLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTM3MDQ3NTl9fX1dfQ__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=brrU~fF0QpHradtCWr7M7yBhemDR4JUbH9kPPaZmTBaXCM2yvVDm7CQj6xuElI5jDRRMFxDKJnXTtbIcm5lE-RCjMIPWfb6-tD1TGEgSK-dj2~I-qfSldiUKhvFxnsX5gdyRQx6G~iGwfjG~6G2aHLlqKlW-JtNHLr09q3FKc2QPD9h9eNwWgrM02OlQHqKK5CluY0KCDSKRZ5t9kPlwhg4f4fsRCmTjPYwjwa49J3hVcGDubDqFOYHiHgkBUm-uFf~niqQDdx6GFkZ1X6dUyl0h4vvpqnHDTlqNqotYhHTJHNLD0PMfrn92HWy5lVP6AcGcd1YLk0uqx~-XZfZBwQ__"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "offline": true
   },
   {
     "id": "station-4",
@@ -588,4 +591,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T07:12Z";
+window.STATIONS_CHECKED = "2026-11-08T18:57Z";

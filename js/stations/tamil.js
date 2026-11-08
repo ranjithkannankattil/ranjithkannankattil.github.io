@@ -1279,6 +1279,15 @@ window.STATIONS = [
       "https://radio.massstream.net/8010/stream"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "vallamaiyin-alaikal-waves-of-power",
+    "name": "Vallamaiyin Alaikal - Waves of Power",
+    "category": "devotional",
+    "streams": [
+      "https://radio.pixelinmedia.com/vallamai"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T07:12Z";
+window.STATIONS_CHECKED = "2026-11-08T18:57Z";

@@ -645,8 +645,7 @@ window.STATIONS = [
     "streams": [
       "https://radioinside.eu/live.mp3"
     ],
-    "added": "2026-10-29",
-    "offline": true
+    "added": "2026-10-29"
   },
   {
     "id": "manna-fm-98-6",
@@ -1064,4 +1063,4 @@ window.STATIONS = [
     "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T07:12Z";
+window.STATIONS_CHECKED = "2026-11-08T18:57Z";

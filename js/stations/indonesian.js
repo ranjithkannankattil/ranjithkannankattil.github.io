@@ -96,7 +96,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/21/9221/rritjpinangpro2.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "sb-fm-tembang-kenangan",
@@ -152,7 +153,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/21/9221/rritjpinangpro1.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "pas-fm-jakarta",
@@ -270,7 +272,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:8500/;super.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "bahtera-yudha-fm-surabaya",
@@ -326,7 +329,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/14/9314/rrisngliatpro1.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "mosh-head-black-metal-id",
@@ -461,7 +465,8 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:9622/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "rri-pro1-banjarmasin",
@@ -551,7 +556,8 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com/8228/;radio"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "offline": true
   },
   {
     "id": "bandung-death-metal-syndicate",
@@ -579,7 +585,8 @@ window.STATIONS = [
       "https://server.radioimeldafm.co.id/radio/8010/swarasemarang"
     ],
     "added": "2026-10-27",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "radio-indah-siar-cirebon",
@@ -660,7 +667,8 @@ window.STATIONS = [
     "streams": [
       "https://svara-stream.radioddns.net/bali_voksradio_993fm"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "offline": true
   },
   {
     "id": "imelda-fm",
@@ -705,7 +713,8 @@ window.STATIONS = [
     "streams": [
       "https://stream-node2.rri.co.id/streaming/21/9221/rritjpinangpro4.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "offline": true
   },
   {
     "id": "jiz-89-5-fm",
@@ -876,7 +885,8 @@ window.STATIONS = [
     "streams": [
       "https://live.radioistara.com/listen/radioistara/radioistara"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "offline": true
   },
   {
     "id": "rri-pro-2-yogyakarta",
@@ -1220,6 +1230,24 @@ window.STATIONS = [
       "https://mpc1.mediacp.eu/stream/kiara-radio"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "cosmic-indo",
+    "name": "Cosmic Indo",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/jw6ys87h2dguv"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "radio-suara-itmi",
+    "name": "radio suara itmi",
+    "category": "music",
+    "streams": [
+      "https://radio.itmi.or.id:8190/radio"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T07:12Z";
+window.STATIONS_CHECKED = "2026-11-08T18:57Z";

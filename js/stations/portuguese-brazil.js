@@ -1277,6 +1277,33 @@ window.STATIONS = [
       "https://live.hunter.fm/lofi_normal"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "radio-atlantida-100-9-fm-florianopolis-s",
+    "name": "Rádio Atlântida 100.9 FM - Florianópolis - SC",
+    "category": "music",
+    "streams": [
+      "https://27393.live.streamtheworld.com:443/ATL_FLO.mp3"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "lightness-of-rock",
+    "name": "Lightness of Rock",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/n0dt87vrnd0uv"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "radio-soul-one",
+    "name": "Radio Soul One",
+    "category": "music",
+    "streams": [
+      "https://stream.soulone.com.br/listen/soulone/externo"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T07:12Z";
+window.STATIONS_CHECKED = "2026-11-08T18:57Z";

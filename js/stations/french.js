@@ -1220,6 +1220,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/4yx608hnu1duv"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "wa3-radio",
+    "name": "Wa3 Radio وع",
+    "category": "music",
+    "streams": [
+      "https://stream.wa3.live/wa3.mp3"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "u-radio",
+    "name": "U RADIO",
+    "category": "music",
+    "streams": [
+      "https://uradio-aac.ice.infomaniak.ch/uradio.aac"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "or-fm-89-6-orkadiere",
+    "name": "Or FM 89.6 Orkadiéré",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/gy7fpc2am1duv"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T07:12Z";
+window.STATIONS_CHECKED = "2026-11-08T18:57Z";

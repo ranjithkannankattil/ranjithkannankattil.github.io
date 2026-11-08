@@ -606,8 +606,7 @@ window.STATIONS = [
     "streams": [
       "https://icecast.ithost.it/radiosei.ogg"
     ],
-    "added": "2026-10-28",
-    "offline": true
+    "added": "2026-10-28"
   },
   {
     "id": "globo-vintage",
@@ -1093,8 +1092,7 @@ window.STATIONS = [
     "streams": [
       "https://nrf1.newradio.it/stream/9750"
     ],
-    "added": "2026-11-06",
-    "offline": true
+    "added": "2026-11-06"
   },
   {
     "id": "albania-360-radio",
@@ -1205,4 +1203,4 @@ window.STATIONS = [
     "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T07:12Z";
+window.STATIONS_CHECKED = "2026-11-08T18:57Z";

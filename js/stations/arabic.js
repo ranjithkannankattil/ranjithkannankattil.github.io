@@ -1270,6 +1270,33 @@ window.STATIONS = [
       "https://stream.wa3.live/wa3.mp3"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "omniradio-sheikh-mahmoud-khalil-al-hussa",
+    "name": "OmniRadio - Sheikh Mahmoud Khalil Al-Hussary",
+    "category": "devotional",
+    "streams": [
+      "https://radio.xecod.com/station/alhussary"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "omniradio-sheikh-mohammed-siddiq-al-mins",
+    "name": "OmniRadio - Sheikh Mohammed Siddiq Al-Minshawi",
+    "category": "devotional",
+    "streams": [
+      "https://radio.xecod.com/station/alminshawi"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "omniradio-sheikh-mishary-rashid-al-afasy",
+    "name": "OmniRadio - Sheikh Mishary Rashid Al-Afasy",
+    "category": "devotional",
+    "streams": [
+      "https://radio.xecod.com/station/alafasi"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T07:12Z";
+window.STATIONS_CHECKED = "2026-11-08T18:57Z";

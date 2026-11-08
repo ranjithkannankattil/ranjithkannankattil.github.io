@@ -236,8 +236,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://rfe04.akacast.akamaistream.net/7/509/437762/v1/ibb.akacast.akamaistream.net/rfe04.m3u"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-13",
@@ -1271,6 +1270,33 @@ window.STATIONS = [
       "https://rdtk.out.airtime.pro/rdtk_a"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "station-45",
+    "name": "Вечная молодость",
+    "category": "music",
+    "streams": [
+      "https://misato.ru-hoster.com:8037/stream"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "russian-hits",
+    "name": "Радио Рекорд Russian Hits",
+    "category": "music",
+    "streams": [
+      "https://radiorecord.hostingradio.ru/russianhits96.aacp"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "power-fm",
+    "name": "Power FM",
+    "category": "music",
+    "streams": [
+      "https://radio.powerfm.lv:1095/stream"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T07:12Z";
+window.STATIONS_CHECKED = "2026-11-08T18:57Z";

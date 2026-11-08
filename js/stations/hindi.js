@@ -256,8 +256,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio007/hlspbaudio007_Auto.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-mirchi-usa",
@@ -369,8 +368,7 @@ window.STATIONS = [
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio011/hlspbaudio011_Auto.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "sandesh-radio",
@@ -1221,4 +1219,4 @@ window.STATIONS = [
     "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T07:12Z";
+window.STATIONS_CHECKED = "2026-11-08T18:57Z";

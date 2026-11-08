@@ -478,6 +478,24 @@ window.STATIONS = [
       "https://stream.partyradio.pro/listen/partyradio/stream"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "julekanalen-classic-fm-jul",
+    "name": "Julekanalen (Classic FM Jul)",
+    "category": "music",
+    "streams": [
+      "https://netradio.julekanalen.dk/julekanalen"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "classic-fm-stjylland",
+    "name": "Classic FM Østjylland",
+    "category": "music",
+    "streams": [
+      "https://netradio.classicfm.dk/cla8a"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T07:12Z";
+window.STATIONS_CHECKED = "2026-11-08T18:57Z";

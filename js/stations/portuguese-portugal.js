@@ -92,7 +92,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "m80-radio-ballads",
@@ -229,8 +230,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "cidade-fm-2",
@@ -277,10 +277,9 @@ window.STATIONS = [
     "name": "Antena 2",
     "category": "music",
     "streams": [
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8",
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
-    ],
-    "offline": true
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR",
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8"
+    ]
   },
   {
     "id": "rca-radio-clube-de-armamar",
@@ -358,7 +357,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -466,8 +466,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.ruc.pt/high"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "m80-radio-dance",
@@ -1241,7 +1240,8 @@ window.STATIONS = [
     "streams": [
       "https://centova.radio.com.pt/proxy/037?mp=/stream"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "offline": true
   },
   {
     "id": "radiofutura-pt",
@@ -1251,6 +1251,24 @@ window.STATIONS = [
       "https://s4.radio.co/s7e7b6c165/low"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "radio-regional-do-centro",
+    "name": "Rádio Regional do Centro",
+    "category": "news",
+    "streams": [
+      "https://nl.digitalrm.pt:8030/stream?1671017145140="
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "radio-entermedia",
+    "name": "Radio EnterMedia",
+    "category": "music",
+    "streams": [
+      "https://radio.radioentermedia.com/listen/entermedia/radio.mp3"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T07:12Z";
+window.STATIONS_CHECKED = "2026-11-08T18:57Z";

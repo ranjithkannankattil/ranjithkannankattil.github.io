@@ -16,8 +16,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://online.kissfm.ua/KissFM"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "f-103-1",
@@ -105,8 +104,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://online.nasheradio.ua/NasheRadio"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "gachi-station-ukrainian-playlist-1",
@@ -122,8 +120,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://online.hitfm.ua/HitFM"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "trance-is-star-radio",
@@ -139,8 +136,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://online.radiorelax.ua/RadioRelax"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "fm",
@@ -188,8 +184,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://online.melodiafm.ua/MelodiaFM"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "djfm-ua",
@@ -496,8 +491,7 @@ window.STATIONS = [
     "streams": [
       "https://online.melodiafm.ua/MelodiaFM_Int_Live"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "kiss-fm-digital-hd",
@@ -803,7 +797,8 @@ window.STATIONS = [
     "streams": [
       "https://radiofiorda.pl/stream/"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "offline": true
   },
   {
     "id": "khvylia-shchastia",
@@ -1076,4 +1071,4 @@ window.STATIONS = [
     "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T07:12Z";
+window.STATIONS_CHECKED = "2026-11-08T18:57Z";

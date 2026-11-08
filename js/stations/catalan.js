@@ -200,7 +200,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://directe.eixamplebarcelonaradio.com:8443/radioOnline"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "comboi-la-radio-de-la-terreta",
@@ -248,7 +249,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://server8.emitironline.com:10824/"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "alpicat-radio",
@@ -383,7 +385,8 @@ window.STATIONS = [
     "streams": [
       "https://enacast.com/radioribarroja/streams/SD"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "radio-vilablareix",
@@ -647,4 +650,4 @@ window.STATIONS = [
     "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T07:12Z";
+window.STATIONS_CHECKED = "2026-11-08T18:57Z";

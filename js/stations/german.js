@@ -1274,6 +1274,33 @@ window.STATIONS = [
       "https://streams.90s90s.de/grunge/mp3-192/"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "radio-argovia",
+    "name": "RADIO ARGOVIA",
+    "category": "music",
+    "streams": [
+      "https://stream.streambase.ch/argovia/mp3-192/direct/"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "ndr-kultur",
+    "name": "NDR Kultur",
+    "category": "music",
+    "streams": [
+      "https://icecast.ndr.de/ndr/ndrkultur/live/aac/192/stream.aac"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "egofm-bayern",
+    "name": "egoFM Bayern",
+    "category": "music",
+    "streams": [
+      "https://cast.egofm.de/egofm.mp3?ar-distributor=radio-browser"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T07:12Z";
+window.STATIONS_CHECKED = "2026-11-08T18:57Z";

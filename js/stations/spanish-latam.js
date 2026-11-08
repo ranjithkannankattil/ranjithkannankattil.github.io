@@ -1115,8 +1115,7 @@ window.STATIONS = [
     "streams": [
       "https://radios.blumhost.es/8124/;"
     ],
-    "added": "2026-11-05",
-    "offline": true
+    "added": "2026-11-05"
   },
   {
     "id": "la-tukka-ec",
@@ -1270,6 +1269,33 @@ window.STATIONS = [
       "https://stream-281.surfernetwork.com/uagzy1yc5uhvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ1YWd6eTF5YzV1aHZ2IiwiaG9zdCI6InN0cmVhbS0yODEuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6IjBFSV9vQVpBVEtHc0VBX3J3T0RrZlEiLCJpYXQiOjE3OTM5NDk3NTcsImV4cCI6MTc5Mzk0OTgxN30.yJdWIGTlnxbBPejAre1ZXxcIVLseydSl_SkNh8LF3AY"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "radio-globo-88-5-mhz",
+    "name": "RADIO GLOBO 88.5 MHZ",
+    "category": "news",
+    "streams": [
+      "https://api.condoristream.com/stream/radioglobo"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "rockeando-con-regueton",
+    "name": "Rockeando con Reguetón",
+    "category": "music",
+    "streams": [
+      "https://stream-204.surfernetwork.com/ck2uqw2dgphvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJjazJ1cXcyZGdwaHZ2IiwiaG9zdCI6InN0cmVhbS0yMDQuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6IjdNdXc3cnBvVHBTMUV3MUs4M1hOV1EiLCJpYXQiOjE3OTM5MzgzMjIsImV4cCI6MTc5MzkzODM4Mn0.9UZWVCbPAPNXkXC5mX_7n4MkZ8e-oJ55pOXgko5TiBw"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "peru-folk-radio",
+    "name": "Peru Folk radio",
+    "category": "music",
+    "streams": [
+      "https://raymistream.net/listen/perufolkradio/live"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T07:12Z";
+window.STATIONS_CHECKED = "2026-11-08T18:57Z";

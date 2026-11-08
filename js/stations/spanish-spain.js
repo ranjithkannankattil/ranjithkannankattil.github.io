@@ -1116,7 +1116,8 @@ window.STATIONS = [
     "streams": [
       "https://edge-nodo-002.streaming.hitcloser.net/eltorotv-streaming-web/tracks-v1a1/mono.m3u8"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "offline": true
   },
   {
     "id": "cadena-ser-extremadura",
@@ -1270,6 +1271,33 @@ window.STATIONS = [
       "https://dcealopez.es/rip-tear-radio-live"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "cadena-ser-valencia",
+    "name": "Cadena Ser + Valencia",
+    "category": "news",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/SER_MAS_VALENCIA.mp3"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "energia-flamenca",
+    "name": "Energía Flamenca",
+    "category": "music",
+    "streams": [
+      "https://axarquia.emisiononline.es/radio/8020/radio.mp3"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "gta-sa-k-rose",
+    "name": "GTA SA: K-Rose",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/hvnu0rfuifguv"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T07:12Z";
+window.STATIONS_CHECKED = "2026-11-08T18:57Z";

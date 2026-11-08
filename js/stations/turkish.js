@@ -783,8 +783,7 @@ window.STATIONS = [
     "streams": [
       "https://sslyayin.radyoyayini.com:7067/stream"
     ],
-    "added": "2026-10-31",
-    "offline": true
+    "added": "2026-10-31"
   },
   {
     "id": "metropol-fm-anadolu-nun-sesi",
@@ -1217,6 +1216,33 @@ window.STATIONS = [
       "https://live.radyo.in/8062/stream"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "radyo-zile-fm-93-5",
+    "name": "Radyo Zile FM 93.5",
+    "category": "music",
+    "streams": [
+      "https://radyozile.ozelip.com/8114/stream"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "bizim-fm-sile",
+    "name": "Bizim Fm Şile",
+    "category": "music",
+    "streams": [
+      "https://stream.turkiyeradyolari.com/9300/stream?_t=1786859250066"
+    ],
+    "added": "2026-11-08"
+  },
+  {
+    "id": "kupe-fm",
+    "name": "Küpe FM",
+    "category": "music",
+    "streams": [
+      "https://icecast.netmedya.net/kupefm"
+    ],
+    "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T07:12Z";
+window.STATIONS_CHECKED = "2026-11-08T18:57Z";
