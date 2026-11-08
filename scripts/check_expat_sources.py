@@ -246,7 +246,7 @@ def main():
         for tid, turls in sorted(topics.items()):
             path = SRC / f"{tid}.html"
             guide = path.read_text()
-            pagelist = [(u, pages[u]) for u in turls if not pages[u][0].startswith("pdf:")]
+            pagelist = [(u, pages[u]) for u in turls if pages[u] and not pages[u][0].startswith("pdf:")]
             if not pagelist:
                 continue
             try:
