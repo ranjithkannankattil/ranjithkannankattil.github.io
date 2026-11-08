@@ -33,6 +33,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "js/scholarships-data.js"
 PAGE = ROOT / "productivity/scholarships.html"
 MAX_NEW = 5
+SEARCH_MODELS = ["gemini-2.5-flash", "gemini-2.5-flash-lite", "gemini-flash-latest"]
 SECTION = "  /* ---------- Found by the weekly search ---------- */"
 REGIONS = {"europe", "northamerica", "southamerica", "asia", "middleeast", "africa", "oceania", "any"}
 LEVELS = {"ug", "masters", "phd"}
@@ -107,7 +108,25 @@ def suggest(names, key, model, today):
         '[{"name": "...", "url": "https://..."}]')
     body = {"contents": [{"parts": [{"text": prompt}]}], "tools": [{"google_search": {}}],
             "generationConfig": {"temperature": 0.2}}
-    got = first_json(ask(body, key, model), "[") or []
+    # Search has its own free quota, which differs by model, so try a few in turn.
+    text, err = None, None
+    for m in [model] + [m for m in SEARCH_MODELS if m != model]:
+        for _ in range(2):
+            try:
+                text = ask(body, key, m)
+                print("Searched with", m)
+                break
+            except Exception as e:  # noqa: BLE001
+                err = e
+                print("Search with", m, "failed:", str(e)[:100])
+                if getattr(e, "code", None) not in (429, 500, 503):
+                    break
+                time.sleep(30)
+        if text is not None:
+            break
+    if text is None:
+        raise err
+    got = first_json(text, "[") or []
     return [g for g in got if isinstance(g, dict) and isinstance(g.get("name"), str)
             and isinstance(g.get("url"), str) and g["url"].startswith("https://")]
 
