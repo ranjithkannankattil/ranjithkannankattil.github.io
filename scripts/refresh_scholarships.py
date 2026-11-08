@@ -126,8 +126,8 @@ def todo(recs, state):
         v = state.get(url) or {}
         if len(ids) != 1 or not v.get("changed") or not v.get("lines"):
             continue  # a page shared by several listings can't be matched to one safely
-        if v["lines"][0].startswith("pdf:"):
-            continue
+        if v["lines"][0].startswith("pdf:") or v.get("via") == "gemini":
+            continue  # a Gemini copy can't be used to check Gemini's own quote
         if v["changed"] > (field(recs[ids[0]], "checked") or ""):
             out.append((v["changed"], ids[0], url))
     return sorted(out, reverse=True)

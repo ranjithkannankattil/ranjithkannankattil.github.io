@@ -8,6 +8,9 @@ name: Check scholarship pages
 on:
   schedule:
     - cron: "37 3 * * *"
+  push:
+    branches: [main]
+    paths: [scripts/check_scholarships.py]
   workflow_dispatch:
     inputs:
       try:
@@ -30,6 +33,9 @@ jobs:
         with:
           python-version: "3.12"
       - name: Compare the official pages
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
         run: python3 scripts/check_scholarships.py
       - name: Update deadlines with Gemini
         continue-on-error: true
