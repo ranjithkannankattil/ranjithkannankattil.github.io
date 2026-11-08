@@ -94,7 +94,7 @@
 },
 "https://cdn.auckland.ac.nz/assets/Scholarships/regulations/university-of-auckland-india-high-achievers-scholarship.pdf": {
 "lines": [],
-"misses": 8
+"misses": 9
 },
 "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-masters-scholarships/": {
 "checked": "2026-11-08",
@@ -248,7 +248,7 @@
 },
 "https://darmasiswa.kemdikbud.go.id/": {
 "lines": [],
-"misses": 8
+"misses": 9
 },
 "https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/erasmus-mundus-joint-masters": {
 "checked": "2026-11-08",
@@ -352,8 +352,12 @@
 "misses": 0
 },
 "https://mbzuai.ac.ae/study/undergraduate-program/": {
-"lines": [],
-"misses": 8
+"checked": "2026-11-08",
+"lines": [
+"Candidates for MBZUAI's undergraduate program must have successfully completed, or be in the final year of completing, a recognized secondary/high school qualification with a minimum overall average of 90% or equivalent, depending on the curriculum and competitiveness of the admissions cycle."
+],
+"misses": 0,
+"via": "gemini"
 },
 "https://nawa.gov.pl/en/students/foreign-students/poland-my-first-choice-programme": {
 "checked": "2026-11-08",
@@ -409,12 +413,19 @@
 "misses": 0
 },
 "https://overseas.tribal.gov.in/": {
-"lines": [],
-"misses": 8
+"checked": "2026-11-08",
+"lines": [
+"Last Date Extended! Apply for National Overseas Scholarship (NOS) for ST Candidates 2026-27.",
+"New Deadline: 15th July 2026, 5:30 PM.",
+"Ministry invites online application for the National Overseas Scholarship Scheme (NOS) for ST candidates for the selection year 2026-27.",
+"The portal is open till 30-06-2026"
+],
+"misses": 0,
+"via": "gemini"
 },
 "https://socialjustice.gov.in/schemes/28": {
 "lines": [],
-"misses": 8
+"misses": 9
 },
 "https://stipendiumhungaricum.hu/wp-content/uploads/2025/10/BA_MA_OTM_Call_for_Applications_2026_27.pdf": {
 "checked": "2026-11-08",
@@ -424,8 +435,15 @@
 "misses": 0
 },
 "https://study.unimelb.edu.au/connect-with-us/international/india": {
-"lines": [],
-"misses": 8
+"checked": "2026-11-08",
+"lines": [
+"What are the application deadlines for mid-year and start-year intake?",
+"Deadlines vary by course and level of study.",
+"For undergraduate programs, see application dates.",
+"For graduate coursework, you'll find application deadlines on the 'How to apply' tab of each course page."
+],
+"misses": 0,
+"via": "gemini"
 },
 "https://the.akdn/en/what-we-do/developing-human-capacity/education/international-scholarships": {
 "checked": "2026-11-08",
@@ -510,7 +528,7 @@
 },
 "https://www.campuschina.org/": {
 "lines": [],
-"misses": 8
+"misses": 9
 },
 "https://www.campusfrance.org/en/actu/call-for-france-excellence-eiffel-applications-2027": {
 "changed": "2026-11-07",
@@ -532,32 +550,27 @@
 "https://www.chevening.org/scholarship/india/": {
 "checked": "2026-11-08",
 "lines": [
-"Closed for applications",
-"Applications for 202 7 -202 8 Chevening Scholarships are now closed.",
-"Applications are closed",
+"Applications for 2027-2028 Chevening Scholarships are now closed.",
 "Keep an eye on our channels to be the first to know when applications open again",
-"How to apply",
-"To apply, you will need:",
-"To meet our eligibility criteria",
-"Feel confident that you can write a compelling application",
-"Make a note of your unique access code for the online application system – you will need this at each stage of the application process",
-"Did you know: Chevening partners offer additional scholarships and every year, some go unfilled. With fewer applicants competing for these opportunities, applying for a partner award may increase your chances of being selected.",
-"Look for eligible one-year taught master's courses in the UK.",
-"(opens in a new window)",
-"Marketing cookies are used to display advertisements that are relevant to you. They are often used by third-party companies, and may be used to track you across other websites."
+"To meet our eligibility criteria"
 ],
-"misses": 0
+"misses": 0,
+"via": "gemini"
 },
 "https://www.daad.in/en/study-research-in-germany/studying-in-germany/daad-scholarships/": {
 "checked": "2026-11-08",
 "lines": [
 "Find out which of the DAAD scholarships are available for students - during or for their Bachelors, Masters, PhD and Post-Doc. This is a selection of scholarships that the DAAD sees as its flagship programmes. Any eligible individual can apply for these."
 ],
-"misses": 0
+"misses": 1
 },
 "https://www.dfat.gov.au/people-to-people/australia-awards/participating-countries": {
-"lines": [],
-"misses": 8
+"checked": "2026-11-08",
+"lines": [
+"This page lists countries that are eligible for Australia Awards Scholarships, and country-specific eligibility criteria."
+],
+"misses": 0,
+"via": "gemini"
 },
 "https://www.felixscholarship.org/": {
 "checked": "2026-11-08",
@@ -609,16 +622,54 @@
 "misses": 0
 },
 "https://www.gov.il/en/service/scholarships_application_for_academic_studies_in_israel": {
-"lines": [],
-"misses": 8
+"checked": "2026-11-08",
+"lines": [
+"Contact your local Israeli embassy or consulate, in your country of origin, to receive the application submission dates and detailed information on the applicant selection process from your country.",
+"Attach all the relevant required documents to your application pack and submit them to the Israeli embassy in your country of origin, no later than 15 January 2027.",
+"International nationals who have acquired an academic degree, either BA or BSc and higher, can apply for a scholarship from the Israel Ministry of Foreign Affairs.",
+"In order to start the application process, please contact the Cultural section in your local Israeli embassy to verify the exact date for submitting applications and to receive more detailed information concerning the process of choosing candidates for scholarship from your country.",
+"You must hold a BA or BSc degree (or higher) and a good record of academic achievement.",
+"You must be under 35 years old at the beginning of the academic year.",
+"You must be a citizen of one of the following countries:",
+"You cannot apply if you are an Israeli citizen or in the process of obtaining citizenship.",
+"You can only receive a scholarship after being accepted to an academic institute that is recognized by the Israeli Higher Education Council.",
+"You must meet the level of English language proficiency required by the academic institute where you intend to study or conduct research.",
+"If you intend to study or conduct research in Hebrew, you must meet the level of Hebrew language proficiency required by the academic institute where you intend to study or conduct research.",
+"You must receive a type (A2) student visa which does not permit to work in order to be eligible for the scholarship.",
+"The final date for the submission of application forms is no later than 15 January 2027."
+],
+"misses": 0,
+"via": "gemini"
 },
 "https://www.in.emb-japan.go.jp/education/Research_Student.html": {
-"lines": [],
-"misses": 8
+"checked": "2026-11-08",
+"lines": [
+"Type Research Students Level Graduate school level",
+"(Master's Course/Ph.D. Course) Age Under 35 years old (Applicants, in principle, must have been born on or after April 2, 1992)",
+"Qualifications and Conditions In addition to the Qualifications and Eligibility Criteria listed in the Guidelines, the following would apply:",
+"1.For Master's course / Doctoral course (first phase)",
+"Bachelor's Degree in the relevant field with minimum 70% marks. The candidates should obtain their mark sheet and degree on or before September 30, 2027 for the October 2027 batch.",
+"2. Doctoral course (second phase)",
+"Master's degree in the relevant field with minimum 70% marks. Candidates should have practical research/teaching/work experience after obtaining the prescribed qualification on or before September 30, 2027 for the October 2027 batch.",
+"*Eligibility for humanities and social sciences is a bachelor's degree in the relevant field with minimum 65%.",
+"The deadline for submission is 15 May 2026 at 11:59 p.m.",
+"Applications received after the aforesaid date and time will be automatically rejected.",
+"Application Deadline (must): 15 May 2026"
+],
+"misses": 0,
+"via": "gemini"
 },
 "https://www.in.emb-japan.go.jp/education/undergraduate_student.html": {
-"lines": [],
-"misses": 8
+"checked": "2026-11-08",
+"lines": [
+"Age Applicants, in principle, must have been born on or after April 2, 2002.",
+"In addition to the qualifications and conditions listed in the Guidelines, the following conditions must be fulfilled:",
+"1. If you have completed your Grade 12 in or before 2026, then minimum 80% marks are required.",
+"2. For students who do not have their Grade 12 result at the time of the application, 80% marks are required in their Grade 10, along with a provisional document from the current school certifying that the applicant is expected to score more than 80% in their 2027 Grade 12 board examinations.",
+"Application deadline: 25 May 2026"
+],
+"misses": 0,
+"via": "gemini"
 },
 "https://www.ku.ac.ae/scholarship/graduate-research-teaching-scholarship-for-international-students": {
 "checked": "2026-11-08",
@@ -645,7 +696,7 @@
 },
 "https://www.monash.edu/india/study/scholarships-and-finance-options": {
 "lines": [],
-"misses": 8
+"misses": 9
 },
 "https://www.rhodeshouse.ox.ac.uk/scholarships/applications/india/": {
 "checked": "2026-11-08",
@@ -661,8 +712,13 @@
 "misses": 0
 },
 "https://www.roc-taiwan.org/in_en/post/7920.html": {
-"lines": [],
-"misses": 8
+"checked": "2026-11-08",
+"lines": [
+"We are pleased to announce that the application period for the 2026 MOE Taiwan Scholarship will officially open on the 1st of February, 2026.",
+"The application deadline is the 31th of March, 2026."
+],
+"misses": 0,
+"via": "gemini"
 },
 "https://www.sbfi.admin.ch/en/swiss-government-excellence-scholarships": {
 "checked": "2026-11-08",
@@ -785,8 +841,15 @@
 "misses": 0
 },
 "https://www.studywithnewzealand.govt.nz/en/study-options/scholarships": {
-"lines": [],
-"misses": 8
+"checked": "2026-11-08",
+"lines": [
+"Most scholarships have non-negotiable criteria and requirements.",
+"Check that you fit all the criteria before you take the time to apply.",
+"If you aren't sure whether you meet all the criteria for a scholarship, contact the organisation that manages the scholarship to discuss your circumstances.",
+"Start planning well ahead of the advertised due date, particularly if you require other people to supply you with references or documentation."
+],
+"misses": 0,
+"via": "gemini"
 },
 "https://www.sydney.edu.au/scholarships/e/sydney-scholars-india-scholarship-program.html": {
 "checked": "2026-11-08",
@@ -972,7 +1035,7 @@
 "„Country“ is the country in which you are living and from which you are applying. If you come from another country, please contact us to find out whether you are eligible for the programme of your choice. More Information",
 "If your status and/or country is not included in the list, you cannot apply for this scholarship programme. To ensure that only scholarship programmes for which you are eligible to apply are shown, please select your status and your country in the results list (left-hand column)."
 ],
-"misses": 0
+"misses": 1
 },
 "https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm": {
 "checked": "2026-11-08",

@@ -37,19 +37,25 @@
 "https://knight-hennessy.stanford.edu/admission": {
 "checked": "2026-11-08"
 },
-"https://mbzuai.ac.ae/study/undergraduate-program/": {},
+"https://mbzuai.ac.ae/study/undergraduate-program/": {
+"checked": "2026-11-08"
+},
 "https://nawa.gov.pl/en/students/foreign-students/poland-my-first-choice-programme": {
 "checked": "2026-11-08"
 },
 "https://nusgs.nus.edu.sg/scholarships/nus-research-scholarship": {
 "checked": "2026-11-08"
 },
-"https://overseas.tribal.gov.in/": {},
+"https://overseas.tribal.gov.in/": {
+"checked": "2026-11-08"
+},
 "https://socialjustice.gov.in/schemes/28": {},
 "https://stipendiumhungaricum.hu/wp-content/uploads/2025/10/BA_MA_OTM_Call_for_Applications_2026_27.pdf": {
 "checked": "2026-11-08"
 },
-"https://study.unimelb.edu.au/connect-with-us/international/india": {},
+"https://study.unimelb.edu.au/connect-with-us/international/india": {
+"checked": "2026-11-08"
+},
 "https://the.akdn/en/what-we-do/developing-human-capacity/education/international-scholarships": {
 "checked": "2026-11-08"
 },
@@ -73,7 +79,9 @@
 "https://www.daad.in/en/study-research-in-germany/studying-in-germany/daad-scholarships/": {
 "checked": "2026-11-08"
 },
-"https://www.dfat.gov.au/people-to-people/australia-awards/participating-countries": {},
+"https://www.dfat.gov.au/people-to-people/australia-awards/participating-countries": {
+"checked": "2026-11-08"
+},
 "https://www.felixscholarship.org/": {
 "checked": "2026-11-08"
 },
@@ -83,9 +91,15 @@
 "https://www.gov.br/capes/en/access-to-information/actions-and-programs/scholarships-and-students/international-cooperation-programs/multinational/post-graduate-student-covenant-program-pec-pg": {
 "checked": "2026-11-08"
 },
-"https://www.gov.il/en/service/scholarships_application_for_academic_studies_in_israel": {},
-"https://www.in.emb-japan.go.jp/education/Research_Student.html": {},
-"https://www.in.emb-japan.go.jp/education/undergraduate_student.html": {},
+"https://www.gov.il/en/service/scholarships_application_for_academic_studies_in_israel": {
+"checked": "2026-11-08"
+},
+"https://www.in.emb-japan.go.jp/education/Research_Student.html": {
+"checked": "2026-11-08"
+},
+"https://www.in.emb-japan.go.jp/education/undergraduate_student.html": {
+"checked": "2026-11-08"
+},
 "https://www.ku.ac.ae/scholarship/graduate-research-teaching-scholarship-for-international-students": {
 "checked": "2026-11-08"
 },
@@ -93,7 +107,9 @@
 "https://www.rhodeshouse.ox.ac.uk/scholarships/applications/india/": {
 "checked": "2026-11-08"
 },
-"https://www.roc-taiwan.org/in_en/post/7920.html": {},
+"https://www.roc-taiwan.org/in_en/post/7920.html": {
+"checked": "2026-11-08"
+},
 "https://www.sbfi.admin.ch/en/swiss-government-excellence-scholarships": {
 "checked": "2026-11-08"
 },
@@ -110,7 +126,9 @@
 "changed": "2026-11-08",
 "checked": "2026-11-08"
 },
-"https://www.studywithnewzealand.govt.nz/en/study-options/scholarships": {},
+"https://www.studywithnewzealand.govt.nz/en/study-options/scholarships": {
+"checked": "2026-11-08"
+},
 "https://www.sydney.edu.au/scholarships/e/sydney-scholars-india-scholarship-program.html": {
 "checked": "2026-11-08"
 },
