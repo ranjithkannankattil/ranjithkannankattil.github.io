@@ -191,7 +191,20 @@ fun App(c: MediaController?) {
         if (Account.signedIn(ctx)) scope.launch { try { Account.saveFavs(ctx, favList.map { it.key }) } catch (e: Exception) { } }
     }
     LaunchedEffect(Session.favsVersion) { favList = favs.all() }
-    LaunchedEffect(Unit) { if (Account.signedIn(ctx)) try { Account.sync(ctx, favs); favList = favs.all() } catch (e: Exception) { } }
+    LaunchedEffect(Unit) {
+        if (Account.signedIn(ctx)) try { Account.sync(ctx, favs); favList = favs.all() } catch (e: Exception) { }
+        // favourites whose station has been taken off the lists (e.g. it played the wrong language) are removed
+        val gone = ArrayList<Station>()
+        favs.all().groupBy { it.col }.forEach { (c, l) ->
+            val fresh = Repo.stations(ctx, c, fresh = true)
+            if (fresh.isNotEmpty()) gone += l.filter { s -> fresh.none { it.id == s.id } }
+        }
+        if (gone.isNotEmpty()) {
+            gone.forEach { favs.remove(it.key) }; refreshFavs()
+            android.widget.Toast.makeText(ctx, "Removed from favourites (no longer listed): " + gone.joinToString(", ") { it.name },
+                android.widget.Toast.LENGTH_LONG).show()
+        }
+    }
     var update by remember { mutableStateOf<Update?>(null) }
     LaunchedEffect(Unit) { update = checkUpdate(ctx) }
     var cols by remember { mutableStateOf<List<Collection>>(emptyList()) }
@@ -222,6 +235,10 @@ fun App(c: MediaController?) {
     LaunchedEffect(colId) {
         loading = true; cat = "all"; prefs.edit().putString("col", colId).apply()
         stations = when (colId) { PICKS -> Repo.picks(ctx); ALL -> Repo.allStations(ctx, cols.ifEmpty { Repo.collections(ctx) }); else -> Repo.stations(ctx, colId) }; loading = false
+        // show the saved copy at once, then fetch today's list (stations are added, fixed and removed every day)
+        if (colId != PICKS && colId != ALL) { val id = colId; val fresh = Repo.stations(ctx, id, fresh = true)
+            if (id == colId && fresh.isNotEmpty() && fresh != stations) stations = fresh }
+        else if (colId == PICKS) { val fresh = Repo.picks(ctx, fresh = true); if (colId == PICKS && fresh.isNotEmpty()) stations = fresh }
     }
     val col = when (colId) { PICKS -> PICKS_COL; ALL -> ALL_COL; else -> cols.find { it.id == colId } }
     fun langOf(s: Station) = cols.find { it.id == s.col }?.name ?: ""
