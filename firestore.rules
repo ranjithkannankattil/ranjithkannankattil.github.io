@@ -6,9 +6,11 @@ service cloud.firestore {
     match /users/{uid} {
       allow read, delete: if request.auth != null && request.auth.uid == uid;
       allow create, update: if request.auth != null && request.auth.uid == uid
-        && request.resource.data.keys().hasOnly(['favs', 'def', 'updated'])
-        && request.resource.data.favs is list && request.resource.data.favs.size() <= 500
-        && (!('def' in request.resource.data) || request.resource.data.def is string);
+        && request.resource.data.keys().hasOnly(['favs', 'def', 'updated', 'listen'])
+        && (!('favs' in request.resource.data) || (request.resource.data.favs is list && request.resource.data.favs.size() <= 500))
+        && (!('def' in request.resource.data) || request.resource.data.def is string)
+        // listening time per device (app and website add up): a small map, nothing else
+        && (!('listen' in request.resource.data) || (request.resource.data.listen is map && request.resource.data.listen.size() <= 20));
     }
     // Visitor counter: anyone may read the total or add exactly one; nothing else is stored.
     match /stats/site {
@@ -16,6 +18,14 @@ service cloud.firestore {
       allow create: if request.resource.data.keys().hasOnly(['visits']) && request.resource.data.visits == 1;
       allow update: if request.resource.data.keys().hasOnly(['visits'])
         && request.resource.data.visits == resource.data.visits + 1;
+    }
+    // Total listening minutes of everyone (anonymous): anyone may read it or add 1-30 minutes at a time.
+    match /stats/listening {
+      allow read: if true;
+      allow create: if request.resource.data.keys().hasOnly(['minutes']) && request.resource.data.minutes is int
+        && request.resource.data.minutes >= 1 && request.resource.data.minutes <= 30;
+      allow update: if request.resource.data.keys().hasOnly(['minutes']) && request.resource.data.minutes is int
+        && request.resource.data.minutes > resource.data.minutes && request.resource.data.minutes <= resource.data.minutes + 30;
     }
     // ---- Radio ratings and comments (see docs/superpowers/specs/2026-10-23-radio-ratings-share-design.md)
     // The approver is the site owner's Firebase account ID, filled in below once known. Empty = nobody.

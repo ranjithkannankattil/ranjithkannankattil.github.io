@@ -213,3 +213,13 @@ test("anyone can read the Velvet Selection; only the owner can set them", async 
   await assertFails(setDoc(doc(db("owner"), "picks/other"), { favs: [] }));
   await assertFails(setDoc(doc(db("owner"), "picks/ranjith"), { favs: [], extra: 1 }));
 });
+
+test("listening: per-device map on your own account; anonymous total grows by at most 30 minutes", async () => {
+  await assertSucceeds(setDoc(doc(db("someone"), "users/someone"), { favs: [], listen: { a1: { total: 1000 } } }));
+  await assertFails(setDoc(doc(db("someone"), "users/someone"), { favs: [], listen: "x" }));
+  await assertSucceeds(setDoc(doc(db(null), "stats/listening"), { minutes: 5 }));
+  await assertSucceeds(getDoc(doc(db(null), "stats/listening")));
+  await assertFails(setDoc(doc(db(null), "stats/listening"), { minutes: 500 }));
+  await assertSucceeds(setDoc(doc(db(null), "stats/listening"), { minutes: 30 }));
+  await assertFails(setDoc(doc(db(null), "stats/listening"), { minutes: 10 }));
+});
