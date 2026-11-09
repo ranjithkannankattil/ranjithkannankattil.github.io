@@ -107,9 +107,10 @@ object Listen {
         if (min < 5) return@withContext
         val n = min.coerceAtMost(30)
         try {
-            Account.http("${Account.DOCS}:commit?key=${Account.KEY}", "POST", JSONObject().put("writes", JSONArray().put(JSONObject()
-                .put("transform", JSONObject().put("document", STATS).put("fieldTransforms", JSONArray().put(JSONObject()
-                    .put("fieldPath", "minutes").put("increment", JSONObject().put("integerValue", n.toString())))))))).toString())
+            val inc = JSONObject().put("fieldPath", "minutes").put("increment", JSONObject().put("integerValue", n.toString()))
+            val write = JSONObject().put("transform", JSONObject().put("document", STATS).put("fieldTransforms", JSONArray().put(inc)))
+            val body = JSONObject().put("writes", JSONArray().put(write))
+            Account.http("${Account.DOCS}:commit?key=${Account.KEY}", "POST", body.toString())
             pr.edit().putLong("pending", pr.getLong("pending", 0) - n * 60_000L).apply()
         } catch (e: Exception) { }
     }
