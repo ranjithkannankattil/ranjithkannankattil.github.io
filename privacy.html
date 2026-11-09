@@ -102,6 +102,7 @@
     <tr><th>What</th><th>Why</th></tr>
     <tr><td>Your Google account ID, email address, name and profile picture link (held by Firebase Authentication)</td><td>To know which saved list is yours when you sign in. Your name is shown only to you, next to the Sign out button.</td></tr>
     <tr><td>Your list of favourite stations, your default language and when they were last changed (held in Firebase Firestore)</td><td>To show your favourites on any device you sign in on.</td></tr>
+    <tr><td>Your listening time: total and this week's minutes, and your five most-played stations, kept separately for each device (held in Firebase Firestore)</td><td>To show you how long you have listened, added up across the app and the website.</td></tr>
   </table>
   <ul>
     <li><strong>Legal basis:</strong> you ask for this feature by signing in, so it is processed to provide it to you (GDPR Art. 6(1)(b)). Without signing in, everything still works and nothing is stored about you (apart from any station ratings you choose to give, below).</li>
@@ -118,16 +119,17 @@
     <li><strong>Signing in (optional):</strong> the same Google sign-in and saved favourites as the Radio page, described above, held by Google Firebase in the EU. The sign-in opens ranjithkb.com in a secure browser tab.</li>
     <li><strong>Song covers:</strong> when a station sends the name of the song playing, the app asks Apple's free iTunes Search for the album cover, sending only the song and artist name (and, like any web request, your IP address). Apple's privacy policy applies to that request.</li>
     <li><strong>Stations and updates:</strong> the app reads the station lists from ranjithkb.com and plays each station straight from its broadcaster, as above. The version downloaded from this site also checks GitHub for a newer version; the Google Play version leaves updates to Play.</li>
+    <li><strong>Listening time:</strong> the app counts how long you listen and which stations you play most, and keeps it on the phone; if you are signed in, it is also saved with your account as described above. Separately, whole minutes are added to one public total of everyone's listening, which holds only that number and nothing about who listened.</li>
     <li><strong>Permissions:</strong> internet access to play, and notifications for the player controls on the lock screen. Nothing else on your phone is read.</li>
   </ul>
 
   <h2 id="delete-account">Deleting your account</h2>
-  <p>You can delete your sign-in and everything saved with it (your favourites list and default language) at any time:</p>
+  <p>You can delete your sign-in and everything saved with it (your favourites list, default language and listening time) at any time:</p>
   <ul>
     <li><strong>In the app:</strong> open Radio Velvet → <em>Info</em> → <em>Your account</em> → <em>Delete account</em>. It happens straight away.</li>
     <li><strong>Without the app:</strong> email <a href="mailto:hello@ranjithkb.com?subject=Delete%20my%20Radio%20account">hello@ranjithkb.com</a> from the Google address you signed in with, asking for your Radio account to be deleted. It is done within 30 days, usually much sooner, and you'll get a reply when it is.</li>
   </ul>
-  <p>Deleting removes your Google account ID, email, name, favourites and default language from Firebase. Anonymous station ratings and approved comments are kept without any link to you unless you ask for them to be removed too. Nothing is kept in backups beyond Firebase's own short recovery window.</p>
+  <p>Deleting removes your Google account ID, email, name, favourites, default language and listening time from Firebase. Anonymous station ratings and approved comments are kept without any link to you unless you ask for them to be removed too. Nothing is kept in backups beyond Firebase's own short recovery window.</p>
 
   <h2>Rating and commenting on stations (optional)</h2>
   <p>On the Radio page you can give a station one to five stars and add a short comment. You don't need to sign in:
