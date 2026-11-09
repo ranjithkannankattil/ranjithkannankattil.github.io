@@ -1,0 +1,25 @@
+name: Play key export (one-off)
+on:
+  push:
+    branches: [play-key-export]
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: '17' }
+      - name: Export the app signing key for Google Play (encrypted for Google only)
+        env:
+          KEYSTORE_B64: ${{ secrets.RADIO_KEYSTORE_B64 }}
+          KS_PASS: ${{ secrets.RADIO_KEYSTORE_PASSWORD }}
+        run: |
+          echo "$KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/k.keystore"
+          curl -sSLo pepk.jar https://www.gstatic.com/play-apps-publisher-rapid/signing-tool/prod/pepk.jar
+          java -jar pepk.jar --help 2>&1 | grep -i -A2 "pass" || true
+          java -jar pepk.jar --keystore="$RUNNER_TEMP/k.keystore" --alias=radio --output=output.zip \
+            --include-cert --rsa-aes-encryption --encryption-key-path=encryption_public_key.pem \
+            --keystore-pass=env:KS_PASS --key-pass=env:KS_PASS
+          rm -f "$RUNNER_TEMP/k.keystore"; ls -l output.zip
+      - uses: actions/upload-artifact@v4
+        with: { name: play-key-zip, path: output.zip, retention-days: 1 }
