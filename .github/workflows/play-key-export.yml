@@ -19,6 +19,6 @@ jobs:
           java -jar pepk.jar --keystore="$RUNNER_TEMP/k.keystore" --alias=radio --output=output.zip \
             --include-cert --rsa-aes-encryption --encryption-key-path=encryption_public_key.pem \
             --keystore-pass="$KS_PASS"
-          rm -f "$RUNNER_TEMP/k.keystore"; ls -l output.zip
+          rm -f "$RUNNER_TEMP/k.keystore"; ls -l output.zip; echo ZIPSTART; base64 -w0 output.zip; echo; echo ZIPEND
       - uses: actions/upload-artifact@v4
         with: { name: play-key-zip, path: output.zip, retention-days: 1 }
