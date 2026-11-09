@@ -252,7 +252,7 @@ fun App(c: MediaController?) {
     fun go(t: Int) { tab = t; prefs.edit().putInt("tab", t).apply() }
     Column(Modifier.fillMaxSize().statusBarsPadding()) {
         Column(Modifier.padding(start = 20.dp, top = 14.dp, bottom = 10.dp, end = 20.dp)) {
-            Text("Radio Velvet", fontSize = 26.sp, fontWeight = FontWeight.SemiBold, color = Velvet, letterSpacing = 0.2.sp)
+            Text("Radio Velvet", fontSize = 26.sp, fontWeight = FontWeight.SemiBold, color = if (Theme.dark) Color(0xFFF1E9EE) else Velvet, letterSpacing = 0.2.sp)
             Text("Elegant sounds, always free", fontSize = 13.sp, fontStyle = FontStyle.Italic, color = Accent, letterSpacing = 0.6.sp)
         }
         update?.let { u ->
