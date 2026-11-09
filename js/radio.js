@@ -155,6 +155,9 @@
   }
 
   // ---------------------------------------------------------- lists
+  // Stations that stream only inside one country (station "geo": country code)
+  const GEO = { AE: "the UAE", QA: "Qatar", BH: "Bahrain", OM: "Oman", SA: "Saudi Arabia", KW: "Kuwait", IN: "India", US: "the USA", GB: "the UK" };
+  function geoNote(c) { return "Only plays in " + (GEO[c] || c); }
   function catLabel(k) { return (col.cats.find((x) => x[0] === k) || [k, k])[1]; }
 
   function renderChips() {
@@ -195,6 +198,7 @@
       li.dataset.id = s.id;
       const isNew = s.added && (Date.now() - Date.parse(s.added)) < 21 * 864e5;
       const sub = s.offline ? "Not working today"
+        : s.geo ? [catLabel(s.category), geoNote(s.geo)].join(" · ")
         : [REGIONS.has(s.category) ? "" : catLabel(s.category),
            s.freq || s.where || (s.streams.length > 1 ? s.streams.length + " sources" : "Live")].filter(Boolean).join(" · ");
       li.innerHTML = `
@@ -832,7 +836,7 @@
     const s = current, url = s.streams[tryIndex];
     if (!url) {
       if (everPlayed) { tryIndex = 0; everPlayed = false; reconnect("Reconnecting"); return; }  // was on air: start over
-      setState("idle"); status("Offline — try another station"); markErr(s.id);
+      setState("idle"); status(s.geo ? geoNote(s.geo) + " — it won't play from here" : "Offline — try another station"); markErr(s.id);
       if (skipDir && autoSkips < 6) { autoSkips++; status("Offline — trying the next one"); setTimeout(() => skip(skipDir), 700); }
       else wants = false;
       return;

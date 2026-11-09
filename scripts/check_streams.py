@@ -291,6 +291,10 @@ def main() -> None:
     st_health = health.setdefault("@station", {})      # consecutive checks with nothing playing, per station
     hidden_now, back_now = [], []
     for st in stations:
+        # Stations that only stream inside one country ("geo": "AE" ...) can't be judged from GitHub's
+        # US servers: leave them exactly as they are (the page and the app say where they play).
+        if st.get("geo"):
+            continue
         before = list(st["streams"])
         working, dead, unknown = [], [], []
         for u in st["streams"]:

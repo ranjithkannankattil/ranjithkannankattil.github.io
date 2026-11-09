@@ -31,6 +31,15 @@ window.STATIONS = [
     ]
   },
   {
+    "id": "hit967",
+    "name": "Hit 96.7",
+    "category": "fm",
+    "streams": [
+      "https://stream.radiojar.com/3yygc0pwuueuv"
+    ],
+    "geo": "AE"
+  },
+  {
     "id": "radiosunomalayalam",
     "name": "Radio Suno",
     "category": "fm",
@@ -52,7 +61,8 @@ window.STATIONS = [
     "name": "AIR Ananthapuri FM",
     "category": "air",
     "streams": [
-      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio229/playlist.m3u8"
+      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio229/playlist.m3u8",
+      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio229/chunklist.m3u8"
     ]
   },
   {
@@ -501,7 +511,8 @@ window.STATIONS = [
     "name": "Onattukara",
     "category": "online",
     "streams": [
-      "https://stream.zeno.fm/fu94u25kqd0uv"
+      "https://stream.zeno.fm/fu94u25kqd0uv",
+      "https://stream.zeno.fm/fu94u25kqd0uv/;stream.mp3"
     ]
   },
   {
@@ -1024,15 +1035,6 @@ window.STATIONS = [
     "added": "2026-10-22"
   },
   {
-    "id": "ananthapuri-fm",
-    "name": "Ananthapuri FM",
-    "category": "fm",
-    "streams": [
-      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio229/chunklist.m3u8"
-    ],
-    "added": "2026-10-22"
-  },
-  {
     "id": "vividh-bharati-thiruvananthapuram",
     "name": "Vividh Bharati Thiruvananthapuram",
     "category": "online",
@@ -1068,15 +1070,6 @@ window.STATIONS = [
       "https://radio.shahimsha.com/listen/shahimsha/radio.mp3"
     ],
     "added": "2026-10-22"
-  },
-  {
-    "id": "radio-onattukara",
-    "name": "Radio Onattukara",
-    "category": "online",
-    "streams": [
-      "https://stream.zeno.fm/fu94u25kqd0uv/;stream.mp3"
-    ],
-    "added": "2026-10-23"
   },
   {
     "id": "planet-black",
