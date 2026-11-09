@@ -1178,6 +1178,33 @@ window.STATIONS = [
       "https://radio.mdkband.com/stream.mp3"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "rock-radio",
+    "name": "Rock Radio",
+    "category": "music",
+    "streams": [
+      "https://radiostream.pl/tuba8-1.mp3?cache=1650763965"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "radio-fraszka",
+    "name": "Radio Fraszka",
+    "category": "music",
+    "streams": [
+      "https://s3.slotex.pl:7132/;"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "rmf-maxx-wocawek",
+    "name": "RMF Maxx Włocławek",
+    "category": "music",
+    "streams": [
+      "https://rs203-krk-cyfronet.rmfstream.pl/rmf_maxxx_wlc"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T06:27Z";
+window.STATIONS_CHECKED = "2026-11-09T07:42Z";

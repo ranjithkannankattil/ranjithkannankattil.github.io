@@ -1269,6 +1269,33 @@ window.STATIONS = [
       "https://stream.radioboom.ro/listen/boom_rock/radio.mp3"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "clasic-radio-greek-music-bucuresti",
+    "name": "Clasic Radio_Greek Music -București",
+    "category": "music",
+    "streams": [
+      "https://live.radioclasic.com/listen/radio_clasic_greek/live.mp3"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "stil-romania-radio-stil-popular",
+    "name": "Stil România -Radio Stil Popular",
+    "category": "music",
+    "streams": [
+      "https://popular.radiostill.ro/8176/stream"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "radio-galati",
+    "name": "Radio Galați",
+    "category": "music",
+    "streams": [
+      "https://stream-galati.radiogalati.ro/"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T06:27Z";
+window.STATIONS_CHECKED = "2026-11-09T07:42Z";

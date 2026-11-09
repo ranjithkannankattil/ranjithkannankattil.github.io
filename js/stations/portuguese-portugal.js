@@ -280,7 +280,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR",
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rca-radio-clube-de-armamar",
@@ -1296,6 +1297,15 @@ window.STATIONS = [
       "https://nl.digitalrm.pt:8072/stream?1671016403075="
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "wave-vibes",
+    "name": "Wave Vibes",
+    "category": "music",
+    "streams": [
+      "https://a6.asurahosting.com/listen/wave_vibes/radio.mp3"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T06:27Z";
+window.STATIONS_CHECKED = "2026-11-09T07:42Z";

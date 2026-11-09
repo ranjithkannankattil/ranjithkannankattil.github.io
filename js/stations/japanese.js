@@ -665,7 +665,8 @@ window.STATIONS = [
     "streams": [
       "https://howlingf-gecko.radioca.st/autodj"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "offline": true
   },
   {
     "id": "radio-gambaru",
@@ -711,6 +712,15 @@ window.STATIONS = [
       "https://radio.tspigot.net/radio/radio.mp3"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "retro-ko-radio",
+    "name": "Retro-Ko Radio",
+    "category": "music",
+    "streams": [
+      "https://radio.retroko.com/listen/retroko/radio.mp3"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T06:27Z";
+window.STATIONS_CHECKED = "2026-11-09T07:42Z";

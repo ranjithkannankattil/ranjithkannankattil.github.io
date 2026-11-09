@@ -1178,6 +1178,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/kcn3b5gfuhruv"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "radio-s4",
+    "name": "Radio S4",
+    "category": "music",
+    "streams": [
+      "https://stream.radios.rs:9006/;"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "laguna",
+    "name": "Laguna",
+    "category": "music",
+    "streams": [
+      "https://live.radiolaguna.rs/laguna"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "skc-slobodni",
+    "name": "skc slobodni",
+    "category": "music",
+    "streams": [
+      "https://skc.fm/hls/skc_radio/aac_hifi.m3u8"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T06:27Z";
+window.STATIONS_CHECKED = "2026-11-09T07:42Z";

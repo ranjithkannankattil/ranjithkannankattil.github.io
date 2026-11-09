@@ -1388,6 +1388,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-09",
     "where": "US"
+  },
+  {
+    "id": "talk-radio-europe",
+    "name": "Talk Radio Europe",
+    "category": "sport",
+    "streams": [
+      "https://s3.yesstreaming.net:7014/stream"
+    ],
+    "added": "2026-11-09",
+    "where": "Spain"
+  },
+  {
+    "id": "kosmos-94-1",
+    "name": "Kosmos 94.1",
+    "category": "world",
+    "streams": [
+      "https://edge.iono.fm/xice/88_high.mp3"
+    ],
+    "added": "2026-11-09",
+    "where": "Namibia"
+  },
+  {
+    "id": "npr-program-stream",
+    "name": "NPR Program Stream",
+    "category": "us",
+    "streams": [
+      "https://npr-hls.streamguys1.com/npr/live.aac/playlist.m3u8"
+    ],
+    "added": "2026-11-09",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T06:27Z";
+window.STATIONS_CHECKED = "2026-11-09T07:42Z";

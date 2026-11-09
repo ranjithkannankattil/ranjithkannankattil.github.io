@@ -1274,6 +1274,33 @@ window.STATIONS = [
       "https://hd.lagrosseradio.info/lagrosseradio-metal-192.mp3"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "generations-rap-u-s",
+    "name": "Generations Rap U.S",
+    "category": "music",
+    "streams": [
+      "https://generationfm-underground.ice.infomaniak.ch/generationfm-underground-high.mp3"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "generations-r-b",
+    "name": "Generations R&B",
+    "category": "music",
+    "streams": [
+      "https://generationfm-slowjam.ice.infomaniak.ch/generationfm-slowjam-high.mp3"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "jazz-radio-only-women",
+    "name": "Jazz Radio Only Women",
+    "category": "music",
+    "streams": [
+      "https://jazz-wr16.ice.infomaniak.ch/jazz-wr16-128.mp3"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T06:27Z";
+window.STATIONS_CHECKED = "2026-11-09T07:42Z";

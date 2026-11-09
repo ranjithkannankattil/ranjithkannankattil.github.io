@@ -486,7 +486,8 @@ window.STATIONS = [
       "https://kathy.torontocast.com:2800/;"
     ],
     "added": "2026-10-24",
-    "where": "US"
+    "where": "US",
+    "offline": true
   },
   {
     "id": "static-90s-2000s-alt-rock",
@@ -1057,7 +1058,8 @@ window.STATIONS = [
       "https://puma.streemlion.com:2125/stream"
     ],
     "where": "Canada",
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "offline": true
   },
   {
     "id": "radio-country-live-new-york",
@@ -1478,4 +1480,4 @@ window.STATIONS = [
     "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T06:27Z";
+window.STATIONS_CHECKED = "2026-11-09T07:42Z";

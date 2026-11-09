@@ -1273,6 +1273,33 @@ window.STATIONS = [
       "https://yayin2.canliyayin.org:10910/stream?"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "sivas-fm",
+    "name": "Sivas FM",
+    "category": "devotional",
+    "streams": [
+      "https://yayin2.canliyayin.org:10960/;stream"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "radiotedu-rock",
+    "name": "RadioTEDU Rock",
+    "category": "music",
+    "streams": [
+      "https://stream.radiotedu.com/rock"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "translation-of-the-quran-in-turkish",
+    "name": "Translation of the Quran in Turkish",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8258/;"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T06:27Z";
+window.STATIONS_CHECKED = "2026-11-09T07:42Z";

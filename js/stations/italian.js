@@ -1230,6 +1230,33 @@ window.STATIONS = [
       "https://stream10.xdevel.com/audio0s978096-2470/stream/icecast.audio"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "radio-80-afro",
+    "name": "Radio 80 Afro",
+    "category": "music",
+    "streams": [
+      "https://sphera.fluidstream.eu/r80_afro.mp3"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "woods-hit-radio-ac",
+    "name": "Woods Hit Radio AC",
+    "category": "music",
+    "streams": [
+      "https://cast4.asurahosting.com/proxy/nigel/stream"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "radio-x",
+    "name": "Radio X",
+    "category": "news",
+    "streams": [
+      "https://eu2.fastcast4u.com/proxy/radiox?mp=/1"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T06:27Z";
+window.STATIONS_CHECKED = "2026-11-09T07:42Z";

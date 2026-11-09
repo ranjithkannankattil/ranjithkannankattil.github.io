@@ -522,8 +522,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming.shoutcast.com/synchronizeradio"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "radio-suara-al-iman-846-am-surabaya",
@@ -913,8 +912,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.swadesifm.com/radio/8000/radio.mp3"
     ],
-    "added": "2026-11-02",
-    "offline": true
+    "added": "2026-11-02"
   },
   {
     "id": "rri-pro-1-manado",
@@ -1250,4 +1248,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T06:27Z";
+window.STATIONS_CHECKED = "2026-11-09T07:42Z";

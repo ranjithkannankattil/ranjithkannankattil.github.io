@@ -121,7 +121,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play-radio-stream3.hndt.com/now/WUBA5hW2/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-10",
@@ -924,7 +925,8 @@ window.STATIONS = [
     "streams": [
       "https://play-radio-stream3.hndt.com/now/JxkyN5mR/chunklist.m3u8"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "offline": true
   },
   {
     "id": "cctv-9",
@@ -1258,6 +1260,33 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/UFM_1003_SC"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "cctv-4-2",
+    "name": "CCTV-4中文国际美洲伴音",
+    "category": "news",
+    "streams": [
+      "https://piccpndali.v.myalicdn.com/audio/cctvamerica_2.m3u8"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "station-61",
+    "name": "中文课程朗读",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/rnxvrexlnajvv"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "cnr-10",
+    "name": "CNR-10 老年之声",
+    "category": "music",
+    "streams": [
+      "https://satellitepull.cnr.cn/live/wxlnzs/playlist.m3u8?wsSession=b560e2b8d5c24aef0be2a5c7-174709253203252&wsIPSercert=29f90b67755e3a4646651f7aa8eb5fd6"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T06:27Z";
+window.STATIONS_CHECKED = "2026-11-09T07:42Z";

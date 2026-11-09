@@ -1230,6 +1230,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-09",
     "where": "Zimbabwe"
+  },
+  {
+    "id": "radio-poland",
+    "name": "Radio Poland",
+    "category": "world",
+    "streams": [
+      "https://stream85.polskieradio.pl/pr5/pr5.sdp/playlist.m3u8"
+    ],
+    "added": "2026-11-09",
+    "where": "Poland"
+  },
+  {
+    "id": "nettalk-america",
+    "name": "NetTalk America",
+    "category": "us",
+    "streams": [
+      "https://stream.zeno.fm/st9bhqvgvceuv"
+    ],
+    "added": "2026-11-09",
+    "where": "US"
+  },
+  {
+    "id": "talkradio",
+    "name": "talkRADIO",
+    "category": "world",
+    "streams": [
+      "https://radio.talkradio.co.uk/stream"
+    ],
+    "added": "2026-11-09",
+    "where": "Uganda"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T06:27Z";
+window.STATIONS_CHECKED = "2026-11-09T07:42Z";
