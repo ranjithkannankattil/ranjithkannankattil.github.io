@@ -625,6 +625,10 @@
     if (window.RadioListen) window.RadioListen.paint();
     $("#infoView").scrollIntoView({ behavior: "smooth", block: "start" });
   };
+  // on phones the tab bar is fixed at the bottom: keep the player bar exactly on top of it
+  { const tabs = $("#radioTabs"); const fit = () => { const fixed = getComputedStyle(tabs).position === "fixed";
+      document.body.style.setProperty("--tabs-h", fixed ? tabs.offsetHeight + "px" : "0px"); };
+    new ResizeObserver(fit).observe(tabs); addEventListener("resize", fit); fit(); }
   // the account box, the app card and the sign-in note live in Info
   { const iv = $("#infoView"), acct = $("#acct"), app = $("#radioApp"), note = $("#acctNote");
     if (acct) $("#ivAcct").append(acct);

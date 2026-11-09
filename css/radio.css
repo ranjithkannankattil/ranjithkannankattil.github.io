@@ -507,3 +507,17 @@ body[data-section="radio"] .lq-menu button:hover{ background:var(--accent-soft);
   body[data-section="radio"]:has(.radio-player.small:not([hidden])){ padding-bottom:9rem; }
   .lq-menu{ left:.75rem!important; right:.75rem; }
 }
+
+/* tab icons; on phones the player sits exactly on the tab bar (height measured by radio.js into --tabs-h) */
+.radio-tabs .ti{ width:20px; height:20px; flex:none; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+.radio-tabs .ti.heart{ fill:var(--accent); stroke:none; }
+.radio-tabs .rt[aria-selected="true"] .ti.heart{ fill:currentColor; }
+@media (max-width:640px){
+  body[data-section="radio"] .radio-tabs .rt{ min-height:58px; padding:.35rem .3rem; gap:.15rem; }
+  .radio-tabs .tl{ font-size:.8rem; line-height:1.15; white-space:nowrap; }
+  .radio-tabs .n{ font-size:.7rem; }
+  .radio-tabs .rt[aria-selected="true"] .ti.heart{ fill:var(--accent); }
+  .radio-player{ bottom:var(--tabs-h, 60px)!important; }
+  body[data-section="radio"]:has(.radio-player:not([hidden])){ padding-bottom:calc(var(--tabs-h, 60px) + 10rem); }
+  body[data-section="radio"]:has(.radio-player.small:not([hidden])){ padding-bottom:calc(var(--tabs-h, 60px) + 5rem); }
+}
