@@ -374,7 +374,7 @@ fun StationRow(s: Station, sub: String, fav: Boolean, current: Boolean, playing:
         Column(Modifier.weight(1f).padding(start = 12.dp)) {
             Text(s.name, fontWeight = FontWeight.SemiBold, maxLines = 1, overflow = TextOverflow.Ellipsis,
                 color = if (s.offline) InkSoft else Ink)
-            Text(listOf(sub, if (s.offline) "Not working today" else "").filter { it.isNotBlank() }.joinToString(" · "),
+            Text(listOf(sub, if (s.offline) "Not working today" else s.geoNote).filter { it.isNotBlank() }.joinToString(" · "),
                 fontSize = 13.sp, color = InkSoft, maxLines = 1)
         }
         IconButton(onFav, Modifier.size(48.dp)) {
