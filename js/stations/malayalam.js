@@ -7,25 +7,6 @@
    akv: name in the Akashvani station list, used to pick up new official links */
 window.STATIONS = [
   {
-    "id": "radiomirchimalayalam",
-    "name": "Mirchi Kochi",
-    "category": "fm",
-    "streams": [
-      "https://sp14.instainternet.com/8050/stream"
-    ],
-    "exclude": [
-      "https://stream.aiir.com/dbv0rxpwp6ytv"
-    ]
-  },
-  {
-    "id": "clubfm",
-    "name": "Club FM",
-    "category": "fm",
-    "streams": [
-      "https://listen.openstream.co/4626/audio"
-    ]
-  },
-  {
     "id": "radiomango",
     "name": "Radio Mango",
     "category": "fm",
@@ -33,7 +14,12 @@ window.STATIONS = [
       "https://listen.openstream.co/4635/audio"
     ],
     "exclude": [
-      "https://eu10.fastcast4u.com/clubfmuae"
+      "https://ais-edge105-live365-dal02.cdnstream.com/a50671",
+      "https://ais-edge51-live365-dal02.cdnstream.com/a50671",
+      "https://eu10.fastcast4u.com/clubfmuae",
+      "https://listen.openstream.co/4626/audio",
+      "https://sp14.instainternet.com/8050/stream",
+      "https://stream.aiir.com/dbv0rxpwp6ytv"
     ]
   },
   {
@@ -419,14 +405,6 @@ window.STATIONS = [
     ],
     "offline": true,
     "hidden": true
-  },
-  {
-    "id": "lmrradio",
-    "name": "LMR Radio",
-    "category": "online",
-    "streams": [
-      "https://ais-edge51-live365-dal02.cdnstream.com/a50671"
-    ]
   },
   {
     "id": "chitrahitsmalayalam",
@@ -1042,15 +1020,6 @@ window.STATIONS = [
     "category": "fm",
     "streams": [
       "https://stream.zeno.fm/4yfsm0d8n98uv"
-    ],
-    "added": "2026-10-22"
-  },
-  {
-    "id": "london-malayalam-radio",
-    "name": "London Malayalam Radio",
-    "category": "online",
-    "streams": [
-      "https://ais-edge105-live365-dal02.cdnstream.com/a50671"
     ],
     "added": "2026-10-22"
   },
