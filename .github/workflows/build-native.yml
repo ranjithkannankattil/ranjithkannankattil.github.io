@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 40
     env:
-      APP_VERSION: "2.2.2"
+      APP_VERSION: "2.3.0"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
@@ -39,6 +39,10 @@ jobs:
             echo "Version ${APP_VERSION} · released $(TZ=Europe/Rome date '+%-d %b %Y, %H:%M %Z')"
             echo
             echo "What's new:"
+            echo "- Dark velvet look when your phone is in dark mode"
+            echo "- Spin: a random station from the list you're on (press and hold for anywhere in the world)"
+            echo "- Collapse the player bar to one slim row with the arrow"
+            echo "- Your listening time and top stations in Info, plus how many hours everyone has listened"
             echo "- New two-row player bar: song and play on top; favourite, sleep, share and previous/next below"
             echo "- Custom sleep timer: any length from 5 minutes to 4 hours"
             echo "- Pin languages so they always stay in the top row, and arrange them in your own order"

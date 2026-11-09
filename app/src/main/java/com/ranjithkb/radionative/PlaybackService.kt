@@ -65,9 +65,21 @@ class PlaybackService : MediaLibraryService() {
                 }
             }
             override fun onPlayerError(error: PlaybackException) = nextSource()
+            // listening time: count only while sound is actually playing
+            override fun onIsPlayingChanged(isPlaying: Boolean) {
+                val item = player.currentMediaItem
+                if (isPlaying && item != null) Listen.start(this@PlaybackService, item.mediaId.removePrefix("st|"),
+                    item.mediaMetadata.extras?.getString("station") ?: item.mediaMetadata.station?.toString() ?: "")
+                else Listen.stop(this@PlaybackService)
+            }
+            override fun onMediaItemTransition(mediaItem: MediaItem?, reason: Int) {
+                if (player.isPlaying && mediaItem != null) Listen.start(this@PlaybackService, mediaItem.mediaId.removePrefix("st|"),
+                    mediaItem.mediaMetadata.extras?.getString("station") ?: "")
+            }
         })
         session = MediaLibrarySession.Builder(this, player, Callback()).build()
         SleepTimer.pause = { player.pause() }
+        scope.launch { while (true) { kotlinx.coroutines.delay(60_000); Listen.tick(this@PlaybackService) } }
     }
 
     /** "Artist - Song" from the stream: show it, and look up the cover. */

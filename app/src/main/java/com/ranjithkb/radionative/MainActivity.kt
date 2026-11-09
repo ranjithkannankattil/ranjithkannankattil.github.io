@@ -64,13 +64,15 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.net.URL
 
-private val Paper = Color(0xFFF0EDE6)
-private val Paper2 = Color(0xFFE7E2D6)
-private val Ink = Color(0xFF1B1B1F)
-private val InkSoft = Color(0xFF4A4A4C)
-private val Accent = Color(0xFF6B2D5C)      // velvet plum
-private val AccentSoft = Color(0xFFEEDFE8)
-private val Velvet = Color(0xFF2A1424)
+/** Follows the phone's dark mode: light paper by day, dark velvet (plum, black, gold) at night. */
+object Theme { var dark by mutableStateOf(false) }
+private val Paper get() = if (Theme.dark) Color(0xFF17101A) else Color(0xFFF0EDE6)
+private val Paper2 get() = if (Theme.dark) Color(0xFF21151F) else Color(0xFFE7E2D6)
+private val Ink get() = if (Theme.dark) Color(0xFFF1E9EE) else Color(0xFF1B1B1F)
+private val InkSoft get() = if (Theme.dark) Color(0xFFB9A8B4) else Color(0xFF4A4A4C)
+private val Accent get() = if (Theme.dark) Color(0xFFB0609C) else Color(0xFF6B2D5C)      // velvet plum
+private val AccentSoft get() = if (Theme.dark) Color(0xFF35202F) else Color(0xFFEEDFE8)
+private val Velvet get() = if (Theme.dark) Color(0xFF0D070B) else Color(0xFF2A1424)
 private val Gold = Color(0xFFC9A86A)
 
 /** Signed-in name (null = signed out) and a counter that bumps when favourites change from the account. */
@@ -124,9 +126,15 @@ class MainActivity : ComponentActivity() {
         Session.name = Account.name(this)
         handleSignIn(intent)
         setContent {
-            MaterialTheme(typography = PoppinsType, colorScheme = lightColorScheme(primary = Accent, onPrimary = Color.White, background = Paper,
+            Theme.dark = androidx.compose.foundation.isSystemInDarkTheme()
+            val scheme = if (Theme.dark) darkColorScheme(primary = Accent, onPrimary = Color.White, background = Paper,
+                surface = Paper, onSurface = Ink, onBackground = Ink, secondaryContainer = AccentSoft, onSecondaryContainer = Ink,
+                surfaceVariant = Paper2, onSurfaceVariant = InkSoft, outline = InkSoft, surfaceContainer = Paper2,
+                surfaceContainerHigh = Paper2, surfaceContainerHighest = AccentSoft)
+                else lightColorScheme(primary = Accent, onPrimary = Color.White, background = Paper,
                 surface = Paper, onSurface = Ink, onBackground = Ink, secondaryContainer = AccentSoft,
-                surfaceVariant = Paper2, outline = InkSoft)) {
+                surfaceVariant = Paper2, outline = InkSoft)
+            MaterialTheme(typography = PoppinsType, colorScheme = scheme) {
                 Surface(Modifier.fillMaxSize(), color = Paper) { App(controller) }
             }
         }
@@ -261,6 +269,17 @@ fun App(c: MediaController?) {
                         item {
                             AssistChip({ pickLang = true }, { Text("All languages") }, Modifier.heightIn(min = 44.dp),
                                 leadingIcon = { Icon(Icons.Filled.Language, null, Modifier.size(18.dp), tint = Accent) })
+                        }
+                        // 🎲 Spin: a random working station from this list; press and hold for anywhere in the world
+                        item {
+                            SpinPill(onClick = {
+                                val pool = shown.filter { !it.offline }.ifEmpty { stations.filter { !it.offline } }
+                                pool.randomOrNull()?.let { play(pool, it) }
+                            }, onLongClick = { scope.launch {
+                                val c2 = cols.randomOrNull() ?: return@launch
+                                val pool = Repo.stations(ctx, c2.id).filter { !it.offline }
+                                pool.randomOrNull()?.let { android.widget.Toast.makeText(ctx, "Spinning the world: ${c2.name}", android.widget.Toast.LENGTH_SHORT).show(); play(pool, it) }
+                            } })
                         }
                     }
                     OutlinedTextField(q, { q = it }, Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 6.dp),
@@ -535,6 +554,9 @@ fun Art(now: NowState, size: Int) {
 
 @Composable
 fun MiniPlayer(now: NowState, c: MediaController?, isFav: Boolean, onFav: () -> Unit, open: () -> Unit) {
+    val prefs = LocalContext.current.getSharedPreferences("app", Context.MODE_PRIVATE)
+    var small by remember { mutableStateOf(prefs.getBoolean("barSmall", false)) }
+    fun setSmall(v: Boolean) { small = v; prefs.edit().putBoolean("barSmall", v).apply() }
     var sleep by remember { mutableStateOf(false) }
     var share by remember { mutableStateOf(false) }
     var drag by remember { mutableFloatStateOf(0f) }
@@ -548,8 +570,9 @@ fun MiniPlayer(now: NowState, c: MediaController?, isFav: Boolean, onFav: () -> 
                 .pointerInput(c) { detectHorizontalDragGestures(onDragEnd = {
                     if (drag < -120) c?.seekToNextMediaItem() else if (drag > 120) c?.seekToPreviousMediaItem(); drag = 0f },
                     onDragCancel = { drag = 0f }) { _, d -> drag += d } }
-                .padding(start = 12.dp, end = 12.dp, top = 12.dp, bottom = 6.dp), verticalAlignment = Alignment.CenterVertically) {
-                Art(now, 52)
+                .padding(start = 12.dp, end = 4.dp, top = if (small) 8.dp else 12.dp, bottom = if (small) 8.dp else 6.dp),
+                verticalAlignment = Alignment.CenterVertically) {
+                Art(now, if (small) 40 else 52)
                 val station = now.md.station?.toString() ?: ""
                 val song = now.md.title?.toString() ?: ""
                 val hasSong = song.isNotBlank() && song != station
@@ -562,14 +585,19 @@ fun MiniPlayer(now: NowState, c: MediaController?, isFav: Boolean, onFav: () -> 
                     Text(now.error ?: if (now.buffering) "Connecting…" else if (hasSong) artist else now.md.artist?.toString() ?: "",
                         color = Color(0xFFBDBDBD), fontSize = 13.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
                 }
-                FilledIconButton({ c?.let { if (it.isPlaying) it.pause() else { it.prepare(); it.play() } } }, Modifier.size(52.dp),
-                    colors = IconButtonDefaults.filledIconButtonColors(containerColor = Paper, contentColor = Ink)) {
+                FilledIconButton({ c?.let { if (it.isPlaying) it.pause() else { it.prepare(); it.play() } } }, Modifier.size(if (small) 44.dp else 52.dp),
+                    colors = IconButtonDefaults.filledIconButtonColors(containerColor = Color(0xFFF0EDE6), contentColor = Color(0xFF1B1B1F))) {
                     Icon(if (now.playing) Icons.Filled.Pause else Icons.Filled.PlayArrow, if (now.playing) "Pause" else "Play", Modifier.size(28.dp))
                 }
+                // ⌄ shrink to one slim row (radio keeps playing) · ⌃ bring the buttons back
+                IconButton({ setSmall(!small) }, Modifier.size(44.dp)) {
+                    Icon(if (small) Icons.Filled.KeyboardArrowUp else Icons.Filled.KeyboardArrowDown,
+                        if (small) "Show all player buttons" else "Make the player smaller", tint = Color(0xFFBDBDBD))
+                }
             }
-            HorizontalDivider(Modifier.padding(horizontal = 12.dp), color = Color(0x14FFFFFF))
+            if (!small) HorizontalDivider(Modifier.padding(horizontal = 12.dp), color = Color(0x14FFFFFF))
             // bottom: favourite · sleep · share | previous next — each button fills its share of the row (easy to hit)
-            Row(Modifier.fillMaxWidth().height(64.dp).padding(horizontal = 4.dp), verticalAlignment = Alignment.CenterVertically) {
+            if (!small) Row(Modifier.fillMaxWidth().height(64.dp).padding(horizontal = 4.dp), verticalAlignment = Alignment.CenterVertically) {
                 @Composable fun Cell(label: String, onClick: () -> Unit, content: @Composable ColumnScope.() -> Unit) =
                     Column(Modifier.weight(1f).fillMaxHeight().clip(RoundedCornerShape(12.dp))
                         .clickable(onClickLabel = label, onClick = onClick),
@@ -633,7 +661,7 @@ fun FullPlayer(now: NowState, c: MediaController?, close: () -> Unit) {
                         IconButton({ c?.seekToPreviousMediaItem() }, Modifier.size(64.dp)) {
                             Icon(Icons.Filled.SkipPrevious, "Previous station", Modifier.size(40.dp), tint = Color.White) }
                         FilledIconButton({ c?.let { if (it.isPlaying) it.pause() else { it.prepare(); it.play() } } }, Modifier.size(80.dp),
-                            shape = CircleShape, colors = IconButtonDefaults.filledIconButtonColors(containerColor = Paper, contentColor = Ink)) {
+                            shape = CircleShape, colors = IconButtonDefaults.filledIconButtonColors(containerColor = Color(0xFFF0EDE6), contentColor = Color(0xFF1B1B1F))) {
                             Icon(if (now.playing) Icons.Filled.Pause else Icons.Filled.PlayArrow, if (now.playing) "Pause" else "Play", Modifier.size(42.dp))
                         }
                         IconButton({ c?.seekToNextMediaItem() }, Modifier.size(64.dp)) {
@@ -679,7 +707,7 @@ fun InfoTab(languages: Int, update: Update?, onSignIn: () -> Unit, onSignOut: ()
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Image(androidx.compose.ui.res.painterResource(R.drawable.velvet_logo), null, Modifier.size(64.dp))
                 Column(Modifier.padding(start = 14.dp)) {
-                    Text("Radio Velvet", fontSize = 22.sp, fontWeight = FontWeight.SemiBold, color = Velvet)
+                    Text("Radio Velvet", fontSize = 22.sp, fontWeight = FontWeight.SemiBold, color = if (Theme.dark) Gold else Velvet)
                     Text("Elegant sounds, always free", color = InkSoft)
                     Text("Version ${appVersion(ctx)}", fontSize = 13.sp, color = InkSoft)
                 }
@@ -717,8 +745,11 @@ fun InfoTab(languages: Int, update: Update?, onSignIn: () -> Unit, onSignOut: ()
             }
         }
         item {
+            Section("Your listening") { ListeningSection() }
+        }
+        item {
             Section("Which stations play") {
-                Text("${if (languages > 0) "$languages lists" else "70+ languages"} and about 2,200 live stations, each tested twice a day. " +
+                Text("${if (languages > 0) "$languages lists" else "70+ languages"} and over 5,000 live stations, each tested twice a day. " +
                     "Stations marked \"Not working today\" failed the last test. A few broadcasters only stream to listeners in their own " +
                     "country, so a station can be silent where you are even when it's working.")
                 Text("If a station doesn't start, Radio Velvet tries its other sources, then you can skip to the next one.",
@@ -955,4 +986,43 @@ fun ArrangePins(list: List<Collection>, onSave: (List<String>) -> Unit, close: (
             }
         }
     }
+}
+
+/** 🎲 Spin: tap for a random station from the list you're on; press and hold for one from anywhere. */
+@OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
+@Composable
+fun SpinPill(onClick: () -> Unit, onLongClick: () -> Unit) {
+    val haptic = androidx.compose.ui.platform.LocalHapticFeedback.current
+    Surface(shape = RoundedCornerShape(8.dp), color = Color.Transparent, border = BorderStroke(1.dp, Gold),
+        modifier = Modifier.heightIn(min = 44.dp).padding(vertical = 4.dp).clip(RoundedCornerShape(8.dp))
+            .combinedClickable(onClick = onClick, onLongClickLabel = "Random station from anywhere", onLongClick = {
+                haptic.performHapticFeedback(androidx.compose.ui.hapticfeedback.HapticFeedbackType.LongPress); onLongClick() })) {
+        Row(Modifier.padding(horizontal = 14.dp, vertical = 6.dp), verticalAlignment = Alignment.CenterVertically) {
+            Icon(Icons.Filled.Casino, null, Modifier.size(18.dp), tint = Gold); Spacer(Modifier.width(6.dp))
+            Text("Spin", fontWeight = FontWeight.SemiBold, fontSize = 14.sp, color = Ink)
+        }
+    }
+}
+
+/** Listening time: yours (this device, or every device when signed in) and everyone's total. */
+@Composable
+fun ListeningSection() {
+    val ctx = LocalContext.current
+    var mine by remember { mutableStateOf(Listen.local(ctx)) }
+    var synced by remember { mutableStateOf(false) }
+    var all by remember { mutableStateOf<Long?>(null) }
+    LaunchedEffect(Session.name) {
+        Listen.account(ctx)?.let { mine = it; synced = true }
+        all = Listen.everyone()
+    }
+    Text(if (mine.total < 60_000) "Nothing yet — your listening time starts counting now." else "You've listened for ${Listen.hm(mine.total)}",
+        fontWeight = FontWeight.SemiBold)
+    if (mine.total >= 60_000) Text("This week: ${Listen.hm(mine.week)}" + if (synced) " · all your devices" else " · on this phone",
+        color = InkSoft, fontSize = 14.sp)
+    if (mine.top.isNotEmpty()) {
+        Text("Your top stations", Modifier.padding(top = 8.dp), fontWeight = FontWeight.Medium, fontSize = 14.sp)
+        mine.top.forEach { (n, ms) -> Text("$n · ${Listen.hm(ms)}", fontSize = 14.sp, color = InkSoft) }
+    }
+    all?.let { m -> Text("Listeners have enjoyed ${"%,d".format(m / 60)} hours of radio on Radio Velvet.",
+        Modifier.padding(top = 10.dp), color = Accent, fontSize = 14.sp, fontWeight = FontWeight.Medium) }
 }
