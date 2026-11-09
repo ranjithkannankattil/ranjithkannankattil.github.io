@@ -175,7 +175,7 @@
     const go = (top) => window.scrollTo({ top, behavior: calm.matches ? "auto" : "smooth" });
     up.onclick = () => go(0);
     down.onclick = () => go(document.documentElement.scrollHeight);
-    const bars = () => [...document.querySelectorAll(".radio-player")];
+    const bars = () => [...document.querySelectorAll(".radio-player, .radio-tabs")];
     let raf = 0;
     function update() {
       raf = 0;
@@ -184,7 +184,8 @@
       up.classList.toggle("on", long && y > Math.min(600, vh * 0.6));
       down.classList.toggle("on", long && doc.scrollHeight - (y + vh) > Math.min(600, vh * 0.6));
       let lift = 0;
-      bars().forEach((b) => { if (!b.hidden && getComputedStyle(b).display !== "none") lift = Math.max(lift, b.getBoundingClientRect().height); });
+      // keep clear of anything fixed to the bottom (the Radio player bar and, on phones, its tab bar)
+      bars().forEach((b) => { const cs = getComputedStyle(b); if (!b.hidden && cs.display !== "none" && cs.position === "fixed") lift = Math.max(lift, vh - b.getBoundingClientRect().top); });
       box.style.setProperty("--sn-lift", lift + "px");
     }
     const queue = () => { if (!raf) raf = requestAnimationFrame(update); };

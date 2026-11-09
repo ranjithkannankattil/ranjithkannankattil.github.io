@@ -89,6 +89,19 @@ if (cfg && cfg.apiKey && box) {
     saveTimer = setTimeout(() => save(favs, def), 600);
   });
 
+  // listening time (js/radio-listen.js): this browser's numbers go to users/{uid}.listen.<device>, so the
+  // website and the app add up; the totals of every device come back to the Info tab
+  async function syncListen(mine) {
+    if (!user || !mine) return;
+    try {
+      await F.setDoc(F.doc(db, "users", user.uid), { listen: { [mine.device]: mine.data } }, { merge: true });
+      const snap = await F.getDoc(F.doc(db, "users", user.uid));
+      const all = (snap.exists() && snap.data().listen) || {};
+      window.dispatchEvent(new CustomEvent("radio:listen-account", { detail: all }));
+    } catch { /* tried again later */ }
+  }
+  window.addEventListener("radio:listen-save", (e) => syncListen(e.detail));
+
   A.getRedirectResult(auth).catch(() => {});
   // an anonymous ID (made when someone rates a station) is not a signed-in account
   let seen = "";
@@ -99,7 +112,7 @@ if (cfg && cfg.apiKey && box) {
     if (id === seen) return;
     seen = id;
     draw();
-    if (user) await mergeOnSignIn();
+    if (user) { await mergeOnSignIn(); if (window.RadioListen) window.RadioListen.save(); }
   }
   draw();
   A.onAuthStateChanged(auth, onUser);

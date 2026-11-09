@@ -22,8 +22,17 @@
   let show = "all";            // all | live | down — set by the dashboard tiles
   let current = null, currentCol = null, hls = null, tryIndex = 0, failTimer = null;
 
-  const key = (s, c = col) => `${c.id}:${s.id}`;
-  const isCur = (s) => current && currentCol === col.id && current.id === s.id;
+  // stations in Velvet Selection / Every station carry their own language in _c
+  const key = (s, c = col) => `${s._c || c.id}:${s.id}`;
+  const isCur = (s) => current && currentCol === (s._c || col.id) && current.id === s.id;
+  // two lists that aren't one language: the developer's picks, and every station of every language
+  const PSEUDO = {
+    picks: { id: "picks", name: "Velvet Selection", native: "", cats: [], group: "",
+      intro: "Hand-picked by the developer, from every language." },
+    all: { id: "all", name: "Every station", native: "", cats: [], group: "",
+      intro: "Every station in every language, in one list. Search to find one fast." }
+  };
+  const isPseudo = (id) => id === "picks" || id === "all";
 
   function initials(name) {
     const w = name.replace(/^(AIR|Radio|BBC)\s+/i, "").split(/[\s.\-–|:]+/).filter((x) => /[\p{L}\p{N}]/u.test(x));
@@ -38,59 +47,91 @@
   const getDefault = () => (byCol[store.get("mr-default", "malayalam")] ? store.get("mr-default", "malayalam") : "malayalam");
   let recent = (store.get("mr-recent", []) || []).filter((id) => byCol[id]);
 
+  // Quick buttons: ★ Velvet Selection, your pinned languages (your order, always shown), recent ones, 🎲 Spin.
+  // Press and hold a language to pin, move or remove it.
+  let pinned = store.get("mr-pinned", []).filter((id) => byCol[id]);
   function renderBar() {
     const def = getDefault();
     $("#langCur").textContent = col.name;
     $("#langNative").textContent = col.native && col.native !== col.name ? col.native : "";
-    // quick chips: default first, then recent ones
-    const quick = [def, ...recent.filter((id) => id !== def)].slice(0, 7);
+    const quick = [...pinned, ...[def, ...recent].filter((id) => !pinned.includes(id) && byCol[id])];
     const box = $("#langQuick");
     box.innerHTML = "";
     renderTabs();
-    for (const id of quick) {
+    const vs = document.createElement("button");
+    vs.className = "lq lq-vs"; vs.setAttribute("aria-pressed", view === "col" && col.id === "picks");
+    vs.innerHTML = '<span class="star" aria-hidden="true">★</span><span>Velvet Selection</span>';
+    vs.onclick = () => openCollection("picks", true);
+    box.append(vs);
+    for (const id of [...new Set(quick)].slice(0, 9)) {
       const c = byCol[id];
       const b = document.createElement("button");
       b.className = "lq";
       b.setAttribute("aria-pressed", view === "col" && id === col.id);
-      b.innerHTML = (id === def ? '<span class="star" aria-label="Default">★</span>' : "") + "<span></span>";
+      b.innerHTML = (pinned.includes(id) ? '<span class="pin" aria-label="Pinned">📌</span>' : id === def ? '<span class="star" aria-label="Default">★</span>' : "") + "<span></span>";
       b.lastChild.textContent = c.name;
-      b.onclick = () => openCollection(id, true);
+      b.title = "Press and hold to pin, move or remove";
+      let t = null, long = false;
+      b.addEventListener("pointerdown", () => { long = false; t = setTimeout(() => { long = true; langMenu(id, b); }, 550); });
+      ["pointerup", "pointerleave", "pointercancel"].forEach((ev) => b.addEventListener(ev, () => clearTimeout(t)));
+      b.addEventListener("contextmenu", (e) => { e.preventDefault(); clearTimeout(t); long = true; langMenu(id, b); });
+      b.onclick = () => { if (long) { long = false; return; } openCollection(id, true); };
       box.append(b);
     }
+    const sp = document.createElement("button");
+    sp.className = "lq lq-spin"; sp.innerHTML = '<span aria-hidden="true">🎲</span><span>Spin</span>';
+    sp.title = "A random station from this list — press and hold for anywhere in the world";
+    let st = null, slong = false;
+    sp.addEventListener("pointerdown", () => { slong = false; st = setTimeout(() => { slong = true; spin(true); }, 550); });
+    ["pointerup", "pointerleave", "pointercancel"].forEach((ev) => sp.addEventListener(ev, () => clearTimeout(st)));
+    sp.addEventListener("contextmenu", (e) => { e.preventDefault(); });
+    sp.onclick = () => { if (slong) { slong = false; return; } spin(false); };
+    box.append(sp);
     const isDef = col.id === def;
+    $("#defBtn").hidden = isPseudo(col.id);
     const d = $("#defBtn");
     d.classList.toggle("is-default", isDef);
     d.textContent = isDef ? "★ Opens by default" : `☆ Make ${col.name} my default`;
     d.title = isDef ? "This page opens on this language" : "Open the Radio page on this language next time";
   }
 
+  // All languages: Malayalam, the English lists, Every station, then the rest by region — each with its station count
+  const counts = {};
+  let countsLoading = false;
+  async function loadCounts() {
+    if (countsLoading) return; countsLoading = true;
+    await Promise.all(COLS.map(async (c) => { const l = await stationsOf(c.id);
+      if (Array.isArray(l)) counts[c.id] = l.filter((x) => !x.hidden).length; }));
+    if (!$("#langPanel").hidden) renderLangList();
+  }
   function renderLangList() {
     const term = $("#langQ").value.trim().toLowerCase();
     const list = $("#langList");
     list.innerHTML = "";
     let first = null;
-    for (const g of GROUPS) {
-      const items = COLS.filter((c) => c.group === g &&
-        (!term || (c.name + " " + (c.native || "")).toLowerCase().includes(term)));
-      if (!items.length) continue;
-      const h = document.createElement("div");
-      h.className = "lg"; h.textContent = g;
-      list.append(h);
-      const row = document.createElement("div");
-      row.className = "li-row";
-      for (const c of items) {
-        const b = document.createElement("button");
-        b.className = "li";
-        b.setAttribute("aria-pressed", c.id === col.id);
-        b.innerHTML = "<span></span><small></small>";
-        b.firstChild.textContent = c.name;
-        b.lastChild.textContent = c.native && c.native !== c.name ? c.native : "";
-        b.onclick = () => { closePanel(); openCollection(c.id, true); };
-        row.append(b);
-        first = first || c;
-      }
-      list.append(row);
-    }
+    const match = (c) => !term || (c.name + " " + (c.native || "")).toLowerCase().includes(term);
+    const btn = (c, row) => {
+      const b = document.createElement("button");
+      b.className = "li";
+      b.setAttribute("aria-pressed", c.id === col.id);
+      b.innerHTML = "<span></span><small></small>";
+      b.firstChild.textContent = c.name;
+      const n = c.id === "all" ? Object.values(counts).reduce((a, x) => a + x, 0) : counts[c.id];
+      b.lastChild.textContent = [c.native && c.native !== c.name ? c.native : "", n ? n.toLocaleString() + " stations" : ""].filter(Boolean).join(" · ");
+      b.onclick = () => { closePanel(); openCollection(c.id, true); };
+      row.append(b);
+      first = first || c;
+    };
+    const section = (title, items) => {
+      if (!items.length) return;
+      const h = document.createElement("div"); h.className = "lg"; h.textContent = title; list.append(h);
+      const row = document.createElement("div"); row.className = "li-row"; list.append(row);
+      items.forEach((c) => btn(c, row));
+    };
+    const top = [byCol.malayalam, ...COLS.filter((c) => c.group === "English")].filter(Boolean);
+    section("Malayalam & English", top.filter(match));
+    if (!term || "every station all".includes(term)) section("All languages together", [PSEUDO.all]);
+    for (const g of GROUPS) section(g, COLS.filter((c) => c.group === g && !top.includes(c) && match(c)));
     if (!first) list.innerHTML = '<p class="li-none">No language matches.</p>';
     return first;
   }
@@ -100,6 +141,7 @@
     $("#langBtn").setAttribute("aria-expanded", "true");
     $("#langQ").value = "";
     renderLangList();
+    loadCounts();
     $("#langQ").focus();
   }
   function closePanel() {
@@ -128,7 +170,82 @@
     });
   }
 
+  async function openPseudo(id, user) {
+    const c = PSEUDO[id];
+    col = c; cat = "all"; show = "all";
+    setView("col");
+    const url = new URL(location.href);
+    url.searchParams.set("c", c.id);
+    history.replaceState(null, "", url);
+    renderBar();
+    $("#colName").textContent = c.name; $("#colNative").textContent = ""; $("#colIntro").textContent = c.intro;
+    grid.innerHTML = ""; $("#count").textContent = "Loading…";
+    let list = [];
+    if (id === "picks") {
+      let keys = [];
+      try {
+        const r = await fetch(`https://firestore.googleapis.com/v1/projects/ranjithkb-radio/databases/(default)/documents/picks/ranjith?key=${window.FIREBASE_CONFIG ? window.FIREBASE_CONFIG.apiKey : ""}`);
+        const j = r.ok ? await r.json() : {};
+        keys = ((((j.fields || {}).favs || {}).arrayValue || {}).values || []).map((v) => v.stringValue).filter((k) => k && k.includes(":"));
+      } catch { /* shown as empty */ }
+      const need = [...new Set(keys.map((k) => splitKey(k)[0]))].filter((x) => byCol[x]);
+      await Promise.all(need.map((x) => stationsOf(x)));
+      list = keys.map((k) => { const [cc, sid] = splitKey(k); const l = cache[cc];
+        const st = Array.isArray(l) ? l.find((x) => x.id === sid) : null; return st ? { ...st, _c: cc } : null; }).filter(Boolean);
+      c.intro = list.length ? PSEUDO.picks.intro : "The Velvet Selection is coming soon.";
+      $("#colIntro").textContent = c.intro;
+    } else {
+      const ids = ["malayalam", ...COLS.map((x) => x.id).filter((x) => x !== "malayalam")];
+      const lists = await Promise.all(ids.map((x) => stationsOf(x)));
+      ids.forEach((x, i) => { if (Array.isArray(lists[i])) list.push(...lists[i].map((st) => ({ ...st, _c: x }))); });
+    }
+    if (col !== c) return;
+    S = list.filter((st) => !st.hidden); byId = {};
+    renderStats(); renderChips(); render();
+    if (user) $(".radio-bar").scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+
+  // the small menu on a held language button
+  function langMenu(id, anchor) {
+    document.querySelector(".lq-menu")?.remove();
+    const m = document.createElement("div");
+    m.className = "lq-menu"; m.setAttribute("role", "menu");
+    const i = pinned.indexOf(id), isPin = i >= 0;
+    const items = [[isPin ? "Unpin" : "📌 Pin — always keep it here", () => { pinned = isPin ? pinned.filter((x) => x !== id) : [...pinned, id]; }]];
+    if (isPin && i > 0) items.push(["◀ Move left", () => { pinned.splice(i, 1); pinned.splice(i - 1, 0, id); }]);
+    if (isPin && i < pinned.length - 1) items.push(["Move right ▶", () => { pinned.splice(i, 1); pinned.splice(i + 1, 0, id); }]);
+    items.push(["✕ Remove from this row", () => { pinned = pinned.filter((x) => x !== id); recent = recent.filter((x) => x !== id); store.set("mr-recent", recent); }]);
+    const h = document.createElement("b"); h.textContent = byCol[id].name; m.append(h);
+    for (const [label, fn] of items) {
+      const b = document.createElement("button"); b.setAttribute("role", "menuitem"); b.textContent = label;
+      b.onclick = (e) => { e.stopPropagation(); fn(); store.set("mr-pinned", pinned); m.remove(); renderBar(); };
+      m.append(b);
+    }
+    document.body.append(m);
+    const r = anchor.getBoundingClientRect();
+    m.style.left = Math.max(8, Math.min(r.left, innerWidth - m.offsetWidth - 8)) + "px";
+    m.style.top = (r.bottom + scrollY + 6) + "px";
+    setTimeout(() => document.addEventListener("click", () => m.remove(), { once: true }), 0);
+  }
+  // 🎲 a random working station from the list on screen, or (held) from anywhere in the world
+  async function spin(world) {
+    if (world) {
+      const c = COLS[Math.floor(Math.random() * COLS.length)];
+      const l = (await stationsOf(c.id) || []).filter((x) => !x.offline && !x.hidden && !x.geo);
+      if (!l.length) return spin(true);
+      const st = { ...l[Math.floor(Math.random() * l.length)], _c: c.id };
+      notice(`Spinning the world: ${c.name}`, 4000);
+      play(st, [st], c.id);
+      return;
+    }
+    const pool = (view === "favs" ? favStations() : visibleList()).filter((x) => !x.offline && !x.gone && !x.loading && !x.geo);
+    if (!pool.length) return;
+    const st = pool[Math.floor(Math.random() * pool.length)];
+    play(st, pool, st._c || col.id);
+  }
+
   async function openCollection(id, user) {
+    if (isPseudo(id)) return openPseudo(id, user);
     const c = byCol[id] || byCol.malayalam;
     col = c; cat = "all"; show = "all";
     setView("col");
@@ -196,8 +313,10 @@
       const li = document.createElement("li");
       li.className = "radio-card" + (isCur(s) ? " on" : "") + (s.offline ? " off" : "");
       li.dataset.id = s.id;
+      if (s._c) li.dataset.c = s._c;
       const isNew = s.added && (Date.now() - Date.parse(s.added)) < 21 * 864e5;
       const sub = s.offline ? "Not working today"
+        : s._c ? [byCol[s._c] ? byCol[s._c].name : "", s.geo ? geoNote(s.geo) : ""].filter(Boolean).join(" · ")
         : s.geo ? [catLabel(s.category), geoNote(s.geo)].join(" · ")
         : [REGIONS.has(s.category) ? "" : catLabel(s.category),
            s.freq || s.where || (s.streams.length > 1 ? s.streams.length + " sources" : "Live")].filter(Boolean).join(" · ");
@@ -310,6 +429,8 @@
     view = v;
     $("#favTools").hidden = v !== "favs";
     document.body.classList.toggle("fav-view", v === "favs");
+    document.body.classList.toggle("info-view", v === "info");
+    $("#infoView").hidden = v !== "info";
     if (v !== "favs") document.body.classList.remove("fav-editing");
     renderTabs();
   }
@@ -318,6 +439,7 @@
     if (!a || !f) return;
     a.setAttribute("aria-selected", view === "col");
     f.setAttribute("aria-selected", view === "favs");
+    $("#tabInfo").setAttribute("aria-selected", view === "info");
     $("#favN").textContent = favs.size;
     a.querySelector(".lang").textContent = col ? col.name : "";
   }
@@ -495,6 +617,19 @@
   $("#favEdit").onclick = () => { favEdit = !favEdit; renderFavs(); };
   $("#tabStations").onclick = () => { if (view !== "col") openCollection(col ? col.id : getDefault(), false); };
   $("#tabFavs").onclick = () => { if (view !== "favs") openFavs(true); };
+  // Info: your listening time, your account, the Android app and a few notes
+  $("#tabInfo").onclick = () => {
+    if (view === "info") return;
+    setView("info");
+    const url = new URL(location.href); url.searchParams.set("c", "info"); history.replaceState(null, "", url);
+    if (window.RadioListen) window.RadioListen.paint();
+    $("#infoView").scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+  // the account box, the app card and the sign-in note live in Info
+  { const iv = $("#infoView"), acct = $("#acct"), app = $("#radioApp"), note = $("#acctNote");
+    if (acct) $("#ivAcct").append(acct);
+    if (app) { const sec = document.createElement("div"); sec.className = "iv-sec"; sec.innerHTML = '<h2 class="iv-h">The Android app</h2>'; sec.append(app); iv.append(sec); }
+    if (note) $("#ivAcct").append(note); }
 
   // ---------------------------------------------------------- sharing
   const shareUrl = (cId, s) => `${location.origin}/radio.html?c=${cId}&s=${encodeURIComponent(s.id)}`;
@@ -710,6 +845,8 @@
     openStationPanel();
   }
   window.RadioApp.share = () => current && shareStation(current, currentCol);
+  window.RadioApp.now = () => current && { key: `${currentCol}:${current.id}`, name: current.name };
+  { const strip = $("#raStrip"); if (strip) strip.onclick = (e) => { e.preventDefault(); $("#tabInfo").click(); }; }
   window.RadioApp.openStation = openStation;
 
   // ---------------------------------------------------------- player
@@ -801,7 +938,7 @@
   const vol = $("#vol");
   let wants = false, everPlayed = false, retries = 0, stallTimer = null, retryTimer = null, skipDir = 0, autoSkips = 0;
 
-  function play(s, list, cId = col.id, dir = 0) {
+  function play(s, list, cId = s._c || col.id, dir = 0) {
     queue = list || (cId === (col && col.id) ? visibleList() : [s]);
     current = s; currentCol = cId; tryIndex = 0; lastSwitch = Date.now();
     everPlayed = false; retries = 0; skipDir = dir;
@@ -1030,6 +1167,21 @@
   document.addEventListener("click", () => { if (!sleepMenu.hidden) openSleep(false); });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !sleepMenu.hidden) { openSleep(false); sleepBtn.focus(); } });
   paintSleep();
+  // custom sleep length (5 minutes to 4 hours)
+  const sc = document.getElementById("sleepCustom"), scLab = document.getElementById("sleepCustomLab");
+  if (sc) {
+    const show = () => { scLab.textContent = nice(+sc.value); };
+    sc.oninput = show; show();
+    sc.onclick = (e) => e.stopPropagation();
+    document.getElementById("sleepCustomGo").onclick = (e) => { e.stopPropagation(); setSleep(+sc.value); openSleep(false); sleepBtn.focus(); };
+  }
+  // ⌄ fold the player to one slim row (keeps playing); ⌃ brings the buttons back
+  const smallBtn = document.getElementById("smallBtn");
+  const setSmall = (v) => { player.classList.toggle("small", v); smallBtn.setAttribute("aria-pressed", v);
+    smallBtn.setAttribute("aria-label", v ? "Show all player buttons" : "Make the player smaller"); store.set("mr-small", v); placePanel(); };
+  setSmall(store.get("mr-small", false));
+  smallBtn.onclick = () => setSmall(!player.classList.contains("small"));
+  document.getElementById("npShare").onclick = () => { if (current) shareStation(current, currentCol); };
 
   // close: stop the stream, cancel any sleep timer, hide the bar (and don't bring it back on the next visit)
   const pageTitle = document.title.replace(/^▶ .*? — /, "");
@@ -1135,9 +1287,10 @@
   // a station link (?c=hindi&s=<id>) also shows that station ready to play
   const params = new URLSearchParams(location.search);
   const want = params.get("c") || getDefault(), sid = params.get("s");
-  const startCol = byCol[want] ? want : byCol[getDefault()] ? getDefault() : "malayalam";
+  const startCol = (byCol[want] || (isPseudo(want) && !sid)) ? want : byCol[getDefault()] ? getDefault() : "malayalam";
   const opening = openCollection(startCol, false);
   if (want === "favs" && !sid) opening.then(() => openFavs(false));
+  if (want === "info" && !sid) opening.then(() => $("#tabInfo").click());
   if (sid) {
     opening.then(() => openStation(startCol, sid)).finally(() => {
       const url = new URL(location.href); url.searchParams.delete("s"); history.replaceState(null, "", url);
