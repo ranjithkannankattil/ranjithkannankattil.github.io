@@ -837,7 +837,8 @@ window.STATIONS = [
       "https://stream.zeno.fm/mwam2yirv1pvv"
     ],
     "added": "2026-10-31",
-    "where": "Nigeria"
+    "where": "Nigeria",
+    "offline": true
   },
   {
     "id": "bfm-89-9-malaysia",
@@ -1418,6 +1419,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-09",
     "where": "US"
+  },
+  {
+    "id": "fun-radio-for-kids-bedtime-stories",
+    "name": "Fun Radio For Kids - Bedtime Stories",
+    "category": "world",
+    "streams": [
+      "https://drive.uber.radio/uber/forkidzbedtimestories/icecast.audio"
+    ],
+    "added": "2026-11-09",
+    "where": "The United Arab Emirates"
+  },
+  {
+    "id": "hawaii-public-radio-hpr-1-khpr",
+    "name": "Hawaii Public Radio HPR-1 (KHPR)",
+    "category": "us",
+    "streams": [
+      "https://khpr-ice.streamguys1.com/khpr2"
+    ],
+    "added": "2026-11-09",
+    "where": "US"
+  },
+  {
+    "id": "rense-radio-https-surfernetwork-com",
+    "name": "Rense Radio (https) (surfernetwork.com)",
+    "category": "us",
+    "streams": [
+      "https://stream-289.surfernetwork.com/k75y6e0k4ehvv"
+    ],
+    "added": "2026-11-09",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T07:42Z";
+window.STATIONS_CHECKED = "2026-11-09T23:38Z";

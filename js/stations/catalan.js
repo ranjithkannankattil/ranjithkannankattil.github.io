@@ -273,8 +273,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.enacast.com/radiohospitalet56.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "canal-blau",
@@ -385,8 +384,7 @@ window.STATIONS = [
     "streams": [
       "https://enacast.com/radioribarroja/streams/SD"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "radio-vilablareix",
@@ -650,4 +648,4 @@ window.STATIONS = [
     "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T07:42Z";
+window.STATIONS_CHECKED = "2026-11-09T23:38Z";

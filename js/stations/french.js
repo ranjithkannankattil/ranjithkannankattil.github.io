@@ -1301,6 +1301,33 @@ window.STATIONS = [
       "https://jazz-wr16.ice.infomaniak.ch/jazz-wr16-128.mp3"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "jazz-radio-latin-jazz",
+    "name": "Jazz Radio Latin Jazz",
+    "category": "music",
+    "streams": [
+      "https://jazz-wr09.ice.infomaniak.ch/jazz-wr09-128.mp3"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "m-radio",
+    "name": "M Radio",
+    "category": "music",
+    "streams": [
+      "https://mfm.ice.infomaniak.ch/mfm-128.mp3"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "isekoi-radio-chill-zone",
+    "name": "ISEKOI Radio · Chill Zone",
+    "category": "music",
+    "streams": [
+      "https://public.isekoi-radio.com/listen/chill/radio.mp3"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T07:42Z";
+window.STATIONS_CHECKED = "2026-11-09T23:38Z";

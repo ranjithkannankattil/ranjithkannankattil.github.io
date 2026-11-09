@@ -1078,7 +1078,8 @@ window.STATIONS = [
     "streams": [
       "https://mpc2.mediacp.eu:8282/sremac"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "offline": true
   },
   {
     "id": "rsg-party-time",
@@ -1205,6 +1206,33 @@ window.STATIONS = [
       "https://skc.fm/hls/skc_radio/aac_hifi.m3u8"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "radio-sumadija-aranelovac",
+    "name": "Radio Šumadija Aranđelovac",
+    "category": "music",
+    "streams": [
+      "https://media.srb-streaming.com/stream/radio-sumadija"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "play-radio-urban",
+    "name": "Play Radio Urban",
+    "category": "music",
+    "streams": [
+      "https://stream.playradio.rs:8443/urban.mp3"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "plus-radio-nostalgija",
+    "name": "Plus Radio Nostalgija",
+    "category": "music",
+    "streams": [
+      "https://samcloud.spacial.com/api/listen?sid=104138&rid=181424&f=aac,any&br=64000,any"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T07:42Z";
+window.STATIONS_CHECKED = "2026-11-09T23:38Z";

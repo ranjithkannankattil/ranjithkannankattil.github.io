@@ -1120,8 +1120,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio212/chunklist.m3u8"
     ],
-    "added": "2026-11-05",
-    "offline": true
+    "added": "2026-11-05"
   },
   {
     "id": "retrobollywood",
@@ -1275,6 +1274,33 @@ window.STATIONS = [
       "https://drive.uber.radio/uber/bollywoodneharkakkar/icecast.audio"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "radio-welcome-90-8fm",
+    "name": "Radio Welcome 90.8fm",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/2tm4yz0pvxhvv"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "bhaktiworld-media-devi-maa",
+    "name": "Bhaktiworld Media Devi Maa",
+    "category": "music",
+    "streams": [
+      "https://ibadat.out.airtime.pro:8000/ibadat_a?_ga=2.112683904.548091236.15820292%2013-1175002648.1580299245"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "taj-92-3-fm",
+    "name": "Taj 92.3 FM",
+    "category": "music",
+    "streams": [
+      "https://ice66.securenetsystems.net/TAJ"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T07:42Z";
+window.STATIONS_CHECKED = "2026-11-09T23:38Z";

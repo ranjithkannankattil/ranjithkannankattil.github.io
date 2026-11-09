@@ -56,8 +56,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming.softnep.net:10996/;stream.nsv&type=mp3&volume=60"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "universal-health-radio",
@@ -98,7 +97,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.softnep.net:10994/;stream.nsv"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-thaha-sanchar",
@@ -117,4 +117,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T07:42Z";
+window.STATIONS_CHECKED = "2026-11-09T23:38Z";

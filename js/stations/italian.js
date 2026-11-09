@@ -804,7 +804,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/72k4a597rs8uv"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "offline": true
   },
   {
     "id": "radio-margherita",
@@ -912,8 +913,7 @@ window.STATIONS = [
     "streams": [
       "https://stream15.top-ix.org/partygroove"
     ],
-    "added": "2026-11-02",
-    "offline": true
+    "added": "2026-11-02"
   },
   {
     "id": "jungle-planet-radio",
@@ -1057,8 +1057,7 @@ window.STATIONS = [
     "streams": [
       "https://stream15.top-ix.org:8000/radiomanila"
     ],
-    "added": "2026-11-05",
-    "offline": true
+    "added": "2026-11-05"
   },
   {
     "id": "ritmo-80",
@@ -1257,6 +1256,33 @@ window.STATIONS = [
       "https://eu2.fastcast4u.com/proxy/radiox?mp=/1"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "radio-19",
+    "name": "Radio 19",
+    "category": "news",
+    "streams": [
+      "https://rn1.fluidstream.eu/radio19.aac?FLID=6"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "grs-gruppo-radio-sperone",
+    "name": "GRS - Gruppo Radio Sperone",
+    "category": "news",
+    "streams": [
+      "https://onair7.xdevel.com/proxy/xautocloud_luge_1982?mp=/;1/"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "italia-hits-italia",
+    "name": "ITALIA Hits Italia",
+    "category": "music",
+    "streams": [
+      "https://icy.unitedradio.it/um011.mp3"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T07:42Z";
+window.STATIONS_CHECKED = "2026-11-09T23:38Z";

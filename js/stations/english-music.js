@@ -1446,8 +1446,7 @@ window.STATIONS = [
       "https://chaosfm.com:8443/stream"
     ],
     "added": "2026-11-07",
-    "where": "UK",
-    "offline": true
+    "where": "UK"
   },
   {
     "id": "progressive-rock-azusa",
@@ -1480,4 +1479,4 @@ window.STATIONS = [
     "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T07:42Z";
+window.STATIONS_CHECKED = "2026-11-09T23:38Z";

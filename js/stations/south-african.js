@@ -49,8 +49,7 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://radiohost.ifastekpanel.com/listen/kingdom/live"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "sekhukhune-fm",
@@ -79,4 +78,4 @@ window.STATIONS = [
     "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T07:42Z";
+window.STATIONS_CHECKED = "2026-11-09T23:38Z";

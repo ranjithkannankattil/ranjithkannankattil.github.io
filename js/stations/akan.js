@@ -24,8 +24,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://atunwadigital.streamguys1.com/angelfm"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "nhyira-104-5-fm",
@@ -122,7 +121,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://atunwadigital.streamguys1.com/hellofm"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "connect-fm",
@@ -291,7 +291,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/qpq7hygy77zuv"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "yfm-97-9-takoradi",
@@ -414,7 +415,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/evaq9ab4k0hvv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "neat-fm",
@@ -480,4 +482,4 @@ window.STATIONS = [
     "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T07:42Z";
+window.STATIONS_CHECKED = "2026-11-09T23:38Z";

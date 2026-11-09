@@ -121,7 +121,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/8a4eqkd0pnhvv"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-7",
@@ -1326,4 +1327,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T07:42Z";
+window.STATIONS_CHECKED = "2026-11-09T23:38Z";

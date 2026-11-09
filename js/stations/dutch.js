@@ -155,8 +155,8 @@ window.STATIONS = [
     "name": "Qmusic",
     "category": "music",
     "streams": [
-      "https://stream.qmusic.nl/qmusic/aac",
-      "https://icecast-qmusicnl-cdp.triple-it.nl/Qmusic_nl_live.mp3"
+      "https://icecast-qmusicnl-cdp.triple-it.nl/Qmusic_nl_live.mp3",
+      "https://stream.qmusic.nl/qmusic/aac"
     ]
   },
   {
@@ -1054,7 +1054,8 @@ window.STATIONS = [
     "streams": [
       "https://stream03.level27.be/;stream.mp3"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "offline": true
   },
   {
     "id": "vrt-radio-bene",
@@ -1336,4 +1337,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T07:42Z";
+window.STATIONS_CHECKED = "2026-11-09T23:38Z";

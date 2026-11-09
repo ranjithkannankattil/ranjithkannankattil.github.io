@@ -473,8 +473,7 @@ window.STATIONS = [
     "streams": [
       "https://rpn.bozztv.com/radio/Med7-RadioTirana/icecast.audio"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "paper-radio",
@@ -522,4 +521,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T07:42Z";
+window.STATIONS_CHECKED = "2026-11-09T23:38Z";

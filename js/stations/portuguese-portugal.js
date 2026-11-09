@@ -206,7 +206,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8",
       "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "golofm",
@@ -278,10 +279,9 @@ window.STATIONS = [
     "name": "Antena 2",
     "category": "music",
     "streams": [
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR",
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8"
-    ],
-    "offline": true
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8",
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
+    ]
   },
   {
     "id": "rca-radio-clube-de-armamar",
@@ -349,8 +349,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/rdpafrica80a/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "antena-1-acores-portugal",
@@ -638,7 +637,8 @@ window.STATIONS = [
     "streams": [
       "https://stream-hls.bauermedia.pt/cidhiphop.aac/playlist.m3u8"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "offline": true
   },
   {
     "id": "nitfm",
@@ -683,7 +683,8 @@ window.STATIONS = [
     "streams": [
       "https://stream-hls.bauermedia.pt/rcbest2000.aac/playlist.m3u8"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "offline": true
   },
   {
     "id": "estacao-diaria-radio-viseu-96-8-fm",
@@ -1241,8 +1242,7 @@ window.STATIONS = [
     "streams": [
       "https://centova.radio.com.pt/proxy/037?mp=/stream"
     ],
-    "added": "2026-11-08",
-    "offline": true
+    "added": "2026-11-08"
   },
   {
     "id": "radiofutura-pt",
@@ -1306,6 +1306,33 @@ window.STATIONS = [
       "https://a6.asurahosting.com/listen/wave_vibes/radio.mp3"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "radio-sol-madeira-103-7-fm",
+    "name": "Rádio Sol Madeira (103.7 FM)",
+    "category": "music",
+    "streams": [
+      "https://audio.serv.pt/8010/stream.mp3"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "radio-palmeira-madeira-96-1-fm",
+    "name": "Rádio Palmeira Madeira (96.1 FM)",
+    "category": "music",
+    "streams": [
+      "https://audio.serv.pt/8018/stream.mp3"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "radar",
+    "name": "Radar",
+    "category": "music",
+    "streams": [
+      "https://proic1.evspt.com/radar_mp3"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T07:42Z";
+window.STATIONS_CHECKED = "2026-11-09T23:38Z";

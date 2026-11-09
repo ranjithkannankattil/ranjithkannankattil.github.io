@@ -449,7 +449,8 @@ window.STATIONS = [
       "https://stream.zenolive.com/e9x2n97b9uduv"
     ],
     "added": "2026-10-26",
-    "where": "Nigeria"
+    "where": "Nigeria",
+    "offline": true
   },
   {
     "id": "rte-radio-1",
@@ -1260,6 +1261,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-09",
     "where": "Uganda"
+  },
+  {
+    "id": "talk-radio-europe",
+    "name": "Talk Radio Europe",
+    "category": "world",
+    "streams": [
+      "https://s3.yesstreaming.net:7014/stream"
+    ],
+    "added": "2026-11-09",
+    "where": "Spain"
+  },
+  {
+    "id": "cbc-radio-one-ottawa-on",
+    "name": "CBC Radio One - Ottawa, ON",
+    "category": "canada",
+    "streams": [
+      "https://26733.live.streamtheworld.com/CBOFM_CBC_SC"
+    ],
+    "added": "2026-11-09",
+    "where": "Canada"
+  },
+  {
+    "id": "npr-program-stream",
+    "name": "NPR Program Stream",
+    "category": "us",
+    "streams": [
+      "https://npr-hls.streamguys1.com/npr/live.aac/playlist.m3u8"
+    ],
+    "added": "2026-11-09",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T07:42Z";
+window.STATIONS_CHECKED = "2026-11-09T23:38Z";

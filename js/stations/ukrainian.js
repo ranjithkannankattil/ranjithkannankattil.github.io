@@ -152,8 +152,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s5.radioforge.com:7908/live?n=77357"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "24-breaking-live",
@@ -233,7 +232,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.brokenbeats.net/tune"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-shanson",
@@ -1078,6 +1078,15 @@ window.STATIONS = [
       "https://stream.druzi.media/192mp3"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "garta",
+    "name": "Радіо Ґарта / Garta",
+    "category": "music",
+    "streams": [
+      "https://rockradioua.online:8433/metal_256"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T07:42Z";
+window.STATIONS_CHECKED = "2026-11-09T23:38Z";

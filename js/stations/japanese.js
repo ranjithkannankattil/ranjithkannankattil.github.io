@@ -331,8 +331,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.vrstv.jp/"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "wave-anime-radio",
@@ -665,8 +664,7 @@ window.STATIONS = [
     "streams": [
       "https://howlingf-gecko.radioca.st/autodj"
     ],
-    "added": "2026-10-29",
-    "offline": true
+    "added": "2026-10-29"
   },
   {
     "id": "radio-gambaru",
@@ -723,4 +721,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T07:42Z";
+window.STATIONS_CHECKED = "2026-11-09T23:38Z";

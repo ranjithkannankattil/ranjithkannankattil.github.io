@@ -522,7 +522,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming.shoutcast.com/synchronizeradio"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "radio-suara-al-iman-846-am-surabaya",
@@ -659,7 +660,8 @@ window.STATIONS = [
     "streams": [
       "https://svara-stream.radioddns.net/bali_voksradio_993fm"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "offline": true
   },
   {
     "id": "imelda-fm",
@@ -675,6 +677,7 @@ window.STATIONS = [
     "name": "VOKS Radio Bali",
     "category": "music",
     "streams": [
+      "https://a3.alhastream.com:4010/radio",
       "https://a3.alhastream.com:4000/radio"
     ],
     "added": "2026-10-28"
@@ -1248,4 +1251,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T07:42Z";
+window.STATIONS_CHECKED = "2026-11-09T23:38Z";

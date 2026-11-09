@@ -241,6 +241,7 @@ window.STATIONS = [
     "name": "RadioTEDU Jazz",
     "category": "music",
     "streams": [
+      "https://stream.radiotedu.com/cazz",
       "https://stream.radiotedu.com/cazz-flac"
     ]
   },
@@ -340,8 +341,7 @@ window.STATIONS = [
     "streams": [
       "https://yayin2.canliyayin.org:9350/stream?/;stream.mp3"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "radio-44",
@@ -442,8 +442,7 @@ window.STATIONS = [
     "streams": [
       "https://yarenfmn.80.yayin.com.tr//stream"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "radyo-7-turku",
@@ -1300,6 +1299,33 @@ window.STATIONS = [
       "https://serverkw.quran-uni.com:8258/;"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "91-8-istanbul-un-sesi",
+    "name": "91.8 İstanbul'un Sesi",
+    "category": "music",
+    "streams": [
+      "https://yayin.radyomadyo.com:9180/stream"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "dadas-fm-erzurum",
+    "name": "Dadaş Fm Erzurum",
+    "category": "music",
+    "streams": [
+      "https://sslyayin.netyayin.net:8084/stream/;stream.mp3"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "loops-radio-house-station",
+    "name": "Loops Radio House Station",
+    "category": "music",
+    "streams": [
+      "https://loopsdeep.ozelip.com/7806/stream"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T07:42Z";
+window.STATIONS_CHECKED = "2026-11-09T23:38Z";

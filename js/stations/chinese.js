@@ -121,8 +121,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play-radio-stream3.hndt.com/now/WUBA5hW2/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-10",
@@ -925,8 +924,7 @@ window.STATIONS = [
     "streams": [
       "https://play-radio-stream3.hndt.com/now/JxkyN5mR/chunklist.m3u8"
     ],
-    "added": "2026-11-03",
-    "offline": true
+    "added": "2026-11-03"
   },
   {
     "id": "cctv-9",
@@ -1287,6 +1285,33 @@ window.STATIONS = [
       "https://satellitepull.cnr.cn/live/wxlnzs/playlist.m3u8?wsSession=b560e2b8d5c24aef0be2a5c7-174709253203252&wsIPSercert=29f90b67755e3a4646651f7aa8eb5fd6"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "asiafm-6",
+    "name": "AsiaFM亚洲音乐台",
+    "category": "music",
+    "streams": [
+      "https://lhttp.qingting.fm/live/4581/64k.mp3"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "971-fm97-1",
+    "name": "深圳飞扬971 FM97.1",
+    "category": "music",
+    "streams": [
+      "https://lhttp.qtfm.cn/live/1271/64k.mp3"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "station-62",
+    "name": "顺德音乐之声",
+    "category": "music",
+    "streams": [
+      "https://lhttp.qtfm.cn/live/20500150/64k.mp3"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T07:42Z";
+window.STATIONS_CHECKED = "2026-11-09T23:38Z";

@@ -297,7 +297,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/72k4a597rs8uv"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "clasic-radio-relax-bucuresti",
@@ -1296,6 +1297,33 @@ window.STATIONS = [
       "https://stream-galati.radiogalati.ro/"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "radio-trinitas-88-5",
+    "name": "Radio Trinitas 88.5",
+    "category": "devotional",
+    "streams": [
+      "https://live.radiotrinitas.ro:8003/;stream.nsv"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "radio-doza-manele",
+    "name": "Radio Doza Manele",
+    "category": "music",
+    "streams": [
+      "https://manele.radiodoza.eu:8100/stream"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "rockstar-radio",
+    "name": "Rockstar Radio",
+    "category": "music",
+    "streams": [
+      "https://a5.asurahosting.com:7120/radio.mp3"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T07:42Z";
+window.STATIONS_CHECKED = "2026-11-09T23:38Z";

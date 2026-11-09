@@ -1205,6 +1205,33 @@ window.STATIONS = [
       "https://rs203-krk-cyfronet.rmfstream.pl/rmf_maxxx_wlc"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "radio-pogoda-gdansk",
+    "name": "Radio Pogoda Gdańsk",
+    "category": "news",
+    "streams": [
+      "https://radiostream.pl/tuba145-1.mp3"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "radio-dht-kana-gowny",
+    "name": "Radio DHT (kanał główny)",
+    "category": "music",
+    "streams": [
+      "https://radiodht.com/stream_main/"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "vox-fm-disco-party",
+    "name": "VOX FM DISCO PARTY",
+    "category": "music",
+    "streams": [
+      "https://ic1.smcdn.pl/6180-1.mp3"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T07:42Z";
+window.STATIONS_CHECKED = "2026-11-09T23:38Z";

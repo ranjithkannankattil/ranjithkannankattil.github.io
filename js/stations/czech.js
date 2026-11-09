@@ -1197,6 +1197,15 @@ window.STATIONS = [
       "https://ice3.abradio.cz/route128.mp3"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "dwg-radio-cesky",
+    "name": "DWG Radio Český",
+    "category": "devotional",
+    "streams": [
+      "https://server25530.streamplus.de/;stream.mp3"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T07:42Z";
+window.STATIONS_CHECKED = "2026-11-09T23:38Z";

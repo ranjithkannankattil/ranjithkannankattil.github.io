@@ -142,7 +142,8 @@ window.STATIONS = [
     "streams": [
       "https://play.streamafrica.net/profkradio"
     ],
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "nathenje-community-radio",
@@ -207,7 +208,8 @@ window.STATIONS = [
     "streams": [
       "https://play.streamafrica.net/tigabane"
     ],
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "yoneco-fm",
@@ -215,8 +217,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://s7.myradiostream.com:60218/;;"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "moyo-fm",
@@ -308,4 +309,4 @@ window.STATIONS = [
     "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T07:42Z";
+window.STATIONS_CHECKED = "2026-11-09T23:38Z";

@@ -357,7 +357,8 @@ window.STATIONS = [
       "https://icast.connectmedia.hu/4656/mr11.aac"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "adventnet-radio",
@@ -951,8 +952,7 @@ window.STATIONS = [
     "streams": [
       "https://live.ideastream.org/wksu4.128.mp3"
     ],
-    "added": "2026-11-04",
-    "offline": true
+    "added": "2026-11-04"
   },
   {
     "id": "best-fm-eger",
@@ -1070,6 +1070,15 @@ window.STATIONS = [
       "https://agnusradio.ro/radio-stream/"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "radio-teszmi",
+    "name": "Rádió Teszmi",
+    "category": "music",
+    "streams": [
+      "https://radioteszmi.hu/radio"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T07:42Z";
+window.STATIONS_CHECKED = "2026-11-09T23:38Z";

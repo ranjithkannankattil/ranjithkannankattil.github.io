@@ -1168,8 +1168,7 @@ window.STATIONS = [
     "streams": [
       "https://paineldj5.com.br:20028/stream"
     ],
-    "added": "2026-11-06",
-    "offline": true
+    "added": "2026-11-06"
   },
   {
     "id": "radio-stereo-mix",
@@ -1334,4 +1333,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T07:42Z";
+window.STATIONS_CHECKED = "2026-11-09T23:38Z";
