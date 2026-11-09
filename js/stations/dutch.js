@@ -1307,6 +1307,33 @@ window.STATIONS = [
       "https://streams.rtvoost.nl/audio/oost/mp3"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "l1-radio",
+    "name": "L1 Radio",
+    "category": "music",
+    "streams": [
+      "https://d34pj260kw1xmk.cloudfront.net/icecast/l1/radio-bb-mp3"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "jazz-de-ville-easy",
+    "name": "Jazz de Ville - Easy",
+    "category": "music",
+    "streams": [
+      "https://stream.jazzradiobymaestro.com/easy"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "jazz-de-ville-jazzy",
+    "name": "Jazz de Ville - Jazzy",
+    "category": "music",
+    "streams": [
+      "https://stream.jazzradiobymaestro.com/jazzy"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T18:57Z";
+window.STATIONS_CHECKED = "2026-11-09T06:27Z";

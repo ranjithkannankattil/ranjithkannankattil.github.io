@@ -1297,6 +1297,33 @@ window.STATIONS = [
       "https://radio.xecod.com/station/alafasi"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "omniradio-sheikh-ahmad-tamim-al-maraghi",
+    "name": "OmniRadio - Sheikh Ahmad Tamim Al-Maraghi",
+    "category": "devotional",
+    "streams": [
+      "https://radio.xecod.com/station/ahmad-tamim"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "biskra",
+    "name": "Biskra بسكرة",
+    "category": "news",
+    "streams": [
+      "https://webradio3.tda.dz:8001/Biskra_64K.mp3"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "omniradio-abu-bakr-al-shatri",
+    "name": "OmniRadio - Abu Bakr Al-Shatri (أبوبكر الشاطري)",
+    "category": "devotional",
+    "streams": [
+      "https://radio.xecod.com/station/abubakr-shatri"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T18:57Z";
+window.STATIONS_CHECKED = "2026-11-09T06:27Z";

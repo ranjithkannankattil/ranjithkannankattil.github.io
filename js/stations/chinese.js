@@ -201,8 +201,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-17",
@@ -1232,6 +1231,33 @@ window.STATIONS = [
       "https://n06.rcs.revma.com/srn5f9kmwxhvv"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "cctv-12",
+    "name": "CCTV-12社会与法伴音",
+    "category": "music",
+    "streams": [
+      "https://piccpndali.v.myalicdn.com/audio/cctv12_2.m3u8"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "station-60",
+    "name": "江苏故事广播",
+    "category": "music",
+    "streams": [
+      "https://lzlive.vojs.cn/rWjyus9/92/live.m3u8?"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "ufm-1003",
+    "name": "UFM 1003",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/UFM_1003_SC"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T18:57Z";
+window.STATIONS_CHECKED = "2026-11-09T06:27Z";

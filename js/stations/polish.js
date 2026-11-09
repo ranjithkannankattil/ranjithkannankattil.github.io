@@ -1151,6 +1151,33 @@ window.STATIONS = [
       "https://rostr1.radioolsztyn.pl:8443/RO"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "rmf-maxxx-krakow",
+    "name": "RMF MAXXX KRAKÓW",
+    "category": "music",
+    "streams": [
+      "https://rs102-krk.rmfstream.pl/MAXXXKRA"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "plus",
+    "name": "PLUS",
+    "category": "music",
+    "streams": [
+      "https://pl.cdn.eurozet.pl/plu-gdn.mp3"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "mdk-space-radio",
+    "name": "MDK Space Radio",
+    "category": "music",
+    "streams": [
+      "https://radio.mdkband.com/stream.mp3"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T18:57Z";
+window.STATIONS_CHECKED = "2026-11-09T06:27Z";

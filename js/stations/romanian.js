@@ -1242,6 +1242,33 @@ window.STATIONS = [
       "https://live.radiobrasov.ro/stream.mp3"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "spacefm-romania-spacefm-dance",
+    "name": "SpaceFM Romania -SpaceFM Dance",
+    "category": "music",
+    "streams": [
+      "https://spacefm.live/listen/spacefm_romania/spacefm192"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "translation-of-the-quran-in-romanian",
+    "name": "Translation of the Quran in romanian",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8022/;"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "radio-boom-rock",
+    "name": "Radio Boom Rock",
+    "category": "music",
+    "streams": [
+      "https://stream.radioboom.ro/listen/boom_rock/radio.mp3"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T18:57Z";
+window.STATIONS_CHECKED = "2026-11-09T06:27Z";

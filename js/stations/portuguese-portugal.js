@@ -230,7 +230,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "cidade-fm-2",
@@ -357,8 +358,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -1269,6 +1269,33 @@ window.STATIONS = [
       "https://radio.radioentermedia.com/listen/entermedia/radio.mp3"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "radio-eu-sou-goias",
+    "name": "RÁDIO EU SOU GOIÁS",
+    "category": "music",
+    "streams": [
+      "https://live9.livemus.com.br:27374/stream"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "radio-fm",
+    "name": "Radio FM",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/RFM.mp3"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "radio-popular-de-source",
+    "name": "Rádio Popular de Source",
+    "category": "news",
+    "streams": [
+      "https://nl.digitalrm.pt:8072/stream?1671016403075="
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T18:57Z";
+window.STATIONS_CHECKED = "2026-11-09T06:27Z";

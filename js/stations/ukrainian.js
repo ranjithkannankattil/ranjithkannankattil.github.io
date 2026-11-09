@@ -797,8 +797,7 @@ window.STATIONS = [
     "streams": [
       "https://radiofiorda.pl/stream/"
     ],
-    "added": "2026-10-31",
-    "offline": true
+    "added": "2026-10-31"
   },
   {
     "id": "khvylia-shchastia",
@@ -1069,6 +1068,15 @@ window.STATIONS = [
       "https://ipradio.net:8443/radiosmak"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "radio-druzi",
+    "name": "Radio DRUZI",
+    "category": "news",
+    "streams": [
+      "https://stream.druzi.media/192mp3"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T18:57Z";
+window.STATIONS_CHECKED = "2026-11-09T06:27Z";

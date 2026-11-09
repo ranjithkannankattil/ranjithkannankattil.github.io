@@ -1358,6 +1358,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-08",
     "where": "US"
+  },
+  {
+    "id": "whbe-espn-louisville",
+    "name": "WHBE ESPN Louisville",
+    "category": "sport",
+    "streams": [
+      "https://prod-44-203-50-103.amperwave.net/unionbroadcasting-whbeammp3-ibc2?session-id=fe287fd17b9c51db5f3aeed55913daa2"
+    ],
+    "added": "2026-11-09",
+    "where": "US"
+  },
+  {
+    "id": "american-gold-pumpkin-fm",
+    "name": "American Gold - Pumpkin FM",
+    "category": "comedy",
+    "streams": [
+      "https://cast2.asurahosting.com/proxy/americangold/stream"
+    ],
+    "added": "2026-11-09",
+    "where": "UK"
+  },
+  {
+    "id": "red-state-talk-radio-encore",
+    "name": "Red State Talk Radio Encore",
+    "category": "us",
+    "streams": [
+      "https://s2.radio.co/sf03a6a4b2/listen"
+    ],
+    "added": "2026-11-09",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T18:57Z";
+window.STATIONS_CHECKED = "2026-11-09T06:27Z";

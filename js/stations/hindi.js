@@ -256,7 +256,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio007/hlspbaudio007_Auto.m3u8"
-    ]
+    ],
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "radio-mirchi-usa",
@@ -368,7 +370,8 @@ window.STATIONS = [
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio011/hlspbaudio011_Auto.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "sandesh-radio",
@@ -1116,8 +1119,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio212/chunklist.m3u8"
     ],
-    "added": "2026-11-05",
-    "offline": true
+    "added": "2026-11-05"
   },
   {
     "id": "retrobollywood",
@@ -1217,6 +1219,33 @@ window.STATIONS = [
       "https://s6.citrus3.com:8396/stream"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "translation-of-the-quran-in-hindi",
+    "name": "Translation of the Quran in Hindi",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8126/;"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "sangeet-samvaad",
+    "name": "Sangeet Samvaad",
+    "category": "music",
+    "streams": [
+      "https://ample.radiojar.com/7mh06pa8uwzuv"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "sportify-bollywood-workout",
+    "name": "Sportify bollywood workout",
+    "category": "music",
+    "streams": [
+      "https://drive.uber.radio/uber/sportifybollywood/icecast.audio"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T18:57Z";
+window.STATIONS_CHECKED = "2026-11-09T06:27Z";

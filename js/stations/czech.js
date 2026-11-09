@@ -1170,6 +1170,33 @@ window.STATIONS = [
       "https://www.aspiraradio.cz/radio/8000/radio.mp3?aspira"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "fajn-rock-music",
+    "name": "Fajn rock music",
+    "category": "music",
+    "streams": [
+      "https://icecast2.play.cz/fajnrock192.mp3"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "slymacks-radio",
+    "name": "Slymacks Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.slymacks.com/"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "radio-66",
+    "name": "Radio 66",
+    "category": "music",
+    "streams": [
+      "https://ice3.abradio.cz/route128.mp3"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T18:57Z";
+window.STATIONS_CHECKED = "2026-11-09T06:27Z";

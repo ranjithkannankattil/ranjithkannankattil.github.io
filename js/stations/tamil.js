@@ -1288,6 +1288,33 @@ window.STATIONS = [
       "https://radio.pixelinmedia.com/vallamai"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "yugam-radio",
+    "name": "Yugam Radio",
+    "category": "music",
+    "streams": [
+      "https://s6.yesstreaming.net:19012/stream"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "vasantha-ragam-fm",
+    "name": "Vasantha Ragam Fm",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/xpbsngksa2zuv"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "nanban-fm",
+    "name": "Nanban Fm",
+    "category": "music",
+    "streams": [
+      "https://nanbanfm-unicast2u.radioca.st/stream"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T18:57Z";
+window.STATIONS_CHECKED = "2026-11-09T06:27Z";

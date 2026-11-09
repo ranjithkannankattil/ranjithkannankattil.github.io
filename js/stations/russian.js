@@ -1297,6 +1297,33 @@ window.STATIONS = [
       "https://radio.powerfm.lv:1095/stream"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "fm-6",
+    "name": "нафталин fm",
+    "category": "music",
+    "streams": [
+      "https://radiorecord.hostingradio.ru/naft96.aacp"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "comedy-100-8-fm",
+    "name": "Comedy радио Сыктывкар 100.8 FM",
+    "category": "music",
+    "streams": [
+      "https://cast.severmedia.ru:5443/Comedy_11_01"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "woods-hit-radio-ac",
+    "name": "Woods Hit Radio AC",
+    "category": "music",
+    "streams": [
+      "https://cast4.asurahosting.com/proxy/nigel/stream"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T18:57Z";
+window.STATIONS_CHECKED = "2026-11-09T06:27Z";

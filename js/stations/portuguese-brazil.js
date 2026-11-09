@@ -1168,7 +1168,8 @@ window.STATIONS = [
     "streams": [
       "https://paineldj5.com.br:20028/stream"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "offline": true
   },
   {
     "id": "radio-stereo-mix",
@@ -1304,6 +1305,33 @@ window.STATIONS = [
       "https://stream.soulone.com.br/listen/soulone/externo"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "97-fm-natal",
+    "name": "97 FM Natal",
+    "category": "music",
+    "streams": [
+      "https://azevedo.jmvstream.com/stream"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "psybrazil-electro",
+    "name": "Psybrazil - Electro",
+    "category": "music",
+    "streams": [
+      "https://radio.psybrazil.com.br/electro"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "radio-am-news",
+    "name": "Rádio AM News",
+    "category": "news",
+    "streams": [
+      "https://stm17.painelcast.com:7442/stream"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T18:57Z";
+window.STATIONS_CHECKED = "2026-11-09T06:27Z";

@@ -912,7 +912,8 @@ window.STATIONS = [
     "streams": [
       "https://stream15.top-ix.org/partygroove"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "offline": true
   },
   {
     "id": "jungle-planet-radio",
@@ -1056,7 +1057,8 @@ window.STATIONS = [
     "streams": [
       "https://stream15.top-ix.org:8000/radiomanila"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "offline": true
   },
   {
     "id": "ritmo-80",
@@ -1201,6 +1203,33 @@ window.STATIONS = [
       "https://stream.rcs.revma.com/fxp289cp81uvv.xspf"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "gedi-radio-capital-music",
+    "name": "GEDI - Radio Capital Music",
+    "category": "music",
+    "streams": [
+      "https://streamcdnr16-4c4b867c89244861ac216426883d1ad0.msvdn.net/webradio/capitalmusic/playlist.m3u8"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "radio-number-one",
+    "name": "Radio Number One",
+    "category": "music",
+    "streams": [
+      "https://rn1.fluidstream.eu/rn1.mp3"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "radio-classica",
+    "name": "Radio Classica",
+    "category": "music",
+    "streams": [
+      "https://stream10.xdevel.com/audio0s978096-2470/stream/icecast.audio"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T18:57Z";
+window.STATIONS_CHECKED = "2026-11-09T06:27Z";

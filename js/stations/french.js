@@ -1247,6 +1247,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/gy7fpc2am1duv"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "biskra",
+    "name": "Biskra بسكرة",
+    "category": "news",
+    "streams": [
+      "https://webradio3.tda.dz:8001/Biskra_64K.mp3"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "bordj-bou-arreridj",
+    "name": "Bordj Bou Arreridj برج بوعريريج",
+    "category": "news",
+    "streams": [
+      "https://webradio3.tda.dz:8001/BordjBouArreridj_64K.mp3"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "la-grosse-radio-metal",
+    "name": "La Grosse Radio Métal",
+    "category": "music",
+    "streams": [
+      "https://hd.lagrosseradio.info/lagrosseradio-metal-192.mp3"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T18:57Z";
+window.STATIONS_CHECKED = "2026-11-09T06:27Z";

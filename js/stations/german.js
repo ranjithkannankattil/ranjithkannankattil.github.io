@@ -1301,6 +1301,33 @@ window.STATIONS = [
       "https://cast.egofm.de/egofm.mp3?ar-distributor=radio-browser"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "egofm",
+    "name": "egoFM",
+    "category": "music",
+    "streams": [
+      "https://cast.egofm.de/egofm.mp3?ar-distributor=ffa0&aw_0_req.gdpr=true"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "bayern-1-schwaben",
+    "name": "Bayern 1 Schwaben",
+    "category": "music",
+    "streams": [
+      "https://dispatcher.rndfnk.com/br/br1/schwaben/mp3/mid"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "inforadio-vom-rbb",
+    "name": "Inforadio vom rbb",
+    "category": "music",
+    "streams": [
+      "https://dispatcher.rndfnk.com/rbb/inforadio/live/mp3/low?aggregator=tunein"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T18:57Z";
+window.STATIONS_CHECKED = "2026-11-09T06:27Z";

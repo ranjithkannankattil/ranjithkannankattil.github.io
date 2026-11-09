@@ -1115,7 +1115,8 @@ window.STATIONS = [
     "streams": [
       "https://radios.blumhost.es/8124/;"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "offline": true
   },
   {
     "id": "la-tukka-ec",
@@ -1296,6 +1297,33 @@ window.STATIONS = [
       "https://raymistream.net/listen/perufolkradio/live"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "adn-radio",
+    "name": "ADN Radio",
+    "category": "news",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/ADNAAC.aac"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "amor-solo-pop-pop-y-baladas-en-espanol",
+    "name": "AMOR SOLO POP: Pop y baladas en español",
+    "category": "music",
+    "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/ACIR03_s01AAC.aac"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "modelo-97-7-fm",
+    "name": "Modelo 97.7 FM",
+    "category": "news",
+    "streams": [
+      "https://usa3.lhdserver.es:8197/stream"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T18:57Z";
+window.STATIONS_CHECKED = "2026-11-09T06:27Z";

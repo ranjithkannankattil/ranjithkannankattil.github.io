@@ -1061,6 +1061,15 @@ window.STATIONS = [
       "https://stream.tilos.hu/tilos_128.mp3"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "agnus-radio-cluj-napoca-88-3-fm",
+    "name": "Agnus Rádió -Cluj Napoca 88,3 FM",
+    "category": "music",
+    "streams": [
+      "https://agnusradio.ro/radio-stream/"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T18:57Z";
+window.STATIONS_CHECKED = "2026-11-09T06:27Z";

@@ -236,7 +236,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ztnr.rtve.es/ztnr/1694255.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "esradio-principal",
@@ -1298,6 +1299,33 @@ window.STATIONS = [
       "https://stream.zeno.fm/hvnu0rfuifguv"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "esradio-asturias",
+    "name": "esRadio Asturias",
+    "category": "news",
+    "streams": [
+      "https://server9.emitironline.com:8822/;"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "ibiza-global-radio",
+    "name": "Ibiza Global Radio",
+    "category": "music",
+    "streams": [
+      "https://listenssl.ibizaglobalradio.com:8024/ibizaglobalradio.mp3"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "hits-1-mallorca",
+    "name": "Hits 1 Mallorca",
+    "category": "music",
+    "streams": [
+      "https://radio7.pro-fhi.net/radio/9006/hits1ibiza"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T18:57Z";
+window.STATIONS_CHECKED = "2026-11-09T06:27Z";

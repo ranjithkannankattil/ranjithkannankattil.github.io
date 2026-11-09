@@ -340,7 +340,8 @@ window.STATIONS = [
     "streams": [
       "https://yayin2.canliyayin.org:9350/stream?/;stream.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "radio-44",
@@ -441,7 +442,8 @@ window.STATIONS = [
     "streams": [
       "https://yarenfmn.80.yayin.com.tr//stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "radyo-7-turku",
@@ -711,7 +713,8 @@ window.STATIONS = [
     "streams": [
       "https://anadolu.liderhost.com.tr:9416/stream"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "offline": true
   },
   {
     "id": "radyo-dogubayazt-fm-104-4",
@@ -1243,6 +1246,33 @@ window.STATIONS = [
       "https://icecast.netmedya.net/kupefm"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "mega-radyo-fm-97-7",
+    "name": "Mega Radyo FM 97.7",
+    "category": "music",
+    "streams": [
+      "https://dinle.megaradyoiskenderun.com/8024/stream"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "espiye-fm",
+    "name": "Espiye FM",
+    "category": "music",
+    "streams": [
+      "https://anadolu.liderhost.com.tr/9028/stream"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "erkam-radyo-2nd-stream",
+    "name": "Erkam Radyo 2nd Stream",
+    "category": "music",
+    "streams": [
+      "https://yayin2.canliyayin.org:10910/stream?"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T18:57Z";
+window.STATIONS_CHECKED = "2026-11-09T06:27Z";

@@ -1151,6 +1151,33 @@ window.STATIONS = [
       "https://media.srb-streaming.com/stream/radio-sumadinac-krajiska"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "wtf-radio",
+    "name": "WTF Radio",
+    "category": "music",
+    "streams": [
+      "https://live.wtfradio.rs/wtfradio.mp3"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "radio-pancevo",
+    "name": "Radio Pančevo",
+    "category": "music",
+    "streams": [
+      "https://s29.myradiostream.com:16654/;"
+    ],
+    "added": "2026-11-09"
+  },
+  {
+    "id": "egata-radio",
+    "name": "Egata Radio",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/kcn3b5gfuhruv"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T18:57Z";
+window.STATIONS_CHECKED = "2026-11-09T06:27Z";

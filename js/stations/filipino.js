@@ -524,8 +524,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/60cb36c29heuv"
     ],
-    "added": "2026-10-28",
-    "offline": true
+    "added": "2026-10-28"
   },
   {
     "id": "105-9-energy-fm-dwla",
@@ -562,6 +561,15 @@ window.STATIONS = [
       "https://serverkw.quran-uni.com:8114/;"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "zexfm",
+    "name": "ZEXFM",
+    "category": "music",
+    "streams": [
+      "https://listen.smilemediaph.com/listen/zexfm/radio.mp3"
+    ],
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-08T18:57Z";
+window.STATIONS_CHECKED = "2026-11-09T06:27Z";
