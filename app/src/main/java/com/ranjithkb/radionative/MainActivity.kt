@@ -634,6 +634,9 @@ fun MiniPlayer(now: NowState, c: MediaController?, isFav: Boolean, onFav: () -> 
                     Icon(Icons.Filled.SkipPrevious, "Previous station", Modifier.size(34.dp), tint = dim) }
                 Cell("Next station", { c?.seekToNextMediaItem() }) {
                     Icon(Icons.Filled.SkipNext, "Next station", Modifier.size(34.dp), tint = dim) }
+                // ✕ stop the radio and put the player bar away (it comes back when you play a station)
+                Cell("Stop and close the player", { SleepTimer.off(); c?.stop(); c?.clearMediaItems() }) {
+                    Icon(Icons.Filled.Close, "Stop and close the player", Modifier.size(26.dp), tint = dim.copy(alpha = 0.7f)) }
             }
         }
     }

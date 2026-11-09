@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 40
     env:
-      APP_VERSION: "2.3.2"
+      APP_VERSION: "2.3.3"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
@@ -39,6 +39,7 @@ jobs:
             echo "Version ${APP_VERSION} · released $(TZ=Europe/Rome date '+%-d %b %Y, %H:%M %Z')"
             echo
             echo "What's new:"
+            echo "- A close button (✕) on the player bar stops the radio and puts the bar away"
             echo "- Station lists refresh every time you open a language; removed stations leave your favourites"
             echo "- Stations that only stream in one country say so, e.g. Hit 96.7: Only plays in the UAE"
             echo "- Dark velvet look when your phone is in dark mode"
