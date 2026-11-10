@@ -1086,6 +1086,15 @@ window.STATIONS = [
       "https://rockradioua.online:8433/metal_256"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "station-32",
+    "name": "Гумор від ШІ",
+    "category": "music",
+    "streams": [
+      "https://stream.radio.reorg.dev/listen/humour-ua/radio.mp3"
+    ],
+    "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-10T08:15Z";
+window.STATIONS_CHECKED = "2026-11-10T21:05Z";

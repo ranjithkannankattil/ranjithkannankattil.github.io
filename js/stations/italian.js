@@ -1310,6 +1310,33 @@ window.STATIONS = [
       "https://icy.unitedradio.it/105Zoo.aac"
     ],
     "added": "2026-11-10"
+  },
+  {
+    "id": "dimensione-suono-roma",
+    "name": "Dimensione Suono Roma",
+    "category": "music",
+    "streams": [
+      "https://stream.dimensionesuonoroma.radio/audio/dsr.stream_aac64/playlist.m3u8"
+    ],
+    "added": "2026-11-10"
+  },
+  {
+    "id": "radio-rouge-italy",
+    "name": "Radio Rouge Italy",
+    "category": "music",
+    "streams": [
+      "https://nl1.streamingpulse.com/ssl/radiorougeitaly"
+    ],
+    "added": "2026-11-10"
+  },
+  {
+    "id": "virgin-radio-rock-party",
+    "name": "Virgin Radio Rock Party",
+    "category": "music",
+    "streams": [
+      "https://icy.unitedradio.it/VirginRockParty.mp3"
+    ],
+    "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-10T08:15Z";
+window.STATIONS_CHECKED = "2026-11-10T21:05Z";

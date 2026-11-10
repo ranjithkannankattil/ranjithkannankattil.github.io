@@ -320,6 +320,15 @@ window.STATIONS = [
       "https://serverkw.quran-uni.com:8140/;"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "oye-radio",
+    "name": "Oye Radio",
+    "category": "news",
+    "streams": [
+      "https://stream.oye.radio/listen/oye_radio/radio.mp3"
+    ],
+    "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-10T08:15Z";
+window.STATIONS_CHECKED = "2026-11-10T21:05Z";

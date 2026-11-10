@@ -16,7 +16,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://pub0201.101.ru/stream/trust/mp3/128/24?"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rock-fm",
@@ -360,7 +361,8 @@ window.STATIONS = [
     "streams": [
       "https://pub0201.101.ru/stream/pro/aac/64/144"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "trance-is-star-radio",
@@ -936,7 +938,8 @@ window.STATIONS = [
     "streams": [
       "https://pub0201.101.ru/stream/pro/aac/64/28?"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "offline": true
   },
   {
     "id": "record-chill-house",
@@ -1326,4 +1329,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-10T08:15Z";
+window.STATIONS_CHECKED = "2026-11-10T21:05Z";

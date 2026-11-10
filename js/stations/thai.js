@@ -185,7 +185,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio10.plathong.net/7590/;stream.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "nbt-north-ease-digital-tv-channel-11",
@@ -293,7 +294,8 @@ window.STATIONS = [
     "streams": [
       "https://radio11.plathong.net/7050/;stream.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "offline": true
   },
   {
     "id": "translation-of-the-quran-in-thai",
@@ -350,4 +352,4 @@ window.STATIONS = [
     "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-10T08:15Z";
+window.STATIONS_CHECKED = "2026-11-10T21:05Z";

@@ -1259,6 +1259,33 @@ window.STATIONS = [
       "https://s3.slotex.pl:7388/stream"
     ],
     "added": "2026-11-10"
+  },
+  {
+    "id": "radio-freee-89-9-fm",
+    "name": "Radio Freee 89.9 FM",
+    "category": "news",
+    "streams": [
+      "https://streaming.radio.lublin.pl:8843/radiofreeeacp"
+    ],
+    "added": "2026-11-10"
+  },
+  {
+    "id": "eska-odz",
+    "name": "Eska Łódź",
+    "category": "music",
+    "streams": [
+      "https://ic1.smcdn.pl/2380-1.mp3"
+    ],
+    "added": "2026-11-10"
+  },
+  {
+    "id": "rmf-maxxx-kielce",
+    "name": "RMF MAXXX KIELCE",
+    "category": "music",
+    "streams": [
+      "https://rs6-krk2.rmfstream.pl/rmf_maxxx_kie"
+    ],
+    "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-10T08:15Z";
+window.STATIONS_CHECKED = "2026-11-10T21:05Z";

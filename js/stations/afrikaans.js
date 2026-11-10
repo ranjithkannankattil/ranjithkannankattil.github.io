@@ -136,7 +136,8 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://www.dn-radio.co.za/listen/world_gospel_radio/radio.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "mfm-92-6",
@@ -207,4 +208,4 @@ window.STATIONS = [
     "added": "2026-11-05"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-10T08:15Z";
+window.STATIONS_CHECKED = "2026-11-10T21:05Z";

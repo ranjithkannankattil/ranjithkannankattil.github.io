@@ -440,7 +440,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.slagr-radio.cz/pisnicka"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "phonk-nation-radio",
@@ -1208,4 +1209,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-10T08:15Z";
+window.STATIONS_CHECKED = "2026-11-10T21:05Z";

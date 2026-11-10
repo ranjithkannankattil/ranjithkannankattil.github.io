@@ -1320,6 +1320,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-10",
     "where": "Canada"
+  },
+  {
+    "id": "96-6-sky-abc-radio",
+    "name": "96.6 SKY ABC RADIO",
+    "category": "world",
+    "streams": [
+      "https://cast.skyradio105.com/proxy/skyradio105/stream"
+    ],
+    "added": "2026-11-10",
+    "where": "Saudi Arabia"
+  },
+  {
+    "id": "cbc-radio-one-thunder-bay-on",
+    "name": "CBC Radio One - Thunder Bay, ON",
+    "category": "canada",
+    "streams": [
+      "https://17813.live.streamtheworld.com/CBQTFM_CBC_SC"
+    ],
+    "added": "2026-11-10",
+    "where": "Canada"
+  },
+  {
+    "id": "105fm",
+    "name": "105FM",
+    "category": "world",
+    "streams": [
+      "https://105fm.espiv.net/listen/105fm/stream.mp3"
+    ],
+    "added": "2026-11-10",
+    "where": "Greece"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-10T08:15Z";
+window.STATIONS_CHECKED = "2026-11-10T21:05Z";

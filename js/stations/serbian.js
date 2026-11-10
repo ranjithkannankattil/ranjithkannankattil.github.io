@@ -1259,6 +1259,33 @@ window.STATIONS = [
       "https://s1.skeletor.rs/san"
     ],
     "added": "2026-11-10"
+  },
+  {
+    "id": "radio-s-folk-stars",
+    "name": "Radio S Folk Stars",
+    "category": "music",
+    "streams": [
+      "https://stream.radios.rs:9024/stream"
+    ],
+    "added": "2026-11-10"
+  },
+  {
+    "id": "naxi-70-e-3",
+    "name": "Naxi 70-e 3",
+    "category": "music",
+    "streams": [
+      "https://naxidigital-70s128ssl.streaming.rs:8382/;"
+    ],
+    "added": "2026-11-10"
+  },
+  {
+    "id": "radio-starcevo",
+    "name": "Radio Starcevo",
+    "category": "music",
+    "streams": [
+      "https://mpc2.mediacp.eu:8350/stream"
+    ],
+    "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-10T08:15Z";
+window.STATIONS_CHECKED = "2026-11-10T21:05Z";

@@ -195,6 +195,15 @@ window.STATIONS = [
       "https://serverkw.quran-uni.com:8144/;"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "parastande-bashde-persian-christian-wors",
+    "name": "Parastande - Bashde Persian Christian Worship",
+    "category": "devotional",
+    "streams": [
+      "https://streamer.radio.co/sa75a4bb19/listen"
+    ],
+    "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-10T08:15Z";
+window.STATIONS_CHECKED = "2026-11-10T21:05Z";

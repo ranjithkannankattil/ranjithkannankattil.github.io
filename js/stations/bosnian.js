@@ -32,8 +32,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.leftor.com/proxy/studiom2/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-glas-drine",
@@ -161,7 +160,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_gradacac.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-usk-1",
@@ -389,4 +389,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-10T08:15Z";
+window.STATIONS_CHECKED = "2026-11-10T21:05Z";

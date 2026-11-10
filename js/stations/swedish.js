@@ -38,7 +38,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://tx-bauerse.sharp-stream.com/http_live.php?i=nrj_instreamtest_se_mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "106-7-rockklassiker",
@@ -46,7 +47,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://tx-bauerse.sharp-stream.com/http_live.php?ua=WEB&i=rockklassiker_instream_se_mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "sveriges-radio-p4-goteborg",
@@ -61,6 +63,7 @@ window.STATIONS = [
     "name": "Mix Megapol",
     "category": "music",
     "streams": [
+      "https://live-bauerse-fm.sharp-stream.com/mixmegapol_instream_se_mp3",
       "https://tx-bauerse.sharp-stream.com/http_live.php?ua=WEB&i=mixmegapol_instream_se_mp3"
     ]
   },
@@ -487,4 +490,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-10T08:15Z";
+window.STATIONS_CHECKED = "2026-11-10T21:05Z";
