@@ -383,6 +383,15 @@ window.STATIONS = [
     ]
   },
   {
+    "id": "malayalamfmnz",
+    "name": "Malayalam FM 104.6 (NZ)",
+    "category": "online",
+    "streams": [
+      "https://a5.asurahosting.com/listen/malayalamfm_live/radio.mp3",
+      "https://a5.asurahosting.com:7770/radio.mp3"
+    ]
+  },
+  {
     "id": "ashrayafm",
     "name": "Ashraya FM",
     "category": "online",
