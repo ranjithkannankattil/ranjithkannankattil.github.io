@@ -837,8 +837,7 @@ window.STATIONS = [
       "https://stream.zeno.fm/mwam2yirv1pvv"
     ],
     "added": "2026-10-31",
-    "where": "Nigeria",
-    "offline": true
+    "where": "Nigeria"
   },
   {
     "id": "bfm-89-9-malaysia",
@@ -1449,6 +1448,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-09",
     "where": "US"
+  },
+  {
+    "id": "chqr-770-global-news-radio-calgary-ab",
+    "name": "CHQR 770 Global News Radio - Calgary, AB",
+    "category": "canada",
+    "streams": [
+      "https://live.leanstream.co/CHQRAM-MP3"
+    ],
+    "added": "2026-11-10",
+    "where": "Canada"
+  },
+  {
+    "id": "crtv-poste-national",
+    "name": "CRTV Poste National",
+    "category": "world",
+    "streams": [
+      "https://10gb1.acangroup.org:8000/postenational"
+    ],
+    "added": "2026-11-10",
+    "where": "Cameroon"
+  },
+  {
+    "id": "96-6-sky-abc-radio",
+    "name": "96.6 SKY ABC RADIO",
+    "category": "world",
+    "streams": [
+      "https://cast.skyradio105.com/proxy/skyradio105/stream"
+    ],
+    "added": "2026-11-10",
+    "where": "Saudi Arabia"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T23:38Z";
+window.STATIONS_CHECKED = "2026-11-10T08:15Z";

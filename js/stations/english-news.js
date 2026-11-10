@@ -449,8 +449,7 @@ window.STATIONS = [
       "https://stream.zenolive.com/e9x2n97b9uduv"
     ],
     "added": "2026-10-26",
-    "where": "Nigeria",
-    "offline": true
+    "where": "Nigeria"
   },
   {
     "id": "rte-radio-1",
@@ -1291,6 +1290,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-09",
     "where": "US"
+  },
+  {
+    "id": "cbc-radio-one-prince-george-bc",
+    "name": "CBC Radio One - Prince George, BC",
+    "category": "canada",
+    "streams": [
+      "https://27033.live.streamtheworld.com/CBYGFM_CBC_SC"
+    ],
+    "added": "2026-11-10",
+    "where": "Canada"
+  },
+  {
+    "id": "afn-360-naples",
+    "name": "AFN 360 Naples",
+    "category": "world",
+    "streams": [
+      "https://23623.live.streamtheworld.com/AFNE_NAP_SC"
+    ],
+    "added": "2026-11-10",
+    "where": "Italy"
+  },
+  {
+    "id": "chqr-770-global-news-radio-calgary-ab",
+    "name": "CHQR 770 Global News Radio - Calgary, AB",
+    "category": "canada",
+    "streams": [
+      "https://live.leanstream.co/CHQRAM-MP3"
+    ],
+    "added": "2026-11-10",
+    "where": "Canada"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T23:38Z";
+window.STATIONS_CHECKED = "2026-11-10T08:15Z";

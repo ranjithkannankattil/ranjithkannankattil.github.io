@@ -660,8 +660,7 @@ window.STATIONS = [
     "streams": [
       "https://svara-stream.radioddns.net/bali_voksradio_993fm"
     ],
-    "added": "2026-10-28",
-    "offline": true
+    "added": "2026-10-28"
   },
   {
     "id": "imelda-fm",
@@ -1251,4 +1250,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T23:38Z";
+window.STATIONS_CHECKED = "2026-11-10T08:15Z";

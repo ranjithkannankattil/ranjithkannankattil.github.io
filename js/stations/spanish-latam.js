@@ -233,8 +233,7 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.infinityhdstream.com/7054/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "mix-medellin-89-9-fm",
@@ -1326,4 +1325,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T23:38Z";
+window.STATIONS_CHECKED = "2026-11-10T08:15Z";

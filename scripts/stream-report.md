@@ -1,56 +1,56 @@
-# Radio stream check — 2026-11-09
+# Radio stream check — 2026-11-10
 
-**5380 of 5551 stations playing.** 132 offline, 38 couldn't be checked, 44 hidden after 20+ failed checks in a row, 36 new stations added.
+**5404 of 5587 stations playing.** 111 offline, 71 couldn't be checked, 47 hidden after 20+ failed checks in a row, 19 new stations added.
 
 | Collection | Stations | Playing | Offline |
 |---|---|---|---|
-| English News | 131 | 130 | 1 |
-| English Talk | 147 | 146 | 1 |
-| English Music | 151 | 149 | 2 |
-| Malayalam | 130 | 100 | 30 |
-| Hindi | 148 | 145 | 3 |
+| English News | 134 | 134 | 0 |
+| English Talk | 150 | 150 | 0 |
+| English Music | 151 | 150 | 1 |
+| Malayalam | 130 | 110 | 20 |
+| Hindi | 151 | 149 | 2 |
 | Tamil | 150 | 148 | 2 |
-| Telugu | 20 | 14 | 6 |
-| Kannada | 19 | 18 | 1 |
+| Telugu | 20 | 20 | 0 |
+| Kannada | 19 | 19 | 0 |
 | Bengali | 25 | 25 | 0 |
 | Punjabi | 38 | 38 | 0 |
 | Urdu | 34 | 33 | 1 |
 | Bhojpuri | 5 | 5 | 0 |
-| Odia | 6 | 5 | 1 |
+| Odia | 6 | 6 | 0 |
 | Nepali | 14 | 13 | 1 |
-| More Indian | 12 | 10 | 2 |
-| Swahili | 37 | 35 | 2 |
+| More Indian | 12 | 12 | 0 |
+| Swahili | 37 | 36 | 1 |
 | Luganda | 35 | 34 | 1 |
-| Akan / Twi | 57 | 54 | 3 |
+| Akan / Twi | 57 | 55 | 2 |
 | Chichewa | 37 | 32 | 5 |
-| Yoruba, Hausa & Igbo | 18 | 16 | 2 |
+| Yoruba, Hausa & Igbo | 18 | 18 | 0 |
 | Amharic & Tigrinya | 15 | 15 | 0 |
 | Bambara & Wolof | 12 | 12 | 0 |
 | Afrikaans | 25 | 24 | 1 |
 | Zulu, Xhosa & Sotho | 9 | 9 | 0 |
 | More African | 12 | 12 | 0 |
-| Italian | 146 | 144 | 2 |
+| Italian | 149 | 147 | 2 |
 | French | 151 | 151 | 0 |
 | Korean | 65 | 56 | 9 |
 | Spanish (Spain) | 151 | 150 | 1 |
-| Spanish (Latin America) | 151 | 150 | 1 |
+| Spanish (Latin America) | 151 | 151 | 0 |
 | Portuguese (Brazil) | 152 | 151 | 1 |
 | Portuguese (Portugal) | 151 | 145 | 6 |
 | German | 151 | 151 | 0 |
 | Dutch | 151 | 150 | 1 |
-| Polish | 141 | 141 | 0 |
+| Polish | 144 | 144 | 0 |
 | Greek | 151 | 151 | 0 |
-| Russian | 151 | 147 | 4 |
-| Ukrainian | 125 | 124 | 1 |
-| Romanian | 151 | 148 | 3 |
+| Russian | 151 | 149 | 2 |
+| Ukrainian | 125 | 125 | 0 |
+| Romanian | 151 | 134 | 17 |
 | Hungarian | 124 | 123 | 1 |
 | Czech | 138 | 137 | 1 |
-| Slovak | 65 | 62 | 3 |
-| Serbian | 141 | 138 | 3 |
-| Croatian | 82 | 81 | 1 |
-| Bosnian | 46 | 46 | 0 |
+| Slovak | 65 | 63 | 2 |
+| Serbian | 144 | 142 | 2 |
+| Croatian | 82 | 82 | 0 |
+| Bosnian | 46 | 45 | 1 |
 | Slovenian | 35 | 35 | 0 |
-| Bulgarian | 88 | 88 | 0 |
+| Bulgarian | 88 | 87 | 1 |
 | Albanian | 62 | 62 | 0 |
 | Macedonian | 24 | 24 | 0 |
 | Swedish | 57 | 56 | 1 |
@@ -71,10 +71,10 @@
 | Chinese (Mandarin) | 150 | 150 | 0 |
 | Cantonese | 74 | 70 | 4 |
 | Japanese | 84 | 84 | 0 |
-| Indonesian | 142 | 137 | 5 |
-| Malay | 17 | 17 | 0 |
+| Indonesian | 142 | 138 | 4 |
+| Malay | 18 | 18 | 0 |
 | Filipino | 67 | 66 | 1 |
-| Thai | 42 | 40 | 2 |
+| Thai | 42 | 41 | 1 |
 | Vietnamese | 13 | 13 | 0 |
 | Sinhala | 20 | 19 | 1 |
 
@@ -82,23 +82,10 @@
 
 | Station | Why |
 |---|---|
-| English News · Fresh 105.9 FM Ibadan | https://stream.zenolive.com/e9x2n97b9uduv — HTTP 503, 40 bytes |
-| English Talk · Glow 99.1 FM Akure | https://stream.zeno.fm/mwam2yirv1pvv — HTTP 503, 40 bytes |
-| English Music · metal rock radio | https://kathy.torontocast.com:2800/; — HTTP 0, 0 bytes |
 | English Music · Highway Country Radio | https://puma.streemlion.com:2125/stream — HTTP 0, 0 bytes |
-| Malayalam · AIR Kochi FM | https://radio.wavespb.com/live/70400e7510e87cdf/70400e7510e87cdf.m3u8 — playlist HTTP 404 |
-| Malayalam · AIR FM Rainbow Kochi | https://radio.wavespb.com/live/7df6f2a8c3c4d33b/7df6f2a8c3c4d33b.m3u8 — playlist HTTP 404 |
-| Malayalam · AIR Devikulam | https://radio.wavespb.com/live/e97acc829da9bf2a/e97acc829da9bf2a.m3u8 — playlist HTTP 404 |
-| Malayalam · My Radio FM | https://cast1.my-control-panel.com/proxy/myradio90fm/stream — HTTP 401, 0 bytes |
-| Malayalam · AIR Kannur | https://radio.wavespb.com/live/b82c91a395fc4a7d/b82c91a395fc4a7d.m3u8 — playlist HTTP 404 |
-| Malayalam · AIR Manjeri FM | https://radio.wavespb.com/live/58390a2ed33cea4a/58390a2ed33cea4a.m3u8 — playlist HTTP 404 |
-| Malayalam · AIR Thrissur | https://radio.wavespb.com/live/f70fdeca437dc326/f70fdeca437dc326.m3u8 — playlist HTTP 404 |
-| Malayalam · Radio Macfast | https://icecast.octosignals.com/radiomacfast — HTTP 404 error page |
-| Malayalam · June FM | https://onair.junefm.in/live — HTTP 404 error page |
 | Malayalam · Radio Mangalam | http://radiomangalam.in:8000/stream — no answer to GitHub's servers |
 | Malayalam · Radio Nellika | https://usa10.fastcast4u.com:8110/;?type=http&nocache=3 — HTTP 0, 0 bytes |
 | Malayalam · Radio Mallu | https://usa15.fastcast4u.com/proxy/radiomall/stream — HTTP 502 error page |
-| Malayalam · Karunasai Radio | https://streamasiahlscdn.atc-labs.com/karunasairadio.m3u8 — playlist HTTP 404 |
 | Malayalam · Radio Lalsalam | https://stream.zeno.fm/f3nc8x3tywzuv — HTTP 401, 0 bytes |
 | Malayalam · Kerala FM | https://stream.zeno.fm/mfn3gkbvty8uv — HTTP 401, 0 bytes |
 | Malayalam · TCR Live | https://centova71.instainternet.com/proxy/tcrliveradio?mp=/stream — HTTP 404 error page |
@@ -116,27 +103,14 @@
 | Malayalam · Quran Radio | https://server03.quran-uni.com:7029/stream — HTTP 0, 0 bytes |
 | Malayalam · Radio Ayyappa | https://stream.zeno.fm/rdcci38kky4vv — HTTP 401, 0 bytes |
 | Malayalam · Njan Malayali Bhakthi | https://stream.zeno.fm/w9kku8utuy8uv — HTTP 401, 0 bytes |
-| Hindi · FM Gold Mumbai | https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio007/hlspbaudio007_Auto.m3u8 — segment HTTP 404, 196 bytes |
 | Hindi · Vividh Bharti Mumbai | https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio011/hlspbaudio011_Auto.m3u8 — segment HTTP 404, 196 bytes |
 | Hindi · Aakashvani | https://audio-edge-fvq45.ams.d.radiomast.io/3ccc1156-fcf8-4ba7-9a0c-28e3a465e1ae?listening-from-radio-garden=1607152226837 — HTTP 0, 0 bytes |
-| Tamil · AIR Nagercoil | https://air.pc.cdn.bitgravity.com/air/live/pbaudio129/chunklist.m3u8 — playlist HTTP 404 |
+| Tamil · Mohan Radio | https://psrlive4.listenon.in/mohan?station=mohanradio — HTTP 0, 0 bytes |
 | Tamil · Vaigai FM | https://cast1.my-control-panel.com/proxy/geethan3/stream — HTTP 502 error page |
-| Telugu · Akashvani Nizamabad | https://radio.wavespb.com/live/5d9989b5189a8f4a/5d9989b5189a8f4a.m3u8 — playlist HTTP 404 |
-| Telugu · Akashvani Tirupati | https://radio.wavespb.com/live/1119aa26b4e9f653/1119aa26b4e9f653.m3u8 — playlist HTTP 404 |
-| Telugu · FM Rainbow Visakhapatnam | https://radio.wavespb.com/live/147314c8aedf4389/147314c8aedf4389.m3u8 — playlist HTTP 404 |
-| Telugu · Akashvani Markapur | https://radio.wavespb.com/live/b11784e3b37b7620/b11784e3b37b7620.m3u8 — playlist HTTP 404 |
-| Telugu · Akashvani Visakhapatnam | https://radio.wavespb.com/live/8362d532bd498fd0/8362d532bd498fd0.m3u8 — playlist HTTP 404 |
-| Telugu · FM Simhapuri Nellore | https://radio.wavespb.com/live/8bc9175bb717c13b/8bc9175bb717c13b.m3u8 — playlist HTTP 404 |
-| Kannada · Janadhwani Kannada | https://d3n2o48cmfppr2.cloudfront.net/svymradio.m3u8 — playlist HTTP 404 |
 | Urdu · Power Radio FM 99 Islamabad | https://isb.power99.live/stream — HTTP 401, 0 bytes |
-| Odia · AIR Jeypore | https://air.pc.cdn.bitgravity.com/air/live/pbaudio112/playlist.m3u8 — playlist HTTP 404 |
-| Nepali · Butwal FM | https://streaming.softnep.net:10994/;stream.nsv — HTTP 503 error page |
-| More Indian · FM Rainbow Mumbai (Marathi) | https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio008/hlspbaudio008_Auto.m3u8 — segment HTTP 404, 196 bytes |
-| More Indian · AIR Nanded | https://air.pc.cdn.bitgravity.com/air/live/pbaudio072/playlist.m3u8 — playlist HTTP 404 |
+| Nepali · CIN Khabar | https://streaming.softnep.net:10996/;stream.nsv&type=mp3&volume=60 — HTTP 503 error page |
 | Swahili · 104.1 Favour FM - Gulu - 104.1 FM | https://us5new.listen2myradio.com:2199/listen.php?port=8138&type=ice&mount=stream — HTTP 200, 205 bytes |
-| Swahili · Radio Citizen | https://radiocitizen-atunwadigital.streamguys1.com/radiocitizen/playlist.m3u8 — segment HTTP 404, 162 bytes |
 | Luganda · Foundation of Truth Radio | https://r1.comcities.com/proxy/fotonline/stream — HTTP 502 error page |
-| Akan / Twi · Hello FM | https://atunwadigital.streamguys1.com/hellofm — HTTP 502, 0 bytes |
 | Akan / Twi · Cape FM | https://stream.zeno.fm/qpq7hygy77zuv — HTTP 401, 0 bytes |
 | Akan / Twi · Kastle FM | https://stream.zeno.fm/evaq9ab4k0hvv — HTTP 401, 0 bytes |
 | Chichewa · Angoni Radio | https://live.netradio.pro/listen/angoni/radio.mp3 — HTTP 502 error page |
@@ -144,8 +118,6 @@
 | Chichewa · We Can Media Online Radio | https://stream.zeno.fm/sg6x5m9nviltv — HTTP 401, 0 bytes |
 | Chichewa · Prof K. Online Radio | https://play.streamafrica.net/profkradio — HTTP 502 error page |
 | Chichewa · Radio Tigabane | https://play.streamafrica.net/tigabane — HTTP 502 error page |
-| Yoruba, Hausa & Igbo · Fresh 105.9 FM Ibadan | https://stream.zenolive.com/e9x2n97b9uduv — HTTP 503, 40 bytes |
-| Yoruba, Hausa & Igbo · Glow 99.1 FM Akure | https://stream-176.zeno.fm/mwam2yirv1pvv — HTTP 503, 40 bytes; https://stream.zeno.fm/mwam2yirv1pvv — HTTP 503, 40 bytes |
 | Afrikaans · Kaleidoscope Online | https://superagent-269bfe30.base44.app/functions/kaleidoscopeRadio?go=stream — HTTP 503, 41 bytes |
 | Italian · Rai News 24 | https://streamcdnb3-8e7439fdb1694c8da3a0fd63e4dda518.msvdn.net/rainews1/hls/rainews_2400/chunklist.m3u8 — segment HTTP 404, 153 bytes |
 | Italian · Radio Romantic | https://stream.zeno.fm/72k4a597rs8uv — HTTP 401, 0 bytes |
@@ -159,32 +131,41 @@
 | Korean · SBS Love FM | https://radiolive.sbs.co.kr/lovepc/lovefm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTQwMjY0MTksInBhdGgiOiIvbG92ZWZtLnN0cmVhbSIsImR1cmF0aW9uIjotMSwidW5vIjoiYTI1ZGFiNTQtYTBkNS00NTFiLWIyNTYtMzIzMDQ0YzEzM2FkIiwiaWF0IjoxNzkzOTgzMjE5fQ.GqQJtXtPEZtbeySXupneg5CA_gr-dnBJTtsp9qXotng — playlist HTTP 403; https://radiolive.sbs.co.kr/lovepc/lovefm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTM5NjUyMTAsInBhdGgiOiIvbG92ZWZtLnN0cmVhbSIsImR1cmF0aW9uIjotMSwidW5vIjoiMzNiZTIzODgtY2NhOS00NmEyLTg5NDAtNTlmNzVlNjM3ZGJkIiwiaWF0IjoxNzkzOTIyMDEwfQ.65i79TrMp7Roo5IjzfSkP_IsHacFtbNl05jxzG3knP0 — playlist HTTP 403; https://radiolive.sbs.co.kr/lovepc/lovefm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTM1OTMyMTYsInBhdGgiOiIvbG92ZWZtLnN0cmVhbSIsImR1cmF0aW9uIjotMSwidW5vIjoiOWU2OWY2NGEtNTYxNS00NDVhLWFmMDgtMTMxNWZmYTVkNjA0IiwiaWF0IjoxNzkzNTUwMDE2fQ.axrOOsMvKadHEYMmSN1AEqn3OQs5Gr3HvtIDp-jvSis — playlist HTTP 403; https://radiolive.sbs.co.kr/lovepc/lovefm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTM1MzIwMDksInBhdGgiOiIvbG92ZWZtLnN0cmVhbSIsImR1cmF0aW9uIjotMSwidW5vIjoiMGRlMTZiNDAtY2QwOC00YWE3LTlmMzItNjMwMTdmY2U2YWRmIiwiaWF0IjoxNzkzNDg4ODA5fQ.zf9ccNbG4dsNoGSXfjhnfPdjsOyeifxWhIYV7u5aaoU — playlist HTTP 403 |
 | Korean · CPBC | https://cdn-radio-seoul.cpbc.co.kr/cpbcseoul/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTM5ODQ0MjEsInBhdGgiOiIvY3BiY3Nlb3VsIiwiZHVyYXRpb24iOi0xLCJ1bm8iOiIzOWQ3Zjk2ZC01YzcwLTRmOWEtYWMwMi1jNjU0ZjJjYjIyYjYiLCJpYXQiOjE3OTM5NDEyMjF9.2cQIV2_xk2WLsR-eQg59ut5jDlAKqxA8k3-8l2IjxEE — playlist HTTP 403; https://cdn-radio-seoul.cpbc.co.kr/cpbcseoul/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTM1NTI0MjMsInBhdGgiOiIvY3BiY3Nlb3VsIiwiZHVyYXRpb24iOi0xLCJ1bm8iOiI1NzQzNmU3Ny1mNWJhLTRjZGQtYjUwOC1mMTYyMzllODE1YWEiLCJpYXQiOjE3OTM1MDkyMjN9.JFWnNAKyIKd1x7icQIzX3GLfAPrp5G5sfChyaIULwhQ — playlist HTTP 403 |
 | Spanish (Spain) · El Toro TV | https://edge-nodo-002.streaming.hitcloser.net/eltorotv-streaming-web/tracks-v1a1/mono.m3u8 — playlist HTTP 0 |
-| Spanish (Latin America) · Radio Cultural TGN | https://stream.infinityhdstream.com/7054/stream — HTTP 401, 0 bytes |
 | Portuguese (Brazil) · 105 FM - SP | https://www.appradio.app:8010//live — HTTP 0, 0 bytes |
-| Portuguese (Portugal) · Antena 2 Jazzin (Portugal) | https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8 — playlist HTTP 206 |
 | Portuguese (Portugal) · Antena 3 | https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8 — playlist HTTP 206; https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8 — playlist HTTP 206 |
 | Portuguese (Portugal) · Antena 1 Madeira (Portugal) | https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8 — playlist HTTP 206 |
 | Portuguese (Portugal) · Rádio Dom Bosco FM | https://stream.streamaudio.de:8000/radio-dom-bosco-fm — HTTP 0, 0 bytes |
-| Portuguese (Portugal) · cidade hiphop | https://stream-hls.bauermedia.pt/cidhiphop.aac/playlist.m3u8 — segment HTTP 404, 555 bytes |
-| Portuguese (Portugal) · 2000 Comercial Online Lisboa Portugal | https://stream-hls.bauermedia.pt/rcbest2000.aac/playlist.m3u8 — segment HTTP 404, 555 bytes |
+| Portuguese (Portugal) · RDP Africa (Portugal) | https://streaming-live.rtp.pt/liveradio/rdpafrica80a/playlist.m3u8 — playlist HTTP 206 |
+| Portuguese (Portugal) · Antena 1 Açores (Portugal) | https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8 — playlist HTTP 206 |
+| Portuguese (Portugal) · RUC Rádio Universidade de Coimbra | https://stream.ruc.pt/high — HTTP 404 error page |
 | Dutch · Boo | https://stream03.level27.be/;stream.mp3 — HTTP 0, 0 bytes |
 | Russian · Шансон без цензуры | https://chanson.hostingradio.ru:8041/chanson-uncensored256.mp3 — HTTP 404 error page |
 | Russian · Instrumental Jazz | https://jfm1.hostingradio.ru:14536/ijstream.mp3 — HTTP 0, 0 bytes |
-| Russian · Радио АСТВ | https://stream.astv.ru/stream.mp3 — HTTP 404 error page |
-| Russian · Brokenbeats | https://stream.brokenbeats.net/tune — HTTP 502, 0 bytes |
-| Ukrainian · Brokenbeats | https://stream.brokenbeats.net/tune — HTTP 502, 0 bytes |
 | Romanian · Radio Zu | https://live7digi.antenaplay.ro/radiozu/radiozu-48000.m3u8 — playlist HTTP 0 |
+| Romanian · Clasic Radio_Opera -București | https://live.radioclasic.com/listen/radio_clasic_opera/live.mp3 — HTTP 502 error page |
+| Romanian · Clasic Radio_Chopin -București | https://live.radioclasic.com/listen/radio_clasic_chopin/live.mp3 — HTTP 502 error page |
 | Romanian · Radio Romantic | https://stream.zeno.fm/72k4a597rs8uv — HTTP 401, 0 bytes |
+| Romanian · Clasic Radio_Relax -București | https://live.radioclasic.com/listen/radio_clasic_relax/live.mp3 — HTTP 502 error page |
+| Romanian · Clasic Radio_R’n’B/Soul -București | https://live.radioclasic.com/listen/radio_clasic_rnb/live.mp3 — HTTP 502 error page |
+| Romanian · Clasic Radio_60 -București | https://live.radioclasic.com/listen/radio_clasic_60/live.mp3 — HTTP 502 error page |
 | Romanian · Radio Oradea | https://live.radiooradea.ro/9000/stream — HTTP 0, 0 bytes |
+| Romanian · Clasic Radio_Popular -București | https://live.radioclasic.com/listen/radio_clasic_popular/live.mp3 — HTTP 502 error page |
+| Romanian · Clasic Radio_Blues -București | https://live.radioclasic.com/listen/radio_clasic_blues/live.mp3 — HTTP 502 error page |
+| Romanian · Clasic Radio_Folk -București | https://live.radioclasic.com/listen/radio_clasic_folk/live.mp3 — HTTP 502 error page |
+| Romanian · Clasic Radio_90 -București | https://live.radioclasic.com/listen/radio_clasic_90/live.mp3 — HTTP 502 error page |
+| Romanian · Clasic Radio_80 -București | https://live.radioclasic.com/listen/radio_clasic_80/live.mp3 — HTTP 502 error page |
+| Romanian · Clasic Radio_Soundtrack -București | https://live.radioclasic.com/listen/radio_clasic_soundtrack/live.mp3 — HTTP 502 error page |
+| Romanian · Clasic Radio_BlueJazz -București | https://live.radioclasic.com/listen/radio_clasic_bluejazz/live.mp3 — HTTP 502 error page |
+| Romanian · Clasic Radio_Jazz -București | https://live.radioclasic.com/listen/radio_clasic_jazz/live.mp3 — HTTP 502 error page |
+| Romanian · Clasic Radio_Greek Music -București | https://live.radioclasic.com/listen/radio_clasic_greek/live.mp3 — HTTP 502 error page |
 | Hungarian · Nemzeti Sport Radio | https://icast.connectmedia.hu/4656/mr11.aac — HTTP 404 error page |
 | Czech · Hvězda | https://hls.hvezda.info/session01/128k/s.m3u8 — playlist HTTP 404 |
-| Slovak · Radio Suita | https://radioserver.online/proxy/radiosuita/radiosuita.mp3 — HTTP 404 error page |
 | Slovak · Tiché Rádio | https://stream.ticheradio.sk/tiche.mp3 — HTTP 502 error page |
 | Slovak · Rádio Rebeca | https://mpc2.mediacp.eu:8200/rebecaweb — HTTP 404 error page |
 | Serbian · Rock Radio Belgrade (Рок Радио Београд) | https://edge9.pink.rs/rockstream — HTTP 0, 0 bytes |
 | Serbian · Radio Subotica 104.4 | https://vojvodjanski.com/radiosubotica — HTTP 410 error page |
-| Serbian · Radio Sremac 102.7 | https://mpc2.mediacp.eu:8282/sremac — HTTP 404 error page |
-| Croatian · Radio Otok Krk | https://s8.iqstreaming.com:8014/stream — HTTP 404 error page |
+| Bosnian · Radio Studio M | https://stream.leftor.com/proxy/studiom2/stream — HTTP 0, 0 bytes |
+| Bulgarian · Veselina Retro | https://nova-radio.neterra.tv/veselinaretro — HTTP 0, 0 bytes |
 | Swedish · Svensk Folkmusik - AkkA radio | https://mediaserv38.live-streams.nl:8107/stream — HTTP 0, 0 bytes |
 | Finnish · Radio Kaleva | https://radiokaleva.digitacdn.net/radio/kaleva/master.m3u8 — playlist HTTP 206 |
 | Finnish · Radio Soho | https://sohostream.djonline.fi:8008/radio — HTTP 404 error page |
@@ -203,112 +184,123 @@
 | Azerbaijani · Azerbaycan Radiosu 105.0 FM | https://str.yodacdn.net/radio_respublica/video.m3u8 — playlist HTTP 403 |
 | Cantonese · 商業電台叱咤903 | https://881903.fishtv.dpdns.org/proxy/903 — HTTP 530 error page |
 | Cantonese · 商業電台雷霆881 | https://881903.fishtv.dpdns.org/proxy/881 — HTTP 530 error page |
-| Cantonese · 香港新城电台知讯台 | https://1603884249.rsc.cdn77.org/1603884249/index.m3u8 — playlist HTTP 206 |
-| Cantonese · 香港新城电台采讯台 | https://1946218710.rsc.cdn77.org/1946218710/index.m3u8 — playlist HTTP 206 |
+| Cantonese · 熱血時報 | https://ptmirror3.passiontimes.hk/hls3/stream.m3u8 — segment HTTP 404, 3652 bytes |
+| Cantonese · 清远综合广播 | https://lhttp.qingting.fm/live/15318668/64k.mp3 — HTTP 404 error page |
 | Indonesian · Cosmopolitan 90.4 FM Jakarta | https://stream.radiojar.com/u7d8heq3bnzuv — HTTP 404, 0 bytes |
 | Indonesian · Synchronize Radio | https://streaming.shoutcast.com/synchronizeradio — HTTP 404 error page |
 | Indonesian · Radio Swara Semarang | https://server.radioimeldafm.co.id/radio/8010/swarasemarang — HTTP 404 error page |
-| Indonesian · Voks Radio Bali 99.3 FM | https://svara-stream.radioddns.net/bali_voksradio_993fm — HTTP 404 error page |
 | Indonesian · ISTARA FM SURABAYA | https://live.radioistara.com/listen/radioistara/radioistara — HTTP 0, 0 bytes |
 | Filipino · DXBH Hope Radio 103.7Mhz | https://stream.dxbh.net/main_mp3 — HTTP 404 error page |
 | Thai · MCOT Loei FM 100.00 | https://lb-media.mcot.net/RegionRadio/Loei.stream_aac/playlist.m3u8 — playlist HTTP 404 |
-| Thai · CWK Radio | https://radio11.plathong.net/7050/;stream.mp3 — HTTP 401, 0 bytes |
 | Sinhala · Sitha FM | https://shaincast.caster.fm:48148/listen.mp3 — HTTP 404 error page |
 
 ## Couldn't be checked from GitHub (left unchanged)
 
 | Station | Why |
 |---|---|
-| English News · RRI Voice Of Indonesia | https://stream-node0.rri.co.id/streaming/25/9125/voi.mp3 — no answer to GitHub's servers |
-| English Talk · WALM 2 HD | https://icecast.walmradio.com:8443/walm2 — no answer to GitHub's servers |
-| English Talk · RRI Voice Of Indonesia | https://stream-node0.rri.co.id/streaming/25/9125/voi.mp3 — no answer to GitHub's servers |
-| English Music · WALM 2 HD | https://icecast.walmradio.com:8443/walm2 — no answer to GitHub's servers |
+| English Talk · WALM - Old Time Radio | https://icecast.walmradio.com:8443/otr — no answer to GitHub's servers |
+| Malayalam · AIR Ananthapuri FM | https://air.pc.cdn.bitgravity.com/air/live/pbaudio229/playlist.m3u8 — no answer to GitHub's servers; https://air.pc.cdn.bitgravity.com/air/live/pbaudio229/chunklist.m3u8 — no answer to GitHub's servers |
+| Malayalam · AIR Alappuzha | https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8 — no answer to GitHub's servers |
 | Malayalam · Paattupetti | https://streamer.radio.co/s8d5f06a3d/listen — server refuses GitHub's servers (403) |
 | Malayalam · Deshavani FM | https://fm.saksoftlabs.com/radio.mp3 — no answer to GitHub's servers |
 | Malayalam · Shalom Radio | https://stream.radio.co/s1383afdc9/listen?ver=828256 — server refuses GitHub's servers (403) |
 | Malayalam · Radio Wind | https://stream.radio.co/s9015a8e16/listen — server refuses GitHub's servers (403) |
 | Malayalam · Puthiyerushalem | https://streams.radio.co/s4e89ff5bd/listen — server refuses GitHub's servers (403) |
+| Malayalam · Raagam AIR 24*7 | https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudioragam/hlspbaudioragam_Auto.m3u8 — no answer to GitHub's servers |
+| Malayalam · Vividh Bharati Thiruvananthapuram | https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/playlist.m3u8 — no answer to GitHub's servers |
+| Hindi · Vividh Bharati | https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/playlist.m3u8 — no answer to GitHub's servers |
+| Hindi · FM Gold Mumbai | https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio007/hlspbaudio007_Auto.m3u8 — segment: no answer to GitHub's servers |
+| Hindi · Raagam AIR 24*7 | https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudioragam/hlspbaudioragam_Auto.m3u8 — no answer to GitHub's servers |
+| Hindi · AIR Kozhikode Real FM | https://air.pc.cdn.bitgravity.com/air/live/pbaudio083/playlist.m3u8 — no answer to GitHub's servers |
+| Hindi · AIR bhopal | https://air.pc.cdn.bitgravity.com/air/live/pbaudio212/chunklist.m3u8 — no answer to GitHub's servers |
+| Tamil · AIR Kodai FM | https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8 — segment: no answer to GitHub's servers |
+| Tamil · AIR Madurai FM | https://air.pc.cdn.bitgravity.com/air/live/pbaudio126/chunklist.m3u8 — no answer to GitHub's servers |
+| Tamil · AIR Tirunelveli FM | https://air.pc.cdn.bitgravity.com/air/live/pbaudio062/chunklist.m3u8 — no answer to GitHub's servers |
+| Tamil · Raagam AIR 24×7 | https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudioragam/hlspbaudioragam_Auto.m3u8 — no answer to GitHub's servers |
+| Tamil · AIR Puducherry FM | https://air.pc.cdn.bitgravity.com/air/live/pbaudio098/chunklist.m3u8 — no answer to GitHub's servers |
+| Tamil · Vividh Bharati Chennai | https://air.pc.cdn.bitgravity.com/air/live/pbaudio024/chunklist.m3u8 — no answer to GitHub's servers |
+| Tamil · FM Gold Tamil | https://air.pc.cdn.bitgravity.com/air/live/pbaudio021/playlist.m3u8 — no answer to GitHub's servers |
+| Tamil · AIR Tuticorin | https://air.pc.cdn.bitgravity.com/air/live/pbaudio025/masterlist.m3u8 — no answer to GitHub's servers |
+| Tamil · AIR Nagercoil | https://air.pc.cdn.bitgravity.com/air/live/pbaudio129/chunklist.m3u8 — segment: no answer to GitHub's servers |
+| Tamil · Chennai FM Rainbow | https://air.pc.cdn.bitgravity.com/air/live/pbaudio022/playlist.m3u8 — no answer to GitHub's servers |
+| Tamil · Fmrainbowtamil | https://air.pc.cdn.bitgravity.com/air/live/pbaudio022/playlist.m3u8 — no answer to GitHub's servers |
+| Tamil · Vividhbharathitamil | https://air.pc.cdn.bitgravity.com/air/live/pbaudio024/playlist.m3u8 — segment: no answer to GitHub's servers |
 | Tamil · Ilayaraja Radio | https://psrlive2.listenon.in/ir?ah=0e81749e37789e5fb8c290926ce87e3f — no answer to GitHub's servers |
 | Tamil · Kannadasan Radio | https://psrlive2.listenon.in/kavi?station=kaviyarasarradio — no answer to GitHub's servers |
+| Tamil · Fm Gold Chennai | https://air.pc.cdn.bitgravity.com/air/live/pbaudio021/chunklist.m3u8 — no answer to GitHub's servers |
+| Telugu · AIR Telugu | https://air.pc.cdn.bitgravity.com/air/live/pbaudio032/playlist.m3u8 — segment: no answer to GitHub's servers |
+| Telugu · Raagam AIR 24×7 | https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudioragam/hlspbaudioragam_Auto.m3u8 — no answer to GitHub's servers |
+| Kannada · Raagam AIR 24×7 | https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudioragam/hlspbaudioragam_Auto.m3u8 — no answer to GitHub's servers |
+| Kannada · Vividh Bharati Bengaluru | https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio026/hlspbaudio026_Auto.m3u8 — segment: no answer to GitHub's servers |
+| Kannada · Akashvani Karnataka | https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio030/hlspbaudio030_Auto.m3u8 — no answer to GitHub's servers |
+| Kannada · Amruthavarshini FM | https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio028/hlspbaudio028_Auto.m3u8 — no answer to GitHub's servers |
+| Kannada · FM Rainbow Kannada | https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio027/hlspbaudio027_Auto.m3u8 — segment: no answer to GitHub's servers |
+| Bengali · AIR FM Gold Kolkata | https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio057/hlspbaudio05764kbps.m3u8 — no answer to GitHub's servers |
+| Bengali · Akashvani FM Rainbow Kolkata | https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio058/hlspbaudio05864kbps.m3u8 — no answer to GitHub's servers |
+| Punjabi · AIR Punjabi | https://air.pc.cdn.bitgravity.com/air/live/pbaudio138/chunklist.m3u8 — no answer to GitHub's servers; https://air.pc.cdn.bitgravity.com/air/live/pbaudio138/playlist.m3u8 — no answer to GitHub's servers |
 | Punjabi · RADIO SINGH NAAD | https://s8.voscast.com/cdn/?k=67baed255b875&m=;stream1740303687963/1 — server answered GitHub with a web page |
-| Korean · 국방FM | https://mediaworks.dema.mil.kr/live_edge/audio.sdp/playlist.m3u8 — no answer to GitHub's servers |
-| Spanish (Spain) · 1000 HITS 80s | https://c2.auracast.net:8048/stream — no answer to GitHub's servers |
-| Portuguese (Portugal) · OXIGÉNIO 102.6 FM | https://proic1.evspt.com/oxigenio_aac — no answer to GitHub's servers |
-| Romanian · Clasic Radio_Opera -București | https://live.radioclasic.com/listen/radio_clasic_opera/live.mp3 — no answer to GitHub's servers |
-| Romanian · Clasic Radio_Relax -București | https://live.radioclasic.com/listen/radio_clasic_relax/live.mp3 — no answer to GitHub's servers |
-| Romanian · Clasic Radio_R’n’B/Soul -București | https://live.radioclasic.com/listen/radio_clasic_rnb/live.mp3 — no answer to GitHub's servers |
-| Romanian · Clasic Radio_Popular -București | https://live.radioclasic.com/listen/radio_clasic_popular/live.mp3 — no answer to GitHub's servers |
-| Romanian · Clasic Radio_Folk -București | https://live.radioclasic.com/listen/radio_clasic_folk/live.mp3 — no answer to GitHub's servers |
-| Romanian · Clasic Radio_Jazz -București | https://live.radioclasic.com/listen/radio_clasic_jazz/live.mp3 — no answer to GitHub's servers |
+| Urdu · Raagam AIR 24*7 | https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudioragam/hlspbaudioragam_Auto.m3u8 — no answer to GitHub's servers |
+| Odia · Vividh Bharati Cuttack | https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/playlist.m3u8 — no answer to GitHub's servers |
+| Odia · AIR Jeypore | https://air.pc.cdn.bitgravity.com/air/live/pbaudio112/playlist.m3u8 — no answer to GitHub's servers |
+| More Indian · FM Rainbow Mumbai (Marathi) | https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio008/hlspbaudio008_Auto.m3u8 — no answer to GitHub's servers |
+| More Indian · AIR Nanded | https://air.pc.cdn.bitgravity.com/air/live/pbaudio072/playlist.m3u8 — no answer to GitHub's servers |
+| More Indian · AIR Kolhapur | https://air.pc.cdn.bitgravity.com/air/live/pbaudio063/playlist.m3u8 — no answer to GitHub's servers |
+| Luganda · 107.9 Pearl FM | https://dc4.serverse.com/proxy/pearlfm/stream/1/ — no answer to GitHub's servers |
+| Spanish (Latin America) · La Retro 80s Chile | https://s2.radio.co:80/s9ecef4f68/listen — server refuses GitHub's servers (403) |
+| Greek · LaikiNota | https://laikinota.gr/laikinota — no answer to GitHub's servers |
+| Russian · Radio Unistar | https://edge2.usp.unistar.by/hls/unistar_main/96k.m3u8 — no answer to GitHub's servers |
+| Romanian · Tranquila Manele România | https://live.radiotranquila.net:8032/stream — no answer to GitHub's servers |
+| Romanian · Stil România -Radio Stil Manele | https://mp3.radiostill.ro:8888/stream — no answer to GitHub's servers |
+| Romanian · Stil România -Radio Stil Popular | https://popular.radiostill.ro/8176/stream — no answer to GitHub's servers |
 | Bulgarian · Radio Balkanika | https://ssl120.radyotelekom.com.tr/8122/stream — server answered GitHub with a web page |
 | Bulgarian · BG Voice Hit Mix | https://stream.radio.co/s53f1b7497/listen — server refuses GitHub's servers (403) |
 | Bulgarian · Radio Atlantic | https://c32.radioboss.fm:8853/stream — no answer to GitHub's servers |
+| Albanian · Radio Mergimi | https://radio.radiomergimi.com:8114/stream — no answer to GitHub's servers |
 | Swedish · NRJ Sweden | https://tx-bauerse.sharp-stream.com/http_live.php?i=nrj_instreamtest_se_mp3 — no answer to GitHub's servers |
 | Swedish · 106,7 Rockklassiker | https://tx-bauerse.sharp-stream.com/http_live.php?ua=WEB&i=rockklassiker_instream_se_mp3 — no answer to GitHub's servers |
 | Swedish · Mix Megapol | https://tx-bauerse.sharp-stream.com/http_live.php?ua=WEB&i=mixmegapol_instream_se_mp3 — no answer to GitHub's servers |
-| Swedish · Retro FM Skåne | https://live-bauerse-fm.sharp-stream.com/retrofm_aacp?ua=WEB&aw_0_1st.playerid=SBS_RP_WEB&aw_0_1st.skey=1575715192&companionAds=true&listenerId=@@GUID@@ — no answer to GitHub's servers |
 | Swedish · Sveriges Kristna Radio | https://s2.radio.co/sfbf5f5b85/listen — server refuses GitHub's servers (403) |
-| Swedish · Vinyl FM (SE) | https://live-bauerse-fm.sharp-stream.com/vinylfm_instream_se_aacp?direct=true&listenerid=undefined&aw_0_1st.bauer_listenerid=undefined&amsparams=playerid:SBS_RP_WEB;skey:1602162911;&aw_0_1st.playerid=SBS_RP_WEB&aw_0_1st.skey=1602162911&aw_0_1st.bauer_loggedin=false&awparams=loggedin:false;&aw_0_req.userConsent=false — no answer to GitHub's servers |
 | Norwegian · radiOrakel | https://stream.radiorakel.no/radiorakel_hq — no answer to GitHub's servers |
 | Finnish · Roll FM | https://rollfm.online/ — no answer to GitHub's servers |
+| Turkish · TRT Radyo 1 | https://trt.radyotvonline.net/trt1 — no answer to GitHub's servers |
 | Turkish · Self FM | https://ssl22.radyotelekom.com/8084/stream — server answered GitHub with a web page |
+| Persian · Radio Mojdeh - Iranian Farsi/Persian Christian music and talk | https://ic2326.c1261.fastserv.com/rm128 — server refuses GitHub's servers (403) |
 | Azerbaijani · Naxçıvan Radiosu | https://s33.myradiostream.com:12782/listen.mp3 — no answer to GitHub's servers |
-| Cantonese · 清远综合广播 | https://lhttp.qingting.fm/live/15318668/64k.mp3 — finished downloading: a file, or blocked in GitHub's region |
+| Chinese (Mandarin) · 天籁之音 - Hi-Fi Radio | https://play-radio-stream3.hndt.com/now/JxkyN5mR/chunklist.m3u8 — segment: no answer to GitHub's servers |
 | Japanese · Hitsujikai Radio | https://streaming.radio.co/se4a8e6a93/listen — server refuses GitHub's servers (403) |
-| Japanese · SoundLink+ | https://howlingf-gecko.radioca.st/autodj — finished downloading: a file, or blocked in GitHub's region |
 | Sinhala · Ran FM | https://a3.asurahosting.com/listen/ranfm/radio.mp3 — no answer to GitHub's servers |
 
 ## New stations added
 
-- English News · Talk Radio Europe (world)
-- English News · CBC Radio One - Ottawa, ON (canada)
-- English News · NPR Program Stream (us)
-- English Talk · Fun Radio For Kids - Bedtime Stories (world)
-- English Talk · Hawaii Public Radio HPR-1 (KHPR) (us)
-- English Talk · Rense Radio (https) (surfernetwork.com) (us)
-- Hindi · Radio Welcome 90.8fm (music)
-- Hindi · Bhaktiworld Media Devi Maa (music)
-- Hindi · Taj 92.3 FM (music)
-- Italian · Radio 19 (news)
-- Italian · GRS - Gruppo Radio Sperone (news)
-- Italian · ITALIA Hits Italia (music)
-- French · Jazz Radio Latin Jazz (music)
-- French · M Radio (music)
-- French · ISEKOI Radio · Chill Zone (music)
-- Portuguese (Portugal) · Rádio Sol Madeira (103.7 FM) (music)
-- Portuguese (Portugal) · Rádio Palmeira Madeira (96.1 FM) (music)
-- Portuguese (Portugal) · Radar (music)
-- Polish · Radio Pogoda Gdańsk (news)
-- Polish · Radio DHT (kanał główny) (music)
-- Polish · VOX FM DISCO PARTY (music)
-- Ukrainian · Радіо Ґарта / Garta (music)
-- Romanian · Radio Trinitas 88.5 (devotional)
-- Romanian · Radio Doza Manele (music)
-- Romanian · Rockstar Radio (music)
-- Hungarian · Rádió Teszmi (music)
-- Czech · DWG Radio Český (devotional)
-- Serbian · Radio Šumadija Aranđelovac (music)
-- Serbian · Play Radio Urban (music)
-- Serbian · Plus Radio Nostalgija (music)
-- Turkish · 91.8 İstanbul'un Sesi (music)
-- Turkish · Dadaş Fm Erzurum (music)
-- Turkish · Loops Radio House Station (music)
-- Chinese (Mandarin) · AsiaFM亚洲音乐台 (music)
-- Chinese (Mandarin) · 深圳飞扬971 FM97.1 (music)
-- Chinese (Mandarin) · 顺德音乐之声 (music)
+- English News · CBC Radio One - Prince George, BC (canada)
+- English News · AFN 360 Naples (world)
+- English News · CHQR 770 Global News Radio - Calgary, AB (canada)
+- English Talk · CHQR 770 Global News Radio - Calgary, AB (canada)
+- English Talk · CRTV Poste National (world)
+- English Talk · 96.6 SKY ABC RADIO (world)
+- Hindi · Hindvani FM (music)
+- Hindi · Radiofaza (music)
+- Hindi · Brisvaani Radio (music)
+- Italian · Radio GLOBO (music)
+- Italian · Translation of the Quran in Italiano (devotional)
+- Italian · Lo zoo di 105 (music)
+- Polish · ZET Pop Rock (music)
+- Polish · Radio Safira (devotional)
+- Polish · Nasze Nowe Radio (music)
+- Serbian · Radio Podrinje (music)
+- Serbian · Gudalo i Struna (music)
+- Serbian · Radio San Loznica (music)
+- Malay · Kool FM (music)
 
 ## Hidden this run (20 failed checks in a row)
 
-- Chichewa · Prof K. Online Radio
-- Chichewa · Radio Tigabane
-- Hungarian · Nemzeti Sport Radio
+- Swedish · Svensk Folkmusik - AkkA radio
+- Finnish · Radio Soho
+- Sinhala · Sitha FM
 
 ## Changes and warnings
 
 | Station | Note |
 |---|---|
-| Portuguese (Portugal) · Antena 2 | 1 backup source(s) failing |
-| Dutch · Qmusic | 1 backup source(s) failing |
-| Turkish · RadioTEDU Jazz | new stream found: https://stream.radiotedu.com/cazz · 1 backup source(s) failing |
 | Chinese (Mandarin) · CNR-1 中国之声 | 1 backup source(s) failing |
-| Indonesian · VOKS Radio Bali | new stream found: https://a3.alhastream.com:4010/radio · 1 backup source(s) failing |
+| Filipino · TAG 91.1 | 1 backup source(s) failing |

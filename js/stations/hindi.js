@@ -257,7 +257,6 @@ window.STATIONS = [
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio007/hlspbaudio007_Auto.m3u8"
     ],
-    "offline": true,
     "hidden": true
   },
   {
@@ -1301,6 +1300,33 @@ window.STATIONS = [
       "https://ice66.securenetsystems.net/TAJ"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "hindvani-fm",
+    "name": "Hindvani FM",
+    "category": "music",
+    "streams": [
+      "https://edge.iono.fm/xice/129_medium.aac"
+    ],
+    "added": "2026-11-10"
+  },
+  {
+    "id": "radiofaza",
+    "name": "Radiofaza",
+    "category": "music",
+    "streams": [
+      "https://radiocast.cr8tive-digital.com/radiofaza"
+    ],
+    "added": "2026-11-10"
+  },
+  {
+    "id": "brisvaani-radio",
+    "name": "Brisvaani Radio",
+    "category": "music",
+    "streams": [
+      "https://centova71.instainternet.com/proxy/brisvaaniradio?mp=/stream"
+    ],
+    "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T23:38Z";
+window.STATIONS_CHECKED = "2026-11-10T08:15Z";

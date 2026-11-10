@@ -217,8 +217,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s8.iqstreaming.com:8014/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-student",
@@ -713,4 +712,4 @@ window.STATIONS = [
     "added": "2026-11-07"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T23:38Z";
+window.STATIONS_CHECKED = "2026-11-10T08:15Z";

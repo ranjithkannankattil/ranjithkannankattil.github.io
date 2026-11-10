@@ -1232,6 +1232,33 @@ window.STATIONS = [
       "https://ic1.smcdn.pl/6180-1.mp3"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "zet-pop-rock",
+    "name": "ZET Pop Rock",
+    "category": "music",
+    "streams": [
+      "https://zt.cdn.eurozet.pl/ZETPRK.mp3"
+    ],
+    "added": "2026-11-10"
+  },
+  {
+    "id": "radio-safira",
+    "name": "Radio Safira",
+    "category": "devotional",
+    "streams": [
+      "https://ec1.yesstreaming.net:2340/stream"
+    ],
+    "added": "2026-11-10"
+  },
+  {
+    "id": "nasze-nowe-radio",
+    "name": "Nasze Nowe Radio",
+    "category": "music",
+    "streams": [
+      "https://s3.slotex.pl:7388/stream"
+    ],
+    "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T23:38Z";
+window.STATIONS_CHECKED = "2026-11-10T08:15Z";

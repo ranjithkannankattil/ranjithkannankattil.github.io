@@ -486,8 +486,7 @@ window.STATIONS = [
       "https://kathy.torontocast.com:2800/;"
     ],
     "added": "2026-10-24",
-    "where": "US",
-    "offline": true
+    "where": "US"
   },
   {
     "id": "static-90s-2000s-alt-rock",
@@ -1479,4 +1478,4 @@ window.STATIONS = [
     "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T23:38Z";
+window.STATIONS_CHECKED = "2026-11-10T08:15Z";

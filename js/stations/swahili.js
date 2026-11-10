@@ -296,8 +296,7 @@ window.STATIONS = [
     "streams": [
       "https://radiocitizen-atunwadigital.streamguys1.com/radiocitizen/playlist.m3u8"
     ],
-    "added": "2026-10-27",
-    "offline": true
+    "added": "2026-10-27"
   },
   {
     "id": "tafsir-in-swahili",
@@ -318,4 +317,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T23:38Z";
+window.STATIONS_CHECKED = "2026-11-10T08:15Z";

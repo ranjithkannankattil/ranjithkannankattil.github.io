@@ -138,6 +138,15 @@ window.STATIONS = [
       "https://serverkw.quran-uni.com:8016/;"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "kool-fm",
+    "name": "Kool FM",
+    "category": "music",
+    "streams": [
+      "https://stream.rcs.revma.com/3930238mtd3vv/hls.m3u8"
+    ],
+    "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T23:38Z";
+window.STATIONS_CHECKED = "2026-11-10T08:15Z";

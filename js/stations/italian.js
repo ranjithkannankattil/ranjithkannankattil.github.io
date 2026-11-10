@@ -1283,6 +1283,33 @@ window.STATIONS = [
       "https://icy.unitedradio.it/um011.mp3"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "radio-globo",
+    "name": "Radio GLOBO",
+    "category": "music",
+    "streams": [
+      "https://globo.newradio.it/globorm128"
+    ],
+    "added": "2026-11-10"
+  },
+  {
+    "id": "translation-of-the-quran-in-italiano",
+    "name": "Translation of the Quran in Italiano",
+    "category": "devotional",
+    "streams": [
+      "https://serverkw.quran-uni.com:8146/;"
+    ],
+    "added": "2026-11-10"
+  },
+  {
+    "id": "lo-zoo-di-105",
+    "name": "Lo zoo di 105",
+    "category": "music",
+    "streams": [
+      "https://icy.unitedradio.it/105Zoo.aac"
+    ],
+    "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T23:38Z";
+window.STATIONS_CHECKED = "2026-11-10T08:15Z";

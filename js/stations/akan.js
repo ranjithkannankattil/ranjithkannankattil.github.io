@@ -121,8 +121,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://atunwadigital.streamguys1.com/hellofm"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "connect-fm",
@@ -482,4 +481,4 @@ window.STATIONS = [
     "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T23:38Z";
+window.STATIONS_CHECKED = "2026-11-10T08:15Z";

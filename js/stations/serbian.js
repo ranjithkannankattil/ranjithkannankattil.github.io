@@ -1078,8 +1078,7 @@ window.STATIONS = [
     "streams": [
       "https://mpc2.mediacp.eu:8282/sremac"
     ],
-    "added": "2026-11-07",
-    "offline": true
+    "added": "2026-11-07"
   },
   {
     "id": "rsg-party-time",
@@ -1233,6 +1232,33 @@ window.STATIONS = [
       "https://samcloud.spacial.com/api/listen?sid=104138&rid=181424&f=aac,any&br=64000,any"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "radio-podrinje",
+    "name": "Radio Podrinje",
+    "category": "music",
+    "streams": [
+      "https://s1.skeletor.rs/podrinje"
+    ],
+    "added": "2026-11-10"
+  },
+  {
+    "id": "gudalo-i-struna",
+    "name": "Gudalo i Struna",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/kpcnnvbdfjtvv"
+    ],
+    "added": "2026-11-10"
+  },
+  {
+    "id": "radio-san-loznica",
+    "name": "Radio San Loznica",
+    "category": "music",
+    "streams": [
+      "https://s1.skeletor.rs/san"
+    ],
+    "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-09T23:38Z";
+window.STATIONS_CHECKED = "2026-11-10T08:15Z";
