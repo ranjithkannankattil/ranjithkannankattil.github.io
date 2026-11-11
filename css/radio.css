@@ -79,6 +79,13 @@ body.fav-view .ra-strip{ display:none; }
 .radio-app .ra-title{ font-family:var(--f-display); font-size:1.05rem; font-weight:600; margin:0 0 .2rem; }
 .radio-app .ra-desc{ margin:0; font-size:.92rem; color:var(--ink-soft); }
 .radio-app .ra-steps{ margin:.35rem 0 0; font-size:.82rem; color:var(--ink-soft); }
+.radio-app .ra-play{ margin:.7rem 0 0; padding:.6rem .8rem; border-left:3px solid var(--accent); background:color-mix(in srgb, var(--accent) 7%, transparent); }
+.radio-app .ra-play-h{ margin:0; font-weight:600; font-size:.9rem; color:var(--ink); }
+.radio-app .ra-play-p{ margin:.2rem 0 0; font-size:.84rem; color:var(--ink-soft); }
+.radio-app .ra-play-steps{ margin:.2rem 0 0; padding-left:1.2rem; font-size:.88rem; }
+.radio-app .ra-play-steps li{ margin:0; }
+.radio-app .ra-play-steps a{ color:var(--accent); font-weight:600; display:inline-flex; align-items:center; min-height:44px; }
+.radio-app .ra-play-steps span{ color:var(--ink-soft); font-size:.82rem; }
 .radio-app .ra-ios{ margin:.5rem 0 0; font-size:.82rem; color:var(--ink-soft); }
 .radio-app .ra-ver{ margin:.5rem 0 0; font-size:.82rem; font-family:var(--f-mono, ui-monospace, monospace); color:var(--ink); }
 .radio-app .ra-new{ margin:.5rem 0 0; font-size:.86rem; color:var(--ink-soft); }
