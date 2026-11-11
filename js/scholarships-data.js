@@ -253,8 +253,8 @@ window.SCHOLARSHIPS = [
     amount: 'Tuition, housing, monthly stipend, insurance, research costs and one return trip in year one. Year two needs a further application.',
     who: 'Non-Chinese citizens with a bachelor’s degree and a strong interest in studying China.',
     how: 'Apply online. Check whether your university has its own pre-selection.',
-    opens: '2026-09-01', closes: '2026-11-30', when: 'The deadline is 9 am Beijing time on 30 November 2026, which is 6:30 am in India. Submit by 29 November.',
-    url: 'https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm', checked: '2026-11-03'
+    closes: '2027-01-08', when: 'The deadline is 8 January 2027. This date was updated automatically, so confirm it on the official page.',
+    url: 'https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm', checked: '2026-11-11'
   },
   {
     id: 'schwarzman', name: 'Schwarzman Scholars', by: 'Schwarzman Scholars · Tsinghua University', place: 'Beijing',
