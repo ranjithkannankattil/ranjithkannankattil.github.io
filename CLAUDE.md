@@ -75,6 +75,15 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
   secrets `RADIO_KEYSTORE_B64` / `RADIO_KEYSTORE_PASSWORD`. Bump `APP_VERSION` for each release.
   The Radio page's download card, the old app's update banner and the app's own Info/Update banner
   all read those releases.
+- **Google Play**: app "Radio Velvet" (`com.ranjithkb.radio`) in Play Console, signed with the same key (Play app signing,
+  existing key uploaded). Closed tests: **Alpha** (email list "Velvet testers", friends) and **Early access** (Google Group
+  `radio-velvet-testers@googlegroups.com`, anyone can join; joined from the Radio page's Info → app card, the
+  `.ra-play` box). Every build on `radio-native` uploads the Play bundle via `scripts/play_upload.py` (secret
+  `PLAY_SERVICE_ACCOUNT`, service account play-uploader@ranjithkb-radio, testing-track rights only) to all closed tracks;
+  Google reviews each release. The .aab is no longer attached to public releases (phones can't install it).
+- **In-app notes**: the app (2.3.5+) shows messages from `radio-notes.json` on the site (id, to web/play/all, times,
+  until, title, text, button, link; `whatsapp:<text>` opens a chat with him). His WhatsApp number comes only from the
+  private build secret `RADIO_WA_NUMBER`; never put it in code or on the site.
 - Old Capacitor wrapper: branch `radio-app` (don't push there — it would publish a 1.x release).
   iPhone: still that wrapper, installed from his Mac with Xcode (free Apple ID, re-run every 7 days);
   no iPhone app for other people — the site says so.
