@@ -481,8 +481,8 @@ body[data-section="radio"] .sm-custom button{ height:44px; padding:0 1rem; borde
 body.info-view .radio-bar, body.info-view .recent-row, body.info-view .radio-stats, body.info-view nav.radio-chips,
 body.info-view .diamond-rule, body.info-view .col-head, body.info-view .radio-count, body.info-view .radio-grid,
 body.info-view .radio-empty, body.info-view .fav-tools, body.info-view .ra-strip{ display:none; }
-.info-view{ margin-top:1.6rem; display:flex; flex-direction:column; gap:1.6rem; max-width:62ch; }
-.info-view[hidden]{ display:none; }
+div.info-view{ margin-top:1.6rem; display:flex; flex-direction:column; gap:1.6rem; max-width:62ch; }
+div.info-view[hidden]{ display:none; }
 .iv-h{ font-family:var(--f-mono); font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); margin:0 0 .5rem; font-weight:600; }
 .iv-big{ font-family:var(--f-display); font-weight:600; font-size:1.35rem; margin:0; }
 .iv-sub{ margin:.25rem 0 0; color:var(--ink-soft); }
@@ -528,4 +528,14 @@ body[data-section="radio"] .lq-menu button:hover{ background:var(--accent-soft);
   .radio-player{ bottom:var(--tabs-h, 60px)!important; }
   body[data-section="radio"]:has(.radio-player:not([hidden])){ padding-bottom:calc(var(--tabs-h, 60px) + 10rem); }
   body[data-section="radio"]:has(.radio-player.small:not([hidden])){ padding-bottom:calc(var(--tabs-h, 60px) + 5rem); }
+}
+
+/* Tablets (iPad etc.): the one-row player squeezed the station name to a word per line; use two rows like phones */
+@media (min-width:641px) and (max-width:1100px){
+  .radio-player{ flex-wrap:wrap; row-gap:.35rem; }
+  .radio-player .np-top{ flex:1 1 100%; }
+  .radio-player .np-controls{ flex:1 1 100%; justify-content:space-between; border-top:1px solid rgba(240,237,230,.1); padding-top:.3rem; }
+  .radio-player.small .np-controls{ display:none; }
+  body[data-section="radio"]:has(.radio-player:not([hidden])){ padding-bottom:9rem; }
+  body[data-section="radio"]:has(.radio-player.small:not([hidden])){ padding-bottom:6.5rem; }
 }
