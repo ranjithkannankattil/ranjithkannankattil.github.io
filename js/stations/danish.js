@@ -496,6 +496,15 @@ window.STATIONS = [
       "https://netradio.classicfm.dk/cla8a"
     ],
     "added": "2026-11-08"
+  },
+  {
+    "id": "radio-mfk",
+    "name": "Radio MFK",
+    "category": "music",
+    "streams": [
+      "https://stream1.radiomfk.dk/radiomfk"
+    ],
+    "added": "2026-11-11"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-10T21:05Z";
+window.STATIONS_CHECKED = "2026-11-11T07:40Z";

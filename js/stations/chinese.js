@@ -121,7 +121,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play-radio-stream3.hndt.com/now/WUBA5hW2/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-10",
@@ -201,8 +202,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-17",
@@ -547,7 +547,8 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qtfm.cn/live/1260/64k.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "offline": true
   },
   {
     "id": "fm103-7",
@@ -925,7 +926,8 @@ window.STATIONS = [
     "streams": [
       "https://play-radio-stream3.hndt.com/now/JxkyN5mR/chunklist.m3u8"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "offline": true
   },
   {
     "id": "cctv-9",
@@ -1315,4 +1317,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-10T21:05Z";
+window.STATIONS_CHECKED = "2026-11-11T07:40Z";

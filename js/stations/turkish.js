@@ -1199,8 +1199,7 @@ window.STATIONS = [
     "streams": [
       "https://yayin1.canlitv.fun/radyo/gencfm/chunklist_w1257533803.m3u8"
     ],
-    "added": "2026-11-08",
-    "offline": true
+    "added": "2026-11-08"
   },
   {
     "id": "bitlis-fm-98-8",
@@ -1329,4 +1328,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-10T21:05Z";
+window.STATIONS_CHECKED = "2026-11-11T07:40Z";

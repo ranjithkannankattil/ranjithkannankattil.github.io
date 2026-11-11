@@ -969,7 +969,8 @@ window.STATIONS = [
       "https://live.kwikmotion.com/qmcqbsradiolive/qbsradio/playlist.m3u8"
     ],
     "added": "2026-11-05",
-    "where": "Qatar"
+    "where": "Qatar",
+    "offline": true
   },
   {
     "id": "6pr-perth-882-am",
@@ -1350,6 +1351,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-10",
     "where": "Greece"
+  },
+  {
+    "id": "pordeus-fm",
+    "name": "PorDeus.fm",
+    "category": "world",
+    "streams": [
+      "https://stream.zenolive.com/92ptm8uua2zuv.aac"
+    ],
+    "added": "2026-11-11",
+    "where": "Brazil"
+  },
+  {
+    "id": "cjad-800",
+    "name": "CJAD 800",
+    "category": "canada",
+    "streams": [
+      "https://26113.live.streamtheworld.com/CJADAM_SC"
+    ],
+    "added": "2026-11-11",
+    "where": "Canada"
+  },
+  {
+    "id": "cftr-city-news-680-toronto-on",
+    "name": "CFTR \"City News 680\" Toronto, ON",
+    "category": "canada",
+    "streams": [
+      "https://rogers-hls.leanstream.co/rogers/tor680.stream/playlist.m3u8"
+    ],
+    "added": "2026-11-11",
+    "where": "Canada"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-10T21:05Z";
+window.STATIONS_CHECKED = "2026-11-11T07:40Z";

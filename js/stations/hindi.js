@@ -64,7 +64,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://www.desizoneradio.com/relay3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "big-92-7-fm",
@@ -257,7 +258,8 @@ window.STATIONS = [
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio007/hlspbaudio007_Auto.m3u8"
     ],
-    "hidden": true
+    "hidden": true,
+    "offline": true
   },
   {
     "id": "radio-mirchi-usa",
@@ -370,7 +372,8 @@ window.STATIONS = [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio011/hlspbaudio011_Auto.m3u8"
     ],
     "added": "2026-10-22",
-    "hidden": true
+    "hidden": true,
+    "offline": true
   },
   {
     "id": "sandesh-radio",
@@ -541,7 +544,8 @@ window.STATIONS = [
     "streams": [
       "https://www.desizoneradio.com/relay2"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "offline": true
   },
   {
     "id": "arijitsingh",
@@ -1118,7 +1122,8 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio212/chunklist.m3u8"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "offline": true
   },
   {
     "id": "retrobollywood",
@@ -1328,4 +1333,4 @@ window.STATIONS = [
     "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-10T21:05Z";
+window.STATIONS_CHECKED = "2026-11-11T07:40Z";

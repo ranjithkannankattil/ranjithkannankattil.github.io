@@ -57,7 +57,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://1716664847.rsc.cdn77.org/1716664847/tracks-a1/mono.ts.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-6",
@@ -180,7 +181,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://1946218710.rsc.cdn77.org/1946218710/index.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-15",
@@ -516,8 +518,7 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/1283/64k.mp3"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "station-33",
@@ -607,8 +608,7 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/15318668/64k.mp3"
     ],
-    "added": "2026-10-27",
-    "offline": true
+    "added": "2026-10-27"
   },
   {
     "id": "station-40",
@@ -638,4 +638,4 @@ window.STATIONS = [
     "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-10T21:05Z";
+window.STATIONS_CHECKED = "2026-11-11T07:40Z";

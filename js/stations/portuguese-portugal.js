@@ -205,8 +205,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8",
       "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "golofm",
@@ -230,7 +229,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "cidade-fm-2",
@@ -1334,4 +1334,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-10T21:05Z";
+window.STATIONS_CHECKED = "2026-11-11T07:40Z";

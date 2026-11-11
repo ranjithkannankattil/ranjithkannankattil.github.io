@@ -144,7 +144,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radiomajevica.com:7520/live"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-tk",
@@ -160,8 +161,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_gradacac.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-usk-1",
@@ -389,4 +389,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-10T21:05Z";
+window.STATIONS_CHECKED = "2026-11-11T07:40Z";

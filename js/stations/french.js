@@ -526,7 +526,8 @@ window.STATIONS = [
     "streams": [
       "https://rcavliveaudio.akamaized.net/hls/live/2006635/P-2QMTL0_MTL/adaptive_192/master.m3u8"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "offline": true
   },
   {
     "id": "generations-funk",
@@ -1330,4 +1331,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-10T21:05Z";
+window.STATIONS_CHECKED = "2026-11-11T07:40Z";

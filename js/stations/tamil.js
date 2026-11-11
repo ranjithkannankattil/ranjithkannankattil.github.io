@@ -56,8 +56,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "89-4-tamil-fm",
@@ -257,7 +256,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://psrlive4.listenon.in/mohan?station=mohanradio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "fm-gold-tamil",
@@ -883,7 +883,8 @@ window.STATIONS = [
     "streams": [
       "https://psrlive2.listenon.in/ir?ah=0e81749e37789e5fb8c290926ce87e3f"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "offline": true
   },
   {
     "id": "kannadasan-radio",
@@ -892,7 +893,8 @@ window.STATIONS = [
     "streams": [
       "https://psrlive2.listenon.in/kavi?station=kaviyarasarradio"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "offline": true
   },
   {
     "id": "isaiyaruvi-fm",
@@ -1318,4 +1320,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-10T21:05Z";
+window.STATIONS_CHECKED = "2026-11-11T07:40Z";

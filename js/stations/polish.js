@@ -1286,6 +1286,33 @@ window.STATIONS = [
       "https://rs6-krk2.rmfstream.pl/rmf_maxxx_kie"
     ],
     "added": "2026-11-10"
+  },
+  {
+    "id": "radio-ram",
+    "name": "Radio RAM",
+    "category": "music",
+    "streams": [
+      "https://stream2.prw.pl:8001/radioram"
+    ],
+    "added": "2026-11-11"
+  },
+  {
+    "id": "antyradio-makak",
+    "name": "Antyradio Makak",
+    "category": "music",
+    "streams": [
+      "https://an.cdn.eurozet.pl/ANTMAK.mp3"
+    ],
+    "added": "2026-11-11"
+  },
+  {
+    "id": "radio-zote-przeboje-bieszczady",
+    "name": "Radio Złote Przeboje - Bieszczady",
+    "category": "music",
+    "streams": [
+      "https://radiostream.pl/tuba8946-1.mp3"
+    ],
+    "added": "2026-11-11"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-10T21:05Z";
+window.STATIONS_CHECKED = "2026-11-11T07:40Z";

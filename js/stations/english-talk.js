@@ -1137,7 +1137,8 @@ window.STATIONS = [
       "https://live.kwikmotion.com/qmcqbsradiolive/qbsradio/playlist.m3u8"
     ],
     "added": "2026-11-05",
-    "where": "Qatar"
+    "where": "Qatar",
+    "offline": true
   },
   {
     "id": "britcom-3-pumpkin-fm",
@@ -1480,4 +1481,4 @@ window.STATIONS = [
     "where": "Saudi Arabia"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-10T21:05Z";
+window.STATIONS_CHECKED = "2026-11-11T07:40Z";

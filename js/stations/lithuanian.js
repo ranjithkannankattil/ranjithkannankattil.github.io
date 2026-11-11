@@ -48,7 +48,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://netradio.ziniur.lt/ziniur_64.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-3",
@@ -80,7 +81,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://netradio.ziniur.lt/easyfm.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "power-gold",
@@ -201,7 +203,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.patejago.lt/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "fred-film-radio-24-lietuviu-kalba",
@@ -264,4 +267,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-10T21:05Z";
+window.STATIONS_CHECKED = "2026-11-11T07:40Z";

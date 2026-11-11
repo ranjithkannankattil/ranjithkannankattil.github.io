@@ -144,8 +144,7 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://s2.stationplaylist.com:9280/macedonia.aac"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "star-radio-urban-folk-skopje-macedonia",
@@ -198,4 +197,4 @@ window.STATIONS = [
     "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-10T21:05Z";
+window.STATIONS_CHECKED = "2026-11-11T07:40Z";
