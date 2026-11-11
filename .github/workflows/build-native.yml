@@ -85,3 +85,11 @@ jobs:
             gh release create "$TAG" Radio.apk Radio-Velvet-Play.aab --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --latest \
               --title "Radio Velvet ${APP_VERSION}" --notes-file notes.md
           fi
+      - name: Send to Google Play test tracks (skipped until the PLAY_SERVICE_ACCOUNT secret exists)
+        env:
+          PLAY_SERVICE_ACCOUNT: ${{ secrets.PLAY_SERVICE_ACCOUNT }}
+        run: |
+          if [ -z "$PLAY_SERVICE_ACCOUNT" ]; then echo "No Play key yet: skipping"; exit 0; fi
+          pip install -q google-api-python-client google-auth
+          NOTES=$(sed -n '/^What.s new:/,/^$/p' notes.md | sed '1d;/^$/d' | head -6)
+          python3 scripts/play_upload.py Radio-Velvet-Play.aab "$APP_VERSION" "$NOTES"
