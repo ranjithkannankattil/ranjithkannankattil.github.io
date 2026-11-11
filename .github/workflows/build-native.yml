@@ -75,14 +75,13 @@ jobs:
             echo "- Stations, Favourites and Info at the bottom of the screen; Android Auto support"
             echo "- Pauses for calls and comes back on afterwards; sleep timer"
             echo
-            echo "(Radio-Velvet-Play.aab is the Google Play upload file; phones need Radio.apk.)"
             echo "Install: download Radio.apk on your Android phone, open it, and allow the install. It updates the Radio app you have."
           } > notes.md
           if gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
-            gh release upload "$TAG" Radio.apk Radio-Velvet-Play.aab --clobber --repo "$GITHUB_REPOSITORY"
+            gh release upload "$TAG" Radio.apk --clobber --repo "$GITHUB_REPOSITORY"
             gh release edit "$TAG" --repo "$GITHUB_REPOSITORY" --latest --title "Radio Velvet ${APP_VERSION}" --notes-file notes.md
           else
-            gh release create "$TAG" Radio.apk Radio-Velvet-Play.aab --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --latest \
+            gh release create "$TAG" Radio.apk --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --latest \
               --title "Radio Velvet ${APP_VERSION}" --notes-file notes.md
           fi
       - name: Send to Google Play test tracks (skipped until the PLAY_SERVICE_ACCOUNT secret exists)
