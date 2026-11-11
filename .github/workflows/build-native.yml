@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 40
     env:
-      APP_VERSION: "2.3.4"
+      APP_VERSION: "2.3.5"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
@@ -26,7 +26,9 @@ jobs:
       - name: Build
         env:
           RADIO_KEYSTORE_PASSWORD: ${{ secrets.RADIO_KEYSTORE_PASSWORD }}
+          RADIO_WA_NUMBER: ${{ secrets.RADIO_WA_NUMBER }}
         run: |
+          if [ -n "$RADIO_WA_NUMBER" ]; then echo "WhatsApp number secret: set"; else echo "WhatsApp number secret: MISSING"; fi
           gradle --no-daemon :app:assembleWebRelease :app:bundlePlayRelease
           cp app/build/outputs/apk/web/release/app-web-release.apk Radio.apk
           cp app/build/outputs/bundle/playRelease/app-play-release.aab Radio-Velvet-Play.aab
@@ -39,6 +41,8 @@ jobs:
             echo "Version ${APP_VERSION} · released $(TZ=Europe/Rome date '+%-d %b %Y, %H:%M %Z')"
             echo
             echo "What's new:"
+            echo "- Android Auto: next and previous now move through the list you picked the station from"
+            echo "- Short notes about Radio Velvet news can now appear in the app (each shown only a few times)"
             echo "- Dark mode: the Radio Velvet title is readable again"
             echo "- A close button (✕) on the player bar stops the radio and puts the bar away"
             echo "- Station lists refresh every time you open a language; removed stations leave your favourites"

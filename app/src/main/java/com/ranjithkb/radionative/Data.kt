@@ -47,6 +47,11 @@ object Repo {
         return c.inputStream.bufferedReader().use { it.readText() }
     }
 
+    /** Messages for app users, from ranjithkb.com/radio-notes.json (edited without an app update). */
+    suspend fun notes(): String? = withContext(Dispatchers.IO) {
+        try { fetch("$SITE/radio-notes.json?t=${System.currentTimeMillis() / 600_000}") } catch (e: Exception) { null }
+    }
+
     /** The JSON array assigned in a `window.X = [...]` script. */
     private fun arrayIn(js: String, name: String): JSONArray {
         val start = js.indexOf("window.$name")

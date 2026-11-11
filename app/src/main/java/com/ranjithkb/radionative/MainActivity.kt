@@ -76,7 +76,7 @@ private val Velvet get() = if (Theme.dark) Color(0xFF0D070B) else Color(0xFF2A14
 private val Gold = Color(0xFFC9A86A)
 
 /** Signed-in name (null = signed out) and a counter that bumps when favourites change from the account. */
-object Session { var name by mutableStateOf<String?>(null); var favsVersion by mutableIntStateOf(0); var busy by mutableStateOf(false) }
+object Session { var name by mutableStateOf<String?>(null); var favsVersion by mutableIntStateOf(0); var busy by mutableStateOf(false); var noteShown = false }
 
 val Poppins = FontFamily(
     Font(R.font.poppins_regular, FontWeight.Normal),
@@ -185,6 +185,7 @@ fun App(c: MediaController?) {
     val prefs = remember { ctx.getSharedPreferences("app", Context.MODE_PRIVATE) }
     val favs = remember { Favs(ctx) }
     var favList by remember { mutableStateOf(favs.all()) }
+    AppNote()
     val scope = rememberCoroutineScope()
     fun refreshFavs() {
         favList = favs.all()
@@ -1045,4 +1046,58 @@ fun ListeningSection() {
     }
     all?.let { m -> Text("Listeners have enjoyed ${"%,d".format(m / 60)} hours of radio on Radio Velvet.",
         Modifier.padding(top = 10.dp), color = Accent, fontSize = 14.sp, fontWeight = FontWeight.Medium) }
+}
+
+/**
+ * Messages for app users, read from ranjithkb.com/radio-notes.json so new ones need no app update.
+ * Each note: id, title, text, optional button + link, "to" (web / play / all), "times" (how often it
+ * may show, once per app start), optional "until" (yyyy-mm-dd) and "sayTimes" (adds "shown N times").
+ * A link "whatsapp:<message>" opens a WhatsApp chat with the owner; the number comes from a private
+ * build secret, never from the code or the website. One note shows per app start, the first one due.
+ */
+@Composable
+fun AppNote() {
+    val ctx = LocalContext.current
+    val prefs = remember { ctx.getSharedPreferences("notes", Context.MODE_PRIVATE) }
+    var note by remember { mutableStateOf<org.json.JSONObject?>(null) }
+    var n by remember { mutableStateOf(0) }
+    LaunchedEffect(Unit) {
+        if (Session.noteShown) return@LaunchedEffect
+        val arr = try { org.json.JSONObject(Repo.notes() ?: return@LaunchedEffect).optJSONArray("notes") } catch (e: Exception) { null } ?: return@LaunchedEffect
+        val today = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.ROOT).format(java.util.Date())
+        val me = if (BuildConfig.SELF_UPDATE) "web" else "play"
+        for (k in 0 until arr.length()) {
+            val o = arr.optJSONObject(k) ?: continue
+            val id = o.optString("id"); if (id.isBlank()) continue
+            val to = o.optString("to", "all"); if (to != "all" && to != me) continue
+            val until = o.optString("until"); if (until.isNotBlank() && today > until) continue
+            val times = o.optInt("times", 1); val seen = prefs.getInt(id, 0); if (seen >= times) continue
+            if (o.optString("link").startsWith("whatsapp:") && BuildConfig.WA_NUMBER.isBlank()) continue
+            n = seen + 1; prefs.edit().putInt(id, n).apply(); Session.noteShown = true; note = o; break
+        }
+    }
+    val o = note ?: return
+    val close = { note = null }
+    val times = o.optInt("times", 1)
+    AlertDialog(onDismissRequest = close,
+        title = { Text(o.optString("title")) },
+        text = { Column {
+            o.optString("text").split("\n\n").filter { it.isNotBlank() }.forEachIndexed { i, para ->
+                Text(para, if (i > 0) Modifier.padding(top = 10.dp) else Modifier) }
+            if (o.optBoolean("sayTimes")) Text("This note is shown only $times times (this is $n of $times).",
+                Modifier.padding(top = 10.dp), color = InkSoft, fontSize = 13.sp)
+        } },
+        confirmButton = {
+            val link = o.optString("link"); val label = o.optString("button")
+            if (link.isNotBlank() && label.isNotBlank()) Button({
+                val url = if (link.startsWith("whatsapp:"))
+                    "https://wa.me/${BuildConfig.WA_NUMBER}?text=" + android.net.Uri.encode(link.removePrefix("whatsapp:")) else link
+                try { ctx.startActivity(android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse(url))
+                    .addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK)) } catch (e: Exception) { openUrl(ctx, url) }
+                close()
+            }, Modifier.heightIn(min = 44.dp)) { Text(label) }
+            else TextButton(close, Modifier.heightIn(min = 44.dp)) { Text("OK") }
+        },
+        dismissButton = { if (o.optString("link").isNotBlank() && o.optString("button").isNotBlank())
+            TextButton(close, Modifier.heightIn(min = 44.dp)) { Text("Not now") } })
 }

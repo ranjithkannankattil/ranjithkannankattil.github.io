@@ -48,6 +48,7 @@ class PlaybackService : MediaLibraryService() {
     private lateinit var session: MediaLibrarySession
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
     private val known = HashMap<String, MediaItem>()   // items shown to Android Auto, by id
+    private val siblings = HashMap<String, List<String>>()   // station id -> ids of the list it was picked from
 
     override fun onCreate() {
         super.onCreate()
@@ -119,6 +120,21 @@ class PlaybackService : MediaLibraryService() {
     }
 
     private inner class Callback : MediaLibrarySession.Callback {
+        // Android Auto hands over only the station that was tapped. Play it inside the list it came from
+        // (Favourites, Velvet Selection or a language), so the car's next / previous buttons work.
+        override fun onSetMediaItems(s: MediaSession, c: MediaSession.ControllerInfo, items: MutableList<MediaItem>,
+                                     startIndex: Int, startPositionMs: Long)
+                : ListenableFuture<MediaSession.MediaItemsWithStartPosition> {
+            if (items.size == 1) {
+                val ids = siblings[items[0].mediaId]
+                val list = ids?.mapNotNull { id -> known[id]?.let { k -> k.buildUpon().setUri(k.requestMetadata.mediaUri).build() } }
+                val at = list?.indexOfFirst { it.mediaId == items[0].mediaId } ?: -1
+                if (list != null && list.size > 1 && at >= 0)
+                    return Futures.immediateFuture(MediaSession.MediaItemsWithStartPosition(list, at, C.TIME_UNSET))
+            }
+            return super.onSetMediaItems(s, c, items, startIndex, startPositionMs)
+        }
+
         // Items from the phone app / Android Auto arrive without their stream address: restore it.
         override fun onAddMediaItems(s: MediaSession, c: MediaSession.ControllerInfo, items: MutableList<MediaItem>)
                 : ListenableFuture<MutableList<MediaItem>> = Futures.immediateFuture(items.map {
@@ -151,6 +167,8 @@ class PlaybackService : MediaLibraryService() {
                 else -> emptyList()
             }
             list.forEach { known[it.mediaId] = it }
+            val playable = list.filter { it.mediaMetadata.isPlayable == true }.map { it.mediaId }
+            playable.forEach { siblings[it] = playable }
             LibraryResult.ofItemList(ImmutableList.copyOf(list), p)
         }
     }
