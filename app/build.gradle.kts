@@ -28,8 +28,11 @@ android {
     // "web" = the APK on ranjithkb.com (updates itself); "play" = Google Play (Play does the updating)
     flavorDimensions += "store"
     productFlavors {
-        create("web") { dimension = "store"; buildConfigField("boolean", "SELF_UPDATE", "true") }
-        create("play") { dimension = "store"; buildConfigField("boolean", "SELF_UPDATE", "false") }
+        create("web") { dimension = "store"; buildConfigField("boolean", "SELF_UPDATE", "true")
+            // WhatsApp number for app notes ("whatsapp:" links): from a private build secret, never in the code
+            buildConfigField("String", "WA_NUMBER", "\"" + (System.getenv("RADIO_WA_NUMBER") ?: "").filter { it.isDigit() } + "\"") }
+        create("play") { dimension = "store"; buildConfigField("boolean", "SELF_UPDATE", "false")
+            buildConfigField("String", "WA_NUMBER", "\"" + (System.getenv("RADIO_WA_NUMBER") ?: "").filter { it.isDigit() } + "\"") }
     }
     buildTypes {
         release { isMinifyEnabled = false; signingConfig = signingConfigs.getByName("shared") }
