@@ -1,0 +1,16 @@
+{
+  "_help": "Messages shown inside the Radio Velvet app (version 2.3.5 and later), one per app start. Fields: id (unique; change it to show a note again), to (web = website app, play = Google Play app, all), times (how many times each person sees it), until (last day, yyyy-mm-dd, optional), title, text (blank line = new paragraph), button + link (optional; a link 'whatsapp:<message>' opens a WhatsApp chat with Ranjith with that message typed in), sayTimes (true adds 'This note is shown only N times').",
+  "notes": [
+    {
+      "id": "play-test-2026-11",
+      "to": "web",
+      "times": 4,
+      "sayTimes": true,
+      "until": "2027-01-31",
+      "title": "Radio Velvet on Google Play",
+      "text": "Radio Velvet is now being tested on Google Play, where it updates by itself like any other app.\n\nWould you like to join the test? Send me a message on WhatsApp with the Gmail address on your phone and I'll add you.",
+      "button": "Message on WhatsApp",
+      "link": "whatsapp:Hi Ranjith, I'd like to test Radio Velvet on Google Play. My Gmail is: "
+    }
+  ]
+}
