@@ -630,3 +630,4 @@ body[data-section="radio"] .radio-player .np-sleep.on, body[data-section="radio"
 body[data-section="radio"] .radio-player .np-controls > button:hover{ background:rgba(240,237,230,.08)!important; }
 .radio-player .np-close svg{ width:18px!important; height:18px!important; }
 .radio-player .np-sleep svg path{ fill:none!important; }
+body[data-section="radio"] .radio-player[hidden]{ display:none!important; }
