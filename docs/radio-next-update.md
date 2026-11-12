@@ -14,3 +14,5 @@ Collected from Ranjith and testers. Build when he says "go".
 ## Stations (website + app, no app update needed)
 8. **Radio Macfast 90.4 (Changanassery)**: find a working online stream and add to Malayalam.
 9. **Radio Mango**: current one is Radio Mango Kochi; find the other Radio Mango streams (other Kerala cities, Gulf/online) and add them with clear names.
+10. **Suryan FM 93.5 (Tamil, Chennai, Sun Network)**: a tester asked for it. The "Sooriyan FM" we have is the Sri Lankan station; find a working stream for India's Suryan FM 93.5 and add it (keep the Sri Lankan one, name both clearly). Prefer an official stream; unofficial re-streams stop working.
+11. **Hello FM 106.4 (Tamil)**: no public stream found yet (12 Nov); add if someone sends a working link.
