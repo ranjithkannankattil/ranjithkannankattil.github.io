@@ -100,7 +100,7 @@ fun LangTabs(tabs: List<LangTab>, selected: String, onClick: (LangTab) -> Unit, 
             horizontalArrangement = Arrangement.spacedBy(22.dp)) {
             items(tabs, key = { it.id }) { t ->
                 val on = t.id == selected
-                Column(Modifier.heightIn(min = 48.dp).combinedClickable(onClick = { onClick(t) },
+                Column(Modifier.width(IntrinsicSize.Max).heightIn(min = 48.dp).combinedClickable(onClick = { onClick(t) },
                     onLongClickLabel = "Pin, move or remove", onLongClick = {
                         haptic.performHapticFeedback(androidx.compose.ui.hapticfeedback.HapticFeedbackType.LongPress); onLong(t) }),
                     verticalArrangement = Arrangement.Bottom) {
@@ -174,6 +174,8 @@ fun StationRow(s: Station, sub: String, fav: Boolean, current: Boolean, playing:
         HorizontalDivider(Modifier.padding(horizontal = Pad), color = Line)
     }
 }
+
+private fun catLabel(c: String) = mapOf("fm" to "FM", "air" to "Akashvani", "am" to "AM").getOrElse(c) { c.replaceFirstChar { it.uppercase() } }
 
 private fun highlighted(name: String, q: String) = buildAnnotatedString {
     val i = if (q.isBlank()) -1 else name.indexOf(q, ignoreCase = true)
@@ -366,7 +368,7 @@ fun SearchContent(all: List<Station>?, currentLang: String, langOf: (Station) ->
     val results = remember(q, cat, all) {
         val l = all ?: emptyList()
         when {
-            cat != null -> l.filter { it.category == cat!!.first && !it.offline }
+            cat != null -> l.filter { (it.category == cat!!.first || (cat!!.first == "news" && it.col.contains("news"))) && !it.offline }
             q.isBlank() -> emptyList()
             else -> l.filter { it.name.contains(q.trim(), true) }.sortedWith(compareBy({ it.offline }, { !it.name.startsWith(q.trim(), true) }, { it.name.lowercase() }))
         }.take(150)
@@ -440,7 +442,7 @@ fun SearchContent(all: List<Station>?, currentLang: String, langOf: (Station) ->
                 if (here.isNotEmpty()) {
                     item { Text(currentLang, Modifier.padding(start = Pad, top = 20.dp), fontSize = 15.sp, fontWeight = FontWeight.SemiBold, color = AccentText) }
                     items(here, key = { "h|" + it.key }) { s ->
-                        StationRow(s, s.category.replaceFirstChar { it.uppercase() }, s.key in favKeys, "st|${s.key}" == nowId, playing,
+                        StationRow(s, catLabel(s.category), s.key in favKeys, "st|${s.key}" == nowId, playing,
                             onPlay = { pick(s) }, onFav = { onFav(s) }, highlight = q.trim())
                     }
                 }
