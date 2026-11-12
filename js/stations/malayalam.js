@@ -197,10 +197,11 @@ window.STATIONS = [
   },
   {
     "id": "nammuderadio",
-    "name": "Nammude Radio",
+    "name": "Nammude UK",
     "category": "online",
     "streams": [
-      "https://stream.nammude.uk/listen/nammude_uk/live"
+      "https://stream.nammude.uk/listen/nammude_uk/live",
+      "https://live.sarrit.com/listen/nammude_uk/live"
     ]
   },
   {
