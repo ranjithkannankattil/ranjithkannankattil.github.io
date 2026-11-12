@@ -205,6 +205,14 @@ window.STATIONS = [
     ]
   },
   {
+    "id": "naadanchaaya",
+    "name": "Naadan Chaaya Radio (Ireland)",
+    "category": "online",
+    "streams": [
+      "https://uksoutha.streaming.broadcast.radio/naadanchaayaradio"
+    ]
+  },
+  {
     "id": "myradio90fm",
     "name": "My Radio FM",
     "category": "online",
