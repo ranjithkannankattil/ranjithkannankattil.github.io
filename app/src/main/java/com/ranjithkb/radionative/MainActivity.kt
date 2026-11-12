@@ -828,10 +828,12 @@ fun ShareMenu(now: NowState, close: () -> Unit) {
     AlertDialog(onDismissRequest = close,
         title = { Text(if (hasSong) "Share this song" else "Share this station") },
         text = { Column {
-            TextButton({ close(); scope.launch {
-                if (hasSong) shareSongCard(ctx, song, artist, station, now.md.artworkUri?.toString(), link)
-                else shareSongCard(ctx, station, "Live radio", station, null, link) } }, Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
-                Icon(Icons.Filled.Image, null); Spacer(Modifier.width(10.dp)); Text("Picture card", Modifier.weight(1f)) }
+            // runs in the activity's scope: closing this menu must not cancel the card while it's being drawn
+            TextButton({ close(); (ctx as? androidx.activity.ComponentActivity)?.lifecycleScope?.launch {
+                try { shareSongCard(ctx, if (hasSong) song else station, artist, station, if (hasSong) now.md.artworkUri?.toString() else null, link) }
+                catch (e: Exception) { android.widget.Toast.makeText(ctx, "Couldn't make the picture card", android.widget.Toast.LENGTH_SHORT).show() } } },
+                Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
+                Icon(Icons.Filled.Image, null); Spacer(Modifier.width(10.dp)); Text("Picture card with link", Modifier.weight(1f)) }
             TextButton({ close(); shareTextOnly(ctx, text) }, Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
                 Icon(Icons.Filled.Share, null); Spacer(Modifier.width(10.dp)); Text("Text with link", Modifier.weight(1f)) }
             TextButton({ close(); copyText(ctx, text) }, Modifier.fillMaxWidth().heightIn(min = 48.dp)) {

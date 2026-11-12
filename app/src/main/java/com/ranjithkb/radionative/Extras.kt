@@ -51,51 +51,56 @@ private fun newer(a: String, b: String): Boolean {
 
 /** A shareable picture of the song that's playing: cover, song, artist, station, app name. */
 suspend fun shareSongCard(ctx: Context, song: String, artist: String, station: String, artUrl: String?, link: String = "https://ranjithkb.com/radio.html") {
+    // Velvet card in the app's look: gold frame, the logo, the cover (when there is one), Jost; the station link goes with it as text
     val file = withContext(Dispatchers.IO) {
         val w = 1080; val h = 1350
         val bmp = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888)
         val cv = Canvas(bmp)
-        cv.drawPaint(Paint().apply { shader = LinearGradient(0f, 0f, 0f, h.toFloat(), 0xFF5B2350.toInt(), 0xFF1E0B19.toInt(), Shader.TileMode.CLAMP) })
+        val gold = 0xFFC9A86A.toInt()
+        cv.drawColor(0xFF2A1424.toInt())
+        cv.drawRect(RectF(48f, 48f, w - 48f, h - 48f), Paint(Paint.ANTI_ALIAS_FLAG).apply { color = 0x88C9A86A.toInt(); style = Paint.Style.STROKE; strokeWidth = 2f })
         val art = artUrl?.let { try { URL(it).openStream().use(BitmapFactory::decodeStream) } catch (e: Exception) { null } }
-        val box = RectF(140f, 150f, 940f, 950f)
-        if (art != null) {
-            val path = Path().apply { addRoundRect(box, 36f, 36f, Path.Direction.CW) }
-            cv.save(); cv.clipPath(path); cv.drawBitmap(art, null, box, Paint(Paint.FILTER_BITMAP_FLAG)); cv.restore()
-        } else {
-            cv.drawRoundRect(box, 36f, 36f, Paint().apply { color = 0x22FFFFFF })
-            val wave = Paint(Paint.ANTI_ALIAS_FLAG).apply { color = 0xFFE8D9C5.toInt(); style = Paint.Style.STROKE; strokeWidth = 18f; strokeCap = Paint.Cap.ROUND }
-            for (r in listOf(110f, 200f)) { cv.drawArc(RectF(540 - r, 550 - r, 540 + r, 550 + r), 135f, 90f, false, wave); cv.drawArc(RectF(540 - r, 550 - r, 540 + r, 550 + r), -45f, 90f, false, wave) }
-            cv.drawCircle(540f, 550f, 34f, Paint(Paint.ANTI_ALIAS_FLAG).apply { color = 0xFFC9A86A.toInt() })
+        val box = RectF(240f, 200f, 840f, 800f)
+        if (art != null) cv.drawBitmap(art, null, box, Paint(Paint.FILTER_BITMAP_FLAG))
+        else {
+            cv.drawRect(box, Paint(Paint.ANTI_ALIAS_FLAG).apply { color = 0x88C9A86A.toInt(); style = Paint.Style.STROKE; strokeWidth = 2f })
+            androidx.core.content.ContextCompat.getDrawable(ctx, R.drawable.ic_logo_mark)?.mutate()?.let { d ->
+                d.setTint(gold); d.setBounds(390, 350, 690, 650); d.draw(cv) }
         }
-        val semi = try { androidx.core.content.res.ResourcesCompat.getFont(ctx, R.font.jost_medium) } catch (e: Exception) { null }
-        val reg = try { androidx.core.content.res.ResourcesCompat.getFont(ctx, R.font.jost_regular) } catch (e: Exception) { null }
-        fun text(s: String, y: Float, size: Float, color: Int, bold: Boolean) {
-            val p = Paint(Paint.ANTI_ALIAS_FLAG).apply { this.color = color; textSize = size; textAlign = Paint.Align.CENTER
-                typeface = (if (bold) semi else reg) ?: Typeface.create(Typeface.SANS_SERIF, if (bold) Typeface.BOLD else Typeface.NORMAL) }
-            var t = s; while (p.measureText(t) > 900 && t.length > 4) t = t.dropLast(2)
+        val light = try { androidx.core.content.res.ResourcesCompat.getFont(ctx, R.font.jost_light) } catch (e: Exception) { null }
+        val med = try { androidx.core.content.res.ResourcesCompat.getFont(ctx, R.font.jost_medium) } catch (e: Exception) { null }
+        fun paint(size: Float, color: Int, tf: Typeface?, spacing: Float = 0f) = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            this.color = color; textSize = size; textAlign = Paint.Align.CENTER; typeface = tf ?: Typeface.SANS_SERIF; letterSpacing = spacing }
+        fun text(s: String, y: Float, p: Paint) {
+            var t = s; while (p.measureText(t) > 880 && t.length > 4) t = t.dropLast(2)
             if (t != s) t = t.trimEnd() + "…"
             cv.drawText(t, 540f, y, p)
         }
-        // long titles wrap onto a second line instead of being cut short
-        val tp = Paint().apply { textSize = 56f; typeface = semi ?: Typeface.DEFAULT_BOLD }
-        val words = song.split(' '); var l1 = ""; var cut = words.size
-        for ((i, w) in words.withIndex()) { val t = if (l1.isEmpty()) w else "$l1 $w"; if (tp.measureText(t) > 900 && l1.isNotEmpty()) { cut = i; break }; l1 = t }
-        val l2 = words.drop(cut).joinToString(" ")
-        var y = 1040f
-        text(l1, y, 56f, 0xFFFFFFFF.toInt(), true)
-        if (l2.isNotBlank()) { y += 66f; text(l2, y, 56f, 0xFFFFFFFF.toInt(), true) }
-        if (artist.isNotBlank()) { y += 70f; text(artist, y, 40f, 0xFFE8D9C5.toInt(), false) }
-        if (song != station) { y += 58f; text("on $station", y, 34f, 0xFFC9A86A.toInt(), false) }
-        text("Radio Velvet · ranjithkb.com/radio", 1290f, 30f, 0x99FFFFFF.toInt(), false)
+        val hasSong = song.isNotBlank() && song != station
+        var y = 900f
+        if (hasSong) { text("ON " + station.uppercase(), y, paint(30f, gold, med, 0.18f)); y += 90f }
+        // title wraps onto a second line instead of being cut short
+        val tp = paint(66f, 0xFFF1E9EE.toInt(), light)
+        val title = if (hasSong) song else station
+        val words = title.split(' '); var l1 = ""; var cut = words.size
+        for ((k, wd) in words.withIndex()) { val t = if (l1.isEmpty()) wd else "$l1 $wd"; if (tp.measureText(t) > 880 && l1.isNotEmpty()) { cut = k; break }; l1 = t }
+        text(l1, y, tp); val l2 = words.drop(cut).joinToString(" ")
+        if (l2.isNotBlank()) { y += 78f; text(l2, y, tp) }
+        val second = if (hasSong) artist else "Live radio"
+        if (second.isNotBlank()) { y += 70f; text(second, y, paint(40f, 0xFFB9A8B4.toInt(), light)) }
+        text("RADIO VELVET", 1215f, paint(30f, gold, med, 0.32f))
+        text(link.removePrefix("https://"), 1265f, paint(26f, 0x99F1E9EE.toInt(), light))
         val dir = File(ctx.cacheDir, "cards").apply { mkdirs() }
         File(dir, "song-card.png").also { f -> f.outputStream().use { bmp.compress(Bitmap.CompressFormat.PNG, 100, it) } }
     }
     val uri = FileProvider.getUriForFile(ctx, ctx.packageName + ".files", file)
+    val caption = if (song.isBlank() || song == station) "Listening to $station live on Radio Velvet\n$link"
+        else "Listening to $song${if (artist.isNotBlank()) " by $artist" else ""} on $station · Radio Velvet\n$link"
     val send = Intent(Intent.ACTION_SEND).setType("image/png").putExtra(Intent.EXTRA_STREAM, uri)
-        .putExtra(Intent.EXTRA_TEXT, if (song == station) "Listening to $station live on Radio Velvet\n$link"
-            else "Listening to $song${if (artist.isNotBlank()) " by $artist" else ""} on $station · Radio Velvet\n$link")
+        .putExtra(Intent.EXTRA_TEXT, caption).putExtra(Intent.EXTRA_SUBJECT, "Radio Velvet")
+        .setClipData(android.content.ClipData.newRawUri("card", uri))
         .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-    ctx.startActivity(Intent.createChooser(send, "Share song card"))
+    ctx.startActivity(Intent.createChooser(send, "Share").addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION))
 }
 
 /** Link that opens this station on the Radio page (same format the website shares). */
