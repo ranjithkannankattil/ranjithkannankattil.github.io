@@ -102,7 +102,7 @@ class MainActivity : ComponentActivity() {
 
     private fun handleSignIn(intent: android.content.Intent?) {
         val u = intent?.data ?: return
-        if (u.scheme != "com.ranjithkb.radio" || u.host != "auth") return
+        if (u.scheme?.startsWith("com.ranjithkb.radio") != true || u.host != "auth") return
         val q = android.net.Uri.parse("x://x?" + (u.encodedFragment ?: ""))
         val id = q.getQueryParameter("id_token") ?: ""; val at = q.getQueryParameter("access_token") ?: ""
         if (id.isEmpty() && at.isEmpty()) { android.widget.Toast.makeText(this, "Sign-in cancelled", android.widget.Toast.LENGTH_SHORT).show(); return }

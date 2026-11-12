@@ -9,6 +9,10 @@ import androidx.media3.common.MediaMetadata
 import androidx.media3.common.Metadata
 import androidx.media3.common.PlaybackException
 import androidx.media3.common.Player
+import androidx.media3.cast.CastPlayer
+import androidx.media3.cast.SessionAvailabilityListener
+import androidx.media3.session.SessionCommand
+import androidx.media3.session.SessionResult
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.extractor.metadata.icy.IcyInfo
 import androidx.media3.session.LibraryResult
@@ -28,7 +32,7 @@ import kotlinx.coroutines.launch
 
 /** Station <-> player item. The stream list rides along in the metadata extras. */
 fun Station.toItem(language: String): MediaItem {
-    val ex = Bundle().apply { putStringArrayList("streams", ArrayList(streams)); putInt("try", 0); putString("station", name) }
+    val ex = Bundle().apply { putStringArrayList("streams", ArrayList(streams)); putInt("try", 0); putString("station", name); putString("lang", language) }
     return MediaItem.Builder()
         .setMediaId("st|$key")
         .setUri(streams[0])
@@ -49,6 +53,9 @@ class PlaybackService : MediaLibraryService() {
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
     private val known = HashMap<String, MediaItem>()   // items shown to Android Auto, by id
     private val siblings = HashMap<String, List<String>>()   // station id -> ids of the list it was picked from
+    private var castPlayer: CastPlayer? = null
+
+    companion object { const val CLOSE = "velvet.close" }
 
     override fun onCreate() {
         super.onCreate()
@@ -74,13 +81,77 @@ class PlaybackService : MediaLibraryService() {
                 else Listen.stop(this@PlaybackService)
             }
             override fun onMediaItemTransition(mediaItem: MediaItem?, reason: Int) {
+                saveQueue()
                 if (player.isPlaying && mediaItem != null) Listen.start(this@PlaybackService, mediaItem.mediaId.removePrefix("st|"),
                     mediaItem.mediaMetadata.extras?.getString("station") ?: "")
             }
         })
         session = MediaLibrarySession.Builder(this, player, Callback()).build()
-        SleepTimer.pause = { player.pause() }
+        SleepTimer.pause = { session.player.pause() }
+        // Cast: when a TV or speaker is picked, the same list carries on there; back on the phone when casting stops
+        Cast.context(this)?.let { cc -> try {
+            castPlayer = CastPlayer(cc).also { cp -> cp.setSessionAvailabilityListener(object : SessionAvailabilityListener {
+                override fun onCastSessionAvailable() = switchTo(cp)
+                override fun onCastSessionUnavailable() = switchTo(player)
+            }) }
+        } catch (e: Throwable) { castPlayer = null } }
         scope.launch { while (true) { kotlinx.coroutines.delay(60_000); Listen.tick(this@PlaybackService) } }
+    }
+
+    // ---- resume: the car (Android Auto), Bluetooth play button or the system media controls can start
+    // the last station again even when the app isn't running, like Spotify does.
+    private fun qp() = getSharedPreferences("queue", MODE_PRIVATE)
+    private fun saveQueue() {
+        val n = player.mediaItemCount; if (n == 0) return
+        val from = (player.currentMediaItemIndex - 150).coerceAtLeast(0); val to = (from + 300).coerceAtMost(n)
+        val arr = org.json.JSONArray()
+        for (i in from until to) {
+            val it = player.getMediaItemAt(i); val md = it.mediaMetadata
+            val streams = md.extras?.getStringArrayList("streams") ?: continue
+            arr.put(org.json.JSONObject().put("id", it.mediaId)
+                .put("name", md.extras?.getString("station") ?: md.station?.toString() ?: md.title?.toString() ?: "")
+                .put("lang", md.extras?.getString("lang") ?: "")
+                .put("streams", org.json.JSONArray(streams)))
+        }
+        qp().edit().putString("items", arr.toString()).putInt("at", player.currentMediaItemIndex - from).apply()
+    }
+    private fun savedQueue(): MediaSession.MediaItemsWithStartPosition? = try {
+        val arr = org.json.JSONArray(qp().getString("items", null) ?: return null)
+        val list = (0 until arr.length()).map { i -> val o = arr.getJSONObject(i)
+            val streams = o.getJSONArray("streams").let { a -> (0 until a.length()).map { a.getString(it) } }
+            Station(o.getString("id").removePrefix("st|").substringAfter(':'), o.getString("name"), "", streams,
+                    col = o.getString("id").removePrefix("st|").substringBefore(':'))
+                .toItem(o.optString("lang")) }
+        if (list.isEmpty()) null
+        else MediaSession.MediaItemsWithStartPosition(list, qp().getInt("at", 0).coerceIn(0, list.size - 1), C.TIME_UNSET)
+    } catch (e: Exception) { null }
+
+    /** Move playback between the phone and a Cast device, keeping the list and the station. */
+    private fun switchTo(target: Player) {
+        val from = session.player
+        if (from === target) return
+        val n = from.mediaItemCount
+        if (n > 0) {
+            val toCast = target === castPlayer
+            val at = from.currentMediaItemIndex.coerceAtLeast(0)
+            val lo = if (toCast) (at - 50).coerceAtLeast(0) else 0
+            val hi = if (toCast) (at + 50).coerceAtMost(n) else n
+            val items = (lo until hi).map { from.getMediaItemAt(it) }
+                .map { if (toCast) Cast.forCast(it) else it.buildUpon().setMimeType(null).build() }
+            val play = toCast && from.playWhenReady
+            from.stop()
+            target.setMediaItems(items, at - lo, C.TIME_UNSET); target.prepare(); target.playWhenReady = play
+        }
+        session.player = target
+    }
+
+    /** Close (✕ while paused): stop, clear the list and remove the notification. The last station is kept for resuming. */
+    private fun closeAll() {
+        SleepTimer.off()
+        val p = session.player
+        p.stop(); p.clearMediaItems()
+        if (p !== player) { player.stop(); player.clearMediaItems() }
+        stopSelf()
     }
 
     /** "Artist - Song" from the stream: show it, and look up the cover. */
@@ -120,6 +191,23 @@ class PlaybackService : MediaLibraryService() {
     }
 
     private inner class Callback : MediaLibrarySession.Callback {
+        override fun onConnect(s: MediaSession, c: MediaSession.ControllerInfo): MediaSession.ConnectionResult =
+            MediaSession.ConnectionResult.AcceptedResultBuilder(s)
+                .setAvailableSessionCommands(MediaSession.ConnectionResult.DEFAULT_SESSION_AND_LIBRARY_COMMANDS.buildUpon()
+                    .add(SessionCommand(CLOSE, Bundle.EMPTY)).build())
+                .build()
+
+        override fun onCustomCommand(s: MediaSession, c: MediaSession.ControllerInfo, cmd: SessionCommand, args: Bundle)
+                : ListenableFuture<SessionResult> {
+            if (cmd.customAction == CLOSE) { closeAll(); return Futures.immediateFuture(SessionResult(SessionResult.RESULT_SUCCESS)) }
+            return super.onCustomCommand(s, c, cmd, args)
+        }
+
+        override fun onPlaybackResumption(s: MediaSession, c: MediaSession.ControllerInfo)
+                : ListenableFuture<MediaSession.MediaItemsWithStartPosition> =
+            savedQueue()?.let { Futures.immediateFuture(it) }
+                ?: Futures.immediateFailedFuture(UnsupportedOperationException("Nothing played yet"))
+
         // Android Auto hands over only the station that was tapped. Play it inside the list it came from
         // (Favourites, Velvet Selection or a language), so the car's next / previous buttons work.
         override fun onSetMediaItems(s: MediaSession, c: MediaSession.ControllerInfo, items: MutableList<MediaItem>,
@@ -180,12 +268,16 @@ class PlaybackService : MediaLibraryService() {
 
     override fun onGetSession(controllerInfo: MediaSession.ControllerInfo) = session
 
+    // App swiped away: if the radio is paused (or nothing is loaded) close fully, so the notification goes too
+    // (some phones, e.g. Samsung Galaxy A14, otherwise keep it). While playing, it carries on as before.
     override fun onTaskRemoved(rootIntent: android.content.Intent?) {
-        if (!player.playWhenReady || player.mediaItemCount == 0) stopSelf()
+        val p = session.player
+        if (!p.playWhenReady || p.mediaItemCount == 0) { p.stop(); stopSelf() }
     }
 
     override fun onDestroy() {
         scope.cancel(); SleepTimer.pause = null
+        castPlayer?.setSessionAvailabilityListener(null); castPlayer?.release()
         session.release(); player.release()
         super.onDestroy()
     }
