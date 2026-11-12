@@ -326,8 +326,8 @@ window.STATIONS = [
   },
   {
     "id": "radiomacfast",
-    "name": "Radio Macfast",
-    "category": "online",
+    "name": "Radio Macfast 90.4",
+    "category": "fm",
     "streams": [
       "https://icecast.octosignals.com/radiomacfast"
     ]

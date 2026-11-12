@@ -36,10 +36,20 @@ window.STATIONS = [
   },
   {
     "id": "sooriyan-fm",
-    "name": "Sooriyan FM",
+    "name": "Sooriyan FM (Sri Lanka)",
     "category": "music",
     "streams": [
       "https://radio.lotustechnologieslk.net:8006/;stream.mp3"
+    ]
+  },
+  {
+    "id": "suryan-fm-chennai",
+    "name": "Suryan FM 93.5 (Chennai)",
+    "category": "music",
+    "streams": [
+      "http://radios.crabdance.com:8002/1",
+      "http://radios.crabdance.com:8002/2",
+      "http://radios.crabdance.com:8002/3"
     ]
   },
   {
