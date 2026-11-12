@@ -67,7 +67,7 @@ class ScreensTest {
             items(sts) { s -> StationRow(s, mapOf("fm" to "FM", "air" to "Akashvani", "online" to "Online")[s.category] ?: "",
                 s.id == "radiomango", s.id == "radiomalabar", playing, {}, {}) }
         }
-        MiniPlayer(now(playing), null, true, {}, {}, CastUi(true, false), {}) {}
+        MiniPlayer(now(playing), null, true, {}, {}, CastUi(true, false), {}, {}) {}
         BottomNav(0, 12) {}
     }
 
