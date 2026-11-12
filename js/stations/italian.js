@@ -57,7 +57,8 @@ window.STATIONS = [
     "streams": [
       "https://icecast.unitedradio.it/Virgin.mp3",
       "https://icy.unitedradio.it/Virgin.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rmc-radio-monte-carlo",
@@ -161,7 +162,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://classichitsradio.streamingmedia.it/play"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rtl-102-5-disco",
@@ -1339,4 +1341,4 @@ window.STATIONS = [
     "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-12T08:14Z";
+window.STATIONS_CHECKED = "2026-11-12T21:32Z";

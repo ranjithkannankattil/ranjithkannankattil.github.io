@@ -394,7 +394,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.gjfm.my.id/listen/gjfm/siaran"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "j-club-powerplay-hiphop-asia-dream-radio",
@@ -664,8 +665,7 @@ window.STATIONS = [
     "streams": [
       "https://howlingf-gecko.radioca.st/autodj"
     ],
-    "added": "2026-10-29",
-    "offline": true
+    "added": "2026-10-29"
   },
   {
     "id": "radio-gambaru",
@@ -722,4 +722,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-12T08:14Z";
+window.STATIONS_CHECKED = "2026-11-12T21:32Z";

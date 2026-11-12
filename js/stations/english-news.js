@@ -699,8 +699,7 @@ window.STATIONS = [
       "https://mainradiostreaming.zbc.co.zw:8020/national.mp3"
     ],
     "added": "2026-10-31",
-    "where": "Zimbabwe",
-    "offline": true
+    "where": "Zimbabwe"
   },
   {
     "id": "wbez-91-5-chicago-public-radio",
@@ -1411,6 +1410,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-12",
     "where": "Italy"
+  },
+  {
+    "id": "star-fm-95-5-cebu",
+    "name": "Star FM 95.5 Cebu",
+    "category": "world",
+    "streams": [
+      "https://stream.zeno.fm/60cb36c29heuv"
+    ],
+    "added": "2026-11-12",
+    "where": "The Philippines"
+  },
+  {
+    "id": "info-radio-ghana",
+    "name": "Info Radio Ghana",
+    "category": "world",
+    "streams": [
+      "https://stream.zeno.fm/ey34mac27vzuv"
+    ],
+    "added": "2026-11-12",
+    "where": "Ghana"
+  },
+  {
+    "id": "ckut-90-3-fm",
+    "name": "CKUT 90.3 FM",
+    "category": "canada",
+    "streams": [
+      "https://ckut.out.airtime.pro/ckut_a"
+    ],
+    "added": "2026-11-12",
+    "where": "Canada"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-12T08:14Z";
+window.STATIONS_CHECKED = "2026-11-12T21:32Z";

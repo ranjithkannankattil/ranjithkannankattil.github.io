@@ -16,8 +16,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://webtvstream.bhtelecom.ba/bh_radio1.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-m-plus",
@@ -269,7 +268,8 @@ window.STATIONS = [
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_bosanski_petrovac.m3u8"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "radio-bosanska-krupa",
@@ -389,4 +389,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-12T08:14Z";
+window.STATIONS_CHECKED = "2026-11-12T21:32Z";

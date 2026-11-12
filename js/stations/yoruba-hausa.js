@@ -99,7 +99,8 @@ window.STATIONS = [
       "https://stream-176.zeno.fm/mwam2yirv1pvv",
       "https://stream.zeno.fm/mwam2yirv1pvv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "crest-91-1-fm-ibadan",
@@ -156,4 +157,4 @@ window.STATIONS = [
     "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-12T08:14Z";
+window.STATIONS_CHECKED = "2026-11-12T21:32Z";

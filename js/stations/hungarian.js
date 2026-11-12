@@ -96,8 +96,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.phost.hu:8004/retro"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "jazzy-soul",
@@ -305,7 +304,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://slagerfm.netregator.hu:7813/slagerfm320.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "fm-103-9-a-rock",
@@ -764,8 +764,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.42netmedia.com:8443/sc_tamas"
     ],
-    "added": "2026-11-01",
-    "offline": true
+    "added": "2026-11-01"
   },
   {
     "id": "plusz-fm-nagyvarad",
@@ -1081,6 +1080,24 @@ window.STATIONS = [
       "https://radioteszmi.hu/radio"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "euphonic-moments-radio",
+    "name": "Euphonic Moments Radio",
+    "category": "music",
+    "streams": [
+      "https://radio.euphonicmoments.com/listen/euphonic-moments/Euphonicmoments_radio256kbps.mp3"
+    ],
+    "added": "2026-11-12"
+  },
+  {
+    "id": "lakihegy-radio",
+    "name": "Lakihegy Rádió",
+    "category": "music",
+    "streams": [
+      "https://lakihegyradio.hu/player/stream.php"
+    ],
+    "added": "2026-11-12"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-12T08:14Z";
+window.STATIONS_CHECKED = "2026-11-12T21:32Z";

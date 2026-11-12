@@ -40,8 +40,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiokaleva.digitacdn.net/radio/kaleva/master.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "yle-radio-suomi-hameenlinna",
@@ -112,8 +111,8 @@ window.STATIONS = [
     "name": "Yle Klassinen",
     "category": "music",
     "streams": [
-      "https://yleradiolive5.akamaized.net/hls/live/20000872/yleklassinen/master.m3u8",
-      "https://icecast.live.yle.fi/radio/YleKlassinen/icecast.audio"
+      "https://icecast.live.yle.fi/radio/YleKlassinen/icecast.audio",
+      "https://yleradiolive5.akamaized.net/hls/live/20000872/yleklassinen/master.m3u8"
     ]
   },
   {
@@ -396,7 +395,8 @@ window.STATIONS = [
     "streams": [
       "https://yleradiolive5.akamaized.net/hls/live/20000882/ylers-kajaani/256/variant.m3u8"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "radio-classic",
@@ -498,4 +498,4 @@ window.STATIONS = [
     "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-12T08:14Z";
+window.STATIONS_CHECKED = "2026-11-12T21:32Z";

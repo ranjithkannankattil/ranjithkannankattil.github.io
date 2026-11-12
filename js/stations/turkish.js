@@ -194,7 +194,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://icecast-rian.cdnvideo.ru/voicestm"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "101-4-hatay-tempo-fm",
@@ -1290,7 +1291,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiotedu.com/rock"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "offline": true
   },
   {
     "id": "translation-of-the-quran-in-turkish",
@@ -1329,4 +1331,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-12T08:14Z";
+window.STATIONS_CHECKED = "2026-11-12T21:32Z";

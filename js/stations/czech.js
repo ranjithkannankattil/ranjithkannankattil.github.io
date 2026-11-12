@@ -1206,6 +1206,15 @@ window.STATIONS = [
       "https://server25530.streamplus.de/;stream.mp3"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "rock-radio-legend-of-rock",
+    "name": "Rock Radio - Legend of Rock",
+    "category": "music",
+    "streams": [
+      "https://ice2.radia.cz/legends_of_rock_128.aac"
+    ],
+    "added": "2026-11-12"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-12T08:14Z";
+window.STATIONS_CHECKED = "2026-11-12T21:32Z";

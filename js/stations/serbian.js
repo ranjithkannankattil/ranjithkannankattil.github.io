@@ -1077,7 +1077,8 @@ window.STATIONS = [
     "streams": [
       "https://mpc2.mediacp.eu:8282/sremac"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "offline": true
   },
   {
     "id": "rsg-party-time",
@@ -1314,4 +1315,4 @@ window.STATIONS = [
     "added": "2026-11-12"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-12T08:14Z";
+window.STATIONS_CHECKED = "2026-11-12T21:32Z";

@@ -64,7 +64,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://icecast-rian.cdnvideo.ru/voicerus"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-3",
@@ -96,7 +97,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://icecast-vgtrk.cdnvideo.ru/vestifm_aac_32kbps"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-6",
@@ -202,7 +204,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast-vgtrk.cdnvideo.ru/vestifm_mp3_64kbps"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-11",
@@ -540,7 +543,8 @@ window.STATIONS = [
     "streams": [
       "https://icecast-mirtv.cdnvideo.ru/radio_mir_256"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "radio-exterior-de-espana",
@@ -1008,8 +1012,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.brokenbeats.net/tune"
     ],
-    "added": "2026-11-03",
-    "offline": true
+    "added": "2026-11-03"
   },
   {
     "id": "station-39",
@@ -1327,4 +1330,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-12T08:14Z";
+window.STATIONS_CHECKED = "2026-11-12T21:32Z";

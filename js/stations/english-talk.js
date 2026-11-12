@@ -787,8 +787,7 @@ window.STATIONS = [
       "https://mainradiostreaming.zbc.co.zw:8020/national.mp3"
     ],
     "added": "2026-10-30",
-    "where": "Zimbabwe",
-    "offline": true
+    "where": "Zimbabwe"
   },
   {
     "id": "radio-sahar",
@@ -838,7 +837,8 @@ window.STATIONS = [
       "https://stream.zeno.fm/mwam2yirv1pvv"
     ],
     "added": "2026-10-31",
-    "where": "Nigeria"
+    "where": "Nigeria",
+    "offline": true
   },
   {
     "id": "bfm-89-9-malaysia",
@@ -1278,8 +1278,7 @@ window.STATIONS = [
       "https://ice42.securenetsystems.net/TAMBRIN"
     ],
     "added": "2026-11-07",
-    "where": "Trinidad And Tobago",
-    "offline": true
+    "where": "Trinidad And Tobago"
   },
   {
     "id": "ghana-waves-radio",
@@ -1482,4 +1481,4 @@ window.STATIONS = [
     "where": "Saudi Arabia"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-12T08:14Z";
+window.STATIONS_CHECKED = "2026-11-12T21:32Z";

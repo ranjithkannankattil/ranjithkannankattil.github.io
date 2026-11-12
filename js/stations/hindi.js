@@ -64,7 +64,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://www.desizoneradio.com/relay3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "big-92-7-fm",
@@ -543,7 +544,8 @@ window.STATIONS = [
     "streams": [
       "https://www.desizoneradio.com/relay2"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "offline": true
   },
   {
     "id": "arijitsingh",
@@ -1330,4 +1332,4 @@ window.STATIONS = [
     "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-12T08:14Z";
+window.STATIONS_CHECKED = "2026-11-12T21:32Z";
