@@ -74,7 +74,8 @@ private val Pad = 24.dp
 /** Small letter-spaced capitals, the label style used across every page. */
 @Composable
 fun Label(text: String, color: Color = Soft, size: Int = 10, modifier: Modifier = Modifier, weight: FontWeight = FontWeight.Medium) =
-    Text(text.uppercase(), modifier, fontSize = size.sp, letterSpacing = (size * 0.24f).sp, fontWeight = weight, color = color,
+    // 2 points larger than the design's sizes and a third less spacing: easier to read, same width
+    Text(text.uppercase(), modifier, fontSize = (size + 2).sp, letterSpacing = ((size + 2) * 0.15f).sp, fontWeight = weight, color = color,
         maxLines = 1, overflow = TextOverflow.Ellipsis)
 
 @Composable
