@@ -36,8 +36,13 @@ class ScreensTest {
         Station("homefm", "Home FM", "fm", listOf("x"), "malayalam"),
         Station("hit967", "Hit 96.7", "fm", listOf("x"), "malayalam", geo = "AE"),
         Station("airananthapuri", "AIR Ananthapuri", "air", listOf("x"), "malayalam"),
-        Station("clubfm", "Club FM 94.3 Thrissur (a very long station name)", "fm", listOf("x"), "malayalam"),
-        Station("old", "Radio Old Songs", "online", listOf("x"), "malayalam", offline = true))
+        Station("clubfm", "Club FM 94.3", "fm", listOf("x"), "malayalam"),
+        Station("radiosuno", "Radio Suno", "fm", listOf("x"), "malayalam"),
+        Station("sunobahrain", "Suno Bahrain", "fm", listOf("x"), "malayalam"),
+        Station("radiolemon", "Radio Lemon UK", "online", listOf("x"), "malayalam"),
+        Station("akashvanikochi", "AIR Kochi FM", "air", listOf("x"), "malayalam"))
+    // the real catalogue size, so the search screen reads "Search all 5,3xx stations"
+    private val every = sts + (1..5310).map { Station("s$it", "Station $it", "online", listOf("x"), "other") }
 
     private fun now(playing: Boolean = true, song: Boolean = true) = NowState(null).apply {
         this.playing = playing; id = "st|malayalam:radiomalabar"
@@ -83,7 +88,7 @@ class ScreensTest {
     @Test fun player_paused_nosong() = shot("7-player-paused", false) { Player(false, song = false) }
     @Test @Config(qualifiers = "w360dp-h640dp-xxhdpi") fun player_small() = shot("8-player-360x640", false) { Player(true) }
     @Test fun search_empty() = shot("9-search", false) {
-        SearchContent(sts, "Malayalam", { "Malayalam" }, emptySet(), null, false, { _, _, _ -> }, {}, {}, {}, {}, null) {} }
+        SearchContent(every, "Malayalam", { "Malayalam" }, emptySet(), null, false, { _, _, _ -> }, {}, {}, {}, {}, null) {} }
     @Test fun search_dark() = shot("10-search-dark", true) {
         SearchContent(sts, "Malayalam", { "Malayalam" }, setOf("malayalam:radiomango"), null, false, { _, _, _ -> }, {}, {}, {}, {}, "radio") {} }
 }
