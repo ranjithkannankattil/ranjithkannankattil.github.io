@@ -419,6 +419,15 @@ window.STATIONS = [
     ]
   },
   {
+    "id": "planetfmnz",
+    "name": "Planet FM 104.6 (NZ)",
+    "category": "fm",
+    "streams": [
+      "https://live.accessmedia.nz/PlanetFM.stream_aac/playlist.m3u8",
+      "https://live.accessmedia.nz/PlanetFM.stream/playlist.m3u8"
+    ]
+  },
+  {
     "id": "ashrayafm",
     "name": "Ashraya FM",
     "category": "online",
