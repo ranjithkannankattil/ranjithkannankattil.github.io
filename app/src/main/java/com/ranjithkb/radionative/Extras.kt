@@ -98,8 +98,8 @@ suspend fun shareSongCard(ctx: Context, song: String, artist: String, station: S
         else "Listening to $song${if (artist.isNotBlank()) " by $artist" else ""} on $station · Radio Velvet\n$link"
     val send = Intent(Intent.ACTION_SEND).setType("image/png").putExtra(Intent.EXTRA_STREAM, uri)
         .putExtra(Intent.EXTRA_TEXT, caption).putExtra(Intent.EXTRA_SUBJECT, "Radio Velvet")
-        .setClipData(android.content.ClipData.newRawUri("card", uri))
         .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        .apply { clipData = android.content.ClipData.newRawUri("card", uri) }
     ctx.startActivity(Intent.createChooser(send, "Share").addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION))
 }
 
