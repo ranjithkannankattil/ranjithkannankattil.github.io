@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ranjithkb.radionative.ScreensTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-11-12T23:07:28" hostname="runnervmwuk1x" time="12.976">
+  <properties/>
+  <testcase name="search_dark" classname="com.ranjithkb.radionative.ScreensTest" time="10.434"/>
+  <testcase name="player_light" classname="com.ranjithkb.radionative.ScreensTest" time="0.373"/>
+  <testcase name="player_small" classname="com.ranjithkb.radionative.ScreensTest" time="0.243"/>
+  <testcase name="player_paused_nosong" classname="com.ranjithkb.radionative.ScreensTest" time="0.235"/>
+  <testcase name="search_empty" classname="com.ranjithkb.radionative.ScreensTest" time="0.224"/>
+  <testcase name="stations_dark" classname="com.ranjithkb.radionative.ScreensTest" time="0.432"/>
+  <testcase name="player_dark" classname="com.ranjithkb.radionative.ScreensTest" time="0.207"/>
+  <testcase name="stations_paused" classname="com.ranjithkb.radionative.ScreensTest" time="0.313"/>
+  <testcase name="stations_light" classname="com.ranjithkb.radionative.ScreensTest" time="0.265"/>
+  <testcase name="stations_small" classname="com.ranjithkb.radionative.ScreensTest" time="0.249"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
