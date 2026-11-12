@@ -787,7 +787,8 @@ window.STATIONS = [
       "https://mainradiostreaming.zbc.co.zw:8020/national.mp3"
     ],
     "added": "2026-10-30",
-    "where": "Zimbabwe"
+    "where": "Zimbabwe",
+    "offline": true
   },
   {
     "id": "radio-sahar",
@@ -1137,8 +1138,7 @@ window.STATIONS = [
       "https://live.kwikmotion.com/qmcqbsradiolive/qbsradio/playlist.m3u8"
     ],
     "added": "2026-11-05",
-    "where": "Qatar",
-    "offline": true
+    "where": "Qatar"
   },
   {
     "id": "britcom-3-pumpkin-fm",
@@ -1278,7 +1278,8 @@ window.STATIONS = [
       "https://ice42.securenetsystems.net/TAMBRIN"
     ],
     "added": "2026-11-07",
-    "where": "Trinidad And Tobago"
+    "where": "Trinidad And Tobago",
+    "offline": true
   },
   {
     "id": "ghana-waves-radio",
@@ -1481,4 +1482,4 @@ window.STATIONS = [
     "where": "Saudi Arabia"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-11T07:40Z";
+window.STATIONS_CHECKED = "2026-11-12T08:14Z";

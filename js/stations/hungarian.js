@@ -96,7 +96,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.phost.hu:8004/retro"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "jazzy-soul",
@@ -763,7 +764,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.42netmedia.com:8443/sc_tamas"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "offline": true
   },
   {
     "id": "plusz-fm-nagyvarad",
@@ -1081,4 +1083,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-11T07:40Z";
+window.STATIONS_CHECKED = "2026-11-12T08:14Z";

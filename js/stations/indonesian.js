@@ -24,7 +24,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream-ssl.arenastreaming.com:8000/jakarta"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "dengerin-musik-indonesia",
@@ -72,7 +73,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radiojar.com/7csmg90fuqruv"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "campursari-fm-jakarta",
@@ -1247,6 +1249,24 @@ window.STATIONS = [
       "https://live.harleyradioshow.com/listen/harleyradio/harleyradio"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "singosari-fm-brebes-official-station",
+    "name": "Singosari Fm Brebes (Official Station)",
+    "category": "music",
+    "streams": [
+      "https://s2.free-shoutcast.com/stream/18096"
+    ],
+    "added": "2026-11-12"
+  },
+  {
+    "id": "onix-radio",
+    "name": "Onix Radio",
+    "category": "music",
+    "streams": [
+      "https://pu.klikhost.com/proxy/onixradio/stream"
+    ],
+    "added": "2026-11-12"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-11T07:40Z";
+window.STATIONS_CHECKED = "2026-11-12T08:14Z";

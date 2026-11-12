@@ -64,8 +64,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://www.desizoneradio.com/relay3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "big-92-7-fm",
@@ -544,8 +543,7 @@ window.STATIONS = [
     "streams": [
       "https://www.desizoneradio.com/relay2"
     ],
-    "added": "2026-10-26",
-    "offline": true
+    "added": "2026-10-26"
   },
   {
     "id": "arijitsingh",
@@ -1122,8 +1120,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio212/chunklist.m3u8"
     ],
-    "added": "2026-11-05",
-    "offline": true
+    "added": "2026-11-05"
   },
   {
     "id": "retrobollywood",
@@ -1333,4 +1330,4 @@ window.STATIONS = [
     "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-11T07:40Z";
+window.STATIONS_CHECKED = "2026-11-12T08:14Z";

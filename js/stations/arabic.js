@@ -323,9 +323,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.damasradio.fm/radio"
-    ],
-    "offline": true,
-    "hidden": true
+    ]
   },
   {
     "id": "radio-manarat",
@@ -1327,4 +1325,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-11T07:40Z";
+window.STATIONS_CHECKED = "2026-11-12T08:14Z";

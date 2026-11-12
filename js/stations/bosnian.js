@@ -16,7 +16,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://webtvstream.bhtelecom.ba/bh_radio1.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-m-plus",
@@ -144,8 +145,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radiomajevica.com:7520/live"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-tk",
@@ -192,8 +192,8 @@ window.STATIONS = [
     "name": "Radio Slobodna Evropa",
     "category": "music",
     "streams": [
-      "https://n11.radiojar.com/bugesa4nn3quv?rj-ttl=5&rj-tok=AAABihgJBEQA_ptijcBtD6_jYw",
-      "https://n08.radiojar.com/bugesa4nn3quv?rj-ttl=5&rj-tok=AAABikFH4NsAib8tua7OjeefLg"
+      "https://n08.radiojar.com/bugesa4nn3quv?rj-ttl=5&rj-tok=AAABikFH4NsAib8tua7OjeefLg",
+      "https://n11.radiojar.com/bugesa4nn3quv?rj-ttl=5&rj-tok=AAABihgJBEQA_ptijcBtD6_jYw"
     ]
   },
   {
@@ -389,4 +389,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-11T07:40Z";
+window.STATIONS_CHECKED = "2026-11-12T08:14Z";

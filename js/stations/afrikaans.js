@@ -205,6 +205,15 @@ window.STATIONS = [
       "https://c32.radioboss.fm:8899/stream"
     ],
     "added": "2026-11-05"
+  },
+  {
+    "id": "hits-1-mallorca",
+    "name": "Hits 1 Mallorca",
+    "category": "music",
+    "streams": [
+      "https://radio7.pro-fhi.net/radio/9006/hits1ibiza"
+    ],
+    "added": "2026-11-12"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-11T07:40Z";
+window.STATIONS_CHECKED = "2026-11-12T08:14Z";

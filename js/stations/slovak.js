@@ -376,8 +376,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.slagr-radio.cz/pisnicka"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "radio-expres-2",
@@ -422,9 +421,7 @@ window.STATIONS = [
     "streams": [
       "https://mpc2.mediacp.eu:8200/rebecaweb"
     ],
-    "added": "2026-10-24",
-    "offline": true,
-    "hidden": true
+    "added": "2026-10-24"
   },
   {
     "id": "radio-viva-metropol",
@@ -553,4 +550,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-11T07:40Z";
+window.STATIONS_CHECKED = "2026-11-12T08:14Z";

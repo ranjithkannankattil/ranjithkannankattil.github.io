@@ -505,6 +505,15 @@ window.STATIONS = [
       "https://stream1.radiomfk.dk/radiomfk"
     ],
     "added": "2026-11-11"
+  },
+  {
+    "id": "dr-p6-beat",
+    "name": "DR P6 BEAT",
+    "category": "music",
+    "streams": [
+      "https://drliveradio2.akamaized.net/hls/live/2118698/p6/masterab.m3u8"
+    ],
+    "added": "2026-11-12"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-11T07:40Z";
+window.STATIONS_CHECKED = "2026-11-12T08:14Z";

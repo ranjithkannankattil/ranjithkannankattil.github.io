@@ -72,8 +72,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://whmsonic.radio.gov.pk:8026/relay?type=http&nocache=9"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "universal-health-radio",
@@ -137,8 +136,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://whmsonic.radio.gov.pk:8076/relay?type=http&nocache=9"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-pakistan-bahawalpur",
@@ -290,4 +288,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-11T07:40Z";
+window.STATIONS_CHECKED = "2026-11-12T08:14Z";

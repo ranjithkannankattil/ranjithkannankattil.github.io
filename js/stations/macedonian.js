@@ -195,6 +195,15 @@ window.STATIONS = [
       "https://stream.radioplus.mu:8000/radio.mp3"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "play-radio",
+    "name": "Play Radio",
+    "category": "music",
+    "streams": [
+      "https://live.playfm.mk:8046/live"
+    ],
+    "added": "2026-11-12"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-11T07:40Z";
+window.STATIONS_CHECKED = "2026-11-12T08:14Z";

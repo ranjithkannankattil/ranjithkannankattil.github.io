@@ -233,7 +233,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.brokenbeats.net/tune"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-shanson",
@@ -241,7 +242,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast.brg.ua/newshanson_main_public_mp3_hq"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radivo",
@@ -1098,4 +1100,4 @@ window.STATIONS = [
     "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-11T07:40Z";
+window.STATIONS_CHECKED = "2026-11-12T08:14Z";

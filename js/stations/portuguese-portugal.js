@@ -92,7 +92,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "m80-radio-ballads",
@@ -277,8 +278,8 @@ window.STATIONS = [
     "name": "Antena 2",
     "category": "music",
     "streams": [
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8",
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR",
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8"
     ]
   },
   {
@@ -357,7 +358,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -501,8 +503,7 @@ window.STATIONS = [
     "streams": [
       "https://ecmanager4.pro-fhi.net:1540/stream"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "metalon-the-heavy",
@@ -1241,7 +1242,8 @@ window.STATIONS = [
     "streams": [
       "https://centova.radio.com.pt/proxy/037?mp=/stream"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "offline": true
   },
   {
     "id": "radiofutura-pt",
@@ -1334,4 +1336,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-11T07:40Z";
+window.STATIONS_CHECKED = "2026-11-12T08:14Z";

@@ -710,6 +710,33 @@ window.STATIONS = [
       "https://slusaj.hr:10445/stream?type=http&nocache=634"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "radio-tvornica-zagreb",
+    "name": "Radio Tvornica Zagreb",
+    "category": "music",
+    "streams": [
+      "https://cast5.asurahosting.com/proxy/tvornica_main/stream"
+    ],
+    "added": "2026-11-12"
+  },
+  {
+    "id": "radio-dalmacija",
+    "name": "Radio Dalmacija",
+    "category": "music",
+    "streams": [
+      "https://shoutcast.pondi.hr:9000/;stream/1"
+    ],
+    "added": "2026-11-12"
+  },
+  {
+    "id": "radio-imotski",
+    "name": "Radio Imotski",
+    "category": "music",
+    "streams": [
+      "https://radioimotski.radioca.st/stream"
+    ],
+    "added": "2026-11-12"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-11T07:40Z";
+window.STATIONS_CHECKED = "2026-11-12T08:14Z";

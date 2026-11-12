@@ -699,7 +699,8 @@ window.STATIONS = [
       "https://mainradiostreaming.zbc.co.zw:8020/national.mp3"
     ],
     "added": "2026-10-31",
-    "where": "Zimbabwe"
+    "where": "Zimbabwe",
+    "offline": true
   },
   {
     "id": "wbez-91-5-chicago-public-radio",
@@ -969,8 +970,7 @@ window.STATIONS = [
       "https://live.kwikmotion.com/qmcqbsradiolive/qbsradio/playlist.m3u8"
     ],
     "added": "2026-11-05",
-    "where": "Qatar",
-    "offline": true
+    "where": "Qatar"
   },
   {
     "id": "6pr-perth-882-am",
@@ -1381,6 +1381,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-11",
     "where": "Canada"
+  },
+  {
+    "id": "kpub-npr-arizona",
+    "name": "KPUB NPR Arizona",
+    "category": "us",
+    "streams": [
+      "https://knau.streamguys1.com/kpub-mp3"
+    ],
+    "added": "2026-11-12",
+    "where": "US"
+  },
+  {
+    "id": "702-johannesburg",
+    "name": "702 Johannesburg",
+    "category": "world",
+    "streams": [
+      "https://28573.live.streamtheworld.com/FM702_SC"
+    ],
+    "added": "2026-11-12",
+    "where": "South Africa"
+  },
+  {
+    "id": "radio-stella-toscana",
+    "name": "Radio Stella Toscana",
+    "category": "world",
+    "streams": [
+      "https://stream4.xdevel.com/audio0s975906-620/stream/icecast.audio"
+    ],
+    "added": "2026-11-12",
+    "where": "Italy"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-11T07:40Z";
+window.STATIONS_CHECKED = "2026-11-12T08:14Z";

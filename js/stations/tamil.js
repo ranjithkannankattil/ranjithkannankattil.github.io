@@ -256,8 +256,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://psrlive4.listenon.in/mohan?station=mohanradio"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "fm-gold-tamil",
@@ -883,8 +882,7 @@ window.STATIONS = [
     "streams": [
       "https://psrlive2.listenon.in/ir?ah=0e81749e37789e5fb8c290926ce87e3f"
     ],
-    "added": "2026-11-01",
-    "offline": true
+    "added": "2026-11-01"
   },
   {
     "id": "kannadasan-radio",
@@ -893,8 +891,7 @@ window.STATIONS = [
     "streams": [
       "https://psrlive2.listenon.in/kavi?station=kaviyarasarradio"
     ],
-    "added": "2026-11-01",
-    "offline": true
+    "added": "2026-11-01"
   },
   {
     "id": "isaiyaruvi-fm",
@@ -1320,4 +1317,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-11T07:40Z";
+window.STATIONS_CHECKED = "2026-11-12T08:14Z";

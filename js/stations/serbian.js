@@ -374,8 +374,7 @@ window.STATIONS = [
     "streams": [
       "https://edge9.pink.rs/rockstream"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "station-2",
@@ -1286,6 +1285,33 @@ window.STATIONS = [
       "https://mpc2.mediacp.eu:8350/stream"
     ],
     "added": "2026-11-10"
+  },
+  {
+    "id": "plus-radio-rock",
+    "name": "Plus Radio Rock",
+    "category": "music",
+    "streams": [
+      "https://samcloud.spacial.com/api/listen?sid=137873&rid=292677&f=aac,any&br=64000"
+    ],
+    "added": "2026-11-12"
+  },
+  {
+    "id": "radio-s-trap-rap",
+    "name": "Radio S Trap & Rap",
+    "category": "music",
+    "streams": [
+      "https://stream.radios.rs:9030/stream"
+    ],
+    "added": "2026-11-12"
+  },
+  {
+    "id": "radio-s-modern-classic",
+    "name": "Radio S Modern Classic",
+    "category": "music",
+    "streams": [
+      "https://stream.radios.rs:9072/stream"
+    ],
+    "added": "2026-11-12"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-11T07:40Z";
+window.STATIONS_CHECKED = "2026-11-12T08:14Z";

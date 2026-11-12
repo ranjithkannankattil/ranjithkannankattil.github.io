@@ -80,7 +80,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/unwq3jdyhmbuv"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "a-f-r-o-505-by-mx2",
@@ -205,4 +206,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-11T07:40Z";
+window.STATIONS_CHECKED = "2026-11-12T08:14Z";

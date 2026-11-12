@@ -434,7 +434,8 @@ window.STATIONS = [
       "https://stream.dxbh.net/main_mp3"
     ],
     "added": "2026-10-24",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "basco-radio-93-3-studio-2",
@@ -570,6 +571,15 @@ window.STATIONS = [
       "https://listen.smilemediaph.com/listen/zexfm/radio.mp3"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "filipino-music-central",
+    "name": "Filipino Music Central",
+    "category": "music",
+    "streams": [
+      "https://stream.zeno.fm/yqkru9yv3yzuv"
+    ],
+    "added": "2026-11-12"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-11T07:40Z";
+window.STATIONS_CHECKED = "2026-11-12T08:14Z";
