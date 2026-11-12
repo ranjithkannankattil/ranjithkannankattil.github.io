@@ -189,7 +189,7 @@ private fun highlighted(name: String, q: String) = buildAnnotatedString {
 /** Station, song and the big play button on top; ♡ ⏮ ⏭ Cast below (✕ appears only while paused). Swipe to change station. */
 @Composable
 fun MiniPlayer(now: NowState, c: androidx.media3.session.MediaController?, isFav: Boolean, onFav: () -> Unit, onClose: () -> Unit,
-               cast: CastUi, onCast: () -> Unit, open: () -> Unit) {
+               cast: CastUi, onCast: () -> Unit, onSleep: () -> Unit, open: () -> Unit) {
     var drag by remember { mutableFloatStateOf(0f) }
     val station = now.md.station?.toString() ?: ""
     val song = now.md.title?.toString() ?: ""
@@ -233,6 +233,13 @@ fun MiniPlayer(now: NowState, c: androidx.media3.session.MediaController?, isFav
                     Icon(Icons.Filled.SkipPrevious, "Previous station", Modifier.size(34.dp), tint = BarIcon) }
                 Cell("Next station", { c?.seekToNextMediaItem() }) {
                     Icon(Icons.Filled.SkipNext, "Next station", Modifier.size(34.dp), tint = BarIcon) }
+                val sleepOn = SleepTimer.at > 0
+                Cell(if (sleepOn) "Sleep timer on" else "Sleep timer", onSleep) {
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Icon(painterResource(R.drawable.ic_sleep), if (sleepOn) "Sleep timer on" else "Sleep timer", Modifier.size(26.dp),
+                            tint = if (sleepOn) GoldC else BarIcon)
+                        if (sleepOn) Text(sleepLeft(), color = GoldC, fontSize = 11.sp, lineHeight = 12.sp)
+                    } }
                 if (cast.available) Cell(if (cast.connected) "Casting: change or stop" else "Cast to a TV or speaker", onCast) {
                     Icon(if (cast.connected) Icons.Filled.CastConnected else Icons.Filled.Cast,
                         if (cast.connected) "Casting" else "Cast", Modifier.size(27.dp), tint = if (cast.connected) GoldC else BarIcon) }

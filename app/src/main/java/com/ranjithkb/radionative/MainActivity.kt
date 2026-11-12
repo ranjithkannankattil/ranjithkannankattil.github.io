@@ -253,6 +253,8 @@ fun App(c: MediaController?) {
     fun go(t: Int) { tab = t; prefs.edit().putInt("tab", t).apply() }
     var az by remember { mutableStateOf(prefs.getBoolean("az", true)) }
     var search by remember { mutableStateOf(false) }
+    var barSleep by remember { mutableStateOf(false) }
+    if (barSleep) SleepDialog { barSleep = false }
     val cast = rememberCast()
     val favKeys = favList.map { it.key }.toSet()
     // ✕ (shown only while paused): stop, clear and remove the notification
@@ -332,7 +334,7 @@ fun App(c: MediaController?) {
         if (now.id != null) {
             val key = now.id?.removePrefix("st|")
             MiniPlayer(now, c, isFav = favList.any { it.key == key }, onFav = { toggleFavKey(key) }, onClose = { closeAll() },
-                cast = cast, onCast = { Cast.open(ctx, Theme.dark) }) { full = true }
+                cast = cast, onCast = { Cast.open(ctx, Theme.dark) }, onSleep = { barSleep = true }) { full = true }
         }
         BottomNav(tab, favList.size, ::go)
     }
