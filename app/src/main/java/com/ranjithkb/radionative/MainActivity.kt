@@ -644,7 +644,8 @@ fun InfoTab(languages: Int, update: Update?, onSignIn: () -> Unit, onSignOut: ()
         }
         item {
             Section("Credits") {
-                Text("Logo by Jai Sachith Chittilapilly")
+                TextButton({ openUrl(ctx, "https://www.facebook.com/share/1CFLUukqxQ/") }, contentPadding = PaddingValues(0.dp)) {
+                    Text("Logo by Jai Sachith Chittilapilly", color = Accent) }
             }
         }
         item {
