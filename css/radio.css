@@ -577,3 +577,7 @@ body[data-section="radio"] .lq-menu button:hover{ background:var(--accent-soft);
   .radio-card .hit{ flex-direction:row; align-items:center; gap:.8rem; padding:.55rem 3.4rem .55rem .9rem; }
   .radio-card .fav{ top:50%; transform:translateY(-50%); }
 }
+/* A–Z switch at the end of the category row; "other languages" heading in search results */
+nav.radio-chips button.az{ margin-left:auto; color:var(--accent); font-weight:600; }
+nav.radio-chips button.az[aria-pressed="false"]{ color:var(--ink-soft); }
+.radio-more{ grid-column:1/-1; background:var(--paper); padding:1rem 1rem .4rem; font-family:var(--f-display); font-weight:600; font-size:.95rem; color:var(--accent); }

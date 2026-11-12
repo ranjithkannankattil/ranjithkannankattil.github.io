@@ -291,7 +291,18 @@
       b.onclick = () => { cat = k; renderChips(); render(); };
       chips.append(b);
     }
+    // A–Z: alphabetical order in every list except the Velvet Selection (hand-picked order); remembered
+    if (col.id !== "picks") {
+      const az = document.createElement("button");
+      az.className = "az"; az.setAttribute("aria-pressed", sortAZ);
+      az.setAttribute("aria-label", sortAZ ? "Show in the usual order" : "Sort A to Z");
+      az.textContent = (sortAZ ? "✓ " : "") + "A–Z";
+      az.onclick = () => { sortAZ = !sortAZ; try { localStorage.setItem("mr-az", sortAZ ? "1" : "0"); } catch { /* fine */ } renderChips(); render(); };
+      chips.append(az);
+    }
   }
+  let sortAZ = (() => { try { return localStorage.getItem("mr-az") !== "0"; } catch { return true; } })();
+  const byName = (a, b) => a.name.replace(/^[("' ]+/, "").localeCompare(b.name.replace(/^[("' ]+/, ""), undefined, { sensitivity: "base" });
 
   function visibleList() {
     const term = q.value.trim().toLowerCase();
@@ -300,6 +311,7 @@
       (show === "all" || (show === "down") === !!s.offline) &&
       (!term || s.name.toLowerCase().includes(term))
     );
+    if (sortAZ && col.id !== "picks") list.sort(byName);
     // stations that failed the latest check go to the bottom (order otherwise kept)
     list.sort((a, b) => (a.offline ? 1 : 0) - (b.offline ? 1 : 0));
     return list;
@@ -309,7 +321,43 @@
     if (view === "favs") { renderFavs(); return; }
     const list = visibleList();
     grid.innerHTML = "";
-    for (const s of list) {
+    for (const s of list) grid.append(card(s, list));
+    $("#count").textContent = `${list.length} station${list.length === 1 ? "" : "s"}` +
+      (show === "live" ? " · live now" : show === "down" ? " · not working today" : "");
+    $("#empty").hidden = list.length > 0;
+    otherLanguages(list.length);
+  }
+
+  // Search looks in every language, like the app: matches from the other languages follow this list's own
+  let everyLoaded = null;
+  async function otherLanguages(here) {
+    const term = q.value.trim().toLowerCase();
+    if (term.length < 2 || col.id === "all" || view === "favs") return;
+    if (!everyLoaded) {
+      everyLoaded = Promise.all(COLS.map((c) => stationsOf(c.id)));
+      await everyLoaded;
+      if (q.value.trim().toLowerCase() === term) render();
+      return;
+    }
+    const lists = await everyLoaded;
+    const more = [];
+    COLS.forEach((c, i) => {
+      if (c.id === col.id || !Array.isArray(lists[i])) return;
+      for (const st of lists[i]) if (!st.hidden && st.name.toLowerCase().includes(term)) more.push({ ...st, _c: c.id });
+    });
+    more.sort((a, b) => (a.offline ? 1 : 0) - (b.offline ? 1 : 0) || (b.name.toLowerCase().startsWith(term) ? 1 : 0) - (a.name.toLowerCase().startsWith(term) ? 1 : 0) || byName(a, b));
+    const shown = more.slice(0, 80);
+    if (!shown.length || q.value.trim().toLowerCase() !== term) return;
+    const h = document.createElement("li");
+    h.className = "radio-more";
+    h.textContent = here ? "In other languages" : "Found in other languages";
+    grid.append(h);
+    for (const s of shown) grid.append(card(s, shown));
+    $("#empty").hidden = true;
+    $("#count").textContent = `${here} here · ${more.length} in other languages`;
+  }
+
+  function card(s, list) {
       const li = document.createElement("li");
       li.className = "radio-card" + (isCur(s) ? " on" : "") + (s.offline ? " off" : "");
       li.dataset.id = s.id;
@@ -331,11 +379,7 @@
       if (isNew && !s.offline) li.querySelector(".nm").insertAdjacentHTML("beforeend", ' <span class="new-tag">New</span>');
       li.querySelector(".hit").onclick = () => (isCur(s) ? toggle() : play(s, list));
       li.querySelector(".fav").onclick = (e) => { e.stopPropagation(); toggleFav(key(s), s); };
-      grid.append(li);
-    }
-    $("#count").textContent = `${list.length} station${list.length === 1 ? "" : "s"}` +
-      (show === "live" ? " · live now" : show === "down" ? " · not working today" : "");
-    $("#empty").hidden = list.length > 0;
+      return li;
   }
 
   function renderStats() {
