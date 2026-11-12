@@ -539,3 +539,41 @@ body[data-section="radio"] .lq-menu button:hover{ background:var(--accent-soft);
   body[data-section="radio"]:has(.radio-player:not([hidden])){ padding-bottom:9rem; }
   body[data-section="radio"]:has(.radio-player.small:not([hidden])){ padding-bottom:6.5rem; }
 }
+
+/* ---- Radio Velvet, easy to read (Nov 2026): the same look as the app. Bigger serif station names, plain
+   readable lines under them, a velvet player bar with gold, and ✕ only while the radio is paused. ---- */
+.radio-title{ display:flex; align-items:center; gap:.7rem; }
+.radio-title .rv-mark{ width:56px; height:56px; flex:none; border-radius:14px; }
+.radio-card .hit{ min-height:76px; padding:.95rem 3.4rem .95rem 1rem; }
+.radio-card .nm{ font-family:var(--f-body); font-weight:600; font-size:1.22rem; line-height:1.25; letter-spacing:0; }
+.radio-card .sub{ font-family:var(--f-display); font-size:.86rem; letter-spacing:0; text-transform:none; color:var(--ink-soft); margin-top:.15rem; }
+.radio-card.on .nm{ color:var(--accent); }
+.radio-card .fav{ width:44px; height:44px; opacity:.75; }
+.radio-card .fav svg{ width:20px; height:20px; }
+@media (hover:none){ .radio-card .fav{ opacity:1; } }
+.radio-chips{ font-family:var(--f-display); font-size:.95rem; letter-spacing:0; text-transform:none; }
+.radio-chips button{ min-height:44px; }
+/* player bar: velvet, gold, cream play button with a gold ring */
+.radio-player{ background:#2A1424; color:#F1E9EE; }
+.radio-player .np-col{ color:#C9A86A; font-family:var(--f-display); font-size:.86rem; letter-spacing:0; text-transform:none; font-weight:500; }
+.radio-player .np-name{ font-family:var(--f-body); font-weight:600; font-size:1.18rem; }
+.radio-player .np-status{ font-family:var(--f-display); font-size:.8rem; letter-spacing:0; text-transform:none; color:#B9A8B4; }
+.np-play{ width:52px; height:52px; border:2px solid #C9A86A; background:#F0EDE6!important; }
+.np-play svg{ width:22px; height:22px; fill:#2A1424; }
+.np-fav[aria-pressed="true"] svg{ fill:#C9A86A; stroke:#C9A86A; }
+.radio-player .np-tile{ background:#3A1F33; color:#C9A86A; }
+/* ✕ only while paused, so a stray tap can't stop the radio */
+.radio-player.playing .np-close, .radio-player.loading .np-close{ display:none; }
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .radio-player{ background:#241520; }
+}
+:root[data-theme="dark"] .radio-player{ background:#241520; }
+/* one station per row on phones (like the app), wider cards on bigger screens; long names wrap instead of overflowing */
+.radio-grid{ grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr)); }
+.radio-card .nm{ white-space:normal; overflow-wrap:anywhere; }
+@media (max-width:600px){ .radio-grid{ grid-template-columns:1fr; } }
+@media (max-width:640px){
+  .radio-grid{ grid-template-columns:1fr; }
+  .radio-card .hit{ flex-direction:row; align-items:center; gap:.9rem; padding:.85rem 3.4rem .85rem 1rem; }
+  .radio-card .fav{ top:50%; transform:translateY(-50%); }
+}
