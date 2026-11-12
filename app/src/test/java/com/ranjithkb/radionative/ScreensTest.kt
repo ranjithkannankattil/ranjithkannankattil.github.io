@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.compose.ui.test.captureToImage
-import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.unit.sp
 import androidx.media3.common.MediaMetadata
@@ -28,7 +28,7 @@ import java.io.File
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 @Config(sdk = [34], qualifiers = "w390dp-h844dp-xxhdpi")
 class ScreensTest {
-    @get:Rule val rule = createComposeRule()
+    @get:Rule val rule = createAndroidComposeRule<androidx.activity.ComponentActivity>()
 
     private val sts = listOf(
         Station("radiomalabar", "Radio Malabar", "online", listOf("x"), "malayalam"),
@@ -48,11 +48,13 @@ class ScreensTest {
 
     private fun shot(name: String, dark: Boolean, content: @Composable () -> Unit) {
         Theme.dark = dark
-        rule.mainClock.autoAdvance = false
         rule.setContent { MaterialTheme(typography = PoppinsType) { Surface(Modifier.fillMaxSize(), color = Paper) { content() } } }
-        rule.mainClock.advanceTimeBy(1500)
+        rule.waitForIdle()
+        val root = rule.activity.window.decorView.rootView
+        val bmp = Bitmap.createBitmap(root.width, root.height, Bitmap.Config.ARGB_8888)
+        root.draw(android.graphics.Canvas(bmp))
         val dir = File("build/screens").apply { mkdirs() }
-        File(dir, "$name.png").outputStream().use { rule.onRoot().captureToImage().asAndroidBitmap().compress(Bitmap.CompressFormat.PNG, 100, it) }
+        File(dir, "$name.png").outputStream().use { bmp.compress(Bitmap.CompressFormat.PNG, 100, it) }
     }
 
     @Composable private fun Stations(playing: Boolean) = Column(Modifier.fillMaxSize()) {
