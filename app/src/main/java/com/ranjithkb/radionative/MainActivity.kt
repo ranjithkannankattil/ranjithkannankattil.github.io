@@ -66,13 +66,13 @@ import java.net.URL
 
 /** Follows the phone's dark mode: light paper by day, dark velvet (plum, black, gold) at night. */
 object Theme { var dark by mutableStateOf(false) }
-private val Paper get() = if (Theme.dark) Color(0xFF17101A) else Color(0xFFF0EDE6)
-private val Paper2 get() = if (Theme.dark) Color(0xFF21151F) else Color(0xFFE7E2D6)
-private val Ink get() = if (Theme.dark) Color(0xFFF1E9EE) else Color(0xFF1B1B1F)
-private val InkSoft get() = if (Theme.dark) Color(0xFFB9A8B4) else Color(0xFF4A4A4C)
-private val Accent get() = if (Theme.dark) Color(0xFFB0609C) else Color(0xFF6B2D5C)      // velvet plum
-private val AccentSoft get() = if (Theme.dark) Color(0xFF35202F) else Color(0xFFEEDFE8)
-private val Velvet get() = if (Theme.dark) Color(0xFF0D070B) else Color(0xFF2A1424)
+internal val Paper get() = if (Theme.dark) Color(0xFF140D12) else Color(0xFFF0EDE6)
+internal val Paper2 get() = if (Theme.dark) Color(0xFF241520) else Color(0xFFE7E2D6)
+internal val Ink get() = if (Theme.dark) Color(0xFFF1E9EE) else Color(0xFF2A1424)
+internal val InkSoft get() = if (Theme.dark) Color(0xFFC9BBC5) else Color(0xFF4A4A4C)
+internal val Accent get() = if (Theme.dark) Color(0xFFB0609C) else Color(0xFF6B2D5C)      // velvet plum
+internal val AccentSoft get() = if (Theme.dark) Color(0xFF35202F) else Color(0xFFEEDFE8)
+internal val Velvet get() = if (Theme.dark) Color(0xFF0D070B) else Color(0xFF2A1424)
 private val Gold = Color(0xFFC9A86A)
 
 /** Signed-in name (null = signed out) and a counter that bumps when favourites change from the account. */
@@ -251,14 +251,29 @@ fun App(c: MediaController?) {
     }
 
     fun go(t: Int) { tab = t; prefs.edit().putInt("tab", t).apply() }
+    var az by remember { mutableStateOf(prefs.getBoolean("az", true)) }
+    var search by remember { mutableStateOf(false) }
+    val cast = rememberCast()
+    val favKeys = favList.map { it.key }.toSet()
+    // ✕ (shown only while paused): stop, clear and remove the notification
+    fun closeAll() {
+        full = false
+        val ctl = c ?: return
+        try { ctl.sendCustomCommand(androidx.media3.session.SessionCommand(PlaybackService.CLOSE, Bundle.EMPTY), Bundle.EMPTY) }
+        catch (e: Exception) { SleepTimer.off(); ctl.stop(); ctl.clearMediaItems() }
+    }
+    fun toggleFavKey(key: String?) {
+        val st = favList.find { it.key == key } ?: stations.find { it.key == key }
+        if (st != null) { favs.toggle(st); refreshFavs() }
+        else if (key != null) scope.launch {
+            Repo.stations(ctx, key.substringBefore(':')).find { it.key == key }?.let { favs.toggle(it); refreshFavs() } }
+    }
     Column(Modifier.fillMaxSize().statusBarsPadding()) {
-        Column(Modifier.padding(start = 20.dp, top = 14.dp, bottom = 10.dp, end = 20.dp)) {
-            Text("Radio Velvet", fontSize = 26.sp, fontWeight = FontWeight.SemiBold, color = if (Theme.dark) Color(0xFFF1E9EE) else Velvet, letterSpacing = 0.2.sp)
-            Text("Elegant sounds, always free", fontSize = 13.sp, fontStyle = FontStyle.Italic, color = Accent, letterSpacing = 0.6.sp)
-        }
+        Header(onSearch = { search = true })
         update?.let { u ->
-            Row(Modifier.fillMaxWidth().background(AccentSoft).padding(16.dp, 8.dp), verticalAlignment = Alignment.CenterVertically) {
-                Text("Radio Velvet ${u.version} is out", Modifier.weight(1f), fontWeight = FontWeight.SemiBold)
+            Row(Modifier.fillMaxWidth().padding(top = 10.dp).background(AccentSoft).padding(start = 24.dp, end = 12.dp, top = 6.dp, bottom = 6.dp),
+                verticalAlignment = Alignment.CenterVertically) {
+                Text("Radio Velvet ${u.version} is out", Modifier.weight(1f), fontWeight = FontWeight.SemiBold, fontSize = 15.sp)
                 TextButton({ go(2) }) { Text("What's new") }
                 UpdateButton(u, "Update")
             }
@@ -267,75 +282,46 @@ fun App(c: MediaController?) {
             if (tab == 2) InfoTab(cols.size, update, onSignIn = { openUrl(ctx, Account.SIGN_IN_URL) },
                 onSignOut = { Account.signOut(ctx); Session.name = null })
             else if (tab == 0) {
-                val favKeys = favList.map { it.key }.toSet()
-                val shown = stations.filter { (cat == "all" || it.category == cat || (cat == "fav" && it.key in favKeys)) && (q.isBlank() || it.name.contains(q, true)) }
+                // A–Z in every list except the Velvet Selection (hand-picked order) and Favourites (your own order)
+                val shown = stations.filter { cat == "all" || it.category == cat || (cat == "fav" && it.key in favKeys) }
+                    .let { l -> if (az && colId != PICKS) l.sortedBy { it.name.trimStart('(', '"', '\'', ' ').lowercase() } else l }
                     .sortedBy { it.offline }
                 Column {
-                    // Where to listen: Velvet Selection first, then your recent languages, then every language
-                    val pillColors = FilterChipDefaults.filterChipColors(selectedContainerColor = Accent,
-                        selectedLabelColor = Color.White, selectedLeadingIconColor = Gold)
-                    LazyRow(Modifier.padding(top = 8.dp), contentPadding = PaddingValues(horizontal = 16.dp),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        item {
-                            FilterChip(colId == PICKS, { colId = PICKS }, { Text("Velvet Selection", fontWeight = FontWeight.SemiBold) },
-                                Modifier.heightIn(min = 44.dp), colors = pillColors,
-                                leadingIcon = { Icon(Icons.Filled.Star, null, Modifier.size(18.dp), tint = if (colId == PICKS) Gold else Accent) })
-                        }
-                        items((pinned + recent.filter { it !in pinned }).mapNotNull { id -> cols.find { it.id == id } }, key = { it.id }) { c ->
-                            LangPill(c.name, colId == c.id, c.id in pinned, onClick = { colId = c.id }, onLongClick = { pillMenu = c })
-                        }
-                        item {
-                            AssistChip({ pickLang = true }, { Text("All languages") }, Modifier.heightIn(min = 44.dp),
-                                leadingIcon = { Icon(Icons.Filled.Language, null, Modifier.size(18.dp), tint = Accent) })
-                        }
-                        // 🎲 Spin: a random working station from this list; press and hold for anywhere in the world
-                        item {
-                            SpinPill(onClick = {
-                                val pool = shown.filter { !it.offline }.ifEmpty { stations.filter { !it.offline } }
-                                pool.randomOrNull()?.let { play(pool, it) }
-                            }, onLongClick = { scope.launch {
-                                val c2 = cols.randomOrNull() ?: return@launch
-                                val pool = Repo.stations(ctx, c2.id).filter { !it.offline }
-                                pool.randomOrNull()?.let { android.widget.Toast.makeText(ctx, "Spinning the world: ${c2.name}", android.widget.Toast.LENGTH_SHORT).show(); play(pool, it) }
-                            } })
-                        }
-                    }
-                    OutlinedTextField(q, { q = it }, Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 6.dp),
-                        placeholder = { Text(when (colId) { PICKS -> "Search the Velvet Selection"; ALL -> "Search every station"; else -> "Search ${col?.name ?: ""} stations" }) },
-                        singleLine = true, leadingIcon = { Icon(Icons.Filled.Search, null) })
+                    val tabs = listOf(LangTab(PICKS, "Velvet Selection", star = true)) +
+                        (pinned + recent.filter { it !in pinned }).mapNotNull { id -> cols.find { it.id == id } }.map { LangTab(it.id, it.name, it.id in pinned) } +
+                        (if (colId == ALL) listOf(LangTab(ALL, "Every station")) else emptyList()) +
+                        listOf(LangTab("_langs", "All languages", icon = true))
+                    LangTabs(tabs, colId, onClick = { t -> if (t.id == "_langs") pickLang = true else colId = t.id },
+                        onLong = { t -> cols.find { it.id == t.id }?.let { pillMenu = it } })
                     val favHere = stations.count { it.key in favKeys }
-                    if (colId != PICKS && col != null && (col.cats.isNotEmpty() || favHere > 0)) LazyRow(contentPadding = PaddingValues(horizontal = 16.dp),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        item { FilterChip(cat == "all", { cat = "all" }, { Text("All ${stations.size}") }) }
-                        if (favHere > 0) item { FilterChip(cat == "fav", { cat = if (cat == "fav") "all" else "fav" }, { Text("Favourites ($favHere)") },
-                            leadingIcon = { Icon(Icons.Filled.Favorite, null, Modifier.size(16.dp), tint = Accent) }) }
-                        items(col.cats.filter { (k, _) -> stations.any { it.category == k } }) { (k, label) ->
-                            FilterChip(cat == k, { cat = k }, { Text("$label ${stations.count { it.category == k }}") })
-                        }
+                    val cats = buildList {
+                        add(Triple("all", "All", stations.size))
+                        if (favHere > 0) add(Triple("fav", "Favourites", favHere))
+                        col?.cats?.filter { (k, _) -> stations.any { it.category == k } }?.forEach { (k, label) -> add(Triple(k, label, -1)) }
                     }
-                    if (colId == PICKS) Text(if (!loading && stations.isEmpty()) "The Velvet Selection is coming soon." else
-                        "Hand-picked by the developer, from every language.", Modifier.padding(16.dp, 4.dp), color = InkSoft, fontSize = 14.sp)
+                    if (colId != PICKS) CatRow(cats, cat, { cat = it }, az, { az = !az; prefs.edit().putBoolean("az", az).apply() })
+                    else Text(if (!loading && stations.isEmpty()) "The Velvet Selection is coming soon." else
+                        "Hand-picked by the developer, from every language.", Modifier.padding(24.dp, 12.dp, 24.dp, 4.dp), color = InkSoft, fontSize = 15.sp)
                     if (loading) LinearProgressIndicator(Modifier.fillMaxWidth().padding(top = 8.dp), color = Accent)
-                    val fk = favList.map { it.key }.toSet()
                     val stState = rememberLazyListState()
-                    LaunchedEffect(colId, cat, q) { stState.scrollToItem(0) }
+                    LaunchedEffect(colId, cat, az) { stState.scrollToItem(0) }
                     Box(Modifier.fillMaxSize()) {
-LazyColumn(state = stState, contentPadding = PaddingValues(bottom = 72.dp)) {
-                        items(shown, key = { it.key }) { s ->
-                            StationRow(s, if (colId == PICKS || colId == ALL) langOf(s) else col?.cats?.find { it.first == s.category }?.second ?: "", s.key in fk,
-                                "st|${s.key}" == now.id, now.playing,
-                                onPlay = { play(shown, s) }, onFav = { favs.toggle(s); refreshFavs() })
+                        LazyColumn(state = stState, contentPadding = PaddingValues(bottom = 16.dp)) {
+                            items(shown, key = { it.key }) { s ->
+                                StationRow(s, if (colId == PICKS || colId == ALL) langOf(s) else col?.cats?.find { it.first == s.category }?.second ?: "",
+                                    s.key in favKeys, "st|${s.key}" == now.id, now.playing,
+                                    onPlay = { play(shown, s) }, onFav = { favs.toggle(s); refreshFavs() })
+                            }
                         }
+                        ScrollButtons(stState, Modifier.align(Alignment.BottomEnd))
                     }
-ScrollButtons(stState, Modifier.align(Alignment.BottomEnd))
-}
                 }
             } else {
                 Column {
-                    if (Session.name == null) Row(Modifier.fillMaxWidth().background(AccentSoft).padding(16.dp, 10.dp),
+                    if (Session.name == null) Row(Modifier.fillMaxWidth().padding(top = 10.dp).background(AccentSoft).padding(24.dp, 10.dp),
                         verticalAlignment = Alignment.CenterVertically) {
                         Text(if (Session.busy) "Signing in…" else "Sign in to keep your favourites on every device and on ranjithkb.com.",
-                            Modifier.weight(1f), fontSize = 14.sp)
+                            Modifier.weight(1f), fontSize = 15.sp)
                         if (!Session.busy) Button({ openUrl(ctx, Account.SIGN_IN_URL) }, Modifier.heightIn(min = 48.dp)) { Text("Sign in") }
                     }
                     FavsTab(favList, now, langOf = ::langOf, onPlay = { s -> play(favList, s) },
@@ -345,18 +331,10 @@ ScrollButtons(stState, Modifier.align(Alignment.BottomEnd))
         }
         if (now.id != null) {
             val key = now.id?.removePrefix("st|")
-            MiniPlayer(now, c, isFav = favList.any { it.key == key }, onFav = {
-                val st = favList.find { it.key == key } ?: stations.find { it.key == key }
-                if (st != null) { favs.toggle(st); refreshFavs() }
-                else if (key != null) scope.launch {
-                    Repo.stations(ctx, key.substringBefore(':')).find { it.key == key }?.let { favs.toggle(it); refreshFavs() } }
-            }) { full = true }
+            MiniPlayer(now, c, isFav = favList.any { it.key == key }, onFav = { toggleFavKey(key) }, onClose = { closeAll() },
+                cast = cast, onCast = { Cast.open(ctx, Theme.dark) }) { full = true }
         }
-        NavigationBar(containerColor = Paper2) {
-            NavigationBarItem(tab == 0, { go(0) }, { Icon(Icons.Filled.Radio, null) }, label = { Text("Stations") })
-            NavigationBarItem(tab == 1, { go(1) }, { Icon(Icons.Filled.Favorite, null) }, label = { Text("Favourites (${favList.size})") })
-            NavigationBarItem(tab == 2, { go(2) }, { Icon(Icons.Filled.Info, null) }, label = { Text("Info") })
-        }
+        BottomNav(tab, favList.size, ::go)
     }
     pillMenu?.let { c ->
         val isPin = c.id in pinned; val i = pinned.indexOf(c.id)
@@ -381,23 +359,25 @@ ScrollButtons(stState, Modifier.align(Alignment.BottomEnd))
     }
     if (arrangePins) ArrangePins(pinned.mapNotNull { id -> cols.find { it.id == id } }, onSave = { savePins(it) }) { arrangePins = false }
     if (pickLang) LanguageDialog(cols, colId, { if (it == PICKS && colId != PICKS) lastCol = colId; colId = it; go(0); pickLang = false }) { pickLang = false }
-    if (full) FullPlayer(now, c) { full = false }
-}
-
-@Composable
-fun StationRow(s: Station, sub: String, fav: Boolean, current: Boolean, playing: Boolean, onPlay: () -> Unit, onFav: () -> Unit) {
-    Row(Modifier.fillMaxWidth().background(if (current) AccentSoft else Color.Transparent).clickable(onClick = onPlay)
-        .padding(start = 16.dp, end = 4.dp, top = 8.dp, bottom = 8.dp), verticalAlignment = Alignment.CenterVertically) {
-        Tile(s.name, current && playing)
-        Column(Modifier.weight(1f).padding(start = 12.dp)) {
-            Text(s.name, fontWeight = FontWeight.SemiBold, maxLines = 1, overflow = TextOverflow.Ellipsis,
-                color = if (s.offline) InkSoft else Ink)
-            Text(listOf(sub, if (s.offline) "Not working today" else s.geoNote).filter { it.isNotBlank() }.joinToString(" · "),
-                fontSize = 13.sp, color = InkSoft, maxLines = 1)
-        }
-        IconButton(onFav, Modifier.size(48.dp)) {
-            Icon(if (fav) Icons.Filled.Favorite else Icons.Outlined.FavoriteBorder,
-                if (fav) "Remove from favourites" else "Add to favourites", tint = if (fav) Accent else InkSoft)
+    if (full) FullPlayer(now, c, cast, onCloseAll = { closeAll() }) { full = false }
+    if (search) {
+        var all by remember { mutableStateOf<List<Station>?>(null) }
+        LaunchedEffect(Unit) { all = Repo.allStations(ctx, cols.ifEmpty { Repo.collections(ctx) }) }
+        var voice by remember { mutableStateOf<String?>(null) }
+        val voiceIntent = remember { android.content.Intent(android.speech.RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
+            .putExtra(android.speech.RecognizerIntent.EXTRA_LANGUAGE_MODEL, android.speech.RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
+            .putExtra(android.speech.RecognizerIntent.EXTRA_PROMPT, "Say a station name") }
+        val canVoice = remember { voiceIntent.resolveActivity(ctx.packageManager) != null }
+        val listen = androidx.activity.compose.rememberLauncherForActivityResult(androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult()) { r ->
+            voice = r.data?.getStringArrayListExtra(android.speech.RecognizerIntent.EXTRA_RESULTS)?.firstOrNull() }
+        Dialog({ search = false }, DialogProperties(usePlatformDefaultWidth = false, decorFitsSystemWindows = false)) {
+            SearchContent(all, if (colId == PICKS || colId == ALL) "" else col?.name ?: "", ::langOf, favKeys, now.id, now.playing,
+                onPlay = { _, s, _ -> play((all ?: emptyList()).filter { it.col == s.col }, s); search = false },
+                onFav = { favs.toggle(it); refreshFavs() },
+                onPicks = { if (colId != PICKS) lastCol = colId; colId = PICKS; go(0); search = false },
+                onSurprise = { (all ?: emptyList()).filter { !it.offline }.randomOrNull()?.let { s ->
+                    play((all ?: emptyList()).filter { it.col == s.col }, s); search = false } },
+                onVoice = if (canVoice) ({ listen.launch(voiceIntent) }) else null, voiceText = voice, close = { search = false })
         }
     }
 }
@@ -460,7 +440,6 @@ LazyColumn(state = listState, contentPadding = PaddingValues(bottom = 72.dp)) {
             if (!edit) itemsIndexed(list, key = { _, s -> s.key }) { i, s ->
                 StationRow(s, langOf(s), true, "st|${s.key}" == now.id, now.playing,
                     onPlay = { onPlay(s) }, onFav = { undo = s to i; favs.remove(s.key); onChanged() })
-                HorizontalDivider(color = Paper2)
             } else itemsIndexed(order, key = { _, s -> s.key }) { i, s ->
                 ReorderableItem(reorder, key = s.key) { dragging ->
                     Surface(color = if (dragging) AccentSoft else Paper, shadowElevation = if (dragging) 8.dp else 0.dp) {
@@ -570,153 +549,25 @@ fun Art(now: NowState, size: Int) {
     else Tile(now.md.station?.toString() ?: now.md.title?.toString() ?: "", false, size)
 }
 
+/** The big player as a full screen, with the share and sleep menus on top of it. */
 @Composable
-fun MiniPlayer(now: NowState, c: MediaController?, isFav: Boolean, onFav: () -> Unit, open: () -> Unit) {
-    val prefs = LocalContext.current.getSharedPreferences("app", Context.MODE_PRIVATE)
-    var small by remember { mutableStateOf(prefs.getBoolean("barSmall", false)) }
-    fun setSmall(v: Boolean) { small = v; prefs.edit().putBoolean("barSmall", v).apply() }
-    var sleep by remember { mutableStateOf(false) }
-    var share by remember { mutableStateOf(false) }
-    var drag by remember { mutableFloatStateOf(0f) }
-    if (sleep) SleepDialog { sleep = false }
-    if (share) ShareMenu(now) { share = false }
-    val dim = Color(0xFFE8E3EA)
-    Surface(color = Velvet, shape = RoundedCornerShape(topStart = 18.dp, topEnd = 18.dp), shadowElevation = 10.dp) {
-        Column {
-            // top: what's playing (tap to open, swipe to change station) and play/pause
-            Row(Modifier.fillMaxWidth().clickable(onClick = open)
-                .pointerInput(c) { detectHorizontalDragGestures(onDragEnd = {
-                    if (drag < -120) c?.seekToNextMediaItem() else if (drag > 120) c?.seekToPreviousMediaItem(); drag = 0f },
-                    onDragCancel = { drag = 0f }) { _, d -> drag += d } }
-                .padding(start = 12.dp, end = 4.dp, top = if (small) 8.dp else 12.dp, bottom = if (small) 8.dp else 6.dp),
-                verticalAlignment = Alignment.CenterVertically) {
-                Art(now, if (small) 40 else 52)
-                val station = now.md.station?.toString() ?: ""
-                val song = now.md.title?.toString() ?: ""
-                val hasSong = song.isNotBlank() && song != station
-                val artist = (now.md.artist?.toString() ?: "").split(" · ").filter { it != station }.joinToString(" · ")
-                Column(Modifier.weight(1f).padding(horizontal = 12.dp)) {
-                    if (hasSong) Text(station.uppercase(), color = Gold, fontSize = 11.sp, fontWeight = FontWeight.Medium, letterSpacing = 0.5.sp,
-                        maxLines = 1, overflow = TextOverflow.Ellipsis)
-                    Text(if (hasSong) song else station.ifBlank { song }, color = Color.White, fontWeight = FontWeight.SemiBold,
-                        maxLines = 1, overflow = TextOverflow.Ellipsis)
-                    Text(now.error ?: if (now.buffering) "Connecting…" else if (hasSong) artist else now.md.artist?.toString() ?: "",
-                        color = Color(0xFFBDBDBD), fontSize = 13.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
-                }
-                FilledIconButton({ c?.let { if (it.isPlaying) it.pause() else { it.prepare(); it.play() } } }, Modifier.size(if (small) 44.dp else 52.dp),
-                    colors = IconButtonDefaults.filledIconButtonColors(containerColor = Color(0xFFF0EDE6), contentColor = Color(0xFF1B1B1F))) {
-                    Icon(if (now.playing) Icons.Filled.Pause else Icons.Filled.PlayArrow, if (now.playing) "Pause" else "Play", Modifier.size(28.dp))
-                }
-                // ⌄ shrink to one slim row (radio keeps playing) · ⌃ bring the buttons back
-                IconButton({ setSmall(!small) }, Modifier.size(44.dp)) {
-                    Icon(if (small) Icons.Filled.KeyboardArrowUp else Icons.Filled.KeyboardArrowDown,
-                        if (small) "Show all player buttons" else "Make the player smaller", tint = Color(0xFFBDBDBD))
-                }
-            }
-            if (!small) HorizontalDivider(Modifier.padding(horizontal = 12.dp), color = Color(0x14FFFFFF))
-            // bottom: favourite · sleep · share | previous next — each button fills its share of the row (easy to hit)
-            if (!small) Row(Modifier.fillMaxWidth().height(64.dp).padding(horizontal = 4.dp), verticalAlignment = Alignment.CenterVertically) {
-                @Composable fun Cell(label: String, onClick: () -> Unit, content: @Composable ColumnScope.() -> Unit) =
-                    Column(Modifier.weight(1f).fillMaxHeight().clip(RoundedCornerShape(12.dp))
-                        .clickable(onClickLabel = label, onClick = onClick),
-                        horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center, content = content)
-                Cell(if (isFav) "Remove from favourites" else "Add to favourites", onFav) {
-                    Icon(if (isFav) Icons.Filled.Favorite else Icons.Outlined.FavoriteBorder,
-                        if (isFav) "Remove from favourites" else "Add to favourites", Modifier.size(30.dp), tint = if (isFav) Gold else dim) }
-                val on = SleepTimer.at > 0
-                Cell("Sleep timer", { sleep = true }) {
-                    Icon(painterResource(R.drawable.ic_sleep), if (on) "Sleep timer on" else "Sleep timer",
-                        Modifier.size(30.dp), tint = if (on) Gold else dim)
-                    if (on) Text(sleepLeft(), color = Gold, fontSize = 11.sp, lineHeight = 12.sp)
-                }
-                Cell("Share", { share = true }) { Icon(Icons.Filled.Share, "Share", Modifier.size(28.dp), tint = dim) }
-                Box(Modifier.width(1.dp).height(30.dp).background(Color(0x1FFFFFFF)))
-                Cell("Previous station", { c?.seekToPreviousMediaItem() }) {
-                    Icon(Icons.Filled.SkipPrevious, "Previous station", Modifier.size(34.dp), tint = dim) }
-                Cell("Next station", { c?.seekToNextMediaItem() }) {
-                    Icon(Icons.Filled.SkipNext, "Next station", Modifier.size(34.dp), tint = dim) }
-                // ✕ stop the radio and put the player bar away (it comes back when you play a station)
-                Cell("Stop and close the player", { SleepTimer.off(); c?.stop(); c?.clearMediaItems() }) {
-                    Icon(Icons.Filled.Close, "Stop and close the player", Modifier.size(26.dp), tint = dim.copy(alpha = 0.7f)) }
-            }
-        }
-    }
-}
-
-@Composable
-fun FullPlayer(now: NowState, c: MediaController?, close: () -> Unit) {
+fun FullPlayer(now: NowState, c: MediaController?, cast: CastUi, onCloseAll: () -> Unit, close: () -> Unit) {
     val scope = rememberCoroutineScope()
     val ctx = LocalContext.current
-    var customSleep by remember { mutableStateOf(false) }
-    if (customSleep) SleepDialog(customOnly = true) { customSleep = false }
+    var share by remember { mutableStateOf(false) }
+    var sleep by remember { mutableStateOf(false) }
     val station = now.md.station?.toString() ?: ""
     val song = now.md.title?.toString() ?: ""
+    val hasSong = song.isNotBlank() && song != station
+    val artist = (now.md.artist?.toString() ?: "").split(" · ").filter { it != station }.joinToString(" · ")
     Dialog(close, DialogProperties(usePlatformDefaultWidth = false, decorFitsSystemWindows = false)) {
-        Surface(Modifier.fillMaxSize(), color = Velvet) {
-            BoxWithConstraints(Modifier.fillMaxSize().statusBarsPadding().navigationBarsPadding()) {
-                val art = minOf(maxWidth.value * 0.56f, maxHeight.value * 0.28f, 240f).toInt()
-                Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(horizontal = 24.dp, vertical = 12.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally) {
-                    Box(Modifier.fillMaxWidth()) {
-                        IconButton(close, Modifier.align(Alignment.CenterStart)) { Icon(Icons.Filled.KeyboardArrowDown, "Close", tint = Color.White) }
-                        Text(if (song.isNotBlank() && song != station) station else "Live radio", color = Color(0xFFBDBDBD),
-                            fontSize = 13.sp, letterSpacing = 1.sp, modifier = Modifier.align(Alignment.Center))
-                    }
-                    Spacer(Modifier.height(8.dp))
-                    Art(now, art)
-                    Spacer(Modifier.height(16.dp))
-                    Text(song, color = Color.White, fontSize = 22.sp, fontWeight = FontWeight.SemiBold, maxLines = 2,
-                        overflow = TextOverflow.Ellipsis, textAlign = TextAlign.Center)
-                    val hasSong = song.isNotBlank() && song != station
-                    Text(now.error ?: if (now.buffering) "Connecting…"
-                        else if (hasSong) (now.md.artist?.toString() ?: "").split(" · ").filter { it != station }.joinToString(" · ")
-                        else now.md.artist?.toString() ?: "",
-                        color = Color(0xFFBDBDBD), fontSize = 15.sp, maxLines = 2, textAlign = TextAlign.Center,
-                        modifier = Modifier.padding(top = 4.dp))
-                    if (hasSong) Text("on $station", color = Gold, fontSize = 14.sp, fontWeight = FontWeight.Medium,
-                        textAlign = TextAlign.Center, modifier = Modifier.padding(top = 6.dp))
-                    val stKey = now.id?.removePrefix("st|")
-                    if (stKey != null) RatingRow(stKey)
-                    Spacer(Modifier.height(10.dp))
-                    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(24.dp)) {
-                        IconButton({ c?.seekToPreviousMediaItem() }, Modifier.size(64.dp)) {
-                            Icon(Icons.Filled.SkipPrevious, "Previous station", Modifier.size(40.dp), tint = Color.White) }
-                        FilledIconButton({ c?.let { if (it.isPlaying) it.pause() else { it.prepare(); it.play() } } }, Modifier.size(80.dp),
-                            shape = CircleShape, colors = IconButtonDefaults.filledIconButtonColors(containerColor = Color(0xFFF0EDE6), contentColor = Color(0xFF1B1B1F))) {
-                            Icon(if (now.playing) Icons.Filled.Pause else Icons.Filled.PlayArrow, if (now.playing) "Pause" else "Play", Modifier.size(42.dp))
-                        }
-                        IconButton({ c?.seekToNextMediaItem() }, Modifier.size(64.dp)) {
-                            Icon(Icons.Filled.SkipNext, "Next station", Modifier.size(40.dp), tint = Color.White) }
-                    }
-                    Spacer(Modifier.height(18.dp))
-                    // Share is always there: a song card while a song is known, otherwise a station card
-                    val songArtist = (now.md.artist?.toString() ?: "").split(" · ").filter { it != station }.joinToString(" · ")
-                    Row(horizontalArrangement = Arrangement.spacedBy(10.dp), verticalAlignment = Alignment.CenterVertically) {
-                        var shareMenu by remember { mutableStateOf(false) }
-                        if (shareMenu) ShareMenu(now) { shareMenu = false }
-                        OutlinedButton({ shareMenu = true },
-                            Modifier.heightIn(min = 48.dp), border = BorderStroke(1.dp, Gold), contentPadding = PaddingValues(horizontal = 16.dp)) {
-                            Icon(Icons.Filled.Share, null, tint = Gold); Spacer(Modifier.width(8.dp))
-                            Text(if (hasSong) "Share song" else "Share station", color = Color.White)
-                        }
-                        var finding by remember { mutableStateOf(false) }
-                        if (hasSong) OutlinedButton({ if (!finding) scope.launch { finding = true; openInSpotify(ctx, song, songArtist); finding = false } },
-                            Modifier.heightIn(min = 48.dp), border = BorderStroke(1.dp, Color(0xFF1DB954)),
-                            contentPadding = PaddingValues(horizontal = 16.dp)) {
-                            Icon(Icons.Filled.PlayCircle, null, tint = Color(0xFF1DB954)); Spacer(Modifier.width(8.dp))
-                            Text(if (finding) "Finding…" else "Spotify", color = Color.White)
-                        }
-                    }
-                    Spacer(Modifier.height(18.dp))
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Icon(painterResource(R.drawable.ic_sleep), null, tint = Gold, modifier = Modifier.size(20.dp))
-                        Text(if (SleepTimer.at > 0) "Stops in ${sleepLeft()}" else "Sleep timer", color = Color.White, fontSize = 14.sp,
-                            modifier = Modifier.padding(start = 6.dp))
-                    }
-                    SleepChoices(onCustom = { customSleep = true }, dark = true)
-                }
-            }
+        PlayerContent(now, c, now.md.extras?.getString("lang") ?: "", cast, onCast = { Cast.open(ctx, Theme.dark) },
+            onShare = { share = true }, onSpotify = if (hasSong) ({ scope.launch { openInSpotify(ctx, song, artist) } }) else null,
+            onSleep = { sleep = true }, onCloseAll = onCloseAll, collapse = close) {
+            now.id?.removePrefix("st|")?.let { RatingRow(it) }
         }
+        if (share) ShareMenu(now) { share = false }
+        if (sleep) SleepDialog { sleep = false }
     }
 }
 
@@ -726,9 +577,10 @@ fun InfoTab(languages: Int, update: Update?, onSignIn: () -> Unit, onSignOut: ()
     LazyColumn(contentPadding = PaddingValues(20.dp), verticalArrangement = Arrangement.spacedBy(18.dp)) {
         item {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Image(androidx.compose.ui.res.painterResource(R.drawable.velvet_logo), null, Modifier.size(64.dp))
+                Box(Modifier.size(64.dp).clip(RoundedCornerShape(14.dp)).background(Color(0xFF2A1424)), contentAlignment = Alignment.Center) {
+                    Icon(painterResource(R.drawable.ic_logo_mark), null, Modifier.size(46.dp), tint = Gold) }
                 Column(Modifier.padding(start = 14.dp)) {
-                    Text("Radio Velvet", fontSize = 22.sp, fontWeight = FontWeight.SemiBold, color = if (Theme.dark) Gold else Velvet)
+                    Text("Radio Velvet", fontFamily = Serif, fontSize = 30.sp, fontWeight = FontWeight.Medium, color = Title)
                     Text("Elegant sounds, always free", color = InkSoft)
                     Text("Version ${appVersion(ctx)}", fontSize = 13.sp, color = InkSoft)
                 }
@@ -835,12 +687,12 @@ fun RatingRow(stKey: String) {
     var mine by remember(stKey) { mutableStateOf<Int?>(null) }
     var note by remember(stKey) { mutableStateOf<String?>(null) }
     LaunchedEffect(stKey) { sum = Ratings.summary(stKey); mine = Ratings.mine(ctx, stKey) }
-    Column(Modifier.padding(top = 8.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+    Column(Modifier.padding(top = 10.dp), horizontalAlignment = Alignment.CenterHorizontally) {
         Text(when {
             sum?.avg != null -> "★ " + String.format(java.util.Locale.UK, "%.1f", sum!!.avg) + " · ${sum!!.count} ratings"
             (sum?.count ?: 0) > 0 -> "${sum!!.count} rating${if (sum!!.count == 1) "" else "s"} so far"
             else -> "Be the first to rate this station"
-        }, color = Color(0xFFBDBDBD), fontSize = 13.sp)
+        }, color = InkSoft, fontSize = 14.sp)
         Row {
             (1..5).forEach { n ->
                 IconButton({ scope.launch {
@@ -853,7 +705,7 @@ fun RatingRow(stKey: String) {
                 }
             }
         }
-        note?.let { Text(it, color = Color(0xFFBDBDBD), fontSize = 12.sp) }
+        note?.let { Text(it, color = InkSoft, fontSize = 13.sp) }
     }
 }
 
