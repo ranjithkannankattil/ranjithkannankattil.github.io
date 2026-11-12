@@ -78,11 +78,11 @@ private val Pad = 24.dp
 /** Tagline and the name in the serif, with a search button. */
 @Composable
 fun Header(onSearch: () -> Unit) {
-    Row(Modifier.fillMaxWidth().padding(start = Pad, end = 10.dp, top = 18.dp), verticalAlignment = Alignment.Bottom) {
+    Row(Modifier.fillMaxWidth().padding(start = Pad, end = 10.dp, top = 10.dp), verticalAlignment = Alignment.Bottom) {
         Column(Modifier.weight(1f)) {
-            Text("Elegant sounds, always free", fontSize = 14.sp, fontStyle = FontStyle.Italic, color = AccentText)
-            Text("Radio Velvet", fontFamily = Serif, fontWeight = FontWeight.Medium, fontSize = 40.sp, lineHeight = 44.sp,
-                color = Title, modifier = Modifier.padding(top = 2.dp))
+            Text("Elegant sounds, always free", fontSize = 13.sp, fontStyle = FontStyle.Italic, color = AccentText)
+            Text("Radio Velvet", fontFamily = Serif, fontWeight = FontWeight.Medium, fontSize = 32.sp, lineHeight = 36.sp,
+                color = Title)
         }
         IconButton(onSearch, Modifier.size(52.dp)) { Icon(Icons.Filled.Search, "Search all stations", Modifier.size(28.dp), tint = Title) }
     }
@@ -96,8 +96,8 @@ class LangTab(val id: String, val label: String, val pinned: Boolean = false, va
 fun LangTabs(tabs: List<LangTab>, selected: String, onClick: (LangTab) -> Unit, onLong: (LangTab) -> Unit) {
     val haptic = androidx.compose.ui.platform.LocalHapticFeedback.current
     Column {
-        LazyRow(Modifier.padding(top = 14.dp), contentPadding = PaddingValues(horizontal = Pad),
-            horizontalArrangement = Arrangement.spacedBy(22.dp)) {
+        LazyRow(Modifier.padding(top = 6.dp), contentPadding = PaddingValues(horizontal = Pad),
+            horizontalArrangement = Arrangement.spacedBy(18.dp)) {
             items(tabs, key = { it.id }) { t ->
                 val on = t.id == selected
                 Column(Modifier.width(IntrinsicSize.Max).heightIn(min = 48.dp).combinedClickable(onClick = { onClick(t) },
@@ -108,7 +108,7 @@ fun LangTabs(tabs: List<LangTab>, selected: String, onClick: (LangTab) -> Unit, 
                         if (t.star) { Icon(Icons.Filled.Star, null, Modifier.size(16.dp), tint = GoldC); Spacer(Modifier.width(6.dp)) }
                         if (t.icon) { Icon(Icons.Filled.Language, null, Modifier.size(18.dp), tint = AccentText); Spacer(Modifier.width(6.dp)) }
                         if (t.pinned) { Icon(Icons.Filled.PushPin, "Pinned", Modifier.size(13.dp), tint = AccentText); Spacer(Modifier.width(4.dp)) }
-                        Text(t.label, fontSize = 16.sp, fontWeight = if (on || t.star) FontWeight.Medium else FontWeight.Normal,
+                        Text(t.label, fontSize = 15.sp, fontWeight = if (on || t.star) FontWeight.Medium else FontWeight.Normal,
                             color = if (on) Title else if (t.star || t.icon) AccentText else Soft)
                     }
                     Box(Modifier.height(2.dp).fillMaxWidth().background(if (on) AccentText else Color.Transparent))
@@ -122,7 +122,7 @@ fun LangTabs(tabs: List<LangTab>, selected: String, onClick: (LangTab) -> Unit, 
 /** All · FM · Akashvani · Online (and your favourites in this language), with the A–Z switch. */
 @Composable
 fun CatRow(cats: List<Triple<String, String, Int>>, selected: String, onSelect: (String) -> Unit, az: Boolean, onAz: () -> Unit) {
-    Row(Modifier.fillMaxWidth().padding(start = Pad - 10.dp, end = 10.dp, top = 6.dp), verticalAlignment = Alignment.CenterVertically) {
+    Row(Modifier.fillMaxWidth().padding(start = Pad - 10.dp, end = 10.dp, top = 2.dp), verticalAlignment = Alignment.CenterVertically) {
         LazyRow(Modifier.weight(1f)) {
             items(cats, key = { it.first }) { (k, label, n) ->
                 val on = k == selected
@@ -151,24 +151,24 @@ fun CatRow(cats: List<Triple<String, String, Int>>, selected: String, onSelect: 
 fun StationRow(s: Station, sub: String, fav: Boolean, current: Boolean, playing: Boolean, onPlay: () -> Unit, onFav: () -> Unit,
                highlight: String = "") {
     Column {
-        Row(Modifier.fillMaxWidth().heightIn(min = 76.dp).clickable(onClickLabel = "Play ${s.name}", onClick = onPlay)
+        Row(Modifier.fillMaxWidth().heightIn(min = 58.dp).clickable(onClickLabel = "Play ${s.name}", onClick = onPlay)
             .padding(start = Pad, end = 8.dp), verticalAlignment = Alignment.CenterVertically) {
-            Box(Modifier.size(10.dp).clip(CircleShape).background(if (current) GoldC else Color.Transparent))
-            Spacer(Modifier.width(14.dp))
-            Column(Modifier.weight(1f).padding(vertical = 10.dp)) {
+            Box(Modifier.size(8.dp).clip(CircleShape).background(if (current) GoldC else Color.Transparent))
+            Spacer(Modifier.width(12.dp))
+            Column(Modifier.weight(1f).padding(vertical = 6.dp)) {
                 val nameColor = if (current) AccentText else if (s.offline) Soft else Title
-                Text(highlighted(s.name, highlight), fontFamily = Serif, fontWeight = FontWeight.SemiBold, fontSize = 25.sp, lineHeight = 28.sp,
+                Text(highlighted(s.name, highlight), fontFamily = Serif, fontWeight = FontWeight.SemiBold, fontSize = 21.sp, lineHeight = 23.sp,
                     color = nameColor, maxLines = 2, overflow = TextOverflow.Ellipsis)
                 val note = listOf(if (current) (if (playing) "Now playing" else "Paused") else "", sub,
                     if (s.offline) "Not working today" else s.geoNote).filter { it.isNotBlank() }.joinToString(" · ")
-                if (note.isNotBlank()) Text(note, fontSize = 14.sp, color = if (current) AccentText else Soft,
+                if (note.isNotBlank()) Text(note, fontSize = 13.sp, color = if (current) AccentText else Soft,
                     fontWeight = if (current) FontWeight.Medium else FontWeight.Normal, maxLines = 1, overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier.padding(top = 3.dp))
+                    modifier = Modifier.padding(top = 1.dp))
             }
-            IconButton(onFav, Modifier.size(52.dp)) {
+            IconButton(onFav, Modifier.size(48.dp)) {
                 Icon(if (fav) Icons.Filled.Favorite else Icons.Outlined.FavoriteBorder,
                     if (fav) "Remove ${s.name} from favourites" else "Add ${s.name} to favourites",
-                    Modifier.size(26.dp), tint = if (fav) AccentText else Soft)
+                    Modifier.size(24.dp), tint = if (fav) AccentText else Soft)
             }
         }
         HorizontalDivider(Modifier.padding(horizontal = Pad), color = Line)
@@ -201,7 +201,7 @@ fun MiniPlayer(now: NowState, c: androidx.media3.session.MediaController?, isFav
                 .pointerInput(c) { detectHorizontalDragGestures(onDragEnd = {
                     if (drag < -120) c?.seekToNextMediaItem() else if (drag > 120) c?.seekToPreviousMediaItem(); drag = 0f },
                     onDragCancel = { drag = 0f }) { _, d -> drag += d } }
-                .padding(start = Pad, end = 16.dp, top = 12.dp, bottom = 2.dp), verticalAlignment = Alignment.CenterVertically) {
+                .padding(start = Pad, end = 16.dp, top = 10.dp, bottom = 0.dp), verticalAlignment = Alignment.CenterVertically) {
                 Column(Modifier.weight(1f).padding(end = 12.dp)) {
                     Text(if (cast.connected) "$station · on your TV / speaker" else station, fontSize = 14.sp, fontWeight = FontWeight.Medium,
                         color = GoldC, maxLines = 1, overflow = TextOverflow.Ellipsis)
@@ -209,20 +209,20 @@ fun MiniPlayer(now: NowState, c: androidx.media3.session.MediaController?, isFav
                     Text(buildAnnotatedString {
                         append(if (hasSong) song else status ?: "Live radio")
                         if (hasSong && artist.isNotBlank()) withStyle(SpanStyle(fontStyle = FontStyle.Italic, color = BarSoft)) { append(" — $artist") }
-                    }, fontFamily = Serif, fontWeight = FontWeight.SemiBold, fontSize = 23.sp, lineHeight = 26.sp, color = Color(0xFFF1E9EE),
+                    }, fontFamily = Serif, fontWeight = FontWeight.SemiBold, fontSize = 20.sp, lineHeight = 23.sp, color = Color(0xFFF1E9EE),
                         maxLines = 1, overflow = TextOverflow.Ellipsis, modifier = Modifier.padding(top = 1.dp))
                     if (hasSong && status != null) Text(status, fontSize = 13.sp, color = BarSoft, maxLines = 1)
                 }
                 val dark = Theme.dark
-                Box(Modifier.size(58.dp).clip(CircleShape).background(if (dark) GoldC else Cream).border(2.dp, GoldC, CircleShape)
+                Box(Modifier.size(52.dp).clip(CircleShape).background(if (dark) GoldC else Cream).border(2.dp, GoldC, CircleShape)
                     .clickable(onClickLabel = if (now.playing) "Pause" else "Play") {
                         c?.let { if (it.isPlaying) it.pause() else { it.prepare(); it.play() } } },
                     contentAlignment = Alignment.Center) {
                     Icon(if (now.playing) Icons.Filled.Pause else Icons.Filled.PlayArrow, if (now.playing) "Pause" else "Play",
-                        Modifier.size(32.dp), tint = Color(0xFF2A1424))
+                        Modifier.size(28.dp), tint = Color(0xFF2A1424))
                 }
             }
-            Row(Modifier.fillMaxWidth().height(56.dp).padding(horizontal = 8.dp), verticalAlignment = Alignment.CenterVertically) {
+            Row(Modifier.fillMaxWidth().height(50.dp).padding(horizontal = 8.dp), verticalAlignment = Alignment.CenterVertically) {
                 @Composable fun Cell(label: String, onClick: () -> Unit, content: @Composable () -> Unit) =
                     Box(Modifier.weight(1f).fillMaxHeight().clip(RoundedCornerShape(12.dp)).clickable(onClickLabel = label, onClick = onClick),
                         contentAlignment = Alignment.Center) { content() }
@@ -305,12 +305,12 @@ fun PlayerContent(now: NowState, c: androidx.media3.session.MediaController?, la
                 if (hasSong) Text("on $station", fontSize = 16.sp, fontWeight = FontWeight.Medium, color = AccentText, textAlign = TextAlign.Center,
                     maxLines = 1, overflow = TextOverflow.Ellipsis)
                 val big = if (hasSong) song else station
-                Text(big, fontFamily = Serif, fontWeight = FontWeight.SemiBold, fontSize = if (big.length > 24) 32.sp else 40.sp,
-                    lineHeight = if (big.length > 24) 36.sp else 44.sp, color = Title, textAlign = TextAlign.Center, maxLines = 2,
+                Text(big, fontFamily = Serif, fontWeight = FontWeight.SemiBold, fontSize = if (big.length > 24) 28.sp else 34.sp,
+                    lineHeight = if (big.length > 24) 32.sp else 38.sp, color = Title, textAlign = TextAlign.Center, maxLines = 2,
                     overflow = TextOverflow.Ellipsis, modifier = Modifier.padding(top = 4.dp))
                 val second = now.error ?: if (now.buffering) "Connecting…" else if (hasSong) artist else if (cast.connected) "Playing on your TV / speaker" else "Live radio"
                 if (second.isNotBlank()) Text(second, fontFamily = Serif, fontStyle = FontStyle.Italic, fontWeight = FontWeight.SemiBold,
-                    fontSize = 23.sp, lineHeight = 26.sp, color = Soft, textAlign = TextAlign.Center, maxLines = 2, overflow = TextOverflow.Ellipsis,
+                    fontSize = 20.sp, lineHeight = 23.sp, color = Soft, textAlign = TextAlign.Center, maxLines = 2, overflow = TextOverflow.Ellipsis,
                     modifier = Modifier.padding(top = 2.dp))
                 rating()
             }
@@ -408,10 +408,10 @@ fun SearchContent(all: List<Station>?, currentLang: String, langOf: (Station) ->
                 if (recent.isNotEmpty()) {
                     item { Text("Recent searches", Modifier.padding(start = Pad, top = 26.dp, bottom = 4.dp), fontSize = 15.sp, fontWeight = FontWeight.SemiBold, color = AccentText) }
                     items(recent, key = { "r|$it" }) { r ->
-                        Row(Modifier.fillMaxWidth().heightIn(min = 60.dp).clickable { q = r }.padding(start = Pad, end = 8.dp),
+                        Row(Modifier.fillMaxWidth().heightIn(min = 52.dp).clickable { q = r }.padding(start = Pad, end = 8.dp),
                             verticalAlignment = Alignment.CenterVertically) {
                             Icon(Icons.Filled.History, null, Modifier.size(22.dp), tint = Soft); Spacer(Modifier.width(14.dp))
-                            Text(r, Modifier.weight(1f), fontFamily = Serif, fontWeight = FontWeight.SemiBold, fontSize = 23.sp, color = Title, maxLines = 1)
+                            Text(r, Modifier.weight(1f), fontFamily = Serif, fontWeight = FontWeight.SemiBold, fontSize = 20.sp, color = Title, maxLines = 1)
                             IconButton({ saveRecent(recent - r) }, Modifier.size(48.dp)) { Icon(Icons.Filled.Close, "Remove $r from recent searches", Modifier.size(18.dp), tint = Soft) }
                         }
                         HorizontalDivider(Modifier.padding(horizontal = Pad), color = Line)
