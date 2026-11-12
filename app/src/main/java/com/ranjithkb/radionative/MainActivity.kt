@@ -372,7 +372,8 @@ fun App(c: MediaController?) {
         val canVoice = remember { voiceIntent.resolveActivity(ctx.packageManager) != null }
         val listen = androidx.activity.compose.rememberLauncherForActivityResult(androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult()) { r ->
             voice = r.data?.getStringArrayListExtra(android.speech.RecognizerIntent.EXTRA_RESULTS)?.firstOrNull() }
-        Dialog({ search = false }, DialogProperties(usePlatformDefaultWidth = false, decorFitsSystemWindows = false)) {
+        androidx.activity.compose.BackHandler { search = false }
+        Box(Modifier.fillMaxSize()) {
             SearchContent(all, if (colId == PICKS || colId == ALL) "" else col?.name ?: "", ::langOf, favKeys, now.id, now.playing,
                 onPlay = { _, s, _ -> play((all ?: emptyList()).filter { it.col == s.col }, s); search = false },
                 onFav = { favs.toggle(it); refreshFavs() },
@@ -562,7 +563,9 @@ fun FullPlayer(now: NowState, c: MediaController?, cast: CastUi, onCloseAll: () 
     val song = now.md.title?.toString() ?: ""
     val hasSong = song.isNotBlank() && song != station
     val artist = (now.md.artist?.toString() ?: "").split(" · ").filter { it != station }.joinToString(" · ")
-    Dialog(close, DialogProperties(usePlatformDefaultWidth = false, decorFitsSystemWindows = false)) {
+    // drawn over the main screen (not a separate window) so it fits between the phone's status bar and navigation bar
+    androidx.activity.compose.BackHandler(onBack = close)
+    Box(Modifier.fillMaxSize()) {
         PlayerContent(now, c, now.md.extras?.getString("lang") ?: "", cast, onCast = { Cast.open(ctx, Theme.dark) },
             onShare = { share = true }, onSpotify = if (hasSong) ({ scope.launch { openInSpotify(ctx, song, artist) } }) else null,
             onSleep = { sleep = true }, onCloseAll = onCloseAll, collapse = close) {

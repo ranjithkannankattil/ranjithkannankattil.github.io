@@ -8,6 +8,7 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.gestures.detectHorizontalDragGestures
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
@@ -281,9 +282,10 @@ fun PlayerContent(now: NowState, c: androidx.media3.session.MediaController?, la
     val song = now.md.title?.toString() ?: ""
     val hasSong = song.isNotBlank() && song != station
     val artist = (now.md.artist?.toString() ?: "").split(" · ").filter { it != station }.joinToString(" · ")
-    BoxWithConstraints(Modifier.fillMaxSize().background(PlayerBg).statusBarsPadding().navigationBarsPadding()) {
+    BoxWithConstraints(Modifier.fillMaxSize().background(PlayerBg).pointerInput(Unit) { detectTapGestures { } }
+        .statusBarsPadding().navigationBarsPadding()) {
         val h = maxHeight
-        val art = minOf(280f, maxWidth.value - 64f, h.value * 0.36f).coerceAtLeast(120f)
+        val art = minOf(260f, maxWidth.value - 80f, h.value * 0.30f).coerceAtLeast(110f)
         Column(Modifier.fillMaxWidth().verticalScroll(rememberScrollState()).heightIn(min = h)
             .padding(start = Pad, end = Pad, top = 8.dp, bottom = 18.dp),
             verticalArrangement = Arrangement.SpaceBetween, horizontalAlignment = Alignment.CenterHorizontally) {
@@ -380,7 +382,8 @@ fun SearchContent(all: List<Station>?, currentLang: String, langOf: (Station) ->
             else -> l.filter { it.name.contains(q.trim(), true) }.sortedWith(compareBy({ it.offline }, { !it.name.startsWith(q.trim(), true) }, { it.name.lowercase() }))
         }.take(150)
     }
-    Column(Modifier.fillMaxSize().background(Paper).statusBarsPadding().navigationBarsPadding().imePadding()) {
+    Column(Modifier.fillMaxSize().background(Paper).pointerInput(Unit) { detectTapGestures { } }
+        .statusBarsPadding().navigationBarsPadding().imePadding()) {
         Row(Modifier.padding(start = 10.dp, end = 20.dp, top = 12.dp), verticalAlignment = Alignment.CenterVertically) {
             IconButton(close, Modifier.size(52.dp)) { Icon(Icons.Filled.ChevronLeft, "Back", Modifier.size(32.dp), tint = Title) }
             Text("Search", fontFamily = Serif, fontWeight = FontWeight.SemiBold, fontSize = 32.sp, color = Title)
