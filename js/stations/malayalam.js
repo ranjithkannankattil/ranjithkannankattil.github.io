@@ -107,6 +107,15 @@ window.STATIONS = [
     ]
   },
   {
+    "id": "radiolemonbengaluru",
+    "name": "Radio Lemon Bengaluru",
+    "category": "online",
+    "streams": [
+      "https://live.sarrit.com:8070/radio.mp3"
+    ],
+    "offline": true
+  },
+  {
     "id": "airmalayalam",
     "name": "AIR Malayalam",
     "category": "air",
