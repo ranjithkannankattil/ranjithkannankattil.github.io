@@ -92,10 +92,18 @@ window.STATIONS = [
   },
   {
     "id": "radiolemonlive",
-    "name": "Radio Lemon",
+    "name": "Radio Lemon UK",
     "category": "online",
     "streams": [
       "https://live.sarrit.com:8040/radio.mp3"
+    ]
+  },
+  {
+    "id": "radiolemonnz",
+    "name": "Radio Lemon New Zealand",
+    "category": "online",
+    "streams": [
+      "https://stream.nammude.uk/listen/radio_lemon_live_newzealand_-_copy/radio.mp3"
     ]
   },
   {
