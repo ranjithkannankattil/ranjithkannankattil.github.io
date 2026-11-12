@@ -581,3 +581,22 @@ body[data-section="radio"] .lq-menu button:hover{ background:var(--accent-soft);
 nav.radio-chips button.az{ margin-left:auto; color:var(--accent); font-weight:600; }
 nav.radio-chips button.az[aria-pressed="false"]{ color:var(--ink-soft); }
 .radio-more{ grid-column:1/-1; background:var(--paper); padding:1rem 1rem .4rem; font-family:var(--f-display); font-weight:600; font-size:.95rem; color:var(--accent); }
+
+/* ---- Prada-style (Nov 2026), matching the app: clean names, small letter-spaced capitals, hairlines, a thin
+   gold bar on the station that's playing, outlined gold play button. Uses the site's own fonts. ---- */
+.radio-card .nm{ font-family:var(--f-display); font-weight:400; font-size:1.03rem; letter-spacing:.01em; }
+.radio-card.on .nm{ font-weight:500; color:var(--accent); }
+.radio-card .sub{ font-family:var(--f-mono); font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; margin-top:.2rem; }
+.radio-card .tile{ display:none; }
+.radio-card .hit{ min-height:56px; padding:.5rem 3.2rem .5rem 1.1rem; }
+.radio-card.on{ background:var(--paper); box-shadow:inset 3px 0 0 #C9A86A; }
+.radio-card.on .hit:hover{ background:var(--paper-2); }
+.radio-grid{ background:var(--line); }
+.radio-player .np-col{ font-family:var(--f-mono); font-size:.6rem; letter-spacing:.2em; text-transform:uppercase; }
+.radio-player .np-name{ font-family:var(--f-display); font-weight:400; font-size:1rem; }
+.radio-player .np-tile{ display:none; }
+.np-play{ width:48px; height:48px; border:1px solid #C9A86A; background:transparent!important; }
+.np-play svg{ fill:#C9A86A; width:18px; height:18px; }
+.radio-chips{ font-family:var(--f-mono); font-size:.68rem; letter-spacing:.14em; text-transform:uppercase; }
+nav.radio-chips button.az{ font-weight:500; }
+body[data-section="radio"] .np-play{ border:1px solid #C9A86A; }
