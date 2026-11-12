@@ -600,3 +600,7 @@ nav.radio-chips button.az[aria-pressed="false"]{ color:var(--ink-soft); }
 .radio-chips{ font-family:var(--f-mono); font-size:.68rem; letter-spacing:.14em; text-transform:uppercase; }
 nav.radio-chips button.az{ font-weight:500; }
 body[data-section="radio"] .np-play{ border:1px solid #C9A86A; }
+/* small capitals a little larger and tighter, as in the app */
+.radio-card .sub{ font-size:.72rem; letter-spacing:.1em; }
+.radio-chips{ font-size:.76rem; letter-spacing:.09em; }
+.radio-player .np-col{ font-size:.7rem; letter-spacing:.12em; }
