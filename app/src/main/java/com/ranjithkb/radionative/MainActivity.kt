@@ -78,20 +78,21 @@ private val Gold = Color(0xFFC9A86A)
 /** Signed-in name (null = signed out) and a counter that bumps when favourites change from the account. */
 object Session { var name by mutableStateOf<String?>(null); var favsVersion by mutableIntStateOf(0); var busy by mutableStateOf(false); var noteShown = false }
 
+/** Jost (Futura style): the app's one typeface, light to semibold. */
 val Poppins = FontFamily(
-    Font(R.font.poppins_regular, FontWeight.Normal),
-    Font(R.font.poppins_medium, FontWeight.Medium),
-    Font(R.font.poppins_semibold, FontWeight.SemiBold),
-    Font(R.font.poppins_semibold, FontWeight.Bold),
-    Font(R.font.poppins_italic, FontWeight.Normal, FontStyle.Italic))
+    Font(R.font.jost_light, FontWeight.Light),
+    Font(R.font.jost_regular, FontWeight.Normal),
+    Font(R.font.jost_medium, FontWeight.Medium),
+    Font(R.font.jost_semibold, FontWeight.SemiBold),
+    Font(R.font.jost_semibold, FontWeight.Bold))
 private val T = Typography()
 val PoppinsType = Typography(
     displayLarge = T.displayLarge.copy(fontFamily = Poppins), displayMedium = T.displayMedium.copy(fontFamily = Poppins),
     displaySmall = T.displaySmall.copy(fontFamily = Poppins), headlineLarge = T.headlineLarge.copy(fontFamily = Poppins),
     headlineMedium = T.headlineMedium.copy(fontFamily = Poppins), headlineSmall = T.headlineSmall.copy(fontFamily = Poppins),
     titleLarge = T.titleLarge.copy(fontFamily = Poppins), titleMedium = T.titleMedium.copy(fontFamily = Poppins),
-    titleSmall = T.titleSmall.copy(fontFamily = Poppins), bodyLarge = T.bodyLarge.copy(fontFamily = Poppins),
-    bodyMedium = T.bodyMedium.copy(fontFamily = Poppins), bodySmall = T.bodySmall.copy(fontFamily = Poppins),
+    titleSmall = T.titleSmall.copy(fontFamily = Poppins), bodyLarge = T.bodyLarge.copy(fontFamily = Poppins, fontSize = 15.sp, lineHeight = 22.sp),
+    bodyMedium = T.bodyMedium.copy(fontFamily = Poppins, fontSize = 14.sp), bodySmall = T.bodySmall.copy(fontFamily = Poppins),
     labelLarge = T.labelLarge.copy(fontFamily = Poppins), labelMedium = T.labelMedium.copy(fontFamily = Poppins),
     labelSmall = T.labelSmall.copy(fontFamily = Poppins))
 
@@ -585,7 +586,7 @@ fun InfoTab(languages: Int, update: Update?, onSignIn: () -> Unit, onSignOut: ()
                 Box(Modifier.size(64.dp).clip(RoundedCornerShape(14.dp)).background(Color(0xFF2A1424)), contentAlignment = Alignment.Center) {
                     Icon(painterResource(R.drawable.ic_logo_mark), null, Modifier.size(46.dp), tint = Gold) }
                 Column(Modifier.padding(start = 14.dp)) {
-                    Text("Radio Velvet", fontFamily = Serif, fontSize = 30.sp, fontWeight = FontWeight.Medium, color = Title)
+                    Text("RADIO VELVET", fontSize = 16.sp, letterSpacing = 5.sp, fontWeight = FontWeight.Medium, color = Title)
                     Text("Elegant sounds, always free", color = InkSoft)
                     Text("Version ${appVersion(ctx)}", fontSize = 13.sp, color = InkSoft)
                 }
@@ -663,8 +664,7 @@ fun InfoTab(languages: Int, update: Update?, onSignIn: () -> Unit, onSignOut: ()
 @Composable
 fun Section(title: String, body: @Composable ColumnScope.() -> Unit) {
     Column {
-        Text(title.uppercase(), fontSize = 12.sp, letterSpacing = 1.sp, color = Accent, fontWeight = FontWeight.SemiBold,
-            modifier = Modifier.padding(bottom = 6.dp))
+        Label(title, AccentText, 10, Modifier.padding(bottom = 8.dp))
         body()
     }
 }
@@ -711,8 +711,8 @@ fun RatingRow(stKey: String) {
                     note = Ratings.rate(ctx, stKey, n)
                     if (note != null) mine = old else { note = "Thanks for rating"; sum = Ratings.summary(stKey) }
                 } }, Modifier.size(44.dp)) {
-                    Icon(if ((mine ?: 0) >= n) Icons.Filled.Star else Icons.Filled.StarBorder,
-                        "Rate $n out of 5", tint = Gold, modifier = Modifier.size(24.dp))
+                    Icon(painterResource(if ((mine ?: 0) >= n) R.drawable.ln_star_fill else R.drawable.ln_star),
+                        "Rate $n out of 5", tint = Gold, modifier = Modifier.size(19.dp))
                 }
             }
         }

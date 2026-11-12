@@ -67,8 +67,8 @@ suspend fun shareSongCard(ctx: Context, song: String, artist: String, station: S
             for (r in listOf(110f, 200f)) { cv.drawArc(RectF(540 - r, 550 - r, 540 + r, 550 + r), 135f, 90f, false, wave); cv.drawArc(RectF(540 - r, 550 - r, 540 + r, 550 + r), -45f, 90f, false, wave) }
             cv.drawCircle(540f, 550f, 34f, Paint(Paint.ANTI_ALIAS_FLAG).apply { color = 0xFFC9A86A.toInt() })
         }
-        val semi = try { androidx.core.content.res.ResourcesCompat.getFont(ctx, R.font.poppins_semibold) } catch (e: Exception) { null }
-        val reg = try { androidx.core.content.res.ResourcesCompat.getFont(ctx, R.font.poppins_regular) } catch (e: Exception) { null }
+        val semi = try { androidx.core.content.res.ResourcesCompat.getFont(ctx, R.font.jost_medium) } catch (e: Exception) { null }
+        val reg = try { androidx.core.content.res.ResourcesCompat.getFont(ctx, R.font.jost_regular) } catch (e: Exception) { null }
         fun text(s: String, y: Float, size: Float, color: Int, bold: Boolean) {
             val p = Paint(Paint.ANTI_ALIAS_FLAG).apply { this.color = color; textSize = size; textAlign = Paint.Align.CENTER
                 typeface = (if (bold) semi else reg) ?: Typeface.create(Typeface.SANS_SERIF, if (bold) Typeface.BOLD else Typeface.NORMAL) }
