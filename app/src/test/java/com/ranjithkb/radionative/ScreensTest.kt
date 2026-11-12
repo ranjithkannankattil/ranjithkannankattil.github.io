@@ -48,8 +48,9 @@ class ScreensTest {
 
     private fun shot(name: String, dark: Boolean, content: @Composable () -> Unit) {
         Theme.dark = dark
+        rule.mainClock.autoAdvance = false
         rule.setContent { MaterialTheme(typography = PoppinsType) { Surface(Modifier.fillMaxSize(), color = Paper) { content() } } }
-        rule.waitForIdle()
+        rule.mainClock.advanceTimeBy(1500)
         val dir = File("build/screens").apply { mkdirs() }
         File(dir, "$name.png").outputStream().use { rule.onRoot().captureToImage().asAndroidBitmap().compress(Bitmap.CompressFormat.PNG, 100, it) }
     }
