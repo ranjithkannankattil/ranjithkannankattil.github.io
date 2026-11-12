@@ -643,6 +643,11 @@ fun InfoTab(languages: Int, update: Update?, onSignIn: () -> Unit, onSignOut: ()
             }
         }
         item {
+            Section("Credits") {
+                Text("Logo by Jai Sachith Chittilapilly")
+            }
+        }
+        item {
             Section("On the web") {
                 TextButton({ openUrl(ctx, "https://ranjithkb.com/radio.html") }) { Text("Radio on ranjithkb.com") }
                 TextButton({ openUrl(ctx, "https://ranjithkb.com/") }) { Text("ranjithkb.com") }
