@@ -23,7 +23,7 @@ import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
 import java.io.File
 
-/** Draws the main screens (no phone needed) so the look can be checked: build/screens/*.png */
+/** Draws the main screens (no phone needed) so the look can be checked: PNG files in build/screens. */
 @RunWith(RobolectricTestRunner::class)
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 @Config(sdk = [34], qualifiers = "w390dp-h844dp-xxhdpi")
