@@ -434,6 +434,8 @@
     const stamp = new Date().toISOString().slice(0, 10) + "-" + Math.floor(Date.now() / 36e5);
     cache[cId] = fetch(`js/stations/${cId}.js?d=${stamp}`).then((r) => (r.ok ? r.text() : ""))
       .then((t) => { const m = t.match(/window\.STATIONS\s*=\s*(\[[\s\S]*?\]);\s*window\.STATIONS_CHECKED/); return m ? JSON.parse(m[1]) : []; })
+      // keep the finished list (not the download) so the Velvet Selection and Favourites can look stations up
+      .then((list) => { cache[cId] = list; return list; })
       .catch(() => { delete cache[cId]; return null; });
     return cache[cId];
   }
