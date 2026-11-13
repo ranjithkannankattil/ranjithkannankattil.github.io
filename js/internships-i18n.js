@@ -80,6 +80,7 @@ window.INTERN_T = {
     found: 'found', notifDone: 'Internship search finished: {n} found.',
     errKey: 'Your key was refused. Check it in step 2.', errNet: 'No internet connection. It will try again.',
     aggHead: 'Search other internship sites', aggHelp: 'Opens each site’s own search for the word you pick. These sites have their own listings and sign-ins.', aggWord: 'Search word',
+    waiting: 'Google asked us to slow down — trying again in {n} s…', lastErr: 'Google said: {m}',
     langNote: 'Listings are in English, as on the official sites.'
   },
 
@@ -152,6 +153,7 @@ window.INTERN_T = {
     found: 'കണ്ടെത്തി', notifDone: 'ഇന്റേൺഷിപ്പ് തിരയൽ കഴിഞ്ഞു: {n} കണ്ടെത്തി.',
     errKey: 'കീ സ്വീകരിച്ചില്ല. ഘട്ടം 2-ൽ പരിശോധിക്കുക.', errNet: 'ഇന്റർനെറ്റ് ഇല്ല. വീണ്ടും ശ്രമിക്കും.',
     aggHead: 'മറ്റ് ഇന്റേൺഷിപ്പ് സൈറ്റുകളിൽ തിരയുക', aggHelp: 'നിങ്ങൾ തിരഞ്ഞെടുക്കുന്ന വാക്കിനായി ഓരോ സൈറ്റിന്റെയും സ്വന്തം തിരയൽ തുറക്കും. ഈ സൈറ്റുകൾക്ക് സ്വന്തം ലിസ്റ്റുകളും സൈൻ ഇന്നും ഉണ്ട്.', aggWord: 'തിരയൽ വാക്ക്',
+    waiting: 'വേഗം കുറയ്ക്കാൻ Google ആവശ്യപ്പെട്ടു — {n} സെക്കൻഡിൽ വീണ്ടും ശ്രമിക്കും…', lastErr: 'Google പറഞ്ഞത്: {m}',
     langNote: 'ഔദ്യോഗിക സൈറ്റുകളിലെ പോലെ ലിസ്റ്റുകൾ ഇംഗ്ലീഷിലാണ്.'
   },
 
@@ -224,6 +226,7 @@ window.INTERN_T = {
     found: 'मिलीं', notifDone: 'इंटर्नशिप खोज पूरी: {n} मिलीं।',
     errKey: 'आपकी की स्वीकार नहीं हुई। चरण 2 में जाँचें।', errNet: 'इंटरनेट नहीं है। फिर से कोशिश होगी।',
     aggHead: 'दूसरी इंटर्नशिप साइटों पर खोजें', aggHelp: 'आपके चुने शब्द के लिए हर साइट की अपनी खोज खुलेगी। इन साइटों की अपनी सूचियाँ और साइन-इन हैं।', aggWord: 'खोज शब्द',
+    waiting: 'Google ने धीमा चलने को कहा — {n} सेकंड में फिर कोशिश…', lastErr: 'Google ने कहा: {m}',
     langNote: 'सूचियाँ अंग्रेज़ी में हैं, जैसे आधिकारिक साइटों पर।'
   }
 };

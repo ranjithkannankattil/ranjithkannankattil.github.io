@@ -129,7 +129,7 @@ marked "check page"). A result is "Found on this page" only if its link's domain
 grounding sources. Built-in official starting points: `js/internships-data.js`. Text in three languages:
 `js/internships-i18n.js` (add a language by copying the `en` block). Saving: browser, backup file via the
 share sheet, a self-updating file on laptops (File System Access), and a restore link whose data sits in
-the `#` fragment. The key is never in backups or links. Test without a key: `internships.html?mock=1`.
+the `#` fragment. The key is never in backups or links. Test without a key: `internships.html?mock=1` (also `?mock=nosearch` and `?mock=rate` to simulate Google limits).
 He doesn't want his Google account involved (no Google sign-in / Drive API). It never scrapes other sites:
 "Search other internship sites" only opens their own search pages (Internshala and Naukri via a Google
 site: search, LinkedIn, Indeed, Unstop, Google Jobs, AICTE, PMIS, NATS, Apprenticeship India) with the student's word.

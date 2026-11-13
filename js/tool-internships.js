@@ -28,7 +28,7 @@
   var TIERS = ['state', 'central', 'psu', 'private'];
   var TIER_T = { state: 'tState', central: 'tCentral', psu: 'tPsu', private: 'tPrivate' };
   var DEPTH = { quick: [5, 5, 2, 4, 2], std: [12, 12, 6, 10, 4], deep: [27, 27, 13, 23, 8] }; // state, central, psu, private, programme checks
-  var MOCK = /[?&]mock=1/.test(location.search);
+  var MOCK = /[?&]mock=/.test(location.search), MOCKERR = (location.search.match(/mock=(nosearch|rate)/) || [])[1];
   var LANGS = window.INTERN_LANGS, TT = window.INTERN_T, FIELDS = window.INTERN_FIELDS;
 
   // ---------------------------------------------------------------- state
@@ -187,14 +187,17 @@
 
   // ---------------------------------------------------------------- Gemini
   function GemErr(kind, message) { this.kind = kind; this.message = message; }
-  var classify = function (status, body) {
+  var classify = function (status, body, search) {
     var s = JSON.stringify(body || {}), m = (body && body.error && body.error.message) || ('HTTP ' + status);
     if (status === 400 && /API key not valid|API_KEY_INVALID/i.test(s)) return new GemErr('key', m);
-    if (status === 401 || status === 403) return new GemErr(/search|grounding/i.test(s) ? 'nosearch' : 'key', m);
+    if (status === 401 || status === 403) return new GemErr(/search|grounding/i.test(s) || search ? 'nosearch' : 'key', m);
+    if (status === 404) return new GemErr(search ? 'nosearch' : 'other', m);
     if (status === 429) {
+      // "limit: 0" means this model (or Google Search on it) is not in this key's free tier at all
+      if (/limit:\s*0\b|"quotaValue":"0"/i.test(s)) return new GemErr(search ? 'nosearch' : 'day', m);
       if (/PerDay|per_day|per day|daily/i.test(s)) return new GemErr('day', m);
       var d = s.match(/"retryDelay":"(\d+)s"/);
-      var e = new GemErr('rate', m); e.wait = d ? (+d[1] + 2) * 1000 : 60000; return e;
+      var e = new GemErr('rate', m); e.wait = Math.min(d ? (+d[1] + 2) * 1000 : 60000, 90000); return e;
     }
     if (status === 400 && /search|grounding|tool/i.test(s)) return new GemErr('nosearch', m);
     if (status >= 500) { var e5 = new GemErr('rate', m); e5.wait = 20000; return e5; }
@@ -204,11 +207,15 @@
     if (MOCK) return mockGemini(body, model);
     var key = getKey();
     if (!key) return Promise.reject(new GemErr('key', t('needKey')));
+    var ctl = window.AbortController ? new AbortController() : null;
+    var timer = ctl && setTimeout(function () { ctl.abort(); }, 120000);
     return fetch(API + model + ':generateContent', {
-      method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key }, body: JSON.stringify(body)
+      method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key }, body: JSON.stringify(body),
+      signal: ctl ? ctl.signal : undefined
     }).then(function (r) {
+      clearTimeout(timer);
       return r.json().catch(function () { return {}; }).then(function (j) {
-        if (!r.ok) throw classify(r.status, j);
+        if (!r.ok) throw classify(r.status, j, !!body.tools);
         var c = j.candidates && j.candidates[0];
         var text = c && c.content && c.content.parts ? c.content.parts.map(function (p) { return p.text || ''; }).join('') : '';
         var gm = (c && c.groundingMetadata) || {};
@@ -216,7 +223,7 @@
           .map(function (h) { return String(h).toLowerCase().replace(/^www\./, ''); });
         return { text: text, hosts: hosts, searched: !!(gm.webSearchQueries && gm.webSearchQueries.length) || hosts.length > 0 };
       });
-    }, function () { throw new GemErr('net', t('errNet')); });
+    }, function (er) { clearTimeout(timer); if (er && er.kind) throw er; throw new GemErr('net', t('errNet')); });
   };
   var parseJSON = function (text, open) {
     if (!text) return null;
@@ -479,7 +486,18 @@
     if (running) return;
     running = true; stopAsked = false;
     $('inStop').hidden = false; $('inResume').hidden = true;
-    var netFails = 0;
+    var netFails = 0, rateFails = 0;
+    var wait = function (ms, why) {
+      var end = Date.now() + ms;
+      return new Promise(function (res) {
+        var tick = function () {
+          var left = Math.ceil((end - Date.now()) / 1000);
+          if (left <= 0 || stopAsked) return res();
+          setLine(t('waiting', { n: left })); setTimeout(tick, 1000);
+        };
+        tick();
+      });
+    };
     var step = function () {
       if (stopAsked) return finish(t('stopped'));
       var task = S.run.tasks.filter(function (x) { return !x.done; })[0];
@@ -489,14 +507,19 @@
       setLine(t('running', { n: i + 1, s: S.run.tasks.length }) + ' · ' + t(TIER_T[task.tier]));
       renderProgress();
       return searchCall(taskPrompt(task)).then(function (r) {
-        netFails = 0;
+        netFails = 0; rateFails = 0; msg('inMsg4', '');
         task.done = true; task.n = addItems(parseJSON(r.text, '['), task.tier, r.hosts, false);
         save(); renderResults(); renderProgress();
         return sleep(GAP).then(step);
       }, function (e) {
         if (e.kind === 'key') return finish(t('errKey'), true);
-        if (e.kind === 'net') { if (++netFails > 4) return finish(t('errNet'), true); setLine(t('errNet')); return sleep(15000).then(step); }
-        if (e.kind === 'rate') { return sleep(e.wait || 60000).then(step); }
+        if (e.kind === 'net') { if (++netFails > 4) return finish(t('errNet'), true); return wait(15000).then(step); }
+        if (e.message) msg('inMsg4', t('lastErr', { m: String(e.message).slice(0, 220) }));
+        if (e.kind === 'rate') {
+          // Google keeps asking us to wait: after 3 tries treat it like today's limit
+          if (++rateFails > 3) return doLeads().then(function () { finish(t('quota')); }, failLeads);
+          return wait(e.wait || 60000).then(step);
+        }
         if (e.kind === 'nosearch') { S.run.noSearch = true; save(); return step(); }
         if (e.kind === 'day') {
           // search quota is used up today: give knowledge-only leads now, finish the searches tomorrow
@@ -517,7 +540,8 @@
     var n = S.res.length;
     if (!left && !note) note = t('done', { n: n });
     setLine(note || t('done', { n: n }));
-    msg('inMsg4', left ? t('left', { n: left }) : '', !!bad);
+    var lastE = $('inMsg4').hidden ? '' : $('inMsg4').textContent;
+    msg('inMsg4', (left ? t('left', { n: left }) : '') + (left && lastE && lastE.indexOf('·') < 0 ? ' · ' + lastE : ''), !!bad);
     $('inStop').hidden = true; $('inResume').hidden = !left; $('inNightAgain').hidden = !left;
     renderProgress(); renderResults();
     if (night) {
@@ -883,6 +907,8 @@
   // ---------------------------------------------------------------- mock (?mock=1, for testing the page without a key)
   function mockGemini(body, model) {
     var txt = body.contents[0].parts[0].text, search = !!body.tools;
+    if (search && MOCKERR === 'nosearch') return sleep(300).then(function () { throw classify(429, { error: { message: 'Quota exceeded for metric: generate_content_free_tier_requests, limit: 0, model: ' + model } }, true); });
+    if (search && MOCKERR === 'rate') return sleep(300).then(function () { throw classify(429, { error: { message: 'Resource exhausted. Please try again later.', details: [{ retryDelay: '2s' }] } }, true); });
     var d = function (n) { var x = new Date(Date.now() + n * 864e5); return x.toISOString().slice(0, 10); };
     var out = 'OK';
     if (/syllabus/.test(txt) && /"subjects"/.test(txt)) out = JSON.stringify({ found: true, url: 'https://www.uni-mysore.ac.in/syllabus/bsc-sericulture.pdf', subjects: ['Mulberry cultivation', 'Silkworm rearing', 'Silkworm pathology', 'Silk reeling technology', 'Seed technology'], skills: ['Disease diagnosis', 'Microscopy', 'Farm record keeping'], orgs: ['Central Silk Board institutes', 'State sericulture departments', 'Silk reeling units'], fields: ['agri', 'science'] });
