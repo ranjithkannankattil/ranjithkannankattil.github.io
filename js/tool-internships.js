@@ -180,7 +180,7 @@
   $('inRead').addEventListener('click', function () {
     if (!takeKey()) return;
     var b = this; b.disabled = true; msg('inMsg2', t('reading'));
-    buildProfile().then(function () { msg('inMsg2', ''); show(3); renderProfile(); })
+    buildProfile().then(function () { msg('inMsg2', ''); show(3); renderProfile(); renderResults(); })
       .catch(function (e) { msg('inMsg2', e.kind === 'key' ? t('errKey') : t('keyBad', { m: e.message || e.kind }), true); })
       .then(function () { b.disabled = false; });
   });
@@ -311,10 +311,10 @@
     var g = e.target.closest('[data-g]'); if (!g) return;
     var list = S.p[g.getAttribute('data-g')];
     var d = e.target.closest('[data-del]');
-    if (d) { list.splice(+d.getAttribute('data-del'), 1); save(); renderProfile(); return; }
+    if (d) { list.splice(+d.getAttribute('data-del'), 1); save(); renderProfile(); renderResults(); return; }
     if (e.target.closest('[data-add]')) {
       var inp = g.querySelector('input'), v = inp.value.trim();
-      if (v && list.indexOf(v) < 0) { list.push(v); save(); renderProfile(); var again = document.querySelector('[data-g="' + g.getAttribute('data-g') + '"] input'); if (again) again.focus(); }
+      if (v && list.indexOf(v) < 0) { list.push(v); save(); renderProfile(); renderResults(); var again = document.querySelector('[data-g="' + g.getAttribute('data-g') + '"] input'); if (again) again.focus(); }
     }
   });
   $('inChips').addEventListener('keydown', function (e) {
@@ -667,7 +667,40 @@
     $('inMore').innerHTML = qs.length ? '<h3>' + esc(t('moreSearch')) + '</h3><div>' + qs.map(function (q) {
       return '<a href="' + esc(gLink(q)) + '" target="_blank" rel="noopener">🔎 ' + esc(q) + '</a>';
     }).join('') + '</div>' : '';
+    renderAgg();
   };
+  // ---- other internship sites: open their own search pages (no scraping, no AI quota)
+  var slug = function (x) { return String(x || '').toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); };
+  var aggWord = '';
+  var AGG = [
+    { name: 'Internshala', url: function (w) { return gLink('site:internshala.com ' + w + ' internship'); } },
+    { name: 'LinkedIn', url: function (w, st) { return 'https://www.linkedin.com/jobs/search/?keywords=' + encodeURIComponent(w) + '&location=' + encodeURIComponent(st ? st + ', India' : 'India') + '&f_JT=I'; } },
+    { name: 'Indeed', url: function (w, st) { return 'https://in.indeed.com/jobs?q=' + encodeURIComponent(w + ' internship') + (st ? '&l=' + encodeURIComponent(st) : ''); } },
+    { name: 'Naukri', url: function (w) { return gLink('site:naukri.com ' + w + ' internship'); } },
+    { name: 'Unstop', url: function (w, st) { return st ? 'https://unstop.com/internship/internship-in-' + slug(st) : 'https://unstop.com/internship'; } },
+    { name: 'Unstop · Govt', url: function () { return 'https://unstop.com/internship/government-internship'; } },
+    { name: 'Google Jobs', url: function (w, st) { return 'https://www.google.com/search?ibp=htl;jobs&q=' + encodeURIComponent(w + ' internship ' + (st || 'India')); } },
+    { name: 'AICTE portal', url: function () { return 'https://internship.aicte-india.org'; } },
+    { name: 'PM Internship', url: function () { return 'https://pminternship.mca.gov.in'; } },
+    { name: 'NATS apprenticeship', url: function () { return 'https://nats.education.gov.in'; } },
+    { name: 'Apprenticeship India', url: function () { return 'https://www.apprenticeshipindia.gov.in'; } }
+  ];
+  var renderAgg = function () {
+    var words = [S.p.course].concat(S.p.subjects.slice(0, 4), S.p.skills.slice(0, 2)).filter(Boolean)
+      .filter(function (w, i, a) { return a.indexOf(w) === i; });
+    if (!words.length) { $('inAgg').innerHTML = ''; return; }
+    if (words.indexOf(aggWord) < 0) aggWord = words[0];
+    var st = S.p.state && S.p.state !== 'all' ? S.p.state : '';
+    $('inAgg').innerHTML = '<h3>' + esc(t('aggHead')) + '</h3><p class="in-small">' + esc(t('aggHelp')) + '</p>' +
+      '<label class="in-agg-w"><span>' + esc(t('aggWord')) + '</span><select id="inAggW">' + words.map(function (w) {
+        return '<option' + (w === aggWord ? ' selected' : '') + '>' + esc(w) + '</option>';
+      }).join('') + '</select></label>' +
+      '<div class="in-agg-list">' + AGG.map(function (a) {
+        return '<a href="' + esc(a.url(aggWord, st)) + '" target="_blank" rel="noopener">' + esc(a.name) + ' ↗</a>';
+      }).join('') + '</div>';
+  };
+  $('inAgg').addEventListener('change', function (e) { if (e.target.id === 'inAggW') { aggWord = e.target.value; renderAgg(); } });
+
   $('inTabs').addEventListener('click', function (e) {
     var b = e.target.closest('[data-tab]'); if (!b) return; S.tab = b.getAttribute('data-tab'); save(); renderResults();
   });

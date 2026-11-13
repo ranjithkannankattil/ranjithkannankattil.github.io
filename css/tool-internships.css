@@ -151,6 +151,17 @@ body[data-section="productivity"] .in-card-acts button[aria-pressed="true"]{ bor
 .in-more a{ display:inline-flex; align-items:center; min-height:40px; padding:.3rem .65rem; border:1px solid var(--line); font-size:.86rem; }
 .in-more a:hover{ border-color:var(--accent); }
 
+/* other internship sites */
+.in-agg{ margin-top:1.4rem; padding:1rem; border:1px solid var(--line); background:var(--paper-2); }
+.in-agg h3{ font-family:var(--f-display); font-weight:600; font-size:1rem; margin:0; }
+.in[data-lang="ml"] .in-agg h3, .in[data-lang="hi"] .in-agg h3, .in[data-lang="ml"] .in-cur h3, .in[data-lang="hi"] .in-cur h3, .in[data-lang="ml"] .in-more h3, .in[data-lang="hi"] .in-more h3{ font-family:inherit; font-weight:700; }
+.in-agg-w{ display:flex; flex-direction:column; margin-top:.7rem; max-width:24rem; }
+.in-agg-w span{ font-size:.82rem; color:var(--ink-soft); }
+.in-agg-w select{ min-height:44px; border:1px solid var(--ink); background:var(--paper); padding:0 .5rem; margin-top:.2rem; }
+.in-agg-list{ display:flex; flex-wrap:wrap; gap:.4rem; margin-top:.7rem; }
+.in-agg-list a{ display:inline-flex; align-items:center; min-height:44px; padding:.3rem .75rem; border:1px solid var(--accent); background:var(--paper); color:var(--accent-text, var(--accent)); font-family:var(--f-display); font-weight:600; font-size:.9rem; }
+.in-agg-list a:hover{ background:var(--accent-soft); }
+
 /* keep safe */
 .in-keep{ margin-top:2rem; padding:1.2rem; border:1px solid var(--ink); }
 .in-keep-grid{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem 1.2rem; margin-top:.9rem; }
