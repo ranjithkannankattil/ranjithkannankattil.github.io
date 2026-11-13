@@ -19,8 +19,7 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
 - **Writings**: never state how many pieces he wrote or over which years; keep descriptions generic.
   Blog version of a post is canonical over the Facebook copy.
 - **Copyheart**: his own work is free to copy (say so for his work only, not everything on the site).
-- The site is English-only — no translated pages. One exception he asked for: the Internship finder has an
-  in-page EN | മലയാളം | हिंदी switch (students are its audience).
+- The site is English-only — no translated pages.
 - **All media goes to Cloudflare R2**, served from `https://media.ranjithkb.com/` — photos, book
   PDFs, link-preview cards, audio, video and any other new images or files. Never commit media to
   the repo for the site to serve. To add some: commit it under `media-incoming/<path>`; the
@@ -119,27 +118,11 @@ Claude task for it.
 Archived by the owner: unlinked, `noindex`, and `build-news.yml` runs by hand only. `news.html` is a short
 note; the full page is saved at `docs/archived/news-page.html` and the code is still in the repo.
 
-## Internship finder (productivity/internships.html, js/tool-internships.js)
-Runs entirely in the visitor's browser on **the student's own** free Gemini key (AI Studio); nothing goes
-to the site or to Claude, and there is no scheduled job. **No Google Search grounding** (free keys get
-"You exceeded your current quota" for it; he asked to drop it). Free-tier AI requests are scarce (can be
-~20 a day for Flash), so the AI is used only for a few requests and Flash-Lite is tried first:
-profile (1 request, + 1 if the guessed syllabus page opens) → 1 request naming organisations per tier
-(state govt → central govt → PSUs → private) with careers/notices pages, plus the built-in list in
-`js/internships-data.js` → those pages are opened with **Jina Reader** (`r.jina.ai/<url>`, free, no key,
-~20/min; **AllOrigins** as backup) and internship links/snippets are picked out by code, following one
-careers/notices link per site → **Google News RSS** for recent announcements → a few batched AI requests
-turn the finds into cards (an AI card replaces the raw find with the same link; raw finds the AI skipped stay as "to check"; undated programmes are kept; an AI link must appear in the excerpts, else it falls back to the page it came from). Finally every card's link is opened again and clearly dead ones (404/410) are removed. A "What happened" summary (pages opened/failed, links, news, AI-tidied, dead removed) shows at the end for debugging. Code-picked links need the link text to say internship/apprentice/etc. (menus, "skip to content", "Internal" are ignored). If the AI limit runs
-out, the raw finds stay and "Continue the search" finishes later (also redoes a failed organisation step
-and re-opens pages that failed). "Found on this page" = the link came from a page we actually opened.
-Text in three languages: `js/internships-i18n.js` (add a language by copying the `en` block). Saving:
-browser, backup file via the share sheet, a self-updating file on laptops (File System Access), and a
-restore link whose data sits in the `#` fragment. The key is never in backups or links. "Use a different
-key" switches keys mid-search and carries on. Test without a key: `internships.html?mock=1`
-(also `?mock=day` = AI limit hit, `?mock=noread` = pages can't be opened).
-He doesn't want his Google account involved (no Google sign-in / Drive API). "Search other internship
-sites" only opens other sites' own search pages (Internshala and Naukri via a Google site: search,
-LinkedIn, Indeed, Unstop, Google Jobs, AICTE, PMIS, NATS, Apprenticeship India) with the student's word.
+## Internship finder (dropped)
+Built and then dropped by the owner in Nov 2026 (in-browser search on students' free Gemini keys was unreliable:
+free keys have no Google Search, tiny daily limits, and free page readers get blocked). Removed from the menu,
+Workbench and sitemap; `productivity/internships.html` is a short noindex note. The code is in git history
+(last full version: commit 3ed989b). Don't rebuild it unless he asks.
 
 ## Adding a Workbench tool
 See "Adding a productivity tool" in README.md (registry in `js/tools.js`, page in `productivity/`,

@@ -57,8 +57,6 @@ SECTIONS = [
      "Colour countries on a globe, or the states and provinces of any country, in your own colours.", "#5C4D7D", None),
     ("scholarships", ["productivity/scholarships.html"], "Workbench · Scholarship finder", "Scholarship finder for Indian students",
      "Study abroad funding on every continent, with official links and deadlines.", "#5C4D7D", None),
-    ("internships", ["productivity/internships.html"], "Workbench · Internship finder", "Internship finder for Indian students",
-     "Your course and syllabus, searched across state and central government, PSUs and private companies.", "#5C4D7D", None),
     ("keyboard", ["productivity/keyboard.html"], "Productivity · Indic Keyboard", "Indic Keyboard for iPhone",
      "Swanalekha and other Malayalam layouts on iPhone and iPad. Open source, alpha.", "#5C4D7D", None),
     ("publications", ["publications.html"], "Publications", "Books and papers",
