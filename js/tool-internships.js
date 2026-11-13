@@ -3,16 +3,21 @@
 
    Everything runs in the visitor's browser on THEIR OWN Gemini key
    (Google AI Studio, free tier). This site never sees the key, the
-   course or the results. Flow:
-     1 course → 2 key → 3 profile (AI reads the syllabus) → 4 search
-   The search plans ~16/40/90 Google-grounded queries in four tiers
-   (state govt → central govt → PSUs → private), runs them slowly to
-   stay inside the free limits, and saves after every step so it can
-   stop and continue (even the next day). If Google Search grounding
-   is not available on the key, it falls back to "leads" from the
-   model's own knowledge, clearly marked "check page".
+   course or the results. No Google Search tool is used (free keys
+   get "quota exceeded" for it). Flow:
+     1 course → 2 key → 3 profile (1–2 AI requests; tries to open the
+       university's syllabus page) → 4 search:
+       a. 1 AI request names organisations per tier (state govt →
+          central govt → PSUs → private) with careers/notices pages,
+          plus the built-in official programmes (internships-data.js)
+       b. those pages are opened with a free page reader (Jina Reader,
+          AllOrigins as backup) and internship links are picked out by
+          code; one careers/notices link per site is followed
+       c. Google News RSS for recent announcements (same reader)
+       d. a few batched AI requests turn the finds into cards
+   If the AI limit runs out, the code-picked finds stay on the page.
 
-   Test without a key: open the page with ?mock=1
+   Test without a key: ?mock=1, ?mock=day, ?mock=noread
    ============================================================ */
 (function () {
   'use strict';
@@ -21,14 +26,12 @@
   if (!root) return;
 
   var API = 'https://generativelanguage.googleapis.com/v1beta/models/';
-  var SEARCH_MODELS = ['gemini-flash-latest', 'gemini-flash-lite-latest'];
   var PLAIN_MODEL = 'gemini-flash-lite-latest';
-  var GAP = 7000;                                     // ms between calls: ~8 a minute
+  var GAP = 7000;                                     // ms between AI calls
   var STORE = 'ifind-v1', KEYSTORE = 'ifind-key', LANGSTORE = 'ifind-lang';
   var TIERS = ['state', 'central', 'psu', 'private'];
   var TIER_T = { state: 'tState', central: 'tCentral', psu: 'tPsu', private: 'tPrivate' };
-  var DEPTH = { quick: [5, 5, 2, 4, 2], std: [12, 12, 6, 10, 4], deep: [27, 27, 13, 23, 8] }; // state, central, psu, private, programme checks
-  var MOCK = /[?&]mock=/.test(location.search), MOCKERR = (location.search.match(/mock=(nosearch|rate)/) || [])[1];
+  var MOCK = /[?&]mock=/.test(location.search), MOCKERR = (location.search.match(/mock=(day|noread)/) || [])[1];
   var LANGS = window.INTERN_LANGS, TT = window.INTERN_T, FIELDS = window.INTERN_FIELDS;
 
   // ---------------------------------------------------------------- state
@@ -176,8 +179,7 @@
     setKey(k, $('inRemember').checked);
     return k;
   };
-  var pending = function () { return !!(S.run && S.run.tasks && S.run.tasks.some(function (x) { return !x.done; })); };
-  var keyStepUI = function () { $('inContinue').hidden = !pending(); };
+  var keyStepUI = function () { $('inContinue').hidden = !(typeof pending === 'function' && pending()); };
   // switch to another key (e.g. from a different Gmail account): stop, keep progress, come back here
   $('inChangeKey').addEventListener('click', function () {
     if (running) stopAsked = true;
@@ -193,7 +195,7 @@
   $('inContinue').addEventListener('click', function () {
     if (!takeKey()) return;
     msg('inMsg2', '');
-    S.run.dead = {}; S.run.note = ''; S.run.noSearch = false;
+    retryFailed();
     show(4);
     // the old search may still be finishing its last request: start once it has stopped
     var go = function () { if (running) return setTimeout(go, 500); loop(); };
@@ -251,6 +253,12 @@
         var gm = (c && c.groundingMetadata) || {};
         var hosts = (gm.groundingChunks || []).map(function (ch) { return ch.web && (ch.web.title || hostOf(ch.web.uri)); }).filter(Boolean)
           .map(function (h) { return String(h).toLowerCase().replace(/^www\./, ''); });
+        var um = (c && (c.urlContextMetadata || c.url_context_metadata)) || {};
+        (um.urlMetadata || um.url_metadata || []).forEach(function (u) {
+          var st = u.urlRetrievalStatus || u.url_retrieval_status || '';
+          var h = hostOf(u.retrievedUrl || u.retrieved_url);
+          if (h && /SUCCESS/.test(st)) hosts.push(h);
+        });
         return { text: text, hosts: hosts, searched: !!(gm.webSearchQueries && gm.webSearchQueries.length) || hosts.length > 0 };
       });
     }, function (er) { clearTimeout(timer); if (er && er.kind) throw er; throw new GemErr('net', t('errNet')); });
@@ -276,51 +284,175 @@
       (p.orgs.length ? '\nRelated organisations: ' + p.orgs.join('; ') : '');
   };
 
-  // try search models in turn; returns {text, hosts} or throws GemErr('nosearch'|'day'|...)
-  var searchCall = function (prompt) {
+  // ---- AI calls: Flash-Lite first (largest free allowance), then Flash. No Google Search tool anywhere.
+  var ask = function (body) {
     var run = S.run || {}; run.dead = run.dead || {};
-    var models = SEARCH_MODELS.filter(function (m) { return run.dead[m] !== today(); });
-    var lastErr = new GemErr('day', 'search limit');
-    var allNoSearch = true;
-    var tryAt = function (i) {
-      if (i >= models.length) { if (allNoSearch && lastErr.kind === 'nosearch') lastErr.kind = 'nosearch'; throw lastErr; }
-      var m = models[i];
-      return gemini({ contents: [{ parts: [{ text: prompt }] }], tools: [{ google_search: {} }], generationConfig: { temperature: 0.2 } }, m)
-        .catch(function (e) {
-          if (e.kind === 'day' || e.kind === 'nosearch') {
-            if (e.kind === 'day') allNoSearch = false;
-            run.dead[m] = today(); lastErr = e; return tryAt(i + 1);
-          }
-          throw e;
-        });
+    var models = [PLAIN_MODEL, 'gemini-flash-latest'].filter(function (m) { return run.dead[m] !== today(); });
+    var last = new GemErr('day', 'Today’s free AI limit for this key is used up.');
+    var go = function (i) {
+      if (i >= models.length) throw last;
+      return gemini(body, models[i]).catch(function (e) {
+        if (e.kind === 'day' || e.kind === 'nosearch') { run.dead[models[i]] = today(); last = e.kind === 'nosearch' ? new GemErr('day', e.message) : e; return go(i + 1); }
+        throw e;
+      });
     };
-    return Promise.resolve().then(function () { return tryAt(0); });
+    return Promise.resolve().then(function () { return go(0); });
+  };
+
+  // ---- Page reader: opens any public page from the browser without AI.
+  // 1) Jina Reader (free, no key, ~20 pages a minute per phone)  2) AllOrigins as a backup
+  var READER = 'https://r.jina.ai/', ORIGINS = 'https://api.allorigins.win/raw?url=';
+  var READ_GAP = 3500;
+  var fetchText = function (url, ms) {
+    var ctl = window.AbortController ? new AbortController() : null;
+    var timer = ctl && setTimeout(function () { ctl.abort(); }, ms || 40000);
+    return fetch(url, { signal: ctl ? ctl.signal : undefined }).then(function (r) {
+      clearTimeout(timer);
+      if (!r.ok) { var e = new Error('HTTP ' + r.status); e.status = r.status; throw e; }
+      return r.text();
+    }, function (e) { clearTimeout(timer); throw e; });
+  };
+  var htmlToMd = function (html, base) {
+    try {
+      var doc = new DOMParser().parseFromString(html, 'text/html');
+      doc.querySelectorAll('script,style,noscript,svg').forEach(function (n) { n.remove(); });
+      doc.querySelectorAll('a[href]').forEach(function (a) {
+        var href; try { href = new URL(a.getAttribute('href'), base).href; } catch (e) { return; }
+        a.textContent = '[' + a.textContent.replace(/\s+/g, ' ').trim() + '](' + href + ')';
+      });
+      doc.querySelectorAll('br,p,div,li,tr,h1,h2,h3,h4,h5,h6').forEach(function (n) { n.append('\n'); });
+      return (doc.body ? doc.body.textContent : '').replace(/[ \t]+/g, ' ').replace(/\n\s*\n+/g, '\n');
+    } catch (e) { return html; }
+  };
+  var readerDown = 0;
+  var readPage = function (url) {
+    if (MOCK) return mockRead(url);
+    var viaOrigins = function () { return fetchText(ORIGINS + encodeURIComponent(url), 30000).then(function (h) { return /<html|<body|<a /i.test(h) ? htmlToMd(h, url) : h; }); };
+    var first = readerDown > 3 ? viaOrigins() : fetchText(READER + url, 40000).then(function (t) { readerDown = 0; return t; }, function (e) { readerDown++; return viaOrigins(); });
+    return first.then(function (text) {
+      if (!text || text.length < 80) throw new Error('empty page');
+      return text.slice(0, 250000);
+    });
+  };
+
+  // ---- Picking out internship mentions from a page (no AI)
+  var KW = /\b(intern(ship)?s?|summer (training|school|research|fellowship|programme|program)|trainee(ship)?s?|apprentice(ship)?s?|studentships?|project (assistant|trainee|fellow)|industrial training|vocational training|in-?plant training|graduate engineer trainee)\b/i;
+  var HOPKW = /(career|recruit|notice|notification|intern|training|vacanc|apprentic|opportunit|\bjobs?\b|advertis|announcement|what.?s new|latest)/i;
+  var linksOf = function (md) {
+    var out = [], re = /\[([^\]\n]{2,220})\]\((https?:\/\/[^)\s]+)\)/g, m;
+    while ((m = re.exec(md))) out.push({ text: m[1].replace(/[*_`#]/g, '').trim(), url: m[2], at: m.index });
+    return out;
+  };
+  var MONTHS = { jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6, jul: 7, aug: 8, sep: 9, sept: 9, oct: 10, nov: 11, dec: 12 };
+  var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+  var findDate = function (s) {
+    var m = s.match(/\b(\d{1,2})[.\/-](\d{1,2})[.\/-](20\d\d)\b/);
+    if (m && +m[2] <= 12 && +m[1] <= 31) return m[3] + '-' + pad(+m[2]) + '-' + pad(+m[1]);
+    m = s.match(/\b(\d{1,2})(?:st|nd|rd|th)?\s+(jan|feb|mar|apr|may|jun|jul|aug|sept?|oct|nov|dec)[a-z]*\.?,?\s+(20\d\d)\b/i);
+    if (m) return m[3] + '-' + pad(MONTHS[m[2].toLowerCase()]) + '-' + pad(+m[1]);
+    m = s.match(/\b(jan|feb|mar|apr|may|jun|jul|aug|sept?|oct|nov|dec)[a-z]*\.?\s+(\d{1,2}),?\s+(20\d\d)\b/i);
+    if (m) return m[3] + '-' + pad(MONTHS[m[1].toLowerCase()]) + '-' + pad(+m[2]);
+    return '';
+  };
+  var snippetsOf = function (md) {
+    var lines = md.split('\n'), out = [], used = {};
+    for (var i = 0; i < lines.length && out.length < 14; i++) {
+      if (!KW.test(lines[i]) || used[i]) continue;
+      var a = Math.max(0, i - 2), b = Math.min(lines.length, i + 3), chunk = [];
+      for (var k = a; k < b; k++) { used[k] = 1; chunk.push(lines[k]); }
+      out.push(chunk.join(' ').replace(/\s+/g, ' ').slice(0, 700));
+    }
+    return out;
+  };
+  var rawItems = function (md, page) {
+    var now = today(), seen = {};
+    return linksOf(md).filter(function (l) {
+      return (KW.test(l.text) || /intern|apprentic|summer.?training|studentship/i.test(l.url)) && !/login|sign.?in|policy\b/i.test(l.text);
+    }).map(function (l) {
+      var near = md.slice(Math.max(0, l.at - 250), l.at + l.text.length + 350);
+      var dl = /last date|closing|deadline|on or before|apply by/i.test(near) ? findDate(near) : '';
+      return { title: l.text.slice(0, 160), org: page.org, url: l.url, deadline: dl && dl >= now ? dl : '', status: 'unclear', why: '' };
+    }).filter(function (x) { var k = x.url.toLowerCase(); if (seen[k]) return false; seen[k] = 1; return true; }).slice(0, 12);
+  };
+  var hopsOf = function (md, page) {
+    var h = hostOf(page.url);
+    return linksOf(md).filter(function (l) {
+      var lh = hostOf(l.url);
+      return (lh === h || lh.slice(-(h.length + 1)) === '.' + h || h.slice(-(lh.length + 1)) === '.' + lh) && HOPKW.test(l.text + ' ' + l.url) && !/\.(jpg|png|zip)$/i.test(l.url);
+    }).sort(function (a, b) { return (KW.test(b.text) ? 1 : 0) - (KW.test(a.text) ? 1 : 0); }).slice(0, 2);
+  };
+
+  // ---- Google News RSS (recent announcements about internships), read through the same reader
+  var newsUrl = function (q) { return 'https://news.google.com/rss/search?q=' + encodeURIComponent(q + ' when:120d') + '&hl=en-IN&gl=IN&ceid=IN:en'; };
+  var readNews = function (q) {
+    if (MOCK) return mockNews(q);
+    var u = newsUrl(q);
+    var parse = function (xml) {
+      var items = [];
+      try {
+        var doc = new DOMParser().parseFromString(xml, 'text/xml');
+        doc.querySelectorAll('item').forEach(function (it) {
+          var g = function (s) { var n = it.querySelector(s); return n ? n.textContent.trim() : ''; };
+          items.push({ title: g('title'), url: g('link'), date: g('pubDate'), src: g('source') });
+        });
+      } catch (e) {}
+      if (!items.length) linksOf(xml).forEach(function (l) { if (/news\.google\.com\/rss\/articles/.test(l.url)) items.push({ title: l.text, url: l.url, date: '', src: '' }); });
+      return items.filter(function (x) { return x.title && x.url && KW.test(x.title); }).slice(0, 8);
+    };
+    return fetchText(ORIGINS + encodeURIComponent(u), 30000).then(parse)
+      .catch(function () { return fetchText(READER + u, 40000).then(parse); });
   };
 
   // ---------------------------------------------------------------- step 3: profile
+  var clean = function (a, n) { return (Array.isArray(a) ? a : []).map(function (x) { return String(x).trim(); }).filter(Boolean).slice(0, n); };
+  var PROFILE_SPEC = '{"subjects": [up to 15 key subjects or papers], "skills": [up to 12 practical skills, lab techniques or software], ' +
+    '"orgs": [up to 10 specific kinds of Indian organisations that take interns in this field, e.g. boards, research institutes, departments, industries], ' +
+    '"fields": [1 to 4 of: policy, law, finance, science, engg, it, agri, health, env, arts, mgmt]';
+  var takeProfile = function (j, syl) {
+    var p = S.p;
+    p.subjects = clean(j.subjects, 15); p.skills = clean(j.skills, 12); p.orgs = clean(j.orgs, 10);
+    p.fields = clean(j.fields, 4).filter(function (f) { return FIELDS[f]; });
+    p.syl = syl; save();
+  };
   var buildProfile = function () {
     var p = S.p, own = !!(pdf || p.paste);
     var head = 'An Indian student wants internships in their field.\n' + profileText() + '\n\n';
-    var ask = (pdf ? 'The attached PDF is this student\'s syllabus. Read it.\n' : '') +
-      (p.paste ? 'The student typed their subjects:\n' + p.paste + '\n' : '') +
-      (own ? '' : 'Use Google Search to find the official syllabus or curriculum of this course at this university (prefer the university\'s own website or PDF). If you cannot find it, use the typical syllabus of this course in India.\n') +
-      '\nReply with ONLY this JSON, in English:\n' +
-      '{"found": true or false (true only if you read this university\'s syllabus or the student\'s own list), "url": "link to the syllabus you read, or empty", ' +
-      '"subjects": [up to 15 key subjects or papers], "skills": [up to 12 practical skills, lab techniques or software], ' +
-      '"orgs": [up to 10 specific kinds of Indian organisations that take interns in this field, e.g. boards, research institutes, departments, industries], ' +
-      '"fields": [1 to 4 of: policy, law, finance, science, engg, it, agri, health, env, arts, mgmt]}';
-    var parts = [{ text: head + ask }];
-    if (pdf) parts.push({ inline_data: { mime_type: 'application/pdf', data: pdf.b64 } });
-    var plain = function () { return gemini({ contents: [{ parts: parts }], generationConfig: { temperature: 0.2 } }, own ? 'gemini-flash-latest' : PLAIN_MODEL); };
-    var call = own ? plain() : searchCall(head + ask).catch(function (e) { if (e.kind === 'key' || e.kind === 'net') throw e; return plain(); });
-    return call.then(function (r) {
-      var j = parseJSON(r.text, '{');
-      if (!j) throw new GemErr('other', 'Could not read the answer. Please try again.');
-      var clean = function (a, n) { return (Array.isArray(a) ? a : []).map(function (x) { return String(x).trim(); }).filter(Boolean).slice(0, n); };
-      p.subjects = clean(j.subjects, 15); p.skills = clean(j.skills, 12); p.orgs = clean(j.orgs, 10);
-      p.fields = clean(j.fields, 4).filter(function (f) { return FIELDS[f]; });
-      p.syl = { found: !!j.found, url: /^https?:\/\//.test(j.url || '') ? j.url : '', own: own };
-      save();
+    if (own) {
+      var parts = [{ text: head + (pdf ? 'The attached PDF is this student\'s syllabus. Read it.\n' : '') +
+        (p.paste ? 'The student typed their subjects:\n' + p.paste + '\n' : '') + '\nReply with ONLY this JSON, in English:\n' + PROFILE_SPEC + '}' }];
+      if (pdf) parts.push({ inline_data: { mime_type: 'application/pdf', data: pdf.b64 } });
+      return (pdf ? gemini({ contents: [{ parts: parts }], generationConfig: { temperature: 0.2 } }, 'gemini-flash-latest').catch(function (e) {
+        if (e.kind === 'key' || e.kind === 'net') throw e;
+        return ask({ contents: [{ parts: parts }], generationConfig: { temperature: 0.2 } });
+      }) : ask({ contents: [{ parts: parts }], generationConfig: { temperature: 0.2, responseMimeType: 'application/json' } })).then(function (r) {
+        var j = parseJSON(r.text, '{'); if (!j) throw new GemErr('other', 'Could not read the answer. Please try again.');
+        takeProfile(j, { found: true, url: '', own: true });
+      });
+    }
+    // 1 AI request: typical syllabus + likely official syllabus links; then try to open those links (no AI)
+    var prompt = head + 'From your own knowledge of Indian university syllabi, describe this course. Also give up to 3 links where this university most likely publishes the official syllabus or curriculum for it (its own website; PDFs are fine).\n' +
+      'Reply with ONLY this JSON, in English:\n' + PROFILE_SPEC + ', "syllabusUrls": ["https://..."]}';
+    return ask({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { temperature: 0.2, responseMimeType: 'application/json' } }).then(function (r) {
+      var j = parseJSON(r.text, '{'); if (!j) throw new GemErr('other', 'Could not read the answer. Please try again.');
+      takeProfile(j, { found: false, url: '', own: false });
+      var urls = clean(j.syllabusUrls, 3).filter(function (u) { return /^https?:\/\//.test(u); });
+      // open the suggested pages; if one really is a syllabus, one more AI request reads the subjects from it
+      var tryAt = function (i) {
+        if (i >= urls.length) return null;
+        return readPage(urls[i]).then(function (text) {
+          var hits = (text.match(/syllabus|curriculum|semester|course code|credits|unit\s*[-–:]?\s*(i|1)\b|paper/gi) || []).length;
+          return hits >= 6 ? { url: urls[i], text: text } : tryAt(i + 1);
+        }, function () { return tryAt(i + 1); });
+      };
+      return tryAt(0).then(function (found) {
+        if (!found) return;
+        var pr = head + 'Below is text from this university\'s syllabus page (' + found.url + '). Read the subjects for this course from it.\n' +
+          'Reply with ONLY this JSON, in English:\n' + PROFILE_SPEC + '}\n\nSYLLABUS TEXT:\n' + found.text.slice(0, 30000);
+        return ask({ contents: [{ parts: [{ text: pr }] }], generationConfig: { temperature: 0.2, responseMimeType: 'application/json' } }).then(function (r2) {
+          var j2 = parseJSON(r2.text, '{');
+          if (j2 && clean(j2.subjects, 15).length >= 3) takeProfile(j2, { found: true, url: found.url, own: false });
+        }, function () {});
+      });
     });
   };
 
@@ -367,7 +499,7 @@
     r.addEventListener('change', function () { S.depth = r.value; save(); });
   });
 
-  // ---------------------------------------------------------------- plan
+  // ---------------------------------------------------------------- the search (no Google Search)
   var relevant = function (list) {
     var f = S.p.fields;
     return list.map(function (x) {
@@ -377,70 +509,47 @@
     }).filter(function (o) { return o.s > 0; }).sort(function (a, b) { return b.s - a.s; }).map(function (o) { return o.x; });
   };
   var stateName = function () { return S.p.state === 'all' || !S.p.state ? 'any Indian state' : S.p.state; };
-
-  var templateTasks = function (n) {
-    var words = S.p.subjects.concat(S.p.skills, S.p.orgs, [S.p.course]);
-    var pick = function (i) { return words[i % words.length] || S.p.course; };
-    var st = S.p.state === 'all' ? 'state government' : S.p.state + ' government';
-    var out = [], kinds = ['internship', 'summer training', 'project trainee', 'studentship'];
-    for (var i = 0; i < n[0]; i++) out.push({ tier: 'state', q: st + ' ' + pick(i) + ' ' + kinds[i % 4] + ' students' });
-    for (i = 0; i < n[1]; i++) out.push({ tier: 'central', q: 'Government of India ' + pick(i + 3) + ' ' + kinds[i % 4] + ' ' + new Date().getFullYear() });
-    for (i = 0; i < n[2]; i++) out.push({ tier: 'psu', q: 'PSU ' + pick(i + 5) + ' internship students' });
-    for (i = 0; i < n[3]; i++) out.push({ tier: 'private', q: pick(i + 7) + ' internship India ' + kinds[i % 4] });
-    return out;
-  };
-  var plan = function () {
-    var n = DEPTH[S.depth] || DEPTH.std, total = n[0] + n[1] + n[2] + n[3];
-    var prompt = 'Plan Google searches to find internships for this Indian student.\n' + profileText() + '\nToday: ' + today() + '\n\n' +
-      'Make exactly ' + total + ' searches: ' + n[0] + ' for the state government of ' + stateName() + ' (its departments, boards, corporations, universities, research stations, district bodies), ' +
-      n[1] + ' for the central government (ministries, regulators, commodity boards, national institutes, research labs, national schemes), ' +
-      n[2] + ' for public sector undertakings (PSUs), and ' + n[3] + ' for private companies, startups and NGOs. ' +
-      'Each search is a short Google query (max 12 words) that would find a current internship, summer training, project trainee, studentship or apprentice announcement. ' +
-      'Use the subjects, skills and organisations above — name specific bodies related to this field where you can. Avoid generic job-board searches. ' +
-      'Reply with ONLY a JSON array: [{"tier":"state|central|psu|private","q":"..."}]';
-    return gemini({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { temperature: 0.5, responseMimeType: 'application/json' } }, PLAIN_MODEL)
-      .then(function (r) { return parseJSON(r.text, '['); })
-      .catch(function (e) { if (e.kind === 'key' || e.kind === 'day') throw e; return null; })
-      .then(function (arr) {
-        var tasks = (Array.isArray(arr) ? arr : []).filter(function (x) { return x && TIERS.indexOf(x.tier) >= 0 && x.q; })
-          .map(function (x) { return { tier: x.tier, q: String(x.q).slice(0, 160) }; });
-        if (tasks.length < total / 2) tasks = templateTasks(n);
-        // official programme checks go first in the central tier
-        var checks = relevant(window.INTERN_CENTRAL).slice(0, n[4]).map(function (c) { return { tier: 'central', q: c.name, check: c.name, url: c.url }; });
-        tasks = tasks.filter(function (x) { return x.tier === 'state'; })
-          .concat(checks, tasks.filter(function (x) { return x.tier === 'central'; }),
-            tasks.filter(function (x) { return x.tier === 'psu'; }), tasks.filter(function (x) { return x.tier === 'private'; }));
-        return tasks.map(function (x, i) { x.id = i; x.done = false; return x; });
-      });
-  };
-
-  // ---------------------------------------------------------------- search
+  // pages to open per tier (state, central, psu, private), built-in programmes, PSUs, news searches
+  var DEPTH2 = { quick: [4, 3, 2, 3, 3, 2, 3], std: [10, 7, 4, 9, 6, 4, 6], deep: [22, 16, 9, 20, 12, 8, 12] };
   var TIER_DESC = {
-    state: function () { return 'the state government of ' + stateName() + ' or its departments, boards, corporations, universities or research bodies'; },
-    central: function () { return 'the Government of India: ministries, regulators, commodity boards, national institutes, research labs or national schemes'; },
-    psu: function () { return 'public sector undertakings (central or state PSUs)'; },
-    private: function () { return 'private companies, startups or NGOs (not government)'; }
+    state: function () { return 'the state government of ' + stateName() + ': departments, boards, corporations, state universities, research stations, district bodies'; },
+    central: function () { return 'the Government of India: ministries, regulators, commodity boards, national institutes, research labs (CSIR, ICAR, ICMR, DRDO, ISRO and others), national schemes'; },
+    psu: function () { return 'public sector undertakings (central and state PSUs)'; },
+    private: function () { return 'private companies, startups and NGOs in India (not government)'; }
   };
-  var ITEM_SPEC = '{"title":"...","org":"...","place":"city/state or remote","stipend":"amount or unpaid or empty","deadline":"YYYY-MM-DD or empty","opens":"YYYY-MM-DD or empty",' +
-    '"status":"open|soon|unclear","eligibility":"who can apply, short","why":"one short line: which subject or skill it matches","url":"official page link"}';
-  var taskPrompt = function (task) {
-    var base = 'You help an Indian student find internships.\n' + profileText() + '\nToday: ' + today() + '\n\n';
-    if (task.check) {
-      return base + 'Use Google Search to check the current status of "' + task.check + '" (official site ' + task.url + '). ' +
-        'Is there an internship round open now, or announced to open in the next 4 months? Reply with ONLY a JSON array with one item ' + ITEM_SPEC +
-        ' using the official page, or [] if you found nothing current.';
-    }
-    return base + 'Use Google Search for: ' + task.q + '\n\n' +
-      'Find internships (also summer training, project traineeships, studentships, apprenticeships) offered by ' + TIER_DESC[task.tier]() +
-      ', that suit this student and are open now or will open in the next 4 months, in India or remote. ' +
-      'Only include ones you actually saw on a page in the search results, and give that page (prefer the organisation\'s own website). ' +
-      'Leave out anything that asks students to pay, and anything whose last date has passed. ' +
-      'Reply with ONLY a JSON array of up to 6 items, or [] if none: [' + ITEM_SPEC + ']';
-  };
-  var leadsPrompt = function (tier) {
-    return 'You help an Indian student find internships.\n' + profileText() + '\n\n' +
-      'From your own knowledge, list up to 10 real organisations under ' + TIER_DESC[tier]() + ' that are known to take students from this field as interns or trainees. ' +
-      'For each give the official website (home or careers page). Reply with ONLY a JSON array: [{"org":"...","title":"Internship or training — check the official page","url":"https://...","why":"one short line"}]';
+  var ITEM_SPEC = '{"tier":"state|central|psu|private","title":"...","org":"...","place":"city/state or remote","stipend":"amount or unpaid or empty","deadline":"YYYY-MM-DD or empty","opens":"YYYY-MM-DD or empty",' +
+    '"status":"open|soon|unclear","eligibility":"who can apply, short","why":"one short line: which subject or skill it matches","url":"link copied exactly from the excerpts"}';
+
+  var discover = function () {
+    var n = DEPTH2[S.depth] || DEPTH2.std;
+    var prompt = 'You help an Indian student find internships.\n' + profileText() + '\n\n' +
+      'Name real organisations in India that take students from this field as interns, summer trainees, project trainees or apprentices. Give exactly: ' +
+      n[0] + ' from ' + TIER_DESC.state() + '; ' + n[1] + ' from ' + TIER_DESC.central() + '; ' + n[2] + ' from ' + TIER_DESC.psu() + '; ' + n[3] + ' from ' + TIER_DESC.private() + '. ' +
+      'Prefer organisations closely tied to the subjects above, including lesser-known specialised bodies. For each, give the URL of its official careers, recruitment, notices or internship page if you know it, otherwise its official home page. ' +
+      'Only real official websites. Reply with ONLY this JSON: {"state":[{"org":"...","url":"https://..."}],"central":[...],"psu":[...],"private":[...]}';
+    return ask({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { temperature: 0.3, responseMimeType: 'application/json' } })
+      .then(function (r) { return parseJSON(r.text, '{') || {}; }, function (e) { if (e.kind === 'key') throw e; return { failed: e }; })
+      .then(function (j) {
+        var failed = j.failed;
+        var pages = [], seen = {};
+        var add = function (tier, org, url, hop) {
+          if (!/^https?:\/\//.test(url || '')) return;
+          var k = url.toLowerCase().replace(/\/+$/, '').replace(/^https?:\/\/(www\.)?/, '');
+          if (seen[k]) return; seen[k] = 1;
+          pages.push({ tier: tier, org: String(org || hostOf(url)).slice(0, 120), url: url, hop: !!hop, done: false });
+        };
+        TIERS.forEach(function (tr, i) {
+          (Array.isArray(j[tr]) ? j[tr] : []).slice(0, n[i]).forEach(function (o) { add(tr, o && o.org, o && o.url); });
+          if (tr === 'central') relevant(window.INTERN_CENTRAL).slice(0, n[4]).forEach(function (c) { add('central', c.name, c.url); });
+          if (tr === 'psu') relevant(window.INTERN_PSU).slice(0, n[5]).forEach(function (c) { add('psu', c.name, c.url); });
+        });
+        var words = S.p.subjects.slice(0, 4).concat(S.p.orgs.slice(0, 4));
+        var st = S.p.state && S.p.state !== 'all' ? S.p.state + ' ' : '';
+        var qs = [S.p.course + ' internship', st + 'internship students ' + (S.p.fields[0] ? FIELDS[S.p.fields[0]].split(',')[0] : S.p.course)];
+        words.forEach(function (w) { qs.push(w + ' internship'); });
+        var news = qs.filter(Boolean).slice(0, n[6]).map(function (q) { return { q: q, done: false }; });
+        return { pages: pages, news: news, failed: failed };
+      });
   };
 
   var OFFICIAL = /\.(gov\.in|nic\.in|res\.in|ac\.in|edu\.in|gov)$/;
@@ -449,26 +558,29 @@
     return (it.url || '').toLowerCase().replace(/[#?].*$/, '').replace(/\/+$/, '').replace(/^https?:\/\/(www\.)?/, '') + '|' +
       String(it.title || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
   };
-  var addItems = function (arr, tier, hosts, lead) {
+  var sameSite = function (a, b) { return a && b && (a === b || a.slice(-(b.length + 1)) === '.' + b || b.slice(-(a.length + 1)) === '.' + a); };
+  // opts: { tier, hosts (pages actually opened), raw (picked by code), news, src (page it came from) }
+  var addItems = function (arr, opts) {
     var added = 0, now = today();
     (Array.isArray(arr) ? arr : []).forEach(function (x) {
       if (!x || !x.url || !/^https?:\/\//.test(x.url) || !(x.title || x.org)) return;
+      var tier = TIERS.indexOf(x.tier) >= 0 ? x.tier : opts.tier;
+      if (!tier) return;
       var dl = /^\d{4}-\d\d-\d\d$/.test(x.deadline || '') ? x.deadline : '';
       if (dl && dl < now) return;
       var h = hostOf(x.url);
-      var verified = !lead && hosts.some(function (g) { return h === g || h.slice(-(g.length + 1)) === '.' + g || g.slice(-(h.length + 1)) === '.' + h; });
       var it = {
         tier: tier, title: String(x.title || 'Internship').slice(0, 160), org: String(x.org || '').slice(0, 120),
         place: String(x.place || '').slice(0, 80), stipend: String(x.stipend || '').slice(0, 60), deadline: dl,
         opens: /^\d{4}-\d\d-\d\d$/.test(x.opens || '') ? x.opens : '', who: String(x.eligibility || '').slice(0, 220),
         why: String(x.why || '').slice(0, 200), url: x.url,
-        status: lead ? 'lead' : (x.status === 'open' ? 'open' : x.status === 'soon' ? 'soon' : 'lead'),
-        verified: verified, official: OFFICIAL.test(h) || curatedHosts.indexOf(h) >= 0, at: now
+        status: x.status === 'open' ? 'open' : x.status === 'soon' ? 'soon' : 'lead',
+        verified: !opts.news && (opts.hosts || []).some(function (g) { return sameSite(h, g); }),
+        official: OFFICIAL.test(h) || curatedHosts.indexOf(h) >= 0, news: !!opts.news, raw: !!opts.raw, src: opts.src || '', at: now
       };
-      if (lead && !it.why) it.why = '';
       it.id = keyOf(it);
       var old = S.res.filter(function (r) { return r.id === it.id; })[0];
-      if (old) { if (old.status === 'lead' && it.status !== 'lead') Object.assign(old, it); return; }
+      if (old) { if (old.raw && !it.raw) Object.assign(old, it); return; }
       S.res.push(it); added++;
     });
     return added;
@@ -477,47 +589,43 @@
   var startRun = function (asNight) {
     readForm();
     if (!getKey() && !MOCK) { show(2); msg('inMsg2', t('needKey'), true); return; }
-    S.run = { tasks: [], started: Date.now(), dead: {}, noSearch: false, leads: {}, note: '' };
-    show(4); setLine(t('planning')); renderProgress();
+    S.run = { v: 2, phase: 'discover', pages: [], news: [], snips: [], ai: 0, dead: {}, note: '', tasks: [] };
+    S.res = S.res.filter(function (x) { return S.marks[x.id] === 'saved' || S.marks[x.id] === 'applied'; });
+    show(4); setLine(t('phDiscover')); renderProgress();
     if (asNight) nightOn();
-    plan().then(function (tasks) { S.run.tasks = tasks; save(); loop(); })
-      .catch(function (e) { endRun(e.kind === 'key' ? t('errKey') : e.kind === 'day' ? t('quota') : (e.message || 'Error'), true); });
+    loop();
   };
   $('inStartNow').addEventListener('click', function () { startRun(false); });
   $('inStartNight').addEventListener('click', function () { askNotify(); startRun(true); });
   $('inNightAgain').addEventListener('click', function () { askNotify(); nightOn(); if (!running) loop(); });
+  var retryFailed = function () {
+    var R = S.run; if (!R || R.v !== 2) return;
+    R.dead = {}; R.note = '';
+    if (R.redo) { R.phase = 'discover'; R.redo = false; }
+    if (R.readerFailed) { R.pages.forEach(function (x) { if (x.ok === false) x.done = false; }); R.news.forEach(function (x) { if (x.ok === false) x.done = false; }); R.readerFailed = false; }
+  };
   $('inResume').addEventListener('click', function () {
     if (!S.run) return;
-    S.run.dead = {}; S.run.note = '';
+    retryFailed();
     show(4); loop();
   });
   $('inStop').addEventListener('click', function () { stopAsked = true; setLine(t('stopped')); });
   $('inNightStop').addEventListener('click', function () { stopAsked = true; nightOff(); });
 
   var setLine = function (s) { $('inProgLine').textContent = s; $('inNightLine').textContent = s; };
-
-  var doLeads = function () {
-    // one knowledge-only call per tier that has nothing yet
-    var tiers = TIERS.filter(function (tr) { return !S.run.leads[tr]; });
-    var chain = Promise.resolve();
-    tiers.forEach(function (tr) {
-      chain = chain.then(function () {
-        if (stopAsked) return;
-        setLine(t(TIER_T[tr]) + ' …');
-        return gemini({ contents: [{ parts: [{ text: leadsPrompt(tr) }] }], generationConfig: { temperature: 0.3, responseMimeType: 'application/json' } }, PLAIN_MODEL)
-          .then(function (r) { addItems(parseJSON(r.text, '['), tr, [], true); S.run.leads[tr] = 1; save(); renderResults(); renderProgress(); })
-          .then(function () { return sleep(GAP); });
-      });
-    });
-    return chain;
+  var pending = function () {
+    var r = S.run; if (!r || r.v !== 2) return false;
+    return r.phase === 'discover' || !!r.redo || r.pages.some(function (x) { return !x.done; }) || r.news.some(function (x) { return !x.done; }) || r.snips.some(function (x) { return !x.done; }) ||
+      (r.readerFailed && r.pages.some(function (x) { return x.ok === false; }));
   };
 
   var loop = function () {
-    if (running) return;
+    if (running || !S.run) return;
+    if (S.run.v !== 2) { S.run = null; save(); return; }
     running = true; stopAsked = false;
     $('inStop').hidden = false; $('inResume').hidden = true;
-    var netFails = 0, rateFails = 0;
-    var wait = function (ms, why) {
+    var netFails = 0, readFails = 0, rateFails = 0;
+    var wait = function (ms) {
       var end = Date.now() + ms;
       return new Promise(function (res) {
         var tick = function () {
@@ -528,75 +636,156 @@
         tick();
       });
     };
+    var R = S.run;
+    var aiErr = function (e, again) {
+      if (e.kind === 'key') return finish(t('errKey'), true);
+      if (e.kind === 'net') { if (++netFails > 4) return finish(t('errNet'), true); return wait(15000).then(again); }
+      if (e.message) msg('inMsg4', t('lastErr', { m: String(e.message).slice(0, 220) }));
+      if (e.kind === 'rate' && ++rateFails <= 3) return wait(e.wait || 60000).then(again);
+      return null;   // daily limit or other: caller decides
+    };
+
     var step = function () {
       if (stopAsked) return finish(t('stopped'));
-      var task = S.run.tasks.filter(function (x) { return !x.done; })[0];
-      if (!task) return finish('');
-      if (S.run.noSearch) return doLeads().then(function () { finish(t('searchOff')); }, failLeads);
-      var i = S.run.tasks.indexOf(task);
-      setLine(t('running', { n: i + 1, s: S.run.tasks.length }) + ' · ' + t(TIER_T[task.tier]));
       renderProgress();
-      return searchCall(taskPrompt(task)).then(function (r) {
-        netFails = 0; rateFails = 0; msg('inMsg4', '');
-        task.done = true; task.n = addItems(parseJSON(r.text, '['), task.tier, r.hosts, false);
-        save(); renderResults(); renderProgress();
-        return sleep(GAP).then(step);
-      }, function (e) {
-        if (e.kind === 'key') return finish(t('errKey'), true);
-        if (e.kind === 'net') { if (++netFails > 4) return finish(t('errNet'), true); return wait(15000).then(step); }
-        if (e.message) msg('inMsg4', t('lastErr', { m: String(e.message).slice(0, 220) }));
-        if (e.kind === 'rate') {
-          // Google keeps asking us to wait: after 3 tries treat it like today's limit
-          if (++rateFails > 3) return doLeads().then(function () { finish(t('quota')); }, failLeads);
-          return wait(e.wait || 60000).then(step);
-        }
-        if (e.kind === 'nosearch') { S.run.noSearch = true; save(); return step(); }
-        if (e.kind === 'day') {
-          // search quota is used up today: give knowledge-only leads now, finish the searches tomorrow
-          return doLeads().then(function () { finish(t('quota')); }, failLeads);
-        }
-        task.done = true; task.err = String(e.message || '').slice(0, 120); save();
-        return sleep(GAP).then(step);
+
+      // 1) one AI request: which organisations to open
+      if (R.phase === 'discover') {
+        setLine(t('phDiscover'));
+        return discover().then(function (d) {
+          var have = {};
+          R.pages.forEach(function (x) { have[x.url] = 1; }); R.news.forEach(function (x) { have['q:' + x.q] = 1; });
+          R.pages = R.pages.concat(d.pages.filter(function (x) { return !have[x.url]; }));
+          R.news = R.news.concat(d.news.filter(function (x) { return !have['q:' + x.q]; }));
+          // if the AI could not name organisations today, the built-in list still runs; ask again on "Continue"
+          R.redo = !!d.failed;
+          if (d.failed && d.failed.message) msg('inMsg4', t('lastErr', { m: String(d.failed.message).slice(0, 220) }));
+          R.phase = 'read'; save();
+          return step();
+        }, function (e) { return aiErr(e, step) || finish(t('errKey'), true); });
+      }
+
+      // 2) open the pages (no AI), pick out internship mentions, follow 1 careers/notices link
+      var pg = R.pages.filter(function (x) { return !x.done; })[0];
+      if (pg) {
+        var all = R.pages.length, i = R.pages.indexOf(pg);
+        setLine(t('phRead', { n: i + 1, s: all }) + ' · ' + pg.org);
+        return readPage(pg.url).then(function (md) {
+          readFails = 0;
+          pg.done = true; pg.ok = true;
+          var title = (md.match(/^Title:\s*(.+)$/m) || [])[1];
+          var sn = snippetsOf(md);
+          var raw = rawItems(md, pg);
+          if (sn.length || raw.length) R.snips.push({ tier: pg.tier, org: pg.org, url: pg.url, title: title || '', text: sn.join('\n'), links: raw.map(function (x) { return '[' + x.title + '](' + x.url + ')'; }).join('\n'), done: false });
+          pg.n = addItems(raw, { tier: pg.tier, hosts: [hostOf(pg.url)], raw: true, src: pg.url });
+          if (!pg.hop) hopsOf(md, pg).forEach(function (l) {
+            if (R.pages.some(function (x) { return x.url === l.url; })) return;
+            R.pages.splice(R.pages.indexOf(pg) + 1, 0, { tier: pg.tier, org: pg.org, url: l.url, hop: true, done: false });
+          });
+          save(); renderResults();
+          return sleep(READ_GAP).then(step);
+        }, function () {
+          pg.done = true; pg.ok = false; save();
+          // if nothing at all can be opened from this phone, say so instead of failing silently
+          if (++readFails >= 6 && !R.pages.some(function (x) { return x.ok; })) { R.readerFailed = true; save(); return finish(t('readerFail'), true); }
+          return sleep(1500).then(step);
+        });
+      }
+
+      // 3) recent news reports about internships in this field (no AI)
+      var nw = R.news.filter(function (x) { return !x.done; })[0];
+      if (nw) {
+        setLine(t('phNews') + ' · ' + nw.q);
+        return readNews(nw.q).then(function (items) {
+          nw.done = true; nw.ok = true;
+          if (items.length) R.snips.push({ tier: '', org: 'News', url: '', news: true, text: items.map(function (x) { return '- [' + x.title + '](' + x.url + ')' + (x.date ? ' (' + x.date + ')' : ''); }).join('\n'), links: '', done: false });
+          addItems(items.map(function (x) { return { title: x.title, org: x.src || 'News report', url: x.url, status: 'unclear', why: '' }; }), { tier: 'private', news: true, raw: true });
+          save(); renderResults();
+          return sleep(READ_GAP).then(step);
+        }, function () { nw.done = true; nw.ok = false; save(); return sleep(1000).then(step); });
+      }
+
+      // 4) a few AI requests: turn what was found into proper cards (batched to save the free allowance)
+      var batch = [], size = 0;
+      R.snips.forEach(function (s) {
+        if (s.done || size > 14000) return;
+        var block = (s.news ? 'NEWS REPORTS (not official pages)' : 'PAGE ' + s.url + ' — ' + s.org + ' — tier: ' + s.tier) + '\n' + s.text + (s.links ? '\nLINKS ON THE PAGE:\n' + s.links : '');
+        block = block.slice(0, 4000); size += block.length; batch.push({ s: s, block: block });
       });
+      if (batch.length) {
+        var tot = R.snips.length, done = R.snips.filter(function (x) { return x.done; }).length;
+        setLine(t('phAi', { n: done + 1, s: tot }));
+        var prompt = 'You help an Indian student find internships.\n' + profileText() + '\nToday: ' + today() + '\n\n' +
+          'Below are excerpts read today from official websites (and some news reports). List every internship, summer training, project traineeship, studentship or apprenticeship in them that suits this student and is open now or will open in the next 4 months. ' +
+          'Use only what the excerpts say. The url must be a link copied exactly from the excerpts (or the page address). Set tier from the page label (for news, decide: state/central government, PSU or private). ' +
+          'Leave out anything whose last date has passed, general job vacancies for experienced people, and anything that asks students to pay. ' +
+          'Reply with ONLY a JSON array, or [] if none: [' + ITEM_SPEC + ']\n\n' + batch.map(function (b) { return b.block; }).join('\n\n---\n\n');
+        return ask({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { temperature: 0.2, responseMimeType: 'application/json' } }).then(function (r) {
+          rateFails = 0; netFails = 0; msg('inMsg4', '');
+          var arr = parseJSON(r.text, '[');
+          if (Array.isArray(arr)) {
+            // the AI's cards replace the raw link finds from these pages
+            var srcs = batch.map(function (b) { return b.s.url; });
+            var hasNews = batch.some(function (b) { return b.s.news; });
+            S.res = S.res.filter(function (x) { return !(x.raw && (srcs.indexOf(x.src) >= 0 || (hasNews && x.news)) && !S.marks[x.id]); });
+            var hosts = batch.filter(function (b) { return !b.s.news; }).map(function (b) { return hostOf(b.s.url); });
+            arr.forEach(function (x) {
+              var fromNews = hasNews && !hosts.some(function (g) { return sameSite(hostOf(x.url), g); });
+              addItems([x], { tier: x.tier, hosts: hosts, news: fromNews });
+            });
+          }
+          batch.forEach(function (b) { b.s.done = true; });
+          R.ai++; save(); renderResults();
+          return sleep(GAP).then(step);
+        }, function (e) {
+          var h = aiErr(e, step);
+          if (h) return h;
+          // today's AI limit is used up: keep the raw finds, tidy them another day
+          return finish(t('aiLater', { n: R.pages.filter(function (x) { return x.ok; }).length }));
+        });
+      }
+      return finish('');
     };
-    var failLeads = function (e) { finish(e && e.kind === 'key' ? t('errKey') : t('quota'), e && e.kind === 'key'); };
     step();
   };
   var finish = function (note, bad) {
     running = false;
-    var left = S.run ? S.run.tasks.filter(function (x) { return !x.done; }).length : 0;
-    S.run.note = note || ''; S.run.finished = left ? 0 : Date.now();
+    var R = S.run, left = pending();
+    R.note = note || ''; R.finished = left ? 0 : Date.now(); R.phase = R.phase === 'discover' && left ? 'discover' : R.phase;
     save();
     var n = S.res.length;
-    if (!left && !note) note = t('done', { n: n });
-    setLine(note || t('done', { n: n }));
+    var line = note || t('done', { n: n });
+    setLine(line);
+    // open the first tab that has something in it
+    if (!S.res.some(function (x) { return x.tier === S.tab; })) {
+      var tr = TIERS.filter(function (k) { return S.res.some(function (x) { return x.tier === k; }); })[0];
+      if (tr) S.tab = tr;
+    }
     var lastE = $('inMsg4').hidden ? '' : $('inMsg4').textContent;
-    msg('inMsg4', (left ? t('left', { n: left }) : '') + (left && lastE && lastE.indexOf('·') < 0 ? ' · ' + lastE : ''), !!bad);
+    if (!left && !note) msg('inMsg4', ''); else if (lastE) msg('inMsg4', lastE, !!bad);
     $('inStop').hidden = true; $('inResume').hidden = !left; $('inNightAgain').hidden = !left;
     renderProgress(); renderResults();
     if (night) {
-      $('inNightLine').textContent = note || t('done', { n: n });
+      $('inNightLine').textContent = line;
       notify(t('notifDone', { n: n }));
       setTimeout(nightOff, 4000);
     }
-    endRunUI();
   };
-  var endRun = function (note, bad) { running = false; if (S.run) S.run.note = note; setLine(note); msg('inMsg4', note, bad); $('inStop').hidden = true; $('inResume').hidden = !S.run || !S.run.tasks.length; save(); nightOff(); };
-  var endRunUI = function () { if ($('inResults').hidden === false) return; };
 
   var renderProgress = function () {
     var r = S.run;
-    if (!r) return;
-    var all = r.tasks.length, done = r.tasks.filter(function (x) { return x.done; }).length;
-    var pct = all ? Math.round(done / all * 100) : 4;
+    if (!r || r.v !== 2) return;
+    var all = 1 + r.pages.length + r.news.length + r.snips.length;
+    var done = (r.phase === 'discover' ? 0 : 1) + r.pages.filter(function (x) { return x.done; }).length + r.news.filter(function (x) { return x.done; }).length + r.snips.filter(function (x) { return x.done; }).length;
+    var pct = Math.max(3, Math.round(done / all * 100));
     $('inBar').style.width = pct + '%'; $('inNightBar').style.width = pct + '%';
-    var counts = TIERS.map(function (tr) { return '<span>' + esc(t(TIER_T[tr])) + ' <b>' + S.res.filter(function (x) { return x.tier === tr; }).length + '</b></span>'; }).join('');
-    $('inProgCounts').innerHTML = counts;
+    $('inProgCounts').innerHTML = TIERS.map(function (tr) { return '<span>' + esc(t(TIER_T[tr])) + ' <b>' + S.res.filter(function (x) { return x.tier === tr; }).length + '</b></span>'; }).join('');
     $('inNightBig').textContent = S.res.length;
+    var left = pending();
     if (!running && r.note) setLine(r.note);
-    else if (!running && all && done === all) setLine(t('done', { n: S.res.length }));
-    $('inResume').hidden = running || !all || done === all;
-    $('inNightAgain').hidden = running || !all || done === all;
+    else if (!running && !left) setLine(t('done', { n: S.res.length }));
+    $('inResume').hidden = running || !left;
+    $('inNightAgain').hidden = running || !left;
     $('inStop').hidden = !running;
   };
 
@@ -619,7 +808,7 @@
   document.addEventListener('visibilitychange', function () {
     if (document.visibilityState === 'visible') {
       if (night) getWake();
-      if (S.run && !running && S.step === 4 && S.run.tasks.some(function (x) { return !x.done; }) && !S.run.note) loop();
+      if (S.run && !running && S.step === 4 && pending() && !S.run.note) loop();
     }
   });
   var askNotify = function () {
@@ -667,7 +856,7 @@
     var expl = x.expl && x.expl[lang];
     return '<li class="in-card' + (m === 'applied' ? ' is-applied' : '') + '" data-id="' + esc(x.id) + '">' +
       '<div class="in-card-top"><span class="in-st ' + st[0] + '">' + esc(t(st[1])) + '</span>' +
-      '<span class="in-ver ' + (x.verified ? 'ok' : 'no') + '">' + esc(t(x.verified ? 'verified' : (x.official ? 'official' : 'unverified'))) + '</span></div>' +
+      '<span class="in-ver ' + (x.verified ? 'ok' : 'no') + '">' + esc(t(x.verified ? 'verified' : x.news ? 'newsItem' : (x.official ? 'official' : 'unverified'))) + '</span></div>' +
       '<h3>' + esc(x.title) + '</h3>' + (x.org ? '<p class="in-org">' + esc(x.org) + '</p>' : '') +
       (rows.length ? '<dl>' + rows.map(function (r) { return '<dt>' + esc(t(r[0])) + '</dt><dd>' + esc(r[1]) + '</dd>'; }).join('') + '</dl>' : '') +
       (x.why ? '<p class="in-why"><b>' + esc(t('why')) + ':</b> ' + esc(x.why) + '</p>' : '') +
@@ -682,7 +871,7 @@
   var gLink = function (q) { return 'https://www.google.com/search?q=' + encodeURIComponent(q); };
   var renderResults = function () {
     var box = $('inResults');
-    var have = S.res.length > 0 || (S.run && S.run.tasks.length > 0) || S.p.subjects.length > 0;
+    var have = S.res.length > 0 || !!S.run || S.p.subjects.length > 0;
     box.hidden = !have;
     if (!have) return;
     if (TIERS.indexOf(S.tab) < 0) S.tab = 'state';
@@ -831,7 +1020,8 @@
     var d = obj.data;
     S.p = Object.assign(blank().p, d.p || {}); S.depth = d.depth || 'std';
     S.run = d.run || null; S.res = Array.isArray(d.res) ? d.res : []; S.marks = d.marks || {};
-    S.step = S.res.length || (S.run && S.run.tasks && S.run.tasks.length) ? 4 : S.p.subjects.length ? 3 : 1;
+    if (S.run && S.run.v !== 2) S.run = null;
+    S.step = S.res.length || S.run ? 4 : S.p.subjects.length ? 3 : 1;
     if (obj.lang && TT[obj.lang]) { lang = obj.lang; try { localStorage.setItem(LANGSTORE, lang); } catch (e) {} }
     save(); fillForm(); applyLang(); show(S.step); keepMsg(t('restored'));
     return true;
@@ -935,23 +1125,39 @@
   });
 
   // ---------------------------------------------------------------- mock (?mock=1, for testing the page without a key)
+  // ?mock=1 normal · ?mock=day (AI limit used up after 2 requests) · ?mock=noread (pages can't be opened)
+  var mockCalls = 0;
+  var md8 = function (n) { var x = new Date(Date.now() + n * 864e5); return x.toISOString().slice(0, 10); };
   function mockGemini(body, model) {
-    var txt = body.contents[0].parts[0].text, search = !!body.tools;
-    if (search && MOCKERR === 'nosearch') return sleep(300).then(function () { throw classify(429, { error: { message: 'Quota exceeded for metric: generate_content_free_tier_requests, limit: 0, model: ' + model } }, true); });
-    if (search && MOCKERR === 'rate') return sleep(300).then(function () { throw classify(429, { error: { message: 'Resource exhausted. Please try again later.', details: [{ retryDelay: '2s' }] } }, true); });
-    var d = function (n) { var x = new Date(Date.now() + n * 864e5); return x.toISOString().slice(0, 10); };
+    var txt = body.contents[0].parts[0].text;
+    mockCalls++;
+    if (MOCKERR === 'day' && mockCalls > 2) return sleep(200).then(function () { throw classify(429, { error: { message: 'You exceeded your current quota, please check your plan and billing details. GenerateRequestsPerDayPerProjectPerModel-FreeTier' } }, false); });
     var out = 'OK';
-    if (/syllabus/.test(txt) && /"subjects"/.test(txt)) out = JSON.stringify({ found: true, url: 'https://www.uni-mysore.ac.in/syllabus/bsc-sericulture.pdf', subjects: ['Mulberry cultivation', 'Silkworm rearing', 'Silkworm pathology', 'Silk reeling technology', 'Seed technology'], skills: ['Disease diagnosis', 'Microscopy', 'Farm record keeping'], orgs: ['Central Silk Board institutes', 'State sericulture departments', 'Silk reeling units'], fields: ['agri', 'science'] });
-    else if (/Plan Google searches/.test(txt)) out = JSON.stringify([{ tier: 'state', q: 'Karnataka sericulture department internship' }, { tier: 'state', q: 'KSSRDI training students' }, { tier: 'central', q: 'Central Silk Board CSR&TI internship' }, { tier: 'psu', q: 'KSIC silk PSU training' }, { tier: 'private', q: 'silk reeling company internship India' }]);
-    else if (/From your own knowledge/.test(txt)) out = JSON.stringify([{ org: 'Example Board', title: 'Internship or training — check the official page', url: 'https://example.gov.in', why: 'Works on silk' }]);
-    else if (/Explain this internship/.test(txt)) out = 'ഇത് പട്ടുനൂൽ ഗവേഷണ സ്ഥാപനത്തിലെ 2 മാസത്തെ ഇന്റേൺഷിപ്പാണ്. BSc വിദ്യാർത്ഥികൾക്ക് അപേക്ഷിക്കാം.';
-    else if (/Use Google Search/.test(txt)) {
-      var tier = /state government of/.test(txt) && /offered by the state/.test(txt) ? 'Karnataka' : 'India';
-      out = JSON.stringify([{ title: 'Summer internship in silkworm pathology', org: tier === 'Karnataka' ? 'Karnataka State Sericulture R&D Institute' : 'Central Sericultural Research & Training Institute', place: 'Mysuru', stipend: '₹5,000/month', deadline: d(20 + Math.floor(Math.random() * 30)), opens: '', status: Math.random() > .5 ? 'open' : 'soon', eligibility: 'BSc Sericulture 2nd/3rd year', why: 'Matches Silkworm pathology', url: 'https://csrtimys.res.in/internship-' + Math.floor(Math.random() * 1e5) }]);
+    if (/SYLLABUS TEXT/.test(txt)) out = JSON.stringify({ subjects: ['Structural analysis', 'Geotechnical engineering', 'Surveying', 'Concrete technology', 'Transportation engineering'], skills: ['AutoCAD', 'Site surveying', 'Soil testing'], orgs: ['State PWD', 'Water authority', 'Construction PSUs'], fields: ['engg'] });
+    else if (/"subjects"/.test(txt)) out = JSON.stringify({ subjects: ['Structural analysis', 'Surveying', 'Fluid mechanics'], skills: ['AutoCAD', 'Soil testing'], orgs: ['Public Works Department', 'Irrigation department', 'Construction companies'], fields: ['engg'], syllabusUrls: ['https://ktu.edu.in/syllabus/civil'] });
+    else if (/Name real organisations/.test(txt)) out = JSON.stringify({ state: [{ org: 'Kerala PWD', url: 'https://pwd.kerala.gov.in' }, { org: 'Kerala Water Authority', url: 'https://kwa.kerala.gov.in' }], central: [{ org: 'CPWD', url: 'https://cpwd.gov.in' }], psu: [{ org: 'NBCC', url: 'https://nbccindia.in' }], private: [{ org: 'L&T Construction', url: 'https://www.lntecc.com/careers' }] });
+    else if (/excerpts read today/.test(txt)) {
+      var urls = (txt.match(/\]\((https?:[^)]+)\)/g) || []).map(function (x) { return x.slice(2, -1); });
+      out = JSON.stringify(urls.slice(0, 4).map(function (u, i) { return { tier: /news\.google/.test(u) ? 'central' : (/kerala/.test(u) ? 'state' : /cpwd|gov\.in/.test(u) ? 'central' : /nbcc/.test(u) ? 'psu' : 'private'), title: 'Summer internship for civil engineering students ' + (i + 1), org: 'Org ' + hostOf(u), place: 'Kerala', stipend: '₹5,000/month', deadline: md8(15 + i * 5), status: i % 2 ? 'soon' : 'open', eligibility: 'BTech Civil 3rd year', why: 'Matches Surveying', url: u }; }));
     }
-    return sleep(400).then(function () { return { text: out, hosts: search ? ['csrtimys.res.in'] : [], searched: search }; });
+    else if (/Explain this internship/.test(txt)) out = 'ഇത് സിവിൽ എഞ്ചിനീയറിങ് വിദ്യാർത്ഥികൾക്കുള്ള 2 മാസത്തെ ഇന്റേൺഷിപ്പാണ്.';
+    return sleep(300).then(function () { return { text: out, hosts: [], searched: false }; });
   }
-  if (MOCK) GAP = 300;
+  function mockRead(url) {
+    if (MOCKERR === 'noread') return sleep(200).then(function () { throw new Error('blocked'); });
+    var h = hostOf(url);
+    if (/syllabus/.test(url)) return sleep(200).then(function () { return 'Title: Syllabus\nSemester 1 syllabus curriculum course code credits paper Unit I semester 2 syllabus paper credits'; });
+    return sleep(250).then(function () {
+      return 'Title: ' + h + '\nURL Source: ' + url + '\nMarkdown Content:\n[Home](' + url + ')\n[Careers](https://' + h + '/careers)\n' +
+        'Applications are invited for the Summer Internship Programme for engineering students. Last date: 15 December 2026.\n' +
+        '[Summer Internship 2026 notification](https://' + h + '/notices/internship-' + url.length + '.pdf)\n[Annual report](https://' + h + '/report.pdf)';
+    });
+  }
+  function mockNews(q) {
+    if (MOCKERR === 'noread') return sleep(200).then(function () { throw new Error('blocked'); });
+    return sleep(200).then(function () { return [{ title: 'Applications open for summer internship in ' + q, url: 'https://news.google.com/rss/articles/' + q.length, date: '', src: 'The Hindu' }]; });
+  }
+  if (MOCK) { GAP = 300; READ_GAP = 200; }
 
   // ---------------------------------------------------------------- start
   if (lang === 'ml' && !S.p.state) S.p.state = 'Kerala';
@@ -959,7 +1165,8 @@
   applyLang();
   var k0 = getKey(); if (k0) $('inKey').value = k0;
   var first = S.step || 1; S.step = 0; show(first, true);
-  if (S.step === 4 && S.run && S.run.tasks.some(function (x) { return !x.done; })) {
+  if (S.run && S.run.v !== 2) { S.run = null; save(); }
+  if (S.step === 4 && S.run && pending()) {
     $('inResume').hidden = false; $('inStop').hidden = true; setLine(S.run.note || t('stopped'));
   }
   readHash();
