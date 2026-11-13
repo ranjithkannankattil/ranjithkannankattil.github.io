@@ -341,7 +341,8 @@ window.STATIONS = [
       "https://hls.hvezda.info/session01/128k/s.m3u8"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "express-fm",
@@ -1217,4 +1218,4 @@ window.STATIONS = [
     "added": "2026-11-12"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-12T21:32Z";
+window.STATIONS_CHECKED = "2026-11-13T07:51Z";

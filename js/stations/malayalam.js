@@ -61,8 +61,8 @@ window.STATIONS = [
     "name": "AIR Ananthapuri FM",
     "category": "air",
     "streams": [
-      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio229/playlist.m3u8",
-      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio229/chunklist.m3u8"
+      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio229/chunklist.m3u8",
+      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio229/playlist.m3u8"
     ]
   },
   {
@@ -183,8 +183,7 @@ window.STATIONS = [
     "akv": "Akashvani Devikulam",
     "exclude": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "airkozhikodefm",
@@ -235,8 +234,7 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://cast1.my-control-panel.com/proxy/myradio90fm/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "airkannur",
@@ -245,8 +243,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/b82c91a395fc4a7d/b82c91a395fc4a7d.m3u8"
     ],
-    "akv": "Akashvani Kannur",
-    "offline": true
+    "akv": "Akashvani Kannur"
   },
   {
     "id": "helloradio",
@@ -279,8 +276,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/58390a2ed33cea4a/58390a2ed33cea4a.m3u8"
     ],
-    "akv": "Akashvani Manjeri",
-    "offline": true
+    "akv": "Akashvani Manjeri"
   },
   {
     "id": "akashvanithrissur",
@@ -293,8 +289,7 @@ window.STATIONS = [
     "akv": "Akashvani Thrissur",
     "exclude": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radioneythal",
@@ -334,8 +329,7 @@ window.STATIONS = [
     "category": "fm",
     "streams": [
       "https://icecast.octosignals.com/radiomacfast"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "globalradio",
@@ -572,8 +566,7 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://streamasiahlscdn.atc-labs.com/karunasairadio.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radiomalayalam",
@@ -650,7 +643,8 @@ window.STATIONS = [
     "streams": [
       "https://centova71.instainternet.com/proxy/tcrliveradio?mp=/stream"
     ],
-    "hidden": true
+    "hidden": true,
+    "offline": true
   },
   {
     "id": "kaathoramlive",
@@ -1195,4 +1189,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-12T21:32Z";
+window.STATIONS_CHECKED = "2026-11-13T07:51Z";

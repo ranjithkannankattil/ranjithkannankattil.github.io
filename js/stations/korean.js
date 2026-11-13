@@ -232,7 +232,8 @@ window.STATIONS = [
     "streams": [
       "https://minisw.imbc.com/dsfm/_definst_/sfm.stream/playlist.m3u8?_lsu_sa_=64E1F515B3DD39F48D49D51B3F91F845A50235B5F40922623ED07Ca116813F96CCaF730F3DC2214C80793FA186bFA16366EDFB96805BA121B665FD1CA71F6B51539415FBACA311F4A80729A53AF1048CA6914FF7BE19FF3E13D0925748C307DD003B1B90C59F159D6854E59D759DDFEB"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "big-b-radio-asian-pop",
@@ -585,6 +586,15 @@ window.STATIONS = [
       "https://serverkw.quran-uni.com:8136/;"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "big-b-radio",
+    "name": "Big B Radio亚洲音乐台",
+    "category": "music",
+    "streams": [
+      "https://antares.dribbcast.com/proxy/apop?mp=/s"
+    ],
+    "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-12T21:32Z";
+window.STATIONS_CHECKED = "2026-11-13T07:51Z";

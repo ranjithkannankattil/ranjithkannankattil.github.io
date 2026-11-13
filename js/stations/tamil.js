@@ -50,7 +50,8 @@ window.STATIONS = [
       "http://radios.crabdance.com:8002/1",
       "http://radios.crabdance.com:8002/2",
       "http://radios.crabdance.com:8002/3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "tamil-panpalai-gold",
@@ -66,8 +67,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "89-4-tamil-fm",
@@ -1328,4 +1328,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-12T21:32Z";
+window.STATIONS_CHECKED = "2026-11-13T07:51Z";

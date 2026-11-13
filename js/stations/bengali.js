@@ -168,7 +168,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radiotreetal.com/listen"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-quarantine-kolkata",
@@ -204,6 +205,15 @@ window.STATIONS = [
       "https://serverkw.quran-uni.com:8128/;"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "radio-khushbu",
+    "name": "Radio Khushbu",
+    "category": "music",
+    "streams": [
+      "https://radio.pblab.in/radiokhushbu"
+    ],
+    "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-12T21:32Z";
+window.STATIONS_CHECKED = "2026-11-13T07:51Z";

@@ -351,7 +351,8 @@ window.STATIONS = [
     "streams": [
       "https://eu1.reliastream.com/proxy/mhr?mp=/MHR"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "darik-nostalgie",
@@ -387,7 +388,8 @@ window.STATIONS = [
     "streams": [
       "https://eu1.reliastream.com/proxy/mdr?mp=/MDR"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "city-radio-bulgaria",
@@ -594,7 +596,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.jump.bg/proxy/feedyyy02?mp=/MLR70S"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "offline": true
   },
   {
     "id": "radio-vaticana-bulgaria",
@@ -759,4 +762,4 @@ window.STATIONS = [
     "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-12T21:32Z";
+window.STATIONS_CHECKED = "2026-11-13T07:51Z";

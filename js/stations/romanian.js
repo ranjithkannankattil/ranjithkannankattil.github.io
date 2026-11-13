@@ -193,8 +193,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_opera/live.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "retro-fm-moldova",
@@ -266,8 +265,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_chopin/live.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "space-fm-dance",
@@ -308,8 +306,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_relax/live.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-as-fm-petrecere-buzau",
@@ -469,8 +466,7 @@ window.STATIONS = [
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_rnb/live.mp3"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "romania-antena-satelor",
@@ -515,8 +511,7 @@ window.STATIONS = [
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_60/live.mp3"
     ],
-    "added": "2026-10-26",
-    "offline": true
+    "added": "2026-10-26"
   },
   {
     "id": "radio-energy-cugir",
@@ -554,8 +549,7 @@ window.STATIONS = [
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_popular/live.mp3"
     ],
-    "added": "2026-10-27",
-    "offline": true
+    "added": "2026-10-27"
   },
   {
     "id": "kiss-fm-chisinau",
@@ -789,8 +783,7 @@ window.STATIONS = [
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_blues/live.mp3"
     ],
-    "added": "2026-10-31",
-    "offline": true
+    "added": "2026-10-31"
   },
   {
     "id": "clasic-radio-folk-bucuresti",
@@ -799,8 +792,7 @@ window.STATIONS = [
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_folk/live.mp3"
     ],
-    "added": "2026-11-01",
-    "offline": true
+    "added": "2026-11-01"
   },
   {
     "id": "club-radio",
@@ -827,8 +819,7 @@ window.STATIONS = [
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_90/live.mp3"
     ],
-    "added": "2026-11-01",
-    "offline": true
+    "added": "2026-11-01"
   },
   {
     "id": "magic-slagare",
@@ -855,8 +846,7 @@ window.STATIONS = [
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_80/live.mp3"
     ],
-    "added": "2026-11-02",
-    "offline": true
+    "added": "2026-11-02"
   },
   {
     "id": "stil-romania-radio-stil-manele",
@@ -937,8 +927,7 @@ window.STATIONS = [
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_soundtrack/live.mp3"
     ],
-    "added": "2026-11-03",
-    "offline": true
+    "added": "2026-11-03"
   },
   {
     "id": "radio-brasov",
@@ -974,8 +963,7 @@ window.STATIONS = [
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_bluejazz/live.mp3"
     ],
-    "added": "2026-11-03",
-    "offline": true
+    "added": "2026-11-03"
   },
   {
     "id": "magic-de-pahar",
@@ -1065,8 +1053,7 @@ window.STATIONS = [
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_jazz/live.mp3"
     ],
-    "added": "2026-11-05",
-    "offline": true
+    "added": "2026-11-05"
   },
   {
     "id": "radio-teatru-rominia-braila",
@@ -1291,8 +1278,7 @@ window.STATIONS = [
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_greek/live.mp3"
     ],
-    "added": "2026-11-09",
-    "offline": true
+    "added": "2026-11-09"
   },
   {
     "id": "stil-romania-radio-stil-popular",
@@ -1340,4 +1326,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-12T21:32Z";
+window.STATIONS_CHECKED = "2026-11-13T07:51Z";

@@ -369,7 +369,8 @@ window.STATIONS = [
     "streams": [
       "https://radio-trtmemleketimfm.medya.trt.com.tr/master.m3u8"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "power-dance",
@@ -479,7 +480,8 @@ window.STATIONS = [
     "streams": [
       "https://radio-trttsr.medya.trt.com.tr/master.m3u8"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "radyo-mezopotamya",
@@ -506,7 +508,8 @@ window.STATIONS = [
     "streams": [
       "https://radio-trttrabzon.medya.trt.com.tr/master.m3u8"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "dinamo-fm-legacy",
@@ -1291,8 +1294,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiotedu.com/rock"
     ],
-    "added": "2026-11-09",
-    "offline": true
+    "added": "2026-11-09"
   },
   {
     "id": "translation-of-the-quran-in-turkish",
@@ -1331,4 +1333,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-12T21:32Z";
+window.STATIONS_CHECKED = "2026-11-13T07:51Z";

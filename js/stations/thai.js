@@ -292,8 +292,7 @@ window.STATIONS = [
     "streams": [
       "https://radio11.plathong.net/7050/;stream.mp3"
     ],
-    "added": "2026-10-29",
-    "offline": true
+    "added": "2026-10-29"
   },
   {
     "id": "translation-of-the-quran-in-thai",
@@ -348,6 +347,15 @@ window.STATIONS = [
       "https://komodo.out.airtime.pro/komodo_a"
     ],
     "added": "2026-11-07"
+  },
+  {
+    "id": "best-radio-fm-89-0-mhz",
+    "name": "Best Radio FM. 89.0 MHz.",
+    "category": "music",
+    "streams": [
+      "https://80sv2.hostpleng.com/?url=http://112.121.150.133:8198/;"
+    ],
+    "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-12T21:32Z";
+window.STATIONS_CHECKED = "2026-11-13T07:51Z";

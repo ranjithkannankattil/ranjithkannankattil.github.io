@@ -1329,7 +1329,8 @@ window.STATIONS = [
       "https://cast.skyradio105.com/proxy/skyradio105/stream"
     ],
     "added": "2026-11-10",
-    "where": "Saudi Arabia"
+    "where": "Saudi Arabia",
+    "offline": true
   },
   {
     "id": "cbc-radio-one-thunder-bay-on",
@@ -1440,6 +1441,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-12",
     "where": "Canada"
+  },
+  {
+    "id": "china-radio-1",
+    "name": "China Radio-1 综合频道",
+    "category": "us",
+    "streams": [
+      "https://sk.cri.cn/am846.m3u8?"
+    ],
+    "added": "2026-11-13",
+    "where": "US"
+  },
+  {
+    "id": "crest-91-1-fm-ibadan",
+    "name": "Crest 91.1 FM Ibadan",
+    "category": "world",
+    "streams": [
+      "https://stream.zeno.fm/qvudrrg5tasvv"
+    ],
+    "added": "2026-11-13",
+    "where": "Nigeria"
+  },
+  {
+    "id": "knkx",
+    "name": "KNKX",
+    "category": "us",
+    "streams": [
+      "https://knkx-live-a.edge.audiocdn.com/6284_128k"
+    ],
+    "added": "2026-11-13",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-12T21:32Z";
+window.STATIONS_CHECKED = "2026-11-13T07:51Z";

@@ -204,6 +204,15 @@ window.STATIONS = [
       "https://live.playfm.mk:8046/live"
     ],
     "added": "2026-11-12"
+  },
+  {
+    "id": "90-1-nbc-fm-narwee-90-1-fm",
+    "name": "90.1 NBC FM - Narwee - 90.1 FM",
+    "category": "music",
+    "streams": [
+      "https://studio.901nbcfm.com.au:8902/newstream"
+    ],
+    "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-12T21:32Z";
+window.STATIONS_CHECKED = "2026-11-13T07:51Z";

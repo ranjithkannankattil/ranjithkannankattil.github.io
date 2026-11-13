@@ -528,6 +528,15 @@ window.STATIONS = [
       "https://cdn.treraadio.ee/pohja-tre"
     ],
     "added": "2026-10-25"
+  },
+  {
+    "id": "sooviraadio",
+    "name": "Sooviraadio",
+    "category": "news",
+    "streams": [
+      "https://media.uunox.net:8888/;"
+    ],
+    "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-12T21:32Z";
+window.STATIONS_CHECKED = "2026-11-13T07:51Z";

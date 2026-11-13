@@ -40,7 +40,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://cast1.asurahosting.com/proxy/brightb1/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "usaku-fm-90-5",
@@ -157,4 +158,4 @@ window.STATIONS = [
     "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-12T21:32Z";
+window.STATIONS_CHECKED = "2026-11-13T07:51Z";
