@@ -107,6 +107,7 @@
       li.classList.toggle('on', k === n); li.classList.toggle('done', k < n);
     });
     save();
+    if (n === 2 && typeof keyStepUI === 'function') keyStepUI();
     // a new step starts at the top: bring the step bar to the top of the screen
     if (!noScroll && changed) {
       var top = $('inSteps').getBoundingClientRect().top + window.pageYOffset - 12;
@@ -160,7 +161,7 @@
     if (!S.p.course) return msg('inMsg1', t('needCourse'), true);
     if (!S.p.state) return msg('inMsg1', t('needState'), true);
     msg('inMsg1', '');
-    show(2);
+    show(2); keyStepUI();
     if (getKey()) $('inKey').value = getKey();
   });
 
@@ -175,6 +176,29 @@
     setKey(k, $('inRemember').checked);
     return k;
   };
+  var pending = function () { return !!(S.run && S.run.tasks && S.run.tasks.some(function (x) { return !x.done; })); };
+  var keyStepUI = function () { $('inContinue').hidden = !pending(); };
+  // switch to another key (e.g. from a different Gmail account): stop, keep progress, come back here
+  $('inChangeKey').addEventListener('click', function () {
+    if (running) stopAsked = true;
+    nightOff();
+    $('inKey').value = ''; $('inKey').type = 'password'; $('inKeyShow').textContent = t('show');
+    show(2); keyStepUI(); msg('inMsg2', t('changeKeyH'));
+    setTimeout(function () { $('inKey').focus(); }, 400);
+  });
+  $('inForget').addEventListener('click', function () {
+    try { localStorage.removeItem(KEYSTORE); sessionStorage.removeItem(KEYSTORE); } catch (e) {}
+    $('inKey').value = ''; msg('inMsg2', t('keyForgot'));
+  });
+  $('inContinue').addEventListener('click', function () {
+    if (!takeKey()) return;
+    msg('inMsg2', '');
+    S.run.dead = {}; S.run.note = ''; S.run.noSearch = false;
+    show(4);
+    // the old search may still be finishing its last request: start once it has stopped
+    var go = function () { if (running) return setTimeout(go, 500); loop(); };
+    go();
+  });
   $('inTest').addEventListener('click', function () {
     var k = takeKey(); if (!k) return;
     var b = this; b.disabled = true;

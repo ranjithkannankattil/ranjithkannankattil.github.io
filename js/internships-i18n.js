@@ -50,7 +50,7 @@ window.INTERN_T = {
     order: 'Order: State government → Central government → PSUs → Private companies',
     planning: 'Planning your searches…',
     running: 'Searching {n} of {s}', stop: 'Stop', resume: 'Continue the search', stopped: 'Stopped. Your progress is saved.',
-    quota: 'Today’s free search limit is used up. Your progress is saved. Open this page tomorrow and tap “Continue the search”.',
+    quota: 'Today’s free search limit is used up. Your progress is saved. Open this page tomorrow and tap “Continue the search” — or tap “Use a different key” to carry on now with a key from another Gmail account.',
     searchOff: 'Google search is not available on this key right now, so these are leads from the AI’s own knowledge. Check each official page.',
     done: 'Done! {n} internships and leads found.',
     left: '{n} searches left',
@@ -81,6 +81,7 @@ window.INTERN_T = {
     errKey: 'Your key was refused. Check it in step 2.', errNet: 'No internet connection. It will try again.',
     aggHead: 'Search other internship sites', aggHelp: 'Opens each site’s own search for the word you pick. These sites have their own listings and sign-ins.', aggWord: 'Search word',
     waiting: 'Google asked us to slow down — trying again in {n} s…', lastErr: 'Google said: {m}',
+    changeKey: 'Use a different key', continueKey: 'Continue the search with this key', forgetKey: 'Remove the saved key from this device', keyForgot: 'Key removed from this device.', changeKeyH: 'Stop the search and switch keys. Your results and progress stay; continue with the new key. In AI Studio, tap your profile picture (top right) to switch to another Gmail account, then create a key there.',
     langNote: 'Listings are in English, as on the official sites.'
   },
 
@@ -123,7 +124,7 @@ window.INTERN_T = {
     order: 'ക്രമം: സംസ്ഥാന സർക്കാർ → കേന്ദ്ര സർക്കാർ → പൊതുമേഖല → സ്വകാര്യ കമ്പനികൾ',
     planning: 'തിരയലുകൾ ആസൂത്രണം ചെയ്യുന്നു…',
     running: '{s}-ൽ {n} തിരയുന്നു', stop: 'നിർത്തുക', resume: 'തിരയൽ തുടരുക', stopped: 'നിർത്തി. പുരോഗതി സേവ് ചെയ്തിട്ടുണ്ട്.',
-    quota: 'ഇന്നത്തെ സൗജന്യ തിരയൽ പരിധി കഴിഞ്ഞു. പുരോഗതി സേവ് ചെയ്തിട്ടുണ്ട്. നാളെ ഈ പേജ് തുറന്ന് “തിരയൽ തുടരുക” ടാപ്പ് ചെയ്യുക.',
+    quota: 'ഇന്നത്തെ സൗജന്യ തിരയൽ പരിധി കഴിഞ്ഞു. പുരോഗതി സേവ് ചെയ്തിട്ടുണ്ട്. നാളെ ഈ പേജ് തുറന്ന് “തിരയൽ തുടരുക” ടാപ്പ് ചെയ്യുക — അല്ലെങ്കിൽ മറ്റൊരു Gmail അക്കൗണ്ടിലെ കീ ഉപയോഗിച്ച് ഇപ്പോൾ തന്നെ തുടരാൻ “മറ്റൊരു കീ ഉപയോഗിക്കുക” ടാപ്പ് ചെയ്യുക.',
     searchOff: 'ഈ കീയിൽ ഇപ്പോൾ Google തിരയൽ ലഭ്യമല്ല; അതിനാൽ ഇവ AI-യുടെ സ്വന്തം അറിവിൽ നിന്നുള്ള സൂചനകളാണ്. ഓരോ ഔദ്യോഗിക പേജും പരിശോധിക്കുക.',
     done: 'കഴിഞ്ഞു! {n} ഇന്റേൺഷിപ്പുകളും സൂചനകളും കണ്ടെത്തി.',
     left: '{n} തിരയലുകൾ ബാക്കി',
@@ -154,6 +155,7 @@ window.INTERN_T = {
     errKey: 'കീ സ്വീകരിച്ചില്ല. ഘട്ടം 2-ൽ പരിശോധിക്കുക.', errNet: 'ഇന്റർനെറ്റ് ഇല്ല. വീണ്ടും ശ്രമിക്കും.',
     aggHead: 'മറ്റ് ഇന്റേൺഷിപ്പ് സൈറ്റുകളിൽ തിരയുക', aggHelp: 'നിങ്ങൾ തിരഞ്ഞെടുക്കുന്ന വാക്കിനായി ഓരോ സൈറ്റിന്റെയും സ്വന്തം തിരയൽ തുറക്കും. ഈ സൈറ്റുകൾക്ക് സ്വന്തം ലിസ്റ്റുകളും സൈൻ ഇന്നും ഉണ്ട്.', aggWord: 'തിരയൽ വാക്ക്',
     waiting: 'വേഗം കുറയ്ക്കാൻ Google ആവശ്യപ്പെട്ടു — {n} സെക്കൻഡിൽ വീണ്ടും ശ്രമിക്കും…', lastErr: 'Google പറഞ്ഞത്: {m}',
+    changeKey: 'മറ്റൊരു കീ ഉപയോഗിക്കുക', continueKey: 'ഈ കീ ഉപയോഗിച്ച് തിരയൽ തുടരുക', forgetKey: 'സേവ് ചെയ്ത കീ ഈ ഉപകരണത്തിൽ നിന്ന് മാറ്റുക', keyForgot: 'കീ ഈ ഉപകരണത്തിൽ നിന്ന് മാറ്റി.', changeKeyH: 'തിരയൽ നിർത്തി കീ മാറ്റാം. ഫലങ്ങളും പുരോഗതിയും നഷ്ടപ്പെടില്ല; പുതിയ കീ ഉപയോഗിച്ച് തുടരാം. AI Studio-യിൽ മുകളിൽ വലതുവശത്തെ പ്രൊഫൈൽ ചിത്രം ടാപ്പ് ചെയ്ത് മറ്റൊരു Gmail അക്കൗണ്ടിലേക്ക് മാറി അവിടെ കീ ഉണ്ടാക്കുക.',
     langNote: 'ഔദ്യോഗിക സൈറ്റുകളിലെ പോലെ ലിസ്റ്റുകൾ ഇംഗ്ലീഷിലാണ്.'
   },
 
@@ -196,7 +198,7 @@ window.INTERN_T = {
     order: 'क्रम: राज्य सरकार → केंद्र सरकार → PSU → निजी कंपनियाँ',
     planning: 'आपकी खोजों की योजना बन रही है…',
     running: '{s} में से {n} खोज', stop: 'रोकें', resume: 'खोज जारी रखें', stopped: 'रुक गया। आपकी प्रगति सेव है।',
-    quota: 'आज की मुफ़्त खोज सीमा पूरी हो गई। प्रगति सेव है। कल यह पेज खोलकर “खोज जारी रखें” पर टैप करें।',
+    quota: 'आज की मुफ़्त खोज सीमा पूरी हो गई। प्रगति सेव है। कल यह पेज खोलकर “खोज जारी रखें” पर टैप करें — या किसी दूसरे Gmail खाते की की से अभी जारी रखने के लिए “दूसरी की इस्तेमाल करें” पर टैप करें।',
     searchOff: 'इस की पर अभी Google खोज उपलब्ध नहीं है, इसलिए ये AI की अपनी जानकारी से सुझाव हैं। हर आधिकारिक पेज जाँचें।',
     done: 'हो गया! {n} इंटर्नशिप और सुझाव मिले।',
     left: '{n} खोज बाकी',
@@ -227,6 +229,7 @@ window.INTERN_T = {
     errKey: 'आपकी की स्वीकार नहीं हुई। चरण 2 में जाँचें।', errNet: 'इंटरनेट नहीं है। फिर से कोशिश होगी।',
     aggHead: 'दूसरी इंटर्नशिप साइटों पर खोजें', aggHelp: 'आपके चुने शब्द के लिए हर साइट की अपनी खोज खुलेगी। इन साइटों की अपनी सूचियाँ और साइन-इन हैं।', aggWord: 'खोज शब्द',
     waiting: 'Google ने धीमा चलने को कहा — {n} सेकंड में फिर कोशिश…', lastErr: 'Google ने कहा: {m}',
+    changeKey: 'दूसरी की इस्तेमाल करें', continueKey: 'इस की से खोज जारी रखें', forgetKey: 'इस डिवाइस से सेव की हटाएँ', keyForgot: 'की इस डिवाइस से हटा दी गई।', changeKeyH: 'खोज रोककर की बदलें। आपके नतीजे और प्रगति बनी रहेगी; नई की से जारी रखें। AI Studio में ऊपर दाईं ओर अपनी प्रोफ़ाइल फ़ोटो पर टैप करके दूसरे Gmail खाते पर जाएँ और वहाँ की बनाएँ।',
     langNote: 'सूचियाँ अंग्रेज़ी में हैं, जैसे आधिकारिक साइटों पर।'
   }
 };
