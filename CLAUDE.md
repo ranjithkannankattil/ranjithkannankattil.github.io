@@ -19,7 +19,8 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
 - **Writings**: never state how many pieces he wrote or over which years; keep descriptions generic.
   Blog version of a post is canonical over the Facebook copy.
 - **Copyheart**: his own work is free to copy (say so for his work only, not everything on the site).
-- The site is English-only — no translated pages.
+- The site is English-only — no translated pages. One exception he asked for: the Internship finder has an
+  in-page EN | മലയാളം | हिंदी switch (students are its audience).
 - **All media goes to Cloudflare R2**, served from `https://media.ranjithkb.com/` — photos, book
   PDFs, link-preview cards, audio, video and any other new images or files. Never commit media to
   the repo for the site to serve. To add some: commit it under `media-incoming/<path>`; the
@@ -117,6 +118,19 @@ Claude task for it.
 ## News (archived)
 Archived by the owner: unlinked, `noindex`, and `build-news.yml` runs by hand only. `news.html` is a short
 note; the full page is saved at `docs/archived/news-page.html` and the code is still in the repo.
+
+## Internship finder (productivity/internships.html, js/tool-internships.js)
+Runs entirely in the visitor's browser on **the student's own** free Gemini key (AI Studio); nothing goes
+to the site or to Claude, and there is no scheduled job. Course + university → Gemini reads the syllabus
+(Google Search grounding, or an uploaded PDF / typed subjects) → editable profile → ~16/40/90 grounded
+searches in the order state govt → central govt → PSUs → private, ~8 a minute, saved after every step
+(continues the next day when the free search limit runs out; falls back to knowledge-only "leads"
+marked "check page"). A result is "Found on this page" only if its link's domain is one of the search's
+grounding sources. Built-in official starting points: `js/internships-data.js`. Text in three languages:
+`js/internships-i18n.js` (add a language by copying the `en` block). Saving: browser, backup file via the
+share sheet, a self-updating file on laptops (File System Access), and a restore link whose data sits in
+the `#` fragment. The key is never in backups or links. Test without a key: `internships.html?mock=1`.
+He doesn't want his Google account involved (no Google sign-in / Drive API).
 
 ## Adding a Workbench tool
 See "Adding a productivity tool" in README.md (registry in `js/tools.js`, page in `productivity/`,

@@ -14,6 +14,7 @@
     { id: "map", label: "Map colourer", desc: "Colour countries and regions", href: "productivity/map.html" },
     { id: "keyboard", label: "Malayalam keyboard", desc: "Malayalam typing on iPhone", href: "productivity/keyboard.html" },
     { id: "scholarships", label: "Scholarship finder", desc: "Study abroad funding for Indians", href: "productivity/scholarships.html" },
+    { id: "internships", label: "Internship finder", desc: "Govt, PSU and private, by your course", href: "productivity/internships.html" },
   ];
   // which productivity tool is open, if any (from <main data-tool="…">)
   const toolHere = (document.querySelector("main[data-tool]") || {}).dataset?.tool;

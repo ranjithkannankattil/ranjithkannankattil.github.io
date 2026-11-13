@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Internship finder for Indian students — Workbench — Ranjith Kannankattil</title>
+<meta name="description" content="Enter your course and university: it reads your syllabus and searches state and central government, PSUs and private companies for internships in your field. Free, on your own Google AI key. English, Malayalam and Hindi.">
+<link rel="canonical" href="https://ranjithkb.com/productivity/internships.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ranjith Kannankattil">
+<meta property="og:title" content="Internship finder for Indian students — Workbench — Ranjith Kannankattil">
+<meta property="og:description" content="Enter your course and university: it reads your syllabus and searches state and central government, PSUs and private companies for internships in your field. Free, on your own Google AI key. English, Malayalam and Hindi.">
+<meta property="og:url" content="https://ranjithkb.com/productivity/internships.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="manifest" href="/internships.webmanifest">
+<link rel="icon" href="/assets/icons/site-32.png?v=3" sizes="32x32">
+<link rel="icon" href="/assets/icons/site.svg?v=3" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icons/site-180.png?v=3">
+<meta name="theme-color" content="#F0EDE6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16161A" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manjari:wght@400;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manjari:wght@400;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"></noscript>
+<link rel="stylesheet" href="../css/style.css?v=18">
+<link rel="stylesheet" href="../css/productivity.css?v=4">
+<link rel="stylesheet" href="../css/tool-internships.css?v=1">
+</head>
+<body data-section="productivity" class="wide">
+
+<header class="titleblock">
+  <div>
+    <div class="id">RANJITH KANNANKATTIL</div>
+    <div class="name">Workbench</div>
+  </div>
+  <nav class="tabs" data-root="../" data-active="productivity" aria-label="Site">
+    <a href="../index.html">Home</a>
+    <a href="../radio.html">Radio</a>
+    <a href="./" class="active">Workbench</a>
+  </nav>
+</header>
+
+<main data-tool="internships">
+  <div data-tool-nav></div>
+  <section class="in" id="in" aria-labelledby="inTitle">
+    <div class="in-lang" role="group" aria-label="Language" id="inLang"></div>
+
+    <div class="tool-head">
+      <div class="tool-eyebrow" data-tool-eyebrow>Tool</div>
+      <h1 class="tool-title" id="inTitle" data-t="title">Internship finder for Indian students</h1>
+      <p class="tool-intro" data-t="intro"></p>
+    </div>
+    <div class="in-disclaimer" role="note" data-th="disclaimer"></div>
+
+    <ol class="in-steps" id="inSteps">
+      <li data-step="1"><b>1</b><span data-t="step1"></span></li>
+      <li data-step="2"><b>2</b><span data-t="step2"></span></li>
+      <li data-step="3"><b>3</b><span data-t="step3"></span></li>
+      <li data-step="4"><b>4</b><span data-t="step4"></span></li>
+    </ol>
+
+    <!-- STEP 1: course -->
+    <div class="in-panel" data-panel="1">
+      <div class="in-form">
+        <label class="in-wide"><span data-t="course"></span><input id="inCourse" autocomplete="off" data-tp="coursePh" maxlength="120"></label>
+        <label class="in-wide"><span data-t="uni"></span><input id="inUni" autocomplete="off" data-tp="uniPh" maxlength="160"></label>
+        <label><span data-t="state"></span><select id="inState"></select></label>
+        <label><span data-t="year"></span><select id="inYear">
+          <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="grad" data-t="yearGrad"></option>
+        </select></label>
+        <label class="in-wide"><span data-t="places"></span><input id="inPlaces" autocomplete="off" data-tp="placesPh" maxlength="120"></label>
+      </div>
+      <details class="in-own">
+        <summary data-t="ownSyllabus"></summary>
+        <p data-t="ownSyllabusHelp"></p>
+        <label class="in-file"><input type="file" id="inPdf" accept="application/pdf"><span data-t="uploadPdf"></span></label>
+        <p class="in-file-name" id="inPdfName" hidden></p>
+        <label class="in-paste"><span data-t="pasteSubjects"></span><textarea id="inPaste" rows="4" data-tp="pastePh"></textarea></label>
+      </details>
+      <p class="in-msg" id="inMsg1" role="alert" hidden></p>
+      <div class="in-acts"><button class="in-btn in-primary" id="inNext1" type="button" data-t="next"></button></div>
+    </div>
+
+    <!-- STEP 2: key -->
+    <div class="in-panel" data-panel="2" hidden>
+      <h2 class="in-h" data-t="keyHead"></h2>
+      <p data-t="keyWhy"></p>
+      <ol class="in-guide">
+        <li data-th="k1"></li><li data-th="k2"></li><li data-th="k3"></li><li data-th="k4"></li><li data-th="k5"></li>
+      </ol>
+      <div class="in-key">
+        <label><span data-t="keyLabel"></span>
+          <span class="in-key-row"><input id="inKey" type="password" autocomplete="off" spellcheck="false" data-tp="keyPh"><button type="button" class="in-btn" id="inKeyShow" data-t="show"></button></span>
+        </label>
+        <label class="in-check"><input type="checkbox" id="inRemember" checked><span data-t="remember"></span></label>
+        <p class="in-small" data-t="keySafe"></p>
+      </div>
+      <p class="in-msg" id="inMsg2" role="status" hidden></p>
+      <div class="in-acts">
+        <button class="in-btn" type="button" data-go="1" data-t="back"></button>
+        <button class="in-btn" type="button" id="inTest" data-t="testKey"></button>
+        <button class="in-btn in-primary" type="button" id="inRead" data-t="readSyllabus"></button>
+      </div>
+    </div>
+
+    <!-- STEP 3: profile -->
+    <div class="in-panel" data-panel="3" hidden>
+      <h2 class="in-h" data-t="profHead"></h2>
+      <p data-t="profHelp"></p>
+      <p class="in-syl" id="inSyl"></p>
+      <div class="in-chips" id="inChips"></div>
+      <div class="in-fields"><h3 data-t="fields"></h3><div id="inFields" class="in-toggles"></div></div>
+      <fieldset class="in-depth">
+        <legend data-t="depth"></legend>
+        <label><input type="radio" name="inDepth" value="quick"><b data-t="dQuick"></b><small data-t="dQuickH"></small></label>
+        <label><input type="radio" name="inDepth" value="std" checked><b data-t="dStd"></b><small data-t="dStdH"></small></label>
+        <label><input type="radio" name="inDepth" value="deep"><b data-t="dDeep"></b><small data-t="dDeepH"></small></label>
+      </fieldset>
+      <p class="in-small" data-t="order"></p>
+      <p class="in-small" data-t="nightHelp"></p>
+      <div class="in-acts">
+        <button class="in-btn" type="button" data-go="1" data-t="back"></button>
+        <button class="in-btn" type="button" id="inStartNow" data-t="startNow"></button>
+        <button class="in-btn in-primary" type="button" id="inStartNight" data-t="startNight"></button>
+      </div>
+    </div>
+
+    <!-- STEP 4: progress (also shown inside Night mode) -->
+    <div class="in-panel" data-panel="4" hidden>
+      <div class="in-prog" id="inProg">
+        <div class="in-prog-line" id="inProgLine" role="status"></div>
+        <div class="in-bar"><i id="inBar"></i></div>
+        <div class="in-prog-counts" id="inProgCounts"></div>
+      </div>
+      <p class="in-msg" id="inMsg4" role="status" hidden></p>
+      <div class="in-acts">
+        <button class="in-btn" type="button" id="inStop" data-t="stop"></button>
+        <button class="in-btn in-primary" type="button" id="inResume" data-t="resume" hidden></button>
+        <button class="in-btn" type="button" id="inNightAgain" data-t="startNight" hidden></button>
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="in-results" id="inResults" hidden>
+      <nav class="in-tabs" id="inTabs" role="tablist"></nav>
+      <div class="in-filters" id="inFilters"></div>
+      <p class="in-small" data-t="langNote"></p>
+      <ul class="in-list" id="inList"></ul>
+      <p class="in-none" id="inNone" hidden data-t="noResults"></p>
+      <div id="inCurated"></div>
+      <div class="in-more" id="inMore"></div>
+      <div class="in-acts in-export">
+        <button class="in-btn" type="button" id="inCsv" data-t="exportCsv"></button>
+        <button class="in-btn" type="button" id="inIcs" data-t="exportIcs"></button>
+      </div>
+    </div>
+
+    <!-- KEEP SAFE -->
+    <div class="in-keep" id="inKeep">
+      <h2 class="in-h" data-t="keepHead"></h2>
+      <p class="in-small">✓ <span data-t="keepAuto"></span></p>
+      <div class="in-keep-grid">
+        <div><button class="in-btn in-primary" type="button" id="inBackup">📤 <span data-t="backup"></span></button><p class="in-small" data-t="backupH"></p></div>
+        <div><label class="in-btn in-file-btn">📂 <span data-t="openBackup"></span><input type="file" id="inOpen" accept=".json,application/json"></label><p class="in-small" data-t="openBackupH"></p></div>
+        <div><button class="in-btn" type="button" id="inEmail">✉️ <span data-t="emailLink"></span></button> <button class="in-btn" type="button" id="inCopy" data-t="copyLink"></button><p class="in-small" data-t="emailLinkH"></p></div>
+        <div id="inFolderBox" hidden><button class="in-btn" type="button" id="inFolder">💾 <span data-t="folder"></span></button><p class="in-small" id="inFolderH" data-t="folderH"></p></div>
+      </div>
+      <p class="in-msg" id="inMsgKeep" role="status" hidden></p>
+    </div>
+
+    <div class="in-info">
+      <section><p data-t="privacy"></p></section>
+      <section><p data-t="scam"></p></section>
+    </div>
+    <div class="in-acts"><button class="in-btn in-quiet" type="button" id="inReset" data-t="startOver"></button></div>
+
+    <p class="tool-note">This is an independent tool and is not connected to any government body or company. It runs in your browser with your own Google AI key; this website never sees your key, course or results. Spotted a mistake? Write to <a href="mailto:hello@ranjithkb.com">hello@ranjithkb.com</a>.</p>
+  </section>
+
+  <div class="diamond-rule"><span class="diamond-mark">◆</span></div>
+</main>
+
+<!-- Night mode -->
+<div class="in-night" id="inNight" hidden role="dialog" aria-modal="true" aria-labelledby="inNightT">
+  <div class="in-night-in">
+    <div class="in-night-t" id="inNightT" data-t="nightTitle"></div>
+    <div class="in-night-big" id="inNightBig">0</div>
+    <div class="in-night-sub" data-t="found"></div>
+    <div class="in-bar"><i id="inNightBar"></i></div>
+    <div class="in-night-line" id="inNightLine"></div>
+    <p class="in-night-keep" data-t="nightKeep"></p>
+    <button class="in-btn" type="button" id="inNightStop" data-t="stop"></button>
+  </div>
+</div>
+
+<footer>
+  <div class="cheart">♡ <span id="year"></span> Ranjith Kannankattil · What I created here is free to copy — <a href="https://copyheart.org/" rel="noopener">copying is an act of love</a>. Others' work keeps its own terms.</div>
+  <div class="foot-r"><span class="visits" id="visits" hidden></span><a href="mailto:hello@ranjithkb.com">hello@ranjithkb.com</a><a href="../privacy.html">Privacy</a></div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/tools.js?v=13"></script>
+<script src="../js/internships-data.js?v=1"></script>
+<script src="../js/internships-i18n.js?v=1"></script>
+<script src="../js/tool-internships.js?v=1"></script>
+<script src="../js/nav.js?v=23" defer></script>
+<script src="../js/visits.js?v=2" defer></script>
+</body>
+</html>

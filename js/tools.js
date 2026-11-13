@@ -18,7 +18,8 @@ window.TOOL_GROUPS = [
   { id: 'docs', name: 'Documents & photos' },
   { id: 'eng', name: 'Engineering' },
   { id: 'lang', name: 'Maps & language' },
-  { id: 'study', name: 'Study abroad' }
+  { id: 'study', name: 'Study abroad' },
+  { id: 'career', name: 'Students & careers' }
 ];
 
 window.TOOLS = [
@@ -111,6 +112,15 @@ window.TOOLS = [
     blurb: 'Scholarships for Indian students on every continent. Filter by country, level, funding, age and work experience, then go straight to the official page.',
     meta: 'India · Study abroad · Deadlines · Official links',
     keys: 'scholarship fellowship grant study abroad india indian students university masters phd chevening commonwealth erasmus fulbright mext gks kaust funding'
+  },
+  {
+    id: 'internships', group: 'career',
+    name: 'Internship finder',
+    short: 'Internships',
+    href: 'internships.html',
+    blurb: 'Enter your course and university: it reads your syllabus, then searches state and central government, PSUs and private companies for internships in your field. Runs overnight on your own free Google AI key. English, മലയാളം, हिंदी.',
+    meta: 'Students · Government · PSUs · Night mode',
+    keys: 'internship intern training summer trainee studentship apprentice student course syllabus government psu pm internship scheme niti aayog job fresher malayalam hindi'
   }
 ];
 

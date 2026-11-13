@@ -37,7 +37,7 @@ def _updated():
 
 
 UPDATED = _updated()
-NAV_V = "19"
+NAV_V = "23"
 
 GROUPS = [
     ("m1", "M1", "Papers & money"),
