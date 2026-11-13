@@ -1174,6 +1174,25 @@
   };
   function queueFolderWrite() { if (!fh || !fhOk) return; clearTimeout(fhTimer); fhTimer = setTimeout(writeFolder, 3000); }
 
+  // Clear search: drop this search's results and progress, keep the course, profile, key and anything Saved / Applied
+  var clearSearch = function () {
+    if (!confirm(t('clearAsk'))) return;
+    stopAsked = true; nightOff();
+    var go = function () {
+      if (running) return setTimeout(go, 300);
+      S.run = null;
+      S.res = S.res.filter(function (x) { return S.marks[x.id] === 'saved' || S.marks[x.id] === 'applied'; });
+      Object.keys(S.marks).forEach(function (k) { if (S.marks[k] === 'hidden') delete S.marks[k]; });
+      S.filter = 'all'; S.tab = 'state';
+      msg('inMsg4', ''); setLine('');
+      $('inBar').style.width = '0'; $('inProgCounts').innerHTML = '';
+      save(); renderResults();
+      show(S.p.subjects.length ? 3 : 1);
+    };
+    go();
+  };
+  $('inClear').addEventListener('click', clearSearch);
+  $('inClear2').addEventListener('click', clearSearch);
   $('inReset').addEventListener('click', function () {
     if (running) return;
     if (!confirm(t('startOverAsk'))) return;

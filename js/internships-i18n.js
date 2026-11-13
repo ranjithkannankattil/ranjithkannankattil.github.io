@@ -92,6 +92,7 @@ window.INTERN_T = {
     rawItem: 'Link on the official page — not checked by AI yet',
     phCheck: 'Checking the links still open {n} of {s}',
     summary: 'What happened: opened {o} official pages ({f} would not open) · {l} internship links found · {n} news reports · {a} tidied by AI · {g} dead links removed.',
+    clearSearch: 'Clear search', clearAsk: 'Clear this search and start afresh? Your course, profile and key stay, and anything you marked Saved or Applied is kept.',
     langNote: 'Listings are in English, as on the official sites.'
   },
 
@@ -176,6 +177,7 @@ window.INTERN_T = {
     rawItem: 'ഔദ്യോഗിക പേജിലെ ലിങ്ക് — AI ഇതുവരെ പരിശോധിച്ചിട്ടില്ല',
     phCheck: 'ലിങ്കുകൾ തുറക്കുന്നുണ്ടോ എന്ന് നോക്കുന്നു: {s}-ൽ {n}',
     summary: 'നടന്നത്: {o} ഔദ്യോഗിക പേജുകൾ തുറന്നു ({f} തുറന്നില്ല) · {l} ഇന്റേൺഷിപ്പ് ലിങ്കുകൾ · {n} വാർത്തകൾ · {a} എണ്ണം AI ക്രമീകരിച്ചു · {g} തകർന്ന ലിങ്കുകൾ നീക്കി.',
+    clearSearch: 'തിരയൽ മായ്ക്കുക', clearAsk: 'ഈ തിരയൽ മായ്ച്ച് പുതുതായി തുടങ്ങണോ? കോഴ്സ്, പ്രൊഫൈൽ, കീ എന്നിവ നിലനിൽക്കും; സേവ് ചെയ്തതും അപേക്ഷിച്ചതും നഷ്ടപ്പെടില്ല.',
     langNote: 'ഔദ്യോഗിക സൈറ്റുകളിലെ പോലെ ലിസ്റ്റുകൾ ഇംഗ്ലീഷിലാണ്.'
   },
 
@@ -260,6 +262,7 @@ window.INTERN_T = {
     rawItem: 'आधिकारिक पेज का लिंक — AI ने अभी जाँचा नहीं',
     phCheck: 'लिंक खुलते हैं या नहीं, जाँच: {s} में से {n}',
     summary: 'क्या हुआ: {o} आधिकारिक पेज खुले ({f} नहीं खुले) · {l} इंटर्नशिप लिंक मिले · {n} खबरें · {a} AI ने सजाए · {g} टूटे लिंक हटाए।',
+    clearSearch: 'खोज साफ़ करें', clearAsk: 'यह खोज साफ़ करके नए सिरे से शुरू करें? आपका कोर्स, प्रोफ़ाइल और की बने रहेंगे, और सेव या आवेदन किए गए नतीजे रखे जाएँगे।',
     langNote: 'सूचियाँ अंग्रेज़ी में हैं, जैसे आधिकारिक साइटों पर।'
   }
 };
