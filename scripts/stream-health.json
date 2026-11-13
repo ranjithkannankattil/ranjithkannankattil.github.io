@@ -72,7 +72,6 @@
     "luganda:foundation-of-truth-radio": 47,
     "malay:myfriends-station": 5,
     "malayalam:greenradio": 47,
-    "malayalam:junefm": 2,
     "malayalam:keralafm": 47,
     "malayalam:mazhavilfm": 47,
     "malayalam:menorahradio": 47,
@@ -2136,11 +2135,6 @@
     "fails": 4,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-11-11"
-  },
-  "https://onair.junefm.in/live": {
-    "fails": 2,
-    "last_reason": "HTTP 404 error page",
-    "since": "2026-11-12"
   },
   "https://online.radiokiks.sk:8000/kiks_czsk.mp3": {
     "fails": 1,
