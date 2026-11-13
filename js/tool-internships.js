@@ -336,7 +336,7 @@
   };
 
   // ---- Is a link alive? (dead = the site answers "not found"; unknown/blocked counts as alive)
-  var DEAD = /returned error (404|410)|^Title:\s*(404|not found|page not found|error 404)|the requested url was not found|page (you are looking for|not found)|404 not found/im;
+  var DEAD = /returned error (404|410)\b|^Title:\s*(404\b|404 not found|not found|page not found)\s*$|the requested url was not found on this server/im;
   var checkLink = function (url) {
     if (MOCK) return sleep(100).then(function () { return !/dead/.test(url); });
     return fetchText(READER + url, 30000).then(function (text) { return !DEAD.test(String(text).slice(0, 1500)); },
@@ -534,7 +534,7 @@
   };
   var stateName = function () { return S.p.state === 'all' || !S.p.state ? 'any Indian state' : S.p.state; };
   // pages to open per tier (state, central, psu, private), built-in programmes, PSUs, news searches
-  var DEPTH2 = { quick: [4, 3, 2, 3, 3, 2, 3], std: [10, 7, 4, 9, 6, 4, 6], deep: [22, 16, 9, 20, 12, 8, 12] };
+  var DEPTH2 = { quick: [6, 5, 3, 5, 3, 2, 4], std: [12, 10, 6, 11, 6, 4, 8], deep: [25, 20, 12, 22, 12, 8, 14] };
   var TIER_DESC = {
     state: function () { return 'the state government of ' + stateName() + ': departments, boards, corporations, state universities, research stations, district bodies'; },
     central: function () { return 'the Government of India: ministries, regulators, commodity boards, national institutes, research labs (CSIR, ICAR, ICMR, DRDO, ISRO and others), national schemes'; },
@@ -613,7 +613,7 @@
   var startRun = function (asNight) {
     readForm();
     if (!getKey() && !MOCK) { show(2); msg('inMsg2', t('needKey'), true); return; }
-    S.run = { v: 2, phase: 'discover', pages: [], news: [], snips: [], ai: 0, dead: {}, note: '', tasks: [] };
+    S.run = { v: 2, phase: 'discover', pages: [], news: [], snips: [], ai: 0, dead: {}, note: '', tasks: [], stat: { orgs: 0, opened: 0, failed: 0, links: 0, news: 0, ai: 0, gone: 0 } };
     S.res = S.res.filter(function (x) { return S.marks[x.id] === 'saved' || S.marks[x.id] === 'applied'; });
     show(4); setLine(t('phDiscover')); renderProgress();
     if (asNight) nightOn();
@@ -662,6 +662,7 @@
       });
     };
     var R = S.run;
+    R.stat = R.stat || { orgs: 0, opened: 0, failed: 0, links: 0, news: 0, ai: 0, gone: 0 };
     var aiErr = function (e, again) {
       if (e.kind === 'key') return finish(t('errKey'), true);
       if (e.kind === 'net') { if (++netFails > 4) return finish(t('errNet'), true); return wait(15000).then(again); }
@@ -683,7 +684,7 @@
           R.pages = R.pages.concat(d.pages.filter(function (x) { return !have[x.url]; }));
           R.news = R.news.concat(d.news.filter(function (x) { return !have['q:' + x.q]; }));
           // if the AI could not name organisations today, the built-in list still runs; ask again on "Continue"
-          R.redo = !!d.failed;
+          R.redo = !!d.failed; R.stat.orgs = R.pages.length;
           if (d.failed && d.failed.message) msg('inMsg4', t('lastErr', { m: String(d.failed.message).slice(0, 220) }));
           R.phase = 'read'; save();
           return step();
@@ -703,6 +704,7 @@
           var raw = rawItems(md, pg);
           if (sn.length || raw.length) R.snips.push({ tier: pg.tier, org: pg.org, url: pg.url, title: title || '', text: sn.join('\n'), links: raw.map(function (x) { return '[' + x.title + '](' + x.url + ')'; }).join('\n'), done: false });
           pg.n = addItems(raw, { tier: pg.tier, hosts: [hostOf(pg.url)], raw: true, src: pg.url });
+          R.stat.opened++; R.stat.links += pg.n;
           if (!pg.hop) hopsOf(md, pg).forEach(function (l) {
             if (R.pages.some(function (x) { return x.url === l.url; })) return;
             R.pages.splice(R.pages.indexOf(pg) + 1, 0, { tier: pg.tier, org: pg.org, url: l.url, hop: true, done: false });
@@ -710,7 +712,7 @@
           save(); renderResults();
           return sleep(READ_GAP).then(step);
         }, function () {
-          pg.done = true; pg.ok = false; save();
+          pg.done = true; pg.ok = false; R.stat.failed++; save();
           // if nothing at all can be opened from this phone, say so instead of failing silently
           if (++readFails >= 6 && !R.pages.some(function (x) { return x.ok; })) { R.readerFailed = true; save(); return finish(t('readerFail'), true); }
           return sleep(1500).then(step);
@@ -724,7 +726,7 @@
         return readNews(nw.q).then(function (items) {
           nw.done = true; nw.ok = true;
           if (items.length) R.snips.push({ tier: '', org: 'News', url: '', news: true, text: items.map(function (x) { return '- [' + x.title + '](' + x.url + ')' + (x.date ? ' (' + x.date + ')' : ''); }).join('\n'), links: '', done: false });
-          addItems(items.map(function (x) { return { title: x.title, org: x.src || 'News report', url: x.url, status: 'unclear', why: '' }; }), { tier: 'private', news: true, raw: true });
+          R.stat.news += addItems(items.map(function (x) { return { title: x.title, org: x.src || 'News report', url: x.url, status: 'unclear', why: '' }; }), { tier: 'private', news: true, raw: true });
           save(); renderResults();
           return sleep(READ_GAP).then(step);
         }, function () { nw.done = true; nw.ok = false; save(); return sleep(1000).then(step); });
@@ -741,18 +743,16 @@
         var tot = R.snips.length, done = R.snips.filter(function (x) { return x.done; }).length;
         setLine(t('phAi', { n: done + 1, s: tot }));
         var prompt = 'You help an Indian student find internships.\n' + profileText() + '\nToday: ' + today() + '\n\n' +
-          'Below are excerpts read today from official websites (and some news reports). List every internship, summer training, project traineeship, studentship or apprenticeship in them that suits this student and is open now or will open in the next 4 months. ' +
+          'Below are excerpts read today from official websites (and some news reports). List every internship, summer training, summer research, project traineeship, studentship or apprenticeship programme mentioned in them that a student of this course could apply to. ' +
+          'Include programmes even when no date is given (status "unclear"); use "open" only if the excerpt says applications are open now, "soon" if it gives a future opening. ' +
           'Use only what the excerpts say. The url must be a link copied exactly from the excerpts (or the page address). Set tier from the page label (for news, decide: state/central government, PSU or private). ' +
-          'Leave out anything whose last date has passed, general job vacancies for experienced people, and anything that asks students to pay. ' +
+          'Leave out only: anything whose last date has clearly passed, regular job vacancies for experienced staff, internal staff training, and anything that asks students to pay. ' +
           'Reply with ONLY a JSON array, or [] if none: [' + ITEM_SPEC + ']\n\n' + batch.map(function (b) { return b.block; }).join('\n\n---\n\n');
         return ask({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { temperature: 0.2, responseMimeType: 'application/json' } }).then(function (r) {
           rateFails = 0; netFails = 0; msg('inMsg4', '');
           var arr = parseJSON(r.text, '[');
           if (Array.isArray(arr)) {
-            // the AI's cards replace the raw link finds from these pages
-            var srcs = batch.map(function (b) { return b.s.url; });
             var hasNews = batch.some(function (b) { return b.s.news; });
-            S.res = S.res.filter(function (x) { return !(x.raw && (srcs.indexOf(x.src) >= 0 || (hasNews && x.news)) && !S.marks[x.id]); });
             var hosts = batch.filter(function (b) { return !b.s.news; }).map(function (b) { return hostOf(b.s.url); });
             var seenText = batch.map(function (b) { return b.block; }).join('\n');
             var norm = function (u) { return String(u || '').replace(/[#].*$/, '').replace(/\/+$/, ''); };
@@ -766,7 +766,10 @@
             });
             arr.forEach(function (x) {
               var fromNews = hasNews && !hosts.some(function (g) { return sameSite(hostOf(x.url), g); });
-              addItems([x], { tier: x.tier, hosts: hosts, news: fromNews });
+              // an AI card for the same link replaces the raw find; raw finds the AI skipped stay as "to check"
+              var nu = norm(x.url).toLowerCase();
+              S.res = S.res.filter(function (y) { return !(y.raw && norm(y.url).toLowerCase() === nu && !S.marks[y.id]); });
+              if (addItems([x], { tier: x.tier, hosts: hosts, news: fromNews })) R.stat.ai++;
             });
           }
           batch.forEach(function (b) { b.s.done = true; });
@@ -787,7 +790,7 @@
         setLine(t('phCheck', { n: tot2 - unchecked.length + 1, s: tot2 }));
         return checkLink(x.url).then(function (alive) {
           x.checked = true;
-          if (!alive && !S.marks[x.id]) S.res.splice(S.res.indexOf(x), 1);
+          if (!alive && !S.marks[x.id]) { S.res.splice(S.res.indexOf(x), 1); R.stat.gone++; }
           save(); renderResults();
           return sleep(READ_GAP).then(step);
         });
@@ -811,7 +814,9 @@
       if (tr) S.tab = tr;
     }
     var lastE = $('inMsg4').hidden ? '' : $('inMsg4').textContent;
-    if (!left && !note) msg('inMsg4', ''); else if (lastE) msg('inMsg4', lastE, !!bad);
+    var st = R.stat;
+    var sum = st ? t('summary', { o: st.opened, f: st.failed, l: st.links, n: st.news, a: st.ai, g: st.gone }) : '';
+    if (!left && !note) msg('inMsg4', sum); else msg('inMsg4', (lastE && lastE !== sum ? lastE + ' · ' : '') + sum, !!bad);
     $('inStop').hidden = true; $('inResume').hidden = !left; $('inNightAgain').hidden = !left;
     renderProgress(); renderResults();
     if (night) {

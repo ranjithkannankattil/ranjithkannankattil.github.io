@@ -44,7 +44,7 @@ window.INTERN_T = {
     syllabusFrom: 'Read from your syllabus:', syllabusNone: 'Your syllabus was not found online, so this is based on a typical syllabus for your course. Add your own subjects if you can.',
     subjects: 'Subjects', skills: 'Skills', orgs: 'Kinds of organisations', fields: 'Broad areas', add: 'Add', addPh: 'Type and press Add',
     depth: 'How deep?', dQuick: 'Quick', dStd: 'Standard', dDeep: 'Deep',
-    dQuickH: 'about 15 pages · 5–10 min', dStdH: 'about 40 pages · 10–20 min', dDeepH: 'about 90 pages · 30–60 min',
+    dQuickH: 'about 25 pages · 5–10 min', dStdH: 'about 50 pages · 10–20 min', dDeepH: 'about 90 pages · 30–60 min',
     startNow: 'Search now', startNight: 'Night mode',
     nightHelp: 'Night mode: plug in your charger, start it, and leave this page open. The screen goes dark and stays awake until the search ends.',
     order: 'Order: State government → Central government → PSUs → Private companies',
@@ -91,6 +91,7 @@ window.INTERN_T = {
     newsItem: 'News report — find the official link',
     rawItem: 'Link on the official page — not checked by AI yet',
     phCheck: 'Checking the links still open {n} of {s}',
+    summary: 'What happened: opened {o} official pages ({f} would not open) · {l} internship links found · {n} news reports · {a} tidied by AI · {g} dead links removed.',
     langNote: 'Listings are in English, as on the official sites.'
   },
 
@@ -127,7 +128,7 @@ window.INTERN_T = {
     syllabusFrom: 'നിങ്ങളുടെ സിലബസിൽ നിന്ന്:', syllabusNone: 'സിലബസ് ഓൺലൈനിൽ കണ്ടെത്താനായില്ല; ഇത് ഈ കോഴ്സിന്റെ സാധാരണ സിലബസ് അടിസ്ഥാനമാക്കിയാണ്. കഴിയുമെങ്കിൽ നിങ്ങളുടെ വിഷയങ്ങൾ ചേർക്കുക.',
     subjects: 'വിഷയങ്ങൾ', skills: 'കഴിവുകൾ', orgs: 'സ്ഥാപനങ്ങളുടെ തരം', fields: 'പ്രധാന മേഖലകൾ', add: 'ചേർക്കുക', addPh: 'ടൈപ്പ് ചെയ്ത് ചേർക്കുക',
     depth: 'എത്ര ആഴത്തിൽ?', dQuick: 'വേഗത്തിൽ', dStd: 'സാധാരണ', dDeep: 'ആഴത്തിൽ',
-    dQuickH: 'ഏകദേശം 15 പേജുകൾ · 5–10 മിനിറ്റ്', dStdH: 'ഏകദേശം 40 പേജുകൾ · 10–20 മിനിറ്റ്', dDeepH: 'ഏകദേശം 90 പേജുകൾ · 30–60 മിനിറ്റ്',
+    dQuickH: 'ഏകദേശം 25 പേജുകൾ · 5–10 മിനിറ്റ്', dStdH: 'ഏകദേശം 50 പേജുകൾ · 10–20 മിനിറ്റ്', dDeepH: 'ഏകദേശം 90 പേജുകൾ · 30–60 മിനിറ്റ്',
     startNow: 'ഇപ്പോൾ തിരയുക', startNight: 'രാത്രി മോഡ്',
     nightHelp: 'രാത്രി മോഡ്: ചാർജർ കുത്തി, തുടങ്ങിയശേഷം ഈ പേജ് തുറന്നുവയ്ക്കുക. തിരയൽ തീരുംവരെ സ്ക്രീൻ ഇരുണ്ട് ഉണർന്നിരിക്കും.',
     order: 'ക്രമം: സംസ്ഥാന സർക്കാർ → കേന്ദ്ര സർക്കാർ → പൊതുമേഖല → സ്വകാര്യ കമ്പനികൾ',
@@ -174,6 +175,7 @@ window.INTERN_T = {
     newsItem: 'വാർത്ത — ഔദ്യോഗിക ലിങ്ക് കണ്ടെത്തുക',
     rawItem: 'ഔദ്യോഗിക പേജിലെ ലിങ്ക് — AI ഇതുവരെ പരിശോധിച്ചിട്ടില്ല',
     phCheck: 'ലിങ്കുകൾ തുറക്കുന്നുണ്ടോ എന്ന് നോക്കുന്നു: {s}-ൽ {n}',
+    summary: 'നടന്നത്: {o} ഔദ്യോഗിക പേജുകൾ തുറന്നു ({f} തുറന്നില്ല) · {l} ഇന്റേൺഷിപ്പ് ലിങ്കുകൾ · {n} വാർത്തകൾ · {a} എണ്ണം AI ക്രമീകരിച്ചു · {g} തകർന്ന ലിങ്കുകൾ നീക്കി.',
     langNote: 'ഔദ്യോഗിക സൈറ്റുകളിലെ പോലെ ലിസ്റ്റുകൾ ഇംഗ്ലീഷിലാണ്.'
   },
 
@@ -210,7 +212,7 @@ window.INTERN_T = {
     syllabusFrom: 'आपके सिलेबस से:', syllabusNone: 'आपका सिलेबस ऑनलाइन नहीं मिला, इसलिए यह इस कोर्स के आम सिलेबस पर आधारित है। हो सके तो अपने विषय जोड़ें।',
     subjects: 'विषय', skills: 'कौशल', orgs: 'संस्थाओं के प्रकार', fields: 'मुख्य क्षेत्र', add: 'जोड़ें', addPh: 'लिखें और जोड़ें दबाएँ',
     depth: 'कितनी गहराई से?', dQuick: 'जल्दी', dStd: 'सामान्य', dDeep: 'गहराई से',
-    dQuickH: 'लगभग 15 पेज · 5–10 मिनट', dStdH: 'लगभग 40 पेज · 10–20 मिनट', dDeepH: 'लगभग 90 पेज · 30–60 मिनट',
+    dQuickH: 'लगभग 25 पेज · 5–10 मिनट', dStdH: 'लगभग 50 पेज · 10–20 मिनट', dDeepH: 'लगभग 90 पेज · 30–60 मिनट',
     startNow: 'अभी खोजें', startNight: 'नाइट मोड',
     nightHelp: 'नाइट मोड: चार्जर लगाएँ, शुरू करें और यह पेज खुला छोड़ दें। खोज पूरी होने तक स्क्रीन काली होकर जागी रहेगी।',
     order: 'क्रम: राज्य सरकार → केंद्र सरकार → PSU → निजी कंपनियाँ',
@@ -257,6 +259,7 @@ window.INTERN_T = {
     newsItem: 'खबर — आधिकारिक लिंक ढूँढें',
     rawItem: 'आधिकारिक पेज का लिंक — AI ने अभी जाँचा नहीं',
     phCheck: 'लिंक खुलते हैं या नहीं, जाँच: {s} में से {n}',
+    summary: 'क्या हुआ: {o} आधिकारिक पेज खुले ({f} नहीं खुले) · {l} इंटर्नशिप लिंक मिले · {n} खबरें · {a} AI ने सजाए · {g} टूटे लिंक हटाए।',
     langNote: 'सूचियाँ अंग्रेज़ी में हैं, जैसे आधिकारिक साइटों पर।'
   }
 };
