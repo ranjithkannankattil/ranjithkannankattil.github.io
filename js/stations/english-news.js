@@ -1329,8 +1329,7 @@ window.STATIONS = [
       "https://cast.skyradio105.com/proxy/skyradio105/stream"
     ],
     "added": "2026-11-10",
-    "where": "Saudi Arabia",
-    "offline": true
+    "where": "Saudi Arabia"
   },
   {
     "id": "cbc-radio-one-thunder-bay-on",
@@ -1417,6 +1416,7 @@ window.STATIONS = [
     "name": "Star FM 95.5 Cebu",
     "category": "world",
     "streams": [
+      "https://stream-146.zeno.fm/60cb36c29heuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI2MGNiMzZjMjloZXV2IiwiaG9zdCI6InN0cmVhbS0xNDYuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6ImJMWEdONUVnUWFpUG1ETU1EeUhYX2ciLCJpYXQiOjE3NDE0MzA4NjIsImV4cCI6MTc0MTQzMDkyMn0.4qElo5I_0GF5A3aE5mUfF6T44wqKi0drur2zii2Q0KA",
       "https://stream.zeno.fm/60cb36c29heuv"
     ],
     "added": "2026-11-12",
@@ -1471,6 +1471,36 @@ window.STATIONS = [
     ],
     "added": "2026-11-13",
     "where": "US"
+  },
+  {
+    "id": "rthk-radio-3",
+    "name": "RTHK Radio 3",
+    "category": "world",
+    "streams": [
+      "https://rthkradio3-live.akamaized.net/hls/live/2040079/radio3/master.m3u8"
+    ],
+    "added": "2026-11-13",
+    "where": "Hong Kong"
+  },
+  {
+    "id": "cape-talk",
+    "name": "Cape Talk",
+    "category": "world",
+    "streams": [
+      "https://25553.live.streamtheworld.com/CAPE_TALK_SC"
+    ],
+    "added": "2026-11-13",
+    "where": "South Africa"
+  },
+  {
+    "id": "94-9-news-now",
+    "name": "94.9 News Now",
+    "category": "us",
+    "streams": [
+      "https://crystalout.surfernetwork.com:8001/WJJF-FM_MP3"
+    ],
+    "added": "2026-11-13",
+    "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T07:51Z";
+window.STATIONS_CHECKED = "2026-11-13T21:08Z";

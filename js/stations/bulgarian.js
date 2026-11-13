@@ -48,8 +48,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nova-radio.neterra.tv/veselinaretro"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "badrock-hard-heavy",
@@ -351,8 +350,7 @@ window.STATIONS = [
     "streams": [
       "https://eu1.reliastream.com/proxy/mhr?mp=/MHR"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "darik-nostalgie",
@@ -388,8 +386,7 @@ window.STATIONS = [
     "streams": [
       "https://eu1.reliastream.com/proxy/mdr?mp=/MDR"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "city-radio-bulgaria",
@@ -596,8 +593,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.jump.bg/proxy/feedyyy02?mp=/MLR70S"
     ],
-    "added": "2026-10-27",
-    "offline": true
+    "added": "2026-10-27"
   },
   {
     "id": "radio-vaticana-bulgaria",
@@ -762,4 +758,4 @@ window.STATIONS = [
     "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T07:51Z";
+window.STATIONS_CHECKED = "2026-11-13T21:08Z";

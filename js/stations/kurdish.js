@@ -56,8 +56,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio-trtradyo6.medya.trt.com.tr/master.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "axa-rojava",
@@ -207,4 +206,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T07:51Z";
+window.STATIONS_CHECKED = "2026-11-13T21:08Z";

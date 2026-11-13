@@ -232,8 +232,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.brokenbeats.net/tune"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-shanson",
@@ -1096,6 +1095,15 @@ window.STATIONS = [
       "https://stream.radio.reorg.dev/listen/humour-ua/radio.mp3"
     ],
     "added": "2026-11-10"
+  },
+  {
+    "id": "fm-disco",
+    "name": "Мелодія FM Disco",
+    "category": "music",
+    "streams": [
+      "https://tavr.tvstitch.com/MelodiaFM_Disco"
+    ],
+    "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T07:51Z";
+window.STATIONS_CHECKED = "2026-11-13T21:08Z";

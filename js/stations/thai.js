@@ -292,7 +292,8 @@ window.STATIONS = [
     "streams": [
       "https://radio11.plathong.net/7050/;stream.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "offline": true
   },
   {
     "id": "translation-of-the-quran-in-thai",
@@ -358,4 +359,4 @@ window.STATIONS = [
     "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T07:51Z";
+window.STATIONS_CHECKED = "2026-11-13T21:08Z";

@@ -145,8 +145,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://27583.live.streamtheworld.com/NOVABRASIL_RIOAAC.aac?1771933348412"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "kiss-fm-92-5-sao-paulo",
@@ -202,8 +201,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stm20.srvstm.com:7264/;?type=https&nocache=1"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "bons-tempos-fm",
@@ -629,8 +627,7 @@ window.STATIONS = [
     "streams": [
       "https://servidor36.brlogic.com:8300/live?1696916321806"
     ],
-    "added": "2026-10-27",
-    "offline": true
+    "added": "2026-10-27"
   },
   {
     "id": "radio-verdinha-92-5-fm",
@@ -910,8 +907,7 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/NOVABRASIL_RIOAAC.aac"
     ],
-    "added": "2026-11-02",
-    "offline": true
+    "added": "2026-11-02"
   },
   {
     "id": "antena1",
@@ -1337,4 +1333,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T07:51Z";
+window.STATIONS_CHECKED = "2026-11-13T21:08Z";

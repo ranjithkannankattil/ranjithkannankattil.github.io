@@ -213,6 +213,15 @@ window.STATIONS = [
       "https://radio7.pro-fhi.net/radio/9006/hits1ibiza"
     ],
     "added": "2026-11-12"
+  },
+  {
+    "id": "daybreak-radio",
+    "name": "Daybreak Radio",
+    "category": "devotional",
+    "streams": [
+      "https://radio.inksnapp.co.za/listen/daybreak_radio/radio.mp3"
+    ],
+    "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T07:51Z";
+window.STATIONS_CHECKED = "2026-11-13T21:08Z";

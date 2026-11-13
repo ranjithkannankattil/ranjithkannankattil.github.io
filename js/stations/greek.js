@@ -555,7 +555,8 @@ window.STATIONS = [
     "streams": [
       "https://rdst.win:48000/stream?type=.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "focus-103-6",
@@ -816,8 +817,7 @@ window.STATIONS = [
     "streams": [
       "https://sp1.19cloudsnetwork.gr/8008/stream?1701442520261"
     ],
-    "added": "2026-10-31",
-    "offline": true
+    "added": "2026-10-31"
   },
   {
     "id": "sokfm-104-8",
@@ -1132,8 +1132,7 @@ window.STATIONS = [
     "streams": [
       "https://sp1.19cloudsnetwork.gr/8008/stream"
     ],
-    "added": "2026-11-05",
-    "offline": true
+    "added": "2026-11-05"
   },
   {
     "id": "aktina-104-7",
@@ -1325,4 +1324,4 @@ window.STATIONS = [
     "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T07:51Z";
+window.STATIONS_CHECKED = "2026-11-13T21:08Z";

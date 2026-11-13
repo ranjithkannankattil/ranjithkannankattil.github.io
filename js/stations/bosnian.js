@@ -268,8 +268,7 @@ window.STATIONS = [
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_bosanski_petrovac.m3u8"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "radio-bosanska-krupa",
@@ -389,4 +388,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T07:51Z";
+window.STATIONS_CHECKED = "2026-11-13T21:08Z";

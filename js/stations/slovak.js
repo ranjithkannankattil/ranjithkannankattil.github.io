@@ -136,8 +136,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://online.radiokiks.sk:8000/kiks_czsk.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-fm",
@@ -551,4 +550,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T07:51Z";
+window.STATIONS_CHECKED = "2026-11-13T21:08Z";

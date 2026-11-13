@@ -194,8 +194,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://icecast-rian.cdnvideo.ru/voicestm"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "101-4-hatay-tempo-fm",
@@ -369,8 +368,7 @@ window.STATIONS = [
     "streams": [
       "https://radio-trtmemleketimfm.medya.trt.com.tr/master.m3u8"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "power-dance",
@@ -480,8 +478,7 @@ window.STATIONS = [
     "streams": [
       "https://radio-trttsr.medya.trt.com.tr/master.m3u8"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "radyo-mezopotamya",
@@ -508,8 +505,7 @@ window.STATIONS = [
     "streams": [
       "https://radio-trttrabzon.medya.trt.com.tr/master.m3u8"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "dinamo-fm-legacy",
@@ -943,7 +939,8 @@ window.STATIONS = [
     "streams": [
       "https://radio-trtantalya.medya.trt.com.tr/master.m3u8"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "offline": true
   },
   {
     "id": "bestefm",
@@ -1333,4 +1330,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T07:51Z";
+window.STATIONS_CHECKED = "2026-11-13T21:08Z";

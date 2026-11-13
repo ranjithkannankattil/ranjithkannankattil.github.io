@@ -286,6 +286,15 @@ window.STATIONS = [
       "https://serverkw.quran-uni.com:8006/;"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "ckyr-fm-106-7-red-fm-calgary-ab",
+    "name": "CKYR-FM 106.7 \"Red FM\" Calgary, AB",
+    "category": "music",
+    "streams": [
+      "https://ice10.securenetsystems.net/CKYR"
+    ],
+    "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T07:51Z";
+window.STATIONS_CHECKED = "2026-11-13T21:08Z";

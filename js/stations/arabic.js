@@ -16,7 +16,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://9090streaming.mobtada.com/9090FMEGYPT"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-2",
@@ -1325,4 +1326,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T07:51Z";
+window.STATIONS_CHECKED = "2026-11-13T21:08Z";

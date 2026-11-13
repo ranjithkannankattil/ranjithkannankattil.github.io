@@ -16,8 +16,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://dc4.serverse.com/proxy/pearlfm/stream/1/"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "kitintale-christian-fellowship",
@@ -294,4 +293,4 @@ window.STATIONS = [
     "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T07:51Z";
+window.STATIONS_CHECKED = "2026-11-13T21:08Z";

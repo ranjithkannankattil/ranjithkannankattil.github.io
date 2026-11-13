@@ -92,7 +92,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "m80-radio-ballads",
@@ -205,7 +206,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8",
       "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "golofm",
@@ -279,8 +281,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR",
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "rca-radio-clube-de-armamar",
@@ -312,9 +313,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.streamaudio.de:8000/radio-dom-bosco-fm"
-    ],
-    "hidden": true,
-    "offline": true
+    ]
   },
   {
     "id": "smoothfm-soul",
@@ -1332,4 +1331,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T07:51Z";
+window.STATIONS_CHECKED = "2026-11-13T21:08Z";

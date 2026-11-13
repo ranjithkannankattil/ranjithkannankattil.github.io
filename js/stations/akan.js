@@ -24,8 +24,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://atunwadigital.streamguys1.com/angelfm"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "nhyira-104-5-fm",
@@ -162,7 +161,8 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://listen.openstream.co/4103/audio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "parousia-radio",
@@ -326,7 +326,8 @@ window.STATIONS = [
     "streams": [
       "https://peacefm-atunwadigital.streamguys1.com/peacefm?amsparams=playerid%3ASGplayer%3Bskey%3A1611468493100%3B&awparams=playerid%3ASGplayer%3Bplayerid%3ASGplayer%3Bplayerid%3ASGplayer%3B&us_privacy=1YNN&us_privacy=1YNN&us_privacy=1YNN"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "ahenfie-fm-106-1mhz",
@@ -426,7 +427,8 @@ window.STATIONS = [
     "streams": [
       "https://atunwadigital.streamguys1.com/neatfm"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "kobbyros-radio",
@@ -435,7 +437,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/47nz3zut26duv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "rehic-radio",
@@ -483,4 +486,4 @@ window.STATIONS = [
     "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T07:51Z";
+window.STATIONS_CHECKED = "2026-11-13T21:08Z";

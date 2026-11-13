@@ -837,8 +837,7 @@ window.STATIONS = [
       "https://stream.zeno.fm/mwam2yirv1pvv"
     ],
     "added": "2026-10-31",
-    "where": "Nigeria",
-    "offline": true
+    "where": "Nigeria"
   },
   {
     "id": "bfm-89-9-malaysia",
@@ -1478,8 +1477,7 @@ window.STATIONS = [
       "https://cast.skyradio105.com/proxy/skyradio105/stream"
     ],
     "added": "2026-11-10",
-    "where": "Saudi Arabia",
-    "offline": true
+    "where": "Saudi Arabia"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T07:51Z";
+window.STATIONS_CHECKED = "2026-11-13T21:08Z";

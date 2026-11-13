@@ -552,7 +552,8 @@ window.STATIONS = [
     "streams": [
       "https://icecast.ithost.it/retesport.ogg"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "offline": true
   },
   {
     "id": "radio-kiss-kiss-hits",
@@ -606,7 +607,8 @@ window.STATIONS = [
     "streams": [
       "https://icecast.ithost.it/radiosei.ogg"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "offline": true
   },
   {
     "id": "globo-vintage",
@@ -1340,4 +1342,4 @@ window.STATIONS = [
     "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T07:51Z";
+window.STATIONS_CHECKED = "2026-11-13T21:08Z";

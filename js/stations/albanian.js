@@ -519,6 +519,15 @@ window.STATIONS = [
       "https://serverkw.quran-uni.com:8116/;"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "chill-albania",
+    "name": "Chill Albania",
+    "category": "news",
+    "streams": [
+      "https://streams.radiomast.io/346318d3-5312-4a69-8f80-64d75640fd35"
+    ],
+    "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T07:51Z";
+window.STATIONS_CHECKED = "2026-11-13T21:08Z";

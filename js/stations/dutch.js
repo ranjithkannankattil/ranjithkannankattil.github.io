@@ -1054,8 +1054,7 @@ window.STATIONS = [
     "streams": [
       "https://stream03.level27.be/;stream.mp3"
     ],
-    "added": "2026-11-04",
-    "offline": true
+    "added": "2026-11-04"
   },
   {
     "id": "vrt-radio-bene",
@@ -1337,4 +1336,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T07:51Z";
+window.STATIONS_CHECKED = "2026-11-13T21:08Z";

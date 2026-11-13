@@ -57,8 +57,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://1716664847.rsc.cdn77.org/1716664847/tracks-a1/mono.ts.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-6",
@@ -99,8 +98,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://1603884249.rsc.cdn77.org/1603884249/index.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "fm94-7",
@@ -270,8 +268,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ptmirror3.passiontimes.hk/hls3/stream.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "chkt-am1430-fairchild",
@@ -518,7 +515,8 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/1283/64k.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "station-33",
@@ -636,6 +634,15 @@ window.STATIONS = [
       "https://lhttp.qingting.fm/live/20211702/64k.mp3"
     ],
     "added": "2026-10-27"
+  },
+  {
+    "id": "90-1-nbc-fm-narwee-90-1-fm",
+    "name": "90.1 NBC FM - Narwee - 90.1 FM",
+    "category": "music",
+    "streams": [
+      "https://studio.901nbcfm.com.au:8902/newstream"
+    ],
+    "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T07:51Z";
+window.STATIONS_CHECKED = "2026-11-13T21:08Z";

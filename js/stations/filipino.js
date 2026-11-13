@@ -308,8 +308,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast3.my-control-panel.com/proxy/ronald/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "eagle-fm-95-5",
@@ -524,6 +523,7 @@ window.STATIONS = [
     "name": "Star FM 95.5 Cebu",
     "category": "news",
     "streams": [
+      "https://stream-146.zeno.fm/60cb36c29heuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI2MGNiMzZjMjloZXV2IiwiaG9zdCI6InN0cmVhbS0xNDYuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6ImJMWEdONUVnUWFpUG1ETU1EeUhYX2ciLCJpYXQiOjE3NDE0MzA4NjIsImV4cCI6MTc0MTQzMDkyMn0.4qElo5I_0GF5A3aE5mUfF6T44wqKi0drur2zii2Q0KA",
       "https://stream.zeno.fm/60cb36c29heuv"
     ],
     "added": "2026-10-28"
@@ -583,4 +583,4 @@ window.STATIONS = [
     "added": "2026-11-12"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T07:51Z";
+window.STATIONS_CHECKED = "2026-11-13T21:08Z";

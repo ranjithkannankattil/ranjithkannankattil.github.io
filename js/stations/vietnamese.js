@@ -40,8 +40,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://cdn.thhp.vn/live/285c1421f29d05045909836b37313898e2f/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "yunnan-international-radio",
@@ -57,8 +56,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://replaynewsvi.ice.infomaniak.ch/replaynewsve-128.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "chkg-fm-96-1-fairchild-radio-vancouver-b",
@@ -112,4 +110,4 @@ window.STATIONS = [
     "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T07:51Z";
+window.STATIONS_CHECKED = "2026-11-13T21:08Z";

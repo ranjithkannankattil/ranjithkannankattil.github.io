@@ -213,6 +213,15 @@ window.STATIONS = [
       "https://studio.901nbcfm.com.au:8902/newstream"
     ],
     "added": "2026-11-13"
+  },
+  {
+    "id": "samo-mk",
+    "name": "Samo MK",
+    "category": "music",
+    "streams": [
+      "https://radiostream.neotel.mk/samomk"
+    ],
+    "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T07:51Z";
+window.STATIONS_CHECKED = "2026-11-13T21:08Z";
