@@ -51,6 +51,8 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
 - ~5,300 stations in 70+ languages, one file per collection in `js/stations/`, list of collections in
   `js/collections.js`. Favourites are stored as `"<collection>:<station id>"` in `mr-favs2`, in his
   chosen order, and synced to Firestore when signed in (`js/radio-sync.js`).
+- Every hour `scripts/recheck_offline.py` (recheck-offline-stations.yml) re-tests only the Malayalam stations marked
+  not working and switches back on any that play again; it never marks a station as not working.
 - `scripts/check_streams.py` tests every stream twice a day (GitHub Actions) and
   `scripts/discover_stations.py` adds new ones. **The check runs from US servers**: US broadcasters
   that stream only to US listeners (iHeart, StreamTheWorld, StreamOn, cdnstream1, SecureNet) pass the

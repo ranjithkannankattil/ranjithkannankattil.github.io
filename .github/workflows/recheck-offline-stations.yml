@@ -1,0 +1,41 @@
+name: Re-check stations that aren't working (hourly)
+
+# Every hour, re-test only the Malayalam stations marked "not working" and switch any that play again
+# back on. Never marks a station as not working (the twice-daily full check does that).
+on:
+  schedule:
+    - cron: "20 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: radio-streams        # same group as the full check, so the two never run at once
+  cancel-in-progress: false
+
+jobs:
+  recheck:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Re-test stations marked not working
+        env:
+          RECHECK_COLLECTIONS: malayalam
+        run: python3 scripts/recheck_offline.py | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Save any that came back
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898732+github-actions[bot]@users.noreply.github.com"
+          git add js/stations scripts/stream-health.json
+          if git diff --cached --quiet; then
+            echo "Nothing came back."
+          else
+            git commit -m "Radio: stations back on air $(TZ=Asia/Kolkata date "+%F %H:%M") IST"
+            git pull --rebase
+            git push
+          fi
