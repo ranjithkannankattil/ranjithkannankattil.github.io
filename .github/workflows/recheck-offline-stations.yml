@@ -20,22 +20,25 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main            # the latest list, even if this run waited behind the full check
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Re-test stations marked not working
+      - name: Re-test stations marked not working and save any that came back
         env:
           RECHECK_COLLECTIONS: malayalam
-        run: python3 scripts/recheck_offline.py | tee -a "$GITHUB_STEP_SUMMARY"
-      - name: Save any that came back
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898732+github-actions[bot]@users.noreply.github.com"
-          git add js/stations scripts/stream-health.json
-          if git diff --cached --quiet; then
-            echo "Nothing came back."
-          else
-            git commit -m "Radio: stations back on air $(TZ=Asia/Kolkata date "+%F %H:%M") IST"
-            git pull --rebase
-            git push
-          fi
+          for attempt in 1 2 3; do
+            git fetch -q origin main && git reset -q --hard origin/main
+            python3 scripts/recheck_offline.py | tee -a "$GITHUB_STEP_SUMMARY"
+            git add js/stations scripts/stream-health.json
+            if git diff --cached --quiet; then echo "Nothing came back."; exit 0; fi
+            git commit -qm "Radio: stations back on air $(TZ=Asia/Kolkata date "+%F %H:%M") IST"
+            # if another job saved first, start again from its version rather than merging by hand
+            if git push -q origin HEAD:main; then exit 0; fi
+            echo "Someone else saved first; checking again on the newest list."
+          done
+          exit 1
