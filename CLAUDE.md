@@ -129,7 +129,7 @@ profile (1 request, + 1 if the guessed syllabus page opens) → 1 request naming
 `js/internships-data.js` → those pages are opened with **Jina Reader** (`r.jina.ai/<url>`, free, no key,
 ~20/min; **AllOrigins** as backup) and internship links/snippets are picked out by code, following one
 careers/notices link per site → **Google News RSS** for recent announcements → a few batched AI requests
-turn the finds into cards (they replace the code-picked "raw" finds of those pages). If the AI limit runs
+turn the finds into cards (they replace the code-picked "raw" finds of those pages; an AI link must appear in the excerpts, else it falls back to the page it came from). Finally every card's link is opened again and dead ones (404/410/"not found") are removed. Code-picked links need the link text to say internship/apprentice/etc. (menus, "skip to content", "Internal" are ignored). If the AI limit runs
 out, the raw finds stay and "Continue the search" finishes later (also redoes a failed organisation step
 and re-opens pages that failed). "Found on this page" = the link came from a page we actually opened.
 Text in three languages: `js/internships-i18n.js` (add a language by copying the `en` block). Saving:

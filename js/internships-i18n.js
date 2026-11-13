@@ -89,6 +89,8 @@ window.INTERN_T = {
     aiLater: 'Opened {n} official pages. Today’s free AI limit ran out before everything was tidied, so some finds are shown as raw links — tap “Continue the search” tomorrow (or use a different key) to finish.',
     readerFail: 'This phone could not open the official pages right now (the free page reader may be busy). Try again in a few minutes.',
     newsItem: 'News report — find the official link',
+    rawItem: 'Link on the official page — not checked by AI yet',
+    phCheck: 'Checking the links still open {n} of {s}',
     langNote: 'Listings are in English, as on the official sites.'
   },
 
@@ -170,6 +172,8 @@ window.INTERN_T = {
     aiLater: '{n} ഔദ്യോഗിക പേജുകൾ തുറന്നു. എല്ലാം ക്രമീകരിക്കും മുമ്പ് ഇന്നത്തെ സൗജന്യ AI പരിധി തീർന്നു, അതിനാൽ ചിലത് ലിങ്കുകളായി മാത്രം കാണിക്കുന്നു — പൂർത്തിയാക്കാൻ നാളെ “തിരയൽ തുടരുക” ടാപ്പ് ചെയ്യുക (അല്ലെങ്കിൽ മറ്റൊരു കീ ഉപയോഗിക്കുക).',
     readerFail: 'ഈ ഫോണിന് ഇപ്പോൾ ഔദ്യോഗിക പേജുകൾ തുറക്കാനായില്ല (സൗജന്യ പേജ് റീഡർ തിരക്കിലായിരിക്കാം). കുറച്ച് മിനിറ്റിനു ശേഷം വീണ്ടും ശ്രമിക്കുക.',
     newsItem: 'വാർത്ത — ഔദ്യോഗിക ലിങ്ക് കണ്ടെത്തുക',
+    rawItem: 'ഔദ്യോഗിക പേജിലെ ലിങ്ക് — AI ഇതുവരെ പരിശോധിച്ചിട്ടില്ല',
+    phCheck: 'ലിങ്കുകൾ തുറക്കുന്നുണ്ടോ എന്ന് നോക്കുന്നു: {s}-ൽ {n}',
     langNote: 'ഔദ്യോഗിക സൈറ്റുകളിലെ പോലെ ലിസ്റ്റുകൾ ഇംഗ്ലീഷിലാണ്.'
   },
 
@@ -251,6 +255,8 @@ window.INTERN_T = {
     aiLater: '{n} आधिकारिक पेज खोले गए। सब कुछ सजाने से पहले आज की मुफ़्त AI सीमा खत्म हो गई, इसलिए कुछ नतीजे सिर्फ़ लिंक के रूप में हैं — पूरा करने के लिए कल “खोज जारी रखें” पर टैप करें (या दूसरी की इस्तेमाल करें)।',
     readerFail: 'यह फ़ोन अभी आधिकारिक पेज नहीं खोल सका (मुफ़्त पेज रीडर व्यस्त हो सकता है)। कुछ मिनट बाद फिर कोशिश करें।',
     newsItem: 'खबर — आधिकारिक लिंक ढूँढें',
+    rawItem: 'आधिकारिक पेज का लिंक — AI ने अभी जाँचा नहीं',
+    phCheck: 'लिंक खुलते हैं या नहीं, जाँच: {s} में से {n}',
     langNote: 'सूचियाँ अंग्रेज़ी में हैं, जैसे आधिकारिक साइटों पर।'
   }
 };

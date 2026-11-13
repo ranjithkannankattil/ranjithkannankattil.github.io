@@ -335,6 +335,18 @@
     });
   };
 
+  // ---- Is a link alive? (dead = the site answers "not found"; unknown/blocked counts as alive)
+  var DEAD = /returned error (404|410)|^Title:\s*(404|not found|page not found|error 404)|the requested url was not found|page (you are looking for|not found)|404 not found/im;
+  var checkLink = function (url) {
+    if (MOCK) return sleep(100).then(function () { return !/dead/.test(url); });
+    return fetchText(READER + url, 30000).then(function (text) { return !DEAD.test(String(text).slice(0, 1500)); },
+      function (e) {
+        if (e && (e.status === 404 || e.status === 410)) return false;
+        return fetchText(ORIGINS + encodeURIComponent(url), 25000).then(function (h) { return !DEAD.test(String(h).slice(0, 3000)); },
+          function (e2) { return !(e2 && (e2.status === 404 || e2.status === 410)); });
+      });
+  };
+
   // ---- Picking out internship mentions from a page (no AI)
   var KW = /\b(intern(ship)?s?|summer (training|school|research|fellowship|programme|program)|trainee(ship)?s?|apprentice(ship)?s?|studentships?|project (assistant|trainee|fellow)|industrial training|vocational training|in-?plant training|graduate engineer trainee)\b/i;
   var HOPKW = /(career|recruit|notice|notification|intern|training|vacanc|apprentic|opportunit|\bjobs?\b|advertis|announcement|what.?s new|latest)/i;
@@ -364,15 +376,27 @@
     }
     return out;
   };
+  // links that are really about an internship: the link text must say so (or the address names one clearly);
+  // menus, "skip to content", same-page anchors and words like "Internal"/"International" are left out
+  var URLKW = /(internship|apprenticeship|apprentice|summer[-_ ]?training|summer[-_ ]?intern|studentship|trainee)/i;
+  var NAVJUNK = /^(skip|home|menu|login|log in|sign in|register|contact|about|faculty|staff|gallery|tenders?|rti|sitemap|search|back|more|read more|click here|view|download|english|hindi|malayalam)\b/i;
   var rawItems = function (md, page) {
-    var now = today(), seen = {};
+    var now = today(), seen = {}, pageKey = page.url.replace(/[#?].*$/, '').replace(/\/+$/, '').toLowerCase();
     return linksOf(md).filter(function (l) {
-      return (KW.test(l.text) || /intern|apprentic|summer.?training|studentship/i.test(l.url)) && !/login|sign.?in|policy\b/i.test(l.text);
+      var text = l.text.replace(/\s+/g, ' ').trim();
+      if (text.length < 6 || NAVJUNK.test(text) || /login|sign.?in|policy\b/i.test(text)) return false;
+      var target = l.url.replace(/[#?].*$/, '').replace(/\/+$/, '').toLowerCase();
+      if (target === pageKey || /^#/.test(l.url) || /#(main|content|skip)/i.test(l.url)) return false;
+      var path = l.url.replace(/^https?:\/\/[^/]+/i, '');
+      return KW.test(text) || (URLKW.test(path) && text.split(' ').length >= 2);
     }).map(function (l) {
       var near = md.slice(Math.max(0, l.at - 250), l.at + l.text.length + 350);
       var dl = /last date|closing|deadline|on or before|apply by/i.test(near) ? findDate(near) : '';
-      return { title: l.text.slice(0, 160), org: page.org, url: l.url, deadline: dl && dl >= now ? dl : '', status: 'unclear', why: '' };
-    }).filter(function (x) { var k = x.url.toLowerCase(); if (seen[k]) return false; seen[k] = 1; return true; }).slice(0, 12);
+      return { title: l.text.replace(/\s+/g, ' ').trim().slice(0, 160), org: page.org, url: l.url, deadline: dl && dl >= now ? dl : '', status: 'unclear', why: '' };
+    }).filter(function (x) {
+      var k = x.url.toLowerCase(), k2 = x.title.toLowerCase() + '|' + x.org.toLowerCase();
+      if (seen[k] || seen[k2]) return false; seen[k] = 1; seen[k2] = 1; return true;
+    }).slice(0, 12);
   };
   var hopsOf = function (md, page) {
     var h = hostOf(page.url);
@@ -600,7 +624,7 @@
   $('inNightAgain').addEventListener('click', function () { askNotify(); nightOn(); if (!running) loop(); });
   var retryFailed = function () {
     var R = S.run; if (!R || R.v !== 2) return;
-    R.dead = {}; R.note = '';
+    R.dead = {}; R.note = ''; R.aiPaused = false;
     if (R.redo) { R.phase = 'discover'; R.redo = false; }
     if (R.readerFailed) { R.pages.forEach(function (x) { if (x.ok === false) x.done = false; }); R.news.forEach(function (x) { if (x.ok === false) x.done = false; }); R.readerFailed = false; }
   };
@@ -616,6 +640,7 @@
   var pending = function () {
     var r = S.run; if (!r || r.v !== 2) return false;
     return r.phase === 'discover' || !!r.redo || r.pages.some(function (x) { return !x.done; }) || r.news.some(function (x) { return !x.done; }) || r.snips.some(function (x) { return !x.done; }) ||
+      S.res.some(function (x) { return !x.news && !x.checked; }) ||
       (r.readerFailed && r.pages.some(function (x) { return x.ok === false; }));
   };
 
@@ -708,7 +733,7 @@
       // 4) a few AI requests: turn what was found into proper cards (batched to save the free allowance)
       var batch = [], size = 0;
       R.snips.forEach(function (s) {
-        if (s.done || size > 14000) return;
+        if (R.aiPaused || s.done || size > 14000) return;
         var block = (s.news ? 'NEWS REPORTS (not official pages)' : 'PAGE ' + s.url + ' — ' + s.org + ' — tier: ' + s.tier) + '\n' + s.text + (s.links ? '\nLINKS ON THE PAGE:\n' + s.links : '');
         block = block.slice(0, 4000); size += block.length; batch.push({ s: s, block: block });
       });
@@ -729,6 +754,16 @@
             var hasNews = batch.some(function (b) { return b.s.news; });
             S.res = S.res.filter(function (x) { return !(x.raw && (srcs.indexOf(x.src) >= 0 || (hasNews && x.news)) && !S.marks[x.id]); });
             var hosts = batch.filter(function (b) { return !b.s.news; }).map(function (b) { return hostOf(b.s.url); });
+            var seenText = batch.map(function (b) { return b.block; }).join('\n');
+            var norm = function (u) { return String(u || '').replace(/[#].*$/, '').replace(/\/+$/, ''); };
+            arr = arr.filter(function (x) {
+              if (!x || !x.url) return false;
+              if (seenText.indexOf(norm(x.url)) >= 0) return true;
+              // a link the AI made up: fall back to the official page it came from, if it named that site
+              var page = batch.filter(function (b) { return !b.s.news && sameSite(hostOf(b.s.url), hostOf(x.url)); })[0];
+              if (page) { x.url = page.s.url; return true; }
+              return false;
+            });
             arr.forEach(function (x) {
               var fromNews = hasNews && !hosts.some(function (g) { return sameSite(hostOf(x.url), g); });
               addItems([x], { tier: x.tier, hosts: hosts, news: fromNews });
@@ -740,10 +775,24 @@
         }, function (e) {
           var h = aiErr(e, step);
           if (h) return h;
-          // today's AI limit is used up: keep the raw finds, tidy them another day
-          return finish(t('aiLater', { n: R.pages.filter(function (x) { return x.ok; }).length }));
+          // today's AI limit is used up: keep the raw finds (still check their links), tidy them another day
+          R.aiPaused = true; save();
+          return step();
         });
       }
+      // 5) check that every card's link still opens (no AI); dead links are removed
+      var unchecked = S.res.filter(function (x) { return !x.news && !x.checked; });
+      if (unchecked.length) {
+        var x = unchecked[0], tot2 = S.res.filter(function (y) { return !y.news; }).length;
+        setLine(t('phCheck', { n: tot2 - unchecked.length + 1, s: tot2 }));
+        return checkLink(x.url).then(function (alive) {
+          x.checked = true;
+          if (!alive && !S.marks[x.id]) S.res.splice(S.res.indexOf(x), 1);
+          save(); renderResults();
+          return sleep(READ_GAP).then(step);
+        });
+      }
+      if (R.aiPaused && R.snips.some(function (x) { return !x.done; })) return finish(t('aiLater', { n: R.pages.filter(function (x) { return x.ok; }).length }));
       return finish('');
     };
     step();
@@ -775,8 +824,10 @@
   var renderProgress = function () {
     var r = S.run;
     if (!r || r.v !== 2) return;
-    var all = 1 + r.pages.length + r.news.length + r.snips.length;
-    var done = (r.phase === 'discover' ? 0 : 1) + r.pages.filter(function (x) { return x.done; }).length + r.news.filter(function (x) { return x.done; }).length + r.snips.filter(function (x) { return x.done; }).length;
+    var chk = S.res.filter(function (x) { return !x.news; });
+    var all = 1 + r.pages.length + r.news.length + r.snips.length + chk.length;
+    var done = (r.phase === 'discover' ? 0 : 1) + r.pages.filter(function (x) { return x.done; }).length + r.news.filter(function (x) { return x.done; }).length + r.snips.filter(function (x) { return x.done; }).length +
+      chk.filter(function (x) { return x.checked; }).length;
     var pct = Math.max(3, Math.round(done / all * 100));
     $('inBar').style.width = pct + '%'; $('inNightBar').style.width = pct + '%';
     $('inProgCounts').innerHTML = TIERS.map(function (tr) { return '<span>' + esc(t(TIER_T[tr])) + ' <b>' + S.res.filter(function (x) { return x.tier === tr; }).length + '</b></span>'; }).join('');
@@ -856,7 +907,7 @@
     var expl = x.expl && x.expl[lang];
     return '<li class="in-card' + (m === 'applied' ? ' is-applied' : '') + '" data-id="' + esc(x.id) + '">' +
       '<div class="in-card-top"><span class="in-st ' + st[0] + '">' + esc(t(st[1])) + '</span>' +
-      '<span class="in-ver ' + (x.verified ? 'ok' : 'no') + '">' + esc(t(x.verified ? 'verified' : x.news ? 'newsItem' : (x.official ? 'official' : 'unverified'))) + '</span></div>' +
+      '<span class="in-ver ' + (x.verified ? 'ok' : 'no') + '">' + esc(t(x.raw && !x.news ? 'rawItem' : x.verified ? 'verified' : x.news ? 'newsItem' : (x.official ? 'official' : 'unverified'))) + '</span></div>' +
       '<h3>' + esc(x.title) + '</h3>' + (x.org ? '<p class="in-org">' + esc(x.org) + '</p>' : '') +
       (rows.length ? '<dl>' + rows.map(function (r) { return '<dt>' + esc(t(r[0])) + '</dt><dd>' + esc(r[1]) + '</dd>'; }).join('') + '</dl>' : '') +
       (x.why ? '<p class="in-why"><b>' + esc(t('why')) + ':</b> ' + esc(x.why) + '</p>' : '') +
@@ -1150,7 +1201,9 @@
     return sleep(250).then(function () {
       return 'Title: ' + h + '\nURL Source: ' + url + '\nMarkdown Content:\n[Home](' + url + ')\n[Careers](https://' + h + '/careers)\n' +
         'Applications are invited for the Summer Internship Programme for engineering students. Last date: 15 December 2026.\n' +
-        '[Summer Internship 2026 notification](https://' + h + '/notices/internship-' + url.length + '.pdf)\n[Annual report](https://' + h + '/report.pdf)';
+        '[Summer Internship 2026 notification](https://' + h + '/notices/internship-' + url.length + '.pdf)\n[Annual report](https://' + h + '/report.pdf)\n' +
+        '[Summer internship old link](https://' + h + '/dead-internship)\n' +
+        '[Internal](https://' + h + '/internal-faculty)\n[Skip to main content](' + url + '#main-content)\n[International relations](https://' + h + '/international)';
     });
   }
   function mockNews(q) {
