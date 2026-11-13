@@ -98,7 +98,8 @@
   });
 
   // ---------------------------------------------------------------- steps
-  var show = function (n) {
+  var show = function (n, noScroll) {
+    var changed = S.step !== n;
     S.step = n;
     document.querySelectorAll('[data-panel]').forEach(function (p) { p.hidden = +p.getAttribute('data-panel') !== n; });
     document.querySelectorAll('#inSteps li').forEach(function (li) {
@@ -106,6 +107,11 @@
       li.classList.toggle('on', k === n); li.classList.toggle('done', k < n);
     });
     save();
+    // a new step starts at the top: bring the step bar to the top of the screen
+    if (!noScroll && changed) {
+      var top = $('inSteps').getBoundingClientRect().top + window.pageYOffset - 12;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    }
   };
   $('inSteps').addEventListener('click', function (e) {
     var li = e.target.closest('[data-step]'); if (!li || running) return;
@@ -115,7 +121,7 @@
     show(n);
   });
   root.addEventListener('click', function (e) {
-    var g = e.target.closest('[data-go]'); if (g) { show(+g.getAttribute('data-go')); root.scrollIntoView({ block: 'start' }); }
+    var g = e.target.closest('[data-go]'); if (g) show(+g.getAttribute('data-go'));
   });
   var msg = function (id, text, bad) {
     var el = $(id); if (!el) return;
@@ -928,7 +934,7 @@
   fillForm();
   applyLang();
   var k0 = getKey(); if (k0) $('inKey').value = k0;
-  show(S.step || 1);
+  var first = S.step || 1; S.step = 0; show(first, true);
   if (S.step === 4 && S.run && S.run.tasks.some(function (x) { return !x.done; })) {
     $('inResume').hidden = false; $('inStop').hidden = true; setLine(S.run.note || t('stopped'));
   }
