@@ -8,6 +8,10 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+# only the newest push builds: an older build must never finish last and overwrite the Dev app or screenshots
+concurrency:
+  group: velvet-dev
+  cancel-in-progress: true
 jobs:
   dev:
     runs-on: ubuntu-latest
