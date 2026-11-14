@@ -181,7 +181,7 @@ window.STATIONS = [
   },
   {
     "id": "my-club-remix",
-    "name": "MY CLUB REMIX",
+    "name": "My CLUB Remix",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/u7eee0hyzp8uv"
@@ -216,4 +216,4 @@ window.STATIONS = [
     "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

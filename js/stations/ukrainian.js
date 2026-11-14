@@ -84,7 +84,7 @@ window.STATIONS = [
   },
   {
     "id": "mfm-station",
-    "name": "MFM STATION",
+    "name": "MFM Station",
     "category": "music",
     "streams": [
       "https://radio.mfm.ua/online128"
@@ -124,7 +124,7 @@ window.STATIONS = [
   },
   {
     "id": "trance-is-star-radio",
-    "name": "TRANCE IS STAR RADIO",
+    "name": "Trance Is Star Radio",
     "category": "music",
     "streams": [
       "https://myradio24.org/tisradio"
@@ -276,7 +276,7 @@ window.STATIONS = [
   },
   {
     "id": "djfm-dance",
-    "name": "DJFM DANCE",
+    "name": "DJ FM Dance",
     "category": "music",
     "streams": [
       "https://cast.brg.ua/djfmdance_main_public_mp3_hq"
@@ -284,7 +284,7 @@ window.STATIONS = [
   },
   {
     "id": "loungefm-chill-out",
-    "name": "LoungeFm Chill Out",
+    "name": "Lounge FM Chill Out",
     "category": "music",
     "streams": [
       "https://cast.mediaonline.net.ua/chillout320"
@@ -324,7 +324,7 @@ window.STATIONS = [
   },
   {
     "id": "powerfm",
-    "name": "PowerFM",
+    "name": "Power FM",
     "category": "news",
     "streams": [
       "https://cast.brg.ua/powerfm_main_public_mp3_hq"
@@ -504,7 +504,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-sunfm",
-    "name": "Radio SunFM",
+    "name": "Radio Sun FM",
     "category": "music",
     "streams": [
       "https://ec5.yesstreaming.net:3650/stream"
@@ -756,7 +756,7 @@ window.STATIONS = [
   },
   {
     "id": "style-fm",
-    "name": "STYLE FM",
+    "name": "Style FM",
     "category": "music",
     "streams": [
       "https://myradio24.org/station"
@@ -1115,4 +1115,4 @@ window.STATIONS = [
     "added": "2026-11-14"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

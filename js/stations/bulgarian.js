@@ -28,7 +28,7 @@ window.STATIONS = [
   },
   {
     "id": "folk-mix",
-    "name": "folk mix",
+    "name": "Folk Mix",
     "category": "music",
     "streams": [
       "https://listen.radiofolkmix.com/folkmixios"
@@ -758,4 +758,4 @@ window.STATIONS = [
     "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

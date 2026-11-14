@@ -12,7 +12,7 @@ window.STATIONS = [
   },
   {
     "id": "azadi-fm",
-    "name": "Azadi Fm",
+    "name": "Azadi FM",
     "category": "music",
     "streams": [
       "https://amed.ozelip.com/8040/;"
@@ -44,7 +44,7 @@ window.STATIONS = [
   },
   {
     "id": "speda-radio",
-    "name": "speda radio",
+    "name": "Speda Radio",
     "category": "news",
     "streams": [
       "https://radio.host247.net/spedafm"
@@ -101,7 +101,7 @@ window.STATIONS = [
   },
   {
     "id": "denge-cudi",
-    "name": "denge cudi",
+    "name": "Denge Cudi",
     "category": "music",
     "streams": [
       "https://denge-cudi.stream.laut.fm/denge-cudi?pl=m3u",
@@ -166,7 +166,7 @@ window.STATIONS = [
   },
   {
     "id": "radyo-mezopotamya",
-    "name": "radyo mezopotamya",
+    "name": "Radyo Mezopotamya",
     "category": "music",
     "streams": [
       "https://anadolu.liderhost.com.tr/9404/stream"
@@ -206,4 +206,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

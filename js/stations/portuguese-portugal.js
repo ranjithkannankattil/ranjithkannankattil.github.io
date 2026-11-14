@@ -137,7 +137,7 @@ window.STATIONS = [
   },
   {
     "id": "rfm-toca-portugal",
-    "name": "RFM TOCA PORTUGAL",
+    "name": "RFM Toca Portugal",
     "category": "music",
     "streams": [
       "https://27793.live.streamtheworld.com/RFM_PORTUGALAAC.aac"
@@ -153,7 +153,7 @@ window.STATIONS = [
   },
   {
     "id": "oxigenio-102-6-fm",
-    "name": "OXIGÉNIO 102.6 FM",
+    "name": "Oxigénio 102.6 FM",
     "category": "music",
     "streams": [
       "https://proic1.evspt.com/oxigenio_aac"
@@ -210,7 +210,7 @@ window.STATIONS = [
   },
   {
     "id": "golofm",
-    "name": "GoloFM",
+    "name": "Golo FM",
     "category": "music",
     "streams": [
       "https://sp0.redeaudio.com/8154/stream"
@@ -317,7 +317,7 @@ window.STATIONS = [
   },
   {
     "id": "smoothfm-soul",
-    "name": "SmoothFM Soul",
+    "name": "Smooth FM Soul",
     "category": "music",
     "streams": [
       "https://stream-icy.bauermedia.pt/smoothsoul.aac"
@@ -371,7 +371,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-orbital",
-    "name": "radio orbital",
+    "name": "Radio Orbital",
     "category": "music",
     "streams": [
       "https://centova.radio.com.pt/proxy/401?mp=/stream"
@@ -389,7 +389,7 @@ window.STATIONS = [
   },
   {
     "id": "rfm-latinas",
-    "name": "RFM LATINAS",
+    "name": "RFM Latinas",
     "category": "music",
     "streams": [
       "https://25693.live.streamtheworld.com/RFM_LATINASAAC.aac"
@@ -605,7 +605,7 @@ window.STATIONS = [
   },
   {
     "id": "76-8-oceano-pacifico",
-    "name": "76,8 OCEANO PACIFICO",
+    "name": "76,8 Oceano Pacifico",
     "category": "music",
     "streams": [
       "https://cp-1.owh.radio.br/listen/owh_s35225/radio-mp3"
@@ -632,7 +632,7 @@ window.STATIONS = [
   },
   {
     "id": "cidade-hiphop",
-    "name": "cidade hiphop",
+    "name": "Cidade Hiphop",
     "category": "music",
     "streams": [
       "https://stream-hls.bauermedia.pt/cidhiphop.aac/playlist.m3u8"
@@ -641,7 +641,7 @@ window.STATIONS = [
   },
   {
     "id": "nitfm",
-    "name": "NiTfm",
+    "name": "NiT FM",
     "category": "music",
     "streams": [
       "https://sp0.redeaudio.com/8028/stream/"
@@ -767,7 +767,7 @@ window.STATIONS = [
   },
   {
     "id": "noite-fm",
-    "name": "NOITE FM",
+    "name": "Noite FM",
     "category": "music",
     "streams": [
       "https://servidor.noite.pt:9002/stream"
@@ -830,7 +830,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-rcp-var",
-    "name": "RADIO RCP-VAR",
+    "name": "Radio RCP-VAR",
     "category": "music",
     "streams": [
       "https://sonic.servsonic.com/8028/stream"
@@ -839,7 +839,7 @@ window.STATIONS = [
   },
   {
     "id": "rfm-dance-it",
-    "name": "RFM DANCE IT",
+    "name": "RFM Dance It",
     "category": "music",
     "streams": [
       "https://25453.live.streamtheworld.com/DANCEONTHEFLOORAAC.aac"
@@ -1037,7 +1037,7 @@ window.STATIONS = [
   },
   {
     "id": "rfm-jazzy",
-    "name": "RFM JAZZY",
+    "name": "RFM Jazzy",
     "category": "music",
     "streams": [
       "https://27753.live.streamtheworld.com/RFM_JAZZYAAC.aac"
@@ -1055,7 +1055,7 @@ window.STATIONS = [
   },
   {
     "id": "jovembsk-mix",
-    "name": "jovembsk mix",
+    "name": "Jovembsk Mix",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/4nc1mzdp81xuv"
@@ -1100,7 +1100,7 @@ window.STATIONS = [
   },
   {
     "id": "jovembsk-dance",
-    "name": "jovembsk dance",
+    "name": "Jovembsk Dance",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/1wux17cbfkcuv"
@@ -1154,7 +1154,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-metropolitana-portugal",
-    "name": "radio metropolitana portugal",
+    "name": "Radio Metropolitana Portugal",
     "category": "music",
     "streams": [
       "https://radios.justweb.pt/8074/stream"
@@ -1271,7 +1271,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-eu-sou-goias",
-    "name": "RÁDIO EU SOU GOIÁS",
+    "name": "Rádio EU SOU Goiás",
     "category": "music",
     "streams": [
       "https://live9.livemus.com.br:27374/stream"
@@ -1333,4 +1333,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

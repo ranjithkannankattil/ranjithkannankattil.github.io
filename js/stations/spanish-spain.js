@@ -312,7 +312,7 @@ window.STATIONS = [
   },
   {
     "id": "cope-a-coruna",
-    "name": "COPE A CORUÑA",
+    "name": "COPE A Coruña",
     "category": "music",
     "streams": [
       "https://wecast-bl01.flumotion.com/copesedes/lacoruna.mp3"
@@ -436,7 +436,7 @@ window.STATIONS = [
   },
   {
     "id": "punk-irratia",
-    "name": "punk irratia",
+    "name": "Punk Irratia",
     "category": "music",
     "streams": [
       "https://punkirratia.net:8443/punk"
@@ -517,7 +517,7 @@ window.STATIONS = [
   },
   {
     "id": "informa-radio",
-    "name": "INFORMA RADIO",
+    "name": "Informa Radio",
     "category": "devotional",
     "streams": [
       "https://24x7.red:42045/informa"
@@ -580,7 +580,7 @@ window.STATIONS = [
   },
   {
     "id": "megastarfm",
-    "name": "MegaStarFM",
+    "name": "MegaStar FM",
     "category": "music",
     "streams": [
       "https://flucast14-h-cloud.flumotion.com/cope/megastar.mp3"
@@ -634,7 +634,7 @@ window.STATIONS = [
   },
   {
     "id": "bikinifm",
-    "name": "BikiniFM",
+    "name": "Bikini FM",
     "category": "music",
     "streams": [
       "https://stream.emisorasmusicales.net/listen/bikini_fm/bikinifm.mp3"
@@ -832,7 +832,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-bob",
-    "name": "RADIO BOB",
+    "name": "Radio BOB",
     "category": "music",
     "streams": [
       "https://streams.radiobob.de/bob-national/mp3-192/homepage?mode=preroll&aw_0_1st.skey=1671400102&cb=286873666&aw_0_1st.playerid=radiobob_web&aw_0_req.userConsentV2=CPkIkEAPkIkEAAFADBDECvCsAP_AAEPAAAYgI9td_H__bW9j-f5_aft0eY1P9_rz7uQzDhfNk-4F3L_W_LwX52E7NF36tq4KmR4ku1LBIQNlHMHUDUmwaokVryHsak2cpSNKJ7BEknMZOydYGF9Pmxtj-QKY5v5_d3bx2D-t_9v-39z338VXn3d53-_02PDdV599Dfn9fR_b89KP9958v4v8_____3_e__3_74I9gEmGrcQBdmWODNoGEUCIEYVhIRQKACCgGFogIAHBwU7KwCfWECABAKAIwIgQ4AowIBAAAJAEhEAEgRYIAAARAIAAQAIAEIAGBgEFgBYGAQAAgGgYohQACBIAZEBEUpgQFQJBAS2VCCUFUhphAFWWAFAIjYKABEEgIpAAEBYOAYIkBKxYIEmKN8gBGCFAKJUIAgaADAAEEexEAGAAII9ioAMAAQR7GQAYAAgj2AAA.YAAAAAAAAAAA&aw_0_1st.kuid=kppidff_PQ5ovBN7&aw_0_1st.ksg=%5B%22vz9c46692%22%5D&listenerid=c47683ff451bdf8ebe068dea8a897b50"
@@ -985,7 +985,7 @@ window.STATIONS = [
   },
   {
     "id": "rockfm-101-7",
-    "name": "RockFM 101.7",
+    "name": "Rock FM 101.7",
     "category": "music",
     "streams": [
       "https://flucast10-o-cloud.flumotion.com/cope/rockfm.aac"
@@ -1256,7 +1256,7 @@ window.STATIONS = [
   },
   {
     "id": "maxima-fm",
-    "name": "Maxima Fm",
+    "name": "Maxima FM",
     "category": "music",
     "streams": [
       "https://en-directo.frequence-radio.com/amp/redirect.php?radio=maxima-fm"
@@ -1327,4 +1327,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

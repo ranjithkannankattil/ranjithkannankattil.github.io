@@ -294,7 +294,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-dimensione-relax",
-    "name": "RADIO DIMENSIONE RELAX",
+    "name": "Radio Dimensione Relax",
     "category": "music",
     "streams": [
       "https://az1.mediacp.eu/listen/radiodimensionerelax/radio.mp3"
@@ -312,7 +312,7 @@ window.STATIONS = [
   },
   {
     "id": "nature-radio-sleep",
-    "name": "NATURE RADIO SLEEP",
+    "name": "Nature Radio Sleep",
     "category": "music",
     "streams": [
       "https://az1.mediacp.eu/listen/natureradiosleep/radio.mp3"
@@ -811,7 +811,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-margherita",
-    "name": "\tRadio Margherita",
+    "name": "Radio Margherita",
     "category": "music",
     "streams": [
       "https://streaming.radiomargherita.com/stream/radiomargherita"
@@ -1342,4 +1342,4 @@ window.STATIONS = [
     "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

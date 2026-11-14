@@ -36,7 +36,7 @@ window.STATIONS = [
   },
   {
     "id": "nhk-world-radio",
-    "name": "NHK WORLD RADIO",
+    "name": "NHK World Radio",
     "category": "news",
     "streams": [
       "https://nhkworld-radio.nhkworld.jp/hls/live/nhkworld-radio-media2/index.m3u8"
@@ -69,7 +69,7 @@ window.STATIONS = [
   },
   {
     "id": "sound-up-station-nfrs",
-    "name": "SOUND UP STATION NFRS",
+    "name": "Sound UP Station NFRS",
     "category": "music",
     "streams": [
       "https://stream2.rcast.net/70945"
@@ -93,7 +93,7 @@ window.STATIONS = [
   },
   {
     "id": "stereo-anime",
-    "name": "stereo anime",
+    "name": "Stereo Anime",
     "category": "music",
     "streams": [
       "https://radio.stereoanime.com/listen/stereoanime/128"
@@ -479,7 +479,7 @@ window.STATIONS = [
   },
   {
     "id": "dankfm",
-    "name": "DankFM",
+    "name": "Dank FM",
     "category": "music",
     "streams": [
       "https://internetradio.dankassassin368.com/DankFM.mp3"
@@ -704,7 +704,7 @@ window.STATIONS = [
   },
   {
     "id": "t-spigot-radio",
-    "name": "t spigot radio",
+    "name": "T Spigot Radio",
     "category": "music",
     "streams": [
       "https://radio.tspigot.net/radio/radio.mp3"
@@ -721,4 +721,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

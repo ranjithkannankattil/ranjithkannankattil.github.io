@@ -29,7 +29,7 @@ window.STATIONS = [
   },
   {
     "id": "bestfm",
-    "name": "BestFM",
+    "name": "Best FM",
     "category": "music",
     "streams": [
       "https://live.radio.si/BestFM"
@@ -253,7 +253,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-1-slo",
-    "name": "radio 1 slo",
+    "name": "Radio 1 Slo",
     "category": "music",
     "streams": [
       "https://live.radio.si/Radio1VE"
@@ -287,4 +287,4 @@ window.STATIONS = [
     "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

@@ -28,7 +28,7 @@ window.STATIONS = [
   },
   {
     "id": "bandnews-fm-sp",
-    "name": "bandnews fm sp",
+    "name": "Bandnews FM Sp",
     "category": "news",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/BANDNEWSFM_SPAAC.m3u8"
@@ -269,7 +269,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-liga-samba",
-    "name": "RÁDIO LIGA SAMBA",
+    "name": "Rádio Liga Samba",
     "category": "music",
     "streams": [
       "https://srv1.braudio.com.br:7308/;stream.nsv"
@@ -317,7 +317,7 @@ window.STATIONS = [
   },
   {
     "id": "mgt-gospel",
-    "name": "MGT GOSPEL",
+    "name": "MGT Gospel",
     "category": "devotional",
     "streams": [
       "https://cast.mgtradio.net/radio/8040/aac"
@@ -370,7 +370,7 @@ window.STATIONS = [
   },
   {
     "id": "nova-brasil-fm-sao-paulo",
-    "name": "Nova Brasil Fm São Paulo",
+    "name": "Nova Brasil FM São Paulo",
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/NOVABRASIL_SPAAC.aac"
@@ -577,7 +577,7 @@ window.STATIONS = [
   },
   {
     "id": "gold-instrumental",
-    "name": "GOLD INSTRUMENTAL",
+    "name": "Gold Instrumental",
     "category": "music",
     "streams": [
       "https://centova2.svdns.com.br:20038/stream"
@@ -694,7 +694,7 @@ window.STATIONS = [
   },
   {
     "id": "elektra-radio",
-    "name": "ELEKTRA RADIO",
+    "name": "Elektra Radio",
     "category": "music",
     "streams": [
       "https://cast3.hoost.com.br:8952/stream"
@@ -966,7 +966,7 @@ window.STATIONS = [
   },
   {
     "id": "viola-viva-caipira",
-    "name": "VIOLA VIVA CAIPIRA",
+    "name": "Viola Viva Caipira",
     "category": "music",
     "streams": [
       "https://centova.euroti.com.br:20055/stream"
@@ -1137,7 +1137,7 @@ window.STATIONS = [
   },
   {
     "id": "mgt-forro",
-    "name": "MGT FORRÓ",
+    "name": "MGT Forró",
     "category": "music",
     "streams": [
       "https://cast.mgtradio.net/radio/8050/aac"
@@ -1209,7 +1209,7 @@ window.STATIONS = [
   },
   {
     "id": "gold-classic",
-    "name": "GOLD CLASSIC",
+    "name": "Gold Classic",
     "category": "music",
     "streams": [
       "https://centova2.svdns.com.br:20009/stream"
@@ -1334,4 +1334,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

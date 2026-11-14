@@ -70,7 +70,7 @@ window.STATIONS = [
   },
   {
     "id": "sumerfm-iraq",
-    "name": "SumerFm Iraq",
+    "name": "Sumer FM Iraq",
     "category": "music",
     "streams": [
       "https://l3.itworkscdn.net/itwaudio/9012/stream"
@@ -199,7 +199,7 @@ window.STATIONS = [
   },
   {
     "id": "medi-1-radio",
-    "name": "MEDI 1 RADIO",
+    "name": "Medi 1 Radio",
     "category": "news",
     "streams": [
       "https://cdn.live.easybroadcast.io/live/83_medi1radio-maghreb_8s9i4bn/playlist.m3u8"
@@ -231,7 +231,7 @@ window.STATIONS = [
   },
   {
     "id": "tayf-fm",
-    "name": "Tayf Fm - راديو طيف - صدى السوريين",
+    "name": "Tayf FM - راديو طيف - صدى السوريين",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/xbohf8qf5uauv"
@@ -364,7 +364,7 @@ window.STATIONS = [
   },
   {
     "id": "adwaafm",
-    "name": "Adwaafm",
+    "name": "Adwaa FM",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/5bxh2nh0x1zuv?1681882617017"
@@ -598,7 +598,7 @@ window.STATIONS = [
   },
   {
     "id": "mfm-radio",
-    "name": "MFM RADIO",
+    "name": "MFM Radio",
     "category": "music",
     "streams": [
       "https://a5.asurahosting.com:7980/radio.mp3"
@@ -643,7 +643,7 @@ window.STATIONS = [
   },
   {
     "id": "u-radio",
-    "name": "U RADIO",
+    "name": "U Radio",
     "category": "music",
     "streams": [
       "https://uradio-aac.ice.infomaniak.ch/uradio.aac"
@@ -859,7 +859,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-yan-plus",
-    "name": "radio yan plus",
+    "name": "Radio Yan Plus",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/7nqu31p6xg0uv"
@@ -895,7 +895,7 @@ window.STATIONS = [
   },
   {
     "id": "101-4-hatay-tempo-fm",
-    "name": "101.4 HATAY TEMPO FM",
+    "name": "101.4 Hatay Tempo FM",
     "category": "music",
     "streams": [
       "https://sslyayin.netyayin.net:1215/stream"
@@ -967,7 +967,7 @@ window.STATIONS = [
   },
   {
     "id": "medina-fm",
-    "name": "MEDINA FM",
+    "name": "Medina FM",
     "category": "news",
     "streams": [
       "https://medinafm.ice.infomaniak.ch/medinafm-64.mp3"
@@ -1102,7 +1102,7 @@ window.STATIONS = [
   },
   {
     "id": "zine-bladi",
-    "name": "ZINE BLADI",
+    "name": "Zine Bladi",
     "category": "music",
     "streams": [
       "https://asmaki.ma:8000/radio.mp3"
@@ -1147,7 +1147,7 @@ window.STATIONS = [
   },
   {
     "id": "mosaiquefm",
-    "name": "Mosaiquefm",
+    "name": "Mosaique FM",
     "category": "news",
     "streams": [
       "https://radio.mosaiquefm.net/mosalive"
@@ -1326,4 +1326,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

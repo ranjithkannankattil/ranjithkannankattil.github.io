@@ -393,7 +393,7 @@ window.STATIONS = [
   },
   {
     "id": "friendstamilfm",
-    "name": "Friendstamilfm",
+    "name": "Friendstamil FM",
     "category": "music",
     "streams": [
       "https://usa15.fastcast4u.com/proxy/tammus00?mp=/;"
@@ -429,7 +429,7 @@ window.STATIONS = [
   },
   {
     "id": "mellisai-fm",
-    "name": "Mellisai Fm",
+    "name": "Mellisai FM",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/e9hsbbbey4zuv"
@@ -438,7 +438,7 @@ window.STATIONS = [
   },
   {
     "id": "jn-fm-tamil-classic",
-    "name": "JN FM TAMIL CLASSIC",
+    "name": "JN FM Tamil Classic",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/qkdmq6d7kfhvv"
@@ -521,7 +521,7 @@ window.STATIONS = [
   },
   {
     "id": "tamilkaterumbufm",
-    "name": "Tamilkaterumbufm",
+    "name": "Tamilkaterumbu FM",
     "category": "music",
     "streams": [
       "https://tamilkaterumbufm-prabak78.radioca.st/stream"
@@ -539,7 +539,7 @@ window.STATIONS = [
   },
   {
     "id": "g-tamil-fm",
-    "name": "G Tamil Fm",
+    "name": "G Tamil FM",
     "category": "music",
     "streams": [
       "https://gtr-unicast2u.radioca.st/stream"
@@ -557,7 +557,7 @@ window.STATIONS = [
   },
   {
     "id": "ajithfm",
-    "name": "Ajithfm",
+    "name": "Ajith FM",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/ntkhu40k17zuv"
@@ -584,7 +584,7 @@ window.STATIONS = [
   },
   {
     "id": "tubetamilfm",
-    "name": "Tubetamilfm",
+    "name": "Tubetamil FM",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/p5k41f436qzuv"
@@ -593,7 +593,7 @@ window.STATIONS = [
   },
   {
     "id": "vanavilfm-radio-maestro",
-    "name": "Vanavilfm - Radio Maestro",
+    "name": "Vanavil FM - Radio Maestro",
     "category": "music",
     "streams": [
       "https://s7.yesstreaming.net:8092/stream"
@@ -629,7 +629,7 @@ window.STATIONS = [
   },
   {
     "id": "aural-radio",
-    "name": "AURAL RADIO",
+    "name": "Aural Radio",
     "category": "music",
     "streams": [
       "https://live.auralradiokerala.in/auralradio/mp3"
@@ -656,7 +656,7 @@ window.STATIONS = [
   },
   {
     "id": "chellam-fm",
-    "name": "Chellam Fm",
+    "name": "Chellam FM",
     "category": "music",
     "streams": [
       "https://sugu.radioca.st/stream/;stream/1"
@@ -674,7 +674,7 @@ window.STATIONS = [
   },
   {
     "id": "arumbu-fm",
-    "name": "Arumbu Fm",
+    "name": "Arumbu FM",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/22db1xmde2zuv"
@@ -692,7 +692,7 @@ window.STATIONS = [
   },
   {
     "id": "valipokan-fm",
-    "name": "Valipokan Fm",
+    "name": "Valipokan FM",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/dcts7v7sef9uv"
@@ -719,7 +719,7 @@ window.STATIONS = [
   },
   {
     "id": "abinayamfm",
-    "name": "Abinayamfm",
+    "name": "Abinayam FM",
     "category": "music",
     "streams": [
       "https://usa11.fastcast4u.com/proxy/ajaydk?mp=/;"
@@ -800,7 +800,7 @@ window.STATIONS = [
   },
   {
     "id": "dharisanam-fm",
-    "name": "Dharisanam Fm",
+    "name": "Dharisanam FM",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/b741tfumhm8uv"
@@ -836,7 +836,7 @@ window.STATIONS = [
   },
   {
     "id": "pollachifm",
-    "name": "Pollachifm",
+    "name": "Pollachi FM",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/f29eh57d3qzuv"
@@ -845,7 +845,7 @@ window.STATIONS = [
   },
   {
     "id": "tamilrockyfm",
-    "name": "Tamilrockyfm",
+    "name": "Tamilrocky FM",
     "category": "music",
     "streams": [
       "https://centova71.instainternet.com/proxy/tamilrockyfm?mp=/stream"
@@ -908,7 +908,7 @@ window.STATIONS = [
   },
   {
     "id": "isaiyaruvi-fm",
-    "name": "Isaiyaruvi Fm",
+    "name": "Isaiyaruvi FM",
     "category": "music",
     "streams": [
       "https://cp1.hostcrate.com/8910/stream"
@@ -917,7 +917,7 @@ window.STATIONS = [
   },
   {
     "id": "friendstamilchatfm",
-    "name": "Friendstamilchatfm",
+    "name": "Friendstamilchat FM",
     "category": "music",
     "streams": [
       "https://usa3.fastcast4u.com/proxy/dhayanib?mp=/;"
@@ -953,7 +953,7 @@ window.STATIONS = [
   },
   {
     "id": "pudugai-isai-fm",
-    "name": "Pudugai Isai Fm",
+    "name": "Pudugai Isai FM",
     "category": "music",
     "streams": [
       "https://pudhugaisaifm-prabak78.radioca.st/stream"
@@ -962,7 +962,7 @@ window.STATIONS = [
   },
   {
     "id": "vaanam-fm-hd",
-    "name": "Vaanam Fm Hd",
+    "name": "Vaanam FM HD",
     "category": "music",
     "streams": [
       "https://fra-ranger01.dedicateware.com:8008/stream"
@@ -971,7 +971,7 @@ window.STATIONS = [
   },
   {
     "id": "mukil-fm",
-    "name": "Mukil Fm",
+    "name": "Mukil FM",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/9s8119m1rzzuv"
@@ -998,7 +998,7 @@ window.STATIONS = [
   },
   {
     "id": "kathiravanfm",
-    "name": "Kathiravanfm",
+    "name": "Kathiravan FM",
     "category": "music",
     "streams": [
       "https://kathiravanfm-prabak78.radioca.st/stream"
@@ -1007,7 +1007,7 @@ window.STATIONS = [
   },
   {
     "id": "vanavilfm-arr-radio",
-    "name": "Vanavilfm - ARR Radio",
+    "name": "Vanavil FM - ARR Radio",
     "category": "music",
     "streams": [
       "https://s7.yesstreaming.net:8038/stream"
@@ -1016,7 +1016,7 @@ window.STATIONS = [
   },
   {
     "id": "mukil-fm-radio",
-    "name": "Mukil Fm Radio",
+    "name": "Mukil FM Radio",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/phv06yfkwzzuv"
@@ -1025,7 +1025,7 @@ window.STATIONS = [
   },
   {
     "id": "isai-fm",
-    "name": "Isai Fm",
+    "name": "Isai FM",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/7b78sdv2x1zuv"
@@ -1034,7 +1034,7 @@ window.STATIONS = [
   },
   {
     "id": "isaiolifm",
-    "name": "Isaiolifm",
+    "name": "Isaioli FM",
     "category": "music",
     "streams": [
       "https://centova71.instainternet.com/proxy/isaiolifmadmin?mp=/stream&1691245966241"
@@ -1043,7 +1043,7 @@ window.STATIONS = [
   },
   {
     "id": "cheemaifm",
-    "name": "Cheemaifm",
+    "name": "Cheemai FM",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/oogj1rc9cdctv"
@@ -1052,7 +1052,7 @@ window.STATIONS = [
   },
   {
     "id": "ullasamfm",
-    "name": "Ullasamfm",
+    "name": "Ullasam FM",
     "category": "music",
     "streams": [
       "https://eu10.fastcast4u.com:6740/stream"
@@ -1061,7 +1061,7 @@ window.STATIONS = [
   },
   {
     "id": "asal-fm",
-    "name": "Asal Fm",
+    "name": "Asal FM",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/pzgws1kc41zuv"
@@ -1106,7 +1106,7 @@ window.STATIONS = [
   },
   {
     "id": "tamilaruvifm",
-    "name": "Tamilaruvifm",
+    "name": "Tamilaruvi FM",
     "category": "music",
     "streams": [
       "https://servidor18-4.brlogic.com:7740/live"
@@ -1124,7 +1124,7 @@ window.STATIONS = [
   },
   {
     "id": "fm-gold-chennai",
-    "name": "Fm Gold Chennai",
+    "name": "FM Gold Chennai",
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio021/chunklist.m3u8"
@@ -1160,7 +1160,7 @@ window.STATIONS = [
   },
   {
     "id": "thendral-fm-radio",
-    "name": "Thendral Fm Radio",
+    "name": "Thendral FM Radio",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/xzt706p3h2zuv"
@@ -1169,7 +1169,7 @@ window.STATIONS = [
   },
   {
     "id": "sirpifm",
-    "name": "Sirpifm",
+    "name": "Sirpi FM",
     "category": "music",
     "streams": [
       "https://sirpifmhd-unicast2u.radioca.st/stream"
@@ -1178,7 +1178,7 @@ window.STATIONS = [
   },
   {
     "id": "pozhil-fm",
-    "name": "Pozhil Fm",
+    "name": "Pozhil FM",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/ssnf4ya44d0uv"
@@ -1205,7 +1205,7 @@ window.STATIONS = [
   },
   {
     "id": "subikshafm",
-    "name": "Subikshafm",
+    "name": "Subiksha FM",
     "category": "music",
     "streams": [
       "https://usa8.fastcast4u.com/proxy/subikshafm?mp=/1"
@@ -1232,7 +1232,7 @@ window.STATIONS = [
   },
   {
     "id": "time-fm",
-    "name": "Time Fm",
+    "name": "Time FM",
     "category": "music",
     "streams": [
       "https://neramfm.com:8000/stream"
@@ -1259,7 +1259,7 @@ window.STATIONS = [
   },
   {
     "id": "mtrfm",
-    "name": "Mtrfm",
+    "name": "Mtr FM",
     "category": "music",
     "streams": [
       "https://radio.mediacp.eu/stream/mtr-fm/stream"
@@ -1268,7 +1268,7 @@ window.STATIONS = [
   },
   {
     "id": "the-leader-fm",
-    "name": "The Leader Fm",
+    "name": "The Leader FM",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/whwy245c2wzuv"
@@ -1286,7 +1286,7 @@ window.STATIONS = [
   },
   {
     "id": "ttrfm",
-    "name": "Ttrfm",
+    "name": "Ttr FM",
     "category": "music",
     "streams": [
       "https://radio.massstream.net/8010/stream"
@@ -1313,7 +1313,7 @@ window.STATIONS = [
   },
   {
     "id": "vasantha-ragam-fm",
-    "name": "Vasantha Ragam Fm",
+    "name": "Vasantha Ragam FM",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/xpbsngksa2zuv"
@@ -1322,7 +1322,7 @@ window.STATIONS = [
   },
   {
     "id": "nanban-fm",
-    "name": "Nanban Fm",
+    "name": "Nanban FM",
     "category": "music",
     "streams": [
       "https://nanbanfm-unicast2u.radioca.st/stream"
@@ -1330,4 +1330,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

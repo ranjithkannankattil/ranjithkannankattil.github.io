@@ -505,7 +505,7 @@ window.STATIONS = [
   },
   {
     "id": "mixfm-cyprus",
-    "name": "MixFM Cyprus",
+    "name": "Mix FM Cyprus",
     "category": "music",
     "streams": [
       "https://link.radiojar.com/c27wx6pdh8vtv"
@@ -820,7 +820,7 @@ window.STATIONS = [
   },
   {
     "id": "sokfm-104-8",
-    "name": "SokFM 104.8",
+    "name": "Sok FM 104.8",
     "category": "music",
     "streams": [
       "https://stream.radiojar.com/zeqcyyvu48hvv"
@@ -847,7 +847,7 @@ window.STATIONS = [
   },
   {
     "id": "rebetiko-sealabs",
-    "name": "rebetiko sealabs",
+    "name": "Rebetiko Sealabs",
     "category": "music",
     "streams": [
       "https://rebetiko.sealabs.net/radio"
@@ -1126,7 +1126,7 @@ window.STATIONS = [
   },
   {
     "id": "blue-space",
-    "name": "BLUE SPACE",
+    "name": "Blue Space",
     "category": "music",
     "streams": [
       "https://sp1.19cloudsnetwork.gr/8008/stream"
@@ -1261,7 +1261,7 @@ window.STATIONS = [
   },
   {
     "id": "02-radio-station",
-    "name": "02 radio station",
+    "name": "02 Radio Station",
     "category": "music",
     "streams": [
       "https://centova.gr-net.gr/proxy/dimitrio/stream"
@@ -1279,7 +1279,7 @@ window.STATIONS = [
   },
   {
     "id": "amvrakia-fm-91-9",
-    "name": "Amvrakia Fm 91.9",
+    "name": "Amvrakia FM 91.9",
     "category": "music",
     "streams": [
       "https://ice.streams.ovh:1195/stream"
@@ -1323,4 +1323,4 @@ window.STATIONS = [
     "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

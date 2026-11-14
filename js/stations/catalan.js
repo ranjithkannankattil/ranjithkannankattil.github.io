@@ -351,7 +351,7 @@ window.STATIONS = [
   },
   {
     "id": "vilassar-radio",
-    "name": "VILASSAR RADIO",
+    "name": "Vilassar Radio",
     "category": "music",
     "streams": [
       "https://relay.stream.enacast-cloud.com:40226/radiovilassardemarHD.mp3?us_privacy=1YNY56.mp3"
@@ -423,7 +423,7 @@ window.STATIONS = [
   },
   {
     "id": "idofm",
-    "name": "IdòFM",
+    "name": "Idò FM",
     "category": "music",
     "streams": [
       "https://ido.omedia.cat/listen/idofm/idofm.mp3"
@@ -649,4 +649,4 @@ window.STATIONS = [
     "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

@@ -164,7 +164,7 @@ window.STATIONS = [
   },
   {
     "id": "wasafi-fm",
-    "name": "Wasafi Fm",
+    "name": "Wasafi FM",
     "category": "music",
     "streams": [
       "https://streaming.radionomy.com/JamendoLounge"
@@ -255,7 +255,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-ssese-101-9-fm",
-    "name": "RADIO SSESE 101.9 FM",
+    "name": "Radio Ssese 101.9 FM",
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/bphnslpg8p1uv"
@@ -326,4 +326,4 @@ window.STATIONS = [
     "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

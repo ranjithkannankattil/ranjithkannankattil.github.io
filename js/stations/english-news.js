@@ -303,7 +303,7 @@ window.STATIONS = [
   },
   {
     "id": "joy-fm",
-    "name": "Joy Fm",
+    "name": "Joy FM",
     "category": "world",
     "streams": [
       "https://mmg.streamguys1.com/JoyFM-mp3?key=8689cc761932e3151f94ddbdbfdf4aa0f4000234b5caeaaa179a2fc0d59a4be9b8b774c3653cb14d1fd76f5cbf80e482&awparams=playerid%3ASGplayer%3B&amsparams=playerid%3ASGplayer%3Bskey%3A1609840716923%3B&aw_0_req.gdpr=true&us_privacy=1YNN"
@@ -363,7 +363,7 @@ window.STATIONS = [
   },
   {
     "id": "redfm",
-    "name": "REDfm",
+    "name": "RED FM",
     "category": "world",
     "streams": [
       "https://22273.live.streamtheworld.com/RED_FMAAC.aac"
@@ -833,7 +833,7 @@ window.STATIONS = [
   },
   {
     "id": "radiumfm-world",
-    "name": "RadiumFM World",
+    "name": "Radium FM World",
     "category": "world",
     "streams": [
       "https://stream.radiumfm.com/world"
@@ -1183,7 +1183,7 @@ window.STATIONS = [
   },
   {
     "id": "99-5-dzyw-koolfm",
-    "name": "99.5 DZYW koolFM",
+    "name": "99.5 DZYW Kool FM",
     "category": "world",
     "streams": [
       "https://listen.smilemediaph.com/listen/koolfm/radio.mp3"
@@ -1223,7 +1223,7 @@ window.STATIONS = [
   },
   {
     "id": "zifm-stereo",
-    "name": "ZiFM Stereo",
+    "name": "Zi FM Stereo",
     "category": "world",
     "streams": [
       "https://edge.iono.fm/xice/134_high.aac"
@@ -1323,7 +1323,7 @@ window.STATIONS = [
   },
   {
     "id": "96-6-sky-abc-radio",
-    "name": "96.6 SKY ABC RADIO",
+    "name": "96.6 SKY ABC Radio",
     "category": "world",
     "streams": [
       "https://cast.skyradio105.com/proxy/skyradio105/stream"
@@ -1504,4 +1504,4 @@ window.STATIONS = [
     "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

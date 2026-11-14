@@ -76,7 +76,7 @@ window.STATIONS = [
   },
   {
     "id": "bravo-kids",
-    "name": "bravo! kids",
+    "name": "Bravo! Kids",
     "category": "music",
     "streams": [
       "https://audio.social3.hr/listen/bravo_kids/stream?3367"
@@ -739,4 +739,4 @@ window.STATIONS = [
     "added": "2026-11-12"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

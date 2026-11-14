@@ -109,7 +109,7 @@ window.STATIONS = [
   },
   {
     "id": "nhk-world-radio",
-    "name": "NHK WORLD RADIO",
+    "name": "NHK World Radio",
     "category": "news",
     "streams": [
       "https://nhkworld-radio.nhkworld.jp/hls/live/nhkworld-radio-media2/index.m3u8"
@@ -181,7 +181,7 @@ window.STATIONS = [
   },
   {
     "id": "asiafm",
-    "name": "AsiaFM 亚洲粤语台",
+    "name": "Asia FM 亚洲粤语台",
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/15318569/64k.mp3"
@@ -461,7 +461,7 @@ window.STATIONS = [
   },
   {
     "id": "redfm",
-    "name": "REDfm",
+    "name": "RED FM",
     "category": "news",
     "streams": [
       "https://22273.live.streamtheworld.com/RED_FMAAC.aac"
@@ -497,7 +497,7 @@ window.STATIONS = [
   },
   {
     "id": "hardbestfm",
-    "name": "HardBestFM",
+    "name": "HardBest FM",
     "category": "music",
     "streams": [
       "https://fm.hardbest.cn/listen/hardstyle/radio.mp3"
@@ -524,7 +524,7 @@ window.STATIONS = [
   },
   {
     "id": "asiafm-2",
-    "name": "AsiaFM 亞洲電台",
+    "name": "Asia FM 亞洲電台",
     "category": "music",
     "streams": [
       "https://n13.rcs.revma.com/xpgtqc74hv8uv"
@@ -713,7 +713,7 @@ window.STATIONS = [
   },
   {
     "id": "asiafm-hdhttps",
-    "name": "AsiaFM HD音乐台【HTTPS】",
+    "name": "Asia FM HD音乐台【HTTPS】",
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/15318341/64k.mp3"
@@ -1154,7 +1154,7 @@ window.STATIONS = [
   },
   {
     "id": "asiafm-5",
-    "name": "AsiaFM 亞太電台",
+    "name": "Asia FM 亞太電台",
     "category": "music",
     "streams": [
       "https://n13.rcs.revma.com/kydend74hv8uv"
@@ -1181,7 +1181,7 @@ window.STATIONS = [
   },
   {
     "id": "my-fm",
-    "name": "MY FM",
+    "name": "My FM",
     "category": "music",
     "streams": [
       "https://stream.rcs.revma.com/hc3unrtbv4uvv/hls.m3u8"
@@ -1315,4 +1315,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

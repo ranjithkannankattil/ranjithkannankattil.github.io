@@ -53,7 +53,7 @@ window.STATIONS = [
   },
   {
     "id": "fugefm",
-    "name": "FugeFM",
+    "name": "Fuge FM",
     "category": "music",
     "streams": [
       "https://streaming.broadcast.radio/fugefm"
@@ -498,4 +498,4 @@ window.STATIONS = [
     "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

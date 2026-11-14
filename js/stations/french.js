@@ -674,7 +674,7 @@ window.STATIONS = [
   },
   {
     "id": "medi-1-radio",
-    "name": "MEDI 1 RADIO",
+    "name": "Medi 1 Radio",
     "category": "news",
     "streams": [
       "https://cdn.live.easybroadcast.io/live/83_medi1radio-maghreb_8s9i4bn/playlist.m3u8"
@@ -836,7 +836,7 @@ window.STATIONS = [
   },
   {
     "id": "medina-fm",
-    "name": "MEDINA FM",
+    "name": "Medina FM",
     "category": "news",
     "streams": [
       "https://medinafm.ice.infomaniak.ch/medinafm-64.mp3"
@@ -863,7 +863,7 @@ window.STATIONS = [
   },
   {
     "id": "mfm-radio",
-    "name": "MFM RADIO",
+    "name": "MFM Radio",
     "category": "music",
     "streams": [
       "https://a5.asurahosting.com:7980/radio.mp3"
@@ -1169,7 +1169,7 @@ window.STATIONS = [
   },
   {
     "id": "france-info-lofi",
-    "name": "france info (lofi)",
+    "name": "France Info (Lofi)",
     "category": "news",
     "streams": [
       "https://direct.franceinfo.fr/live/franceinfo-lofi.mp3"
@@ -1232,7 +1232,7 @@ window.STATIONS = [
   },
   {
     "id": "u-radio",
-    "name": "U RADIO",
+    "name": "U Radio",
     "category": "music",
     "streams": [
       "https://uradio-aac.ice.infomaniak.ch/uradio.aac"
@@ -1330,4 +1330,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

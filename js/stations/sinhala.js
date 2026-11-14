@@ -12,7 +12,7 @@ window.STATIONS = [
   },
   {
     "id": "siyath-fm",
-    "name": "Siyath Fm",
+    "name": "Siyath FM",
     "category": "music",
     "streams": [
       "https://srv01.onlineradio.voaplus.com/siyathafm"
@@ -68,7 +68,7 @@ window.STATIONS = [
   },
   {
     "id": "freefm-lk",
-    "name": "Freefm Lk",
+    "name": "Free FM Lk",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/1tcs4fbw7rquv"
@@ -167,4 +167,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

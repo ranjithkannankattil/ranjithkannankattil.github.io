@@ -331,7 +331,7 @@ window.STATIONS = [
   },
   {
     "id": "bigfm-deutschland",
-    "name": "bigFM Deutschland",
+    "name": "Big FM Deutschland",
     "category": "news",
     "streams": [
       "https://stream.bigfm.de/deutschland/mp3-128/radio-browser"
@@ -511,7 +511,7 @@ window.STATIONS = [
   },
   {
     "id": "blasmusikradio-mit-bernd",
-    "name": "\tBlasmusikradio mit Bernd",
+    "name": "Blasmusikradio mit Bernd",
     "category": "music",
     "streams": [
       "https://blasmusikradiomitbernd.stream.laut.fm/blasmusikradio_mit_bernd?t302=2026-10-22_11-14-48&uuid=1c862183-4ad1-31ac-d614-244ec1af5ae8"
@@ -520,7 +520,7 @@ window.STATIONS = [
   },
   {
     "id": "wdr-cosmo",
-    "name": "WDR COSMO",
+    "name": "WDR Cosmo",
     "category": "music",
     "streams": [
       "https://wdr-cosmo-live.icecast.wdr.de/wdr/cosmo/live/mp3/128/stream.mp3"
@@ -556,7 +556,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-88-6",
-    "name": "radio 88.6",
+    "name": "Radio 88.6",
     "category": "music",
     "streams": [
       "https://radio886.at/streams/radio_88.6/mp3"
@@ -827,7 +827,7 @@ window.STATIONS = [
   },
   {
     "id": "fluxfm",
-    "name": "FluxFM",
+    "name": "Flux FM",
     "category": "music",
     "streams": [
       "https://streams.fluxfm.de/live/mp3-320/audio/"
@@ -872,7 +872,7 @@ window.STATIONS = [
   },
   {
     "id": "bytefm",
-    "name": "ByteFM",
+    "name": "Byte FM",
     "category": "music",
     "streams": [
       "https://bytefm.cast.addradio.de/bytefm/main/high/stream"
@@ -1277,7 +1277,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-argovia",
-    "name": "RADIO ARGOVIA",
+    "name": "Radio Argovia",
     "category": "music",
     "streams": [
       "https://stream.streambase.ch/argovia/mp3-192/direct/"
@@ -1295,7 +1295,7 @@ window.STATIONS = [
   },
   {
     "id": "egofm-bayern",
-    "name": "egoFM Bayern",
+    "name": "Ego FM Bayern",
     "category": "music",
     "streams": [
       "https://cast.egofm.de/egofm.mp3?ar-distributor=radio-browser"
@@ -1304,7 +1304,7 @@ window.STATIONS = [
   },
   {
     "id": "egofm",
-    "name": "egoFM",
+    "name": "Ego FM",
     "category": "music",
     "streams": [
       "https://cast.egofm.de/egofm.mp3?ar-distributor=ffa0&aw_0_req.gdpr=true"
@@ -1330,4 +1330,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

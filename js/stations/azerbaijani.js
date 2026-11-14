@@ -4,7 +4,7 @@
 window.STATIONS = [
   {
     "id": "102-1-arabeskin-merkezi-fm",
-    "name": "102.1 Arabeskin Merkezi Fm",
+    "name": "102.1 Arabeskin Merkezi FM",
     "category": "music",
     "streams": [
       "https://canli.arabeskinmerkezi.com:9180/stream"
@@ -68,7 +68,7 @@ window.STATIONS = [
   },
   {
     "id": "media-fm-105-5",
-    "name": "Media Fm 105.5",
+    "name": "Media FM 105.5",
     "category": "music",
     "streams": [
       "https://icecast.livetv.az/mediafm"
@@ -76,7 +76,7 @@ window.STATIONS = [
   },
   {
     "id": "naz-radio",
-    "name": "NAZ RADIO",
+    "name": "NAZ Radio",
     "category": "music",
     "streams": [
       "https://s2.myradiostream.com/5286/listen.mp3"
@@ -110,7 +110,7 @@ window.STATIONS = [
   },
   {
     "id": "media-fm-mugam",
-    "name": "Media fm mugam",
+    "name": "Media FM mugam",
     "category": "music",
     "streams": [
       "https://icecast.livetv.az/mediamugam"
@@ -126,7 +126,7 @@ window.STATIONS = [
   },
   {
     "id": "planetfm-88-7",
-    "name": "PlanetFM 88.7",
+    "name": "Planet FM 88.7",
     "category": "music",
     "streams": [
       "https://live.dinle.az/planetfm"
@@ -192,4 +192,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

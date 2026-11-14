@@ -12,7 +12,7 @@ window.STATIONS = [
   },
   {
     "id": "tokfm",
-    "name": "TokFM",
+    "name": "Tok FM",
     "category": "music",
     "streams": [
       "https://radiostream.pl/tuba10-1.mp3",
@@ -45,7 +45,7 @@ window.STATIONS = [
   },
   {
     "id": "eska-goraca-100",
-    "name": "ESKA GORĄCA 100",
+    "name": "Eska Gorąca 100",
     "category": "music",
     "streams": [
       "https://ic1.smcdn.pl/6120-1.mp3"
@@ -77,7 +77,7 @@ window.STATIONS = [
   },
   {
     "id": "pr-trojka",
-    "name": "PR TRÓJKA",
+    "name": "PR Trójka",
     "category": "music",
     "streams": [
       "https://stream13.polskieradio.pl/pr3/pr3.sdp/playlist.m3u8"
@@ -134,7 +134,7 @@ window.STATIONS = [
   },
   {
     "id": "eska-rock",
-    "name": "ESKA ROCK",
+    "name": "Eska Rock",
     "category": "music",
     "streams": [
       "https://n05-eu3.rcs.revma.com/1nnezw8qz7zuv"
@@ -150,7 +150,7 @@ window.STATIONS = [
   },
   {
     "id": "eska-poznan",
-    "name": "ESKA POZNAŃ",
+    "name": "Eska Poznań",
     "category": "music",
     "streams": [
       "https://ic2.smcdn.pl/2140-1.aac"
@@ -158,7 +158,7 @@ window.STATIONS = [
   },
   {
     "id": "rmf-fm-polska",
-    "name": "Rmf Fm Polska",
+    "name": "Rmf FM Polska",
     "category": "music",
     "streams": [
       "https://rs101-krk-cyfronet.rmfstream.pl/RMFFM48"
@@ -434,7 +434,7 @@ window.STATIONS = [
   },
   {
     "id": "eska-impreska",
-    "name": "ESKA IMPRESKA",
+    "name": "Eska Impreska",
     "category": "music",
     "streams": [
       "https://ic1.smcdn.pl/6030-1.mp3"
@@ -488,7 +488,7 @@ window.STATIONS = [
   },
   {
     "id": "rmf-4-dance-rnb",
-    "name": "RMF 4 DANCE & RNB",
+    "name": "RMF 4 Dance & RNB",
     "category": "music",
     "streams": [
       "https://rs6-krk2.rmfstream.pl/rmf_4"
@@ -587,7 +587,7 @@ window.STATIONS = [
   },
   {
     "id": "zet-dance",
-    "name": "ZET DANCE",
+    "name": "ZET Dance",
     "category": "music",
     "streams": [
       "https://pl01.cdn.eurozet.pl/ZETDAN.mp3"
@@ -596,7 +596,7 @@ window.STATIONS = [
   },
   {
     "id": "rmf-maxx-poznan",
-    "name": "RMF MAXX POZNAŃ",
+    "name": "RMF Maxx Poznań",
     "category": "music",
     "streams": [
       "https://rs103-krk-cyfronet.rmfstream.pl/MAXXXPOZ"
@@ -650,7 +650,7 @@ window.STATIONS = [
   },
   {
     "id": "meloradio-hot-dance",
-    "name": "MELORADIO HOT DANCE",
+    "name": "Meloradio HOT Dance",
     "category": "music",
     "streams": [
       "https://ml02.cdn.eurozet.pl/MELHDN.mp3"
@@ -731,7 +731,7 @@ window.STATIONS = [
   },
   {
     "id": "planeta-fm",
-    "name": "PLANETA FM",
+    "name": "Planeta FM",
     "category": "music",
     "streams": [
       "https://pl01.cdn.eurozet.pl/pla-net.mp3"
@@ -785,7 +785,7 @@ window.STATIONS = [
   },
   {
     "id": "meloradio-poznan",
-    "name": "MELORADIO POZNAŃ",
+    "name": "Meloradio Poznań",
     "category": "music",
     "streams": [
       "https://ml03.cdn.eurozet.pl/mel-poz.mp3"
@@ -1118,7 +1118,7 @@ window.STATIONS = [
   },
   {
     "id": "vox-fm-disco-90",
-    "name": "VOX FM DISCO 90",
+    "name": "VOX FM Disco 90",
     "category": "music",
     "streams": [
       "https://ic1.smcdn.pl/6170-1.mp3"
@@ -1154,7 +1154,7 @@ window.STATIONS = [
   },
   {
     "id": "rmf-maxxx-krakow",
-    "name": "RMF MAXXX KRAKÓW",
+    "name": "RMF Maxxx Kraków",
     "category": "music",
     "streams": [
       "https://rs102-krk.rmfstream.pl/MAXXXKRA"
@@ -1226,7 +1226,7 @@ window.STATIONS = [
   },
   {
     "id": "vox-fm-disco-party",
-    "name": "VOX FM DISCO PARTY",
+    "name": "VOX FM Disco Party",
     "category": "music",
     "streams": [
       "https://ic1.smcdn.pl/6180-1.mp3"
@@ -1280,7 +1280,7 @@ window.STATIONS = [
   },
   {
     "id": "rmf-maxxx-kielce",
-    "name": "RMF MAXXX KIELCE",
+    "name": "RMF Maxxx Kielce",
     "category": "music",
     "streams": [
       "https://rs6-krk2.rmfstream.pl/rmf_maxxx_kie"
@@ -1315,4 +1315,4 @@ window.STATIONS = [
     "added": "2026-11-11"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

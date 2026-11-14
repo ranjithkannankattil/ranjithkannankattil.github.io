@@ -109,7 +109,7 @@ window.STATIONS = [
   },
   {
     "id": "cool-radio",
-    "name": "COOL RADIO",
+    "name": "Cool Radio",
     "category": "music",
     "streams": [
       "https://c34.radioboss.fm:9058/stream"
@@ -117,7 +117,7 @@ window.STATIONS = [
   },
   {
     "id": "beveik-radijas",
-    "name": "BEVEIK RADIJAS",
+    "name": "Beveik Radijas",
     "category": "music",
     "streams": [
       "https://halo.streamerr.co/listen/beveikradijas/radio.mp3"
@@ -264,4 +264,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

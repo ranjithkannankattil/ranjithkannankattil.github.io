@@ -466,7 +466,7 @@ window.STATIONS = [
   },
   {
     "id": "ar-radio",
-    "name": "AR RADIO",
+    "name": "AR Radio",
     "category": "music",
     "streams": [
       "https://free.rcast.net/200660"
@@ -493,7 +493,7 @@ window.STATIONS = [
   },
   {
     "id": "harman-beats",
-    "name": "HARMAN BEATS",
+    "name": "Harman Beats",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/jmi0hwxrgmauv"
@@ -574,7 +574,7 @@ window.STATIONS = [
   },
   {
     "id": "4lobos-bollywood-radio",
-    "name": "4lobos bollywood radio",
+    "name": "4lobos Bollywood Radio",
     "category": "music",
     "streams": [
       "https://puma.streemlion.com:4130/stream"
@@ -700,7 +700,7 @@ window.STATIONS = [
   },
   {
     "id": "93-5-jamshedpur",
-    "name": "93.5 jamshedpur",
+    "name": "93.5 Jamshedpur",
     "category": "music",
     "streams": [
       "https://stream-281.surfernetwork.com/9phrkb1e3v8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI5cGhya2IxZTN2OHV2IiwiaG9zdCI6InN0cmVhbS0yODEuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJIc2hqLVN5dVJoMm5ZZ0Fvbi1Fbm13IiwiaWF0IjoxNzkzMTE2MDcxLCJleHAiOjE3OTMxMTYxMzF9.NyLqCeI1zRJzbG5WcSSBHDNUC07p0mSR-O9hsmopGUk"
@@ -989,7 +989,7 @@ window.STATIONS = [
   },
   {
     "id": "aural-radio",
-    "name": "AURAL RADIO",
+    "name": "Aural Radio",
     "category": "music",
     "streams": [
       "https://live.auralradiokerala.in/auralradio/mp3"
@@ -1330,4 +1330,4 @@ window.STATIONS = [
     "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

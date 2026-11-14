@@ -12,7 +12,7 @@ window.STATIONS = [
   },
   {
     "id": "dr-p8-jazz",
-    "name": "DR P8 JAZZ",
+    "name": "DR P8 Jazz",
     "category": "music",
     "streams": [
       "https://live-icy.dr.dk/A/A22H.mp3",
@@ -93,7 +93,7 @@ window.STATIONS = [
   },
   {
     "id": "partyfm",
-    "name": "PartyFM",
+    "name": "Party FM",
     "category": "music",
     "streams": [
       "https://stream.partyfm.dk/Party320/",
@@ -373,7 +373,7 @@ window.STATIONS = [
   },
   {
     "id": "dr-p5-sjlland",
-    "name": "dr p5 sjælland",
+    "name": "Dr p5 Sjælland",
     "category": "music",
     "streams": [
       "https://live-icy.dr.dk/A19H_master2.mp3"
@@ -508,7 +508,7 @@ window.STATIONS = [
   },
   {
     "id": "dr-p6-beat",
-    "name": "DR P6 BEAT",
+    "name": "DR P6 Beat",
     "category": "music",
     "streams": [
       "https://drliveradio2.akamaized.net/hls/live/2118698/p6/masterab.m3u8"
@@ -516,4 +516,4 @@ window.STATIONS = [
     "added": "2026-11-12"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

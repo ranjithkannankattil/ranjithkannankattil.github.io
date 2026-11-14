@@ -185,7 +185,7 @@ window.STATIONS = [
   },
   {
     "id": "finest-fm",
-    "name": "Finest Fm",
+    "name": "Finest FM",
     "category": "music",
     "streams": [
       "https://shoutcast.finestfm.fi/;"
@@ -275,7 +275,7 @@ window.STATIONS = [
   },
   {
     "id": "punk-fm",
-    "name": "PUNK FM",
+    "name": "Punk FM",
     "category": "music",
     "streams": [
       "https://sapircast.caster.fm:11309/OsZpV"
@@ -387,7 +387,7 @@ window.STATIONS = [
   },
   {
     "id": "bigfm",
-    "name": "BIGfm",
+    "name": "BIG FM",
     "category": "music",
     "streams": [
       "https://sc2.flamebox.org/bigfm-hd"
@@ -539,4 +539,4 @@ window.STATIONS = [
     "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

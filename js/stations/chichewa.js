@@ -214,7 +214,7 @@ window.STATIONS = [
   },
   {
     "id": "yoneco-fm",
-    "name": "YONECO FM",
+    "name": "Yoneco FM",
     "category": "news",
     "streams": [
       "https://s7.myradiostream.com:60218/;;"
@@ -310,4 +310,4 @@ window.STATIONS = [
     "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

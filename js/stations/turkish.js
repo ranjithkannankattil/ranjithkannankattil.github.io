@@ -78,7 +78,7 @@ window.STATIONS = [
   },
   {
     "id": "102-1-arabeskin-merkezi-fm",
-    "name": "102.1 Arabeskin Merkezi Fm",
+    "name": "102.1 Arabeskin Merkezi FM",
     "category": "music",
     "streams": [
       "https://canli.arabeskinmerkezi.com:9180/stream"
@@ -86,7 +86,7 @@ window.STATIONS = [
   },
   {
     "id": "baba-radyo",
-    "name": "baba radyo",
+    "name": "Baba Radyo",
     "category": "music",
     "streams": [
       "https://officialbabaradyo.radyotvonline.net/babaofficial"
@@ -126,7 +126,7 @@ window.STATIONS = [
   },
   {
     "id": "azadi-fm",
-    "name": "Azadi Fm",
+    "name": "Azadi FM",
     "category": "music",
     "streams": [
       "https://amed.ozelip.com/8040/;"
@@ -198,7 +198,7 @@ window.STATIONS = [
   },
   {
     "id": "101-4-hatay-tempo-fm",
-    "name": "101.4 HATAY TEMPO FM",
+    "name": "101.4 Hatay Tempo FM",
     "category": "music",
     "streams": [
       "https://sslyayin.netyayin.net:1215/stream"
@@ -255,7 +255,7 @@ window.STATIONS = [
   },
   {
     "id": "karadut-fm",
-    "name": "Karadut Fm",
+    "name": "Karadut FM",
     "category": "devotional",
     "streams": [
       "https://yayin5.radyohizmeti.com/9982/stream"
@@ -408,7 +408,7 @@ window.STATIONS = [
   },
   {
     "id": "powerturk-fm-turkey-2",
-    "name": "POWERTÜRK FM TURKEY 2",
+    "name": "Powertürk FM Turkey 2",
     "category": "music",
     "streams": [
       "https://live.powerapp.com.tr/powerturk/abr/powerturk/128/playlist.m3u8"
@@ -482,7 +482,7 @@ window.STATIONS = [
   },
   {
     "id": "radyo-mezopotamya",
-    "name": "radyo mezopotamya",
+    "name": "Radyo Mezopotamya",
     "category": "music",
     "streams": [
       "https://anadolu.liderhost.com.tr/9404/stream"
@@ -581,7 +581,7 @@ window.STATIONS = [
   },
   {
     "id": "sizir-fm",
-    "name": "SIZIR FM",
+    "name": "Sizir FM",
     "category": "music",
     "streams": [
       "https://stream.radiojar.com/tamm1f7kk48uv"
@@ -599,7 +599,7 @@ window.STATIONS = [
   },
   {
     "id": "hey-radyo",
-    "name": "HEY RADYO",
+    "name": "HEY Radyo",
     "category": "music",
     "streams": [
       "https://usa4.fastcast4u.com/proxy/radyoizmirfm/mp3stream128"
@@ -644,7 +644,7 @@ window.STATIONS = [
   },
   {
     "id": "mekke-fm",
-    "name": "Mekke Fm",
+    "name": "Mekke FM",
     "category": "devotional",
     "streams": [
       "https://radyodinle.cansuyufm.com/17175/stream;"
@@ -671,7 +671,7 @@ window.STATIONS = [
   },
   {
     "id": "antakya-renk-fm-hatay",
-    "name": "ANTAKYA RENK FM HATAY",
+    "name": "Antakya Renk FM Hatay",
     "category": "music",
     "streams": [
       "https://radyo.yayindakiler.com:3016/renk"
@@ -707,7 +707,7 @@ window.STATIONS = [
   },
   {
     "id": "mirac-fm",
-    "name": "Miraç Fm",
+    "name": "Miraç FM",
     "category": "devotional",
     "streams": [
       "https://anadolu.liderhost.com.tr:9416/stream"
@@ -781,7 +781,7 @@ window.STATIONS = [
   },
   {
     "id": "kayseri-gozdefm",
-    "name": "Kayseri GözdeFM",
+    "name": "Kayseri Gözde FM",
     "category": "music",
     "streams": [
       "https://sslyayin.radyoyayini.com:7067/stream"
@@ -853,7 +853,7 @@ window.STATIONS = [
   },
   {
     "id": "gul-fm",
-    "name": "Gül Fm",
+    "name": "Gül FM",
     "category": "devotional",
     "streams": [
       "https://yayin2.canliyayin.org:10989/;*.mp3"
@@ -907,7 +907,7 @@ window.STATIONS = [
   },
   {
     "id": "lp-roman-fm",
-    "name": "LP Roman Fm",
+    "name": "LP Roman FM",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/netvowp5t54uv"
@@ -944,7 +944,7 @@ window.STATIONS = [
   },
   {
     "id": "bestefm",
-    "name": "BesteFM",
+    "name": "Beste FM",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/tnvnovtgozstv"
@@ -989,7 +989,7 @@ window.STATIONS = [
   },
   {
     "id": "bestefm-lounge",
-    "name": "BesteFM Lounge",
+    "name": "Beste FM Lounge",
     "category": "music",
     "streams": [
       "https://stream.epic-lounge.com/shisha-lounge?ref=streema"
@@ -1026,7 +1026,7 @@ window.STATIONS = [
   },
   {
     "id": "bestefm-mix",
-    "name": "BesteFM Mix",
+    "name": "Beste FM Mix",
     "category": "music",
     "streams": [
       "https://yayin.radyomadyo.com:8002/"
@@ -1044,7 +1044,7 @@ window.STATIONS = [
   },
   {
     "id": "mixia-radio",
-    "name": "MIXIA RADIO",
+    "name": "Mixia Radio",
     "category": "music",
     "streams": [
       "https://radiomixia.fr/stream/mixia.mp3"
@@ -1062,7 +1062,7 @@ window.STATIONS = [
   },
   {
     "id": "edizfm",
-    "name": "Edizfm",
+    "name": "Ediz FM",
     "category": "music",
     "streams": [
       "https://edizfm.ozelip.com/8030/stream"
@@ -1170,7 +1170,7 @@ window.STATIONS = [
   },
   {
     "id": "radyo-zergan-47",
-    "name": "RADYO ZERGAN (47)",
+    "name": "Radyo Zergan (47)",
     "category": "music",
     "streams": [
       "https://sslyayin.netyayin.net/radyozergan/;"
@@ -1233,7 +1233,7 @@ window.STATIONS = [
   },
   {
     "id": "bizim-fm-sile",
-    "name": "Bizim Fm Şile",
+    "name": "Bizim FM Şile",
     "category": "music",
     "streams": [
       "https://stream.turkiyeradyolari.com/9300/stream?_t=1786859250066"
@@ -1314,7 +1314,7 @@ window.STATIONS = [
   },
   {
     "id": "dadas-fm-erzurum",
-    "name": "Dadaş Fm Erzurum",
+    "name": "Dadaş FM Erzurum",
     "category": "music",
     "streams": [
       "https://sslyayin.netyayin.net:8084/stream/;stream.mp3"
@@ -1331,4 +1331,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

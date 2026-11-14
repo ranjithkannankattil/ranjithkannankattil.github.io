@@ -61,7 +61,7 @@ window.STATIONS = [
   },
   {
     "id": "povidka",
-    "name": "povídka",
+    "name": "Povídka",
     "category": "music",
     "streams": [
       "https://ice3.abradio.cz/povidka128.mp3"
@@ -472,7 +472,7 @@ window.STATIONS = [
   },
   {
     "id": "rock-max",
-    "name": "ROCK MAX",
+    "name": "Rock MAX",
     "category": "music",
     "streams": [
       "https://ice.abradio.cz/rockmax256.mp3"
@@ -688,7 +688,7 @@ window.STATIONS = [
   },
   {
     "id": "bikers-radio-doupe",
-    "name": "BIKERS RADIO DOUPE",
+    "name": "Bikers Radio Doupe",
     "category": "music",
     "streams": [
       "https://icecast7.play.cz/bikersradiodoupe128.mp3"
@@ -1245,4 +1245,4 @@ window.STATIONS = [
     "added": "2026-11-14"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

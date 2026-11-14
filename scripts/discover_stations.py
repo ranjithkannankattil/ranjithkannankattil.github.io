@@ -7,6 +7,7 @@ right category. A few per collection per run, so lists grow steadily rather than
 """
 from __future__ import annotations
 
+from tidy_names import tidy as tidy_name   # same name tidying as the 14 Nov clean-up
 import concurrent.futures as cf
 import datetime as dt
 import re
@@ -127,7 +128,7 @@ def discover(cols: list[dict], files: dict, health: dict, test_stream, OK: str) 
             if not cat:
                 continue
             seen.add(nk)
-            picked.append({"name": name, "category": cat, "streams": [u], "_cc": r.get("countrycode") or "", "_country": r.get("country") or ""})
+            picked.append({"name": tidy_name(name), "category": cat, "streams": [u], "_cc": r.get("countrycode") or "", "_country": r.get("country") or ""})
             if len(picked) >= PER_RUN_TEST:
                 break
         plan += [(col, c) for c in picked]

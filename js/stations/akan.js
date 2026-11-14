@@ -394,7 +394,7 @@ window.STATIONS = [
   },
   {
     "id": "dadi-fm",
-    "name": "Dadi Fm",
+    "name": "Dadi FM",
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/afzd4f4nq7zuv"
@@ -422,7 +422,7 @@ window.STATIONS = [
   },
   {
     "id": "neat-fm",
-    "name": "Neat Fm",
+    "name": "Neat FM",
     "category": "news",
     "streams": [
       "https://atunwadigital.streamguys1.com/neatfm"
@@ -467,7 +467,7 @@ window.STATIONS = [
   },
   {
     "id": "secret-fm-online",
-    "name": "Secret Fm Online",
+    "name": "Secret FM Online",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/rgts3k9c37zuv"
@@ -476,7 +476,7 @@ window.STATIONS = [
   },
   {
     "id": "moonlite-fm",
-    "name": "Moonlite Fm",
+    "name": "Moonlite FM",
     "category": "music",
     "streams": [
       "https://stream.lensnetworks.com/proxy/moonlite?mp=/stream"
@@ -484,4 +484,4 @@ window.STATIONS = [
     "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

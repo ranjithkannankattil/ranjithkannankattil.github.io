@@ -20,7 +20,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-expres",
-    "name": "RÁDIO EXPRES",
+    "name": "Rádio Expres",
     "category": "music",
     "streams": [
       "https://stream.bauermedia.sk/128.mp3"
@@ -68,7 +68,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-vlna-oldies-party",
-    "name": "RÁDIO VLNA OLDIES PARTY",
+    "name": "Rádio Vlna Oldies Party",
     "category": "music",
     "streams": [
       "https://stream.radiovlna.sk/party-hi.mp3"
@@ -84,7 +84,7 @@ window.STATIONS = [
   },
   {
     "id": "slobodny-vysielac",
-    "name": "SLOBODNÝ VYSIELAČ",
+    "name": "Slobodný Vysielač",
     "category": "music",
     "streams": [
       "https://vysielanie.online/radio/8020/SV128.mp3"
@@ -164,7 +164,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-best-fm",
-    "name": "RÁDIO BEST FM",
+    "name": "Rádio Best FM",
     "category": "music",
     "streams": [
       "https://stream3.bestfm.sk:8000/128.mp3"
@@ -172,7 +172,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-vlna-60-70",
-    "name": "RÁDIO VLNA 60-70",
+    "name": "Rádio Vlna 60-70",
     "category": "music",
     "streams": [
       "https://stream.radiovlna.sk/gold-hi.mp3"
@@ -302,7 +302,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-vlna-classic-rock",
-    "name": "RÁDIO VLNA CLASSIC ROCK",
+    "name": "Rádio Vlna Classic Rock",
     "category": "music",
     "streams": [
       "https://stream.radiovlna.sk:8000/rock-hi.mp3"
@@ -326,7 +326,7 @@ window.STATIONS = [
   },
   {
     "id": "subfm",
-    "name": "SubFM",
+    "name": "Sub FM",
     "category": "music",
     "streams": [
       "https://stream.subfm.sk/subfm"
@@ -353,7 +353,7 @@ window.STATIONS = [
   },
   {
     "id": "rusynfm",
-    "name": "RusynFM",
+    "name": "Rusyn FM",
     "category": "music",
     "streams": [
       "https://stream.rusyn.fm/rusyny.mp3"
@@ -443,7 +443,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-metropolitan",
-    "name": "radio metropolitan",
+    "name": "Radio Metropolitan",
     "category": "music",
     "streams": [
       "https://mpc2.mediacp.eu:8214/stream"
@@ -550,4 +550,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

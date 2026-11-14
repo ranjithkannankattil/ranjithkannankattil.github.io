@@ -28,7 +28,7 @@ window.STATIONS = [
   },
   {
     "id": "beu",
-    "name": "((beu))",
+    "name": "((Beu))",
     "category": "music",
     "streams": [
       "https://stream.beufm.kz/beufm"
@@ -147,4 +147,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

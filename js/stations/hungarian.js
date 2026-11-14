@@ -52,7 +52,7 @@ window.STATIONS = [
   },
   {
     "id": "dance-90-s",
-    "name": "DANCE 90'S",
+    "name": "Dance 90'S",
     "category": "music",
     "streams": [
       "https://mediagw.e-tiger.net/stream/zc06?ver=887687"
@@ -407,7 +407,7 @@ window.STATIONS = [
   },
   {
     "id": "bdpst-rock",
-    "name": "BDPST ROCK",
+    "name": "BDPST Rock",
     "category": "music",
     "streams": [
       "https://s2.audiostream.hu/bdpstrock_FLAC"
@@ -434,7 +434,7 @@ window.STATIONS = [
   },
   {
     "id": "coolfm-trance-elektro",
-    "name": "COOLFM Trance / Elektro",
+    "name": "Cool FM Trance / Elektro",
     "category": "music",
     "streams": [
       "https://mediagw.e-tiger.net/stream/zc14"
@@ -587,7 +587,7 @@ window.STATIONS = [
   },
   {
     "id": "coolfm-hazai-kedvencek",
-    "name": "COOLFM Hazai Kedvencek",
+    "name": "Cool FM Hazai Kedvencek",
     "category": "music",
     "streams": [
       "https://mediagw.e-tiger.net/stream/zc19"
@@ -641,7 +641,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-inside",
-    "name": "RADIO INSIDE",
+    "name": "Radio Inside",
     "category": "music",
     "streams": [
       "https://radioinside.eu/live.mp3"
@@ -731,7 +731,7 @@ window.STATIONS = [
   },
   {
     "id": "coolfm-rap-hip-hop",
-    "name": "COOLFM Rap/Hip-hop",
+    "name": "Cool FM Rap/Hip-hop",
     "category": "music",
     "streams": [
       "https://mediagw.e-tiger.net/stream/zc08"
@@ -812,7 +812,7 @@ window.STATIONS = [
   },
   {
     "id": "clubflashh-radio",
-    "name": "CLUBFLASHH RADIO",
+    "name": "Clubflashh Radio",
     "category": "music",
     "streams": [
       "https://clubflashh.streammachine.co.uk/stream/clubflashh"
@@ -857,7 +857,7 @@ window.STATIONS = [
   },
   {
     "id": "sunshinefm-nyiregyhaza",
-    "name": "SunshineFM Nyíregyháza",
+    "name": "Sunshine FM Nyíregyháza",
     "category": "music",
     "streams": [
       "https://sunshine1.stream.composeit.hu/sunshine"
@@ -920,7 +920,7 @@ window.STATIONS = [
   },
   {
     "id": "club-dance-2",
-    "name": "club dance 2",
+    "name": "Club Dance 2",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/pssclobh1rhuv"
@@ -1099,4 +1099,4 @@ window.STATIONS = [
     "added": "2026-11-12"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

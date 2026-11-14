@@ -181,7 +181,7 @@ window.STATIONS = [
   },
   {
     "id": "stereo-anime",
-    "name": "stereo anime",
+    "name": "Stereo Anime",
     "category": "music",
     "streams": [
       "https://radio.stereoanime.com/listen/stereoanime/128"
@@ -277,7 +277,7 @@ window.STATIONS = [
   },
   {
     "id": "fm-soldados-87-5",
-    "name": "\tFM Soldados 87.5",
+    "name": "FM Soldados 87.5",
     "category": "music",
     "streams": [
       "https://radio02.ferozo.com/proxy/ra01000409?mp=/stream"
@@ -380,7 +380,7 @@ window.STATIONS = [
   },
   {
     "id": "1-oldies",
-    "name": "__1 oldies",
+    "name": "__1 Oldies",
     "category": "music",
     "streams": [
       "https://80sexitos.stream.laut.fm/80sexitos"
@@ -642,7 +642,7 @@ window.STATIONS = [
   },
   {
     "id": "beatles-radio",
-    "name": "BEATLES RADIO",
+    "name": "Beatles Radio",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/e4auhdgm6cquv"
@@ -823,7 +823,7 @@ window.STATIONS = [
   },
   {
     "id": "fiesta-vallenata",
-    "name": "FIESTA VALLENATA",
+    "name": "Fiesta Vallenata",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/qlznh4yhpvytv"
@@ -1066,7 +1066,7 @@ window.STATIONS = [
   },
   {
     "id": "esplendida-91-9-fm",
-    "name": "ESPLENDIDA 91.9 FM",
+    "name": "Esplendida 91.9 FM",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/jyrqyy8he4tvv"
@@ -1084,7 +1084,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-activa-89-7-fm-hermosillo-sonora",
-    "name": "\tRADIO ACTIVA 89.7 FM ⚡ Hermosillo, Sonora",
+    "name": "RADIO ACTIVA 89.7 FM ⚡ Hermosillo, Sonora",
     "category": "music",
     "streams": [
       "https://mdstrm.com/audio/66ad14f0917845e9b7570bf2/live.m3u8"
@@ -1157,7 +1157,7 @@ window.STATIONS = [
   },
   {
     "id": "el-club-de-la-pluma",
-    "name": "EL CLUB DE LA PLUMA",
+    "name": "El CLUB de la Pluma",
     "category": "music",
     "streams": [
       "https://streaming01.shockmedia.com.ar:10728/stream"
@@ -1274,7 +1274,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-globo-88-5-mhz",
-    "name": "RADIO GLOBO 88.5 MHZ",
+    "name": "Radio Globo 88.5 MHZ",
     "category": "news",
     "streams": [
       "https://api.condoristream.com/stream/radioglobo"
@@ -1327,4 +1327,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

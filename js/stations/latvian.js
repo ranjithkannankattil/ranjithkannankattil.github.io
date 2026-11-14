@@ -60,7 +60,7 @@ window.STATIONS = [
   },
   {
     "id": "lounge-private",
-    "name": "LOUNGE PRIVATE",
+    "name": "Lounge Private",
     "category": "music",
     "streams": [
       "https://streams.radioskonto.lv:8443/lounge-private"
@@ -68,7 +68,7 @@ window.STATIONS = [
   },
   {
     "id": "star-fm",
-    "name": "Star Fm",
+    "name": "Star FM",
     "category": "music",
     "streams": [
       "https://starfm.live.advailo.com/audio/mp3/icecast.audio"
@@ -116,7 +116,7 @@ window.STATIONS = [
   },
   {
     "id": "lounge-fm",
-    "name": "LOUNGE FM",
+    "name": "Lounge FM",
     "category": "music",
     "streams": [
       "https://stream.loungefm.lv:8443/lounge"
@@ -252,7 +252,7 @@ window.STATIONS = [
   },
   {
     "id": "ivofm",
-    "name": "IvoFm",
+    "name": "Ivo FM",
     "category": "music",
     "streams": [
       "https://radio.ivofm.lv/listen/ivofm/radio.mp3"
@@ -503,4 +503,4 @@ window.STATIONS = [
     "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

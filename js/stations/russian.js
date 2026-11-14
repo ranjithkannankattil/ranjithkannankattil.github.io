@@ -20,7 +20,7 @@ window.STATIONS = [
   },
   {
     "id": "rock-fm",
-    "name": "ROCK FM",
+    "name": "Rock FM",
     "category": "music",
     "streams": [
       "https://nashe1.hostingradio.ru/rock-128.mp3"
@@ -28,7 +28,7 @@ window.STATIONS = [
   },
   {
     "id": "dfm-russian-dance",
-    "name": "DFM RUSSIAN DANCE",
+    "name": "DFM Russian Dance",
     "category": "music",
     "streams": [
       "https://dfm-dfmrusdance.hostingradio.ru/dfmrusdance96.aacp?0.9987259013359274"
@@ -140,7 +140,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-record-russian-gold",
-    "name": "\tRadio Record - Russian Gold",
+    "name": "Radio Record - Russian Gold",
     "category": "music",
     "streams": [
       "https://radiorecord.hostingradio.ru/russiangold96.aacp"
@@ -365,7 +365,7 @@ window.STATIONS = [
   },
   {
     "id": "trance-is-star-radio",
-    "name": "TRANCE IS STAR RADIO",
+    "name": "Trance Is Star Radio",
     "category": "music",
     "streams": [
       "https://myradio24.org/tisradio"
@@ -617,7 +617,7 @@ window.STATIONS = [
   },
   {
     "id": "1000-hits-radio",
-    "name": "1000 HITS RADIO",
+    "name": "1000 Hits Radio",
     "category": "music",
     "streams": [
       "https://stream.1000hit.ru:8000/stream128"
@@ -1167,7 +1167,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-7-semey",
-    "name": "RADIO 7 SEMEY",
+    "name": "Radio 7 Semey",
     "category": "music",
     "streams": [
       "https://listen2.myradio24.com/8334"
@@ -1194,7 +1194,7 @@ window.STATIONS = [
   },
   {
     "id": "jurnal-fm",
-    "name": "Jurnal Fm",
+    "name": "Jurnal FM",
     "category": "news",
     "streams": [
       "https://audio.jurnalfm.md/hq"
@@ -1302,7 +1302,7 @@ window.STATIONS = [
   },
   {
     "id": "fm-6",
-    "name": "нафталин fm",
+    "name": "нафталин FM",
     "category": "music",
     "streams": [
       "https://radiorecord.hostingradio.ru/naft96.aacp"
@@ -1328,4 +1328,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

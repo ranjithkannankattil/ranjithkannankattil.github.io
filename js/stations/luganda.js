@@ -222,7 +222,7 @@ window.STATIONS = [
   },
   {
     "id": "busoga-royal-radio",
-    "name": "BUSOGA ROYAL RADIO",
+    "name": "Busoga Royal Radio",
     "category": "music",
     "streams": [
       "https://cast5.my-control-panel.com/proxy/busogaroyalradio/stream"
@@ -231,7 +231,7 @@ window.STATIONS = [
   },
   {
     "id": "block-fm-103-2",
-    "name": "BLOCK FM 103.2",
+    "name": "Block FM 103.2",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/gxjhbloltwluv"
@@ -276,7 +276,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-ssese-101-9-fm",
-    "name": "RADIO SSESE 101.9 FM",
+    "name": "Radio Ssese 101.9 FM",
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/bphnslpg8p1uv"
@@ -293,4 +293,4 @@ window.STATIONS = [
     "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

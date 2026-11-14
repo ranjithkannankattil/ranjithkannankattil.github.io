@@ -92,7 +92,7 @@ window.STATIONS = [
   },
   {
     "id": "tdi-bez-reklama",
-    "name": "TDI BEZ REKLAMA",
+    "name": "TDI BEZ Reklama",
     "category": "music",
     "streams": [
       "https://streaming.tdiradio.com/tdiradiobezreklama.mp3"
@@ -116,7 +116,7 @@ window.STATIONS = [
   },
   {
     "id": "021-caffe",
-    "name": "021 caffe",
+    "name": "021 Caffe",
     "category": "music",
     "streams": [
       "https://centova.dukahosting.com/proxy/021kafe/stream"
@@ -811,7 +811,7 @@ window.STATIONS = [
   },
   {
     "id": "bigfm-balkan",
-    "name": "BigFM Balkan",
+    "name": "Big FM Balkan",
     "category": "music",
     "streams": [
       "https://stream.bigfm.de/balkan/mp3-128/onlineradiobox"
@@ -1198,7 +1198,7 @@ window.STATIONS = [
   },
   {
     "id": "skc-slobodni",
-    "name": "skc slobodni",
+    "name": "Skc Slobodni",
     "category": "music",
     "streams": [
       "https://skc.fm/hls/skc_radio/aac_hifi.m3u8"
@@ -1314,4 +1314,4 @@ window.STATIONS = [
     "added": "2026-11-12"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

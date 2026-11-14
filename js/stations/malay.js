@@ -12,7 +12,7 @@ window.STATIONS = [
   },
   {
     "id": "wai-fm-iban",
-    "name": "WAI FM IBAN",
+    "name": "WAI FM Iban",
     "category": "news",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/WAI_FM_IBAN.mp3"
@@ -36,7 +36,7 @@ window.STATIONS = [
   },
   {
     "id": "dj-dugem",
-    "name": "DJ DUGEM",
+    "name": "DJ Dugem",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/ooaqxeogpfdvv"
@@ -150,4 +150,4 @@ window.STATIONS = [
     "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

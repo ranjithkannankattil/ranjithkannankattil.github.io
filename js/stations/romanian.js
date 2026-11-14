@@ -4,7 +4,7 @@
 window.STATIONS = [
   {
     "id": "kiss-fm",
-    "name": "Kiss Fm",
+    "name": "Kiss FM",
     "category": "music",
     "streams": [
       "https://live.kissfm.ro/kissfm.aacp"
@@ -12,7 +12,7 @@ window.STATIONS = [
   },
   {
     "id": "digi-fm",
-    "name": "DIGI FM",
+    "name": "Digi FM",
     "category": "news",
     "streams": [
       "https://edge76.rcs-rds.ro/digifm/digifm.mp3"
@@ -20,7 +20,7 @@ window.STATIONS = [
   },
   {
     "id": "magic-fm",
-    "name": "Magic Fm",
+    "name": "Magic FM",
     "category": "music",
     "streams": [
       "https://live.magicfm.ro/magicfm.aacp"
@@ -86,7 +86,7 @@ window.STATIONS = [
   },
   {
     "id": "rockfm",
-    "name": "RockFM",
+    "name": "Rock FM",
     "category": "music",
     "streams": [
       "https://live.rockfm.ro/rockfm.aacp"
@@ -126,7 +126,7 @@ window.STATIONS = [
   },
   {
     "id": "rock-fm-hard-rock",
-    "name": "Rock Fm Hard Rock",
+    "name": "Rock FM Hard Rock",
     "category": "music",
     "streams": [
       "https://live.rockfm.ro/hard.rock"
@@ -270,7 +270,7 @@ window.STATIONS = [
   },
   {
     "id": "space-fm-dance",
-    "name": "Space Fm Dance",
+    "name": "Space FM Dance",
     "category": "music",
     "streams": [
       "https://spacefm.live/radio/8000/spacefm128"
@@ -311,7 +311,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-as-fm-petrecere-buzau",
-    "name": "Radio AS fm petrecere -Buzău",
+    "name": "Radio AS FM petrecere -Buzău",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/ze76t581tm0uv"
@@ -563,7 +563,7 @@ window.STATIONS = [
   },
   {
     "id": "jurnal-fm",
-    "name": "Jurnal Fm",
+    "name": "Jurnal FM",
     "category": "news",
     "streams": [
       "https://audio.jurnalfm.md/hq"
@@ -743,7 +743,7 @@ window.STATIONS = [
   },
   {
     "id": "alex-wolf-radio",
-    "name": "ALEX WOLF RADIO",
+    "name": "Alex WOLF Radio",
     "category": "music",
     "streams": [
       "https://alexwolfradio.com:1040/stream"
@@ -806,7 +806,7 @@ window.STATIONS = [
   },
   {
     "id": "megapolis-fm",
-    "name": "Megapolis Fm",
+    "name": "Megapolis FM",
     "category": "music",
     "streams": [
       "https://megapolisfm.md:8443/886"
@@ -1040,7 +1040,7 @@ window.STATIONS = [
   },
   {
     "id": "hit-fm-chisinau-101-7-fm",
-    "name": "Hit FM Chișinău 101.7 fm",
+    "name": "Hit FM Chișinău 101.7 FM",
     "category": "music",
     "streams": [
       "https://stream.dixi.md:9443/HitFM"
@@ -1085,7 +1085,7 @@ window.STATIONS = [
   },
   {
     "id": "rock-fm-blues",
-    "name": "Rock Fm Blues",
+    "name": "Rock FM Blues",
     "category": "music",
     "streams": [
       "https://live.rockfm.ro/blues"
@@ -1094,7 +1094,7 @@ window.STATIONS = [
   },
   {
     "id": "rock-fm-ballads",
-    "name": "Rock Fm Ballads",
+    "name": "Rock FM Ballads",
     "category": "music",
     "streams": [
       "https://live.rockfm.ro/ballads.rock"
@@ -1247,7 +1247,7 @@ window.STATIONS = [
   },
   {
     "id": "spacefm-romania-spacefm-dance",
-    "name": "SpaceFM Romania -SpaceFM Dance",
+    "name": "Space FM Romania -Space FM Dance",
     "category": "music",
     "streams": [
       "https://spacefm.live/listen/spacefm_romania/spacefm192"
@@ -1327,4 +1327,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

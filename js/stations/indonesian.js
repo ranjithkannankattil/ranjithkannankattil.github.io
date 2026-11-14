@@ -28,7 +28,7 @@ window.STATIONS = [
   },
   {
     "id": "dengerin-musik-indonesia",
-    "name": "DENGERIN MUSIK INDONESIA",
+    "name": "Dengerin Musik Indonesia",
     "category": "music",
     "streams": [
       "https://stream.denger.in/"
@@ -216,7 +216,7 @@ window.STATIONS = [
   },
   {
     "id": "radiks-fm-semarang",
-    "name": "RADIKS FM SEMARANG",
+    "name": "Radiks FM Semarang",
     "category": "music",
     "streams": [
       "https://i.klikhost.com:9620/;",
@@ -302,7 +302,7 @@ window.STATIONS = [
   },
   {
     "id": "polaris-fm",
-    "name": "POLARIS FM",
+    "name": "Polaris FM",
     "category": "music",
     "streams": [
       "https://i.klikhost.com/9604/stream.aac"
@@ -461,7 +461,7 @@ window.STATIONS = [
   },
   {
     "id": "bimasakti-fm-kebumen",
-    "name": "BIMASAKTI FM KEBUMEN",
+    "name": "Bimasakti FM Kebumen",
     "category": "music",
     "streams": [
       "https://i.klikhost.com:9622/stream"
@@ -489,7 +489,7 @@ window.STATIONS = [
   },
   {
     "id": "kiara-4u",
-    "name": "KIARA 4U",
+    "name": "Kiara 4U",
     "category": "music",
     "streams": [
       "https://eu1.fastcast4u.com/proxy/kiarafm?mp=/1"
@@ -534,7 +534,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-suara-al-iman-846-am-surabaya",
-    "name": "\tRadio Suara Al-Iman 846 AM Surabaya",
+    "name": "Radio Suara Al-Iman 846 AM Surabaya",
     "category": "music",
     "streams": [
       "https://radioislamindonesia.com/aliman.mp3"
@@ -609,7 +609,7 @@ window.STATIONS = [
   },
   {
     "id": "arb-fm-jakarta",
-    "name": "ARB FM JAKARTA",
+    "name": "ARB FM Jakarta",
     "category": "music",
     "streams": [
       "https://void.idserverhost.com/8018/stream"
@@ -618,7 +618,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-pensiunan",
-    "name": "radio pensiunan",
+    "name": "Radio Pensiunan",
     "category": "music",
     "streams": [
       "https://pu.klikhost.com/proxy/radiopensiunan/stream"
@@ -627,7 +627,7 @@ window.STATIONS = [
   },
   {
     "id": "yasika-fm-jogja",
-    "name": "YASIKA FM JOGJA",
+    "name": "Yasika FM Jogja",
     "category": "music",
     "streams": [
       "https://i.klikhost.com:9610/stream"
@@ -645,7 +645,7 @@ window.STATIONS = [
   },
   {
     "id": "trax-fm-semarang",
-    "name": "trax fm semarang",
+    "name": "Trax FM Semarang",
     "category": "music",
     "streams": [
       "https://n0f.radiojar.com/fr9zqhv80k8uv"
@@ -692,7 +692,7 @@ window.STATIONS = [
   },
   {
     "id": "tjandra-fm-cianjur",
-    "name": "TJANDRA FM CIANJUR",
+    "name": "Tjandra FM Cianjur",
     "category": "music",
     "streams": [
       "https://live.tjandrafm.com/listen/tjandrafm/stream"
@@ -701,7 +701,7 @@ window.STATIONS = [
   },
   {
     "id": "mettaswara-slow-rock",
-    "name": "mettaswara slow rock",
+    "name": "Mettaswara Slow Rock",
     "category": "music",
     "streams": [
       "https://mettaswara.com:8700//slowrock"
@@ -738,7 +738,7 @@ window.STATIONS = [
   },
   {
     "id": "braya-radio",
-    "name": "BRAYA RADIO",
+    "name": "Braya Radio",
     "category": "music",
     "streams": [
       "https://live.brayaradio.com/listen/brayaradio/stream"
@@ -765,7 +765,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-salvator",
-    "name": "RADIO SALVATOR",
+    "name": "Radio Salvator",
     "category": "devotional",
     "streams": [
       "https://live.radiosalvator.com/listen/radiosalvator/radiosalvator"
@@ -774,7 +774,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-streaming-sehati",
-    "name": "RADIO STREAMING SEHATI",
+    "name": "Radio Streaming Sehati",
     "category": "music",
     "streams": [
       "https://c4.siar.us:8092/autodj"
@@ -828,7 +828,7 @@ window.STATIONS = [
   },
   {
     "id": "dna-fm-jepara",
-    "name": "DNA FM JEPARA",
+    "name": "DNA FM Jepara",
     "category": "music",
     "streams": [
       "https://sc.dnafm.net/listen/dnafm/live"
@@ -873,7 +873,7 @@ window.STATIONS = [
   },
   {
     "id": "elpas-radio",
-    "name": "ELPAS RADIO",
+    "name": "Elpas Radio",
     "category": "music",
     "streams": [
       "https://live.elpasradio.com/listen/elpasradio/stream"
@@ -882,7 +882,7 @@ window.STATIONS = [
   },
   {
     "id": "istara-fm-surabaya",
-    "name": "ISTARA FM SURABAYA",
+    "name": "Istara FM Surabaya",
     "category": "music",
     "streams": [
       "https://live.radioistara.com/listen/radioistara/radioistara"
@@ -901,7 +901,7 @@ window.STATIONS = [
   },
   {
     "id": "pro-1-rri-makassar",
-    "name": "PRO 1 RRI MAKASSAR",
+    "name": "PRO 1 RRI Makassar",
     "category": "music",
     "streams": [
       "https://stream-node0.rri.co.id/streaming/22/9022/rrimakasarpro1.mp3"
@@ -1010,7 +1010,7 @@ window.STATIONS = [
   },
   {
     "id": "suara-salira",
-    "name": "SUARA SALIRA",
+    "name": "Suara Salira",
     "category": "music",
     "streams": [
       "https://live.suarasalira.com/listen/suarasalira/stream"
@@ -1019,7 +1019,7 @@ window.STATIONS = [
   },
   {
     "id": "ananda-radio-bandung",
-    "name": "ananda radio bandung",
+    "name": "Ananda Radio Bandung",
     "category": "music",
     "streams": [
       "https://sx.alhasmedia.com/radio/8220/radio"
@@ -1100,7 +1100,7 @@ window.STATIONS = [
   },
   {
     "id": "kradio-hss",
-    "name": "KRADIO HSS",
+    "name": "Kradio HSS",
     "category": "music",
     "streams": [
       "https://live.kradionews.com/listen/kradio/stream"
@@ -1109,7 +1109,7 @@ window.STATIONS = [
   },
   {
     "id": "cocojo-radio",
-    "name": "COCOJO RADIO",
+    "name": "Cocojo Radio",
     "category": "music",
     "streams": [
       "https://live.cocojoradio.com/listen/cocojoradio/cocojoradio"
@@ -1163,7 +1163,7 @@ window.STATIONS = [
   },
   {
     "id": "vos-radio",
-    "name": "VOS RADIO",
+    "name": "VOS Radio",
     "category": "music",
     "streams": [
       "https://live.voss.my.id/listen/voss/voss"
@@ -1190,7 +1190,7 @@ window.STATIONS = [
   },
   {
     "id": "dehills-radio",
-    "name": "DEHILLS RADIO",
+    "name": "Dehills Radio",
     "category": "music",
     "streams": [
       "https://live.dehills.id/listen/dehills/stream"
@@ -1226,7 +1226,7 @@ window.STATIONS = [
   },
   {
     "id": "kiara-mpc-radio",
-    "name": "KIARA MPC RADIO",
+    "name": "Kiara MPC Radio",
     "category": "music",
     "streams": [
       "https://mpc1.mediacp.eu/stream/kiara-radio"
@@ -1244,7 +1244,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-suara-itmi",
-    "name": "radio suara itmi",
+    "name": "Radio Suara Itmi",
     "category": "music",
     "streams": [
       "https://radio.itmi.or.id:8190/radio"
@@ -1253,7 +1253,7 @@ window.STATIONS = [
   },
   {
     "id": "harley-radio-show",
-    "name": "HARLEY RADIO SHOW",
+    "name": "Harley Radio Show",
     "category": "music",
     "streams": [
       "https://live.harleyradioshow.com/listen/harleyradio/harleyradio"
@@ -1262,7 +1262,7 @@ window.STATIONS = [
   },
   {
     "id": "singosari-fm-brebes-official-station",
-    "name": "Singosari Fm Brebes (Official Station)",
+    "name": "Singosari FM Brebes (Official Station)",
     "category": "music",
     "streams": [
       "https://s2.free-shoutcast.com/stream/18096"
@@ -1291,7 +1291,7 @@ window.STATIONS = [
   },
   {
     "id": "zenith-fm-salatiga",
-    "name": "ZENITH FM SALATIGA",
+    "name": "Zenith FM Salatiga",
     "category": "music",
     "streams": [
       "https://i.klikhost.com:9616/stream"
@@ -1300,4 +1300,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

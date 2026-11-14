@@ -305,7 +305,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-singh-naad",
-    "name": "RADIO SINGH NAAD",
+    "name": "Radio Singh Naad",
     "category": "devotional",
     "streams": [
       "https://s8.voscast.com/cdn/?k=67baed255b875&m=;stream1740303687963/1"
@@ -331,4 +331,4 @@ window.STATIONS = [
     "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

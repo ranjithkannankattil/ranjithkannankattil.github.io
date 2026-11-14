@@ -545,7 +545,7 @@ window.STATIONS = [
   },
   {
     "id": "npo-blend",
-    "name": "NPO BLEND",
+    "name": "NPO Blend",
     "category": "music",
     "streams": [
       "https://icecast.omroep.nl/npoblend-bb-mp3"
@@ -797,7 +797,7 @@ window.STATIONS = [
   },
   {
     "id": "slam-hardstyle",
-    "name": "SLAM! HARDSTYLE",
+    "name": "Slam! Hardstyle",
     "category": "music",
     "streams": [
       "https://streaming.slam.nl/web11_mp3"
@@ -824,7 +824,7 @@ window.STATIONS = [
   },
   {
     "id": "kink-classics",
-    "name": "KINK CLASSICS",
+    "name": "KINK Classics",
     "category": "music",
     "streams": [
       "https://25243.live.streamtheworld.com/KINK_DNA_SC"
@@ -1336,4 +1336,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

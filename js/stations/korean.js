@@ -157,7 +157,7 @@ window.STATIONS = [
   },
   {
     "id": "nhk-world-radio",
-    "name": "NHK WORLD RADIO",
+    "name": "NHK World Radio",
     "category": "news",
     "streams": [
       "https://nhkworld-radio.nhkworld.jp/hls/live/nhkworld-radio-media2/index.m3u8"
@@ -337,7 +337,7 @@ window.STATIONS = [
   },
   {
     "id": "96-kool-fm",
-    "name": "96 KOOL FM",
+    "name": "96 Kool FM",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/97qzdqafuqzuv"
@@ -382,7 +382,7 @@ window.STATIONS = [
   },
   {
     "id": "ebs-tune-in",
-    "name": "ebs tune in",
+    "name": "Ebs Tune in",
     "category": "music",
     "streams": [
       "https://ebsonair.ebs.co.kr/fmradiofamilypc/familypc1m/playlist.m3u8"
@@ -409,7 +409,7 @@ window.STATIONS = [
   },
   {
     "id": "gugakfm",
-    "name": "GugakFM",
+    "name": "Gugak FM",
     "category": "music",
     "streams": [
       "https://mgugaklive.nowcdn.co.kr/gugakradio/gugakradio.stream/chunklist_w1653570079.m3u8",
@@ -598,4 +598,4 @@ window.STATIONS = [
     "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

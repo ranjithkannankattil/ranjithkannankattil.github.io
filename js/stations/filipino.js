@@ -297,7 +297,7 @@ window.STATIONS = [
   },
   {
     "id": "tgon-koolfm-106-7",
-    "name": "TGON KoolFM 106.7",
+    "name": "TGON Kool FM 106.7",
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/2ss1hgnu6hhvv"
@@ -402,7 +402,7 @@ window.STATIONS = [
   },
   {
     "id": "taps-radio-ilagan",
-    "name": "TAPS RADIO ILAGAN",
+    "name": "Taps Radio Ilagan",
     "category": "music",
     "streams": [
       "https://us1.amfmph.com/ssl/tapsradioilagan?mp=/stream"
@@ -440,7 +440,7 @@ window.STATIONS = [
   },
   {
     "id": "basco-radio-93-3-studio-2",
-    "name": "Basco Radio 93.3 Studio 2\n",
+    "name": "Basco Radio 93.3 Studio 2",
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/a3th9bd1fs8uv"
@@ -449,7 +449,7 @@ window.STATIONS = [
   },
   {
     "id": "28-2-goodvibes-fm",
-    "name": "28.2 GoodVibes Fm",
+    "name": "28.2 GoodVibes FM",
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/fu24r3f24c9uv"
@@ -458,7 +458,7 @@ window.STATIONS = [
   },
   {
     "id": "sayhifm",
-    "name": "SayHiFM",
+    "name": "SayHi FM",
     "category": "music",
     "streams": [
       "https://play.radioking.io/sayhifm"
@@ -494,7 +494,7 @@ window.STATIONS = [
   },
   {
     "id": "taps-radio-alicia",
-    "name": "TAPS RADIO ALICIA",
+    "name": "Taps Radio Alicia",
     "category": "music",
     "streams": [
       "https://us1.amfmph.com/ssl/tapsradi?mp=/stream&1642337283814"
@@ -503,7 +503,7 @@ window.STATIONS = [
   },
   {
     "id": "kizzfm-uk-90-9",
-    "name": "KizzFM UK 90.9",
+    "name": "Kizz FM UK 90.9",
     "category": "music",
     "streams": [
       "https://azura.kizzfmuk90-9.com/listen/kizzfmuk/radio.mp3?1689855016244"
@@ -550,7 +550,7 @@ window.STATIONS = [
   },
   {
     "id": "99-5-dzyw-koolfm",
-    "name": "99.5 DZYW koolFM",
+    "name": "99.5 DZYW Kool FM",
     "category": "news",
     "streams": [
       "https://listen.smilemediaph.com/listen/koolfm/radio.mp3"
@@ -568,7 +568,7 @@ window.STATIONS = [
   },
   {
     "id": "zexfm",
-    "name": "ZEXFM",
+    "name": "ZEX FM",
     "category": "music",
     "streams": [
       "https://listen.smilemediaph.com/listen/zexfm/radio.mp3"
@@ -594,4 +594,4 @@ window.STATIONS = [
     "added": "2026-11-14"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

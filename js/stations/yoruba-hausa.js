@@ -121,7 +121,7 @@ window.STATIONS = [
   },
   {
     "id": "zuria-fm",
-    "name": "Zuria Fm",
+    "name": "Zuria FM",
     "category": "news",
     "streams": [
       "https://atunwadigital.streamguys1.com/yfm1025kumasi"
@@ -156,4 +156,4 @@ window.STATIONS = [
     "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

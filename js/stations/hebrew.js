@@ -183,7 +183,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-darom-95-8fm-97fm",
-    "name": "radio darom 95.8fm 97fm",
+    "name": "Radio Darom 95.8fm 97fm",
     "category": "news",
     "streams": [
       "https://cdn.cybercdn.live/Darom_97FM/Live/icecast.audio"
@@ -207,7 +207,7 @@ window.STATIONS = [
   },
   {
     "id": "101fm-radio-jerusalem",
-    "name": "101fm radio jerusalem",
+    "name": "101fm Radio Jerusalem",
     "category": "news",
     "streams": [
       "https://radio.streamgates.net/stream/101fm"
@@ -223,7 +223,7 @@ window.STATIONS = [
   },
   {
     "id": "radio-lev-hamedina",
-    "name": "radio lev hamedina",
+    "name": "Radio Lev Hamedina",
     "category": "news",
     "streams": [
       "https://cdn.cybercdn.live/Lev_Hamedina/Audio/icecast.audio"
@@ -345,7 +345,7 @@ window.STATIONS = [
   },
   {
     "id": "kol-hai",
-    "name": "kol hai",
+    "name": "Kol Hai",
     "category": "music",
     "streams": [
       "https://live.kcm.fm/livemusic"
@@ -452,4 +452,4 @@ window.STATIONS = [
     "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

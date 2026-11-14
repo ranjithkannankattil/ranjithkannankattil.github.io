@@ -1090,7 +1090,7 @@ window.STATIONS = [
   },
   {
     "id": "aural-oldies",
-    "name": "AURAL OLDIES",
+    "name": "Aural Oldies",
     "category": "online",
     "streams": [
       "https://stream.zeno.fm/anrf216cu68uv",
@@ -1136,7 +1136,7 @@ window.STATIONS = [
   },
   {
     "id": "retro-ma",
-    "name": "retro ma",
+    "name": "Retro Ma",
     "category": "online",
     "streams": [
       "https://stream.zeno.fm/b6augfmdanzuv"
@@ -1225,4 +1225,4 @@ window.STATIONS = [
     "added": "2026-11-14"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

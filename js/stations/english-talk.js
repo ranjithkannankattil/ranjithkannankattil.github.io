@@ -531,7 +531,7 @@ window.STATIONS = [
   },
   {
     "id": "kogo-am-600",
-    "name": "KOGO AM 600",
+    "name": "Kogo AM 600",
     "category": "us",
     "streams": [
       "https://ample.revma.ihrhls.com/zc257"
@@ -811,7 +811,7 @@ window.STATIONS = [
   },
   {
     "id": "sexfm",
-    "name": "SexFM",
+    "name": "Sex FM",
     "category": "comedy",
     "streams": [
       "https://api.potat.bot/api/hls/live.m3u8"
@@ -1111,7 +1111,7 @@ window.STATIONS = [
   },
   {
     "id": "zifm-stereo",
-    "name": "ZiFM Stereo",
+    "name": "Zi FM Stereo",
     "category": "world",
     "streams": [
       "https://edge.iono.fm/xice/134_high.aac"
@@ -1331,7 +1331,7 @@ window.STATIONS = [
   },
   {
     "id": "99-5-dzyw-koolfm",
-    "name": "99.5 DZYW koolFM",
+    "name": "99.5 DZYW Kool FM",
     "category": "world",
     "streams": [
       "https://listen.smilemediaph.com/listen/koolfm/radio.mp3"
@@ -1471,7 +1471,7 @@ window.STATIONS = [
   },
   {
     "id": "96-6-sky-abc-radio",
-    "name": "96.6 SKY ABC RADIO",
+    "name": "96.6 SKY ABC Radio",
     "category": "world",
     "streams": [
       "https://cast.skyradio105.com/proxy/skyradio105/stream"
@@ -1480,4 +1480,4 @@ window.STATIONS = [
     "where": "Saudi Arabia"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";

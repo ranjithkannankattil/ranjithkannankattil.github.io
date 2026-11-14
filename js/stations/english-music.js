@@ -141,7 +141,7 @@ window.STATIONS = [
   },
   {
     "id": "somafm-secret-agent",
-    "name": "SomaFM Secret Agent",
+    "name": "Soma FM Secret Agent",
     "category": "jazz",
     "streams": [
       "https://ice5.somafm.com/secretagent-128-mp3"
@@ -249,7 +249,7 @@ window.STATIONS = [
   },
   {
     "id": "somafm-indie-pop-rocks",
-    "name": "SomaFM Indie Pop Rocks!",
+    "name": "Soma FM Indie Pop Rocks!",
     "category": "rock",
     "streams": [
       "https://ice6.somafm.com/indiepop-128-aac"
@@ -276,7 +276,7 @@ window.STATIONS = [
   },
   {
     "id": "somafm-underground-80s",
-    "name": "SomaFM Underground 80s",
+    "name": "Soma FM Underground 80s",
     "category": "pop",
     "streams": [
       "https://ice6.somafm.com/u80s-128-mp3"
@@ -285,7 +285,7 @@ window.STATIONS = [
   },
   {
     "id": "somafm-left-coast-70s",
-    "name": "SomaFM Left Coast 70s",
+    "name": "Soma FM Left Coast 70s",
     "category": "rock",
     "streams": [
       "https://ice2.somafm.com/seventies-320-mp3"
@@ -321,7 +321,7 @@ window.STATIONS = [
   },
   {
     "id": "somafm-heavyweight-reggae",
-    "name": "SomaFM Heavyweight Reggae",
+    "name": "Soma FM Heavyweight Reggae",
     "category": "eclectic",
     "streams": [
       "https://ice2.somafm.com/reggae-256-mp3"
@@ -470,7 +470,7 @@ window.STATIONS = [
   },
   {
     "id": "1-oldies",
-    "name": "__1 oldies",
+    "name": "__1 Oldies",
     "category": "rock",
     "streams": [
       "https://80sexitos.stream.laut.fm/80sexitos"
@@ -480,7 +480,7 @@ window.STATIONS = [
   },
   {
     "id": "metal-rock-radio",
-    "name": "metal rock radio",
+    "name": "Metal Rock Radio",
     "category": "rock",
     "streams": [
       "https://kathy.torontocast.com:2800/;"
@@ -500,7 +500,7 @@ window.STATIONS = [
   },
   {
     "id": "erotica-lounge",
-    "name": "EROTICA LOUNGE",
+    "name": "Erotica Lounge",
     "category": "jazz",
     "streams": [
       "https://stream.zeno.fm/89asra0sfa0uv"
@@ -520,7 +520,7 @@ window.STATIONS = [
   },
   {
     "id": "sensual-lounge-radio",
-    "name": "SENSUAL LOUNGE RADIO",
+    "name": "Sensual Lounge Radio",
     "category": "jazz",
     "streams": [
       "https://kathy.torontocast.com:3590/;?type=http&nocache=1739707069"
@@ -590,7 +590,7 @@ window.STATIONS = [
   },
   {
     "id": "somafm-metal-detector",
-    "name": "SomaFM Metal Detector",
+    "name": "Soma FM Metal Detector",
     "category": "rock",
     "streams": [
       "https://ice5.somafm.com/metal-128-aac"
@@ -620,7 +620,7 @@ window.STATIONS = [
   },
   {
     "id": "100-covers-lounge",
-    "name": "100 % COVERS LOUNGE",
+    "name": "100 % Covers Lounge",
     "category": "jazz",
     "streams": [
       "https://az1.mediacp.eu/listen/100coverslounge/radio.mp3"
@@ -630,7 +630,7 @@ window.STATIONS = [
   },
   {
     "id": "somafm-poptron",
-    "name": "SomaFM PopTron",
+    "name": "Soma FM PopTron",
     "category": "rock",
     "streams": [
       "https://ice2.somafm.com/poptron-128-mp3"
@@ -1010,7 +1010,7 @@ window.STATIONS = [
   },
   {
     "id": "somafm-boot-liquor",
-    "name": "SomaFM Boot Liquor",
+    "name": "Soma FM Boot Liquor",
     "category": "country",
     "streams": [
       "https://ice6.somafm.com/bootliquor-320-mp3",
@@ -1129,7 +1129,7 @@ window.STATIONS = [
   },
   {
     "id": "rte-lyric-fm",
-    "name": "RTÉ lyric fm",
+    "name": "RTÉ lyric FM",
     "category": "classical",
     "streams": [
       "https://icecast.rte.ie/lyric"
@@ -1309,7 +1309,7 @@ window.STATIONS = [
   },
   {
     "id": "truckersfm",
-    "name": "TruckersFM",
+    "name": "Truckers FM",
     "category": "pop",
     "streams": [
       "https://radio.truckers.fm/"
@@ -1478,4 +1478,4 @@ window.STATIONS = [
     "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T20:30Z";
