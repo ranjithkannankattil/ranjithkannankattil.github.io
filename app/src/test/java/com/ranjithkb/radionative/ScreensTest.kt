@@ -53,7 +53,7 @@ class ScreensTest {
 
     private fun shot(name: String, dark: Boolean, theme: String = "velvet", text: Int = 0, font: String = "jost", spacing: Int = 0,
                      viz: String = "off", animated: Boolean = false, content: @Composable () -> Unit) {
-        Theme.dark = dark; Theme.themeId = theme; Theme.text = text; Theme.font = font; Theme.spacing = spacing; Theme.viz = viz
+        Theme.mode = "phone"; Theme.sysDark = dark; Theme.themeId = theme; Theme.text = text; Theme.font = font; Theme.spacing = spacing; Theme.viz = viz
         if (animated) rule.mainClock.autoAdvance = false
         rule.setContent {
             val d = androidx.compose.ui.platform.LocalDensity.current
@@ -124,18 +124,34 @@ class ScreensTest {
     @Test @Config(qualifiers = "w360dp-h740dp-xxhdpi") fun n18_settings_large_360() = shot("n18-settings-large-360", false, text = 2) { SettingsScreen({}) {} }
     /** One screen drawn in every theme (light and dark): the screen is set once and the theme changed between pictures. */
     private fun everyTheme(prefix: String, darkToo: Boolean, viz: String, content: @Composable () -> Unit) {
-        val pick = androidx.compose.runtime.mutableStateOf(THEMES[0].id to false)
         Theme.viz = viz; Theme.text = 0; Theme.font = "jost"; Theme.spacing = 0
         rule.mainClock.autoAdvance = false
+        Theme.mode = "phone"
         rule.setContent {
-            Theme.themeId = pick.value.first; Theme.dark = pick.value.second
             MaterialTheme(typography = PoppinsType) { Surface(Modifier.fillMaxSize(), color = Paper) { content() } }
         }
         THEMES.forEach { t -> (if (darkToo) listOf(false, true) else listOf(false)).forEach { dk ->
-            pick.value = t.id to dk
+            // changed from outside the screen, the way Settings changes them: everything must repaint
+            Theme.themeId = t.id; Theme.sysDark = dk
+            androidx.compose.runtime.snapshots.Snapshot.sendApplyNotifications()
             rule.mainClock.advanceTimeBy(900)
             capture("$prefix-${t.id}-${if (dk) "dark" else "light"}")
         } }
+    }
+    @Test fun n22_force_dark_on_light_phone() {
+        Theme.sysDark = false; Theme.themeId = "velvet"; Theme.viz = "off"; Theme.text = 0; Theme.font = "jost"; Theme.spacing = 0
+        Theme.mode = "phone"
+        rule.mainClock.autoAdvance = false
+        rule.setContent { MaterialTheme(typography = PoppinsType) { Surface(Modifier.fillMaxSize(), color = Paper) { Stations(true) } } }
+        rule.mainClock.advanceTimeBy(500); capture("n22-a-phone-light")
+        Theme.mode = "dark"; androidx.compose.runtime.snapshots.Snapshot.sendApplyNotifications(); rule.mainClock.advanceTimeBy(500)
+        capture("n22-b-forced-dark")
+        val root = rule.activity.window.decorView.rootView
+        val bmp = Bitmap.createBitmap(root.width, root.height, Bitmap.Config.ARGB_8888); root.draw(android.graphics.Canvas(bmp))
+        val px = bmp.getPixel(root.width / 2, root.height / 2)
+        val lum = (android.graphics.Color.red(px) + android.graphics.Color.green(px) + android.graphics.Color.blue(px)) / 3
+        org.junit.Assert.assertTrue("forced dark should paint a dark page, got $lum", lum < 80)
+        Theme.mode = "phone"
     }
     @Test fun n19_every_theme() = everyTheme("t", true, "off") { Stations(true, "heard") }
     @Test fun n20_every_theme_player() = everyTheme("tp", false, "bars") { Player(true) }

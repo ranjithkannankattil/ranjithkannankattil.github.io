@@ -77,7 +77,10 @@ object Palettes {
 
 /** The look the listener chose (Settings), as Compose state. Defaults = the app exactly as before. */
 object Theme {
-    var dark by mutableStateOf(false)
+    /** The phone's own light / dark setting (set by the activity). */
+    var sysDark by mutableStateOf(false)
+    /** Dark or light right now: the listener's choice, or the phone's. Worked out, never stored, so it always follows both. */
+    val dark: Boolean get() = when (mode) { "light" -> false; "dark" -> true; else -> sysDark }
     var themeId by mutableStateOf("velvet")
     var mode by mutableStateOf("phone")          // phone · light · dark
     var text by mutableStateOf(0)                // 0 normal · 1 large · 2 extra large

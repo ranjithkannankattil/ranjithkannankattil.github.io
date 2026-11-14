@@ -176,6 +176,7 @@ class ResumeWatcher(private val ctx: Context, private val scope: CoroutineScope,
     companion object {
         const val WINDOW_MS = 10 * 60_000L
         const val QUIET_MS = 4_000L
+        const val LONG_MS = 5 * 60_000L
         fun shouldResume(enabled: Boolean, elapsed: Long, quietFor: Long, inCall: Boolean, userPaused: Boolean, hasItem: Boolean) =
             enabled && !userPaused && hasItem && !inCall && elapsed <= WINDOW_MS && quietFor >= QUIET_MS
     }
@@ -188,14 +189,16 @@ class ResumeWatcher(private val ctx: Context, private val scope: CoroutineScope,
         job?.cancel()
         val start = System.currentTimeMillis()
         job = scope.launch {
-            var quietSince = 0L
+            var quietSince = 0L; var busySince = 0L
             delay(1500)
             while (true) {
                 val now = System.currentTimeMillis()
                 val p = player()
                 if (p.playWhenReady || now - start > WINDOW_MS) break
                 val busy = am.isMusicActive || inCall()
-                if (busy) quietSince = 0L else if (quietSince == 0L) quietSince = now
+                if (busy) { quietSince = 0L; if (busySince == 0L) busySince = now } else { busySince = 0L; if (quietSince == 0L) quietSince = now }
+                // another app playing for more than 5 minutes is the listener's choice (music, a film): don't come back over it later
+                if (busySince != 0L && now - busySince > LONG_MS) break
                 if (shouldResume(true, now - start, if (quietSince == 0L) 0 else now - quietSince, inCall(), false, p.mediaItemCount > 0)) {
                     p.prepare(); p.play(); break
                 }

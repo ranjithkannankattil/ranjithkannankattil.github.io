@@ -249,7 +249,7 @@ fun BottomNav(tab: Int, favCount: Int, go: (Int) -> Unit) {
     Column(Modifier.background(Paper).navigationBarsPadding()) {
         HorizontalDivider(color = Line)
         Row(Modifier.fillMaxWidth().height(58.dp)) {
-            listOf(Triple(R.drawable.ln_radio, "Stations", 0), Triple(R.drawable.ln_heart, "Favourites $favCount", 1),
+            listOf(Triple(R.drawable.ln_radio, "Stations", 0), Triple(R.drawable.ln_heart, if (Theme.text >= 2) "Favourites" else "Favourites $favCount", 1),
                 Triple(R.drawable.ln_info, "Info", 2)).forEach { (icon, label, i) ->
                 val on = tab == i
                 Column(Modifier.weight(1f).fillMaxHeight().clickable(onClickLabel = label) { go(i) },
@@ -298,7 +298,7 @@ fun PlayerContent(now: NowState, c: androidx.media3.session.MediaController?, la
                 }
                 if (Theme.viz == "circle") VizView("circle", now.playing, Modifier.fillMaxSize().padding(8.dp))
                 else if (Theme.viz != "off") VizView(Theme.viz, now.playing,
-                    Modifier.align(Alignment.BottomCenter).fillMaxWidth().height((art * 0.32f).dp).padding(horizontal = 14.dp, vertical = 12.dp))
+                    Modifier.align(Alignment.BottomCenter).fillMaxWidth().height((art * 0.46f).dp).padding(horizontal = 14.dp, vertical = 12.dp))
             }
             if (Theme.viz != "off") VizSwitcher()
             Column(Modifier.fillMaxWidth().padding(top = 16.dp), horizontalAlignment = Alignment.CenterHorizontally) {

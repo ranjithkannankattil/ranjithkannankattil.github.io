@@ -81,7 +81,9 @@ fun Segmented(options: List<String>, selected: Int, onSelect: (Int) -> Unit) {
             Box(Modifier.weight(1f).heightIn(min = 48.dp).background(if (on) Title else Color.Transparent)
                 .semantics { role = Role.RadioButton; this.selected = on }
                 .clickable(onClickLabel = o) { onSelect(i) }.padding(horizontal = 4.dp, vertical = 8.dp), contentAlignment = Alignment.Center) {
-                Text(o, fontSize = 14.sp, color = if (on) Paper else Title, maxLines = 2, lineHeight = 17.sp,
+                // a little smaller when the text size is large, so "Comfortable" still fits on a small phone
+                Text(o, fontSize = (if (Theme.text >= 2) 12 else if (Theme.text == 1) 13 else 14).sp, color = if (on) Paper else Title,
+                    maxLines = 2, lineHeight = 17.sp,
                     textAlign = androidx.compose.ui.text.style.TextAlign.Center)
             }
         }

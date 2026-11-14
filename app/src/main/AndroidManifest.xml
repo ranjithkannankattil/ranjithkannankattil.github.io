@@ -12,6 +12,8 @@
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <!-- Alarm: ring exactly on time (the listener allows it in Settings), and set it again after a restart -->
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <!-- Equaliser on the app's own sound (a normal permission, granted automatically) -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <!-- Android TV: no touchscreen needed; shows on the TV home screen -->
     <uses-feature android:name="android.hardware.touchscreen" android:required="false" />

@@ -122,7 +122,8 @@ class MainActivity : ComponentActivity() {
         Crash.sendSaved(this, lifecycleScope)
         setContent {
             val sysDark = androidx.compose.foundation.isSystemInDarkTheme()
-            Theme.dark = when (Theme.mode) { "light" -> false; "dark" -> true; else -> sysDark }
+            SideEffect { Theme.sysDark = sysDark }
+            if (Theme.sysDark != sysDark) Theme.sysDark = sysDark   // first frame: before anything is drawn
             val view = androidx.compose.ui.platform.LocalView.current
             SideEffect {   // status bar and navigation bar icons follow the app's light / dark choice, not just the phone's
                 androidx.core.view.WindowCompat.getInsetsController(window, view).apply {
