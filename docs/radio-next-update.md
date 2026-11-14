@@ -42,8 +42,9 @@ Collected from Ranjith and testers. Build when he says "go".
 ## Part 5: Settings, on demand (asked 14 Nov) — defaults stay exactly as now
 20. **Settings page** (⚙ in the header or under Info), app + website:
     - Theme: Follow phone (default) / Light / Dark, plus colour palettes, each in light and dark (shown on the design
-      canvas, "Settings · colour themes"): Elegant — Velvet (default), Midnight, Emerald, Noir, Kasavu; Vibrant — Banana
-      Leaf, Sunset, Ocean, Mango, Peacock. Waiting for his pick of which to keep.
+      canvas, "Settings · colour themes"): Malayalam names with the script beside them (Manjari): Elegant — Velvet
+      (default), Nilavu നിലാവ് (navy), Kaavu കാവ് (green), Mashi മഷി (black), Kasavu കസവ്; Vibrant — Vaazhayila
+      വാഴയില, Sandhya സന്ധ്യ, Kadal കടൽ, Maanga മാങ്ങ, Mayil മയിൽ. Waiting for his pick of which to keep.
     - Text size: Normal / Large / Extra large (scales everything evenly; for older listeners).
     - Font: Jost (default) / Classic serif (Cormorant) / Phone's own font.
 21. **Equaliser (app only)**: off by default; presets Normal, Voice & news, Bass boost, Music, Classical, Small speaker, plus
