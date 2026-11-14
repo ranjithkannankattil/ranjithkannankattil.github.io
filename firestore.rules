@@ -27,6 +27,16 @@ service cloud.firestore {
       allow update: if request.resource.data.keys().hasOnly(['minutes']) && request.resource.data.minutes is int
         && request.resource.data.minutes > resource.data.minutes && request.resource.data.minutes <= resource.data.minutes + 30;
     }
+    // Anonymous minutes per station per day (for "Most heard"): listens/<YYYY-MM-DD>/s/<collection:station>.
+    // Only a number; anyone may read it or add 1-30 minutes at a time.
+    match /listens/{day}/s/{key} {
+      allow read: if true;
+      allow create: if day.matches('^20[0-9]{2}-[01][0-9]-[0-3][0-9]$') && key.matches('^[A-Za-z0-9-]+:.{1,100}$')
+        && request.resource.data.keys().hasOnly(['m']) && request.resource.data.m is int
+        && request.resource.data.m >= 1 && request.resource.data.m <= 30;
+      allow update: if request.resource.data.keys().hasOnly(['m']) && request.resource.data.m is int
+        && request.resource.data.m > resource.data.m && request.resource.data.m <= resource.data.m + 30;
+    }
     // ---- Radio ratings and comments (see docs/superpowers/specs/2026-10-23-radio-ratings-share-design.md)
     // The approver is the site owner's Firebase account ID, filled in below once known. Empty = nobody.
     function ownerUid() { return 'oidT4ydQi7aRffo0v6qvf4mMNM72'; } // OWNER_UID

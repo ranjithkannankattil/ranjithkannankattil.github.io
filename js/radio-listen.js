@@ -1,7 +1,8 @@
 // Listening time on the Radio page. Counted only while a station is actually playing.
 // Kept in this browser (mr-listen); when signed in, saved per device to the account (js/radio-sync.js)
 // so the app and the website add up. Whole minutes also go to one anonymous total that holds
-// nothing but the number (Firestore stats/listening).
+// nothing but the number (Firestore stats/listening), and to anonymous per-station daily counts
+// (listens/<day>/s/<collection:station>, minutes only) for "Most heard".
 (() => {
   const audio = document.getElementById("audio");
   if (!audio) return;
@@ -24,6 +25,7 @@
     const wk = weekKey(); L.week = (L.weekKey === wk ? L.week || 0 : 0) + ms; L.weekKey = wk;
     L.top = L.top || {}; const t = L.top[who.key] || { n: who.name, ms: 0 }; t.n = who.name; t.ms += ms; L.top[who.key] = t;
     L.pending = (L.pending || 0) + ms;
+    L.sp = L.sp || {}; L.sp[who.key] = (L.sp[who.key] || 0) + ms;     // per station, not yet sent
     put(L);
   }
   const now = () => (window.RadioApp && window.RadioApp.now) ? window.RadioApp.now() : null;
@@ -43,13 +45,31 @@
       if (r.ok) { L = get(); L.pending = Math.max(0, (L.pending || 0) - n * 60000); put(L); }
     } catch { /* next time */ }
   }
+  // Anonymous minutes per station per day (UTC), for "Most heard". Sent once a station has 2+ whole minutes.
+  async function flushStations(all) {
+    L = get(); const sp = L.sp || {}; if (!KEY) return;
+    const day = new Date().toISOString().slice(0, 10);
+    const ready = Object.entries(sp).map(([k, ms]) => [k, Math.min(30, Math.floor(ms / 60000))])
+      .filter(([k, n]) => n >= (all ? 1 : 2) && /^[a-z0-9-]+:[^/]{1,100}$/i.test(k));
+    if (!ready.length) return;
+    try {
+      const r = await fetch(`https://firestore.googleapis.com/v1/projects/ranjithkb-radio/databases/(default)/documents:commit?key=${KEY}`, {
+        method: "POST", headers: { "content-type": "application/json" }, keepalive: !!all,
+        body: JSON.stringify({ writes: ready.map(([k, n]) => ({ transform: {
+          document: `projects/ranjithkb-radio/databases/(default)/documents/listens/${day}/s/${k}`,
+          fieldTransforms: [{ fieldPath: "m", increment: { integerValue: String(n) } }] } })) }) });
+      if (r.ok) { L = get(); L.sp = L.sp || {}; ready.forEach(([k, n]) => {
+        L.sp[k] = Math.max(0, (L.sp[k] || 0) - n * 60000); if (L.sp[k] < 60000 && !mark) delete L.sp[k]; }); put(L); }
+    } catch { /* next time */ }
+  }
   function save() {
     L = get();
     const top = Object.fromEntries(Object.entries(L.top || {}).sort((a, b) => b[1].ms - a[1].ms).slice(0, 10));
     window.dispatchEvent(new CustomEvent("radio:listen-save", { detail: { device: L.device,
       data: { total: L.total || 0, weekKey: weekKey(), week: L.weekKey === weekKey() ? L.week || 0 : 0, top } } }));
   }
-  setInterval(() => { if (mark) { add(); mark = Date.now(); } flushEveryone(); }, 60000);
+  setInterval(() => { if (mark) { add(); mark = Date.now(); } flushEveryone(); flushStations(false); }, 60000);
+  window.addEventListener("pagehide", () => flushStations(true));
   setInterval(save, 5 * 60000);
   window.addEventListener("radio:listen-account", (e) => { account = e.detail || {}; paint(); });
 

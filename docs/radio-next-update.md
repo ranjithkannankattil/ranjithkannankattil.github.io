@@ -25,7 +25,7 @@ Collected from Ranjith and testers. Build when he says "go".
 13. **Radio Lemon Bengaluru, Europe, Africa, Australia**: not playing on 12 Nov, even on their own site. Bengaluru is listed as offline and comes back by itself; add the others once they play. Check whether our "Radio Mate" (stream named "lemonaustralia") is really Radio Lemon Australia.
 
 ## Part 4: Most heard and Top rated (app + website)
-15. **Anonymous minutes per station**: app and website add whole minutes to a per-station count (no user link); new Firestore
+15. **Anonymous minutes per station**: website counting live since 14 Nov (listens/<day>/s/<collection:station>); app to add whole minutes to a per-station count (no user link); new Firestore
     rule allows only small increments; privacy page gets one line.
 16. **Nightly GitHub job** (no Claude) totals listening (this week + all time) and ratings (average, count) into one small
     file on the site, e.g. `js/station-stats.json`; app and page read that file, not the database.
@@ -35,6 +35,9 @@ Collected from Ranjith and testers. Build when he says "go".
     this week vs all time.
 18. **Resume after other apps' videos** (asked 13 Nov): when another app takes the sound (e.g. a Facebook video), resume
     once it has been quiet a few seconds, only within 10 minutes, never during calls or after his own pause.
+
+19. **Buy me a coffee** (app + website, asked 14 Nov): a gentle, optional support link saying the app is free but
+    building and running it takes time and effort. Needs his Buy Me a Coffee (or similar) page link first.
 
 ## Done on 12 Nov (live already)
 - Malayalam FM 104.6 (NZ), Planet FM 104.6 (NZ), Naadan Chaaya Radio (Ireland), Radio Lemon New Zealand added; Radio Lemon UK and Nammude UK named clearly (Nammude UK has a backup stream); Radio Lemon Bengaluru listed (offline for now).

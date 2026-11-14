@@ -223,3 +223,15 @@ test("listening: per-device map on your own account; anonymous total grows by at
   await assertSucceeds(setDoc(doc(db(null), "stats/listening"), { minutes: 30 }));
   await assertFails(setDoc(doc(db(null), "stats/listening"), { minutes: 10 }));
 });
+
+test("listens: anonymous minutes per station per day, 1-30 at a time, nothing else", async () => {
+  const d = (u) => doc(db(u), "listens/2026-11-14/s/malayalam:radiomango");
+  await assertSucceeds(setDoc(d(null), { m: 3 }));
+  await assertSucceeds(getDoc(d(null)));
+  await assertSucceeds(setDoc(d(null), { m: 30 }));
+  await assertFails(setDoc(d(null), { m: 100 }));
+  await assertFails(setDoc(d(null), { m: 20 }));
+  await assertFails(setDoc(d(null), { m: 31, who: "x" }));
+  await assertFails(setDoc(doc(db(null), "listens/yesterday/s/malayalam:radiomango"), { m: 1 }));
+  await assertFails(setDoc(doc(db(null), "listens/2026-11-14/s/nocolon"), { m: 1 }));
+});
