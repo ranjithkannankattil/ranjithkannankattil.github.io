@@ -49,6 +49,10 @@ Collected from Ranjith and testers. Build when he says "go".
     - Font: Jost (default) / Classic serif (Cormorant) / Phone's own font.
 21. **Equaliser (app only)**: off by default; presets Normal, Voice & news, Bass boost, Music, Classical, Small speaker, plus
     5-band sliders; remembered; works over Bluetooth/car. Not on the website: browsers can't process other sites' streams.
+23. **Visualiser** (Settings, off by default; asked 14 Nov): animated sound bars / waves / circle in the big player, in the
+    chosen theme's colours (like Windows Media Player). App: real music-driven, from the player's own audio (Media3
+    TeeAudioProcessor + FFT) — no microphone permission. Website: most streams don't allow browsers to read the sound,
+    so the web version is a gentle animation that follows play/pause, not the music (say so).
 22. **Tip jar / support** (asked 14 Nov): Play app = Google Play in-app tips (€1.99 / €4.99 / €9.99, UPI in India); website
     and website APK = Buy Me a Coffee. Waiting for him: Play payments profile, Buy Me a Coffee page link.
 
