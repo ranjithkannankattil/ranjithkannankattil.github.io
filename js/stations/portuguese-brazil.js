@@ -799,8 +799,7 @@ window.STATIONS = [
     "streams": [
       "https://stm12.xcast.com.br:9454/stream"
     ],
-    "added": "2026-10-31",
-    "offline": true
+    "added": "2026-10-31"
   },
   {
     "id": "radio-reggae-brasil",
@@ -953,7 +952,8 @@ window.STATIONS = [
     "streams": [
       "https://webradio.amsolution.com.br/radio/8320/lideranca"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "offline": true
   },
   {
     "id": "94-fm-natal-radio-cidade",
@@ -1334,4 +1334,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T07:32Z";
+window.STATIONS_CHECKED = "2026-11-14T19:20Z";

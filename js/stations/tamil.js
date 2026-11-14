@@ -67,7 +67,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "89-4-tamil-fm",
@@ -299,7 +300,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast4.asurahosting.com/proxy/neville/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "minnal-fm",
@@ -1328,4 +1330,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T07:32Z";
+window.STATIONS_CHECKED = "2026-11-14T19:20Z";

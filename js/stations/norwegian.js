@@ -253,7 +253,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.radio3.no/Radio3Bodo48?rp_source=1&=&&___cb=322377588283394"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "p7-klem",
@@ -389,6 +390,15 @@ window.STATIONS = [
       "https://stream.oradio.no/oradio_hq"
     ],
     "added": "2026-10-22"
+  },
+  {
+    "id": "radio-revolt",
+    "name": "Radio Revolt",
+    "category": "music",
+    "streams": [
+      "https://direkte.radiorevolt.no/revolt.aac"
+    ],
+    "added": "2026-11-14"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T07:32Z";
+window.STATIONS_CHECKED = "2026-11-14T19:20Z";

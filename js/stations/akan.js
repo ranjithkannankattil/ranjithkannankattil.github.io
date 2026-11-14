@@ -122,7 +122,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://atunwadigital.streamguys1.com/hellofm"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "connect-fm",
@@ -326,8 +327,7 @@ window.STATIONS = [
     "streams": [
       "https://peacefm-atunwadigital.streamguys1.com/peacefm?amsparams=playerid%3ASGplayer%3Bskey%3A1611468493100%3B&awparams=playerid%3ASGplayer%3Bplayerid%3ASGplayer%3Bplayerid%3ASGplayer%3B&us_privacy=1YNN&us_privacy=1YNN&us_privacy=1YNN"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "ahenfie-fm-106-1mhz",
@@ -427,8 +427,7 @@ window.STATIONS = [
     "streams": [
       "https://atunwadigital.streamguys1.com/neatfm"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "kobbyros-radio",
@@ -485,4 +484,4 @@ window.STATIONS = [
     "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T07:32Z";
+window.STATIONS_CHECKED = "2026-11-14T19:20Z";

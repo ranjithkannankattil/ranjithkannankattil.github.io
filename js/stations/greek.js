@@ -555,8 +555,7 @@ window.STATIONS = [
     "streams": [
       "https://rdst.win:48000/stream?type=.mp3"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "focus-103-6",
@@ -1324,4 +1323,4 @@ window.STATIONS = [
     "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T07:32Z";
+window.STATIONS_CHECKED = "2026-11-14T19:20Z";

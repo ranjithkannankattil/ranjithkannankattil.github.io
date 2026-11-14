@@ -783,8 +783,7 @@ window.STATIONS = [
     "streams": [
       "https://icecast7.play.cz/relax128.mp3"
     ],
-    "added": "2026-10-31",
-    "offline": true
+    "added": "2026-10-31"
   },
   {
     "id": "hitradio-fm-crystal",
@@ -1217,6 +1216,33 @@ window.STATIONS = [
       "https://ice2.radia.cz/legends_of_rock_128.aac"
     ],
     "added": "2026-11-12"
+  },
+  {
+    "id": "radio-zeitung",
+    "name": "Radio Zeitung",
+    "category": "music",
+    "streams": [
+      "https://stream.radiojar.com/2h1bhm7zhxquv"
+    ],
+    "added": "2026-11-14"
+  },
+  {
+    "id": "rock-radio-metalomanie",
+    "name": "Rock Radio Metalomanie",
+    "category": "music",
+    "streams": [
+      "https://ice2.radia.cz/metalomanie128.aac"
+    ],
+    "added": "2026-11-14"
+  },
+  {
+    "id": "rock-radio-alternative-rock",
+    "name": "Rock Radio Alternative Rock",
+    "category": "music",
+    "streams": [
+      "https://ice2.radia.cz/znamkapunku128.aac"
+    ],
+    "added": "2026-11-14"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T07:32Z";
+window.STATIONS_CHECKED = "2026-11-14T19:20Z";

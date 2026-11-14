@@ -218,7 +218,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://azura-cast.radiokansk.ru/listen/radiokansk/live"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "instrumental-jazz",
@@ -378,8 +379,7 @@ window.STATIONS = [
     "streams": [
       "https://live.zhanafm.kz:8443/vasheradio"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "fm-70e",
@@ -1328,4 +1328,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T07:32Z";
+window.STATIONS_CHECKED = "2026-11-14T19:20Z";

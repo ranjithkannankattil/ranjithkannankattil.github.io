@@ -57,7 +57,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://edge.iono.fm/xice/301_low.aac"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "amapiano-fm",
@@ -78,4 +79,4 @@ window.STATIONS = [
     "added": "2026-10-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T07:32Z";
+window.STATIONS_CHECKED = "2026-11-14T19:20Z";

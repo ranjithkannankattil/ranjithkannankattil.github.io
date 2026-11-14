@@ -209,8 +209,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s10.webradio-hosting.com/proxy/fredradiolt/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "geras-fm",
@@ -265,4 +264,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T07:32Z";
+window.STATIONS_CHECKED = "2026-11-14T19:20Z";

@@ -936,8 +936,7 @@ window.STATIONS = [
     "streams": [
       "https://s10.webradio-hosting.com/proxy/fredradioar/stream"
     ],
-    "added": "2026-11-02",
-    "offline": true
+    "added": "2026-11-02"
   },
   {
     "id": "bbc-arabic-1413-am",
@@ -1327,4 +1326,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T07:32Z";
+window.STATIONS_CHECKED = "2026-11-14T19:20Z";

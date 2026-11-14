@@ -378,8 +378,7 @@ window.STATIONS = [
     "streams": [
       "https://s10.webradio-hosting.com/proxy/fredradiokr/stream"
     ],
-    "added": "2026-10-26",
-    "offline": true
+    "added": "2026-10-26"
   },
   {
     "id": "ebs-tune-in",
@@ -599,4 +598,4 @@ window.STATIONS = [
     "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T07:32Z";
+window.STATIONS_CHECKED = "2026-11-14T19:20Z";

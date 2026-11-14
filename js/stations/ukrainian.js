@@ -1104,6 +1104,15 @@ window.STATIONS = [
       "https://tavr.tvstitch.com/MelodiaFM_Disco"
     ],
     "added": "2026-11-13"
+  },
+  {
+    "id": "vsemirnoeodesscoeradio",
+    "name": "VsemirnoeOdesscoeRadio",
+    "category": "music",
+    "streams": [
+      "https://listen1.myradio24.com/odesradio"
+    ],
+    "added": "2026-11-14"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T07:32Z";
+window.STATIONS_CHECKED = "2026-11-14T19:20Z";

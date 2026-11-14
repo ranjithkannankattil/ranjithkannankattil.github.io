@@ -144,8 +144,8 @@ window.STATIONS = [
     "name": "Sveriges Radio - P4 Blekinge",
     "category": "music",
     "streams": [
-      "https://sverigesradio.se/topsy/direkt/213-lo-mp3.m3u",
-      "https://live1.sr.se/p4blek-mp3-96"
+      "https://live1.sr.se/p4blek-mp3-96",
+      "https://sverigesradio.se/topsy/direkt/213-lo-mp3.m3u"
     ]
   },
   {
@@ -488,6 +488,15 @@ window.STATIONS = [
       "https://serverkw.quran-uni.com:8232/;"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "strul-fm",
+    "name": "Strul FM",
+    "category": "music",
+    "streams": [
+      "https://stream.streamaudio.de:8000/strul-fm"
+    ],
+    "added": "2026-11-14"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T07:32Z";
+window.STATIONS_CHECKED = "2026-11-14T19:20Z";

@@ -48,8 +48,8 @@ window.STATIONS = [
     "name": "Kafa Radyo",
     "category": "music",
     "streams": [
-      "https://moondigitalmaster.radyotvonline.net/kafaradyo/playlist.m3u8",
-      "https://moondigitaledge2.radyotvonline.net/kafaradyo/playlist.m3u8"
+      "https://moondigitaledge2.radyotvonline.net/kafaradyo/playlist.m3u8",
+      "https://moondigitalmaster.radyotvonline.net/kafaradyo/playlist.m3u8"
     ]
   },
   {
@@ -930,7 +930,8 @@ window.STATIONS = [
     "streams": [
       "https://moondigitaledge2.radyotvonline.net/radyod/playlist.m3u8"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "offline": true
   },
   {
     "id": "trt-antalya",
@@ -1011,7 +1012,8 @@ window.STATIONS = [
     "streams": [
       "https://radio-trtgap.medya.trt.com.tr/master.m3u8"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "offline": true
   },
   {
     "id": "gonul-fm-97-3",
@@ -1329,4 +1331,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T07:32Z";
+window.STATIONS_CHECKED = "2026-11-14T19:20Z";
