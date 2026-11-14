@@ -44,6 +44,11 @@ service cloud.firestore {
     function signedAs(uid) { return request.auth != null && request.auth.uid == uid; }
     function goodStars(v) { return v is int && v >= 1 && v <= 5; }
 
+    // The nightly stats job reads every vote in one query (Top rated). Votes are public anyway; only the ratings
+    // collection has "votes", so this opens nothing new.
+    match /{path=**}/votes/{uid} {
+      allow read: if true;
+    }
     // One vote per browser per station. Every vote is written in a batch with limits/{uid},
     // and the previous limits/{uid}.last must be at least 12 s old.
     match /ratings/{key}/votes/{uid} {
@@ -58,7 +63,8 @@ service cloud.firestore {
             || get(/databases/$(database)/documents/limits/$(uid)).data.last < request.time - duration.value(12, 's'));
       allow delete: if isOwner();
     }
-    // limits/{uid}: when this browser last rated (last) and last commented (lastComment).
+    // limits/{uid}: when this browser last rated (last), commented (lastComment), asked for a station (lastRequest)
+    // and sent a crash report (lastCrash).
     // Each field may only be set to the current time or left as it was; it can't be dropped.
     function stamp(f) {
       return (f in request.resource.data)
@@ -69,8 +75,8 @@ service cloud.firestore {
     match /limits/{uid} {
       allow read: if signedAs(uid);
       allow create, update: if signedAs(uid)
-        && request.resource.data.keys().hasOnly(['last', 'lastComment'])
-        && stamp('last') && stamp('lastComment');
+        && request.resource.data.keys().hasOnly(['last', 'lastComment', 'lastRequest', 'lastCrash'])
+        && stamp('last') && stamp('lastComment') && stamp('lastRequest') && stamp('lastCrash');
     }
 
     // Comments: public only once approved; the author and the owner can read them before that.
@@ -97,6 +103,41 @@ service cloud.firestore {
         || (isOwner() && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status'])
             && request.resource.data.status in ['approved', 'rejected']);
       allow delete: if isOwner() || (request.auth != null && resource.data.uid == request.auth.uid);
+    }
+    // ---- Requests and crash reports: anyone (anonymous sign-in is enough) can send one; only the owner reads them.
+    // Each is written in a batch with limits/{uid}: one station request a minute, one crash report a minute.
+    function gap(f, secs) {
+      return getAfter(/databases/$(database)/documents/limits/$(request.auth.uid)).data[f] == request.time
+        && (!exists(/databases/$(database)/documents/limits/$(request.auth.uid))
+            || !(f in get(/databases/$(database)/documents/limits/$(request.auth.uid)).data)
+            || get(/databases/$(database)/documents/limits/$(request.auth.uid)).data[f] < request.time - duration.value(secs, 's'));
+    }
+    function text(v, lo, hi) { return v is string && v.size() >= lo && v.size() <= hi; }
+    match /requests/{id} {
+      allow read, delete: if isOwner();
+      allow create: if request.auth != null && id.matches('^' + request.auth.uid + '__[0-9]{1,15}$')
+        && request.resource.data.keys().hasOnly(['uid', 'name', 'place', 'link', 'note', 'from', 'ts'])
+        && request.resource.data.keys().hasAll(['uid', 'name', 'from', 'ts'])
+        && request.resource.data.uid == request.auth.uid
+        && text(request.resource.data.name, 2, 80)
+        && (!('place' in request.resource.data) || text(request.resource.data.place, 0, 80))
+        && (!('link' in request.resource.data) || text(request.resource.data.link, 0, 300))
+        && (!('note' in request.resource.data) || text(request.resource.data.note, 0, 300))
+        && request.resource.data.from in ['web', 'app']
+        && request.resource.data.ts == request.time && gap('lastRequest', 60);
+    }
+    match /crashes/{id} {
+      allow read, delete: if isOwner();
+      allow create: if request.auth != null && id.matches('^' + request.auth.uid + '__[0-9]{1,15}$')
+        && request.resource.data.keys().hasOnly(['app', 'version', 'phone', 'android', 'error', 'trace', 'at', 'ts'])
+        && request.resource.data.keys().hasAll(['app', 'version', 'error', 'ts'])
+        && text(request.resource.data.app, 1, 40) && text(request.resource.data.version, 1, 30)
+        && (!('phone' in request.resource.data) || text(request.resource.data.phone, 0, 80))
+        && (!('android' in request.resource.data) || request.resource.data.android is int)
+        && text(request.resource.data.error, 1, 300)
+        && (!('trace' in request.resource.data) || text(request.resource.data.trace, 0, 4000))
+        && (!('at' in request.resource.data) || request.resource.data.at is int)
+        && request.resource.data.ts == request.time && gap('lastCrash', 60);
     }
     // ---- Movies: the owner's private film log (movies.html). Only the owner can read or write it.
     // movielog/{uid}/watches/{id} and movielog/{uid}/watchlist/{tmdb id}

@@ -5,7 +5,7 @@ import { readFileSync } from "node:fs";
 import { initializeTestEnvironment, assertSucceeds, assertFails } from "@firebase/rules-unit-testing";
 import {
   doc, setDoc, getDoc, updateDoc, writeBatch, serverTimestamp, Timestamp, collection,
-  query, where, getDocs, getCountFromServer, increment,
+  query, where, getDocs, getCountFromServer, increment, collectionGroup,
 } from "firebase/firestore";
 
 const RULES = readFileSync(new URL("../../firestore.rules", import.meta.url), "utf8");
@@ -234,4 +234,41 @@ test("listens: anonymous minutes per station per day, 1-30 at a time, nothing el
   await assertFails(setDoc(d(null), { m: 31, who: "x" }));
   await assertFails(setDoc(doc(db(null), "listens/yesterday/s/malayalam:radiomango"), { m: 1 }));
   await assertFails(setDoc(doc(db(null), "listens/2026-11-14/s/nocolon"), { m: 1 }));
+});
+
+test("votes: one collection-group read for the nightly stats; still nobody else's to write", async () => {
+  await seed((d) => setDoc(doc(d, `ratings/${K}/votes/u1`), { stars: 4, ts: ago(100) }));
+  await assertSucceeds(getDocs(query(collectionGroup(db(null), "votes"))));
+  await assertFails(setDoc(doc(db("u2"), `ratings/${K}/votes/u1`), { stars: 5, ts: serverTimestamp() }));
+});
+
+test("requests: send one a minute, only the owner reads", async () => {
+  const send = (uid, n, extra = {}) => {
+    const b = writeBatch(db(uid));
+    b.set(doc(db(uid), `requests/${uid}__${n}`), { uid, name: "Radio Macfast", place: "Changanassery", from: "app", ts: serverTimestamp(), ...extra });
+    b.set(doc(db(uid), `limits/${uid}`), { lastRequest: serverTimestamp() }, { merge: true });
+    return b.commit();
+  };
+  await assertSucceeds(send("u1", 1));
+  await assertFails(send("u1", 2));                                  // too soon
+  await assertFails(send("u2", 1, { phone: "123" }));               // unknown field
+  await assertFails(send("u3", 1, { name: "x" }));                  // name too short
+  await assertFails(getDoc(doc(db("u1"), "requests/u1__1")));
+  await assertSucceeds(getDoc(doc(db("owner"), "requests/u1__1")));
+  await assertFails(setDoc(doc(db(null), "requests/x__1"), { uid: "x", name: "Abc", from: "web", ts: serverTimestamp() }));
+});
+
+test("crashes: create-only crash reports, only the owner reads", async () => {
+  const send = (uid, n, extra = {}) => {
+    const b = writeBatch(db(uid));
+    b.set(doc(db(uid), `crashes/${uid}__${n}`), { app: "Radio Velvet", version: "2.5.0", phone: "Samsung A14", android: 34,
+      error: "IllegalStateException", trace: "at x.y", at: 1, ts: serverTimestamp(), ...extra });
+    b.set(doc(db(uid), `limits/${uid}`), { lastCrash: serverTimestamp() }, { merge: true });
+    return b.commit();
+  };
+  await assertSucceeds(send("u1", 1));
+  await assertFails(send("u1", 2));
+  await assertFails(send("u2", 1, { trace: "x".repeat(5000) }));
+  await assertFails(getDoc(doc(db("u1"), "crashes/u1__1")));
+  await assertSucceeds(getDoc(doc(db("owner"), "crashes/u1__1")));
 });
