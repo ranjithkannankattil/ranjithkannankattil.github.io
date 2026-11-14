@@ -293,7 +293,8 @@ fun PlayerContent(now: NowState, c: androidx.media3.session.MediaController?, la
                 else Box(Modifier.fillMaxSize().padding(12.dp).border(1.dp, GoldC.copy(alpha = 0.5f)), contentAlignment = Alignment.Center) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
                         Icon(painterResource(R.drawable.ic_logo_mark), null, Modifier.size((art * 0.26f).dp), tint = GoldC)
-                        Label(station, BarSoft, 9, Modifier.padding(top = 12.dp, start = 14.dp, end = 14.dp))
+                        // the station name on the cover: light on a dark cover, dark on a light one, always readable
+                        Label(station, if (Palettes.luma(ArtBg) < 0.5f) Color(0xFFE6DCE2) else Title, 9, Modifier.padding(top = 12.dp, start = 14.dp, end = 14.dp))
                     }
                 }
                 if (Theme.viz == "circle") VizView("circle", now.playing, Modifier.fillMaxSize().padding(8.dp))
