@@ -51,6 +51,12 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
 - ~5,300 stations in 70+ languages, one file per collection in `js/stations/`, list of collections in
   `js/collections.js`. Favourites are stored as `"<collection>:<station id>"` in `mr-favs2`, in his
   chosen order, and synced to Firestore when signed in (`js/radio-sync.js`).
+- **Most heard / Top rated**: the page and the app add anonymous minutes per station per day to Firestore
+  `listens/<day>/s/<collection:station>`; every night `station-stats.yml` runs `scripts/build_station_stats.py` (no Claude)
+  and writes `js/station-stats.json` (this week's minutes, star averages). Both read that file; `sw.js` never caches it.
+- **Settings** (page: `js/radio-settings.js`, localStorage `rv-settings`; app: Settings.kt): 15 colour themes with Malayalam
+  names, each light + dark, text size, spacing, visualiser. Defaults = the original look. The page keeps the site's fonts.
+- **Request a station** and app **crash reports** go to Firestore `requests` / `crashes` (owner-only read; one a minute).
 - Every hour `scripts/recheck_offline.py` (recheck-offline-stations.yml) re-tests only the Malayalam stations marked
   not working and switches back on any that play again; it never marks a station as not working.
 - `scripts/check_streams.py` tests every stream twice a day (GitHub Actions) and
