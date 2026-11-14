@@ -44,9 +44,11 @@ Collected from Ranjith and testers. Build when he says "go".
     - Theme: Follow phone (default) / Light / Dark, plus colour palettes, each in light and dark (shown on the design
       canvas, "Settings · colour themes"): Malayalam names with the script beside them (Manjari) and the English meaning in brackets for foreigners, e.g. "Kadal കടൽ (Sea)": Elegant — Velvet
       (default), Nilavu നിലാവ് (navy), Kaavu കാവ് (green), Mashi മഷി (black), Kasavu കസവ്; Vibrant — Ila
-      ഇല, Sandhya സന്ധ്യ, Kadal കടൽ, Maambazham മാമ്പഴം, Peeli പീലി. Waiting for his pick of which to keep.
+      ഇല, Sandhya സന്ധ്യ, Kadal കടൽ, Maambazham മാമ്പഴം, Peeli പീലി. All of them are kept (his call, 14 Nov), plus Subtle — Manju മഞ്ഞ് (Mist), Chandanam ചന്ദനം
+      (Sandalwood), Aambal ആമ്പൽ (Water lily), Kaayal കായൽ (Backwaters), Mazha മഴ (Rain).
     - Text size: Normal / Large / Extra large (scales everything evenly; for older listeners).
     - Font: Jost (default) / Classic serif (Cormorant) / Phone's own font.
+    - Station list spacing: Compact (default, now) / Comfortable / Spacious (row height and gaps only).
 21. **Equaliser (app only)**: off by default; presets Normal, Voice & news, Bass boost, Music, Classical, Small speaker, plus
     5-band sliders; remembered; works over Bluetooth/car. Not on the website: browsers can't process other sites' streams.
 23. **Visualiser** (Settings, off by default; asked 14 Nov): animated sound bars / waves / circle in the big player, in the
