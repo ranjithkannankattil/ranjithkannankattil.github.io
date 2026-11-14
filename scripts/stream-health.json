@@ -75,17 +75,10 @@
     "lithuanian:haze-pub-radio": 11,
     "luganda:foundation-of-truth-radio": 48,
     "malay:myfriends-station": 6,
-    "malayalam:airdevikulam": 1,
-    "malayalam:airkannur": 1,
-    "malayalam:akashvanithrissur": 1,
     "malayalam:greenradio": 48,
-    "malayalam:junefm": 1,
-    "malayalam:karunasairadio": 1,
     "malayalam:keralafm": 48,
-    "malayalam:manjerifm": 1,
     "malayalam:mazhavilfm": 48,
     "malayalam:menorahradio": 48,
-    "malayalam:myradio90fm": 1,
     "malayalam:njanmalayalibhakthi": 48,
     "malayalam:omrradio": 48,
     "malayalam:quranradiomalayalam": 48,
@@ -94,7 +87,6 @@
     "malayalam:radiocafe": 48,
     "malayalam:radiolalsalam": 48,
     "malayalam:radiolemonbengaluru": 3,
-    "malayalam:radiomacfast": 1,
     "malayalam:radiomallu": 48,
     "malayalam:radiomangalam": 48,
     "malayalam:radionellika": 48,
@@ -2035,11 +2027,6 @@
     "last_reason": "HTTP 502 error page",
     "since": "2026-10-29"
   },
-  "https://cast1.my-control-panel.com/proxy/myradio90fm/stream": {
-    "fails": 1,
-    "last_reason": "HTTP 401, 0 bytes",
-    "since": "2026-11-13"
-  },
   "https://cast3.asurahosting.com/proxy/myfriend/stream": {
     "fails": 6,
     "last_reason": "HTTP 502 error page",
@@ -2160,11 +2147,6 @@
     "last_reason": "HTTP 404 error page",
     "since": "2026-11-13"
   },
-  "https://icecast.octosignals.com/radiomacfast": {
-    "fails": 1,
-    "last_reason": "HTTP 404 error page",
-    "since": "2026-11-13"
-  },
   "https://irvess.com/stream/irvess": {
     "fails": 4,
     "last_reason": "HTTP 404 error page",
@@ -2250,11 +2232,6 @@
     "last_reason": "playlist HTTP 400",
     "since": "2026-11-13"
   },
-  "https://onair.junefm.in/live": {
-    "fails": 1,
-    "last_reason": "HTTP 404 error page",
-    "since": "2026-11-13"
-  },
   "https://peacefm-atunwadigital.streamguys1.com/peacefm?amsparams=playerid%3ASGplayer%3Bskey%3A1611468493100%3B&awparams=playerid%3ASGplayer%3Bplayerid%3ASGplayer%3Bplayerid%3ASGplayer%3B&us_privacy=1YNN&us_privacy=1YNN&us_privacy=1YNN": {
     "fails": 1,
     "last_reason": "HTTP 502, 0 bytes",
@@ -2320,11 +2297,6 @@
     "last_reason": "playlist HTTP 404",
     "since": "2026-11-13"
   },
-  "https://radio.wavespb.com/live/58390a2ed33cea4a/58390a2ed33cea4a.m3u8": {
-    "fails": 1,
-    "last_reason": "playlist HTTP 404",
-    "since": "2026-11-13"
-  },
   "https://radio.wavespb.com/live/5d9989b5189a8f4a/5d9989b5189a8f4a.m3u8": {
     "fails": 1,
     "last_reason": "playlist HTTP 404",
@@ -2350,22 +2322,7 @@
     "last_reason": "playlist HTTP 404",
     "since": "2026-11-13"
   },
-  "https://radio.wavespb.com/live/b82c91a395fc4a7d/b82c91a395fc4a7d.m3u8": {
-    "fails": 1,
-    "last_reason": "playlist HTTP 404",
-    "since": "2026-11-13"
-  },
   "https://radio.wavespb.com/live/deae7120a205bfff/deae7120a205bfff.m3u8": {
-    "fails": 1,
-    "last_reason": "playlist HTTP 404",
-    "since": "2026-11-13"
-  },
-  "https://radio.wavespb.com/live/e97acc829da9bf2a/e97acc829da9bf2a.m3u8": {
-    "fails": 1,
-    "last_reason": "playlist HTTP 404",
-    "since": "2026-11-13"
-  },
-  "https://radio.wavespb.com/live/f70fdeca437dc326/f70fdeca437dc326.m3u8": {
     "fails": 1,
     "last_reason": "playlist HTTP 404",
     "since": "2026-11-13"
@@ -2614,11 +2571,6 @@
     "fails": 62,
     "last_reason": "HTTP 401, 0 bytes",
     "since": "2026-10-20"
-  },
-  "https://streamasiahlscdn.atc-labs.com/karunasairadio.m3u8": {
-    "fails": 1,
-    "last_reason": "playlist HTTP 404",
-    "since": "2026-11-13"
   },
   "https://streamcdnb3-8e7439fdb1694c8da3a0fd63e4dda518.msvdn.net/rainews1/hls/rainews_2400/chunklist.m3u8": {
     "fails": 17,
