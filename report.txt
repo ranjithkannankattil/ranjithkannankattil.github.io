@@ -1,0 +1,252 @@
+### Cinema build
+```
+anteo.spaziocinema: 39 V.O. films; V.O. shows by day [14, 24, 19, 21, 19, 2, 0]; 30 dubbed
+citylife.spaziocinema: 10 V.O. films; V.O. shows by day [4, 7, 7, 8, 5, 0, 0]; 40 dubbed
+ariosto.spaziocinema: 3 V.O. films; V.O. shows by day [0, 1, 0, 0, 0, 0, 0]; 9 dubbed
+arlecchino.cinetecadimilano: 49 V.O. films; V.O. shows by day [2, 2, 5, 4, 4, 1, 2]; 13 dubbed
+mic.cinetecadimilano: 16 V.O. films; V.O. shows by day [2, 1, 1, 2, 1, 0, 0]; 13 dubbed
+capitol.spaziocinema: 1 V.O. films; V.O. shows by day [0, 0, 0, 0, 0, 0, 0]; 25 dubbed
+cinema.barberini: 17 V.O. films; V.O. shows by day [15, 23, 1, 3, 1, 3, 2]; 13 dubbed
+quattrofontane.ccroma: 13 V.O. films; V.O. shows by day [9, 12, 9, 0, 0, 0, 0]; 6 dubbed
+giuliocesare.ccroma: 13 V.O. films; V.O. shows by day [9, 13, 10, 1, 0, 0, 0]; 15 dubbed
+roma.andromeda: 1 V.O. films; V.O. shows by day [1, 1, 1, 1, 1, 0, 0]; 17 dubbed
+lux.cdr: 7 V.O. films; V.O. shows by day [3, 4, 3, 3, 3, 2, 2]; 24 dubbed
+nazionale.cctorino: 2 V.O. films; V.O. shows by day [1, 1, 1, 1, 2, 0, 0]; 4 dubbed
+arlecchino.popupcinema: 5 V.O. films; V.O. shows by day [2, 2, 2, 1, 1, 0, 0]; 5 dubbed
+medica.popupcinema: 4 V.O. films; V.O. shows by day [2, 1, 1, 1, 1, 0, 0]; 2 dubbed
+odeon.ccb: 10 V.O. films; V.O. shows by day [0, 2, 1, 1, 1, 0, 0]; 15 dubbed
+rialto.ccb: 3 V.O. films; V.O. shows by day [0, 2, 2, 2, 2, 0, 0]; 2 dubbed
+roma.ccb: 1 V.O. films; V.O. shows by day [0, 1, 1, 1, 1, 0, 0]; 2 dubbed
+europa.ccb: 5 V.O. films; V.O. shows by day [0, 0, 1, 0, 0, 0, 0]; 2 dubbed
+lumiere.cinetecabologna: 4 V.O. films; V.O. shows by day [11, 13, 6, 6, 9, 0, 0]; 1 dubbed
+flora.ccroma: 13 V.O. films; V.O. shows by day [5, 5, 5, 4, 0, 0, 0]; 4 dubbed
+casacinema: 6 V.O. films; V.O. shows by day [10, 10, 3, 4, 4, 0, 0]; 3 dubbed
+corallo.ccgenova: 1 V.O. films; V.O. shows by day [0, 1, 0, 0, 0, 0, 0]; 2 dubbed
+city.ccgenova: 2 V.O. films; V.O. shows by day [0, 2, 0, 0, 0, 0, 0]; 5 dubbed
+carignano.ccgenova: 1 V.O. films; V.O. shows by day [1, 1, 1, 1, 1, 0, 0]; 3 dubbed
+ariston.ccgenova: 2 V.O. films; V.O. shows by day [0, 2, 0, 0, 0, 0, 0]; 2 dubbed
+lab80: 5 V.O. films; V.O. shows by day [1, 3, 2, 1, 2, 0, 0]; 5 dubbed
+alcione: 0 V.O. film-days
+Milano: 24 films (12 English)
+    + new from anteo.spaziocinema: Fatherland
+    + new from anteo.spaziocinema: Il canto della foresta
+    + new from citylife.spaziocinema: Godzilla Minus Zero
+    + new from arlecchino.cinetecadimilano: The Match
+    sites: 22 per-show links, 4 times added, 0 Italian times dropped; venues not on MYmovies: ariosto.spaziocinema:Ariosto→Ariosto spazioCinema
+    2026-11-15: 22 films (10 English)
+    2026-11-16: 17 films (9 English)
+    2026-11-17: 20 films (8 English)
+    2026-11-18: 17 films (6 English)
+    2026-11-19: 3 films (1 English)
+    2026-11-20: 2 films (0 English)
+    -- El Ser Querido [Spanish via cinema] syn poster · 2 links
+    -- La Gradiva [French via cinema] syn poster imdb · 3 links
+    EN Ebenezer: A Christmas Carol [English via cinema] syn poster · 1 links
+    EN Hope [English via cinema] syn poster imdb ott · 1 links
+    EN It Ends [English via cinema] syn poster · 0 links
+    EN Wild Horse Nine [English via cinema] syn poster · 4 links
+    -- Look Back [Japanese via cinema] syn poster imdb · 2 links
+    EN Hereditary [English via tmdb] syn poster imdb ott · 1 links
+    -- Låt den rätte komma in [Swedish via wikidata] syn poster · 1 links
+    -- Naza [Hebrew / English via manual] syn poster imdb · 0 links
+    EN Digger [English via cinema] syn poster · 0 links
+    -- Minotaur [Russian via cinema] syn poster imdb · 1 links
+    EN The French Connection [English via tmdb] syn poster imdb stream ott · 0 links
+    -- Godzilla Minus One [Japanese via tmdb] syn poster imdb stream ott · 0 links
+    EN Sense and Sensibility [English via manual] syn poster imdb ott · 0 links
+    EN Primetime [English via cinema] syn poster imdb ott · 1 links
+    -- La femme la plus riche du monde [French via wikidata] syn poster · 0 links
+    EN Wildwood - I segreti del bosco proibito [English via cinema] syn poster imdb ott · 0 links
+    EN George Michael - The Faith Tour [English via cinema] syn poster · 0 links
+    -- Black Lions - Roman Wolves [am via tmdb] syn poster · 1 links
+    -- Fatherland [German via cinema] syn poster imdb · 1 links
+    -- Il canto della foresta [French via cinema] · 1 links
+    EN Godzilla Minus Zero [English via cinema] syn poster · 1 links
+    -- The Match [Korean via tmdb] syn poster imdb stream · 1 links
+Roma: 26 films (13 English)
+    sites: 37 per-show links, 0 times added, 15 Italian times dropped
+    2026-11-15: 16 films (9 English)
+    2026-11-16: 10 films (4 English)
+    2026-11-17: 6 films (5 English)
+    2026-11-18: 5 films (4 English)
+    2026-11-19: 2 films (2 English)
+    2026-11-20: 2 films (2 English)
+    -- El Ser Querido [Spanish via cinema] syn poster · 2 links
+    -- La Gradiva [French via cinema] syn poster imdb · 5 links
+    EN Ebenezer: A Christmas Carol [English via cinema] syn poster · 4 links
+    EN Hope [English via cinema] syn poster imdb ott · 0 links
+    EN Wild Horse Nine [English via cinema] syn poster · 9 links
+    -- Look Back [Japanese via cinema] syn poster imdb · 4 links
+    EN How to Rob a Bank [English via tmdb] syn poster · 2 links
+    EN Match Point [English via tmdb] syn poster imdb stream · 0 links
+    -- Fatherland [German via cinema] syn poster imdb · 2 links
+    EN Digger [English via cinema] syn poster · 1 links
+    -- Minotaur [Russian via cinema] syn poster imdb · 2 links
+    -- M [German via tmdb] syn poster imdb stream · 0 links
+    EN Sense and Sensibility [English via manual] syn poster imdb ott · 2 links
+    EN Primetime [English via cinema] syn poster imdb ott · 2 links
+    EN Double Indemnity [English via tmdb] syn poster imdb · 0 links
+    -- Il delitto Matteotti [Italian via wikidata] syn poster · 0 links
+    -- So-won [Korean via tmdb] syn poster imdb · 0 links
+    EN Wildwood - I segreti del bosco proibito [English via cinema] syn poster imdb ott · 2 links
+    -- Lásky jedné plavovlávsky [Original language via country] syn poster · 0 links
+    -- Un giorno senza donne [Original language via country] syn poster · 0 links
+    EN Minnie and Moskowitz [English via cinema] syn poster imdb · 0 links
+    EN Husbands [English via wikidata] · 0 links
+    EN George Michael - The Faith Tour [English via cinema] syn poster · 0 links
+    -- Ziemia obiecana [Polish via wikidata] syn poster · 0 links
+    -- Brzezina [Original language via country] syn · 0 links
+    -- Nina Roza [French / English via cinema] syn poster · 0 links
+Torino: 13 films (7 English)
+    sites: 1 per-show links, 0 times added, 0 Italian times dropped
+    2026-11-15: 1 films (1 English)
+    2026-11-16: 1 films (1 English)
+    2026-11-17: 1 films (1 English)
+    2026-11-18: 2 films (1 English)
+    2026-11-19: 0 films (0 English)
+    2026-11-20: 0 films (0 English)
+    -- El Ser Querido [Spanish via cinema] syn poster · 0 links
+    -- La Gradiva [French via cinema] syn poster imdb · 0 links
+    EN Ebenezer: A Christmas Carol [English via cinema] syn poster · 0 links
+    EN Wild Horse Nine [English via cinema] syn poster · 1 links
+    -- Look Back [Japanese via cinema] syn poster imdb · 0 links
+    EN Digger [English via cinema] syn poster · 0 links
+    -- Brodre/Brothers [Original language via country] syn poster · 0 links
+    EN Primetime [English via cinema] syn poster imdb ott · 0 links
+    -- So-won [Korean via tmdb] syn poster imdb · 0 links
+    EN Wildwood - I segreti del bosco proibito [English via cinema] syn poster imdb ott · 0 links
+    -- Le chant des forêts [French via wikidata] syn poster · 0 links
+    EN Minnie and Moskowitz [English via cinema] syn poster imdb · 0 links
+    EN Bleak Moments [English via tmdb] syn poster imdb · 0 links
+Bologna: 6 films (3 English)
+    + new from lumiere.cinetecabologna: La Gradiva
+    + new from lumiere.cinetecabologna: Hope
+    sites: 15 per-show links, 7 times added, 0 Italian times dropped; venues not on MYmovies: europa.ccb:Europa→Europa, odeon.ccb:Odeon→Odeon, rialto.ccb:Rialto→Rialto Studios, roma.ccb:Roma→Roma d'Essai
+    2026-11-15: 9 films (4 English)
+    2026-11-16: 7 films (4 English)
+    2026-11-17: 5 films (1 English)
+    2026-11-18: 7 films (2 English)
+    2026-11-19: 0 films (0 English)
+    2026-11-20: 0 films (0 English)
+    EN Godzilla Minus Zero [English via cinema] syn poster · 1 links
+    EN It Ends [English via cinema] syn poster · 1 links
+    EN Wild Horse Nine [English via cinema] syn poster · 6 links
+    -- Look Back [Japanese via cinema] syn poster imdb · 4 links
+    -- La Gradiva [French via cinema] syn poster imdb · 2 links
+    -- Hope [Korean via cinema] syn poster imdb · 1 links
+Firenze: 10 films (4 English)
+    sites: 5 per-show links, 0 times added, 0 Italian times dropped
+    2026-11-15: 4 films (1 English)
+    2026-11-16: 4 films (1 English)
+    2026-11-17: 4 films (2 English)
+    2026-11-18: 0 films (0 English)
+    2026-11-19: 0 films (0 English)
+    2026-11-20: 0 films (0 English)
+    -- La Gradiva [French via cinema] syn poster imdb · 0 links
+    EN Ebenezer: A Christmas Carol [English via cinema] syn poster · 0 links
+    EN Hope [English via cinema] syn poster imdb ott · 0 links
+    EN Wild Horse Nine [English via cinema] syn poster · 1 links
+    -- Look Back [Japanese via cinema] syn poster imdb · 1 links
+    -- Fatherland [German via cinema] syn poster imdb · 1 links
+    -- Minotaur [Russian via cinema] syn poster imdb · 2 links
+    -- Le chant des forêts [French via wikidata] syn poster · 0 links
+    EN Minnie and Moskowitz [English via cinema] syn poster imdb · 0 links
+    -- Il Tempo e l'Acqua [Original language via country] · 0 links
+Napoli: 6 films (2 English)
+    sites: 10 per-show links, 0 times added, 4 Italian times dropped
+    2026-11-15: 3 films (2 English)
+    2026-11-16: 3 films (1 English)
+    2026-11-17: 3 films (1 English)
+    2026-11-18: 3 films (1 English)
+    2026-11-19: 0 films (0 English)
+    2026-11-20: 0 films (0 English)
+    -- La Gradiva [French via cinema] syn poster imdb · 0 links
+    EN Wild Horse Nine [English via cinema] syn poster · 4 links
+    -- Look Back [Japanese via cinema] syn poster imdb · 4 links
+    -- Ai no Corrida - L'Empire des sens [Japanese / French / English via cinema] syn poster · 1 links
+    EN The Holy Mountain [English via cinema] syn poster imdb stream · 1 links
+    -- Le chant des forêts [French via wikidata] syn poster · 0 links
+Genova: 1 films (0 English)
+    sites: 1 per-show links, 0 times added, 0 Italian times dropped; venues not on MYmovies: ariston.ccgenova:Ariston→Ariston, city.ccgenova:City→City, corallo.ccgenova:Corallo→Corallo
+    2026-11-15: 6 films (2 English)
+    2026-11-16: 1 films (0 English)
+    2026-11-17: 1 films (0 English)
+    2026-11-18: 1 films (0 English)
+    2026-11-19: 0 films (0 English)
+    2026-11-20: 0 films (0 English)
+    -- La Gradiva [French via cinema] syn poster imdb · 1 links
+Venezia: 2 films (2 English)
+    sites: 0 per-show links, 0 times added, 0 Italian times dropped
+    2026-11-15: 0 films (0 English)
+    2026-11-16: 0 films (0 English)
+    2026-11-17: 0 films (0 English)
+    2026-11-18: 0 films (0 English)
+    2026-11-19: 0 films (0 English)
+    2026-11-20: 0 films (0 English)
+    EN Ebenezer: A Christmas Carol [English via cinema] syn poster · 0 links
+    EN Wild Horse Nine [English via cinema] syn poster · 0 links
+Padova: 4 films (1 English)
+    sites: 0 per-show links, 0 times added, 0 Italian times dropped
+    2026-11-15: 0 films (0 English)
+    2026-11-16: 0 films (0 English)
+    2026-11-17: 0 films (0 English)
+    2026-11-18: 0 films (0 English)
+    2026-11-19: 0 films (0 English)
+    2026-11-20: 0 films (0 English)
+    -- La Gradiva [French via cinema] syn poster imdb · 0 links
+    EN Wild Horse Nine [English via cinema] syn poster · 0 links
+    -- Look Back [Japanese via cinema] syn poster imdb · 0 links
+    -- Fatherland [German via cinema] syn poster imdb · 0 links
+Verona: 0 films (0 English)
+    sites: 0 per-show links, 0 times added, 0 Italian times dropped
+    2026-11-15: 0 films (0 English)
+    2026-11-16: 0 films (0 English)
+    2026-11-17: 0 films (0 English)
+    2026-11-18: 0 films (0 English)
+    2026-11-19: 0 films (0 English)
+    2026-11-20: 0 films (0 English)
+Bergamo: 1 films (0 English)
+    sites: 1 per-show links, 1 times added, 0 Italian times dropped; venues not on MYmovies: lab80:Cult! Diffusione Culturale→Lab 80, lab80:Lo Schermo Bianco→Lab 80
+    2026-11-15: 3 films (0 English)
+    2026-11-16: 2 films (0 English)
+    2026-11-17: 1 films (1 English)
+    2026-11-18: 2 films (0 English)
+    2026-11-19: 0 films (0 English)
+    2026-11-20: 0 films (0 English)
+    -- La Gradiva [French via cinema] syn poster imdb · 1 links
+Brescia: 1 films (0 English)
+    sites: 0 per-show links, 0 times added, 0 Italian times dropped
+    2026-11-15: 0 films (0 English)
+    2026-11-16: 0 films (0 English)
+    2026-11-17: 0 films (0 English)
+    2026-11-18: 0 films (0 English)
+    2026-11-19: 0 films (0 English)
+    2026-11-20: 0 films (0 English)
+    -- Nina Roza [French / English via cinema] syn poster · 0 links
+Monza: 0 films (0 English)
+    sites: 0 per-show links, 0 times added, 0 Italian times dropped; venues not on MYmovies: capitol.spaziocinema:Capitol Anteo Spazio Cinema→Capitol
+    2026-11-15: 0 films (0 English)
+    2026-11-16: 0 films (0 English)
+    2026-11-17: 0 films (0 English)
+    2026-11-18: 0 films (0 English)
+    2026-11-19: 0 films (0 English)
+    2026-11-20: 0 films (0 English)
+Pisa: 0 films (0 English)
+    sites: 0 per-show links, 0 times added, 0 Italian times dropped
+    2026-11-15: 0 films (0 English)
+    2026-11-16: 0 films (0 English)
+    2026-11-17: 0 films (0 English)
+    2026-11-18: 0 films (0 English)
+    2026-11-19: 0 films (0 English)
+    2026-11-20: 0 films (0 English)
+Trieste: 2 films (1 English)
+    sites: 0 per-show links, 0 times added, 0 Italian times dropped
+    2026-11-15: 0 films (0 English)
+    2026-11-16: 0 films (0 English)
+    2026-11-17: 0 films (0 English)
+    2026-11-18: 0 films (0 English)
+    2026-11-19: 0 films (0 English)
+    2026-11-20: 0 films (0 English)
+    -- La Gradiva [French via cinema] syn poster imdb · 0 links
+    EN Wild Horse Nine [English via cinema] syn poster · 0 links
+```
