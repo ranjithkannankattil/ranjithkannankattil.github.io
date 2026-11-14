@@ -81,11 +81,20 @@ class PlaybackService : MediaLibraryService() {
         override fun seekToPreviousMediaItem() = go(-1)
     }
 
-    companion object { const val CLOSE = "velvet.close" }
+    companion object { const val CLOSE = "velvet.close"; const val ALARM = "velvet.alarm"; const val RESUME = "velvet.resume" }
+    private lateinit var eq: EqEngine
+    private lateinit var resumer: ResumeWatcher
+    private var tone: android.media.Ringtone? = null
+    private var alarmUntil = 0L
+    private val prefListener = android.content.SharedPreferences.OnSharedPreferenceChangeListener { _, k ->
+        if (k != null && k.startsWith("eq")) eq.apply()
+        if (k == "theme" || k == "mode") VelvetWidget.refresh(this)
+    }
 
     override fun onCreate() {
         super.onCreate()
-        player = ExoPlayer.Builder(this)
+        Crash.install(this)
+        player = ExoPlayer.Builder(this, VelvetRenderers(this))
             .setAudioAttributes(AudioAttributes.Builder().setUsage(C.USAGE_MEDIA)
                 .setContentType(C.AUDIO_CONTENT_TYPE_MUSIC).build(), /* handleAudioFocus = */ true)
             .setHandleAudioBecomingNoisy(true)          // headphones out: pause
@@ -99,19 +108,39 @@ class PlaybackService : MediaLibraryService() {
                 }
             }
             override fun onPlayerError(error: PlaybackException) = nextSource()
+            override fun onAudioSessionIdChanged(audioSessionId: Int) = eq.attach(audioSessionId)
+            override fun onPlayWhenReadyChanged(playWhenReady: Boolean, reason: Int) {
+                if (playWhenReady) return
+                stopTone()
+                if (System.currentTimeMillis() > alarmUntil) player.volume = 1f
+                // another app (a video, a game) took the sound for good: start again once it's quiet, if allowed
+                if (reason == Player.PLAY_WHEN_READY_CHANGE_REASON_AUDIO_FOCUS_LOSS) resumer.lostForGood() else resumer.cancel()
+            }
+            override fun onEvents(p: Player, events: Player.Events) {
+                val item = p.currentMediaItem
+                val station = item?.mediaMetadata?.extras?.getString("station") ?: item?.mediaMetadata?.station?.toString()
+                val title = item?.mediaMetadata?.title?.toString()
+                VelvetWidget.update(this@PlaybackService, station, title?.takeIf { it != station }, p.playWhenReady && item != null)
+            }
             // listening time: count only while sound is actually playing
             override fun onIsPlayingChanged(isPlaying: Boolean) {
+                if (isPlaying) stopTone()
                 val item = player.currentMediaItem
                 if (isPlaying && item != null) Listen.start(this@PlaybackService, item.mediaId.removePrefix("st|"),
                     item.mediaMetadata.extras?.getString("station") ?: item.mediaMetadata.station?.toString() ?: "")
-                else Listen.stop(this@PlaybackService)
+                else { Listen.stop(this@PlaybackService); scope.launch { Listen.flushStations(this@PlaybackService, all = true) } }
             }
             override fun onMediaItemTransition(mediaItem: MediaItem?, reason: Int) {
                 saveQueue()
+                mediaItem?.let { Recent.add(this@PlaybackService, it) }
+                if (System.currentTimeMillis() > alarmUntil) player.volume = 1f
                 if (player.isPlaying && mediaItem != null) Listen.start(this@PlaybackService, mediaItem.mediaId.removePrefix("st|"),
                     mediaItem.mediaMetadata.extras?.getString("station") ?: "")
             }
         })
+        eq = EqEngine(this); eq.attach(player.audioSessionId)
+        resumer = ResumeWatcher(this, scope) { session.player }
+        Theme.prefs(this).registerOnSharedPreferenceChangeListener(prefListener)
         local = StationSkipper(player)
         session = MediaLibrarySession.Builder(this, local, Callback()).build()
         SleepTimer.pause = { session.player.pause() }
@@ -174,12 +203,50 @@ class PlaybackService : MediaLibraryService() {
 
     /** Close (✕ while paused): stop, clear the list and remove the notification. The last station is kept for resuming. */
     private fun closeAll() {
-        SleepTimer.off()
+        SleepTimer.off(); resumer.cancel(); stopTone()
         val p = session.player
         p.stop(); p.clearMediaItems()
         if (p !== local) { player.stop(); player.clearMediaItems() }
         stopSelf()
     }
+
+    /** The alarm: the chosen station (or the last one), fading in from quiet; a soft alarm tone if it doesn't start. */
+    private fun ring(args: Bundle) {
+        resumer.cancel()
+        val p = session.player
+        val st = args.getString("station")?.let { runCatching { org.json.JSONObject(it) }.getOrNull() }
+        val item = st?.let { o -> runCatching {
+            val streams = o.getJSONArray("streams").let { a -> (0 until a.length()).map { a.getString(it) } }
+            Station(o.getString("id"), o.getString("name"), "", streams, col = o.getString("col")).toItem(o.optString("lang")) }.getOrNull() }
+        if (item != null) { p.setMediaItem(item) }
+        else if (p.mediaItemCount == 0) savedQueue()?.let { q -> p.setMediaItems(q.mediaItems, q.startIndex, q.startPositionMs) }
+        val target = (args.getInt("volume", 70).coerceIn(20, 100)) / 100f
+        val fade = args.getInt("fade", 60).coerceIn(0, 300)
+        alarmUntil = System.currentTimeMillis() + fade * 1000L + 5_000   // volume stays as set until the listener changes something
+        if (p === local) player.volume = if (fade > 0) 0.05f else target
+        p.prepare(); p.play()
+        scope.launch {
+            if (fade > 0 && p === local) {
+                val steps = fade * 4
+                for (i in 1..steps) { kotlinx.coroutines.delay(250); if (!player.playWhenReady) break
+                    player.volume = 0.05f + (target - 0.05f) * i / steps }
+            }
+            kotlinx.coroutines.delay(if (fade > 0) 5_000 else 30_000)
+            if (!session.player.isPlaying && session.player.playWhenReady) startTone()
+        }
+    }
+    private fun startTone() {
+        try {
+            val uri = android.media.RingtoneManager.getActualDefaultRingtoneUri(this, android.media.RingtoneManager.TYPE_ALARM)
+                ?: android.media.RingtoneManager.getDefaultUri(android.media.RingtoneManager.TYPE_NOTIFICATION)
+            tone = android.media.RingtoneManager.getRingtone(this, uri)?.apply {
+                audioAttributes = android.media.AudioAttributes.Builder().setUsage(android.media.AudioAttributes.USAGE_ALARM).build()
+                if (android.os.Build.VERSION.SDK_INT >= 28) isLooping = true
+                play() }
+            scope.launch { kotlinx.coroutines.delay(120_000); stopTone() }
+        } catch (e: Exception) { }
+    }
+    private fun stopTone() { try { tone?.stop() } catch (e: Exception) { }; tone = null }
 
     /** "Artist - Song" from the stream: show it, and look up the cover. */
     private fun nowPlaying(raw: String) {
@@ -221,12 +288,19 @@ class PlaybackService : MediaLibraryService() {
         override fun onConnect(s: MediaSession, c: MediaSession.ControllerInfo): MediaSession.ConnectionResult =
             MediaSession.ConnectionResult.AcceptedResultBuilder(s)
                 .setAvailableSessionCommands(MediaSession.ConnectionResult.DEFAULT_SESSION_AND_LIBRARY_COMMANDS.buildUpon()
-                    .add(SessionCommand(CLOSE, Bundle.EMPTY)).build())
+                    .add(SessionCommand(CLOSE, Bundle.EMPTY)).add(SessionCommand(ALARM, Bundle.EMPTY))
+                    .add(SessionCommand(RESUME, Bundle.EMPTY)).build())
                 .build()
 
         override fun onCustomCommand(s: MediaSession, c: MediaSession.ControllerInfo, cmd: SessionCommand, args: Bundle)
                 : ListenableFuture<SessionResult> {
             if (cmd.customAction == CLOSE) { closeAll(); return Futures.immediateFuture(SessionResult(SessionResult.RESULT_SUCCESS)) }
+            if (cmd.customAction == ALARM) { ring(args); return Futures.immediateFuture(SessionResult(SessionResult.RESULT_SUCCESS)) }
+            if (cmd.customAction == RESUME) {
+                savedQueue()?.let { q -> val p = session.player
+                    p.setMediaItems(q.mediaItems, q.startIndex, q.startPositionMs); p.prepare(); p.play() }
+                return Futures.immediateFuture(SessionResult(SessionResult.RESULT_SUCCESS))
+            }
             return super.onCustomCommand(s, c, cmd, args)
         }
 
@@ -303,6 +377,8 @@ class PlaybackService : MediaLibraryService() {
     }
 
     override fun onDestroy() {
+        Theme.prefs(this).unregisterOnSharedPreferenceChangeListener(prefListener)
+        stopTone(); eq.release()
         scope.cancel(); SleepTimer.pause = null
         castPlayer?.setSessionAvailabilityListener(null); castPlayer?.release()
         session.release(); player.release()

@@ -51,10 +51,22 @@ class ScreensTest {
             .setExtras(android.os.Bundle().apply { putString("lang", "Malayalam") }).build()
     }
 
-    private fun shot(name: String, dark: Boolean, content: @Composable () -> Unit) {
-        Theme.dark = dark
-        rule.setContent { MaterialTheme(typography = PoppinsType) { Surface(Modifier.fillMaxSize(), color = Paper) { content() } } }
-        rule.waitForIdle()
+    private fun shot(name: String, dark: Boolean, theme: String = "velvet", text: Int = 0, font: String = "jost", spacing: Int = 0,
+                     viz: String = "off", animated: Boolean = false, content: @Composable () -> Unit) {
+        Theme.dark = dark; Theme.themeId = theme; Theme.text = text; Theme.font = font; Theme.spacing = spacing; Theme.viz = viz
+        if (animated) rule.mainClock.autoAdvance = false
+        rule.setContent {
+            val d = androidx.compose.ui.platform.LocalDensity.current
+            androidx.compose.runtime.CompositionLocalProvider(androidx.compose.ui.platform.LocalDensity provides
+                androidx.compose.ui.unit.Density(d.density, d.fontScale * Theme.textScale)) {
+                MaterialTheme(typography = PoppinsType) { Surface(Modifier.fillMaxSize(), color = Paper) { content() } }
+            }
+        }
+        if (animated) rule.mainClock.advanceTimeBy(1200) else rule.waitForIdle()
+        capture(name)
+    }
+
+    private fun capture(name: String) {
         val root = rule.activity.window.decorView.rootView
         val bmp = Bitmap.createBitmap(root.width, root.height, Bitmap.Config.ARGB_8888)
         root.draw(android.graphics.Canvas(bmp))
@@ -62,15 +74,24 @@ class ScreensTest {
         File(dir, "$name.png").outputStream().use { bmp.compress(Bitmap.CompressFormat.PNG, 100, it) }
     }
 
-    @Composable private fun Stations(playing: Boolean) = Column(Modifier.fillMaxSize()) {
+    private val stats = Stats.Data(mapOf("malayalam:radiomalabar" to 11100, "malayalam:radiomango" to 3000, "malayalam:homefm" to 480,
+        "malayalam:clubfm" to 45), mapOf("malayalam:radiomango" to (4.6 to 38), "malayalam:clubfm" to (4.5 to 7), "malayalam:homefm" to (5.0 to 2),
+        "malayalam:radiomalabar" to (4.8 to 12)), "2026-11-15")
+
+    @Composable private fun Stations(playing: Boolean, sortBy: String = "az") = Column(Modifier.fillMaxSize()) {
         Header {}
         LangTabs(listOf(LangTab(PICKS, "Velvet Selection", star = true), LangTab("malayalam", "Malayalam", true),
             LangTab("english", "English"), LangTab("tamil", "Tamil"), LangTab("_langs", "All languages", icon = true)), "malayalam", {}, {})
         CatRow(listOf(Triple("all", "All", 130), Triple("fav", "Favourites", 3), Triple("fm", "FM", -1), Triple("air", "Akashvani", -1),
-            Triple("online", "Online", -1)), "all", {}, true, {})
+            Triple("online", "Online", -1)), "all", {}, SORTS.first { it.first == sortBy }.second, {})
+        val shown = Stats.sort(sts, sortBy, stats)
+        val top = if (sortBy == "heard") Stats.top3(shown, stats) else emptySet()
         LazyColumn(Modifier.weight(1f)) {
-            items(sts) { s -> StationRow(s, mapOf("fm" to "FM", "air" to "Akashvani", "online" to "Online")[s.category] ?: "",
-                s.id == "radiomango", s.id == "radiomalabar", playing, {}, {}) }
+            items(shown) { s ->
+                val base = mapOf("fm" to "FM", "air" to "Akashvani", "online" to "Online")[s.category] ?: ""
+                val sub = when (sortBy) { "heard" -> Stats.heardLabel(stats.week[s.key]) + " · " + base
+                    "rated" -> Stats.ratedLabel(stats.ratings[s.key]) + " · " + base; else -> base }
+                StationRow(s, sub, s.id == "radiomango", s.id == "radiomalabar", playing, {}, {}, badge = s.key in top) }
         }
         MiniPlayer(now(playing), null, true, {}, {}, CastUi(true, false), {}, {}) {}
         BottomNav(0, 12) {}
@@ -78,6 +99,63 @@ class ScreensTest {
 
     @Composable private fun Player(playing: Boolean, song: Boolean = true) = PlayerContent(now(playing, song), null, "Malayalam", CastUi(true, false),
         {}, {}, if (song) ({}) else null, {}, {}, {}) { Text("★★★★☆  4.2 · 38 ratings", fontSize = 15.sp, color = Soft) }
+
+    // ---- next update: sort, settings, sound, alarm, request, comments, recently played, widget, every theme
+    @Test fun n01_most_heard() = shot("n01-most-heard", false) { Stations(true, "heard") }
+    @Test fun n02_top_rated() = shot("n02-top-rated", false) { Stations(true, "rated") }
+    @Test fun n03_most_heard_dark() = shot("n03-most-heard-dark", true) { Stations(true, "heard") }
+    @Test fun n04_settings() = shot("n04-settings", false) { SettingsScreen({}) {} }
+    @Test fun n05_settings_dark() = shot("n05-settings-dark", true) { SettingsScreen({}) {} }
+    @Test fun n06_themes() = shot("n06-themes", false) { ThemesScreen {} }
+    @Test fun n07_equaliser() = shot("n07-equaliser", false) { EqualiserScreen {} }
+    @Test fun n08_visualiser_settings() = shot("n08-visualiser", false, viz = "bars", animated = true) { VisualiserScreen {} }
+    @Test fun n09_player_bars() = shot("n09-player-bars", false, viz = "bars", animated = true) { Player(true) }
+    @Test fun n10_player_waves_dark() = shot("n10-player-waves-dark", true, viz = "waves", animated = true) { Player(true) }
+    @Test fun n11_player_circle() = shot("n11-player-circle", false, viz = "circle", animated = true) { Player(true) }
+    @Test fun n12_alarm() = shot("n12-alarm", false) { AlarmScreen(sts.map { it to "Malayalam" }) {} }
+    @Test fun n13_request() = shot("n13-request", false) { RequestScreen {} }
+    @Test fun n14_comments() = shot("n14-comments", false) { CommentsScreen("malayalam:radiomango", "Radio Mango") {} }
+    @Test fun n15_favourites_recent() = shot("n15-favourites-recent", false) { Column(Modifier.fillMaxSize()) {
+        Header {}
+        FavsTab(sts.take(4), now(), { "Malayalam" }, {}, recent = sts.take(5).mapIndexed { i, s -> Recent.Item(s, "Malayalam",
+            System.currentTimeMillis() - i * 30 * 3_600_000L) }, onRecent = {}, onChanged = {}, favs = Favs(rule.activity), onPicks = {}) } }
+    @Test @Config(qualifiers = "w360dp-h740dp-xxhdpi") fun n16_extra_large_text_360() = shot("n16-extra-large-360", false, text = 2) { Stations(true, "heard") }
+    @Test fun n17_classic_serif_spacious() = shot("n17-serif-spacious", false, font = "serif", spacing = 2) { Stations(true) }
+    @Test @Config(qualifiers = "w360dp-h740dp-xxhdpi") fun n18_settings_large_360() = shot("n18-settings-large-360", false, text = 2) { SettingsScreen({}) {} }
+    /** One screen drawn in every theme (light and dark): the screen is set once and the theme changed between pictures. */
+    private fun everyTheme(prefix: String, darkToo: Boolean, viz: String, content: @Composable () -> Unit) {
+        val pick = androidx.compose.runtime.mutableStateOf(THEMES[0].id to false)
+        Theme.viz = viz; Theme.text = 0; Theme.font = "jost"; Theme.spacing = 0
+        rule.mainClock.autoAdvance = false
+        rule.setContent {
+            Theme.themeId = pick.value.first; Theme.dark = pick.value.second
+            MaterialTheme(typography = PoppinsType) { Surface(Modifier.fillMaxSize(), color = Paper) { content() } }
+        }
+        THEMES.forEach { t -> (if (darkToo) listOf(false, true) else listOf(false)).forEach { dk ->
+            pick.value = t.id to dk
+            rule.mainClock.advanceTimeBy(900)
+            capture("$prefix-${t.id}-${if (dk) "dark" else "light"}")
+        } }
+    }
+    @Test fun n19_every_theme() = everyTheme("t", true, "off") { Stations(true, "heard") }
+    @Test fun n20_every_theme_player() = everyTheme("tp", false, "bars") { Player(true) }
+    @Test fun n21_widgets() {
+        val ctx = rule.activity
+        listOf(false, true).forEach { playing ->
+            VelvetWidget.update(ctx, "Radio Mango", if (playing) "Malare · Vijay Yesudas" else null, playing)
+            listOf(R.layout.widget_large to VelvetWidget::class.java, R.layout.widget_small to VelvetWidgetSmall::class.java).forEach { (lay, cls) ->
+                val v = VelvetWidget.views(ctx, lay, cls).apply(ctx, android.widget.FrameLayout(ctx))
+                val w = (if (lay == R.layout.widget_large) 360 else 300) * 3; val h = (if (lay == R.layout.widget_large) 130 else 64) * 3
+                v.measure(android.view.View.MeasureSpec.makeMeasureSpec(w, android.view.View.MeasureSpec.EXACTLY),
+                    android.view.View.MeasureSpec.makeMeasureSpec(h, android.view.View.MeasureSpec.EXACTLY))
+                v.layout(0, 0, w, h)
+                val bmp = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888); bmp.eraseColor(0xFF3A4458.toInt())
+                v.draw(android.graphics.Canvas(bmp))
+                File(File("build/screens").apply { mkdirs() }, "n21-widget-${if (lay == R.layout.widget_large) "large" else "small"}-${if (playing) "playing" else "paused"}.png")
+                    .outputStream().use { bmp.compress(Bitmap.CompressFormat.PNG, 100, it) }
+            }
+        }
+    }
 
     @Test fun stations_light() = shot("1-stations-light", false) { Stations(true) }
     @Test fun stations_dark() = shot("2-stations-dark", true) { Stations(true) }

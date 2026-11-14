@@ -69,6 +69,8 @@ dependencies {
     implementation("androidx.mediarouter:mediarouter:1.7.0")
     implementation("androidx.fragment:fragment-ktx:1.8.5")
     implementation("androidx.appcompat:appcompat:1.7.0")
+    // Google Play's in-app "rate us" sheet (Play version only)
+    "playImplementation"("com.google.android.play:review-ktx:2.0.2")
     // screenshots of the screens in test builds (Robolectric, no phone needed)
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.robolectric:robolectric:4.14.1")

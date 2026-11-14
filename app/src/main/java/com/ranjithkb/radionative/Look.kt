@@ -58,16 +58,18 @@ import androidx.compose.ui.unit.sp
 
 val Serif = Poppins    // one typeface everywhere (Jost)
 
-internal val Title get() = if (Theme.dark) Color(0xFFF1E9EE) else Color(0xFF2A1424)
-internal val AccentText get() = if (Theme.dark) Color(0xFFD9A9CB) else Color(0xFF6B2D5C)
-internal val Line get() = if (Theme.dark) Color(0xFF33242F) else Color(0xFFDED7C9)
-internal val Soft get() = if (Theme.dark) Color(0xFFB9A8B4) else Color(0xFF6A6266)
-internal val BarBg get() = if (Theme.dark) Color(0xFF241520) else Color(0xFF2A1424)
-internal val PlayerBg get() = if (Theme.dark) Color(0xFF140D12) else Color(0xFFF0EDE6)
-internal val ArtBg get() = Color(0xFF2A1424)
-internal val GoldC = Color(0xFFC9A86A)
-private val BarInk = Color(0xFFF1E9EE)
-private val BarSoft = Color(0xFFB9A8B4)
+internal val Title get() = Theme.pal.ink
+internal val AccentText get() = Theme.pal.accentText
+internal val Line get() = Theme.pal.line
+internal val Soft get() = Theme.pal.soft
+internal val BarBg get() = Theme.pal.bar
+internal val PlayerBg get() = Theme.pal.playerBg
+internal val ArtBg get() = Theme.pal.artBg
+internal val GoldC get() = Theme.pal.gold
+private val BarInk get() = Theme.pal.barInk
+private val BarSoft get() = Theme.pal.barSoft
+/** Gold on the bottom bar, or the bar's own text colour where gold wouldn't stand out (pale bars). */
+private val BarGold get() = if (Palettes.contrast(GoldC, BarBg) >= 2.6f) GoldC else BarInk
 
 private val Pad = 24.dp
 
@@ -84,11 +86,12 @@ fun LineIcon(id: Int, desc: String?, size: Int = 22, tint: Color = Title) =
 
 /** The small logo and RADIO VELVET in spaced capitals, with search. */
 @Composable
-fun Header(onSearch: () -> Unit) {
+fun Header(onSearch: () -> Unit, onSettings: () -> Unit = {}) {
     Row(Modifier.fillMaxWidth().padding(start = Pad, end = 10.dp, top = 12.dp), verticalAlignment = Alignment.CenterVertically) {
         Icon(painterResource(R.drawable.ic_logo_mark), null, Modifier.size(30.dp), tint = if (Theme.dark) GoldC else Title)
         Spacer(Modifier.width(10.dp))
         Text("RADIO VELVET", Modifier.weight(1f), fontSize = 13.sp, letterSpacing = 4.4.sp, fontWeight = FontWeight.Medium, color = Title)
+        IconButton(onSettings, Modifier.size(48.dp)) { LineIcon(R.drawable.ln_gear, "Settings", 22) }
         IconButton(onSearch, Modifier.size(48.dp)) { LineIcon(R.drawable.ln_search, "Search all stations", 22) }
     }
 }
@@ -123,7 +126,7 @@ fun LangTabs(tabs: List<LangTab>, selected: String, onClick: (LangTab) -> Unit, 
 
 /** ALL · FM · AKASHVANI · ONLINE (and favourites in this language), with A–Z. */
 @Composable
-fun CatRow(cats: List<Triple<String, String, Int>>, selected: String, onSelect: (String) -> Unit, az: Boolean, onAz: () -> Unit) {
+fun CatRow(cats: List<Triple<String, String, Int>>, selected: String, onSelect: (String) -> Unit, sortLabel: String, onSort: () -> Unit) {
     Row(Modifier.fillMaxWidth().padding(start = Pad - 8.dp, end = Pad - 8.dp), verticalAlignment = Alignment.CenterVertically) {
         LazyRow(Modifier.weight(1f)) {
             items(cats, key = { it.first }) { (k, label, n) ->
@@ -134,9 +137,12 @@ fun CatRow(cats: List<Triple<String, String, Int>>, selected: String, onSelect: 
                 }
             }
         }
-        Box(Modifier.heightIn(min = 44.dp).clickable(onClickLabel = if (az) "Show in the usual order" else "Sort A to Z", onClick = onAz)
+        Box(Modifier.heightIn(min = 44.dp).clickable(onClickLabel = "Sort: $sortLabel. Change", onClick = onSort)
             .padding(horizontal = 8.dp), contentAlignment = Alignment.Center) {
-            Label(if (az) "✓ A–Z" else "A–Z", if (az) Title else Soft, 9, weight = FontWeight.SemiBold)
+            Row(Modifier.border(1.dp, Line).padding(horizontal = 8.dp, vertical = 6.dp), verticalAlignment = Alignment.CenterVertically) {
+                Text("⇅ ", fontSize = 12.sp, color = AccentText)
+                Label(sortLabel, AccentText, 9, weight = FontWeight.SemiBold)
+            }
         }
     }
 }
@@ -144,14 +150,15 @@ fun CatRow(cats: List<Triple<String, String, Int>>, selected: String, onSelect: 
 /** One station: clean name, a small capitals line below, ♡ on the right. The playing one has a thin gold bar. */
 @Composable
 fun StationRow(s: Station, sub: String, fav: Boolean, current: Boolean, playing: Boolean, onPlay: () -> Unit, onFav: () -> Unit,
-               highlight: String = "") {
+               highlight: String = "", badge: Boolean = false) {
+    val pad = when (Theme.spacing) { 1 -> 11.dp; 2 -> 17.dp; else -> 7.dp }
     Column(Modifier.padding(horizontal = Pad)) {
-        Row(Modifier.fillMaxWidth().height(IntrinsicSize.Min).heightIn(min = 56.dp).clickable(onClickLabel = "Play ${s.name}", onClick = onPlay),
+        Row(Modifier.fillMaxWidth().height(IntrinsicSize.Min).heightIn(min = Theme.rowHeight.dp).clickable(onClickLabel = "Play ${s.name}", onClick = onPlay),
             verticalAlignment = Alignment.CenterVertically) {
             Box(Modifier.width(3.dp).fillMaxHeight().padding(vertical = 12.dp).background(if (current) GoldC else Color.Transparent))
             Spacer(Modifier.width(13.dp))
-            Column(Modifier.weight(1f).padding(vertical = 7.dp)) {
-                Text(highlighted(s.name, highlight), fontSize = 16.5.sp, lineHeight = 20.sp,
+            Column(Modifier.weight(1f).padding(vertical = pad)) {
+                Text(highlighted(s.name, highlight, badge), fontSize = 16.5.sp, lineHeight = 20.sp,
                     fontWeight = if (current) FontWeight.Medium else FontWeight.Normal,
                     color = if (current) AccentText else if (s.offline) Soft else Title, maxLines = 2, overflow = TextOverflow.Ellipsis)
                 val note = listOf(if (current) (if (playing) "Now playing" else "Paused") else "", sub,
@@ -169,13 +176,15 @@ fun StationRow(s: Station, sub: String, fav: Boolean, current: Boolean, playing:
 
 private fun catLabel(c: String) = mapOf("fm" to "FM", "air" to "Akashvani", "am" to "AM").getOrElse(c) { c.replaceFirstChar { it.uppercase() } }
 
-private fun highlighted(name: String, q: String) = buildAnnotatedString {
+private fun highlighted(name: String, q: String, badge: Boolean = false) = buildAnnotatedString {
     val i = if (q.isBlank()) -1 else name.indexOf(q, ignoreCase = true)
     if (i < 0) append(name) else {
         append(name.substring(0, i))
-        withStyle(SpanStyle(background = if (Theme.dark) Color(0xFF4A2A40) else Color(0xFFEEDFE8))) { append(name.substring(i, i + q.length)) }
+        withStyle(SpanStyle(background = Theme.pal.highlight)) { append(name.substring(i, i + q.length)) }
         append(name.substring(i + q.length))
     }
+    // gold ◆: one of the three most heard this week in this list
+    if (badge) withStyle(SpanStyle(color = GoldC, fontSize = 11.sp)) { append("  ◆") }
 }
 
 /** Station and song with an outlined gold play button; ♡ ⏮ ⏭ sleep cast below (✕ appears only while paused). Swipe to change station. */
@@ -195,7 +204,7 @@ fun MiniPlayer(now: NowState, c: androidx.media3.session.MediaController?, isFav
                     onDragCancel = { drag = 0f }) { _, d -> drag += d } }
                 .padding(start = Pad, end = 18.dp, top = 10.dp), verticalAlignment = Alignment.CenterVertically) {
                 Column(Modifier.weight(1f).padding(end = 12.dp)) {
-                    Label(if (cast.connected) "$station · on your TV / speaker" else station, GoldC, 9)
+                    Label(if (cast.connected) "$station · on your TV / speaker" else station, BarGold, 9)
                     val status = now.error ?: if (now.buffering) "Connecting…" else null
                     Text(buildAnnotatedString {
                         append(if (hasSong) song else status ?: "Live radio")
@@ -203,11 +212,11 @@ fun MiniPlayer(now: NowState, c: androidx.media3.session.MediaController?, isFav
                     }, fontSize = 16.sp, color = BarInk, maxLines = 1, overflow = TextOverflow.Ellipsis, modifier = Modifier.padding(top = 3.dp))
                     if (hasSong && status != null) Text(status, fontSize = 12.sp, color = BarSoft, maxLines = 1)
                 }
-                Box(Modifier.size(48.dp).clip(CircleShape).border(1.dp, GoldC, CircleShape)
+                Box(Modifier.size(48.dp).clip(CircleShape).border(1.dp, BarGold, CircleShape)
                     .clickable(onClickLabel = if (now.playing) "Pause" else "Play") {
                         c?.let { if (it.isPlaying) it.pause() else { it.prepare(); it.play() } } },
                     contentAlignment = Alignment.Center) {
-                    LineIcon(if (now.playing) R.drawable.ln_pause else R.drawable.ln_play, if (now.playing) "Pause" else "Play", 20, GoldC)
+                    LineIcon(if (now.playing) R.drawable.ln_pause else R.drawable.ln_play, if (now.playing) "Pause" else "Play", 20, BarGold)
                 }
             }
             Row(Modifier.fillMaxWidth().height(48.dp).padding(horizontal = 8.dp), verticalAlignment = Alignment.CenterVertically) {
@@ -215,17 +224,17 @@ fun MiniPlayer(now: NowState, c: androidx.media3.session.MediaController?, isFav
                     Box(Modifier.weight(1f).fillMaxHeight().clickable(onClickLabel = label, onClick = onClick), contentAlignment = Alignment.Center) { content() }
                 Cell(if (isFav) "Remove from favourites" else "Add to favourites", onFav) {
                     LineIcon(if (isFav) R.drawable.ln_heart_fill else R.drawable.ln_heart,
-                        if (isFav) "Remove from favourites" else "Add to favourites", 20, if (isFav) GoldC else BarInk) }
+                        if (isFav) "Remove from favourites" else "Add to favourites", 20, if (isFav) BarGold else BarInk) }
                 Cell("Previous station", { c?.seekToPreviousMediaItem() }) { LineIcon(R.drawable.ln_prev, "Previous station", 20, BarInk) }
                 Cell("Next station", { c?.seekToNextMediaItem() }) { LineIcon(R.drawable.ln_next, "Next station", 20, BarInk) }
                 val sleepOn = SleepTimer.at > 0
                 Cell(if (sleepOn) "Sleep timer on" else "Sleep timer", onSleep) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                        LineIcon(R.drawable.ln_sleep, if (sleepOn) "Sleep timer on" else "Sleep timer", 20, if (sleepOn) GoldC else BarInk)
-                        if (sleepOn) Text(sleepLeft(), color = GoldC, fontSize = 9.sp, lineHeight = 10.sp)
+                        LineIcon(R.drawable.ln_sleep, if (sleepOn) "Sleep timer on" else "Sleep timer", 20, if (sleepOn) BarGold else BarInk)
+                        if (sleepOn) Text(sleepLeft(), color = BarGold, fontSize = 9.sp, lineHeight = 10.sp)
                     } }
                 if (cast.available) Cell(if (cast.connected) "Casting: change or stop" else "Cast to a TV or speaker", onCast) {
-                    LineIcon(R.drawable.ln_cast, if (cast.connected) "Casting" else "Cast", 20, if (cast.connected) GoldC else BarInk) }
+                    LineIcon(R.drawable.ln_cast, if (cast.connected) "Casting" else "Cast", 20, if (cast.connected) BarGold else BarInk) }
                 // ✕ only while paused, so a stray tap can't stop the radio
                 if (!now.playing && !now.buffering) Cell("Stop and close the player", onClose) {
                     LineIcon(R.drawable.ln_close, "Stop and close the player", 18, BarInk.copy(alpha = 0.8f)) }
@@ -279,14 +288,19 @@ fun PlayerContent(now: NowState, c: androidx.media3.session.MediaController?, la
             }
             Box(Modifier.padding(top = 10.dp).size(art.dp).background(ArtBg), contentAlignment = Alignment.Center) {
                 val bmp = artBitmap(now.md.artworkUri?.toString())
-                if (bmp != null) Image(bmp.asImageBitmap(), null, Modifier.fillMaxSize(), contentScale = ContentScale.Crop)
+                if (bmp != null) Image(bmp.asImageBitmap(), null, Modifier.fillMaxSize(), contentScale = ContentScale.Crop,
+                    alpha = if (Theme.viz == "circle") 0.35f else 1f)
                 else Box(Modifier.fillMaxSize().padding(12.dp).border(1.dp, GoldC.copy(alpha = 0.5f)), contentAlignment = Alignment.Center) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
                         Icon(painterResource(R.drawable.ic_logo_mark), null, Modifier.size((art * 0.26f).dp), tint = GoldC)
                         Label(station, BarSoft, 9, Modifier.padding(top = 12.dp, start = 14.dp, end = 14.dp))
                     }
                 }
+                if (Theme.viz == "circle") VizView("circle", now.playing, Modifier.fillMaxSize().padding(8.dp))
+                else if (Theme.viz != "off") VizView(Theme.viz, now.playing,
+                    Modifier.align(Alignment.BottomCenter).fillMaxWidth().height((art * 0.32f).dp).padding(horizontal = 14.dp, vertical = 12.dp))
             }
+            if (Theme.viz != "off") VizSwitcher()
             Column(Modifier.fillMaxWidth().padding(top = 16.dp), horizontalAlignment = Alignment.CenterHorizontally) {
                 if (hasSong) Label("On $station", AccentText, 10)
                 val big = if (hasSong) song else station

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/w_root" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/w_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+        android:src="@drawable/widget_bg" android:scaleType="fitXY" android:importantForAccessibility="no" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="horizontal"
+        android:gravity="center_vertical" android:paddingStart="14dp" android:paddingEnd="8dp">
+        <ImageView android:id="@+id/w_logo" android:layout_width="28dp" android:layout_height="28dp"
+            android:src="@drawable/ic_logo_mark" android:contentDescription="Open Radio Velvet" />
+        <TextView android:id="@+id/w_station" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:paddingStart="10dp" android:text="Radio Velvet" android:textSize="15sp" android:maxLines="1" android:ellipsize="end"
+            android:fontFamily="@font/jost_regular" />
+        <FrameLayout android:id="@+id/w_play" android:layout_width="44dp" android:layout_height="44dp">
+            <ImageView android:id="@+id/w_ring" android:layout_width="match_parent" android:layout_height="match_parent"
+                android:src="@drawable/widget_ring" android:importantForAccessibility="no" />
+            <ImageView android:id="@+id/w_playicon" android:layout_width="18dp" android:layout_height="18dp" android:layout_gravity="center"
+                android:src="@drawable/ln_play" android:contentDescription="Play or pause" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

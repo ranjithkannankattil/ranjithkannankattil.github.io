@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 40
     env:
-      APP_VERSION: "2.4.0-dev"
+      APP_VERSION: "2.5.0-dev"
       DEV_BUILD: "1"
     steps:
       - uses: actions/checkout@v4
@@ -25,6 +25,10 @@ jobs:
         # A throwaway key only for the separate "Radio Velvet Dev" test app (com.ranjithkb.radio.dev).
         # The real app's key is a private repo secret and is never used here.
         run: mkdir -p ~/.android; cp .github/dev-key/dev-test.keystore ~/.android/debug.keystore
+      - name: Logic tests (alarm, sorting, equaliser, visualiser, themes, resume rules…) must pass
+        run: gradle --no-daemon :app:testPlayDebugUnitTest --tests "*LogicTest*"
+      - name: The website-APK version must build too
+        run: gradle --no-daemon :app:compileWebReleaseKotlin
       - name: Build the Dev app
         env:
           RADIO_WA_NUMBER: ${{ secrets.RADIO_WA_NUMBER }}

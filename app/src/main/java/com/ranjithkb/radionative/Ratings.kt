@@ -20,7 +20,7 @@ object Ratings {
     private fun prefs(ctx: Context) = ctx.getSharedPreferences("anon", Context.MODE_PRIVATE)
 
     /** Signed-in account if there is one, otherwise an anonymous one (created once, kept on the phone). */
-    private fun who(ctx: Context): Pair<String, String> {
+    internal fun who(ctx: Context): Pair<String, String> {
         Account.token(ctx)?.let { return it }
         val p = prefs(ctx)
         val uid = p.getString("uid", null)

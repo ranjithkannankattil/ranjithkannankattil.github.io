@@ -44,6 +44,10 @@ object Listen {
         top.put(key, o.put("n", playingName).put("ms", o.optLong("ms") + ms))
         e.putString("top", top.toString())
         e.putLong("pending", pr.getLong("pending", 0) + ms)
+        // anonymous minutes per station (for "Most heard"): only the station and a number, nothing about the listener
+        val sp = JSONObject(pr.getString("sp", "{}")!!)
+        sp.put(key, sp.optLong(key) + ms)
+        e.putString("sp", sp.toString())
         e.apply()
     }
 
@@ -102,7 +106,39 @@ object Listen {
     // ---- everyone's total (anonymous)
     private const val STATS = "projects/ranjithkb-radio/databases/(default)/documents/stats/listening"
 
+    /** Stations whose whole minutes are ready to send: 2+ minutes (1+ when [all]), at most 30 at a time. */
+    internal fun readyStations(sp: JSONObject, all: Boolean): List<Pair<String, Int>> =
+        sp.keys().asSequence().map { it to (sp.optLong(it) / 60_000).toInt().coerceAtMost(30) }
+            .filter { (k, n) -> n >= (if (all) 1 else 2) && STATION_KEY.matches(k) }.toList()
+    internal val STATION_KEY = Regex("^[A-Za-z0-9-]+:[^/]{1,100}$")
+
+    /** Send per-station minutes to listens/<today, UTC>/s/<collection:station> (one request for all of them). */
+    suspend fun flushStations(ctx: Context, all: Boolean = false) = withContext(Dispatchers.IO) {
+        val pr = p(ctx)
+        val ready = readyStations(JSONObject(pr.getString("sp", "{}")!!), all)
+        if (ready.isEmpty()) return@withContext
+        val day = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US).apply { timeZone = java.util.TimeZone.getTimeZone("UTC") }
+            .format(java.util.Date())
+        try {
+            val writes = JSONArray()
+            ready.forEach { (k, n) ->
+                val inc = JSONObject().put("fieldPath", "m").put("increment", JSONObject().put("integerValue", n.toString()))
+                writes.put(JSONObject().put("transform", JSONObject()
+                    .put("document", "projects/ranjithkb-radio/databases/(default)/documents/listens/$day/s/$k")
+                    .put("fieldTransforms", JSONArray().put(inc))))
+            }
+            Account.http("${Account.DOCS}:commit?key=${Account.KEY}", "POST", JSONObject().put("writes", writes).toString())
+            synchronized(this@Listen) {
+                val sp = JSONObject(pr.getString("sp", "{}")!!)
+                ready.forEach { (k, n) -> val left = (sp.optLong(k) - n * 60_000L).coerceAtLeast(0)
+                    if (left < 60_000 && k != playingKey) sp.remove(k) else sp.put(k, left) }
+                pr.edit().putString("sp", sp.toString()).apply()
+            }
+        } catch (e: Exception) { }
+    }
+
     private suspend fun flushGlobal(ctx: Context) = withContext(Dispatchers.IO) {
+        flushStations(ctx)
         val pr = p(ctx); val min = (pr.getLong("pending", 0) / 60_000).toInt()
         if (min < 5) return@withContext
         val n = min.coerceAtMost(30)

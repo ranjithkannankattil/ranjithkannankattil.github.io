@@ -64,29 +64,21 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.net.URL
 
-/** Follows the phone's dark mode: light paper by day, dark velvet (plum, black, gold) at night. */
-object Theme { var dark by mutableStateOf(false) }
-internal val Paper get() = if (Theme.dark) Color(0xFF140D12) else Color(0xFFF0EDE6)
-internal val Paper2 get() = if (Theme.dark) Color(0xFF241520) else Color(0xFFE7E2D6)
-internal val Ink get() = if (Theme.dark) Color(0xFFF1E9EE) else Color(0xFF2A1424)
-internal val InkSoft get() = if (Theme.dark) Color(0xFFC9BBC5) else Color(0xFF4A4A4C)
-internal val Accent get() = if (Theme.dark) Color(0xFFB0609C) else Color(0xFF6B2D5C)      // velvet plum
-internal val AccentSoft get() = if (Theme.dark) Color(0xFF35202F) else Color(0xFFEEDFE8)
-internal val Velvet get() = if (Theme.dark) Color(0xFF0D070B) else Color(0xFF2A1424)
-private val Gold = Color(0xFFC9A86A)
+/** Colours of the chosen theme (Settings), light or dark. */
+internal val Paper get() = Theme.pal.paper
+internal val Paper2 get() = Theme.pal.paper2
+internal val Ink get() = Theme.pal.ink
+internal val InkSoft get() = Theme.pal.inkSoft
+internal val Accent get() = Theme.pal.accent
+internal val AccentSoft get() = Theme.pal.accentSoft
+internal val Velvet get() = Theme.pal.bar
+private val Gold get() = Theme.pal.gold
 
 /** Signed-in name (null = signed out) and a counter that bumps when favourites change from the account. */
 object Session { var name by mutableStateOf<String?>(null); var favsVersion by mutableIntStateOf(0); var busy by mutableStateOf(false); var noteShown = false }
 
-/** Jost (Futura style): the app's one typeface, light to semibold. */
-val Poppins = FontFamily(
-    Font(R.font.jost_light, FontWeight.Light),
-    Font(R.font.jost_regular, FontWeight.Normal),
-    Font(R.font.jost_medium, FontWeight.Medium),
-    Font(R.font.jost_semibold, FontWeight.SemiBold),
-    Font(R.font.jost_semibold, FontWeight.Bold))
 private val T = Typography()
-val PoppinsType = Typography(
+val PoppinsType: Typography get() = Typography(
     displayLarge = T.displayLarge.copy(fontFamily = Poppins), displayMedium = T.displayMedium.copy(fontFamily = Poppins),
     displaySmall = T.displaySmall.copy(fontFamily = Poppins), headlineLarge = T.headlineLarge.copy(fontFamily = Poppins),
     headlineMedium = T.headlineMedium.copy(fontFamily = Poppins), headlineSmall = T.headlineSmall.copy(fontFamily = Poppins),
@@ -126,8 +118,15 @@ class MainActivity : ComponentActivity() {
         if (Build.VERSION.SDK_INT >= 33) requestPermissions(arrayOf(Manifest.permission.POST_NOTIFICATIONS), 1)
         Session.name = Account.name(this)
         handleSignIn(intent)
+        Theme.load(this)
+        Crash.sendSaved(this, lifecycleScope)
         setContent {
-            Theme.dark = androidx.compose.foundation.isSystemInDarkTheme()
+            val sysDark = androidx.compose.foundation.isSystemInDarkTheme()
+            Theme.dark = when (Theme.mode) { "light" -> false; "dark" -> true; else -> sysDark }
+            val view = androidx.compose.ui.platform.LocalView.current
+            SideEffect {   // status bar and navigation bar icons follow the app's light / dark choice, not just the phone's
+                androidx.core.view.WindowCompat.getInsetsController(window, view).apply {
+                    isAppearanceLightStatusBars = !Theme.dark; isAppearanceLightNavigationBars = !Theme.dark } }
             val scheme = if (Theme.dark) darkColorScheme(primary = Accent, onPrimary = Color.White, background = Paper,
                 surface = Paper, onSurface = Ink, onBackground = Ink, secondaryContainer = AccentSoft, onSecondaryContainer = Ink,
                 surfaceVariant = Paper2, onSurfaceVariant = InkSoft, outline = InkSoft, surfaceContainer = Paper2,
@@ -135,8 +134,13 @@ class MainActivity : ComponentActivity() {
                 else lightColorScheme(primary = Accent, onPrimary = Color.White, background = Paper,
                 surface = Paper, onSurface = Ink, onBackground = Ink, secondaryContainer = AccentSoft,
                 surfaceVariant = Paper2, outline = InkSoft)
-            MaterialTheme(typography = PoppinsType, colorScheme = scheme) {
-                Surface(Modifier.fillMaxSize(), color = Paper) { App(controller) }
+            val d = androidx.compose.ui.platform.LocalDensity.current
+            // Settings → Text size scales every text evenly, on top of the phone's own font size
+            androidx.compose.runtime.CompositionLocalProvider(androidx.compose.ui.platform.LocalDensity provides
+                androidx.compose.ui.unit.Density(d.density, d.fontScale * Theme.textScale)) {
+                MaterialTheme(typography = PoppinsType, colorScheme = scheme) {
+                    Surface(Modifier.fillMaxSize(), color = Paper) { App(controller) }
+                }
             }
         }
     }
@@ -252,7 +256,15 @@ fun App(c: MediaController?) {
     }
 
     fun go(t: Int) { tab = t; prefs.edit().putInt("tab", t).apply() }
-    var az by remember { mutableStateOf(prefs.getBoolean("az", true)) }
+    // Sort: usual · az · heard · rated (A–Z was the old default, so it stays the default)
+    var sort by remember { mutableStateOf(prefs.getString("sort", null) ?: if (prefs.getBoolean("az", true)) "az" else "usual") }
+    var sortSheet by remember { mutableStateOf(false) }
+    var stats by remember { mutableStateOf<Stats.Data?>(null) }
+    LaunchedEffect(Unit) { stats = Stats.get(ctx) }
+    var page by remember { mutableStateOf<String?>(null) }      // settings · themes · eq · viz · alarm · request
+    var recentPlayed by remember { mutableStateOf(Recent.all(ctx)) }
+    LaunchedEffect(now.id) { kotlinx.coroutines.delay(500); recentPlayed = Recent.all(ctx) }
+    LaunchedEffect(Unit) { Review.maybeAsk(ctx) }
     var search by remember { mutableStateOf(false) }
     var barSleep by remember { mutableStateOf(false) }
     if (barSleep) SleepDialog { barSleep = false }
@@ -272,7 +284,7 @@ fun App(c: MediaController?) {
             Repo.stations(ctx, key.substringBefore(':')).find { it.key == key }?.let { favs.toggle(it); refreshFavs() } }
     }
     Column(Modifier.fillMaxSize().statusBarsPadding()) {
-        Header(onSearch = { search = true })
+        Header(onSearch = { search = true }, onSettings = { page = "settings" })
         update?.let { u ->
             Row(Modifier.fillMaxWidth().padding(top = 10.dp).background(AccentSoft).padding(start = 24.dp, end = 12.dp, top = 6.dp, bottom = 6.dp),
                 verticalAlignment = Alignment.CenterVertically) {
@@ -282,12 +294,12 @@ fun App(c: MediaController?) {
             }
         }
         Box(Modifier.weight(1f)) {
-            if (tab == 2) InfoTab(cols.size, update, onSignIn = { openUrl(ctx, Account.SIGN_IN_URL) },
+            if (tab == 2) InfoTab(cols.size, update, onPage = { page = it }, onSignIn = { openUrl(ctx, Account.SIGN_IN_URL) },
                 onSignOut = { Account.signOut(ctx); Session.name = null })
             else if (tab == 0) {
                 // A–Z in every list except the Velvet Selection (hand-picked order) and Favourites (your own order)
                 val shown = stations.filter { cat == "all" || it.category == cat || (cat == "fav" && it.key in favKeys) }
-                    .let { l -> if (az && colId != PICKS) l.sortedBy { it.name.trimStart('(', '"', '\'', ' ').lowercase() } else l }
+                    .let { l -> if (colId != PICKS) Stats.sort(l, sort, stats) else l }
                     .sortedBy { it.offline }
                 Column {
                     val tabs = listOf(LangTab(PICKS, "Velvet Selection", star = true)) +
@@ -302,18 +314,23 @@ fun App(c: MediaController?) {
                         if (favHere > 0) add(Triple("fav", "Favourites", favHere))
                         col?.cats?.filter { (k, _) -> stations.any { it.category == k } }?.forEach { (k, label) -> add(Triple(k, label, -1)) }
                     }
-                    if (colId != PICKS) CatRow(cats, cat, { cat = it }, az, { az = !az; prefs.edit().putBoolean("az", az).apply() })
+                    if (colId != PICKS) CatRow(cats, cat, { cat = it }, SORTS.first { it.first == sort }.second, { sortSheet = true })
                     else Text(if (!loading && stations.isEmpty()) "The Velvet Selection is coming soon." else
                         "Hand-picked by the developer, from every language.", Modifier.padding(24.dp, 12.dp, 24.dp, 4.dp), color = InkSoft, fontSize = 15.sp)
                     if (loading) LinearProgressIndicator(Modifier.fillMaxWidth().padding(top = 8.dp), color = Accent)
                     val stState = rememberLazyListState()
-                    LaunchedEffect(colId, cat, az) { stState.scrollToItem(0) }
+                    LaunchedEffect(colId, cat, sort) { stState.scrollToItem(0) }
+                    val top3 = remember(shown, sort, stats) { if (sort == "heard") Stats.top3(shown, stats) else emptySet() }
                     Box(Modifier.fillMaxSize()) {
                         LazyColumn(state = stState, contentPadding = PaddingValues(bottom = 16.dp)) {
                             items(shown, key = { it.key }) { s ->
-                                StationRow(s, if (colId == PICKS || colId == ALL) langOf(s) else col?.cats?.find { it.first == s.category }?.second ?: "",
-                                    s.key in favKeys, "st|${s.key}" == now.id, now.playing,
-                                    onPlay = { play(shown, s) }, onFav = { favs.toggle(s); refreshFavs() })
+                                val base = if (colId == PICKS || colId == ALL) langOf(s) else col?.cats?.find { it.first == s.category }?.second ?: ""
+                                val sub = when { colId == PICKS -> base
+                                    sort == "heard" -> listOf(Stats.heardLabel(stats?.week?.get(s.key)), base).filter { it.isNotBlank() }.joinToString(" · ")
+                                    sort == "rated" -> listOf(Stats.ratedLabel(stats?.ratings?.get(s.key)), base).filter { it.isNotBlank() }.joinToString(" · ")
+                                    else -> base }
+                                StationRow(s, sub, s.key in favKeys, "st|${s.key}" == now.id, now.playing,
+                                    onPlay = { play(shown, s) }, onFav = { favs.toggle(s); refreshFavs() }, badge = s.key in top3)
                             }
                         }
                         ScrollButtons(stState, Modifier.align(Alignment.BottomEnd))
@@ -328,6 +345,7 @@ fun App(c: MediaController?) {
                         if (!Session.busy) Button({ openUrl(ctx, Account.SIGN_IN_URL) }, Modifier.heightIn(min = 48.dp)) { Text("Sign in") }
                     }
                     FavsTab(favList, now, langOf = ::langOf, onPlay = { s -> play(favList, s) },
+                        recent = recentPlayed, onRecent = { r -> play(recentPlayed.map { it.station }, r.station) },
                         onChanged = { refreshFavs() }, favs = favs, onPicks = { if (colId != PICKS) lastCol = colId; colId = PICKS; go(0) })
                 }
             }
@@ -363,6 +381,21 @@ fun App(c: MediaController?) {
     if (arrangePins) ArrangePins(pinned.mapNotNull { id -> cols.find { it.id == id } }, onSave = { savePins(it) }) { arrangePins = false }
     if (pickLang) LanguageDialog(cols, colId, { if (it == PICKS && colId != PICKS) lastCol = colId; colId = it; go(0); pickLang = false }) { pickLang = false }
     if (full) FullPlayer(now, c, cast, onCloseAll = { closeAll() }) { full = false }
+    if (sortSheet) SortSheet(sort, { sort = it; prefs.edit().putString("sort", it).apply()
+        if (it == "heard" || it == "rated") scope.launch { stats = Stats.get(ctx) } }) { sortSheet = false }
+    page?.let { pg ->
+        Box(Modifier.fillMaxSize()) {
+            when (pg) {
+                "settings" -> SettingsScreen({ page = null }) { page = it }
+                "themes" -> ThemesScreen { page = "settings" }
+                "eq" -> EqualiserScreen { page = "settings" }
+                "viz" -> VisualiserScreen { page = "settings" }
+                "alarm" -> AlarmScreen((favList + recentPlayed.map { it.station }).distinctBy { it.key }.map { it to langOf(it) }) { page = "settings" }
+                "request" -> RequestScreen { page = null }
+                else -> page = null
+            }
+        }
+    }
     if (search) {
         var all by remember { mutableStateOf<List<Station>?>(null) }
         LaunchedEffect(Unit) { all = Repo.allStations(ctx, cols.ifEmpty { Repo.collections(ctx) }) }
@@ -397,6 +430,7 @@ fun Tile(name: String, on: Boolean, size: Int = 44) {
 
 @Composable
 fun FavsTab(list: List<Station>, now: NowState, langOf: (Station) -> String, onPlay: (Station) -> Unit,
+            recent: List<Recent.Item> = emptyList(), onRecent: (Recent.Item) -> Unit = {},
             onChanged: () -> Unit, favs: Favs, onPicks: () -> Unit) {
     val ctx = LocalContext.current
     val scope = rememberCoroutineScope()
@@ -411,6 +445,7 @@ fun FavsTab(list: List<Station>, now: NowState, langOf: (Station) -> String, onP
     }
     fun commit() { favs.replaceAll(order); onChanged() }
     Column {
+        if (!edit) RecentStrip(recent, now.id?.removePrefix("st|"), onRecent)
         Row(Modifier.fillMaxWidth().padding(16.dp, 10.dp), verticalAlignment = Alignment.CenterVertically) {
             Text(if (list.isEmpty()) "No favourites yet. Tap ♡ on any station, in any language."
                  else if (edit) "Drag ≡ to move a station" else "${list.size} favourites", Modifier.weight(1f), color = InkSoft)
@@ -560,6 +595,7 @@ fun FullPlayer(now: NowState, c: MediaController?, cast: CastUi, onCloseAll: () 
     val ctx = LocalContext.current
     var share by remember { mutableStateOf(false) }
     var sleep by remember { mutableStateOf(false) }
+    var comments by remember { mutableStateOf(false) }
     val station = now.md.station?.toString() ?: ""
     val song = now.md.title?.toString() ?: ""
     val hasSong = song.isNotBlank() && song != station
@@ -570,20 +606,23 @@ fun FullPlayer(now: NowState, c: MediaController?, cast: CastUi, onCloseAll: () 
         PlayerContent(now, c, now.md.extras?.getString("lang") ?: "", cast, onCast = { Cast.open(ctx, Theme.dark) },
             onShare = { share = true }, onSpotify = if (hasSong) ({ scope.launch { openInSpotify(ctx, song, artist) } }) else null,
             onSleep = { sleep = true }, onCloseAll = onCloseAll, collapse = close) {
-            now.id?.removePrefix("st|")?.let { RatingRow(it) }
+            now.id?.removePrefix("st|")?.let { k -> RatingRow(k)
+                TextButton({ comments = true }, Modifier.heightIn(min = 44.dp)) { Text("Comments", color = AccentText, fontSize = 14.sp) } }
         }
+        if (comments) now.id?.removePrefix("st|")?.let { k ->
+            CommentsScreen(k, now.md.extras?.getString("station") ?: station) { comments = false } }
         if (share) ShareMenu(now) { share = false }
         if (sleep) SleepDialog { sleep = false }
     }
 }
 
 @Composable
-fun InfoTab(languages: Int, update: Update?, onSignIn: () -> Unit, onSignOut: () -> Unit) {
+fun InfoTab(languages: Int, update: Update?, onPage: (String) -> Unit = {}, onSignIn: () -> Unit, onSignOut: () -> Unit) {
     val ctx = LocalContext.current
     LazyColumn(contentPadding = PaddingValues(20.dp), verticalArrangement = Arrangement.spacedBy(18.dp)) {
         item {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Box(Modifier.size(64.dp).clip(RoundedCornerShape(14.dp)).background(Color(0xFF2A1424)), contentAlignment = Alignment.Center) {
+                Box(Modifier.size(64.dp).clip(RoundedCornerShape(14.dp)).background(ArtBg), contentAlignment = Alignment.Center) {
                     Icon(painterResource(R.drawable.ic_logo_mark), null, Modifier.size(46.dp), tint = Gold) }
                 Column(Modifier.padding(start = 14.dp)) {
                     Text("RADIO VELVET", fontSize = 16.sp, letterSpacing = 5.sp, fontWeight = FontWeight.Medium, color = Title)
@@ -654,8 +693,10 @@ fun InfoTab(languages: Int, update: Update?, onSignIn: () -> Unit, onSignOut: ()
                 TextButton({ openUrl(ctx, "https://ranjithkb.com/radio.html") }) { Text("Radio on ranjithkb.com") }
                 TextButton({ openUrl(ctx, "https://ranjithkb.com/") }) { Text("ranjithkb.com") }
                 TextButton({ openUrl(ctx, "https://ranjithkb.com/privacy.html#radio-velvet") }) { Text("Privacy policy") }
-                TextButton({ ctx.startActivity(android.content.Intent(android.content.Intent.ACTION_SENDTO,
-                    android.net.Uri.parse("mailto:hello@ranjithkb.com?subject=Radio%20Velvet"))) }) { Text("Suggest a station: hello@ranjithkb.com") }
+                TextButton({ onPage("request") }) { Text("Request a station") }
+                TextButton({ onPage("settings") }) { Text("Settings: colours, text size, equaliser, alarm") }
+                TextButton({ try { ctx.startActivity(android.content.Intent(android.content.Intent.ACTION_SENDTO,
+                    android.net.Uri.parse("mailto:hello@ranjithkb.com?subject=Radio%20Velvet"))) } catch (e: Exception) { } }) { Text("Write to us: hello@ranjithkb.com") }
             }
         }
     }
