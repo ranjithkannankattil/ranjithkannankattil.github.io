@@ -79,7 +79,7 @@ class ScreensTest {
         "malayalam:radiomalabar" to (4.8 to 12)), "2026-11-15")
 
     @Composable private fun Stations(playing: Boolean, sortBy: String = "az") = Column(Modifier.fillMaxSize()) {
-        Header {}
+        Header(onSearch = {})
         LangTabs(listOf(LangTab(PICKS, "Velvet Selection", star = true), LangTab("malayalam", "Malayalam", true),
             LangTab("english", "English"), LangTab("tamil", "Tamil"), LangTab("_langs", "All languages", icon = true)), "malayalam", {}, {})
         CatRow(listOf(Triple("all", "All", 130), Triple("fav", "Favourites", 3), Triple("fm", "FM", -1), Triple("air", "Akashvani", -1),
@@ -116,7 +116,7 @@ class ScreensTest {
     @Test fun n13_request() = shot("n13-request", false) { RequestScreen {} }
     @Test fun n14_comments() = shot("n14-comments", false) { CommentsScreen("malayalam:radiomango", "Radio Mango") {} }
     @Test fun n15_favourites_recent() = shot("n15-favourites-recent", false) { Column(Modifier.fillMaxSize()) {
-        Header {}
+        Header(onSearch = {})
         FavsTab(sts.take(4), now(), { "Malayalam" }, {}, recent = sts.take(5).mapIndexed { i, s -> Recent.Item(s, "Malayalam",
             System.currentTimeMillis() - i * 30 * 3_600_000L) }, onRecent = {}, onChanged = {}, favs = Favs(rule.activity), onPicks = {}) } }
     @Test @Config(qualifiers = "w360dp-h740dp-xxhdpi") fun n16_extra_large_text_360() = shot("n16-extra-large-360", false, text = 2) { Stations(true, "heard") }
