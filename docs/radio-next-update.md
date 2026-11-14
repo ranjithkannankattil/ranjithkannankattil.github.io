@@ -24,5 +24,17 @@ Collected from Ranjith and testers. Build when he says "go".
 12. **Mazhavil FM**: listed but hidden (old stream dead, website down on 12 Nov, no public link). Add the new link if the station or a listener sends one.
 13. **Radio Lemon Bengaluru, Europe, Africa, Australia**: not playing on 12 Nov, even on their own site. Bengaluru is listed as offline and comes back by itself; add the others once they play. Check whether our "Radio Mate" (stream named "lemonaustralia") is really Radio Lemon Australia.
 
+## Part 4: Most heard and Top rated (app + website)
+15. **Anonymous minutes per station**: app and website add whole minutes to a per-station count (no user link); new Firestore
+    rule allows only small increments; privacy page gets one line.
+16. **Nightly GitHub job** (no Claude) totals listening (this week + all time) and ratings (average, count) into one small
+    file on the site, e.g. `js/station-stats.json`; app and page read that file, not the database.
+17. **Sort button replaces A–Z** in the category row: Usual order · A–Z · Most heard · Top rated (remembered; Favourites
+    keep his order). Most heard shows "1,240 hrs this week"; Top rated shows "★ 4.6 · 38 ratings", ranks only stations
+    with 3+ ratings. Optional gold ◆ on the top 3 most heard per language. Waiting for his two choices: ◆ yes/no,
+    this week vs all time.
+18. **Resume after other apps' videos** (asked 13 Nov): when another app takes the sound (e.g. a Facebook video), resume
+    once it has been quiet a few seconds, only within 10 minutes, never during calls or after his own pause.
+
 ## Done on 12 Nov (live already)
 - Malayalam FM 104.6 (NZ), Planet FM 104.6 (NZ), Naadan Chaaya Radio (Ireland), Radio Lemon New Zealand added; Radio Lemon UK and Nammude UK named clearly (Nammude UK has a backup stream); Radio Lemon Bengaluru listed (offline for now).
