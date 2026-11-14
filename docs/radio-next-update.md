@@ -58,5 +58,19 @@ Collected from Ranjith and testers. Build when he says "go".
 22. **Tip jar / support** (asked 14 Nov): Play app = Google Play in-app tips (€1.99 / €4.99 / €9.99, UPI in India); website
     and website APK = Buy Me a Coffee. Waiting for him: Play payments profile, Buy Me a Coffee page link.
 
+## Part 6: Big-app features (chosen 14 Nov)
+24. **Car / Bluetooth / Android Auto next & previous fixed** (on radio-native-dev): "previous" used to restart the same
+    station after 3 s (music rule); now both always change station and wrap round. CarPlay (iPhone wrapper) code
+    already maps next/previous and ±10 s to station changes; not testable without a car.
+25. **Alarm clock**: wake up to a chosen station (or the last one) at a set time, days of the week, gentle fade-in;
+    survives restarts; app only (Android exact alarms).
+26. **Home-screen widget**: station, song, play/pause, previous/next; themed.
+27. **Request a station** button (app + website): name, city/country, link if known → saved for him (Firestore
+    `requests`, owner-only read) instead of WhatsApp messages.
+28. **Crash reports** (Firebase Crashlytics, project ranjithkb-radio): which phone and why when the app crashes; privacy
+    page line.
+29. **"Rate us" prompt**: Google Play's own in-app review sheet, shown once after a few days of happy listening (Play
+    version only; Google decides if it actually appears).
+
 ## Done on 12 Nov (live already)
 - Malayalam FM 104.6 (NZ), Planet FM 104.6 (NZ), Naadan Chaaya Radio (Ireland), Radio Lemon New Zealand added; Radio Lemon UK and Nammude UK named clearly (Nammude UK has a backup stream); Radio Lemon Bengaluru listed (offline for now).
