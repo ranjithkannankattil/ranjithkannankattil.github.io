@@ -206,8 +206,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8",
       "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "golofm",
@@ -279,8 +278,8 @@ window.STATIONS = [
     "name": "Antena 2",
     "category": "music",
     "streams": [
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR",
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8"
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8",
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
     ]
   },
   {
@@ -347,7 +346,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/rdpafrica80a/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "antena-1-acores-portugal",
@@ -1331,4 +1331,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T21:08Z";
+window.STATIONS_CHECKED = "2026-11-14T07:32Z";

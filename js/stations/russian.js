@@ -378,7 +378,8 @@ window.STATIONS = [
     "streams": [
       "https://live.zhanafm.kz:8443/vasheradio"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "fm-70e",
@@ -1327,4 +1328,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T21:08Z";
+window.STATIONS_CHECKED = "2026-11-14T07:32Z";

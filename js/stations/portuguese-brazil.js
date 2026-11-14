@@ -799,7 +799,8 @@ window.STATIONS = [
     "streams": [
       "https://stm12.xcast.com.br:9454/stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "offline": true
   },
   {
     "id": "radio-reggae-brasil",
@@ -1333,4 +1334,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T21:08Z";
+window.STATIONS_CHECKED = "2026-11-14T07:32Z";

@@ -8,7 +8,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.zhanafm.kz:8443/vasheradio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "darhan-radio",
@@ -147,4 +148,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T21:08Z";
+window.STATIONS_CHECKED = "2026-11-14T07:32Z";

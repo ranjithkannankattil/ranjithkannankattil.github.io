@@ -581,6 +581,15 @@ window.STATIONS = [
       "https://stream.zeno.fm/yqkru9yv3yzuv"
     ],
     "added": "2026-11-12"
+  },
+  {
+    "id": "fmr-98-3-camiguin",
+    "name": "FMR 98.3 Camiguin",
+    "category": "music",
+    "streams": [
+      "https://de3.amfmph.com/ssl/fmrcamiguin?mp=/live"
+    ],
+    "added": "2026-11-14"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T21:08Z";
+window.STATIONS_CHECKED = "2026-11-14T07:32Z";

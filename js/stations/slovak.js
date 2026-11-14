@@ -502,7 +502,8 @@ window.STATIONS = [
     "streams": [
       "https://s10.webradio-hosting.com/proxy/fredradiosk/stream"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "party-radio",
@@ -550,4 +551,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T21:08Z";
+window.STATIONS_CHECKED = "2026-11-14T07:32Z";

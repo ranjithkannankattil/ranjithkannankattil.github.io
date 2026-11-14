@@ -24,7 +24,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://atunwadigital.streamguys1.com/angelfm"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "nhyira-104-5-fm",
@@ -161,8 +162,7 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://listen.openstream.co/4103/audio"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "parousia-radio",
@@ -437,8 +437,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/47nz3zut26duv"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "rehic-radio",
@@ -486,4 +485,4 @@ window.STATIONS = [
     "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T21:08Z";
+window.STATIONS_CHECKED = "2026-11-14T07:32Z";

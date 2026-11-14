@@ -33,7 +33,8 @@ window.STATIONS = [
     "streams": [
       "https://live7digi.antenaplay.ro/radiozu/radiozu-48000.m3u8"
     ],
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "play-90-s",
@@ -1326,4 +1327,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T21:08Z";
+window.STATIONS_CHECKED = "2026-11-14T07:32Z";

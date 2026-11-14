@@ -209,7 +209,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s10.webradio-hosting.com/proxy/fredradiojp/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "big-b-radio",
@@ -721,4 +722,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T21:08Z";
+window.STATIONS_CHECKED = "2026-11-14T07:32Z";

@@ -172,7 +172,8 @@ window.STATIONS = [
       "https://1fm.gscdn.kbs.co.kr/1fm_192_2.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8xZm0uZ3NjZG4ua2JzLmNvLmtyLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTQ2MTc5NTl9fX1dfQ__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=Hhs86UwUW8hoS2zjw8e2cpekNhZvIOgSOFUzmKXEtan8zxJ2EMLUs~ugZ-tXajqj-H8bJ4t9xczeUf5IWuo5jich5fNLaLnn-5y5j~JLgZWiLKnCewOIyk3-kzu0h13gUtB49P3AXqnE-RzFhQ1aoECyECKfmrWBPeQe5~SIxpjC24RjvdlFmmYrtK7F8r-C1kEXzDtDQFhiD-4Htxv93e6YDnsbT8Il7jI~sjpoXQwtGyJbPVK5kIL3NDgi-tJc0inFWAwTxzhU59JlSc38SfKMvBbFn7keO6JaCEGbXz5As5yIrv2XuShYkeDWoAuKGcqHZ283SYV1HhxxeNeOSA__",
       "https://1fm.gscdn.kbs.co.kr/1fm_192_2.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8xZm0uZ3NjZG4ua2JzLmNvLmtyLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTQxMTAzODN9fX1dfQ__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=Q-6D8qKpBUZwUyDRv43aZSdAtZayES-JV07vz1zTBLAV9dG3e0VdwDTNPZ55~89~BCgMI0QK4ATbYQ8ZjcWm~0UW3uGX0wQtF4Iz87qYmg77u7BWv6qs3F1BAcVEc0-I2nCcrDF9vYoRnVf973jped9TWmi66Wc9Eg1r6ZgiK2-hin5Ked0~bxg~hEwuiqYuOXl~-I2EClps2JG1o9Yru6oD1vLoTBubFYsLcdJIqpga0jUJW3idgxR7uakuJiO01grtN0KAvIJdhaYXV7HdTtU2rPf~TEUoi3QykXo7QRYOhPaiPdOFZR8mF4dpmLJGINa~dkL40~~nKv1sdQSbgw__"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "sbs-power-fm",
@@ -377,7 +378,8 @@ window.STATIONS = [
     "streams": [
       "https://s10.webradio-hosting.com/proxy/fredradiokr/stream"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "offline": true
   },
   {
     "id": "ebs-tune-in",
@@ -597,4 +599,4 @@ window.STATIONS = [
     "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T21:08Z";
+window.STATIONS_CHECKED = "2026-11-14T07:32Z";

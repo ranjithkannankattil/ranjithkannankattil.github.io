@@ -620,7 +620,8 @@ window.STATIONS = [
     "streams": [
       "https://s10.webradio-hosting.com/proxy/fredradiobg/stream"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "offline": true
   },
   {
     "id": "radio-fresh-ruse-93-6-fm",
@@ -758,4 +759,4 @@ window.STATIONS = [
     "added": "2026-11-02"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T21:08Z";
+window.STATIONS_CHECKED = "2026-11-14T07:32Z";

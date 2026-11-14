@@ -583,7 +583,8 @@ window.STATIONS = [
     "streams": [
       "https://enacast.com/rtvelvendrell/streams/SD"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "offline": true
   },
   {
     "id": "radio-puig-reig",
@@ -649,4 +650,4 @@ window.STATIONS = [
     "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T21:08Z";
+window.STATIONS_CHECKED = "2026-11-14T07:32Z";

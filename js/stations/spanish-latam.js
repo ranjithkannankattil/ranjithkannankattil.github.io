@@ -656,7 +656,8 @@ window.STATIONS = [
     "streams": [
       "https://mdstrm.com/audio/66a01759c5aa2b85d66b5933/live.m3u8"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "offline": true
   },
   {
     "id": "radio-canela-pichincha-106-5-fm",
@@ -1088,7 +1089,8 @@ window.STATIONS = [
     "streams": [
       "https://mdstrm.com/audio/66ad14f0917845e9b7570bf2/live.m3u8"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "offline": true
   },
   {
     "id": "neuro-21-station",
@@ -1325,4 +1327,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T21:08Z";
+window.STATIONS_CHECKED = "2026-11-14T07:32Z";

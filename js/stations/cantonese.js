@@ -41,7 +41,8 @@ window.STATIONS = [
     "streams": [
       "https://881903.fishtv.dpdns.org/proxy/903"
     ],
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "station-4",
@@ -74,7 +75,8 @@ window.STATIONS = [
     "streams": [
       "https://881903.fishtv.dpdns.org/proxy/881"
     ],
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "station-7",
@@ -98,7 +100,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://1603884249.rsc.cdn77.org/1603884249/index.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "fm94-7",
@@ -268,7 +271,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ptmirror3.passiontimes.hk/hls3/stream.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "chkt-am1430-fairchild",
@@ -515,8 +519,7 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/1283/64k.mp3"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "station-33",
@@ -643,6 +646,15 @@ window.STATIONS = [
       "https://studio.901nbcfm.com.au:8902/newstream"
     ],
     "added": "2026-11-13"
+  },
+  {
+    "id": "station-43",
+    "name": "广州青少年广播",
+    "category": "music",
+    "streams": [
+      "https://rscdn.ajmide.com/r_1090/nglive_1090.m3u8"
+    ],
+    "added": "2026-11-14"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-13T21:08Z";
+window.STATIONS_CHECKED = "2026-11-14T07:32Z";
