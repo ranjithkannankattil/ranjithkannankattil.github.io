@@ -39,5 +39,15 @@ Collected from Ranjith and testers. Build when he says "go".
 19. **Buy me a coffee** (app + website, asked 14 Nov): a gentle, optional support link saying the app is free but
     building and running it takes time and effort. Needs his Buy Me a Coffee (or similar) page link first.
 
+## Part 5: Settings, on demand (asked 14 Nov) — defaults stay exactly as now
+20. **Settings page** (⚙ in the header or under Info), app + website:
+    - Theme: Follow phone (default) / Light / Dark; later optional colour themes (Velvet, Midnight blue, Emerald, all with gold).
+    - Text size: Normal / Large / Extra large (scales everything evenly; for older listeners).
+    - Font: Jost (default) / Classic serif (Cormorant) / Phone's own font.
+21. **Equaliser (app only)**: off by default; presets Normal, Voice & news, Bass boost, Music, Classical, Small speaker, plus
+    5-band sliders; remembered; works over Bluetooth/car. Not on the website: browsers can't process other sites' streams.
+22. **Tip jar / support** (asked 14 Nov): Play app = Google Play in-app tips (€1.99 / €4.99 / €9.99, UPI in India); website
+    and website APK = Buy Me a Coffee. Waiting for him: Play payments profile, Buy Me a Coffee page link.
+
 ## Done on 12 Nov (live already)
 - Malayalam FM 104.6 (NZ), Planet FM 104.6 (NZ), Naadan Chaaya Radio (Ireland), Radio Lemon New Zealand added; Radio Lemon UK and Nammude UK named clearly (Nammude UK has a backup stream); Radio Lemon Bengaluru listed (offline for now).
