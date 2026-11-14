@@ -8,6 +8,7 @@ import androidx.media3.common.MediaItem
 import androidx.media3.common.MediaMetadata
 import androidx.media3.common.Metadata
 import androidx.media3.common.PlaybackException
+import androidx.media3.common.ForwardingPlayer
 import androidx.media3.common.Player
 import androidx.media3.cast.CastPlayer
 import androidx.media3.cast.SessionAvailabilityListener
@@ -54,6 +55,31 @@ class PlaybackService : MediaLibraryService() {
     private val known = HashMap<String, MediaItem>()   // items shown to Android Auto, by id
     private val siblings = HashMap<String, List<String>>()   // station id -> ids of the list it was picked from
     private var castPlayer: CastPlayer? = null
+    private lateinit var local: Player
+
+    /**
+     * Cars, Bluetooth buttons and Android Auto send "next" / "previous". For music, "previous" after 3 seconds
+     * restarts the song; for live radio that only reconnects the same station. Here they always change station,
+     * and wrap round at the ends of the list.
+     */
+    private class StationSkipper(p: Player) : ForwardingPlayer(p) {
+        private val skips = listOf(Player.COMMAND_SEEK_TO_NEXT, Player.COMMAND_SEEK_TO_PREVIOUS,
+            Player.COMMAND_SEEK_TO_NEXT_MEDIA_ITEM, Player.COMMAND_SEEK_TO_PREVIOUS_MEDIA_ITEM)
+        override fun getAvailableCommands(): Player.Commands = super.getAvailableCommands().let { c ->
+            if (mediaItemCount > 1) c.buildUpon().addAll(*skips.toIntArray()).build() else c }
+        override fun isCommandAvailable(command: Int) =
+            (mediaItemCount > 1 && command in skips) || super.isCommandAvailable(command)
+        override fun hasNextMediaItem() = mediaItemCount > 1
+        override fun hasPreviousMediaItem() = mediaItemCount > 1
+        private fun go(d: Int) {
+            val n = mediaItemCount; if (n < 2) return
+            seekToDefaultPosition(((currentMediaItemIndex + d) % n + n) % n)
+        }
+        override fun seekToNext() = go(1)
+        override fun seekToNextMediaItem() = go(1)
+        override fun seekToPrevious() = go(-1)
+        override fun seekToPreviousMediaItem() = go(-1)
+    }
 
     companion object { const val CLOSE = "velvet.close" }
 
@@ -86,13 +112,14 @@ class PlaybackService : MediaLibraryService() {
                     mediaItem.mediaMetadata.extras?.getString("station") ?: "")
             }
         })
-        session = MediaLibrarySession.Builder(this, player, Callback()).build()
+        local = StationSkipper(player)
+        session = MediaLibrarySession.Builder(this, local, Callback()).build()
         SleepTimer.pause = { session.player.pause() }
         // Cast: when a TV or speaker is picked, the same list carries on there; back on the phone when casting stops
         Cast.context(this)?.let { cc -> try {
-            castPlayer = CastPlayer(cc).also { cp -> cp.setSessionAvailabilityListener(object : SessionAvailabilityListener {
-                override fun onCastSessionAvailable() = switchTo(cp)
-                override fun onCastSessionUnavailable() = switchTo(player)
+            castPlayer = CastPlayer(cc).also { cp -> val castSkip = StationSkipper(cp); cp.setSessionAvailabilityListener(object : SessionAvailabilityListener {
+                override fun onCastSessionAvailable() = switchTo(castSkip)
+                override fun onCastSessionUnavailable() = switchTo(local)
             }) }
         } catch (e: Throwable) { castPlayer = null } }
         scope.launch { while (true) { kotlinx.coroutines.delay(60_000); Listen.tick(this@PlaybackService) } }
@@ -132,7 +159,7 @@ class PlaybackService : MediaLibraryService() {
         if (from === target) return
         val n = from.mediaItemCount
         if (n > 0) {
-            val toCast = target === castPlayer
+            val toCast = target !== local
             val at = from.currentMediaItemIndex.coerceAtLeast(0)
             val lo = if (toCast) (at - 50).coerceAtLeast(0) else 0
             val hi = if (toCast) (at + 50).coerceAtMost(n) else n
@@ -150,7 +177,7 @@ class PlaybackService : MediaLibraryService() {
         SleepTimer.off()
         val p = session.player
         p.stop(); p.clearMediaItems()
-        if (p !== player) { player.stop(); player.clearMediaItems() }
+        if (p !== local) { player.stop(); player.clearMediaItems() }
         stopSelf()
     }
 
