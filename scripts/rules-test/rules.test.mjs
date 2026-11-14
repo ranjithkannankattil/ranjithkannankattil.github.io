@@ -244,9 +244,9 @@ test("votes: one collection-group read for the nightly stats; still nobody else'
 
 test("requests: send one a minute, only the owner reads", async () => {
   const send = (uid, n, extra = {}) => {
-    const b = writeBatch(db(uid));
-    b.set(doc(db(uid), `requests/${uid}__${n}`), { uid, name: "Radio Macfast", place: "Changanassery", from: "app", ts: serverTimestamp(), ...extra });
-    b.set(doc(db(uid), `limits/${uid}`), { lastRequest: serverTimestamp() }, { merge: true });
+    const f = db(uid), b = writeBatch(f);
+    b.set(doc(f, `requests/${uid}__${n}`), { uid, name: "Radio Macfast", place: "Changanassery", from: "app", ts: serverTimestamp(), ...extra });
+    b.set(doc(f, `limits/${uid}`), { lastRequest: serverTimestamp() }, { merge: true });
     return b.commit();
   };
   await assertSucceeds(send("u1", 1));
@@ -260,10 +260,10 @@ test("requests: send one a minute, only the owner reads", async () => {
 
 test("crashes: create-only crash reports, only the owner reads", async () => {
   const send = (uid, n, extra = {}) => {
-    const b = writeBatch(db(uid));
-    b.set(doc(db(uid), `crashes/${uid}__${n}`), { app: "Radio Velvet", version: "2.5.0", phone: "Samsung A14", android: 34,
+    const f = db(uid), b = writeBatch(f);
+    b.set(doc(f, `crashes/${uid}__${n}`), { app: "Radio Velvet", version: "2.5.0", phone: "Samsung A14", android: 34,
       error: "IllegalStateException", trace: "at x.y", at: 1, ts: serverTimestamp(), ...extra });
-    b.set(doc(db(uid), `limits/${uid}`), { lastCrash: serverTimestamp() }, { merge: true });
+    b.set(doc(f, `limits/${uid}`), { lastCrash: serverTimestamp() }, { merge: true });
     return b.commit();
   };
   await assertSucceeds(send("u1", 1));
