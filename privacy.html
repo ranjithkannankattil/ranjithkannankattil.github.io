@@ -114,14 +114,18 @@
   </ul>
 
   <h2 id="radio-velvet">Radio Velvet, the Android app</h2>
-  <p>Radio Velvet (on Google Play and as a download from the Radio page) works like the Radio page and keeps the same promises: no ads, no analytics, no crash reporting and no tracking.</p>
+  <p>Radio Velvet (on Google Play and as a download from the Radio page) works like the Radio page and keeps the same promises: no ads, no analytics and no tracking. If the app crashes, a short crash report is sent to me (see below).</p>
   <ul>
     <li><strong>On your phone only:</strong> your favourites and their order, the last station played, and copies of the station lists so the app opens quickly. Song cards you share are made on the phone and go only where you send them.</li>
     <li><strong>Signing in (optional):</strong> the same Google sign-in and saved favourites as the Radio page, described above, held by Google Firebase in the EU. The sign-in opens ranjithkb.com in a secure browser tab.</li>
     <li><strong>Song covers:</strong> when a station sends the name of the song playing, the app asks Apple's free iTunes Search for the album cover, sending only the song and artist name (and, like any web request, your IP address). Apple's privacy policy applies to that request.</li>
     <li><strong>Stations and updates:</strong> the app reads the station lists from ranjithkb.com and plays each station straight from its broadcaster, as above. The version downloaded from this site also checks GitHub for a newer version; the Google Play version leaves updates to Play.</li>
-    <li><strong>Listening time:</strong> the app counts how long you listen and which stations you play most, and keeps it on the phone; if you are signed in, it is also saved with your account as described above. Separately, whole minutes are added to one public total of everyone's listening, which holds only that number and nothing about who listened. On the website, whole minutes are also added to a public count for each station and day (for a "Most heard" list), again only the number of minutes, with nothing about who listened.</li>
-    <li><strong>Permissions:</strong> internet access to play, and notifications for the player controls on the lock screen. Nothing else on your phone is read.</li>
+    <li><strong>Listening time:</strong> the app counts how long you listen and which stations you play most, and keeps it on the phone; if you are signed in, it is also saved with your account as described above. Separately, whole minutes are added to one public total of everyone's listening, which holds only that number and nothing about who listened. The app and the website also add whole minutes to a public count for each station and day (for the "Most heard" list), again only the number of minutes, with nothing about who listened.</li>
+    <li><strong>Crash reports:</strong> if the app crashes, it saves a short report on the phone and sends it the next time it opens: the error and where in the app it happened, the app version, the phone's make and model and the Android version, with the same anonymous ID used for ratings. Nothing about you, your stations or your listening. It goes to my own Firebase (EU), not to an analytics company; only I can read it, and I delete reports once the bug is fixed. Legal basis: keeping the app working (GDPR Art. 6(1)(f)).</li>
+    <li><strong>Request a station:</strong> if you send a request (app or website), the station name and whatever else you type are saved with the anonymous ID, for me only. No name or email is asked for.</li>
+    <li><strong>Settings, alarm and widget:</strong> colours, text size, equaliser, alarm time and station, and recently played stations stay on the phone (and, on the website, in this browser). The alarm needs the "Alarms &amp; reminders" permission to ring exactly on time; the app asks before using it.</li>
+    <li><strong>"Rate us":</strong> the Google Play version may show Google Play's own review sheet once; what you write there goes to Google Play, not to me.</li>
+    <li><strong>Permissions:</strong> internet access to play, notifications for the player controls on the lock screen, and (only if you set an alarm) alarms, plus starting again after the phone restarts so the alarm still rings. The visualiser uses only the radio's own sound inside the app: no microphone. Nothing else on your phone is read.</li>
   </ul>
 
   <h2 id="delete-account">Deleting your account</h2>
@@ -133,7 +137,7 @@
   <p>Deleting removes your Google account ID, email, name, favourites, default language and listening time from Firebase. Anonymous station ratings and approved comments are kept without any link to you unless you ask for them to be removed too. Nothing is kept in backups beyond Firebase's own short recovery window.</p>
 
   <h2>Rating and commenting on stations (optional)</h2>
-  <p>On the Radio page you can give a station one to five stars and add a short comment. You don't need to sign in:
+  <p>On the Radio page and in the app you can give a station one to five stars and add a short comment. You don't need to sign in:
   the first time you rate or comment, your browser gets an anonymous ID from Firebase Authentication, so your rating can be changed later and counted once per browser. Just opening a station's ratings creates nothing. If you then sign in with Google, the anonymous ID is joined to your account, so your ratings stay yours.</p>
   <ul>
     <li><strong>What is stored:</strong> the anonymous ID (or your Google account ID, if you are signed in), the station, your stars, your comment if you write one, and when you sent it — in Google Firebase (EU, Firestore location <code>eur3</code>), as described above.</li>

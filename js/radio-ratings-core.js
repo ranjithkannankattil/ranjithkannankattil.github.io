@@ -92,6 +92,23 @@ export function createRatings({ auth, db, A, F }) {
       }, "too-fast");
     },
 
+    // "Request a station": saved for the owner only (requests/{uid}__{time}); one a minute
+    async request({ name, place, link, note }) {
+      const n = String(name || "").trim().slice(0, 80);
+      if (n.length < 2) throw fail("bad-name");
+      const uid = await ready();
+      const d = { uid, name: n, from: "web", ts: F.serverTimestamp() };
+      for (const [k, v, max] of [["place", place, 80], ["link", link, 300], ["note", note, 300]]) {
+        const t = String(v || "").trim().slice(0, max); if (t) d[k] = t;
+      }
+      await call(() => {
+        const b = F.writeBatch(db);
+        b.set(F.doc(db, "requests", `${uid}__${Date.now()}`), d);
+        b.set(F.doc(db, "limits", uid), { lastRequest: F.serverTimestamp() }, { merge: true });
+        return b.commit();
+      }, "too-fast");
+    },
+
     // equality-only queries need no composite index; sorting and paging happen here
     async approved(key, { after, limit = 5 } = {}) {
       const snap = await call(() => F.getDocs(F.query(comments(), F.where("key", "==", key), F.where("status", "==", "approved"))));

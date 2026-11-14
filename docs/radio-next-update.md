@@ -1,5 +1,7 @@
 # Radio Velvet: plan for the next update
 
+**Status 14 Nov:** everything below except the tip jar / Buy Me a Coffee (19, 22) is built: website live, app in the Dev build (2.5.0-dev) waiting for his test before Play.
+
 Collected from Ranjith and testers. Build when he says "go".
 
 ## Part 1: App (needs a new app version, goes to Google Play review)

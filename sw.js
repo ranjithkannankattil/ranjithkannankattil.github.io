@@ -19,6 +19,7 @@ self.addEventListener("fetch", (e) => {
   const same = url.origin === location.origin;
   if (!same && !fonts.test(req.url)) return;
   if (same && url.pathname.startsWith("/downloads/")) return; // app downloads: always fresh, never cached
+  if (same && url.pathname === "/js/station-stats.json") return; // nightly radio stats: changes daily, never cached here
   if (same && (url.pathname.startsWith("/__/") || url.pathname.startsWith("/js/stations/"))) {
     // station lists: always fresh when online, last copy when not
     e.respondWith(fetch(req).then((r) => { const c = r.clone(); caches.open(CACHE).then((x) => x.put(req, c)); return r; }).catch(() => caches.match(req)));

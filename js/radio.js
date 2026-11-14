@@ -291,17 +291,45 @@
       b.onclick = () => { cat = k; renderChips(); render(); };
       chips.append(b);
     }
-    // A–Z: alphabetical order in every list except the Velvet Selection (hand-picked order); remembered
+    // Sort (like the app): usual order · A–Z · most heard this week · top rated. Remembered.
+    // Not in the Velvet Selection (hand-picked order).
     if (col.id !== "picks") {
-      const az = document.createElement("button");
-      az.className = "az"; az.setAttribute("aria-pressed", sortAZ);
-      az.setAttribute("aria-label", sortAZ ? "Show in the usual order" : "Sort A to Z");
-      az.textContent = (sortAZ ? "✓ " : "") + "A–Z";
-      az.onclick = () => { sortAZ = !sortAZ; try { localStorage.setItem("mr-az", sortAZ ? "1" : "0"); } catch { /* fine */ } renderChips(); render(); };
-      chips.append(az);
+      const lab = document.createElement("label");
+      lab.className = "az sort";
+      lab.innerHTML = '<span aria-hidden="true">⇅</span><select aria-label="Sort stations"></select>';
+      const sel = lab.querySelector("select");
+      for (const [v, t] of SORTS) { const o = document.createElement("option"); o.value = v; o.textContent = t; sel.append(o); }
+      sel.value = sortBy;
+      sel.onchange = () => { sortBy = sel.value; try { localStorage.setItem("mr-sort", sortBy); } catch { /* fine */ }
+        if (sortBy === "heard" || sortBy === "rated") loadStats().then(render); render(); };
+      chips.append(lab);
     }
   }
-  let sortAZ = (() => { try { return localStorage.getItem("mr-az") !== "0"; } catch { return true; } })();
+  const SORTS = [["usual", "Usual order"], ["az", "A–Z"], ["heard", "Most heard"], ["rated", "Top rated"]];
+  let sortBy = (() => { try {
+    const v = localStorage.getItem("mr-sort");
+    return SORTS.some(([k]) => k === v) ? v : (localStorage.getItem("mr-az") === "0" ? "usual" : "az");
+  } catch { return "az"; } })();
+  // Most heard / top rated come from a small file the site rebuilds every night (scripts/build_station_stats.py)
+  let stats = null, statsLoading = null;
+  function loadStats() {
+    if (stats) return Promise.resolve(stats);
+    if (!statsLoading) statsLoading = fetch("js/station-stats.json", { cache: "no-cache" })
+      .then((r) => (r.ok ? r.json() : null)).catch(() => null).then((j) => (stats = j || { week: {}, ratings: {} }));
+    return statsLoading;
+  }
+  if (sortBy === "heard" || sortBy === "rated") loadStats().then(() => { if (col && S.length) render(); });
+  const MIN_RATINGS = 3;
+  const heardMin = (k) => (stats && stats.week && stats.week[k]) || 0;
+  const rating = (k) => { const r = stats && stats.ratings && stats.ratings[k]; return r && r[1] >= MIN_RATINGS ? r : null; };
+  function heardLabel(m) {
+    if (!m) return "Still collecting";
+    if (m < 60) return `${m} min this week`;
+    if (m < 120) return "1 hr this week";
+    return `${Math.floor(m / 60).toLocaleString("en-GB")} hrs this week`;
+  }
+  const ratedLabel = (r) => (r ? `★ ${r[0].toFixed(1)} · ${r[1]} ratings` : "Not enough ratings yet");
+  let top3 = new Set();
   const byName = (a, b) => a.name.replace(/^[("' ]+/, "").localeCompare(b.name.replace(/^[("' ]+/, ""), undefined, { sensitivity: "base" });
 
   function visibleList() {
@@ -311,7 +339,14 @@
       (show === "all" || (show === "down") === !!s.offline) &&
       (!term || s.name.toLowerCase().includes(term))
     );
-    if (sortAZ && col.id !== "picks") list.sort(byName);
+    if (col.id !== "picks") {
+      if (sortBy === "az") list.sort(byName);
+      else if (sortBy === "heard") list.sort((a, b) => heardMin(key(b)) - heardMin(key(a)));
+      else if (sortBy === "rated") list.sort((a, b) => ((rating(key(b)) || [-1])[0] - (rating(key(a)) || [-1])[0]) ||
+        ((stats && stats.ratings[key(b)] || [0, 0])[1] - (stats && stats.ratings[key(a)] || [0, 0])[1]));
+    }
+    top3 = new Set(sortBy === "heard" && col.id !== "picks"
+      ? list.filter((s) => heardMin(key(s)) >= 60).sort((a, b) => heardMin(key(b)) - heardMin(key(a))).slice(0, 3).map((s) => key(s)) : []);
     // stations that failed the latest check go to the bottom (order otherwise kept)
     list.sort((a, b) => (a.offline ? 1 : 0) - (b.offline ? 1 : 0));
     return list;
@@ -375,7 +410,9 @@
         </button>
         <button class="fav" aria-label="Favourite" aria-pressed="${favs.has(key(s))}"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2Z"/></svg></button>`;
       li.querySelector(".nm").textContent = s.name;      // names come from a public directory: never as HTML
-      li.querySelector(".sub").textContent = sub;
+      const extra = s.offline || col.id === "picks" ? "" : sortBy === "heard" ? heardLabel(heardMin(key(s))) : sortBy === "rated" ? ratedLabel(rating(key(s))) : "";
+      li.querySelector(".sub").textContent = [extra, sub].filter(Boolean).join(" · ");
+      if (top3.has(key(s))) li.querySelector(".nm").insertAdjacentHTML("beforeend", ' <span class="top3" title="One of the three most heard this week">◆</span>');
       if (isNew && !s.offline) li.querySelector(".nm").insertAdjacentHTML("beforeend", ' <span class="new-tag">New</span>');
       li.querySelector(".hit").onclick = () => (isCur(s) ? toggle() : play(s, list));
       li.querySelector(".fav").onclick = (e) => { e.stopPropagation(); toggleFav(key(s), s); };

@@ -8,7 +8,7 @@ if (cfg && cfg.apiKey && box) {
   const note = document.getElementById("acctNote");
   if (note) note.hidden = false;
   const V = "10.12.2";
-  const { upgradeToGoogle } = await import("./radio-ratings-core.js?v=3");
+  const { upgradeToGoogle } = await import("./radio-ratings-core.js?v=4");
   const [{ initializeApp, getApps, getApp }, A, F] = await Promise.all([
     import(`https://www.gstatic.com/firebasejs/${V}/firebase-app.js`),
     import(`https://www.gstatic.com/firebasejs/${V}/firebase-auth.js`),
