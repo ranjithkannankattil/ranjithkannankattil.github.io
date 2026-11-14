@@ -170,8 +170,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.live/proxy/zerock/zerock"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "eco-99fm",
@@ -452,4 +451,4 @@ window.STATIONS = [
     "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T20:30Z";
+window.STATIONS_CHECKED = "2026-11-14T21:00Z";

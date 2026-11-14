@@ -280,8 +280,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8",
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "rca-radio-clube-de-armamar",
@@ -357,8 +356,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -1333,4 +1331,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T20:30Z";
+window.STATIONS_CHECKED = "2026-11-14T21:00Z";

@@ -50,7 +50,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/5022107/64k.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-5",
@@ -657,4 +658,4 @@ window.STATIONS = [
     "added": "2026-11-14"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T19:20Z";
+window.STATIONS_CHECKED = "2026-11-14T21:00Z";

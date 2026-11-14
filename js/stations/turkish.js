@@ -368,7 +368,8 @@ window.STATIONS = [
     "streams": [
       "https://radio-trtmemleketimfm.medya.trt.com.tr/master.m3u8"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "power-dance",
@@ -505,7 +506,8 @@ window.STATIONS = [
     "streams": [
       "https://radio-trttrabzon.medya.trt.com.tr/master.m3u8"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "dinamo-fm-legacy",
@@ -930,8 +932,7 @@ window.STATIONS = [
     "streams": [
       "https://moondigitaledge2.radyotvonline.net/radyod/playlist.m3u8"
     ],
-    "added": "2026-11-02",
-    "offline": true
+    "added": "2026-11-02"
   },
   {
     "id": "trt-antalya",
@@ -1012,8 +1013,7 @@ window.STATIONS = [
     "streams": [
       "https://radio-trtgap.medya.trt.com.tr/master.m3u8"
     ],
-    "added": "2026-11-04",
-    "offline": true
+    "added": "2026-11-04"
   },
   {
     "id": "gonul-fm-97-3",
@@ -1331,4 +1331,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T20:30Z";
+window.STATIONS_CHECKED = "2026-11-14T21:00Z";

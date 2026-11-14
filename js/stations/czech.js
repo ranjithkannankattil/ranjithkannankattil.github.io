@@ -1243,6 +1243,15 @@ window.STATIONS = [
       "https://ice2.radia.cz/znamkapunku128.aac"
     ],
     "added": "2026-11-14"
+  },
+  {
+    "id": "rock-radio-stage",
+    "name": "Rock Radio Stage:",
+    "category": "music",
+    "streams": [
+      "https://ice2.radia.cz/rockzabava128.aac?1"
+    ],
+    "added": "2026-11-14"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T20:30Z";
+window.STATIONS_CHECKED = "2026-11-14T21:00Z";

@@ -322,7 +322,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://server.radioimeldafm.co.id/radio/8040/gajahmadafm"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rri-pro-1-sungailiat",
@@ -421,7 +422,8 @@ window.STATIONS = [
     "streams": [
       "https://server.radioimeldafm.co.id:8040/gajahmadafm"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "yaski-radio",
@@ -1300,4 +1302,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T20:30Z";
+window.STATIONS_CHECKED = "2026-11-14T21:00Z";

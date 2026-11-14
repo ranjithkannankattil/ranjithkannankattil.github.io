@@ -952,8 +952,7 @@ window.STATIONS = [
     "streams": [
       "https://webradio.amsolution.com.br/radio/8320/lideranca"
     ],
-    "added": "2026-11-02",
-    "offline": true
+    "added": "2026-11-02"
   },
   {
     "id": "94-fm-natal-radio-cidade",
@@ -1334,4 +1333,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T20:30Z";
+window.STATIONS_CHECKED = "2026-11-14T21:00Z";

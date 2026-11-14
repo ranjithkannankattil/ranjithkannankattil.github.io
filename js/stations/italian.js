@@ -408,7 +408,8 @@ window.STATIONS = [
       "https://streamcdnb3-8e7439fdb1694c8da3a0fd63e4dda518.msvdn.net/rainews1/hls/rainews_2400/chunklist.m3u8"
     ],
     "added": "2026-10-24",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "radio-italia-anni-60-trentino-alto-adige",
@@ -1342,4 +1343,4 @@ window.STATIONS = [
     "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T20:30Z";
+window.STATIONS_CHECKED = "2026-11-14T21:00Z";
