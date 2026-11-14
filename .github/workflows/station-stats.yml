@@ -1,0 +1,35 @@
+name: Radio station stats (Most heard, Top rated)
+
+# Every night: add up anonymous listening minutes and star ratings into js/station-stats.json.
+on:
+  schedule:
+    - cron: "40 1 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build the stats and save them
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898732+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch -q origin main && git reset -q --hard origin/main
+            python3 scripts/build_station_stats.py | tee -a "$GITHUB_STEP_SUMMARY"
+            git add js/station-stats.json
+            if git diff --cached --quiet; then echo "No change."; exit 0; fi
+            git commit -qm "Radio: station stats $(TZ=Asia/Kolkata date "+%F") (most heard, top rated)"
+            if git push -q origin HEAD:main; then exit 0; fi
+          done
+          exit 1
