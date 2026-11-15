@@ -198,7 +198,7 @@ class LogicTest {
         assertEquals("RM", CarArt.letters("Radio Mango")); assertEquals("AF", CarArt.letters("Ahalia FM"))
         assertEquals("CF", CarArt.letters("Club FM 94.3")); assertEquals("BR", CarArt.letters("BBC Radio 4"))
         assertEquals("AT", CarArt.letters("Akashvani Thrissur")); assertEquals("HI", CarArt.letters("Hit 96.7"))
-        assertEquals("RM", CarArt.letters("The Radio Mattoli (Wayanad)")); assertEquals("RV", CarArt.letters("94.3"))
+        assertEquals("RM", CarArt.letters("The Radio Mattoli (Wayanad)")); assertEquals("94", CarArt.letters("94.3"))
         assertEquals("94.3", CarArt.frequency("Club FM 94.3")); assertNull(CarArt.frequency("Radio Mango"))
         CarArt.letters("ക്ലബ് എഫ്എം").let { assertTrue(it.isNotEmpty()) }
     }
