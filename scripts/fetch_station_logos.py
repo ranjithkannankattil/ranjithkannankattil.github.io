@@ -72,6 +72,13 @@ def directory():
     sys.exit("radio-browser directory unreachable")
 
 
+# icons of website builders and streaming platforms, not of the station
+GENERIC = ("wix.com", "wixstatic", "wordpress", "wp.com", "squarespace", "blogger", "blogspot", "google.com", "gstatic",
+           "facebook", "fbcdn", "weebly", "jimdo", "shoutcast", "icecast", "zeno.fm", "radio.co", "streema", "tunein",
+           "radio.garden", "onlineradiobox", "mixlr", "caster.fm", "live365", "radionomy", "streamtheworld", "airtime.pro")
+BLOCKED = ROOT / "scripts" / "data" / "station-logos-blocked.json"   # stations whose logo was removed by hand: never fetched again
+
+
 def usable(data: bytes) -> Image.Image | None:
     """A real logo: decodes, at least 96 px, not too long or thin, not a blank square."""
     try:
@@ -116,11 +123,14 @@ def main() -> None:
     dry = "--dry" in args
     have = json.loads(OUT.read_text()).get("logos", {}) if OUT.exists() else {}
     tried = json.loads(TRIED.read_text()) if TRIED.exists() else {}
+    blocked = set(json.loads(BLOCKED.read_text())) if BLOCKED.exists() else set()
+    for k in blocked:
+        have.pop(k, None)
     today = dt.date.today()
     todo = []
     for col, s in stations():
         k = f"{col}:{s['id']}"
-        if k in have:
+        if k in have or k in blocked:
             continue
         t = tried.get(k)
         if t and (today - dt.date.fromisoformat(t)).days < RETRY_DAYS:
@@ -155,6 +165,8 @@ def main() -> None:
         fav = find(col, s)
         if not fav:
             return k, None, "no logo listed"
+        if any(g in fav.lower() for g in GENERIC):
+            return k, None, "platform icon, not the station's"
         try:
             data = get(fav, timeout=15, limit=3_000_000)
         except Exception as e:
