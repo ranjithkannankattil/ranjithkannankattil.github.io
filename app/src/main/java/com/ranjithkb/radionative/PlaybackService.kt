@@ -81,6 +81,12 @@ class PlaybackService : MediaLibraryService() {
         override fun seekToPreviousMediaItem() = go(-1)
     }
 
+    /** How long to wait between reconnect attempts, and when to stop. Pure, so it can be tested. */
+    object Reconnect {
+        const val LIMIT_MS = 15 * 60_000L
+        private val WAITS = longArrayOf(1_500, 3_000, 5_000, 8_000, 12_000, 20_000, 30_000)
+        fun delayMs(n: Int): Long = WAITS[n.coerceIn(0, WAITS.size - 1)]
+    }
     companion object { const val CLOSE = "velvet.close"; const val ALARM = "velvet.alarm"; const val RESUME = "velvet.resume" }
     private lateinit var eq: EqEngine
     private lateinit var resumer: ResumeWatcher
@@ -99,6 +105,10 @@ class PlaybackService : MediaLibraryService() {
                 .setContentType(C.AUDIO_CONTENT_TYPE_MUSIC).build(), /* handleAudioFocus = */ true)
             .setHandleAudioBecomingNoisy(true)          // headphones out: pause
             .setWakeMode(C.WAKE_MODE_NETWORK)
+            // short drop-outs (a bridge, a few seconds without signal) are retried quietly while the buffer keeps
+            // playing, instead of stopping at the first failed read
+            .setMediaSourceFactory(androidx.media3.exoplayer.source.DefaultMediaSourceFactory(this)
+                .setLoadErrorHandlingPolicy(androidx.media3.exoplayer.upstream.DefaultLoadErrorHandlingPolicy(10)))
             .build()
         player.addListener(object : Player.Listener {
             override fun onMetadata(metadata: Metadata) {
@@ -107,11 +117,11 @@ class PlaybackService : MediaLibraryService() {
                     if (e is IcyInfo && !e.title.isNullOrBlank()) nowPlaying(e.title!!)
                 }
             }
-            override fun onPlayerError(error: PlaybackException) = nextSource()
+            override fun onPlayerError(error: PlaybackException) = onFailed(error)
             override fun onAudioSessionIdChanged(audioSessionId: Int) = eq.attach(audioSessionId)
             override fun onPlayWhenReadyChanged(playWhenReady: Boolean, reason: Int) {
                 if (playWhenReady) return
-                stopTone()
+                stopTone(); giveUpReconnect()
                 if (System.currentTimeMillis() > alarmUntil) player.volume = 1f
                 // another app (a video, a game) took the sound for good: start again once it's quiet, if allowed
                 if (reason == Player.PLAY_WHEN_READY_CHANGE_REASON_AUDIO_FOCUS_LOSS) resumer.lostForGood() else resumer.cancel()
@@ -124,7 +134,7 @@ class PlaybackService : MediaLibraryService() {
             }
             // listening time: count only while sound is actually playing
             override fun onIsPlayingChanged(isPlaying: Boolean) {
-                if (isPlaying) stopTone()
+                if (isPlaying) { stopTone(); onAir() }
                 val item = player.currentMediaItem
                 if (isPlaying && item != null) Listen.start(this@PlaybackService, item.mediaId.removePrefix("st|"),
                     item.mediaMetadata.extras?.getString("station") ?: item.mediaMetadata.station?.toString() ?: "")
@@ -132,6 +142,8 @@ class PlaybackService : MediaLibraryService() {
             }
             override fun onMediaItemTransition(mediaItem: MediaItem?, reason: Int) {
                 saveQueue()
+                // another station (not just the same one reloaded on a different source): start afresh
+                if (mediaItem?.mediaId != lastId) { lastId = mediaItem?.mediaId; playedOk = false; giveUpReconnect() }
                 mediaItem?.let { Recent.add(this@PlaybackService, it) }
                 if (System.currentTimeMillis() > alarmUntil) player.volume = 1f
                 if (player.isPlaying && mediaItem != null) Listen.start(this@PlaybackService, mediaItem.mediaId.removePrefix("st|"),
@@ -203,7 +215,7 @@ class PlaybackService : MediaLibraryService() {
 
     /** Close (✕ while paused): stop, clear the list and remove the notification. The last station is kept for resuming. */
     private fun closeAll() {
-        SleepTimer.off(); resumer.cancel(); stopTone()
+        SleepTimer.off(); resumer.cancel(); stopTone(); giveUpReconnect()
         val p = session.player
         p.stop(); p.clearMediaItems()
         if (p !== local) { player.stop(); player.clearMediaItems() }
@@ -270,18 +282,80 @@ class PlaybackService : MediaLibraryService() {
         scope.launch { Repo.artwork(artist, song)?.let { update(it) } }
     }
 
-    /** A stream failed: try the station's next source, if it has one. */
-    private fun nextSource() {
+    // ---- staying on air through tunnels and patchy signal
+    // A station that was playing and loses the network keeps trying, the moment the phone is back online and
+    // every few seconds, for up to 15 minutes (then it stops, to save battery and data). Only while the listener
+    // still wants it playing: their own pause, another station or closing ends it.
+    private var playedOk = false
+    private var lastId: String? = null
+    private var lostAt = 0L
+    private var retryN = 0
+    private var retryJob: kotlinx.coroutines.Job? = null
+    private var netCb: android.net.ConnectivityManager.NetworkCallback? = null
+
+    private fun onAir() { playedOk = true; lostAt = 0; retryN = 0; retryJob?.cancel(); retryJob = null; unwatchNet() }
+
+    private fun onFailed(error: PlaybackException) {
+        val network = error.errorCode in 2000..2999
+        if (playedOk && network) { reconnectLater(); return }        // it was on air: the signal, not the station
+        if (!nextSource() && (network || playedOk)) reconnectLater()
+    }
+
+    private fun reconnectLater() {
+        if (!player.playWhenReady || player.currentMediaItem == null) return
+        val now = System.currentTimeMillis()
+        if (lostAt == 0L) lostAt = now
+        if (now - lostAt > Reconnect.LIMIT_MS) { giveUpReconnect(); return }
+        watchNet()
+        retryJob?.cancel()
+        retryJob = scope.launch { kotlinx.coroutines.delay(Reconnect.delayMs(retryN++)); retryNow() }
+    }
+
+    private fun retryNow() {
+        retryJob?.cancel(); retryJob = null
+        if (!player.playWhenReady || player.playbackState != Player.STATE_IDLE) return
         val i = player.currentMediaItemIndex
         val item = player.currentMediaItem ?: return
-        val ex = item.mediaMetadata.extras ?: return
-        val streams = ex.getStringArrayList("streams") ?: return
+        val ex = item.mediaMetadata.extras
+        val first = ex?.getStringArrayList("streams")?.firstOrNull()
+        if (first != null && ex.getInt("try") != 0) {   // start again from the station's main stream
+            player.replaceMediaItem(i, item.buildUpon().setUri(first)
+                .setMediaMetadata(item.mediaMetadata.buildUpon().setExtras(Bundle(ex).apply { putInt("try", 0) }).build()).build())
+        }
+        player.prepare(); player.play()
+    }
+
+    private fun giveUpReconnect() { retryJob?.cancel(); retryJob = null; lostAt = 0; retryN = 0; unwatchNet() }
+
+    /** Back online: try straight away instead of waiting for the next attempt. */
+    private fun watchNet() {
+        if (netCb != null) return
+        val cm = getSystemService(android.net.ConnectivityManager::class.java) ?: return
+        val cb = object : android.net.ConnectivityManager.NetworkCallback() {
+            override fun onAvailable(network: android.net.Network) {
+                android.os.Handler(mainLooper).postDelayed({ if (lostAt != 0L) retryNow() }, 800)
+            }
+        }
+        try { cm.registerDefaultNetworkCallback(cb); netCb = cb } catch (e: Exception) { }
+    }
+    private fun unwatchNet() {
+        val cb = netCb ?: return; netCb = null
+        try { getSystemService(android.net.ConnectivityManager::class.java)?.unregisterNetworkCallback(cb) } catch (e: Exception) { }
+    }
+
+    /** A stream failed: try the station's next source, if it has one. False when there are no more. */
+    private fun nextSource(): Boolean {
+        val i = player.currentMediaItemIndex
+        val item = player.currentMediaItem ?: return false
+        val ex = item.mediaMetadata.extras ?: return false
+        val streams = ex.getStringArrayList("streams") ?: return false
         val t = ex.getInt("try") + 1
-        if (t >= streams.size) return
+        if (t >= streams.size) return false
         val nex = Bundle(ex).apply { putInt("try", t) }
         player.replaceMediaItem(i, item.buildUpon().setUri(streams[t])
             .setMediaMetadata(item.mediaMetadata.buildUpon().setExtras(nex).build()).build())
         player.prepare(); player.play()
+        return true
     }
 
     private inner class Callback : MediaLibrarySession.Callback {
@@ -378,7 +452,7 @@ class PlaybackService : MediaLibraryService() {
 
     override fun onDestroy() {
         Theme.prefs(this).unregisterOnSharedPreferenceChangeListener(prefListener)
-        stopTone(); eq.release()
+        stopTone(); eq.release(); giveUpReconnect()
         scope.cancel(); SleepTimer.pause = null
         castPlayer?.setSessionAvailabilityListener(null); castPlayer?.release()
         session.release(); player.release()

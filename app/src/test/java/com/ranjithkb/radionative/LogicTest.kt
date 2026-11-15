@@ -186,6 +186,14 @@ class LogicTest {
         assertFalse("not quiet long enough", ResumeWatcher.shouldResume(true, 30_000, 3_999, false, false, true))
     }
 
+    @Test fun reconnect_waits_grow_and_stop_after_15_minutes() {
+        val w = (0..20).map { PlaybackService.Reconnect.delayMs(it) }
+        assertEquals(1_500L, w[0]); assertTrue(w.zipWithNext().all { (a, b) -> b >= a }); assertEquals(30_000L, w.last())
+        assertTrue("first minute covers several tries", w.take(6).sum() < 60_000)
+        var t = 0L; var n = 0; while (t < PlaybackService.Reconnect.LIMIT_MS) { t += w[minOf(n, 20)]; n++ }
+        assertTrue("about $n tries in 15 minutes", n in 30..60)
+    }
+
     // ---------------- rate us
     @Test fun review_rules() {
         val day = 86_400_000L; val now = 100 * day
