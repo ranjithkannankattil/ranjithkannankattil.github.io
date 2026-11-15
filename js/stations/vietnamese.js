@@ -56,7 +56,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://replaynewsvi.ice.infomaniak.ch/replaynewsve-128.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "chkg-fm-96-1-fairchild-radio-vancouver-b",
@@ -110,4 +111,4 @@ window.STATIONS = [
     "added": "2026-11-06"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T21:00Z";
+window.STATIONS_CHECKED = "2026-11-15T07:42Z";

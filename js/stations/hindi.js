@@ -850,7 +850,8 @@ window.STATIONS = [
       "https://audio-edge-fvq45.ams.d.radiomast.io/3ccc1156-fcf8-4ba7-9a0c-28e3a465e1ae?listening-from-radio-garden=1607152226837"
     ],
     "added": "2026-11-01",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "bollywood-2000-s-radio",
@@ -1330,4 +1331,4 @@ window.STATIONS = [
     "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T21:00Z";
+window.STATIONS_CHECKED = "2026-11-15T07:42Z";

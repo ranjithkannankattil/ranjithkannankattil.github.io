@@ -121,7 +121,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play-radio-stream3.hndt.com/now/WUBA5hW2/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-10",
@@ -201,8 +202,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-17",
@@ -539,7 +539,8 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/336/64k.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "offline": true
   },
   {
     "id": "station-33",
@@ -710,7 +711,8 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qtfm.cn/live/333/64k.mp3"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "offline": true
   },
   {
     "id": "asiafm-hdhttps",
@@ -917,7 +919,8 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/267/64k.mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "offline": true
   },
   {
     "id": "hi-fi-radio",
@@ -980,7 +983,8 @@ window.STATIONS = [
     "streams": [
       "https://play-radio-stream3.hndt.com/now/yorSd1X2/chunklist.m3u8"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "offline": true
   },
   {
     "id": "fred-film-radio",
@@ -1061,7 +1065,8 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/276/64k.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "offline": true
   },
   {
     "id": "happyradio",
@@ -1316,4 +1321,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T21:00Z";
+window.STATIONS_CHECKED = "2026-11-15T07:42Z";

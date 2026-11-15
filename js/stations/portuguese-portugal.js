@@ -92,8 +92,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "m80-radio-ballads",
@@ -157,7 +156,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://proic1.evspt.com/oxigenio_aac"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "cidade-fm",
@@ -419,7 +419,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2opera80a/playlist.m3u8"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "radio-observador",
@@ -1328,7 +1329,8 @@ window.STATIONS = [
     "streams": [
       "https://proic1.evspt.com/radar_mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T21:00Z";
+window.STATIONS_CHECKED = "2026-11-15T07:42Z";

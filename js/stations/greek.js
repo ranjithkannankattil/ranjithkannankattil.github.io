@@ -456,7 +456,8 @@ window.STATIONS = [
     "streams": [
       "https://r1.cloudskep.com/cybcr/cybc3/icecast.audio"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "athens-radio-trance",
@@ -708,7 +709,8 @@ window.STATIONS = [
     "streams": [
       "https://r1.cloudskep.com/cybcr/cybc1/icecast.audio"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "offline": true
   },
   {
     "id": "rainbow-89-pop",
@@ -1323,4 +1325,4 @@ window.STATIONS = [
     "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T21:00Z";
+window.STATIONS_CHECKED = "2026-11-15T07:42Z";

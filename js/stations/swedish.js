@@ -294,7 +294,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://replaynewsse.ice.infomaniak.ch/replaynewsse-128.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "sr4-sthlm",
@@ -499,4 +500,4 @@ window.STATIONS = [
     "added": "2026-11-14"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T21:00Z";
+window.STATIONS_CHECKED = "2026-11-15T07:42Z";

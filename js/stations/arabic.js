@@ -846,7 +846,8 @@ window.STATIONS = [
     "streams": [
       "https://medradio.ice.infomaniak.ch/medradio-128.mp3"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "offline": true
   },
   {
     "id": "almunir-radio-tripoli",
@@ -1326,4 +1327,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T21:00Z";
+window.STATIONS_CHECKED = "2026-11-15T07:42Z";

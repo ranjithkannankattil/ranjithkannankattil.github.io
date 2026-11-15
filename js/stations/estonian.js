@@ -230,6 +230,7 @@ window.STATIONS = [
     "name": "Vömba FM",
     "category": "music",
     "streams": [
+      "https://c4.radioboss.fm:18123/stream",
       "https://c4.radioboss.fm:18123/live"
     ]
   },
@@ -539,4 +540,4 @@ window.STATIONS = [
     "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T21:00Z";
+window.STATIONS_CHECKED = "2026-11-15T07:42Z";

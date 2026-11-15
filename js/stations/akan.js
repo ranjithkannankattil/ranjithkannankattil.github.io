@@ -50,7 +50,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sunny-radio-server.cloud-ip.cc/radio/sunnyradio?t=1782488511159"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "agoo-96-9-fm",
@@ -292,8 +293,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/qpq7hygy77zuv"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "yfm-97-9-takoradi",
@@ -417,8 +417,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/evaq9ab4k0hvv"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "neat-fm",
@@ -484,4 +483,4 @@ window.STATIONS = [
     "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T21:00Z";
+window.STATIONS_CHECKED = "2026-11-15T07:42Z";

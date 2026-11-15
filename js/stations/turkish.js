@@ -25,7 +25,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radyo.duhnet.tv/ak_dtvh_slowturk"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radyo-seymen",
@@ -368,8 +369,7 @@ window.STATIONS = [
     "streams": [
       "https://radio-trtmemleketimfm.medya.trt.com.tr/master.m3u8"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "power-dance",
@@ -506,8 +506,7 @@ window.STATIONS = [
     "streams": [
       "https://radio-trttrabzon.medya.trt.com.tr/master.m3u8"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "dinamo-fm-legacy",
@@ -1331,4 +1330,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T21:00Z";
+window.STATIONS_CHECKED = "2026-11-15T07:42Z";

@@ -88,7 +88,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.mfm.ua/online128"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "nrj-ukraine",
@@ -1115,4 +1116,4 @@ window.STATIONS = [
     "added": "2026-11-14"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-14T21:00Z";
+window.STATIONS_CHECKED = "2026-11-15T07:42Z";
