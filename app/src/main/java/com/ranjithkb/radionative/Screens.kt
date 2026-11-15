@@ -148,7 +148,7 @@ fun ThemePreview(t: ThemeDef, on: Boolean, w: Int, modifier: Modifier = Modifier
                 Box(Modifier.width((1.5f * u).dp).height((9 * u).dp).background(if (playing) p.gold else Color.Transparent))
                 Spacer(Modifier.width((3 * u).dp))
                 Column(Modifier.weight(1f)) {
-                    Box(Modifier.width((if (playing) 34 else 30) * u.dp).height((2.5f * u).dp).background(if (playing) p.accentText else p.ink))
+                    Box(Modifier.width(((if (playing) 34 else 30) * u).dp).height((2.5f * u).dp).background(if (playing) p.accentText else p.ink))
                     Spacer(Modifier.height((2.5f * u).dp))
                     Box(Modifier.width((20 * u).dp).height((1.5f * u).dp).background(p.soft))
                 }
