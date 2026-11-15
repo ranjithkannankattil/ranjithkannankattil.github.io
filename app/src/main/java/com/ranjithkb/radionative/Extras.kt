@@ -133,13 +133,13 @@ fun drawSongCard(ctx: Context, song: String, artist: String, station: String, ar
         }
     }
 
-    fun face(light: Boolean): Typeface? = try { when (font) {
-        "serif" -> androidx.core.content.res.ResourcesCompat.getFont(ctx, if (light) R.font.cormorant_regular else R.font.cormorant_semibold)
-        "phone" -> Typeface.create(Typeface.SANS_SERIF, if (light) Typeface.NORMAL else Typeface.BOLD)
-        else -> androidx.core.content.res.ResourcesCompat.getFont(ctx, if (light) R.font.jost_light else R.font.jost_medium)
-    } } catch (e: Exception) { null }
+    val fc = FONTS.firstOrNull { it.id == font } ?: FONTS[0]
+    fun face(light: Boolean): Typeface? = try {
+        fc.res?.let { r -> androidx.core.content.res.ResourcesCompat.getFont(ctx, if (light) r[0] else r[2]) }
+            ?: Typeface.create(Typeface.SANS_SERIF, if (light) Typeface.NORMAL else Typeface.BOLD)
+    } catch (e: Exception) { null }
     val light = face(true); val med = face(false)
-    val grow = if (font == "serif") 1.12f else 1f
+    val grow = fc.scale
     fun paint(size: Float, color: Int, tf: Typeface?, spacing: Float = 0f) = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         this.color = color; textSize = size * grow; textAlign = Paint.Align.CENTER; typeface = tf ?: Typeface.SANS_SERIF; letterSpacing = spacing }
     fun text(s: String, y: Float, p: Paint) {

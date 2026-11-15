@@ -218,6 +218,13 @@ class LogicTest {
         assertEquals(setOf("Elegant", "Subtle", "Vibrant"), THEMES.map { it.group }.toSet())
         THEMES.filter { it.id != "velvet" }.forEach { assertTrue(it.ml.isNotBlank()); assertTrue(it.en.isNotBlank()) }
     }
+    @Test fun fonts_list_is_complete() {
+        assertEquals("jost", FONTS[0].id); assertTrue(FONTS.any { it.id == "poppins" }); assertEquals(FONTS.size, FONTS.map { it.id }.toSet().size)
+        FONTS.forEach { f -> if (f.id != "phone") assertEquals(4, f.res!!.size) }
+        val ctx = RuntimeEnvironment.getApplication()
+        FONTS.forEach { f -> Theme.prefs(ctx).edit().putString("font", f.id).commit(); Theme.load(ctx); assertEquals(f.id, Theme.font) }
+        Theme.prefs(ctx).edit().clear().commit(); Theme.load(ctx)
+    }
     @Test fun settings_survive_bad_values() {
         val ctx = RuntimeEnvironment.getApplication()
         Theme.prefs(ctx).edit().putString("theme", "nope").putString("mode", "purple").putInt("text", 9).putString("font", "comic")

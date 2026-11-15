@@ -209,8 +209,26 @@ fun SettingsScreen(close: () -> Unit, open: (String) -> Unit) {
         SectionHead("Text size")
         Segmented(listOf("Normal", "Large", "Extra large"), Theme.text) { Theme.text = it; save() }
         SectionHead("Font")
-        Segmented(listOf("Jost", "Classic serif", "Phone font"), listOf("jost", "serif", "phone").indexOf(Theme.font)) {
-            Theme.font = listOf("jost", "serif", "phone")[it]; save() }
+        // each font shown in itself: tap to use it
+        FONTS.chunked(2).forEach { pair ->
+            Row(Modifier.fillMaxWidth().padding(bottom = 8.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                pair.forEach { f ->
+                    val on = f.id == Theme.font
+                    Column(Modifier.weight(1f).heightIn(min = 64.dp).border(if (on) 1.5.dp else 1.dp, if (on) Title else Line)
+                        .background(if (on) Paper2 else Color.Transparent)
+                        .semantics { selected = on; role = Role.RadioButton }.clickable(onClickLabel = "Use ${f.name}") { Theme.font = f.id; save() }
+                        .padding(horizontal = 12.dp, vertical = 8.dp), verticalArrangement = Arrangement.Center) {
+                        Text(if (f.res == null) "Radio Velvet" else "Radio Velvet", fontFamily = f.family, fontSize = (17 * (if (f.scale > 1f) 1.1f else 1f)).sp,
+                            color = Title, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            if (on) Text("◆ ", color = GoldC, fontSize = 10.sp)
+                            Text(f.name + "  ·  " + f.kind, fontSize = 12.sp, color = if (on) AccentText else Soft, maxLines = 1, fontFamily = FONTS[0].family)
+                        }
+                    }
+                }
+                if (pair.size == 1) Spacer(Modifier.weight(1f))
+            }
+        }
         SectionHead("Station list")
         Segmented(listOf("Compact", "Comfortable", "Spacious"), Theme.spacing) { Theme.spacing = it; save() }
 

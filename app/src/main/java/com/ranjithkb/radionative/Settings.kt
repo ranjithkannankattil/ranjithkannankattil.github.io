@@ -84,12 +84,12 @@ object Theme {
     var themeId by mutableStateOf("velvet")
     var mode by mutableStateOf("phone")          // phone · light · dark
     var text by mutableStateOf(0)                // 0 normal · 1 large · 2 extra large
-    var font by mutableStateOf("jost")           // jost · serif · phone
+    var font by mutableStateOf("jost")           // one of FONTS (jost, poppins, … , phone)
     var spacing by mutableStateOf(0)             // 0 compact · 1 comfortable · 2 spacious
     var viz by mutableStateOf("off")             // bars · waves · circle · off
     var resume by mutableStateOf(true)           // carry on after another app's video
     val pal: Pal get() = Palettes.of(themeId, dark)
-    val textScale: Float get() = (when (text) { 1 -> 1.15f; 2 -> 1.3f; else -> 1f }) * (if (font == "serif") 1.1f else 1f)
+    val textScale: Float get() = (when (text) { 1 -> 1.15f; 2 -> 1.3f; else -> 1f }) * (FONTS.firstOrNull { it.id == font }?.scale ?: 1f)
     val rowHeight: Int get() = when (spacing) { 1 -> 64; 2 -> 76; else -> 56 }
 
     fun prefs(ctx: Context) = ctx.getSharedPreferences("settings", Context.MODE_PRIVATE)
@@ -97,7 +97,7 @@ object Theme {
         val p = prefs(ctx)
         themeId = p.getString("theme", "velvet")!!.let { id -> if (THEMES.any { it.id == id }) id else "velvet" }
         mode = p.getString("mode", "phone")!!.let { if (it in listOf("phone", "light", "dark")) it else "phone" }
-        text = p.getInt("text", 0).coerceIn(0, 2); font = p.getString("font", "jost")!!.let { if (it in listOf("jost", "serif", "phone")) it else "jost" }
+        text = p.getInt("text", 0).coerceIn(0, 2); font = p.getString("font", "jost")!!.let { f -> if (FONTS.any { it.id == f }) f else "jost" }
         spacing = p.getInt("spacing", 0).coerceIn(0, 2)
         viz = p.getString("viz", "off")!!.let { if (it in listOf("bars", "waves", "circle", "off")) it else "off" }
         resume = p.getBoolean("resume", true)
@@ -108,13 +108,26 @@ object Theme {
     }
 }
 
-private val JostFamily = FontFamily(
-    Font(R.font.jost_light, FontWeight.Light), Font(R.font.jost_regular, FontWeight.Normal), Font(R.font.jost_medium, FontWeight.Medium),
-    Font(R.font.jost_semibold, FontWeight.SemiBold), Font(R.font.jost_semibold, FontWeight.Bold))
-private val SerifFamily = FontFamily(
-    Font(R.font.cormorant_regular, FontWeight.Light), Font(R.font.cormorant_regular, FontWeight.Normal),
-    Font(R.font.cormorant_medium, FontWeight.Medium), Font(R.font.cormorant_semibold, FontWeight.SemiBold),
-    Font(R.font.cormorant_semibold, FontWeight.Bold))
+/** A typeface the listener can choose. [res]: light, regular, medium, semibold (null = the phone's own font). */
+class FontChoice(val id: String, val name: String, val kind: String, val res: IntArray?, val scale: Float = 1f) {
+    val family: FontFamily by lazy {
+        if (res == null) FontFamily.Default else FontFamily(
+            Font(res[0], FontWeight.Light), Font(res[1], FontWeight.Normal), Font(res[2], FontWeight.Medium),
+            Font(res[3], FontWeight.SemiBold), Font(res[3], FontWeight.Bold))
+    }
+}
 
-/** The app's typeface: Jost unless the listener picked Classic serif or the phone's own font. */
-val Poppins: FontFamily get() = when (Theme.font) { "serif" -> SerifFamily; "phone" -> FontFamily.Default; else -> JostFamily }
+/** Jost first (the app's own look); modern sans-serifs, then classic serifs, then the phone's font. */
+val FONTS = listOf(
+    FontChoice("jost", "Jost", "Modern", intArrayOf(R.font.jost_light, R.font.jost_regular, R.font.jost_medium, R.font.jost_semibold)),
+    FontChoice("poppins", "Poppins", "Modern", intArrayOf(R.font.poppins_light, R.font.poppins_regular, R.font.poppins_medium, R.font.poppins_semibold), 0.95f),
+    FontChoice("montserrat", "Montserrat", "Modern", intArrayOf(R.font.montserrat_light, R.font.montserrat_regular, R.font.montserrat_medium, R.font.montserrat_semibold), 0.95f),
+    FontChoice("raleway", "Raleway", "Modern", intArrayOf(R.font.raleway_light, R.font.raleway_regular, R.font.raleway_medium, R.font.raleway_semibold)),
+    FontChoice("serif", "Cormorant", "Classic", intArrayOf(R.font.cormorant_regular, R.font.cormorant_regular, R.font.cormorant_medium, R.font.cormorant_semibold), 1.1f),
+    FontChoice("playfair", "Playfair", "Classic", intArrayOf(R.font.playfair_regular, R.font.playfair_regular, R.font.playfair_medium, R.font.playfair_semibold)),
+    FontChoice("lora", "Lora", "Classic", intArrayOf(R.font.lora_regular, R.font.lora_regular, R.font.lora_medium, R.font.lora_semibold)),
+    FontChoice("phone", "Phone font", "Phone", null),
+)
+
+/** The app's typeface: the one chosen in Settings (Jost unless changed). */
+val Poppins: FontFamily get() = (FONTS.firstOrNull { it.id == Theme.font } ?: FONTS[0]).family

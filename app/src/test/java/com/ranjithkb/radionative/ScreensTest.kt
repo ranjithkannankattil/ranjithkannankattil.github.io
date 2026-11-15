@@ -165,6 +165,20 @@ class ScreensTest {
         }
     }
     @Test fun n24_player_visualiser_off_switch() = shot("n24-player-viz-off", false, viz = "off") { Player(true) }
+    @Test fun n25_every_font() {
+        rule.mainClock.autoAdvance = false
+        Theme.mode = "phone"; Theme.sysDark = false; Theme.themeId = "velvet"; Theme.viz = "off"; Theme.text = 0; Theme.spacing = 0
+        rule.setContent {
+            val d = androidx.compose.ui.platform.LocalDensity.current
+            androidx.compose.runtime.CompositionLocalProvider(androidx.compose.ui.platform.LocalDensity provides
+                androidx.compose.ui.unit.Density(d.density, d.fontScale * Theme.textScale)) {
+                MaterialTheme(typography = PoppinsType) { Surface(Modifier.fillMaxSize(), color = Paper) { Stations(true) } } }
+        }
+        FONTS.forEach { f -> Theme.font = f.id; androidx.compose.runtime.snapshots.Snapshot.sendApplyNotifications()
+            rule.mainClock.advanceTimeBy(600); capture("n25-font-${f.id}") }
+        Theme.font = "jost"
+    }
+    @Test fun n26_settings_fonts() = shot("n26-settings-fonts", false) { SettingsScreen({}) {} }
     @Test fun n19_every_theme() = everyTheme("t", true, "off") { Stations(true, "heard") }
     @Test fun n20_every_theme_player() = everyTheme("tp", false, "bars") { Player(true) }
     @Test fun n21_widgets() {
