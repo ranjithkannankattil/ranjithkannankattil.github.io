@@ -160,8 +160,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.ehrhiti.lv:8000/Stream_67.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "european-hit-radio-superhits-hiphop-rnb",
@@ -177,8 +176,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.ehrhiti.lv:8000/Stream_32.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "ehr-fresh",
@@ -186,8 +184,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.ehrhiti.lv:8000/Stream_25.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "ehr-darbam",
@@ -195,8 +192,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.ehrhiti.lv:8000/Stream_23.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-liepaja",
@@ -276,8 +272,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.ehrhiti.lv:8000/Stream_14.aac"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "ehr-latviesu-hiti-lv-reps",
@@ -388,8 +383,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.ehrhiti.lv:8000/Stream_12.mp3"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "europa",
@@ -407,8 +401,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.ehrhiti.lv:8000/Stream_78.mp3"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "your-city-padio",
@@ -444,8 +437,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.ehrhiti.lv:8000/Stream_64.mp3"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "latvijas-radio-lr6-naba",
@@ -463,8 +455,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.ehrhiti.lv:8000/Stream_36.mp3"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "ehr-festivalu-hiti",
@@ -473,8 +464,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.ehrhiti.lv:8000/Stream_73.mp3"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "european-hit-radio-superhits-chillout-hi",
@@ -513,4 +503,4 @@ window.STATIONS = [
     "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T07:42Z";
+window.STATIONS_CHECKED = "2026-11-15T10:24Z";

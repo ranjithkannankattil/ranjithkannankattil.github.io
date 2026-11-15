@@ -88,8 +88,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.mfm.ua/online128"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "nrj-ukraine",
@@ -233,7 +232,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.brokenbeats.net/tune"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-shanson",
@@ -1116,4 +1116,4 @@ window.STATIONS = [
     "added": "2026-11-14"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T07:42Z";
+window.STATIONS_CHECKED = "2026-11-15T10:24Z";

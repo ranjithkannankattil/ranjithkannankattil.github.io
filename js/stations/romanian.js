@@ -530,9 +530,7 @@ window.STATIONS = [
     "streams": [
       "https://live.radiooradea.ro/9000/stream"
     ],
-    "added": "2026-10-26",
-    "offline": true,
-    "hidden": true
+    "added": "2026-10-26"
   },
   {
     "id": "love-pro-dj-radio-chisinau",
@@ -1327,4 +1325,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T07:42Z";
+window.STATIONS_CHECKED = "2026-11-15T10:24Z";

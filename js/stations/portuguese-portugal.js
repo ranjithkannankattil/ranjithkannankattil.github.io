@@ -156,8 +156,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://proic1.evspt.com/oxigenio_aac"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "cidade-fm",
@@ -230,8 +229,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "cidade-fm-2",
@@ -1329,8 +1327,7 @@ window.STATIONS = [
     "streams": [
       "https://proic1.evspt.com/radar_mp3"
     ],
-    "added": "2026-11-09",
-    "offline": true
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T07:42Z";
+window.STATIONS_CHECKED = "2026-11-15T10:24Z";

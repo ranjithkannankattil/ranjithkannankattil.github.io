@@ -649,7 +649,8 @@ window.STATIONS = [
     "streams": [
       "https://stream-285.surfernetwork.com/thdtw5xd9eiuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ0aGR0dzV4ZDllaXV2IiwiaG9zdCI6InN0cmVhbS0yODUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiI0OUMxUU9PMFIyeTl5SThnTno0VTB3IiwiaWF0IjoxNzg1OTU0NjI0LCJleHAiOjE3ODU5NTQ2ODR9.TEC2qyYYTCv3OjNepwCqgyWWPAoxPRanj5XLmznekcA"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "offline": true
   },
   {
     "id": "vrt-radio-1-classics",
@@ -1336,4 +1337,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T07:42Z";
+window.STATIONS_CHECKED = "2026-11-15T10:24Z";

@@ -1258,8 +1258,7 @@ window.STATIONS = [
     "streams": [
       "https://s2.free-shoutcast.com/stream/18096"
     ],
-    "added": "2026-11-12",
-    "offline": true
+    "added": "2026-11-12"
   },
   {
     "id": "onix-radio",
@@ -1289,4 +1288,4 @@ window.STATIONS = [
     "added": "2026-11-14"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T07:42Z";
+window.STATIONS_CHECKED = "2026-11-15T10:24Z";

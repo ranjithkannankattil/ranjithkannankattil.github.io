@@ -846,8 +846,7 @@ window.STATIONS = [
     "streams": [
       "https://medradio.ice.infomaniak.ch/medradio-128.mp3"
     ],
-    "added": "2026-11-01",
-    "offline": true
+    "added": "2026-11-01"
   },
   {
     "id": "almunir-radio-tripoli",
@@ -1126,7 +1125,8 @@ window.STATIONS = [
     "streams": [
       "https://live.misk.art/stream"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "offline": true
   },
   {
     "id": "ayat-al-quran-radio",
@@ -1327,4 +1327,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T07:42Z";
+window.STATIONS_CHECKED = "2026-11-15T10:24Z";

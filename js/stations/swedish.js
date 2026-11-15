@@ -498,6 +498,15 @@ window.STATIONS = [
       "https://stream.streamaudio.de:8000/strul-fm"
     ],
     "added": "2026-11-14"
+  },
+  {
+    "id": "tjenamors-radio",
+    "name": "Tjenamors Radio!",
+    "category": "music",
+    "streams": [
+      "https://radio.tjenamors.se/listen/tjenamors_radio/radio.mp3"
+    ],
+    "added": "2026-11-15"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T07:42Z";
+window.STATIONS_CHECKED = "2026-11-15T10:24Z";

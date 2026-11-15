@@ -122,7 +122,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.dinle.az/dalgafm"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "planetfm-88-7",
@@ -130,7 +131,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.dinle.az/planetfm"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "ayaz-tv",
@@ -192,4 +194,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T07:42Z";
+window.STATIONS_CHECKED = "2026-11-15T10:24Z";
