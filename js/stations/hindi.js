@@ -257,8 +257,7 @@ window.STATIONS = [
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio007/hlspbaudio007_Auto.m3u8"
     ],
-    "hidden": true,
-    "offline": true
+    "hidden": true
   },
   {
     "id": "radio-mirchi-usa",
@@ -1331,4 +1330,4 @@ window.STATIONS = [
     "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T10:24Z";
+window.STATIONS_CHECKED = "2026-11-15T19:57Z";

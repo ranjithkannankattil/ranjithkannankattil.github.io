@@ -59,7 +59,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://tamilpanpalai.radioca.st/ind"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "air-kodai-fm",
@@ -67,7 +68,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "89-4-tamil-fm",
@@ -291,7 +293,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio129/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "tamil-ragam",
@@ -1328,4 +1331,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T10:24Z";
+window.STATIONS_CHECKED = "2026-11-15T19:57Z";

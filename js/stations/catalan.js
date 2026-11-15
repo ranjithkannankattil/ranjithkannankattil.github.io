@@ -200,7 +200,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://directe.eixamplebarcelonaradio.com:8443/radioOnline"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "comboi-la-radio-de-la-terreta",
@@ -649,4 +650,4 @@ window.STATIONS = [
     "added": "2026-10-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T10:24Z";
+window.STATIONS_CHECKED = "2026-11-15T19:57Z";

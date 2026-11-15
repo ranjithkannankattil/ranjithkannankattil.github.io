@@ -1125,8 +1125,7 @@ window.STATIONS = [
     "streams": [
       "https://live.misk.art/stream"
     ],
-    "added": "2026-11-05",
-    "offline": true
+    "added": "2026-11-05"
   },
   {
     "id": "ayat-al-quran-radio",
@@ -1327,4 +1326,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T10:24Z";
+window.STATIONS_CHECKED = "2026-11-15T19:57Z";

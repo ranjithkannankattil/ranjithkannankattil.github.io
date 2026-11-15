@@ -32,7 +32,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/5022379/64k.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "903",
@@ -518,7 +519,8 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/1283/64k.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "station-33",
@@ -608,8 +610,7 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/15318668/64k.mp3"
     ],
-    "added": "2026-10-27",
-    "offline": true
+    "added": "2026-10-27"
   },
   {
     "id": "station-40",
@@ -663,7 +664,8 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/1282/64k.mp3"
     ],
-    "added": "2026-11-15"
+    "added": "2026-11-15",
+    "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T10:24Z";
+window.STATIONS_CHECKED = "2026-11-15T19:57Z";

@@ -349,8 +349,7 @@ window.STATIONS = [
       "https://ice31.securenetsystems.net/0079"
     ],
     "added": "2026-10-24",
-    "where": "Malawi",
-    "offline": true
+    "where": "Malawi"
   },
   {
     "id": "ujyaalo-90-network",
@@ -1421,7 +1420,8 @@ window.STATIONS = [
       "https://stream.zeno.fm/60cb36c29heuv"
     ],
     "added": "2026-11-12",
-    "where": "The Philippines"
+    "where": "The Philippines",
+    "offline": true
   },
   {
     "id": "info-radio-ghana",
@@ -1504,4 +1504,4 @@ window.STATIONS = [
     "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T10:24Z";
+window.STATIONS_CHECKED = "2026-11-15T19:57Z";

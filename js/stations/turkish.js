@@ -369,8 +369,7 @@ window.STATIONS = [
     "streams": [
       "https://radio-trtmemleketimfm.medya.trt.com.tr/master.m3u8"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "power-dance",
@@ -480,8 +479,7 @@ window.STATIONS = [
     "streams": [
       "https://radio-trttsr.medya.trt.com.tr/master.m3u8"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "radyo-mezopotamya",
@@ -1332,4 +1330,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T10:24Z";
+window.STATIONS_CHECKED = "2026-11-15T19:57Z";

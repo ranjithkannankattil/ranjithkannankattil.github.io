@@ -399,6 +399,24 @@ window.STATIONS = [
       "https://direkte.radiorevolt.no/revolt.aac"
     ],
     "added": "2026-11-14"
+  },
+  {
+    "id": "nrk-p1-hordaland",
+    "name": "NRK P1 Hordaland",
+    "category": "music",
+    "streams": [
+      "https://cdn0-47115-liveicecast0.dna.contentdelivery.net/p1_dk8_aac_h"
+    ],
+    "added": "2026-11-15"
+  },
+  {
+    "id": "radio-l-lillesand",
+    "name": "Radio L Lillesand",
+    "category": "music",
+    "streams": [
+      "https://stream.radio-l.no/rlihq"
+    ],
+    "added": "2026-11-15"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T10:24Z";
+window.STATIONS_CHECKED = "2026-11-15T19:57Z";

@@ -1041,7 +1041,8 @@ window.STATIONS = [
     "streams": [
       "https://online-novodnistrovsk.pp.ua:8443/playHD"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "offline": true
   },
   {
     "id": "station-30",
@@ -1116,4 +1117,4 @@ window.STATIONS = [
     "added": "2026-11-14"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T10:24Z";
+window.STATIONS_CHECKED = "2026-11-15T19:57Z";

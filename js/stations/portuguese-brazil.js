@@ -113,7 +113,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://1132747t.ha.azioncdn.net/primary/gaucha_rbs.sdp/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "sertaneja-106-7",
@@ -265,7 +266,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://liverdgaupoa.rbsdirect.com.br/primary/gaucha_rbs.sdp/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-liga-samba",
@@ -880,7 +882,8 @@ window.STATIONS = [
     "streams": [
       "https://liverd102fm.rbsdirect.com.br/primary/ita_poa.sdp/chunklist_0ac85862-caaa-446f-93bf-3e12816c36a0.m3u8"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "offline": true
   },
   {
     "id": "phonkio-radio-og-phonk-in-hq-24-7",
@@ -1333,4 +1336,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T10:24Z";
+window.STATIONS_CHECKED = "2026-11-15T19:57Z";

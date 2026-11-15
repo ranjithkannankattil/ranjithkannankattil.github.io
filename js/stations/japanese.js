@@ -331,8 +331,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.vrstv.jp/"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "wave-anime-radio",
@@ -722,4 +721,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T10:24Z";
+window.STATIONS_CHECKED = "2026-11-15T19:57Z";

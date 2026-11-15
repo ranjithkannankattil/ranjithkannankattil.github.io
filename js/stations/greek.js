@@ -951,7 +951,8 @@ window.STATIONS = [
     "streams": [
       "https://i2.streams.ovh:7109/stream?type=http&nocache=11373"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "offline": true
   },
   {
     "id": "skai-patras",
@@ -1323,4 +1324,4 @@ window.STATIONS = [
     "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T10:24Z";
+window.STATIONS_CHECKED = "2026-11-15T19:57Z";

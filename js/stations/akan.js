@@ -49,8 +49,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sunny-radio-server.cloud-ip.cc/radio/sunnyradio?t=1782488511159"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "agoo-96-9-fm",
@@ -482,4 +481,4 @@ window.STATIONS = [
     "added": "2026-10-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T10:24Z";
+window.STATIONS_CHECKED = "2026-11-15T19:57Z";
