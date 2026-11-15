@@ -687,6 +687,9 @@ fun InfoTab(languages: Int, update: Update?, onPage: (String) -> Unit = {}, onSi
             Section("Credits") {
                 TextButton({ openUrl(ctx, "https://www.facebook.com/share/1CFLUukqxQ/") }, contentPadding = PaddingValues(0.dp)) {
                     Text("Logo by Jai Sachith Chittilapilly", color = Accent) }
+                Text("Station names and logos belong to their owners. Logos are shown only on the Android Auto screen, " +
+                    "to recognise a station at a glance; a station that prefers otherwise can write to hello@ranjithkb.com.",
+                    style = MaterialTheme.typography.bodySmall, color = InkSoft, modifier = Modifier.padding(top = 6.dp))
             }
         }
         item {
