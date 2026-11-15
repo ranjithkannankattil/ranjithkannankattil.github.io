@@ -153,6 +153,17 @@ class ScreensTest {
         org.junit.Assert.assertTrue("forced dark should paint a dark page, got $lum", lum < 80)
         Theme.mode = "phone"
     }
+    @Test fun n23_share_cards() {
+        val ctx = rule.activity
+        listOf(Triple("velvet", false, "off"), Triple("velvet", true, "bars"), Triple("kadal", false, "waves"), Triple("ila", true, "circle"),
+            Triple("kasavu", false, "bars"), Triple("manju", false, "off")).forEachIndexed { i, (t, dk, vz) ->
+            val font = listOf("jost", "jost", "serif", "jost", "phone", "jost")[i]
+            val b = drawSongCard(ctx, "Yaar Intha Saalaiyoram", "G. V. Prakash Kumar, Saindhavi", "Radio Mango", null,
+                "ranjithkb.com/radio.html?c=malayalam&s=radiomango", Palettes.of(t, dk), vz, font, null)
+            File(File("build/screens").apply { mkdirs() }, "n23-card-$t-${if (dk) "dark" else "light"}-$vz-$font.png")
+                .outputStream().use { b.compress(Bitmap.CompressFormat.PNG, 100, it) }
+        }
+    }
     @Test fun n19_every_theme() = everyTheme("t", true, "off") { Stations(true, "heard") }
     @Test fun n20_every_theme_player() = everyTheme("tp", false, "bars") { Player(true) }
     @Test fun n21_widgets() {

@@ -1,5 +1,7 @@
 package com.ranjithkb.radionative
 
+import androidx.compose.ui.graphics.toArgb
+
 import android.content.Context
 import android.content.Intent
 import android.graphics.*
@@ -51,45 +53,12 @@ private fun newer(a: String, b: String): Boolean {
 
 /** A shareable picture of the song that's playing: cover, song, artist, station, app name. */
 suspend fun shareSongCard(ctx: Context, song: String, artist: String, station: String, artUrl: String?, link: String = "https://ranjithkb.com/radio.html") {
-    // Velvet card in the app's look: gold frame, the logo, the cover (when there is one), Jost; the station link goes with it as text
+    // the card in the listener's own look: colour theme (light / dark), font and visualiser, as in the big player
+    val pal = Theme.pal; val viz = Theme.viz; val font = Theme.font
+    val bands = if (System.currentTimeMillis() - Viz.stamp < 2000) Viz.bands.copyOf() else null
     val file = withContext(Dispatchers.IO) {
-        val w = 1080; val h = 1350
-        val bmp = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888)
-        val cv = Canvas(bmp)
-        val gold = 0xFFC9A86A.toInt()
-        cv.drawColor(0xFF2A1424.toInt())
-        cv.drawRect(RectF(48f, 48f, w - 48f, h - 48f), Paint(Paint.ANTI_ALIAS_FLAG).apply { color = 0x88C9A86A.toInt(); style = Paint.Style.STROKE; strokeWidth = 2f })
         val art = artUrl?.let { try { URL(it).openStream().use(BitmapFactory::decodeStream) } catch (e: Exception) { null } }
-        val box = RectF(240f, 200f, 840f, 800f)
-        if (art != null) cv.drawBitmap(art, null, box, Paint(Paint.FILTER_BITMAP_FLAG))
-        else {
-            cv.drawRect(box, Paint(Paint.ANTI_ALIAS_FLAG).apply { color = 0x88C9A86A.toInt(); style = Paint.Style.STROKE; strokeWidth = 2f })
-            androidx.core.content.ContextCompat.getDrawable(ctx, R.drawable.ic_logo_mark)?.mutate()?.let { d ->
-                d.setTint(gold); d.setBounds(390, 350, 690, 650); d.draw(cv) }
-        }
-        val light = try { androidx.core.content.res.ResourcesCompat.getFont(ctx, R.font.jost_light) } catch (e: Exception) { null }
-        val med = try { androidx.core.content.res.ResourcesCompat.getFont(ctx, R.font.jost_medium) } catch (e: Exception) { null }
-        fun paint(size: Float, color: Int, tf: Typeface?, spacing: Float = 0f) = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-            this.color = color; textSize = size; textAlign = Paint.Align.CENTER; typeface = tf ?: Typeface.SANS_SERIF; letterSpacing = spacing }
-        fun text(s: String, y: Float, p: Paint) {
-            var t = s; while (p.measureText(t) > 880 && t.length > 4) t = t.dropLast(2)
-            if (t != s) t = t.trimEnd() + "…"
-            cv.drawText(t, 540f, y, p)
-        }
-        val hasSong = song.isNotBlank() && song != station
-        var y = 900f
-        if (hasSong) { text("ON " + station.uppercase(), y, paint(30f, gold, med, 0.18f)); y += 90f }
-        // title wraps onto a second line instead of being cut short
-        val tp = paint(66f, 0xFFF1E9EE.toInt(), light)
-        val title = if (hasSong) song else station
-        val words = title.split(' '); var l1 = ""; var cut = words.size
-        for ((k, wd) in words.withIndex()) { val t = if (l1.isEmpty()) wd else "$l1 $wd"; if (tp.measureText(t) > 880 && l1.isNotEmpty()) { cut = k; break }; l1 = t }
-        text(l1, y, tp); val l2 = words.drop(cut).joinToString(" ")
-        if (l2.isNotBlank()) { y += 78f; text(l2, y, tp) }
-        val second = if (hasSong) artist else "Live radio"
-        if (second.isNotBlank()) { y += 70f; text(second, y, paint(40f, 0xFFB9A8B4.toInt(), light)) }
-        text("RADIO VELVET", 1215f, paint(30f, gold, med, 0.32f))
-        text(link.removePrefix("https://"), 1265f, paint(26f, 0x99F1E9EE.toInt(), light))
+        val bmp = drawSongCard(ctx, song, artist, station, art, link, pal, viz, font, bands)
         val dir = File(ctx.cacheDir, "cards").apply { mkdirs() }
         File(dir, "song-card.png").also { f -> f.outputStream().use { bmp.compress(Bitmap.CompressFormat.PNG, 100, it) } }
     }
@@ -101,6 +70,98 @@ suspend fun shareSongCard(ctx: Context, song: String, artist: String, station: S
         .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
         .apply { clipData = android.content.ClipData.newRawUri("card", uri) }
     ctx.startActivity(Intent.createChooser(send, "Share").addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION))
+}
+
+/**
+ * The share card picture (1080 × 1350): the cover colour of the chosen theme, its gold, the chosen font, and the
+ * visualiser style from the big player (with the sound levels of the moment when the radio is playing).
+ */
+fun drawSongCard(ctx: Context, song: String, artist: String, station: String, art: Bitmap?, link: String,
+                 pal: Pal, viz: String, font: String, bands: FloatArray?): Bitmap {
+    val w = 1080; val h = 1350
+    val bmp = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888)
+    val cv = Canvas(bmp)
+    val bg = pal.artBg
+    val darkCard = Palettes.luma(bg) < 0.5f
+    val ink = if (darkCard) 0xFFF1E9EE.toInt() else pal.ink.toArgb()
+    val soft = if (darkCard) 0xFFC9BBC5.toInt() else pal.soft.toArgb()
+    val goldC = if (Palettes.contrast(pal.gold, bg) >= 2.2f) pal.gold else androidx.compose.ui.graphics.Color(ink)
+    val gold = goldC.toArgb()
+    val vizC = (if (Palettes.contrast(pal.accentText, bg) >= 2f) pal.accentText else androidx.compose.ui.graphics.Color(ink)).toArgb()
+    fun alpha(c: Int, a: Int) = (c and 0x00FFFFFF) or (a shl 24)
+    cv.drawColor(bg.toArgb())
+    val line = Paint(Paint.ANTI_ALIAS_FLAG).apply { color = alpha(gold, 0x88); style = Paint.Style.STROKE; strokeWidth = 2f }
+    cv.drawRect(RectF(48f, 48f, w - 48f, h - 48f), line)
+
+    val band = viz == "bars" || viz == "waves"
+    val box = if (band) RectF(270f, 140f, 810f, 680f) else RectF(240f, 170f, 840f, 770f)
+    val logo = androidx.core.content.ContextCompat.getDrawable(ctx, R.drawable.ic_logo_mark)?.mutate()
+    if (art != null) cv.drawBitmap(art, null, box, Paint(Paint.FILTER_BITMAP_FLAG).apply { if (viz == "circle") alpha = 90 })
+    else {
+        cv.drawRect(box, line)
+        val s = box.width() * 0.42f
+        logo?.let { d -> d.setTint(gold); d.setBounds((box.centerX() - s / 2).toInt(), (box.centerY() - s / 2).toInt(),
+            (box.centerX() + s / 2).toInt(), (box.centerY() + s / 2).toInt()); d.draw(cv) }
+    }
+    // the visualiser: the moment's sound levels when playing, otherwise a calm pattern
+    val v = bands ?: FloatArray(Viz.N) { i -> (0.3f + 0.4f * (0.5f + 0.5f * kotlin.math.sin(i * 0.55f)) * (0.6f + 0.4f * kotlin.math.cos(i * 0.21f))) * (1f - i / 60f) }
+    val vp = Paint(Paint.ANTI_ALIAS_FLAG).apply { strokeCap = Paint.Cap.ROUND }
+    when (viz) {
+        "bars" -> {
+            val r = RectF(box.left, box.bottom + 24f, box.right, box.bottom + 144f); val bw = r.width() / Viz.N
+            v.forEachIndexed { i, x -> vp.color = alpha(if (i % 7 == 3) gold else vizC, (140 + 115 * x).toInt().coerceIn(0, 255))
+                val bh = r.height() * (0.08f + 0.92f * x)
+                cv.drawRect(r.left + i * bw + bw * 0.19f, r.bottom - bh, r.left + i * bw + bw * 0.81f, r.bottom, vp) }
+        }
+        "waves" -> {
+            val r = RectF(box.left, box.bottom + 24f, box.right, box.bottom + 144f)
+            listOf(Triple(1f, 0f, vizC), Triple(0.6f, 1.6f, gold)).forEach { (sc, ph, c) ->
+                val path = android.graphics.Path()
+                for (k in 0..96) { val x = r.left + r.width() * k / 96f; val amp = v[k * (Viz.N - 1) / 96] * r.height() * 0.45f * sc
+                    val y = r.centerY() + amp * kotlin.math.sin(k / 96f * 6.2832f * 3 + ph)
+                    if (k == 0) path.moveTo(x, y) else path.lineTo(x, y) }
+                cv.drawPath(path, Paint(Paint.ANTI_ALIAS_FLAG).apply { color = c; style = Paint.Style.STROKE; strokeWidth = if (sc == 1f) 5f else 3f; strokeCap = Paint.Cap.ROUND })
+            }
+        }
+        "circle" -> {
+            val cx = box.centerX(); val cy = box.centerY(); val r0 = box.width() * 0.30f; val n = Viz.N * 2
+            vp.strokeWidth = 6f
+            for (k in 0 until n) { val x = v[k % Viz.N]; val a = k / n.toFloat() * 6.2832f - 1.5708f; val r1 = r0 + x * box.width() * 0.17f
+                vp.color = alpha(if (k % 8 == 3) gold else vizC, (128 + 127 * x).toInt().coerceIn(0, 255))
+                cv.drawLine(cx + r0 * kotlin.math.cos(a), cy + r0 * kotlin.math.sin(a), cx + r1 * kotlin.math.cos(a), cy + r1 * kotlin.math.sin(a), vp) }
+            cv.drawCircle(cx, cy, r0 - 8f, Paint(Paint.ANTI_ALIAS_FLAG).apply { color = alpha(gold, 0xB0); style = Paint.Style.STROKE; strokeWidth = 2f })
+        }
+    }
+
+    fun face(light: Boolean): Typeface? = try { when (font) {
+        "serif" -> androidx.core.content.res.ResourcesCompat.getFont(ctx, if (light) R.font.cormorant_regular else R.font.cormorant_semibold)
+        "phone" -> Typeface.create(Typeface.SANS_SERIF, if (light) Typeface.NORMAL else Typeface.BOLD)
+        else -> androidx.core.content.res.ResourcesCompat.getFont(ctx, if (light) R.font.jost_light else R.font.jost_medium)
+    } } catch (e: Exception) { null }
+    val light = face(true); val med = face(false)
+    val grow = if (font == "serif") 1.12f else 1f
+    fun paint(size: Float, color: Int, tf: Typeface?, spacing: Float = 0f) = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+        this.color = color; textSize = size * grow; textAlign = Paint.Align.CENTER; typeface = tf ?: Typeface.SANS_SERIF; letterSpacing = spacing }
+    fun text(s: String, y: Float, p: Paint) {
+        var t = s; while (p.measureText(t) > 880 && t.length > 4) t = t.dropLast(2)
+        if (t != s) t = t.trimEnd() + "…"
+        cv.drawText(t, 540f, y, p)
+    }
+    val hasSong = song.isNotBlank() && song != station
+    var y = if (band) 920f else 900f
+    if (hasSong) { text("ON " + station.uppercase(), y, paint(30f, gold, med, 0.18f)); y += 88f }
+    // title wraps onto a second line instead of being cut short
+    val tp = paint(64f, ink, light)
+    val title = if (hasSong) song else station
+    val words = title.split(' '); var l1 = ""; var cut = words.size
+    for ((k, wd) in words.withIndex()) { val t = if (l1.isEmpty()) wd else "$l1 $wd"; if (tp.measureText(t) > 880 && l1.isNotEmpty()) { cut = k; break }; l1 = t }
+    text(l1, y, tp); val l2 = words.drop(cut).joinToString(" ")
+    if (l2.isNotBlank()) { y += 74f; text(l2, y, tp) }
+    val second = if (hasSong) artist else "Live radio"
+    if (second.isNotBlank()) { y += 66f; text(second, y, paint(38f, soft, light)) }
+    text("RADIO VELVET", 1222f, paint(30f, gold, med, 0.32f))
+    text(link.removePrefix("https://"), 1270f, paint(25f, alpha(ink, 0x99), light))
+    return bmp
 }
 
 /** Link that opens this station on the Radio page (same format the website shares). */
