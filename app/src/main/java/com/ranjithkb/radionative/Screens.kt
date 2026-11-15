@@ -14,6 +14,7 @@ import androidx.compose.foundation.gestures.detectVerticalDragGestures
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
@@ -125,6 +126,65 @@ fun Swatch(t: ThemeDef, size: Int, on: Boolean) {
     }
 }
 
+/**
+ * A tiny version of the real screen in one theme: header, three stations (one playing, with the gold mark),
+ * and the player bar. Light or dark follows the app's current choice.
+ */
+@Composable
+fun ThemePreview(t: ThemeDef, on: Boolean, w: Int, modifier: Modifier = Modifier) {
+    val p = Palettes.of(t.id, Theme.dark)
+    val h = (w * 1.62f).toInt()
+    val u = w / 76f   // scale: the box is drawn for 76 dp wide
+    Column(modifier.width(w.dp).height(h.dp).clip(RoundedCornerShape((6 * u).dp)).background(p.paper)
+        .border(if (on) 2.dp else 1.dp, if (on) p.accent else Line, RoundedCornerShape((6 * u).dp))) {
+        Row(Modifier.padding(start = (6 * u).dp, top = (7 * u).dp, end = (6 * u).dp), verticalAlignment = Alignment.CenterVertically) {
+            Icon(androidx.compose.ui.res.painterResource(R.drawable.ic_logo_mark), null, Modifier.size((8 * u).dp), tint = if (Theme.dark) p.gold else p.ink)
+            Spacer(Modifier.width((3 * u).dp))
+            Box(Modifier.width((26 * u).dp).height((2 * u).dp).background(p.ink))
+        }
+        Box(Modifier.padding(start = (6 * u).dp, top = (6 * u).dp).width((22 * u).dp).height((1.5f * u).dp).background(p.accent))
+        listOf(true, false, false).forEach { playing ->
+            Row(Modifier.padding(start = (6 * u).dp, end = (6 * u).dp, top = (7 * u).dp), verticalAlignment = Alignment.CenterVertically) {
+                Box(Modifier.width((1.5f * u).dp).height((9 * u).dp).background(if (playing) p.gold else Color.Transparent))
+                Spacer(Modifier.width((3 * u).dp))
+                Column(Modifier.weight(1f)) {
+                    Box(Modifier.width((if (playing) 34 else 30) * u.dp).height((2.5f * u).dp).background(if (playing) p.accentText else p.ink))
+                    Spacer(Modifier.height((2.5f * u).dp))
+                    Box(Modifier.width((20 * u).dp).height((1.5f * u).dp).background(p.soft))
+                }
+                Box(Modifier.size((5 * u).dp).clip(CircleShape).background(if (playing) p.accent else Color.Transparent)
+                    .border((0.8f * u).dp, p.soft, CircleShape))
+            }
+            Box(Modifier.padding(start = (6 * u).dp, end = (6 * u).dp, top = (5 * u).dp).fillMaxWidth().height(1.dp).background(p.line))
+        }
+        Spacer(Modifier.weight(1f))
+        Row(Modifier.fillMaxWidth().background(p.bar).padding(horizontal = (6 * u).dp, vertical = (7 * u).dp), verticalAlignment = Alignment.CenterVertically) {
+            Column(Modifier.weight(1f)) {
+                Box(Modifier.width((16 * u).dp).height((1.5f * u).dp).background(if (Palettes.contrast(p.gold, p.bar) >= 2.6f) p.gold else p.barInk))
+                Spacer(Modifier.height((3 * u).dp))
+                Box(Modifier.width((30 * u).dp).height((2.5f * u).dp).background(p.barInk))
+            }
+            Box(Modifier.size((13 * u).dp).clip(CircleShape).border((1 * u).dp, if (Palettes.contrast(p.gold, p.bar) >= 2.6f) p.gold else p.barInk, CircleShape))
+        }
+    }
+}
+
+/** A theme as a box with its name under it: tap to use it. */
+@Composable
+fun ThemeChoice(t: ThemeDef, w: Int, onPick: () -> Unit) {
+    val on = t.id == Theme.themeId
+    Column(Modifier.width(w.dp).semantics { selected = on; role = Role.RadioButton; contentDescription = "${t.name} ${t.en} colour theme" }
+        .clickable(onClick = onPick), horizontalAlignment = Alignment.CenterHorizontally) {
+        ThemePreview(t, on, w)
+        Row(Modifier.padding(top = 6.dp), verticalAlignment = Alignment.CenterVertically) {
+            if (on) Text("◆ ", color = GoldC, fontSize = 11.sp)
+            Text(t.name, fontSize = 13.sp, color = if (on) AccentText else Title, fontWeight = if (on) FontWeight.Medium else FontWeight.Normal, maxLines = 1)
+        }
+        if (t.ml.isNotBlank()) Text(t.ml, fontSize = 12.sp, color = Soft, maxLines = 1, fontFamily = Manjari)
+        if (t.en != t.name) Text(t.en, fontSize = 11.sp, color = Soft, maxLines = 1, overflow = TextOverflow.Ellipsis)
+    }
+}
+
 // ------------------------------------------------------------------ Settings
 
 @OptIn(ExperimentalLayoutApi::class)
@@ -137,17 +197,10 @@ fun SettingsScreen(close: () -> Unit, open: (String) -> Unit) {
         Segmented(listOf("Phone", "Light", "Dark"), listOf("phone", "light", "dark").indexOf(Theme.mode)) {
             Theme.mode = listOf("phone", "light", "dark")[it]; save() }
         Text("Phone = follow the phone's light / dark setting.", fontSize = 12.sp, color = Soft, modifier = Modifier.padding(top = 6.dp))
-        val quick = listOf("velvet", "nilavu", "kaavu", "kadal", "sandhya").map { id -> THEMES.first { it.id == id } }
-            .let { l -> if (l.any { it.id == Theme.themeId }) l else l.dropLast(1) + THEMES.first { it.id == Theme.themeId } }
-        Row(Modifier.fillMaxWidth().padding(top = 16.dp), horizontalArrangement = Arrangement.SpaceBetween) {
-            quick.forEach { t ->
-                Column(Modifier.width(62.dp).clickable(onClickLabel = "Use the ${t.name} colours") { Theme.themeId = t.id; save() },
-                    horizontalAlignment = Alignment.CenterHorizontally) {
-                    Swatch(t, 50, t.id == Theme.themeId)
-                    Text(t.name, fontSize = 12.sp, color = Title, maxLines = 1, modifier = Modifier.padding(top = 5.dp))
-                    if (t.ml.isNotBlank()) Text(t.ml, fontSize = 11.sp, color = Soft, maxLines = 1, fontFamily = Manjari)
-                }
-            }
+        // every theme as a little screen, side by side: swipe and tap
+        androidx.compose.foundation.lazy.LazyRow(Modifier.fillMaxWidth().padding(top = 16.dp), horizontalArrangement = Arrangement.spacedBy(12.dp),
+            state = androidx.compose.foundation.lazy.rememberLazyListState(THEMES.indexOfFirst { it.id == Theme.themeId }.coerceAtLeast(0))) {
+            items(THEMES.size) { i -> ThemeChoice(THEMES[i], 76) { Theme.themeId = THEMES[i].id; save() } }
         }
         TextButton({ open("themes") }, Modifier.align(Alignment.End).heightIn(min = 48.dp)) {
             Text("All ${THEMES.size} colour themes ›", color = AccentText) }
@@ -184,20 +237,15 @@ fun ThemesScreen(close: () -> Unit) {
             modifier = Modifier.padding(top = 4.dp))
         THEMES.groupBy { it.group }.forEach { (g, list) ->
             SectionHead(g)
-            list.forEach { t ->
-                val on = t.id == Theme.themeId
-                Row(Modifier.fillMaxWidth().heightIn(min = 56.dp).semantics { selected = on; role = Role.RadioButton }
-                    .clickable(onClickLabel = "Use ${t.name}") { Theme.themeId = t.id; Theme.save(ctx) }, verticalAlignment = Alignment.CenterVertically) {
-                    Swatch(t, 34, false)
-                    Spacer(Modifier.width(14.dp))
-                    Text(androidx.compose.ui.text.buildAnnotatedString {
-                        withStyle(androidx.compose.ui.text.SpanStyle(color = if (on) AccentText else Title, fontWeight = if (on) FontWeight.Medium else FontWeight.Normal)) { append(t.name) }
-                        if (t.ml.isNotBlank()) withStyle(androidx.compose.ui.text.SpanStyle(fontFamily = Manjari, color = Title)) { append("  " + t.ml) }
-                        if (t.en != t.name) withStyle(androidx.compose.ui.text.SpanStyle(color = Soft, fontSize = 13.sp)) { append("  (${t.en})") }
-                    }, Modifier.weight(1f), fontSize = 16.sp)
-                    if (on) Text("◆", color = GoldC, fontSize = 16.sp)
+            BoxWithConstraints(Modifier.fillMaxWidth()) {
+                val w = ((maxWidth.value - 2 * 14) / 3).toInt().coerceAtMost(110)
+                Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
+                    list.chunked(3).forEach { row ->
+                        Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(14.dp)) {
+                            row.forEach { t -> ThemeChoice(t, w) { Theme.themeId = t.id; Theme.save(ctx) } }
+                        }
+                    }
                 }
-                HorizontalDivider(color = Line)
             }
         }
     }

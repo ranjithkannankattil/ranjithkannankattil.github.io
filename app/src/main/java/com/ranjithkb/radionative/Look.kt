@@ -290,16 +290,26 @@ fun PlayerContent(now: NowState, c: androidx.media3.session.MediaController?, la
                 val bmp = artBitmap(now.md.artworkUri?.toString())
                 if (bmp != null) Image(bmp.asImageBitmap(), null, Modifier.fillMaxSize(), contentScale = ContentScale.Crop,
                     alpha = if (Theme.viz == "circle") 0.35f else 1f)
-                else Box(Modifier.fillMaxSize().padding(12.dp).border(1.dp, GoldC.copy(alpha = 0.5f)), contentAlignment = Alignment.Center) {
-                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                        Icon(painterResource(R.drawable.ic_logo_mark), null, Modifier.size((art * 0.26f).dp), tint = GoldC)
-                        // the station name on the cover: light on a dark cover, dark on a light one, always readable
-                        Label(station, if (Palettes.luma(ArtBg) < 0.5f) Color(0xFFE6DCE2) else Title, 9, Modifier.padding(top = 12.dp, start = 14.dp, end = 14.dp))
+                // the visualiser gets its own space on the cover, so it never runs over the logo or the station's name
+                val band = Theme.viz == "bars" || Theme.viz == "waves"
+                val nameColor = if (Palettes.luma(ArtBg) < 0.5f) Color(0xFFE6DCE2) else Title
+                if (bmp == null) Box(Modifier.fillMaxSize().padding(12.dp).border(1.dp, GoldC.copy(alpha = 0.5f))) {
+                    Column(Modifier.fillMaxSize().padding(horizontal = 10.dp, vertical = 10.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+                        Spacer(Modifier.weight(1f))
+                        Icon(painterResource(R.drawable.ic_logo_mark), null, Modifier.size((art * (if (band) 0.2f else 0.26f)).dp), tint = GoldC)
+                        // the station name on the cover (not with the circle, which draws round the logo; it's shown below anyway)
+                        if (Theme.viz != "circle") Label(station, nameColor, 9, Modifier.padding(top = 10.dp, start = 4.dp, end = 4.dp))
+                        Spacer(Modifier.weight(1f))
+                        if (band) VizView(Theme.viz, now.playing, Modifier.fillMaxWidth().height((art * 0.30f).dp).padding(horizontal = 4.dp))
+                    }
+                    if (Theme.viz == "circle") VizView("circle", now.playing, Modifier.fillMaxSize().padding(4.dp))
+                } else {
+                    if (Theme.viz == "circle") VizView("circle", now.playing, Modifier.fillMaxSize().padding(8.dp))
+                    else if (band) Box(Modifier.align(Alignment.BottomCenter).fillMaxWidth().height((art * 0.34f).dp)
+                        .background(ArtBg.copy(alpha = 0.72f))) {   // a soft band over the song's cover picture
+                        VizView(Theme.viz, now.playing, Modifier.fillMaxSize().padding(horizontal = 14.dp, vertical = 8.dp))
                     }
                 }
-                if (Theme.viz == "circle") VizView("circle", now.playing, Modifier.fillMaxSize().padding(8.dp))
-                else if (Theme.viz != "off") VizView(Theme.viz, now.playing,
-                    Modifier.align(Alignment.BottomCenter).fillMaxWidth().height((art * 0.46f).dp).padding(horizontal = 14.dp, vertical = 12.dp))
             }
             if (Theme.viz != "off") VizSwitcher()
             Column(Modifier.fillMaxWidth().padding(top = 16.dp), horizontalAlignment = Alignment.CenterHorizontally) {
