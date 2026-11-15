@@ -117,7 +117,7 @@ class FontChoice(val id: String, val name: String, val kind: String, val res: In
     }
 }
 
-/** Jost first (the app's own look); modern sans-serifs, then classic serifs, then the phone's font. */
+/** Jost first (the app's own look); modern sans-serifs, classic serifs, terminal / typewriter, then the phone's font. */
 val FONTS = listOf(
     FontChoice("jost", "Jost", "Modern", intArrayOf(R.font.jost_light, R.font.jost_regular, R.font.jost_medium, R.font.jost_semibold)),
     FontChoice("poppins", "Poppins", "Modern", intArrayOf(R.font.poppins_light, R.font.poppins_regular, R.font.poppins_medium, R.font.poppins_semibold), 0.95f),
@@ -126,6 +126,8 @@ val FONTS = listOf(
     FontChoice("serif", "Cormorant", "Classic", intArrayOf(R.font.cormorant_regular, R.font.cormorant_regular, R.font.cormorant_medium, R.font.cormorant_semibold), 1.1f),
     FontChoice("playfair", "Playfair", "Classic", intArrayOf(R.font.playfair_regular, R.font.playfair_regular, R.font.playfair_medium, R.font.playfair_semibold)),
     FontChoice("lora", "Lora", "Classic", intArrayOf(R.font.lora_regular, R.font.lora_regular, R.font.lora_medium, R.font.lora_semibold)),
+    FontChoice("plexmono", "IBM Plex Mono", "Terminal", intArrayOf(R.font.plexmono_light, R.font.plexmono_regular, R.font.plexmono_medium, R.font.plexmono_semibold), 0.9f),
+    FontChoice("courier", "Courier Prime", "Typewriter", intArrayOf(R.font.courier_regular, R.font.courier_regular, R.font.courier_regular, R.font.courier_bold), 0.92f),
     FontChoice("phone", "Phone font", "Phone", null),
 )
 
