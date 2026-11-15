@@ -132,6 +132,31 @@ class LogicTest {
         assertArrayEquals(Eq.PRESETS["Bass boost"], Eq.bands(ctx))
     }
 
+    @Test fun eq_normal_and_off_mean_untouched_sound() {
+        assertTrue(EqEngine.flat(EqEngine.target(true, Eq.PRESETS["Normal"]!!)))
+        assertTrue(EqEngine.flat(EqEngine.target(false, Eq.PRESETS["Bass boost"]!!)))
+        assertFalse(EqEngine.flat(EqEngine.target(true, Eq.PRESETS["Bass boost"]!!)))
+    }
+    @Test fun eq_curve_follows_the_sliders() {
+        val g = EqEngine.target(true, Eq.PRESETS["Bass boost"]!!)
+        assertEquals(10, g.size); assertEquals(6f, g[0], 0.01f); assertTrue(g[1] > g[4]); assertEquals(0f, g[9], 0.01f)
+        g.forEach { assertTrue(it in -12f..12f) }
+    }
+    @Test fun eq_glide_is_smooth_and_always_the_same_length() {
+        val from = FloatArray(10); val to = FloatArray(10) { 6f }
+        var prev = from; var maxJump = 0f
+        var t = 0f
+        while (t <= EqEngine.GLIDE_MS) {
+            val n = EqEngine.step(prev, to, from, t)
+            maxJump = maxOf(maxJump, kotlin.math.abs(n[0] - prev[0])); prev = n; t += EqEngine.STEP_MS
+        }
+        assertEquals(6f, EqEngine.step(prev, to, from, EqEngine.GLIDE_MS)[0], 0.001f)
+        assertTrue("largest step $maxJump dB", maxJump < 0.8f)   // 6 dB spread over ~15 small steps, no jump
+        assertEquals(0f, EqEngine.step(from, to, from, 0f)[0], 0.001f)
+        // a glide downwards and a small change take the same time
+        assertEquals(1f, EqEngine.step(to, FloatArray(10) { 1f }, to, EqEngine.GLIDE_MS)[0], 0.001f)
+    }
+
     // ---------------- visualiser
     @Test fun fft_finds_the_tone() {
         val n = 1024; val rate = 44100; val hz = 1000.0

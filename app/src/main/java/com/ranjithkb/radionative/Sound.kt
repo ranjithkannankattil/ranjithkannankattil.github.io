@@ -48,33 +48,123 @@ object Eq {
     }
 }
 
-/** Applies the equaliser to the phone player's sound (headphones, speaker, Bluetooth, car). */
+/**
+ * Applies the equaliser to the phone player's sound (headphones, speaker, Bluetooth, car).
+ *
+ * Uses Android's DynamicsProcessing (Android 9+): exact gains with no hidden volume drop, so "Normal" sounds
+ * exactly like the equaliser being off (it is switched off then: the sound passes through untouched).
+ * Boosts go through a gentle limiter instead of turning everything down. Every change glides over about
+ * a quarter of a second instead of jumping, so moving a slider or picking a preset never clicks or drops out.
+ * Older phones (Android 8) fall back to the basic Equalizer, also bypassed on "Normal".
+ */
 class EqEngine(private val ctx: Context) {
-    private var eq: Equalizer? = null
+    companion object {
+        /** Upper edges of the 10 bands the five sliders are spread over (Hz). */
+        val EDGES = floatArrayOf(45f, 90f, 180f, 355f, 710f, 1400f, 2800f, 5600f, 11200f, 20000f)
+        /** Middle of each band, where the five-slider curve is read. */
+        val CENTRES = intArrayOf(32, 64, 125, 250, 500, 1000, 2000, 4000, 8000, 16000)
+        const val STEP_MS = 16L
+        const val GLIDE_MS = 240f
+        /** The gains (dB) for each band, from the five sliders; all zeros means "leave the sound alone". */
+        fun target(on: Boolean, bands: IntArray): FloatArray =
+            if (!on) FloatArray(CENTRES.size) else FloatArray(CENTRES.size) { Eq.levelAt(CENTRES[it], bands) }
+        fun flat(g: FloatArray) = g.all { kotlin.math.abs(it) < 0.05f }
+        /** One glide step from [cur] towards [to]: a fixed share of the way, so every change takes the same time. */
+        fun step(cur: FloatArray, to: FloatArray, start: FloatArray, elapsedMs: Float): FloatArray {
+            val t = (elapsedMs / GLIDE_MS).coerceIn(0f, 1f)
+            val e = t * t * (3 - 2 * t)   // smooth start and end
+            return FloatArray(cur.size) { start[it] + (to[it] - start[it]) * e }
+        }
+    }
+
+    private val main = android.os.Handler(android.os.Looper.getMainLooper())
     private var session = C.AUDIO_SESSION_ID_UNSET
+    private var dp: android.media.audiofx.DynamicsProcessing? = null
+    private var legacy: Equalizer? = null
+    private var cur = FloatArray(CENTRES.size)
+    private var from = FloatArray(CENTRES.size)
+    private var to = FloatArray(CENTRES.size)
+    private var startedAt = 0L
+    private var gliding = false
 
     fun attach(sessionId: Int) {
-        if (sessionId == session && eq != null) { apply(); return }
-        release(); session = sessionId
+        if (sessionId == session) { apply(); return }
+        release(); session = sessionId; cur = FloatArray(CENTRES.size)
         apply()
     }
+
+    /** Read the settings and glide to them. Called often (every slider move); cheap. */
     fun apply() {
-        val on = Eq.on(ctx)
-        if (!on) { eq?.enabled = false; return }
-        if (session == C.AUDIO_SESSION_ID_UNSET || session == 0) return
-        try {
-            val e = eq ?: Equalizer(0, session).also { eq = it }
-            val (lo, hi) = e.bandLevelRange.let { it[0].toInt() to it[1].toInt() }
-            val b = Eq.bands(ctx)
-            for (i in 0 until e.numberOfBands) {
-                val hz = e.getCenterFreq(i.toShort()) / 1000
-                val mb = (Eq.levelAt(hz, b) * 100).toInt().coerceIn(lo, hi)
-                e.setBandLevel(i.toShort(), mb.toShort())
-            }
-            e.enabled = true
-        } catch (t: Throwable) { release() }     // some phones don't allow it; the radio plays on unchanged
+        main.removeCallbacks(debounced); main.postDelayed(debounced, 30)
     }
-    fun release() { try { eq?.release() } catch (_: Throwable) { }; eq = null }
+    private val debounced = Runnable {
+        to = target(Eq.on(ctx), Eq.bands(ctx))
+        if (session == C.AUDIO_SESSION_ID_UNSET || session == 0) return@Runnable
+        if (flat(to) && flat(cur) && !gliding) { bypass(); return@Runnable }
+        if (!ensure()) return@Runnable
+        from = cur.copyOf(); startedAt = android.os.SystemClock.uptimeMillis()
+        if (!gliding) { gliding = true; main.post(tick) }
+    }
+    private val tick = object : Runnable {
+        override fun run() {
+            val el = (android.os.SystemClock.uptimeMillis() - startedAt).toFloat()
+            cur = step(cur, to, from, el)
+            push(cur)
+            if (el < GLIDE_MS) main.postDelayed(this, STEP_MS)
+            else { cur = to.copyOf(); push(cur); gliding = false; if (flat(cur)) bypass() }
+        }
+    }
+
+    /** Make sure the effect exists and is switched on. False if this phone won't allow it (the radio plays on unchanged). */
+    private fun ensure(): Boolean {
+        try {
+            if (android.os.Build.VERSION.SDK_INT >= 28) {
+                val d = dp ?: run {
+                    val eq = android.media.audiofx.DynamicsProcessing.Eq(true, true, EDGES.size)
+                    EDGES.forEachIndexed { i, f -> eq.setBand(i, android.media.audiofx.DynamicsProcessing.EqBand(true, f, 0f)) }
+                    // limiter only catches peaks from boosts (no squashing of normal sound): -1 dB ceiling, fast attack, gentle release
+                    val lim = android.media.audiofx.DynamicsProcessing.Limiter(true, true, 0, 1f, 80f, 10f, -1f, 0f)
+                    val cfg = android.media.audiofx.DynamicsProcessing.Config.Builder(
+                        android.media.audiofx.DynamicsProcessing.VARIANT_FAVOR_FREQUENCY_RESOLUTION, 2,
+                        true, EDGES.size, false, 0, false, 0, true)
+                        .setPreEqAllChannelsTo(eq).setLimiterAllChannelsTo(lim).build()
+                    android.media.audiofx.DynamicsProcessing(0, session, cfg).also { dp = it; push(cur) }
+                }
+                if (!d.enabled) d.enabled = true
+            } else {
+                val e = legacy ?: Equalizer(0, session).also { legacy = it }
+                if (!e.enabled) e.enabled = true
+            }
+            return true
+        } catch (t: Throwable) { release(); return false }
+    }
+
+    private fun push(g: FloatArray) {
+        try {
+            dp?.let { d -> g.forEachIndexed { i, v ->
+                d.setPreEqBandAllChannelsTo(i, android.media.audiofx.DynamicsProcessing.EqBand(true, EDGES[i], v)) } }
+            legacy?.let { e ->
+                val (lo, hi) = e.bandLevelRange.let { it[0].toInt() to it[1].toInt() }
+                for (i in 0 until e.numberOfBands) {
+                    val hz = e.getCenterFreq(i.toShort()) / 1000
+                    val k = CENTRES.indices.minBy { kotlin.math.abs(kotlin.math.ln(CENTRES[it].toFloat() / hz.coerceAtLeast(1))) }
+                    e.setBandLevel(i.toShort(), (g[k] * 100).toInt().coerceIn(lo, hi).toShort())
+                }
+            }
+        } catch (t: Throwable) { }
+    }
+
+    /** Flat: switch the effect off so the sound passes through exactly as broadcast. */
+    private fun bypass() {
+        try { dp?.enabled = false } catch (_: Throwable) { }
+        try { legacy?.enabled = false } catch (_: Throwable) { }
+    }
+
+    fun release() {
+        main.removeCallbacks(debounced); main.removeCallbacks(tick); gliding = false
+        try { dp?.release() } catch (_: Throwable) { }; dp = null
+        try { legacy?.release() } catch (_: Throwable) { }; legacy = null
+    }
 }
 
 /**
