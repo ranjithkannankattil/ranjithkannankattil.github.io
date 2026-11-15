@@ -164,6 +164,7 @@ class ScreensTest {
                 .outputStream().use { b.compress(Bitmap.CompressFormat.PNG, 100, it) }
         }
     }
+    @Test fun n24_player_visualiser_off_switch() = shot("n24-player-viz-off", false, viz = "off") { Player(true) }
     @Test fun n19_every_theme() = everyTheme("t", true, "off") { Stations(true, "heard") }
     @Test fun n20_every_theme_player() = everyTheme("tp", false, "bars") { Player(true) }
     @Test fun n21_widgets() {

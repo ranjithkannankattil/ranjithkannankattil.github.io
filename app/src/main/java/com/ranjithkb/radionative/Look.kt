@@ -311,7 +311,7 @@ fun PlayerContent(now: NowState, c: androidx.media3.session.MediaController?, la
                     }
                 }
             }
-            if (Theme.viz != "off") VizSwitcher()
+            VizSwitcher()   // off: a quiet "Visualiser" switch; on: Bars · Waves · Circle · Off
             Column(Modifier.fillMaxWidth().padding(top = 16.dp), horizontalAlignment = Alignment.CenterHorizontally) {
                 if (hasSong) Label("On $station", AccentText, 10)
                 val big = if (hasSong) song else station

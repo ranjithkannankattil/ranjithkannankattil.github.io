@@ -21,6 +21,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.geometry.Offset
@@ -410,12 +411,33 @@ fun VizView(style: String, playing: Boolean, modifier: Modifier, demo: Boolean =
 @Composable
 fun VizSwitcher() {
     val ctx = LocalContext.current
+    val pr = Theme.prefs(ctx)
+    fun pick(st: String) {
+        if (st == "off" && Theme.viz != "off") pr.edit().putString("vizLast", Theme.viz).apply()   // remembered for next time
+        Theme.viz = st; Theme.save(ctx)
+    }
+    if (Theme.viz == "off") {
+        // off: one quiet little switch under the cover (three small bars and the word), so it's there but doesn't draw the eye
+        Row(Modifier.padding(top = 4.dp).heightIn(min = 44.dp).alpha(0.75f)
+            .clickable(onClickLabel = "Turn on the visualiser") { pick(pr.getString("vizLast", "bars")!!.takeIf { it in VIZ_STYLES && it != "off" } ?: "bars") }
+            .padding(horizontal = 12.dp), verticalAlignment = Alignment.CenterVertically) {
+            Canvas(Modifier.size(12.dp, 10.dp)) {
+                val w = size.width / 5
+                listOf(0.5f, 1f, 0.7f).forEachIndexed { i, f ->
+                    drawLine(Soft, Offset(w * (i * 2 + 0.5f), size.height), Offset(w * (i * 2 + 0.5f), size.height * (1 - f)), 1.3.dp.toPx())
+                }
+            }
+            Spacer(Modifier.width(7.dp))
+            Label("Visualiser", Soft, 8)
+        }
+        return
+    }
     Row(Modifier.padding(top = 6.dp), horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-        VIZ_STYLES.forEach { s ->
-            val on = s == Theme.viz
-            Box(Modifier.heightIn(min = 44.dp).semantics { selected = on }.clickable(onClickLabel = "Visualiser: $s") { Theme.viz = s; Theme.save(ctx) }
+        VIZ_STYLES.forEach { st ->
+            val on = st == Theme.viz
+            Box(Modifier.heightIn(min = 44.dp).semantics { selected = on }.clickable(onClickLabel = "Visualiser: $st") { pick(st) }
                 .padding(horizontal = 10.dp), contentAlignment = Alignment.Center) {
-                Label(s, if (on) AccentText else Soft, 9, weight = if (on) FontWeight.SemiBold else FontWeight.Medium,
+                Label(st, if (on) AccentText else Soft, 9, weight = if (on) FontWeight.SemiBold else FontWeight.Medium,
                     modifier = Modifier.drawBehind { if (on) drawLine(AccentText, Offset(0f, size.height + 3.dp.toPx()), Offset(size.width, size.height + 3.dp.toPx()), 1.dp.toPx()) })
             }
         }
