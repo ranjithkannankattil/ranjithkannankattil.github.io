@@ -82,6 +82,7 @@
     const meta = document.querySelector('meta[name="theme-color"]');
     if (meta) meta.content = getComputedStyle(b).getPropertyValue("--paper").trim() || meta.content;
     viz.style(S.viz);
+    paintPreviews();
   }
   sysDark.addEventListener("change", () => { if (S.mode === "phone") apply(); });
 
@@ -147,6 +148,23 @@
     box.setAttribute("aria-label", name);
     return box;
   }
+  /** Colour the little preview boxes for light or dark, whichever is showing now. */
+  function paintPreviews(root) {
+    const dark = S.mode === "dark" || (S.mode === "phone" && sysDark.matches);
+    (root || document).querySelectorAll(".rv-theme[data-theme]").forEach((b) => {
+      const t = THEMES.find((x) => x.id === b.dataset.theme), p = palette(t, dark), c = (v) => toHex(v);
+      const goldOnBar = contrast(p.gold, p.bar) >= 2.6 ? p.gold : p.barInk;
+      const set = (sel, prop, v) => b.querySelectorAll(sel).forEach((e) => { e.style[prop] = c(v); });
+      set(".pv", "background", p.paper); set(".pv", "borderColor", p.line);
+      set(".pv-h i", "background", dark ? p.gold : p.ink); set(".pv-h b", "background", p.ink); set(".pv-tab", "background", p.accent);
+      set(".pv-r i", "background", p.ink); set(".pv-r.on i", "background", p.accent); set(".pv-r b", "background", p.inkSoft);
+      set(".pv-r", "borderColor", p.line); set(".pv-r.on u", "background", p.gold); set(".pv-r s", "borderColor", p.inkSoft);
+      set(".pv-r.on s", "background", p.accent);
+      set(".pv-bar", "background", p.bar); set(".pv-bar i", "background", goldOnBar); set(".pv-bar b", "background", p.barInk);
+      set(".pv-bar s", "borderColor", goldOnBar);
+    });
+  }
+
   function settingsSection() {
     const sec = document.createElement("div"); sec.className = "iv-sec rv-settings"; sec.id = "settings";
     sec.innerHTML = '<h2 class="iv-h">Settings</h2><p class="iv-sub">Saved on this device. The app has the same choices.</p>';
@@ -158,12 +176,16 @@
       if (t.group !== group) { group = t.group; const g = document.createElement("p"); g.className = "rv-group"; g.textContent = group; grid.append(g); }
       const b = document.createElement("button"); b.type = "button"; b.className = "rv-theme"; b.setAttribute("role", "radio");
       b.setAttribute("aria-checked", String(t.id === S.theme));
-      b.innerHTML = '<span class="sw"><i></i><b></b></span><span class="nm"></span><span class="ml" lang="ml"></span><span class="en"></span>';
-      b.querySelector(".sw").style.background = t.bg; b.querySelector(".sw i").style.background = t.accent; b.querySelector(".sw b").style.background = t.hi;
+      // a tiny version of the page in this theme: header, three stations (one playing), the player bar
+      b.innerHTML = '<span class="pv" aria-hidden="true"><span class="pv-h"><i></i><b></b></span><span class="pv-tab"></span>' +
+        '<span class="pv-r on"><u></u><i></i><b></b><s></s></span><span class="pv-r"><u></u><i></i><b></b><s></s></span><span class="pv-r"><u></u><i></i><b></b><s></s></span>' +
+        '<span class="pv-bar"><i></i><b></b><s></s></span></span><span class="nm"></span><span class="ml" lang="ml"></span><span class="en"></span>';
+      b.dataset.theme = t.id;
       b.querySelector(".nm").textContent = t.name; b.querySelector(".ml").textContent = t.ml; b.querySelector(".en").textContent = t.en !== t.name ? `(${t.en})` : "";
       b.onclick = () => { S.theme = t.id; save(); apply(); grid.querySelectorAll(".rv-theme").forEach((x) => x.setAttribute("aria-checked", String(x === b))); };
       grid.append(b);
     });
+    paintPreviews(grid);
     row("Colour theme", grid);
     row("Text size", radios("Text size", [[0, "Normal"], [1, "Large"], [2, "Extra large"]], S.text, (v) => { S.text = v; save(); apply(); }));
     row("Station list", radios("Station list spacing", [[0, "Compact"], [1, "Comfortable"], [2, "Spacious"]], S.spacing, (v) => { S.spacing = v; save(); apply(); }));
