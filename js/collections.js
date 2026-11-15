@@ -64,6 +64,10 @@ window.RADIO_COLLECTIONS = [
         "World"
       ],
       [
+        "devotional",
+        "Faith"
+      ],
+      [
         "comedy",
         "Comedy"
       ],

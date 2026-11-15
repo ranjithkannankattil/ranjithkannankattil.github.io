@@ -1450,6 +1450,15 @@ window.STATIONS = [
     "where": "US"
   },
   {
+    "id": "ewtn-catholic-radio",
+    "name": "EWTN Catholic Radio",
+    "category": "devotional",
+    "streams": [
+      "https://ewtn-ice.streamguys1.com/english-aac"
+    ],
+    "added": "2026-11-15"
+  },
+  {
     "id": "chqr-770-global-news-radio-calgary-ab",
     "name": "CHQR 770 Global News Radio - Calgary, AB",
     "category": "canada",
