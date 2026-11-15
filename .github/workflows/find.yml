@@ -1,0 +1,9 @@
+name: tmp find catholic stations
+on: { push: { branches: [tmp-find-catholic] } }
+jobs:
+  find:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 find.py
