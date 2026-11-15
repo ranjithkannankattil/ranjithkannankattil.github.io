@@ -34,12 +34,14 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: auto
           R2: https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
-        run: python3 scripts/fetch_station_logos.py --limit "${{ github.event.inputs.limit || '3000' }}" | tee -a "$GITHUB_STEP_SUMMARY"
+        run: |
+          set -o pipefail
+          python3 scripts/fetch_station_logos.py --limit "${{ github.event.inputs.limit || '3000' }}" 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
       - name: Save the list
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898732+github-actions[bot]@users.noreply.github.com"
-          git add js/station-logos.json scripts/data/station-logos-tried.json 2>/dev/null || true
+          for f in js/station-logos.json scripts/data/station-logos-tried.json; do [ -f "$f" ] && git add "$f"; done
           if git diff --cached --quiet; then echo "No change."; exit 0; fi
           git commit -qm "Radio: station logos for Android Auto ($(date +%F))"
           for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; sleep 5; done

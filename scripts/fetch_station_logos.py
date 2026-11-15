@@ -176,7 +176,11 @@ def main() -> None:
                 tried[k] = today.isoformat()
                 reasons[info.split(":")[0]] = reasons.get(info.split(":")[0], 0) + 1
     print(f"new logos: {len(found)}; without: {dict(reasons)}")
-    if dry or not found:
+    if dry:
+        return
+    if not found:
+        TRIED.parent.mkdir(parents=True, exist_ok=True)
+        TRIED.write_text(json.dumps(dict(sorted(tried.items())), indent=0) + "\n")
         return
     # upload to R2 (the same bucket the Media upload workflow uses), then record the addresses
     env = os.environ
@@ -189,6 +193,7 @@ def main() -> None:
     OUT.write_text(json.dumps({"updated": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ"),
                                "note": "Station logos belong to their owners. Used only to show the station on Android Auto.",
                                "logos": dict(sorted(have.items()))}, ensure_ascii=False, separators=(",", ":")) + "\n")
+    TRIED.parent.mkdir(parents=True, exist_ok=True)
     TRIED.write_text(json.dumps(dict(sorted(tried.items())), indent=0) + "\n")
 
 
