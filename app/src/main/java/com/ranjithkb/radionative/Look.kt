@@ -287,7 +287,7 @@ fun PlayerContent(now: NowState, c: androidx.media3.session.MediaController?, la
                 else Spacer(Modifier.size(48.dp))
             }
             Box(Modifier.padding(top = 10.dp).size(art.dp).background(ArtBg), contentAlignment = Alignment.Center) {
-                val bmp = artBitmap(now.md.artworkUri?.toString())
+                val bmp = artBitmap(now.md.artworkUri?.toString()?.takeUnless(CarArt::isStationArt))
                 if (bmp != null) Image(bmp.asImageBitmap(), null, Modifier.fillMaxSize(), contentScale = ContentScale.Crop,
                     alpha = if (Theme.viz == "circle") 0.35f else 1f)
                 // the visualiser gets its own space on the cover, so it never runs over the logo or the station's name

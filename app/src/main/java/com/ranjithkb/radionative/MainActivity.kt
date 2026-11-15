@@ -118,7 +118,7 @@ class MainActivity : ComponentActivity() {
         if (Build.VERSION.SDK_INT >= 33) requestPermissions(arrayOf(Manifest.permission.POST_NOTIFICATIONS), 1)
         Session.name = Account.name(this)
         handleSignIn(intent)
-        Theme.load(this)
+        Theme.load(this); CarArt.init(this)
         Crash.sendSaved(this, lifecycleScope)
         setContent {
             val sysDark = androidx.compose.foundation.isSystemInDarkTheme()
@@ -584,7 +584,7 @@ fun artBitmap(uri: String?): Bitmap? {
 
 @Composable
 fun Art(now: NowState, size: Int) {
-    val bmp = artBitmap(now.md.artworkUri?.toString())
+    val bmp = artBitmap(now.md.artworkUri?.toString()?.takeUnless(CarArt::isStationArt))
     if (bmp != null) Image(bmp.asImageBitmap(), null, Modifier.size(size.dp).clip(RoundedCornerShape(6.dp)), contentScale = ContentScale.Crop)
     else Tile(now.md.station?.toString() ?: now.md.title?.toString() ?: "", false, size)
 }
@@ -872,7 +872,7 @@ fun ShareMenu(now: NowState, close: () -> Unit) {
         text = { Column {
             // runs in the activity's scope: closing this menu must not cancel the card while it's being drawn
             TextButton({ close(); (ctx as? androidx.activity.ComponentActivity)?.lifecycleScope?.launch {
-                try { shareSongCard(ctx, if (hasSong) song else station, artist, station, if (hasSong) now.md.artworkUri?.toString() else null, link) }
+                try { shareSongCard(ctx, if (hasSong) song else station, artist, station, if (hasSong) now.md.artworkUri?.toString()?.takeUnless(CarArt::isStationArt) else null, link) }
                 catch (e: Exception) { android.widget.Toast.makeText(ctx, "Couldn't make the picture card", android.widget.Toast.LENGTH_SHORT).show() } } },
                 Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
                 Icon(Icons.Filled.Image, null); Spacer(Modifier.width(10.dp)); Text("Picture card with link", Modifier.weight(1f)) }

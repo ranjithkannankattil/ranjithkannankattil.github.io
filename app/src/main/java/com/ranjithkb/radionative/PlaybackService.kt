@@ -40,6 +40,7 @@ fun Station.toItem(language: String): MediaItem {
         .setRequestMetadata(MediaItem.RequestMetadata.Builder().setMediaUri(Uri.parse(streams[0])).build())
         .setMediaMetadata(MediaMetadata.Builder().setTitle(name).setArtist(language).setStation(name)
             .setIsPlayable(true).setIsBrowsable(false).setMediaType(MediaMetadata.MEDIA_TYPE_RADIO_STATION)
+            .setArtworkUri(CarArt.uriFor(key, name))      // the Android Auto picture: logo in a Velvet frame, or a badge
             .setExtras(ex).build())
         .build()
 }
@@ -99,7 +100,7 @@ class PlaybackService : MediaLibraryService() {
 
     override fun onCreate() {
         super.onCreate()
-        Crash.install(this)
+        Crash.install(this); CarArt.init(this)
         player = ExoPlayer.Builder(this, VelvetRenderers(this))
             .setAudioAttributes(AudioAttributes.Builder().setUsage(C.USAGE_MEDIA)
                 .setContentType(C.AUDIO_CONTENT_TYPE_MUSIC).build(), /* handleAudioFocus = */ true)
@@ -275,7 +276,8 @@ class PlaybackService : MediaLibraryService() {
             if (cur.mediaId != item.mediaId) return
             val md = cur.mediaMetadata.buildUpon().setTitle(song)
                 .setArtist(listOf(artist, station).filter { it.isNotBlank() }.joinToString(" · "))
-                .setArtworkUri(art?.let(Uri::parse)).build()
+                // the song's cover when found, else the station's picture for the car
+                .setArtworkUri(art?.let(Uri::parse) ?: CarArt.uriFor(item.mediaId.removePrefix("st|"), station)).build()
             player.replaceMediaItem(i, cur.buildUpon().setMediaMetadata(md).build())
         }
         update(null)

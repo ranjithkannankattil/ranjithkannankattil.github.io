@@ -179,6 +179,19 @@ class ScreensTest {
         Theme.font = "jost"
     }
     @Test fun n26_settings_fonts() = shot("n26-settings-fonts", false) { SettingsScreen({}) {} }
+    @Test fun n27_car_pictures() {
+        val ctx = rule.activity
+        // a stand-in logo (a red circle on white with a word), drawn here: real logos come from the weekly job
+        val logo = Bitmap.createBitmap(400, 400, Bitmap.Config.ARGB_8888).apply { eraseColor(android.graphics.Color.WHITE)
+            val c = android.graphics.Canvas(this); val p = android.graphics.Paint(android.graphics.Paint.ANTI_ALIAS_FLAG).apply { color = 0xFFD62828.toInt() }
+            c.drawCircle(200f, 170f, 110f, p); p.color = 0xFF222222.toInt(); p.textSize = 54f; p.textAlign = android.graphics.Paint.Align.CENTER
+            c.drawText("LOGO FM", 200f, 360f, p) }
+        listOf(Triple("Radio Mango", null, "velvet"), Triple("Club FM 94.3", null, "velvet"), Triple("Ahalia FM", logo, "velvet"),
+            Triple("BBC Radio 4", null, "kadal"), Triple("Hit 96.7", logo, "kasavu")).forEachIndexed { i, (n, l, t) ->
+            val b = CarArt.draw(ctx, n, l, Palettes.of(t, false))
+            File(File("build/screens").apply { mkdirs() }, "n27-car-$i-${n.replace(' ', '_')}-$t.png").outputStream().use { b.compress(Bitmap.CompressFormat.PNG, 100, it) }
+        }
+    }
     @Test fun n19_every_theme() = everyTheme("t", true, "off") { Stations(true, "heard") }
     @Test fun n20_every_theme_player() = everyTheme("tp", false, "bars") { Player(true) }
     @Test fun n21_widgets() {

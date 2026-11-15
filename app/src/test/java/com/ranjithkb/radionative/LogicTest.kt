@@ -194,6 +194,23 @@ class LogicTest {
         assertTrue("about $n tries in 15 minutes", n in 30..60)
     }
 
+    @Test fun car_badge_letters() {
+        assertEquals("RM", CarArt.letters("Radio Mango")); assertEquals("AF", CarArt.letters("Ahalia FM"))
+        assertEquals("CF", CarArt.letters("Club FM 94.3")); assertEquals("BR", CarArt.letters("BBC Radio 4"))
+        assertEquals("AT", CarArt.letters("Akashvani Thrissur")); assertEquals("HI", CarArt.letters("Hit 96.7"))
+        assertEquals("RM", CarArt.letters("The Radio Mattoli (Wayanad)")); assertEquals("RV", CarArt.letters("94.3"))
+        assertEquals("94.3", CarArt.frequency("Club FM 94.3")); assertNull(CarArt.frequency("Radio Mango"))
+        CarArt.letters("ക്ലബ് എഫ്എം").let { assertTrue(it.isNotEmpty()) }
+    }
+    @Test fun phone_screens_ignore_the_car_picture() {
+        CarArt.init(RuntimeEnvironment.getApplication())
+        val u = CarArt.uriFor("malayalam:radiomango", "Radio Mango")!!.toString()
+        assertTrue(u.startsWith("content://") && CarArt.isStationArt(u))
+        assertFalse(CarArt.isStationArt("https://is1-ssl.mzstatic.com/image/song.jpg")); assertFalse(CarArt.isStationArt(null))
+        val item = Station("radiomango", "Radio Mango", "fm", listOf("https://x"), "malayalam").toItem("Malayalam")
+        assertEquals(u, item.mediaMetadata.artworkUri.toString())
+    }
+
     // ---------------- rate us
     @Test fun review_rules() {
         val day = 86_400_000L; val now = 100 * day

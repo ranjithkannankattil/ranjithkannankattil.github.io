@@ -60,6 +60,8 @@
                 <action android:name="android.app.action.SCHEDULE_EXACT_ALARM_PERMISSION_STATE_CHANGED" />
             </intent-filter>
         </receiver>
+        <!-- Station pictures for the Android Auto screen (read-only, pictures this app draws) -->
+        <provider android:name=".CarArtProvider" android:authorities="${applicationId}.carart" android:exported="true" />
         <!-- Home-screen widgets -->
         <receiver android:name=".VelvetWidget" android:exported="false" android:label="Radio Velvet">
             <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
