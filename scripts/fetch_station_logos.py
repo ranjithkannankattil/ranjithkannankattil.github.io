@@ -31,7 +31,7 @@ TRIED = ROOT / "scripts" / "data" / "station-logos-tried.json"
 WORK = ROOT / "build-logos"
 MEDIA = "https://media.ranjithkb.com/radio-logos"
 UA = {"User-Agent": "RadioVelvet/1.0 (+https://ranjithkb.com/radio.html)"}
-API = ["https://de1.api.radio-browser.info", "https://nl1.api.radio-browser.info", "https://at1.api.radio-browser.info"]
+API = ["https://de2.api.radio-browser.info", "https://fi1.api.radio-browser.info", "https://de1.api.radio-browser.info"]
 SIZE = 400
 RETRY_DAYS = 30
 
@@ -60,13 +60,15 @@ def norm(u: str) -> str:
 
 
 def directory():
-    for base in API:
+    import time
+    for base in API * 3:      # the directory's servers are sometimes busy: try each, three rounds
         try:
             rows = json.loads(get(f"{base}/json/stations?hidebroken=false&limit=200000", timeout=180))
             print(f"directory: {len(rows)} stations from {base}")
             return rows
         except Exception as e:
             print("directory failed at", base, e)
+            time.sleep(10)
     sys.exit("radio-browser directory unreachable")
 
 
