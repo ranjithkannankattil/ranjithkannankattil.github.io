@@ -102,7 +102,6 @@
     "malayalam:radiomallu": 52,
     "malayalam:radiomangalam": 52,
     "malayalam:radionellika": 52,
-    "malayalam:radioneythal": 1,
     "malayalam:radioutsav": 52,
     "malayalam:radiovatakara": 52,
     "malayalam:ragamradio": 52,
@@ -2314,11 +2313,6 @@
     "fails": 3,
     "last_reason": "HTTP 502 error page",
     "since": "2026-11-14"
-  },
-  "https://s2.myradiostream.com/5538/listen.mp3": {
-    "fails": 1,
-    "last_reason": "HTTP 401 error page",
-    "since": "2026-11-15"
   },
   "https://s7.voscast.com:9563/stream": {
     "fails": 66,
