@@ -986,9 +986,18 @@
     if (!sayNames || !("speechSynthesis" in window)) return;
     try { speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(t); u.rate = 1.05; speechSynthesis.speak(u); } catch { /* no voice */ }
   }
-  function skip(dir, spoken) {
+  // stations that just wouldn't play (with the internet working): Next / Previous pass over them for 10 minutes
+  const deadNow = new Map();
+  const isDead = (k) => { const t = deadNow.get(k); if (t && Date.now() - t < 600000) return true; deadNow.delete(k); return false; };
+  async function skip(dir, spoken) {
     if (!current) return;
     let list = queue.length ? queue : (currentCol === col.id && view === "col" ? visibleList() : []);
+    // started from somewhere with no list (reopened the app on the last station, Recently played, a shared link):
+    // step through the whole language list instead of saying there's nothing else
+    if (list.filter((x) => !x.offline).length < 2) {
+      const all = await stationsOf(currentCol);
+      if (all && all.length) { list = all.slice().sort(byName); queue = list; }
+    }
     const cOf = (x) => x._c || currentCol;
     const isNow = (x) => x.id === current.id && cOf(x) === currentCol;
     const mixed = list.some((x) => x._c && x._c !== currentCol);   // the all-languages favourites list
@@ -997,7 +1006,8 @@
       const favList = pool.filter((x) => favs.has(`${currentCol}:${x.id}`));
       if (favs.has(`${currentCol}:${current.id}`) && favList.length >= 2) list = favList;
     }
-    const live = list.filter((x) => !x.offline || isNow(x));
+    // skip: marked not working, "only plays in <country>" stations, and ones that already failed this visit
+    const live = list.filter((x) => isNow(x) || (!x.offline && !x.geo && !isDead(`${cOf(x)}:${x.id}`)));
     if (live.length < 2) { status("No other station in this list"); return; }
     let i = live.findIndex(isNow);
     if (i < 0) i = dir > 0 ? -1 : 0;
@@ -1028,7 +1038,7 @@
   function play(s, list, cId = s._c || col.id, dir = 0) {
     queue = list || (cId === (col && col.id) ? visibleList() : [s]);
     current = s; currentCol = cId; tryIndex = 0; lastSwitch = Date.now();
-    everPlayed = false; retries = 0; skipDir = dir;
+    everPlayed = false; retries = 0; skipDir = dir; lostAt = 0;
     if (!dir) autoSkips = 0;
     store.set("mr-last2", { c: cId, s }); store.set("mr-closed", false);
     showNowPlaying(s, cId);
@@ -1041,10 +1051,16 @@
     attempt();
   }
 
+  // Keeps trying through a tunnel or a patchy stretch for up to 15 minutes, then stops (saves battery and data).
+  let lostAt = 0;
+  const LOST_LIMIT = 15 * 60 * 1000;
   function reconnect(why) {
     if (!wants || !current) return;
     clearTimeout(stallTimer); clearTimeout(retryTimer);
-    if (!navigator.onLine) { setState("loading"); status("No signal — will reconnect"); return; }
+    if (!lostAt) lostAt = Date.now();
+    if (Date.now() - lostAt > LOST_LIMIT) { wants = false; lostAt = 0; teardown(); setState("idle"); status("Lost the signal — press play to try again"); return; }
+    // no network at all: check again every few seconds (phones don't always announce that the signal is back)
+    if (!navigator.onLine) { setState("loading"); status("No signal — will reconnect"); retryTimer = setTimeout(() => reconnect(why), 4000); return; }
     if (retries >= 4) { retries = 0; nextSource(); return; }
     const wait = [1500, 3000, 6000, 12000][retries++];
     setState("loading"); status(why || "Reconnecting");
@@ -1061,13 +1077,14 @@
     if (!url) {
       if (everPlayed) { tryIndex = 0; everPlayed = false; reconnect("Reconnecting"); return; }  // was on air: start over
       setState("idle"); status(s.geo ? geoNote(s.geo) + " — it won't play from here" : "Offline — try another station"); markErr(s.id);
+      if (navigator.onLine && Date.now() - netIssueAt > 30000) deadNow.set(`${currentCol}:${s.id}`, Date.now());
       if (skipDir && autoSkips < 6) { autoSkips++; status("Offline — trying the next one"); setTimeout(() => skip(skipDir), 700); }
       else wants = false;
       return;
     }
     setState("loading");
     status(s.streams.length > 1 ? `Connecting · source ${tryIndex + 1}/${s.streams.length}` : "Connecting");
-    failTimer = setTimeout(nextSource, 12000);
+    failTimer = setTimeout(nextSource, skipDir ? 8000 : 12000);   // reached with Next in the car: give up on a dead one sooner
     const isHls = /\.m3u8(\?|$)/i.test(url);
     // hls.js first: the browser's own HLS player can't read some playlists (e.g. Akashvani).
     // Native HLS is only used where hls.js can't run (iPhone Safari).
@@ -1094,7 +1111,7 @@
     if (holdPaused()) return;
     clearTimeout(failTimer); clearTimeout(stallTimer); clearTimeout(interruptTimer);
     if (!everPlayed) rememberStation(currentCol, current);
-    everPlayed = true; retries = 0; autoSkips = 0; skipDir = 0;
+    everPlayed = true; retries = 0; autoSkips = 0; skipDir = 0; lostAt = 0;
     setState("playing"); status(sleepAt ? sleepLabel() : "Live");
   });
   const stalled = () => {
@@ -1107,12 +1124,23 @@
   // headphones pulled out, another app taking the audio. From then on only the listener
   // (play on the page or the lock screen) starts it again, so it never plays over a call.
   // A real drop-out reports an error or the stream ending and is still a reconnect.
+  // Except a drop-out in disguise: in a tunnel the iPhone pauses the stream without an error. If the sound had
+  // just run dry (buffering, no signal, nothing left to play) it's the network, not a person: reconnect,
+  // and keep trying until the signal is back. Calls in the iPhone app arrive as "interruption-began" first.
+  let netIssueAt = 0;
+  const netIssue = () => { netIssueAt = Date.now(); };
+  audio.addEventListener("waiting", netIssue); audio.addEventListener("stalled", netIssue); audio.addEventListener("error", netIssue);
+  window.addEventListener("offline", netIssue);
   audio.addEventListener("pause", () => {
     if (Date.now() - ownPauseAt < 1000) return;
     if (!wants || !current) return;
     clearTimeout(interruptTimer);
     interruptTimer = setTimeout(() => {
       if (!audio.paused || audio.error || audio.ended || !wants) return;
+      if (callHeldAt) return;
+      if (!navigator.onLine || Date.now() - netIssueAt < 20000 || audio.readyState < 3) {
+        netIssueAt = Date.now(); retries = 0; reconnect("Signal lost — reconnecting"); return;
+      }
       wants = false;
       interruptedAt = Date.now();
       clearTimeout(failTimer); clearTimeout(stallTimer); clearTimeout(retryTimer);
