@@ -68,6 +68,19 @@ class DeviceTest {
         fail("none of the first 10 stations in $col played"); throw IllegalStateException()
     }
 
+    /** Connects the way Android Auto and Bluetooth do (the older media browser). */
+    private fun carController(): android.support.v4.media.session.MediaControllerCompat {
+        var mb: android.support.v4.media.MediaBrowserCompat? = null
+        val done = java.util.concurrent.CountDownLatch(1)
+        inst.runOnMainSync {
+            mb = android.support.v4.media.MediaBrowserCompat(ctx, ComponentName(ctx, PlaybackService::class.java),
+                object : android.support.v4.media.MediaBrowserCompat.ConnectionCallback() { override fun onConnected() { done.countDown() } }, null)
+            mb!!.connect()
+        }
+        assertTrue("car-style connection", done.await(20, TimeUnit.SECONDS))
+        return android.support.v4.media.session.MediaControllerCompat(ctx, mb!!.sessionToken)
+    }
+
     @Test fun t01_car_browse_tree() {
         val root = main { b.getLibraryRoot(null) }.get(20, TimeUnit.SECONDS).value!!
         val top = children(root.mediaId)
@@ -107,11 +120,20 @@ class DeviceTest {
         main { b.seekToPreviousMediaItem() }
         assertTrue("previous goes back (not restart)", waitFor(5_000, "previous") { b.currentMediaItem?.mediaId == first })
         assertTrue("plays again after previous", waitFor(25_000, "replay") { b.isPlaying })
-        // wrap round at the end of the list
+        // the phone app's and widget's ⏭ / ⏮: wrap round at the ends of the list
         main { b.seekToDefaultPosition(b.mediaItemCount - 1) }
-        main { b.seekToNextMediaItem() }
-        assertTrue("next from the last goes to the first", waitFor(5_000, "wrap") { b.currentMediaItemIndex == 0 })
-        log("list ${list.size}, started at $i, wrap ok")
+        assertTrue(waitFor(5_000, "at last") { b.currentMediaItemIndex == b.mediaItemCount - 1 })
+        main { b.nextStation() }
+        assertTrue("app ⏭ from the last goes to the first", waitFor(5_000, "wrap") { b.currentMediaItemIndex == 0 })
+        main { b.prevStation() }
+        assertTrue("app ⏮ from the first goes to the last", waitFor(5_000, "wrap back") { b.currentMediaItemIndex == b.mediaItemCount - 1 })
+        // the car's and Bluetooth buttons (Android Auto talks to the player the older way, MediaControllerCompat)
+        val compat = carController()
+        compat.transportControls.skipToNext()
+        assertTrue("car ⏭ from the last goes to the first", waitFor(5_000, "car wrap") { b.currentMediaItemIndex == 0 })
+        compat.transportControls.skipToPrevious()
+        assertTrue("car ⏮ goes back a station (not restart)", waitFor(5_000, "car prev") { b.currentMediaItemIndex == b.mediaItemCount - 1 })
+        log("list ${list.size}, started at $i, wrap ok (app and car)")
     }
 
     @Test fun t04_lost_signal_comes_back() {
@@ -171,9 +193,12 @@ class DeviceTest {
         try {
             Thread.sleep(3_000)
             val fresh = System.currentTimeMillis() - Viz.stamp < 1_000
-            val level = Viz.bands.max()
-            log("visualiser: fresh=$fresh, loudest band=$level")
-            assertTrue("sound levels arrive", fresh); assertTrue("they move with the music", level > 0.05f)
+            val level = Viz.bands.max(); val peak = Viz.peak
+            log("visualiser: fresh=$fresh, loudest band=$level, loudest sample=$peak")
+            assertTrue("sound levels arrive", fresh)
+            // the bars follow the sound: loud sound gives tall bars, near silence low ones
+            if (peak > 0.05f) assertTrue("bars rise with real sound (peak $peak, bars $level)", level > 0.3f)
+            else log("the stream was nearly silent in the emulator (peak $peak): bars correctly stay low ($level)")
         } finally { Viz.watching = false }
     }
 

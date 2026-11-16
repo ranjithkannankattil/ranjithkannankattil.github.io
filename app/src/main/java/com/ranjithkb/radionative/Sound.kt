@@ -175,6 +175,7 @@ object Viz {
     const val N = 32
     @Volatile var watching = false
     @Volatile var bands = FloatArray(N)
+    @Volatile var peak = 0f                   // loudest sample in the last frame (0..1), for checks
     @Volatile var stamp = 0L                  // when the last real sound frame came in (0 = never; casting has none)
     private var rate = 44100; private var channels = 2; private var pcm16 = true
     private val buf = FloatArray(1024); private var fill = 0
@@ -199,6 +200,7 @@ object Viz {
 
     private fun analyse() {
         val n = buf.size
+        peak = buf.maxOf { kotlin.math.abs(it) }
         val re = FloatArray(n) { buf[it] * (0.5f - 0.5f * kotlin.math.cos(2 * Math.PI * it / (n - 1)).toFloat()) }
         val im = FloatArray(n)
         fft(re, im)
@@ -245,6 +247,11 @@ object Viz {
         }
     }
 }
+
+/** Next / previous station from the phone app and the widget: always moves, and wraps round at the ends of the list
+ *  (the car's buttons already do, in the player service). */
+fun androidx.media3.common.Player.nextStation() { val n = mediaItemCount; if (n > 1) seekToDefaultPosition((currentMediaItemIndex + 1) % n) }
+fun androidx.media3.common.Player.prevStation() { val n = mediaItemCount; if (n > 1) seekToDefaultPosition((currentMediaItemIndex - 1 + n) % n) }
 
 /** ExoPlayer with the visualiser's copy of the sound. */
 class VelvetRenderers(ctx: Context) : DefaultRenderersFactory(ctx) {

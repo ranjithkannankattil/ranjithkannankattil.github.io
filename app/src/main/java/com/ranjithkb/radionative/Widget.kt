@@ -93,8 +93,8 @@ open class VelvetWidget : AppWidgetProvider() {
                 val c = f.get()
                 when {
                     c.mediaItemCount == 0 -> c.sendCustomCommand(SessionCommand(PlaybackService.RESUME, Bundle.EMPTY), Bundle.EMPTY)  // last station
-                    a == NEXT -> c.seekToNextMediaItem()
-                    a == PREV -> c.seekToPreviousMediaItem()
+                    a == NEXT -> c.nextStation()
+                    a == PREV -> c.prevStation()
                     c.isPlaying -> c.pause()
                     else -> { c.prepare(); c.play() }
                 }

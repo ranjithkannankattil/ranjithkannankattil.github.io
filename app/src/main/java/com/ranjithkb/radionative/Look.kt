@@ -200,7 +200,7 @@ fun MiniPlayer(now: NowState, c: androidx.media3.session.MediaController?, isFav
         Column(Modifier.fillMaxWidth()) {
             Row(Modifier.fillMaxWidth().clickable(onClickLabel = "Open the player", onClick = open)
                 .pointerInput(c) { detectHorizontalDragGestures(onDragEnd = {
-                    if (drag < -120) c?.seekToNextMediaItem() else if (drag > 120) c?.seekToPreviousMediaItem(); drag = 0f },
+                    if (drag < -120) c?.nextStation() else if (drag > 120) c?.prevStation(); drag = 0f },
                     onDragCancel = { drag = 0f }) { _, d -> drag += d } }
                 .padding(start = Pad, end = 18.dp, top = 10.dp), verticalAlignment = Alignment.CenterVertically) {
                 Column(Modifier.weight(1f).padding(end = 12.dp)) {
@@ -225,8 +225,8 @@ fun MiniPlayer(now: NowState, c: androidx.media3.session.MediaController?, isFav
                 Cell(if (isFav) "Remove from favourites" else "Add to favourites", onFav) {
                     LineIcon(if (isFav) R.drawable.ln_heart_fill else R.drawable.ln_heart,
                         if (isFav) "Remove from favourites" else "Add to favourites", 20, if (isFav) BarGold else BarInk) }
-                Cell("Previous station", { c?.seekToPreviousMediaItem() }) { LineIcon(R.drawable.ln_prev, "Previous station", 20, BarInk) }
-                Cell("Next station", { c?.seekToNextMediaItem() }) { LineIcon(R.drawable.ln_next, "Next station", 20, BarInk) }
+                Cell("Previous station", { c?.prevStation() }) { LineIcon(R.drawable.ln_prev, "Previous station", 20, BarInk) }
+                Cell("Next station", { c?.nextStation() }) { LineIcon(R.drawable.ln_next, "Next station", 20, BarInk) }
                 val sleepOn = SleepTimer.at > 0
                 Cell(if (sleepOn) "Sleep timer on" else "Sleep timer", onSleep) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
@@ -324,14 +324,14 @@ fun PlayerContent(now: NowState, c: androidx.media3.session.MediaController?, la
                 rating()
             }
             Row(Modifier.padding(top = 6.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(40.dp)) {
-                IconButton({ c?.seekToPreviousMediaItem() }, Modifier.size(56.dp)) { LineIcon(R.drawable.ln_prev, "Previous station", 26) }
+                IconButton({ c?.prevStation() }, Modifier.size(56.dp)) { LineIcon(R.drawable.ln_prev, "Previous station", 26) }
                 val ring = if (Theme.dark) GoldC else Title
                 Box(Modifier.size(80.dp).clip(CircleShape).border(1.dp, ring, CircleShape)
                     .clickable(onClickLabel = if (now.playing) "Pause" else "Play") { c?.let { if (it.isPlaying) it.pause() else { it.prepare(); it.play() } } },
                     contentAlignment = Alignment.Center) {
                     LineIcon(if (now.playing) R.drawable.ln_pause else R.drawable.ln_play, if (now.playing) "Pause" else "Play", 26, ring)
                 }
-                IconButton({ c?.seekToNextMediaItem() }, Modifier.size(56.dp)) { LineIcon(R.drawable.ln_next, "Next station", 26) }
+                IconButton({ c?.nextStation() }, Modifier.size(56.dp)) { LineIcon(R.drawable.ln_next, "Next station", 26) }
             }
             Row(Modifier.fillMaxWidth().padding(top = 14.dp).drawBehind {
                 drawLine(Line, Offset(0f, 0f), Offset(size.width, 0f), 1.dp.toPx())
