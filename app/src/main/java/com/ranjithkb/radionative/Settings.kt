@@ -88,7 +88,12 @@ object Theme {
     var spacing by mutableStateOf(0)             // 0 compact · 1 comfortable · 2 spacious
     var viz by mutableStateOf("off")             // bars · waves · circle · off
     var resume by mutableStateOf(true)           // carry on after another app's video
-    val pal: Pal get() = Palettes.of(themeId, dark)
+    var look by mutableStateOf("std")            // the big player: std (today's) or a radio from Eras.LIST
+    var lookColours by mutableStateOf("original") // original (the radio's own materials) · theme (the colour theme)
+    /** True while the big player is on screen (it covers everything else). */
+    var playerOpen by mutableStateOf(false)
+    /** The colours on screen: the theme's, or, while the big player shows an original radio, that radio's page. */
+    val pal: Pal get() = Palettes.of(themeId, dark).let { if (playerOpen && look != "std" && lookColours == "original") Eras.pagePal(look, dark, it) else it }
     val textScale: Float get() = (when (text) { 1 -> 1.15f; 2 -> 1.3f; else -> 1f }) * (FONTS.firstOrNull { it.id == font }?.scale ?: 1f)
     val rowHeight: Int get() = when (spacing) { 1 -> 64; 2 -> 76; else -> 56 }
 
@@ -101,10 +106,13 @@ object Theme {
         spacing = p.getInt("spacing", 0).coerceIn(0, 2)
         viz = p.getString("viz", "off")!!.let { if (it in listOf("bars", "waves", "circle", "off")) it else "off" }
         resume = p.getBoolean("resume", true)
+        look = p.getString("look", "std")!!.let { if (it in Eras.IDS) it else "std" }
+        lookColours = p.getString("lookColours", "original")!!.let { if (it in listOf("original", "theme")) it else "original" }
     }
     fun save(ctx: Context) {
         prefs(ctx).edit().putString("theme", themeId).putString("mode", mode).putInt("text", text).putString("font", font)
-            .putInt("spacing", spacing).putString("viz", viz).putBoolean("resume", resume).apply()
+            .putInt("spacing", spacing).putString("viz", viz).putBoolean("resume", resume)
+            .putString("look", look).putString("lookColours", lookColours).apply()
     }
 }
 

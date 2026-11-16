@@ -286,32 +286,40 @@ fun PlayerContent(now: NowState, c: androidx.media3.session.MediaController?, la
                     LineIcon(R.drawable.ln_close, "Stop and close the player", 20, Soft) }
                 else Spacer(Modifier.size(48.dp))
             }
-            Box(Modifier.padding(top = 10.dp).size(art.dp).background(ArtBg), contentAlignment = Alignment.Center) {
-                val bmp = artBitmap(now.md.artworkUri?.toString()?.takeUnless(CarArt::isStationArt))
-                if (bmp != null) Image(bmp.asImageBitmap(), null, Modifier.fillMaxSize(), contentScale = ContentScale.Crop,
-                    alpha = if (Theme.viz == "circle") 0.35f else 1f)
-                // the visualiser gets its own space on the cover, so it never runs over the logo or the station's name
-                val band = Theme.viz == "bars" || Theme.viz == "waves"
-                val nameColor = if (Palettes.luma(ArtBg) < 0.5f) Color(0xFFE6DCE2) else Title
-                if (bmp == null) Box(Modifier.fillMaxSize().padding(12.dp).border(1.dp, GoldC.copy(alpha = 0.5f))) {
-                    Column(Modifier.fillMaxSize().padding(horizontal = 10.dp, vertical = 10.dp), horizontalAlignment = Alignment.CenterHorizontally) {
-                        Spacer(Modifier.weight(1f))
-                        Icon(painterResource(R.drawable.ic_logo_mark), null, Modifier.size((art * (if (band) 0.2f else 0.26f)).dp), tint = GoldC)
-                        // the station name on the cover (not with the circle, which draws round the logo; it's shown below anyway)
-                        if (Theme.viz != "circle") Label(station, nameColor, 9, Modifier.padding(top = 10.dp, start = 4.dp, end = 4.dp))
-                        Spacer(Modifier.weight(1f))
-                        if (band) VizView(Theme.viz, now.playing, Modifier.fillMaxWidth().height((art * 0.30f).dp).padding(horizontal = 4.dp))
-                    }
-                    if (Theme.viz == "circle") VizView("circle", now.playing, Modifier.fillMaxSize().padding(4.dp))
-                } else {
-                    if (Theme.viz == "circle") VizView("circle", now.playing, Modifier.fillMaxSize().padding(8.dp))
-                    else if (band) Box(Modifier.align(Alignment.BottomCenter).fillMaxWidth().height((art * 0.34f).dp)
-                        .background(ArtBg.copy(alpha = 0.72f))) {   // a soft band over the song's cover picture
-                        VizView(Theme.viz, now.playing, Modifier.fillMaxSize().padding(horizontal = 14.dp, vertical = 8.dp))
+            val era = Eras.byId(Theme.look)
+            if (era != null) {
+                // a radio from one era: it takes the cover's place (its own needles and meters replace the visualiser)
+                val rw = maxWidth.value - 48f
+                val rh = minOf(h.value * 0.44f, rw * era.h / era.w).coerceAtLeast(150f)
+                EraRadio(era, now, c, Modifier.padding(top = 10.dp).fillMaxWidth().height(rh.dp))
+            } else {
+                Box(Modifier.padding(top = 10.dp).size(art.dp).background(ArtBg), contentAlignment = Alignment.Center) {
+                    val bmp = artBitmap(now.md.artworkUri?.toString()?.takeUnless(CarArt::isStationArt))
+                    if (bmp != null) Image(bmp.asImageBitmap(), null, Modifier.fillMaxSize(), contentScale = ContentScale.Crop,
+                        alpha = if (Theme.viz == "circle") 0.35f else 1f)
+                    // the visualiser gets its own space on the cover, so it never runs over the logo or the station's name
+                    val band = Theme.viz == "bars" || Theme.viz == "waves"
+                    val nameColor = if (Palettes.luma(ArtBg) < 0.5f) Color(0xFFE6DCE2) else Title
+                    if (bmp == null) Box(Modifier.fillMaxSize().padding(12.dp).border(1.dp, GoldC.copy(alpha = 0.5f))) {
+                        Column(Modifier.fillMaxSize().padding(horizontal = 10.dp, vertical = 10.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+                            Spacer(Modifier.weight(1f))
+                            Icon(painterResource(R.drawable.ic_logo_mark), null, Modifier.size((art * (if (band) 0.2f else 0.26f)).dp), tint = GoldC)
+                            // the station name on the cover (not with the circle, which draws round the logo; it's shown below anyway)
+                            if (Theme.viz != "circle") Label(station, nameColor, 9, Modifier.padding(top = 10.dp, start = 4.dp, end = 4.dp))
+                            Spacer(Modifier.weight(1f))
+                            if (band) VizView(Theme.viz, now.playing, Modifier.fillMaxWidth().height((art * 0.30f).dp).padding(horizontal = 4.dp))
+                        }
+                        if (Theme.viz == "circle") VizView("circle", now.playing, Modifier.fillMaxSize().padding(4.dp))
+                    } else {
+                        if (Theme.viz == "circle") VizView("circle", now.playing, Modifier.fillMaxSize().padding(8.dp))
+                        else if (band) Box(Modifier.align(Alignment.BottomCenter).fillMaxWidth().height((art * 0.34f).dp)
+                            .background(ArtBg.copy(alpha = 0.72f))) {   // a soft band over the song's cover picture
+                            VizView(Theme.viz, now.playing, Modifier.fillMaxSize().padding(horizontal = 14.dp, vertical = 8.dp))
+                        }
                     }
                 }
+                VizSwitcher()   // off: a quiet "Visualiser" switch; on: Bars · Waves · Circle · Off
             }
-            VizSwitcher()   // off: a quiet "Visualiser" switch; on: Bars · Waves · Circle · Off
             Column(Modifier.fillMaxWidth().padding(top = 16.dp), horizontalAlignment = Alignment.CenterHorizontally) {
                 if (hasSong) Label("On $station", AccentText, 10)
                 val big = if (hasSong) song else station

@@ -205,6 +205,8 @@ fun SettingsScreen(close: () -> Unit, open: (String) -> Unit) {
         }
         TextButton({ open("themes") }, Modifier.align(Alignment.End).heightIn(min = 48.dp)) {
             Text("All ${THEMES.size} colour themes ›", color = AccentText) }
+        SettingRow("Player look", sub = "Radios from the 1930s to the 1990s, in their own colours or yours",
+            value = Eras.byId(Theme.look)?.name ?: "Standard", onClick = { open("look") })
 
         SectionHead("Text size")
         Segmented(listOf("Normal", "Large", "Extra large"), Theme.text) { Theme.text = it; save() }
@@ -244,7 +246,8 @@ fun SettingsScreen(close: () -> Unit, open: (String) -> Unit) {
         SettingRow("Alarm", value = if (a.on) "%02d:%02d · %s".format(a.hour, a.minute, Alarm.daysLabel(a.days)) else "Off", onClick = { open("alarm") })
         SettingRow("Request a station", sub = "Missing a station? Tell us", onClick = { open("request") })
         SettingRow("Reset to the original look", onClick = {
-            Theme.themeId = "velvet"; Theme.mode = "phone"; Theme.text = 0; Theme.font = "jost"; Theme.spacing = 0; Theme.viz = "off"; save() })
+            Theme.themeId = "velvet"; Theme.mode = "phone"; Theme.text = 0; Theme.font = "jost"; Theme.spacing = 0; Theme.viz = "off"
+            Theme.look = "std"; Theme.lookColours = "original"; save() })
     }
 }
 

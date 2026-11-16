@@ -294,4 +294,65 @@ class LogicTest {
         assertTrue(err.startsWith("IllegalStateException: ")); assertTrue(err.length <= 300); assertTrue(trace.length <= 4000)
         assertEquals("NullPointerException", Crash.summary(NullPointerException()).first)
     }
+
+    // ---- player looks
+    @Test fun era_dial_reads_the_frequency_or_the_place_in_the_list() {
+        assertEquals("91.9", Eras.dial("Radio Mango 91.9", 0, 10).second)
+        assertEquals(((91.9f - 88f) / 20f), Eras.dial("Radio Mango 91.9", 0, 10).first, 0.001f)
+        assertEquals("96.7", Eras.dial("Hit 96.7", 3, 10).second)
+        assertEquals("104", Eras.dial("Fever 104 FM", 3, 10).second)
+        assertEquals(null, Eras.freq("Radio 2024 Hits"))           // a year is not a frequency
+        assertEquals(null, Eras.freq("Station 5"))
+        assertEquals("CH 01", Eras.dial("Radio Malabar", 0, 10).second)
+        assertEquals(0.06f, Eras.dial("Radio Malabar", 0, 10).first, 0.001f)
+        assertEquals(0.94f, Eras.dial("Radio Malabar", 9, 10).first, 0.001f)
+        assertEquals(0.5f, Eras.dial("Radio Malabar", -1, 0).first, 0.001f)  // not playing from a list
+        assertEquals(0.5f, Eras.dial("Radio Malabar", 0, 1).first, 0.001f)
+        for (n in 0 until 300) { val p = Eras.dial("X", n, 300).first; assertTrue(p in 0f..1f) }
+    }
+    @Test fun era_knob_angles() {
+        assertEquals(-135f, Eras.angle(0f), 0.01f); assertEquals(135f, Eras.angle(1f), 0.01f); assertEquals(0f, Eras.angle(0.5f), 0.01f)
+        assertEquals(-135f, Eras.angle(-3f), 0.01f); assertEquals(0.5f, Eras.eqToKnob(0), 0.001f); assertEquals(1f, Eras.eqToKnob(12), 0.001f)
+    }
+    @Test fun era_pages_are_readable_light_and_dark() {
+        Eras.LIST.forEach { e -> listOf(false, true).forEach { dk ->
+            val p = Eras.page(e.id, dk)!!
+            assertTrue("${e.id} ink", Palettes.contrast(p.ink, p.page) >= 7f)
+            assertTrue("${e.id} soft", Palettes.contrast(p.soft, p.page) >= 4.5f)
+            assertTrue("${e.id} accent", Palettes.contrast(p.accent, p.page) >= 4.5f)
+            assertEquals("${e.id} light/dark", dk, Palettes.luma(p.page) < 0.5f)
+        } }
+    }
+    @Test fun era_page_colours_only_while_the_player_is_open_with_original_colours() {
+        Theme.themeId = "kadal"; Theme.mode = "light"
+        val theme = Palettes.of("kadal", false)
+        Theme.look = "boombox"; Theme.lookColours = "original"; Theme.playerOpen = false
+        assertEquals(theme, Theme.pal)                                     // the rest of the app keeps the theme
+        Theme.playerOpen = true
+        assertEquals(Eras.page("boombox", false)!!.page, Theme.pal.playerBg)
+        Theme.lookColours = "theme"; assertEquals(theme, Theme.pal)        // "My colour theme": the theme's page
+        Theme.lookColours = "original"; Theme.look = "std"; assertEquals(theme, Theme.pal)
+        Theme.playerOpen = false; Theme.mode = "phone"; Theme.themeId = "velvet"
+    }
+    @Test fun era_skins_for_every_theme() {
+        Eras.LIST.forEach { e -> THEMES.forEach { t ->
+            val s = Eras.skin(e.id, false, t.id)
+            assertEquals(Color(t.accent), if (t.id == "velvet") Color(0xFF6B2D5C) else s.bodyTop)
+            assertTrue("${e.id}/${t.id} dial", Palettes.contrast(s.panelInk, s.panel) >= 4.5f)
+        }
+            val o = Eras.skin(e.id, true, "kadal")
+            assertTrue("${e.id} original dial", Palettes.contrast(o.panelInk, o.panel) >= 4.5f)
+            assertTrue("${e.id} original differs from theme", o.bodyTop != Eras.skin(e.id, false, "kadal").bodyTop)
+        }
+    }
+    @Test fun player_look_saved_and_bad_values_ignored() {
+        val ctx = RuntimeEnvironment.getApplication()
+        Theme.look = "digital"; Theme.lookColours = "theme"; Theme.save(ctx)
+        Theme.look = "std"; Theme.lookColours = "original"; Theme.load(ctx)
+        assertEquals("digital", Theme.look); assertEquals("theme", Theme.lookColours)
+        Theme.prefs(ctx).edit().putString("look", "gramophone").putString("lookColours", "neon").apply(); Theme.load(ctx)
+        assertEquals("std", Theme.look); assertEquals("original", Theme.lookColours)
+        Theme.prefs(ctx).edit().clear().apply(); Theme.load(ctx)
+        assertEquals("std", Theme.look)                                    // new installs: today's player
+    }
 }

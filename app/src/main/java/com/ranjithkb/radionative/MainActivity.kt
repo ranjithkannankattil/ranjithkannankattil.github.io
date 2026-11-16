@@ -389,6 +389,7 @@ fun App(c: MediaController?) {
             when (pg) {
                 "settings" -> SettingsScreen({ page = null }) { page = it }
                 "themes" -> ThemesScreen { page = "settings" }
+                "look" -> PlayerLookScreen { page = "settings" }
                 "eq" -> EqualiserScreen { page = "settings" }
                 "viz" -> VisualiserScreen { page = "settings" }
                 "alarm" -> AlarmScreen((favList + recentPlayed.map { it.station }).distinctBy { it.key }.map { it to langOf(it) }) { page = "settings" }
@@ -603,6 +604,8 @@ fun FullPlayer(now: NowState, c: MediaController?, cast: CastUi, onCloseAll: () 
     val artist = (now.md.artist?.toString() ?: "").split(" · ").filter { it != station }.joinToString(" · ")
     // drawn over the main screen (not a separate window) so it fits between the phone's status bar and navigation bar
     androidx.activity.compose.BackHandler(onBack = close)
+    // while it's open, an original radio's page colours apply (the big player covers everything else)
+    DisposableEffect(Unit) { Theme.playerOpen = true; onDispose { Theme.playerOpen = false } }
     Box(Modifier.fillMaxSize()) {
         PlayerContent(now, c, now.md.extras?.getString("lang") ?: "", cast, onCast = { Cast.open(ctx, Theme.dark) },
             onShare = { share = true }, onSpotify = if (hasSong) ({ scope.launch { openInSpotify(ctx, song, artist) } }) else null,

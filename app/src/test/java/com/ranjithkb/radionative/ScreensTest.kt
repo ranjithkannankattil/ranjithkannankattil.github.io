@@ -52,7 +52,9 @@ class ScreensTest {
     }
 
     private fun shot(name: String, dark: Boolean, theme: String = "velvet", text: Int = 0, font: String = "jost", spacing: Int = 0,
-                     viz: String = "off", animated: Boolean = false, content: @Composable () -> Unit) {
+                     viz: String = "off", animated: Boolean = false, look: String = "std", lookColours: String = "original",
+                     content: @Composable () -> Unit) {
+        Theme.look = look; Theme.lookColours = lookColours; Theme.playerOpen = look != "std"
         Theme.mode = "phone"; Theme.sysDark = dark; Theme.themeId = theme; Theme.text = text; Theme.font = font; Theme.spacing = spacing; Theme.viz = viz
         if (animated) rule.mainClock.autoAdvance = false
         rule.setContent {
@@ -124,6 +126,7 @@ class ScreensTest {
     @Test @Config(qualifiers = "w360dp-h740dp-xxhdpi") fun n18_settings_large_360() = shot("n18-settings-large-360", false, text = 2) { SettingsScreen({}) {} }
     /** One screen drawn in every theme (light and dark): the screen is set once and the theme changed between pictures. */
     private fun everyTheme(prefix: String, darkToo: Boolean, viz: String, content: @Composable () -> Unit) {
+        Theme.look = "std"; Theme.playerOpen = false
         Theme.viz = viz; Theme.text = 0; Theme.font = "jost"; Theme.spacing = 0
         rule.mainClock.autoAdvance = false
         Theme.mode = "phone"
@@ -192,6 +195,28 @@ class ScreensTest {
             File(File("build/screens").apply { mkdirs() }, "n27-car-$i-${n.replace(' ', '_')}-$t.png").outputStream().use { b.compress(Bitmap.CompressFormat.PNG, 100, it) }
         }
     }
+    // ---- player looks: every era, original and theme colours, light and dark
+    private fun everyEra(prefix: String, theme: String, content: @Composable () -> Unit) {
+        Theme.viz = "off"; Theme.text = 0; Theme.font = "jost"; Theme.spacing = 0; Theme.mode = "phone"; Theme.themeId = theme
+        Theme.playerOpen = true
+        rule.mainClock.autoAdvance = false
+        rule.setContent { MaterialTheme(typography = PoppinsType) { Surface(Modifier.fillMaxSize(), color = Paper) { content() } } }
+        Eras.LIST.forEach { e -> listOf("original", "theme").forEach { col -> listOf(false, true).forEach { dk ->
+            Theme.look = e.id; Theme.lookColours = col; Theme.sysDark = dk
+            androidx.compose.runtime.snapshots.Snapshot.sendApplyNotifications()
+            rule.mainClock.advanceTimeBy(900)
+            capture("$prefix-${e.id}-$col-${if (dk) "dark" else "light"}")
+        } } }
+        Theme.look = "std"; Theme.playerOpen = false
+    }
+    @Test fun n28_every_era() = everyEra("era", "velvet") { Player(true) }
+    @Test fun n29_every_era_kadal_theme() = everyEra("erak", "kadal") { Player(true) }
+    @Test @Config(qualifiers = "w360dp-h640dp-xxhdpi") fun n30_every_era_small_phone() = everyEra("eras", "velvet") { Player(true) }
+    @Test fun n31_player_look_settings() = shot("n31-player-look", false, look = "receiver") { Theme.playerOpen = false; PlayerLookScreen {} }
+    @Test fun n32_player_look_settings_dark_theme_colours() = shot("n32-player-look-dark", true, look = "boombox", lookColours = "theme") {
+        Theme.playerOpen = false; PlayerLookScreen {} }
+    @Test fun n33_era_paused_no_song() = shot("n33-era-paused", false, look = "valve") { Player(false, song = false) }
+    @Test fun n34_settings_with_look_row() = shot("n34-settings-look", false, look = "cathedral") { Theme.playerOpen = false; SettingsScreen({}) {} }
     @Test fun n19_every_theme() = everyTheme("t", true, "off") { Stations(true, "heard") }
     @Test fun n20_every_theme_player() = everyTheme("tp", false, "bars") { Player(true) }
     @Test fun n21_widgets() {
