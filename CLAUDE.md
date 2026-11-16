@@ -92,6 +92,11 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
 - **In-app notes**: the app (2.3.5+) shows messages from `radio-notes.json` on the site (id, to web/play/all, times,
   until, title, text, button, link; `whatsapp:<text>` opens a chat with him). His WhatsApp number comes only from the
   private build secret `RADIO_WA_NUMBER`; never put it in code or on the site.
+- **Player look** (2.6.0+, `Eras.kt`): Settings → Player look draws the big player as a radio from one era (1930s cathedral, 1950s valve,
+  1960s transistor, 1970s hi-fi receiver, 1980s boombox, 1990s digital tuner); Standard stays the default. Colours: Original radio
+  (period materials, its own light/dark page while the player is open) or My colour theme. Knobs work (tuning = station, volume =
+  phone media volume, bass/mid/treble = equaliser). Only the picture repaints each frame; a paused radio stops drawing once still.
+  Device tests `EraDeviceTest` drive the clock by hand (the radio animates while music plays). App only, not on the website.
 - Old Capacitor wrapper: branch `radio-app` (don't push there — it would publish a 1.x release).
   iPhone: still that wrapper, installed from his Mac with Xcode (free Apple ID, re-run every 7 days);
   no iPhone app for other people — the site says so.
