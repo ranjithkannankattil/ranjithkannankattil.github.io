@@ -32,7 +32,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.leftor.com/proxy/studiom2/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-glas-drine",
@@ -176,8 +177,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_usora.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-busovaca",
@@ -387,6 +387,15 @@ window.STATIONS = [
       "https://serverkw.quran-uni.com:8030/;"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "antena-sarajevo",
+    "name": "Antena Sarajevo",
+    "category": "music",
+    "streams": [
+      "https://stream.rsgmedia.ba/listen/antena_sarajevo/radio.mp3"
+    ],
+    "added": "2026-11-16"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T19:57Z";
+window.STATIONS_CHECKED = "2026-11-16T07:49Z";

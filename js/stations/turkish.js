@@ -940,7 +940,8 @@ window.STATIONS = [
     "streams": [
       "https://radio-trtantalya.medya.trt.com.tr/master.m3u8"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "offline": true
   },
   {
     "id": "bestefm",
@@ -1330,4 +1331,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T19:57Z";
+window.STATIONS_CHECKED = "2026-11-16T07:49Z";

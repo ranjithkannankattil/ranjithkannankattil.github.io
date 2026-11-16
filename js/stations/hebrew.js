@@ -169,9 +169,9 @@ window.STATIONS = [
     "name": "Ze Rock Radio",
     "category": "music",
     "streams": [
+      "https://rocky.kupernet.com/stream",
       "https://icecast.live/proxy/zerock/zerock"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "eco-99fm",
@@ -452,4 +452,4 @@ window.STATIONS = [
     "added": "2026-11-01"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T19:57Z";
+window.STATIONS_CHECKED = "2026-11-16T07:49Z";

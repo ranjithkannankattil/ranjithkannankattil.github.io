@@ -253,8 +253,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.radio3.no/Radio3Bodo48?rp_source=1&=&&___cb=322377588283394"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "p7-klem",
@@ -419,4 +418,4 @@ window.STATIONS = [
     "added": "2026-11-15"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T19:57Z";
+window.STATIONS_CHECKED = "2026-11-16T07:49Z";

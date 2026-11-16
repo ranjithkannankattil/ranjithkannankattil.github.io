@@ -183,8 +183,7 @@ window.STATIONS = [
     "akv": "Akashvani Devikulam",
     "exclude": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "airkozhikodefm",
@@ -643,7 +642,8 @@ window.STATIONS = [
     "streams": [
       "https://centova71.instainternet.com/proxy/tcrliveradio?mp=/stream"
     ],
-    "hidden": true
+    "hidden": true,
+    "offline": true
   },
   {
     "id": "kaathoramlive",
@@ -1215,4 +1215,4 @@ window.STATIONS = [
     "added": "2026-11-14"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T02:09Z";
+window.STATIONS_CHECKED = "2026-11-16T07:49Z";

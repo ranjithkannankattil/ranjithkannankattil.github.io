@@ -719,6 +719,24 @@ window.STATIONS = [
       "https://radio.retroko.com/listen/retroko/radio.mp3"
     ],
     "added": "2026-11-09"
+  },
+  {
+    "id": "lucky-fm",
+    "name": "Lucky FM",
+    "category": "music",
+    "streams": [
+      "https://luckyfm.duckdns.org:5000/stream"
+    ],
+    "added": "2026-11-16"
+  },
+  {
+    "id": "tjs-japanese-radio-station",
+    "name": "TJS Japanese Radio Station",
+    "category": "music",
+    "streams": [
+      "https://s8.citrus3.com:8200/stream"
+    ],
+    "added": "2026-11-16"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T19:57Z";
+window.STATIONS_CHECKED = "2026-11-16T07:49Z";

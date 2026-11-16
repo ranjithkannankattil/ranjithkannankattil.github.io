@@ -102,7 +102,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://1603884249.rsc.cdn77.org/1603884249/index.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "fm94-7",
@@ -272,7 +273,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ptmirror3.passiontimes.hk/hls3/stream.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "chkt-am1430-fairchild",
@@ -519,8 +521,7 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/1283/64k.mp3"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "station-33",
@@ -664,8 +665,7 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/1282/64k.mp3"
     ],
-    "added": "2026-11-15",
-    "offline": true
+    "added": "2026-11-15"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T19:57Z";
+window.STATIONS_CHECKED = "2026-11-16T07:49Z";

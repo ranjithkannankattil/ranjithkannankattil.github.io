@@ -1025,6 +1025,7 @@ window.STATIONS = [
     "name": "Radio Continu",
     "category": "music",
     "streams": [
+      "https://stream.radiocontinu.nl/radio-continu",
       "https://stream.radiocontinu.nl/radiocontinu"
     ],
     "added": "2026-11-03"
@@ -1336,4 +1337,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-15T19:57Z";
+window.STATIONS_CHECKED = "2026-11-16T07:49Z";
