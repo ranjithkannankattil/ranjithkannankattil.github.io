@@ -120,8 +120,16 @@ class CarArtProvider : ContentProvider() {
             val tmp = File(dir, file.name + ".tmp")
             tmp.outputStream().use { bmp.compress(Bitmap.CompressFormat.PNG, 100, it) }
             tmp.renameTo(file)
+            trim(dir)
         }
         return ParcelFileDescriptor.open(file, ParcelFileDescriptor.MODE_READ_ONLY)
+    }
+
+    /** Keep at most 800 pictures (about one per station in the car lists looked at), dropping the oldest. */
+    private fun trim(dir: File) {
+        val files = dir.listFiles { f -> f.name.endsWith(".png") } ?: return
+        if (files.size <= 800) return
+        files.sortedBy { it.lastModified() }.take(files.size - 700).forEach { it.delete() }
     }
 
     override fun getType(uri: Uri) = "image/png"
