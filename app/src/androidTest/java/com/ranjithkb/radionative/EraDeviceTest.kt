@@ -132,4 +132,114 @@ class EraDeviceTest {
         assertTrue("the radio's meters receive the sound", fresh)
         assertTrue("watching while the radio is on screen", Viz.watching)
     }
+
+    // ---- every control on every radio, both directions, taps, TalkBack actions, and the drawing following along
+    private fun idx() = main { b.currentMediaItemIndex }
+    private fun count() = main { b.mediaItemCount }
+    private fun moved(from: Int, steps: Int): Boolean { val n = count(); val now = idx(); return (now - from + n) % n == ((steps % n) + n) % n }
+    private fun leftSide(): TouchInjectionScope.() -> Unit = { click(androidx.compose.ui.geometry.Offset(6f, centerY)) }
+    private fun rightSide(): TouchInjectionScope.() -> Unit = { click(androidx.compose.ui.geometry.Offset(width - 6f, centerY)) }
+    private fun action(node: SemanticsNodeInteraction, label: String) {
+        val a = node.fetchSemanticsNode().config[androidx.compose.ui.semantics.SemanticsActions.CustomActions].first { it.label == label }
+        main { a.action() }
+    }
+    private fun picture() = rule.onNode(hasContentDescription(" radio, ", substring = true)).captureToImage().toPixelMap()
+    private fun differs(a: androidx.compose.ui.graphics.PixelMap, b: androidx.compose.ui.graphics.PixelMap): Int {
+        var d = 0; for (y in 0 until minOf(a.height, b.height) step 2) for (x in 0 until minOf(a.width, b.width) step 2) if (a[x, y] != b[x, y]) d++; return d
+    }
+
+    @Test fun e07_every_knob_on_every_radio() {
+        val am = ctx.getSystemService(AudioManager::class.java)
+        val max = am.getStreamMaxVolume(AudioManager.STREAM_MUSIC)
+        val expected = mapOf("cathedral" to listOf("Tuning", "Volume"), "valve" to listOf("Tuning", "Volume"), "transistor" to listOf("Tuning", "Volume"),
+            "receiver" to listOf("Tuning", "Volume", "Bass", "Treble"), "boombox" to listOf("keys"), "digital" to listOf("Bass", "Mid", "Treble", "Volume"))
+        for (e in Eras.LIST) {
+            main { era = e }; rule.waitForIdle()
+            log("---- ${e.id}")
+            for (k in expected[e.id]!!) when (k) {
+                "Tuning" -> {
+                    val n = rule.onNodeWithContentDescription("Tuning knob", substring = true)
+                    var from = idx(); n.performTouchInput { swipeRight(durationMillis = 300) }
+                    assertTrue("${e.id}: turn right tunes on", waitFor(6_000, "tune right") { b.currentMediaItemIndex != from })
+                    val fwd = idx(); assertTrue("${e.id}: forwards", (fwd - from + count()) % count() in 1..4)
+                    from = idx(); n.performTouchInput { swipeLeft(durationMillis = 300) }
+                    assertTrue("${e.id}: turn left tunes back", waitFor(6_000, "tune left") { b.currentMediaItemIndex != from })
+                    assertTrue("${e.id}: backwards", (from - idx() + count()) % count() in 1..4)
+                    from = idx(); n.performTouchInput(rightSide()); assertTrue("${e.id}: tap right = next", waitFor(6_000, "tap r") { moved(from, 1) })
+                    from = idx(); n.performTouchInput(leftSide()); assertTrue("${e.id}: tap left = previous", waitFor(6_000, "tap l") { moved(from, -1) })
+                    from = idx(); action(n, "Next station"); assertTrue("${e.id}: TalkBack next", waitFor(6_000, "tb next") { moved(from, 1) })
+                    from = idx(); action(n, "Previous station"); assertTrue("${e.id}: TalkBack previous", waitFor(6_000, "tb prev") { moved(from, -1) })
+                    log("${e.id} tuning ok")
+                }
+                "Volume" -> {
+                    val n = rule.onNodeWithContentDescription("Volume knob")
+                    am.setStreamVolume(AudioManager.STREAM_MUSIC, max / 2, 0); rule.waitForIdle()
+                    var v = am.getStreamVolume(AudioManager.STREAM_MUSIC)
+                    n.performTouchInput { swipeUp(durationMillis = 300) }; rule.waitForIdle()
+                    assertTrue("${e.id}: up = louder", am.getStreamVolume(AudioManager.STREAM_MUSIC) > v)
+                    v = am.getStreamVolume(AudioManager.STREAM_MUSIC)
+                    n.performTouchInput { swipeDown(durationMillis = 300) }; rule.waitForIdle()
+                    assertTrue("${e.id}: down = quieter", am.getStreamVolume(AudioManager.STREAM_MUSIC) < v)
+                    v = am.getStreamVolume(AudioManager.STREAM_MUSIC)
+                    n.performTouchInput(rightSide()); rule.waitForIdle(); assertEquals("${e.id}: tap right +1", v + 1, am.getStreamVolume(AudioManager.STREAM_MUSIC))
+                    n.performTouchInput(leftSide()); rule.waitForIdle(); assertEquals("${e.id}: tap left -1", v, am.getStreamVolume(AudioManager.STREAM_MUSIC))
+                    action(n, "Louder"); rule.waitForIdle(); assertEquals("${e.id}: TalkBack louder", v + 1, am.getStreamVolume(AudioManager.STREAM_MUSIC))
+                    // the phone's own volume buttons move the knob too
+                    am.setStreamVolume(AudioManager.STREAM_MUSIC, 2, 0)
+                    val pct = "${2 * 100 / max} percent"
+                    assertTrue("${e.id}: knob follows the phone's volume", waitFor(4_000, "knob follows") {
+                        runCatching { rule.onNodeWithContentDescription("Volume knob").assert(androidx.compose.ui.test.SemanticsMatcher.expectValue(
+                            androidx.compose.ui.semantics.SemanticsProperties.StateDescription, pct)); true }.getOrDefault(false) })
+                    am.setStreamVolume(AudioManager.STREAM_MUSIC, max / 2, 0)
+                    log("${e.id} volume ok")
+                }
+                "keys" -> {
+                    var from = idx(); rule.onNodeWithContentDescription("Next station").performClick()
+                    assertTrue("▶▶", waitFor(6_000, "next") { moved(from, 1) })
+                    from = idx(); rule.onNodeWithContentDescription("Previous station").performClick()
+                    assertTrue("◀◀", waitFor(6_000, "prev") { moved(from, -1) })
+                    rule.onNodeWithContentDescription("Pause").performClick(); assertTrue("■", waitFor(6_000, "pause") { !b.playWhenReady })
+                    rule.onNodeWithContentDescription("Play").performClick(); assertTrue("▶", waitFor(25_000, "play") { b.isPlaying })
+                    log("boombox keys ok")
+                }
+                else -> {
+                    val band = mapOf("Bass" to 0, "Mid" to 2, "Treble" to 4)[k]!!
+                    Eq.save(ctx, false, "Normal", Eq.PRESETS["Normal"]!!)
+                    main { era = Eras.LIST[0] }; rule.waitForIdle(); main { era = e }; rule.waitForIdle()   // reread the equaliser
+                    val n = rule.onNodeWithContentDescription("$k knob")
+                    n.performTouchInput { swipeRight(durationMillis = 300) }; rule.waitForIdle()
+                    val up = Eq.bands(ctx)[band]
+                    assertTrue("${e.id}: $k up turns the equaliser on and raises it ($up)", Eq.on(ctx) && up > 0)
+                    assertTrue("${e.id}: $k only moves its own band", Eq.bands(ctx).filterIndexed { i, _ -> i != band }.all { it == 0 })
+                    n.performTouchInput { swipeLeft(durationMillis = 300) }; n.performTouchInput { swipeLeft(durationMillis = 300) }; rule.waitForIdle()
+                    assertTrue("${e.id}: $k down lowers it", Eq.bands(ctx)[band] < up)
+                    val v = Eq.bands(ctx)[band]
+                    n.performTouchInput(rightSide()); rule.waitForIdle(); assertEquals("${e.id}: $k tap +2", (v + 2).coerceAtMost(12), Eq.bands(ctx)[band])
+                    action(n, "Less $k"); rule.waitForIdle(); assertEquals("${e.id}: $k TalkBack less", v, Eq.bands(ctx)[band])
+                    repeat(10) { n.performTouchInput { swipeRight(durationMillis = 200) } }; rule.waitForIdle()
+                    assertEquals("${e.id}: $k stops at +12", 12, Eq.bands(ctx)[band])
+                    Thread.sleep(800); assertTrue("${e.id}: still playing after $k", main { b.isPlaying })
+                    Eq.save(ctx, false, "Normal", Eq.PRESETS["Normal"]!!)
+                    log("${e.id} $k ok")
+                }
+            }
+        }
+    }
+
+    @Test fun e08_the_drawn_knob_turns() {
+        val am = ctx.getSystemService(AudioManager::class.java)
+        main { era = Eras.byId("valve")!!; b.pause() }
+        main { now.playing = false }
+        am.setStreamVolume(AudioManager.STREAM_MUSIC, 1, 0)
+        Thread.sleep(2_500); rule.waitForIdle()
+        val before = picture()
+        am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC), 0)
+        Thread.sleep(1_000); rule.waitForIdle()
+        val after = picture()
+        val d = differs(before, after)
+        log("volume knob redraw: $d pixels changed")
+        assertTrue("the volume pointer moved on the picture", d > 20)
+        val still = picture(); assertEquals("nothing else moves while paused", 0, differs(after, still))
+        am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC) / 2, 0)
+    }
 }
