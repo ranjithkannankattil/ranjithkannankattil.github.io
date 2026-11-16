@@ -66,7 +66,7 @@ class EraDeviceTest {
 
     @Test fun e01_every_radio_draws_original_and_theme_light_and_dark() {
         for (e in Eras.LIST) for (col in listOf("original", "theme")) for (dk in listOf(false, true)) {
-            main { era = e; Theme.lookColours = col; Theme.mode = if (dk) "dark" else "light" }
+            main { era = e; Theme.lookColours = col; Theme.mode = if (dk) "dark" else "light" }; settle()
             settle()
             val px = rule.onNodeWithContentDescription("${e.name} radio, ${e.decade}").captureToImage().toPixelMap()
             val colours = HashSet<Int>()
@@ -78,7 +78,7 @@ class EraDeviceTest {
     }
 
     @Test fun e02_tuning_knob_changes_station_both_ways() {
-        main { era = Eras.byId("receiver")!! }
+        main { era = Eras.byId("receiver")!! }; settle()
         val start = main { b.currentMediaItemIndex }
         rule.onNodeWithContentDescription("Tuning knob", substring = true).performTouchInput { swipeRight(durationMillis = 300) }
         assertTrue("turning right tunes on", waitFor(6_000, "tune next") { b.currentMediaItemIndex > start })
@@ -90,7 +90,7 @@ class EraDeviceTest {
     }
 
     @Test fun e03_volume_knob_is_the_phone_volume() {
-        main { era = Eras.byId("cathedral")!! }
+        main { era = Eras.byId("cathedral")!! }; settle()
         val am = ctx.getSystemService(AudioManager::class.java)
         am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC) / 2, 0)
         val v0 = am.getStreamVolume(AudioManager.STREAM_MUSIC)
@@ -102,7 +102,7 @@ class EraDeviceTest {
     }
 
     @Test fun e04_bass_and_treble_knobs_are_the_equaliser_and_keep_playing() {
-        main { era = Eras.byId("digital")!! }
+        main { era = Eras.byId("digital")!! }; settle()
         Eq.save(ctx, false, "Normal", Eq.PRESETS["Normal"]!!)
         rule.onNodeWithContentDescription("Bass knob").performTouchInput { swipeRight(durationMillis = 300) }
         settle()
@@ -116,7 +116,7 @@ class EraDeviceTest {
     }
 
     @Test fun e05_boombox_keys() {
-        main { era = Eras.byId("boombox")!! }
+        main { era = Eras.byId("boombox")!! }; settle()
         val start = main { b.currentMediaItemIndex }
         rule.onNodeWithContentDescription("Next station").performClick()
         assertTrue("▶▶ next", waitFor(6_000, "next") { b.currentMediaItemIndex == start + 1 })
@@ -129,7 +129,7 @@ class EraDeviceTest {
     }
 
     @Test fun e06_meters_follow_the_music() {
-        main { era = Eras.byId("receiver")!! }
+        main { era = Eras.byId("receiver")!! }; settle()
         Thread.sleep(3_000)
         val fresh = System.currentTimeMillis() - Viz.stamp < 1_000
         log("radio meters get sound: fresh=$fresh peak=${Viz.peak}")
@@ -140,7 +140,8 @@ class EraDeviceTest {
     // ---- every control on every radio, both directions, taps, TalkBack actions, and the drawing following along
     private fun idx() = main { b.currentMediaItemIndex }
     private fun count() = main { b.mediaItemCount }
-    private fun moved(from: Int, steps: Int): Boolean { val n = count(); val now = idx(); return (now - from + n) % n == ((steps % n) + n) % n }
+    /** For use inside waitFor (already on the main thread). */
+    private fun moved(from: Int, steps: Int): Boolean { val n = b.mediaItemCount; val now = b.currentMediaItemIndex; return (now - from + n) % n == ((steps % n) + n) % n }
     private fun leftSide(): TouchInjectionScope.() -> Unit = { click(androidx.compose.ui.geometry.Offset(6f, centerY)) }
     private fun rightSide(): TouchInjectionScope.() -> Unit = { click(androidx.compose.ui.geometry.Offset(width - 6f, centerY)) }
     private fun action(node: SemanticsNodeInteraction, label: String) {
@@ -234,7 +235,7 @@ class EraDeviceTest {
 
     @Test fun e08_the_drawn_knob_turns() {
         val am = ctx.getSystemService(AudioManager::class.java)
-        main { era = Eras.byId("valve")!!; b.pause() }
+        main { era = Eras.byId("valve")!!; b.pause() }; settle(); settle()
         main { now.playing = false }
         am.setStreamVolume(AudioManager.STREAM_MUSIC, 1, 0)
         Thread.sleep(2_500); settle()
