@@ -273,7 +273,7 @@ fun PlayerContent(now: NowState, c: androidx.media3.session.MediaController?, la
     val artist = (now.md.artist?.toString() ?: "").split(" · ").filter { it != station }.joinToString(" · ")
     BoxWithConstraints(Modifier.fillMaxSize().background(PlayerBg).pointerInput(Unit) { detectTapGestures { } }
         .statusBarsPadding().navigationBarsPadding()) {
-        val h = maxHeight
+        val h = maxHeight; val fullW = maxWidth
         val art = minOf(260f, maxWidth.value - 80f, h.value * 0.32f).coerceAtLeast(110f)
         Column(Modifier.fillMaxWidth().verticalScroll(rememberScrollState()).heightIn(min = h)
             .padding(start = Pad, end = Pad, top = 6.dp, bottom = 18.dp),
@@ -289,7 +289,7 @@ fun PlayerContent(now: NowState, c: androidx.media3.session.MediaController?, la
             val era = Eras.byId(Theme.look)
             if (era != null) {
                 // a radio from one era: it takes the cover's place (its own needles and meters replace the visualiser)
-                val rw = maxWidth.value - 48f
+                val rw = fullW.value - 48f
                 val rh = minOf(h.value * 0.44f, rw * era.h / era.w).coerceAtLeast(150f)
                 EraRadio(era, now, c, Modifier.padding(top = 10.dp).fillMaxWidth().height(rh.dp))
             } else {
