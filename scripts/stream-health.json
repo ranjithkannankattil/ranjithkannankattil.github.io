@@ -65,7 +65,6 @@
     "malayalam:airkannur": 1,
     "malayalam:akashvanithrissur": 1,
     "malayalam:greenradio": 56,
-    "malayalam:junefm": 1,
     "malayalam:karunasairadio": 1,
     "malayalam:keralafm": 56,
     "malayalam:manjerifm": 1,
@@ -2077,11 +2076,6 @@
     "fails": 10,
     "last_reason": "playlist HTTP 400",
     "since": "2026-11-13"
-  },
-  "https://onair.junefm.in/live": {
-    "fails": 1,
-    "last_reason": "HTTP 404 error page",
-    "since": "2026-11-16"
   },
   "https://online-novodnistrovsk.pp.ua:8443/playHD": {
     "fails": 3,
