@@ -161,6 +161,8 @@ private fun rememberLevels(playing: Boolean): Pair<FloatArray, Float> {
                     (0.25f + 0.35f * (0.5f + 0.5f * sin(t * 2.1f + i * 0.45f)) * (0.6f + 0.4f * cos(t * 1.3f + i * 0.17f))) * (1f - i / (Viz.N * 1.6f)) }
                 shown = FloatArray(Viz.N) { i -> shown[i] + (target[i] - shown[i]) * (if (!playing) 0.06f else 0.3f) }
             }
+            // paused: once everything has settled, stop drawing frames (saves battery)
+            if (!playing && shown.all { it < 0.004f }) { shown = FloatArray(Viz.N); break }
         }
     }
     return shown to t
@@ -193,7 +195,14 @@ fun EraRadio(era: Eras.Era, now: NowState, c: androidx.media3.session.MediaContr
     val am = remember { ctx.getSystemService(Context.AUDIO_SERVICE) as AudioManager }
     val max = remember { am.getStreamMaxVolume(AudioManager.STREAM_MUSIC).coerceAtLeast(1) }
     var vol by remember { mutableIntStateOf(am.getStreamVolume(AudioManager.STREAM_MUSIC)) }
-    LaunchedEffect(Unit) { while (true) { kotlinx.coroutines.delay(600); vol = am.getStreamVolume(AudioManager.STREAM_MUSIC) } }
+    // the knob follows the phone's own volume buttons too
+    DisposableEffect(Unit) {
+        val r = object : android.content.BroadcastReceiver() {
+            override fun onReceive(c: Context?, i: android.content.Intent?) { vol = am.getStreamVolume(AudioManager.STREAM_MUSIC) } }
+        androidx.core.content.ContextCompat.registerReceiver(ctx, r, android.content.IntentFilter("android.media.VOLUME_CHANGED_ACTION"),
+            androidx.core.content.ContextCompat.RECEIVER_NOT_EXPORTED)
+        onDispose { runCatching { ctx.unregisterReceiver(r) } }
+    }
     var bands by remember { mutableStateOf(if (Eq.on(ctx)) Eq.bands(ctx) else IntArray(5)) }
     val vals = RadioVals(levels, t, now.playing, shownPos, label, station, vol / max.toFloat(), bands[0], bands[2], bands[4])
     val tm = rememberTextMeasurer()
@@ -435,7 +444,7 @@ private fun DrawScope.boombox(s: Eras.Skin, v: RadioVals, tm: TextMeasurer) {
     }
     drawRect(s.panel, Offset(124f, 30f), Size(92f, 30f))
     drawRect(s.metal, Offset(124f, 30f), Size(92f, 30f), style = Stroke(2f))
-    txt(tm, "FM ${v.freqLabel}".take(9), 170f, 33f, 16f, s.panelInk, mono = true)
+    txt(tm, if (v.freqLabel.startsWith("CH")) v.freqLabel else "FM ${v.freqLabel}".take(9), 170f, 33f, 16f, s.panelInk, mono = true)
     drawRoundRect(s.body2, Offset(124f, 68f), Size(92f, 44f), CornerRadius(4f))
     drawRoundRect(s.metal, Offset(124f, 68f), Size(92f, 44f), CornerRadius(4f), style = Stroke(2f))
     for (cx in listOf(148f, 192f)) rotate(if (v.playing) v.t * 120f else 0f, Offset(cx, 90f)) {
@@ -463,7 +472,7 @@ private fun DrawScope.digital(s: Eras.Skin, v: RadioVals, tm: TextMeasurer) {
     }
     drawPath(wave, s.glow, style = Stroke(2f))
     drawRoundRect(s.metal, Offset(14f, 14f), Size(312f, 104f), CornerRadius(5f), style = Stroke(1f))
-    txt(tm, "${v.freqLabel}${if (v.freqLabel.startsWith("CH")) "" else " MHz"}", 318f, 19f, 10f, s.glow, mono = true, right = true)
+    txt(tm, "${v.freqLabel}${if (v.freqLabel.startsWith("CH")) "" else " MHz"}", 318f, 19f, 10f, if (Palettes.luma(s.panel) > 0.5f) s.panelInk else s.glow, mono = true, right = true)
     for (k in 0 until 20) {
         val lvl = v.levels[(k * (Viz.N - 1)) / 19]
         val on = (lvl * 13f).toInt().coerceIn(if (v.playing) 1 else 0, 12)
@@ -483,6 +492,12 @@ fun PlayerLookScreen(close: () -> Unit) {
         Text("How the big player looks. Needles, meters and lamps move with the music, and the knobs work: tuning changes the station, " +
             "volume is the phone's volume, bass and treble are the equaliser.", fontSize = 13.sp, color = Soft, lineHeight = 19.sp,
             modifier = Modifier.padding(top = 4.dp))
+        SectionHead("Colours")
+        Segmented(listOf("Original radio", "My colour theme"), if (Theme.lookColours == "original") 0 else 1) {
+            Theme.lookColours = if (it == 0) "original" else "theme"; Theme.save(ctx) }
+        Text("Original radio: walnut, bakelite, leather, aluminium… as the radio really was. My colour theme: the same radio in your " +
+            "colour theme. Every look has a light and a dark page, following Settings → Appearance.", fontSize = 12.5.sp, color = Soft,
+            lineHeight = 18.sp, modifier = Modifier.padding(top = 8.dp))
         SectionHead("Radio looks")
         BoxWithConstraints(Modifier.fillMaxWidth()) {
             val w = ((maxWidth.value - 2 * 12) / 3).coerceAtMost(124f)
@@ -494,12 +509,6 @@ fun PlayerLookScreen(close: () -> Unit) {
                 }
             }
         }
-        SectionHead("Colours")
-        Segmented(listOf("Original radio", "My colour theme"), if (Theme.lookColours == "original") 0 else 1) {
-            Theme.lookColours = if (it == 0) "original" else "theme"; Theme.save(ctx) }
-        Text("Original radio: walnut, bakelite, leather, aluminium… as the radio really was. My colour theme: the same radio in your " +
-            "colour theme. Every look has a light and a dark page, following Settings → Appearance.", fontSize = 12.5.sp, color = Soft,
-            lineHeight = 18.sp, modifier = Modifier.padding(top = 8.dp))
     }
 }
 
