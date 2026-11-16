@@ -1008,7 +1008,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.brokenbeats.net/tune"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "offline": true
   },
   {
     "id": "station-39",
@@ -1062,8 +1063,7 @@ window.STATIONS = [
     "streams": [
       "https://edge2.usp.unistar.by/hls/unistar_main/96k.m3u8"
     ],
-    "added": "2026-11-04",
-    "offline": true
+    "added": "2026-11-04"
   },
   {
     "id": "station-42",
@@ -1327,4 +1327,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T07:49Z";
+window.STATIONS_CHECKED = "2026-11-16T23:29Z";

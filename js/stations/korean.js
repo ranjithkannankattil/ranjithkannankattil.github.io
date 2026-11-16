@@ -180,11 +180,10 @@ window.STATIONS = [
     "name": "SBS Power FM",
     "category": "music",
     "streams": [
-      "https://radiolive.sbs.co.kr/powerpc/powerfm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTQ0ODI0MDQsInBhdGgiOiIvcG93ZXJmbS5zdHJlYW0iLCJkdXJhdGlvbiI6LTEsInVubyI6IjgzMDdlMTljLTA4YWItNDgzNi1hOTcyLWJkNjNhY2NhYjQyYiIsImlhdCI6MTc5NDQzOTIwNH0.xOr45wRUFGsb0nk-YF2gR4EHoFj8TMbKOpkYmooMj_o",
-      "https://radiolive.sbs.co.kr/powerpc/powerfm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTM5ODMyMDcsInBhdGgiOiIvcG93ZXJmbS5zdHJlYW0iLCJkdXJhdGlvbiI6LTEsInVubyI6ImMzNjgwM2E5LTFlMjktNDMxMC1iYWE4LTRjYzk4MmE5NDJmNSIsImlhdCI6MTc5Mzk0MDAwN30.FTR0W6RYHq40WGd3Dj3PvMqXVFnpw70RzzmaUEd13o0"
+      "https://radiolive.sbs.co.kr/powerpc/powerfm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTQ5MTQ0MDksInBhdGgiOiIvcG93ZXJmbS5zdHJlYW0iLCJkdXJhdGlvbiI6LTEsInVubyI6Ijg1OGY2NDc2LTAyNjctNGM4Ni04NzQyLWIyOTEwZjIxODg4OCIsImlhdCI6MTc5NDg3MTIwOX0.SC0Lh7pPAxHr77VbpYs938Q9XWa9QdjrsMtvK5GxFyw",
+      "https://radiolive.sbs.co.kr/powerpc/powerfm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTQ0ODI0MDQsInBhdGgiOiIvcG93ZXJmbS5zdHJlYW0iLCJkdXJhdGlvbiI6LTEsInVubyI6IjgzMDdlMTljLTA4YWItNDgzNi1hOTcyLWJkNjNhY2NhYjQyYiIsImlhdCI6MTc5NDQzOTIwNH0.xOr45wRUFGsb0nk-YF2gR4EHoFj8TMbKOpkYmooMj_o"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "kbs-1radio",
@@ -206,7 +205,8 @@ window.STATIONS = [
       "https://2fm-ad.gscdn.kbs.co.kr/2fm_ad_192_1.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8yZm0tYWQuZ3NjZG4ua2JzLmNvLmtyLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTM2NTkxNjR9fX1dfQ__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=K971H~TYyRfroye4mfqpGrRI-oW1rXzrb30u6V9YbagzyvPPfWXg3RkyWzmrLQBZvn0vfc2DsXt0vL3XfkmO2OooAN4cl6UpAXybxYzYKj2CsAy~~BjCdQbDURZs-90p3zejrBX61BbutZkZYtKCUV1j8T2jzvbG8avxF0YYDotDL2CAoxb-M70XqafqkLHK9iT1RVoFbSKHI5N7Ng3Mc2c0ylhXB9Nit3YvkzNd25Ldtl3YBrOcdi2scWffTN4BiwUNpolCMZGcLLRUcbntjtBJK8dmodjbxU6EH3BGf2O2z~A2TRyRScg8yNnmsRDUQ2ahfGkZV~NTWi~LD6ciMw__"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "cjrk-fm-102-7-east-fm-toronto-on",
@@ -561,12 +561,10 @@ window.STATIONS = [
     "name": "SBS Love FM",
     "category": "music",
     "streams": [
-      "https://radiolive.sbs.co.kr/lovepc/lovefm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTQ0NzY0MDgsInBhdGgiOiIvbG92ZWZtLnN0cmVhbSIsImR1cmF0aW9uIjotMSwidW5vIjoiOWI4NTQ5NTAtNTcxNy00N2Q1LWI2MjctNWZkNmY2YzM3MmZiIiwiaWF0IjoxNzk0NDMzMjA4fQ.uqWVJ4qFen1AFAZZe8Dj4U5MJL3BULftdL2eN2YZMX0",
-      "https://radiolive.sbs.co.kr/lovepc/lovefm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTQwMjY0MTksInBhdGgiOiIvbG92ZWZtLnN0cmVhbSIsImR1cmF0aW9uIjotMSwidW5vIjoiYTI1ZGFiNTQtYTBkNS00NTFiLWIyNTYtMzIzMDQ0YzEzM2FkIiwiaWF0IjoxNzkzOTgzMjE5fQ.GqQJtXtPEZtbeySXupneg5CA_gr-dnBJTtsp9qXotng",
-      "https://radiolive.sbs.co.kr/lovepc/lovefm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTM5NjUyMTAsInBhdGgiOiIvbG92ZWZtLnN0cmVhbSIsImR1cmF0aW9uIjotMSwidW5vIjoiMzNiZTIzODgtY2NhOS00NmEyLTg5NDAtNTlmNzVlNjM3ZGJkIiwiaWF0IjoxNzkzOTIyMDEwfQ.65i79TrMp7Roo5IjzfSkP_IsHacFtbNl05jxzG3knP0"
+      "https://radiolive.sbs.co.kr/lovepc/lovefm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTQ5MDg0MTAsInBhdGgiOiIvbG92ZWZtLnN0cmVhbSIsImR1cmF0aW9uIjotMSwidW5vIjoiZGE1OWM3NmMtOTg0OS00YmFkLWJhZjktMzgyMzA3OWEzZTNiIiwiaWF0IjoxNzk0ODY1MjEwfQ.G-2kdU04HuaXrswP_JIPYXCjd10hbNcP0fOe2k2yoAs",
+      "https://radiolive.sbs.co.kr/lovepc/lovefm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTQ0NzY0MDgsInBhdGgiOiIvbG92ZWZtLnN0cmVhbSIsImR1cmF0aW9uIjotMSwidW5vIjoiOWI4NTQ5NTAtNTcxNy00N2Q1LWI2MjctNWZkNmY2YzM3MmZiIiwiaWF0IjoxNzk0NDMzMjA4fQ.uqWVJ4qFen1AFAZZe8Dj4U5MJL3BULftdL2eN2YZMX0"
     ],
-    "added": "2026-11-01",
-    "offline": true
+    "added": "2026-11-01"
   },
   {
     "id": "cpbc",
@@ -598,4 +596,4 @@ window.STATIONS = [
     "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T07:49Z";
+window.STATIONS_CHECKED = "2026-11-16T23:29Z";

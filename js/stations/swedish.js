@@ -63,8 +63,7 @@ window.STATIONS = [
     "name": "Mix Megapol",
     "category": "music",
     "streams": [
-      "https://live-bauerse-fm.sharp-stream.com/mixmegapol_instream_se_mp3",
-      "https://tx-bauerse.sharp-stream.com/http_live.php?ua=WEB&i=mixmegapol_instream_se_mp3"
+      "https://live-bauerse-fm.sharp-stream.com/mixmegapol_instream_se_mp3"
     ]
   },
   {
@@ -506,6 +505,15 @@ window.STATIONS = [
       "https://radio.tjenamors.se/listen/tjenamors_radio/radio.mp3"
     ],
     "added": "2026-11-15"
+  },
+  {
+    "id": "radio-aftonbladet",
+    "name": "Radio Aftonbladet",
+    "category": "news",
+    "streams": [
+      "https://abtvlive-lh.akamaized.net/hls/live/msl5/20001068/ab/radio/master.m3u8"
+    ],
+    "added": "2026-11-16"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T07:49Z";
+window.STATIONS_CHECKED = "2026-11-16T23:29Z";

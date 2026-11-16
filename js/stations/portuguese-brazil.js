@@ -537,8 +537,7 @@ window.STATIONS = [
     "streams": [
       "https://s05.w3bserver.com:20025/;"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "radio-bandeirantes-90-9-fm",
@@ -746,7 +745,8 @@ window.STATIONS = [
       "https://www.appradio.app:8010//live"
     ],
     "added": "2026-10-29",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "radio-grenal",
@@ -755,8 +755,7 @@ window.STATIONS = [
     "streams": [
       "https://grenal.audiostream.com.br:20000/aac"
     ],
-    "added": "2026-10-29",
-    "offline": true
+    "added": "2026-10-29"
   },
   {
     "id": "radio-dance-music-anos-2000",
@@ -1116,8 +1115,7 @@ window.STATIONS = [
     "streams": [
       "https://grenal.audiostream.com.br:20000/aac?1771934582309"
     ],
-    "added": "2026-11-05",
-    "offline": true
+    "added": "2026-11-05"
   },
   {
     "id": "piata-fm",
@@ -1336,4 +1334,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T07:49Z";
+window.STATIONS_CHECKED = "2026-11-16T23:29Z";

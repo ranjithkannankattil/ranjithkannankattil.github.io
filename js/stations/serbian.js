@@ -1078,8 +1078,7 @@ window.STATIONS = [
     "streams": [
       "https://mpc2.mediacp.eu:8282/sremac"
     ],
-    "added": "2026-11-07",
-    "offline": true
+    "added": "2026-11-07"
   },
   {
     "id": "rsg-party-time",
@@ -1259,7 +1258,8 @@ window.STATIONS = [
     "streams": [
       "https://s1.skeletor.rs/san"
     ],
-    "added": "2026-11-10"
+    "added": "2026-11-10",
+    "offline": true
   },
   {
     "id": "radio-s-folk-stars",
@@ -1316,4 +1316,4 @@ window.STATIONS = [
     "added": "2026-11-12"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T07:49Z";
+window.STATIONS_CHECKED = "2026-11-16T23:29Z";

@@ -553,8 +553,7 @@ window.STATIONS = [
     "streams": [
       "https://icecast.ithost.it/retesport.ogg"
     ],
-    "added": "2026-10-27",
-    "offline": true
+    "added": "2026-10-27"
   },
   {
     "id": "radio-kiss-kiss-hits",
@@ -608,8 +607,7 @@ window.STATIONS = [
     "streams": [
       "https://icecast.ithost.it/radiosei.ogg"
     ],
-    "added": "2026-10-28",
-    "offline": true
+    "added": "2026-10-28"
   },
   {
     "id": "globo-vintage",
@@ -1051,8 +1049,7 @@ window.STATIONS = [
     "streams": [
       "https://s1.forstream.it:8070/radiocentrale.mp3"
     ],
-    "added": "2026-11-05",
-    "offline": true
+    "added": "2026-11-05"
   },
   {
     "id": "radio-manila",
@@ -1343,4 +1340,4 @@ window.STATIONS = [
     "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T07:49Z";
+window.STATIONS_CHECKED = "2026-11-16T23:29Z";

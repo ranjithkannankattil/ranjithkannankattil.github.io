@@ -205,6 +205,15 @@ window.STATIONS = [
       "https://serverkw.quran-uni.com:8110/;"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "halkn-sesi-radyo",
+    "name": "Halkın Sesi Radyo",
+    "category": "music",
+    "streams": [
+      "https://halkinse.80.yayin.com.tr/;"
+    ],
+    "added": "2026-11-16"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T07:49Z";
+window.STATIONS_CHECKED = "2026-11-16T23:29Z";

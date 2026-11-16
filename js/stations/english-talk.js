@@ -387,7 +387,8 @@ window.STATIONS = [
       "https://wamu.cdnstream1.com/wamu.mp3"
     ],
     "added": "2026-10-23",
-    "where": "US"
+    "where": "US",
+    "offline": true
   },
   {
     "id": "comedy-104-radiostorm",
@@ -837,7 +838,8 @@ window.STATIONS = [
       "https://stream.zeno.fm/mwam2yirv1pvv"
     ],
     "added": "2026-10-31",
-    "where": "Nigeria"
+    "where": "Nigeria",
+    "offline": true
   },
   {
     "id": "bfm-89-9-malaysia",
@@ -1489,4 +1491,4 @@ window.STATIONS = [
     "where": "Saudi Arabia"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T07:49Z";
+window.STATIONS_CHECKED = "2026-11-16T23:29Z";

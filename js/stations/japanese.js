@@ -664,7 +664,8 @@ window.STATIONS = [
     "streams": [
       "https://howlingf-gecko.radioca.st/autodj"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "offline": true
   },
   {
     "id": "radio-gambaru",
@@ -739,4 +740,4 @@ window.STATIONS = [
     "added": "2026-11-16"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T07:49Z";
+window.STATIONS_CHECKED = "2026-11-16T23:29Z";

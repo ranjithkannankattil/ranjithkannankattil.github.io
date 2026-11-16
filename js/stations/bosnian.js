@@ -32,8 +32,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.leftor.com/proxy/studiom2/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-glas-drine",
@@ -398,4 +397,4 @@ window.STATIONS = [
     "added": "2026-11-16"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T07:49Z";
+window.STATIONS_CHECKED = "2026-11-16T23:29Z";

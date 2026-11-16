@@ -48,8 +48,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nova-radio.neterra.tv/veselinaretro"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "badrock-hard-heavy",
@@ -757,6 +756,15 @@ window.STATIONS = [
       "https://c32.radioboss.fm:8853/stream"
     ],
     "added": "2026-11-02"
+  },
+  {
+    "id": "interhit",
+    "name": "Interhit",
+    "category": "music",
+    "streams": [
+      "https://play.123castbg.eu:18425/stream"
+    ],
+    "added": "2026-11-16"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T07:49Z";
+window.STATIONS_CHECKED = "2026-11-16T23:29Z";

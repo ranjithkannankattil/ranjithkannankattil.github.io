@@ -272,7 +272,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.ehrhiti.lv:8000/Stream_14.aac"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "ehr-latviesu-hiti-lv-reps",
@@ -503,4 +504,4 @@ window.STATIONS = [
     "added": "2026-10-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T07:49Z";
+window.STATIONS_CHECKED = "2026-11-16T23:29Z";

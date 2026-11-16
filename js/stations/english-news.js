@@ -199,7 +199,8 @@ window.STATIONS = [
     "streams": [
       "https://wamu.cdnstream1.com/wamu.mp3"
     ],
-    "where": "US"
+    "where": "US",
+    "offline": true
   },
   {
     "id": "bbc-radio-4",
@@ -449,7 +450,8 @@ window.STATIONS = [
       "https://stream.zenolive.com/e9x2n97b9uduv"
     ],
     "added": "2026-10-26",
-    "where": "Nigeria"
+    "where": "Nigeria",
+    "offline": true
   },
   {
     "id": "rte-radio-1",
@@ -1503,4 +1505,4 @@ window.STATIONS = [
     "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T07:49Z";
+window.STATIONS_CHECKED = "2026-11-16T23:29Z";

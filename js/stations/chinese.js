@@ -120,7 +120,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play-radio-stream3.hndt.com/now/WUBA5hW2/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-10",
@@ -924,7 +925,8 @@ window.STATIONS = [
     "streams": [
       "https://play-radio-stream3.hndt.com/now/JxkyN5mR/chunklist.m3u8"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "offline": true
   },
   {
     "id": "cctv-9",
@@ -978,8 +980,7 @@ window.STATIONS = [
     "streams": [
       "https://play-radio-stream3.hndt.com/now/yorSd1X2/chunklist.m3u8"
     ],
-    "added": "2026-11-04",
-    "offline": true
+    "added": "2026-11-04"
   },
   {
     "id": "fred-film-radio",
@@ -1315,4 +1316,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T07:49Z";
+window.STATIONS_CHECKED = "2026-11-16T23:29Z";

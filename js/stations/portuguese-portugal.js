@@ -92,7 +92,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "m80-radio-ballads",
@@ -229,8 +230,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "cidade-fm-2",
@@ -277,8 +277,8 @@ window.STATIONS = [
     "name": "Antena 2",
     "category": "music",
     "streams": [
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR",
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8"
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8",
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
     ]
   },
   {
@@ -336,7 +336,8 @@ window.STATIONS = [
     "streams": [
       "https://stream-hls.bauermedia.pt/comercial.aac/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "rdp-africa-portugal",
@@ -345,7 +346,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/rdpafrica80a/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "antena-1-acores-portugal",
@@ -579,7 +581,8 @@ window.STATIONS = [
     "streams": [
       "https://stream-hls.bauermedia.pt/smojazz.aac/playlist.m3u8"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "offline": true
   },
   {
     "id": "m80-radio-indie",
@@ -633,7 +636,8 @@ window.STATIONS = [
     "streams": [
       "https://stream-hls.bauermedia.pt/cidhiphop.aac/playlist.m3u8"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "offline": true
   },
   {
     "id": "nitfm",
@@ -1329,4 +1333,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T07:49Z";
+window.STATIONS_CHECKED = "2026-11-16T23:29Z";

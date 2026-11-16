@@ -232,7 +232,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.brokenbeats.net/tune"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-shanson",
@@ -662,8 +663,7 @@ window.STATIONS = [
     "streams": [
       "https://listen2.myradio24.com/50904"
     ],
-    "added": "2026-10-28",
-    "offline": true
+    "added": "2026-10-28"
   },
   {
     "id": "station-15",
@@ -1117,4 +1117,4 @@ window.STATIONS = [
     "added": "2026-11-14"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T07:49Z";
+window.STATIONS_CHECKED = "2026-11-16T23:29Z";

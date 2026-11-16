@@ -442,7 +442,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.qmusic.nl/fouteuur/aac"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "538",
@@ -1337,4 +1338,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T07:49Z";
+window.STATIONS_CHECKED = "2026-11-16T23:29Z";

@@ -1171,7 +1171,8 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/CLASICA_1065AAC.aac"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "offline": true
   },
   {
     "id": "radio-cristiana-venezuela",
@@ -1327,4 +1328,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T07:49Z";
+window.STATIONS_CHECKED = "2026-11-16T23:29Z";

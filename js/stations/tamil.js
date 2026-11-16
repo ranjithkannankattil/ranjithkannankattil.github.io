@@ -291,7 +291,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio129/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "tamil-ragam",
@@ -1328,4 +1329,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T07:49Z";
+window.STATIONS_CHECKED = "2026-11-16T23:29Z";
