@@ -26,6 +26,8 @@ jobs:
         run: |
           echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
           sudo udevadm control --reload-rules && sudo udevadm trigger --name-match=kvm
+      - name: Test key (the throwaway Dev key, never the real one)
+        run: mkdir -p ~/.android; cp .github/dev-key/dev-test.keystore ~/.android/debug.keystore
       - name: Build the app and the tests first
         run: gradle --no-daemon :app:assemblePlayDebug :app:assemblePlayDebugAndroidTest
       - name: Run on Android 14
