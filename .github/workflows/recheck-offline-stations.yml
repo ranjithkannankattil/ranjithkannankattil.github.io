@@ -10,14 +10,17 @@ on:
 permissions:
   contents: write
 
+# GitHub often skips hourly schedules when busy (Nov 2026: it ran every 4-8 hours). So each run stays on and
+# re-checks once an hour for about five hours; the schedule only has to fire a few times a day.
+# Its own group (not the full check's): saving retries on the newest list, so the two can't undo each other.
 concurrency:
-  group: radio-streams        # same group as the full check, so the two never run at once
+  group: radio-recheck
   cancel-in-progress: false
 
 jobs:
   recheck:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 330
     steps:
       - uses: actions/checkout@v4
         with:
@@ -31,14 +34,20 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898732+github-actions[bot]@users.noreply.github.com"
+          rounds=5; [ "${{ github.event_name }}" = "workflow_dispatch" ] && rounds=1
+          for round in $(seq 1 $rounds); do
+          start=$(date +%s)
+          echo "### Round $round ($(TZ=Asia/Kolkata date '+%H:%M') IST)" >> "$GITHUB_STEP_SUMMARY"
+          saved=0
           for attempt in 1 2 3; do
             git fetch -q origin main && git reset -q --hard origin/main
             python3 scripts/recheck_offline.py | tee -a "$GITHUB_STEP_SUMMARY"
             git add js/stations scripts/stream-health.json
-            if git diff --cached --quiet; then echo "Nothing came back."; exit 0; fi
+            if git diff --cached --quiet; then echo "Nothing came back."; saved=1; break; fi
             git commit -qm "Radio: stations back on air $(TZ=Asia/Kolkata date "+%F %H:%M") IST"
             # if another job saved first, start again from its version rather than merging by hand
-            if git push -q origin HEAD:main; then exit 0; fi
+            if git push -q origin HEAD:main; then saved=1; break; fi
             echo "Someone else saved first; checking again on the newest list."
           done
-          exit 1
+          if [ $round -lt $rounds ]; then left=$(( 3600 - ($(date +%s) - start) )); [ $left -lt 60 ] && left=60; sleep $left; fi
+          done

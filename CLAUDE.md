@@ -57,7 +57,7 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
 - **Settings** (page: `js/radio-settings.js`, localStorage `rv-settings`; app: Settings.kt): 15 colour themes with Malayalam
   names, each light + dark, text size, spacing, visualiser. Defaults = the original look. The page keeps the site's fonts.
 - **Request a station** and app **crash reports** go to Firestore `requests` / `crashes` (owner-only read; one a minute).
-- Every hour `scripts/recheck_offline.py` (recheck-offline-stations.yml) re-tests only the Malayalam stations marked
+- Every hour `scripts/recheck_offline.py` (recheck-offline-stations.yml; each run stays on for ~5 hourly rounds because GitHub drops many hourly schedules) re-tests only the Malayalam stations marked
   not working and switches back on any that play again; it never marks a station as not working.
 - `scripts/check_streams.py` tests every stream twice a day (GitHub Actions) and
   `scripts/discover_stations.py` adds new ones. **The check runs from US servers**: US broadcasters
