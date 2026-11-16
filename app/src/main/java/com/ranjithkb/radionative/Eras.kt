@@ -146,10 +146,11 @@ class RadioVals(val levels: FloatArray, val t: Float, val playing: Boolean, val 
 
 /** The moving parts: the visualiser's sound data when there is some, a gentle made-up movement otherwise, still when paused. */
 @Composable
-private fun rememberLevels(playing: Boolean): Pair<FloatArray, Float> {
+private fun rememberLevels(playing: Boolean): Motion {
     DisposableEffect(Unit) { Viz.watching = true; onDispose { Viz.watching = false } }
-    var t by remember { mutableFloatStateOf(0f) }
-    var shown by remember { mutableStateOf(FloatArray(Viz.N)) }
+    val m = remember { Motion() }
+    var t by m.t
+    var shown by m.shown
     LaunchedEffect(playing) {
         var last = 0L
         while (true) {
@@ -165,8 +166,11 @@ private fun rememberLevels(playing: Boolean): Pair<FloatArray, Float> {
             if (!playing && shown.all { it < 0.004f }) { shown = FloatArray(Viz.N); break }
         }
     }
-    return shown to t
+    return m
 }
+
+/** The moving values. Read only while drawing, so each frame repaints the picture without rebuilding the screen. */
+class Motion { val t = mutableFloatStateOf(0f); val shown = mutableStateOf(FloatArray(Viz.N)) }
 
 private enum class Ctl { TUNE, VOLUME, BASS, MID, TREBLE, PREV, PLAY, STOP, NEXT }
 /** A control on the drawing, in design units: centre and half-size. */
@@ -187,11 +191,11 @@ private fun zones(era: String): List<Zone> = when (era) {
 fun EraRadio(era: Eras.Era, now: NowState, c: androidx.media3.session.MediaController?, modifier: Modifier) {
     val ctx = LocalContext.current
     val skin = Eras.skin(era.id, Theme.lookColours == "original", Theme.themeId)
-    val (levels, t) = rememberLevels(now.playing)
+    val motion = rememberLevels(now.playing)
     val station = now.md.station?.toString() ?: now.md.title?.toString() ?: ""
     val (pos, label) = Eras.dial(station, c?.currentMediaItemIndex ?: -1, c?.mediaItemCount ?: 0)
     // the needle glides to the new station, like turning a real dial
-    val shownPos by androidx.compose.animation.core.animateFloatAsState(pos, androidx.compose.animation.core.tween(650), label = "dial")
+    val shownPos = androidx.compose.animation.core.animateFloatAsState(pos, androidx.compose.animation.core.tween(650), label = "dial")
     val am = remember { ctx.getSystemService(Context.AUDIO_SERVICE) as AudioManager }
     val max = remember { am.getStreamMaxVolume(AudioManager.STREAM_MUSIC).coerceAtLeast(1) }
     var vol by remember { mutableIntStateOf(am.getStreamVolume(AudioManager.STREAM_MUSIC)) }
@@ -204,7 +208,7 @@ fun EraRadio(era: Eras.Era, now: NowState, c: androidx.media3.session.MediaContr
         onDispose { runCatching { ctx.unregisterReceiver(r) } }
     }
     var bands by remember { mutableStateOf(if (Eq.on(ctx)) Eq.bands(ctx) else IntArray(5)) }
-    val vals = RadioVals(levels, t, now.playing, shownPos, label, station, vol / max.toFloat(), bands[0], bands[2], bands[4])
+    val playing = now.playing
     val tm = rememberTextMeasurer()
 
     fun setVol(v: Int) { vol = v.coerceIn(0, max); am.setStreamVolume(AudioManager.STREAM_MUSIC, vol, 0) }
@@ -219,7 +223,9 @@ fun EraRadio(era: Eras.Era, now: NowState, c: androidx.media3.session.MediaContr
         val w = era.w * s; val h = era.h * s
         Box(Modifier.size(w.dp, h.dp)) {
             Canvas(Modifier.fillMaxSize().semantics { contentDescription = "${era.name} radio, ${era.decade}" }) {
-                withTransform({ scale(size.width / era.w, size.height / era.h, Offset.Zero) }) { drawEra(era.id, skin, vals, tm) }
+                withTransform({ scale(size.width / era.w, size.height / era.h, Offset.Zero) }) {
+                    drawEra(era.id, skin, RadioVals(motion.shown.value, motion.t.floatValue, playing, shownPos.value, label, station,
+                        vol / max.toFloat(), bands[0], bands[2], bands[4]), tm) }
             }
             zones(era.id).forEach { z ->
                 // every control at least 48 dp to touch, centred on the drawn knob
