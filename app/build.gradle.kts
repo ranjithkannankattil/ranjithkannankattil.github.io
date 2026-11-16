@@ -15,6 +15,7 @@ android {
         // Test builds ("Radio Velvet Dev"): a separate app next to the real one, never released
         val dev = System.getenv("DEV_BUILD") == "1"
         if (dev) applicationIdSuffix = ".dev"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         resValue("string", "app_name", if (dev) "Radio Velvet Dev" else "Radio Velvet")
         manifestPlaceholders["authScheme"] = if (dev) "com.ranjithkb.radio.dev" else "com.ranjithkb.radio"
     }
@@ -73,6 +74,11 @@ dependencies {
     "playImplementation"("com.google.android.play:review-ktx:2.0.2")
     // screenshots of the screens in test builds (Robolectric, no phone needed)
     testImplementation("junit:junit:4.13.2")
+    // the app tested on a real Android system (emulator on GitHub): .github/workflows/device-test.yml
+    androidTestImplementation("androidx.test.ext:junit:1.2.1")
+    androidTestImplementation("androidx.test:runner:1.6.2")
+    androidTestImplementation("androidx.test:rules:1.6.1")
+    androidTestImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
     testImplementation("org.robolectric:robolectric:4.14.1")
     testImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-test-manifest")

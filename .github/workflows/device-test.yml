@@ -1,0 +1,55 @@
+name: Radio Velvet on a real Android system (emulator)
+# The Dev app's player tested end to end on Android 14: real streams, the car's browse list and pictures,
+# next / previous, losing the signal, another app's sound, equaliser, visualiser, alarm, widget, crash reports.
+# Results (and the log) go to the velvet-device-results branch.
+on:
+  workflow_dispatch:
+  push:
+    branches: [radio-native-dev]
+    paths: ["app/src/**", "app/build.gradle.kts", ".github/workflows/device-test.yml"]
+concurrency:
+  group: velvet-device
+  cancel-in-progress: true
+permissions:
+  contents: write
+jobs:
+  device:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: 17 }
+      - uses: gradle/actions/setup-gradle@v4
+        with: { gradle-version: "8.11.1" }
+      - name: Allow the emulator to use the processor's virtualisation
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules && sudo udevadm trigger --name-match=kvm
+      - name: Build the app and the tests first
+        run: gradle --no-daemon :app:assemblePlayDebug :app:assemblePlayDebugAndroidTest
+      - name: Run on Android 14
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          target: google_apis
+          arch: x86_64
+          profile: pixel_6
+          disable-animations: true
+          emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot -camera-back none
+          script: |
+            adb logcat -c || true
+            gradle --no-daemon :app:connectedPlayDebugAndroidTest || echo "SOME TESTS FAILED" > /tmp/failed.txt
+            adb logcat -d -s VELVET-TEST:I AndroidRuntime:E ExoPlayerImpl:E MediaSessionService:W > /tmp/velvet-log.txt || true
+            adb logcat -d > /tmp/full-log.txt || true
+      - name: Save results to the velvet-device-results branch
+        if: always()
+        run: |
+          mkdir -p /tmp/out && cp /tmp/velvet-log.txt /tmp/full-log.txt /tmp/failed.txt /tmp/out/ 2>/dev/null || true
+          cp -r app/build/outputs/androidTest-results/connected/. /tmp/out/results/ 2>/dev/null || true
+          find app/build/outputs/androidTest-results -name "*.xml" -exec cp {} /tmp/out/ \; 2>/dev/null || true
+          cd /tmp/out && git init -q -b velvet-device-results && git add -A && git -c user.name=ci -c user.email=ci@ranjithkb.com commit -qm "device test $GITHUB_SHA" || exit 0
+          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${GITHUB_REPOSITORY}.git" velvet-device-results
+      - name: Fail if any device test failed
+        if: always()
+        run: test ! -f /tmp/failed.txt
