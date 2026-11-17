@@ -61,12 +61,10 @@
     "lithuanian:haze-pub-radio": 18,
     "luganda:foundation-of-truth-radio": 56,
     "malay:myfriends-station": 14,
-    "malayalam:airdevikulam": 1,
     "malayalam:greenradio": 56,
     "malayalam:keralafm": 56,
     "malayalam:mazhavilfm": 56,
     "malayalam:menorahradio": 56,
-    "malayalam:myradio90fm": 1,
     "malayalam:njanmalayalibhakthi": 56,
     "malayalam:omrradio": 56,
     "malayalam:quranradiomalayalam": 56,
@@ -78,7 +76,6 @@
     "malayalam:radiolemonbengaluru": 11,
     "malayalam:radiomallu": 56,
     "malayalam:radiomangalam": 56,
-    "malayalam:radiome": 1,
     "malayalam:radionellika": 56,
     "malayalam:radioutsav": 56,
     "malayalam:radiovatakara": 56,
@@ -1882,11 +1879,6 @@
     "last_reason": "HTTP 502 error page",
     "since": "2026-10-29"
   },
-  "https://cast1.my-control-panel.com/proxy/myradio90fm/stream": {
-    "fails": 1,
-    "last_reason": "HTTP 401, 0 bytes",
-    "since": "2026-11-16"
-  },
   "https://cast3.asurahosting.com/proxy/myfriend/stream": {
     "fails": 14,
     "last_reason": "HTTP 502 error page",
@@ -1946,11 +1938,6 @@
     "fails": 1,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-20"
-  },
-  "https://freestream.hu:8340/radiome": {
-    "fails": 1,
-    "last_reason": "HTTP 404 error page",
-    "since": "2026-11-16"
   },
   "https://gains.reviveradio.net/proxy/menorah?mp=/stream": {
     "fails": 70,
@@ -2173,11 +2160,6 @@
     "since": "2026-11-16"
   },
   "https://radio.wavespb.com/live/deae7120a205bfff/deae7120a205bfff.m3u8": {
-    "fails": 1,
-    "last_reason": "playlist HTTP 404",
-    "since": "2026-11-16"
-  },
-  "https://radio.wavespb.com/live/e97acc829da9bf2a/e97acc829da9bf2a.m3u8": {
     "fails": 1,
     "last_reason": "playlist HTTP 404",
     "since": "2026-11-16"
