@@ -121,24 +121,24 @@
    "containsAds": false,
    "locales": {
     "en-IN": {
-     "privacyPolicyUrl": "https://ranjithkb.com/privacy.html",
-     "termsOfUseUrl": "https://ranjithkb.com/privacy.html"
+     "privacyPolicyUrl": "https://ranjithkb.com/privacy.html#alexa",
+     "termsOfUseUrl": "https://ranjithkb.com/privacy.html#alexa"
     },
     "en-GB": {
-     "privacyPolicyUrl": "https://ranjithkb.com/privacy.html",
-     "termsOfUseUrl": "https://ranjithkb.com/privacy.html"
+     "privacyPolicyUrl": "https://ranjithkb.com/privacy.html#alexa",
+     "termsOfUseUrl": "https://ranjithkb.com/privacy.html#alexa"
     },
     "en-US": {
-     "privacyPolicyUrl": "https://ranjithkb.com/privacy.html",
-     "termsOfUseUrl": "https://ranjithkb.com/privacy.html"
+     "privacyPolicyUrl": "https://ranjithkb.com/privacy.html#alexa",
+     "termsOfUseUrl": "https://ranjithkb.com/privacy.html#alexa"
     },
     "en-AU": {
-     "privacyPolicyUrl": "https://ranjithkb.com/privacy.html",
-     "termsOfUseUrl": "https://ranjithkb.com/privacy.html"
+     "privacyPolicyUrl": "https://ranjithkb.com/privacy.html#alexa",
+     "termsOfUseUrl": "https://ranjithkb.com/privacy.html#alexa"
     },
     "en-CA": {
-     "privacyPolicyUrl": "https://ranjithkb.com/privacy.html",
-     "termsOfUseUrl": "https://ranjithkb.com/privacy.html"
+     "privacyPolicyUrl": "https://ranjithkb.com/privacy.html#alexa",
+     "termsOfUseUrl": "https://ranjithkb.com/privacy.html#alexa"
     }
    }
   }
