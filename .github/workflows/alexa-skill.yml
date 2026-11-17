@@ -1,0 +1,62 @@
+name: Radio Velvet for Alexa
+
+# Keeps the Alexa skill's station list in step with the site and tests the skill. No Claude involved.
+on:
+  workflow_run:
+    workflows: ["Check radio streams"]   # after the twice-daily stream check changes stations
+    types: [completed]
+  push:
+    branches: [main]
+    paths:
+      - alexa/**
+      - scripts/build_alexa_stations.py
+      - scripts/check_alexa_streams.py
+      - .github/workflows/alexa-skill.yml
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: alexa-skill
+  cancel-in-progress: false
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Rebuild the Alexa station list and voice model from the site's stations
+        run: python3 scripts/build_alexa_stations.py | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Test the skill (every request type, name matching, voice model)
+        working-directory: alexa/lambda
+        run: |
+          npm install --no-audit --no-fund
+          npm test
+
+      - name: Play the start of every Malayalam stream like an Echo would
+        run: |
+          set -o pipefail
+          python3 scripts/check_alexa_streams.py | tail -n +1 > /dev/null || echo "::warning::Many Malayalam streams failed the Alexa check"
+          cat scripts/alexa-stream-report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Save the new list (if stations changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add js/alexa-stations.json alexa/skill-package/interactionModels scripts/alexa-stream-report.md
+          if git diff --cached --quiet; then echo "No change"; exit 0; fi
+          git commit -m "Alexa: station list follows today's stream check"
+          for i in 1 2 3; do git pull --rebase -q origin main && git push -q && exit 0; sleep 5; done
+          exit 1

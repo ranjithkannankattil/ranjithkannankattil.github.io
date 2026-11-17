@@ -7,3 +7,4 @@ scripts/rules-test/out.txt
 scripts/rules-test/*.log
 build/
 build-logos/
+alexa/lambda/node_modules/

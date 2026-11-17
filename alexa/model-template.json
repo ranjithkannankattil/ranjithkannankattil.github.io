@@ -1,0 +1,169 @@
+{
+ "interactionModel": {
+  "languageModel": {
+   "invocationName": "radio velvet",
+   "intents": [
+    {
+     "name": "PlayStationIntent",
+     "slots": [
+      {
+       "name": "station",
+       "type": "STATION"
+      }
+     ],
+     "samples": [
+      "play {station}",
+      "play {station} radio",
+      "play radio {station}",
+      "put on {station}",
+      "tune to {station}",
+      "tune in to {station}",
+      "listen to {station}",
+      "switch to {station}",
+      "change to {station}",
+      "i want {station}",
+      "start {station}",
+      "{station}"
+     ]
+    },
+    {
+     "name": "PlayLanguageIntent",
+     "slots": [
+      {
+       "name": "language",
+       "type": "LANGUAGE"
+      }
+     ],
+     "samples": [
+      "play {language}",
+      "play {language} radio",
+      "play {language} stations",
+      "play a {language} station",
+      "play something in {language}",
+      "play some {language} radio",
+      "{language} radio",
+      "{language} stations",
+      "i want {language} radio",
+      "switch to {language}"
+     ]
+    },
+    {
+     "name": "PlaySelectionIntent",
+     "slots": [],
+     "samples": [
+      "play velvet selection",
+      "play the velvet selection",
+      "velvet selection",
+      "play your selection",
+      "play your picks",
+      "play the selection",
+      "play something",
+      "play anything",
+      "play some radio",
+      "play radio",
+      "surprise me",
+      "play something good"
+     ]
+    },
+    {
+     "name": "WhatsPlayingIntent",
+     "slots": [],
+     "samples": [
+      "what's playing",
+      "what is playing",
+      "what station is this",
+      "which station is this",
+      "what am i listening to",
+      "what's this station",
+      "name this station"
+     ]
+    },
+    {
+     "name": "AMAZON.PauseIntent",
+     "slots": [],
+     "samples": []
+    },
+    {
+     "name": "AMAZON.ResumeIntent",
+     "slots": [],
+     "samples": []
+    },
+    {
+     "name": "AMAZON.NextIntent",
+     "slots": [],
+     "samples": []
+    },
+    {
+     "name": "AMAZON.PreviousIntent",
+     "slots": [],
+     "samples": []
+    },
+    {
+     "name": "AMAZON.StopIntent",
+     "slots": [],
+     "samples": []
+    },
+    {
+     "name": "AMAZON.CancelIntent",
+     "slots": [],
+     "samples": []
+    },
+    {
+     "name": "AMAZON.HelpIntent",
+     "slots": [],
+     "samples": []
+    },
+    {
+     "name": "AMAZON.FallbackIntent",
+     "slots": [],
+     "samples": []
+    },
+    {
+     "name": "AMAZON.NavigateHomeIntent",
+     "slots": [],
+     "samples": []
+    },
+    {
+     "name": "AMAZON.LoopOnIntent",
+     "slots": [],
+     "samples": []
+    },
+    {
+     "name": "AMAZON.LoopOffIntent",
+     "slots": [],
+     "samples": []
+    },
+    {
+     "name": "AMAZON.ShuffleOnIntent",
+     "slots": [],
+     "samples": []
+    },
+    {
+     "name": "AMAZON.ShuffleOffIntent",
+     "slots": [],
+     "samples": []
+    },
+    {
+     "name": "AMAZON.StartOverIntent",
+     "slots": [],
+     "samples": []
+    },
+    {
+     "name": "AMAZON.RepeatIntent",
+     "slots": [],
+     "samples": []
+    }
+   ],
+   "types": [
+    {
+     "name": "STATION",
+     "values": []
+    },
+    {
+     "name": "LANGUAGE",
+     "values": []
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,146 @@
+{
+ "manifest": {
+  "publishingInformation": {
+   "locales": {
+    "en-IN": {
+     "name": "Radio Velvet",
+     "summary": "Live radio from Kerala, the Gulf and the world, Malayalam first.",
+     "description": "Radio Velvet plays thousands of live radio stations: Malayalam first, plus Tamil, Hindi, Arabic, English and 70 more languages. Say \"Alexa, ask Radio Velvet to play Radio Mango\", \"Alexa, ask Radio Velvet to play Malayalam radio\", or \"Alexa, open Radio Velvet\". Free, no ads. Same stations as ranjithkb.com/radio and the Radio Velvet Android app.",
+     "examplePhrases": [
+      "Alexa, open Radio Velvet",
+      "Alexa, ask Radio Velvet to play Radio Mango",
+      "Alexa, ask Radio Velvet to play Malayalam radio"
+     ],
+     "keywords": [
+      "radio",
+      "malayalam",
+      "kerala",
+      "fm",
+      "live radio"
+     ],
+     "smallIconUri": "https://ranjithkb.com/assets/icons/radio-velvet-108.png",
+     "largeIconUri": "https://ranjithkb.com/assets/icons/radio-velvet-512.png"
+    },
+    "en-GB": {
+     "name": "Radio Velvet",
+     "summary": "Live radio from Kerala, the Gulf and the world, Malayalam first.",
+     "description": "Radio Velvet plays thousands of live radio stations: Malayalam first, plus Tamil, Hindi, Arabic, English and 70 more languages. Say \"Alexa, ask Radio Velvet to play Radio Mango\", \"Alexa, ask Radio Velvet to play Malayalam radio\", or \"Alexa, open Radio Velvet\". Free, no ads. Same stations as ranjithkb.com/radio and the Radio Velvet Android app.",
+     "examplePhrases": [
+      "Alexa, open Radio Velvet",
+      "Alexa, ask Radio Velvet to play Radio Mango",
+      "Alexa, ask Radio Velvet to play Malayalam radio"
+     ],
+     "keywords": [
+      "radio",
+      "malayalam",
+      "kerala",
+      "fm",
+      "live radio"
+     ],
+     "smallIconUri": "https://ranjithkb.com/assets/icons/radio-velvet-108.png",
+     "largeIconUri": "https://ranjithkb.com/assets/icons/radio-velvet-512.png"
+    },
+    "en-US": {
+     "name": "Radio Velvet",
+     "summary": "Live radio from Kerala, the Gulf and the world, Malayalam first.",
+     "description": "Radio Velvet plays thousands of live radio stations: Malayalam first, plus Tamil, Hindi, Arabic, English and 70 more languages. Say \"Alexa, ask Radio Velvet to play Radio Mango\", \"Alexa, ask Radio Velvet to play Malayalam radio\", or \"Alexa, open Radio Velvet\". Free, no ads. Same stations as ranjithkb.com/radio and the Radio Velvet Android app.",
+     "examplePhrases": [
+      "Alexa, open Radio Velvet",
+      "Alexa, ask Radio Velvet to play Radio Mango",
+      "Alexa, ask Radio Velvet to play Malayalam radio"
+     ],
+     "keywords": [
+      "radio",
+      "malayalam",
+      "kerala",
+      "fm",
+      "live radio"
+     ],
+     "smallIconUri": "https://ranjithkb.com/assets/icons/radio-velvet-108.png",
+     "largeIconUri": "https://ranjithkb.com/assets/icons/radio-velvet-512.png"
+    },
+    "en-AU": {
+     "name": "Radio Velvet",
+     "summary": "Live radio from Kerala, the Gulf and the world, Malayalam first.",
+     "description": "Radio Velvet plays thousands of live radio stations: Malayalam first, plus Tamil, Hindi, Arabic, English and 70 more languages. Say \"Alexa, ask Radio Velvet to play Radio Mango\", \"Alexa, ask Radio Velvet to play Malayalam radio\", or \"Alexa, open Radio Velvet\". Free, no ads. Same stations as ranjithkb.com/radio and the Radio Velvet Android app.",
+     "examplePhrases": [
+      "Alexa, open Radio Velvet",
+      "Alexa, ask Radio Velvet to play Radio Mango",
+      "Alexa, ask Radio Velvet to play Malayalam radio"
+     ],
+     "keywords": [
+      "radio",
+      "malayalam",
+      "kerala",
+      "fm",
+      "live radio"
+     ],
+     "smallIconUri": "https://ranjithkb.com/assets/icons/radio-velvet-108.png",
+     "largeIconUri": "https://ranjithkb.com/assets/icons/radio-velvet-512.png"
+    },
+    "en-CA": {
+     "name": "Radio Velvet",
+     "summary": "Live radio from Kerala, the Gulf and the world, Malayalam first.",
+     "description": "Radio Velvet plays thousands of live radio stations: Malayalam first, plus Tamil, Hindi, Arabic, English and 70 more languages. Say \"Alexa, ask Radio Velvet to play Radio Mango\", \"Alexa, ask Radio Velvet to play Malayalam radio\", or \"Alexa, open Radio Velvet\". Free, no ads. Same stations as ranjithkb.com/radio and the Radio Velvet Android app.",
+     "examplePhrases": [
+      "Alexa, open Radio Velvet",
+      "Alexa, ask Radio Velvet to play Radio Mango",
+      "Alexa, ask Radio Velvet to play Malayalam radio"
+     ],
+     "keywords": [
+      "radio",
+      "malayalam",
+      "kerala",
+      "fm",
+      "live radio"
+     ],
+     "smallIconUri": "https://ranjithkb.com/assets/icons/radio-velvet-108.png",
+     "largeIconUri": "https://ranjithkb.com/assets/icons/radio-velvet-512.png"
+    }
+   },
+   "isAvailableWorldwide": true,
+   "testingInstructions": "Say: open Radio Velvet, then: play Radio Mango. Next / previous change station.",
+   "category": "MUSIC_AND_AUDIO",
+   "distributionCountries": []
+  },
+  "apis": {
+   "custom": {
+    "interfaces": [
+     {
+      "type": "AUDIO_PLAYER"
+     }
+    ]
+   }
+  },
+  "manifestVersion": "1.0",
+  "privacyAndCompliance": {
+   "allowsPurchases": false,
+   "usesPersonalInfo": false,
+   "isChildDirected": false,
+   "isExportCompliant": true,
+   "containsAds": false,
+   "locales": {
+    "en-IN": {
+     "privacyPolicyUrl": "https://ranjithkb.com/privacy.html",
+     "termsOfUseUrl": "https://ranjithkb.com/privacy.html"
+    },
+    "en-GB": {
+     "privacyPolicyUrl": "https://ranjithkb.com/privacy.html",
+     "termsOfUseUrl": "https://ranjithkb.com/privacy.html"
+    },
+    "en-US": {
+     "privacyPolicyUrl": "https://ranjithkb.com/privacy.html",
+     "termsOfUseUrl": "https://ranjithkb.com/privacy.html"
+    },
+    "en-AU": {
+     "privacyPolicyUrl": "https://ranjithkb.com/privacy.html",
+     "termsOfUseUrl": "https://ranjithkb.com/privacy.html"
+    },
+    "en-CA": {
+     "privacyPolicyUrl": "https://ranjithkb.com/privacy.html",
+     "termsOfUseUrl": "https://ranjithkb.com/privacy.html"
+    }
+   }
+  }
+ }
+}
