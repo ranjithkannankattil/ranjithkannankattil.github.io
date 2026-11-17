@@ -691,7 +691,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.42netmedia.com:8443/sarvar"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "offline": true
   },
   {
     "id": "oxygen-happy",
@@ -1099,4 +1100,4 @@ window.STATIONS = [
     "added": "2026-11-12"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T23:29Z";
+window.STATIONS_CHECKED = "2026-11-17T09:01Z";

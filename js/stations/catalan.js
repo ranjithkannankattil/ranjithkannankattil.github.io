@@ -437,8 +437,7 @@ window.STATIONS = [
     "streams": [
       "https://f111.rndfnk.com/star/crtve/rne5/bcn/aac/128/stream.aac?cid=01GEP66PD2Z35HZMWWYTNPZDNA&sid=3FcfW2W3jdWkXz7vkD72zU2Ngq6&token=LHRzylmDW8bb20dv4Y5loVc683Q4WaYIA3aHusJnd9Q&tvf=VK9SHi5cvBhmMTExLnJuZGZuay5jb20"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "radio-manlleu",
@@ -647,6 +646,15 @@ window.STATIONS = [
       "https://enacast.com/tarragonaradio/streams/SD"
     ],
     "added": "2026-10-28"
+  },
+  {
+    "id": "radio-silenci",
+    "name": "Ràdio Silenci",
+    "category": "music",
+    "streams": [
+      "https://streaming.enacast.com:8000/radiosilenci56.mp3"
+    ],
+    "added": "2026-11-17"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T23:29Z";
+window.STATIONS_CHECKED = "2026-11-17T09:01Z";

@@ -195,7 +195,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.aiir.com/dbv0rxpwp6ytv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "translation-of-the-quran-in-bengali",
@@ -216,4 +217,4 @@ window.STATIONS = [
     "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T23:29Z";
+window.STATIONS_CHECKED = "2026-11-17T09:01Z";

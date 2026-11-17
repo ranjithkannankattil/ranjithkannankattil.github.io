@@ -1258,8 +1258,7 @@ window.STATIONS = [
     "streams": [
       "https://s1.skeletor.rs/san"
     ],
-    "added": "2026-11-10",
-    "offline": true
+    "added": "2026-11-10"
   },
   {
     "id": "radio-s-folk-stars",
@@ -1316,4 +1315,4 @@ window.STATIONS = [
     "added": "2026-11-12"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T23:29Z";
+window.STATIONS_CHECKED = "2026-11-17T09:01Z";

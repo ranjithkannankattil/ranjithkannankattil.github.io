@@ -24,7 +24,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://vod3.obs.co.kr:444/live/obsstream1/radio.stream/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "ifm",
@@ -169,11 +170,10 @@ window.STATIONS = [
     "name": "KBS Classic FM",
     "category": "music",
     "streams": [
-      "https://1fm.gscdn.kbs.co.kr/1fm_192_2.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8xZm0uZ3NjZG4ua2JzLmNvLmtyLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTQ2MTc5NTl9fX1dfQ__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=Hhs86UwUW8hoS2zjw8e2cpekNhZvIOgSOFUzmKXEtan8zxJ2EMLUs~ugZ-tXajqj-H8bJ4t9xczeUf5IWuo5jich5fNLaLnn-5y5j~JLgZWiLKnCewOIyk3-kzu0h13gUtB49P3AXqnE-RzFhQ1aoECyECKfmrWBPeQe5~SIxpjC24RjvdlFmmYrtK7F8r-C1kEXzDtDQFhiD-4Htxv93e6YDnsbT8Il7jI~sjpoXQwtGyJbPVK5kIL3NDgi-tJc0inFWAwTxzhU59JlSc38SfKMvBbFn7keO6JaCEGbXz5As5yIrv2XuShYkeDWoAuKGcqHZ283SYV1HhxxeNeOSA__",
-      "https://1fm.gscdn.kbs.co.kr/1fm_192_2.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8xZm0uZ3NjZG4ua2JzLmNvLmtyLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTQxMTAzODN9fX1dfQ__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=Q-6D8qKpBUZwUyDRv43aZSdAtZayES-JV07vz1zTBLAV9dG3e0VdwDTNPZ55~89~BCgMI0QK4ATbYQ8ZjcWm~0UW3uGX0wQtF4Iz87qYmg77u7BWv6qs3F1BAcVEc0-I2nCcrDF9vYoRnVf973jped9TWmi66Wc9Eg1r6ZgiK2-hin5Ked0~bxg~hEwuiqYuOXl~-I2EClps2JG1o9Yru6oD1vLoTBubFYsLcdJIqpga0jUJW3idgxR7uakuJiO01grtN0KAvIJdhaYXV7HdTtU2rPf~TEUoi3QykXo7QRYOhPaiPdOFZR8mF4dpmLJGINa~dkL40~~nKv1sdQSbgw__"
+      "https://1fm.gscdn.kbs.co.kr/1fm_192_2.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8xZm0uZ3NjZG4ua2JzLmNvLmtyLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTUwNTExODB9fX1dfQ__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=kb052A55J~c3BMS0~eeIuaFKM8MfJ1fisebrfVnPmgWQJwTS0NGnD3dq9MToCpIBImZ54Bs9KdNBO5tDBHusl~iwRXsGBm0AwO7grvtKvS5g9RZ24v3u93YBwYjkp6kheiW9SUqV0obKArLdrkDGAovn8u731VyBM1M0gEYzSMSqWaDK2M83K3r8234gxAzgKmyj5r5YT4DfhxTCyjwgm-101A75Hl98PE5xLooJ8p5nMJ~lAHkAKK6IwnHIL6MWz1H6wiz3guCKd4F7E3gOv4tkd3zU3jFHSdoKar~coONvnrQ3utb3LJ3w6xzL9NOxzrdtcZCSSjDiL9Egm6Aj8A__",
+      "https://1fm.gscdn.kbs.co.kr/1fm_192_2.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8xZm0uZ3NjZG4ua2JzLmNvLmtyLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTQ2MTc5NTl9fX1dfQ__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=Hhs86UwUW8hoS2zjw8e2cpekNhZvIOgSOFUzmKXEtan8zxJ2EMLUs~ugZ-tXajqj-H8bJ4t9xczeUf5IWuo5jich5fNLaLnn-5y5j~JLgZWiLKnCewOIyk3-kzu0h13gUtB49P3AXqnE-RzFhQ1aoECyECKfmrWBPeQe5~SIxpjC24RjvdlFmmYrtK7F8r-C1kEXzDtDQFhiD-4Htxv93e6YDnsbT8Il7jI~sjpoXQwtGyJbPVK5kIL3NDgi-tJc0inFWAwTxzhU59JlSc38SfKMvBbFn7keO6JaCEGbXz5As5yIrv2XuShYkeDWoAuKGcqHZ283SYV1HhxxeNeOSA__"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "sbs-power-fm",
@@ -194,7 +194,8 @@ window.STATIONS = [
       "https://2radio-bora.gscdn.kbs.co.kr/2radio-bora-01/2radio-bora-01_hd.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8ycmFkaW8tYm9yYS5nc2Nkbi5rYnMuY28ua3IvMnJhZGlvLWJvcmEtMDEvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5MzY5NjM4MH19fV19&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=kaVuof3zZ71CkFHyxNd69O~qD1fnpfDRs~UedNhkMf4po1l7V0ht7GNtefxszGX85Ym0DruadEBhM6EGZTAzqqGQzVGnOa5iAi20z4Wo--MHccI7DUygt6bl0BBzjXMQfW44scqPN1JMRlijjmFP7IZVyv8jA97pIbpBt-YkOH1PuIa1sJYwfrf8AgH7EDM6v~2TUPrYQs4KBg-gl8as7UQZ3OwMa45YjBKS0YlB76jU3J248HRQydYINIKGTp2dLOCzK5P8rf6drOvWbQQMfMhUEvl5Pr~C1Mf164A4yQqFb727DJWeWvw6MPjEd-EOFvo1KSV-slwKJO3ft0OHew__"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "kbs-cool-fm",
@@ -231,10 +232,10 @@ window.STATIONS = [
     "name": "MBC FM",
     "category": "music",
     "streams": [
+      "https://minisw.imbc.com/dsfm/_definst_/sfm.stream/playlist.m3u8?_lsu_sa_=6D214F1AB3B937B4464655943BC1E840B5E13B45D4087229330032aE26CA3636C9a9C34834A2504DE05B33E151bE51B213B77F9FE26B279AB804A464475E9C92804C7BBCC4941D71EAAF8323309BFEDF247DAD862661548BD0BA2082A11AC1A06EFAFA0A98EE2762FCDE77E681910FA8",
       "https://minisw.imbc.com/dsfm/_definst_/sfm.stream/playlist.m3u8?_lsu_sa_=64E1F515B3DD39F48D49D51B3F91F845A50235B5F40922623ED07Ca116813F96CCaF730F3DC2214C80793FA186bFA16366EDFB96805BA121B665FD1CA71F6B51539415FBACA311F4A80729A53AF1048CA6914FF7BE19FF3E13D0925748C307DD003B1B90C59F159D6854E59D759DDFEB"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "big-b-radio-asian-pop",
@@ -444,7 +445,8 @@ window.STATIONS = [
       "https://1radio-bora.gscdn.kbs.co.kr/1radio-bora-01/1radio-bora-01_hd.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8xcmFkaW8tYm9yYS5nc2Nkbi5rYnMuY28ua3IvMXJhZGlvLWJvcmEtMDEvKiIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5MzcxMzIwNn19fV19&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=eDvDH75Q3QTu-J1j1tW17tGkLPSpFFGpFiUJAR~zTiWkjXE6GPnyYQVAvlfHBf2d8AeNsU0I-cCIC3jSRekiXEuB~iZgKOxSfBK0FDVtdnqNoWrr9vLOpAhjU51vINerSYfY0jcikHV~2at77yS4xNAQBsSb3gyWiRNn59rFNRUsH131rm3lUdegJNnKr3yv5v7Rt6hVH2hb~kNNs0D~rP5cdurNzftoPA6rB17Nn5h0GJQesefTqvIJh3h455QehRJ0pHUaMfKAb26AT0m1Ae7TyWExwFCvgOt8IhP9glRbRz7Qd5fTZYWRjJ-E8p5wbjRxV8ZwaBHk1s0HGNdAkg__"
     ],
     "added": "2026-10-27",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "kbs",
@@ -455,7 +457,8 @@ window.STATIONS = [
       "https://1fm.gscdn.kbs.co.kr/1fm_192_2.m3u8?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly8xZm0uZ3NjZG4ua2JzLmNvLmtyLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTM3MDQ3NTl9fX1dfQ__&Key-Pair-Id=APKAICDSGT3Y7IXGJ3TA&Signature=brrU~fF0QpHradtCWr7M7yBhemDR4JUbH9kPPaZmTBaXCM2yvVDm7CQj6xuElI5jDRRMFxDKJnXTtbIcm5lE-RCjMIPWfb6-tD1TGEgSK-dj2~I-qfSldiUKhvFxnsX5gdyRQx6G~iGwfjG~6G2aHLlqKlW-JtNHLr09q3FKc2QPD9h9eNwWgrM02OlQHqKK5CluY0KCDSKRZ5t9kPlwhg4f4fsRCmTjPYwjwa49J3hVcGDubDqFOYHiHgkBUm-uFf~niqQDdx6GFkZ1X6dUyl0h4vvpqnHDTlqNqotYhHTJHNLD0PMfrn92HWy5lVP6AcGcd1YLk0uqx~-XZfZBwQ__"
     ],
     "added": "2026-10-27",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "station-4",
@@ -571,11 +574,10 @@ window.STATIONS = [
     "name": "CPBC",
     "category": "music",
     "streams": [
-      "https://cdn-radio-seoul.cpbc.co.kr/cpbcseoul/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTQ1MDA0MTksInBhdGgiOiIvY3BiY3Nlb3VsIiwiZHVyYXRpb24iOi0xLCJ1bm8iOiI1MjFlMTRkMi0zNDcwLTQzMTMtYjcwNy0yMjFmMjA1OGQ4MmIiLCJpYXQiOjE3OTQ0NTcyMTl9.LlSkZjO9aUCm5V0mnqYQBbpame2XfiVrHfZUFEcsKjY",
-      "https://cdn-radio-seoul.cpbc.co.kr/cpbcseoul/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTM5ODQ0MjEsInBhdGgiOiIvY3BiY3Nlb3VsIiwiZHVyYXRpb24iOi0xLCJ1bm8iOiIzOWQ3Zjk2ZC01YzcwLTRmOWEtYWMwMi1jNjU0ZjJjYjIyYjYiLCJpYXQiOjE3OTM5NDEyMjF9.2cQIV2_xk2WLsR-eQg59ut5jDlAKqxA8k3-8l2IjxEE"
+      "https://cdn-radio-seoul.cpbc.co.kr/cpbcseoul/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTQ5MzI0MTMsInBhdGgiOiIvY3BiY3Nlb3VsIiwiZHVyYXRpb24iOi0xLCJ1bm8iOiIzNDFhMDkzNy0zNTQzLTQyYTctOTdjNi1kY2FjOWNlZmY1NTEiLCJpYXQiOjE3OTQ4ODkyMTN9.tWqVw0bssGUGJ6pWcDqhBIChuBDF6l-PgeJXpHPsrzg",
+      "https://cdn-radio-seoul.cpbc.co.kr/cpbcseoul/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTQ1MDA0MTksInBhdGgiOiIvY3BiY3Nlb3VsIiwiZHVyYXRpb24iOi0xLCJ1bm8iOiI1MjFlMTRkMi0zNDcwLTQzMTMtYjcwNy0yMjFmMjA1OGQ4MmIiLCJpYXQiOjE3OTQ0NTcyMTl9.LlSkZjO9aUCm5V0mnqYQBbpame2XfiVrHfZUFEcsKjY"
     ],
-    "added": "2026-11-01",
-    "offline": true
+    "added": "2026-11-01"
   },
   {
     "id": "translation-of-the-quran-in-korean",
@@ -596,4 +598,4 @@ window.STATIONS = [
     "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T23:29Z";
+window.STATIONS_CHECKED = "2026-11-17T09:01Z";

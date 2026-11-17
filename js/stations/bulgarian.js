@@ -48,7 +48,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nova-radio.neterra.tv/veselinaretro"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "badrock-hard-heavy",
@@ -512,7 +513,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.jump.bg/proxy/stanimi1/radioRETRO"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "offline": true
   },
   {
     "id": "station-9",
@@ -765,6 +767,15 @@ window.STATIONS = [
       "https://play.123castbg.eu:18425/stream"
     ],
     "added": "2026-11-16"
+  },
+  {
+    "id": "easy-radio-bg",
+    "name": "Easy Radio BG",
+    "category": "music",
+    "streams": [
+      "https://live.easyradio.bg/192?type=.mp3"
+    ],
+    "added": "2026-11-17"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T23:29Z";
+window.STATIONS_CHECKED = "2026-11-17T09:01Z";

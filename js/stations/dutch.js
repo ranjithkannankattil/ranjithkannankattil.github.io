@@ -442,8 +442,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.qmusic.nl/fouteuur/aac"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "538",
@@ -731,7 +730,8 @@ window.STATIONS = [
     "streams": [
       "https://megahitfm.krioyohosting.com:1012/stream"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "offline": true
   },
   {
     "id": "radio-2-antwerpen",
@@ -1338,4 +1338,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T23:29Z";
+window.STATIONS_CHECKED = "2026-11-17T09:01Z";

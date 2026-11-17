@@ -61,8 +61,8 @@ window.STATIONS = [
     "name": "AIR Ananthapuri FM",
     "category": "air",
     "streams": [
-      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio229/chunklist.m3u8",
-      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio229/playlist.m3u8"
+      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio229/playlist.m3u8",
+      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio229/chunklist.m3u8"
     ]
   },
   {
@@ -88,7 +88,8 @@ window.STATIONS = [
     "category": "fm",
     "streams": [
       "https://stream.aiir.com/dbv0rxpwp6ytv"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radiolemonlive",
@@ -676,7 +677,8 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://freestream.hu:8340/radiome"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "thaalamradio",
@@ -1216,4 +1218,4 @@ window.STATIONS = [
     "added": "2026-11-14"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T03:54Z";
+window.STATIONS_CHECKED = "2026-11-17T09:01Z";

@@ -272,7 +272,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ptmirror3.passiontimes.hk/hls3/stream.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "chkt-am1430-fairchild",
@@ -666,4 +667,4 @@ window.STATIONS = [
     "added": "2026-11-15"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T23:29Z";
+window.STATIONS_CHECKED = "2026-11-17T09:01Z";

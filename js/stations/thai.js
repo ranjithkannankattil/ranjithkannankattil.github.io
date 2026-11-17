@@ -355,8 +355,7 @@ window.STATIONS = [
     "streams": [
       "https://80sv2.hostpleng.com/?url=http://112.121.150.133:8198/;"
     ],
-    "added": "2026-11-13",
-    "offline": true
+    "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T23:29Z";
+window.STATIONS_CHECKED = "2026-11-17T09:01Z";

@@ -683,7 +683,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.radioplai.md/live"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "offline": true
   },
   {
     "id": "radio-ai-nostri",
@@ -1325,4 +1326,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T23:29Z";
+window.STATIONS_CHECKED = "2026-11-17T09:01Z";

@@ -230,7 +230,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "cidade-fm-2",
@@ -336,8 +337,7 @@ window.STATIONS = [
     "streams": [
       "https://stream-hls.bauermedia.pt/comercial.aac/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "rdp-africa-portugal",
@@ -346,8 +346,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/rdpafrica80a/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "antena-1-acores-portugal",
@@ -581,8 +580,7 @@ window.STATIONS = [
     "streams": [
       "https://stream-hls.bauermedia.pt/smojazz.aac/playlist.m3u8"
     ],
-    "added": "2026-10-26",
-    "offline": true
+    "added": "2026-10-26"
   },
   {
     "id": "m80-radio-indie",
@@ -636,8 +634,7 @@ window.STATIONS = [
     "streams": [
       "https://stream-hls.bauermedia.pt/cidhiphop.aac/playlist.m3u8"
     ],
-    "added": "2026-10-27",
-    "offline": true
+    "added": "2026-10-27"
   },
   {
     "id": "nitfm",
@@ -1204,7 +1201,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena3madeira80a/playlist.m3u8"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "offline": true
   },
   {
     "id": "radio-quantica",
@@ -1333,4 +1331,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T23:29Z";
+window.STATIONS_CHECKED = "2026-11-17T09:01Z";

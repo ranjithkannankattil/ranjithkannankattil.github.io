@@ -877,7 +877,8 @@ window.STATIONS = [
       "https://live.radioistara.com/listen/radioistara/radioistara"
     ],
     "added": "2026-11-02",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "rri-pro-2-yogyakarta",
@@ -904,7 +905,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.stylefmtasik.com/listen/stylefmtasik/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "offline": true
   },
   {
     "id": "joss-885-am",
@@ -1255,8 +1257,7 @@ window.STATIONS = [
     "streams": [
       "https://s2.free-shoutcast.com/stream/18096"
     ],
-    "added": "2026-11-12",
-    "offline": true
+    "added": "2026-11-12"
   },
   {
     "id": "onix-radio",
@@ -1286,4 +1287,4 @@ window.STATIONS = [
     "added": "2026-11-14"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T23:29Z";
+window.STATIONS_CHECKED = "2026-11-17T09:01Z";

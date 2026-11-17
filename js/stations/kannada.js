@@ -122,8 +122,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://d3n2o48cmfppr2.cloudfront.net/svymradio.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "fm-rainbow-kannada",
@@ -149,7 +148,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.aiir.com/dbv0rxpwp6ytv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "translation-of-the-quran-in-kannada",
@@ -161,4 +161,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T23:29Z";
+window.STATIONS_CHECKED = "2026-11-17T09:01Z";

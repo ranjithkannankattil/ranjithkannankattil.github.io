@@ -145,6 +145,15 @@ window.STATIONS = [
     "streams": [
       "https://satellitepull.cnr.cn/live/wxhygb/playlist.m3u8?wsSession=5047841c34cc76f1a161d1fe-174726561703025&wsIPSercert=29f90b67755e3a4646651f7aa8eb5fd6"
     ]
+  },
+  {
+    "id": "muzzone-radio",
+    "name": "Muzzone Radio",
+    "category": "music",
+    "streams": [
+      "https://stream4.rcast.net/74046"
+    ],
+    "added": "2026-11-17"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-16T23:29Z";
+window.STATIONS_CHECKED = "2026-11-17T09:01Z";
