@@ -78,7 +78,7 @@ Collected from Ranjith and testers. Build when he says "go".
 - Malayalam FM 104.6 (NZ), Planet FM 104.6 (NZ), Naadan Chaaya Radio (Ireland), Radio Lemon New Zealand added; Radio Lemon UK and Nammude UK named clearly (Nammude UK has a backup stream); Radio Lemon Bengaluru listed (offline for now).
 
 ## Next version (after 2.6.0): tabs and bottom bar — his ideas, Nov 2026
-Designs on the design canvas ("Next version — 1 / 2 / 3"). Waiting for his pick before building.
+His choice (17 Nov): keep the bottom bar, highlight the chosen tab with the soft pill (2A), and replace "Velvet Selection" with the Velvet logo that has a star in it (star options A tip / B big star / C badge on the canvas; his pick of the star pending).
 1. "Velvet Selection" tab is too long: 1A gold star only, or 1B the Velvet logo (TalkBack still says "Velvet Selection").
 2. Bottom bar: make the chosen tab stand out — 2A soft pill, 2B filled in plum, 2C gold edge with a light gold fill.
 3. Or drop the bottom bar: ♥ Favourites becomes the first top tab, Info becomes ⓘ in the header; one more station row fits.
