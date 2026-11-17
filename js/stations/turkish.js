@@ -42,7 +42,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radyofenomen.com/fenomen/128/icecast.audio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "kafa-radyo",
@@ -292,7 +293,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radyofenomen.com/fenomenclubbin/128/icecast.audio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-antalya",
@@ -714,7 +716,8 @@ window.STATIONS = [
       "https://anadolu.liderhost.com.tr:9416/stream"
     ],
     "added": "2026-10-29",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "radyo-dogubayazt-fm-104-4",
@@ -976,7 +979,8 @@ window.STATIONS = [
     "streams": [
       "https://live.radyofenomen.com/fenomen2010/256/chunks.m3u8"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "offline": true
   },
   {
     "id": "fenomen-256",
@@ -985,7 +989,8 @@ window.STATIONS = [
     "streams": [
       "https://live.radyofenomen.com/fenomen/256/chunks.m3u8"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "offline": true
   },
   {
     "id": "bestefm-lounge",
@@ -1330,4 +1335,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T09:01Z";
+window.STATIONS_CHECKED = "2026-11-17T22:23Z";

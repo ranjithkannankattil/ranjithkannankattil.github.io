@@ -356,8 +356,7 @@ window.STATIONS = [
     "streams": [
       "https://radiocast.ch:8000/stream"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "radio-dj-98-2",
@@ -531,4 +530,4 @@ window.STATIONS = [
     "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T09:01Z";
+window.STATIONS_CHECKED = "2026-11-17T22:23Z";

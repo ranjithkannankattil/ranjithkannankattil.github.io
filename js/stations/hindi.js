@@ -371,7 +371,8 @@ window.STATIONS = [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio011/hlspbaudio011_Auto.m3u8"
     ],
     "added": "2026-10-22",
-    "hidden": true
+    "hidden": true,
+    "offline": true
   },
   {
     "id": "sandesh-radio",
@@ -1331,4 +1332,4 @@ window.STATIONS = [
     "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T09:01Z";
+window.STATIONS_CHECKED = "2026-11-17T22:23Z";

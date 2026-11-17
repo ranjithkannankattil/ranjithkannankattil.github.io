@@ -204,6 +204,15 @@ window.STATIONS = [
       "https://streamer.radio.co/sa75a4bb19/listen"
     ],
     "added": "2026-11-10"
+  },
+  {
+    "id": "radio-meher",
+    "name": "Radio Meher",
+    "category": "music",
+    "streams": [
+      "https://streams.radio.co/s08eb94fbc/listen"
+    ],
+    "added": "2026-11-17"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T09:01Z";
+window.STATIONS_CHECKED = "2026-11-17T22:23Z";

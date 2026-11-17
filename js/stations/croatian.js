@@ -286,8 +286,7 @@ window.STATIONS = [
     "streams": [
       "https://radiocentar.hr:8282/stream.aac"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "jr-radio",
@@ -740,4 +739,4 @@ window.STATIONS = [
     "added": "2026-11-12"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T09:01Z";
+window.STATIONS_CHECKED = "2026-11-17T22:23Z";

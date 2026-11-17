@@ -152,9 +152,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://chanson.hostingradio.ru:8041/chanson-uncensored256.mp3"
-    ],
-    "offline": true,
-    "hidden": true
+    ]
   },
   {
     "id": "anon-fm",
@@ -495,7 +493,8 @@ window.STATIONS = [
     "streams": [
       "https://s40.myradiostream.com/:22546/listen.mp3?"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "station-22",
@@ -909,8 +908,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.astv.ru/stream.mp3"
     ],
-    "added": "2026-11-02",
-    "offline": true
+    "added": "2026-11-02"
   },
   {
     "id": "fm-5",
@@ -1327,4 +1325,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T09:01Z";
+window.STATIONS_CHECKED = "2026-11-17T22:23Z";

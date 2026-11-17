@@ -183,7 +183,8 @@ window.STATIONS = [
       "https://radiolive.sbs.co.kr/powerpc/powerfm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTQ5MTQ0MDksInBhdGgiOiIvcG93ZXJmbS5zdHJlYW0iLCJkdXJhdGlvbiI6LTEsInVubyI6Ijg1OGY2NDc2LTAyNjctNGM4Ni04NzQyLWIyOTEwZjIxODg4OCIsImlhdCI6MTc5NDg3MTIwOX0.SC0Lh7pPAxHr77VbpYs938Q9XWa9QdjrsMtvK5GxFyw",
       "https://radiolive.sbs.co.kr/powerpc/powerfm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTQ0ODI0MDQsInBhdGgiOiIvcG93ZXJmbS5zdHJlYW0iLCJkdXJhdGlvbiI6LTEsInVubyI6IjgzMDdlMTljLTA4YWItNDgzNi1hOTcyLWJkNjNhY2NhYjQyYiIsImlhdCI6MTc5NDQzOTIwNH0.xOr45wRUFGsb0nk-YF2gR4EHoFj8TMbKOpkYmooMj_o"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "kbs-1radio",
@@ -567,7 +568,8 @@ window.STATIONS = [
       "https://radiolive.sbs.co.kr/lovepc/lovefm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTQ5MDg0MTAsInBhdGgiOiIvbG92ZWZtLnN0cmVhbSIsImR1cmF0aW9uIjotMSwidW5vIjoiZGE1OWM3NmMtOTg0OS00YmFkLWJhZjktMzgyMzA3OWEzZTNiIiwiaWF0IjoxNzk0ODY1MjEwfQ.G-2kdU04HuaXrswP_JIPYXCjd10hbNcP0fOe2k2yoAs",
       "https://radiolive.sbs.co.kr/lovepc/lovefm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTQ0NzY0MDgsInBhdGgiOiIvbG92ZWZtLnN0cmVhbSIsImR1cmF0aW9uIjotMSwidW5vIjoiOWI4NTQ5NTAtNTcxNy00N2Q1LWI2MjctNWZkNmY2YzM3MmZiIiwiaWF0IjoxNzk0NDMzMjA4fQ.uqWVJ4qFen1AFAZZe8Dj4U5MJL3BULftdL2eN2YZMX0"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "offline": true
   },
   {
     "id": "cpbc",
@@ -577,7 +579,8 @@ window.STATIONS = [
       "https://cdn-radio-seoul.cpbc.co.kr/cpbcseoul/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTQ5MzI0MTMsInBhdGgiOiIvY3BiY3Nlb3VsIiwiZHVyYXRpb24iOi0xLCJ1bm8iOiIzNDFhMDkzNy0zNTQzLTQyYTctOTdjNi1kY2FjOWNlZmY1NTEiLCJpYXQiOjE3OTQ4ODkyMTN9.tWqVw0bssGUGJ6pWcDqhBIChuBDF6l-PgeJXpHPsrzg",
       "https://cdn-radio-seoul.cpbc.co.kr/cpbcseoul/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTQ1MDA0MTksInBhdGgiOiIvY3BiY3Nlb3VsIiwiZHVyYXRpb24iOi0xLCJ1bm8iOiI1MjFlMTRkMi0zNDcwLTQzMTMtYjcwNy0yMjFmMjA1OGQ4MmIiLCJpYXQiOjE3OTQ0NTcyMTl9.LlSkZjO9aUCm5V0mnqYQBbpame2XfiVrHfZUFEcsKjY"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "offline": true
   },
   {
     "id": "translation-of-the-quran-in-korean",
@@ -598,4 +601,4 @@ window.STATIONS = [
     "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T09:01Z";
+window.STATIONS_CHECKED = "2026-11-17T22:23Z";

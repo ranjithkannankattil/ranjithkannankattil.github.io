@@ -217,7 +217,8 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:9620/;",
       "https://i.klikhost.com:9620/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-music-indonesia",
@@ -268,7 +269,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:8500/;super.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "bahtera-yudha-fm-surabaya",
@@ -659,7 +661,8 @@ window.STATIONS = [
     "streams": [
       "https://svara-stream.radioddns.net/bali_voksradio_993fm"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "offline": true
   },
   {
     "id": "imelda-fm",
@@ -905,8 +908,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.stylefmtasik.com/listen/stylefmtasik/stream"
     ],
-    "added": "2026-11-02",
-    "offline": true
+    "added": "2026-11-02"
   },
   {
     "id": "joss-885-am",
@@ -933,7 +935,8 @@ window.STATIONS = [
     "streams": [
       "https://ssg.streamingmurah.com:8078/;"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "offline": true
   },
   {
     "id": "wawa-radio-101-2-fm",
@@ -1257,7 +1260,8 @@ window.STATIONS = [
     "streams": [
       "https://s2.free-shoutcast.com/stream/18096"
     ],
-    "added": "2026-11-12"
+    "added": "2026-11-12",
+    "offline": true
   },
   {
     "id": "onix-radio",
@@ -1284,7 +1288,8 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:9616/stream"
     ],
-    "added": "2026-11-14"
+    "added": "2026-11-14",
+    "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T09:01Z";
+window.STATIONS_CHECKED = "2026-11-17T22:23Z";

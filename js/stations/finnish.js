@@ -40,7 +40,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiokaleva.digitacdn.net/radio/kaleva/master.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "yle-radio-suomi-hameenlinna",
@@ -243,7 +244,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://wr2.downtime.fi/kaakko.aac"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "moygid-tv-aaniopasradio-moygid-online-fi",
@@ -350,7 +352,8 @@ window.STATIONS = [
     "streams": [
       "https://wr2.downtime.fi/kiekko.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "sveriges-radio-sr-sisuradio",
@@ -506,4 +509,4 @@ window.STATIONS = [
     "added": "2026-11-17"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T09:01Z";
+window.STATIONS_CHECKED = "2026-11-17T22:23Z";

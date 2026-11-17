@@ -251,7 +251,8 @@ window.STATIONS = [
       "https://live.leproradio.com/rocks.ogg"
     ],
     "added": "2026-10-31",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "criminal-tribe",
@@ -261,7 +262,8 @@ window.STATIONS = [
       "https://live.leproradio.com/criminal.ogg"
     ],
     "added": "2026-10-31",
-    "offline": true
+    "offline": true,
+    "hidden": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T09:01Z";
+window.STATIONS_CHECKED = "2026-11-17T22:23Z";

@@ -297,7 +297,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.radiojar.com/kokkino-ath.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "kosmos-jazz",
@@ -348,8 +349,7 @@ window.STATIONS = [
     "streams": [
       "https://netradio.live24.gr/laikos876"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "balkan-radio",
@@ -1015,7 +1015,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.crete.ovh:8443/1"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "offline": true
   },
   {
     "id": "d-code-96-2",
@@ -1060,8 +1061,7 @@ window.STATIONS = [
     "streams": [
       "https://derti.live24.gr/laikos876"
     ],
-    "added": "2026-11-04",
-    "offline": true
+    "added": "2026-11-04"
   },
   {
     "id": "cosmoradio-95-1",
@@ -1325,4 +1325,4 @@ window.STATIONS = [
     "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T09:01Z";
+window.STATIONS_CHECKED = "2026-11-17T22:23Z";

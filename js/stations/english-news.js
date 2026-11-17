@@ -349,7 +349,8 @@ window.STATIONS = [
       "https://ice31.securenetsystems.net/0079"
     ],
     "added": "2026-10-24",
-    "where": "Malawi"
+    "where": "Malawi",
+    "offline": true
   },
   {
     "id": "ujyaalo-90-network",
@@ -1503,4 +1504,4 @@ window.STATIONS = [
     "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T09:01Z";
+window.STATIONS_CHECKED = "2026-11-17T22:23Z";

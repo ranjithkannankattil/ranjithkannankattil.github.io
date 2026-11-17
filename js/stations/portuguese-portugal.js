@@ -92,8 +92,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "m80-radio-ballads",
@@ -204,8 +203,8 @@ window.STATIONS = [
     "name": "Antena 3",
     "category": "music",
     "streams": [
-      "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8",
-      "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
+      "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8",
+      "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8"
     ]
   },
   {
@@ -230,8 +229,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "cidade-fm-2",
@@ -355,7 +353,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -1201,8 +1200,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena3madeira80a/playlist.m3u8"
     ],
-    "added": "2026-11-07",
-    "offline": true
+    "added": "2026-11-07"
   },
   {
     "id": "radio-quantica",
@@ -1331,4 +1329,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T09:01Z";
+window.STATIONS_CHECKED = "2026-11-17T22:23Z";

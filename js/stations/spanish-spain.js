@@ -792,7 +792,8 @@ window.STATIONS = [
     "streams": [
       "https://stm01.streammaximum.com:8194/;"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "offline": true
   },
   {
     "id": "energia-vintage",
@@ -1327,4 +1328,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T09:01Z";
+window.STATIONS_CHECKED = "2026-11-17T22:23Z";

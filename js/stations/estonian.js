@@ -393,7 +393,8 @@ window.STATIONS = [
     "streams": [
       "https://sc2.flamebox.org/bigfm-hd"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "nrj-estonia",
@@ -420,7 +421,8 @@ window.STATIONS = [
     "streams": [
       "https://sc2.treraadio.ee/xfm-tallinn"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "tagatuba-fm",
@@ -540,4 +542,4 @@ window.STATIONS = [
     "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T09:01Z";
+window.STATIONS_CHECKED = "2026-11-17T22:23Z";

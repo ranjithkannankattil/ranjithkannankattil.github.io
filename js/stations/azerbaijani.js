@@ -64,7 +64,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s40.myradiostream.com/:22546/listen.mp3?"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "media-fm-105-5",
@@ -192,4 +193,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T09:01Z";
+window.STATIONS_CHECKED = "2026-11-17T22:23Z";

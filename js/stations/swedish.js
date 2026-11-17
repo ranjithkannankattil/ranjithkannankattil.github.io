@@ -514,6 +514,15 @@ window.STATIONS = [
       "https://abtvlive-lh.akamaized.net/hls/live/msl5/20001068/ab/radio/master.m3u8"
     ],
     "added": "2026-11-16"
+  },
+  {
+    "id": "radioapans-knattekanal",
+    "name": "Radioapans knattekanal",
+    "category": "music",
+    "streams": [
+      "https://live1.sr.se/knattekanalen-aac-320"
+    ],
+    "added": "2026-11-17"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T09:01Z";
+window.STATIONS_CHECKED = "2026-11-17T22:23Z";

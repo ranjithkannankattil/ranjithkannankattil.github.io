@@ -152,8 +152,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s5.radioforge.com:7908/live?n=77357"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "24-breaking-live",
@@ -1041,8 +1040,7 @@ window.STATIONS = [
     "streams": [
       "https://online-novodnistrovsk.pp.ua:8443/playHD"
     ],
-    "added": "2026-11-05",
-    "offline": true
+    "added": "2026-11-05"
   },
   {
     "id": "station-30",
@@ -1117,4 +1115,4 @@ window.STATIONS = [
     "added": "2026-11-14"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T09:01Z";
+window.STATIONS_CHECKED = "2026-11-17T22:23Z";

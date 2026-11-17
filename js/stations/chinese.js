@@ -979,7 +979,8 @@ window.STATIONS = [
     "streams": [
       "https://play-radio-stream3.hndt.com/now/yorSd1X2/chunklist.m3u8"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "offline": true
   },
   {
     "id": "fred-film-radio",
@@ -1024,7 +1025,8 @@ window.STATIONS = [
     "streams": [
       "https://stream4.rcast.net/71937/#?.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "offline": true
   },
   {
     "id": "station-50",
@@ -1315,4 +1317,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T09:01Z";
+window.STATIONS_CHECKED = "2026-11-17T22:23Z";

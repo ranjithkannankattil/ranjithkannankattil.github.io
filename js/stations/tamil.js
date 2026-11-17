@@ -67,7 +67,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "89-4-tamil-fm",
@@ -235,7 +236,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio098/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "vagai-tamil-fm",
@@ -1329,4 +1331,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T09:01Z";
+window.STATIONS_CHECKED = "2026-11-17T22:23Z";

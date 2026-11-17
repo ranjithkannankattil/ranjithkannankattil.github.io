@@ -827,7 +827,8 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/MIXFM_POAAAC.aac"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "offline": true
   },
   {
     "id": "radio-atlantida-94-3-fm-porto-alegre",
@@ -1334,4 +1335,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T09:01Z";
+window.STATIONS_CHECKED = "2026-11-17T22:23Z";
