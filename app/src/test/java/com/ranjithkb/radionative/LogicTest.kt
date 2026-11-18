@@ -384,13 +384,14 @@ class LogicTest {
         assertEquals(Pair(2, 5f), Rotary.steps(85f, 40f)); assertEquals(Pair(-1, -5f), Rotary.steps(-45f, 40f)); assertEquals(Pair(0, 30f), Rotary.steps(30f, 40f))
     }
 
-    @Test fun theme_swipe_goes_round_all_fifteen() {
-        assertEquals(THEMES[1].id, ThemeSwipe.step("velvet", +1))
-        assertEquals(THEMES.last().id, ThemeSwipe.step("velvet", -1))
-        assertEquals("velvet", ThemeSwipe.step(THEMES.last().id, +1))
-        var id = "velvet"; val seen = mutableSetOf<String>()
-        repeat(THEMES.size) { id = ThemeSwipe.step(id, +1); seen += id }
-        assertEquals(THEMES.size, seen.size); assertEquals("velvet", id)
-        assertEquals(THEMES[1].id, ThemeSwipe.step("no-such-theme", +1))
+    @Test fun look_swipe_goes_round_standard_and_all_six_radios() {
+        assertEquals("cathedral", Eras.step("std", +1))
+        assertEquals("digital", Eras.step("std", -1))
+        assertEquals("std", Eras.step("digital", +1))
+        var id = "std"; val seen = mutableSetOf<String>()
+        repeat(Eras.IDS.size) { id = Eras.step(id, +1); seen += id }
+        assertEquals(7, seen.size); assertEquals("std", id)
+        assertEquals("cathedral", Eras.step("gramophone", +1))
+        assertEquals("1950s · Valve radio", Eras.name("valve")); assertEquals("Standard player", Eras.name("std"))
     }
 }

@@ -66,7 +66,12 @@ object Eras {
     )
     val IDS = listOf("std") + LIST.map { it.id }
     fun byId(id: String) = LIST.firstOrNull { it.id == id }
-    fun name(id: String) = byId(id)?.let { "${it.name} · ${it.decade}" } ?: "Standard"
+    fun name(id: String) = byId(id)?.let { "${it.decade} · ${it.name}" } ?: "Standard player"
+    /** Swiping through the looks in order (Standard first), round and round. */
+    fun step(id: String, dir: Int): String {
+        val i = IDS.indexOf(id).coerceAtLeast(0)
+        return IDS[((i + dir) % IDS.size + IDS.size) % IDS.size]
+    }
 
     /** The radio's own colours. */
     class Skin(val bodyTop: Color, val bodyBottom: Color, val body2: Color, val panel: Color, val panelInk: Color, val metal: Color,

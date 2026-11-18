@@ -290,12 +290,11 @@ fun PlayerContent(now: NowState, c: androidx.media3.session.MediaController?, la
                 else Spacer(Modifier.size(48.dp))
             }
             val era = Eras.byId(Theme.look)
-            // swiping the cover (or the radio, away from its knobs) flips through the colour themes
+            // swiping the cover (or the radio, away from its knobs) flips through the player looks: Standard and the six radios
             val ctx = androidx.compose.ui.platform.LocalContext.current
-            var shown by remember { mutableStateOf<ThemeDef?>(null) }
+            var shown by remember { mutableStateOf<String?>(null) }
             LaunchedEffect(shown) { if (shown != null) { kotlinx.coroutines.delay(1400); shown = null } }
-            val flip: (Int) -> Unit = { dir -> Theme.themeId = ThemeSwipe.step(Theme.themeId, dir); Theme.save(ctx)
-                shown = THEMES.first { it.id == Theme.themeId } }
+            val flip: (Int) -> Unit = { dir -> Theme.look = Eras.step(Theme.look, dir); Theme.save(ctx); shown = Eras.name(Theme.look) }
             if (era != null) {
                 // a radio from one era: it takes the cover's place (its own needles and meters replace the visualiser)
                 val rw = fullW.value - 48f
@@ -484,7 +483,7 @@ fun SearchContent(all: List<Station>?, currentLang: String, langOf: (Station) ->
     }
 }
 
-/** Sideways swipe of at least 64 dp: left = next theme, right = previous. TalkBack gets the same as actions. */
+/** Sideways swipe of at least 64 dp: left = next player look, right = previous. TalkBack gets the same as actions. */
 fun Modifier.themeSwipe(flip: (Int) -> Unit): Modifier = this
     .pointerInput(Unit) {
         var drag = 0f
@@ -492,17 +491,17 @@ fun Modifier.themeSwipe(flip: (Int) -> Unit): Modifier = this
         detectHorizontalDragGestures(onDragStart = { drag = 0f }, onDragEnd = { if (drag < -th) flip(+1) else if (drag > th) flip(-1); drag = 0f },
             onDragCancel = { drag = 0f }) { ch, d -> ch.consume(); drag += d }
     }
-    .semantics { customActions = listOf(CustomAccessibilityAction("Next colour theme") { flip(+1); true },
-        CustomAccessibilityAction("Previous colour theme") { flip(-1); true }) }
+    .semantics { customActions = listOf(CustomAccessibilityAction("Next radio look") { flip(+1); true },
+        CustomAccessibilityAction("Previous radio look") { flip(-1); true }) }
 
-/** The new theme's name, shown for a moment over the cover. */
+/** The new look's name, shown for a moment over the cover. */
 @Composable
-fun BoxScope.ThemeToast(t: ThemeDef?) {
+fun BoxScope.ThemeToast(t: String?) {
     androidx.compose.animation.AnimatedVisibility(t != null, Modifier.align(Alignment.Center),
         enter = androidx.compose.animation.fadeIn(), exit = androidx.compose.animation.fadeOut()) {
         val d = t ?: return@AnimatedVisibility
         Box(Modifier.background(Color(0xE6140D12)).padding(horizontal = 20.dp, vertical = 12.dp)) {
-            Text(if (d.ml.isNotBlank()) "${d.ml}  ·  ${d.name}" else d.name, color = Color(0xFFF3E6C8), fontSize = 17.sp)
+            Text(d, color = Color(0xFFF3E6C8), fontSize = 17.sp)
         }
     }
 }

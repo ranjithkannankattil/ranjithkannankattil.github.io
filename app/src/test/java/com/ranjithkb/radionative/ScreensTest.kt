@@ -220,30 +220,32 @@ class ScreensTest {
         Theme.playerOpen = false; PlayerLookScreen {} }
     @Test fun n33_era_paused_no_song() = shot("n33-era-paused", false, look = "valve") { Player(false, song = false) }
     @Test fun n34_settings_with_look_row() = shot("n34-settings-look", false, look = "cathedral") { Theme.playerOpen = false; SettingsScreen({}) {} }
-    // ---- swiping the cover changes the colour theme
-    private fun swipeTheme(look: String, prefix: String) {
-        Theme.themeId = "velvet"; Theme.look = look; Theme.lookColours = "theme"; Theme.playerOpen = look != "std"
+    // ---- swiping the cover changes the player look (Standard and the six radios)
+    private fun swipeLook(start: String, prefix: String) {
+        Theme.themeId = "velvet"; Theme.look = start; Theme.lookColours = "original"; Theme.playerOpen = true
         Theme.viz = "off"; Theme.mode = "light"; Theme.sysDark = false
         rule.setContent { MaterialTheme(typography = PoppinsType) { Surface(Modifier.fillMaxSize(), color = Paper) { Player(true) } } }
-        val cover = rule.onAllNodes(androidx.compose.ui.test.SemanticsMatcher("next theme") { n ->
-            n.config.getOrNull(androidx.compose.ui.semantics.SemanticsActions.CustomActions)?.any { it.label == "Next colour theme" } == true })[0]
-        cover.performTouchInput { swipeLeft(startX = right - 10f, endX = left + 10f) }
+        val pic = { rule.onAllNodes(SemanticsMatcher("next look") { n ->
+            n.config.getOrNull(androidx.compose.ui.semantics.SemanticsActions.CustomActions)?.any { it.label == "Next radio look" } == true })[0] }
+        val next = Eras.step(start, +1)
+        pic().performTouchInput { swipeLeft(startX = right - 10f, endX = left + 10f) }
         rule.waitForIdle()
-        assertEquals(THEMES[1].id, Theme.themeId)
-        rule.onNodeWithText(THEMES[1].ml, substring = true).assertExists()        // its name shows
+        assertEquals(next, Theme.look)
+        rule.onNodeWithText(Eras.name(next)).assertExists()                        // its name shows
         capture("$prefix-swiped")
-        cover.performTouchInput { swipeRight(startX = left + 10f, endX = right - 10f) }
-        cover.performTouchInput { swipeRight(startX = left + 10f, endX = right - 10f) }
-        rule.waitForIdle()
-        assertEquals(THEMES.last().id, Theme.themeId)                              // past Velvet, round to the last one
-        cover.performTouchInput { swipeLeft(startX = right - 10f, endX = right - 60f) }  // too short: nothing
-        rule.waitForIdle(); assertEquals(THEMES.last().id, Theme.themeId)
+        pic().performTouchInput { swipeRight(startX = left + 10f, endX = right - 10f) }
+        rule.waitForIdle(); assertEquals(start, Theme.look)
+        pic().performTouchInput { swipeRight(startX = left + 10f, endX = right - 10f) }
+        rule.waitForIdle(); assertEquals(Eras.step(start, -1), Theme.look)
+        pic().performTouchInput { swipeLeft(startX = right - 10f, endX = right - 60f) }   // too short: nothing
+        rule.waitForIdle(); assertEquals(Eras.step(start, -1), Theme.look)
+        assertEquals("velvet", Theme.themeId)                                       // colours untouched
         rule.mainClock.advanceTimeBy(2000); rule.waitForIdle()
-        rule.onNodeWithText(THEMES.last().ml, substring = true).assertDoesNotExist() // the name goes away
-        Theme.themeId = "velvet"; Theme.look = "std"; Theme.playerOpen = false; Theme.mode = "phone"
+        rule.onNodeWithText(Eras.name(Eras.step(start, -1))).assertDoesNotExist()   // the name goes away
+        Theme.look = "std"; Theme.playerOpen = false; Theme.mode = "phone"
     }
-    @Test fun n35_swipe_cover_changes_theme() = swipeTheme("std", "n35-cover")
-    @Test fun n36_swipe_radio_changes_theme() = swipeTheme("valve", "n36-radio")
+    @Test fun n35_swipe_standard_cover_to_a_radio() = swipeLook("std", "n35-cover")
+    @Test fun n36_swipe_between_radios() = swipeLook("valve", "n36-radio")
     @Test fun n19_every_theme() = everyTheme("t", true, "off") { Stations(true, "heard") }
     @Test fun n20_every_theme_player() = everyTheme("tp", false, "bars") { Player(true) }
     @Test fun n21_widgets() {

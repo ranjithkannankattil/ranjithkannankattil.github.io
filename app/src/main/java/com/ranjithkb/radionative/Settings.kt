@@ -14,14 +14,6 @@ import androidx.compose.ui.text.font.FontWeight
 data class ThemeDef(val id: String, val name: String, val ml: String, val en: String, val group: String,
                     val bg: Long, val ink: Long, val soft: Long, val accent: Long, val bar: Long, val barInk: Long, val hi: Long)
 
-/** Swiping through the themes in order, round and round. */
-object ThemeSwipe {
-    fun step(id: String, dir: Int): String {
-        val i = THEMES.indexOfFirst { it.id == id }.coerceAtLeast(0)
-        return THEMES[((i + dir) % THEMES.size + THEMES.size) % THEMES.size].id
-    }
-}
-
 val THEMES = listOf(
     ThemeDef("velvet", "Velvet", "", "Velvet", "Elegant", 0xFFF0EDE6, 0xFF2A1424, 0xFF6A6266, 0xFF6B2D5C, 0xFF2A1424, 0xFFF1E9EE, 0xFFC9A86A),
     ThemeDef("nilavu", "Nilavu", "നിലാവ്", "Moonlight", "Elegant", 0xFFEEF0F4, 0xFF14203A, 0xFF5E6577, 0xFF2B4C8C, 0xFF14203A, 0xFFEEF0F4, 0xFFD8C29A),
