@@ -184,8 +184,7 @@ window.STATIONS = [
     "akv": "Akashvani Devikulam",
     "exclude": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "airkozhikodefm",
@@ -678,8 +677,7 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://freestream.hu:8340/radiome"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "thaalamradio",
@@ -1228,4 +1226,4 @@ window.STATIONS = [
     "added": "2026-11-17"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-18T02:25Z";
+window.STATIONS_CHECKED = "2026-11-18T04:22Z";
