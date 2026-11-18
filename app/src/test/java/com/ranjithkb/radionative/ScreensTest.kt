@@ -224,23 +224,26 @@ class ScreensTest {
     private fun swipeLook(start: String, prefix: String) {
         Theme.themeId = "velvet"; Theme.look = start; Theme.lookColours = "original"; Theme.playerOpen = true
         Theme.viz = "off"; Theme.mode = "light"; Theme.sysDark = false
+        rule.mainClock.autoAdvance = false   // the radio moves while music plays: the test moves the clock itself
+        val tick = { rule.mainClock.advanceTimeBy(600) }
         rule.setContent { MaterialTheme(typography = PoppinsType) { Surface(Modifier.fillMaxSize(), color = Paper) { Player(true) } } }
         val pic = { rule.onAllNodes(SemanticsMatcher("next look") { n ->
             n.config.getOrNull(androidx.compose.ui.semantics.SemanticsActions.CustomActions)?.any { it.label == "Next radio look" } == true })[0] }
+        tick()
         val next = Eras.step(start, +1)
         pic().performTouchInput { swipeLeft(startX = right - 10f, endX = left + 10f) }
-        rule.waitForIdle()
+        tick()
         assertEquals(next, Theme.look)
         rule.onNodeWithText(Eras.name(next)).assertExists()                        // its name shows
         capture("$prefix-swiped")
         pic().performTouchInput { swipeRight(startX = left + 10f, endX = right - 10f) }
-        rule.waitForIdle(); assertEquals(start, Theme.look)
+        tick(); assertEquals(start, Theme.look)
         pic().performTouchInput { swipeRight(startX = left + 10f, endX = right - 10f) }
-        rule.waitForIdle(); assertEquals(Eras.step(start, -1), Theme.look)
+        tick(); assertEquals(Eras.step(start, -1), Theme.look)
         pic().performTouchInput { swipeLeft(startX = right - 10f, endX = right - 60f) }   // too short: nothing
-        rule.waitForIdle(); assertEquals(Eras.step(start, -1), Theme.look)
+        tick(); assertEquals(Eras.step(start, -1), Theme.look)
         assertEquals("velvet", Theme.themeId)                                       // colours untouched
-        rule.mainClock.advanceTimeBy(2000); rule.waitForIdle()
+        rule.mainClock.advanceTimeBy(2000); tick()
         rule.onNodeWithText(Eras.name(Eras.step(start, -1))).assertDoesNotExist()   // the name goes away
         Theme.look = "std"; Theme.playerOpen = false; Theme.mode = "phone"
     }
