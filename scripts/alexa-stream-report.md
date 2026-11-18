@@ -1,7 +1,7 @@
 ## Alexa stream check
 
-Malayalam: **99 of 105** play the way an Echo needs.
-All checked: 172 of 180.
+Malayalam: **100 of 106** play the way an Echo needs.
+All checked: 174 of 181.
 
 | Station | Language | Result |
 |---|---|---|
@@ -12,12 +12,13 @@ All checked: 172 of 180.
 | Radio Wind | malayalam | ❌ HTTPError: HTTP Error 403: Station config not found (Redis) |
 | Shalom Radio | malayalam | ❌ HTTPError: HTTP Error 403: Station config not found (Redis) |
 | 98.6 FM | malayalam | ✅ 200 audio/mpeg 16384B |
+| AIR Akashvani Malayalam | malayalam | ✅ 200 application/vnd.apple.mpegurl 371B |
 | AIR Alappuzha | malayalam | ✅ 200 application/vnd.apple.mpegurl 93B |
 | AIR Ananthapuri FM | malayalam | ✅ 200 application/vnd.apple.mpegurl 93B |
 | AIR Devikulam | malayalam | ✅ 200 application/vnd.apple.mpegurl 370B |
-| AIR FM Rainbow Kochi | malayalam | ✅ 200 application/vnd.apple.mpegurl 371B |
+| AIR FM Rainbow Kochi | malayalam | ✅ 200 application/vnd.apple.mpegurl 369B |
 | AIR Kannur | malayalam | ✅ 200 application/vnd.apple.mpegurl 370B |
-| AIR Kochi FM | malayalam | ✅ 200 application/vnd.apple.mpegurl 370B |
+| AIR Kochi FM | malayalam | ✅ 200 application/vnd.apple.mpegurl 369B |
 | AIR Kozhikode (Calicut) | malayalam | ✅ 200 application/vnd.apple.mpegurl 371B |
 | AIR Kozhikode FM | malayalam | ✅ 200 application/vnd.apple.mpegurl 371B |
 | AIR Malayalam | malayalam | ✅ 200 application/vnd.apple.mpegurl 371B |
@@ -110,6 +111,5 @@ All checked: 172 of 180.
 | Vividh Bharati Malayalam | malayalam | ✅ 200 application/vnd.apple.mpegurl 371B |
 | Vividh Bharati Thiruvananthapuram | malayalam | ✅ 200 application/vnd.apple.mpegurl 93B |
 | World to World | malayalam | ✅ 200 audio/aac 16384B |
-| إذاعة القرآن الكريم من القاهرة | arabic | ❌ RemoteDisconnected: Remote end closed connection without response |
 | Tamil Sun FM | tamil | ❌ BadStatusLine: ICY 200 OK
  |
