@@ -383,4 +383,14 @@ class LogicTest {
         assertEquals(10f, Rotary.turn(c, androidx.compose.ui.geometry.Offset(150f, 40f), androidx.compose.ui.geometry.Offset(170f, 40f), 20f, 2f, wheel = true), 0.01f)
         assertEquals(Pair(2, 5f), Rotary.steps(85f, 40f)); assertEquals(Pair(-1, -5f), Rotary.steps(-45f, 40f)); assertEquals(Pair(0, 30f), Rotary.steps(30f, 40f))
     }
+
+    @Test fun theme_swipe_goes_round_all_fifteen() {
+        assertEquals(THEMES[1].id, ThemeSwipe.step("velvet", +1))
+        assertEquals(THEMES.last().id, ThemeSwipe.step("velvet", -1))
+        assertEquals("velvet", ThemeSwipe.step(THEMES.last().id, +1))
+        var id = "velvet"; val seen = mutableSetOf<String>()
+        repeat(THEMES.size) { id = ThemeSwipe.step(id, +1); seen += id }
+        assertEquals(THEMES.size, seen.size); assertEquals("velvet", id)
+        assertEquals(THEMES[1].id, ThemeSwipe.step("no-such-theme", +1))
+    }
 }

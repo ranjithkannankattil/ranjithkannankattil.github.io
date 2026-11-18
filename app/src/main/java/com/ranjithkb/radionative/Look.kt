@@ -37,6 +37,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.semantics.CustomAccessibilityAction
+import androidx.compose.ui.semantics.customActions
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
@@ -287,13 +290,22 @@ fun PlayerContent(now: NowState, c: androidx.media3.session.MediaController?, la
                 else Spacer(Modifier.size(48.dp))
             }
             val era = Eras.byId(Theme.look)
+            // swiping the cover (or the radio, away from its knobs) flips through the colour themes
+            val ctx = androidx.compose.ui.platform.LocalContext.current
+            var shown by remember { mutableStateOf<ThemeDef?>(null) }
+            LaunchedEffect(shown) { if (shown != null) { kotlinx.coroutines.delay(1400); shown = null } }
+            val flip: (Int) -> Unit = { dir -> Theme.themeId = ThemeSwipe.step(Theme.themeId, dir); Theme.save(ctx)
+                shown = THEMES.first { it.id == Theme.themeId } }
             if (era != null) {
                 // a radio from one era: it takes the cover's place (its own needles and meters replace the visualiser)
                 val rw = fullW.value - 48f
                 val rh = minOf(h.value * 0.44f, rw * era.h / era.w).coerceAtLeast(150f)
-                EraRadio(era, now, c, Modifier.padding(top = 10.dp).fillMaxWidth().height(rh.dp))
+                Box(Modifier.padding(top = 10.dp).fillMaxWidth().height(rh.dp), contentAlignment = Alignment.Center) {
+                    EraRadio(era, now, c, Modifier.fillMaxSize(), onSwipe = flip)
+                    ThemeToast(shown)
+                }
             } else {
-                Box(Modifier.padding(top = 10.dp).size(art.dp).background(ArtBg), contentAlignment = Alignment.Center) {
+                Box(Modifier.padding(top = 10.dp).size(art.dp).background(ArtBg).themeSwipe(flip), contentAlignment = Alignment.Center) {
                     val bmp = artBitmap(now.md.artworkUri?.toString()?.takeUnless(CarArt::isStationArt))
                     if (bmp != null) Image(bmp.asImageBitmap(), null, Modifier.fillMaxSize(), contentScale = ContentScale.Crop,
                         alpha = if (Theme.viz == "circle") 0.35f else 1f)
@@ -317,6 +329,7 @@ fun PlayerContent(now: NowState, c: androidx.media3.session.MediaController?, la
                             VizView(Theme.viz, now.playing, Modifier.fillMaxSize().padding(horizontal = 14.dp, vertical = 8.dp))
                         }
                     }
+                    ThemeToast(shown)
                 }
                 VizSwitcher()   // off: a quiet "Visualiser" switch; on: Bars · Waves · Circle · Off
             }
@@ -467,6 +480,29 @@ fun SearchContent(all: List<Station>?, currentLang: String, langOf: (Station) ->
                     Text("No station by that name. Try part of the name, like \"Mango\" or \"AIR\".", Modifier.padding(Pad), fontSize = 15.sp, color = Soft)
                 }
             }
+        }
+    }
+}
+
+/** Sideways swipe of at least 64 dp: left = next theme, right = previous. TalkBack gets the same as actions. */
+fun Modifier.themeSwipe(flip: (Int) -> Unit): Modifier = this
+    .pointerInput(Unit) {
+        var drag = 0f
+        val th = 64.dp.toPx()
+        detectHorizontalDragGestures(onDragStart = { drag = 0f }, onDragEnd = { if (drag < -th) flip(+1) else if (drag > th) flip(-1); drag = 0f },
+            onDragCancel = { drag = 0f }) { ch, d -> ch.consume(); drag += d }
+    }
+    .semantics { customActions = listOf(CustomAccessibilityAction("Next colour theme") { flip(+1); true },
+        CustomAccessibilityAction("Previous colour theme") { flip(-1); true }) }
+
+/** The new theme's name, shown for a moment over the cover. */
+@Composable
+fun BoxScope.ThemeToast(t: ThemeDef?) {
+    androidx.compose.animation.AnimatedVisibility(t != null, Modifier.align(Alignment.Center),
+        enter = androidx.compose.animation.fadeIn(), exit = androidx.compose.animation.fadeOut()) {
+        val d = t ?: return@AnimatedVisibility
+        Box(Modifier.background(Color(0xE6140D12)).padding(horizontal = 20.dp, vertical = 12.dp)) {
+            Text(if (d.ml.isNotBlank()) "${d.ml}  ·  ${d.name}" else d.name, color = Color(0xFFF3E6C8), fontSize = 17.sp)
         }
     }
 }

@@ -10,12 +10,14 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.asAndroidBitmap
+import androidx.compose.ui.test.*
 import androidx.compose.ui.test.captureToImage
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.unit.sp
 import androidx.media3.common.MediaMetadata
 import org.junit.Rule
+import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
@@ -217,6 +219,30 @@ class ScreensTest {
         Theme.playerOpen = false; PlayerLookScreen {} }
     @Test fun n33_era_paused_no_song() = shot("n33-era-paused", false, look = "valve") { Player(false, song = false) }
     @Test fun n34_settings_with_look_row() = shot("n34-settings-look", false, look = "cathedral") { Theme.playerOpen = false; SettingsScreen({}) {} }
+    // ---- swiping the cover changes the colour theme
+    private fun swipeTheme(look: String, prefix: String) {
+        Theme.themeId = "velvet"; Theme.look = look; Theme.lookColours = "theme"; Theme.playerOpen = look != "std"
+        Theme.viz = "off"; Theme.mode = "light"; Theme.sysDark = false
+        rule.setContent { MaterialTheme(typography = PoppinsType) { Surface(Modifier.fillMaxSize(), color = Paper) { Player(true) } } }
+        val cover = rule.onAllNodes(androidx.compose.ui.test.SemanticsMatcher("next theme") { n ->
+            n.config.getOrNull(androidx.compose.ui.semantics.SemanticsActions.CustomActions)?.any { it.label == "Next colour theme" } == true })[0]
+        cover.performTouchInput { swipeLeft(startX = right - 10f, endX = left + 10f) }
+        rule.waitForIdle()
+        assertEquals(THEMES[1].id, Theme.themeId)
+        rule.onNodeWithText(THEMES[1].ml, substring = true).assertExists()        // its name shows
+        capture("$prefix-swiped")
+        cover.performTouchInput { swipeRight(startX = left + 10f, endX = right - 10f) }
+        cover.performTouchInput { swipeRight(startX = left + 10f, endX = right - 10f) }
+        rule.waitForIdle()
+        assertEquals(THEMES.last().id, Theme.themeId)                              // past Velvet, round to the last one
+        cover.performTouchInput { swipeLeft(startX = right - 10f, endX = right - 60f) }  // too short: nothing
+        rule.waitForIdle(); assertEquals(THEMES.last().id, Theme.themeId)
+        rule.mainClock.advanceTimeBy(2000); rule.waitForIdle()
+        rule.onNodeWithText(THEMES.last().ml, substring = true).assertDoesNotExist() // the name goes away
+        Theme.themeId = "velvet"; Theme.look = "std"; Theme.playerOpen = false; Theme.mode = "phone"
+    }
+    @Test fun n35_swipe_cover_changes_theme() = swipeTheme("std", "n35-cover")
+    @Test fun n36_swipe_radio_changes_theme() = swipeTheme("valve", "n36-radio")
     @Test fun n19_every_theme() = everyTheme("t", true, "off") { Stations(true, "heard") }
     @Test fun n20_every_theme_player() = everyTheme("tp", false, "bars") { Player(true) }
     @Test fun n21_widgets() {
