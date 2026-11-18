@@ -95,6 +95,14 @@ His choice (17 Nov): keep the bottom bar, highlight the chosen tab with the soft
    Every day · Once (days still tappable, e.g. a Fri–Sat weekend in Saudi). The list shows the next alarm. The current single
    alarm becomes the first one, so nobody loses theirs. Designs: canvas "Alarms_list" / "Alarms_edit".
 
+5. **Alarm safety net** (his question, 19 Nov: "what if the station isn't working?"). Today: the phone's alarm sound only
+   after the fade + 5 s (over a minute of silence with a 1-minute fade) and it stops after 2 minutes; no backup links or
+   station. Plan: the station's other links first; then a backup station ("If it doesn't play": default = most-played
+   working favourite, or any station, or "Phone alarm sound"); the phone's alarm sound at the latest 20 s after the alarm
+   time no matter what (no internet, Wi-Fi off); keeps ringing until stopped (max 10 min) with Stop / Snooze 10 min on the
+   lock screen; a quiet stream check 2 minutes before the alarm swaps to the backup if the station is down. Device tests
+   for dead stream, no internet, slow station, Stop. Offered to him as a small update on its own after 2.6.0 is approved.
+
 ## Already built and tested on Dev (radio-native-dev), waiting for the next release
 - Knobs turn like real ones: follow the finger round the knob (not only straight swipes), move with the finger between
   steps, a soft click at each step, bigger touch areas; a tap only counts on the knob's left / right third.
