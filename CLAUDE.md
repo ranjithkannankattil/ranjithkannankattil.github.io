@@ -98,8 +98,8 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
   phone media volume, bass/mid/treble = equaliser). Only the picture repaints each frame; a paused radio stops drawing once still.
   Device tests `EraDeviceTest` drive the clock by hand (the radio animates while music plays). App only, not on the website.
 - **Next app version — ON HOLD (his call, 17 Nov 2026)**: designed and approved, not built. Velvet Selection tab becomes the
-  Velvet logo with a big star (star replaces the antenna dot and inner wave), a one-time first-launch tip under it, a
-  "Velvet Selection" heading inside the tab; bottom bar stays, chosen tab gets a soft pill. Details: docs/radio-next-update.md.
+  Velvet logo with a big star (star replaces the antenna dot and inner wave), a first-launch helper tour of the whole app
+  (8 skippable steps, replay from Info), a "Velvet Selection" heading inside the tab; bottom bar stays, chosen tab gets a soft pill. Details: docs/radio-next-update.md.
   Build only when he says, and release only after the 2.6.0 Play review is done (a new upload replaces the one in review).
   Already on Dev and tested (17–19 Nov): round-turning knobs, swipe the cover to change the player look, Reset knobs.
 - Old Capacitor wrapper: branch `radio-app` (don't push there — it would publish a 1.x release).

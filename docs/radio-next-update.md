@@ -79,8 +79,12 @@ Collected from Ranjith and testers. Build when he says "go".
 
 ## Next version (after 2.6.0): tabs and bottom bar — his ideas, Nov 2026
 His choice (17 Nov): keep the bottom bar, highlight the chosen tab with the soft pill (2A), and replace "Velvet Selection" with the Velvet logo that has a star in it — he picked B, the big star (a star replaces the antenna dot and inner wave).
-   First-timers: a one-time tip under the star on first launch ("Velvet Selection — hand-picked stations from every language", Got it);
-   inside the tab the list is headed "Velvet Selection"; long-press shows the name; TalkBack reads it.
+   First-timers (his correction, 19 Nov): a helper tour of the WHOLE app on first launch, not just the star — 8 steps, each
+   dimming the screen and ringing one part: 1 Welcome (Show me / No thanks) · 2 ★ Velvet Selection · 3 language tabs and ⇅ sort ·
+   4 ♡ favourites · 5 search and ⚙ Settings (themes, fonts, equaliser, visualiser, radio looks, alarm) · 6 the player bar (tap
+   to open, swipe to change station) · 7 the big player (swipe the cover for radio looks, knobs, share / sleep / cast) ·
+   8 Stations / Favourites / Info. Skip at any step; shown once; replay from Info → Quick tour. Designs: canvas "Tour_1…8".
+   Inside the star tab the list is headed "Velvet Selection"; long-press shows the name; TalkBack reads it.
 1. "Velvet Selection" tab is too long: 1A gold star only, or 1B the Velvet logo (TalkBack still says "Velvet Selection").
 2. Bottom bar: make the chosen tab stand out — 2A soft pill, 2B filled in plum, 2C gold edge with a light gold fill.
 3. Or drop the bottom bar: ♥ Favourites becomes the first top tab, Info becomes ⓘ in the header; one more station row fits.
