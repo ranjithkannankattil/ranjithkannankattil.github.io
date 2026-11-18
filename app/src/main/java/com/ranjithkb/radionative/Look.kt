@@ -40,6 +40,7 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.semantics.CustomAccessibilityAction
 import androidx.compose.ui.semantics.customActions
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
@@ -106,18 +107,25 @@ class LangTab(val id: String, val label: String, val pinned: Boolean = false, va
 @Composable
 fun LangTabs(tabs: List<LangTab>, selected: String, onClick: (LangTab) -> Unit, onLong: (LangTab) -> Unit) {
     val haptic = androidx.compose.ui.platform.LocalHapticFeedback.current
+    val ctx = androidx.compose.ui.platform.LocalContext.current
     Column(Modifier.padding(horizontal = Pad)) {
         LazyRow(Modifier.padding(top = 8.dp), horizontalArrangement = Arrangement.spacedBy(20.dp)) {
             items(tabs, key = { it.id }) { t ->
                 val on = t.id == selected
-                Column(Modifier.width(IntrinsicSize.Max).heightIn(min = 44.dp).combinedClickable(onClick = { onClick(t) },
-                    onLongClickLabel = "Pin, move or remove", onLongClick = {
-                        haptic.performHapticFeedback(androidx.compose.ui.hapticfeedback.HapticFeedbackType.LongPress); onLong(t) }),
-                    verticalArrangement = Arrangement.Bottom) {
-                    Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(bottom = 9.dp)) {
-                        if (t.star) { Text("★", fontSize = 11.sp, color = GoldC); Spacer(Modifier.width(5.dp)) }
-                        if (t.pinned) { Icon(Icons.Filled.PushPin, "Pinned", Modifier.size(11.dp), tint = Soft); Spacer(Modifier.width(4.dp)) }
-                        Label(t.label, if (on) Title else Soft, 10, weight = if (on) FontWeight.SemiBold else FontWeight.Medium)
+                Column((if (t.star) Modifier.tourTarget("star") else Modifier).width(IntrinsicSize.Max).heightIn(min = 44.dp).widthIn(min = if (t.star) 44.dp else 0.dp)
+                    .combinedClickable(onClick = { onClick(t) },
+                    onLongClickLabel = if (t.star) "Show its name" else "Pin, move or remove", onLongClick = {
+                        haptic.performHapticFeedback(androidx.compose.ui.hapticfeedback.HapticFeedbackType.LongPress)
+                        // the star tab is just the logo: holding it says what it is
+                        if (t.star) android.widget.Toast.makeText(ctx, t.label, android.widget.Toast.LENGTH_SHORT).show() else onLong(t) }),
+                    verticalArrangement = Arrangement.Bottom, horizontalAlignment = Alignment.CenterHorizontally) {
+                    Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(bottom = if (t.star) 6.dp else 9.dp)) {
+                        // the Velvet Selection: the Velvet logo with a star (TalkBack still reads its name)
+                        if (t.star) Icon(painterResource(R.drawable.ic_logo_star), t.label, Modifier.size(26.dp), tint = GoldC)
+                        else {
+                            if (t.pinned) { Icon(Icons.Filled.PushPin, "Pinned", Modifier.size(11.dp), tint = Soft); Spacer(Modifier.width(4.dp)) }
+                            Label(t.label, if (on) Title else Soft, 10, weight = if (on) FontWeight.SemiBold else FontWeight.Medium)
+                        }
                     }
                     Box(Modifier.height(1.dp).fillMaxWidth().background(if (on) Title else Color.Transparent))
                 }
@@ -255,10 +263,17 @@ fun BottomNav(tab: Int, favCount: Int, go: (Int) -> Unit) {
             listOf(Triple(R.drawable.ln_radio, "Stations", 0), Triple(R.drawable.ln_heart, if (Theme.text >= 2) "Favourites" else "Favourites $favCount", 1),
                 Triple(R.drawable.ln_info, "Info", 2)).forEach { (icon, label, i) ->
                 val on = tab == i
-                Column(Modifier.weight(1f).fillMaxHeight().clickable(onClickLabel = label) { go(i) },
+                // the tab you're on sits in a soft pill of the theme's colour, so it's easy to see at a glance
+                val pillInk = if (Theme.dark) GoldC else AccentText
+                Column(Modifier.weight(1f).fillMaxHeight().clickable(onClickLabel = label) { go(i) }
+                    .semantics { selected = on },
                     horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
-                    LineIcon(if (on && i == 1) R.drawable.ln_heart_fill else icon, null, 21, if (on) Title else Soft)
-                    Label(label, if (on) Title else Soft, 9, Modifier.padding(top = 5.dp), if (on) FontWeight.SemiBold else FontWeight.Medium)
+                    Box(Modifier.size(58.dp, 30.dp).clip(RoundedCornerShape(15.dp))
+                        .background(if (on) pillInk.copy(alpha = if (Theme.dark) 0.20f else 0.13f) else Color.Transparent),
+                        contentAlignment = Alignment.Center) {
+                        LineIcon(if (on && i == 1) R.drawable.ln_heart_fill else icon, null, 21, if (on) pillInk else Soft)
+                    }
+                    Label(label, if (on) pillInk else Soft, 9, Modifier.padding(top = 3.dp), if (on) FontWeight.SemiBold else FontWeight.Medium)
                 }
             }
         }

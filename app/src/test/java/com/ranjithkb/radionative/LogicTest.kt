@@ -61,8 +61,8 @@ class LogicTest {
     @Test fun alarm_days_labels() {
         assertEquals("Once", Alarm.daysLabel(emptySet()))
         assertEquals("Every day", Alarm.daysLabel((1..7).toSet()))
-        assertEquals("Mon–Fri", Alarm.daysLabel((2..6).toSet()))
-        assertEquals("Weekends", Alarm.daysLabel(setOf(1, 7)))
+        assertEquals("Workdays", Alarm.daysLabel((2..6).toSet()))
+        assertEquals("Weekend", Alarm.daysLabel(setOf(1, 7)))
         assertEquals("Mon, Wed, Sun", Alarm.daysLabel(setOf(2, 4, 1)))
     }
     @Test fun alarm_save_and_load() {
@@ -73,6 +73,86 @@ class LogicTest {
         assertTrue(l.on); assertEquals(6, l.hour); assertEquals(45, l.minute); assertEquals(setOf(2, 3), l.days)
         assertEquals("Radio Mango", l.station!!.getString("name")); assertEquals(2, l.station!!.getJSONArray("streams").length())
         assertEquals(30, l.fadeSec); assertEquals(85, l.volume)
+    }
+
+    // ---------------- several alarms (2.7)
+    private fun alarmPrefs() = RuntimeEnvironment.getApplication().getSharedPreferences("alarm", android.content.Context.MODE_PRIVATE)
+    @Test fun alarms_old_single_alarm_is_kept() {      // someone on 2.6 with one alarm updates: it becomes the first of the list
+        val ctx = RuntimeEnvironment.getApplication()
+        alarmPrefs().edit().clear().putBoolean("on", true).putInt("hour", 5).putInt("minute", 50).putString("days", "2,3,4,5,6")
+            .putString("station", """{"id":"radiomango","col":"malayalam","name":"Radio Mango","streams":["https://a"]}""")
+            .putInt("fade", 30).putInt("volume", 60).commit()
+        val l = Alarm.all(ctx)
+        assertEquals(1, l.size); val a = l[0]
+        assertTrue(a.on); assertEquals(5, a.hour); assertEquals(50, a.minute); assertEquals(Alarm.WORKDAYS, a.days)
+        assertEquals("Radio Mango", a.station!!.getString("name")); assertEquals(30, a.fadeSec); assertEquals(60, a.volume)
+        assertEquals("auto", a.backup)
+        assertEquals(1, Alarm.all(ctx).size)            // read twice: still one, not copied again
+    }
+    @Test fun alarms_none_for_new_people() {
+        alarmPrefs().edit().clear().commit()
+        assertTrue(Alarm.all(RuntimeEnvironment.getApplication()).isEmpty())
+    }
+    @Test fun alarms_workdays_and_weekend_side_by_side() {
+        val ctx = RuntimeEnvironment.getApplication(); alarmPrefs().edit().clear().commit()
+        val work = Alarm.fresh(ctx).copy(hour = 6, minute = 30, days = Alarm.WORKDAYS, name = "Work"); Alarm.save(ctx, work)
+        val wknd = Alarm.fresh(ctx).copy(hour = 8, minute = 15, days = Alarm.WEEKEND, name = "Weekend", backup = "tone"); Alarm.save(ctx, wknd)
+        assertNotEquals(work.id, wknd.id)
+        val l = Alarm.all(ctx)
+        assertEquals(listOf("Work", "Weekend"), l.map { it.name })         // in time order
+        assertEquals("tone", l[1].backup)
+        // Saturday 07:00 → the weekend one (8:15 today); Friday 07:00 → the workday one on Monday? no: Saturday 8:15
+        assertEquals("Weekend", Alarm.upcoming(cal(2026, 11, 14, 7, 0), l)!!.first.name)
+        val fri = Alarm.upcoming(cal(2026, 11, 13, 7, 0), l)!!
+        assertEquals("Weekend", fri.first.name); assertEquals(14, fri.second.get(Calendar.DAY_OF_MONTH))
+        val sunNight = Alarm.upcoming(cal(2026, 11, 15, 22, 0), l)!!
+        assertEquals("Work", sunNight.first.name); assertEquals(16, sunNight.second.get(Calendar.DAY_OF_MONTH))
+        // editing one leaves the other alone
+        Alarm.save(ctx, l[0].copy(hour = 7)); assertEquals(8, Alarm.byId(ctx, wknd.id)!!.hour); assertEquals(7, Alarm.byId(ctx, work.id)!!.hour)
+        // switched off: not "next"
+        Alarm.save(ctx, Alarm.byId(ctx, wknd.id)!!.copy(on = false))
+        assertEquals("Work", Alarm.upcoming(cal(2026, 11, 13, 8, 0), Alarm.all(ctx))!!.first.name)
+        Alarm.remove(ctx, work.id); assertEquals(listOf(wknd.id), Alarm.all(ctx).map { it.id })
+        assertNull(Alarm.upcoming(cal(2026, 11, 13, 8, 0), Alarm.all(ctx)))
+    }
+    @Test fun alarms_many_ids_unique() {
+        val ctx = RuntimeEnvironment.getApplication(); alarmPrefs().edit().clear().commit()
+        repeat(6) { Alarm.save(ctx, Alarm.fresh(ctx).copy(hour = it)) }
+        assertEquals(6, Alarm.all(ctx).map { it.id }.toSet().size)
+    }
+    @Test fun alarm_setup_json_roundtrip_and_bad_values() {
+        val s = Alarm.Setup(true, 23, 59, setOf(1, 7), null, 120, 100, id = 9, name = "Late", backup = "tone")
+        assertEquals(s, Alarm.Setup.fromJson(s.toJson()))
+        val bad = Alarm.Setup.fromJson(JSONObject("""{"hour":30,"minute":-4,"days":[0,9,3],"volume":5,"fade":9999,"backup":""}"""))
+        assertEquals(23, bad.hour); assertEquals(0, bad.minute); assertEquals(setOf(3), bad.days); assertEquals(20, bad.volume)
+        assertEquals(300, bad.fadeSec); assertEquals("auto", bad.backup)
+    }
+    @Test fun alarm_when_labels() {
+        val now = cal(2026, 11, 13, 22, 0)   // Friday night
+        assertEquals("Today 23:30", Alarm.whenLabel(now, Alarm.next(now, 23, 30, emptySet()), true))
+        assertEquals("Tomorrow, Saturday 08:15", Alarm.whenLabel(now, Alarm.next(now, 8, 15, Alarm.WEEKEND), true))
+        assertEquals("Monday 6:30 am", Alarm.whenLabel(now, Alarm.next(now, 6, 30, Alarm.WORKDAYS), false))
+        assertEquals("12:05 pm", Alarm.timeLabel(12, 5, false)); assertEquals("12:00 am", Alarm.timeLabel(0, 0, false))
+    }
+    @Test fun alarm_quiet_check_is_only_fresh() {
+        val ctx = RuntimeEnvironment.getApplication(); alarmPrefs().edit().clear().commit()
+        assertFalse(Alarm.knownDown(ctx, 3))
+        Alarm.markChecked(ctx, 3, false); assertTrue(Alarm.knownDown(ctx, 3))
+        alarmPrefs().edit().putLong("checked_3", System.currentTimeMillis() - 30 * 60_000L).commit()
+        assertFalse("an old check doesn't count", Alarm.knownDown(ctx, 3))
+        Alarm.markChecked(ctx, 3, true); assertFalse(Alarm.knownDown(ctx, 3))
+    }
+
+    // ---------------- first-time tour (2.7)
+    @Test fun tour_has_eight_steps_with_welcome_first() {
+        assertEquals(8, Tour.COUNT); assertNull(Tour.STEPS[0].target)
+        assertEquals(listOf("star", "langs", "sort", "row", "header", "player", "nav"), Tour.STEPS.drop(1).map { it.target })
+        assertTrue(Tour.STEPS.all { it.text.length in 30..200 })
+    }
+    @Test fun tour_once_only() {
+        val ctx = RuntimeEnvironment.getApplication()
+        ctx.getSharedPreferences("tour", 0).edit().clear().commit()
+        Tour.done(ctx); assertFalse(Tour.shouldShow(ctx))
     }
 
     // ---------------- most heard / top rated

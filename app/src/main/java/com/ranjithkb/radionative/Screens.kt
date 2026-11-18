@@ -242,8 +242,10 @@ fun SettingsScreen(close: () -> Unit, open: (String) -> Unit) {
             trailing = { VelvetSwitch(Theme.resume, "Resume after other apps") { Theme.resume = it; save() } })
 
         SectionHead("More")
-        val a = remember { Alarm.load(ctx) }
-        SettingRow("Alarm", value = if (a.on) "%02d:%02d · %s".format(a.hour, a.minute, Alarm.daysLabel(a.days)) else "Off", onClick = { open("alarm") })
+        val alarms = remember { Alarm.all(ctx) }
+        val up = remember(alarms) { Alarm.upcoming(java.util.Calendar.getInstance(), alarms) }
+        SettingRow("Alarms", value = when { up != null -> Alarm.timeLabel(up.first.hour, up.first.minute, android.text.format.DateFormat.is24HourFormat(ctx)) +
+            (if (alarms.count { it.on } > 1) " +${alarms.count { it.on } - 1}" else ""); else -> "Off" }, onClick = { open("alarm") })
         SettingRow("Request a station", sub = "Missing a station? Tell us", onClick = { open("request") })
         SettingRow("Reset to the original look", onClick = {
             Theme.themeId = "velvet"; Theme.mode = "phone"; Theme.text = 0; Theme.font = "jost"; Theme.spacing = 0; Theme.viz = "off"
@@ -497,44 +499,94 @@ fun SortSheet(current: String, onPick: (String) -> Unit, close: () -> Unit) {
 
 // ------------------------------------------------------------------ Alarm
 
-@OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
+/** Alarms: a list (workdays, weekend…), each opening its own page. [choices] are the stations to wake up to. */
 @Composable
 fun AlarmScreen(choices: List<Pair<Station, String>>, close: () -> Unit) {
     val ctx = LocalContext.current
-    var s by remember { mutableStateOf(Alarm.load(ctx)) }
-    var pickTime by remember { mutableStateOf(false) }
-    var pickStation by remember { mutableStateOf(false) }
+    var list by remember { mutableStateOf(Alarm.all(ctx)) }
+    var editing by remember { mutableStateOf<Alarm.Setup?>(null) }
+    var isNew by remember { mutableStateOf(false) }
     var exact by remember { mutableStateOf(Alarm.canExact(ctx)) }
+    val is24 = android.text.format.DateFormat.is24HourFormat(ctx)
     val life = androidx.compose.ui.platform.LocalLifecycleOwner.current
     DisposableEffect(life) {
         val o = androidx.lifecycle.LifecycleEventObserver { _, e -> if (e == androidx.lifecycle.Lifecycle.Event.ON_RESUME) { exact = Alarm.canExact(ctx); Alarm.schedule(ctx) } }
         life.lifecycle.addObserver(o); onDispose { life.lifecycle.removeObserver(o) }
     }
-    fun save(n: Alarm.Setup) { s = n; Alarm.save(ctx, n) }
-    SubPage("Alarm", close) {
-        SettingRow("Alarm on", trailing = { VelvetSwitch(s.on, "Alarm on") { save(s.copy(on = it)) } })
-        if (s.on && !exact && Build.VERSION.SDK_INT >= 31) {
-            Column(Modifier.padding(top = 12.dp).fillMaxWidth().border(1.dp, GoldC).padding(14.dp)) {
-                Text("To ring exactly on time, allow Radio Velvet to set alarms. Without it the alarm may be a few minutes late.",
-                    fontSize = 14.sp, color = Title, lineHeight = 20.sp)
-                TextButton({ ctx.startActivity(Intent(AndroidSettings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM,
-                    android.net.Uri.parse("package:${ctx.packageName}"))) }, Modifier.heightIn(min = 48.dp)) { Text("Allow alarms", color = AccentText) }
+    fun refresh() { list = Alarm.all(ctx) }
+    SubPage("Alarms", close) {
+        if (list.any { it.on } && !exact && Build.VERSION.SDK_INT >= 31) ExactNote(ctx)
+        val up = Alarm.upcoming(java.util.Calendar.getInstance(), list)
+        Text(if (up == null) "No alarm on" else "Next: " + Alarm.whenLabel(java.util.Calendar.getInstance(), up.second, is24) +
+            (up.first.name.takeIf { it.isNotBlank() }?.let { " · $it" } ?: ""),
+            fontSize = 14.sp, color = Soft, modifier = Modifier.padding(top = 6.dp, bottom = 6.dp))
+        if (list.isEmpty()) Text("Wake up to your radio. Set one for workdays and another for the weekend.",
+            fontSize = 15.sp, color = Title, lineHeight = 22.sp, modifier = Modifier.padding(vertical = 14.dp))
+        list.forEach { a ->
+            Column {
+                Row(Modifier.fillMaxWidth().heightIn(min = 76.dp).clickable(onClickLabel = "Edit the alarm") { editing = a; isNew = false }
+                    .padding(vertical = 10.dp), verticalAlignment = Alignment.CenterVertically) {
+                    Column(Modifier.weight(1f)) {
+                        Text(Alarm.timeLabel(a.hour, a.minute, is24), fontSize = 34.sp, fontWeight = FontWeight.Light, color = if (a.on) Title else Soft)
+                        Text(listOf(a.name, Alarm.daysLabel(a.days), a.station?.optString("name")?.ifBlank { null } ?: "Last station played")
+                            .filter { it.isNotBlank() }.joinToString(" · "), fontSize = 13.sp, color = Soft, maxLines = 2)
+                    }
+                    VelvetSwitch(a.on, "Alarm " + Alarm.timeLabel(a.hour, a.minute, is24) + " on") { Alarm.save(ctx, a.copy(on = it)); refresh() }
+                }
+                HorizontalDivider(color = Line)
             }
         }
-        Text("%02d:%02d".format(s.hour, s.minute), Modifier.fillMaxWidth().padding(top = 18.dp)
-            .clickable(onClickLabel = "Change the time") { pickTime = true }, fontSize = 72.sp, fontWeight = FontWeight.Light,
+        Box(Modifier.padding(top = 22.dp).fillMaxWidth().heightIn(min = 52.dp).border(1.dp, Title)
+            .clickable(onClickLabel = "Add an alarm") { editing = Alarm.fresh(ctx); isNew = true }, contentAlignment = Alignment.Center) {
+            Label("+  Add an alarm", Title, 11) }
+        Text("Each alarm plays even after the phone restarts. If its station doesn't answer, another one plays, and if none does, " +
+            "the phone's alarm sound rings, so you always wake up. Stop or snooze it from the notification.",
+            fontSize = 13.sp, color = Soft, lineHeight = 19.sp, modifier = Modifier.padding(top = 16.dp))
+    }
+    editing?.let { e ->
+        AlarmEdit(e, isNew, choices, close = { editing = null; refresh() })
+    }
+}
+
+@Composable
+private fun ExactNote(ctx: android.content.Context) {
+    Column(Modifier.padding(top = 12.dp).fillMaxWidth().border(1.dp, GoldC).padding(14.dp)) {
+        Text("To ring exactly on time, allow Radio Velvet to set alarms. Without it an alarm may be a few minutes late.",
+            fontSize = 14.sp, color = Title, lineHeight = 20.sp)
+        TextButton({ ctx.startActivity(Intent(AndroidSettings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM,
+            android.net.Uri.parse("package:${ctx.packageName}"))) }, Modifier.heightIn(min = 48.dp)) { Text("Allow alarms", color = AccentText) }
+    }
+}
+
+/** One alarm's page. Nothing changes until "Save alarm"; ← leaves it as it was. */
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
+@Composable
+fun AlarmEdit(start: Alarm.Setup, isNew: Boolean, choices: List<Pair<Station, String>>, close: () -> Unit) {
+    val ctx = LocalContext.current
+    var s by remember(start.id) { mutableStateOf(start) }
+    var pickTime by remember { mutableStateOf(false) }
+    var pickStation by remember { mutableStateOf(false) }
+    var pickBackup by remember { mutableStateOf(false) }
+    val is24 = android.text.format.DateFormat.is24HourFormat(ctx)
+    Box(Modifier.fillMaxSize()) {
+    SubPage(if (isNew) "New alarm" else "Alarm", close) {
+        Text(Alarm.timeLabel(s.hour, s.minute, is24), Modifier.fillMaxWidth().padding(top = 10.dp)
+            .clickable(onClickLabel = "Change the time") { pickTime = true }, fontSize = 64.sp, fontWeight = FontWeight.Light,
             color = Title, textAlign = androidx.compose.ui.text.style.TextAlign.Center)
         Label("Tap the time to change it", Soft, 9, Modifier.align(Alignment.CenterHorizontally))
+        Field("Name (optional)", s.name, "e.g. Work, Weekend", 30) { s = s.copy(name = it) }
         SectionHead("Repeat · " + Alarm.daysLabel(s.days))
+        val quick = listOf("Workdays" to Alarm.WORKDAYS, "Weekend" to Alarm.WEEKEND, "Every day" to Alarm.EVERY_DAY, "Once" to emptySet())
+        Segmented(quick.map { it.first }, quick.indexOfFirst { it.second == s.days }) { s = s.copy(days = quick[it].second) }
         val order = listOf(Calendar.MONDAY to "M", Calendar.TUESDAY to "T", Calendar.WEDNESDAY to "W", Calendar.THURSDAY to "T",
             Calendar.FRIDAY to "F", Calendar.SATURDAY to "S", Calendar.SUNDAY to "S")
         val full = listOf("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
-        Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+        Row(Modifier.fillMaxWidth().padding(top = 12.dp), horizontalArrangement = Arrangement.SpaceBetween) {
             order.forEachIndexed { i, (d, l) ->
                 val on = d in s.days
                 Box(Modifier.size(44.dp).clip(CircleShape).background(if (on) Title else Color.Transparent).border(1.dp, if (on) Title else Line, CircleShape)
                     .semantics { selected = on; contentDescription = full[i] }
-                    .clickable { save(s.copy(days = if (on) s.days - d else s.days + d)) }, contentAlignment = Alignment.Center) {
+                    .clickable { s = s.copy(days = if (on) s.days - d else s.days + d) }, contentAlignment = Alignment.Center) {
                     Text(l, fontSize = 14.sp, color = if (on) Paper else Title)
                 }
             }
@@ -542,34 +594,58 @@ fun AlarmScreen(choices: List<Pair<Station, String>>, close: () -> Unit) {
         SectionHead("Wake up to")
         val name = s.station?.optString("name")?.takeIf { it.isNotBlank() }
         SettingRow(name ?: "The last station I played", sub = s.station?.optString("lang")?.takeIf { it.isNotBlank() }, onClick = { pickStation = true })
+        SectionHead("If it doesn't play")
+        SettingRow(backupLabel(s.backup), sub = "The phone's alarm sound rings within 20 seconds if nothing plays", onClick = { pickBackup = true })
         SectionHead("Fade in")
         Segmented(listOf("Off", "30 s", "1 min", "2 min"), listOf(0, 30, 60, 120).indexOf(s.fadeSec).coerceAtLeast(0)) {
-            save(s.copy(fadeSec = listOf(0, 30, 60, 120)[it])) }
+            s = s.copy(fadeSec = listOf(0, 30, 60, 120)[it]) }
         SectionHead("Volume · ${s.volume}%")
-        Slider(s.volume.toFloat(), { s = s.copy(volume = (it / 5).toInt() * 5) }, onValueChangeFinished = { save(s) },
+        Slider(s.volume.toFloat(), { s = s.copy(volume = (it / 5).toInt() * 5) },
             valueRange = 20f..100f, colors = SliderDefaults.colors(thumbColor = Accent, activeTrackColor = Accent, inactiveTrackColor = Line))
-        Text("Plays even after the phone restarts. If the station doesn't answer, the phone's alarm tone rings instead, so you still wake up. " +
-            "Pause it from the notification or the app.", fontSize = 13.sp, color = Soft, lineHeight = 19.sp, modifier = Modifier.padding(top = 16.dp))
+        Box(Modifier.padding(top = 22.dp).fillMaxWidth().heightIn(min = 52.dp).background(Title)
+            .clickable(onClickLabel = "Save alarm") { Alarm.save(ctx, s.copy(on = true)); close() }, contentAlignment = Alignment.Center) {
+            Label("Save alarm", Paper, 11) }
+        if (!isNew) Box(Modifier.padding(top = 10.dp).fillMaxWidth().heightIn(min = 52.dp)
+            .clickable(onClickLabel = "Delete alarm") { Alarm.remove(ctx, s.id); close() }, contentAlignment = Alignment.Center) {
+            Label("Delete alarm", AccentText, 11) }
     }
     if (pickTime) {
-        val st = rememberTimePickerState(s.hour, s.minute, is24Hour = android.text.format.DateFormat.is24HourFormat(ctx))
+        val st = rememberTimePickerState(s.hour, s.minute, is24Hour = is24)
         AlertDialog(onDismissRequest = { pickTime = false }, containerColor = Paper,
-            confirmButton = { TextButton({ save(s.copy(hour = st.hour, minute = st.minute, on = true)); pickTime = false }) { Text("Set", color = AccentText) } },
+            confirmButton = { TextButton({ s = s.copy(hour = st.hour, minute = st.minute); pickTime = false }) { Text("Set", color = AccentText) } },
             dismissButton = { TextButton({ pickTime = false }) { Text("Cancel", color = Soft) } },
             text = { TimePicker(st, colors = TimePickerDefaults.colors(selectorColor = Accent, clockDialColor = Paper2,
                 timeSelectorSelectedContainerColor = AccentSoft, periodSelectorSelectedContainerColor = AccentSoft)) })
     }
     if (pickStation) {
-        Box(Modifier.fillMaxSize()) {
-            SubPage("Wake up to", { pickStation = false }) {
-                SettingRow("The last station I played", onClick = { save(s.copy(station = null)); pickStation = false })
-                if (choices.isEmpty()) Text("Add favourites (♡) to choose a station here.", fontSize = 14.sp, color = Soft, modifier = Modifier.padding(top = 12.dp))
-                choices.forEach { (st, lang) ->
-                    SettingRow(st.name, sub = lang.ifBlank { null }, onClick = { save(s.copy(station = Alarm.stationJson(st, lang))); pickStation = false })
-                }
+        SubPage("Wake up to", { pickStation = false }) {
+            SettingRow("The last station I played", onClick = { s = s.copy(station = null); pickStation = false })
+            if (choices.isEmpty()) Text("Add favourites (♡) to choose a station here.", fontSize = 14.sp, color = Soft, modifier = Modifier.padding(top = 12.dp))
+            choices.forEach { (st, lang) ->
+                SettingRow(st.name, sub = lang.ifBlank { null }, onClick = { s = s.copy(station = Alarm.stationJson(st, lang)); pickStation = false })
             }
         }
     }
+    if (pickBackup) {
+        SubPage("If it doesn't play", { pickBackup = false }) {
+            Text("First the station's other links are tried. Then:", fontSize = 14.sp, color = Soft, modifier = Modifier.padding(top = 4.dp, bottom = 6.dp))
+            SettingRow("A favourite that's working", sub = "Your favourites in order, then stations you played lately",
+                onClick = { s = s.copy(backup = "auto"); pickBackup = false })
+            SettingRow("The phone's alarm sound", sub = "No other station", onClick = { s = s.copy(backup = "tone"); pickBackup = false })
+            if (choices.isNotEmpty()) SectionHead("Or this station")
+            choices.filter { it.first.key != s.station?.let { o -> o.optString("col") + ":" + o.optString("id") } }.forEach { (st, lang) ->
+                SettingRow(st.name, sub = lang.ifBlank { null },
+                    onClick = { s = s.copy(backup = Alarm.stationJson(st, lang).toString()); pickBackup = false })
+            }
+        }
+    }
+    }
+}
+
+private fun backupLabel(b: String) = when (b) {
+    "auto" -> "A favourite that's working"
+    "tone" -> "The phone's alarm sound"
+    else -> runCatching { org.json.JSONObject(b).optString("name") }.getOrNull()?.ifBlank { null } ?: "A favourite that's working"
 }
 
 // ------------------------------------------------------------------ Request a station

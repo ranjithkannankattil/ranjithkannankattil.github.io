@@ -88,7 +88,7 @@ class PlaybackService : MediaLibraryService() {
         private val WAITS = longArrayOf(1_500, 3_000, 5_000, 8_000, 12_000, 20_000, 30_000)
         fun delayMs(n: Int): Long = WAITS[n.coerceIn(0, WAITS.size - 1)]
     }
-    companion object { const val CLOSE = "velvet.close"; const val ALARM = "velvet.alarm"; const val RESUME = "velvet.resume" }
+    companion object { const val CLOSE = "velvet.close"; const val ALARM = "velvet.alarm"; const val ALARM_STOP = "velvet.alarm.stop"; const val RESUME = "velvet.resume" }
     private lateinit var eq: EqEngine
     private lateinit var resumer: ResumeWatcher
     private var tone: android.media.Ringtone? = null
@@ -123,6 +123,7 @@ class PlaybackService : MediaLibraryService() {
             override fun onPlayWhenReadyChanged(playWhenReady: Boolean, reason: Int) {
                 if (playWhenReady) return
                 stopTone(); giveUpReconnect()
+                if (ringing) stopRing(pause = false)
                 if (System.currentTimeMillis() > alarmUntil) player.volume = 1f
                 // another app (a video, a game) took the sound for good: start again once it's quiet, if allowed
                 if (reason == Player.PLAY_WHEN_READY_CHANGE_REASON_AUDIO_FOCUS_LOSS) resumer.lostForGood() else resumer.cancel()
@@ -135,7 +136,7 @@ class PlaybackService : MediaLibraryService() {
             }
             // listening time: count only while sound is actually playing
             override fun onIsPlayingChanged(isPlaying: Boolean) {
-                if (isPlaying) { stopTone(); onAir() }
+                if (isPlaying) { stopTone(); onAir(); if (ringing) AlarmLog.note(this@PlaybackService, "on air: " + (player.currentMediaItem?.mediaId ?: "")) }
                 val item = player.currentMediaItem
                 if (isPlaying && item != null) Listen.start(this@PlaybackService, item.mediaId.removePrefix("st|"),
                     item.mediaMetadata.extras?.getString("station") ?: item.mediaMetadata.station?.toString() ?: "")
@@ -216,50 +217,114 @@ class PlaybackService : MediaLibraryService() {
 
     /** Close (✕ while paused): stop, clear the list and remove the notification. The last station is kept for resuming. */
     private fun closeAll() {
-        SleepTimer.off(); resumer.cancel(); stopTone(); giveUpReconnect()
+        SleepTimer.off(); resumer.cancel(); stopRing(pause = false); stopTone(); giveUpReconnect()
         val p = session.player
         p.stop(); p.clearMediaItems()
         if (p !== local) { player.stop(); player.clearMediaItems() }
         stopSelf()
     }
 
-    /** The alarm: the chosen station (or the last one), fading in from quiet; a soft alarm tone if it doesn't start. */
+    // ---- the alarm, with a safety net so it always wakes you
+    // The chosen station (or the last one) fades in. If it doesn't play: its other links, then the backup (your
+    // favourites / one chosen station / straight to the alarm sound). The phone's alarm sound starts at the latest
+    // Alarm.TONE_AFTER_MS after the alarm time, whatever happens, and stops on its own once the radio is on air.
+    // It keeps going until Stop / Snooze / pause, at most Alarm.RING_MAX_MS.
+    private var ringing = false
+    private var ringId = 0
+    private var ringJob: kotlinx.coroutines.Job? = null
+    private var candidateAt = 0L
+    private val candidates = ArrayDeque<MediaItem>()
+
+    private fun itemOf(o: org.json.JSONObject?): MediaItem? = o?.let { runCatching {
+        val streams = it.getJSONArray("streams").let { a -> (0 until a.length()).map { a.getString(it) } }
+        if (streams.isEmpty()) null
+        else Station(it.getString("id"), it.getString("name"), "", streams, col = it.getString("col")).toItem(it.optString("lang")) }.getOrNull() }
+
+    /** Who to try after the alarm's station: pure order rules, testable. */
+    private fun backups(backup: String, primaryKey: String?): List<MediaItem> {
+        if (backup == "tone") return emptyList()
+        val picked = if (backup != "auto") itemOf(runCatching { org.json.JSONObject(backup) }.getOrNull()) else null
+        val favs = Favs(this).all().map { it.toItem("") }
+        val recent = Recent.all(this).map { it.station.toItem(it.lang) }
+        val l = (listOfNotNull(picked) + favs + recent).distinctBy { it.mediaId }.filter { it.mediaId != primaryKey }
+        return l.take(6)
+    }
+
     private fun ring(args: Bundle) {
-        resumer.cancel()
+        stopRing(pause = false)
+        resumer.cancel(); giveUpReconnect()
+        ringing = true; ringId = args.getInt("id", 1)
         val p = session.player
-        val st = args.getString("station")?.let { runCatching { org.json.JSONObject(it) }.getOrNull() }
-        val item = st?.let { o -> runCatching {
-            val streams = o.getJSONArray("streams").let { a -> (0 until a.length()).map { a.getString(it) } }
-            Station(o.getString("id"), o.getString("name"), "", streams, col = o.getString("col")).toItem(o.optString("lang")) }.getOrNull() }
-        if (item != null) { p.setMediaItem(item) }
-        else if (p.mediaItemCount == 0) savedQueue()?.let { q -> p.setMediaItems(q.mediaItems, q.startIndex, q.startPositionMs) }
+        val primary = itemOf(args.getString("station")?.let { runCatching { org.json.JSONObject(it) }.getOrNull() })
+            ?: savedQueue()?.let { q -> q.mediaItems.getOrNull(q.startIndex) }
+        candidates.clear()
+        val backup = args.getString("backup") ?: "auto"
+        candidates.addAll(backups(backup, primary?.mediaId))
+        val down = args.getBoolean("down")
+        if (down && primary != null) candidates.addLast(primary)        // the check said it's down: backups first, it last
+        val first = if (primary != null && !down) primary else candidates.removeFirstOrNull()
+        AlarmLog.note(this, "ring ${ringId}: " + (first?.mediaId ?: "tone") + (if (down) " (station was down)" else "") + ", ${candidates.size} backups")
         val target = (args.getInt("volume", 70).coerceIn(20, 100)) / 100f
         val fade = args.getInt("fade", 60).coerceIn(0, 300)
-        alarmUntil = System.currentTimeMillis() + fade * 1000L + 5_000   // volume stays as set until the listener changes something
-        if (p === local) player.volume = if (fade > 0) 0.05f else target
-        p.prepare(); p.play()
-        scope.launch {
-            if (fade > 0 && p === local) {
-                val steps = fade * 4
-                for (i in 1..steps) { kotlinx.coroutines.delay(250); if (!player.playWhenReady) break
-                    player.volume = 0.05f + (target - 0.05f) * i / steps }
+        val start = System.currentTimeMillis()
+        alarmUntil = start + fade * 1000L + Alarm.RING_MAX_MS
+        if (first == null) startTone()
+        else {
+            if (p === local) player.volume = if (fade > 0) 0.05f else target
+            p.setMediaItem(first); candidateAt = start; p.prepare(); p.play()
+        }
+        ringJob = scope.launch {
+            val steps = fade * 4
+            var i = 0
+            while (ringing) {
+                kotlinx.coroutines.delay(250)
+                val now = System.currentTimeMillis()
+                val pl = session.player
+                if (pl.isPlaying) { if (pl === local && i < steps) { i++; player.volume = 0.05f + (target - 0.05f) * i / steps } }
+                else {
+                    // this station has had its chance (stuck connecting): the next one
+                    if (now - candidateAt > 9_000 && candidates.isNotEmpty()) nextCandidate()
+                    if (now - start > Alarm.TONE_AFTER_MS && !toneOn) startTone()
+                }
+                // nobody stopped it: the alarm sound ends; a radio that's playing carries on as normal listening
+                if (now - start > Alarm.RING_MAX_MS) { stopRing(pause = !pl.isPlaying); break }
             }
-            kotlinx.coroutines.delay(if (fade > 0) 5_000 else 30_000)
-            if (!session.player.isPlaying && session.player.playWhenReady) startTone()
         }
     }
+
+    /** The alarm's station and its links all failed (or got stuck): the next backup, or the alarm sound. */
+    private fun nextCandidate(): Boolean {
+        val n = candidates.removeFirstOrNull()
+        if (n == null) { startTone(); return false }
+        val p = session.player
+        p.setMediaItem(n); candidateAt = System.currentTimeMillis(); p.prepare(); p.play()
+        return true
+    }
+
+    /** Stop / Snooze / pause: everything about the alarm ends (the radio too, unless [pause] is false). */
+    private fun stopRing(pause: Boolean) {
+        val was = ringing
+        ringing = false; ringJob?.cancel(); ringJob = null; candidates.clear(); stopTone(); alarmUntil = 0
+        if (was) { Alarm.clearRinging(this); AlarmLog.note(this, "stopped"); if (pause) { session.player.pause(); player.volume = 1f } }
+    }
+
+    private var toneOn = false
     private fun startTone() {
+        if (toneOn) return
+        toneOn = true
         try {
             val uri = android.media.RingtoneManager.getActualDefaultRingtoneUri(this, android.media.RingtoneManager.TYPE_ALARM)
-                ?: android.media.RingtoneManager.getDefaultUri(android.media.RingtoneManager.TYPE_NOTIFICATION)
+                ?: android.media.RingtoneManager.getDefaultUri(android.media.RingtoneManager.TYPE_ALARM)
+                ?: android.media.RingtoneManager.getDefaultUri(android.media.RingtoneManager.TYPE_RINGTONE)
             tone = android.media.RingtoneManager.getRingtone(this, uri)?.apply {
                 audioAttributes = android.media.AudioAttributes.Builder().setUsage(android.media.AudioAttributes.USAGE_ALARM).build()
                 if (android.os.Build.VERSION.SDK_INT >= 28) isLooping = true
                 play() }
-            scope.launch { kotlinx.coroutines.delay(120_000); stopTone() }
+            if (ringing) Alarm.byId(this, ringId)?.let { Alarm.showRinging(this, it, tone = true) }
+            AlarmLog.note(this, "tone")
         } catch (e: Exception) { }
     }
-    private fun stopTone() { try { tone?.stop() } catch (e: Exception) { }; tone = null }
+    private fun stopTone() { try { tone?.stop() } catch (e: Exception) { }; tone = null; toneOn = false }
 
     /** "Artist - Song" from the stream: show it, and look up the cover. */
     private fun nowPlaying(raw: String) {
@@ -300,7 +365,9 @@ class PlaybackService : MediaLibraryService() {
     private fun onFailed(error: PlaybackException) {
         val network = error.errorCode in 2000..2999
         if (playedOk && network) { reconnectLater(); return }        // it was on air: the signal, not the station
-        if (!nextSource() && (network || playedOk)) reconnectLater()
+        if (nextSource()) return
+        if (ringing) { nextCandidate(); return }                     // an alarm can't wait: the next station
+        if (network || playedOk) reconnectLater()
     }
 
     private fun reconnectLater() {
@@ -364,7 +431,7 @@ class PlaybackService : MediaLibraryService() {
         override fun onConnect(s: MediaSession, c: MediaSession.ControllerInfo): MediaSession.ConnectionResult =
             MediaSession.ConnectionResult.AcceptedResultBuilder(s)
                 .setAvailableSessionCommands(MediaSession.ConnectionResult.DEFAULT_SESSION_AND_LIBRARY_COMMANDS.buildUpon()
-                    .add(SessionCommand(CLOSE, Bundle.EMPTY)).add(SessionCommand(ALARM, Bundle.EMPTY))
+                    .add(SessionCommand(CLOSE, Bundle.EMPTY)).add(SessionCommand(ALARM, Bundle.EMPTY)).add(SessionCommand(ALARM_STOP, Bundle.EMPTY))
                     .add(SessionCommand(RESUME, Bundle.EMPTY)).build())
                 .build()
 
@@ -372,6 +439,7 @@ class PlaybackService : MediaLibraryService() {
                 : ListenableFuture<SessionResult> {
             if (cmd.customAction == CLOSE) { closeAll(); return Futures.immediateFuture(SessionResult(SessionResult.RESULT_SUCCESS)) }
             if (cmd.customAction == ALARM) { ring(args); return Futures.immediateFuture(SessionResult(SessionResult.RESULT_SUCCESS)) }
+            if (cmd.customAction == ALARM_STOP) { stopRing(pause = true); return Futures.immediateFuture(SessionResult(SessionResult.RESULT_SUCCESS)) }
             if (cmd.customAction == RESUME) {
                 savedQueue()?.let { q -> val p = session.player
                     p.setMediaItems(q.mediaItems, q.startIndex, q.startPositionMs); p.prepare(); p.play() }

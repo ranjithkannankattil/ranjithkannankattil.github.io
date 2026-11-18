@@ -204,6 +204,7 @@ class DeviceTest {
     }
 
     @Test fun t10_alarm_rings_and_fades_in() {
+        ctx.getSharedPreferences("alarm", 0).edit().clear().commit()
         val (list, i) = playSomething()
         val st = list[i]
         main { b.pause() }
@@ -224,6 +225,116 @@ class DeviceTest {
         assertNotNull("alarm is set with Android", next)
         Alarm.save(ctx, Alarm.load(ctx).copy(on = false))
         assertNull("alarm off clears it", ctx.getSystemService(android.app.AlarmManager::class.java).nextAlarmClock)
+    }
+
+    // ---- 2.7: several alarms and the safety net
+    private val dead = listOf("https://127.0.0.1:9/dead.mp3", "https://nothing.invalid/stream")
+    private fun deadStation() = Alarm.stationJson(Station("deadtest", "Dead Test FM", "", dead, col = "english-news"), "English")
+    private fun asStation(it: MediaItem): Station { val ex = it.mediaMetadata.extras!!; val k = it.mediaId.removePrefix("st|")
+        return Station(k.substringAfter(':'), ex.getString("station")!!, "", ex.getStringArrayList("streams")!!, col = k.substringBefore(':')) }
+    private fun lastLog() = AlarmLog.all(ctx).firstOrNull() ?: ""
+    private fun ringing() = ctx.getSystemService(android.app.NotificationManager::class.java).activeNotifications.any { it.id == Alarm.NOTE_ID }
+
+    @Test fun t14_dead_station_falls_back_to_a_favourite() {
+        val (list, i) = playSomething(); main { b.pause() }
+        val good = asStation(list[i])
+        val keepFavs = Favs(ctx).all(); Favs(ctx).replaceAll(listOf(good))
+        try {
+            val t0 = System.currentTimeMillis()
+            main { b.sendCustomCommand(SessionCommand(PlaybackService.ALARM, Bundle.EMPTY),
+                Bundle().apply { putString("station", deadStation().toString()); putInt("fade", 0); putInt("volume", 80); putString("backup", "auto") }) }
+            assertTrue("a favourite plays instead", waitFor(25_000, "backup plays") { b.isPlaying })
+            val took = System.currentTimeMillis() - t0
+            log("dead station → ${main { b.currentMediaItem?.mediaId }} in ${took} ms; log: ${AlarmLog.all(ctx).take(3)}")
+            assertEquals("st|${good.key}", main { b.currentMediaItem?.mediaId })
+            assertTrue("within 20 s", took < 20_000)
+        } finally { Favs(ctx).replaceAll(keepFavs) }
+    }
+
+    @Test fun t15_nothing_plays_so_the_alarm_sound_rings_then_stop() {
+        shell("pm grant ${ctx.packageName} android.permission.POST_NOTIFICATIONS")
+        ctx.getSharedPreferences("alarm", 0).edit().clear().commit()
+        Alarm.save(ctx, Alarm.Setup(true, 6, 0, Alarm.EVERY_DAY, deadStation(), 0, 60, id = 7, name = "Test", backup = "tone"))
+        val t0 = System.currentTimeMillis()
+        ctx.sendBroadcast(Intent(ctx, AlarmReceiver::class.java).setAction(AlarmReceiver.RING).putExtra("id", 7))
+        assertTrue("the alarm sound rings", waitFor(22_000, "tone") { lastLog().contains("tone") })
+        log("tone after ${System.currentTimeMillis() - t0} ms; log: ${AlarmLog.all(ctx).take(4)}")
+        assertTrue("Stop / Snooze notification is up", waitFor(5_000, "notification") { ringing() })
+        assertFalse("no radio playing", main { b.isPlaying })
+        ctx.sendBroadcast(Intent(ctx, AlarmReceiver::class.java).setAction(AlarmReceiver.STOP).putExtra("id", 7))
+        assertTrue("Stop ends it", waitFor(10_000, "stopped") { lastLog().contains("stopped") })
+        assertTrue("notification gone", waitFor(5_000, "notification gone") { !ringing() })
+        assertTrue("still set for tomorrow", Alarm.byId(ctx, 7)!!.on)
+        Alarm.remove(ctx, 7)
+    }
+
+    @Test fun t16_snooze_rings_again_in_ten_minutes() {
+        ctx.getSharedPreferences("alarm", 0).edit().clear().commit()
+        Alarm.save(ctx, Alarm.Setup(true, 6, 0, emptySet(), deadStation(), 0, 60, id = 8, backup = "tone"))
+        ctx.sendBroadcast(Intent(ctx, AlarmReceiver::class.java).setAction(AlarmReceiver.RING).putExtra("id", 8))
+        assertTrue("rings", waitFor(22_000, "tone") { lastLog().contains("tone") })
+        assertFalse("a one-off alarm switches itself off", Alarm.byId(ctx, 8)!!.on)
+        ctx.sendBroadcast(Intent(ctx, AlarmReceiver::class.java).setAction(AlarmReceiver.SNOOZE).putExtra("id", 8))
+        assertTrue("snooze stops the sound", waitFor(10_000, "stopped") { lastLog().contains("stopped") })
+        assertTrue("snooze is set", waitFor(5_000, "snooze set") { Alarm.snoozeSet(ctx, 8) })
+        // the snoozed alarm rings even though the one-off is now off
+        ctx.sendBroadcast(Intent(ctx, AlarmReceiver::class.java).setAction(AlarmReceiver.SNOOZED).putExtra("id", 8))
+        assertTrue("snoozed alarm rings again", waitFor(22_000, "tone again") { lastLog().contains("tone") })
+        ctx.sendBroadcast(Intent(ctx, AlarmReceiver::class.java).setAction(AlarmReceiver.STOP).putExtra("id", 8))
+        assertTrue(waitFor(10_000, "stopped") { lastLog().contains("stopped") })
+        Alarm.remove(ctx, 8)
+    }
+
+    @Test fun t17_several_alarms_android_rings_the_earliest() {
+        shell("appops set ${ctx.packageName} SCHEDULE_EXACT_ALARM allow")
+        val am = ctx.getSystemService(android.app.AlarmManager::class.java)
+        (0 until 40).any { am.canScheduleExactAlarms() || run { Thread.sleep(250); false } }
+        ctx.getSharedPreferences("alarm", 0).edit().clear().commit()
+        val now = java.util.Calendar.getInstance()
+        val a = Alarm.Setup(true, (now.get(java.util.Calendar.HOUR_OF_DAY) + 3) % 24, 10, Alarm.EVERY_DAY, null, 60, 70, id = 1, name = "Soon")
+        val b2 = Alarm.Setup(true, (now.get(java.util.Calendar.HOUR_OF_DAY) + 7) % 24, 40, Alarm.EVERY_DAY, null, 60, 70, id = 2, name = "Later")
+        Alarm.save(ctx, b2); Alarm.save(ctx, a)
+        val want = Alarm.upcoming(java.util.Calendar.getInstance(), Alarm.all(ctx))!!
+        val got = am.nextAlarmClock
+        log("next alarm: want ${want.first.name} ${want.second.time}, Android has ${got?.triggerTime?.let { java.util.Date(it) }}")
+        assertEquals("Soon", want.first.name)
+        assertEquals(want.second.timeInMillis, got!!.triggerTime)
+        Alarm.save(ctx, a.copy(on = false))
+        assertEquals("the other one is next once the first is off", Alarm.upcoming(java.util.Calendar.getInstance(), Alarm.all(ctx))!!.second.timeInMillis,
+            am.nextAlarmClock!!.triggerTime)
+        Alarm.remove(ctx, 1); Alarm.remove(ctx, 2)
+        assertNull("none left", am.nextAlarmClock)
+    }
+
+    @Test fun t18_quiet_check_before_the_alarm() {
+        val (list, i) = playSomething(); main { b.pause() }
+        val good = asStation(list[i])
+        val ok = Alarm.streamAnswers(good.streams); val bad = Alarm.streamAnswers(dead)
+        log("quiet check: working station $ok, dead one $bad")
+        assertTrue(ok); assertFalse(bad)
+    }
+
+    @Test fun t19_known_down_goes_straight_to_the_backup() {
+        val (list, i) = playSomething(); main { b.pause() }
+        val good = asStation(list[i]); val other = asStation(list[(i + 1) % list.size])
+        // the alarm's station "is down" (the check said so): the chosen backup plays first
+        main { b.sendCustomCommand(SessionCommand(PlaybackService.ALARM, Bundle.EMPTY), Bundle().apply {
+            putString("station", Alarm.stationJson(other, "English").toString()); putInt("fade", 0); putInt("volume", 80)
+            putString("backup", Alarm.stationJson(good, "English").toString()); putBoolean("down", true) }) }
+        assertTrue(waitFor(25_000, "backup plays") { b.isPlaying })
+        assertEquals("st|${good.key}", main { b.currentMediaItem?.mediaId })
+    }
+
+    @Test fun t20_pausing_ends_the_alarm() {
+        val (list, i) = playSomething(); main { b.pause() }
+        main { b.sendCustomCommand(SessionCommand(PlaybackService.ALARM, Bundle.EMPTY), Bundle().apply {
+            putString("station", Alarm.stationJson(asStation(list[i]), "English").toString()); putInt("fade", 0); putInt("volume", 80) }) }
+        assertTrue(waitFor(25_000, "plays") { b.isPlaying })
+        main { b.pause() }
+        assertTrue("pause ends the alarm (no sound later)", waitFor(5_000, "stopped") { lastLog().contains("stopped") })
+        Thread.sleep(22_000)
+        assertFalse("no alarm sound after a pause", lastLog().contains("tone"))
+        assertFalse(main { b.isPlaying })
     }
 
     @Test fun t11_widget_play_button() {

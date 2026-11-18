@@ -18,7 +18,9 @@ import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.unit.sp
 import androidx.media3.common.MediaMetadata
 import org.junit.Rule
-import org.junit.Assert.assertEquals
+import org.junit.Assert.*
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
@@ -83,12 +85,14 @@ class ScreensTest {
         "malayalam:clubfm" to 45), mapOf("malayalam:radiomango" to (4.6 to 38), "malayalam:clubfm" to (4.5 to 7), "malayalam:homefm" to (5.0 to 2),
         "malayalam:radiomalabar" to (4.8 to 12)), "2026-11-15")
 
-    @Composable private fun Stations(playing: Boolean, sortBy: String = "az") = Column(Modifier.fillMaxSize()) {
-        Header(onSearch = {})
+    @Composable private fun Stations(playing: Boolean, sortBy: String = "az", tab: Int = 0) = Column(Modifier.fillMaxSize()) {
+        Box(Modifier.tourTarget("header")) { Header(onSearch = {}) }
+        Box(Modifier.tourTarget("langs")) {
         LangTabs(listOf(LangTab(PICKS, "Velvet Selection", star = true), LangTab("malayalam", "Malayalam", true),
-            LangTab("english", "English"), LangTab("tamil", "Tamil"), LangTab("_langs", "All languages", icon = true)), "malayalam", {}, {})
+            LangTab("english", "English"), LangTab("tamil", "Tamil"), LangTab("_langs", "All languages", icon = true)), "malayalam", {}, {}) }
+        Box(Modifier.tourTarget("sort")) {
         CatRow(listOf(Triple("all", "All", 130), Triple("fav", "Favourites", 3), Triple("fm", "FM", -1), Triple("air", "Akashvani", -1),
-            Triple("online", "Online", -1)), "all", {}, SORTS.first { it.first == sortBy }.second, {})
+            Triple("online", "Online", -1)), "all", {}, SORTS.first { it.first == sortBy }.second, {}) }
         val shown = Stats.sort(sts, sortBy, stats)
         val top = if (sortBy == "heard") Stats.top3(shown, stats) else emptySet()
         LazyColumn(Modifier.weight(1f)) {
@@ -96,10 +100,116 @@ class ScreensTest {
                 val base = mapOf("fm" to "FM", "air" to "Akashvani", "online" to "Online")[s.category] ?: ""
                 val sub = when (sortBy) { "heard" -> Stats.heardLabel(stats.week[s.key]) + " · " + base
                     "rated" -> Stats.ratedLabel(stats.ratings[s.key]) + " · " + base; else -> base }
-                StationRow(s, sub, s.id == "radiomango", s.id == "radiomalabar", playing, {}, {}, badge = s.key in top) }
+                Box(if (s == shown.first()) Modifier.tourTarget("row") else Modifier) {
+                StationRow(s, sub, s.id == "radiomango", s.id == "radiomalabar", playing, {}, {}, badge = s.key in top) } }
         }
-        MiniPlayer(now(playing), null, true, {}, {}, CastUi(true, false), {}, {}) {}
-        BottomNav(0, 12) {}
+        Box(Modifier.tourTarget("player")) { MiniPlayer(now(playing), null, true, {}, {}, CastUi(true, false), {}, {}) {} }
+        Box(Modifier.tourTarget("nav")) { BottomNav(tab, 12) {} }
+    }
+
+    private fun hasClickLabel(l: String) = SemanticsMatcher("click label $l") {
+        it.config.getOrNull(androidx.compose.ui.semantics.SemanticsActions.OnClick)?.label == l }
+
+    // ---- 2.7: star tab, soft pill, several alarms, first-time tour
+    private fun twoAlarms() {
+        val ctx = rule.activity
+        ctx.getSharedPreferences("alarm", 0).edit().clear().commit()
+        val mango = Alarm.stationJson(sts[1], "Malayalam")
+        Alarm.save(ctx, Alarm.Setup(true, 6, 30, Alarm.WORKDAYS, mango, 60, 70, id = 1, name = "Work"))
+        Alarm.save(ctx, Alarm.Setup(true, 8, 15, Alarm.WEEKEND, Alarm.stationJson(sts[0], "Malayalam"), 120, 60, id = 2, name = "Weekend", backup = "tone"))
+        Alarm.save(ctx, Alarm.Setup(false, 22, 0, emptySet(), null, 0, 50, id = 3))
+    }
+    @Test fun v01_pill_light() = shot("v01-pill-light", false) { Stations(true) }
+    @Test fun v02_pill_dark() = shot("v02-pill-dark", true) { Stations(true) }
+    @Test fun v03_pill_favourites_dark_rosewood() = shot("v03-pill-favs-rosewood-dark", true, theme = "rosewood") { Stations(true, tab = 1) }
+    @Test fun v04_alarms_list() { twoAlarms(); shot("v04-alarms-list", false) { AlarmScreen(sts.map { it to "Malayalam" }) {} } }
+    @Test fun v05_alarms_list_dark() { twoAlarms(); shot("v05-alarms-list-dark", true) { AlarmScreen(sts.map { it to "Malayalam" }) {} } }
+    @Test fun v06_alarms_empty() { rule.activity.getSharedPreferences("alarm", 0).edit().clear().commit()
+        shot("v06-alarms-empty", false) { AlarmScreen(sts.map { it to "Malayalam" }) {} } }
+    @Test fun v07_alarm_edit() { twoAlarms(); shot("v07-alarm-edit", false) {
+        AlarmEdit(Alarm.byId(rule.activity, 2)!!, false, sts.map { it to "Malayalam" }) {} } }
+    @Test @Config(qualifiers = "w360dp-h740dp-xxhdpi") fun v08_alarm_edit_large_360() { twoAlarms()
+        shot("v08-alarm-edit-large-360", false, text = 2) { AlarmEdit(Alarm.byId(rule.activity, 1)!!, false, sts.map { it to "Malayalam" }) {} } }
+    @Test fun v09_add_weekend_alarm_by_touch() {
+        twoAlarms()
+        shot("v09a-before-add", false) { AlarmScreen(sts.map { it to "Malayalam" }) {} }
+        rule.onNodeWithText("+  Add an alarm", substring = true).performClick(); rule.waitForIdle()
+        rule.onNodeWithText("Weekend").performClick(); rule.waitForIdle()
+        rule.onNodeWithText("The last station I played").assertExists()
+        capture("v09b-new-alarm-weekend")
+        rule.onNodeWithText("A favourite that's working").performClick(); rule.waitForIdle()
+        capture("v09c-backup-choices")
+        rule.onNodeWithText("The phone's alarm sound").performClick(); rule.waitForIdle()
+        rule.onNode(hasClickLabel("Save alarm")).performScrollTo().performClick(); rule.waitForIdle()
+        val l = Alarm.all(rule.activity)
+        assertEquals(4, l.size)
+        val n = l.first { it.id == 4 }
+        assertEquals(Alarm.WEEKEND, n.days); assertEquals("tone", n.backup); assertTrue(n.on)
+        capture("v09d-list-after-add")
+    }
+    @Test fun v10_back_leaves_alarm_unchanged() {
+        twoAlarms()
+        shot("v10-x", false) { AlarmScreen(sts.map { it to "Malayalam" }) {} }
+        rule.onAllNodes(hasClickLabel("Edit the alarm"))[0].performClick(); rule.waitForIdle()
+        rule.onNodeWithText("Every day").performClick(); rule.waitForIdle()
+        rule.onAllNodes(hasContentDescription("Back")).onLast().performClick(); rule.waitForIdle()
+        assertEquals(Alarm.WORKDAYS, Alarm.byId(rule.activity, 1)!!.days)
+    }
+    @Test fun v11_delete_alarm() {
+        twoAlarms()
+        shot("v11-x", false) { AlarmScreen(sts.map { it to "Malayalam" }) {} }
+        rule.onAllNodes(hasClickLabel("Edit the alarm"))[1].performClick(); rule.waitForIdle()
+        rule.onNode(hasClickLabel("Delete alarm")).performScrollTo().performClick(); rule.waitForIdle()
+        assertNull(Alarm.byId(rule.activity, 2)); assertEquals(2, Alarm.all(rule.activity).size)
+    }
+    @Test fun v12_switch_alarm_off_in_list() {
+        twoAlarms()
+        shot("v12-x", false) { AlarmScreen(sts.map { it to "Malayalam" }) {} }
+        rule.onNode(hasContentDescription(":15", substring = true)).performClick(); rule.waitForIdle()
+        assertFalse(Alarm.byId(rule.activity, 2)!!.on)
+    }
+
+    /** One tour step drawn over the Stations screen (the overlay finds the parts by their measured place). */
+    private fun tourShot(step: Int, dark: Boolean = false) {
+        var st by androidx.compose.runtime.mutableIntStateOf(step)
+        shot("v2${step}-tour-${step + 1}" + if (dark) "-dark" else "", dark) {
+            Box(Modifier.fillMaxSize()) { Stations(true); if (st >= 0) TourOverlay(st, { st = it }) { st = -1 } } }
+    }
+    @Test fun v20_tour_1() = tourShot(0)
+    @Test fun v21_tour_2() = tourShot(1)
+    @Test fun v22_tour_3() = tourShot(2)
+    @Test fun v23_tour_4() = tourShot(3)
+    @Test fun v24_tour_5() = tourShot(4)
+    @Test fun v25_tour_6() = tourShot(5)
+    @Test fun v26_tour_7() = tourShot(6)
+    @Test fun v27_tour_8() = tourShot(7)
+    @Test fun v28_tour_dark() = tourShot(1, dark = true)
+    @Test fun v29_tour_walk_through_and_skip() {
+        var st by androidx.compose.runtime.mutableIntStateOf(0); var ended = 0
+        shot("v29-x", false) { Box(Modifier.fillMaxSize()) { Stations(true); if (st >= 0) TourOverlay(st, { st = it }) { st = -1; ended++ } } }
+        rule.onNode(hasClickLabel("Show me")).performClick(); rule.waitForIdle(); assertEquals(1, st)
+        repeat(6) { rule.onNode(hasClickLabel("Next")).performClick(); rule.waitForIdle() }
+        assertEquals(7, st)
+        rule.onNode(hasClickLabel("Back")).performClick(); rule.waitForIdle(); assertEquals(6, st)
+        rule.onNode(hasClickLabel("Next")).performClick(); rule.waitForIdle()
+        rule.onNode(hasClickLabel("Done")).performClick(); rule.waitForIdle()
+        assertEquals(-1, st); assertEquals(1, ended)
+        // and once more, skipping half way
+        st = 3; rule.waitForIdle()
+        rule.onNode(hasClickLabel("Skip the tour")).performClick(); rule.waitForIdle()
+        assertEquals(-1, st); assertEquals(2, ended)
+        // "No thanks" on the welcome
+        st = 0; rule.waitForIdle()
+        rule.onNode(hasClickLabel("No thanks")).performClick(); rule.waitForIdle()
+        assertEquals(-1, st); assertEquals(3, ended)
+    }
+    @Test fun v30_tour_lights_the_right_parts() {
+        shot("v30-x", false) { Stations(true) }
+        listOf("star", "langs", "sort", "row", "header", "player", "nav").forEach {
+            assertTrue("$it is measured", Tour.targets[it]?.let { r -> r.width > 0 && r.height > 0 } == true) }
+        val star = Tour.targets["star"]!!; val langs = Tour.targets["langs"]!!
+        assertTrue("star inside the language row", langs.contains(star.center))
+        assertTrue("nav at the bottom", Tour.targets["nav"]!!.top > Tour.targets["player"]!!.top)
     }
 
     @Composable private fun Player(playing: Boolean, song: Boolean = true) = PlayerContent(now(playing, song), null, "Malayalam", CastUi(true, false),

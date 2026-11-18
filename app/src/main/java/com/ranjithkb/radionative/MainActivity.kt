@@ -22,11 +22,14 @@ import androidx.compose.ui.text.style.TextAlign
 import sh.calvin.reorderable.ReorderableItem
 import sh.calvin.reorderable.rememberReorderableLazyListState
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.gestures.detectHorizontalDragGestures
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
@@ -267,6 +270,9 @@ fun App(c: MediaController?) {
     LaunchedEffect(now.id) { kotlinx.coroutines.delay(500); recentPlayed = Recent.all(ctx) }
     LaunchedEffect(Unit) { Review.maybeAsk(ctx) }
     var search by remember { mutableStateOf(false) }
+    // first-time tour (fresh installs only; Info → Quick tour replays it)
+    var tourStep by remember { mutableIntStateOf(if (Tour.shouldShow(ctx)) 0 else -1) }
+    fun endTour() { tourStep = -1; Tour.done(ctx) }
     var barSleep by remember { mutableStateOf(false) }
     if (barSleep) SleepDialog { barSleep = false }
     val cast = rememberCast()
@@ -285,7 +291,7 @@ fun App(c: MediaController?) {
             Repo.stations(ctx, key.substringBefore(':')).find { it.key == key }?.let { favs.toggle(it); refreshFavs() } }
     }
     Column(Modifier.fillMaxSize().statusBarsPadding()) {
-        Header(onSearch = { search = true }, onSettings = { page = "settings" })
+        Box(Modifier.tourTarget("header")) { Header(onSearch = { search = true }, onSettings = { page = "settings" }) }
         update?.let { u ->
             Row(Modifier.fillMaxWidth().padding(top = 10.dp).background(AccentSoft).padding(start = 24.dp, end = 12.dp, top = 6.dp, bottom = 6.dp),
                 verticalAlignment = Alignment.CenterVertically) {
@@ -295,7 +301,7 @@ fun App(c: MediaController?) {
             }
         }
         Box(Modifier.weight(1f)) {
-            if (tab == 2) InfoTab(cols.size, update, onPage = { page = it }, onSignIn = { openUrl(ctx, Account.SIGN_IN_URL) },
+            if (tab == 2) InfoTab(cols.size, update, onPage = { if (it == "tour") { go(0); tourStep = 1 } else page = it }, onSignIn = { openUrl(ctx, Account.SIGN_IN_URL) },
                 onSignOut = { Account.signOut(ctx); Session.name = null })
             else if (tab == 0) {
                 // A–Z in every list except the Velvet Selection (hand-picked order) and Favourites (your own order)
@@ -307,17 +313,26 @@ fun App(c: MediaController?) {
                         (pinned + recent.filter { it !in pinned }).mapNotNull { id -> cols.find { it.id == id } }.map { LangTab(it.id, it.name, it.id in pinned) } +
                         (if (colId == ALL) listOf(LangTab(ALL, "Every station")) else emptyList()) +
                         listOf(LangTab("_langs", "All languages", icon = true))
-                    LangTabs(tabs, colId, onClick = { t -> if (t.id == "_langs") pickLang = true else colId = t.id },
-                        onLong = { t -> cols.find { it.id == t.id }?.let { pillMenu = it } })
+                    Box(Modifier.tourTarget("langs")) {
+                        LangTabs(tabs, colId, onClick = { t -> if (t.id == "_langs") pickLang = true else colId = t.id },
+                            onLong = { t -> cols.find { it.id == t.id }?.let { pillMenu = it } }) }
                     val favHere = stations.count { it.key in favKeys }
                     val cats = buildList {
                         add(Triple("all", "All", stations.size))
                         if (favHere > 0) add(Triple("fav", "Favourites", favHere))
                         col?.cats?.filter { (k, _) -> stations.any { it.category == k } }?.forEach { (k, label) -> add(Triple(k, label, -1)) }
                     }
-                    if (colId != PICKS) CatRow(cats, cat, { cat = it }, SORTS.first { it.first == sort }.second, { sortSheet = true })
-                    else Text(if (!loading && stations.isEmpty()) "The Velvet Selection is coming soon." else
-                        "Hand-picked by the developer, from every language.", Modifier.padding(24.dp, 12.dp, 24.dp, 4.dp), color = InkSoft, fontSize = 15.sp)
+                    if (colId != PICKS) Box(Modifier.tourTarget("sort")) { CatRow(cats, cat, { cat = it }, SORTS.first { it.first == sort }.second, { sortSheet = true }) }
+                    else Column(Modifier.padding(24.dp, 14.dp, 24.dp, 4.dp).semantics(mergeDescendants = true) { heading() }) {
+                        // the star tab has no words on it, so the list says where you are
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Icon(painterResource(R.drawable.ic_logo_star), null, Modifier.size(28.dp), tint = GoldC)
+                            Spacer(Modifier.width(10.dp))
+                            Text("Velvet Selection", fontSize = 20.sp, color = Title, fontWeight = FontWeight.Medium)
+                        }
+                        Text(if (!loading && stations.isEmpty()) "Coming soon." else "Hand-picked stations from every language.",
+                            Modifier.padding(top = 4.dp), color = InkSoft, fontSize = 14.sp)
+                    }
                     if (loading) LinearProgressIndicator(Modifier.fillMaxWidth().padding(top = 8.dp), color = Accent)
                     val stState = rememberLazyListState()
                     LaunchedEffect(colId, cat, sort) { stState.scrollToItem(0) }
@@ -330,8 +345,9 @@ fun App(c: MediaController?) {
                                     sort == "heard" -> listOf(Stats.heardLabel(stats?.week?.get(s.key)), base).filter { it.isNotBlank() }.joinToString(" · ")
                                     sort == "rated" -> listOf(Stats.ratedLabel(stats?.ratings?.get(s.key)), base).filter { it.isNotBlank() }.joinToString(" · ")
                                     else -> base }
-                                StationRow(s, sub, s.key in favKeys, "st|${s.key}" == now.id, now.playing,
-                                    onPlay = { play(shown, s) }, onFav = { favs.toggle(s); refreshFavs() }, badge = s.key in top3)
+                                Box(if (s.key == shown.firstOrNull()?.key) Modifier.tourTarget("row") else Modifier) {
+                                    StationRow(s, sub, s.key in favKeys, "st|${s.key}" == now.id, now.playing,
+                                        onPlay = { play(shown, s) }, onFav = { favs.toggle(s); refreshFavs() }, badge = s.key in top3) }
                             }
                         }
                         ScrollButtons(stState, Modifier.align(Alignment.BottomEnd))
@@ -353,10 +369,11 @@ fun App(c: MediaController?) {
         }
         if (now.id != null) {
             val key = now.id?.removePrefix("st|")
-            MiniPlayer(now, c, isFav = favList.any { it.key == key }, onFav = { toggleFavKey(key) }, onClose = { closeAll() },
-                cast = cast, onCast = { Cast.open(ctx, Theme.dark) }, onSleep = { barSleep = true }) { full = true }
-        }
-        BottomNav(tab, favList.size, ::go)
+            Box(Modifier.tourTarget("player")) {
+                MiniPlayer(now, c, isFav = favList.any { it.key == key }, onFav = { toggleFavKey(key) }, onClose = { closeAll() },
+                    cast = cast, onCast = { Cast.open(ctx, Theme.dark) }, onSleep = { barSleep = true }) { full = true } }
+        } else Tour.targets.remove("player")
+        Box(Modifier.tourTarget("nav")) { BottomNav(tab, favList.size, ::go) }
     }
     pillMenu?.let { c ->
         val isPin = c.id in pinned; val i = pinned.indexOf(c.id)
@@ -397,6 +414,10 @@ fun App(c: MediaController?) {
                 else -> page = null
             }
         }
+    }
+    if (tourStep >= 0 && page == null && !search && !full) {
+        LaunchedEffect(Unit) { if (tab != 0) go(0) }
+        TourOverlay(tourStep, onStep = { tourStep = it }, onEnd = ::endTour)
     }
     if (search) {
         var all by remember { mutableStateOf<List<Station>?>(null) }
@@ -684,6 +705,9 @@ fun InfoTab(languages: Int, update: Update?, onPage: (String) -> Unit = {}, onSi
                 Text("• Pauses for calls and comes back on afterwards.")
                 Text("• Song name and cover appear when the station sends them. Share them as a song card from the player.")
                 Text("• Works in Android Auto: Favourites and every language list.")
+                Text("• Several alarms (workdays, weekend…) in Settings → Alarms. If a station doesn't answer, another plays, then the phone's alarm sound.")
+                Box(Modifier.padding(top = 8.dp).heightIn(min = 48.dp).border(1.dp, Line).clickable(onClickLabel = "Start the quick tour") { onPage("tour") }
+                    .padding(horizontal = 16.dp), contentAlignment = Alignment.Center) { Text("Quick tour of the app", color = AccentText) }
             }
         }
         item {
