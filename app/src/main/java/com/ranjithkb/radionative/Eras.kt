@@ -65,6 +65,8 @@ object Eras {
         Era("digital", "Digital tuner", "1990s", 340f, 300f),
     )
     val IDS = listOf("std") + LIST.map { it.id }
+    /** Radios with bass / mid / treble knobs (they get a Reset knobs button). */
+    fun hasTone(id: String) = id == "receiver" || id == "digital"
     fun byId(id: String) = LIST.firstOrNull { it.id == id }
     fun name(id: String) = byId(id)?.let { "${it.decade} · ${it.name}" } ?: "Standard player"
     /** Swiping through the looks in order (Standard first), round and round. */
@@ -253,7 +255,8 @@ fun EraRadio(era: Eras.Era, now: NowState, c: androidx.media3.session.MediaContr
     }
     fun bandOf(k: Ctl) = when (k) { Ctl.BASS -> 0; Ctl.MID -> 2; else -> 4 }
 
-    BoxWithConstraints(modifier, contentAlignment = Alignment.Center) {
+    Column(modifier, horizontalAlignment = Alignment.CenterHorizontally) {
+    BoxWithConstraints(Modifier.fillMaxWidth().weight(1f), contentAlignment = Alignment.Center) {
         val s = minOf(maxWidth.value / era.w, maxHeight.value / era.h)
         val w = era.w * s; val h = era.h * s
         Box(Modifier.size(w.dp, h.dp)) {
@@ -294,6 +297,18 @@ fun EraRadio(era: Eras.Era, now: NowState, c: androidx.media3.session.MediaContr
                 Box(m)
             }
         }
+    }
+    // tone knobs back to flat (the hi-fi receiver and the digital tuner); volume and tuning are left as they are
+    if (Eras.hasTone(era.id)) {
+        val turned = bands.any { it != 0 }
+        Row(Modifier.height(44.dp).alpha(if (turned) 1f else 0.4f)
+            .clickable(enabled = turned, onClickLabel = "Reset the knobs") {
+                bands = IntArray(5); turn.clear(); Eq.save(ctx, false, "Normal", IntArray(5)); tick() }
+            .semantics(mergeDescendants = true) { contentDescription = "Reset knobs: bass, mid and treble back to flat" }
+            .padding(horizontal = 14.dp), verticalAlignment = Alignment.CenterVertically) {
+            Text("↺  Reset knobs", fontSize = 13.sp, color = Soft, letterSpacing = 0.6.sp)
+        }
+    }
     }
 }
 

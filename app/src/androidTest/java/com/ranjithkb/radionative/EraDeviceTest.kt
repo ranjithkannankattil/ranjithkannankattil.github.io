@@ -373,4 +373,33 @@ class EraDeviceTest {
         assertTrue("no look flip from the bar", flips.isEmpty())
         main { showMini = false }
     }
+
+    @Test fun e13_reset_knobs_puts_the_tone_back_to_flat() {
+        val am = ctx.getSystemService(AudioManager::class.java)
+        for (id in listOf("receiver", "digital")) {
+            Eq.save(ctx, false, "Normal", Eq.PRESETS["Normal"]!!)
+            main { era = Eras.LIST[0] }; settle(); main { era = Eras.byId(id)!! }; settle()
+            val reset = rule.onNodeWithContentDescription("Reset knobs", substring = true)
+            reset.assertIsNotEnabled()                                              // nothing to reset yet
+            turnRound(rule.onNodeWithContentDescription("Bass knob"), 90f); settle()
+            turnRound(rule.onNodeWithContentDescription("Treble knob"), -60f); settle()
+            assertTrue("$id: knobs moved the equaliser", Eq.on(ctx) && Eq.bands(ctx)[0] > 0 && Eq.bands(ctx)[4] < 0)
+            val vol = am.getStreamVolume(AudioManager.STREAM_MUSIC); val st = idx()
+            reset.assertIsEnabled().performClick(); settle()
+            assertFalse("$id: equaliser off after reset", Eq.on(ctx))
+            assertTrue("$id: all bands flat", Eq.bands(ctx).all { it == 0 })
+            assertEquals("$id: volume untouched", vol, am.getStreamVolume(AudioManager.STREAM_MUSIC))
+            assertEquals("$id: station untouched", st, idx())
+            reset.assertIsNotEnabled()
+            rule.onNodeWithContentDescription("Bass knob").assert(SemanticsMatcher.expectValue(
+                androidx.compose.ui.semantics.SemanticsProperties.StateDescription, "+0 dB"))
+            Thread.sleep(800); assertTrue("$id: still playing after reset", main { b.isPlaying })
+            log("$id reset knobs ok")
+        }
+        // radios without tone knobs have no reset button
+        for (id in listOf("cathedral", "valve", "transistor", "boombox")) {
+            main { era = Eras.byId(id)!! }; settle()
+            rule.onNodeWithContentDescription("Reset knobs", substring = true).assertDoesNotExist()
+        }
+    }
 }

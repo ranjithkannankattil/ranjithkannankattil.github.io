@@ -301,6 +301,7 @@ fun PlayerContent(now: NowState, c: androidx.media3.session.MediaController?, la
                 // a radio from one era: it takes the cover's place (its own needles and meters replace the visualiser)
                 val rw = fullW.value - 48f
                 val rh = minOf(h.value * 0.44f, rw * era.h / era.w).coerceAtLeast(150f)
+                    .let { if (Eras.hasTone(era.id)) it + 44f else it }   // room for "Reset knobs" under the radio
                 Box(Modifier.padding(top = 10.dp).fillMaxWidth().height(rh.dp), contentAlignment = Alignment.Center) {
                     EraRadio(era, now, c, Modifier.fillMaxSize(), onSwipe = flip)
                 }
