@@ -225,7 +225,8 @@ class ScreensTest {
         Theme.themeId = "velvet"; Theme.look = start; Theme.lookColours = "original"; Theme.playerOpen = true
         Theme.viz = "off"; Theme.mode = "light"; Theme.sysDark = false
         rule.mainClock.autoAdvance = false   // the radio moves while music plays: the test moves the clock itself
-        val tick = { rule.mainClock.advanceTimeBy(600) }
+        // state changed by a gesture reaches the screen once the change is announced (Android does this by itself in the app)
+        val tick = { androidx.compose.runtime.snapshots.Snapshot.sendApplyNotifications(); rule.mainClock.advanceTimeBy(600) }
         rule.setContent { MaterialTheme(typography = PoppinsType) { Surface(Modifier.fillMaxSize(), color = Paper) { Player(true) } } }
         val pic = { rule.onAllNodes(SemanticsMatcher("next look") { n ->
             n.config.getOrNull(androidx.compose.ui.semantics.SemanticsActions.CustomActions)?.any { it.label == "Next radio look" } == true })[0] }
