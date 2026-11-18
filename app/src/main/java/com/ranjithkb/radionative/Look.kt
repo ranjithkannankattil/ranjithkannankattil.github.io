@@ -41,6 +41,7 @@ import androidx.compose.ui.semantics.CustomAccessibilityAction
 import androidx.compose.ui.semantics.customActions
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.selected
+import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
@@ -111,7 +112,7 @@ fun VelvetStar(label: String?, size: Int) = Box(Modifier.size(size.dp).then(if (
 /** Inside the star tab: says where you are, since the tab itself has no words. */
 @Composable
 fun PicksHeading(empty: Boolean) = Column(Modifier.padding(24.dp, 14.dp, 24.dp, 4.dp)
-    .semantics(mergeDescendants = true) { androidx.compose.ui.semantics.heading() }) {
+    .semantics(mergeDescendants = true) { heading() }) {
     Row(verticalAlignment = Alignment.CenterVertically) {
         VelvetStar(null, 30)
         Spacer(Modifier.width(10.dp))
