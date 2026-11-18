@@ -203,8 +203,8 @@ window.STATIONS = [
     "name": "Antena 3",
     "category": "music",
     "streams": [
-      "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8",
-      "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8"
+      "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8",
+      "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
     ]
   },
   {
@@ -229,7 +229,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "cidade-fm-2",
@@ -278,7 +279,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8",
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rca-radio-clube-de-armamar",
@@ -417,7 +419,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2opera80a/playlist.m3u8"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "radio-observador",
@@ -1329,4 +1332,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T22:23Z";
+window.STATIONS_CHECKED = "2026-11-18T08:28Z";

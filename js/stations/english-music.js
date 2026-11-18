@@ -1058,7 +1058,8 @@ window.STATIONS = [
     ],
     "where": "Canada",
     "added": "2026-11-02",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "radio-country-live-new-york",
@@ -1068,7 +1069,8 @@ window.STATIONS = [
       "https://streaming.radiostreamlive.com/radiocountrylive_devices"
     ],
     "where": "US",
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "offline": true
   },
   {
     "id": "folk-alley-freshgrass",
@@ -1445,8 +1447,7 @@ window.STATIONS = [
       "https://chaosfm.com:8443/stream"
     ],
     "added": "2026-11-07",
-    "where": "UK",
-    "offline": true
+    "where": "UK"
   },
   {
     "id": "progressive-rock-azusa",
@@ -1479,4 +1480,4 @@ window.STATIONS = [
     "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T22:23Z";
+window.STATIONS_CHECKED = "2026-11-18T08:28Z";

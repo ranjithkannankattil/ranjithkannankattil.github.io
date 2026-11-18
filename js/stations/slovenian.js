@@ -285,6 +285,15 @@ window.STATIONS = [
       "https://stream.zeno.fm/q7300aptbwzuv"
     ],
     "added": "2026-10-24"
+  },
+  {
+    "id": "radio-trst-a",
+    "name": "Radio Trst A",
+    "category": "music",
+    "streams": [
+      "https://streamcdnr7-8e7439fdb1694c8da3a0fd63e4dda518.msvdn.net/friuliaudio1/hls/friuliaudio_320/chunklist.m3u8"
+    ],
+    "added": "2026-11-18"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T22:23Z";
+window.STATIONS_CHECKED = "2026-11-18T08:28Z";

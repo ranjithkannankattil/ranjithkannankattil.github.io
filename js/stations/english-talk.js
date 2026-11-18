@@ -787,7 +787,8 @@ window.STATIONS = [
       "https://mainradiostreaming.zbc.co.zw:8020/national.mp3"
     ],
     "added": "2026-10-30",
-    "where": "Zimbabwe"
+    "where": "Zimbabwe",
+    "offline": true
   },
   {
     "id": "radio-sahar",
@@ -837,8 +838,7 @@ window.STATIONS = [
       "https://stream.zeno.fm/mwam2yirv1pvv"
     ],
     "added": "2026-10-31",
-    "where": "Nigeria",
-    "offline": true
+    "where": "Nigeria"
   },
   {
     "id": "bfm-89-9-malaysia",
@@ -1188,7 +1188,8 @@ window.STATIONS = [
       "https://105fm.espiv.net/listen/105fm/stream.mp3"
     ],
     "added": "2026-11-06",
-    "where": "Greece"
+    "where": "Greece",
+    "offline": true
   },
   {
     "id": "702-abc-sydney",
@@ -1477,7 +1478,8 @@ window.STATIONS = [
       "https://10gb1.acangroup.org:8000/postenational"
     ],
     "added": "2026-11-10",
-    "where": "Cameroon"
+    "where": "Cameroon",
+    "offline": true
   },
   {
     "id": "96-6-sky-abc-radio",
@@ -1490,4 +1492,4 @@ window.STATIONS = [
     "where": "Saudi Arabia"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T22:23Z";
+window.STATIONS_CHECKED = "2026-11-18T08:28Z";

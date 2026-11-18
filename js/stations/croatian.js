@@ -331,7 +331,8 @@ window.STATIONS = [
     "streams": [
       "https://stream2.statsradio.com:8150/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "braniteljski-radio-nepokoreni-grad-osije",
@@ -739,4 +740,4 @@ window.STATIONS = [
     "added": "2026-11-12"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T22:23Z";
+window.STATIONS_CHECKED = "2026-11-18T08:28Z";

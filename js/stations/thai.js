@@ -292,8 +292,7 @@ window.STATIONS = [
     "streams": [
       "https://radio11.plathong.net/7050/;stream.mp3"
     ],
-    "added": "2026-10-29",
-    "offline": true
+    "added": "2026-10-29"
   },
   {
     "id": "translation-of-the-quran-in-thai",
@@ -338,8 +337,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.vpsthai.net/proxy/chydhnxz/stream/1/"
     ],
-    "added": "2026-11-07",
-    "offline": true
+    "added": "2026-11-07"
   },
   {
     "id": "komodo",
@@ -357,8 +355,7 @@ window.STATIONS = [
     "streams": [
       "https://80sv2.hostpleng.com/?url=http://112.121.150.133:8198/;"
     ],
-    "added": "2026-11-13",
-    "offline": true
+    "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T22:23Z";
+window.STATIONS_CHECKED = "2026-11-18T08:28Z";

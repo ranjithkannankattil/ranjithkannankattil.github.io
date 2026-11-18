@@ -349,8 +349,7 @@ window.STATIONS = [
       "https://ice31.securenetsystems.net/0079"
     ],
     "added": "2026-10-24",
-    "where": "Malawi",
-    "offline": true
+    "where": "Malawi"
   },
   {
     "id": "ujyaalo-90-network",
@@ -700,7 +699,8 @@ window.STATIONS = [
       "https://mainradiostreaming.zbc.co.zw:8020/national.mp3"
     ],
     "added": "2026-10-31",
-    "where": "Zimbabwe"
+    "where": "Zimbabwe",
+    "offline": true
   },
   {
     "id": "wbez-91-5-chicago-public-radio",
@@ -1350,7 +1350,8 @@ window.STATIONS = [
       "https://105fm.espiv.net/listen/105fm/stream.mp3"
     ],
     "added": "2026-11-10",
-    "where": "Greece"
+    "where": "Greece",
+    "offline": true
   },
   {
     "id": "pordeus-fm",
@@ -1504,4 +1505,4 @@ window.STATIONS = [
     "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T22:23Z";
+window.STATIONS_CHECKED = "2026-11-18T08:28Z";

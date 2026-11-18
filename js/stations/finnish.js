@@ -40,8 +40,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiokaleva.digitacdn.net/radio/kaleva/master.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "yle-radio-suomi-hameenlinna",
@@ -434,7 +433,8 @@ window.STATIONS = [
     "streams": [
       "https://kaupunkiradio.radiotaajuus.fi:9013/radio"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "yle-radio-suomi-pori",
@@ -509,4 +509,4 @@ window.STATIONS = [
     "added": "2026-11-17"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T22:23Z";
+window.STATIONS_CHECKED = "2026-11-18T08:28Z";

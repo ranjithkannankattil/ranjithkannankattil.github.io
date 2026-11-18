@@ -183,7 +183,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://1946218710.rsc.cdn77.org/1946218710/index.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-15",
@@ -666,4 +667,4 @@ window.STATIONS = [
     "added": "2026-11-15"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T22:23Z";
+window.STATIONS_CHECKED = "2026-11-18T08:28Z";

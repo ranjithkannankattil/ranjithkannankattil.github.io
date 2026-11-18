@@ -322,7 +322,8 @@ window.STATIONS = [
     "streams": [
       "https://canelaradio.makrodigital.com/stream/canelaradioguayaquil"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "blu-radio-senal-nacional",
@@ -1327,4 +1328,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T22:23Z";
+window.STATIONS_CHECKED = "2026-11-18T08:28Z";

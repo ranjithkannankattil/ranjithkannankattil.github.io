@@ -1295,8 +1295,7 @@ window.STATIONS = [
     "streams": [
       "https://stream-galati.radiogalati.ro/"
     ],
-    "added": "2026-11-09",
-    "offline": true
+    "added": "2026-11-09"
   },
   {
     "id": "radio-trinitas-88-5",
@@ -1326,4 +1325,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-17T22:23Z";
+window.STATIONS_CHECKED = "2026-11-18T08:28Z";
