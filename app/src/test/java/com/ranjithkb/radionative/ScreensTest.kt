@@ -234,7 +234,10 @@ class ScreensTest {
         pic().performTouchInput { swipeLeft(startX = right - 10f, endX = left + 10f) }
         tick()
         assertEquals(next, Theme.look)
-        rule.onNodeWithText(Eras.name(next)).assertExists()                        // its name shows
+        // its name shows (on failure: print what is on screen)
+        val found = rule.onAllNodesWithText(Eras.name(next), useUnmergedTree = true).fetchSemanticsNodes().size
+        if (found != 1) println("LOOKSWIPE " + rule.onRoot(useUnmergedTree = true).printToString())
+        assertEquals("pop-up with ${Eras.name(next)}", 1, found)
         capture("$prefix-swiped")
         pic().performTouchInput { swipeRight(startX = left + 10f, endX = right - 10f) }
         tick(); assertEquals(start, Theme.look)
