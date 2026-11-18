@@ -115,7 +115,7 @@ fun VelvetStar(label: String?, size: Int) = Box(Modifier.size(size.dp).then(if (
 fun PicksHeading(empty: Boolean) = Row(Modifier.fillMaxWidth().heightIn(min = 44.dp).padding(horizontal = Pad)
     .semantics(mergeDescendants = true) { heading() }, verticalAlignment = Alignment.CenterVertically) {
     Label("Velvet Selection", Title, 9, weight = FontWeight.SemiBold)
-    Text("  ·  " + (if (empty) "coming soon" else "hand-picked from every language"), fontSize = 13.sp, color = Soft, maxLines = 1,
+    Text("  ·  " + (if (empty) "coming soon" else "hand-picked stations"), fontSize = 13.sp, color = Soft, maxLines = 1,
         overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis)
 }
 
