@@ -295,13 +295,14 @@ fun PlayerContent(now: NowState, c: androidx.media3.session.MediaController?, la
             var shown by remember { mutableStateOf<String?>(null) }
             LaunchedEffect(shown) { if (shown != null) { kotlinx.coroutines.delay(1400); shown = null } }
             val flip: (Int) -> Unit = { dir -> Theme.look = Eras.step(Theme.look, dir); Theme.save(ctx); shown = Eras.name(Theme.look) }
+            Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
+            Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
             if (era != null) {
                 // a radio from one era: it takes the cover's place (its own needles and meters replace the visualiser)
                 val rw = fullW.value - 48f
                 val rh = minOf(h.value * 0.44f, rw * era.h / era.w).coerceAtLeast(150f)
                 Box(Modifier.padding(top = 10.dp).fillMaxWidth().height(rh.dp), contentAlignment = Alignment.Center) {
                     EraRadio(era, now, c, Modifier.fillMaxSize(), onSwipe = flip)
-                    ThemeToast(shown)
                 }
             } else {
                 Box(Modifier.padding(top = 10.dp).size(art.dp).background(ArtBg).themeSwipe(flip), contentAlignment = Alignment.Center) {
@@ -328,9 +329,11 @@ fun PlayerContent(now: NowState, c: androidx.media3.session.MediaController?, la
                             VizView(Theme.viz, now.playing, Modifier.fillMaxSize().padding(horizontal = 14.dp, vertical = 8.dp))
                         }
                     }
-                    ThemeToast(shown)
                 }
                 VizSwitcher()   // off: a quiet "Visualiser" switch; on: Bars · Waves · Circle · Off
+            }
+            }
+            ThemeToast(shown)   // one name pop-up over both, so it survives the switch from the cover to a radio
             }
             Column(Modifier.fillMaxWidth().padding(top = 16.dp), horizontalAlignment = Alignment.CenterHorizontally) {
                 if (hasSong) Label("On $station", AccentText, 10)
