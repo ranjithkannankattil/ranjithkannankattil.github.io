@@ -32,5 +32,38 @@ for t in closed:
     edits.tracks().update(packageName=PKG, editId=edit, track=t, body={"track": t, "releases": [{
         "name": f"{code} ({version})", "versionCodes": [code], "status": "completed",
         "releaseNotes": [{"language": "en-GB", "text": notes[:500]}]}]}).execute()
+
+# New phone screenshots for the store listing, when PLAY_SCREENSHOTS points at them (play-01.png … on media.ranjithkb.com).
+# The listing is the whole app's page (not only testers'), so this runs only when he has said yes to new pictures.
+# If the Play key isn't allowed to change the listing, the release still goes ahead and the pictures are uploaded by hand.
+shots = os.environ.get("PLAY_SCREENSHOTS", "").strip().rstrip("/")
+if shots:
+    import tempfile, urllib.request
+    files = []
+    for i in range(1, 9):
+        u = f"{shots}/play-{i:02d}.png"
+        try:
+            f = os.path.join(tempfile.gettempdir(), f"play-{i:02d}.png"); urllib.request.urlretrieve(u, f); files.append(f)
+        except Exception as e:
+            print("No", u, "-", e); break
+    if len(files) >= 2:
+        try:
+            langs = [l["language"] for l in edits.listings().list(packageName=PKG, editId=edit).execute().get("listings", [])] or ["en-GB"]
+            for lang in langs:
+                edits.images().deleteall(packageName=PKG, editId=edit, language=lang, imageType="phoneScreenshots").execute()
+                for f in files:
+                    edits.images().upload(packageName=PKG, editId=edit, language=lang, imageType="phoneScreenshots",
+                        media_body=MediaFileUpload(f, mimetype="image/png")).execute()
+            print(f"Store listing: {len(files)} new phone screenshots for {', '.join(langs)}")
+        except Exception as e:
+            print("Could not change the store pictures (upload them by hand in Play Console):", str(e)[:300])
+            edits.delete(packageName=PKG, editId=edit).execute()
+            edit = edits.insert(packageName=PKG, body={}).execute()["id"]
+            up = edits.bundles().upload(packageName=PKG, editId=edit,
+                media_body=MediaFileUpload(aab, mimetype="application/octet-stream", resumable=True)).execute()
+            for t in closed:
+                edits.tracks().update(packageName=PKG, editId=edit, track=t, body={"track": t, "releases": [{
+                    "name": f"{code} ({version})", "versionCodes": [code], "status": "completed",
+                    "releaseNotes": [{"language": "en-GB", "text": notes[:500]}]}]}).execute()
 edits.commit(packageName=PKG, editId=edit).execute()
 print(f"Sent {version} to Google for review on: {', '.join(closed)}")
