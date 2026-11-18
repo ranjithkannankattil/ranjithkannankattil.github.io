@@ -249,4 +249,49 @@ class EraDeviceTest {
         val still = picture(); assertEquals("nothing else moves while paused", 0, differs(after, still))
         am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC) / 2, 0)
     }
+
+    /** A finger going round the knob, [deg] degrees (clockwise +), close to its edge. */
+    private fun turnRound(node: SemanticsNodeInteraction, deg: Float) = node.performTouchInput {
+        val r = minOf(width, height) * 0.38f; val n = 24
+        val pt = { a: Float -> center + androidx.compose.ui.geometry.Offset(r * kotlin.math.cos(Math.toRadians(a.toDouble())).toFloat(), r * kotlin.math.sin(Math.toRadians(a.toDouble())).toFloat()) }
+        down(pt(-90f)); for (k in 1..n) { moveTo(pt(-90f + deg * k / n), delayMillis = 16) }; up()
+    }
+
+    @Test fun e09_turning_knobs_round_like_real_ones() {
+        val am = ctx.getSystemService(AudioManager::class.java)
+        // tuning: a half turn clockwise moves on, anticlockwise comes back
+        for (id in listOf("cathedral", "valve", "receiver")) {
+            main { era = Eras.byId(id)!! }; settle()
+            val n = rule.onNodeWithContentDescription("Tuning knob", substring = true)
+            var from = idx(); turnRound(n, 120f); settle()
+            assertTrue("$id: turning round clockwise tunes on", waitFor(6_000, "round next") { b.currentMediaItemIndex != from })
+            val fwd = (idx() - from + count()) % count(); assertTrue("$id: 120° = about 3 stations, got $fwd", fwd in 2..4)
+            from = idx(); turnRound(n, -80f); settle()
+            assertTrue("$id: anticlockwise tunes back", waitFor(6_000, "round prev") { b.currentMediaItemIndex != from })
+            assertTrue("$id: backwards", (from - idx() + count()) % count() in 1..3)
+            log("$id tuning by turning round ok")
+        }
+        // volume: clockwise louder, anticlockwise quieter
+        for (id in listOf("cathedral", "valve", "receiver", "digital")) {
+            main { era = Eras.byId(id)!! }; settle()
+            am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC) / 2, 0); settle()
+            val v0 = am.getStreamVolume(AudioManager.STREAM_MUSIC)
+            turnRound(rule.onNodeWithContentDescription("Volume knob"), 90f); settle()
+            assertTrue("$id: turning round clockwise is louder", am.getStreamVolume(AudioManager.STREAM_MUSIC) > v0)
+            val v1 = am.getStreamVolume(AudioManager.STREAM_MUSIC)
+            turnRound(rule.onNodeWithContentDescription("Volume knob"), -120f); settle()
+            assertTrue("$id: anticlockwise is quieter", am.getStreamVolume(AudioManager.STREAM_MUSIC) < v1)
+            log("$id volume by turning round ok: $v0 -> $v1 -> ${am.getStreamVolume(AudioManager.STREAM_MUSIC)}")
+        }
+        // bass on the digital tuner: a quarter turn = several dB
+        main { era = Eras.byId("digital")!! }; settle()
+        Eq.save(ctx, false, "Normal", Eq.PRESETS["Normal"]!!); main { era = Eras.LIST[0] }; settle(); main { era = Eras.byId("digital")!! }; settle()
+        turnRound(rule.onNodeWithContentDescription("Bass knob"), 90f); settle()
+        val bass = Eq.bands(ctx)[0]
+        assertTrue("a quarter turn of bass raises it by several dB ($bass)", bass in 5..12)
+        turnRound(rule.onNodeWithContentDescription("Bass knob"), -90f); settle()
+        assertTrue("and back down", Eq.bands(ctx)[0] < bass)
+        assertTrue("still playing", main { b.isPlaying })
+        Eq.save(ctx, false, "Normal", Eq.PRESETS["Normal"]!!)
+    }
 }

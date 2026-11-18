@@ -355,4 +355,32 @@ class LogicTest {
         Theme.prefs(ctx).edit().clear().apply(); Theme.load(ctx)
         assertEquals("std", Theme.look)                                    // new installs: today's player
     }
+
+    // ---- turning knobs
+    private fun circle(c: androidx.compose.ui.geometry.Offset, r: Float, from: Float, to: Float, n: Int = 36): Float {
+        var acc = 0f; var prev = c + androidx.compose.ui.geometry.Offset(r * kotlin.math.cos(Math.toRadians(from.toDouble())).toFloat(), r * kotlin.math.sin(Math.toRadians(from.toDouble())).toFloat())
+        for (k in 1..n) { val a = from + (to - from) * k / n
+            val p = c + androidx.compose.ui.geometry.Offset(r * kotlin.math.cos(Math.toRadians(a.toDouble())).toFloat(), r * kotlin.math.sin(Math.toRadians(a.toDouble())).toFloat())
+            acc += Rotary.turn(c, prev, p, 20f, 2f); prev = p }
+        return acc
+    }
+    @Test fun knob_follows_a_finger_going_round() {
+        val c = androidx.compose.ui.geometry.Offset(100f, 100f)
+        assertEquals(90f, circle(c, 60f, -90f, 0f), 2f)        // a quarter turn clockwise, from the top
+        assertEquals(-90f, circle(c, 60f, 0f, -90f), 2f)       // and back
+        assertEquals(300f, circle(c, 60f, 0f, 300f, 60), 3f)   // most of a turn, past the start line
+        assertEquals(-180f, circle(c, 45f, 90f, -90f, 40), 3f)
+    }
+    @Test fun knob_takes_straight_swipes_too() {
+        val c = androidx.compose.ui.geometry.Offset(100f, 100f)
+        var acc = 0f; var x = 40f
+        while (x < 160f) { acc += Rotary.turn(c, androidx.compose.ui.geometry.Offset(x, 100f), androidx.compose.ui.geometry.Offset(x + 4f, 100f), 20f, 2f); x += 4f }
+        assertTrue("swipe right through the middle turns clockwise: $acc", acc > 50f)
+        acc = 0f; var y = 160f
+        while (y > 40f) { acc += Rotary.turn(c, androidx.compose.ui.geometry.Offset(100f, y), androidx.compose.ui.geometry.Offset(100f, y - 4f), 20f, 2f); y -= 4f }
+        assertTrue("swipe up turns clockwise: $acc", acc > 50f)
+        // a thumb wheel only takes straight swipes, even off-centre
+        assertEquals(10f, Rotary.turn(c, androidx.compose.ui.geometry.Offset(150f, 40f), androidx.compose.ui.geometry.Offset(170f, 40f), 20f, 2f, wheel = true), 0.01f)
+        assertEquals(Pair(2, 5f), Rotary.steps(85f, 40f)); assertEquals(Pair(-1, -5f), Rotary.steps(-45f, 40f)); assertEquals(Pair(0, 30f), Rotary.steps(30f, 40f))
+    }
 }

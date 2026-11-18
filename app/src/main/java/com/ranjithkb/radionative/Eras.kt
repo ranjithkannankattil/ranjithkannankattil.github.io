@@ -131,9 +131,36 @@ object Eras {
     fun eqToKnob(db: Int) = (db + 12) / 24f
 }
 
+/**
+ * Turning a knob. Round the knob: the change in angle of the finger about the knob's centre (clockwise +).
+ * Near the centre, or on a straight wheel: a straight swipe (right or up = clockwise). Degrees in both cases.
+ */
+object Rotary {
+    fun angleDelta(c: Offset, a: Offset, b: Offset): Float {
+        var d = Math.toDegrees((kotlin.math.atan2(b.y - c.y, b.x - c.x) - kotlin.math.atan2(a.y - c.y, a.x - c.x)).toDouble()).toFloat()
+        while (d > 180f) d -= 360f; while (d < -180f) d += 360f
+        return d
+    }
+    /** [minR] px: closer than this to the centre counts as a straight swipe. [pxPerDeg]: straight-swipe speed. */
+    fun turn(c: Offset, prev: Offset, now: Offset, minR: Float, pxPerDeg: Float, wheel: Boolean = false): Float {
+        val straight = ((now.x - prev.x) - (now.y - prev.y)) / pxPerDeg
+        if (wheel) return straight
+        val r = minOf((prev - c).getDistance(), (now - c).getDistance())
+        if (r < minR) return straight
+        // moving round the knob (across the radius) = turning it; moving towards or away from the centre = a swipe
+        val u = (now - c) / (now - c).getDistance(); val v = now - prev
+        val across = u.x * v.y - u.y * v.x; val along = u.x * v.x + u.y * v.y
+        return if (kotlin.math.abs(across) >= kotlin.math.abs(along)) angleDelta(c, prev, now) else straight
+    }
+    /** Whole steps in [acc] degrees, and what's left over. */
+    fun steps(acc: Float, perStep: Float): Pair<Int, Float> { val n = (acc / perStep).toInt(); return n to (acc - n * perStep) }
+}
+
 /** Everything a radio drawing shows at one moment. */
 class RadioVals(val levels: FloatArray, val t: Float, val playing: Boolean, val pos: Float, val freqLabel: String, val station: String,
-                val vol: Float, val bass: Int, val mid: Int, val treble: Int) {
+                val vol: Float, val bass: Int, val mid: Int, val treble: Int, val turn: Map<String, Float> = emptyMap()) {
+    /** A knob's drawn angle: its value, plus how far the finger has turned it towards the next step. */
+    fun k(ctl: String, base: Float) = base + (turn[ctl] ?: 0f)
     val vuL get() = (levels.take(12).average().toFloat() * 1.35f).coerceIn(0f, 1f)
     val vuR get() = (levels.drop(8).take(14).average().toFloat() * 1.6f).coerceIn(0f, 1f)
     val level get() = ((vuL + vuR) / 2f)
@@ -174,12 +201,12 @@ class Motion { val t = mutableFloatStateOf(0f); val shown = mutableStateOf(Float
 
 private enum class Ctl { TUNE, VOLUME, BASS, MID, TREBLE, PREV, PLAY, STOP, NEXT }
 /** A control on the drawing, in design units: centre and half-size. */
-private class Zone(val ctl: Ctl, val cx: Float, val cy: Float, val hw: Float, val hh: Float = hw)
+private class Zone(val ctl: Ctl, val cx: Float, val cy: Float, val hw: Float, val hh: Float = hw, val wheel: Boolean = false)
 
 private fun zones(era: String): List<Zone> = when (era) {
     "cathedral" -> listOf(Zone(Ctl.TUNE, 61f, 331f, 31f), Zone(Ctl.VOLUME, 239f, 331f, 31f))
     "valve" -> listOf(Zone(Ctl.TUNE, 49f, 285f, 31f), Zone(Ctl.VOLUME, 291f, 285f, 31f))
-    "transistor" -> listOf(Zone(Ctl.TUNE, 76f, 239f, 60f, 16f), Zone(Ctl.VOLUME, 302f, 85f, 12f, 45f))
+    "transistor" -> listOf(Zone(Ctl.TUNE, 76f, 239f, 60f, 16f, wheel = true), Zone(Ctl.VOLUME, 302f, 85f, 12f, 45f, wheel = true))
     "receiver" -> listOf(Ctl.TUNE, Ctl.VOLUME, Ctl.BASS, Ctl.TREBLE).mapIndexed { i, k -> Zone(k, 14f + 312f * (i + 0.5f) / 4, 224f, 30f) }
     "boombox" -> listOf(Ctl.PREV, Ctl.PLAY, Ctl.STOP, Ctl.NEXT).mapIndexed { i, k -> Zone(k, 37f + i * 56f, 153f, 23f, 13f) }
     "digital" -> listOf(Ctl.BASS, Ctl.MID, Ctl.TREBLE, Ctl.VOLUME).mapIndexed { i, k -> Zone(k, 14f + 312f * (i + 0.5f) / 4, 255f, 28f) }
@@ -209,6 +236,9 @@ fun EraRadio(era: Eras.Era, now: NowState, c: androidx.media3.session.MediaContr
     }
     var bands by remember { mutableStateOf(if (Eq.on(ctx)) Eq.bands(ctx) else IntArray(5)) }
     val playing = now.playing
+    val turn = remember { mutableStateMapOf<String, Float>() }           // live, part-way turns of each knob
+    val view = androidx.compose.ui.platform.LocalView.current
+    fun tick() { view.performHapticFeedback(android.view.HapticFeedbackConstants.CLOCK_TICK) }
     val tm = rememberTextMeasurer()
 
     fun setVol(v: Int) { vol = v.coerceIn(0, max); am.setStreamVolume(AudioManager.STREAM_MUSIC, vol, 0) }
@@ -225,12 +255,12 @@ fun EraRadio(era: Eras.Era, now: NowState, c: androidx.media3.session.MediaContr
             Canvas(Modifier.fillMaxSize().semantics { contentDescription = "${era.name} radio, ${era.decade}" }) {
                 withTransform({ scale(size.width / era.w, size.height / era.h, Offset.Zero) }) {
                     drawEra(era.id, skin, RadioVals(motion.shown.value, motion.t.floatValue, playing, shownPos.value, label, station,
-                        vol / max.toFloat(), bands[0], bands[2], bands[4]), tm) }
+                        vol / max.toFloat(), bands[0], bands[2], bands[4], turn.toMap()), tm) }
             }
             zones(era.id).forEach { z ->
                 // every control at least 48 dp to touch, centred on the drawn knob
-                val zw = maxOf(z.hw * 2 * s, 48f); val zh = maxOf(z.hh * 2 * s, 48f)
-                var acc by remember { mutableFloatStateOf(0f) }
+                val minSize = if (z.ctl in listOf(Ctl.PREV, Ctl.PLAY, Ctl.STOP, Ctl.NEXT) || z.wheel) 48f else 68f
+                val zw = maxOf(z.hw * 2 * s, minSize); val zh = maxOf(z.hh * 2 * s, minSize)
                 val name = when (z.ctl) { Ctl.TUNE -> "Tuning"; Ctl.VOLUME -> "Volume"; Ctl.BASS -> "Bass"; Ctl.MID -> "Mid"; Ctl.TREBLE -> "Treble"
                     Ctl.PREV -> "Previous station"; Ctl.PLAY -> "Play"; Ctl.STOP -> "Pause"; Ctl.NEXT -> "Next station" }
                 var m = Modifier.offset((z.cx * s - zw / 2).dp, (z.cy * s - zh / 2).dp).size(zw.dp, zh.dp)
@@ -239,28 +269,19 @@ fun EraRadio(era: Eras.Era, now: NowState, c: androidx.media3.session.MediaContr
                     Ctl.NEXT -> m.clickable(onClickLabel = name) { c?.nextStation() }.semantics { contentDescription = name; role = Role.Button }
                     Ctl.PLAY -> m.clickable(onClickLabel = name) { c?.let { it.prepare(); it.play() } }.semantics { contentDescription = name; role = Role.Button }
                     Ctl.STOP -> m.clickable(onClickLabel = name) { c?.pause() }.semantics { contentDescription = name; role = Role.Button }
-                    Ctl.TUNE -> m.pointerInput(c) {
-                        val step = 36.dp.toPx()
-                        detectDragGestures(onDragEnd = { acc = 0f }) { ch, d -> ch.consume(); acc += d.x - d.y
-                            while (acc > step) { acc -= step; c?.nextStation() }; while (acc < -step) { acc += step; c?.prevStation() } }
-                    }.pointerInput(c) { detectTapGestures { o -> if (o.x > size.width / 2) c?.nextStation() else c?.prevStation() } }
+                    Ctl.TUNE -> m.knob(z.wheel, 40f, "TUNE", turn, ::tick, restartOn = c) { n -> repeat(abs(n)) { if (n > 0) c?.nextStation() else c?.prevStation() } }
+                        .pointerInput(c) { detectTapGestures { o -> if (o.x > size.width / 2) c?.nextStation() else c?.prevStation() } }
                         .semantics { contentDescription = "Tuning knob: turn or tap the right side for the next station, the left side for the previous"
                             customActions = listOf(CustomAccessibilityAction("Next station") { c?.nextStation(); true },
                                 CustomAccessibilityAction("Previous station") { c?.prevStation(); true }) }
-                    Ctl.VOLUME -> m.pointerInput(Unit) {
-                        val step = 14.dp.toPx()
-                        detectDragGestures(onDragEnd = { acc = 0f }) { ch, d -> ch.consume(); acc += d.x - d.y
-                            while (acc > step) { acc -= step; setVol(vol + 1) }; while (acc < -step) { acc += step; setVol(vol - 1) } }
-                    }.pointerInput(Unit) { detectTapGestures { o -> setVol(vol + if (o.x > size.width / 2) 1 else -1) } }
+                    Ctl.VOLUME -> m.knob(z.wheel, (270f / max).coerceIn(10f, 30f), "VOLUME", turn, ::tick) { n -> setVol(vol + n) }
+                        .pointerInput(Unit) { detectTapGestures { o -> setVol(vol + if (o.x > size.width / 2) 1 else -1) } }
                         .semantics { contentDescription = "Volume knob"; stateDescription = "${vol * 100 / max} percent"
                             customActions = listOf(CustomAccessibilityAction("Louder") { setVol(vol + 1); true },
                                 CustomAccessibilityAction("Quieter") { setVol(vol - 1); true }) }
                     else -> { val i = bandOf(z.ctl)
-                        m.pointerInput(Unit) {
-                            val step = 9.dp.toPx()
-                            detectDragGestures(onDragEnd = { acc = 0f }) { ch, d -> ch.consume(); acc += d.x - d.y
-                                while (acc > step) { acc -= step; setBand(i, bands[i] + 1) }; while (acc < -step) { acc += step; setBand(i, bands[i] - 1) } }
-                        }.pointerInput(Unit) { detectTapGestures { o -> setBand(i, bands[i] + if (o.x > size.width / 2) 2 else -2) } }
+                        m.knob(z.wheel, 11f, z.ctl.name, turn, ::tick) { n -> setBand(i, bands[i] + n) }
+                            .pointerInput(Unit) { detectTapGestures { o -> setBand(i, bands[i] + if (o.x > size.width / 2) 2 else -2) } }
                             .semantics { contentDescription = "$name knob"; stateDescription = "%+d dB".format(bands[i])
                                 customActions = listOf(CustomAccessibilityAction("More $name") { setBand(i, bands[i] + 2); true },
                                     CustomAccessibilityAction("Less $name") { setBand(i, bands[i] - 2); true }) } }
@@ -268,6 +289,22 @@ fun EraRadio(era: Eras.Era, now: NowState, c: androidx.media3.session.MediaContr
                 Box(m)
             }
         }
+    }
+}
+
+/** Turning gesture for a knob: [perStep] degrees per step; [onSteps] gets whole steps (+ clockwise); the part-way turn is drawn. */
+private fun Modifier.knob(wheel: Boolean, perStep: Float, key: String, turn: MutableMap<String, Float>, tick: () -> Unit,
+                          restartOn: Any? = null, onSteps: (Int) -> Unit) = pointerInput(key, perStep, wheel, restartOn) {
+    val minR = 14.dp.toPx(); val pxPerDeg = 0.85.dp.toPx()
+    val c = Offset(size.width / 2f, size.height / 2f)
+    var acc = 0f
+    detectDragGestures(onDragStart = { acc = 0f }, onDragEnd = { acc = 0f; turn.remove(key) }, onDragCancel = { acc = 0f; turn.remove(key) }) { ch, _ ->
+        ch.consume()
+        acc += Rotary.turn(c, ch.previousPosition, ch.position, minR, pxPerDeg, wheel)
+        val (n, rest) = Rotary.steps(acc, perStep)
+        if (n != 0) { onSteps(n); tick() }
+        acc = rest
+        turn[key] = rest
     }
 }
 
@@ -372,8 +409,8 @@ private fun DrawScope.cathedral(s: Eras.Skin, v: RadioVals, tm: TextMeasurer) {
     drawLine(s.needle, Offset(cx, cy), Offset(cx + cos(na).toFloat() * 36, cy + sin(na).toFloat() * 36), 2f, StrokeCap.Round)
     drawCircle(s.panelInk, 4f, Offset(cx, cy))
     txt(tm, v.freqLabel, cx, cy + 14, 8f, s.panelInk)
-    knob(tm, 61f, 331f, 22.4f, Eras.angle(v.pos), "Tune", s)
-    knob(tm, 239f, 331f, 22.4f, Eras.angle(v.vol), "Volume", s)
+    knob(tm, 61f, 331f, 22.4f, v.k("TUNE", Eras.angle(v.pos)), "Tune", s)
+    knob(tm, 239f, 331f, 22.4f, v.k("VOLUME", Eras.angle(v.vol)), "Volume", s)
 }
 
 private fun DrawScope.valve(s: Eras.Skin, v: RadioVals, tm: TextMeasurer) {
@@ -383,15 +420,15 @@ private fun DrawScope.valve(s: Eras.Skin, v: RadioVals, tm: TextMeasurer) {
     txt(tm, "VELVET", 170f, 130f, 15f, s.grille, spacing = 4.8f, weight = FontWeight.Normal)
     drawRoundRect(s.metal, Offset(18f, 18f), Size(304f, 144f), CornerRadius(12f), style = Stroke(2f))
     hdial(tm, 18f, 176f, 304f, 66f, v, s, 2f)
-    knob(tm, 49f, 285f, 22.4f, Eras.angle(v.pos), "Tune", s)
-    knob(tm, 291f, 285f, 22.4f, Eras.angle(v.vol), "Volume", s)
+    knob(tm, 49f, 285f, 22.4f, v.k("TUNE", Eras.angle(v.pos)), "Tune", s)
+    knob(tm, 291f, 285f, 22.4f, v.k("VOLUME", Eras.angle(v.vol)), "Volume", s)
     lamp(170f, 276f, 7f, s.glow, if (v.playing) 0.55f + 0.45f * v.level else 0f)
     txt(tm, "On air", 170f, 292f, 7.5f, s.metal, caps = true)
 }
 
 private fun DrawScope.transistor(s: Eras.Skin, v: RadioVals, tm: TextMeasurer) {
     drawRoundRect(s.metal, Offset(292f, 40f), Size(20f, 90f), CornerRadius(6f))         // the volume wheel on the side
-    for (i in 0 until 14) drawLine(s.body2.copy(alpha = 0.5f), Offset(294f, 44f + i * 6f + (v.vol * 5f)), Offset(310f, 44f + i * 6f + (v.vol * 5f)), 1f)
+    for (i in 0 until 14) drawLine(s.body2.copy(alpha = 0.5f), Offset(294f, 44f + i * 6f + ((v.vol * 5f + v.k("VOLUME", 0f) / 8f) % 6f + 6f) % 6f), Offset(310f, 44f + i * 6f + ((v.vol * 5f + v.k("VOLUME", 0f) / 8f) % 6f + 6f) % 6f), 1f)
     body(s, 0f, 0f, 300f, 270f, 18f, 18f)
     drawRoundRect(s.grilleBg, Offset(16f, 16f), Size(268f, 96f), CornerRadius(10f))
     for (row in 0 until 6) for (col in 0 until 19) drawCircle(s.grille, 3.5f, Offset(25f + col * 13.9f, 28f + row * 14.2f))
@@ -402,7 +439,7 @@ private fun DrawScope.transistor(s: Eras.Skin, v: RadioVals, tm: TextMeasurer) {
     hdial(tm, 16f, 156f, 268f, 56f, v, s, 1.5f)
     // the thumb wheel: its ribs roll with the dial
     drawRoundRect(s.body2, Offset(16f, 226f), Size(120f, 26f), CornerRadius(13f))
-    val off = (v.pos * 60f) % 6f
+    val off = ((v.pos * 60f + v.k("TUNE", 0f) / 6f) % 6f + 6f) % 6f
     var x = 18f + off; while (x < 134f) { drawLine(s.metal, Offset(x, 228f), Offset(x, 250f), 2.2f); x += 6f }
     drawRoundRect(s.metal, Offset(16f, 226f), Size(120f, 26f), CornerRadius(13f), style = Stroke(1f))
     txt(tm, "◀ Tune ▶", 284f, 233f, 7.5f, s.metal, caps = true)
@@ -429,7 +466,7 @@ private fun DrawScope.receiver(s: Eras.Skin, v: RadioVals, tm: TextMeasurer) {
     vu(tm, 14f, 14f, 150f, 92f, v.vuL, "Left", s)
     vu(tm, 176f, 14f, 150f, 92f, v.vuR, "Right", s)
     hdial(tm, 14f, 118f, 312f, 64f, v, s, 1f)
-    val angles = listOf(Eras.angle(v.pos), Eras.angle(v.vol), Eras.angle(Eras.eqToKnob(v.bass)), Eras.angle(Eras.eqToKnob(v.treble)))
+    val angles = listOf(v.k("TUNE", Eras.angle(v.pos)), v.k("VOLUME", Eras.angle(v.vol)), v.k("BASS", Eras.angle(Eras.eqToKnob(v.bass))), v.k("TREBLE", Eras.angle(Eras.eqToKnob(v.treble))))
     listOf("Tuning", "Volume", "Bass", "Treble").forEachIndexed { i, l -> knob(tm, 14f + 312f * (i + 0.5f) / 4, 224f, 21.6f, angles[i], l, s) }
     listOf(s.needle, s.glow, Color(0xFF5BC46A)).forEachIndexed { i, c -> lamp(124f + i * 16f, 282f, 4f, c, if (v.playing) 1f else 0.15f) }
     txt(tm, "Stereo · Live", 176f, 276f, 7.5f, s.metal, left = true, caps = true)
@@ -485,7 +522,7 @@ private fun DrawScope.digital(s: Eras.Skin, v: RadioVals, tm: TextMeasurer) {
         for (i in 0 until 12) drawRect(if (i < on) (if (i >= 10) s.needle else s.glow) else s.body2,
             Offset(14f + k * 15.6f + 2.3f, 210f - i * 7f), Size(11f, 5f))
     }
-    val angles = listOf(Eras.angle(Eras.eqToKnob(v.bass)), Eras.angle(Eras.eqToKnob(v.mid)), Eras.angle(Eras.eqToKnob(v.treble)), Eras.angle(v.vol))
+    val angles = listOf(v.k("BASS", Eras.angle(Eras.eqToKnob(v.bass))), v.k("MID", Eras.angle(Eras.eqToKnob(v.mid))), v.k("TREBLE", Eras.angle(Eras.eqToKnob(v.treble))), v.k("VOLUME", Eras.angle(v.vol)))
     listOf("Bass", "Mid", "Treble", "Volume").forEachIndexed { i, l -> knob(tm, 14f + 312f * (i + 0.5f) / 4, 255f, 20f, angles[i], l, s) }
 }
 
