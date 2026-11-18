@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory
 import android.media.AudioAttributes
 import android.media.AudioFocusRequest
 import android.media.AudioManager
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import androidx.media3.common.MediaItem
@@ -214,6 +215,9 @@ class DeviceTest {
         assertTrue("alarm starts the station", waitFor(25_000, "alarm") { b.isPlaying })
         // scheduling: next alarm is set with the system (exact alarms allowed for the test)
         shell("appops set ${ctx.packageName} SCHEDULE_EXACT_ALARM allow")
+        val am = ctx.getSystemService(android.app.AlarmManager::class.java)
+        val granted = Build.VERSION.SDK_INT < 31 || (0 until 40).any { am.canScheduleExactAlarms() || run { Thread.sleep(250); false } }
+        log("exact alarms allowed: $granted")
         Alarm.save(ctx, Alarm.Setup(true, 6, 30, (2..6).toSet(), station, 60, 70))
         val next = ctx.getSystemService(android.app.AlarmManager::class.java).nextAlarmClock
         log("next alarm clock: ${next?.triggerTime}")

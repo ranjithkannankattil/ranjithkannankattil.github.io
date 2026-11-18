@@ -394,4 +394,10 @@ class LogicTest {
         assertEquals("cathedral", Eras.step("gramophone", +1))
         assertEquals("1950s · Valve radio", Eras.name("valve")); assertEquals("Standard player", Eras.name("std"))
     }
+
+    @Test fun knob_taps_only_count_on_its_sides() {
+        assertEquals(1, side(95f, 100)); assertEquals(-1, side(5f, 100))
+        assertEquals(0, side(50f, 100)); assertEquals(0, side(40f, 100)); assertEquals(0, side(60f, 100))
+        assertEquals(1, side(67f, 100)); assertEquals(-1, side(33f, 100))
+    }
 }

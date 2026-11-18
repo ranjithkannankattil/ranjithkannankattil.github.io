@@ -278,18 +278,18 @@ fun EraRadio(era: Eras.Era, now: NowState, c: androidx.media3.session.MediaContr
                     Ctl.PLAY -> m.clickable(onClickLabel = name) { c?.let { it.prepare(); it.play() } }.semantics { contentDescription = name; role = Role.Button }
                     Ctl.STOP -> m.clickable(onClickLabel = name) { c?.pause() }.semantics { contentDescription = name; role = Role.Button }
                     Ctl.TUNE -> m.knob(z.wheel, 40f, "TUNE", turn, ::tick, restartOn = c) { n -> repeat(abs(n)) { if (n > 0) c?.nextStation() else c?.prevStation() } }
-                        .pointerInput(c) { detectTapGestures { o -> if (o.x > size.width / 2) c?.nextStation() else c?.prevStation() } }
+                        .pointerInput(c) { detectTapGestures { o -> when (side(o.x, size.width)) { 1 -> c?.nextStation(); -1 -> c?.prevStation() } } }
                         .semantics { contentDescription = "Tuning knob: turn or tap the right side for the next station, the left side for the previous"
                             customActions = listOf(CustomAccessibilityAction("Next station") { c?.nextStation(); true },
                                 CustomAccessibilityAction("Previous station") { c?.prevStation(); true }) }
                     Ctl.VOLUME -> m.knob(z.wheel, (270f / max).coerceIn(10f, 30f), "VOLUME", turn, ::tick) { n -> setVol(vol + n) }
-                        .pointerInput(Unit) { detectTapGestures { o -> setVol(vol + if (o.x > size.width / 2) 1 else -1) } }
+                        .pointerInput(Unit) { detectTapGestures { o -> val d = side(o.x, size.width); if (d != 0) setVol(vol + d) } }
                         .semantics { contentDescription = "Volume knob"; stateDescription = "${vol * 100 / max} percent"
                             customActions = listOf(CustomAccessibilityAction("Louder") { setVol(vol + 1); true },
                                 CustomAccessibilityAction("Quieter") { setVol(vol - 1); true }) }
                     else -> { val i = bandOf(z.ctl)
                         m.knob(z.wheel, 11f, z.ctl.name, turn, ::tick) { n -> setBand(i, bands[i] + n) }
-                            .pointerInput(Unit) { detectTapGestures { o -> setBand(i, bands[i] + if (o.x > size.width / 2) 2 else -2) } }
+                            .pointerInput(Unit) { detectTapGestures { o -> val d = side(o.x, size.width); if (d != 0) setBand(i, bands[i] + 2 * d) } }
                             .semantics { contentDescription = "$name knob"; stateDescription = "%+d dB".format(bands[i])
                                 customActions = listOf(CustomAccessibilityAction("More $name") { setBand(i, bands[i] + 2); true },
                                     CustomAccessibilityAction("Less $name") { setBand(i, bands[i] - 2); true }) } }
@@ -311,6 +311,10 @@ fun EraRadio(era: Eras.Era, now: NowState, c: androidx.media3.session.MediaContr
     }
     }
 }
+
+/** A tap on a knob: its right third steps up (+1), its left third down (-1); the middle does nothing,
+ *  so a finger that only rests or wobbles on the knob changes nothing. */
+internal fun side(x: Float, width: Int): Int = when { x > width * 2f / 3f -> 1; x < width / 3f -> -1; else -> 0 }
 
 /** Turning gesture for a knob: [perStep] degrees per step; [onSteps] gets whole steps (+ clockwise); the part-way turn is drawn. */
 private fun Modifier.knob(wheel: Boolean, perStep: Float, key: String, turn: MutableMap<String, Float>, tick: () -> Unit,

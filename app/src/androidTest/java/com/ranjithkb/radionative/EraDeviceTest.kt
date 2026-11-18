@@ -297,7 +297,10 @@ class EraDeviceTest {
         assertTrue("a quarter turn of bass raises it by several dB ($bass)", bass in 5..12)
         turnRound(rule.onNodeWithContentDescription("Bass knob"), -90f); settle()
         assertTrue("and back down", Eq.bands(ctx)[0] < bass)
-        assertTrue("still playing", main { b.isPlaying })
+        // the tuning above may have landed on a station still connecting (or one that's down): give it time, as a listener would
+        val playing = waitFor(30_000, "plays with the bass knob turned") { b.isPlaying }
+        log("after the knob turns: ${main { b.mediaMetadata.station }} playing=$playing")
+        assertTrue("still playing", playing)
         Eq.save(ctx, false, "Normal", Eq.PRESETS["Normal"]!!)
     }
 
