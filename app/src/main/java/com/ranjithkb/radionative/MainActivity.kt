@@ -323,16 +323,7 @@ fun App(c: MediaController?) {
                         col?.cats?.filter { (k, _) -> stations.any { it.category == k } }?.forEach { (k, label) -> add(Triple(k, label, -1)) }
                     }
                     if (colId != PICKS) Box(Modifier.tourTarget("sort")) { CatRow(cats, cat, { cat = it }, SORTS.first { it.first == sort }.second, { sortSheet = true }) }
-                    else Column(Modifier.padding(24.dp, 14.dp, 24.dp, 4.dp).semantics(mergeDescendants = true) { heading() }) {
-                        // the star tab has no words on it, so the list says where you are
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            VelvetStar(null, 30)
-                            Spacer(Modifier.width(10.dp))
-                            Text("Velvet Selection", fontSize = 20.sp, color = Title, fontWeight = FontWeight.Medium)
-                        }
-                        Text(if (!loading && stations.isEmpty()) "Coming soon." else "Hand-picked stations from every language.",
-                            Modifier.padding(top = 4.dp), color = InkSoft, fontSize = 14.sp)
-                    }
+                    else PicksHeading(!loading && stations.isEmpty())
                     if (loading) LinearProgressIndicator(Modifier.fillMaxWidth().padding(top = 8.dp), color = Accent)
                     val stState = rememberLazyListState()
                     LaunchedEffect(colId, cat, sort) { stState.scrollToItem(0) }

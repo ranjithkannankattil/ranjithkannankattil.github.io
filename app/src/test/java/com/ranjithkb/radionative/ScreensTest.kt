@@ -119,6 +119,18 @@ class ScreensTest {
         Alarm.save(ctx, Alarm.Setup(true, 8, 15, Alarm.WEEKEND, Alarm.stationJson(sts[0], "Malayalam"), 120, 60, id = 2, name = "Weekend", backup = "tone"))
         Alarm.save(ctx, Alarm.Setup(false, 22, 0, emptySet(), null, 0, 50, id = 3))
     }
+    @Composable private fun Picks(dark: Boolean = false) = Column(Modifier.fillMaxSize()) {
+        Header(onSearch = {})
+        LangTabs(listOf(LangTab(PICKS, "Velvet Selection", star = true), LangTab("malayalam", "Malayalam", true),
+            LangTab("english", "English"), LangTab("tamil", "Tamil"), LangTab("_langs", "All languages", icon = true)), PICKS, {}, {})
+        PicksHeading(false)
+        LazyColumn(Modifier.weight(1f)) { items(sts.take(7)) { s ->
+            StationRow(s, if (s.id == "hit967") "Malayalam · Only plays in the UAE" else "Malayalam", s.id == "radiomango", s.id == "radiomalabar", true, {}, {}) } }
+        MiniPlayer(now(true), null, true, {}, {}, CastUi(true, false), {}, {}) {}
+        BottomNav(0, 12) {}
+    }
+    @Test fun v31_velvet_selection() = shot("v31-velvet-selection", false) { Picks() }
+    @Test fun v32_velvet_selection_dark() = shot("v32-velvet-selection-dark", true) { Picks() }
     @Test fun v01_pill_light() = shot("v01-pill-light", false) { Stations(true) }
     @Test fun v02_pill_dark() = shot("v02-pill-dark", true) { Stations(true) }
     @Test fun v03_pill_favourites_dark_rosewood() = shot("v03-pill-favs-rosewood-dark", true, theme = "rosewood") { Stations(true, tab = 1) }

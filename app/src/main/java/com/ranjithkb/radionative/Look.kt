@@ -108,6 +108,18 @@ fun VelvetStar(label: String?, size: Int) = Box(Modifier.size(size.dp).then(if (
     Icon(painterResource(R.drawable.ic_star_sel), null, Modifier.fillMaxSize(), tint = GoldC)
 }
 
+/** Inside the star tab: says where you are, since the tab itself has no words. */
+@Composable
+fun PicksHeading(empty: Boolean) = Column(Modifier.padding(24.dp, 14.dp, 24.dp, 4.dp)
+    .semantics(mergeDescendants = true) { androidx.compose.ui.semantics.heading() }) {
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        VelvetStar(null, 30)
+        Spacer(Modifier.width(10.dp))
+        Text("Velvet Selection", fontSize = 20.sp, color = Title, fontWeight = FontWeight.Medium)
+    }
+    Text(if (empty) "Coming soon." else "Hand-picked stations from every language.", Modifier.padding(top = 4.dp), color = InkSoft, fontSize = 14.sp)
+}
+
 class LangTab(val id: String, val label: String, val pinned: Boolean = false, val star: Boolean = false, val icon: Boolean = false)
 
 /** Languages in spaced capitals; a fine line under the one you're on. Press and hold to pin, move or remove. */
