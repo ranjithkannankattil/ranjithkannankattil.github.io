@@ -299,7 +299,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/72k4a597rs8uv"
     ],
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "clasic-radio-relax-bucuresti",
@@ -1325,4 +1326,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-18T08:28Z";
+window.STATIONS_CHECKED = "2026-11-18T22:03Z";

@@ -1097,6 +1097,33 @@ window.STATIONS = [
       "https://lakihegyradio.hu/player/stream.php"
     ],
     "added": "2026-11-12"
+  },
+  {
+    "id": "radioone-chillout",
+    "name": "RadioOne - Chillout",
+    "category": "music",
+    "streams": [
+      "https://stream.radioone.hu/ch4"
+    ],
+    "added": "2026-11-18"
+  },
+  {
+    "id": "radioone-trance",
+    "name": "RadioOne - Trance",
+    "category": "music",
+    "streams": [
+      "https://stream.radioone.hu/ch1"
+    ],
+    "added": "2026-11-18"
+  },
+  {
+    "id": "radioone-italo-disco",
+    "name": "RadioOne - Italo Disco",
+    "category": "music",
+    "streams": [
+      "https://stream.radioone.hu/ch2"
+    ],
+    "added": "2026-11-18"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-18T08:28Z";
+window.STATIONS_CHECKED = "2026-11-18T22:03Z";

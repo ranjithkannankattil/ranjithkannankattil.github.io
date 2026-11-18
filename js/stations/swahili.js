@@ -178,8 +178,7 @@ window.STATIONS = [
     "streams": [
       "https://us5new.listen2myradio.com:2199/listen.php?port=8138&type=ice&mount=stream"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "heavenly-altar-church-radio-kampala",
@@ -296,8 +295,7 @@ window.STATIONS = [
     "streams": [
       "https://radiocitizen-atunwadigital.streamguys1.com/radiocitizen/playlist.m3u8"
     ],
-    "added": "2026-10-27",
-    "offline": true
+    "added": "2026-10-27"
   },
   {
     "id": "tafsir-in-swahili",
@@ -336,4 +334,4 @@ window.STATIONS = [
     "added": "2026-11-17"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-18T08:28Z";
+window.STATIONS_CHECKED = "2026-11-18T22:03Z";

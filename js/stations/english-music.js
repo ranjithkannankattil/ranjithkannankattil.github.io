@@ -1069,8 +1069,7 @@ window.STATIONS = [
       "https://streaming.radiostreamlive.com/radiocountrylive_devices"
     ],
     "where": "US",
-    "added": "2026-11-02",
-    "offline": true
+    "added": "2026-11-02"
   },
   {
     "id": "folk-alley-freshgrass",
@@ -1447,7 +1446,8 @@ window.STATIONS = [
       "https://chaosfm.com:8443/stream"
     ],
     "added": "2026-11-07",
-    "where": "UK"
+    "where": "UK",
+    "offline": true
   },
   {
     "id": "progressive-rock-azusa",
@@ -1480,4 +1480,4 @@ window.STATIONS = [
     "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-18T08:28Z";
+window.STATIONS_CHECKED = "2026-11-18T22:03Z";

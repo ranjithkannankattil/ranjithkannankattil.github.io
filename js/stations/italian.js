@@ -806,7 +806,8 @@ window.STATIONS = [
       "https://stream.zeno.fm/72k4a597rs8uv"
     ],
     "added": "2026-11-01",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "radio-margherita",
@@ -1340,4 +1341,4 @@ window.STATIONS = [
     "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-18T08:28Z";
+window.STATIONS_CHECKED = "2026-11-18T22:03Z";

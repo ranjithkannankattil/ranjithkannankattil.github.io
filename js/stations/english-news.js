@@ -699,8 +699,7 @@ window.STATIONS = [
       "https://mainradiostreaming.zbc.co.zw:8020/national.mp3"
     ],
     "added": "2026-10-31",
-    "where": "Zimbabwe",
-    "offline": true
+    "where": "Zimbabwe"
   },
   {
     "id": "wbez-91-5-chicago-public-radio",
@@ -1350,8 +1349,7 @@ window.STATIONS = [
       "https://105fm.espiv.net/listen/105fm/stream.mp3"
     ],
     "added": "2026-11-10",
-    "where": "Greece",
-    "offline": true
+    "where": "Greece"
   },
   {
     "id": "pordeus-fm",
@@ -1505,4 +1503,4 @@ window.STATIONS = [
     "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-18T08:28Z";
+window.STATIONS_CHECKED = "2026-11-18T22:03Z";

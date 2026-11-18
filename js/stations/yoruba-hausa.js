@@ -48,7 +48,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://eu8.fastcast4u.com/proxy/usakufm?mp=/1"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "vicinity-95-3-fm",
@@ -72,7 +73,8 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://airtime.dclm.org/radio/8070/hausa"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "hausa-fulani-radio",
@@ -157,4 +159,4 @@ window.STATIONS = [
     "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-18T08:28Z";
+window.STATIONS_CHECKED = "2026-11-18T22:03Z";

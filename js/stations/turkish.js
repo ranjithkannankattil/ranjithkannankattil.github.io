@@ -42,8 +42,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radyofenomen.com/fenomen/128/icecast.audio"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "kafa-radyo",
@@ -293,8 +292,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radyofenomen.com/fenomenclubbin/128/icecast.audio"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-antalya",
@@ -979,8 +977,7 @@ window.STATIONS = [
     "streams": [
       "https://live.radyofenomen.com/fenomen2010/256/chunks.m3u8"
     ],
-    "added": "2026-11-03",
-    "offline": true
+    "added": "2026-11-03"
   },
   {
     "id": "fenomen-256",
@@ -989,8 +986,7 @@ window.STATIONS = [
     "streams": [
       "https://live.radyofenomen.com/fenomen/256/chunks.m3u8"
     ],
-    "added": "2026-11-03",
-    "offline": true
+    "added": "2026-11-03"
   },
   {
     "id": "bestefm-lounge",
@@ -1335,4 +1331,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-18T08:28Z";
+window.STATIONS_CHECKED = "2026-11-18T22:03Z";

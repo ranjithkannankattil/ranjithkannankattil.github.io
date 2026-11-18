@@ -277,7 +277,8 @@ window.STATIONS = [
       "https://isb.power99.live/stream"
     ],
     "added": "2026-10-27",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "translation-of-the-quran-in-urdu",
@@ -298,4 +299,4 @@ window.STATIONS = [
     "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-18T08:28Z";
+window.STATIONS_CHECKED = "2026-11-18T22:03Z";

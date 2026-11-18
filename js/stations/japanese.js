@@ -430,8 +430,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.mdkband.com/stream.mp3"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "ia-music-news-japanese",
@@ -458,7 +457,8 @@ window.STATIONS = [
     "streams": [
       "https://edenofthewest.com/listen/eden-radio/radio.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "anime-radio",
@@ -742,4 +742,4 @@ window.STATIONS = [
     "added": "2026-11-16"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-18T08:28Z";
+window.STATIONS_CHECKED = "2026-11-18T22:03Z";

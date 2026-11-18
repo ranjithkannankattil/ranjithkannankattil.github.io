@@ -232,7 +232,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.brokenbeats.net/tune"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-shanson",
@@ -545,8 +546,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.mdkband.com/stream.mp3"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "station-12",
@@ -1114,6 +1114,15 @@ window.STATIONS = [
       "https://listen1.myradio24.com/odesradio"
     ],
     "added": "2026-11-14"
+  },
+  {
+    "id": "radio-rehab",
+    "name": "Radio Rehab",
+    "category": "news",
+    "streams": [
+      "https://radiorehab.duckdns.org/radio.mp3"
+    ],
+    "added": "2026-11-18"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-18T08:28Z";
+window.STATIONS_CHECKED = "2026-11-18T22:03Z";

@@ -952,8 +952,7 @@ window.STATIONS = [
     "streams": [
       "https://stream2.statsradio.com:8150/stream"
     ],
-    "added": "2026-11-04",
-    "offline": true
+    "added": "2026-11-04"
   },
   {
     "id": "radio-kolor",
@@ -1178,8 +1177,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.mdkband.com/stream.mp3"
     ],
-    "added": "2026-11-09",
-    "offline": true
+    "added": "2026-11-09"
   },
   {
     "id": "rock-radio",
@@ -1317,4 +1315,4 @@ window.STATIONS = [
     "added": "2026-11-11"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-18T08:28Z";
+window.STATIONS_CHECKED = "2026-11-18T22:03Z";

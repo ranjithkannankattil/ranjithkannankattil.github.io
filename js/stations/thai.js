@@ -113,7 +113,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.chiliradio.app/radiored"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "97qfm",
@@ -292,7 +293,8 @@ window.STATIONS = [
     "streams": [
       "https://radio11.plathong.net/7050/;stream.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "offline": true
   },
   {
     "id": "translation-of-the-quran-in-thai",
@@ -355,7 +357,8 @@ window.STATIONS = [
     "streams": [
       "https://80sv2.hostpleng.com/?url=http://112.121.150.133:8198/;"
     ],
-    "added": "2026-11-13"
+    "added": "2026-11-13",
+    "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-18T08:28Z";
+window.STATIONS_CHECKED = "2026-11-18T22:03Z";
