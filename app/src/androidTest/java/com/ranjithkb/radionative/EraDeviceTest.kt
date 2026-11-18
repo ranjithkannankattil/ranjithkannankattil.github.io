@@ -14,6 +14,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.toPixelMap
 import androidx.compose.ui.test.*
+import androidx.compose.ui.semantics.getOrNull
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.unit.dp
 import androidx.media3.common.MediaItem
@@ -41,6 +42,8 @@ class EraDeviceTest {
     private lateinit var b: MediaBrowser
     private val now = NowState(null)
     private var era by mutableStateOf(Eras.LIST[0])
+    private var showMini by mutableStateOf(false)
+    private val flips = java.util.Collections.synchronizedList(mutableListOf<Int>())
 
     /** Lets the screen catch up: 0.8 s of frames. */
     private fun settle() = rule.mainClock.advanceTimeBy(800)
@@ -59,7 +62,10 @@ class EraDeviceTest {
         waitFor(25_000, "playing") { b.isPlaying }
         main { now.playing = b.isPlaying; now.md = b.mediaMetadata }
         rule.mainClock.autoAdvance = false     // the radio moves for as long as music plays; the test moves the clock itself
-        rule.setContent { MaterialTheme { Surface { EraRadio(era, now, b, Modifier.fillMaxWidth().height(420.dp)) } } }
+        rule.setContent { MaterialTheme { Surface { androidx.compose.foundation.layout.Column {
+            EraRadio(era, now, b, Modifier.fillMaxWidth().height(420.dp), onSwipe = { flips += it })
+            if (showMini) MiniPlayer(now, b, false, {}, {}, CastUi(false, false), {}, {}) {}
+        } } } }
         settle()
     }
     @After fun done() { Eq.save(ctx, false, "Normal", Eq.PRESETS["Normal"]!!); main { b.pause(); b.release() } }
@@ -293,5 +299,78 @@ class EraDeviceTest {
         assertTrue("and back down", Eq.bands(ctx)[0] < bass)
         assertTrue("still playing", main { b.isPlaying })
         Eq.save(ctx, false, "Normal", Eq.PRESETS["Normal"]!!)
+    }
+
+    // ---------- how a real hand uses the new controls
+    private fun pictureNode() = rule.onNode(hasContentDescription(" radio, ", substring = true))
+
+    @Test fun e10_swiping_the_radio_flips_the_look_once_and_knobs_never_do() {
+        val am = ctx.getSystemService(AudioManager::class.java)
+        for (e in Eras.LIST) {
+            main { era = e }; settle(); flips.clear()
+            // a sideways swipe across the middle of the radio (between the knobs)
+            // at 58% of the height: below the transistor's side wheel, above the knobs and keys of every radio
+            pictureNode().performTouchInput { swipe(androidx.compose.ui.geometry.Offset(right - 8f, height * 0.58f), androidx.compose.ui.geometry.Offset(left + 8f, height * 0.58f), 250) }; settle()
+            assertEquals("${e.id}: one swipe left = one step on", listOf(1), flips.toList())
+            pictureNode().performTouchInput { swipe(androidx.compose.ui.geometry.Offset(left + 8f, height * 0.58f), androidx.compose.ui.geometry.Offset(right - 8f, height * 0.58f), 250) }; settle()
+            assertEquals("${e.id}: then one step back", listOf(1, -1), flips.toList())
+            // a short nudge is not a swipe
+            pictureNode().performTouchInput { swipe(androidx.compose.ui.geometry.Offset(centerX + 40f, height * 0.58f), androidx.compose.ui.geometry.Offset(centerX - 40f, height * 0.58f), 200) }; settle()
+            assertEquals("${e.id}: a short nudge does nothing", 2, flips.size)
+            log("${e.id}: look swipe ok")
+        }
+        // a sideways drag that starts on a knob turns the knob, never the look
+        for (id in listOf("cathedral", "valve", "receiver", "digital")) {
+            main { era = Eras.byId(id)!! }; settle(); flips.clear()
+            am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC) / 2, 0); settle()
+            val v0 = am.getStreamVolume(AudioManager.STREAM_MUSIC)
+            rule.onNodeWithContentDescription("Volume knob").performTouchInput { swipeRight(startX = centerX - 10f, endX = centerX + 300f, durationMillis = 300) }; settle()
+            assertTrue("$id: dragging off the knob changes no look (${flips.toList()})", flips.isEmpty())
+            assertTrue("$id: and it did turn the knob", am.getStreamVolume(AudioManager.STREAM_MUSIC) != v0)
+        }
+        // the boombox keys are buttons, not swipe areas
+        main { era = Eras.byId("boombox")!! }; settle(); flips.clear()
+        val from = idx(); rule.onNodeWithContentDescription("Next station").performClick()
+        assertTrue("▶▶ still a button", waitFor(6_000, "next") { moved(from, 1) }); assertTrue(flips.isEmpty())
+    }
+
+    @Test fun e11_fast_spin_and_shaky_finger() {
+        main { era = Eras.byId("receiver")!! }; settle()
+        val n = rule.onNodeWithContentDescription("Tuning knob", substring = true)
+        // two quick full turns clockwise: about 18 stations on, no crash, keeps playing
+        val start = idx(); val cnt = count()
+        n.performTouchInput {
+            val r = minOf(width, height) * 0.4f
+            val pt = { a: Float -> center + androidx.compose.ui.geometry.Offset(r * kotlin.math.cos(Math.toRadians(a.toDouble())).toFloat(), r * kotlin.math.sin(Math.toRadians(a.toDouble())).toFloat()) }
+            down(pt(-90f)); for (k in 1..72) moveTo(pt(-90f + 10f * k), delayMillis = 8); up()
+        }
+        settle()
+        val moved = (idx() - start + cnt) % cnt
+        log("fast spin: $moved stations on (list of $cnt)")
+        assertTrue("two turns ≈ 18 stations (got $moved)", moved in 14..20 || (cnt <= 20 && moved >= 0))
+        assertTrue("still playing after a fast spin", waitFor(30_000, "plays after spin") { b.isPlaying })
+        // a shaky finger: small wobbles back and forth round the knob change nothing
+        val before = idx()
+        n.performTouchInput {
+            val r = minOf(width, height) * 0.4f
+            val pt = { a: Float -> center + androidx.compose.ui.geometry.Offset(r * kotlin.math.cos(Math.toRadians(a.toDouble())).toFloat(), r * kotlin.math.sin(Math.toRadians(a.toDouble())).toFloat()) }
+            down(pt(-90f)); for (k in 1..40) moveTo(pt(-90f + if (k % 2 == 0) 12f else -12f), delayMillis = 10); up()
+        }
+        settle(); Thread.sleep(800)
+        assertEquals("a shaky finger doesn't change station", before, idx())
+    }
+
+    @Test fun e12_bottom_bar_swipe_still_changes_station() {
+        main { showMini = true }; settle()
+        val start = idx()
+        val bar = rule.onNode(SemanticsMatcher("the bar") { n ->
+            n.config.getOrNull(androidx.compose.ui.semantics.SemanticsActions.OnClick)?.label == "Open the player" })
+        bar.performTouchInput { swipeLeft(startX = right - 10f, endX = left + 10f, durationMillis = 250) }; settle()
+        assertTrue("swiping the bar left goes to the next station", waitFor(6_000, "bar next") { moved(start, 1) })
+        val mid = idx()
+        bar.performTouchInput { swipeRight(startX = left + 10f, endX = right - 10f, durationMillis = 250) }; settle()
+        assertTrue("and right goes back", waitFor(6_000, "bar prev") { moved(mid, -1) })
+        assertTrue("no look flip from the bar", flips.isEmpty())
+        main { showMini = false }
     }
 }
