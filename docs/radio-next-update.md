@@ -90,6 +90,11 @@ His choice (17 Nov): keep the bottom bar, highlight the chosen tab with the soft
 3. Or drop the bottom bar: ♥ Favourites becomes the first top tab, Info becomes ⓘ in the header; one more station row fits.
    (The "Favourites 3" chip under the tabs stays: favourites in that language; the ♥ tab is all favourites.)
 
+4. **Several alarms** (tester's idea, 19 Nov): one for workdays, one for the weekend, more if wanted — each with its own
+   time, days, station, fade-in, volume, an optional name and an on/off switch. Quick repeat choices: Workdays · Weekend ·
+   Every day · Once (days still tappable, e.g. a Fri–Sat weekend in Saudi). The list shows the next alarm. The current single
+   alarm becomes the first one, so nobody loses theirs. Designs: canvas "Alarms_list" / "Alarms_edit".
+
 ## Already built and tested on Dev (radio-native-dev), waiting for the next release
 - Knobs turn like real ones: follow the finger round the knob (not only straight swipes), move with the finger between
   steps, a soft click at each step, bigger touch areas; a tap only counts on the knob's left / right third.
