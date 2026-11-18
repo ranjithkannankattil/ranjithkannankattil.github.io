@@ -85,3 +85,12 @@ His choice (17 Nov): keep the bottom bar, highlight the chosen tab with the soft
 2. Bottom bar: make the chosen tab stand out — 2A soft pill, 2B filled in plum, 2C gold edge with a light gold fill.
 3. Or drop the bottom bar: ♥ Favourites becomes the first top tab, Info becomes ⓘ in the header; one more station row fits.
    (The "Favourites 3" chip under the tabs stays: favourites in that language; the ♥ tab is all favourites.)
+
+## Already built and tested on Dev (radio-native-dev), waiting for the next release
+- Knobs turn like real ones: follow the finger round the knob (not only straight swipes), move with the finger between
+  steps, a soft click at each step, bigger touch areas; a tap only counts on the knob's left / right third.
+- Swipe the cover (or a radio, away from its knobs) to flip between the player looks: Standard and the six radios;
+  the look's name shows for a moment. (His idea; the bottom bar's swipe still changes station.)
+- "Reset knobs" under the hi-fi receiver and the digital tuner: bass / mid / treble back to flat; volume and station untouched.
+- Tests: LogicTest + ScreensTest all pass; device tests 26/26 (incl. turning round, fast spin, shaky finger, swipe never
+  from a knob, bottom-bar swipe, reset).

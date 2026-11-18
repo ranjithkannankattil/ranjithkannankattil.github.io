@@ -101,6 +101,7 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
   Velvet logo with a big star (star replaces the antenna dot and inner wave), a one-time first-launch tip under it, a
   "Velvet Selection" heading inside the tab; bottom bar stays, chosen tab gets a soft pill. Details: docs/radio-next-update.md.
   Build only when he says, and release only after the 2.6.0 Play review is done (a new upload replaces the one in review).
+  Already on Dev and tested (17–19 Nov): round-turning knobs, swipe the cover to change the player look, Reset knobs.
 - Old Capacitor wrapper: branch `radio-app` (don't push there — it would publish a 1.x release).
   iPhone: still that wrapper, installed from his Mac with Xcode (free Apple ID, re-run every 7 days);
   no iPhone app for other people — the site says so.
