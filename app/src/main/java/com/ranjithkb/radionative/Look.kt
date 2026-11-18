@@ -109,16 +109,14 @@ fun VelvetStar(label: String?, size: Int) = Box(Modifier.size(size.dp).then(if (
     Icon(painterResource(R.drawable.ic_star_sel), null, Modifier.fillMaxSize(), tint = GoldC)
 }
 
-/** Inside the star tab: says where you are, since the tab itself has no words. */
+/** Inside the star tab: one quiet line saying where you are (the tab itself has no words), the same height as the
+ *  ALL · FM · … row on the language tabs, so the list starts in the same place. */
 @Composable
-fun PicksHeading(empty: Boolean) = Column(Modifier.padding(24.dp, 14.dp, 24.dp, 4.dp)
-    .semantics(mergeDescendants = true) { heading() }) {
-    Row(verticalAlignment = Alignment.CenterVertically) {
-        VelvetStar(null, 30)
-        Spacer(Modifier.width(10.dp))
-        Text("Velvet Selection", fontSize = 20.sp, color = Title, fontWeight = FontWeight.Medium)
-    }
-    Text(if (empty) "Coming soon." else "Hand-picked stations from every language.", Modifier.padding(top = 4.dp), color = InkSoft, fontSize = 14.sp)
+fun PicksHeading(empty: Boolean) = Row(Modifier.fillMaxWidth().heightIn(min = 44.dp).padding(horizontal = Pad)
+    .semantics(mergeDescendants = true) { heading() }, verticalAlignment = Alignment.CenterVertically) {
+    Label("Velvet Selection", Title, 9, weight = FontWeight.SemiBold)
+    Text("  ·  " + (if (empty) "coming soon" else "hand-picked from every language"), fontSize = 13.sp, color = Soft, maxLines = 1,
+        overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis)
 }
 
 class LangTab(val id: String, val label: String, val pinned: Boolean = false, val star: Boolean = false, val icon: Boolean = false)
