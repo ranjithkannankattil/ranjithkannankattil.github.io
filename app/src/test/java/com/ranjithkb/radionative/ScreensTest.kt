@@ -133,7 +133,7 @@ class ScreensTest {
     @Test fun v09_add_weekend_alarm_by_touch() {
         twoAlarms()
         shot("v09a-before-add", false) { AlarmScreen(sts.map { it to "Malayalam" }) {} }
-        rule.onNodeWithText("+  Add an alarm", substring = true).performClick(); rule.waitForIdle()
+        rule.onNode(hasClickLabel("Add an alarm")).performScrollTo().performClick(); rule.waitForIdle()
         rule.onNodeWithText("Weekend").performClick(); rule.waitForIdle()
         rule.onNodeWithText("The last station I played").assertExists()
         capture("v09b-new-alarm-weekend")

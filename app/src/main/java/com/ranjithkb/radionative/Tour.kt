@@ -90,11 +90,17 @@ fun TourOverlay(step: Int, onStep: (Int) -> Unit, onEnd: () -> Unit) {
         .semantics { paneTitle = "Quick tour" }
         .pointerInput(step) { detectTapGestures { } }) {       // the app underneath doesn't take taps during the tour
         val ink = Color(0xFF1C1218)
-        Canvas(Modifier.fillMaxSize().graphicsLayer { compositingStrategy = CompositingStrategy.Offscreen }) {
-            drawRect(ink.copy(alpha = 0.72f))
+        Canvas(Modifier.fillMaxSize()) {
+            // the dim layer with a hole cut out (even-odd fill), so the lit part shows exactly as it is
+            val dim = androidx.compose.ui.graphics.Path().apply {
+                fillType = androidx.compose.ui.graphics.PathFillType.EvenOdd
+                addRect(Rect(Offset.Zero, size))
+                if (hole != null) addRoundRect(androidx.compose.ui.geometry.RoundRect(
+                    Rect(hole.left - pad, hole.top - pad, hole.right + pad, hole.bottom + pad), CornerRadius(pad * 2)))
+            }
+            drawPath(dim, ink.copy(alpha = 0.72f))
             if (hole != null) {
                 val r = Rect(hole.left - pad, hole.top - pad, hole.right + pad, hole.bottom + pad)
-                drawRoundRect(Color.Black, r.topLeft, r.size, CornerRadius(pad * 2), blendMode = BlendMode.Clear)
                 drawRoundRect(GoldC.copy(alpha = glow), r.topLeft, r.size, CornerRadius(pad * 2), style = Stroke(with(density) { 2.dp.toPx() }))
             }
         }

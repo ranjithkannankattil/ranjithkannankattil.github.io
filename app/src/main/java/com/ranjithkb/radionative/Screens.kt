@@ -528,7 +528,7 @@ fun AlarmScreen(choices: List<Pair<Station, String>>, close: () -> Unit) {
                     .padding(vertical = 10.dp), verticalAlignment = Alignment.CenterVertically) {
                     Column(Modifier.weight(1f)) {
                         Text(Alarm.timeLabel(a.hour, a.minute, is24), fontSize = 34.sp, fontWeight = FontWeight.Light, color = if (a.on) Title else Soft)
-                        Text(listOf(a.name, Alarm.daysLabel(a.days), a.station?.optString("name")?.ifBlank { null } ?: "Last station played")
+                        Text(listOf(a.name.takeIf { !it.equals(Alarm.daysLabel(a.days), true) } ?: "", Alarm.daysLabel(a.days), a.station?.optString("name")?.ifBlank { null } ?: "Last station played")
                             .filter { it.isNotBlank() }.joinToString(" · "), fontSize = 13.sp, color = Soft, maxLines = 2)
                     }
                     VelvetSwitch(a.on, "Alarm " + Alarm.timeLabel(a.hour, a.minute, is24) + " on") { Alarm.save(ctx, a.copy(on = it)); refresh() }

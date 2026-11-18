@@ -1,0 +1,7 @@
+<!-- The big star of the Velvet Selection, drawn over ic_logo_star in gold. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp" android:height="48dp" android:viewportWidth="48" android:viewportHeight="48">
+    <group android:translateX="-26.1934" android:translateY="-25.3936" android:scaleX="0.11476" android:scaleY="0.11476">
+        <path android:fillColor="#FFC9A86A" android:pathData="M499.00,240.00 L521.17,291.48 L576.99,296.66 L534.87,333.66 L547.20,388.34 L499.00,359.72 L450.80,388.34 L463.13,333.66 L421.01,296.66 L476.83,291.48Z"/>
+    </group>
+</vector>

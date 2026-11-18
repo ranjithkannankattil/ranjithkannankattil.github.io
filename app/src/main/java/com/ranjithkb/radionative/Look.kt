@@ -41,6 +41,7 @@ import androidx.compose.ui.semantics.CustomAccessibilityAction
 import androidx.compose.ui.semantics.customActions
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.selected
+import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
@@ -100,6 +101,13 @@ fun Header(onSearch: () -> Unit, onSettings: () -> Unit = {}) {
     }
 }
 
+/** The Velvet Selection mark: the Velvet logo in the ink colour (gold in dark mode) with a big gold star. */
+@Composable
+fun VelvetStar(label: String?, size: Int) = Box(Modifier.size(size.dp).then(if (label != null) Modifier.semantics { contentDescription = label } else Modifier)) {
+    Icon(painterResource(R.drawable.ic_logo_star), null, Modifier.fillMaxSize(), tint = if (Theme.dark) GoldC else Title)
+    Icon(painterResource(R.drawable.ic_star_sel), null, Modifier.fillMaxSize(), tint = GoldC)
+}
+
 class LangTab(val id: String, val label: String, val pinned: Boolean = false, val star: Boolean = false, val icon: Boolean = false)
 
 /** Languages in spaced capitals; a fine line under the one you're on. Press and hold to pin, move or remove. */
@@ -121,7 +129,7 @@ fun LangTabs(tabs: List<LangTab>, selected: String, onClick: (LangTab) -> Unit, 
                     verticalArrangement = Arrangement.Bottom, horizontalAlignment = Alignment.CenterHorizontally) {
                     Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(bottom = if (t.star) 6.dp else 9.dp)) {
                         // the Velvet Selection: the Velvet logo with a star (TalkBack still reads its name)
-                        if (t.star) Icon(painterResource(R.drawable.ic_logo_star), t.label, Modifier.size(26.dp), tint = GoldC)
+                        if (t.star) VelvetStar(t.label, 28)
                         else {
                             if (t.pinned) { Icon(Icons.Filled.PushPin, "Pinned", Modifier.size(11.dp), tint = Soft); Spacer(Modifier.width(4.dp)) }
                             Label(t.label, if (on) Title else Soft, 10, weight = if (on) FontWeight.SemiBold else FontWeight.Medium)
