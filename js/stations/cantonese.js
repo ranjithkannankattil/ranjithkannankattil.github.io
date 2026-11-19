@@ -520,8 +520,7 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/1283/64k.mp3"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "station-33",
@@ -548,7 +547,8 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/5061/64k.mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "offline": true
   },
   {
     "id": "m80-radio-macau-80s",
@@ -611,8 +611,7 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/15318668/64k.mp3"
     ],
-    "added": "2026-10-27",
-    "offline": true
+    "added": "2026-10-27"
   },
   {
     "id": "station-40",
@@ -666,8 +665,7 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/1282/64k.mp3"
     ],
-    "added": "2026-11-15",
-    "offline": true
+    "added": "2026-11-15"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-18T22:03Z";
+window.STATIONS_CHECKED = "2026-11-19T08:27Z";

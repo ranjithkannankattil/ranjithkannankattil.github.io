@@ -153,7 +153,8 @@ window.STATIONS = [
     "streams": [
       "https://stream4.rcast.net/74046"
     ],
-    "added": "2026-11-17"
+    "added": "2026-11-17",
+    "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-18T22:03Z";
+window.STATIONS_CHECKED = "2026-11-19T08:27Z";

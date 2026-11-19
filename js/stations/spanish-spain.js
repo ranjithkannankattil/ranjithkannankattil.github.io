@@ -17,8 +17,7 @@ window.STATIONS = [
     "streams": [
       "https://cadena100-streamers-mp3.flumotion.com/cope/cadena100.mp3",
       "https://cadena100-cope.flumotion.com/chunks.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "los-40-principales-espana",
@@ -1329,4 +1328,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-18T22:03Z";
+window.STATIONS_CHECKED = "2026-11-19T08:27Z";

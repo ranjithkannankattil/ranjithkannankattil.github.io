@@ -152,7 +152,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s5.radioforge.com:7908/live?n=77357"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "24-breaking-live",
@@ -176,7 +177,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://online-radio.nv.ua/radionv.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "fm-95-2",
@@ -232,8 +234,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.brokenbeats.net/tune"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-shanson",
@@ -1125,4 +1126,4 @@ window.STATIONS = [
     "added": "2026-11-18"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-18T22:03Z";
+window.STATIONS_CHECKED = "2026-11-19T08:27Z";

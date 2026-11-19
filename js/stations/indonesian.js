@@ -80,8 +80,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.campursarifm.com/listen/campursari/campursari892"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "89-2-fm-jakarta-campur-sari",
@@ -89,8 +88,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://a8.siar.us/listen/campursari/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "rri-pro-2-92-1-fm-tanjungpinang",
@@ -270,8 +268,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:8500/;super.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "bahtera-yudha-fm-surabaya",
@@ -319,8 +316,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://server.radioimeldafm.co.id/radio/8040/gajahmadafm"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "rri-pro-1-sungailiat",
@@ -328,8 +324,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/14/9314/rrisngliatpro1.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "mosh-head-black-metal-id",
@@ -419,8 +414,7 @@ window.STATIONS = [
     "streams": [
       "https://server.radioimeldafm.co.id:8040/gajahmadafm"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "yaski-radio",
@@ -465,8 +459,7 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:9622/stream"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "rri-pro1-banjarmasin",
@@ -558,8 +551,7 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com/8228/;radio"
     ],
-    "added": "2026-10-26",
-    "offline": true
+    "added": "2026-10-26"
   },
   {
     "id": "bandung-death-metal-syndicate",
@@ -678,8 +670,7 @@ window.STATIONS = [
     "streams": [
       "https://server.radioimeldafm.co.id:8030/imeldafm"
     ],
-    "added": "2026-10-28",
-    "offline": true
+    "added": "2026-10-28"
   },
   {
     "id": "voks-radio-bali",
@@ -943,8 +934,7 @@ window.STATIONS = [
     "streams": [
       "https://ssg.streamingmurah.com:8078/;"
     ],
-    "added": "2026-11-03",
-    "offline": true
+    "added": "2026-11-03"
   },
   {
     "id": "wawa-radio-101-2-fm",
@@ -1268,8 +1258,7 @@ window.STATIONS = [
     "streams": [
       "https://s2.free-shoutcast.com/stream/18096"
     ],
-    "added": "2026-11-12",
-    "offline": true
+    "added": "2026-11-12"
   },
   {
     "id": "onix-radio",
@@ -1278,8 +1267,7 @@ window.STATIONS = [
     "streams": [
       "https://pu.klikhost.com/proxy/onixradio/stream"
     ],
-    "added": "2026-11-12",
-    "offline": true
+    "added": "2026-11-12"
   },
   {
     "id": "homebrew-radio",
@@ -1297,8 +1285,7 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:9616/stream"
     ],
-    "added": "2026-11-14",
-    "offline": true
+    "added": "2026-11-14"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-18T22:03Z";
+window.STATIONS_CHECKED = "2026-11-19T08:27Z";

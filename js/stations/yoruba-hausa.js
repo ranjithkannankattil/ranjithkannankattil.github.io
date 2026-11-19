@@ -73,8 +73,7 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://airtime.dclm.org/radio/8070/hausa"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "hausa-fulani-radio",
@@ -128,8 +127,7 @@ window.STATIONS = [
     "streams": [
       "https://atunwadigital.streamguys1.com/yfm1025kumasi"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "ccc-worldwide-radio",
@@ -159,4 +157,4 @@ window.STATIONS = [
     "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-18T22:03Z";
+window.STATIONS_CHECKED = "2026-11-19T08:27Z";

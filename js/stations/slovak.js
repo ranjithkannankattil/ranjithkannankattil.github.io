@@ -128,7 +128,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.sepia.sk:8000/jazz128.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-kiks-ceskoslovensko",
@@ -550,4 +551,4 @@ window.STATIONS = [
     "added": "2026-11-03"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-18T22:03Z";
+window.STATIONS_CHECKED = "2026-11-19T08:27Z";

@@ -907,7 +907,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.astv.ru/stream.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "offline": true
   },
   {
     "id": "fm-5",
@@ -1006,8 +1007,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.brokenbeats.net/tune"
     ],
-    "added": "2026-11-03",
-    "offline": true
+    "added": "2026-11-03"
   },
   {
     "id": "station-39",
@@ -1325,4 +1325,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-18T22:03Z";
+window.STATIONS_CHECKED = "2026-11-19T08:27Z";
