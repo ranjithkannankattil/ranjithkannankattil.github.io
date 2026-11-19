@@ -84,7 +84,6 @@
     "luganda:foundation-of-truth-radio": 60,
     "malay:myfriends-station": 18,
     "malayalam:air-akashvani-malayalam": 1,
-    "malayalam:airdevikulam": 1,
     "malayalam:greenradio": 60,
     "malayalam:keralafm": 60,
     "malayalam:livefm1072": 4,
@@ -2177,11 +2176,6 @@
     "since": "2026-11-18"
   },
   "https://radio.wavespb.com/live/deae7120a205bfff/deae7120a205bfff.m3u8": {
-    "fails": 1,
-    "last_reason": "playlist HTTP 404",
-    "since": "2026-11-18"
-  },
-  "https://radio.wavespb.com/live/e97acc829da9bf2a/e97acc829da9bf2a.m3u8": {
     "fails": 1,
     "last_reason": "playlist HTTP 404",
     "since": "2026-11-18"
