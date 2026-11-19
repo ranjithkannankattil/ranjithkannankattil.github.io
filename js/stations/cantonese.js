@@ -183,8 +183,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://1946218710.rsc.cdn77.org/1946218710/index.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-15",
@@ -520,7 +519,8 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/1283/64k.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "station-33",
@@ -547,8 +547,7 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/5061/64k.mp3"
     ],
-    "added": "2026-10-26",
-    "offline": true
+    "added": "2026-10-26"
   },
   {
     "id": "m80-radio-macau-80s",
@@ -665,7 +664,8 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/1282/64k.mp3"
     ],
-    "added": "2026-11-15"
+    "added": "2026-11-15",
+    "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T08:27Z";
+window.STATIONS_CHECKED = "2026-11-19T22:17Z";

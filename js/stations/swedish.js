@@ -39,7 +39,8 @@ window.STATIONS = [
     "streams": [
       "https://tx-bauerse.sharp-stream.com/http_live.php?i=nrj_instreamtest_se_mp3"
     ],
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "106-7-rockklassiker",
@@ -48,7 +49,8 @@ window.STATIONS = [
     "streams": [
       "https://tx-bauerse.sharp-stream.com/http_live.php?ua=WEB&i=rockklassiker_instream_se_mp3"
     ],
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "sveriges-radio-p4-goteborg",
@@ -525,4 +527,4 @@ window.STATIONS = [
     "added": "2026-11-17"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T08:27Z";
+window.STATIONS_CHECKED = "2026-11-19T22:17Z";

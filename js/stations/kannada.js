@@ -122,7 +122,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://d3n2o48cmfppr2.cloudfront.net/svymradio.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "fm-rainbow-kannada",
@@ -148,8 +149,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.aiir.com/dbv0rxpwp6ytv"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "translation-of-the-quran-in-kannada",
@@ -159,6 +159,15 @@ window.STATIONS = [
       "https://serverkw.quran-uni.com:8132/;"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "radio-daijiworld-konkani",
+    "name": "RADIO daijiworld Konkani (कोन्कनि ಕೊ೦ಕಣಿ )",
+    "category": "music",
+    "streams": [
+      "https://radio.garden/api/ara/content/listen/wnpDPXNr/channel.mp3"
+    ],
+    "added": "2026-11-19"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T08:27Z";
+window.STATIONS_CHECKED = "2026-11-19T22:17Z";

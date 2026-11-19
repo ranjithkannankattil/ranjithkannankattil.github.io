@@ -242,8 +242,8 @@ window.STATIONS = [
     "name": "RadioTEDU Jazz",
     "category": "music",
     "streams": [
-      "https://stream.radiotedu.com/cazz",
-      "https://stream.radiotedu.com/cazz-flac"
+      "https://stream.radiotedu.com/cazz-flac",
+      "https://stream.radiotedu.com/cazz"
     ]
   },
   {
@@ -369,7 +369,8 @@ window.STATIONS = [
     "streams": [
       "https://radio-trtmemleketimfm.medya.trt.com.tr/master.m3u8"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "power-dance",
@@ -1331,4 +1332,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T08:27Z";
+window.STATIONS_CHECKED = "2026-11-19T22:17Z";

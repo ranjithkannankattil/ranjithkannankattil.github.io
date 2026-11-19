@@ -796,8 +796,7 @@ window.STATIONS = [
     "streams": [
       "https://expressfm.ice.infomaniak.ch/expressfm-64.mp3"
     ],
-    "added": "2026-11-01",
-    "offline": true
+    "added": "2026-11-01"
   },
   {
     "id": "monte-carlo",
@@ -1331,4 +1330,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T08:27Z";
+window.STATIONS_CHECKED = "2026-11-19T22:17Z";

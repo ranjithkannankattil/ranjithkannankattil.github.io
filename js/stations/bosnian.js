@@ -32,8 +32,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.leftor.com/proxy/studiom2/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-glas-drine",
@@ -269,7 +268,8 @@ window.STATIONS = [
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_bosanski_petrovac.m3u8"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "radio-bosanska-krupa",
@@ -398,4 +398,4 @@ window.STATIONS = [
     "added": "2026-11-16"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T08:27Z";
+window.STATIONS_CHECKED = "2026-11-19T22:17Z";

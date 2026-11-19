@@ -165,6 +165,15 @@ window.STATIONS = [
       "https://serverkw.quran-uni.com:8118/;"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "youth-fm",
+    "name": "Youth FM",
+    "category": "music",
+    "streams": [
+      "https://ec6.yesstreaming.net:1920/stream"
+    ],
+    "added": "2026-11-19"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T08:27Z";
+window.STATIONS_CHECKED = "2026-11-19T22:17Z";

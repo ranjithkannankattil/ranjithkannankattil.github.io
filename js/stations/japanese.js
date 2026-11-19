@@ -394,7 +394,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.gjfm.my.id/listen/gjfm/siaran"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "j-club-powerplay-hiphop-asia-dream-radio",
@@ -740,4 +741,4 @@ window.STATIONS = [
     "added": "2026-11-16"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T08:27Z";
+window.STATIONS_CHECKED = "2026-11-19T22:17Z";

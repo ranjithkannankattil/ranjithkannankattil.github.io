@@ -416,6 +416,15 @@ window.STATIONS = [
       "https://stream.radio-l.no/rlihq"
     ],
     "added": "2026-11-15"
+  },
+  {
+    "id": "nettvy-radio",
+    "name": "Nettvy Radio",
+    "category": "music",
+    "streams": [
+      "https://nettvy.no/radio/stream"
+    ],
+    "added": "2026-11-19"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T08:27Z";
+window.STATIONS_CHECKED = "2026-11-19T22:17Z";

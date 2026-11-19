@@ -121,7 +121,8 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://ais-sa1.streamon.fm/7676_48k.aac"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "dreamzz-punjabi-radio",
@@ -238,8 +239,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.aiir.com/dbv0rxpwp6ytv"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "red-fm",
@@ -332,4 +332,4 @@ window.STATIONS = [
     "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T08:27Z";
+window.STATIONS_CHECKED = "2026-11-19T22:17Z";

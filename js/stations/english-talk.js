@@ -837,7 +837,8 @@ window.STATIONS = [
       "https://stream.zeno.fm/mwam2yirv1pvv"
     ],
     "added": "2026-10-31",
-    "where": "Nigeria"
+    "where": "Nigeria",
+    "offline": true
   },
   {
     "id": "bfm-89-9-malaysia",
@@ -1489,4 +1490,4 @@ window.STATIONS = [
     "where": "Saudi Arabia"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T08:27Z";
+window.STATIONS_CHECKED = "2026-11-19T22:17Z";

@@ -296,7 +296,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.spacefm.ee/live"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "raadio-tallinn",
@@ -540,4 +541,4 @@ window.STATIONS = [
     "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T08:27Z";
+window.STATIONS_CHECKED = "2026-11-19T22:17Z";

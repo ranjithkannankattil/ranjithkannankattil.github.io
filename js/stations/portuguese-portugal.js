@@ -92,7 +92,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "m80-radio-ballads",
@@ -203,8 +204,8 @@ window.STATIONS = [
     "name": "Antena 3",
     "category": "music",
     "streams": [
-      "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8",
-      "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
+      "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8",
+      "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8"
     ]
   },
   {
@@ -345,7 +346,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/rdpafrica80a/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "antena-1-acores-portugal",
@@ -354,8 +356,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -373,7 +374,8 @@ window.STATIONS = [
     "streams": [
       "https://centova.radio.com.pt/proxy/401?mp=/stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "radio-paralelo",
@@ -400,7 +402,8 @@ window.STATIONS = [
     "streams": [
       "https://centova.radio.com.pt/proxy/478?mp=/stream"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "radio-renascenca-2",
@@ -526,7 +529,8 @@ window.STATIONS = [
     "streams": [
       "https://centova.radio.com.pt/proxy/522?mp=/stream&1715267171"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "m80-radio-90s",
@@ -688,7 +692,8 @@ window.STATIONS = [
     "streams": [
       "https://centova.radio.com.pt/proxy/430?mp=/stream"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "offline": true
   },
   {
     "id": "radio-algoritmo",
@@ -850,7 +855,8 @@ window.STATIONS = [
     "streams": [
       "https://centova.radio.com.pt/proxy/426?mp=/stream;"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "offline": true
   },
   {
     "id": "radio-calheta",
@@ -922,7 +928,8 @@ window.STATIONS = [
     "streams": [
       "https://centova.radios.com.pt/proxy/410?mp=/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "offline": true
   },
   {
     "id": "m80-radio-70s",
@@ -958,13 +965,15 @@ window.STATIONS = [
     "streams": [
       "https://centova.radio.com.pt/proxy/422?mp=/stream;"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "offline": true
   },
   {
     "id": "radio-marginal",
     "name": "Rádio Marginal",
     "category": "music",
     "streams": [
+      "https://stream-radio-marginal-by.newsgen.io/rmlive.mp3",
       "https://centova.radios.pt/proxy/499?mp=/stream"
     ],
     "added": "2026-11-02"
@@ -1129,7 +1138,8 @@ window.STATIONS = [
     "streams": [
       "https://centova.radios.pt/proxy/404?mp=/stream"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "offline": true
   },
   {
     "id": "radio-tagide",
@@ -1237,7 +1247,8 @@ window.STATIONS = [
     "streams": [
       "https://centova.radio.com.pt/proxy/037?mp=/stream"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "offline": true
   },
   {
     "id": "radiofutura-pt",
@@ -1330,4 +1341,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T08:27Z";
+window.STATIONS_CHECKED = "2026-11-19T22:17Z";

@@ -48,8 +48,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://eu8.fastcast4u.com/proxy/usakufm?mp=/1"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "vicinity-95-3-fm",
@@ -157,4 +156,4 @@ window.STATIONS = [
     "added": "2026-11-04"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T08:27Z";
+window.STATIONS_CHECKED = "2026-11-19T22:17Z";

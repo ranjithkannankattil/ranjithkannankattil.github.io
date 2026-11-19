@@ -153,7 +153,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://r1.cloudskep.com/radio/diesi/icecast.audio"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "99-1",
@@ -754,8 +755,7 @@ window.STATIONS = [
     "streams": [
       "https://eu7.fastcast4u.com/proxy/nmarog02?mp=/1"
     ],
-    "added": "2026-10-29",
-    "offline": true
+    "added": "2026-10-29"
   },
   {
     "id": "ekrixi",
@@ -1016,8 +1016,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.crete.ovh:8443/1"
     ],
-    "added": "2026-11-03",
-    "offline": true
+    "added": "2026-11-03"
   },
   {
     "id": "d-code-96-2",
@@ -1327,4 +1326,4 @@ window.STATIONS = [
     "added": "2026-11-08"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T08:27Z";
+window.STATIONS_CHECKED = "2026-11-19T22:17Z";

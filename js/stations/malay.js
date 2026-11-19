@@ -89,7 +89,8 @@ window.STATIONS = [
     "streams": [
       "https://cast3.asurahosting.com/proxy/myfriend/stream"
     ],
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "asyil-fm",
@@ -150,4 +151,4 @@ window.STATIONS = [
     "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T08:27Z";
+window.STATIONS_CHECKED = "2026-11-19T22:17Z";

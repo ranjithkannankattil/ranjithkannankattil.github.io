@@ -772,7 +772,8 @@ window.STATIONS = [
     "streams": [
       "https://stream2.radiotransilvania.ro/Nagyvarad"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "offline": true
   },
   {
     "id": "erdely-fm",
@@ -1126,4 +1127,4 @@ window.STATIONS = [
     "added": "2026-11-18"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T08:27Z";
+window.STATIONS_CHECKED = "2026-11-19T22:17Z";

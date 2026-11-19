@@ -212,8 +212,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.aiir.com/dbv0rxpwp6ytv"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "radio-vivid-voice",
@@ -299,4 +298,4 @@ window.STATIONS = [
     "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T08:27Z";
+window.STATIONS_CHECKED = "2026-11-19T22:17Z";

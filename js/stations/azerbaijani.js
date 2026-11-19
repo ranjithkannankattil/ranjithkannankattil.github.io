@@ -64,7 +64,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s40.myradiostream.com/:22546/listen.mp3?"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "media-fm-105-5",
@@ -190,6 +191,33 @@ window.STATIONS = [
       "https://serverkw.quran-uni.com:8386/;"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "106fm",
+    "name": "106Fm",
+    "category": "music",
+    "streams": [
+      "https://audiostr.atv.az/106fm"
+    ],
+    "added": "2026-11-19"
+  },
+  {
+    "id": "baku-retro-fm",
+    "name": "Baku Retro FM",
+    "category": "music",
+    "streams": [
+      "https://stream.bakuradioalliance.az/retrofm"
+    ],
+    "added": "2026-11-19"
+  },
+  {
+    "id": "baku-hit-fm",
+    "name": "Baku Hit FM",
+    "category": "music",
+    "streams": [
+      "https://stream.bakuradioalliance.az/hitfm"
+    ],
+    "added": "2026-11-19"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T08:27Z";
+window.STATIONS_CHECKED = "2026-11-19T22:17Z";

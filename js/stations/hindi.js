@@ -370,8 +370,7 @@ window.STATIONS = [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio011/hlspbaudio011_Auto.m3u8"
     ],
     "added": "2026-10-22",
-    "hidden": true,
-    "offline": true
+    "hidden": true
   },
   {
     "id": "sandesh-radio",
@@ -479,8 +478,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.aiir.com/dbv0rxpwp6ytv"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "shaiva-lahari",
@@ -1331,4 +1329,4 @@ window.STATIONS = [
     "added": "2026-11-10"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T08:27Z";
+window.STATIONS_CHECKED = "2026-11-19T22:17Z";

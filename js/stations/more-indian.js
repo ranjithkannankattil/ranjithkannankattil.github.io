@@ -17,8 +17,7 @@ window.STATIONS = [
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio008/hlspbaudio008_Auto.m3u8"
     ],
-    "hidden": true,
-    "offline": true
+    "hidden": true
   },
   {
     "id": "radio-4-public-health-marathi",
@@ -77,7 +76,8 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio072/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "air-kolhapur",
@@ -86,7 +86,8 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio063/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "translation-of-the-quran-in-kashmiri",
@@ -105,6 +106,15 @@ window.STATIONS = [
       "https://serverkw.quran-uni.com:8384/;"
     ],
     "added": "2026-11-03"
+  },
+  {
+    "id": "radio-daijiworld-konkani",
+    "name": "RADIO daijiworld Konkani (कोन्कनि ಕೊ೦ಕಣಿ )",
+    "category": "music",
+    "streams": [
+      "https://radio.garden/api/ara/content/listen/wnpDPXNr/channel.mp3"
+    ],
+    "added": "2026-11-19"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T08:27Z";
+window.STATIONS_CHECKED = "2026-11-19T22:17Z";

@@ -1369,7 +1369,8 @@ window.STATIONS = [
       "https://26113.live.streamtheworld.com/CJADAM_SC"
     ],
     "added": "2026-11-11",
-    "where": "Canada"
+    "where": "Canada",
+    "offline": true
   },
   {
     "id": "cftr-city-news-680-toronto-on",
@@ -1503,4 +1504,4 @@ window.STATIONS = [
     "where": "US"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T08:27Z";
+window.STATIONS_CHECKED = "2026-11-19T22:17Z";

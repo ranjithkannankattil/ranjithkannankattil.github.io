@@ -1396,7 +1396,8 @@ window.STATIONS = [
       "https://streams.calmradio.com:6828/stream"
     ],
     "added": "2026-11-06",
-    "where": "Canada"
+    "where": "Canada",
+    "offline": true
   },
   {
     "id": "the-jazz-groove-west",
@@ -1446,7 +1447,8 @@ window.STATIONS = [
       "https://chaosfm.com:8443/stream"
     ],
     "added": "2026-11-07",
-    "where": "UK"
+    "where": "UK",
+    "offline": true
   },
   {
     "id": "progressive-rock-azusa",
@@ -1479,4 +1481,4 @@ window.STATIONS = [
     "where": "UK"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T08:27Z";
+window.STATIONS_CHECKED = "2026-11-19T22:17Z";

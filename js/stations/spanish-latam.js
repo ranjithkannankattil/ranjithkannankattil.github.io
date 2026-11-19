@@ -281,8 +281,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio02.ferozo.com/proxy/ra01000409?mp=/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "la-ke-buena-ciudad-de-mexico-92-9-fm-xeq",
@@ -1328,4 +1327,4 @@ window.STATIONS = [
     "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T08:27Z";
+window.STATIONS_CHECKED = "2026-11-19T22:17Z";

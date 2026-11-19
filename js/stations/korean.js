@@ -337,8 +337,7 @@ window.STATIONS = [
     "streams": [
       "https://mgugaklive.nowcdn.co.kr/gugakvideo/gugakvideo.stream/playlist.m3u8"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "96-kool-fm",
@@ -604,4 +603,4 @@ window.STATIONS = [
     "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T08:27Z";
+window.STATIONS_CHECKED = "2026-11-19T22:17Z";
