@@ -140,7 +140,8 @@ class ScreensTest {
     @Test @Config(qualifiers = "w360dp-h720dp-xxhdpi") fun p05() = shot("play-p05-valve-radio", false, look = "valve", animated = true) { Player(true) }
     @Test @Config(qualifiers = "w360dp-h720dp-xxhdpi") fun p06() = shot("play-p06-boombox-dark", true, look = "boombox", animated = true) { Player(true) }
     @Test @Config(qualifiers = "w360dp-h720dp-xxhdpi") fun p07() = shot("play-p07-colour-themes", false) { ThemesScreen {} }
-    @Test @Config(qualifiers = "w360dp-h720dp-xxhdpi") fun p08() = shot("play-p08-equaliser", false) { EqualiserScreen {} }
+    @Test @Config(qualifiers = "w360dp-h720dp-xxhdpi") fun p08() { Eq.save(rule.activity, true, "Music", Eq.PRESETS["Music"]!!.copyOf())
+        shot("play-p08-equaliser", false) { EqualiserScreen {} } }
     @Test @Config(qualifiers = "w360dp-h720dp-xxhdpi") fun p09() { exactOk(); twoAlarms()
         shot("play-p09-alarms", false) { AlarmScreen(sts.map { it to "Malayalam" }) {} } }
     @Test @Config(qualifiers = "w360dp-h720dp-xxhdpi") fun p10() { exactOk(); twoAlarms()
