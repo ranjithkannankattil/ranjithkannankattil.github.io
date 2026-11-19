@@ -1,28 +1,28 @@
-# Scholarship page check, 2026-11-18
+# Scholarship page check, 2026-11-19
 
 These pages changed. Update `js/scholarships-data.js` if the facts changed.
 
-## MEXT Research Student Scholarship
-https://www.in.emb-japan.go.jp/education/Research_Student.html
+## Gates Cambridge Scholarship
+https://www.gatescambridge.org/apply/timeline/
 
-- New: Age Under 35 years old (Applicants, in principle, must have been born on or after April 2, 1992)
-- New: Applications received after the aforesaid date and time will be automatically rejected.
-- New: Application Deadline (must): 15 May 2026
-- Gone: Type Research Students Level Graduate school level
-- Gone: (Master's Course/Ph.D. Course) Age Under 35 years old (Applicants, in principle, must have been born on or after April 2, 1992) Fields of study (A)Humanities
-- Gone: Applications received after the aforesaid date and time will be automatically rejected. Additionally, files submitted in formats other than Microsoft Word such as scanned copies of handwritten documents, PDF files, PowerPoint files, Google Drive links, Google Docs, etc. will also be rejected automatically.
-- Gone: Applicants who are shortlisted after the Preliminary Application Form screening will be required to submit a separate application form along with the supporting documents as specified in the guidelines. Schedule of the Selection Application Deadline (must): 15 May 2026
-- Gone: Application Screening: May 2026
-- Gone: Notification of result of Preliminary Application Form - Early June
-- Gone: Written Examination: 5 July, 2026
-- Gone: Interview: From 16 to 19 July 2026 (online)
+- New: Dependent on your course – usually either Tuesday 8th December 2026 or Wednesday 6th January 2027 (see Course Directory ). (Full application must be submitted by 11:59pm UK time)
+- Gone: Dependent on your course – either Tuesday 8th December 2026 or Wednesday 6th January 2027 (see Course Directory ). (Full application must be submitted by 11:59pm UK time)
+
+## Khalifa University Graduate Scholarship
+https://www.ku.ac.ae/scholarship/graduate-research-teaching-scholarship-for-international-students
+
+- New: Khalifa University Undergraduate Wins Second Place in CSAW 2026 MENA Applied Research Competition
+- New: UAE’s first national high-temperature materials laboratory opens at Khalifa University in partnership with Mubadala, EGA and Strata
+- Gone: Khalifa University to Host More Than 400 Global University Leaders for QS Higher Ed Summit: Middle East 2026 in Abu Dhabi
 
 ## University of Cape Town funding noticeboard
 https://uct.ac.za/students/fees-funding-postgraduate-degree-funding/postgraduate-degree-funding-noticeboard
 
-- New: 2027 NRF Honours General Call - applications requiring ISFAP assessment Honours See Call information 15 Nov 2026
-- Gone: 2027 NRF Honours General Call - applications requiring ISFAP assessment Honours See Call information 15 Nov 2026 NRF DA Support
-- Gone: PhD resaerch project in Neurosciences, by Dissertation with African Brain Child Doctoral Neurosciences 15 Nov 2026 Queries and Application submissions to Dr Jill Combrinck at j.combrinck@uct.ac.za
+- New: Call for Research Proposals Grant Programme: CCSA Doctoral, Postdoctoral Thematic Areas 27 Nov 2026 Enquiries, email mrgp@compcom.co.za
+- New: Yenching Academy of Peking University Master's Chinese studies 30 Nov 2026 Download the application form here . Questions and application to be sent to fazeela.felton@uct.ac.za
+- New: John Davidson Education Trust 2027 Bursary Programme Honour's, Master's Engineering or Accounting 15 Jan 2027 Submission by hard copy only to the PGFO: Level 2, Otto Beit building, Upper Campus, University of Cape Town, Rondebosch 7700
+- New: No emailed applications accepted. Enquiries: pgfunding@uct.ac.za
+- Gone: Yenching Academy of Peking University Master's Chinese studies 30 Nov 2026 Download the application form here . Questions to be sent to yca-partnerships@pku.edu.cn
 
 ## Could not read from GitHub today
 
