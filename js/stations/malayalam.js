@@ -237,8 +237,7 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://cast1.my-control-panel.com/proxy/myradio90fm/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "airkannur",
@@ -1229,4 +1228,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T00:57Z";
+window.STATIONS_CHECKED = "2026-11-19T01:57Z";
