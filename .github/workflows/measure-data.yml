@@ -1,0 +1,13 @@
+name: Measure radio data use
+# By hand only: how many MB an hour of listening uses on the most-listened stations (no Claude, no secrets).
+on:
+  workflow_dispatch:
+    inputs:
+      stations: { description: "How many top stations", default: "15" }
+permissions: { contents: read }
+jobs:
+  measure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/measure_data_use.py "${{ inputs.stations }}"
