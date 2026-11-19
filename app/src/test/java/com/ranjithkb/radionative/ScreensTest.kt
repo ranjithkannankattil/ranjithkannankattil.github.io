@@ -131,6 +131,24 @@ class ScreensTest {
     }
     @Test fun v31_velvet_selection() = shot("v31-velvet-selection", false) { Picks() }
     @Test fun v32_velvet_selection_dark() = shot("v32-velvet-selection-dark", true) { Picks() }
+    // ---- Google Play phone screenshots: the real screen at true phone proportions, 1080 × 2160 (Play's tallest allowed, 2:1)
+    private fun exactOk() { org.robolectric.shadows.ShadowAlarmManager.setCanScheduleExactAlarms(true) }
+    @Test @Config(qualifiers = "w360dp-h720dp-xxhdpi") fun p01() = shot("play-p01-stations", false) { Stations(true, "heard") }
+    @Test @Config(qualifiers = "w360dp-h720dp-xxhdpi") fun p02() = shot("play-p02-velvet-selection", false) { Picks() }
+    @Test @Config(qualifiers = "w360dp-h720dp-xxhdpi") fun p03() = shot("play-p03-player-bars", false, viz = "bars", animated = true) { Player(true) }
+    @Test @Config(qualifiers = "w360dp-h720dp-xxhdpi") fun p04() = shot("play-p04-player-waves-dark", true, viz = "waves", animated = true) { Player(true) }
+    @Test @Config(qualifiers = "w360dp-h720dp-xxhdpi") fun p05() = shot("play-p05-valve-radio", false, look = "valve", animated = true) { Player(true) }
+    @Test @Config(qualifiers = "w360dp-h720dp-xxhdpi") fun p06() = shot("play-p06-boombox-dark", true, look = "boombox", animated = true) { Player(true) }
+    @Test @Config(qualifiers = "w360dp-h720dp-xxhdpi") fun p07() = shot("play-p07-colour-themes", false) { ThemesScreen {} }
+    @Test @Config(qualifiers = "w360dp-h720dp-xxhdpi") fun p08() = shot("play-p08-equaliser", false) { EqualiserScreen {} }
+    @Test @Config(qualifiers = "w360dp-h720dp-xxhdpi") fun p09() { exactOk(); twoAlarms()
+        shot("play-p09-alarms", false) { AlarmScreen(sts.map { it to "Malayalam" }) {} } }
+    @Test @Config(qualifiers = "w360dp-h720dp-xxhdpi") fun p10() { exactOk(); twoAlarms()
+        shot("play-p10-alarm-edit", false) { AlarmEdit(Alarm.byId(rule.activity, 1)!!, false, sts.map { it to "Malayalam" }) {} } }
+    @Test @Config(qualifiers = "w360dp-h720dp-xxhdpi") fun p11() = shot("play-p11-visualiser", false, viz = "circle", animated = true) { VisualiserScreen {} }
+    @Test @Config(qualifiers = "w360dp-h720dp-xxhdpi") fun p12() = shot("play-p12-stations-kaavu-dark", true, theme = "kaavu") { Stations(true) }
+    @Test @Config(qualifiers = "w360dp-h720dp-xxhdpi") fun p13() = shot("play-p13-player-sandhya", false, theme = "sandhya", viz = "bars", animated = true) { Player(true) }
+
     @Test fun v01_pill_light() = shot("v01-pill-light", false) { Stations(true) }
     @Test fun v02_pill_dark() = shot("v02-pill-dark", true) { Stations(true) }
     @Test fun v03_pill_favourites_dark_rosewood() = shot("v03-pill-favs-rosewood-dark", true, theme = "rosewood") { Stations(true, tab = 1) }
