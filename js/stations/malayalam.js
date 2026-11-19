@@ -88,8 +88,7 @@ window.STATIONS = [
     "category": "fm",
     "streams": [
       "https://stream.aiir.com/dbv0rxpwp6ytv"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radiolemonlive",
@@ -1227,4 +1226,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T08:27Z";
+window.STATIONS_CHECKED = "2026-11-19T21:36Z";

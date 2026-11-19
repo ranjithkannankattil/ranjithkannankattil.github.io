@@ -83,7 +83,6 @@
     "malayalam:air-akashvani-malayalam": 2,
     "malayalam:greenradio": 61,
     "malayalam:keralafm": 61,
-    "malayalam:livefm1072": 5,
     "malayalam:mazhavilfm": 61,
     "malayalam:menorahradio": 61,
     "malayalam:njanmalayalibhakthi": 61,
@@ -2162,11 +2161,6 @@
     "fails": 64,
     "last_reason": "playlist HTTP 403",
     "since": "2026-10-21"
-  },
-  "https://stream.aiir.com/dbv0rxpwp6ytv": {
-    "fails": 40,
-    "last_reason": "HTTP 503, 40 bytes",
-    "since": "2026-11-17"
   },
   "https://stream.astv.ru/stream.mp3": {
     "fails": 1,
