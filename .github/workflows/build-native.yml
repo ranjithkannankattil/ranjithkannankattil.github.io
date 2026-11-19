@@ -114,6 +114,4 @@ jobs:
           if [ -z "$PLAY_SERVICE_ACCOUNT" ]; then echo "No Play key yet: skipping"; exit 0; fi
           pip install -q google-api-python-client google-auth
           NOTES=$(sed -n '/^What.s new:/,/^$/p' notes.md | sed '1d;/^$/d' | head -6)
-          # store phone screenshots for this version (on media.ranjithkb.com); the release goes ahead even if they can't be set
-          export PLAY_SCREENSHOTS="https://media.ranjithkb.com/radio/play/${APP_VERSION}"
           python3 scripts/play_upload.py Radio-Velvet-Play.aab "$APP_VERSION" "$NOTES"
