@@ -26,7 +26,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap"></noscript>
 <link rel="stylesheet" href="css/style.css?v=18">
-<link rel="stylesheet" href="css/radio.css?v=43">
+<link rel="stylesheet" href="css/radio.css?v=44">
 </head>
 <body data-section="radio" class="wide">
 
@@ -194,7 +194,14 @@
     <span class="np-sep" aria-hidden="true"></span>
     <button class="np-skip" id="prevBtn" aria-label="Previous station" title="Previous station"><svg viewBox="0 0 24 24" class="ln"><path d="M6 5v14M18 5 9 12l9 7z"/></svg></button>
     <button class="np-skip" id="nextBtn" aria-label="Next station" title="Next station"><svg viewBox="0 0 24 24" class="ln"><path d="M18 5v14M6 5l9 7-9 7z"/></svg></button>
-    <input class="np-vol" id="vol" type="range" min="0" max="1" step="0.01" value="1" aria-label="Volume">
+    <div class="np-volwrap" id="volWrap">
+      <button class="np-volbtn" id="volBtn" aria-label="Volume" aria-expanded="false" aria-controls="volPop" title="Volume" data-level="high"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="spk" d="M3.5 9.5h3.6L12 5.2v13.6l-4.9-4.3H3.5z"/><path class="w1" d="M15.2 9.2a4 4 0 0 1 0 5.6"/><path class="w2" d="M17.8 6.6a7.6 7.6 0 0 1 0 10.8"/><path class="x" d="M15.5 9.5l5 5M20.5 9.5l-5 5"/></svg></button>
+      <div class="np-volpop" id="volPop" role="group" aria-label="Volume">
+        <button class="np-volmute" id="volMute" aria-label="Mute" title="Mute" data-level="high"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="spk" d="M3.5 9.5h3.6L12 5.2v13.6l-4.9-4.3H3.5z"/><path class="w1" d="M15.2 9.2a4 4 0 0 1 0 5.6"/><path class="w2" d="M17.8 6.6a7.6 7.6 0 0 1 0 10.8"/><path class="x" d="M15.5 9.5l5 5M20.5 9.5l-5 5"/></svg></button>
+        <input class="np-vol" id="vol" type="range" min="0" max="1" step="0.01" value="1" aria-label="Volume">
+        <span class="np-volnum" id="volNum" aria-hidden="true">100</span>
+      </div>
+    </div>
     <button class="np-close" id="closeBtn" aria-label="Stop and close the player" title="Stop and close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
   </div>
   <div class="sleep-menu" id="sleepMenu" role="dialog" aria-label="Sleep timer" hidden>
@@ -250,7 +257,7 @@
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.5.13/hls.min.js"></script>
 <script src="js/collections.js?v=2"></script>
-<script src="js/radio.js?v=45"></script>
+<script src="js/radio.js?v=46"></script>
 <script src="js/firebase-config.js?v=3"></script>
 <script src="js/radio-listen.js?v=2"></script>
 <script src="js/radio-settings.js?v=2"></script>

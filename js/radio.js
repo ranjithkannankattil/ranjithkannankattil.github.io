@@ -1316,8 +1316,38 @@
   $("#prevBtn").onclick = () => skip(-1);
   $("#nextBtn").onclick = () => skip(1);
   npFav.onclick = () => current && toggleFav(`${currentCol}:${current.id}`, current);
-  vol.value = store.get("mr-vol", 1); audio.volume = vol.value;
-  vol.oninput = () => { audio.volume = vol.value; store.set("mr-vol", +vol.value); };
+  // volume: a speaker in the player row opens a slider above the bar (with mute). iPhones and iPads don't let a web page
+  // change the volume (only the phone's buttons do), so there the speaker is hidden rather than offering a dead slider.
+  const volBtn = $("#volBtn"), volWrap = $("#volWrap"), volNum = $("#volNum"), volMute = $("#volMute");
+  const canSetVolume = (() => { try { const t = new Audio(); t.volume = 0.5; return Math.abs(t.volume - 0.5) < 0.01; } catch { return false; } })();
+  let lastVol = +store.get("mr-vol-last", 1) || 1;
+  function showVol() {
+    const v = +vol.value, pct = Math.round(v * 100), lvl = v === 0 ? "mute" : v < 0.5 ? "low" : "high";
+    volBtn.dataset.level = volMute.dataset.level = lvl;
+    volNum.textContent = pct;
+    vol.setAttribute("aria-valuetext", v === 0 ? "Muted" : pct + "%");
+    volBtn.setAttribute("aria-label", "Volume, " + (v === 0 ? "muted" : pct + "%"));
+    volMute.setAttribute("aria-label", v === 0 ? "Unmute" : "Mute"); volMute.title = v === 0 ? "Unmute" : "Mute";
+  }
+  function setVol(v) {
+    vol.value = Math.max(0, Math.min(1, v)); audio.volume = +vol.value; store.set("mr-vol", +vol.value);
+    if (+vol.value > 0) { lastVol = +vol.value; store.set("mr-vol-last", lastVol); }
+    showVol();
+  }
+  function closeVol() { volWrap.classList.remove("open"); volBtn.setAttribute("aria-expanded", "false"); }
+  vol.value = store.get("mr-vol", 1); audio.volume = vol.value; showVol();
+  vol.oninput = () => setVol(+vol.value);
+  if (!canSetVolume) volWrap.hidden = true;
+  volBtn.onclick = (e) => {
+    e.stopPropagation();
+    const open = !volWrap.classList.contains("open");
+    volWrap.classList.toggle("open", open); volBtn.setAttribute("aria-expanded", String(open));
+    if (open) vol.focus({ preventScroll: true });
+  };
+  volMute.onclick = (e) => { e.stopPropagation(); setVol(+vol.value === 0 ? lastVol : 0); };
+  volWrap.addEventListener("wheel", (e) => { e.preventDefault(); setVol(+vol.value + (e.deltaY < 0 ? 0.05 : -0.05)); }, { passive: false });
+  document.addEventListener("click", (e) => { if (!volWrap.contains(e.target)) closeVol(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && volWrap.classList.contains("open")) { closeVol(); volBtn.focus(); } });
   q.oninput = render;
   document.addEventListener("keydown", (e) => {
     if (e.code === "Space" && e.target === document.body) { e.preventDefault(); toggle(); }
