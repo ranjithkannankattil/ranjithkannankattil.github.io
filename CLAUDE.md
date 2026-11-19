@@ -87,7 +87,7 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
   existing key uploaded). Closed tests: **Alpha** (email list "Velvet testers", friends) and **Early access** (Google Group
   `radio-velvet-testers@googlegroups.com`, anyone can join; joined from the Radio page's Info → app card, the
   `.ra-play` box). Every build on `radio-native` uploads the Play bundle via `scripts/play_upload.py` (secret
-  `PLAY_SERVICE_ACCOUNT`, service account play-uploader@ranjithkb-radio, testing-track rights only) to all closed tracks;
+  `PLAY_SERVICE_ACCOUNT`, service account play-uploader@ranjithkb-radio, testing tracks + Manage store presence) to all closed tracks;
   Google reviews each release. The .aab is no longer attached to public releases (phones can't install it).
 - **In-app notes**: the app (2.3.5+) shows messages from `radio-notes.json` on the site (id, to web/play/all, times,
   until, title, text, button, link; `whatsapp:<text>` opens a chat with him). His WhatsApp number comes only from the
@@ -105,9 +105,9 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
   notification; a quiet stream check 2 min before; AlarmLog keeps the last 30 lines. Plus round-turning knobs, swipe the cover
   for the player look, Reset knobs.
 - **Play store screenshots**: real app screens (ScreensTest `p01`–`p13`, 1080 × 2160) captioned on a light cream background,
-  1080 × 1920; the chosen 8 are on R2 at `radio/play/<version>/play-01..08.png`. The Play key has testing-track rights only, so it
-  can't change the store listing: he uploads them by hand (Store listing → Phone screenshots), or gives the service account
-  "Manage store presence" and runs the "Play store screenshots" workflow on main. Never add listing changes to the release
+  1080 × 1920; the chosen 8 are on R2 at `radio/play/<version>/play-01..08.png`. The Play key now also has "Manage store
+  presence" (he granted it 19 Nov 2026): run the "Play store screenshots" workflow on main (input: version) to put them on the
+  listing (2.7.0's went up that day). Keep listing changes out of the release
   upload (a failed commit there would lose the release).
 - Old Capacitor wrapper: branch `radio-app` (don't push there — it would publish a 1.x release).
   iPhone: still that wrapper, installed from his Mac with Xcode (free Apple ID, re-run every 7 days);
