@@ -111,3 +111,13 @@ His choice (17 Nov): keep the bottom bar, highlight the chosen tab with the soft
 - "Reset knobs" under the hi-fi receiver and the digital tuner: bass / mid / treble back to flat; volume and station untouched.
 - Tests: LogicTest + ScreensTest all pass; device tests 26/26 (incl. turning round, fast spin, shaky finger, swipe never
   from a knob, bottom-bar swipe, reset).
+
+## Released in 2.7.0 (sent to Google 19 Nov 2026)
+Everything above: star tab, soft pill, tour, several alarms, safety net, and the Dev items. Next ideas go below.
+
+## Feedback for the next revision
+- **TVS iQube (EV scooter) doesn't see Radio Velvet as a music player** (tester, 19 Nov 2026). The TVS Connect app only
+  shows controls for well-known apps (Amazon Music, Spotify, YouTube Music; not even YouTube forks): it seems to pick apps by
+  name, which only TVS can change. Radio Velvet already plays through Android's standard music controls (lock screen,
+  Bluetooth, Android Auto). Ideas: ask TVS to add `com.ranjithkb.radio`; check whether the scooter's Bluetooth/helmet
+  controls work anyway; TVS showed Android Auto for the top iQube at EICMA 2026 (Radio Velvet already works in Android Auto).
