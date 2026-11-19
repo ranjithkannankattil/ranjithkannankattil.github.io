@@ -1,7 +1,7 @@
 ## Alexa stream check
 
-Malayalam: **100 of 106** play the way an Echo needs.
-All checked: 174 of 181.
+Malayalam: **98 of 105** play the way an Echo needs.
+All checked: 172 of 180.
 
 | Station | Language | Result |
 |---|---|---|
@@ -9,19 +9,19 @@ All checked: 174 of 181.
 | Hit 96.7 (AE only) | malayalam | ❌ HTTPError: HTTP Error 401: Unauthorized |
 | Paattupetti | malayalam | ❌ HTTPError: HTTP Error 403: Station config not found (Redis) |
 | Puthiyerushalem | malayalam | ❌ HTTPError: HTTP Error 403: Station config not found (Redis) |
+| Radio Neythal | malayalam | ❌ HTTPError: HTTP Error 401: Unauthorized |
 | Radio Wind | malayalam | ❌ HTTPError: HTTP Error 403: Station config not found (Redis) |
 | Shalom Radio | malayalam | ❌ HTTPError: HTTP Error 403: Station config not found (Redis) |
 | 98.6 FM | malayalam | ✅ 200 audio/mpeg 16384B |
-| AIR Akashvani Malayalam | malayalam | ✅ 200 application/vnd.apple.mpegurl 371B |
 | AIR Alappuzha | malayalam | ✅ 200 application/vnd.apple.mpegurl 93B |
 | AIR Ananthapuri FM | malayalam | ✅ 200 application/vnd.apple.mpegurl 93B |
 | AIR Devikulam | malayalam | ✅ 200 application/vnd.apple.mpegurl 370B |
 | AIR FM Rainbow Kochi | malayalam | ✅ 200 application/vnd.apple.mpegurl 369B |
 | AIR Kannur | malayalam | ✅ 200 application/vnd.apple.mpegurl 370B |
-| AIR Kochi FM | malayalam | ✅ 200 application/vnd.apple.mpegurl 369B |
+| AIR Kochi FM | malayalam | ✅ 200 application/vnd.apple.mpegurl 371B |
 | AIR Kozhikode (Calicut) | malayalam | ✅ 200 application/vnd.apple.mpegurl 371B |
-| AIR Kozhikode FM | malayalam | ✅ 200 application/vnd.apple.mpegurl 371B |
-| AIR Malayalam | malayalam | ✅ 200 application/vnd.apple.mpegurl 371B |
+| AIR Kozhikode FM | malayalam | ✅ 200 application/vnd.apple.mpegurl 370B |
+| AIR Malayalam | malayalam | ✅ 200 application/vnd.apple.mpegurl 369B |
 | AIR Manjeri FM | malayalam | ✅ 200 application/vnd.apple.mpegurl 370B |
 | AIR Thrissur | malayalam | ✅ 200 application/vnd.apple.mpegurl 370B |
 | AR Radio | malayalam | ✅ 200 audio/mpeg 16384B |
@@ -56,7 +56,7 @@ All checked: 174 of 181.
 | Kairali News | malayalam | ✅ 200 application/vnd.apple.mpegurl 370B |
 | Kairaly TV | malayalam | ✅ 200 application/vnd.apple.mpegurl 182B |
 | Kalabhavan Mani Radio | malayalam | ✅ 200 audio/mpeg 16384B |
-| Karunasai Radio | malayalam | ✅ 200 application/x-mpegurl 214B |
+| Karunasai Radio | malayalam | ✅ 200 application/x-mpegurl 217B |
 | Luminous FM | malayalam | ✅ 200 audio/mpeg 16384B |
 | Mala90 | malayalam | ✅ 200 audio/mpeg 16384B |
 | Malayalam FM 104.6 (NZ) | malayalam | ✅ 200 audio/mpeg 16384B |
@@ -93,7 +93,6 @@ All checked: 174 of 181.
 | Radio Mattoli | malayalam | ✅ 200 audio/mpeg 16384B |
 | Radio Media Village | malayalam | ✅ 200 audio/ogg 16384B |
 | Radio Mythri | malayalam | ✅ 200 audio/aac 16384B |
-| Radio Neythal | malayalam | ✅ 200 audio/mpeg 16384B |
 | Radio Palakkad | malayalam | ✅ 200 audio/mpeg 16384B |
 | Radio Sallapam | malayalam | ✅ 200 audio/mpeg 16384B |
 | Radio Sarangi | malayalam | ✅ 200 audio/mpeg 16384B |
@@ -108,7 +107,7 @@ All checked: 174 of 181.
 | Shaiva Lahari | malayalam | ✅ 200 audio/mpeg 16384B |
 | Suno Bahrain | malayalam | ✅ 200 audio/mpeg 16384B |
 | Tirur Radio | malayalam | ✅ 200 audio/mpeg 16384B |
-| Vividh Bharati Malayalam | malayalam | ✅ 200 application/vnd.apple.mpegurl 371B |
+| Vividh Bharati Malayalam | malayalam | ✅ 200 application/vnd.apple.mpegurl 369B |
 | Vividh Bharati Thiruvananthapuram | malayalam | ✅ 200 application/vnd.apple.mpegurl 93B |
 | World to World | malayalam | ✅ 200 audio/aac 16384B |
 | Tamil Sun FM | tamil | ❌ BadStatusLine: ICY 200 OK
