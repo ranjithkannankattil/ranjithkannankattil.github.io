@@ -1,0 +1,23 @@
+name: Play store screenshots
+# By hand only: puts the phone screenshots of one Radio Velvet version (from media.ranjithkb.com) on the Google Play listing.
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version folder on media.ranjithkb.com/radio/play/ (e.g. 2.7.0)"
+        required: true
+permissions:
+  contents: read
+jobs:
+  listing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Replace the phone screenshots
+        env:
+          PLAY_SERVICE_ACCOUNT: ${{ secrets.PLAY_SERVICE_ACCOUNT }}
+        run: |
+          pip install -q google-api-python-client google-auth
+          python3 scripts/play_listing_screenshots.py "${{ inputs.version }}"
