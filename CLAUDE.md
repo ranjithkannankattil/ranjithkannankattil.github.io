@@ -97,12 +97,18 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
   (period materials, its own light/dark page while the player is open) or My colour theme. Knobs work (tuning = station, volume =
   phone media volume, bass/mid/treble = equaliser). Only the picture repaints each frame; a paused radio stops drawing once still.
   Device tests `EraDeviceTest` drive the clock by hand (the radio animates while music plays). App only, not on the website.
-- **Next app version — ON HOLD (his call, 17 Nov 2026)**: designed and approved, not built. Velvet Selection tab becomes the
-  Velvet logo with a big star (star replaces the antenna dot and inner wave), a first-launch helper tour of the whole app
-  (8 skippable steps, replay from Info), a "Velvet Selection" heading inside the tab, several alarms (workdays / weekend…); bottom bar stays, chosen tab gets a soft pill. Details: docs/radio-next-update.md.
-  Build only when he says. 2.6.0 was approved on Google Play on 19 Nov 2026 (with the crash-logs Data safety update), so the
-  next release can go to Play once he says; a new upload replaces any release still in review.
-  Already on Dev and tested (17–19 Nov): round-turning knobs, swipe the cover to change the player look, Reset knobs.
+- **2.7.0** (sent to Google 19 Nov 2026, code 2031): the Velvet Selection tab is the Velvet logo with a gold star, with one quiet
+  line "VELVET SELECTION · hand-picked stations" inside (he didn't want a second logo and big heading: "3 layer titles");
+  chosen bottom tab on a soft pill; first-launch tour (`Tour.kt`, 8 steps, fresh installs only, replay from Info → Quick tour);
+  several alarms (`Alarm.kt`: list in prefs "alarm"/"list", 2.6's single alarm migrates) with a safety net: the station's other
+  links → backup (favourites / a chosen station / "tone") → the phone's alarm sound within 20 s; Stop / Snooze 10 min
+  notification; a quiet stream check 2 min before; AlarmLog keeps the last 30 lines. Plus round-turning knobs, swipe the cover
+  for the player look, Reset knobs.
+- **Play store screenshots**: real app screens (ScreensTest `p01`–`p13`, 1080 × 2160) captioned on a light cream background,
+  1080 × 1920; the chosen 8 are on R2 at `radio/play/<version>/play-01..08.png`. The Play key has testing-track rights only, so it
+  can't change the store listing: he uploads them by hand (Store listing → Phone screenshots), or gives the service account
+  "Manage store presence" and runs the "Play store screenshots" workflow on main. Never add listing changes to the release
+  upload (a failed commit there would lose the release).
 - Old Capacitor wrapper: branch `radio-app` (don't push there — it would publish a 1.x release).
   iPhone: still that wrapper, installed from his Mac with Xcode (free Apple ID, re-run every 7 days);
   no iPhone app for other people — the site says so.
