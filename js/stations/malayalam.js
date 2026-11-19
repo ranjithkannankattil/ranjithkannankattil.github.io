@@ -333,8 +333,7 @@ window.STATIONS = [
     "category": "fm",
     "streams": [
       "https://icecast.octosignals.com/radiomacfast"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "globalradio",
@@ -570,8 +569,7 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://streamasiahlscdn.atc-labs.com/karunasairadio.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radiomalayalam",
@@ -1231,4 +1229,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-18T23:57Z";
+window.STATIONS_CHECKED = "2026-11-19T00:57Z";
