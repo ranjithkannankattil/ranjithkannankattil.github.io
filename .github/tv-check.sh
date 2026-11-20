@@ -2,7 +2,7 @@
 # Drives Radio Velvet Dev on an Android TV emulator with the remote's keys and saves screenshots + a video.
 set -x
 OUT=/tmp/tv; mkdir -p $OUT
-PKG=com.ranjithkb.radio.dev
+PKG=com.ranjithkb.radio   # this test build has the normal app id
 APK=$(ls app/build/outputs/apk/play/debug/*.apk | head -1)
 adb install -r "$APK"
 sleep 5
