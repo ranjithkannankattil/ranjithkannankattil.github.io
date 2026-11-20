@@ -45,12 +45,16 @@
   }
 
   // ---- settings
-  const DEF = { theme: "velvet", mode: "phone", text: 0, spacing: 0, viz: "off" };
+  const DEF = { theme: "velvet", mode: "phone", text: 0, spacing: 0, viz: "off", data: "off" };
   let S = (() => { try { return { ...DEF, ...JSON.parse(localStorage.getItem("rv-settings") || "{}") }; } catch { return { ...DEF }; } })();
   if (!THEMES.some((t) => t.id === S.theme)) S.theme = "velvet";
   if (!["phone", "light", "dark"].includes(S.mode)) S.mode = "phone";
   S.text = [0, 1, 2].includes(S.text) ? S.text : 0; S.spacing = [0, 1, 2].includes(S.spacing) ? S.spacing : 0;
   if (!["bars", "waves", "circle", "off"].includes(S.viz)) S.viz = "off";
+  if (!["off", "mobile", "on"].includes(S.data)) S.data = "off";
+  // Data saver: on when chosen, on mobile data when "mobile" is chosen (where the browser can tell), and always when
+  // the browser's own "save data" switch is on
+  const saving = () => { const c = navigator.connection || {}; return S.data === "on" || !!c.saveData || (S.data === "mobile" && c.type === "cellular"); };
   const save = () => { try { localStorage.setItem("rv-settings", JSON.stringify(S)); } catch { /* private window: this visit only */ } };
 
   const sysDark = matchMedia("(prefers-color-scheme: dark)");
@@ -195,6 +199,12 @@
     note.textContent = "Shown in the player. On the website it's a gentle animation that follows play and pause: most stations don't let browsers read their sound. In the app it moves with the music.";
     vz.append(note);
     row("Visualiser", vz);
+    const ds = document.createElement("div");
+    ds.append(radios("Data saver", [["off", "Off"], ["mobile", "Mobile data"], ["on", "Always"]], S.data, (v) => { S.data = v; save(); window.dispatchEvent(new Event("rv-data")); }));
+    const dn = document.createElement("p"); dn.className = "iv-sub";
+    dn.textContent = "For ships, villages and patchy signal: plays each station's lightest link and shows how heavy each station is (MB an hour). \"Mobile data\" works where the browser can tell it's on mobile data (Chrome on Android).";
+    ds.append(dn);
+    row("Data saver", ds);
     const p = document.createElement("p"); p.className = "iv-sub";
     p.textContent = "Equaliser and alarm are in the Android app. The website keeps its own fonts.";
     sec.append(p);
@@ -249,5 +259,5 @@
     head.append(b);
   }
   apply();
-  window.RadioSettings = { THEMES, palette: (id, dark) => palette(THEMES.find((t) => t.id === id), dark), contrast: (a, b) => contrast(hex(a), hex(b)), get: () => ({ ...S }) };
+  window.RadioSettings = { THEMES, palette: (id, dark) => palette(THEMES.find((t) => t.id === id), dark), contrast: (a, b) => contrast(hex(a), hex(b)), get: () => ({ ...S }), saving };
 })();

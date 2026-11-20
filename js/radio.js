@@ -305,7 +305,14 @@
       chips.append(lab);
     }
   }
-  const SORTS = [["usual", "Usual order"], ["az", "A–Z"], ["heard", "Most heard"], ["rated", "Top rated"]];
+  const SORTS = [["usual", "Usual order"], ["az", "A–Z"], ["heard", "Most heard"], ["rated", "Top rated"], ["light", "Lightest first"]];
+  // Data saver: each stream's weight comes from the twice-daily check ("br", kbps per stream, 0 = not known)
+  const saving = () => !!window.RadioSettings?.saving?.();
+  const lightest = (s) => Math.min(...(s.br || []).filter((k) => k > 0), Infinity);
+  const weightLabel = (s) => { const k = lightest(s); return isFinite(k) ? `${k} kbps · ~${Math.round(k * 0.45)} MB/hour` : ""; };
+  const playOrder = (s) => !saving() || !s.br ? s.streams
+    : s.streams.map((u, i) => [u, s.br[i] > 0 ? s.br[i] : 96]).sort((a, b) => a[1] - b[1]).map((x) => x[0]);
+  window.addEventListener("rv-data", () => { if (col && S.length) render(); });
   let sortBy = (() => { try {
     const v = localStorage.getItem("mr-sort");
     return SORTS.some(([k]) => k === v) ? v : (localStorage.getItem("mr-az") === "0" ? "usual" : "az");
@@ -342,6 +349,7 @@
     if (col.id !== "picks") {
       if (sortBy === "az") list.sort(byName);
       else if (sortBy === "heard") list.sort((a, b) => heardMin(key(b)) - heardMin(key(a)));
+      else if (sortBy === "light") list.sort((a, b) => (isFinite(lightest(a)) ? lightest(a) : 1e4) - (isFinite(lightest(b)) ? lightest(b) : 1e4));
       else if (sortBy === "rated") list.sort((a, b) => ((rating(key(b)) || [-1])[0] - (rating(key(a)) || [-1])[0]) ||
         ((stats && stats.ratings[key(b)] || [0, 0])[1] - (stats && stats.ratings[key(a)] || [0, 0])[1]));
     }
@@ -410,7 +418,8 @@
         </button>
         <button class="fav" aria-label="Favourite" aria-pressed="${favs.has(key(s))}"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2Z"/></svg></button>`;
       li.querySelector(".nm").textContent = s.name;      // names come from a public directory: never as HTML
-      const extra = s.offline || col.id === "picks" ? "" : sortBy === "heard" ? heardLabel(heardMin(key(s))) : sortBy === "rated" ? ratedLabel(rating(key(s))) : "";
+      const extra = [s.offline || col.id === "picks" ? "" : sortBy === "heard" ? heardLabel(heardMin(key(s))) : sortBy === "rated" ? ratedLabel(rating(key(s))) : "",
+        s.offline || !(saving() || sortBy === "light") ? "" : weightLabel(s)].filter(Boolean).join(" · ");
       li.querySelector(".sub").textContent = [extra, sub].filter(Boolean).join(" · ");
       if (top3.has(key(s))) li.querySelector(".nm").insertAdjacentHTML("beforeend", ' <span class="top3" title="One of the three most heard this week">◆</span>');
       if (isNew && !s.offline) li.querySelector(".nm").insertAdjacentHTML("beforeend", ' <span class="new-tag">New</span>');
@@ -1038,6 +1047,7 @@
   function play(s, list, cId = s._c || col.id, dir = 0) {
     queue = list || (cId === (col && col.id) ? visibleList() : [s]);
     current = s; currentCol = cId; tryIndex = 0; lastSwitch = Date.now();
+    s._play = playOrder(s);                         // Data saver: lightest link first
     everPlayed = false; retries = 0; skipDir = dir; lostAt = 0;
     if (!dir) autoSkips = 0;
     store.set("mr-last2", { c: cId, s }); store.set("mr-closed", false);
@@ -1073,7 +1083,7 @@
     teardown();
     wants = true;
     interruptedAt = 0; callHeldAt = 0;
-    const s = current, url = s.streams[tryIndex];
+    const s = current, links = s._play || s.streams, url = links[tryIndex];
     if (!url) {
       if (everPlayed) { tryIndex = 0; everPlayed = false; reconnect("Reconnecting"); return; }  // was on air: start over
       setState("idle"); status(s.geo ? geoNote(s.geo) + " — it won't play from here" : "Offline — try another station"); markErr(s.id);
@@ -1083,13 +1093,14 @@
       return;
     }
     setState("loading");
-    status(s.streams.length > 1 ? `Connecting · source ${tryIndex + 1}/${s.streams.length}` : "Connecting");
+    status(links.length > 1 ? `Connecting · source ${tryIndex + 1}/${links.length}` : "Connecting");
     failTimer = setTimeout(nextSource, skipDir ? 8000 : 12000);   // reached with Next in the car: give up on a dead one sooner
     const isHls = /\.m3u8(\?|$)/i.test(url);
     // hls.js first: the browser's own HLS player can't read some playlists (e.g. Akashvani).
     // Native HLS is only used where hls.js can't run (iPhone Safari).
     if (isHls && window.Hls?.isSupported()) {
-      hls = new Hls({ lowLatencyMode: false });
+      hls = new Hls(saving() ? { lowLatencyMode: false, startLevel: 0, capLevelToPlayerSize: false } : { lowLatencyMode: false });
+      if (saving()) hls.on(Hls.Events.MANIFEST_PARSED, () => { hls.autoLevelCapping = 0; });   // Data saver: the lowest level
       hls.on(Hls.Events.ERROR, (_, d) => { if (d.fatal) nextSource(); });
       hls.loadSource(url); hls.attachMedia(audio);
       hls.on(Hls.Events.MANIFEST_PARSED, () => audio.play().catch(nextSource));
