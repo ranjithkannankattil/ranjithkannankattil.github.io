@@ -144,4 +144,5 @@ Everything above: star tab, soft pill, tour, several alarms, safety net, and the
   Info, the tour, alarms, notifications, lock-screen and Android Auto labels, messages. Natural, everyday Malayalam (not
   stiff official words), in Manjari; Hindi the same way: simple everyday Hindi, not heavy Sanskrit words, in a clean
   Devanagari font. Station and song names stay as they are. App only: the website stays English-only.
+  His word choices (Malayalam): Station = നിലയം (Stations tab = നിലയങ്ങൾ).
   He reviews the Malayalam wording, and someone fluent checks the Hindi, before release. Not started; build when he says.
