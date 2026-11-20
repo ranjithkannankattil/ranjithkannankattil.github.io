@@ -640,92 +640,101 @@ fun FullPlayer(now: NowState, c: MediaController?, cast: CastUi, onCloseAll: () 
 @Composable
 fun InfoTab(languages: Int, update: Update?, onPage: (String) -> Unit = {}, onSignIn: () -> Unit, onSignOut: () -> Unit) {
     val ctx = LocalContext.current
-    LazyColumn(contentPadding = PaddingValues(20.dp), verticalArrangement = Arrangement.spacedBy(18.dp)) {
+    // Tidy (Nov 2026): a header card, your listening, then short lists of rows like Settings; longer text opens its own page
+    var about by remember { mutableStateOf<String?>(null) }
+    Box(Modifier.fillMaxSize()) {
+    LazyColumn(contentPadding = PaddingValues(start = 20.dp, end = 20.dp, top = 16.dp, bottom = 24.dp)) {
         item {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Box(Modifier.size(64.dp).clip(RoundedCornerShape(14.dp)).background(ArtBg), contentAlignment = Alignment.Center) {
-                    Icon(painterResource(R.drawable.ic_logo_mark), null, Modifier.size(46.dp), tint = Gold) }
-                Column(Modifier.padding(start = 14.dp)) {
-                    Text("RADIO VELVET", fontSize = 16.sp, letterSpacing = 5.sp, fontWeight = FontWeight.Medium, color = Title)
-                    Text("Elegant sounds, always free", color = InkSoft)
-                    Text("Version ${appVersion(ctx)}", fontSize = 13.sp, color = InkSoft)
-                }
-            }
-        }
-        update?.let { u -> item {
-            Column(Modifier.fillMaxWidth().background(AccentSoft).padding(16.dp)) {
-                Text("New version ${u.version}", fontWeight = FontWeight.SemiBold)
-                u.notes.forEach { Text("• $it", fontSize = 14.sp, modifier = Modifier.padding(top = 4.dp)) }
-                Box(Modifier.padding(top = 10.dp)) { UpdateButton(u, "Download and install") }
-                Text("Open the downloaded file and allow the install. Your favourites stay.", fontSize = 12.sp, color = InkSoft)
-            }
-        } }
-        item {
-            Section("Your account") {
-                if (Session.name != null) {
-                    Text("Signed in as ${Session.name}. Favourites are saved to your account and match ranjithkb.com.")
-                    var ask by remember { mutableStateOf(false) }
-                    var msg by remember { mutableStateOf<String?>(null) }
-                    val scope = rememberCoroutineScope()
-                    Row(Modifier.padding(top = 8.dp), verticalAlignment = Alignment.CenterVertically) {
-                        OutlinedButton(onSignOut, Modifier.heightIn(min = 48.dp)) { Text("Sign out") }
-                        TextButton({ ask = true }, Modifier.padding(start = 8.dp).heightIn(min = 48.dp)) { Text("Delete account", color = InkSoft) }
+            Column(Modifier.fillMaxWidth().clip(RoundedCornerShape(16.dp)).background(AccentSoft).padding(16.dp)) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Box(Modifier.size(56.dp).clip(RoundedCornerShape(14.dp)).background(ArtBg), contentAlignment = Alignment.Center) {
+                        Icon(painterResource(R.drawable.ic_logo_mark), null, Modifier.size(40.dp), tint = Gold) }
+                    Column(Modifier.padding(start = 14.dp).weight(1f)) {
+                        Text("RADIO VELVET", fontSize = 15.sp, letterSpacing = 5.sp, fontWeight = FontWeight.Medium, color = Title)
+                        Text("Elegant sounds, always free", fontSize = 14.sp, color = InkSoft)
+                        Text("Version ${appVersion(ctx)}" + if (update == null) " · Up to date" else "", fontSize = 13.sp, color = InkSoft)
                     }
-                    if (ask) AlertDialog(onDismissRequest = { ask = false },
-                        title = { Text("Delete your account?") },
-                        text = { Text("This removes your saved favourites and your sign-in from Radio Velvet and ranjithkb.com. Favourites on this phone stay until you remove them.") },
-                        confirmButton = { TextButton({ ask = false; scope.launch {
-                            msg = Account.deleteAccount(ctx) ?: "Your account is deleted."; Session.name = null } }) { Text("Delete") } },
-                        dismissButton = { TextButton({ ask = false }) { Text("Cancel") } })
-                } else {
-                    Text("Sign in with Google to keep favourites on every device and on the website.")
-                    Button(onSignIn, Modifier.padding(top = 8.dp).heightIn(min = 48.dp)) { Text("Sign in") }
+                }
+                update?.let { u ->
+                    Text("New version ${u.version}", fontWeight = FontWeight.SemiBold, modifier = Modifier.padding(top = 14.dp))
+                    u.notes.take(4).forEach { Text("• $it", fontSize = 14.sp, modifier = Modifier.padding(top = 3.dp)) }
+                    Box(Modifier.padding(top = 10.dp)) { UpdateButton(u, "Download and install") }
+                    Text("Open the downloaded file and allow the install. Your favourites stay.", fontSize = 12.sp, color = InkSoft)
                 }
             }
         }
+        item { Box(Modifier.padding(top = 22.dp)) { Section("Your listening") { ListeningSection() } } }
         item {
-            Section("Your listening") { ListeningSection() }
+            SectionHead("Your account")
+            var open by remember { mutableStateOf(false) }
+            var ask by remember { mutableStateOf(false) }
+            val scope = rememberCoroutineScope()
+            if (Session.name != null) {
+                SettingRow("Signed in as ${Session.name}", sub = "Favourites match on every phone and on ranjithkb.com",
+                    value = if (open) "‹" else "›", onClick = { open = !open })
+                if (open) Row(Modifier.padding(vertical = 8.dp), verticalAlignment = Alignment.CenterVertically) {
+                    OutlinedButton(onSignOut, Modifier.heightIn(min = 48.dp)) { Text("Sign out") }
+                    TextButton({ ask = true }, Modifier.padding(start = 8.dp).heightIn(min = 48.dp)) { Text("Delete account", color = InkSoft) }
+                }
+                if (ask) AlertDialog(onDismissRequest = { ask = false },
+                    title = { Text("Delete your account?") },
+                    text = { Text("This removes your saved favourites and your sign-in from Radio Velvet and ranjithkb.com. Favourites on this phone stay until you remove them.") },
+                    confirmButton = { TextButton({ ask = false; scope.launch {
+                        Account.deleteAccount(ctx); Session.name = null } }) { Text("Delete") } },
+                    dismissButton = { TextButton({ ask = false }) { Text("Cancel") } })
+            } else SettingRow("Sign in with Google", sub = "Keep your favourites on every phone and on the website", value = "›", onClick = onSignIn)
         }
         item {
-            Section("Which stations play") {
-                Text("${if (languages > 0) "$languages lists" else "70+ languages"} and over 5,000 live stations, each tested twice a day. " +
-                    "Stations marked \"Not working today\" failed the last test. A few broadcasters only stream to listeners in their own " +
-                    "country, so a station can be silent where you are even when it's working.")
-                Text("If a station doesn't start, Radio Velvet tries its other sources, then you can skip to the next one.",
-                    Modifier.padding(top = 6.dp), color = InkSoft, fontSize = 14.sp)
-            }
+            SectionHead("Make it yours")
+            SettingRow("Settings", sub = "Colours, text size, equaliser, data saver", value = "›", onClick = { onPage("settings") })
+            SettingRow("Alarms", sub = "Wake up to the radio", value = "›", onClick = { onPage("alarm") })
+            SettingRow("Request a station", sub = "Missing a station? Tell us", value = "›", onClick = { onPage("request") })
+            SettingRow("Quick tour of the app", value = "›", onClick = { onPage("tour") })
+            SettingRow("Share Radio Velvet", sub = "Send the app to family and friends", value = "›", onClick = {
+                try { ctx.startActivity(android.content.Intent.createChooser(android.content.Intent(android.content.Intent.ACTION_SEND)
+                    .setType("text/plain").putExtra(android.content.Intent.EXTRA_TEXT,
+                        "Radio Velvet: free radio from Kerala and around the world. https://ranjithkb.com/radio.html"), "Share Radio Velvet"))
+                } catch (e: Exception) { } })
+            SettingRow("Write to us", sub = "hello@ranjithkb.com", value = "›", onClick = {
+                try { ctx.startActivity(android.content.Intent(android.content.Intent.ACTION_SENDTO,
+                    android.net.Uri.parse("mailto:hello@ranjithkb.com?subject=Radio%20Velvet"))) } catch (e: Exception) { } })
         }
         item {
-            Section("Good to know") {
-                Text("• Plays with the screen off; controls on the lock screen, headphones and Bluetooth.")
-                Text("• Pauses for calls and comes back on afterwards.")
-                Text("• Song name and cover appear when the station sends them. Share them as a song card from the player.")
-                Text("• Works in Android Auto: Favourites and every language list.")
-                Text("• Several alarms (workdays, weekend…) in Settings → Alarms. If a station doesn't answer, another plays, then the phone's alarm sound.")
-                Box(Modifier.padding(top = 8.dp).heightIn(min = 48.dp).border(1.dp, Line).clickable(onClickLabel = "Start the quick tour") { onPage("tour") }
-                    .padding(horizontal = 16.dp), contentAlignment = Alignment.Center) { Text("Quick tour of the app", color = AccentText) }
-            }
+            SectionHead("About")
+            SettingRow("What the app can do", value = "›", onClick = { about = "can" })
+            SettingRow("Which stations play", value = "›", onClick = { about = "stations" })
+            SettingRow("Privacy policy", value = "›", onClick = { openUrl(ctx, "https://ranjithkb.com/privacy.html#radio-velvet") })
+            SettingRow("Credits", value = "›", onClick = { about = "credits" })
+            SettingRow("Radio on ranjithkb.com", value = "›", onClick = { openUrl(ctx, "https://ranjithkb.com/radio.html") })
         }
-        item {
-            Section("Credits") {
-                TextButton({ openUrl(ctx, "https://www.facebook.com/share/1CFLUukqxQ/") }, contentPadding = PaddingValues(0.dp)) {
-                    Text("Logo by Jai Sachith Chittilapilly", color = Accent) }
-                Text("Station names and logos belong to their owners. Logos are shown only on the Android Auto screen, " +
-                    "to recognise a station at a glance; a station that prefers otherwise can write to hello@ranjithkb.com.",
-                    style = MaterialTheme.typography.bodySmall, color = InkSoft, modifier = Modifier.padding(top = 6.dp))
-            }
+    }
+    when (about) {
+        "can" -> SubPage("What the app can do", { about = null }) {
+            listOf("Plays with the screen off; controls on the lock screen, headphones and Bluetooth.",
+                "Pauses for calls and comes back on afterwards.",
+                "Song name and cover appear when the station sends them. Share them as a song card from the player.",
+                "Works in Android Auto: Favourites and every language list. Casts to a TV or speaker.",
+                "Several alarms (workdays, weekend…). If a station doesn't answer, another plays, then the phone's alarm sound.",
+                "Data saver for ships, villages and patchy signal: the lightest links and no song covers.",
+                "Swipe the cover in the big player to change its look, from a 1930s radio to a 1990s tuner.")
+                .forEach { Text("• $it", fontSize = 15.sp, lineHeight = 22.sp, color = Title, modifier = Modifier.padding(top = 10.dp)) }
         }
-        item {
-            Section("On the web") {
-                TextButton({ openUrl(ctx, "https://ranjithkb.com/radio.html") }) { Text("Radio on ranjithkb.com") }
-                TextButton({ openUrl(ctx, "https://ranjithkb.com/") }) { Text("ranjithkb.com") }
-                TextButton({ openUrl(ctx, "https://ranjithkb.com/privacy.html#radio-velvet") }) { Text("Privacy policy") }
-                TextButton({ onPage("request") }) { Text("Request a station") }
-                TextButton({ onPage("settings") }) { Text("Settings: colours, text size, equaliser, alarm") }
-                TextButton({ try { ctx.startActivity(android.content.Intent(android.content.Intent.ACTION_SENDTO,
-                    android.net.Uri.parse("mailto:hello@ranjithkb.com?subject=Radio%20Velvet"))) } catch (e: Exception) { } }) { Text("Write to us: hello@ranjithkb.com") }
-            }
+        "stations" -> SubPage("Which stations play", { about = null }) {
+            Text("${if (languages > 0) "$languages lists" else "70+ languages"} and over 5,000 live stations, each tested twice a day. " +
+                "Stations marked \"Not working today\" failed the last test. A few broadcasters only stream to listeners in their own " +
+                "country, so a station can be silent where you are even when it's working.", fontSize = 15.sp, lineHeight = 22.sp,
+                color = Title, modifier = Modifier.padding(top = 8.dp))
+            Text("If a station doesn't start, Radio Velvet tries its other sources, then you can skip to the next one.",
+                Modifier.padding(top = 12.dp), color = InkSoft, fontSize = 14.sp, lineHeight = 20.sp)
         }
+        "credits" -> SubPage("Credits", { about = null }) {
+            TextButton({ openUrl(ctx, "https://www.facebook.com/share/1CFLUukqxQ/") }, Modifier.heightIn(min = 48.dp), contentPadding = PaddingValues(0.dp)) {
+                Text("Logo by Jai Sachith Chittilapilly", color = AccentText) }
+            Text("Station names and logos belong to their owners. Logos are shown only on the Android Auto screen, " +
+                "to recognise a station at a glance; a station that prefers otherwise can write to hello@ranjithkb.com.",
+                fontSize = 14.sp, lineHeight = 20.sp, color = InkSoft, modifier = Modifier.padding(top = 6.dp))
+        }
+    }
     }
 }
 

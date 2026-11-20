@@ -25,6 +25,9 @@ import androidx.compose.material.icons.outlined.Mic
 import androidx.compose.material.icons.outlined.Radio
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.layout.onSizeChanged
+import kotlinx.coroutines.launch
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
@@ -329,18 +332,19 @@ fun PlayerContent(now: NowState, c: androidx.media3.session.MediaController?, la
             var shown by remember { mutableStateOf<String?>(null) }
             LaunchedEffect(shown) { if (shown != null) { kotlinx.coroutines.delay(1400); shown = null } }
             val flip: (Int) -> Unit = { dir -> Theme.look = Eras.step(Theme.look, dir); Theme.save(ctx); shown = Eras.name(Theme.look) }
+            val slide = rememberLookSlide()
             Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
-            Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
+            Column(Modifier.fillMaxWidth().lookSlide(slide), horizontalAlignment = Alignment.CenterHorizontally) {
             if (era != null) {
                 // a radio from one era: it takes the cover's place (its own needles and meters replace the visualiser)
                 val rw = fullW.value - 48f
                 val rh = minOf(h.value * 0.44f, rw * era.h / era.w).coerceAtLeast(150f)
                     .let { if (Eras.hasTone(era.id)) it + 44f else it }   // room for "Reset knobs" under the radio
                 Box(Modifier.padding(top = 10.dp).fillMaxWidth().height(rh.dp), contentAlignment = Alignment.Center) {
-                    EraRadio(era, now, c, Modifier.fillMaxSize(), onSwipe = flip)
+                    EraRadio(era, now, c, Modifier.fillMaxSize(), onSwipe = flip, slide = slide)
                 }
             } else {
-                Box(Modifier.padding(top = 10.dp).size(art.dp).background(ArtBg).themeSwipe(flip), contentAlignment = Alignment.Center) {
+                Box(Modifier.padding(top = 10.dp).size(art.dp).background(ArtBg).themeSwipe(flip, slide), contentAlignment = Alignment.Center) {
                     val bmp = artBitmap(now.md.artworkUri?.toString()?.takeUnless(CarArt::isStationArt))
                     if (bmp != null) Image(bmp.asImageBitmap(), null, Modifier.fillMaxSize(), contentScale = ContentScale.Crop,
                         alpha = if (Theme.viz == "circle") 0.35f else 1f)
@@ -368,7 +372,7 @@ fun PlayerContent(now: NowState, c: androidx.media3.session.MediaController?, la
                 VizSwitcher()   // off: a quiet "Visualiser" switch; on: Bars · Waves · Circle · Off
             }
             }
-            ThemeToast(shown)   // one name pop-up over both, so it survives the switch from the cover to a radio
+            ThemeToast(slide.peek ?: shown)   // one name pop-up over both: the coming look while sliding, then the new one
             }
             Column(Modifier.fillMaxWidth().padding(top = 16.dp), horizontalAlignment = Alignment.CenterHorizontally) {
                 if (hasSong) Label("On $station", AccentText, 10)
@@ -521,13 +525,61 @@ fun SearchContent(all: List<Station>?, currentLang: String, langOf: (Station) ->
     }
 }
 
-/** Sideways swipe of at least 64 dp: left = next player look, right = previous. TalkBack gets the same as actions. */
-fun Modifier.themeSwipe(flip: (Int) -> Unit): Modifier = this
-    .pointerInput(Unit) {
+/**
+ * The player look follows the finger while swiping (smooth and fluid, his ask Nov 2026): it slides and fades a little
+ * with the drag; let go past the threshold (or flick) and the next look glides in from that side with a soft spring;
+ * a short swipe springs back. [x] is the slide in pixels, [peek] the name of the look that's coming.
+ */
+class LookSlide(val scope: kotlinx.coroutines.CoroutineScope) {
+    val x = androidx.compose.animation.core.Animatable(0f)
+    var width = 1f
+    var peek by mutableStateOf<String?>(null)
+    /** How far along the slide is, 0…1 (for the fade and the slight shrink). */
+    val frac get() = (kotlin.math.abs(x.value) / width).coerceIn(0f, 1f)
+    fun drag(d: Float, next: (Int) -> String?) = scope.launch {
+        x.snapTo(x.value + d * (if (kotlin.math.abs(x.value) > width * 0.5f) 0.4f else 0.85f))   // a little resistance further out
+        peek = if (kotlin.math.abs(x.value) > width * 0.12f) next(if (x.value < 0) +1 else -1) else null
+    }
+    /** Let go: [dir] is the look change (0 = none). The new look enters from the side the finger went towards. */
+    fun release(dir: Int) = scope.launch {
+        peek = null
+        if (dir != 0) x.snapTo(dir * width * 0.42f)
+        x.animateTo(0f, androidx.compose.animation.core.spring(dampingRatio = 0.86f, stiffness = 380f))
+    }
+}
+
+@Composable
+fun rememberLookSlide(): LookSlide { val sc = rememberCoroutineScope(); return remember { LookSlide(sc) } }
+
+/** The slide on whatever shows the look (the cover or a radio). */
+fun Modifier.lookSlide(s: LookSlide?): Modifier = if (s == null) this else this
+    .onSizeChanged { s.width = it.width.toFloat().coerceAtLeast(1f) }
+    .graphicsLayer {
+        translationX = s.x.value
+        val f = s.frac
+        alpha = 1f - 0.65f * f
+        scaleX = 1f - 0.05f * f; scaleY = 1f - 0.05f * f
+    }
+
+/** Sideways swipe of at least 64 dp (or a flick): left = next player look, right = previous. TalkBack gets the same as actions. */
+fun Modifier.themeSwipe(flip: (Int) -> Unit, slide: LookSlide? = null): Modifier = this
+    .pointerInput(slide) {
         var drag = 0f
         val th = 64.dp.toPx()
-        detectHorizontalDragGestures(onDragStart = { drag = 0f }, onDragEnd = { if (drag < -th) flip(+1) else if (drag > th) flip(-1); drag = 0f },
-            onDragCancel = { drag = 0f }) { ch, d -> ch.consume(); drag += d }
+        val flick = 900.dp.toPx()                     // px per second
+        val vt = androidx.compose.ui.input.pointer.util.VelocityTracker()
+        detectHorizontalDragGestures(onDragStart = { drag = 0f; vt.resetTracking() },
+            onDragEnd = {
+                val v = vt.calculateVelocity().x
+                val dir = when { drag < -th || (v < -flick && drag < 0) -> +1; drag > th || (v > flick && drag > 0) -> -1; else -> 0 }
+                if (dir != 0) flip(dir)
+                slide?.release(dir); drag = 0f
+            },
+            onDragCancel = { drag = 0f; slide?.release(0) }) { ch, d ->
+            ch.consume(); drag += d
+            vt.addPosition(ch.uptimeMillis, ch.position)
+            slide?.drag(d) { Eras.name(Eras.step(Theme.look, it)) }
+        }
     }
     .semantics { customActions = listOf(CustomAccessibilityAction("Next radio look") { flip(+1); true },
         CustomAccessibilityAction("Previous radio look") { flip(-1); true }) }

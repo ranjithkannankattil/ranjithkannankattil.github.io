@@ -19,6 +19,7 @@ import androidx.compose.ui.unit.sp
 import androidx.media3.common.MediaMetadata
 import org.junit.Rule
 import org.junit.Assert.*
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import org.junit.Test
@@ -156,6 +157,16 @@ class ScreensTest {
         shot("v40-data-saver", false) { DataSaverScreen {} }; DataSaver.save(rule.activity, DataSaver.OFF) }
     @Test fun v41_data_saver_dark() { DataSaver.save(rule.activity, DataSaver.ON)
         shot("v41-data-saver-dark", true) { DataSaverScreen {} }; DataSaver.save(rule.activity, DataSaver.OFF) }
+    // ---- the tidier Info tab
+    @Composable private fun Info() = Column(Modifier.fillMaxSize()) { Box(Modifier.weight(1f)) { InfoTab(73, null, {}, {}, {}) }; BottomNav(2, 12) {} }
+    @Test fun v50_info_tab() = shot("v50-info", false) { Info() }
+    @Test fun v51_info_tab_dark() = shot("v51-info-dark", true) { Info() }
+    @Test fun v52_info_tab_scrolled() { shot("v52-info-x", false) { Info() }
+        rule.onNodeWithText("Credits").performScrollTo(); rule.waitForIdle(); capture("v52-info-scrolled") }
+    @Test fun v53_info_about_page() { shot("v53-info-y", false) { Info() }
+        rule.onNodeWithText("What the app can do").performScrollTo().performClick(); rule.waitForIdle(); capture("v53-info-what-it-can-do")
+        rule.onNodeWithText("Data saver", substring = true).assertExists() }
+    @Test @Config(qualifiers = "w360dp-h740dp-xxhdpi") fun v54_info_large_text_360() = shot("v54-info-large-360", false, text = 2) { Info() }
     @Test fun v01_pill_light() = shot("v01-pill-light", false) { Stations(true) }
     @Test fun v02_pill_dark() = shot("v02-pill-dark", true) { Stations(true) }
     @Test fun v03_pill_favourites_dark_rosewood() = shot("v03-pill-favs-rosewood-dark", true, theme = "rosewood") { Stations(true, tab = 1) }
@@ -379,6 +390,15 @@ class ScreensTest {
             n.config.getOrNull(androidx.compose.ui.semantics.SemanticsActions.CustomActions)?.any { it.label == "Next radio look" } == true })[0] }
         tick()
         val next = Eras.step(start, +1)
+        // half-way through a swipe: the look follows the finger, and the coming look's name shows
+        pic().performTouchInput { down(center); moveBy(Offset(-width * 0.18f, 0f)); moveBy(Offset(-width * 0.18f, 0f)) }
+        tick()
+        assertEquals("not changed until you let go", start, Theme.look)
+        assertTrue("the coming look's name shows while sliding",
+            rule.onAllNodesWithText(Eras.name(next), useUnmergedTree = true).fetchSemanticsNodes().isNotEmpty())
+        capture("$prefix-mid-swipe")
+        pic().performTouchInput { moveBy(Offset(width * 0.36f, 0f)); up() }        // back where it started: springs back
+        tick(); assertEquals(start, Theme.look)
         pic().performTouchInput { swipeLeft(startX = right - 10f, endX = left + 10f) }
         tick()
         assertEquals(next, Theme.look)

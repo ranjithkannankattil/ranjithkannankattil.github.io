@@ -222,7 +222,8 @@ private fun zones(era: String): List<Zone> = when (era) {
 
 /** The big player's radio: the drawing plus its working controls. */
 @Composable
-fun EraRadio(era: Eras.Era, now: NowState, c: androidx.media3.session.MediaController?, modifier: Modifier, onSwipe: ((Int) -> Unit)? = null) {
+fun EraRadio(era: Eras.Era, now: NowState, c: androidx.media3.session.MediaController?, modifier: Modifier, onSwipe: ((Int) -> Unit)? = null,
+             slide: LookSlide? = null) {
     val ctx = LocalContext.current
     val skin = Eras.skin(era.id, Theme.lookColours == "original", Theme.themeId)
     val motion = rememberLevels(now.playing)
@@ -260,7 +261,7 @@ fun EraRadio(era: Eras.Era, now: NowState, c: androidx.media3.session.MediaContr
         val s = minOf(maxWidth.value / era.w, maxHeight.value / era.h)
         val w = era.w * s; val h = era.h * s
         Box(Modifier.size(w.dp, h.dp)) {
-            Canvas(Modifier.fillMaxSize().let { if (onSwipe != null) it.themeSwipe(onSwipe) else it }.semantics { contentDescription = "${era.name} radio, ${era.decade}" }) {
+            Canvas(Modifier.fillMaxSize().let { if (onSwipe != null) it.themeSwipe(onSwipe, slide) else it }.semantics { contentDescription = "${era.name} radio, ${era.decade}" }) {
                 withTransform({ scale(size.width / era.w, size.height / era.h, Offset.Zero) }) {
                     drawEra(era.id, skin, RadioVals(motion.shown.value, motion.t.floatValue, playing, shownPos.value, label, station,
                         vol / max.toFloat(), bands[0], bands[2], bands[4], turn.toMap()), tm) }
