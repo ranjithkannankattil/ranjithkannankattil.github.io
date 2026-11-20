@@ -581,8 +581,10 @@ fun AlarmEdit(start: Alarm.Setup, isNew: Boolean, choices: List<Pair<Station, St
         SectionHead(t("Repeat") + " · " + Alarm.daysLabel(s.days))
         val quick = listOf("Workdays" to Alarm.WORKDAYS, "Weekend" to Alarm.WEEKEND, "Every day" to Alarm.EVERY_DAY, "Once" to emptySet())
         Segmented(quick.map { t(it.first) }, quick.indexOfFirst { it.second == s.days }) { s = s.copy(days = quick[it].second) }
-        val order = listOf(Calendar.MONDAY to "M", Calendar.TUESDAY to "T", Calendar.WEDNESDAY to "W", Calendar.THURSDAY to "T",
-            Calendar.FRIDAY to "F", Calendar.SATURDAY to "S", Calendar.SUNDAY to "S")
+        val letters = when (Lang.code) { "ml" -> listOf("തി", "ചൊ", "ബു", "വ്യാ", "വെ", "ശ", "ഞാ"); "hi" -> listOf("सो", "मं", "बु", "गु", "शु", "श", "र")
+            else -> listOf("M", "T", "W", "T", "F", "S", "S") }
+        val order = listOf(Calendar.MONDAY, Calendar.TUESDAY, Calendar.WEDNESDAY, Calendar.THURSDAY, Calendar.FRIDAY, Calendar.SATURDAY,
+            Calendar.SUNDAY).zip(letters)
         val full = listOf("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
         Row(Modifier.fillMaxWidth().padding(top = 12.dp), horizontalArrangement = Arrangement.SpaceBetween) {
             order.forEachIndexed { i, (d, l) ->

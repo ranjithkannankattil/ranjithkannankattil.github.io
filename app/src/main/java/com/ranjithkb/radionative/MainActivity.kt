@@ -671,7 +671,7 @@ fun InfoTab(languages: Int, update: Update?, onPage: (String) -> Unit = {}, onSi
             val scope = rememberCoroutineScope()
             if (Session.name != null) {
                 SettingRow("Signed in as ${Session.name}", sub = t("Favourites match on every phone and on ranjithkb.com"),
-                    value = if (open) "‹" else "›", onClick = { open = !open })
+                    onClick = { open = !open })
                 if (open) Row(Modifier.padding(vertical = 8.dp), verticalAlignment = Alignment.CenterVertically) {
                     OutlinedButton(onSignOut, Modifier.heightIn(min = 48.dp)) { Text(t("Sign out")) }
                     TextButton({ ask = true }, Modifier.padding(start = 8.dp).heightIn(min = 48.dp)) { Text(t("Delete account"), color = InkSoft) }
@@ -682,30 +682,30 @@ fun InfoTab(languages: Int, update: Update?, onPage: (String) -> Unit = {}, onSi
                     confirmButton = { TextButton({ ask = false; scope.launch {
                         Account.deleteAccount(ctx); Session.name = null } }) { Text(t("Delete")) } },
                     dismissButton = { TextButton({ ask = false }) { Text(t("Cancel")) } })
-            } else SettingRow(t("Sign in with Google"), sub = t("Keep your favourites on every phone and on the website"), value = "›", onClick = onSignIn)
+            } else SettingRow(t("Sign in with Google"), sub = t("Keep your favourites on every phone and on the website"), onClick = onSignIn)
         }
         item {
             SectionHead(t("Make it yours"))
-            SettingRow(t("Settings"), sub = t("Colours, text size, equaliser, data saver"), value = "›", onClick = { onPage("settings") })
-            SettingRow(t("Alarms"), sub = t("Wake up to the radio"), value = "›", onClick = { onPage("alarm") })
-            SettingRow(t("Request a station"), sub = t("Missing a station? Tell us"), value = "›", onClick = { onPage("request") })
-            SettingRow(t("Quick tour of the app"), value = "›", onClick = { onPage("tour") })
-            SettingRow(t("Share Radio Velvet"), sub = t("Send the app to family and friends"), value = "›", onClick = {
+            SettingRow(t("Settings"), sub = t("Colours, text size, equaliser, data saver"), onClick = { onPage("settings") })
+            SettingRow(t("Alarms"), sub = t("Wake up to the radio"), onClick = { onPage("alarm") })
+            SettingRow(t("Request a station"), sub = t("Missing a station? Tell us"), onClick = { onPage("request") })
+            SettingRow(t("Quick tour of the app"), onClick = { onPage("tour") })
+            SettingRow(t("Share Radio Velvet"), sub = t("Send the app to family and friends"), onClick = {
                 try { ctx.startActivity(android.content.Intent.createChooser(android.content.Intent(android.content.Intent.ACTION_SEND)
                     .setType("text/plain").putExtra(android.content.Intent.EXTRA_TEXT,
                         "Radio Velvet: free radio from Kerala and around the world. https://ranjithkb.com/radio.html"), "Share Radio Velvet"))
                 } catch (e: Exception) { } })
-            SettingRow(t("Write to us"), sub = t("hello@ranjithkb.com"), value = "›", onClick = {
+            SettingRow(t("Write to us"), sub = t("hello@ranjithkb.com"), onClick = {
                 try { ctx.startActivity(android.content.Intent(android.content.Intent.ACTION_SENDTO,
                     android.net.Uri.parse("mailto:hello@ranjithkb.com?subject=Radio%20Velvet"))) } catch (e: Exception) { } })
         }
         item {
             SectionHead(t("About"))
-            SettingRow(t("What the app can do"), value = "›", onClick = { about = "can" })
-            SettingRow(t("Which stations play"), value = "›", onClick = { about = "stations" })
-            SettingRow(t("Privacy policy"), value = "›", onClick = { openUrl(ctx, "https://ranjithkb.com/privacy.html#radio-velvet") })
-            SettingRow(t("Credits"), value = "›", onClick = { about = "credits" })
-            SettingRow(t("Radio on ranjithkb.com"), value = "›", onClick = { openUrl(ctx, "https://ranjithkb.com/radio.html") })
+            SettingRow(t("What the app can do"), onClick = { about = "can" })
+            SettingRow(t("Which stations play"), onClick = { about = "stations" })
+            SettingRow(t("Privacy policy"), onClick = { openUrl(ctx, "https://ranjithkb.com/privacy.html#radio-velvet") })
+            SettingRow(t("Credits"), onClick = { about = "credits" })
+            SettingRow(t("Radio on ranjithkb.com"), onClick = { openUrl(ctx, "https://ranjithkb.com/radio.html") })
         }
     }
     when (about) {
