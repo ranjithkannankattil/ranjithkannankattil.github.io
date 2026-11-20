@@ -878,7 +878,7 @@ fun SleepDialog(customOnly: Boolean = false, close: () -> Unit) {
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     listOf(-15, -5, 5, 15).forEach { d ->
                         OutlinedButton({ mins = (mins + d).coerceIn(5f, 240f) }, Modifier.heightIn(min = 44.dp),
-                            contentPadding = PaddingValues(horizontal = 10.dp)) { Text((if (d > 0)  else "−") + "${kotlin.math.abs(d)}") }
+                            contentPadding = PaddingValues(horizontal = 10.dp)) { Text((if (d > 0) "+" else "−") + "${kotlin.math.abs(d)}") }
                     }
                 }
             }

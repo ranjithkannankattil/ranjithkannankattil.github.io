@@ -55,7 +55,6 @@ import kotlin.math.cos
 import kotlin.math.sin
 
 private val Pad = 24.dp
-private val Manjari = FontFamily.Default   // the phone's Malayalam font (Manjari isn't bundled; names stay readable everywhere)
 
 /** A full page drawn over the app (not a separate window), with ← and a spaced-capitals title. */
 @Composable
