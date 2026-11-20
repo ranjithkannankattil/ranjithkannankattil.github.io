@@ -148,10 +148,11 @@ fun TvHome(cols: List<Collection>, favs: List<Station>, now: NowState, onOpenPla
                     if (l == null) Text(t("Loading…"), color = Soft, fontSize = 15.sp, modifier = Modifier.height(96.dp))
                     else LazyRow(horizontalArrangement = Arrangement.spacedBy(16.dp), contentPadding = PaddingValues(end = 48.dp, top = 6.dp, bottom = 6.dp)) {
                         items(l, key = { it.key }) { s ->
-                            val fr = if (r.id == rows.first().id && s == l.first()) Modifier.focusRequester(first) else Modifier
-                            TvCard(s, r.title, playing = now.id == "st|${s.key}", mod = fr) { play(l, s) }
+                            val isFirst = r.id == rows.first().id && s == l.first()
+                            TvCard(s, r.title, playing = now.id == "st|${s.key}", mod = if (isFirst) Modifier.focusRequester(first) else Modifier) { play(l, s) }
+                            // the remote starts on the very first station (asked from that card, which is always on screen)
+                            if (isFirst) LaunchedEffect(Unit) { runCatching { first.requestFocus() } }
                         }
-                        if (r.id == rows.first().id && l.isNotEmpty()) item { LaunchedEffect(Unit) { runCatching { first.requestFocus() } } }
                     }
                 }
             }
