@@ -129,3 +129,7 @@ Everything above: star tab, soft pill, tour, several alarms, safety net, and the
   Akashvani 38–53, high-quality ones ~86.
 - **Kathakali padam station**: email drafted to kathakalipadam.com (in his Gmail drafts) with free ways to start a radio;
   add their station when they send a stream link.
+- **Smoother player-look swipe** (his ask, 20 Nov 2026): swiping the cover to change the player look (Standard ↔ the six
+  era radios) should feel smooth and fluid: the current look follows the finger and slides out while the next slides in
+  (like turning a page), springs back if the swipe is short, with no jump or flash and a gentle settle; the look name
+  shows during the slide. Not started; build when he says.
