@@ -1,0 +1,46 @@
+name: Radio Velvet on Android TV (emulator)
+# The Dev app on an Android TV emulator, driven with the remote's arrow keys: screenshots, a video and the
+# player's state go to the velvet-tv-results branch.
+on:
+  workflow_dispatch:
+  push:
+    branches: [radio-native-dev]
+    paths: ["app/src/main/java/com/ranjithkb/radionative/TvActivity.kt", "app/src/main/AndroidManifest.xml", ".github/workflows/tv-test.yml", ".github/tv-check.sh"]
+concurrency:
+  group: velvet-tv
+  cancel-in-progress: true
+permissions:
+  contents: write
+jobs:
+  tv:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: 17 }
+      - uses: gradle/actions/setup-gradle@v4
+        with: { gradle-version: "8.11.1" }
+      - name: Allow the emulator to use the processor's virtualisation
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules && sudo udevadm trigger --name-match=kvm
+      - name: Test key (the throwaway Dev key, never the real one)
+        run: mkdir -p ~/.android; cp .github/dev-key/dev-test.keystore ~/.android/debug.keystore
+      - name: Build the Dev app
+        run: gradle --no-daemon :app:assemblePlayDebug
+      - name: Run on an Android TV
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          target: android-tv
+          arch: x86
+          profile: tv_1080p
+          disable-animations: false
+          emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot -camera-back none
+          script: bash .github/tv-check.sh
+      - name: Save results to the velvet-tv-results branch
+        if: always()
+        run: |
+          mkdir -p /tmp/tv && cd /tmp/tv && git init -q -b velvet-tv-results && git add -A && git -c user.name=ci -c user.email=ci@ranjithkb.com commit -qm "tv test $GITHUB_SHA" || exit 0
+          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${GITHUB_REPOSITORY}.git" velvet-tv-results
