@@ -282,7 +282,7 @@ window.STATIONS = [
     ],
     "where": "Canada",
     "br": [
-      48
+      47
     ]
   },
   {
@@ -717,7 +717,7 @@ window.STATIONS = [
     "added": "2026-10-26",
     "where": "UK",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -1045,7 +1045,9 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "where": "Nigeria",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "bfm-89-9-malaysia",
@@ -1877,4 +1879,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T03:07Z";
+window.STATIONS_CHECKED = "2026-11-20T08:17Z";

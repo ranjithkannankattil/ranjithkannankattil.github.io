@@ -60,7 +60,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m8080.aac"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -127,9 +127,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
     ],
-    "offline": true,
     "br": [
-      171
+      168
     ]
   },
   {
@@ -162,7 +161,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m80nacional.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -277,12 +276,12 @@ window.STATIONS = [
     "name": "Antena 3",
     "category": "music",
     "streams": [
-      "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8",
-      "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8"
+      "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8",
+      "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
     ],
     "br": [
-      173,
-      173
+      176,
+      176
     ]
   },
   {
@@ -315,7 +314,7 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
     ],
     "br": [
-      184
+      172
     ]
   },
   {
@@ -326,7 +325,7 @@ window.STATIONS = [
       "https://stream-hls.bauermedia.pt/cidade.aac/playlist.m3u8"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -378,12 +377,12 @@ window.STATIONS = [
     "name": "Antena 2",
     "category": "music",
     "streams": [
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8",
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR",
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8"
     ],
     "br": [
-      259,
-      262
+      262,
+      259
     ]
   },
   {
@@ -461,7 +460,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -473,8 +472,9 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      194
-    ]
+      195
+    ],
+    "offline": true
   },
   {
     "id": "antena-1-acores-portugal",
@@ -485,8 +485,9 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      194
-    ]
+      177
+    ],
+    "offline": true
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -569,8 +570,9 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      167
-    ]
+      166
+    ],
+    "offline": true
   },
   {
     "id": "radio-observador",
@@ -617,7 +619,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -641,7 +643,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -749,7 +751,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -773,7 +775,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -785,7 +787,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -857,7 +859,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -917,7 +919,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -1610,7 +1612,8 @@ window.STATIONS = [
     "added": "2026-11-07",
     "br": [
       172
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-quantica",
@@ -1657,7 +1660,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-08",
     "br": [
-      128
+      112
     ]
   },
   {
@@ -1781,4 +1784,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T03:07Z";
+window.STATIONS_CHECKED = "2026-11-20T08:17Z";

@@ -77,7 +77,9 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qtfm.cn/live/20500149/64k.mp3"
     ],
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "cri",
@@ -121,7 +123,9 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qtfm.cn/live/5022308/64k.mp3"
     ],
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "nhk-world-radio",
@@ -137,7 +141,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play-radio-stream3.hndt.com/now/WUBA5hW2/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-10",
@@ -523,7 +528,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/267/64k.mp3?listening-from-radio-garden=1696445196"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      64
+    ]
   },
   {
     "id": "ma",
@@ -872,7 +880,9 @@ window.STATIONS = [
       "https://lhttp.qtfm.cn/live/15318341/64k.mp3"
     ],
     "added": "2026-10-30",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "jesus-is-lord-radio",
@@ -881,10 +891,7 @@ window.STATIONS = [
     "streams": [
       "https://s3.radio.co/s97f38db97/listen"
     ],
-    "added": "2026-10-31",
-    "br": [
-      48
-    ]
+    "added": "2026-10-31"
   },
   {
     "id": "hardbestfm-hardcore",
@@ -1067,7 +1074,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/20071/64k.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-43",
@@ -1172,7 +1182,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qtfm.cn/live/4847/64k.mp3"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-49",
@@ -1239,7 +1252,9 @@ window.STATIONS = [
       "https://stream4.rcast.net/71937/#?.mp3"
     ],
     "added": "2026-11-05",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-50",
@@ -1363,7 +1378,9 @@ window.STATIONS = [
       "https://lhttp-hw.qtfm.cn/live/4917/64k.mp3"
     ],
     "added": "2026-11-06",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-54",
@@ -1585,4 +1602,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T03:07Z";
+window.STATIONS_CHECKED = "2026-11-20T08:17Z";

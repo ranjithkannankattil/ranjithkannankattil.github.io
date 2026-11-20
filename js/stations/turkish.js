@@ -63,8 +63,8 @@ window.STATIONS = [
       "https://moondigitalmaster.radyotvonline.net/kafaradyo/playlist.m3u8"
     ],
     "br": [
-      63,
-      63
+      64,
+      64
     ]
   },
   {
@@ -554,7 +554,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      150
+      151
     ]
   },
   {
@@ -566,7 +566,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      129
+      128
     ]
   },
   {
@@ -992,7 +992,8 @@ window.STATIONS = [
       "https://irvess.com/stream/irvess"
     ],
     "added": "2026-10-30",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "radyo-tulu",
@@ -1574,7 +1575,8 @@ window.STATIONS = [
     "streams": [
       "https://yayin1.canlitv.fun/radyo/gencfm/chunklist_w1257533803.m3u8"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "offline": true
   },
   {
     "id": "bitlis-fm-98-8",
@@ -1716,7 +1718,9 @@ window.STATIONS = [
       "https://yayin.radyomadyo.com:9180/stream"
     ],
     "added": "2026-11-09",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "dadas-fm-erzurum",
@@ -1743,4 +1747,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T03:07Z";
+window.STATIONS_CHECKED = "2026-11-20T08:17Z";

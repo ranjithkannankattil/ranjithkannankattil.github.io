@@ -303,7 +303,7 @@ window.STATIONS = [
     ],
     "where": "UK",
     "br": [
-      47
+      48
     ]
   },
   {
@@ -511,7 +511,7 @@ window.STATIONS = [
     "added": "2026-10-23",
     "where": "UK",
     "br": [
-      47
+      48
     ]
   },
   {
@@ -1883,4 +1883,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T03:07Z";
+window.STATIONS_CHECKED = "2026-11-20T08:17Z";

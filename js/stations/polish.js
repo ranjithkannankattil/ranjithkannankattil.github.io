@@ -945,7 +945,10 @@ window.STATIONS = [
     "streams": [
       "https://play.radiofest.pl:8443/fest"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      192
+    ]
   },
   {
     "id": "antyradio-katowice",
@@ -1220,7 +1223,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "br": [
-      64
+      128
     ]
   },
   {
@@ -1759,4 +1762,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T03:07Z";
+window.STATIONS_CHECKED = "2026-11-20T08:17Z";

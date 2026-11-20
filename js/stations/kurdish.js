@@ -108,7 +108,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/unwq3jdyhmbuv"
     ],
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "a-f-r-o-505-by-mx2",
@@ -291,4 +292,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T03:07Z";
+window.STATIONS_CHECKED = "2026-11-20T08:17Z";

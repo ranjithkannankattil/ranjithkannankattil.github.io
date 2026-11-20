@@ -463,7 +463,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.bigfm.de/deutschland/mp3-128/radio-browser"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "orf-hitradio-o3",
@@ -534,7 +537,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      192
+      256
     ]
   },
   {
@@ -1563,7 +1566,10 @@ window.STATIONS = [
     "streams": [
       "https://radiobzlive.rai.it/RAIBZ_Livestream"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-paloma",
@@ -1782,4 +1788,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T03:07Z";
+window.STATIONS_CHECKED = "2026-11-20T08:17Z";

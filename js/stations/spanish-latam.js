@@ -438,7 +438,9 @@ window.STATIONS = [
       "https://canelaradio.makrodigital.com/stream/canelaradioguayaquil"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "blu-radio-senal-nacional",
@@ -471,10 +473,7 @@ window.STATIONS = [
     "streams": [
       "https://s3.radio.co/s97f38db97/listen"
     ],
-    "added": "2026-10-22",
-    "br": [
-      48
-    ]
+    "added": "2026-10-22"
   },
   {
     "id": "los-40-principales-mexico",
@@ -736,7 +735,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      160
+      128
     ]
   },
   {
@@ -886,7 +885,9 @@ window.STATIONS = [
       "https://canelaradio.makrodigital.com/stream/canelaradioquito"
     ],
     "added": "2026-10-28",
-    "offline": true
+    "br": [
+      96
+    ]
   },
   {
     "id": "baladas-rs",
@@ -1392,7 +1393,9 @@ window.STATIONS = [
       "https://streamingecuador.net:8287/hcjb"
     ],
     "added": "2026-11-04",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "atb-radio",
@@ -1750,4 +1753,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T03:07Z";
+window.STATIONS_CHECKED = "2026-11-20T08:17Z";

@@ -345,9 +345,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://psrlive4.listenon.in/mohan?station=mohanradio"
-    ],
-    "br": [
-      48
     ]
   },
   {
@@ -542,7 +539,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      78
+      80
     ]
   },
   {
@@ -554,7 +551,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      78
+      80
     ]
   },
   {
@@ -805,7 +802,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      78
+      79
     ]
   },
   {
@@ -1745,4 +1742,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T03:07Z";
+window.STATIONS_CHECKED = "2026-11-20T08:17Z";

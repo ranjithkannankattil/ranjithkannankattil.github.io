@@ -10,7 +10,7 @@ window.STATIONS = [
       "https://radiolive.ytn.co.kr/radio/_definst_/20211118_fmlive/playlist.m3u8"
     ],
     "br": [
-      108
+      102
     ]
   },
   {
@@ -32,7 +32,7 @@ window.STATIONS = [
       "https://vod3.obs.co.kr:444/live/obsstream1/radio.stream/playlist.m3u8"
     ],
     "br": [
-      156
+      136
     ]
   },
   {
@@ -354,7 +354,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      1153
+      1151
     ]
   },
   {
@@ -366,7 +366,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      1310
+      1290
     ]
   },
   {
@@ -378,7 +378,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      1150
+      1154
     ]
   },
   {
@@ -390,7 +390,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      98
+      97
     ]
   },
   {
@@ -414,7 +414,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      1148
+      1140
     ]
   },
   {
@@ -426,7 +426,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      4432
+      4443
     ]
   },
   {
@@ -543,7 +543,9 @@ window.STATIONS = [
       "https://lhttp-hw.qtfm.cn/live/20324/64k.mp3"
     ],
     "added": "2026-10-27",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "gukak",
@@ -635,7 +637,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      1135
+      1145
     ]
   },
   {
@@ -656,7 +658,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      1158
+      1153
     ]
   },
   {
@@ -751,4 +753,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T03:07Z";
+window.STATIONS_CHECKED = "2026-11-20T08:17Z";

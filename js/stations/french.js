@@ -1014,10 +1014,7 @@ window.STATIONS = [
     "streams": [
       "https://s3.radio.co/s97f38db97/listen"
     ],
-    "added": "2026-10-31",
-    "br": [
-      48
-    ]
+    "added": "2026-10-31"
   },
   {
     "id": "marrakechplus",
@@ -1770,4 +1767,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T03:07Z";
+window.STATIONS_CHECKED = "2026-11-20T08:17Z";

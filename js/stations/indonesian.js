@@ -41,6 +41,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.denger.in/"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -694,7 +697,9 @@ window.STATIONS = [
       "https://streaming.shoutcast.com/synchronizeradio"
     ],
     "added": "2026-10-25",
-    "offline": true
+    "br": [
+      96
+    ]
   },
   {
     "id": "radio-suara-al-iman-846-am-surabaya",
@@ -1395,7 +1400,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "br": [
-      96
+      128
     ]
   },
   {
@@ -1653,9 +1658,7 @@ window.STATIONS = [
       "https://s2.free-shoutcast.com/stream/18096"
     ],
     "added": "2026-11-12",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "onix-radio",
@@ -1694,4 +1697,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T03:07Z";
+window.STATIONS_CHECKED = "2026-11-20T08:17Z";

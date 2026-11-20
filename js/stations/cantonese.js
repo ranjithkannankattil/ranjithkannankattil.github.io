@@ -9,7 +9,9 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qtfm.cn/live/20500149/64k.mp3"
     ],
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-2",
@@ -600,7 +602,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/20071/64k.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-30",
@@ -623,7 +628,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -670,7 +675,9 @@ window.STATIONS = [
       "https://lhttp.qtfm.cn/live/5022392/64k.mp3"
     ],
     "added": "2026-10-26",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-35",
@@ -693,7 +700,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -728,7 +735,9 @@ window.STATIONS = [
       "https://lhttp-hw.qtfm.cn/live/5037/64k.mp3"
     ],
     "added": "2026-10-26",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "kradio",
@@ -833,4 +842,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T03:07Z";
+window.STATIONS_CHECKED = "2026-11-20T08:17Z";

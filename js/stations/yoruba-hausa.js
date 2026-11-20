@@ -96,7 +96,8 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://airtime.dclm.org/radio/8070/hausa"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "hausa-fulani-radio",
@@ -130,7 +131,10 @@ window.STATIONS = [
       "https://stream.zeno.fm/mwam2yirv1pvv"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "br": [
+      128,
+      128
+    ]
   },
   {
     "id": "crest-91-1-fm-ibadan",
@@ -176,9 +180,7 @@ window.STATIONS = [
       "https://cccworldwide.net/radio/live.mp3"
     ],
     "added": "2026-10-25",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "translation-of-the-quran-in-yoruba",
@@ -205,4 +207,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T03:07Z";
+window.STATIONS_CHECKED = "2026-11-20T08:17Z";

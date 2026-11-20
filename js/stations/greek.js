@@ -206,7 +206,9 @@ window.STATIONS = [
     "streams": [
       "https://r1.cloudskep.com/radio/diesi/icecast.audio"
     ],
-    "offline": true
+    "br": [
+      56
+    ]
   },
   {
     "id": "99-1",
@@ -458,10 +460,7 @@ window.STATIONS = [
     "streams": [
       "https://sp3.streams.ovh/8070/stream"
     ],
-    "added": "2026-10-22",
-    "br": [
-      128
-    ]
+    "added": "2026-10-22"
   },
   {
     "id": "laikos-fm",
@@ -649,7 +648,9 @@ window.STATIONS = [
       "https://solid9.streamupsolutions.com/proxy/zvbgdllc?mp=/stream"
     ],
     "added": "2026-10-24",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "happy-104",
@@ -1675,7 +1676,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "br": [
-      128
+      192
     ]
   },
   {
@@ -1751,4 +1752,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T03:07Z";
+window.STATIONS_CHECKED = "2026-11-20T08:17Z";

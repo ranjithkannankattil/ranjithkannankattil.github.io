@@ -316,6 +316,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://server10.emitironline.com:8040/"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -369,9 +372,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming.enacast.com/radiohospitalet56.mp3"
     ],
-    "br": [
-      96
-    ]
+    "offline": true
   },
   {
     "id": "canal-blau",
@@ -878,4 +879,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T03:07Z";
+window.STATIONS_CHECKED = "2026-11-20T08:17Z";

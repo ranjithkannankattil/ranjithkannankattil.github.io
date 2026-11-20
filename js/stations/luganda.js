@@ -9,9 +9,7 @@ window.STATIONS = [
     "streams": [
       "https://dc4.serverse.com/proxy/ccmxrgub/stream"
     ],
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "107-9-pearl-fm",
@@ -20,9 +18,7 @@ window.STATIONS = [
     "streams": [
       "https://dc4.serverse.com/proxy/pearlfm/stream/1/"
     ],
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "kitintale-christian-fellowship",
@@ -395,4 +391,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T03:07Z";
+window.STATIONS_CHECKED = "2026-11-20T08:17Z";

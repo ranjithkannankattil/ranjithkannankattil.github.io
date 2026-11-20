@@ -1498,6 +1498,15 @@ window.STATIONS = [
     "br": [
       128
     ]
+  },
+  {
+    "id": "radioone-arabesk",
+    "name": "RadioOne - Arabesk",
+    "category": "music",
+    "streams": [
+      "https://stream.radioone.hu/ch3"
+    ],
+    "added": "2026-11-20"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T03:07Z";
+window.STATIONS_CHECKED = "2026-11-20T08:17Z";

@@ -19,9 +19,6 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://s3.radio.co/s97f38db97/listen"
-    ],
-    "br": [
-      48
     ]
   },
   {
@@ -239,9 +236,7 @@ window.STATIONS = [
       "https://us5new.listen2myradio.com:2199/listen.php?port=8138&type=ice&mount=stream"
     ],
     "added": "2026-10-22",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "heavenly-altar-church-radio-kampala",
@@ -446,4 +441,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T03:07Z";
+window.STATIONS_CHECKED = "2026-11-20T08:17Z";

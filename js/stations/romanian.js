@@ -138,7 +138,7 @@ window.STATIONS = [
       "https://astreaming.edi.ro:8443/VirginRadio_aac"
     ],
     "br": [
-      64
+      128
     ]
   },
   {
@@ -564,10 +564,7 @@ window.STATIONS = [
     "streams": [
       "https://live.radiotranquila.net:8032/stream"
     ],
-    "added": "2026-10-24",
-    "br": [
-      128
-    ]
+    "added": "2026-10-24"
   },
   {
     "id": "clasic-radio-bach-bucuresti",
@@ -1131,10 +1128,7 @@ window.STATIONS = [
     "streams": [
       "https://mp3.radiostill.ro:8888/stream"
     ],
-    "added": "2026-11-02",
-    "br": [
-      128
-    ]
+    "added": "2026-11-02"
   },
   {
     "id": "fun-radio-romania",
@@ -1503,10 +1497,7 @@ window.STATIONS = [
     "streams": [
       "https://s3.radio.co/s1492c0564/listen"
     ],
-    "added": "2026-11-06",
-    "br": [
-      320
-    ]
+    "added": "2026-11-06"
   },
   {
     "id": "radio-rfi-moldova",
@@ -1707,10 +1698,7 @@ window.STATIONS = [
     "streams": [
       "https://popular.radiostill.ro/8176/stream"
     ],
-    "added": "2026-11-09",
-    "br": [
-      128
-    ]
+    "added": "2026-11-09"
   },
   {
     "id": "radio-galati",
@@ -1761,4 +1749,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T03:07Z";
+window.STATIONS_CHECKED = "2026-11-20T08:17Z";

@@ -61,9 +61,7 @@ window.STATIONS = [
     "streams": [
       "https://netradio.ziniur.lt/ziniur_64.mp3"
     ],
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "radio-3",
@@ -105,9 +103,7 @@ window.STATIONS = [
     "streams": [
       "https://netradio.ziniur.lt/easyfm.mp3"
     ],
-    "br": [
-      256
-    ]
+    "offline": true
   },
   {
     "id": "power-gold",
@@ -226,7 +222,7 @@ window.STATIONS = [
       "https://wowzaott1.penki.lt/jazzfm/jazzfm.stream/playlist.m3u8"
     ],
     "br": [
-      89
+      90
     ]
   },
   {
@@ -349,6 +345,15 @@ window.STATIONS = [
     "added": "2026-10-31",
     "offline": true,
     "hidden": true
+  },
+  {
+    "id": "mrpl-classics",
+    "name": "MRPL Classics",
+    "category": "music",
+    "streams": [
+      "https://mrpl.babrai.com/classics.mp3"
+    ],
+    "added": "2026-11-20"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T03:07Z";
+window.STATIONS_CHECKED = "2026-11-20T08:17Z";
