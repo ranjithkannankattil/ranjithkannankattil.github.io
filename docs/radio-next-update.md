@@ -139,3 +139,8 @@ Everything above: star tab, soft pill, tour, several alarms, safety net, and the
   Settings, Alarms, Request a station, Quick tour, Share the app, Write to us; (5) "About" rows that open their own
   short page: What the app can do (the "good to know" lines), How stations are checked, Privacy policy, Credits, Radio
   on ranjithkb.com. Same look as the Settings page. Show him a mock-up first; build when he says.
+- **App in Malayalam** (his ask, 20 Nov 2026). Settings → App language: English (default) or മലയാളം, also offered in the
+  phone's own Settings → Apps → Radio Velvet → Language (Android 13+). Every word the app shows: tabs, buttons, Settings,
+  Info, the tour, alarms, notifications, lock-screen and Android Auto labels, messages. Natural, everyday Malayalam (not
+  stiff official words), in Manjari; station and song names stay as they are. App only: the website stays English-only.
+  He reviews the Malayalam wording before release. Not started; build when he says.
