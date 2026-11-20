@@ -460,7 +460,10 @@ window.STATIONS = [
     "streams": [
       "https://sp3.streams.ovh/8070/stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "laikos-fm",
@@ -1639,9 +1642,7 @@ window.STATIONS = [
       "https://ams-pioneer02.dedicateware.com:1955/stream"
     ],
     "added": "2026-11-07",
-    "br": [
-      192
-    ]
+    "offline": true
   },
   {
     "id": "skylos-69",
@@ -1676,7 +1677,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "br": [
-      192
+      128
     ]
   },
   {
@@ -1752,4 +1753,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

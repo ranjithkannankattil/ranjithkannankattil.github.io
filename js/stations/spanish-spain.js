@@ -1417,7 +1417,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-04",
     "br": [
-      128
+      320
     ]
   },
   {
@@ -1509,7 +1509,8 @@ window.STATIONS = [
       "https://rockfm-cope.flumotion.com/chunks.m3u8"
     ],
     "added": "2026-11-05",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "negocios-com",
@@ -1761,4 +1762,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

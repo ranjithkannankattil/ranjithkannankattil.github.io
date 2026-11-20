@@ -398,9 +398,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/qpq7hygy77zuv"
     ],
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "yfm-97-9-takoradi",
@@ -409,7 +407,8 @@ window.STATIONS = [
     "streams": [
       "https://atunwadigital.streamguys1.com/yfm979takoradi"
     ],
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "yfm-107-9-accra",
@@ -561,9 +560,7 @@ window.STATIONS = [
       "https://stream.zeno.fm/evaq9ab4k0hvv"
     ],
     "added": "2026-10-23",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "neat-fm",
@@ -573,9 +570,7 @@ window.STATIONS = [
       "https://atunwadigital.streamguys1.com/neatfm"
     ],
     "added": "2026-10-23",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "kobbyros-radio",
@@ -650,4 +645,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

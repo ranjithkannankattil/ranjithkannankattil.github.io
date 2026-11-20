@@ -278,9 +278,7 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:9154/stream"
     ],
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "radiks-fm-semarang",
@@ -290,10 +288,7 @@ window.STATIONS = [
       "https://i.klikhost.com:9620/;",
       "https://i.klikhost.com:9620/stream"
     ],
-    "br": [
-      64,
-      64
-    ]
+    "offline": true
   },
   {
     "id": "radio-music-indonesia",
@@ -358,9 +353,7 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:8500/;super.mp3"
     ],
-    "br": [
-      192
-    ]
+    "offline": true
   },
   {
     "id": "bahtera-yudha-fm-surabaya",
@@ -401,9 +394,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com/9604/stream.aac"
-    ],
-    "br": [
-      64
     ]
   },
   {
@@ -425,7 +415,7 @@ window.STATIONS = [
       "https://server.radioimeldafm.co.id/radio/8040/gajahmadafm"
     ],
     "br": [
-      64
+      80
     ]
   },
   {
@@ -556,7 +546,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      64
+      80
     ]
   },
   {
@@ -733,9 +723,7 @@ window.STATIONS = [
       "https://i.klikhost.com/8228/;radio"
     ],
     "added": "2026-10-26",
-    "br": [
-      48
-    ]
+    "offline": true
   },
   {
     "id": "bandung-death-metal-syndicate",
@@ -873,9 +861,7 @@ window.STATIONS = [
       "https://svara-stream.radioddns.net/bali_voksradio_993fm"
     ],
     "added": "2026-10-28",
-    "br": [
-      160
-    ]
+    "offline": true
   },
   {
     "id": "imelda-fm",
@@ -1231,9 +1217,7 @@ window.STATIONS = [
       "https://ssg.streamingmurah.com:8078/;"
     ],
     "added": "2026-11-03",
-    "br": [
-      32
-    ]
+    "offline": true
   },
   {
     "id": "wawa-radio-101-2-fm",
@@ -1423,7 +1407,9 @@ window.STATIONS = [
       "https://radio.gjfm.my.id/listen/gjfm/siaran"
     ],
     "added": "2026-11-05",
-    "offline": true
+    "br": [
+      80
+    ]
   },
   {
     "id": "radio-cmn",
@@ -1446,7 +1432,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-06",
     "br": [
-      80
+      64
     ]
   },
   {
@@ -1469,9 +1455,7 @@ window.STATIONS = [
       "https://radio.safasindo.com/listen/radio_safasindo/radio.mp3"
     ],
     "added": "2026-11-06",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "rri-pro-3-palembang",
@@ -1542,7 +1526,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "br": [
-      128
+      94
     ]
   },
   {
@@ -1668,9 +1652,7 @@ window.STATIONS = [
       "https://pu.klikhost.com/proxy/onixradio/stream"
     ],
     "added": "2026-11-12",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "homebrew-radio",
@@ -1692,9 +1674,7 @@ window.STATIONS = [
       "https://i.klikhost.com:9616/stream"
     ],
     "added": "2026-11-14",
-    "br": [
-      64
-    ]
+    "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

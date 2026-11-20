@@ -1066,7 +1066,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.bigfm.de/balkan/mp3-128/onlineradiobox"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-sumadinac",
@@ -1646,7 +1649,9 @@ window.STATIONS = [
       "https://s1.skeletor.rs/san"
     ],
     "added": "2026-11-10",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-s-folk-stars",
@@ -1721,4 +1726,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

@@ -38,7 +38,7 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      127
+      128
     ]
   },
   {
@@ -60,7 +60,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m8080.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -95,7 +95,7 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      128
+      127
     ]
   },
   {
@@ -128,8 +128,9 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
     ],
     "br": [
-      168
-    ]
+      167
+    ],
+    "offline": true
   },
   {
     "id": "m80-radio-ballads",
@@ -161,7 +162,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m80nacional.aac"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -172,7 +173,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m8060.aac"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -235,7 +236,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/rckids.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -257,7 +258,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/smooth.aac"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -280,8 +281,8 @@ window.STATIONS = [
       "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
     ],
     "br": [
-      176,
-      176
+      166,
+      166
     ]
   },
   {
@@ -314,8 +315,9 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
     ],
     "br": [
-      172
-    ]
+      165
+    ],
+    "offline": true
   },
   {
     "id": "cidade-fm-2",
@@ -472,9 +474,8 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      195
-    ],
-    "offline": true
+      186
+    ]
   },
   {
     "id": "antena-1-acores-portugal",
@@ -485,9 +486,8 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      177
-    ],
-    "offline": true
+      168
+    ]
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -619,7 +619,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -643,7 +643,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -727,7 +727,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -775,7 +775,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -787,7 +787,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -799,7 +799,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -859,7 +859,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -883,7 +883,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -967,7 +967,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -1171,7 +1171,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-01",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -1255,7 +1255,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-02",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -1365,7 +1365,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "br": [
-      160
+      128
     ]
   },
   {
@@ -1461,7 +1461,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "br": [
-      169
+      178
     ]
   },
   {
@@ -1611,9 +1611,8 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "br": [
-      172
-    ],
-    "offline": true
+      166
+    ]
   },
   {
     "id": "radio-quantica",
@@ -1659,9 +1658,7 @@ window.STATIONS = [
       "https://centova.radio.com.pt/proxy/037?mp=/stream"
     ],
     "added": "2026-11-08",
-    "br": [
-      112
-    ]
+    "offline": true
   },
   {
     "id": "radiofutura-pt",
@@ -1784,4 +1781,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

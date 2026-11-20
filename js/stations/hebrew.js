@@ -130,12 +130,12 @@ window.STATIONS = [
     "name": "ECO99FM",
     "category": "music",
     "streams": [
-      "https://eco-live.mediacast.co.il/99fm_aac",
-      "https://eco01.livecdn.biz/ecolive/99fm_aac/icecast.audio?hash=1559501510715.m4a"
+      "https://eco01.livecdn.biz/ecolive/99fm_aac/icecast.audio?hash=1559501510715.m4a",
+      "https://eco-live.mediacast.co.il/99fm_aac"
     ],
     "br": [
       64,
-      64
+      0
     ]
   },
   {
@@ -178,9 +178,7 @@ window.STATIONS = [
     "streams": [
       "https://icecast.kab.tv/live1-heb-574bcfd5.mp3"
     ],
-    "br": [
-      80
-    ]
+    "offline": true
   },
   {
     "id": "mizrahit-fm-best",
@@ -231,12 +229,10 @@ window.STATIONS = [
     "name": "Ze Rock Radio",
     "category": "music",
     "streams": [
-      "https://rocky.kupernet.com/stream",
-      "https://icecast.live/proxy/zerock/zerock"
+      "https://rocky.kupernet.com/stream"
     ],
     "br": [
-      128,
-      0
+      128
     ]
   },
   {
@@ -412,7 +408,7 @@ window.STATIONS = [
       "https://gb25.streamgates.net/radios-audio/100Nostalgia/playlist.m3u8"
     ],
     "br": [
-      146
+      147
     ]
   },
   {
@@ -614,4 +610,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

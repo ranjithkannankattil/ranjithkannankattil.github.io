@@ -10,7 +10,7 @@ window.STATIONS = [
       "https://n12.radiojar.com/8s5u5tpdtwzuv?listening-from-radio-garden=1620219571863&rj-tok=AAABeTyl2zYARSWbLVnrEOlqGw&rj-ttl=5"
     ],
     "br": [
-      64
+      80
     ]
   },
   {
@@ -108,7 +108,7 @@ window.STATIONS = [
       "https://stream.radiojar.com/8s5u5tpdtwzuv"
     ],
     "br": [
-      80
+      64
     ]
   },
   {
@@ -283,7 +283,7 @@ window.STATIONS = [
       "https://n0e.radiojar.com/8s5u5tpdtwzuv?rj=&rj-tok=AAABg5BDP0EA2ElNLJYUJTsVcg&rj-ttl=5"
     ],
     "br": [
-      80
+      64
     ]
   },
   {
@@ -1287,9 +1287,7 @@ window.STATIONS = [
       "https://webradio3.tda.dz:8001/Constantine_64K.mp3"
     ],
     "added": "2026-11-02",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "medina-fm",
@@ -1766,4 +1764,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

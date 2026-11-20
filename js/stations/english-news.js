@@ -939,7 +939,7 @@ window.STATIONS = [
     "added": "2026-11-02",
     "where": "UK",
     "br": [
-      64
+      63
     ]
   },
   {
@@ -991,7 +991,7 @@ window.STATIONS = [
     "added": "2026-11-02",
     "where": "UK",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -1095,7 +1095,7 @@ window.STATIONS = [
     "added": "2026-11-03",
     "where": "Qatar",
     "br": [
-      429
+      409
     ]
   },
   {
@@ -1209,7 +1209,7 @@ window.STATIONS = [
     "added": "2026-11-05",
     "where": "Qatar",
     "br": [
-      128
+      129
     ]
   },
   {
@@ -1719,7 +1719,9 @@ window.STATIONS = [
     ],
     "added": "2026-11-11",
     "where": "Canada",
-    "offline": true
+    "br": [
+      48
+    ]
   },
   {
     "id": "cftr-city-news-680-toronto-on",
@@ -1731,7 +1733,7 @@ window.STATIONS = [
     "added": "2026-11-11",
     "where": "Canada",
     "br": [
-      48
+      47
     ]
   },
   {
@@ -1890,4 +1892,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

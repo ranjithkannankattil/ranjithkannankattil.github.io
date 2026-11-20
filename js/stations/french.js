@@ -1014,7 +1014,10 @@ window.STATIONS = [
     "streams": [
       "https://s3.radio.co/s97f38db97/listen"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      48
+    ]
   },
   {
     "id": "marrakechplus",
@@ -1225,9 +1228,7 @@ window.STATIONS = [
       "https://webradio3.tda.dz:8001/Constantine_64K.mp3"
     ],
     "added": "2026-11-02",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "ancient-fm",
@@ -1767,4 +1768,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

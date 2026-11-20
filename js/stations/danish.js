@@ -157,7 +157,7 @@ window.STATIONS = [
       "https://live-bauerdk.sharp-stream.com/DK_HQ_RP11.aac"
     ],
     "br": [
-      95
+      96
     ]
   },
   {
@@ -703,4 +703,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

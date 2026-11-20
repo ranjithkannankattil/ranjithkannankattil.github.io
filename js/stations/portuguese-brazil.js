@@ -1679,7 +1679,9 @@ window.STATIONS = [
       "https://stream.animu.moe/192"
     ],
     "added": "2026-11-08",
-    "offline": true
+    "br": [
+      192
+    ]
   },
   {
     "id": "hunter-fm-lo-fi",
@@ -1763,4 +1765,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

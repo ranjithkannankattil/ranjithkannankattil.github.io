@@ -216,7 +216,7 @@ window.STATIONS = [
       "https://server1.stweb.tv/rcvos/live/playlist.m3u8"
     ],
     "br": [
-      66
+      68
     ]
   },
   {
@@ -473,7 +473,10 @@ window.STATIONS = [
     "streams": [
       "https://s3.radio.co/s97f38db97/listen"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      48
+    ]
   },
   {
     "id": "los-40-principales-mexico",
@@ -745,10 +748,7 @@ window.STATIONS = [
     "streams": [
       "https://ice42.securenetsystems.net/HRN"
     ],
-    "added": "2026-10-26",
-    "br": [
-      32
-    ]
+    "added": "2026-10-26"
   },
   {
     "id": "metro-95-1",
@@ -1753,4 +1753,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

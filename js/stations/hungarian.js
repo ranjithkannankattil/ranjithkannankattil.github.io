@@ -284,9 +284,7 @@ window.STATIONS = [
     "streams": [
       "https://icast.connectmedia.hu/5115/live.mp3"
     ],
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "radio-1-sopron",
@@ -328,9 +326,7 @@ window.STATIONS = [
     "streams": [
       "https://icast.connectmedia.hu/5232/live.mp3"
     ],
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "best-fm-budapest",
@@ -747,7 +743,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "br": [
-      256
+      192
     ]
   },
   {
@@ -841,10 +837,7 @@ window.STATIONS = [
     "streams": [
       "https://a9.asurahosting.com/listen/passion_radio_hungary/radio.mp3"
     ],
-    "added": "2026-10-29",
-    "br": [
-      192
-    ]
+    "added": "2026-10-29"
   },
   {
     "id": "zalan-radio",
@@ -1034,7 +1027,9 @@ window.STATIONS = [
       "https://stream2.radiotransilvania.ro/Nagyvarad"
     ],
     "added": "2026-11-01",
-    "offline": true
+    "br": [
+      192
+    ]
   },
   {
     "id": "erdely-fm",
@@ -1164,7 +1159,9 @@ window.STATIONS = [
       "https://stream2.radiotransilvania.ro/Margitta"
     ],
     "added": "2026-11-02",
-    "offline": true
+    "br": [
+      160
+    ]
   },
   {
     "id": "elo-viz-radio-living-water-radio",
@@ -1282,9 +1279,7 @@ window.STATIONS = [
       "https://icast.connectmedia.hu/5116/live.mp3/;"
     ],
     "added": "2026-11-04",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "radio-gaga-csikszek",
@@ -1506,7 +1501,37 @@ window.STATIONS = [
     "streams": [
       "https://stream.radioone.hu/ch3"
     ],
+    "added": "2026-11-20",
+    "br": [
+      128
+    ]
+  },
+  {
+    "id": "radioone-lo-fi-nyelvtanulo",
+    "name": "RadioOne - Lo-Fi Nyelvtanuló",
+    "category": "music",
+    "streams": [
+      "https://stream.radioone.hu/ch5"
+    ],
+    "added": "2026-11-20"
+  },
+  {
+    "id": "radio-1-szombathely",
+    "name": "Rádió 1 Szombathely",
+    "category": "music",
+    "streams": [
+      "https://icast.connectmedia.hu/5216/live.mp3"
+    ],
+    "added": "2026-11-20"
+  },
+  {
+    "id": "groove-cafe",
+    "name": "Groove Cafe",
+    "category": "music",
+    "streams": [
+      "https://www.radiogroove.hu/cafe.mp3"
+    ],
     "added": "2026-11-20"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

@@ -139,7 +139,7 @@ window.STATIONS = [
       "https://streaming.softnep.net:10988/;stream.nsv&type=mp3"
     ],
     "br": [
-      96
+      80
     ]
   },
   {
@@ -166,4 +166,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

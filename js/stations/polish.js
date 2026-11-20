@@ -1127,7 +1127,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-02",
     "br": [
-      96
+      128
     ]
   },
   {
@@ -1223,7 +1223,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "br": [
-      128
+      64
     ]
   },
   {
@@ -1283,7 +1283,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-04",
     "br": [
-      319
+      96
     ]
   },
   {
@@ -1352,7 +1352,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "br": [
-      64
+      128
     ]
   },
   {
@@ -1471,7 +1471,9 @@ window.STATIONS = [
       "https://s3.slotex.pl/shoutcast/7496/stream"
     ],
     "added": "2026-11-07",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "zet-impreza",
@@ -1762,4 +1764,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

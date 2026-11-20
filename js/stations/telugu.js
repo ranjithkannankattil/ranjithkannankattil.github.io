@@ -116,7 +116,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/5d9989b5189a8f4a/5d9989b5189a8f4a.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "akashvani-tirupati",
@@ -125,7 +126,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/1119aa26b4e9f653/1119aa26b4e9f653.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "fm-rainbow-visakhapatnam",
@@ -134,7 +136,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/147314c8aedf4389/147314c8aedf4389.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "live-fm",
@@ -155,7 +158,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/b11784e3b37b7620/b11784e3b37b7620.m3u8"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "offline": true
   },
   {
     "id": "akashvani-visakhapatnam",
@@ -164,7 +168,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/8362d532bd498fd0/8362d532bd498fd0.m3u8"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "offline": true
   },
   {
     "id": "fm-simhapuri-nellore",
@@ -173,7 +178,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/8bc9175bb717c13b/8bc9175bb717c13b.m3u8"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "offline": true
   },
   {
     "id": "voice-of-truth-radio-telugu",
@@ -218,7 +224,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/8416764ec0889597/8416764ec0889597.m3u8"
     ],
-    "added": "2026-11-13"
+    "added": "2026-11-13",
+    "offline": true
   },
   {
     "id": "akashvani-warangal",
@@ -227,7 +234,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/deae7120a205bfff/deae7120a205bfff.m3u8"
     ],
-    "added": "2026-11-13"
+    "added": "2026-11-13",
+    "offline": true
   },
   {
     "id": "akashvani-anantapur",
@@ -236,7 +244,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/3bcd83926d6c3cca/3bcd83926d6c3cca.m3u8"
     ],
-    "added": "2026-11-13"
+    "added": "2026-11-13",
+    "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

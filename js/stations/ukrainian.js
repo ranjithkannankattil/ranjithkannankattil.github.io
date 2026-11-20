@@ -207,7 +207,9 @@ window.STATIONS = [
     "streams": [
       "https://s5.radioforge.com:7908/live?n=77357"
     ],
-    "offline": true
+    "br": [
+      192
+    ]
   },
   {
     "id": "24-breaking-live",
@@ -238,7 +240,9 @@ window.STATIONS = [
     "streams": [
       "https://online-radio.nv.ua/radionv.mp3"
     ],
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "fm-95-2",
@@ -313,7 +317,9 @@ window.STATIONS = [
     "streams": [
       "https://stream.brokenbeats.net/tune"
     ],
-    "offline": true
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-shanson",
@@ -332,9 +338,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radivo.thx8te.kh.ua/listen/radivo/radio.mp3"
-    ],
-    "br": [
-      320
     ]
   },
   {
@@ -399,9 +402,7 @@ window.STATIONS = [
     "streams": [
       "https://noasrv.caster.fm:10001/live"
     ],
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "fm-3",
@@ -551,10 +552,7 @@ window.STATIONS = [
     "streams": [
       "https://a9.asurahosting.com:7390/radio.mp3"
     ],
-    "added": "2026-10-23",
-    "br": [
-      192
-    ]
+    "added": "2026-10-23"
   },
   {
     "id": "station-8",
@@ -1260,9 +1258,7 @@ window.STATIONS = [
       "https://complex.in.ua/zhudachiv"
     ],
     "added": "2026-11-02",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "teren-fm",
@@ -1505,4 +1501,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

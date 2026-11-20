@@ -678,7 +678,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      256
+      128
     ]
   },
   {
@@ -1052,7 +1052,9 @@ window.STATIONS = [
       "https://cast.thiff.com/proxy/laarmeni?mp=/stream"
     ],
     "added": "2026-10-31",
-    "offline": true
+    "br": [
+      192
+    ]
   },
   {
     "id": "russian-bards",
@@ -1290,7 +1292,9 @@ window.STATIONS = [
       "https://stream.brokenbeats.net/tune"
     ],
     "added": "2026-11-03",
-    "offline": true
+    "br": [
+      320
+    ]
   },
   {
     "id": "station-39",
@@ -1620,7 +1624,10 @@ window.STATIONS = [
     "streams": [
       "https://misato.ru-hoster.com:8037/stream"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "russian-hits",
@@ -1673,8 +1680,8 @@ window.STATIONS = [
     ],
     "added": "2026-11-09",
     "br": [
-      64
+      128
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

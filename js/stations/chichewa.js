@@ -389,7 +389,9 @@ window.STATIONS = [
     "streams": [
       "https://lbsradio-dexterity.radioca.st/stream"
     ],
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "marweltan-radio59",
@@ -404,4 +406,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

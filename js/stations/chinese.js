@@ -141,8 +141,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play-radio-stream3.hndt.com/now/WUBA5hW2/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-10",
@@ -238,9 +237,7 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
     ],
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "station-17",
@@ -631,9 +628,7 @@ window.STATIONS = [
       "https://live.fm891.net/192k.aac"
     ],
     "added": "2026-10-26",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "station-31",
@@ -761,7 +756,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      51
+      52
     ]
   },
   {
@@ -891,7 +886,10 @@ window.STATIONS = [
     "streams": [
       "https://s3.radio.co/s97f38db97/listen"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      48
+    ]
   },
   {
     "id": "hardbestfm-hardcore",
@@ -1134,7 +1132,8 @@ window.STATIONS = [
     "streams": [
       "https://play-radio-stream3.hndt.com/now/JxkyN5mR/chunklist.m3u8"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "offline": true
   },
   {
     "id": "cctv-9",
@@ -1241,7 +1240,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-04",
     "br": [
-      97
+      96
     ]
   },
   {
@@ -1602,4 +1601,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

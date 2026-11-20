@@ -203,9 +203,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://a9.asurahosting.com/listen/radio_marimanga/radio.mp3"
-    ],
-    "br": [
-      320
     ]
   },
   {
@@ -215,7 +212,9 @@ window.STATIONS = [
     "streams": [
       "https://live.radio-zemra.eu/stream"
     ],
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "radionatyra",
@@ -457,7 +456,9 @@ window.STATIONS = [
       "https://live.radio-zemra.eu/folklor"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "br": [
+      112
+    ]
   },
   {
     "id": "prime-gold",
@@ -706,4 +707,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

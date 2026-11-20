@@ -40,9 +40,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cdn-edge.iiptvcdn.com/radio_edge/45d4-d521-cbfc-d686-0123/playlist.m3u8"
-    ],
-    "br": [
-      128
     ]
   },
   {
@@ -342,7 +339,7 @@ window.STATIONS = [
       "https://livefta.malimarcdn.com/ftaedge00/nat.sdp/playlist.m3u8"
     ],
     "br": [
-      2432
+      2424
     ]
   },
   {
@@ -385,9 +382,7 @@ window.STATIONS = [
       "https://radio11.plathong.net/7050/;stream.mp3"
     ],
     "added": "2026-10-29",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "translation-of-the-quran-in-thai",
@@ -410,7 +405,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-06",
     "br": [
-      128
+      112
     ]
   },
   {
@@ -474,4 +469,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

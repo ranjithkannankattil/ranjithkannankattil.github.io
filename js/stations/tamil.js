@@ -85,7 +85,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "89-4-tamil-fm",
@@ -345,6 +346,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://psrlive4.listenon.in/mohan?station=mohanradio"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -366,7 +370,7 @@ window.STATIONS = [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio025/masterlist.m3u8"
     ],
     "br": [
-      79
+      80
     ]
   },
   {
@@ -375,7 +379,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio129/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "tamil-ragam",
@@ -385,7 +390,7 @@ window.STATIONS = [
       "https://cast4.asurahosting.com/proxy/neville/stream"
     ],
     "br": [
-      160
+      192
     ]
   },
   {
@@ -539,7 +544,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      80
+      78
     ]
   },
   {
@@ -551,7 +556,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      80
+      78
     ]
   },
   {
@@ -802,7 +807,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      79
+      78
     ]
   },
   {
@@ -1215,9 +1220,7 @@ window.STATIONS = [
       "https://radio13.pro-fhi.net:19236/stream.mp3"
     ],
     "added": "2026-11-02",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "muthamilradio",
@@ -1742,4 +1745,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

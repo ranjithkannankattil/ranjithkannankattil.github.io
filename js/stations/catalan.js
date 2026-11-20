@@ -229,9 +229,7 @@ window.STATIONS = [
     "streams": [
       "https://enacast.com/laplanaradio/streams/HD"
     ],
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "montserrat-radio",
@@ -879,4 +877,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

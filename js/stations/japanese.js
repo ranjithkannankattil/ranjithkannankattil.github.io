@@ -396,7 +396,7 @@ window.STATIONS = [
       "https://sbs-ice.streamguys1.com/sbs-popasia-sbs-web"
     ],
     "br": [
-      97
+      96
     ]
   },
   {
@@ -440,7 +440,7 @@ window.STATIONS = [
       "https://vrc.gate.vrtv.jp/live?p=g&u=d"
     ],
     "br": [
-      1355
+      1031
     ]
   },
   {
@@ -535,7 +535,9 @@ window.STATIONS = [
       "https://radio.gjfm.my.id/listen/gjfm/siaran"
     ],
     "added": "2026-10-23",
-    "offline": true
+    "br": [
+      80
+    ]
   },
   {
     "id": "j-club-powerplay-hiphop-asia-dream-radio",
@@ -887,7 +889,9 @@ window.STATIONS = [
       "https://howlingf-gecko.radioca.st/autodj"
     ],
     "added": "2026-10-29",
-    "offline": true
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-gambaru",
@@ -984,4 +988,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

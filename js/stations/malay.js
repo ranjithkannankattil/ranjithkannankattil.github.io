@@ -64,9 +64,7 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/KELANTAN_FMAAC.aac"
     ],
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "radio-rosak",
@@ -199,4 +197,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

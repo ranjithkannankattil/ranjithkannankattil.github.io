@@ -61,7 +61,9 @@ window.STATIONS = [
     "streams": [
       "https://netradio.ziniur.lt/ziniur_64.mp3"
     ],
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-3",
@@ -103,7 +105,9 @@ window.STATIONS = [
     "streams": [
       "https://netradio.ziniur.lt/easyfm.mp3"
     ],
-    "offline": true
+    "br": [
+      256
+    ]
   },
   {
     "id": "power-gold",
@@ -222,7 +226,7 @@ window.STATIONS = [
       "https://wowzaott1.penki.lt/jazzfm/jazzfm.stream/playlist.m3u8"
     ],
     "br": [
-      90
+      89
     ]
   },
   {
@@ -353,7 +357,19 @@ window.STATIONS = [
     "streams": [
       "https://mrpl.babrai.com/classics.mp3"
     ],
+    "added": "2026-11-20",
+    "br": [
+      128
+    ]
+  },
+  {
+    "id": "radio-znad-wilii",
+    "name": "Radio Znad Wilii",
+    "category": "news",
+    "streams": [
+      "https://plays.zw.lt/zw128"
+    ],
     "added": "2026-11-20"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

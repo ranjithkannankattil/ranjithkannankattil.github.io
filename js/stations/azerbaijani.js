@@ -105,9 +105,7 @@ window.STATIONS = [
     "streams": [
       "https://s2.myradiostream.com/5286/listen.mp3"
     ],
-    "br": [
-      192
-    ]
+    "offline": true
   },
   {
     "id": "azerbaycan-radiosu-105-0-fm",
@@ -212,7 +210,7 @@ window.STATIONS = [
       "https://live.livestreamtv.ca/azstar/amlst:azstar/playlist.m3u8"
     ],
     "br": [
-      4350
+      4230
     ]
   },
   {
@@ -285,4 +283,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

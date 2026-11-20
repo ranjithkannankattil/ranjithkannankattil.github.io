@@ -303,7 +303,7 @@ window.STATIONS = [
     ],
     "where": "UK",
     "br": [
-      48
+      47
     ]
   },
   {
@@ -447,10 +447,7 @@ window.STATIONS = [
       "https://icecast.walmradio.com:8443/walm2_opus"
     ],
     "added": "2026-10-22",
-    "where": "US",
-    "br": [
-      192
-    ]
+    "where": "US"
   },
   {
     "id": "bbc-radio-2",
@@ -511,7 +508,7 @@ window.STATIONS = [
     "added": "2026-10-23",
     "where": "UK",
     "br": [
-      48
+      47
     ]
   },
   {
@@ -1013,7 +1010,7 @@ window.STATIONS = [
     "added": "2026-10-30",
     "where": "US",
     "br": [
-      128
+      136
     ]
   },
   {
@@ -1038,9 +1035,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "where": "US",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "radio-x-90s",
@@ -1117,7 +1112,7 @@ window.STATIONS = [
     "added": "2026-11-01",
     "where": "Australia",
     "br": [
-      97
+      96
     ]
   },
   {
@@ -1667,7 +1662,9 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "where": "UK",
-    "offline": true
+    "br": [
+      320
+    ]
   },
   {
     "id": "truckersfm",
@@ -1866,7 +1863,7 @@ window.STATIONS = [
     "added": "2026-11-07",
     "where": "UK",
     "br": [
-      47
+      48
     ]
   },
   {
@@ -1883,4 +1880,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

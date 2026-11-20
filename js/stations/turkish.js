@@ -303,7 +303,7 @@ window.STATIONS = [
       "https://moondigitaledge.radyotvonline.net/palnostalji/playlist.m3u8"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -554,7 +554,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      151
+      150
     ]
   },
   {
@@ -566,7 +566,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      128
+      129
     ]
   },
   {
@@ -601,7 +601,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      63
+      64
     ]
   },
   {
@@ -638,7 +638,8 @@ window.STATIONS = [
     "added": "2026-10-25",
     "br": [
       141
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radyo-mezopotamya",
@@ -661,7 +662,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      32
+      24
     ]
   },
   {
@@ -674,7 +675,8 @@ window.STATIONS = [
     "added": "2026-10-25",
     "br": [
       141
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "dinamo-fm-legacy",
@@ -1242,7 +1244,8 @@ window.STATIONS = [
     "added": "2026-11-02",
     "br": [
       141
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "bestefm",
@@ -1332,7 +1335,8 @@ window.STATIONS = [
     "added": "2026-11-04",
     "br": [
       106
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "gonul-fm-97-3",
@@ -1341,10 +1345,7 @@ window.STATIONS = [
     "streams": [
       "https://sslyayin.netyayin.net/gonulfm/stream"
     ],
-    "added": "2026-11-04",
-    "br": [
-      96
-    ]
+    "added": "2026-11-04"
   },
   {
     "id": "bestefm-mix",
@@ -1747,4 +1748,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";

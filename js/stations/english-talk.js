@@ -369,10 +369,7 @@ window.STATIONS = [
       "https://icecast.walmradio.com:8443/walm2_opus"
     ],
     "added": "2026-10-22",
-    "where": "US",
-    "br": [
-      192
-    ]
+    "where": "US"
   },
   {
     "id": "times-radio",
@@ -717,7 +714,7 @@ window.STATIONS = [
     "added": "2026-10-26",
     "where": "UK",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -1433,7 +1430,7 @@ window.STATIONS = [
     "added": "2026-11-05",
     "where": "Qatar",
     "br": [
-      128
+      129
     ]
   },
   {
@@ -1879,4 +1876,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T08:17Z";
+window.STATIONS_CHECKED = "2026-11-20T22:01Z";
