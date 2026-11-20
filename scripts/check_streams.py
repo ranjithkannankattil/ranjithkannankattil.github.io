@@ -95,6 +95,35 @@ def curl(url: str, timeout: int = TIMEOUT) -> tuple[int, str, bytes, dict, int]:
 
 
 OK, DEAD, UNKNOWN = "ok", "dead", "unknown"
+
+# How heavy each stream is (kbps), for the apps' Data saver: the station's own header (icy-br, ice-audio-info),
+# the HLS playlist's BANDWIDTH (its lightest level), or the first MP3 frame. Unknown streams are simply left out.
+BITRATE: dict[str, int] = {}
+_MP3_KBPS = [0, 32, 40, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320]          # MPEG-1 Layer III
+_MP3_KBPS_2 = [0, 8, 16, 24, 32, 40, 48, 56, 64, 80, 96, 112, 128, 144, 160]           # MPEG-2/2.5 Layer III
+
+
+def kbps_from(headers: dict, data: bytes) -> int:
+    v = headers.get("icy-br", "").split(",")[0].strip()
+    if v.isdigit() and 8 <= int(v) <= 512:
+        return int(v)
+    m = re.search(r"(?:^|;)\s*(?:ice-)?bitrate=(\d+)", headers.get("ice-audio-info", ""), re.I)
+    if m and 8 <= int(m.group(1)) <= 512:
+        return int(m.group(1))
+    # the first MP3 frame header (two frames in a row, so it isn't a false match)
+    for i in range(min(len(data) - 4, 20000)):
+        if data[i] == 0xFF and (data[i + 1] & 0xE6) == 0xE2:
+            ver, idx, sr = (data[i + 1] >> 3) & 3, data[i + 2] >> 4, (data[i + 2] >> 2) & 3
+            if idx in (0, 15) or sr == 3 or ver == 1:
+                continue
+            kb = (_MP3_KBPS if ver == 3 else _MP3_KBPS_2)[idx]
+            rate = ({3: [44100, 48000, 32000], 2: [22050, 24000, 16000], 0: [11025, 12000, 8000]}[ver])[sr]
+            pad = (data[i + 2] >> 1) & 1
+            size = (144 if ver == 3 else 72) * kb * 1000 // rate + pad
+            j = i + size
+            if j + 1 < len(data) and data[j] == 0xFF and (data[j + 1] & 0xE6) == 0xE2:
+                return kb
+    return 0
 # curl exit codes that usually mean "this server won't talk to GitHub's machines"
 # (timeouts, resets) rather than "this stream is gone"
 NETWORKY = {28, 52, 56}
@@ -117,6 +146,9 @@ def test_hls(url: str, depth: int = 0) -> tuple[str, str]:
     if depth == 0 and "access-control-allow-origin" not in headers:
         return DEAD, "playlist blocks cross-origin playback"
     lines = [l.strip() for l in data.decode("utf-8", "ignore").splitlines()]
+    bws = [int(m.group(1)) for l in lines if l.startswith("#EXT-X-STREAM-INF") for m in [re.search(r"[:,]BANDWIDTH=(\d+)", l)] if m]
+    if depth == 0 and bws:
+        BITRATE[url] = max(8, round(min(bws) / 1000))
     uris = [l for l in lines if l and not l.startswith("#")]
     if not uris:
         return DEAD, "empty playlist"
@@ -158,6 +190,9 @@ def test_stream(url: str) -> tuple[str, str]:
                 # A live stream never finishes downloading. This one did: either a file (a jingle -
                 # never used as a replacement) or a region-blocked message for GitHub's US servers.
                 return UNKNOWN, "finished downloading: a file, or blocked in GitHub's region"
+            kb = kbps_from(headers, data)
+            if kb:
+                BITRATE[url] = kb
             return OK, f"{len(data)//1000} KB in {TIMEOUT}s"
         return DEAD, f"HTTP {code}, {len(data)} bytes"
     except Exception as e:  # noqa: BLE001
@@ -325,6 +360,11 @@ def main() -> None:
             health.pop(u, None)
 
         st["streams"] = list(dict.fromkeys(working + unknown + keep_dead))
+        br = [BITRATE.get(u, 0) for u in st["streams"]]
+        if any(br):
+            st["br"] = br                       # kbps per stream, same order; 0 = not known
+        else:
+            st.pop("br", None)
         if working:
             st.pop("offline", None)
         elif unknown:
