@@ -182,6 +182,21 @@ class ScreensTest {
     @Test fun v67_hi_settings() = inLang("hi", "v67-hi-settings") { SettingsScreen({}) {} }
     @Test @Config(qualifiers = "w360dp-h740dp-xxhdpi") fun v68_ml_info_360_large() { Lang.code = "ml"; try { shot("v68-ml-info-360-large", false, text = 2) { Info() } } finally { Lang.code = "en" } }
 
+    // ---- Android TV / Google TV
+    private val tvCols = listOf(Collection("malayalam", "Malayalam", "മലയാളം", "", emptyList()), Collection("english-news", "English news", "", "", emptyList()),
+        Collection("tamil", "Tamil", "", "", emptyList()), Collection("hindi", "Hindi", "", "", emptyList()))
+    @Composable private fun Tv() = Box(Modifier.fillMaxSize().background(Paper)) {
+        TvHome(tvCols, sts.take(3), now(true), {}, load = { sts }) { _, _ -> } }
+    @Test @Config(qualifiers = "w960dp-h540dp-land-television-xhdpi") fun tv01_home() = shot("tv01-home", true) { Tv() }
+    @Test @Config(qualifiers = "w960dp-h540dp-land-television-xhdpi") fun tv02_player() = shot("tv02-player", true) { Box(Modifier.fillMaxSize().background(Paper)) { TvPlayer(now(true), null, isFav = true) {} } }
+    @Test @Config(qualifiers = "w960dp-h540dp-land-television-xhdpi") fun tv03_home_malayalam() = inLang("ml", "tv03-home-ml", true) { Tv() }
+    @Test @Config(qualifiers = "w960dp-h540dp-land-television-xhdpi") fun tv04_player_hindi() = inLang("hi", "tv04-player-hi", true) { Box(Modifier.fillMaxSize().background(Paper)) { TvPlayer(now(false), null, isFav = false) {} } }
+    @Test @Config(qualifiers = "w960dp-h540dp-land-television-xhdpi") fun tv05_first_station_has_focus() {
+        shot("tv05-x", true) { Tv() }
+        rule.waitForIdle()
+        assertTrue("the remote starts on the first station", rule.onAllNodes(androidx.compose.ui.test.isFocused()).fetchSemanticsNodes().isNotEmpty())
+    }
+
     @Test fun v01_pill_light() = shot("v01-pill-light", false) { Stations(true) }
     @Test fun v02_pill_dark() = shot("v02-pill-dark", true) { Stations(true) }
     @Test fun v03_pill_favourites_dark_rosewood() = shot("v03-pill-favs-rosewood-dark", true, theme = "rosewood") { Stations(true, tab = 1) }

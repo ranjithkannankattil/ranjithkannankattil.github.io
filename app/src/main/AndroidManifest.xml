@@ -25,12 +25,19 @@
         android:banner="@drawable/tv_banner"
         android:theme="@style/Theme.Radio"
         android:usesCleartextTraffic="true">
+        <!-- Android TV / Google TV: the big-screen face of the app (rows of stations, the remote's arrows and OK) -->
+        <activity android:name=".TvActivity" android:exported="true" android:banner="@drawable/tv_banner"
+            android:screenOrientation="landscape" android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".MainActivity" android:exported="true" android:launchMode="singleTask"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
             </intent-filter>
             <!-- Google sign-in hand-off from ranjithkb.com/auth-app.html -->
             <intent-filter>

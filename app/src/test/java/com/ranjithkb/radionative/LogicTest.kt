@@ -202,6 +202,13 @@ class LogicTest {
         finally { Lang.code = "en" }
     }
 
+    // ---------------- Android TV
+    @Test fun tv_rows_selection_favourites_then_languages() {
+        val cols = listOf(Collection("malayalam", "Malayalam", "", "", emptyList()), Collection("tamil", "Tamil", "", "", emptyList()))
+        assertEquals(listOf(PICKS, "_favs", "malayalam", "tamil"), tvRows(cols, true).map { it.id })
+        assertEquals(listOf(PICKS, "malayalam", "tamil"), tvRows(cols, false).map { it.id })      // no favourites row when empty
+    }
+
     // ---------------- first-time tour (2.7)
     @Test fun tour_has_eight_steps_with_welcome_first() {
         assertEquals(8, Tour.COUNT); assertNull(Tour.STEPS[0].target)
