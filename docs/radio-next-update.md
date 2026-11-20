@@ -121,3 +121,11 @@ Everything above: star tab, soft pill, tour, several alarms, safety net, and the
   name, which only TVS can change. Radio Velvet already plays through Android's standard music controls (lock screen,
   Bluetooth, Android Auto). Ideas: ask TVS to add `com.ranjithkb.radio`; check whether the scooter's Bluetooth/helmet
   controls work anyway; TVS showed Android Auto for the top iQube at EICMA 2026 (Radio Velvet already works in Android Auto).
+- **Data saver** (his idea, 20 Nov 2026: for sailors and remote villages on satellite or 2G). Not started; build when he says.
+  Settings → Data saver: Off / On / Only on mobile data (website also follows the browser's Save-Data). When on: play
+  each station's lightest link (the nightly stream check records every link's bitrate), cap HLS (Akashvani) to its lowest
+  level, skip song covers and song look-ups, keep a longer buffer for patchy signal, show "32 kbps · ~15 MB/hour" on rows
+  and a "Lightest first" sort, and show data used this month in Info. Measured 19 Nov: most stations use ~58 MB/hour,
+  Akashvani 38–53, high-quality ones ~86.
+- **Kathakali padam station**: email drafted to kathakalipadam.com (in his Gmail drafts) with free ways to start a radio;
+  add their station when they send a stream link.
