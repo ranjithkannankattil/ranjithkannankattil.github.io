@@ -1,0 +1,65 @@
+MEDIA SESSION SERVICE (dumpsys media_session)
+
+9 sessions listeners.
+Global priority session is null
+User Records:
+Record for full_user=0
+  Volume key long-press listener: null
+  Volume key long-press listener package: 
+  Media key listener: null
+  Media key listener package: 
+  OnMediaKeyEventDispatchedListener: added 0 listener(s)
+  OnMediaKeyEventSessionChangedListener: added 2 listener(s)
+    from com.google.android.bluetooth
+    from com.google.android.bluetooth
+  Last MediaButtonReceiver: MBR {pi=null, componentName=ComponentInfo{com.ranjithkb.radio/androidx.media3.session.MediaButtonReceiver}, type=1, pkg=com.ranjithkb.radio}
+  Media button session is com.ranjithkb.radio/androidx.media3.session.id. (userId=0)
+  Sessions Stack - have 3 sessions:
+    androidx.media3.session.id. com.ranjithkb.radio/androidx.media3.session.id. (userId=0)
+      ownerPid=3224, ownerUid=10122, userId=0
+      package=com.ranjithkb.radio
+      launchIntent=null
+      mediaButtonReceiver=MBR {pi=null, componentName=ComponentInfo{com.ranjithkb.radio/androidx.media3.session.MediaButtonReceiver}, type=1, pkg=com.ranjithkb.radio}
+      active=true
+      flags=7
+      rating type=0
+      controllers: 7
+      state=PlaybackState {state=PLAYING(3), position=-1616, buffered position=29440, speed=1.0, updated=124976, actions=7340031, custom actions=[], active item id=0, error=null}
+      audioAttrs=AudioAttributes: usage=USAGE_MEDIA content=CONTENT_TYPE_MUSIC flags=0x800 tags= bundle=null
+      volumeType=LOCAL, controlType=ABSOLUTE, max=0, current=0, volumeControlId=null
+      metadata: size=13, description=Radio Malabar, Malayalam, null
+      queueTitle=null, size=48
+    BluetoothMediaBrowserService com.google.android.bluetooth/BluetoothMediaBrowserService (userId=0)
+      ownerPid=950, ownerUid=1002, userId=0
+      package=com.google.android.bluetooth
+      launchIntent=null
+      mediaButtonReceiver=null
+      active=false
+      flags=3
+      rating type=0
+      controllers: 0
+      state=PlaybackState {state=ERROR(7), position=0, buffered position=0, speed=0.0, updated=47704, actions=0, custom actions=[], active item id=-1, error=Bluetooth audio disconnected}
+      audioAttrs=AudioAttributes: usage=USAGE_MEDIA content=CONTENT_TYPE_UNKNOWN flags=0x800 tags= bundle=null
+      volumeType=LOCAL, controlType=ABSOLUTE, max=0, current=0, volumeControlId=null
+      metadata: null
+      queueTitle=Now Playing, size=0
+    BluetoothMediaBrowserService com.google.android.bluetooth/BluetoothMediaBrowserService (userId=0)
+      ownerPid=950, ownerUid=1002, userId=0
+      package=com.google.android.bluetooth
+      launchIntent=null
+      mediaButtonReceiver=null
+      active=false
+      flags=3
+      rating type=0
+      controllers: 0
+      state=PlaybackState {state=ERROR(7), position=0, buffered position=0, speed=0.0, updated=47912, actions=0, custom actions=[], active item id=-1, error=Bluetooth audio disconnected}
+      audioAttrs=AudioAttributes: usage=USAGE_MEDIA content=CONTENT_TYPE_UNKNOWN flags=0x800 tags= bundle=null
+      volumeType=LOCAL, controlType=ABSOLUTE, max=0, current=0, volumeControlId=null
+      metadata: null
+      queueTitle=Now Playing, size=0
+Audio playback (lastly played comes first)
+  uid=10122 packages=com.ranjithkb.radio 
+Media session config:
+  media_button_receiver_fgs_allowlist_duration_ms: [cur: 10000, def: 10000]
+  media_session_calback_fgs_allowlist_duration_ms: [cur: 10000, def: 10000]
+  media_session_callback_fgs_while_in_use_temp_allow_duration_ms: [cur: 10000, def: 10000]

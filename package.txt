@@ -1,0 +1,216 @@
+Activity Resolver Table:
+  Schemes:
+      com.ranjithkb.radio:
+        7583662 com.ranjithkb.radio/com.ranjithkb.radionative.MainActivity filter 5c558b0
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "com.ranjithkb.radio"
+          Authority: "auth": -1
+
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        6f6bc44 com.ranjithkb.radio/com.ranjithkb.radionative.TvActivity filter 503112d
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LEANBACK_LAUNCHER"
+        7583662 com.ranjithkb.radio/com.ranjithkb.radionative.MainActivity filter 2ed33f3
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+
+Receiver Resolver Table:
+  Non-Data Actions:
+      android.app.action.SCHEDULE_EXACT_ALARM_PERMISSION_STATE_CHANGED:
+        69d1c4f com.ranjithkb.radio/com.ranjithkb.radionative.AlarmReceiver filter 39f4fdc
+          Action: "android.app.action.SCHEDULE_EXACT_ALARM_PERMISSION_STATE_CHANGED"
+          Action: "android.intent.action.TIMEZONE_CHANGED"
+          Action: "android.intent.action.TIME_SET"
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "android.intent.action.MY_PACKAGE_REPLACED"
+      androidx.profileinstaller.action.SAVE_PROFILE:
+        6727e61 com.ranjithkb.radio/androidx.profileinstaller.ProfileInstallReceiver filter 23be74
+          Action: "androidx.profileinstaller.action.SAVE_PROFILE"
+      androidx.profileinstaller.action.INSTALL_PROFILE:
+        6727e61 com.ranjithkb.radio/androidx.profileinstaller.ProfileInstallReceiver filter 1478d86
+          Action: "androidx.profileinstaller.action.INSTALL_PROFILE"
+      android.intent.action.TIMEZONE_CHANGED:
+        69d1c4f com.ranjithkb.radio/com.ranjithkb.radionative.AlarmReceiver filter 39f4fdc
+          Action: "android.app.action.SCHEDULE_EXACT_ALARM_PERMISSION_STATE_CHANGED"
+          Action: "android.intent.action.TIMEZONE_CHANGED"
+          Action: "android.intent.action.TIME_SET"
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "android.intent.action.MY_PACKAGE_REPLACED"
+      android.intent.action.TIME_SET:
+        69d1c4f com.ranjithkb.radio/com.ranjithkb.radionative.AlarmReceiver filter 39f4fdc
+          Action: "android.app.action.SCHEDULE_EXACT_ALARM_PERMISSION_STATE_CHANGED"
+          Action: "android.intent.action.TIMEZONE_CHANGED"
+          Action: "android.intent.action.TIME_SET"
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "android.intent.action.MY_PACKAGE_REPLACED"
+      androidx.profileinstaller.action.SKIP_FILE:
+        6727e61 com.ranjithkb.radio/androidx.profileinstaller.ProfileInstallReceiver filter 43a4647
+          Action: "androidx.profileinstaller.action.SKIP_FILE"
+      androidx.profileinstaller.action.BENCHMARK_OPERATION:
+        6727e61 com.ranjithkb.radio/androidx.profileinstaller.ProfileInstallReceiver filter 4f79f9d
+          Action: "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+      android.intent.action.BOOT_COMPLETED:
+        69d1c4f com.ranjithkb.radio/com.ranjithkb.radionative.AlarmReceiver filter 39f4fdc
+          Action: "android.app.action.SCHEDULE_EXACT_ALARM_PERMISSION_STATE_CHANGED"
+          Action: "android.intent.action.TIMEZONE_CHANGED"
+          Action: "android.intent.action.TIME_SET"
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "android.intent.action.MY_PACKAGE_REPLACED"
+      android.appwidget.action.APPWIDGET_UPDATE:
+        55238e5 com.ranjithkb.radio/com.ranjithkb.radionative.VelvetWidget filter 7762fba
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+        3b92e6b com.ranjithkb.radio/com.ranjithkb.radionative.VelvetWidgetSmall filter 3bf8dc8
+          Action: "android.appwidget.action.APPWIDGET_UPDATE"
+      android.intent.action.MY_PACKAGE_REPLACED:
+        69d1c4f com.ranjithkb.radio/com.ranjithkb.radionative.AlarmReceiver filter 39f4fdc
+          Action: "android.app.action.SCHEDULE_EXACT_ALARM_PERMISSION_STATE_CHANGED"
+          Action: "android.intent.action.TIMEZONE_CHANGED"
+          Action: "android.intent.action.TIME_SET"
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "android.intent.action.MY_PACKAGE_REPLACED"
+      android.intent.action.MEDIA_BUTTON:
+        e2c9329 com.ranjithkb.radio/androidx.media3.session.MediaButtonReceiver filter 88756ae
+          Action: "android.intent.action.MEDIA_BUTTON"
+
+Service Resolver Table:
+  Non-Data Actions:
+      androidx.media3.session.MediaSessionService:
+        7efc12 com.ranjithkb.radio/com.ranjithkb.radionative.PlaybackService filter ecaffe3
+          Action: "androidx.media3.session.MediaSessionService"
+          Action: "android.media.browse.MediaBrowserService"
+      android.media.browse.MediaBrowserService:
+        7efc12 com.ranjithkb.radio/com.ranjithkb.radionative.PlaybackService filter ecaffe3
+          Action: "androidx.media3.session.MediaSessionService"
+          Action: "android.media.browse.MediaBrowserService"
+
+Domain verification status:
+
+Permissions:
+  Permission [com.ranjithkb.radio.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION] (d7fa85c):
+    sourcePackage=com.ranjithkb.radio
+    uid=10122 gids=[] type=0 prot=signature
+    perm=PermissionInfo{7cee765 com.ranjithkb.radio.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION}
+    flags=0x0
+
+Registered ContentProviders:
+  com.ranjithkb.radio/androidx.startup.InitializationProvider:
+    Provider{ab77c3a com.ranjithkb.radio/androidx.startup.InitializationProvider}
+  com.ranjithkb.radio/androidx.core.content.FileProvider:
+    Provider{6d5c0eb com.ranjithkb.radio/androidx.core.content.FileProvider}
+  com.ranjithkb.radio/com.ranjithkb.radionative.CarArtProvider:
+    Provider{a8cee48 com.ranjithkb.radio/com.ranjithkb.radionative.CarArtProvider}
+
+ContentProvider Authorities:
+  [com.ranjithkb.radio.androidx-startup]:
+    Provider{ab77c3a com.ranjithkb.radio/androidx.startup.InitializationProvider}
+      applicationInfo=ApplicationInfo{24b94e1 com.ranjithkb.radio}
+  [com.ranjithkb.radio.files]:
+    Provider{6d5c0eb com.ranjithkb.radio/androidx.core.content.FileProvider}
+      applicationInfo=ApplicationInfo{8912206 com.ranjithkb.radio}
+  [com.ranjithkb.radio.carart]:
+    Provider{a8cee48 com.ranjithkb.radio/com.ranjithkb.radionative.CarArtProvider}
+      applicationInfo=ApplicationInfo{4cd80c7 com.ranjithkb.radio}
+
+Key Set Manager:
+  [com.ranjithkb.radio]
+      Signing KeySets: 42
+
+Packages:
+  Package [com.ranjithkb.radio] (b1801c9):
+    appId=10122
+    pkg=Package{9a6a6f4 com.ranjithkb.radio}
+    codePath=/data/app/~~HoQO2RNHQwywMJkUQT67CQ==/com.ranjithkb.radio-2aJvIVfCpI_T-Xy-VN51bg==
+    resourcePath=/data/app/~~HoQO2RNHQwywMJkUQT67CQ==/com.ranjithkb.radio-2aJvIVfCpI_T-Xy-VN51bg==
+    legacyNativeLibraryDir=/data/app/~~HoQO2RNHQwywMJkUQT67CQ==/com.ranjithkb.radio-2aJvIVfCpI_T-Xy-VN51bg==/lib
+    extractNativeLibs=false
+    primaryCpuAbi=x86
+    secondaryCpuAbi=null
+    cpuAbiOverride=null
+    versionCode=2004 minSdk=26 targetSdk=36
+    minExtensionVersions=[]
+    versionName=2.0.0
+    usesNonSdkApi=false
+    splits=[base]
+    apkSigningVersion=2
+    flags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    privateFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ALLOW_AUDIO_PLAYBACK_CAPTURE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    forceQueryable=false
+    queriesPackages=[com.google.android.gms.policy_cast_dynamite]
+    queriesIntents=[Intent { act=android.support.customtabs.action.CustomTabsService }, Intent { act=android.speech.action.RECOGNIZE_SPEECH }]
+    dataDir=/data/user/0/com.ranjithkb.radio
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2026-11-20 17:16:57
+    lastUpdateTime=2026-11-20 17:17:05
+    installerPackageName=null
+    installerPackageUid=-1
+    initiatingPackageName=com.android.shell
+    originatingPackageName=null
+    packageSource=1
+    appMetadataFilePath=null
+    signatures=PackageSignatures{78b9e1d version:2, signatures:[34e04c57], past signatures:[]}
+    installPermissionsFixed=true
+    pkgFlags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    privatePkgFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ALLOW_AUDIO_PLAYBACK_CAPTURE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    apexModuleName=null
+    declared permissions:
+      com.ranjithkb.radio.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: prot=signature
+    requested permissions:
+      android.permission.INTERNET
+      android.permission.WAKE_LOCK
+      android.permission.FOREGROUND_SERVICE
+      android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK
+      android.permission.POST_NOTIFICATIONS
+      android.permission.SCHEDULE_EXACT_ALARM
+      android.permission.MODIFY_AUDIO_SETTINGS
+      android.permission.RECEIVE_BOOT_COMPLETED
+      android.permission.ACCESS_NETWORK_STATE
+      com.ranjithkb.radio.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+    install permissions:
+      android.permission.MODIFY_AUDIO_SETTINGS: granted=true
+      com.ranjithkb.radio.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: granted=true
+      android.permission.FOREGROUND_SERVICE: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      android.permission.INTERNET: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      android.permission.SCHEDULE_EXACT_ALARM: granted=false
+      android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK: granted=true
+      android.permission.WAKE_LOCK: granted=true
+    User 0: ceDataInode=319896 installed=true hidden=false suspended=false distractionFlags=0 stopped=true notLaunched=true enabled=0 instant=false virtual=false
+      installReason=0
+      firstInstallTime=2026-11-20 17:17:05
+      uninstallReason=0
+      overlay paths:
+        /data/resource-cache/com.android.systemui-neutral-MDjj.frro
+        /data/resource-cache/com.android.systemui-accent-xXj0.frro
+        /data/resource-cache/com.android.systemui-dynamic-zYPs.frro
+      gids=[3003]
+      runtime permissions:
+        android.permission.POST_NOTIFICATIONS: granted=true, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED]
+
+Queries:
+  system apps queryable: false
+  queries via forceQueryable:
+  queries via package name:
+  queries via component:
+    com.android.settings.intelligence:
+      com.ranjithkb.radio
+    com.android.tv:
+      com.ranjithkb.radio
+    com.google.android.play.games:
+      com.ranjithkb.radio
+  queryable via interaction:
+    User 0:
+  queryable via uses-library:
+
+Dexopt state:
+  [com.ranjithkb.radio]
+    path: /data/app/~~HoQO2RNHQwywMJkUQT67CQ==/com.ranjithkb.radio-2aJvIVfCpI_T-Xy-VN51bg==/base.apk
+      x86: [status=run-from-apk] [reason=unknown] [primary-abi]
+        [location is error]
+
+Compiler stats:
+  [com.ranjithkb.radio]
+    (No recorded stats)

@@ -1,0 +1,283 @@
+7 activities found:
+  Activity #0:
+    priority=3 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    labelRes=0x7f1103e0 nonLocalizedLabel=null icon=0x7f080152
+    ActivityInfo:
+      name=com.android.tv.settings.MainSettings
+      packageName=com.android.tv.settings
+      labelRes=0x7f1105b5 nonLocalizedLabel=null icon=0x0 banner=0x0
+      enabled=true exported=true directBootAware=true
+      taskAffinity=com.android.tv.settings targetActivity=null persistableMode=PERSIST_ROOT_ONLY
+      launchMode=LAUNCH_MULTIPLE flags=0x10220 privateFlags=0x2 theme=0x7f120450
+      screenOrientation=-1 configChanges=0x73 softInputMode=0x0
+      lockTaskLaunchMode=LOCK_TASK_LAUNCH_MODE_DEFAULT
+      resizeMode=RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION
+      knownActivityEmbeddingCerts={}
+      ApplicationInfo:
+        name=com.android.tv.settings.TvSettingsApplication
+        packageName=com.android.tv.settings
+        labelRes=0x7f1105b5 nonLocalizedLabel=null icon=0x7f0801bf banner=0x7f080114
+        className=com.android.tv.settings.TvSettingsApplication
+        processName=com.android.tv.settings
+        taskAffinity=com.android.tv.settings
+        uid=1000 flags=0x38c8be05 privateFlags=0x8c701168 theme=0x7f1203dd
+        requiresSmallestWidthDp=0 compatibleWidthLimitDp=0 largestWidthLimitDp=0
+        sourceDir=/system_ext/priv-app/TvSettings/TvSettings.apk
+        resourceDirs=[/product/overlay/TvSettingsGmsResOverlay.apk]
+        overlayPaths=[/data/resource-cache/com.android.systemui-neutral-MDjj.frro, /data/resource-cache/com.android.systemui-accent-xXj0.frro, /data/resource-cache/com.android.systemui-dynamic-zYPs.frro, /product/overlay/TvSettingsGmsResOverlay.apk]
+        seinfo=platform:privapp:targetSdkVersion=34
+        seinfoUser=:complete
+        dataDir=/data/user_de/0/com.android.tv.settings
+        deviceProtectedDataDir=/data/user_de/0/com.android.tv.settings
+        credentialProtectedDataDir=/data/user/0/com.android.tv.settings
+        sharedLibraryFiles=[/system_ext/framework/androidx.window.extensions.jar, /system_ext/framework/androidx.window.sidecar.jar]
+        enabled=true minSdkVersion=34 targetSdkVersion=34 versionCode=1 targetSandboxVersion=1
+        supportsRtl=true
+        fullBackupContent=true
+        crossProfile=false
+        HiddenApiEnforcementPolicy=0
+        usesNonSdkApi=true
+        allowsPlaybackCapture=true
+        nativeHeapZeroInitialized=0
+        enableOnBackInvokedCallback=false
+        createTimestamp=65316
+  Activity #1:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=true
+    ActivityInfo:
+      name=com.android.tv.TvActivity
+      packageName=com.android.tv
+      enabled=true exported=true directBootAware=false
+      taskAffinity=com.android.tv targetActivity=null persistableMode=PERSIST_ROOT_ONLY
+      launchMode=LAUNCH_SINGLE_TASK flags=0x10200 privateFlags=0x2 theme=0x0
+      screenOrientation=-1 configChanges=0x3 softInputMode=0x0
+      lockTaskLaunchMode=LOCK_TASK_LAUNCH_MODE_DEFAULT
+      resizeMode=RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION
+      knownActivityEmbeddingCerts={}
+      ApplicationInfo:
+        name=com.android.tv.app.LiveTvApplication
+        packageName=com.android.tv
+        labelRes=0x7f10001f nonLocalizedLabel=null icon=0x7f080103 banner=0x7f080183
+        className=com.android.tv.app.LiveTvApplication
+        processName=com.android.tv
+        taskAffinity=com.android.tv
+        uid=10082 flags=0x30e8be45 privateFlags=0x8c081008 theme=0x7f11018a
+        requiresSmallestWidthDp=0 compatibleWidthLimitDp=0 largestWidthLimitDp=0
+        sourceDir=/product/priv-app/LiveTv/LiveTv.apk
+        resourceDirs=[]
+        overlayPaths=[/data/resource-cache/com.android.systemui-neutral-MDjj.frro, /data/resource-cache/com.android.systemui-accent-xXj0.frro, /data/resource-cache/com.android.systemui-dynamic-zYPs.frro]
+        seinfo=default:privapp:targetSdkVersion=34
+        seinfoUser=:complete
+        dataDir=/data/user/0/com.android.tv
+        deviceProtectedDataDir=/data/user_de/0/com.android.tv
+        credentialProtectedDataDir=/data/user/0/com.android.tv
+        enabled=true minSdkVersion=23 targetSdkVersion=34 versionCode=417000452 targetSandboxVersion=1
+        supportsRtl=true
+        fullBackupContent=true
+        crossProfile=false
+        HiddenApiEnforcementPolicy=2
+        usesNonSdkApi=false
+        allowsPlaybackCapture=true
+        nativeHeapZeroInitialized=0
+        enableOnBackInvokedCallback=false
+        createTimestamp=65316
+  Activity #2:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=true
+    ActivityInfo:
+      name=com.google.android.finsky.tvmainactivity.TvMainActivity
+      packageName=com.android.vending
+      labelRes=0x7f1405de nonLocalizedLabel=null icon=0x0 banner=0x0
+      enabled=true exported=true directBootAware=false
+      taskAffinity=com.android.vending targetActivity=null persistableMode=PERSIST_ROOT_ONLY
+      launchMode=LAUNCH_SINGLE_TASK flags=0x310200 privateFlags=0x2 theme=0x7f15023a
+      screenOrientation=-1 configChanges=0x3 softInputMode=0x0
+      lockTaskLaunchMode=LOCK_TASK_LAUNCH_MODE_DEFAULT
+      resizeMode=RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION
+      knownActivityEmbeddingCerts={}
+      ApplicationInfo:
+        name=com.google.android.finsky.application.tvimpl.TubeskyApplication
+        packageName=com.android.vending
+        labelRes=0x7f1400ae nonLocalizedLabel=null icon=0x7f110001 banner=0x7f0801ef
+        className=com.google.android.finsky.application.tvimpl.TubeskyApplication
+        processName=com.android.vending
+        taskAffinity=com.android.vending
+        uid=10085 flags=0x28cabe45 privateFlags=0xac081118 theme=0x0
+        requiresSmallestWidthDp=0 compatibleWidthLimitDp=0 largestWidthLimitDp=0
+        sourceDir=/product/priv-app/Tubesky/Tubesky.apk
+        resourceDirs=[]
+        overlayPaths=[/data/resource-cache/com.android.systemui-neutral-MDjj.frro, /data/resource-cache/com.android.systemui-accent-xXj0.frro, /data/resource-cache/com.android.systemui-dynamic-zYPs.frro]
+        seinfo=default:privapp:targetSdkVersion=34
+        seinfoUser=:complete
+        dataDir=/data/user/0/com.android.vending
+        deviceProtectedDataDir=/data/user_de/0/com.android.vending
+        credentialProtectedDataDir=/data/user/0/com.android.vending
+        sharedLibraryFiles=[/system/framework/org.apache.http.legacy.jar, /system_ext/framework/androidx.window.extensions.jar, /system_ext/framework/androidx.window.sidecar.jar]
+        enabled=true minSdkVersion=23 targetSdkVersion=34 versionCode=83942508 targetSandboxVersion=1
+        supportsRtl=true
+        fullBackupContent=true
+        crossProfile=false
+        HiddenApiEnforcementPolicy=2
+        usesNonSdkApi=false
+        allowsPlaybackCapture=true
+        nativeHeapZeroInitialized=0
+        localeConfigRes=0x7f180010
+        enableOnBackInvokedCallback=true
+        createTimestamp=65316
+  Activity #3:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=true
+    ActivityInfo:
+      name=com.google.android.apps.youtube.tv.activity.ShellActivity
+      packageName=com.google.android.youtube.tv
+      enabled=true exported=true directBootAware=false
+      taskAffinity=com.google.android.youtube.tv targetActivity=null persistableMode=PERSIST_ROOT_ONLY
+      launchMode=LAUNCH_MULTIPLE flags=0x13102a0 privateFlags=0x2 theme=0x7f150167
+      screenOrientation=6 configChanges=0x6f3 softInputMode=0x0
+      lockTaskLaunchMode=LOCK_TASK_LAUNCH_MODE_DEFAULT
+      resizeMode=RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION
+      knownActivityEmbeddingCerts={}
+      ApplicationInfo:
+        name=com.google.android.apps.youtube.tv.application.TvRoot_Application
+        packageName=com.google.android.youtube.tv
+        labelRes=0x7f140030 nonLocalizedLabel=null icon=0x7f110000 banner=0x7f080060
+        className=com.google.android.apps.youtube.tv.application.TvRoot_Application
+        processName=com.google.android.youtube.tv
+        taskAffinity=com.google.android.youtube.tv
+        uid=10094 flags=0x2088be45 privateFlags=0x8c081010 theme=0x0
+        requiresSmallestWidthDp=0 compatibleWidthLimitDp=0 largestWidthLimitDp=0
+        sourceDir=/product/app/YouTubeLeanback/YouTubeLeanback.apk
+        resourceDirs=[]
+        overlayPaths=[/data/resource-cache/com.android.systemui-neutral-MDjj.frro, /data/resource-cache/com.android.systemui-accent-xXj0.frro, /data/resource-cache/com.android.systemui-dynamic-zYPs.frro]
+        seinfo=default:targetSdkVersion=31
+        seinfoUser=:complete
+        dataDir=/data/user/0/com.google.android.youtube.tv
+        deviceProtectedDataDir=/data/user_de/0/com.google.android.youtube.tv
+        credentialProtectedDataDir=/data/user/0/com.google.android.youtube.tv
+        sharedLibraryFiles=[/system_ext/framework/androidx.window.extensions.jar, /system_ext/framework/androidx.window.sidecar.jar]
+        enabled=true minSdkVersion=24 targetSdkVersion=31 versionCode=218009360 targetSandboxVersion=1
+        supportsRtl=false
+        fullBackupContent=true
+        crossProfile=false
+        HiddenApiEnforcementPolicy=2
+        usesNonSdkApi=false
+        allowsPlaybackCapture=true
+        nativeHeapZeroInitialized=0
+        enableOnBackInvokedCallback=false
+        createTimestamp=65316
+  Activity #4:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=true
+    ActivityInfo:
+      name=com.google.android.apps.youtube.tvmusic.activity.MainActivity
+      packageName=com.google.android.youtube.tvmusic
+      enabled=true exported=true directBootAware=false
+      taskAffinity=com.google.android.youtube.tvmusic targetActivity=null persistableMode=PERSIST_ROOT_ONLY
+      launchMode=LAUNCH_SINGLE_TASK flags=0x310280 privateFlags=0x2 theme=0x0
+      screenOrientation=6 configChanges=0x6f3 softInputMode=0x0
+      lockTaskLaunchMode=LOCK_TASK_LAUNCH_MODE_DEFAULT
+      resizeMode=RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION
+      knownActivityEmbeddingCerts={}
+      ApplicationInfo:
+        name=com.google.android.apps.youtube.tvmusic.application.MusicTvApplication
+        packageName=com.google.android.youtube.tvmusic
+        labelRes=0x7f10001c nonLocalizedLabel=null icon=0x7f0e0000 banner=0x7f07004f
+        className=com.google.android.apps.youtube.tvmusic.application.MusicTvApplication
+        processName=com.google.android.youtube.tvmusic
+        taskAffinity=com.google.android.youtube.tvmusic
+        uid=10090 flags=0x20a8be45 privateFlags=0x8c081010 theme=0x7f110132
+        requiresSmallestWidthDp=0 compatibleWidthLimitDp=0 largestWidthLimitDp=0
+        sourceDir=/product/app/YouTubeMusicTVPrebuilt/YouTubeMusicTVPrebuilt.apk
+        resourceDirs=[]
+        overlayPaths=[/data/resource-cache/com.android.systemui-neutral-MDjj.frro, /data/resource-cache/com.android.systemui-accent-xXj0.frro, /data/resource-cache/com.android.systemui-dynamic-zYPs.frro]
+        seinfo=default:targetSdkVersion=33
+        seinfoUser=:complete
+        dataDir=/data/user/0/com.google.android.youtube.tvmusic
+        deviceProtectedDataDir=/data/user_de/0/com.google.android.youtube.tvmusic
+        credentialProtectedDataDir=/data/user/0/com.google.android.youtube.tvmusic
+        enabled=true minSdkVersion=24 targetSdkVersion=33 versionCode=110003320 targetSandboxVersion=1
+        supportsRtl=false
+        fullBackupContent=true
+        crossProfile=false
+        HiddenApiEnforcementPolicy=2
+        usesNonSdkApi=false
+        allowsPlaybackCapture=true
+        nativeHeapZeroInitialized=0
+        enableOnBackInvokedCallback=false
+        createTimestamp=65316
+  Activity #5:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    ActivityInfo:
+      name=com.google.android.apps.play.games.app.atv.features.home.HomeActivity
+      packageName=com.google.android.play.games
+      labelRes=0x7f1403ae nonLocalizedLabel=null icon=0x7f110018 banner=0x7f0800b4
+      enabled=true exported=true directBootAware=false
+      taskAffinity=null targetActivity=null persistableMode=PERSIST_ROOT_ONLY
+      launchMode=LAUNCH_MULTIPLE flags=0x10200 privateFlags=0x2 theme=0x7f1501eb
+      screenOrientation=-1 configChanges=0x63 softInputMode=0x0
+      lockTaskLaunchMode=LOCK_TASK_LAUNCH_MODE_DEFAULT
+      resizeMode=RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION
+      knownActivityEmbeddingCerts={}
+      ApplicationInfo:
+        name=com.google.android.apps.play.games.app.atv.core.PlayGamesApplication
+        packageName=com.google.android.play.games
+        labelRes=0x7f1403af nonLocalizedLabel=null icon=0x7f110018 banner=0x0
+        className=com.google.android.apps.play.games.app.atv.core.PlayGamesApplication
+        processName=com.google.android.play.games
+        taskAffinity=null
+        uid=10088 flags=0x2088be45 privateFlags=0x8c081000 theme=0x0
+        requiresSmallestWidthDp=0 compatibleWidthLimitDp=0 largestWidthLimitDp=0
+        sourceDir=/product/app/PlayGamesPano/PlayGamesPano.apk
+        resourceDirs=[]
+        overlayPaths=[/data/resource-cache/com.android.systemui-neutral-MDjj.frro, /data/resource-cache/com.android.systemui-accent-xXj0.frro, /data/resource-cache/com.android.systemui-dynamic-zYPs.frro]
+        seinfo=default:targetSdkVersion=34
+        seinfoUser=:complete
+        dataDir=/data/user/0/com.google.android.play.games
+        deviceProtectedDataDir=/data/user_de/0/com.google.android.play.games
+        credentialProtectedDataDir=/data/user/0/com.google.android.play.games
+        sharedLibraryFiles=[/system_ext/framework/androidx.window.extensions.jar, /system_ext/framework/androidx.window.sidecar.jar]
+        enabled=true minSdkVersion=30 targetSdkVersion=34 versionCode=462434070 targetSandboxVersion=1
+        supportsRtl=false
+        fullBackupContent=true
+        crossProfile=false
+        HiddenApiEnforcementPolicy=2
+        usesNonSdkApi=false
+        allowsPlaybackCapture=true
+        nativeHeapZeroInitialized=0
+        enableOnBackInvokedCallback=false
+        createTimestamp=65316
+  Activity #6:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    ActivityInfo:
+      name=com.ranjithkb.radionative.TvActivity
+      packageName=com.ranjithkb.radio
+      labelRes=0x0 nonLocalizedLabel=null icon=0x0 banner=0x7f08021e
+      enabled=true exported=true directBootAware=false
+      taskAffinity=com.ranjithkb.radio targetActivity=null persistableMode=PERSIST_ROOT_ONLY
+      launchMode=LAUNCH_SINGLE_TASK flags=0x10200 privateFlags=0x2 theme=0x0
+      screenOrientation=0 configChanges=0x3 softInputMode=0x0
+      lockTaskLaunchMode=LOCK_TASK_LAUNCH_MODE_DEFAULT
+      resizeMode=RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION
+      knownActivityEmbeddingCerts={}
+      ApplicationInfo:
+        packageName=com.ranjithkb.radio
+        labelRes=0x7f0f001c nonLocalizedLabel=null icon=0x7f0e0000 banner=0x7f08021e
+        processName=com.ranjithkb.radio
+        taskAffinity=com.ranjithkb.radio
+        uid=10122 flags=0x28a8be46 privateFlags=0x8c001000 theme=0x7f10012f
+        requiresSmallestWidthDp=0 compatibleWidthLimitDp=0 largestWidthLimitDp=0
+        sourceDir=/data/app/~~HoQO2RNHQwywMJkUQT67CQ==/com.ranjithkb.radio-2aJvIVfCpI_T-Xy-VN51bg==/base.apk
+        resourceDirs=[]
+        overlayPaths=[/data/resource-cache/com.android.systemui-neutral-MDjj.frro, /data/resource-cache/com.android.systemui-accent-xXj0.frro, /data/resource-cache/com.android.systemui-dynamic-zYPs.frro]
+        seinfo=default:targetSdkVersion=36
+        seinfoUser=:complete
+        dataDir=/data/user/0/com.ranjithkb.radio
+        deviceProtectedDataDir=/data/user_de/0/com.ranjithkb.radio
+        credentialProtectedDataDir=/data/user/0/com.ranjithkb.radio
+        enabled=true minSdkVersion=26 targetSdkVersion=36 versionCode=2004 targetSandboxVersion=1
+        supportsRtl=false
+        fullBackupContent=true
+        crossProfile=false
+        HiddenApiEnforcementPolicy=2
+        usesNonSdkApi=false
+        allowsPlaybackCapture=true
+        nativeHeapZeroInitialized=0
+        localeConfigRes=0x7f120003
+        enableOnBackInvokedCallback=false
+        createTimestamp=65316
