@@ -121,7 +121,7 @@ class MainActivity : ComponentActivity() {
         if (Build.VERSION.SDK_INT >= 33) requestPermissions(arrayOf(Manifest.permission.POST_NOTIFICATIONS), 1)
         Session.name = Account.name(this)
         handleSignIn(intent)
-        Theme.load(this); CarArt.init(this)
+        Theme.load(this); CarArt.init(this); DataSaver.load(this); DataUse.init(this)
         Crash.sendSaved(this, lifecycleScope)
         setContent {
             val sysDark = androidx.compose.foundation.isSystemInDarkTheme()
@@ -327,6 +327,7 @@ fun App(c: MediaController?) {
                     if (loading) LinearProgressIndicator(Modifier.fillMaxWidth().padding(top = 8.dp), color = Accent)
                     val stState = rememberLazyListState()
                     LaunchedEffect(colId, cat, sort) { stState.scrollToItem(0) }
+                    val saving = remember(DataSaver.mode) { DataSaver.refresh(ctx) }
                     val top3 = remember(shown, sort, stats) { if (sort == "heard") Stats.top3(shown, stats) else emptySet() }
                     Box(Modifier.fillMaxSize()) {
                         LazyColumn(state = stState, contentPadding = PaddingValues(bottom = 16.dp)) {
@@ -335,7 +336,10 @@ fun App(c: MediaController?) {
                                 val sub = when { colId == PICKS -> base
                                     sort == "heard" -> listOf(Stats.heardLabel(stats?.week?.get(s.key)), base).filter { it.isNotBlank() }.joinToString(" · ")
                                     sort == "rated" -> listOf(Stats.ratedLabel(stats?.ratings?.get(s.key)), base).filter { it.isNotBlank() }.joinToString(" · ")
-                                    else -> base }
+                                    else -> base }.let { t ->
+                                        // Data saver (or "Lightest first"): how heavy the station is
+                                        val w = if (sort == "light" || saving) DataSaver.label(DataSaver.lightest(s.br)) else ""
+                                        listOf(w, t).filter { it.isNotBlank() }.joinToString(" · ") }
                                 Box(if (s.key == shown.firstOrNull()?.key) Modifier.tourTarget("row") else Modifier) {
                                     StationRow(s, sub, s.key in favKeys, "st|${s.key}" == now.id, now.playing,
                                         onPlay = { play(shown, s) }, onFav = { favs.toggle(s); refreshFavs() }, badge = s.key in top3) }
@@ -400,6 +404,7 @@ fun App(c: MediaController?) {
                 "look" -> PlayerLookScreen { page = "settings" }
                 "eq" -> EqualiserScreen { page = "settings" }
                 "viz" -> VisualiserScreen { page = "settings" }
+                "data" -> DataSaverScreen { page = "settings" }
                 "alarm" -> AlarmScreen((favList + recentPlayed.map { it.station }).distinctBy { it.key }.map { it to langOf(it) }) { page = "settings" }
                 "request" -> RequestScreen { page = null }
                 else -> page = null

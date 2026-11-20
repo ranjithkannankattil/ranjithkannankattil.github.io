@@ -143,6 +143,45 @@ class LogicTest {
         Alarm.markChecked(ctx, 3, true); assertFalse(Alarm.knownDown(ctx, 3))
     }
 
+    // ---------------- Data saver
+    @Test fun data_saver_plays_the_lightest_link_first() {
+        val st = listOf("https://a/128", "https://b/32", "https://c/unknown", "https://d/64")
+        assertEquals(listOf("https://b/32", "https://d/64", "https://c/unknown", "https://a/128"), DataSaver.order(st, listOf(128, 32, 0, 64)))
+        assertEquals(st, DataSaver.order(st, emptyList()))                           // no weights known: same links
+        assertEquals(32, DataSaver.lightest(listOf(128, 32, 0))); assertEquals(0, DataSaver.lightest(emptyList()))
+        assertEquals("32 kbps · ~14 MB/hour", DataSaver.label(32)); assertEquals("128 kbps · ~58 MB/hour", DataSaver.label(128))
+        assertEquals("", DataSaver.label(0))
+    }
+    @Test fun data_saver_station_weights_come_from_the_site() {
+        val o = JSONObject("""{"id":"x","name":"X FM","streams":["https://a","https://b"],"br":[128,48]}""")
+        val s = Station.fromJson(o, "malayalam"); assertEquals(listOf(128, 48), s.br)
+        assertEquals(listOf(128, 48), Station.fromJson(s.toJson()).br)               // kept in the phone's cache too
+        assertEquals(emptyList<Int>(), Station.fromJson(JSONObject("""{"id":"y","name":"Y","streams":["https://a"]}"""), "m").br)
+    }
+    @Test fun data_saver_lightest_first_sort() {
+        fun st(id: String, br: List<Int>) = Station(id, id, "", listOf("https://$id"), "m", br = br)
+        val l = listOf(st("heavy", listOf(192)), st("none", emptyList()), st("light", listOf(128, 24)), st("mid", listOf(64)))
+        assertEquals(listOf("light", "mid", "heavy", "none"), Stats.sort(l, "light", null).map { it.id })
+    }
+    @Test fun data_saver_setting_and_mobile_only() {
+        val ctx = RuntimeEnvironment.getApplication()
+        DataSaver.save(ctx, DataSaver.ON); assertTrue(DataSaver.isOn)
+        DataSaver.save(ctx, DataSaver.OFF); assertFalse(DataSaver.isOn)
+        DataSaver.save(ctx, DataSaver.MOBILE); assertEquals(DataSaver.metered(ctx), DataSaver.isOn)
+        DataSaver.load(ctx); assertEquals(DataSaver.MOBILE, DataSaver.mode)
+        DataSaver.save(ctx, DataSaver.OFF)
+    }
+    @Test fun data_use_counts_per_month() {
+        val ctx = RuntimeEnvironment.getApplication(); DataUse.init(ctx)
+        ctx.getSharedPreferences("datause", 0).edit().clear().commit()
+        val m = DataUse.monthKey()
+        DataUse.add(ctx, m, 5_000_000, 1_000_000); DataUse.add(ctx, m, 3_000_000, 0)
+        assertEquals(8_000_000L to 1_000_000L, DataUse.thisMonth(ctx))
+        DataUse.add(ctx, "1999-01", 7, 7)                                            // another month starts from zero
+        assertEquals(0L to 0L, DataUse.thisMonth(ctx))
+        assertEquals("1.2 GB", DataUse.size(1_234_000_000)); assertEquals("340 MB", DataUse.size(340_200_000)); assertEquals("0 MB", DataUse.size(0))
+    }
+
     // ---------------- first-time tour (2.7)
     @Test fun tour_has_eight_steps_with_welcome_first() {
         assertEquals(8, Tour.COUNT); assertNull(Tour.STEPS[0].target)

@@ -180,6 +180,7 @@ object Stats {
     /** Sort a list. mode: usual · az · heard · rated. Stations with no data keep their usual order after the rest. */
     fun sort(list: List<Station>, mode: String, d: Data?): List<Station> = when (mode) {
         "az" -> list.sortedBy { it.name.trimStart('(', '"', '\'', ' ').lowercase() }
+        "light" -> list.sortedBy { DataSaver.lightest(it.br).takeIf { k -> k > 0 } ?: 9999 }
         "heard" -> list.sortedByDescending { d?.week?.get(it.key) ?: 0 }
         "rated" -> list.sortedWith(compareByDescending<Station> { s -> d?.ratings?.get(s.key)?.takeIf { it.second >= MIN_RATINGS }?.first ?: -1.0 }
             .thenByDescending { s -> d?.ratings?.get(s.key)?.second ?: 0 })

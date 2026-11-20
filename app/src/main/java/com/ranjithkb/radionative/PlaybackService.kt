@@ -33,6 +33,8 @@ import kotlinx.coroutines.launch
 
 /** Station <-> player item. The stream list rides along in the metadata extras. */
 fun Station.toItem(language: String): MediaItem {
+    // Data saver: the lightest link first (the others stay as backups, lightest next)
+    val streams = if (DataSaver.isOn && br.isNotEmpty()) DataSaver.order(streams, br) else streams
     val ex = Bundle().apply { putStringArrayList("streams", ArrayList(streams)); putInt("try", 0); putString("station", name); putString("lang", language) }
     return MediaItem.Builder()
         .setMediaId("st|$key")
@@ -100,7 +102,7 @@ class PlaybackService : MediaLibraryService() {
 
     override fun onCreate() {
         super.onCreate()
-        Crash.install(this); CarArt.init(this)
+        Crash.install(this); CarArt.init(this); DataUse.init(this); DataSaver.refresh(this)
         player = ExoPlayer.Builder(this, VelvetRenderers(this))
             .setAudioAttributes(AudioAttributes.Builder().setUsage(C.USAGE_MEDIA)
                 .setContentType(C.AUDIO_CONTENT_TYPE_MUSIC).build(), /* handleAudioFocus = */ true)
@@ -108,9 +110,11 @@ class PlaybackService : MediaLibraryService() {
             .setWakeMode(C.WAKE_MODE_NETWORK)
             // short drop-outs (a bridge, a few seconds without signal) are retried quietly while the buffer keeps
             // playing, instead of stopping at the first failed read
-            .setMediaSourceFactory(androidx.media3.exoplayer.source.DefaultMediaSourceFactory(this)
+            .setMediaSourceFactory(androidx.media3.exoplayer.source.DefaultMediaSourceFactory(
+                    androidx.media3.datasource.DefaultDataSource.Factory(this).setTransferListener(DataUse))   // counts this month's data
                 .setLoadErrorHandlingPolicy(androidx.media3.exoplayer.upstream.DefaultLoadErrorHandlingPolicy(10)))
             .build()
+        applyDataSaver()
         player.addListener(object : Player.Listener {
             override fun onMetadata(metadata: Metadata) {
                 for (i in 0 until metadata.length()) {
@@ -143,7 +147,7 @@ class PlaybackService : MediaLibraryService() {
                 else { Listen.stop(this@PlaybackService); scope.launch { Listen.flushStations(this@PlaybackService, all = true) } }
             }
             override fun onMediaItemTransition(mediaItem: MediaItem?, reason: Int) {
-                saveQueue()
+                saveQueue(); applyDataSaver()
                 // another station (not just the same one reloaded on a different source): start afresh
                 if (mediaItem?.mediaId != lastId) { lastId = mediaItem?.mediaId; playedOk = false; giveUpReconnect() }
                 mediaItem?.let { Recent.add(this@PlaybackService, it) }
@@ -392,6 +396,14 @@ class PlaybackService : MediaLibraryService() {
                 .setMediaMetadata(item.mediaMetadata.buildUpon().setExtras(Bundle(ex).apply { putInt("try", 0) }).build()).build())
         }
         player.prepare(); player.play()
+    }
+
+    /** Data saver: HLS streams (Akashvani…) play their lowest level; the setting can change while the radio plays. */
+    private fun applyDataSaver() {
+        DataSaver.refresh(this)
+        val cap = if (DataSaver.isOn) DataSaver.HLS_CAP else Int.MAX_VALUE
+        if (player.trackSelectionParameters.maxAudioBitrate != cap)
+            player.trackSelectionParameters = player.trackSelectionParameters.buildUpon().setMaxAudioBitrate(cap).build()
     }
 
     private fun giveUpReconnect() { retryJob?.cancel(); retryJob = null; lostAt = 0; retryN = 0; unwatchNet() }

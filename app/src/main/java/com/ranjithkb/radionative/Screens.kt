@@ -241,6 +241,9 @@ fun SettingsScreen(close: () -> Unit, open: (String) -> Unit) {
         SettingRow("Resume after other apps", sub = "After a video in Facebook, WhatsApp… within 10 minutes. Never during calls.",
             trailing = { VelvetSwitch(Theme.resume, "Resume after other apps") { Theme.resume = it; save() } })
 
+        SectionHead("Data")
+        SettingRow("Data saver", sub = "For ships, villages and patchy signal: lightest links, no song covers",
+            value = when (DataSaver.mode) { DataSaver.ON -> "Always"; DataSaver.MOBILE -> "Mobile data"; else -> "Off" }, onClick = { open("data") })
         SectionHead("More")
         val alarms = remember { Alarm.all(ctx) }
         val up = remember(alarms) { Alarm.upcoming(java.util.Calendar.getInstance(), alarms) }
@@ -469,7 +472,7 @@ fun VizSwitcher() {
 
 // ------------------------------------------------------------------ Sort
 
-val SORTS = listOf("usual" to "Usual order", "az" to "A–Z", "heard" to "Most heard", "rated" to "Top rated")
+val SORTS = listOf("usual" to "Usual order", "az" to "A–Z", "heard" to "Most heard", "rated" to "Top rated", "light" to "Lightest first")
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

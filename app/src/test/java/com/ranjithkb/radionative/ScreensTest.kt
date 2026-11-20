@@ -150,6 +150,12 @@ class ScreensTest {
     @Test @Config(qualifiers = "w360dp-h720dp-xxhdpi") fun p12() = shot("play-p12-stations-kaavu-dark", true, theme = "kaavu") { Stations(true) }
     @Test @Config(qualifiers = "w360dp-h720dp-xxhdpi") fun p13() = shot("play-p13-player-sandhya", false, theme = "sandhya", viz = "bars", animated = true) { Player(true) }
 
+    @Test fun v40_data_saver() { DataSaver.save(rule.activity, DataSaver.MOBILE)
+        rule.activity.getSharedPreferences("datause", 0).edit().clear().commit()
+        DataUse.add(rule.activity, DataUse.monthKey(), 412_000_000, 1_830_000_000)
+        shot("v40-data-saver", false) { DataSaverScreen {} }; DataSaver.save(rule.activity, DataSaver.OFF) }
+    @Test fun v41_data_saver_dark() { DataSaver.save(rule.activity, DataSaver.ON)
+        shot("v41-data-saver-dark", true) { DataSaverScreen {} }; DataSaver.save(rule.activity, DataSaver.OFF) }
     @Test fun v01_pill_light() = shot("v01-pill-light", false) { Stations(true) }
     @Test fun v02_pill_dark() = shot("v02-pill-dark", true) { Stations(true) }
     @Test fun v03_pill_favourites_dark_rosewood() = shot("v03-pill-favs-rosewood-dark", true, theme = "rosewood") { Stations(true, tab = 1) }
