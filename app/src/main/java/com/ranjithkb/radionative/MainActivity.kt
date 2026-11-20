@@ -121,7 +121,7 @@ class MainActivity : ComponentActivity() {
         if (Build.VERSION.SDK_INT >= 33) requestPermissions(arrayOf(Manifest.permission.POST_NOTIFICATIONS), 1)
         Session.name = Account.name(this)
         handleSignIn(intent)
-        Theme.load(this); CarArt.init(this); DataSaver.load(this); DataUse.init(this)
+        Theme.load(this); CarArt.init(this); DataSaver.load(this); DataUse.init(this); Lang.load(this)
         Crash.sendSaved(this, lifecycleScope)
         setContent {
             val sysDark = androidx.compose.foundation.isSystemInDarkTheme()
@@ -296,7 +296,7 @@ fun App(c: MediaController?) {
             Row(Modifier.fillMaxWidth().padding(top = 10.dp).background(AccentSoft).padding(start = 24.dp, end = 12.dp, top = 6.dp, bottom = 6.dp),
                 verticalAlignment = Alignment.CenterVertically) {
                 Text("Radio Velvet ${u.version} is out", Modifier.weight(1f), fontWeight = FontWeight.SemiBold, fontSize = 15.sp)
-                TextButton({ go(2) }) { Text("What's new") }
+                TextButton({ go(2) }) { Text(t("What's new")) }
                 UpdateButton(u, "Update")
             }
         }
@@ -309,20 +309,20 @@ fun App(c: MediaController?) {
                     .let { l -> if (colId != PICKS) Stats.sort(l, sort, stats) else l }
                     .sortedBy { it.offline }
                 Column {
-                    val tabs = listOf(LangTab(PICKS, "Velvet Selection", star = true)) +
+                    val tabs = listOf(LangTab(PICKS, t("Velvet Selection"), star = true)) +
                         (pinned + recent.filter { it !in pinned }).mapNotNull { id -> cols.find { it.id == id } }.map { LangTab(it.id, it.name, it.id in pinned) } +
-                        (if (colId == ALL) listOf(LangTab(ALL, "Every station")) else emptyList()) +
-                        listOf(LangTab("_langs", "All languages", icon = true))
+                        (if (colId == ALL) listOf(LangTab(ALL, t("Every station"))) else emptyList()) +
+                        listOf(LangTab("_langs", t("All languages"), icon = true))
                     Box(Modifier.tourTarget("langs")) {
                         LangTabs(tabs, colId, onClick = { t -> if (t.id == "_langs") pickLang = true else colId = t.id },
                             onLong = { t -> cols.find { it.id == t.id }?.let { pillMenu = it } }) }
                     val favHere = stations.count { it.key in favKeys }
                     val cats = buildList {
-                        add(Triple("all", "All", stations.size))
-                        if (favHere > 0) add(Triple("fav", "Favourites", favHere))
+                        add(Triple("all", t("All"), stations.size))
+                        if (favHere > 0) add(Triple("fav", t("Favourites"), favHere))
                         col?.cats?.filter { (k, _) -> stations.any { it.category == k } }?.forEach { (k, label) -> add(Triple(k, label, -1)) }
                     }
-                    if (colId != PICKS) Box(Modifier.tourTarget("sort")) { CatRow(cats, cat, { cat = it }, SORTS.first { it.first == sort }.second, { sortSheet = true }) }
+                    if (colId != PICKS) Box(Modifier.tourTarget("sort")) { CatRow(cats, cat, { cat = it }, t(SORTS.first { it.first == sort }.second), { sortSheet = true }) }
                     else PicksHeading(!loading && stations.isEmpty())
                     if (loading) LinearProgressIndicator(Modifier.fillMaxWidth().padding(top = 8.dp), color = Accent)
                     val stState = rememberLazyListState()
@@ -354,7 +354,7 @@ fun App(c: MediaController?) {
                         verticalAlignment = Alignment.CenterVertically) {
                         Text(if (Session.busy) "Signing in…" else "Sign in to keep your favourites on every device and on ranjithkb.com.",
                             Modifier.weight(1f), fontSize = 15.sp)
-                        if (!Session.busy) Button({ openUrl(ctx, Account.SIGN_IN_URL) }, Modifier.heightIn(min = 48.dp)) { Text("Sign in") }
+                        if (!Session.busy) Button({ openUrl(ctx, Account.SIGN_IN_URL) }, Modifier.heightIn(min = 48.dp)) { Text(t("Sign in")) }
                     }
                     FavsTab(favList, now, langOf = ::langOf, onPlay = { s -> play(favList, s) },
                         recent = recentPlayed, onRecent = { r -> play(recentPlayed.map { it.station }, r.station) },
@@ -380,16 +380,16 @@ fun App(c: MediaController?) {
                     Text(if (isPin) "Unpin" else "Pin, so it always stays in the row", Modifier.weight(1f)) }
                 if (isPin && i > 0) TextButton({ savePins(pinned.toMutableList().apply { add(i - 1, removeAt(i)) }); done() },
                     Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
-                    Icon(Icons.Filled.ChevronLeft, null); Spacer(Modifier.width(10.dp)); Text("Move left", Modifier.weight(1f)) }
+                    Icon(Icons.Filled.ChevronLeft, null); Spacer(Modifier.width(10.dp)); Text(t("Move left"), Modifier.weight(1f)) }
                 if (isPin && i < pinned.size - 1) TextButton({ savePins(pinned.toMutableList().apply { add(i + 1, removeAt(i)) }); done() },
                     Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
-                    Icon(Icons.Filled.ChevronRight, null); Spacer(Modifier.width(10.dp)); Text("Move right", Modifier.weight(1f)) }
+                    Icon(Icons.Filled.ChevronRight, null); Spacer(Modifier.width(10.dp)); Text(t("Move right"), Modifier.weight(1f)) }
                 if (pinned.size > 1) TextButton({ done(); arrangePins = true }, Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
-                    Icon(Icons.Filled.DragHandle, null); Spacer(Modifier.width(10.dp)); Text("Arrange pinned languages", Modifier.weight(1f)) }
+                    Icon(Icons.Filled.DragHandle, null); Spacer(Modifier.width(10.dp)); Text(t("Arrange pinned languages"), Modifier.weight(1f)) }
                 TextButton({ savePins(pinned - c.id); saveRecent(recent - c.id); done() }, Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
-                    Icon(Icons.Filled.Close, null); Spacer(Modifier.width(10.dp)); Text("Remove from the row", Modifier.weight(1f)) }
+                    Icon(Icons.Filled.Close, null); Spacer(Modifier.width(10.dp)); Text(t("Remove from the row"), Modifier.weight(1f)) }
             } },
-            confirmButton = { TextButton({ done() }) { Text("Cancel") } })
+            confirmButton = { TextButton({ done() }) { Text(t("Cancel")) } })
     }
     if (arrangePins) ArrangePins(pinned.mapNotNull { id -> cols.find { it.id == id } }, onSave = { savePins(it) }) { arrangePins = false }
     if (pickLang) LanguageDialog(cols, colId, { if (it == PICKS && colId != PICKS) lastCol = colId; colId = it; go(0); pickLang = false }) { pickLang = false }
@@ -469,12 +469,12 @@ fun FavsTab(list: List<Station>, now: NowState, langOf: (Station) -> String, onP
             Text(if (list.isEmpty()) "No favourites yet. Tap ♡ on any station, in any language."
                  else if (edit) "Drag ≡ to move a station" else "${list.size} favourites", Modifier.weight(1f), color = InkSoft)
             if (list.isNotEmpty()) {
-                if (edit) Button({ edit = false }, Modifier.heightIn(min = 48.dp)) { Text("Done") }
-                else OutlinedButton({ edit = true }, Modifier.heightIn(min = 48.dp)) { Text("Reorder / remove") }
+                if (edit) Button({ edit = false }, Modifier.heightIn(min = 48.dp)) { Text(t("Done")) }
+                else OutlinedButton({ edit = true }, Modifier.heightIn(min = 48.dp)) { Text(t("Reorder / remove")) }
             }
         }
         if (list.isEmpty()) OutlinedButton(onPicks, Modifier.padding(horizontal = 16.dp).heightIn(min = 48.dp)) {
-            Icon(Icons.Filled.Star, null, tint = Accent); Spacer(Modifier.width(8.dp)); Text("Start with the Velvet Selection")
+            Icon(Icons.Filled.Star, null, tint = Accent); Spacer(Modifier.width(8.dp)); Text(t("Start with the Velvet Selection"))
         }
         if (Account.isOwner(ctx) && list.isNotEmpty() && !edit) {
             var busy by remember { mutableStateOf(false) }
@@ -490,7 +490,7 @@ fun FavsTab(list: List<Station>, now: NowState, langOf: (Station) -> String, onP
         undo?.let { (s, at) ->
             Row(Modifier.fillMaxWidth().background(AccentSoft).padding(16.dp, 4.dp), verticalAlignment = Alignment.CenterVertically) {
                 Text("Removed ${s.name}", Modifier.weight(1f))
-                TextButton({ favs.insert(s, at); undo = null; onChanged() }) { Text("Undo") }
+                TextButton({ favs.insert(s, at); undo = null; onChanged() }) { Text(t("Undo")) }
             }
         }
         Box(Modifier.fillMaxSize()) {
@@ -539,7 +539,7 @@ fun LanguageDialog(cols: List<Collection>, current: String, onPick: (String) -> 
             Column(Modifier.statusBarsPadding()) {
                 Row(Modifier.padding(8.dp), verticalAlignment = Alignment.CenterVertically) {
                     IconButton(onClose) { Icon(Icons.Filled.Close, "Close") }
-                    OutlinedTextField(q, { q = it }, Modifier.weight(1f), placeholder = { Text("Find a language") }, singleLine = true)
+                    OutlinedTextField(q, { q = it }, Modifier.weight(1f), placeholder = { Text(t("Find a language")) }, singleLine = true)
                 }
                 LazyColumn {
                     if (q.isBlank()) item {
@@ -548,8 +548,8 @@ fun LanguageDialog(cols: List<Collection>, current: String, onPick: (String) -> 
                             verticalAlignment = Alignment.CenterVertically) {
                             Icon(Icons.Filled.Star, null, tint = Accent); Spacer(Modifier.width(10.dp))
                             Column(Modifier.weight(1f)) {
-                                Text("Velvet Selection", fontWeight = FontWeight.SemiBold)
-                                Text("Hand-picked stations from every language", fontSize = 13.sp, color = InkSoft)
+                                Text(t("Velvet Selection"), fontWeight = FontWeight.SemiBold)
+                                Text(t("Hand-picked stations from every language"), fontSize = 13.sp, color = InkSoft)
                             }
                         }
                     }
@@ -574,8 +574,8 @@ fun LanguageDialog(cols: List<Collection>, current: String, onPick: (String) -> 
                             verticalAlignment = Alignment.CenterVertically) {
                             Icon(Icons.Filled.Language, null, tint = Accent); Spacer(Modifier.width(10.dp))
                             Column(Modifier.weight(1f)) {
-                                Text("Every station", fontWeight = FontWeight.SemiBold)
-                                Text("All languages in one list", fontSize = 13.sp, color = InkSoft)
+                                Text(t("Every station"), fontWeight = FontWeight.SemiBold)
+                                Text(t("All languages in one list"), fontSize = 13.sp, color = InkSoft)
                             }
                             if (counts.isNotEmpty()) Text("${counts.values.sum()}", color = Accent, fontWeight = FontWeight.SemiBold, fontSize = 14.sp)
                         }
@@ -628,7 +628,7 @@ fun FullPlayer(now: NowState, c: MediaController?, cast: CastUi, onCloseAll: () 
             onShare = { share = true }, onSpotify = if (hasSong) ({ scope.launch { openInSpotify(ctx, song, artist) } }) else null,
             onSleep = { sleep = true }, onCloseAll = onCloseAll, collapse = close) {
             now.id?.removePrefix("st|")?.let { k -> RatingRow(k)
-                TextButton({ comments = true }, Modifier.heightIn(min = 44.dp)) { Text("Comments", color = AccentText, fontSize = 14.sp) } }
+                TextButton({ comments = true }, Modifier.heightIn(min = 44.dp)) { Text(t("Comments"), color = AccentText, fontSize = 14.sp) } }
         }
         if (comments) now.id?.removePrefix("st|")?.let { k ->
             CommentsScreen(k, now.md.extras?.getString("station") ?: station) { comments = false } }
@@ -651,7 +651,7 @@ fun InfoTab(languages: Int, update: Update?, onPage: (String) -> Unit = {}, onSi
                         Icon(painterResource(R.drawable.ic_logo_mark), null, Modifier.size(40.dp), tint = Gold) }
                     Column(Modifier.padding(start = 14.dp).weight(1f)) {
                         Text("RADIO VELVET", fontSize = 15.sp, letterSpacing = 5.sp, fontWeight = FontWeight.Medium, color = Title)
-                        Text("Elegant sounds, always free", fontSize = 14.sp, color = InkSoft)
+                        Text(t("Elegant sounds, always free"), fontSize = 14.sp, color = InkSoft)
                         Text("Version ${appVersion(ctx)}" + if (update == null) " · Up to date" else "", fontSize = 13.sp, color = InkSoft)
                     }
                 }
@@ -659,57 +659,57 @@ fun InfoTab(languages: Int, update: Update?, onPage: (String) -> Unit = {}, onSi
                     Text("New version ${u.version}", fontWeight = FontWeight.SemiBold, modifier = Modifier.padding(top = 14.dp))
                     u.notes.take(4).forEach { Text("• $it", fontSize = 14.sp, modifier = Modifier.padding(top = 3.dp)) }
                     Box(Modifier.padding(top = 10.dp)) { UpdateButton(u, "Download and install") }
-                    Text("Open the downloaded file and allow the install. Your favourites stay.", fontSize = 12.sp, color = InkSoft)
+                    Text(t("Open the downloaded file and allow the install. Your favourites stay."), fontSize = 12.sp, color = InkSoft)
                 }
             }
         }
-        item { Box(Modifier.padding(top = 22.dp)) { Section("Your listening") { ListeningSection() } } }
+        item { Box(Modifier.padding(top = 22.dp)) { Section(t("Your listening")) { ListeningSection() } } }
         item {
-            SectionHead("Your account")
+            SectionHead(t("Your account"))
             var open by remember { mutableStateOf(false) }
             var ask by remember { mutableStateOf(false) }
             val scope = rememberCoroutineScope()
             if (Session.name != null) {
-                SettingRow("Signed in as ${Session.name}", sub = "Favourites match on every phone and on ranjithkb.com",
+                SettingRow("Signed in as ${Session.name}", sub = t("Favourites match on every phone and on ranjithkb.com"),
                     value = if (open) "‹" else "›", onClick = { open = !open })
                 if (open) Row(Modifier.padding(vertical = 8.dp), verticalAlignment = Alignment.CenterVertically) {
-                    OutlinedButton(onSignOut, Modifier.heightIn(min = 48.dp)) { Text("Sign out") }
-                    TextButton({ ask = true }, Modifier.padding(start = 8.dp).heightIn(min = 48.dp)) { Text("Delete account", color = InkSoft) }
+                    OutlinedButton(onSignOut, Modifier.heightIn(min = 48.dp)) { Text(t("Sign out")) }
+                    TextButton({ ask = true }, Modifier.padding(start = 8.dp).heightIn(min = 48.dp)) { Text(t("Delete account"), color = InkSoft) }
                 }
                 if (ask) AlertDialog(onDismissRequest = { ask = false },
-                    title = { Text("Delete your account?") },
-                    text = { Text("This removes your saved favourites and your sign-in from Radio Velvet and ranjithkb.com. Favourites on this phone stay until you remove them.") },
+                    title = { Text(t("Delete your account?")) },
+                    text = { Text(t("This removes your saved favourites and your sign-in from Radio Velvet and ranjithkb.com. Favourites on this phone stay until you remove them.")) },
                     confirmButton = { TextButton({ ask = false; scope.launch {
-                        Account.deleteAccount(ctx); Session.name = null } }) { Text("Delete") } },
-                    dismissButton = { TextButton({ ask = false }) { Text("Cancel") } })
-            } else SettingRow("Sign in with Google", sub = "Keep your favourites on every phone and on the website", value = "›", onClick = onSignIn)
+                        Account.deleteAccount(ctx); Session.name = null } }) { Text(t("Delete")) } },
+                    dismissButton = { TextButton({ ask = false }) { Text(t("Cancel")) } })
+            } else SettingRow(t("Sign in with Google"), sub = t("Keep your favourites on every phone and on the website"), value = "›", onClick = onSignIn)
         }
         item {
-            SectionHead("Make it yours")
-            SettingRow("Settings", sub = "Colours, text size, equaliser, data saver", value = "›", onClick = { onPage("settings") })
-            SettingRow("Alarms", sub = "Wake up to the radio", value = "›", onClick = { onPage("alarm") })
-            SettingRow("Request a station", sub = "Missing a station? Tell us", value = "›", onClick = { onPage("request") })
-            SettingRow("Quick tour of the app", value = "›", onClick = { onPage("tour") })
-            SettingRow("Share Radio Velvet", sub = "Send the app to family and friends", value = "›", onClick = {
+            SectionHead(t("Make it yours"))
+            SettingRow(t("Settings"), sub = t("Colours, text size, equaliser, data saver"), value = "›", onClick = { onPage("settings") })
+            SettingRow(t("Alarms"), sub = t("Wake up to the radio"), value = "›", onClick = { onPage("alarm") })
+            SettingRow(t("Request a station"), sub = t("Missing a station? Tell us"), value = "›", onClick = { onPage("request") })
+            SettingRow(t("Quick tour of the app"), value = "›", onClick = { onPage("tour") })
+            SettingRow(t("Share Radio Velvet"), sub = t("Send the app to family and friends"), value = "›", onClick = {
                 try { ctx.startActivity(android.content.Intent.createChooser(android.content.Intent(android.content.Intent.ACTION_SEND)
                     .setType("text/plain").putExtra(android.content.Intent.EXTRA_TEXT,
                         "Radio Velvet: free radio from Kerala and around the world. https://ranjithkb.com/radio.html"), "Share Radio Velvet"))
                 } catch (e: Exception) { } })
-            SettingRow("Write to us", sub = "hello@ranjithkb.com", value = "›", onClick = {
+            SettingRow(t("Write to us"), sub = t("hello@ranjithkb.com"), value = "›", onClick = {
                 try { ctx.startActivity(android.content.Intent(android.content.Intent.ACTION_SENDTO,
                     android.net.Uri.parse("mailto:hello@ranjithkb.com?subject=Radio%20Velvet"))) } catch (e: Exception) { } })
         }
         item {
-            SectionHead("About")
-            SettingRow("What the app can do", value = "›", onClick = { about = "can" })
-            SettingRow("Which stations play", value = "›", onClick = { about = "stations" })
-            SettingRow("Privacy policy", value = "›", onClick = { openUrl(ctx, "https://ranjithkb.com/privacy.html#radio-velvet") })
-            SettingRow("Credits", value = "›", onClick = { about = "credits" })
-            SettingRow("Radio on ranjithkb.com", value = "›", onClick = { openUrl(ctx, "https://ranjithkb.com/radio.html") })
+            SectionHead(t("About"))
+            SettingRow(t("What the app can do"), value = "›", onClick = { about = "can" })
+            SettingRow(t("Which stations play"), value = "›", onClick = { about = "stations" })
+            SettingRow(t("Privacy policy"), value = "›", onClick = { openUrl(ctx, "https://ranjithkb.com/privacy.html#radio-velvet") })
+            SettingRow(t("Credits"), value = "›", onClick = { about = "credits" })
+            SettingRow(t("Radio on ranjithkb.com"), value = "›", onClick = { openUrl(ctx, "https://ranjithkb.com/radio.html") })
         }
     }
     when (about) {
-        "can" -> SubPage("What the app can do", { about = null }) {
+        "can" -> SubPage(t("What the app can do"), { about = null }) {
             listOf("Plays with the screen off; controls on the lock screen, headphones and Bluetooth.",
                 "Pauses for calls and comes back on afterwards.",
                 "Song name and cover appear when the station sends them. Share them as a song card from the player.",
@@ -719,19 +719,16 @@ fun InfoTab(languages: Int, update: Update?, onPage: (String) -> Unit = {}, onSi
                 "Swipe the cover in the big player to change its look, from a 1930s radio to a 1990s tuner.")
                 .forEach { Text("• $it", fontSize = 15.sp, lineHeight = 22.sp, color = Title, modifier = Modifier.padding(top = 10.dp)) }
         }
-        "stations" -> SubPage("Which stations play", { about = null }) {
-            Text("${if (languages > 0) "$languages lists" else "70+ languages"} and over 5,000 live stations, each tested twice a day. " +
-                "Stations marked \"Not working today\" failed the last test. A few broadcasters only stream to listeners in their own " +
-                "country, so a station can be silent where you are even when it's working.", fontSize = 15.sp, lineHeight = 22.sp,
+        "stations" -> SubPage(t("Which stations play"), { about = null }) {
+            Text("${if (languages > 0) "$languages lists" else "70+ languages"} and over 5,000 live stations, each tested twice a day. Stations marked \"Not working today\" failed the last test. A few broadcasters only stream to listeners in their own country, so a station can be silent where you are even when it's working.", fontSize = 15.sp, lineHeight = 22.sp,
                 color = Title, modifier = Modifier.padding(top = 8.dp))
-            Text("If a station doesn't start, Radio Velvet tries its other sources, then you can skip to the next one.",
+            Text(t("If a station doesn't start, Radio Velvet tries its other sources, then you can skip to the next one."),
                 Modifier.padding(top = 12.dp), color = InkSoft, fontSize = 14.sp, lineHeight = 20.sp)
         }
-        "credits" -> SubPage("Credits", { about = null }) {
+        "credits" -> SubPage(t("Credits"), { about = null }) {
             TextButton({ openUrl(ctx, "https://www.facebook.com/share/1CFLUukqxQ/") }, Modifier.heightIn(min = 48.dp), contentPadding = PaddingValues(0.dp)) {
-                Text("Logo by Jai Sachith Chittilapilly", color = AccentText) }
-            Text("Station names and logos belong to their owners. Logos are shown only on the Android Auto screen, " +
-                "to recognise a station at a glance; a station that prefers otherwise can write to hello@ranjithkb.com.",
+                Text(t("Logo by Jai Sachith Chittilapilly"), color = AccentText) }
+            Text(t("Station names and logos belong to their owners. Logos are shown only on the Android Auto screen, to recognise a station at a glance; a station that prefers otherwise can write to hello@ranjithkb.com."),
                 fontSize = 14.sp, lineHeight = 20.sp, color = InkSoft, modifier = Modifier.padding(top = 6.dp))
         }
     }
@@ -857,9 +854,9 @@ fun SleepChoices(onCustom: () -> Unit, dark: Boolean, after: () -> Unit = {}) {
                 contentPadding = PaddingValues(horizontal = 12.dp)) { Text("$m min", color = fg) }
         }
         OutlinedButton(onCustom, Modifier.heightIn(min = 48.dp), border = BorderStroke(1.dp, line),
-            contentPadding = PaddingValues(horizontal = 12.dp)) { Text("Custom", color = fg) }
+            contentPadding = PaddingValues(horizontal = 12.dp)) { Text(t("Custom"), color = fg) }
         if (SleepTimer.at > 0) OutlinedButton({ SleepTimer.off(); after() }, Modifier.heightIn(min = 48.dp), border = BorderStroke(1.dp, Gold),
-            contentPadding = PaddingValues(horizontal = 12.dp)) { Text("Off", color = if (dark) Gold else Accent) }
+            contentPadding = PaddingValues(horizontal = 12.dp)) { Text(t("Off"), color = if (dark) Gold else Accent) }
     }
 }
 
@@ -881,13 +878,13 @@ fun SleepDialog(customOnly: Boolean = false, close: () -> Unit) {
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     listOf(-15, -5, 5, 15).forEach { d ->
                         OutlinedButton({ mins = (mins + d).coerceIn(5f, 240f) }, Modifier.heightIn(min = 44.dp),
-                            contentPadding = PaddingValues(horizontal = 10.dp)) { Text((if (d > 0) "+" else "−") + "${kotlin.math.abs(d)}") }
+                            contentPadding = PaddingValues(horizontal = 10.dp)) { Text((if (d > 0)  else "−") + "${kotlin.math.abs(d)}") }
                     }
                 }
             }
         } },
-        confirmButton = { if (custom) Button({ SleepTimer.set((mins.toInt() / 5) * 5); close() }) { Text("Start") } },
-        dismissButton = { TextButton(close) { Text("Cancel") } })
+        confirmButton = { if (custom) Button({ SleepTimer.set((mins.toInt() / 5) * 5); close() }) { Text(t("Start")) } },
+        dismissButton = { TextButton(close) { Text(t("Cancel")) } })
 }
 
 /** Share the song or station: picture card, text with a link, or copy the text and link. */
@@ -910,13 +907,13 @@ fun ShareMenu(now: NowState, close: () -> Unit) {
                 try { shareSongCard(ctx, if (hasSong) song else station, artist, station, if (hasSong) now.md.artworkUri?.toString()?.takeUnless(CarArt::isStationArt) else null, link) }
                 catch (e: Exception) { android.widget.Toast.makeText(ctx, "Couldn't make the picture card", android.widget.Toast.LENGTH_SHORT).show() } } },
                 Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
-                Icon(Icons.Filled.Image, null); Spacer(Modifier.width(10.dp)); Text("Picture card with link", Modifier.weight(1f)) }
+                Icon(Icons.Filled.Image, null); Spacer(Modifier.width(10.dp)); Text(t("Picture card with link"), Modifier.weight(1f)) }
             TextButton({ close(); shareTextOnly(ctx, text) }, Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
-                Icon(Icons.Filled.Share, null); Spacer(Modifier.width(10.dp)); Text("Text with link", Modifier.weight(1f)) }
+                Icon(Icons.Filled.Share, null); Spacer(Modifier.width(10.dp)); Text(t("Text with link"), Modifier.weight(1f)) }
             TextButton({ close(); copyText(ctx, text) }, Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
-                Icon(Icons.Filled.ContentCopy, null); Spacer(Modifier.width(10.dp)); Text("Copy text and link", Modifier.weight(1f)) }
+                Icon(Icons.Filled.ContentCopy, null); Spacer(Modifier.width(10.dp)); Text(t("Copy text and link"), Modifier.weight(1f)) }
         } },
-        confirmButton = { TextButton(close) { Text("Cancel") } })
+        confirmButton = { TextButton(close) { Text(t("Cancel")) } })
 }
 
 /** Drag the pinned languages into the order they appear in the row. */
@@ -928,8 +925,8 @@ fun ArrangePins(list: List<Collection>, onSave: (List<String>) -> Unit, close: (
     Dialog({ onSave(order.map { it.id }); close() }) {
         Surface(shape = RoundedCornerShape(16.dp), color = Paper) {
             Column(Modifier.padding(vertical = 16.dp)) {
-                Text("Arrange pinned languages", Modifier.padding(horizontal = 20.dp), fontWeight = FontWeight.SemiBold, fontSize = 18.sp)
-                Text("Drag ≡ to change the order in the row.", Modifier.padding(20.dp, 4.dp), color = InkSoft, fontSize = 14.sp)
+                Text(t("Arrange pinned languages"), Modifier.padding(horizontal = 20.dp), fontWeight = FontWeight.SemiBold, fontSize = 18.sp)
+                Text(t("Drag ≡ to change the order in the row."), Modifier.padding(20.dp, 4.dp), color = InkSoft, fontSize = 14.sp)
                 LazyColumn(state = state, modifier = Modifier.heightIn(max = 420.dp)) {
                     items(order, key = { it.id }) { c ->
                         ReorderableItem(re, key = c.id) { dragging ->
@@ -944,7 +941,7 @@ fun ArrangePins(list: List<Collection>, onSave: (List<String>) -> Unit, close: (
                     }
                 }
                 Row(Modifier.fillMaxWidth().padding(horizontal = 12.dp), horizontalArrangement = Arrangement.End) {
-                    Button({ onSave(order.map { it.id }); close() }, Modifier.heightIn(min = 48.dp)) { Text("Done") }
+                    Button({ onSave(order.map { it.id }); close() }, Modifier.heightIn(min = 48.dp)) { Text(t("Done")) }
                 }
             }
         }
@@ -962,7 +959,7 @@ fun SpinPill(onClick: () -> Unit, onLongClick: () -> Unit) {
                 haptic.performHapticFeedback(androidx.compose.ui.hapticfeedback.HapticFeedbackType.LongPress); onLongClick() })) {
         Row(Modifier.padding(horizontal = 14.dp, vertical = 6.dp), verticalAlignment = Alignment.CenterVertically) {
             Icon(Icons.Filled.Casino, null, Modifier.size(18.dp), tint = Gold); Spacer(Modifier.width(6.dp))
-            Text("Spin", fontWeight = FontWeight.SemiBold, fontSize = 14.sp, color = Ink)
+            Text(t("Spin"), fontWeight = FontWeight.SemiBold, fontSize = 14.sp, color = Ink)
         }
     }
 }
@@ -983,7 +980,7 @@ fun ListeningSection() {
     if (mine.total >= 60_000) Text("This week: ${Listen.hm(mine.week)}" + if (synced) " · all your devices" else " · on this phone",
         color = InkSoft, fontSize = 14.sp)
     if (mine.top.isNotEmpty()) {
-        Text("Your top stations", Modifier.padding(top = 8.dp), fontWeight = FontWeight.Medium, fontSize = 14.sp)
+        Text(t("Your top stations"), Modifier.padding(top = 8.dp), fontWeight = FontWeight.Medium, fontSize = 14.sp)
         mine.top.forEach { (n, ms) -> Text("$n · ${Listen.hm(ms)}", fontSize = 14.sp, color = InkSoft) }
     }
     all?.let { m -> Text("Listeners have enjoyed ${"%,d".format(m / 60)} hours of radio on Radio Velvet.",
@@ -1038,8 +1035,8 @@ fun AppNote() {
                     .addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK)) } catch (e: Exception) { openUrl(ctx, url) }
                 close()
             }, Modifier.heightIn(min = 44.dp)) { Text(label) }
-            else TextButton(close, Modifier.heightIn(min = 44.dp)) { Text("OK") }
+            else TextButton(close, Modifier.heightIn(min = 44.dp)) { Text(t("OK")) }
         },
         dismissButton = { if (o.optString("link").isNotBlank() && o.optString("button").isNotBlank())
-            TextButton(close, Modifier.heightIn(min = 44.dp)) { Text("Not now") } })
+            TextButton(close, Modifier.heightIn(min = 44.dp)) { Text(t("Not now")) } })
 }

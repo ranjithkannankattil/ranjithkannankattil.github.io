@@ -111,9 +111,9 @@ object Alarm {
     fun whenLabel(now: Calendar, at: Calendar, is24: Boolean): String {
         val days = ((at.clone() as Calendar).apply { set(Calendar.HOUR_OF_DAY, 0); set(Calendar.MINUTE, 0); set(Calendar.SECOND, 0); set(Calendar.MILLISECOND, 0) }.timeInMillis -
             (now.clone() as Calendar).apply { set(Calendar.HOUR_OF_DAY, 0); set(Calendar.MINUTE, 0); set(Calendar.SECOND, 0); set(Calendar.MILLISECOND, 0) }.timeInMillis) / 86_400_000L
-        val day = at.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, java.util.Locale.UK)
+        val day = at.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, if (Lang.code == "en") java.util.Locale.UK else java.util.Locale(Lang.code))
         val t = timeLabel(at.get(Calendar.HOUR_OF_DAY), at.get(Calendar.MINUTE), is24)
-        return when (days) { 0L -> "Today $t"; 1L -> "Tomorrow, $day $t"; else -> "$day $t" }
+        return when (days) { 0L -> Lang.tr("Today") + " $t"; 1L -> Lang.tr("Tomorrow") + ", $day $t"; else -> "$day $t" }
     }
 
     fun timeLabel(h: Int, m: Int, is24: Boolean): String = if (is24) String.format(java.util.Locale.UK, "%02d:%02d", h, m)
@@ -124,10 +124,10 @@ object Alarm {
         val names = mapOf(Calendar.MONDAY to "Mon", Calendar.TUESDAY to "Tue", Calendar.WEDNESDAY to "Wed", Calendar.THURSDAY to "Thu",
             Calendar.FRIDAY to "Fri", Calendar.SATURDAY to "Sat", Calendar.SUNDAY to "Sun")
         return when {
-            days.isEmpty() -> "Once"
-            days.size == 7 -> "Every day"
-            days == WORKDAYS -> "Workdays"
-            days == WEEKEND -> "Weekend"
+            days.isEmpty() -> t("Once")
+            days.size == 7 -> t("Every day")
+            days == WORKDAYS -> t("Workdays")
+            days == WEEKEND -> t("Weekend")
             else -> listOf(2, 3, 4, 5, 6, 7, 1).filter { it in days }.joinToString(", ") { names[it]!! }
         }
     }

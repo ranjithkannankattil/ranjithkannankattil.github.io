@@ -140,4 +140,7 @@ val FONTS = listOf(
 )
 
 /** The app's typeface: the one chosen in Settings (Jost unless changed). */
-val Poppins: FontFamily get() = (FONTS.firstOrNull { it.id == Theme.font } ?: FONTS[0]).family
+val Poppins: FontFamily get() = if (Lang.code == "ml") Manjari      // Malayalam app words: Manjari (it has Latin letters too)
+    else (FONTS.firstOrNull { it.id == Theme.font } ?: FONTS[0]).family
+val Manjari: FontFamily by lazy { FontFamily(Font(R.font.manjari_regular, FontWeight.Light), Font(R.font.manjari_regular, FontWeight.Normal),
+    Font(R.font.manjari_bold, FontWeight.Medium), Font(R.font.manjari_bold, FontWeight.SemiBold), Font(R.font.manjari_bold, FontWeight.Bold)) }

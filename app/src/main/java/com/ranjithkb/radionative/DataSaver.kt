@@ -119,22 +119,20 @@ fun DataSaverScreen(close: () -> Unit) {
     val ctx = LocalContext.current
     var use by remember { mutableStateOf(DataUse.thisMonth(ctx)) }
     LaunchedEffect(Unit) { while (true) { kotlinx.coroutines.delay(5000); use = DataUse.thisMonth(ctx) } }
-    SubPage("Data saver", close) {
-        Text("For ships, villages and patchy signal: plays each station's lightest link and skips song covers. " +
-            "Many stations then use 15–30 MB an hour instead of 60–90.", fontSize = 14.sp, color = Soft, lineHeight = 20.sp,
+    SubPage(t("Data saver"), close) {
+        Text(t("For ships, villages and patchy signal: plays each station's lightest link and skips song covers. Many stations then use 15–30 MB an hour instead of 60–90."), fontSize = 14.sp, color = Soft, lineHeight = 20.sp,
             modifier = Modifier.padding(top = 4.dp))
-        SectionHead("Save data")
+        SectionHead(t("Save data"))
         val opts = listOf(DataSaver.OFF, DataSaver.MOBILE, DataSaver.ON)
-        Segmented(listOf("Off", "Mobile data", "Always"), opts.indexOf(DataSaver.mode).coerceAtLeast(0)) { DataSaver.save(ctx, opts[it]) }
+        Segmented(listOf(t("Off"), t("Mobile data"), t("Always")), opts.indexOf(DataSaver.mode).coerceAtLeast(0)) { DataSaver.save(ctx, opts[it]) }
         Text(when (DataSaver.mode) {
             DataSaver.ON -> "On all the time, on Wi-Fi too."
             DataSaver.MOBILE -> "On when the phone is on mobile data; full quality on Wi-Fi."
             else -> "Off: every station plays at its usual quality."
         }, fontSize = 13.sp, color = Soft, modifier = Modifier.padding(top = 8.dp))
-        SectionHead("Used by Radio Velvet this month")
-        SettingRow("Mobile data", value = DataUse.size(use.first))
-        SettingRow("Wi-Fi", value = DataUse.size(use.second))
-        Text("Counted by the app itself, from the 1st of the month. Lists show each station's weight with Data saver on, " +
-            "and ⇅ Sort has \"Lightest first\".", fontSize = 13.sp, color = Soft, lineHeight = 19.sp, modifier = Modifier.padding(top = 12.dp))
+        SectionHead(t("Used by Radio Velvet this month"))
+        SettingRow(t("Mobile data"), value = DataUse.size(use.first))
+        SettingRow(t("Wi-Fi"), value = DataUse.size(use.second))
+        Text(t("Counted by the app itself, from the 1st of the month. Lists show each station's weight with Data saver on, and ⇅ Sort has \"Lightest first\"."), fontSize = 13.sp, color = Soft, lineHeight = 19.sp, modifier = Modifier.padding(top = 12.dp))
     }
 }

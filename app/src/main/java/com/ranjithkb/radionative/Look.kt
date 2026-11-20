@@ -86,7 +86,8 @@ private val Pad = 24.dp
 @Composable
 fun Label(text: String, color: Color = Soft, size: Int = 10, modifier: Modifier = Modifier, weight: FontWeight = FontWeight.Medium) =
     // 2 points larger than the design's sizes and a third less spacing: easier to read, same width
-    Text(text.uppercase(), modifier, fontSize = (size + 2).sp, letterSpacing = ((size + 2) * 0.15f).sp, fontWeight = weight, color = color,
+    // Malayalam and Hindi: no extra letter spacing (it would pull the joined letters apart)
+    Text(text.uppercase(), modifier, fontSize = (size + 2).sp, letterSpacing = if (Lang.code == "en") ((size + 2) * 0.15f).sp else 0.sp, fontWeight = weight, color = color,
         maxLines = 1, overflow = TextOverflow.Ellipsis)
 
 @Composable
@@ -117,8 +118,8 @@ fun VelvetStar(label: String?, size: Int) = Box(Modifier.size(size.dp).then(if (
 @Composable
 fun PicksHeading(empty: Boolean) = Row(Modifier.fillMaxWidth().heightIn(min = 44.dp).padding(horizontal = Pad)
     .semantics(mergeDescendants = true) { heading() }, verticalAlignment = Alignment.CenterVertically) {
-    Label("Velvet Selection", Title, 9, weight = FontWeight.SemiBold)
-    Text("  ·  " + (if (empty) "coming soon" else "hand-picked stations"), fontSize = 13.sp, color = Soft, maxLines = 1,
+    Label(t("Velvet Selection"), Title, 9, weight = FontWeight.SemiBold)
+    Text("  ·  " + t(if (empty) "coming soon" else "hand-picked stations"), fontSize = 13.sp, color = Soft, maxLines = 1,
         overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis)
 }
 
@@ -231,7 +232,7 @@ fun MiniPlayer(now: NowState, c: androidx.media3.session.MediaController?, isFav
     val artist = (now.md.artist?.toString() ?: "").split(" · ").filter { it != station }.joinToString(" · ")
     Surface(color = BarBg, shadowElevation = 8.dp) {
         Column(Modifier.fillMaxWidth()) {
-            Row(Modifier.fillMaxWidth().clickable(onClickLabel = "Open the player", onClick = open)
+            Row(Modifier.fillMaxWidth().clickable(onClickLabel = t("Open the player"), onClick = open)
                 .pointerInput(c) { detectHorizontalDragGestures(onDragEnd = {
                     if (drag < -120) c?.nextStation() else if (drag > 120) c?.prevStation(); drag = 0f },
                     onDragCancel = { drag = 0f }) { _, d -> drag += d } }
@@ -440,7 +441,7 @@ fun SearchContent(all: List<Station>?, currentLang: String, langOf: (Station) ->
         .statusBarsPadding().navigationBarsPadding().imePadding()) {
         Row(Modifier.padding(start = 10.dp, end = 20.dp, top = 12.dp), verticalAlignment = Alignment.CenterVertically) {
             IconButton(close, Modifier.size(52.dp)) { LineIcon(R.drawable.ln_back, "Back", 24) }
-            Label("Search", Title, 13, weight = FontWeight.Medium)
+            Label(t("Search"), Title, 13, weight = FontWeight.Medium)
         }
         Row(Modifier.padding(start = Pad, end = Pad, top = 8.dp).fillMaxWidth().height(52.dp)
             .drawBehind { drawLine(Title, Offset(0f, size.height - 0.5.dp.toPx()), Offset(size.width, size.height - 0.5.dp.toPx()), 1.dp.toPx()) }
@@ -470,7 +471,7 @@ fun SearchContent(all: List<Station>?, currentLang: String, langOf: (Station) ->
             }
             if (!searching) {
                 if (recent.isNotEmpty()) {
-                    item { Label("Recent searches", AccentText, 10, Modifier.padding(start = Pad, top = 26.dp, bottom = 4.dp)) }
+                    item { Label(t("Recent searches"), AccentText, 10, Modifier.padding(start = Pad, top = 26.dp, bottom = 4.dp)) }
                     items(recent, key = { "r|$it" }) { r ->
                         Row(Modifier.fillMaxWidth().heightIn(min = 52.dp).clickable { q = r }.padding(start = Pad, end = 8.dp),
                             verticalAlignment = Alignment.CenterVertically) {
@@ -482,7 +483,7 @@ fun SearchContent(all: List<Station>?, currentLang: String, langOf: (Station) ->
                     }
                 }
                 item {
-                    Label("Try", AccentText, 10, Modifier.padding(start = Pad, top = 26.dp, bottom = 12.dp))
+                    Label(t("Try"), AccentText, 10, Modifier.padding(start = Pad, top = 26.dp, bottom = 12.dp))
                     FlowRow(Modifier.padding(horizontal = Pad), horizontalArrangement = Arrangement.spacedBy(10.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                         @Composable fun Chip(label: String, gold: Boolean = false, onClick: () -> Unit) =
                             Surface(shape = RoundedCornerShape(0.dp), color = Color.Transparent, border = BorderStroke(1.dp, if (gold) GoldC else Line),
@@ -518,7 +519,7 @@ fun SearchContent(all: List<Station>?, currentLang: String, langOf: (Station) ->
                     }
                 }
                 if (all != null && results.isEmpty()) item {
-                    Text("No station by that name. Try part of the name, like \"Mango\" or \"AIR\".", Modifier.padding(Pad), fontSize = 15.sp, color = Soft)
+                    Text(t("No station by that name. Try part of the name, like \"Mango\" or \"AIR\"."), Modifier.padding(Pad), fontSize = 15.sp, color = Soft)
                 }
             }
         }

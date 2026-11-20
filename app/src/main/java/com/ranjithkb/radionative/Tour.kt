@@ -121,20 +121,20 @@ fun TourOverlay(step: Int, onStep: (Int) -> Unit, onEnd: () -> Unit) {
                 Spacer(Modifier.weight(1f))
                 Label("$step of ${Tour.COUNT - 1}", Soft, 9)
             }
-            Text(s.title, fontSize = 19.sp, fontWeight = FontWeight.Medium, color = Title, modifier = Modifier.semantics { heading() })
-            Text(s.text, fontSize = 15.sp, lineHeight = 22.sp, color = InkSoft, modifier = Modifier.padding(top = 6.dp))
+            Text(t(s.title), fontSize = 19.sp, fontWeight = FontWeight.Medium, color = Title, modifier = Modifier.semantics { heading() })
+            Text(t(s.text), fontSize = 15.sp, lineHeight = 22.sp, color = InkSoft, modifier = Modifier.padding(top = 6.dp))
             Row(Modifier.padding(top = 16.dp).fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
                 Box(Modifier.heightIn(min = 48.dp).clickable(onClickLabel = if (step == 0) "No thanks" else "Skip the tour") { onEnd() }
                     .padding(horizontal = 6.dp), contentAlignment = Alignment.Center) {
-                    Label(if (step == 0) "No thanks" else "Skip", Soft, 11) }
+                    Label(t(if (step == 0) "No thanks" else "Skip"), Soft, 11) }
                 Spacer(Modifier.weight(1f))
-                if (step > 1) Box(Modifier.heightIn(min = 48.dp).clickable(onClickLabel = "Back") { onStep(step - 1) }
-                    .padding(horizontal = 14.dp), contentAlignment = Alignment.Center) { Label("Back", AccentText, 11) }
+                if (step > 1) Box(Modifier.heightIn(min = 48.dp).clickable(onClickLabel = t("Back")) { onStep(step - 1) }
+                    .padding(horizontal = 14.dp), contentAlignment = Alignment.Center) { Label(t("Back"), AccentText, 11) }
                 val last = step == Tour.COUNT - 1
                 val label = when { step == 0 -> "Show me"; last -> "Done"; else -> "Next" }
                 Box(Modifier.heightIn(min = 48.dp).widthIn(min = 96.dp).clip(RoundedCornerShape(24.dp)).background(Title)
                     .clickable(onClickLabel = label) { if (last) onEnd() else onStep(step + 1) }.padding(horizontal = 20.dp),
-                    contentAlignment = Alignment.Center) { Label(label, Paper, 11) }
+                    contentAlignment = Alignment.Center) { Label(t(label), Paper, 11) }
             }
         }
     }

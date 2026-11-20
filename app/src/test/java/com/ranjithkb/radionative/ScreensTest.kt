@@ -167,6 +167,20 @@ class ScreensTest {
         rule.onNodeWithText("What the app can do").performScrollTo().performClick(); rule.waitForIdle(); capture("v53-info-what-it-can-do")
         rule.onNodeWithText("Data saver", substring = true).assertExists() }
     @Test @Config(qualifiers = "w360dp-h740dp-xxhdpi") fun v54_info_large_text_360() = shot("v54-info-large-360", false, text = 2) { Info() }
+    // ---- the app in Malayalam and Hindi
+    private fun inLang(c: String, name: String, dark: Boolean = false, body: @Composable () -> Unit) {
+        Lang.code = c; try { shot(name, dark, content = body) } finally { Lang.code = "en" } }
+    @Test fun v60_ml_stations() = inLang("ml", "v60-ml-stations") { Stations(true) }
+    @Test fun v61_ml_info() = inLang("ml", "v61-ml-info") { Info() }
+    @Test fun v62_ml_settings() = inLang("ml", "v62-ml-settings") { SettingsScreen({}) {} }
+    @Test fun v63_ml_alarm_edit() { twoAlarms(); inLang("ml", "v63-ml-alarm-edit") { AlarmEdit(Alarm.byId(rule.activity, 1)!!, false, sts.map { it to "Malayalam" }) {} } }
+    @Test fun v64_ml_tour() { var st by androidx.compose.runtime.mutableIntStateOf(1)
+        inLang("ml", "v64-ml-tour") { Box(Modifier.fillMaxSize()) { Stations(true); TourOverlay(st, { st = it }) {} } } }
+    @Test fun v65_ml_data_saver_dark() = inLang("ml", "v65-ml-data-saver-dark", true) { DataSaverScreen {} }
+    @Test fun v66_hi_stations() = inLang("hi", "v66-hi-stations") { Stations(true) }
+    @Test fun v67_hi_settings() = inLang("hi", "v67-hi-settings") { SettingsScreen({}) {} }
+    @Test @Config(qualifiers = "w360dp-h740dp-xxhdpi") fun v68_ml_info_360_large() { Lang.code = "ml"; try { shot("v68-ml-info-360-large", false, text = 2) { Info() } } finally { Lang.code = "en" } }
+
     @Test fun v01_pill_light() = shot("v01-pill-light", false) { Stations(true) }
     @Test fun v02_pill_dark() = shot("v02-pill-dark", true) { Stations(true) }
     @Test fun v03_pill_favourites_dark_rosewood() = shot("v03-pill-favs-rosewood-dark", true, theme = "rosewood") { Stations(true, tab = 1) }

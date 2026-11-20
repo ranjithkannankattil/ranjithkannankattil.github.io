@@ -182,6 +182,26 @@ class LogicTest {
         assertEquals("1.2 GB", DataUse.size(1_234_000_000)); assertEquals("340 MB", DataUse.size(340_200_000)); assertEquals("0 MB", DataUse.size(0))
     }
 
+    // ---------------- app language
+    @Test fun lang_words_follow_his_choices() {
+        try {
+            Lang.code = "ml"
+            assertEquals("നിലയങ്ങൾ", t("Stations")); assertEquals("ഫോണ്ട്", t("Font")); assertEquals("വിവരം", t("Info"))
+            assertEquals("Radio Mango", t("Radio Mango"))                 // anything without a translation stays as it is
+            Lang.code = "hi"; assertEquals("सेटिंग्स", t("Settings"))
+            Lang.code = "en"; assertEquals("Settings", t("Settings"))
+        } finally { Lang.code = "en" }
+    }
+    @Test fun lang_setting_is_remembered() {
+        val ctx = RuntimeEnvironment.getApplication()
+        try { Lang.set(ctx, "ml"); Lang.code = "en"; Lang.load(ctx); assertEquals("ml", Lang.code)
+            Lang.set(ctx, "xx"); assertEquals("en", Lang.code) } finally { Lang.set(ctx, "en") }
+    }
+    @Test fun lang_alarm_days_in_malayalam() {
+        try { Lang.code = "ml"; assertEquals("പ്രവൃത്തി ദിവസങ്ങൾ", Alarm.daysLabel(Alarm.WORKDAYS)); assertEquals("വാരാന്ത്യം", Alarm.daysLabel(Alarm.WEEKEND)) }
+        finally { Lang.code = "en" }
+    }
+
     // ---------------- first-time tour (2.7)
     @Test fun tour_has_eight_steps_with_welcome_first() {
         assertEquals(8, Tour.COUNT); assertNull(Tour.STEPS[0].target)

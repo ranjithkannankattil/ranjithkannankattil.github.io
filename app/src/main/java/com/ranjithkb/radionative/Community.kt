@@ -189,12 +189,12 @@ object Stats {
 
     /** "185 hrs this week" (minutes below an hour), or "Still collecting". */
     fun heardLabel(min: Int?): String = when {
-        min == null || min <= 0 -> "Still collecting"
+        min == null || min <= 0 -> t("Still collecting")
         min < 60 -> "$min min this week"
         min < 120 -> "1 hr this week"
         else -> "%,d hrs this week".format(java.util.Locale.UK, min / 60)
     }
-    fun ratedLabel(r: Pair<Double, Int>?): String = if (r == null || r.second < MIN_RATINGS) "Not enough ratings yet"
+    fun ratedLabel(r: Pair<Double, Int>?): String = if (r == null || r.second < MIN_RATINGS) t("Not enough ratings yet")
         else "★ " + String.format(java.util.Locale.UK, "%.1f", r.first) + " · ${r.second} ratings"
     /** Top 3 most heard in the list (gold ◆). */
     fun top3(list: List<Station>, d: Data?): Set<String> =

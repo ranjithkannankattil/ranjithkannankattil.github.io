@@ -193,11 +193,13 @@ fun ThemeChoice(t: ThemeDef, w: Int, onPick: () -> Unit) {
 fun SettingsScreen(close: () -> Unit, open: (String) -> Unit) {
     val ctx = LocalContext.current
     fun save() = Theme.save(ctx)
-    SubPage("Settings", close) {
-        SectionHead("Appearance")
-        Segmented(listOf("Phone", "Light", "Dark"), listOf("phone", "light", "dark").indexOf(Theme.mode)) {
+    SubPage(t("Settings"), close) {
+        SectionHead("App language · ആപ്പിന്റെ ഭാഷ · ऐप की भाषा")
+        Segmented(Lang.CODES.map { Lang.NAMES[it]!! }, Lang.CODES.indexOf(Lang.code)) { Lang.set(ctx, Lang.CODES[it]) }
+        SectionHead(t("Appearance"))
+        Segmented(listOf(t("Phone"), t("Light"), t("Dark")), listOf("phone", "light", "dark").indexOf(Theme.mode)) {
             Theme.mode = listOf("phone", "light", "dark")[it]; save() }
-        Text("Phone = follow the phone's light / dark setting.", fontSize = 12.sp, color = Soft, modifier = Modifier.padding(top = 6.dp))
+        Text(t("Phone = follow the phone's light / dark setting."), fontSize = 12.sp, color = Soft, modifier = Modifier.padding(top = 6.dp))
         // every theme as a little screen, side by side: swipe and tap
         androidx.compose.foundation.lazy.LazyRow(Modifier.fillMaxWidth().padding(top = 16.dp), horizontalArrangement = Arrangement.spacedBy(12.dp),
             state = androidx.compose.foundation.lazy.rememberLazyListState(THEMES.indexOfFirst { it.id == Theme.themeId }.coerceAtLeast(0))) {
@@ -205,12 +207,12 @@ fun SettingsScreen(close: () -> Unit, open: (String) -> Unit) {
         }
         TextButton({ open("themes") }, Modifier.align(Alignment.End).heightIn(min = 48.dp)) {
             Text("All ${THEMES.size} colour themes ›", color = AccentText) }
-        SettingRow("Player look", sub = "Radios from the 1930s to the 1990s, in their own colours or yours",
+        SettingRow(t("Player look"), sub = t("Radios from the 1930s to the 1990s, in their own colours or yours"),
             value = Eras.byId(Theme.look)?.name ?: "Standard", onClick = { open("look") })
 
-        SectionHead("Text size")
-        Segmented(listOf("Normal", "Large", "Extra large"), Theme.text) { Theme.text = it; save() }
-        SectionHead("Font")
+        SectionHead(t("Text size"))
+        Segmented(listOf(t("Normal"), t("Large"), t("Extra large")), Theme.text) { Theme.text = it; save() }
+        SectionHead(t("Font"))
         // each font shown in itself: tap to use it
         FONTS.chunked(2).forEach { pair ->
             Row(Modifier.fillMaxWidth().padding(bottom = 8.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -231,26 +233,26 @@ fun SettingsScreen(close: () -> Unit, open: (String) -> Unit) {
                 if (pair.size == 1) Spacer(Modifier.weight(1f))
             }
         }
-        SectionHead("Station list")
-        Segmented(listOf("Compact", "Comfortable", "Spacious"), Theme.spacing) { Theme.spacing = it; save() }
+        SectionHead(t("Station list"))
+        Segmented(listOf(t("Compact"), t("Comfortable"), t("Spacious")), Theme.spacing) { Theme.spacing = it; save() }
 
-        SectionHead("Sound")
-        SettingRow("Equaliser", value = if (Eq.on(ctx)) Eq.preset(ctx) else "Off", onClick = { open("eq") })
-        SettingRow("Visualiser in the big player", sub = "Moving bars, waves or a circle with the music",
+        SectionHead(t("Sound"))
+        SettingRow(t("Equaliser"), value = if (Eq.on(ctx)) Eq.preset(ctx) else "Off", onClick = { open("eq") })
+        SettingRow(t("Visualiser in the big player"), sub = t("Moving bars, waves or a circle with the music"),
             value = Theme.viz.replaceFirstChar { it.uppercase() }, onClick = { open("viz") })
-        SettingRow("Resume after other apps", sub = "After a video in Facebook, WhatsApp… within 10 minutes. Never during calls.",
+        SettingRow(t("Resume after other apps"), sub = t("After a video in Facebook, WhatsApp… within 10 minutes. Never during calls."),
             trailing = { VelvetSwitch(Theme.resume, "Resume after other apps") { Theme.resume = it; save() } })
 
-        SectionHead("Data")
-        SettingRow("Data saver", sub = "For ships, villages and patchy signal: lightest links, no song covers",
+        SectionHead(t("Data"))
+        SettingRow(t("Data saver"), sub = t("For ships, villages and patchy signal: lightest links, no song covers"),
             value = when (DataSaver.mode) { DataSaver.ON -> "Always"; DataSaver.MOBILE -> "Mobile data"; else -> "Off" }, onClick = { open("data") })
-        SectionHead("More")
+        SectionHead(t("More"))
         val alarms = remember { Alarm.all(ctx) }
         val up = remember(alarms) { Alarm.upcoming(java.util.Calendar.getInstance(), alarms) }
-        SettingRow("Alarms", value = when { up != null -> Alarm.timeLabel(up.first.hour, up.first.minute, android.text.format.DateFormat.is24HourFormat(ctx)) +
+        SettingRow(t("Alarms"), value = when { up != null -> Alarm.timeLabel(up.first.hour, up.first.minute, android.text.format.DateFormat.is24HourFormat(ctx)) +
             (if (alarms.count { it.on } > 1) " +${alarms.count { it.on } - 1}" else ""); else -> "Off" }, onClick = { open("alarm") })
-        SettingRow("Request a station", sub = "Missing a station? Tell us", onClick = { open("request") })
-        SettingRow("Reset to the original look", onClick = {
+        SettingRow(t("Request a station"), sub = t("Missing a station? Tell us"), onClick = { open("request") })
+        SettingRow(t("Reset to the original look"), onClick = {
             Theme.themeId = "velvet"; Theme.mode = "phone"; Theme.text = 0; Theme.font = "jost"; Theme.spacing = 0; Theme.viz = "off"
             Theme.look = "std"; Theme.lookColours = "original"; save() })
     }
@@ -259,8 +261,8 @@ fun SettingsScreen(close: () -> Unit, open: (String) -> Unit) {
 @Composable
 fun ThemesScreen(close: () -> Unit) {
     val ctx = LocalContext.current
-    SubPage("Colour theme", close) {
-        Text("Each theme has a light and a dark version; Settings → Appearance chooses which.", fontSize = 13.sp, color = Soft,
+    SubPage(t("Colour theme"), close) {
+        Text(t("Each theme has a light and a dark version; Settings → Appearance chooses which."), fontSize = 13.sp, color = Soft,
             modifier = Modifier.padding(top = 4.dp))
         THEMES.groupBy { it.group }.forEach { (g, list) ->
             SectionHead(g)
@@ -288,9 +290,9 @@ fun EqualiserScreen(close: () -> Unit) {
     var preset by remember { mutableStateOf(Eq.preset(ctx)) }
     var bands by remember { mutableStateOf(Eq.bands(ctx).toList()) }
     fun save() = Eq.save(ctx, on, preset, bands.toIntArray())
-    SubPage("Equaliser", close) {
-        SettingRow("Equaliser on", trailing = { VelvetSwitch(on, "Equaliser on") { on = it; save() } })
-        SectionHead("Presets")
+    SubPage(t("Equaliser"), close) {
+        SettingRow(t("Equaliser on"), trailing = { VelvetSwitch(on, "Equaliser on") { on = it; save() } })
+        SectionHead(t("Presets"))
         FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             (Eq.PRESETS.keys + "Custom").forEach { name ->
                 val sel = name == preset
@@ -303,18 +305,17 @@ fun EqualiserScreen(close: () -> Unit) {
                 }
             }
         }
-        SectionHead("Fine-tune")
+        SectionHead(t("Fine-tune"))
         Row(Modifier.fillMaxWidth().padding(top = 6.dp).then(if (on) Modifier else Modifier.background(Color.Transparent))) {
             listOf("60 Hz", "230 Hz", "910 Hz", "3.6 kHz", "14 kHz").forEachIndexed { i, f ->
                 Column(Modifier.weight(1f), horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text("%+d".format(bands[i]), fontSize = 13.sp, color = Soft)
+                    Text(t("%+d").format(bands[i]), fontSize = 13.sp, color = Soft)
                     VSlider(bands[i], f, enabled = on) { v -> bands = bands.toMutableList().also { it[i] = v }; preset = "Custom"; save() }
                     Label(f, Soft, 8)
                 }
             }
         }
-        Text("Works on the phone speaker, headphones, Bluetooth and in the car. Turned off while casting to a TV or speaker. " +
-            "Not on the website: browsers can't change other sites' sound.", fontSize = 13.sp, color = Soft, lineHeight = 19.sp,
+        Text(t("Works on the phone speaker, headphones, Bluetooth and in the car. Turned off while casting to a TV or speaker. Not on the website: browsers can't change other sites' sound."), fontSize = 13.sp, color = Soft, lineHeight = 19.sp,
             modifier = Modifier.padding(top = 24.dp))
     }
 }
@@ -357,11 +358,10 @@ val VIZ_STYLES = listOf("bars", "waves", "circle", "off")
 @Composable
 fun VisualiserScreen(close: () -> Unit) {
     val ctx = LocalContext.current
-    SubPage("Visualiser", close) {
-        Text("Moves with the music in the big player, in your theme's colours. Uses only the radio's own sound: " +
-            "no microphone. Off saves a little battery.", fontSize = 14.sp, color = Soft, lineHeight = 20.sp, modifier = Modifier.padding(top = 4.dp))
-        SectionHead("Style")
-        Segmented(listOf("Bars", "Waves", "Circle", "Off"), VIZ_STYLES.indexOf(Theme.viz)) { Theme.viz = VIZ_STYLES[it]; Theme.save(ctx) }
+    SubPage(t("Visualiser"), close) {
+        Text(t("Moves with the music in the big player, in your theme's colours. Uses only the radio's own sound: no microphone. Off saves a little battery."), fontSize = 14.sp, color = Soft, lineHeight = 20.sp, modifier = Modifier.padding(top = 4.dp))
+        SectionHead(t("Style"))
+        Segmented(listOf(t("Bars"), t("Waves"), t("Circle"), t("Off")), VIZ_STYLES.indexOf(Theme.viz)) { Theme.viz = VIZ_STYLES[it]; Theme.save(ctx) }
         if (Theme.viz != "off") Box(Modifier.padding(top = 24.dp).fillMaxWidth().height(180.dp).background(ArtBg), contentAlignment = Alignment.Center) {
             VizView(Theme.viz, playing = true, Modifier.fillMaxSize().padding(14.dp), demo = true)
         }
@@ -394,7 +394,7 @@ fun VizView(style: String, playing: Boolean, modifier: Modifier, demo: Boolean =
     }
     val a = AccentText; val g = GoldC
     val fg = if (Palettes.contrast(a, ArtBg) >= 2f) a else Theme.pal.barInk
-    Canvas(modifier.semantics { contentDescription = "Visualiser" }) {
+    Canvas(modifier.semantics { contentDescription = Lang.tr("Visualiser") }) {
         val v = shown
         when (style) {
             "bars" -> {
@@ -445,7 +445,7 @@ fun VizSwitcher() {
     if (Theme.viz == "off") {
         // off: one quiet little switch under the cover (three small bars and the word), so it's there but doesn't draw the eye
         Row(Modifier.padding(top = 4.dp).heightIn(min = 44.dp).alpha(0.75f)
-            .clickable(onClickLabel = "Turn on the visualiser") { pick(pr.getString("vizLast", "bars")!!.takeIf { it in VIZ_STYLES && it != "off" } ?: "bars") }
+            .clickable(onClickLabel = t("Turn on the visualiser")) { pick(pr.getString("vizLast", "bars")!!.takeIf { it in VIZ_STYLES && it != "off" } ?: "bars") }
             .padding(horizontal = 12.dp), verticalAlignment = Alignment.CenterVertically) {
             Canvas(Modifier.size(12.dp, 10.dp)) {
                 val w = size.width / 5
@@ -454,7 +454,7 @@ fun VizSwitcher() {
                 }
             }
             Spacer(Modifier.width(7.dp))
-            Label("Visualiser", Soft, 8)
+            Label(t("Visualiser"), Soft, 8)
         }
         return
     }
@@ -480,9 +480,11 @@ fun SortSheet(current: String, onPick: (String) -> Unit, close: () -> Unit) {
     ModalBottomSheet(onDismissRequest = close, containerColor = Paper, scrimColor = Color.Black.copy(alpha = 0.35f),
         dragHandle = { Box(Modifier.padding(top = 12.dp, bottom = 8.dp).size(36.dp, 3.dp).background(Line)) }) {
         Column(Modifier.padding(start = Pad, end = Pad, bottom = 24.dp)) {
-            Label("Sort stations", Soft, 10, Modifier.padding(bottom = 6.dp))
+            Label(t("Sort stations"), Soft, 10, Modifier.padding(bottom = 6.dp))
             listOf("Usual order" to "As the stations are listed", "A–Z" to "By name",
-                "Most heard" to "Hours listened this week, by everyone", "Top rated" to "Average stars, from 3 ratings up").forEachIndexed { i, (t, d) ->
+                "Most heard" to "Hours listened this week, by everyone", "Top rated" to "Average stars, from 3 ratings up",
+                "Lightest first" to "Least data an hour first (good for Data saver)").forEachIndexed { i, (en, de) ->
+                val t = Lang.tr(en); val d = Lang.tr(de)
                 val id = SORTS[i].first; val on = id == current
                 Row(Modifier.fillMaxWidth().heightIn(min = 60.dp).semantics { selected = on; role = Role.RadioButton }
                     .clickable(onClickLabel = t) { onPick(id); close() }, verticalAlignment = Alignment.CenterVertically) {
@@ -494,7 +496,7 @@ fun SortSheet(current: String, onPick: (String) -> Unit, close: () -> Unit) {
                 }
                 HorizontalDivider(color = Line)
             }
-            Text("Counted anonymously: only minutes per station, never who listened. Updated every night. Favourites keep your own order.",
+            Text(t("Counted anonymously: only minutes per station, never who listened. Updated every night. Favourites keep your own order."),
                 fontSize = 13.sp, color = Soft, lineHeight = 19.sp, modifier = Modifier.padding(top = 14.dp))
         }
     }
@@ -517,17 +519,17 @@ fun AlarmScreen(choices: List<Pair<Station, String>>, close: () -> Unit) {
         life.lifecycle.addObserver(o); onDispose { life.lifecycle.removeObserver(o) }
     }
     fun refresh() { list = Alarm.all(ctx) }
-    SubPage("Alarms", close) {
+    SubPage(t("Alarms"), close) {
         if (list.any { it.on } && !exact && Build.VERSION.SDK_INT >= 31) ExactNote(ctx)
         val up = Alarm.upcoming(java.util.Calendar.getInstance(), list)
-        Text(if (up == null) "No alarm on" else "Next: " + Alarm.whenLabel(java.util.Calendar.getInstance(), up.second, is24) +
+        Text(if (up == null) t("No alarm on") else t("Next: ") + Alarm.whenLabel(java.util.Calendar.getInstance(), up.second, is24) +
             (up.first.name.takeIf { it.isNotBlank() }?.let { " · $it" } ?: ""),
             fontSize = 14.sp, color = Soft, modifier = Modifier.padding(top = 6.dp, bottom = 6.dp))
-        if (list.isEmpty()) Text("Wake up to your radio. Set one for workdays and another for the weekend.",
+        if (list.isEmpty()) Text(t("Wake up to your radio. Set one for workdays and another for the weekend."),
             fontSize = 15.sp, color = Title, lineHeight = 22.sp, modifier = Modifier.padding(vertical = 14.dp))
         list.forEach { a ->
             Column {
-                Row(Modifier.fillMaxWidth().heightIn(min = 76.dp).clickable(onClickLabel = "Edit the alarm") { editing = a; isNew = false }
+                Row(Modifier.fillMaxWidth().heightIn(min = 76.dp).clickable(onClickLabel = t("Edit the alarm")) { editing = a; isNew = false }
                     .padding(vertical = 10.dp), verticalAlignment = Alignment.CenterVertically) {
                     Column(Modifier.weight(1f)) {
                         Text(Alarm.timeLabel(a.hour, a.minute, is24), fontSize = 34.sp, fontWeight = FontWeight.Light, color = if (a.on) Title else Soft)
@@ -540,10 +542,9 @@ fun AlarmScreen(choices: List<Pair<Station, String>>, close: () -> Unit) {
             }
         }
         Box(Modifier.padding(top = 22.dp).fillMaxWidth().heightIn(min = 52.dp).border(1.dp, Title)
-            .clickable(onClickLabel = "Add an alarm") { editing = Alarm.fresh(ctx); isNew = true }, contentAlignment = Alignment.Center) {
-            Label("+  Add an alarm", Title, 11) }
-        Text("Each alarm plays even after the phone restarts. If its station doesn't answer, another one plays, and if none does, " +
-            "the phone's alarm sound rings, so you always wake up. Stop or snooze it from the notification.",
+            .clickable(onClickLabel = t("Add an alarm")) { editing = Alarm.fresh(ctx); isNew = true }, contentAlignment = Alignment.Center) {
+            Label(t("+  Add an alarm"), Title, 11) }
+        Text(t("Each alarm plays even after the phone restarts. If its station doesn't answer, another one plays, and if none does, the phone's alarm sound rings, so you always wake up. Stop or snooze it from the notification."),
             fontSize = 13.sp, color = Soft, lineHeight = 19.sp, modifier = Modifier.padding(top = 16.dp))
     }
     editing?.let { e ->
@@ -554,10 +555,10 @@ fun AlarmScreen(choices: List<Pair<Station, String>>, close: () -> Unit) {
 @Composable
 private fun ExactNote(ctx: android.content.Context) {
     Column(Modifier.padding(top = 12.dp).fillMaxWidth().border(1.dp, GoldC).padding(14.dp)) {
-        Text("To ring exactly on time, allow Radio Velvet to set alarms. Without it an alarm may be a few minutes late.",
+        Text(t("To ring exactly on time, allow Radio Velvet to set alarms. Without it an alarm may be a few minutes late."),
             fontSize = 14.sp, color = Title, lineHeight = 20.sp)
         TextButton({ ctx.startActivity(Intent(AndroidSettings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM,
-            android.net.Uri.parse("package:${ctx.packageName}"))) }, Modifier.heightIn(min = 48.dp)) { Text("Allow alarms", color = AccentText) }
+            android.net.Uri.parse("package:${ctx.packageName}"))) }, Modifier.heightIn(min = 48.dp)) { Text(t("Allow alarms"), color = AccentText) }
     }
 }
 
@@ -574,9 +575,9 @@ fun AlarmEdit(start: Alarm.Setup, isNew: Boolean, choices: List<Pair<Station, St
     Box(Modifier.fillMaxSize()) {
     SubPage(if (isNew) "New alarm" else "Alarm", close) {
         Text(Alarm.timeLabel(s.hour, s.minute, is24), Modifier.fillMaxWidth().padding(top = 10.dp)
-            .clickable(onClickLabel = "Change the time") { pickTime = true }, fontSize = 64.sp, fontWeight = FontWeight.Light,
+            .clickable(onClickLabel = t("Change the time")) { pickTime = true }, fontSize = 64.sp, fontWeight = FontWeight.Light,
             color = Title, textAlign = androidx.compose.ui.text.style.TextAlign.Center)
-        Label("Tap the time to change it", Soft, 9, Modifier.align(Alignment.CenterHorizontally))
+        Label(t("Tap the time to change it"), Soft, 9, Modifier.align(Alignment.CenterHorizontally))
         Field("Name (optional)", s.name, "e.g. Work, Weekend", 30) { s = s.copy(name = it) }
         SectionHead("Repeat · " + Alarm.daysLabel(s.days))
         val quick = listOf("Workdays" to Alarm.WORKDAYS, "Weekend" to Alarm.WEEKEND, "Every day" to Alarm.EVERY_DAY, "Once" to emptySet())
@@ -594,48 +595,48 @@ fun AlarmEdit(start: Alarm.Setup, isNew: Boolean, choices: List<Pair<Station, St
                 }
             }
         }
-        SectionHead("Wake up to")
+        SectionHead(t("Wake up to"))
         val name = s.station?.optString("name")?.takeIf { it.isNotBlank() }
         SettingRow(name ?: "The last station I played", sub = s.station?.optString("lang")?.takeIf { it.isNotBlank() }, onClick = { pickStation = true })
-        SectionHead("If it doesn't play")
-        SettingRow(backupLabel(s.backup), sub = "The phone's alarm sound rings within 20 seconds if nothing plays", onClick = { pickBackup = true })
-        SectionHead("Fade in")
-        Segmented(listOf("Off", "30 s", "1 min", "2 min"), listOf(0, 30, 60, 120).indexOf(s.fadeSec).coerceAtLeast(0)) {
+        SectionHead(t("If it doesn't play"))
+        SettingRow(backupLabel(s.backup), sub = t("The phone's alarm sound rings within 20 seconds if nothing plays"), onClick = { pickBackup = true })
+        SectionHead(t("Fade in"))
+        Segmented(listOf(t("Off"), t("30 s"), t("1 min"), t("2 min")), listOf(0, 30, 60, 120).indexOf(s.fadeSec).coerceAtLeast(0)) {
             s = s.copy(fadeSec = listOf(0, 30, 60, 120)[it]) }
         SectionHead("Volume · ${s.volume}%")
         Slider(s.volume.toFloat(), { s = s.copy(volume = (it / 5).toInt() * 5) },
             valueRange = 20f..100f, colors = SliderDefaults.colors(thumbColor = Accent, activeTrackColor = Accent, inactiveTrackColor = Line))
         Box(Modifier.padding(top = 22.dp).fillMaxWidth().heightIn(min = 52.dp).background(Title)
-            .clickable(onClickLabel = "Save alarm") { Alarm.save(ctx, s.copy(on = true)); close() }, contentAlignment = Alignment.Center) {
-            Label("Save alarm", Paper, 11) }
+            .clickable(onClickLabel = t("Save alarm")) { Alarm.save(ctx, s.copy(on = true)); close() }, contentAlignment = Alignment.Center) {
+            Label(t("Save alarm"), Paper, 11) }
         if (!isNew) Box(Modifier.padding(top = 10.dp).fillMaxWidth().heightIn(min = 52.dp)
-            .clickable(onClickLabel = "Delete alarm") { Alarm.remove(ctx, s.id); close() }, contentAlignment = Alignment.Center) {
-            Label("Delete alarm", AccentText, 11) }
+            .clickable(onClickLabel = t("Delete alarm")) { Alarm.remove(ctx, s.id); close() }, contentAlignment = Alignment.Center) {
+            Label(t("Delete alarm"), AccentText, 11) }
     }
     if (pickTime) {
         val st = rememberTimePickerState(s.hour, s.minute, is24Hour = is24)
         AlertDialog(onDismissRequest = { pickTime = false }, containerColor = Paper,
-            confirmButton = { TextButton({ s = s.copy(hour = st.hour, minute = st.minute); pickTime = false }) { Text("Set", color = AccentText) } },
-            dismissButton = { TextButton({ pickTime = false }) { Text("Cancel", color = Soft) } },
+            confirmButton = { TextButton({ s = s.copy(hour = st.hour, minute = st.minute); pickTime = false }) { Text(t("Set"), color = AccentText) } },
+            dismissButton = { TextButton({ pickTime = false }) { Text(t("Cancel"), color = Soft) } },
             text = { TimePicker(st, colors = TimePickerDefaults.colors(selectorColor = Accent, clockDialColor = Paper2,
                 timeSelectorSelectedContainerColor = AccentSoft, periodSelectorSelectedContainerColor = AccentSoft)) })
     }
     if (pickStation) {
-        SubPage("Wake up to", { pickStation = false }) {
-            SettingRow("The last station I played", onClick = { s = s.copy(station = null); pickStation = false })
-            if (choices.isEmpty()) Text("Add favourites (♡) to choose a station here.", fontSize = 14.sp, color = Soft, modifier = Modifier.padding(top = 12.dp))
+        SubPage(t("Wake up to"), { pickStation = false }) {
+            SettingRow(t("The last station I played"), onClick = { s = s.copy(station = null); pickStation = false })
+            if (choices.isEmpty()) Text(t("Add favourites (♡) to choose a station here."), fontSize = 14.sp, color = Soft, modifier = Modifier.padding(top = 12.dp))
             choices.forEach { (st, lang) ->
                 SettingRow(st.name, sub = lang.ifBlank { null }, onClick = { s = s.copy(station = Alarm.stationJson(st, lang)); pickStation = false })
             }
         }
     }
     if (pickBackup) {
-        SubPage("If it doesn't play", { pickBackup = false }) {
-            Text("First the station's other links are tried. Then:", fontSize = 14.sp, color = Soft, modifier = Modifier.padding(top = 4.dp, bottom = 6.dp))
-            SettingRow("A favourite that's working", sub = "Your favourites in order, then stations you played lately",
+        SubPage(t("If it doesn't play"), { pickBackup = false }) {
+            Text(t("First the station's other links are tried. Then:"), fontSize = 14.sp, color = Soft, modifier = Modifier.padding(top = 4.dp, bottom = 6.dp))
+            SettingRow(t("A favourite that's working"), sub = t("Your favourites in order, then stations you played lately"),
                 onClick = { s = s.copy(backup = "auto"); pickBackup = false })
-            SettingRow("The phone's alarm sound", sub = "No other station", onClick = { s = s.copy(backup = "tone"); pickBackup = false })
-            if (choices.isNotEmpty()) SectionHead("Or this station")
+            SettingRow(t("The phone's alarm sound"), sub = t("No other station"), onClick = { s = s.copy(backup = "tone"); pickBackup = false })
+            if (choices.isNotEmpty()) SectionHead(t("Or this station"))
             choices.filter { it.first.key != s.station?.let { o -> o.optString("col") + ":" + o.optString("id") } }.forEach { (st, lang) ->
                 SettingRow(st.name, sub = lang.ifBlank { null },
                     onClick = { s = s.copy(backup = Alarm.stationJson(st, lang).toString()); pickBackup = false })
@@ -673,21 +674,21 @@ fun RequestScreen(close: () -> Unit) {
     var name by remember { mutableStateOf("") }; var place by remember { mutableStateOf("") }
     var link by remember { mutableStateOf("") }; var note by remember { mutableStateOf("") }
     var busy by remember { mutableStateOf(false) }; var msg by remember { mutableStateOf<String?>(null) }; var sent by remember { mutableStateOf(false) }
-    SubPage("Request a station", close) {
-        Text("Missing a station you love? Tell us and we'll try to add it.", fontSize = 15.sp, color = Title, lineHeight = 22.sp,
+    SubPage(t("Request a station"), close) {
+        Text(t("Missing a station you love? Tell us and we'll try to add it."), fontSize = 15.sp, color = Title, lineHeight = 22.sp,
             modifier = Modifier.padding(top = 6.dp))
         Field("Station name", name, "e.g. Radio Macfast 90.4", 80) { name = it; sent = false }
         Field("City / country", place, "e.g. Changanassery, Kerala", 80) { place = it }
         Field("Link (if you know it)", link, "https://…", 300) { link = it }
         Field("Anything else", note, "e.g. it plays old film songs", 300) { note = it }
         Box(Modifier.padding(top = 26.dp).fillMaxWidth().heightIn(min = 52.dp).background(if (busy || sent) Soft else Title)
-            .clickable(enabled = !busy && !sent, onClickLabel = "Send the request") {
+            .clickable(enabled = !busy && !sent, onClickLabel = t("Send the request")) {
                 scope.launch { busy = true; msg = Requests.send(ctx, name, place, link, note); busy = false
                     if (msg == null) { sent = true; name = ""; place = ""; link = ""; note = "" } } },
             contentAlignment = Alignment.Center) { Label(if (busy) "Sending…" else if (sent) "Sent" else "Send request", Paper, 11) }
-        Text("Only Ranjith reads requests. No name or email needed.", fontSize = 13.sp, color = Soft, modifier = Modifier.padding(top = 12.dp))
+        Text(t("Only Ranjith reads requests. No name or email needed."), fontSize = 13.sp, color = Soft, modifier = Modifier.padding(top = 12.dp))
         if (sent) Row(Modifier.padding(top = 18.dp).fillMaxWidth().border(1.dp, Line).padding(14.dp)) {
-            Text("◆ ", color = GoldC); Text("Thank you! Sent. New stations usually appear within a few days.", fontSize = 14.sp, color = Title, lineHeight = 20.sp) }
+            Text("◆ ", color = GoldC); Text(t("Thank you! Sent. New stations usually appear within a few days."), fontSize = 14.sp, color = Title, lineHeight = 20.sp) }
         msg?.let { Text(it, fontSize = 14.sp, color = AccentText, modifier = Modifier.padding(top = 14.dp)) }
     }
 }
@@ -717,11 +718,11 @@ fun CommentsScreen(stKey: String, stationName: String, close: () -> Unit) {
             Text("  " + when { sum == null -> ""; sum!!.count == 0 -> "No ratings yet"; sum!!.avg == null -> "${sum!!.count} rating${if (sum!!.count == 1) "" else "s"} so far"
                 else -> "${sum!!.count} ratings" }, fontSize = 13.sp, color = Soft, modifier = Modifier.padding(bottom = 8.dp))
         }
-        SectionHead("What listeners say")
+        SectionHead(t("What listeners say"))
         when {
-            list == null -> Text("Loading…", fontSize = 14.sp, color = Soft)
-            failed -> Text("Couldn't load comments. Check the internet.", fontSize = 14.sp, color = Soft)
-            list!!.isEmpty() -> Text("No comments yet. Be the first.", fontSize = 14.sp, color = Soft)
+            list == null -> Text(t("Loading…"), fontSize = 14.sp, color = Soft)
+            failed -> Text(t("Couldn't load comments. Check the internet."), fontSize = 14.sp, color = Soft)
+            list!!.isEmpty() -> Text(t("No comments yet. Be the first."), fontSize = 14.sp, color = Soft)
             else -> list!!.take(30).forEach { c ->
                 Column(Modifier.fillMaxWidth().padding(vertical = 12.dp)) {
                     Row { Text("★".repeat(c.stars.coerceIn(0, 5)), color = GoldC, letterSpacing = 2.sp)
@@ -733,7 +734,7 @@ fun CommentsScreen(stKey: String, stationName: String, close: () -> Unit) {
             }
         }
         SectionHead(if (mine != null) "Your comment" else "Your rating")
-        mine?.takeIf { it.status == "waiting" }?.let { Text("Waiting for a quick check before it appears.", fontSize = 13.sp, color = Soft) }
+        mine?.takeIf { it.status == "waiting" }?.let { Text(t("Waiting for a quick check before it appears."), fontSize = 13.sp, color = Soft) }
         Row {
             (1..5).forEach { n ->
                 IconButton({ stars = n }, Modifier.size(48.dp)) {
@@ -743,14 +744,14 @@ fun CommentsScreen(stKey: String, stationName: String, close: () -> Unit) {
         Field("Say something about this station (optional)", text, "What do you like about it?", 300) { text = it }
         Text("${text.length} / 300", fontSize = 11.sp, color = Soft, modifier = Modifier.align(Alignment.End).padding(top = 4.dp))
         Box(Modifier.padding(top = 18.dp).fillMaxWidth().heightIn(min = 52.dp).background(if (busy || stars == 0) Soft else Title)
-            .clickable(enabled = !busy && stars > 0, onClickLabel = "Post") {
+            .clickable(enabled = !busy && stars > 0, onClickLabel = t("Post")) {
                 scope.launch { busy = true
                     msg = if (text.isBlank()) Ratings.rate(ctx, stKey, stars) ?: "Thanks for rating."
                         else Comments.post(ctx, stKey, stars, text) ?: "Thank you! It will appear after a quick check."
                     busy = false; mine = Comments.mine(ctx, stKey); sum = Ratings.summary(stKey) } },
             contentAlignment = Alignment.Center) { Label(if (busy) "Sending…" else if (text.isBlank()) "Rate" else "Post", Paper, 11) }
         msg?.let { Text(it, fontSize = 14.sp, color = AccentText, modifier = Modifier.padding(top = 12.dp)) }
-        Text("Comments appear after a quick check. Please be kind; no phone numbers or links.", fontSize = 12.sp, color = Soft,
+        Text(t("Comments appear after a quick check. Please be kind; no phone numbers or links."), fontSize = 12.sp, color = Soft,
             modifier = Modifier.padding(top = 12.dp))
     }
 }
@@ -761,7 +762,7 @@ fun CommentsScreen(stKey: String, stationName: String, close: () -> Unit) {
 fun RecentStrip(items: List<Recent.Item>, nowKey: String?, onPlay: (Recent.Item) -> Unit) {
     if (items.isEmpty()) return
     Column {
-        Label("Recently played", Soft, 10, Modifier.padding(start = Pad, top = 14.dp, bottom = 10.dp))
+        Label(t("Recently played"), Soft, 10, Modifier.padding(start = Pad, top = 14.dp, bottom = 10.dp))
         androidx.compose.foundation.lazy.LazyRow(contentPadding = PaddingValues(horizontal = Pad), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
             items(items.size, key = { items[it].station.key }) { i ->
                 val it0 = items[i]; val on = it0.station.key == nowKey

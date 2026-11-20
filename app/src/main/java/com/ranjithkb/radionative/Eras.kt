@@ -68,7 +68,7 @@ object Eras {
     /** Radios with bass / mid / treble knobs (they get a Reset knobs button). */
     fun hasTone(id: String) = id == "receiver" || id == "digital"
     fun byId(id: String) = LIST.firstOrNull { it.id == id }
-    fun name(id: String) = byId(id)?.let { "${it.decade} · ${it.name}" } ?: "Standard player"
+    fun name(id: String) = byId(id)?.let { "${it.decade} · ${it.name}" } ?: Lang.tr("Standard player")
     /** Swiping through the looks in order (Standard first), round and round. */
     fun step(id: String, dir: Int): String {
         val i = IDS.indexOf(id).coerceAtLeast(0)
@@ -280,12 +280,12 @@ fun EraRadio(era: Eras.Era, now: NowState, c: androidx.media3.session.MediaContr
                     Ctl.STOP -> m.clickable(onClickLabel = name) { c?.pause() }.semantics { contentDescription = name; role = Role.Button }
                     Ctl.TUNE -> m.knob(z.wheel, 40f, "TUNE", turn, ::tick, restartOn = c) { n -> repeat(abs(n)) { if (n > 0) c?.nextStation() else c?.prevStation() } }
                         .pointerInput(c) { detectTapGestures { o -> when (side(o.x, size.width)) { 1 -> c?.nextStation(); -1 -> c?.prevStation() } } }
-                        .semantics { contentDescription = "Tuning knob: turn or tap the right side for the next station, the left side for the previous"
+                        .semantics { contentDescription = Lang.tr("Tuning knob: turn or tap the right side for the next station, the left side for the previous")
                             customActions = listOf(CustomAccessibilityAction("Next station") { c?.nextStation(); true },
                                 CustomAccessibilityAction("Previous station") { c?.prevStation(); true }) }
                     Ctl.VOLUME -> m.knob(z.wheel, (270f / max).coerceIn(10f, 30f), "VOLUME", turn, ::tick) { n -> setVol(vol + n) }
                         .pointerInput(Unit) { detectTapGestures { o -> val d = side(o.x, size.width); if (d != 0) setVol(vol + d) } }
-                        .semantics { contentDescription = "Volume knob"; stateDescription = "${vol * 100 / max} percent"
+                        .semantics { contentDescription = Lang.tr("Volume knob"); stateDescription = "${vol * 100 / max} percent"
                             customActions = listOf(CustomAccessibilityAction("Louder") { setVol(vol + 1); true },
                                 CustomAccessibilityAction("Quieter") { setVol(vol - 1); true }) }
                     else -> { val i = bandOf(z.ctl)
@@ -303,11 +303,11 @@ fun EraRadio(era: Eras.Era, now: NowState, c: androidx.media3.session.MediaContr
     if (Eras.hasTone(era.id)) {
         val turned = bands.any { it != 0 }
         Row(Modifier.height(44.dp).alpha(if (turned) 1f else 0.4f)
-            .clickable(enabled = turned, onClickLabel = "Reset the knobs") {
+            .clickable(enabled = turned, onClickLabel = Lang.tr("Reset the knobs")) {
                 bands = IntArray(5); turn.clear(); Eq.save(ctx, false, "Normal", IntArray(5)); tick() }
-            .semantics(mergeDescendants = true) { contentDescription = "Reset knobs: bass, mid and treble back to flat" }
+            .semantics(mergeDescendants = true) { contentDescription = Lang.tr("Reset knobs: bass, mid and treble back to flat") }
             .padding(horizontal = 14.dp), verticalAlignment = Alignment.CenterVertically) {
-            Text("↺  Reset knobs", fontSize = 13.sp, color = Soft, letterSpacing = 0.6.sp)
+            Text(Lang.tr("↺  Reset knobs"), fontSize = 13.sp, color = Soft, letterSpacing = 0.6.sp)
         }
     }
     }
@@ -556,17 +556,15 @@ private fun DrawScope.digital(s: Eras.Skin, v: RadioVals, tm: TextMeasurer) {
 @Composable
 fun PlayerLookScreen(close: () -> Unit) {
     val ctx = LocalContext.current
-    SubPage("Player look", close) {
-        Text("How the big player looks. Needles, meters and lamps move with the music, and the knobs work: tuning changes the station, " +
-            "volume is the phone's volume, bass and treble are the equaliser.", fontSize = 13.sp, color = Soft, lineHeight = 19.sp,
+    SubPage(Lang.tr("Player look"), close) {
+        Text(Lang.tr("How the big player looks. Needles, meters and lamps move with the music, and the knobs work: tuning changes the station, volume is the phone's volume, bass and treble are the equaliser."), fontSize = 13.sp, color = Soft, lineHeight = 19.sp,
             modifier = Modifier.padding(top = 4.dp))
-        SectionHead("Colours")
-        Segmented(listOf("Original radio", "My colour theme"), if (Theme.lookColours == "original") 0 else 1) {
+        SectionHead(Lang.tr("Colours"))
+        Segmented(listOf(Lang.tr("Original radio"), Lang.tr("My colour theme")), if (Theme.lookColours == "original") 0 else 1) {
             Theme.lookColours = if (it == 0) "original" else "theme"; Theme.save(ctx) }
-        Text("Original radio: walnut, bakelite, leather, aluminium… as the radio really was. My colour theme: the same radio in your " +
-            "colour theme. Every look has a light and a dark page, following Settings → Appearance.", fontSize = 12.5.sp, color = Soft,
+        Text(Lang.tr("Original radio: walnut, bakelite, leather, aluminium… as the radio really was. My colour theme: the same radio in your colour theme. Every look has a light and a dark page, following Settings → Appearance."), fontSize = 12.5.sp, color = Soft,
             lineHeight = 18.sp, modifier = Modifier.padding(top = 8.dp))
-        SectionHead("Radio looks")
+        SectionHead(Lang.tr("Radio looks"))
         BoxWithConstraints(Modifier.fillMaxWidth()) {
             val w = ((maxWidth.value - 2 * 12) / 3).coerceAtMost(124f)
             Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
