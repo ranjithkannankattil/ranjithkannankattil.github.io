@@ -169,8 +169,7 @@ window.STATIONS = [
       "https://radio.wavespb.com/live/70400e7510e87cdf/70400e7510e87cdf.m3u8"
     ],
     "freq": "102.3 FM",
-    "akv": "Akashvani Kochi",
-    "offline": true
+    "akv": "Akashvani Kochi"
   },
   {
     "id": "fmrainbowkochi",
@@ -180,8 +179,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/7df6f2a8c3c4d33b/7df6f2a8c3c4d33b.m3u8"
     ],
-    "akv": "FM Rainbow Kochi",
-    "offline": true
+    "akv": "FM Rainbow Kochi"
   },
   {
     "id": "aircalicut",
@@ -1528,4 +1526,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T22:01Z";
+window.STATIONS_CHECKED = "2026-11-20T23:21Z";
