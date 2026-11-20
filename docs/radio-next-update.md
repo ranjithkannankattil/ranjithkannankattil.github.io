@@ -133,3 +133,9 @@ Everything above: star tab, soft pill, tour, several alarms, safety net, and the
   era radios) should feel smooth and fluid: the current look follows the finger and slides out while the next slides in
   (like turning a page), springs back if the swipe is short, with no jump or flash and a gentle settle; the look name
   shows during the slide. Not started; build when he says.
+- **Tidier Info tab** (his ask, 20 Nov 2026: "looks cluttered"). Today it's seven blocks of paragraphs and plain text
+  links. Proposed: (1) a header card: logo, version, "Up to date" or the update button; (2) Your listening; (3) one
+  account row ("Signed in as …" ›, with sign out / delete inside); (4) one list of rows with icons, like Settings:
+  Settings, Alarms, Request a station, Quick tour, Share the app, Write to us; (5) "About" rows that open their own
+  short page: What the app can do (the "good to know" lines), How stations are checked, Privacy policy, Credits, Radio
+  on ranjithkb.com. Same look as the Settings page. Show him a mock-up first; build when he says.
