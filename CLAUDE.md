@@ -97,13 +97,20 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
   (period materials, its own light/dark page while the player is open) or My colour theme. Knobs work (tuning = station, volume =
   phone media volume, bass/mid/treble = equaliser). Only the picture repaints each frame; a paused radio stops drawing once still.
   Device tests `EraDeviceTest` drive the clock by hand (the radio animates while music plays). App only, not on the website.
-- **2.7.0** (sent to Google 19 Nov 2026, code 2031): the Velvet Selection tab is the Velvet logo with a gold star, with one quiet
+- **2.7.0** (sent to Google 19 Nov 2026, code 2031; approved and out 20 Nov): the Velvet Selection tab is the Velvet logo with a gold star, with one quiet
   line "VELVET SELECTION · hand-picked stations" inside (he didn't want a second logo and big heading: "3 layer titles");
   chosen bottom tab on a soft pill; first-launch tour (`Tour.kt`, 8 steps, fresh installs only, replay from Info → Quick tour);
   several alarms (`Alarm.kt`: list in prefs "alarm"/"list", 2.6's single alarm migrates) with a safety net: the station's other
   links → backup (favourites / a chosen station / "tone") → the phone's alarm sound within 20 s; Stop / Snooze 10 min
   notification; a quiet stream check 2 min before; AlarmLog keeps the last 30 lines. Plus round-turning knobs, swipe the cover
   for the player look, Reset knobs.
+- **On Dev for 2.8.0** (built 20 Nov 2026, all tests passing; release when he says): Data saver (`DataSaver.kt`: Off / Mobile
+  data / Always; lightest link first from the site's `br` weights, HLS capped at 64 kbps, no covers; this month's data use
+  counted by the player), smoother player-look swipe (`LookSlide` in Look.kt), tidier Info tab, the app in Malayalam and
+  Hindi (`Lang.kt` table + `t()`; Settings → App language; phone per-app language via locales_config; Manjari bundled), and
+  the fix for "paused, then it played again by itself" in the car (every pause now cancels the resume-after-other-apps
+  helper and reconnecting; an error while paused never moves to the next link). Info → hold the version line shows
+  `PlayLog` (what started/stopped the radio and which app asked) for testers.
 - **Play store screenshots**: real app screens (ScreensTest `p01`–`p13`, 1080 × 2160) captioned on a light cream background,
   1080 × 1920; the chosen 8 are on R2 at `radio/play/<version>/play-01..08.png`. The Play key now also has "Manage store
   presence" (he granted it 19 Nov 2026): run the "Play store screenshots" workflow on main (input: version) to put them on the
