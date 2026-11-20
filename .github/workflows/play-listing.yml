@@ -1,10 +1,10 @@
 name: Play store screenshots
-# By hand only: puts the phone screenshots of one Radio Velvet version (from media.ranjithkb.com) on the Google Play listing.
+# By hand only: puts the phone screenshots (or, with "tv", the Android TV screenshots and banner) of one Radio Velvet version (from media.ranjithkb.com) on the Google Play listing.
 on:
   workflow_dispatch:
     inputs:
       version:
-        description: "Version folder on media.ranjithkb.com/radio/play/ (e.g. 2.7.0)"
+        description: "Version folder on media.ranjithkb.com/radio/play/ (e.g. 2.7.0), or tv for the Android TV screenshots and banner"
         required: true
 permissions:
   contents: read
