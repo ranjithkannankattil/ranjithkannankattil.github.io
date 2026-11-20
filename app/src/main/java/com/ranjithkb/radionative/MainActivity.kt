@@ -652,7 +652,7 @@ fun InfoTab(languages: Int, update: Update?, onPage: (String) -> Unit = {}, onSi
                     Column(Modifier.padding(start = 14.dp).weight(1f)) {
                         Text("RADIO VELVET", fontSize = 15.sp, letterSpacing = 5.sp, fontWeight = FontWeight.Medium, color = Title)
                         Text(t("Elegant sounds, always free"), fontSize = 14.sp, color = InkSoft)
-                        Text("Version ${appVersion(ctx)}" + if (update == null) " · Up to date" else "", fontSize = 13.sp, color = InkSoft)
+                        Text(t("Version") + " ${appVersion(ctx)}" + if (update == null) " · " + t("Up to date") else "", fontSize = 13.sp, color = InkSoft)
                     }
                 }
                 update?.let { u ->
@@ -975,7 +975,7 @@ fun ListeningSection() {
         Listen.account(ctx)?.let { mine = it; synced = true }
         all = Listen.everyone()
     }
-    Text(if (mine.total < 60_000) "Nothing yet — your listening time starts counting now." else "You've listened for ${Listen.hm(mine.total)}",
+    Text(if (mine.total < 60_000) t("Nothing yet — your listening time starts counting now.") else t("You've listened for") + " ${Listen.hm(mine.total)}",
         fontWeight = FontWeight.SemiBold)
     if (mine.total >= 60_000) Text("This week: ${Listen.hm(mine.week)}" + if (synced) " · all your devices" else " · on this phone",
         color = InkSoft, fontSize = 14.sp)

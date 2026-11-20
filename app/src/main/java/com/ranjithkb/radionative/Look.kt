@@ -283,8 +283,8 @@ fun BottomNav(tab: Int, favCount: Int, go: (Int) -> Unit) {
     Column(Modifier.background(Paper).navigationBarsPadding()) {
         HorizontalDivider(color = Line)
         Row(Modifier.fillMaxWidth().height(58.dp)) {
-            listOf(Triple(R.drawable.ln_radio, "Stations", 0), Triple(R.drawable.ln_heart, if (Theme.text >= 2) "Favourites" else "Favourites $favCount", 1),
-                Triple(R.drawable.ln_info, "Info", 2)).forEach { (icon, label, i) ->
+            listOf(Triple(R.drawable.ln_radio, t("Stations"), 0), Triple(R.drawable.ln_heart, if (Theme.text >= 2) t("Favourites") else t("Favourites") + " $favCount", 1),
+                Triple(R.drawable.ln_info, t("Info"), 2)).forEach { (icon, label, i) ->
                 val on = tab == i
                 // the tab you're on sits in a soft pill of the theme's colour, so it's easy to see at a glance
                 val pillInk = if (Theme.dark) GoldC else AccentText

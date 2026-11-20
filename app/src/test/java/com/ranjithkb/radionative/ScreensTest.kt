@@ -89,11 +89,11 @@ class ScreensTest {
     @Composable private fun Stations(playing: Boolean, sortBy: String = "az", tab: Int = 0) = Column(Modifier.fillMaxSize()) {
         Box(Modifier.tourTarget("header")) { Header(onSearch = {}) }
         Box(Modifier.tourTarget("langs")) {
-        LangTabs(listOf(LangTab(PICKS, "Velvet Selection", star = true), LangTab("malayalam", "Malayalam", true),
-            LangTab("english", "English"), LangTab("tamil", "Tamil"), LangTab("_langs", "All languages", icon = true)), "malayalam", {}, {}) }
+        LangTabs(listOf(LangTab(PICKS, t("Velvet Selection"), star = true), LangTab("malayalam", "Malayalam", true),
+            LangTab("english", "English"), LangTab("tamil", "Tamil"), LangTab("_langs", t("All languages"), icon = true)), "malayalam", {}, {}) }
         Box(Modifier.tourTarget("sort")) {
-        CatRow(listOf(Triple("all", "All", 130), Triple("fav", "Favourites", 3), Triple("fm", "FM", -1), Triple("air", "Akashvani", -1),
-            Triple("online", "Online", -1)), "all", {}, SORTS.first { it.first == sortBy }.second, {}) }
+        CatRow(listOf(Triple("all", t("All"), 130), Triple("fav", t("Favourites"), 3), Triple("fm", "FM", -1), Triple("air", "Akashvani", -1),
+            Triple("online", "Online", -1)), "all", {}, t(SORTS.first { it.first == sortBy }.second), {}) }
         val shown = Stats.sort(sts, sortBy, stats)
         val top = if (sortBy == "heard") Stats.top3(shown, stats) else emptySet()
         LazyColumn(Modifier.weight(1f)) {
@@ -122,8 +122,8 @@ class ScreensTest {
     }
     @Composable private fun Picks(dark: Boolean = false) = Column(Modifier.fillMaxSize()) {
         Header(onSearch = {})
-        LangTabs(listOf(LangTab(PICKS, "Velvet Selection", star = true), LangTab("malayalam", "Malayalam", true),
-            LangTab("english", "English"), LangTab("tamil", "Tamil"), LangTab("_langs", "All languages", icon = true)), PICKS, {}, {})
+        LangTabs(listOf(LangTab(PICKS, t("Velvet Selection"), star = true), LangTab("malayalam", "Malayalam", true),
+            LangTab("english", "English"), LangTab("tamil", "Tamil"), LangTab("_langs", t("All languages"), icon = true)), PICKS, {}, {})
         PicksHeading(false)
         LazyColumn(Modifier.weight(1f)) { items(sts.take(7)) { s ->
             StationRow(s, if (s.id == "hit967") "Malayalam · Only plays in the UAE" else "Malayalam", s.id == "radiomango", s.id == "radiomalabar", true, {}, {}) } }
@@ -162,9 +162,10 @@ class ScreensTest {
     @Test fun v50_info_tab() = shot("v50-info", false) { Info() }
     @Test fun v51_info_tab_dark() = shot("v51-info-dark", true) { Info() }
     @Test fun v52_info_tab_scrolled() { shot("v52-info-x", false) { Info() }
-        rule.onNodeWithText("Credits").performScrollTo(); rule.waitForIdle(); capture("v52-info-scrolled") }
+        rule.onNode(hasScrollToNodeAction()).performScrollToNode(hasText("Credits")); rule.waitForIdle(); capture("v52-info-scrolled") }
     @Test fun v53_info_about_page() { shot("v53-info-y", false) { Info() }
-        rule.onNodeWithText("What the app can do").performScrollTo().performClick(); rule.waitForIdle(); capture("v53-info-what-it-can-do")
+        rule.onNode(hasScrollToNodeAction()).performScrollToNode(hasText("What the app can do"))
+        rule.onNodeWithText("What the app can do").performClick(); rule.waitForIdle(); capture("v53-info-what-it-can-do")
         rule.onNodeWithText("Data saver", substring = true).assertExists() }
     @Test @Config(qualifiers = "w360dp-h740dp-xxhdpi") fun v54_info_large_text_360() = shot("v54-info-large-360", false, text = 2) { Info() }
     // ---- the app in Malayalam and Hindi

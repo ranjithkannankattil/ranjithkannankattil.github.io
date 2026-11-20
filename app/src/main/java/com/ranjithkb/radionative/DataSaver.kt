@@ -126,9 +126,9 @@ fun DataSaverScreen(close: () -> Unit) {
         val opts = listOf(DataSaver.OFF, DataSaver.MOBILE, DataSaver.ON)
         Segmented(listOf(t("Off"), t("Mobile data"), t("Always")), opts.indexOf(DataSaver.mode).coerceAtLeast(0)) { DataSaver.save(ctx, opts[it]) }
         Text(when (DataSaver.mode) {
-            DataSaver.ON -> "On all the time, on Wi-Fi too."
-            DataSaver.MOBILE -> "On when the phone is on mobile data; full quality on Wi-Fi."
-            else -> "Off: every station plays at its usual quality."
+            DataSaver.ON -> t("On all the time, on Wi-Fi too.")
+            DataSaver.MOBILE -> t("On when the phone is on mobile data; full quality on Wi-Fi.")
+            else -> t("Off: every station plays at its usual quality.")
         }, fontSize = 13.sp, color = Soft, modifier = Modifier.padding(top = 8.dp))
         SectionHead(t("Used by Radio Velvet this month"))
         SettingRow(t("Mobile data"), value = DataUse.size(use.first))

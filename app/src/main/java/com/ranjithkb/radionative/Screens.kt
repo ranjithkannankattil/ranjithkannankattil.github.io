@@ -572,15 +572,15 @@ fun AlarmEdit(start: Alarm.Setup, isNew: Boolean, choices: List<Pair<Station, St
     var pickBackup by remember { mutableStateOf(false) }
     val is24 = android.text.format.DateFormat.is24HourFormat(ctx)
     Box(Modifier.fillMaxSize()) {
-    SubPage(if (isNew) "New alarm" else "Alarm", close) {
+    SubPage(t(if (isNew) "New alarm" else "Alarm"), close) {
         Text(Alarm.timeLabel(s.hour, s.minute, is24), Modifier.fillMaxWidth().padding(top = 10.dp)
             .clickable(onClickLabel = t("Change the time")) { pickTime = true }, fontSize = 64.sp, fontWeight = FontWeight.Light,
             color = Title, textAlign = androidx.compose.ui.text.style.TextAlign.Center)
         Label(t("Tap the time to change it"), Soft, 9, Modifier.align(Alignment.CenterHorizontally))
-        Field("Name (optional)", s.name, "e.g. Work, Weekend", 30) { s = s.copy(name = it) }
-        SectionHead("Repeat · " + Alarm.daysLabel(s.days))
+        Field(t("Name (optional)"), s.name, t("e.g. Work, Weekend"), 30) { s = s.copy(name = it) }
+        SectionHead(t("Repeat") + " · " + Alarm.daysLabel(s.days))
         val quick = listOf("Workdays" to Alarm.WORKDAYS, "Weekend" to Alarm.WEEKEND, "Every day" to Alarm.EVERY_DAY, "Once" to emptySet())
-        Segmented(quick.map { it.first }, quick.indexOfFirst { it.second == s.days }) { s = s.copy(days = quick[it].second) }
+        Segmented(quick.map { t(it.first) }, quick.indexOfFirst { it.second == s.days }) { s = s.copy(days = quick[it].second) }
         val order = listOf(Calendar.MONDAY to "M", Calendar.TUESDAY to "T", Calendar.WEDNESDAY to "W", Calendar.THURSDAY to "T",
             Calendar.FRIDAY to "F", Calendar.SATURDAY to "S", Calendar.SUNDAY to "S")
         val full = listOf("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
@@ -602,7 +602,7 @@ fun AlarmEdit(start: Alarm.Setup, isNew: Boolean, choices: List<Pair<Station, St
         SectionHead(t("Fade in"))
         Segmented(listOf(t("Off"), t("30 s"), t("1 min"), t("2 min")), listOf(0, 30, 60, 120).indexOf(s.fadeSec).coerceAtLeast(0)) {
             s = s.copy(fadeSec = listOf(0, 30, 60, 120)[it]) }
-        SectionHead("Volume · ${s.volume}%")
+        SectionHead(t("Volume") + " · ${s.volume}%")
         Slider(s.volume.toFloat(), { s = s.copy(volume = (it / 5).toInt() * 5) },
             valueRange = 20f..100f, colors = SliderDefaults.colors(thumbColor = Accent, activeTrackColor = Accent, inactiveTrackColor = Line))
         Box(Modifier.padding(top = 22.dp).fillMaxWidth().heightIn(min = 52.dp).background(Title)
@@ -646,8 +646,8 @@ fun AlarmEdit(start: Alarm.Setup, isNew: Boolean, choices: List<Pair<Station, St
 }
 
 private fun backupLabel(b: String) = when (b) {
-    "auto" -> "A favourite that's working"
-    "tone" -> "The phone's alarm sound"
+    "auto" -> t("A favourite that's working")
+    "tone" -> t("The phone's alarm sound")
     else -> runCatching { org.json.JSONObject(b).optString("name") }.getOrNull()?.ifBlank { null } ?: "A favourite that's working"
 }
 
