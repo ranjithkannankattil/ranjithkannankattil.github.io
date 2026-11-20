@@ -5,14 +5,16 @@ OUT=/tmp/tv; mkdir -p $OUT
 PKG=com.ranjithkb.radio.dev
 APK=$(ls app/build/outputs/apk/play/debug/*.apk | head -1)
 adb install -r "$APK"
-adb shell cmd package query-activities -c android.intent.category.LEANBACK_LAUNCHER > $OUT/tv-launcher.txt
+sleep 5
+adb shell cmd package query-activities -a android.intent.action.MAIN -c android.intent.category.LEANBACK_LAUNCHER > $OUT/tv-launcher.txt
+adb shell dumpsys package $PKG > $OUT/package.txt
 shot() { adb exec-out screencap -p > $OUT/$1.png; }
 key() { adb shell input keyevent "$1"; sleep "${2:-2}"; }
 adb shell screenrecord --bit-rate 4000000 --time-limit 170 /sdcard/tv.mp4 &
 REC=$!
 sleep 2
 # open it the way the TV's home screen does
-adb shell monkey -p $PKG -c android.intent.category.LEANBACK_LAUNCHER 1
+adb shell am start -W -a android.intent.action.MAIN -c android.intent.category.LEANBACK_LAUNCHER -n $PKG/com.ranjithkb.radionative.TvActivity
 sleep 15; shot 01-home
 key DPAD_RIGHT; key DPAD_RIGHT; shot 02-right
 key DPAD_DOWN 3; shot 03-down
@@ -25,6 +27,8 @@ key DPAD_LEFT; key DPAD_CENTER 5; shot 08-paused
 key DPAD_CENTER 10; shot 09-playing-again
 key BACK 3; shot 10-back-to-rows
 key HOME 6; shot 11-tv-home-screen
+adb shell am start -a android.settings.APPLICATION_SETTINGS >/dev/null 2>&1; sleep 1; key HOME 2
+adb shell am start -n com.google.android.tvlauncher/.appsview.AppsViewActivity >/dev/null 2>&1 || true; sleep 6; shot 12-tv-apps
 kill $REC; sleep 5
 adb pull /sdcard/tv.mp4 $OUT/tv.mp4
 adb logcat -d -s VELVET-PLAY:I AndroidRuntime:E ExoPlayerImpl:E > $OUT/log.txt || true
