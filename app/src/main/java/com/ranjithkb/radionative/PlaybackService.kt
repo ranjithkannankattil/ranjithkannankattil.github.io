@@ -65,7 +65,12 @@ class PlaybackService : MediaLibraryService() {
      * restarts the song; for live radio that only reconnects the same station. Here they always change station,
      * and wrap round at the ends of the list.
      */
-    private class StationSkipper(p: Player) : ForwardingPlayer(p) {
+    private class StationSkipper(p: Player, private val onPause: () -> Unit, private val onPlay: () -> Unit) : ForwardingPlayer(p) {
+        // Every pause the listener asks for (phone, lock screen, car, Bluetooth, Android Auto) lands here, even when the
+        // radio was already stopped by something else: it must cancel any plan to start the sound again later.
+        override fun pause() { onPause(); super.pause() }
+        override fun setPlayWhenReady(playWhenReady: Boolean) { if (playWhenReady) onPlay() else onPause(); super.setPlayWhenReady(playWhenReady) }
+        override fun play() { onPlay(); super.play() }
         private val skips = listOf(Player.COMMAND_SEEK_TO_NEXT, Player.COMMAND_SEEK_TO_PREVIOUS,
             Player.COMMAND_SEEK_TO_NEXT_MEDIA_ITEM, Player.COMMAND_SEEK_TO_PREVIOUS_MEDIA_ITEM)
         override fun getAvailableCommands(): Player.Commands = super.getAvailableCommands().let { c ->
@@ -125,6 +130,13 @@ class PlaybackService : MediaLibraryService() {
             override fun onPlayerError(error: PlaybackException) = onFailed(error)
             override fun onAudioSessionIdChanged(audioSessionId: Int) = eq.attach(audioSessionId)
             override fun onPlayWhenReadyChanged(playWhenReady: Boolean, reason: Int) {
+                if (reason != Player.PLAY_WHEN_READY_CHANGE_REASON_USER_REQUEST)
+                    PlayLog.note(this@PlaybackService, (if (playWhenReady) "playing" else "stopped") + " (" + when (reason) {
+                        Player.PLAY_WHEN_READY_CHANGE_REASON_AUDIO_FOCUS_LOSS -> "another app took the sound"
+                        Player.PLAY_WHEN_READY_CHANGE_REASON_AUDIO_BECOMING_NOISY -> "headphones or car unplugged"
+                        Player.PLAY_WHEN_READY_CHANGE_REASON_END_OF_MEDIA_ITEM -> "stream ended"
+                        Player.PLAY_WHEN_READY_CHANGE_REASON_REMOTE -> "cast device"
+                        else -> "reason $reason" } + ")")
                 if (playWhenReady) return
                 stopTone(); giveUpReconnect()
                 if (ringing) stopRing(pause = false)
@@ -159,7 +171,9 @@ class PlaybackService : MediaLibraryService() {
         eq = EqEngine(this); eq.attach(player.audioSessionId)
         resumer = ResumeWatcher(this, scope) { session.player }
         Theme.prefs(this).registerOnSharedPreferenceChangeListener(prefListener)
-        local = StationSkipper(player)
+        local = StationSkipper(player,
+            onPause = { PlayLog.note(this, "pause by " + PlayLog.who); resumer.cancel(); giveUpReconnect(); if (ringing) stopRing(pause = false) },
+            onPlay = { PlayLog.note(this, "play by " + PlayLog.who) })
         session = MediaLibrarySession.Builder(this, local, Callback()).build()
         SleepTimer.pause = { session.player.pause() }
         // Cast: when a TV or speaker is picked, the same list carries on there; back on the phone when casting stops
@@ -368,6 +382,8 @@ class PlaybackService : MediaLibraryService() {
 
     private fun onFailed(error: PlaybackException) {
         val network = error.errorCode in 2000..2999
+        if (!player.playWhenReady && !ringing) {                     // paused by the listener: an error now must not start the sound
+            PlayLog.note(this, "error while paused (${error.errorCodeName}): stays paused"); return }
         if (playedOk && network) { reconnectLater(); return }        // it was on air: the signal, not the station
         if (nextSource()) return
         if (ringing) { nextCandidate(); return }                     // an alarm can't wait: the next station
@@ -387,6 +403,7 @@ class PlaybackService : MediaLibraryService() {
     private fun retryNow() {
         retryJob?.cancel(); retryJob = null
         if (!player.playWhenReady || player.playbackState != Player.STATE_IDLE) return
+        PlayLog.note(this, "reconnecting after the signal dropped")
         val i = player.currentMediaItemIndex
         val item = player.currentMediaItem ?: return
         val ex = item.mediaMetadata.extras
@@ -426,6 +443,7 @@ class PlaybackService : MediaLibraryService() {
 
     /** A stream failed: try the station's next source, if it has one. False when there are no more. */
     private fun nextSource(): Boolean {
+        if (!player.playWhenReady && !ringing) return false
         val i = player.currentMediaItemIndex
         val item = player.currentMediaItem ?: return false
         val ex = item.mediaMetadata.extras ?: return false
@@ -433,6 +451,7 @@ class PlaybackService : MediaLibraryService() {
         val t = ex.getInt("try") + 1
         if (t >= streams.size) return false
         val nex = Bundle(ex).apply { putInt("try", t) }
+        PlayLog.note(this, "trying the station's link ${t + 1} of ${streams.size}")
         player.replaceMediaItem(i, item.buildUpon().setUri(streams[t])
             .setMediaMetadata(item.mediaMetadata.buildUpon().setExtras(nex).build()).build())
         player.prepare(); player.play()
@@ -440,6 +459,13 @@ class PlaybackService : MediaLibraryService() {
     }
 
     private inner class Callback : MediaLibrarySession.Callback {
+        // who sent the last command (for the play log): the app, the lock screen, the car, Android Auto, Bluetooth…
+        override fun onPlayerCommandRequest(s: MediaSession, c: MediaSession.ControllerInfo, playerCommand: Int): Int {
+            PlayLog.who = c.packageName; return super.onPlayerCommandRequest(s, c, playerCommand)
+        }
+        override fun onMediaButtonEvent(s: MediaSession, c: MediaSession.ControllerInfo, intent: android.content.Intent): Boolean {
+            PlayLog.who = "button:" + c.packageName; return super.onMediaButtonEvent(s, c, intent)
+        }
         override fun onConnect(s: MediaSession, c: MediaSession.ControllerInfo): MediaSession.ConnectionResult =
             MediaSession.ConnectionResult.AcceptedResultBuilder(s)
                 .setAvailableSessionCommands(MediaSession.ConnectionResult.DEFAULT_SESSION_AND_LIBRARY_COMMANDS.buildUpon()

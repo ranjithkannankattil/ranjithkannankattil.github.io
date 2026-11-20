@@ -297,7 +297,7 @@ class ResumeWatcher(private val ctx: Context, private val scope: CoroutineScope,
                 // another app playing for more than 5 minutes is the listener's choice (music, a film): don't come back over it later
                 if (busySince != 0L && now - busySince > LONG_MS) break
                 if (shouldResume(true, now - start, if (quietSince == 0L) 0 else now - quietSince, inCall(), false, p.mediaItemCount > 0)) {
-                    p.prepare(); p.play(); break
+                    PlayLog.who = "resume-after-other-app"; p.prepare(); p.play(); break
                 }
                 delay(1000)
             }

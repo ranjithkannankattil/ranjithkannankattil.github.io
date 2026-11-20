@@ -337,6 +337,18 @@ class DeviceTest {
         assertFalse(main { b.isPlaying })
     }
 
+    // ---- his car bug (Nov 2026): after pressing pause, the radio started again by itself
+    @Test fun t21_pause_stays_paused() {
+        playSomething()
+        main { b.pause() }
+        assertTrue(waitFor(5_000, "paused") { !main { b.isPlaying } })
+        main { b.pause() }                                  // pressing pause again (car screens can lag): still fine
+        Thread.sleep(45_000)                                // long enough for any reconnect / resume helper to fire
+        assertFalse("still paused 45 s later", main { b.playWhenReady })
+        log("play log: ${PlayLog.all(ctx).take(6)}")
+        assertTrue("the pause is in the play log", PlayLog.all(ctx).any { it.contains("pause by") })
+    }
+
     @Test fun t11_widget_play_button() {
         playSomething(); main { b.pause() }
         assertTrue(waitFor(5_000, "paused") { !b.isPlaying })

@@ -295,3 +295,20 @@ object AlarmLog {
     }
     fun all(ctx: Context): List<String> = runCatching { JSONArray(p(ctx).getString("l", "[]")).let { a -> (0 until a.length()).map { a.getString(it) } } }.getOrDefault(emptyList())
 }
+
+/**
+ * What started or stopped the radio lately, and who asked (the app, lock screen, car, Bluetooth, Android Auto, the
+ * "resume after other apps" helper, reconnecting…). Kept on the phone (last 40 lines); Info → hold the version line.
+ */
+object PlayLog {
+    @Volatile var who: String = "app"
+    private fun p(ctx: Context) = ctx.getSharedPreferences("playlog", Context.MODE_PRIVATE)
+    fun note(ctx: Context, line: String) {
+        android.util.Log.i("VELVET-PLAY", line)
+        val t = java.text.SimpleDateFormat("dd MMM HH:mm:ss", java.util.Locale.UK).format(java.util.Date())
+        val l = (listOf("$t  $line") + all(ctx)).take(40)
+        p(ctx).edit().putString("l", JSONArray(l).toString()).apply()
+        who = "app"
+    }
+    fun all(ctx: Context): List<String> = runCatching { JSONArray(p(ctx).getString("l", "[]")).let { a -> (0 until a.length()).map { a.getString(it) } } }.getOrDefault(emptyList())
+}

@@ -637,6 +637,7 @@ fun FullPlayer(now: NowState, c: MediaController?, cast: CastUi, onCloseAll: () 
     }
 }
 
+@OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
 @Composable
 fun InfoTab(languages: Int, update: Update?, onPage: (String) -> Unit = {}, onSignIn: () -> Unit, onSignOut: () -> Unit) {
     val ctx = LocalContext.current
@@ -652,7 +653,18 @@ fun InfoTab(languages: Int, update: Update?, onPage: (String) -> Unit = {}, onSi
                     Column(Modifier.padding(start = 14.dp).weight(1f)) {
                         Text("RADIO VELVET", fontSize = 15.sp, letterSpacing = 5.sp, fontWeight = FontWeight.Medium, color = Title)
                         Text(t("Elegant sounds, always free"), fontSize = 14.sp, color = InkSoft)
-                        Text(t("Version") + " ${appVersion(ctx)}" + if (update == null) " · " + t("Up to date") else "", fontSize = 13.sp, color = InkSoft)
+                        var log by remember { mutableStateOf(false) }
+                        Text(t("Version") + " ${appVersion(ctx)}" + if (update == null) " · " + t("Up to date") else "", fontSize = 13.sp, color = InkSoft,
+                            modifier = Modifier.combinedClickable(onClick = {}, onLongClickLabel = "Show what the radio did lately", onLongClick = { log = true }))
+                        // for testing: hold the version line to see what started or stopped the radio, and who asked
+                        if (log) AlertDialog(onDismissRequest = { log = false }, title = { Text("What the radio did lately") },
+                            text = { Column(Modifier.heightIn(max = 420.dp).verticalScroll(rememberScrollState())) {
+                                (PlayLog.all(ctx) + listOf("— alarms —") + AlarmLog.all(ctx)).forEach { Text(it, fontSize = 12.sp, lineHeight = 16.sp) } } },
+                            confirmButton = { TextButton({ log = false }) { Text(t("OK")) } },
+                            dismissButton = { TextButton({
+                                val cm = ctx.getSystemService(android.content.ClipboardManager::class.java)
+                                cm?.setPrimaryClip(android.content.ClipData.newPlainText("Radio Velvet log", (PlayLog.all(ctx) + AlarmLog.all(ctx)).joinToString("\n")))
+                            }) { Text("Copy") } })
                     }
                 }
                 update?.let { u ->
