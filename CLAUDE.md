@@ -104,7 +104,7 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
   links → backup (favourites / a chosen station / "tone") → the phone's alarm sound within 20 s; Stop / Snooze 10 min
   notification; a quiet stream check 2 min before; AlarmLog keeps the last 30 lines. Plus round-turning knobs, swipe the cover
   for the player look, Reset knobs.
-- **On Dev for 2.8.0** (built 20 Nov 2026, all tests passing; release when he says): Data saver (`DataSaver.kt`: Off / Mobile
+- **2.8.0** (sent to Google 20 Nov 2026, code 2032): Data saver (`DataSaver.kt`: Off / Mobile
   data / Always; lightest link first from the site's `br` weights, HLS capped at 64 kbps, no covers; this month's data use
   counted by the player), smoother player-look swipe (`LookSlide` in Look.kt), tidier Info tab, the app in Malayalam and
   Hindi (`Lang.kt` table + `t()`; Settings → App language; phone per-app language via locales_config; Manjari bundled), and
