@@ -116,11 +116,17 @@ fun TvApp(c: MediaController?) {
     }
 }
 
+@OptIn(androidx.compose.ui.ExperimentalComposeUiApi::class)
 @Composable
 fun TvHome(cols: List<Collection>, favs: List<Station>, now: NowState, onOpenPlayer: () -> Unit,
            load: (suspend (String) -> List<Station>)? = null, play: (List<Station>, Station) -> Unit) {
     val ctx = LocalContext.current
     val first = remember { FocusRequester() }
+    // A TV is driven by the remote: make sure Compose is in remote (keyboard) mode, where tiles can take focus,
+    // even on boxes that report a touchscreen.
+    val input = androidx.compose.ui.platform.LocalInputModeManager.current
+    LaunchedEffect(Unit) { runCatching {
+        input.requestInputMode(androidx.compose.ui.input.InputMode.Keyboard) } }
     val rows = remember(cols, favs.isNotEmpty()) { tvRows(cols, favs.isNotEmpty()) }
     Column(Modifier.fillMaxSize().padding(start = 48.dp, top = 28.dp)) {
         Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(end = 48.dp)) {
@@ -185,10 +191,13 @@ fun TvChip(text: String, onClick: () -> Unit) {
 }
 
 /** The full-screen player: cover, station, song and big buttons for the remote. Back returns to the rows. */
+@OptIn(androidx.compose.ui.ExperimentalComposeUiApi::class)
 @Composable
 fun TvPlayer(now: NowState, c: MediaController?, isFav: Boolean, onFav: () -> Unit) {
     val playBtn = remember { FocusRequester() }
-    LaunchedEffect(Unit) { runCatching { playBtn.requestFocus() } }
+    val input = androidx.compose.ui.platform.LocalInputModeManager.current
+    LaunchedEffect(Unit) { runCatching {
+        input.requestInputMode(androidx.compose.ui.input.InputMode.Keyboard); playBtn.requestFocus() } }
     val station = now.md.extras?.getString("station") ?: now.md.station?.toString() ?: ""
     val song = now.md.title?.toString()?.takeIf { it != station }
     Row(Modifier.fillMaxSize().padding(64.dp), verticalAlignment = Alignment.CenterVertically) {
