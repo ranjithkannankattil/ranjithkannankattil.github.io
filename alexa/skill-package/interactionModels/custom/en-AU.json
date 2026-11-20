@@ -288,6 +288,13 @@
        }
       },
       {
+       "id": "malayalam:airdevikulam",
+       "name": {
+        "value": "AIR Devikulam",
+        "synonyms": []
+       }
+      },
+      {
        "id": "malayalam:airkozhikodefm",
        "name": {
         "value": "AIR Kozhikode FM",
