@@ -116,6 +116,11 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
   presence" (he granted it 19 Nov 2026): run the "Play store screenshots" workflow on main (input: version) to put them on the
   listing (2.7.0's went up that day). Keep listing changes out of the release
   upload (a failed commit there would lose the release).
+- **Android TV** (on `radio-native-dev`, not released yet): `TvActivity.kt` (rows of stations for the remote, big player, always dark),
+  its own LEANBACK launcher entry and banner. `tv-test.yml` drives it on an Android TV emulator (screenshots + video to branch
+  `velvet-tv-results`). Play Console: Android TV form factor added by him 20 Nov 2026; TV screenshots + 1280×720 banner are on R2 at
+  `radio/play/tv/` and went on the listing (run "Play store screenshots" with `tv`). Still to do: release a bundle with TV in it
+  (planned 2.9.0, after 2.8.0 is approved), mention "Android TV" in the description, then he opts in under Form factors.
 - Old Capacitor wrapper: branch `radio-app` (don't push there — it would publish a 1.x release).
   iPhone: still that wrapper, installed from his Mac with Xcode (free Apple ID, re-run every 7 days);
   no iPhone app for other people — the site says so.
