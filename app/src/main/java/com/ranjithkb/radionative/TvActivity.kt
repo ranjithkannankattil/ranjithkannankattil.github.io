@@ -128,8 +128,8 @@ fun TvHome(cols: List<Collection>, favs: List<Station>, now: NowState, onOpenPla
     LaunchedEffect(Unit) { runCatching {
         input.requestInputMode(androidx.compose.ui.input.InputMode.Keyboard) } }
     val rows = remember(cols, favs.isNotEmpty()) { tvRows(cols, favs.isNotEmpty()) }
-    Column(Modifier.fillMaxSize().padding(start = 48.dp, top = 28.dp)) {
-        Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(end = 48.dp)) {
+    Column(Modifier.fillMaxSize().padding(start = 34.dp, top = 28.dp)) {
+        Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(start = 14.dp, end = 48.dp)) {
             Icon(painterResource(R.drawable.ic_logo_mark), null, Modifier.size(40.dp), tint = GoldC)
             Text("RADIO VELVET", Modifier.padding(start = 14.dp), fontSize = 22.sp, letterSpacing = 8.sp, color = Title, fontWeight = FontWeight.Medium)
             Spacer(Modifier.weight(1f))
@@ -143,10 +143,10 @@ fun TvHome(cols: List<Collection>, favs: List<Station>, now: NowState, onOpenPla
                     list = (if (r.id == "_favs") favs else load?.invoke(r.id) ?: if (r.id == PICKS) Repo.picks(ctx) else Repo.stations(ctx, r.id)).filter { !it.offline }
                 }
                 Column {
-                    Text(r.title, fontSize = 20.sp, color = Title, fontWeight = FontWeight.Medium, modifier = Modifier.padding(bottom = 10.dp))
+                    Text(r.title, fontSize = 20.sp, color = Title, fontWeight = FontWeight.Medium, modifier = Modifier.padding(start = 14.dp, bottom = 4.dp))
                     val l = list
-                    if (l == null) Text(t("Loading…"), color = Soft, fontSize = 15.sp, modifier = Modifier.height(96.dp))
-                    else LazyRow(horizontalArrangement = Arrangement.spacedBy(16.dp), contentPadding = PaddingValues(end = 48.dp, top = 6.dp, bottom = 6.dp)) {
+                    if (l == null) Text(t("Loading…"), color = Soft, fontSize = 15.sp, modifier = Modifier.padding(start = 14.dp).height(96.dp))
+                    else LazyRow(horizontalArrangement = Arrangement.spacedBy(16.dp), contentPadding = PaddingValues(start = 14.dp, end = 48.dp, top = 10.dp, bottom = 10.dp)) {
                         items(l, key = { it.key }) { s ->
                             val isFirst = r.id == rows.first().id && s == l.first()
                             TvCard(s, r.title, playing = now.id == "st|${s.key}", mod = if (isFirst) Modifier.focusRequester(first) else Modifier) { play(l, s) }
