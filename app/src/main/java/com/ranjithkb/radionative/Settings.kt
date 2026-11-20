@@ -88,6 +88,7 @@ object Theme {
     var spacing by mutableStateOf(0)             // 0 compact · 1 comfortable · 2 spacious
     var viz by mutableStateOf("off")             // bars · waves · circle · off
     var resume by mutableStateOf(true)           // carry on after another app's video
+    var favTiles by mutableStateOf(false)        // Favourites as a grid of tiles instead of a list
     var look by mutableStateOf("std")            // the big player: std (today's) or a radio from Eras.LIST
     var lookColours by mutableStateOf("original") // original (the radio's own materials) · theme (the colour theme)
     /** True while the big player is on screen (it covers everything else). */
@@ -108,12 +109,14 @@ object Theme {
         spacing = p.getInt("spacing", 0).coerceIn(0, 2)
         viz = p.getString("viz", "off")!!.let { if (it in listOf("bars", "waves", "circle", "off")) it else "off" }
         resume = p.getBoolean("resume", true)
+        favTiles = p.getBoolean("favTiles", false)
         look = p.getString("look", "std")!!.let { if (it in Eras.IDS) it else "std" }
         lookColours = p.getString("lookColours", "original")!!.let { if (it in listOf("original", "theme")) it else "original" }
     }
     fun save(ctx: Context) {
         prefs(ctx).edit().putString("theme", themeId).putString("mode", mode).putInt("text", text).putString("font", font)
             .putInt("spacing", spacing).putString("viz", viz).putBoolean("resume", resume)
+            .putBoolean("favTiles", favTiles)
             .putString("look", look).putString("lookColours", lookColours).apply()
     }
 }

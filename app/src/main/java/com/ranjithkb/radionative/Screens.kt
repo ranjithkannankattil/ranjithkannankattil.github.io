@@ -234,6 +234,8 @@ fun SettingsScreen(close: () -> Unit, open: (String) -> Unit) {
         }
         SectionHead(t("Station list"))
         Segmented(listOf(t("Compact"), t("Comfortable"), t("Spacious")), Theme.spacing) { Theme.spacing = it; save() }
+        SectionHead(t("Favourites"))
+        Segmented(listOf(t("List"), t("Tiles")), if (Theme.favTiles) 1 else 0) { Theme.favTiles = it == 1; save() }
 
         SectionHead(t("Sound"))
         SettingRow(t("Equaliser"), value = if (Eq.on(ctx)) Eq.preset(ctx) else "Off", onClick = { open("eq") })

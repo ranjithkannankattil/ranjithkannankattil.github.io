@@ -313,6 +313,28 @@ class ScreensTest {
         Header(onSearch = {})
         FavsTab(sts.take(4), now(), { "Malayalam" }, {}, recent = sts.take(5).mapIndexed { i, s -> Recent.Item(s, "Malayalam",
             System.currentTimeMillis() - i * 30 * 3_600_000L) }, onRecent = {}, onChanged = {}, favs = Favs(rule.activity), onPicks = {}) } }
+    // ---- Favourites as tiles (Settings → Favourites → Tiles)
+    private fun tiles(name: String, dark: Boolean, lang: String = "en") {
+        Theme.favTiles = true; Lang.code = lang
+        try { shot(name, dark) { Column(Modifier.fillMaxSize()) { Header(onSearch = {})
+            FavsTab(sts, now(true), { "Malayalam" }, {}, recent = emptyList(), onRecent = {}, onChanged = {}, favs = Favs(rule.activity), onPicks = {}) } } }
+        finally { Theme.favTiles = false; Lang.code = "en" }
+    }
+    @Test fun f01_fav_tiles() = tiles("f01-fav-tiles", false)
+    @Test fun f02_fav_tiles_dark() = tiles("f02-fav-tiles-dark", true)
+    @Test @Config(qualifiers = "w360dp-h740dp-xxhdpi") fun f03_fav_tiles_360() = tiles("f03-fav-tiles-360", false)
+    @Test fun f04_fav_tiles_malayalam() = tiles("f04-fav-tiles-ml", false, "ml")
+    @Test fun f05_fav_tiles_tap_plays_and_heart_removes() {
+        Theme.favTiles = true
+        var played: String? = null; var removed: String? = null
+        try {
+            rule.setContent { FavTiles(sts, now(false), { "Malayalam" }, { played = it.name }) { _, s -> removed = s.name } }
+            rule.onNodeWithContentDescription(sts[1].name + ", Malayalam").performClick()
+            assertEquals(sts[1].name, played)
+            rule.onNodeWithContentDescription("Remove from favourites " + sts[2].name).performClick()
+            assertEquals(sts[2].name, removed)
+        } finally { Theme.favTiles = false }
+    }
     @Test @Config(qualifiers = "w360dp-h740dp-xxhdpi") fun n16_extra_large_text_360() = shot("n16-extra-large-360", false, text = 2) { Stations(true, "heard") }
     @Test fun n17_classic_serif_spacious() = shot("n17-serif-spacious", false, font = "serif", spacing = 2) { Stations(true) }
     @Test @Config(qualifiers = "w360dp-h740dp-xxhdpi") fun n18_settings_large_360() = shot("n18-settings-large-360", false, text = 2) { SettingsScreen({}) {} }

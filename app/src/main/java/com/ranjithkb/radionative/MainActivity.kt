@@ -30,6 +30,7 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
@@ -438,6 +439,44 @@ fun App(c: MediaController?) {
     }
 }
 
+/**
+ * Favourites as tiles (Settings → Favourites → Tiles): three or more to a row, each with the station's initials,
+ * its name and language. Tap to play; the small ♥ takes it out of Favourites (with Undo, like the list).
+ */
+@OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
+@Composable
+fun FavTiles(list: List<Station>, now: NowState, langOf: (Station) -> String, onPlay: (Station) -> Unit,
+             onRemove: (Int, Station) -> Unit) {
+    androidx.compose.foundation.lazy.grid.LazyVerticalGrid(
+        androidx.compose.foundation.lazy.grid.GridCells.Adaptive(104.dp), Modifier.fillMaxSize(),
+        contentPadding = PaddingValues(start = 12.dp, end = 12.dp, top = 4.dp, bottom = 84.dp),
+        horizontalArrangement = Arrangement.spacedBy(10.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+        items(list.size, key = { list[it].key }) { i ->
+            val s = list[i]
+            val current = "st|${s.key}" == now.id
+            val on = current && now.playing
+            Box(Modifier.animateItem().fillMaxWidth().aspectRatio(0.86f).clip(RoundedCornerShape(12.dp))
+                .background(if (current) AccentSoft else Paper2)
+                .border(if (current) 2.dp else 1.dp, if (current) Accent else Line, RoundedCornerShape(12.dp))
+                .clickable(onClickLabel = t("Play")) { onPlay(s) }
+                .semantics(mergeDescendants = true) { contentDescription = s.name + ", " + langOf(s) + (if (on) ", " + t("Now playing") else "") }) {
+                Column(Modifier.fillMaxSize().padding(10.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+                    Spacer(Modifier.height(6.dp))
+                    Tile(s.name, on, 48)
+                    Spacer(Modifier.height(8.dp))
+                    Text(s.name, fontWeight = FontWeight.SemiBold, fontSize = 14.sp, lineHeight = 17.sp, maxLines = 2,
+                        overflow = TextOverflow.Ellipsis, textAlign = androidx.compose.ui.text.style.TextAlign.Center, color = Title)
+                    Spacer(Modifier.weight(1f))
+                    Text(langOf(s), fontSize = 11.sp, color = InkSoft, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                }
+                Box(Modifier.align(Alignment.TopEnd).size(44.dp).clickable(onClickLabel = t("Remove from favourites")) { onRemove(i, s) },
+                    contentAlignment = Alignment.Center) {
+                    Icon(Icons.Filled.Favorite, t("Remove from favourites") + " " + s.name, Modifier.size(16.dp), tint = Accent) }
+            }
+        }
+    }
+}
+
 @Composable
 fun Tile(name: String, on: Boolean, size: Int = 44) {
     val ini = name.split(Regex("[^\\p{L}\\p{N}]+")).filter { it.isNotEmpty() }.take(2).joinToString("") { it.take(1) }.uppercase()
@@ -494,7 +533,8 @@ fun FavsTab(list: List<Station>, now: NowState, langOf: (Station) -> String, onP
             }
         }
         Box(Modifier.fillMaxSize()) {
-LazyColumn(state = listState, contentPadding = PaddingValues(bottom = 72.dp)) {
+if (Theme.favTiles && !edit) FavTiles(list, now, langOf, onPlay) { i, s -> undo = s to i; favs.remove(s.key); onChanged() }
+else LazyColumn(state = listState, contentPadding = PaddingValues(bottom = 72.dp)) {
             if (!edit) itemsIndexed(list, key = { _, s -> s.key }) { i, s ->
                 StationRow(s, langOf(s), true, "st|${s.key}" == now.id, now.playing,
                     onPlay = { onPlay(s) }, onFav = { undo = s to i; favs.remove(s.key); onChanged() })
