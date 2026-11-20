@@ -65,7 +65,7 @@ class PlaybackService : MediaLibraryService() {
      * restarts the song; for live radio that only reconnects the same station. Here they always change station,
      * and wrap round at the ends of the list.
      */
-    private class StationSkipper(p: Player, private val onPause: () -> Unit, private val onPlay: () -> Unit) : ForwardingPlayer(p) {
+    private class StationSkipper(p: Player, private val onPause: () -> Unit = {}, private val onPlay: () -> Unit = {}) : ForwardingPlayer(p) {
         // Every pause the listener asks for (phone, lock screen, car, Bluetooth, Android Auto) lands here, even when the
         // radio was already stopped by something else: it must cancel any plan to start the sound again later.
         override fun pause() { onPause(); super.pause() }
