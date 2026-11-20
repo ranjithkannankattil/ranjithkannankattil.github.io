@@ -226,6 +226,15 @@
        }
       },
       {
+       "id": "malayalam:livefm1072",
+       "name": {
+        "value": "Live FM 1072",
+        "synonyms": [
+         "live fm one zero seven two"
+        ]
+       }
+      },
+      {
        "id": "malayalam:radiolemonnz",
        "name": {
         "value": "Radio Lemon New Zealand",
@@ -275,13 +284,6 @@
        "id": "malayalam:airalappuzha",
        "name": {
         "value": "AIR Alappuzha",
-        "synonyms": []
-       }
-      },
-      {
-       "id": "malayalam:airdevikulam",
-       "name": {
-        "value": "AIR Devikulam",
         "synonyms": []
        }
       },
@@ -2044,16 +2046,6 @@
        }
       },
       {
-       "id": "english-news:cjad-800",
-       "name": {
-        "value": "CJAD 800",
-        "synonyms": [
-         "cjad",
-         "cjad eight hundred"
-        ]
-       }
-      },
-      {
        "id": "english-news:kpub-npr-arizona",
        "name": {
         "value": "KPUB NPR Arizona",
@@ -2353,6 +2345,16 @@
        }
       },
       {
+       "id": "english-talk:cjad-800",
+       "name": {
+        "value": "CJAD 800",
+        "synonyms": [
+         "cjad",
+         "cjad eight hundred"
+        ]
+       }
+      },
+      {
        "id": "english-talk:wrfz-rochester-free-radio",
        "name": {
         "value": "WRFZ - Rochester Free Radio",
@@ -2499,16 +2501,6 @@
        "name": {
         "value": "DrGnu - Gothic",
         "synonyms": []
-       }
-      },
-      {
-       "id": "english-talk:glow-99-1-fm-akure",
-       "name": {
-        "value": "Glow 99.1 FM Akure",
-        "synonyms": [
-         "glow fm akure",
-         "glow ninety nine point one fm akure"
-        ]
        }
       },
       {
@@ -3973,13 +3965,6 @@
        }
       },
       {
-       "id": "hindi:fm-gold-mumbai",
-       "name": {
-        "value": "FM Gold Mumbai",
-        "synonyms": []
-       }
-      },
-      {
        "id": "hindi:radio-mirchi-usa",
        "name": {
         "value": "Radio Mirchi USA",
@@ -4102,6 +4087,13 @@
         "synonyms": [
          "maharani"
         ]
+       }
+      },
+      {
+       "id": "hindi:live-fm",
+       "name": {
+        "value": "Live FM",
+        "synonyms": []
        }
       },
       {
@@ -6868,6 +6860,13 @@
        }
       },
       {
+       "id": "akan:angel-fm",
+       "name": {
+        "value": "Angel FM",
+        "synonyms": []
+       }
+      },
+      {
        "id": "akan:ghana-music-radio",
        "name": {
         "value": "Ghana Music Radio",
@@ -7427,6 +7426,16 @@
         "synonyms": [
          "diamond fm",
          "diamond one hundred one point one fm"
+        ]
+       }
+      },
+      {
+       "id": "yoruba-hausa:usaku-fm-90-5",
+       "name": {
+        "value": "Usaku FM 90.5",
+        "synonyms": [
+         "usaku fm",
+         "usaku fm ninety point five"
         ]
        }
       },
@@ -9534,6 +9543,15 @@
        }
       },
       {
+       "id": "french:radio-express-fm",
+       "name": {
+        "value": "Radio Express FM",
+        "synonyms": [
+         "express fm"
+        ]
+       }
+      },
+      {
        "id": "french:la-grande-musique-baroque",
        "name": {
         "value": "LA GRANDE MUSIQUE Baroque",
@@ -9899,6 +9917,13 @@
        "id": "korean:ebs-tv-i",
        "name": {
         "value": "EBS TV-i",
+        "synonyms": []
+       }
+      },
+      {
+       "id": "korean:gukak-tv",
+       "name": {
+        "value": "Gukak TV",
         "synonyms": []
        }
       },
@@ -10810,20 +10835,21 @@
        }
       },
       {
+       "id": "spanish-latam:fm-soldados-87-5",
+       "name": {
+        "value": "FM Soldados 87.5",
+        "synonyms": [
+         "fm soldados",
+         "fm soldados eighty seven point five"
+        ]
+       }
+      },
+      {
        "id": "spanish-latam:wonder-80-s-flashback",
        "name": {
         "value": "Wonder 80's Flashback",
         "synonyms": [
          "wonder 's flashback"
-        ]
-       }
-      },
-      {
-       "id": "spanish-latam:radio-canela-guayas",
-       "name": {
-        "value": "Radio Canela Guayas",
-        "synonyms": [
-         "canela guayas"
         ]
        }
       },
@@ -11009,19 +11035,6 @@
        }
       },
       {
-       "id": "spanish-latam:radio-canela-pichincha-106-5-fm",
-       "name": {
-        "value": "Radio Canela Pichincha 106.5 FM",
-        "synonyms": [
-         "canela pichincha 106.5 fm",
-         "canela pichincha fm",
-         "canela pichincha one hundred six point five fm",
-         "radio canela pichincha fm",
-         "radio canela pichincha one hundred six point five fm"
-        ]
-       }
-      },
-      {
        "id": "spanish-latam:baladas-rs",
        "name": {
         "value": "Baladas Rs",
@@ -11174,17 +11187,6 @@
        "name": {
         "value": "Navidad Venezuela",
         "synonyms": []
-       }
-      },
-      {
-       "id": "spanish-latam:96-7-radio-rebelde-fm",
-       "name": {
-        "value": "96.7 Radio Rebelde FM",
-        "synonyms": [
-         "ninety six point seven radio rebelde fm",
-         "radio rebelde fm",
-         "rebelde fm"
-        ]
        }
       },
       {
@@ -11827,16 +11829,6 @@
        }
       },
       {
-       "id": "portuguese-portugal:antena-2-jazzin-portugal",
-       "name": {
-        "value": "Antena 2 Jazzin (Portugal)",
-        "synonyms": [
-         "antena 2 jazzin portugal",
-         "antena two jazzin portugal"
-        ]
-       }
-      },
-      {
        "id": "portuguese-portugal:rfm-toca-portugal",
        "name": {
         "value": "RFM Toca Portugal",
@@ -11904,6 +11896,16 @@
         "value": "Antena 1 Fado",
         "synonyms": [
          "antena one fado"
+        ]
+       }
+      },
+      {
+       "id": "portuguese-portugal:antena-1-madeira-portugal",
+       "name": {
+        "value": "Antena 1 Madeira (Portugal)",
+        "synonyms": [
+         "antena 1 madeira portugal",
+         "antena one madeira portugal"
         ]
        }
       },
@@ -14864,13 +14866,6 @@
        }
       },
       {
-       "id": "polish:happy-station",
-       "name": {
-        "value": "Happy Station",
-        "synonyms": []
-       }
-      },
-      {
        "id": "polish:zet-impreza",
        "name": {
         "value": "ZET Impreza",
@@ -15070,16 +15065,6 @@
        }
       },
       {
-       "id": "greek:diesi-cyprus-101-1",
-       "name": {
-        "value": "Diesi Cyprus 101.1",
-        "synonyms": [
-         "diesi cyprus",
-         "diesi cyprus one hundred one point one"
-        ]
-       }
-      },
-      {
        "id": "greek:skai-100-3",
        "name": {
         "value": "Skai 100.3",
@@ -15265,13 +15250,6 @@
        "id": "greek:trito-live",
        "name": {
         "value": "Trito Live",
-        "synonyms": []
-       }
-      },
-      {
-       "id": "greek:hit-ellinikos",
-       "name": {
-        "value": "Hit Ellinikos",
         "synonyms": []
        }
       },
@@ -15487,6 +15465,16 @@
        "name": {
         "value": "1st Greek 80s FLAC Radio",
         "synonyms": []
+       }
+      },
+      {
+       "id": "greek:thess-94-5",
+       "name": {
+        "value": "Thess 94.5",
+        "synonyms": [
+         "thess",
+         "thess ninety four point five"
+        ]
        }
       },
       {
@@ -16068,13 +16056,6 @@
        "id": "russian:russian-lounge",
        "name": {
         "value": "Russian Lounge",
-        "synonyms": []
-       }
-      },
-      {
-       "id": "russian:brokenbeats",
-       "name": {
-        "value": "Brokenbeats",
         "synonyms": []
        }
       },
@@ -17303,13 +17284,6 @@
        }
       },
       {
-       "id": "hungarian:plusz-fm-nagyvarad",
-       "name": {
-        "value": "Plusz FM - Nagyvarad",
-        "synonyms": []
-       }
-      },
-      {
        "id": "hungarian:clubflashh-radio",
        "name": {
         "value": "Clubflashh Radio",
@@ -17327,13 +17301,6 @@
        "id": "hungarian:lahmacun-radio",
        "name": {
         "value": "Lahmacun Radio",
-        "synonyms": []
-       }
-      },
-      {
-       "id": "hungarian:plusz-fm-margitta",
-       "name": {
-        "value": "Plusz FM - Margitta",
         "synonyms": []
        }
       },
@@ -17478,13 +17445,6 @@
         "synonyms": [
          "frekvence one"
         ]
-       }
-      },
-      {
-       "id": "czech:express-fm",
-       "name": {
-        "value": "Express FM",
-        "synonyms": []
        }
       },
       {
@@ -18430,15 +18390,6 @@
        }
       },
       {
-       "id": "serbian:radio-san-loznica",
-       "name": {
-        "value": "Radio San Loznica",
-        "synonyms": [
-         "san loznica"
-        ]
-       }
-      },
-      {
        "id": "serbian:plus-radio-rock",
        "name": {
         "value": "Plus Radio Rock",
@@ -18828,6 +18779,15 @@
        }
       },
       {
+       "id": "bosnian:radio-studio-m",
+       "name": {
+        "value": "Radio Studio M",
+        "synonyms": [
+         "studio m"
+        ]
+       }
+      },
+      {
        "id": "bosnian:radio-glas-drine",
        "name": {
         "value": "Radio Glas Drine",
@@ -19006,15 +18966,6 @@
        "name": {
         "value": "Moj Radio",
         "synonyms": []
-       }
-      },
-      {
-       "id": "bosnian:radio-bosanski-petrovac",
-       "name": {
-        "value": "Radio Bosanski Petrovac",
-        "synonyms": [
-         "bosanski petrovac"
-        ]
        }
       },
       {
@@ -19325,6 +19276,13 @@
         "synonyms": [
          "city hiphop r and b"
         ]
+       }
+      },
+      {
+       "id": "bulgarian:veselina-retro",
+       "name": {
+        "value": "Veselina Retro",
+        "synonyms": []
        }
       },
       {
@@ -19754,15 +19712,6 @@
        }
       },
       {
-       "id": "albanian:radio-zemra",
-       "name": {
-        "value": "Radio Zemra",
-        "synonyms": [
-         "zemra"
-        ]
-       }
-      },
-      {
        "id": "albanian:radionatyra",
        "name": {
         "value": "RadioNatyra",
@@ -19882,15 +19831,6 @@
         "value": "Radio Ngjallja",
         "synonyms": [
          "ngjallja"
-        ]
-       }
-      },
-      {
-       "id": "albanian:radio-shqip-folklor",
-       "name": {
-        "value": "Radio Shqip Folklor",
-        "synonyms": [
-         "shqip folklor"
         ]
        }
       },
@@ -20023,6 +19963,15 @@
        }
       },
       {
+       "id": "macedonian:star-radio-ex-yu-retro-skopje-macedonia",
+       "name": {
+        "value": "Star Radio (Ex-YU Retro) Skopje, Macedonia",
+        "synonyms": [
+         "star radio ex-yu retro skopje macedonia"
+        ]
+       }
+      },
+      {
        "id": "macedonian:time-fm-gevgelija",
        "name": {
         "value": "Time FM Gevgelija",
@@ -20054,6 +20003,15 @@
          "radio bubamara 105.2 skopje macedonia",
          "radio bubamara one hundred five point two skopje macedonia",
          "radio bubamara skopje macedonia"
+        ]
+       }
+      },
+      {
+       "id": "macedonian:star-radio-world-hits-skopje-macedonia",
+       "name": {
+        "value": "Star Radio (World Hits) Skopje, Macedonia",
+        "synonyms": [
+         "star radio world hits skopje macedonia"
         ]
        }
       },
@@ -20109,11 +20067,56 @@
        }
       },
       {
+       "id": "macedonian:star-radio-mk-narodna-skopje-macedonia",
+       "name": {
+        "value": "Star Radio (MK Narodna) Skopje, Macedonia",
+        "synonyms": [
+         "star radio mk narodna skopje macedonia"
+        ]
+       }
+      },
+      {
+       "id": "macedonian:star-radio-live-skopje-macedonia",
+       "name": {
+        "value": "Star Radio (Live) Skopje, Macedonia",
+        "synonyms": [
+         "star radio live skopje macedonia"
+        ]
+       }
+      },
+      {
+       "id": "macedonian:star-radio-boemi-skopje-macedonia",
+       "name": {
+        "value": "Star Radio (Boemi) Skopje, Macedonia",
+        "synonyms": [
+         "star radio boemi skopje macedonia"
+        ]
+       }
+      },
+      {
        "id": "macedonian:sky-radio-hits-skopje-macedonia",
        "name": {
         "value": "Sky Radio Hits Skopje, Macedonia",
         "synonyms": [
          "sky radio hits skopje macedonia"
+        ]
+       }
+      },
+      {
+       "id": "macedonian:star-radio-urban-folk-skopje-macedonia",
+       "name": {
+        "value": "Star Radio (Urban Folk) Skopje, Macedonia",
+        "synonyms": [
+         "star radio urban folk skopje macedonia"
+        ]
+       }
+      },
+      {
+       "id": "macedonian:star-radio-plus-skopje-macedonia",
+       "name": {
+        "value": "Star Radio (Plus) Skopje, Macedonia",
+        "synonyms": [
+         "star radio plus skopje macedonia"
         ]
        }
       },
@@ -20752,6 +20755,13 @@
         "synonyms": [
          "l lillesand"
         ]
+       }
+      },
+      {
+       "id": "norwegian:nettvy-radio",
+       "name": {
+        "value": "Nettvy Radio",
+        "synonyms": []
        }
       },
       {
@@ -21525,13 +21535,6 @@
        "id": "estonian:r2extra-chill",
        "name": {
         "value": "R2Extra - Chill",
-        "synonyms": []
-       }
-      },
-      {
-       "id": "estonian:space-fm",
-       "name": {
-        "value": "Space FM",
         "synonyms": []
        }
       },
@@ -23760,6 +23763,27 @@
        }
       },
       {
+       "id": "azerbaijani:106fm",
+       "name": {
+        "value": "106Fm",
+        "synonyms": []
+       }
+      },
+      {
+       "id": "azerbaijani:baku-retro-fm",
+       "name": {
+        "value": "Baku Retro FM",
+        "synonyms": []
+       }
+      },
+      {
+       "id": "azerbaijani:baku-hit-fm",
+       "name": {
+        "value": "Baku Hit FM",
+        "synonyms": []
+       }
+      },
+      {
        "id": "kazakh:darhan-radio",
        "name": {
         "value": "Darhan Radio",
@@ -23812,6 +23836,13 @@
         "synonyms": [
          "bulbul"
         ]
+       }
+      },
+      {
+       "id": "kazakh:muzzone-radio",
+       "name": {
+        "value": "Muzzone Radio",
+        "synonyms": []
        }
       },
       {
@@ -24132,13 +24163,6 @@
        "id": "japanese:animeradio-de",
        "name": {
         "value": "AnimeRadio.de",
-        "synonyms": []
-       }
-      },
-      {
-       "id": "japanese:galau-jikan-fm-indonesia",
-       "name": {
-        "value": "Galau Jikan FM - Indonesia",
         "synonyms": []
        }
       },
@@ -25875,16 +25899,6 @@
         "value": "KRB Radio 3",
         "synonyms": [
          "krb radio three"
-        ]
-       }
-      },
-      {
-       "id": "thai:mcot-loei-fm-100-00",
-       "name": {
-        "value": "MCOT Loei FM 100.00",
-        "synonyms": [
-         "mcot loei fm",
-         "mcot loei fm one hundred point zero zero"
         ]
        }
       },
