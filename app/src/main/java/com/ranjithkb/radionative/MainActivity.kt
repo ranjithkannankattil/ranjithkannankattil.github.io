@@ -455,18 +455,19 @@ fun FavTiles(list: List<Station>, now: NowState, langOf: (Station) -> String, on
             val s = list[i]
             val current = "st|${s.key}" == now.id
             val on = current && now.playing
-            Box(Modifier.animateItem().fillMaxWidth().aspectRatio(0.86f).clip(RoundedCornerShape(12.dp))
+            Box(Modifier.animateItem().fillMaxWidth().clip(RoundedCornerShape(12.dp))
                 .background(if (current) AccentSoft else Paper2)
                 .border(if (current) 2.dp else 1.dp, if (current) Accent else Line, RoundedCornerShape(12.dp))
                 .clickable(onClickLabel = t("Play")) { onPlay(s) }
                 .semantics(mergeDescendants = true) { contentDescription = s.name + ", " + langOf(s) + (if (on) ", " + t("Now playing") else "") }) {
-                Column(Modifier.fillMaxSize().padding(10.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+                Column(Modifier.fillMaxWidth().padding(10.dp), horizontalAlignment = Alignment.CenterHorizontally) {
                     Spacer(Modifier.height(6.dp))
                     Tile(s.name, on, 48)
                     Spacer(Modifier.height(8.dp))
-                    Text(s.name, fontWeight = FontWeight.SemiBold, fontSize = 14.sp, lineHeight = 17.sp, maxLines = 2,
+                    // every name gets room for two lines, so all tiles are the same height at any text size
+                    Text(s.name, fontWeight = FontWeight.SemiBold, fontSize = 14.sp, lineHeight = 17.sp, minLines = 2, maxLines = 2,
                         overflow = TextOverflow.Ellipsis, textAlign = androidx.compose.ui.text.style.TextAlign.Center, color = Title)
-                    Spacer(Modifier.weight(1f))
+                    Spacer(Modifier.height(4.dp))
                     Text(langOf(s), fontSize = 11.sp, color = InkSoft, maxLines = 1, overflow = TextOverflow.Ellipsis)
                 }
                 Box(Modifier.align(Alignment.TopEnd).size(44.dp).clickable(onClickLabel = t("Remove from favourites")) { onRemove(i, s) },
