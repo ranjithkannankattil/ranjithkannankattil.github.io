@@ -98,10 +98,12 @@ object Theme {
     val rowHeight: Int get() = when (spacing) { 1 -> 64; 2 -> 76; else -> 56 }
 
     fun prefs(ctx: Context) = ctx.getSharedPreferences("settings", Context.MODE_PRIVATE)
+    /** Set by the TV screen: a TV always uses the dark look, whatever re-reads the settings later (the player, the car). */
+    @Volatile var tvDark = false
     fun load(ctx: Context) {
         val p = prefs(ctx)
         themeId = p.getString("theme", "velvet")!!.let { id -> if (THEMES.any { it.id == id }) id else "velvet" }
-        mode = p.getString("mode", "phone")!!.let { if (it in listOf("phone", "light", "dark")) it else "phone" }
+        mode = if (tvDark) "dark" else p.getString("mode", "phone")!!.let { if (it in listOf("phone", "light", "dark")) it else "phone" }
         text = p.getInt("text", 0).coerceIn(0, 2); font = p.getString("font", "jost")!!.let { f -> if (FONTS.any { it.id == f }) f else "jost" }
         spacing = p.getInt("spacing", 0).coerceIn(0, 2)
         viz = p.getString("viz", "off")!!.let { if (it in listOf("bars", "waves", "circle", "off")) it else "off" }

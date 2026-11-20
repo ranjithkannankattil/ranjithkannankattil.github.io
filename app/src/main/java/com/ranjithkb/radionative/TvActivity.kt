@@ -56,8 +56,8 @@ class TvActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Theme.tvDark = true
         Theme.load(this); DataSaver.load(this); DataUse.init(this); Lang.load(this)
-        Theme.mode = "dark"
         setContent {
             MaterialTheme(typography = PoppinsType, colorScheme = darkColorScheme(primary = Accent, background = Paper, surface = Paper,
                 onSurface = Title, onBackground = Title)) {

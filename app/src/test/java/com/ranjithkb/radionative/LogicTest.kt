@@ -203,6 +203,15 @@ class LogicTest {
     }
 
     // ---------------- Android TV
+    @Test fun tv_stays_dark_when_the_player_rereads_the_settings() {
+        val ctx = RuntimeEnvironment.getApplication()
+        Theme.prefs(ctx).edit().putString("mode", "light").commit()
+        try {
+            Theme.tvDark = true; Theme.load(ctx); assertEquals("dark", Theme.mode)
+            Theme.tvDark = false; Theme.load(ctx); assertEquals("light", Theme.mode)    // phones keep their own choice
+        } finally { Theme.tvDark = false; Theme.prefs(ctx).edit().remove("mode").commit(); Theme.load(ctx) }
+    }
+
     @Test fun tv_rows_selection_favourites_then_languages() {
         val cols = listOf(Collection("malayalam", "Malayalam", "", "", emptyList()), Collection("tamil", "Tamil", "", "", emptyList()))
         assertEquals(listOf(PICKS, "_favs", "malayalam", "tamil"), tvRows(cols, true).map { it.id })
