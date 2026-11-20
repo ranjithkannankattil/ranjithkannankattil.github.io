@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://n-11-21.dcs.redcdn.pl/sc/o2/radio357/live/radio357_pr.livx?preroll=0"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -17,6 +20,10 @@ window.STATIONS = [
     "streams": [
       "https://radiostream.pl/tuba10-1.mp3",
       "https://radiostream.pl/tuba10-1.mp3#TOK_FM"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -25,6 +32,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://ssl-1.radiotvrepublika.pl:12698/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -33,6 +43,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://n-4-2.dcs.redcdn.pl/sc/o2/Eurozet/live/antyradio.livx?audio=5"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -41,6 +54,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://go-audio.toya.net.pl/63214"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -49,6 +65,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ic1.smcdn.pl/6120-1.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -57,6 +76,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://waw.ic.smcdn.pl/6130-1.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -65,6 +87,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream15.polskieradio.pl/pr24/pr24.sdp/playlist.m3u8"
+    ],
+    "br": [
+      195
     ]
   },
   {
@@ -73,6 +98,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ch.cdn.eurozet.pl/chi-net.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -81,6 +109,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream13.polskieradio.pl/pr3/pr3.sdp/playlist.m3u8"
+    ],
+    "br": [
+      195
     ]
   },
   {
@@ -89,6 +120,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s2.radioparty.pl:8015/stream?nocache=4171"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -97,6 +131,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://djmixes.radioparty.pl:8035/"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -105,6 +142,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://waw.ic.smcdn.pl/6140-1.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -113,6 +153,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ic2.smcdn.pl/3990-1.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -122,6 +165,10 @@ window.STATIONS = [
     "streams": [
       "https://radiostream.pl/tuba8904-1.mp3",
       "https://radiostream.pl/tuba8928-1.mp3"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -130,6 +177,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://rs202-krk.rmfstream.pl/RMFMAXXX48"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -138,6 +188,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://n05-eu3.rcs.revma.com/1nnezw8qz7zuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -146,6 +199,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://energy2000.radioparty.pl:8005/"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -154,6 +210,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ic2.smcdn.pl/2140-1.aac"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -162,6 +221,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://rs101-krk-cyfronet.rmfstream.pl/RMFFM48"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -170,6 +232,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s3.slotex.pl:7170/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -178,6 +243,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://pl02.cdn.eurozet.pl/plu-waw.mp3?redirected=02"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -186,6 +254,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://r.dcs.redcdn.pl/sc/o2/Eurozet/live/meloradio.livx?audio=5"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -194,6 +265,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.24dubstep.pl/radio/8000/mp3_normal"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -202,6 +276,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostream.pl/tuba8926-1.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -210,6 +287,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s1.slotex.pl/shoutcast/7432/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -218,6 +298,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://waw.ic.smcdn.pl/2380-2.aac"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -226,6 +309,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://waw.ic.smcdn.pl/6120-1.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -234,6 +320,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://an01.cdn.eurozet.pl/ANTCLA.mp3?redirected=01"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -242,6 +331,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://s1.slotex.pl/shoutcast/7102/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -250,6 +342,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://rs202-krk-cyfronet.rmfstream.pl/rmf_classic"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -258,6 +353,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostream.pl/tuba8900-1.mp3?cache=1647512038"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -266,6 +364,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s3.slotex.pl/shoutcast/7354/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -274,6 +375,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.rcs.revma.com/062uq3z3kwzuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -282,6 +386,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ml01.cdn.eurozet.pl/mel-ktw.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -290,6 +397,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://rs202-krk-cyfronet.rmfstream.pl/RMF24?aw_0_req.gdpr=false&aw_0_req.userConsentV2=&aw_0_1st.playerid=RMF_Player_JS_P&aw_0_1st.rmf_disable_preroll=true"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -298,6 +408,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://house.radioparty.pl:8010/"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -306,6 +419,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://an05.cdn.eurozet.pl/ANTHAR.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -314,6 +430,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.rcs.revma.com/q18ty3qhwzzuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -322,6 +441,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://shoutcast.paranormalium.pl:8000/5"
+    ],
+    "br": [
+      24
     ]
   },
   {
@@ -331,7 +453,10 @@ window.STATIONS = [
     "streams": [
       "https://waw.ic.smcdn.pl/6040-1.aac"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      64
+    ]
   },
   {
     "id": "antyradio-made-in-poland",
@@ -340,7 +465,10 @@ window.STATIONS = [
     "streams": [
       "https://an04.cdn.eurozet.pl/ANTPOL.mp3?t=1668748669557?redirected=04"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ah-fm-electronic-dance-music-trance",
@@ -349,7 +477,10 @@ window.STATIONS = [
     "streams": [
       "https://eu.ah.fm/live"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      192
+    ]
   },
   {
     "id": "polskie-radio-dzieciom",
@@ -358,7 +489,10 @@ window.STATIONS = [
     "streams": [
       "https://stream85.polskieradio.pl/live/radio_dzieciom.sdp/playlist.m3u8"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      195
+    ]
   },
   {
     "id": "eska-2",
@@ -367,7 +501,10 @@ window.STATIONS = [
     "streams": [
       "https://ic1.smcdn.pl/1530-1.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "eska-rzeszow",
@@ -376,7 +513,10 @@ window.STATIONS = [
     "streams": [
       "https://ic1.smcdn.pl/2240-1.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "wnet-fm",
@@ -385,7 +525,10 @@ window.STATIONS = [
     "streams": [
       "https://media.wnet.fm/wnet.fm"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-disco-dance",
@@ -394,7 +537,10 @@ window.STATIONS = [
     "streams": [
       "https://radiodd.cloud/radio/8000/radio.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      320
+    ]
   },
   {
     "id": "costa-s-ambient-radio",
@@ -403,7 +549,10 @@ window.STATIONS = [
     "streams": [
       "https://pc.costa-server.info.pl:11020/listen/costas_ambient_radio/radio.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radioparty-pl-vocal-trance",
@@ -412,7 +561,10 @@ window.STATIONS = [
     "streams": [
       "https://s2.radioparty.pl:8025/vocaltrance"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      64
+    ]
   },
   {
     "id": "polskie-radio-czworka",
@@ -421,7 +573,10 @@ window.STATIONS = [
     "streams": [
       "https://stream14.polskieradio.pl/pr4/pr4.sdp/playlist.m3u8"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      195
+    ]
   },
   {
     "id": "radio-zet-128",
@@ -430,7 +585,10 @@ window.STATIONS = [
     "streams": [
       "https://n-11-21.dcs.redcdn.pl/sc/o2/Eurozet/live/audio.livx?audio=5"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "eska-impreska",
@@ -439,7 +597,10 @@ window.STATIONS = [
     "streams": [
       "https://ic1.smcdn.pl/6030-1.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-pogoda-poznan",
@@ -448,7 +609,10 @@ window.STATIONS = [
     "streams": [
       "https://stream30.radiostream.pl/tuba138-1.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "house-of-funk",
@@ -457,7 +621,10 @@ window.STATIONS = [
     "streams": [
       "https://houseoffunk.eu:8443/live"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-sar-studencka-agencja-radiowa",
@@ -466,7 +633,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiosar.pl/hdmain.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-mirage-italo-dance",
@@ -475,7 +645,10 @@ window.STATIONS = [
     "streams": [
       "https://ssl-1.radiohost.pl:9569/stream"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-mbox-disco-polo",
@@ -484,7 +657,10 @@ window.STATIONS = [
     "streams": [
       "https://s3.slotex.pl:7222/stream"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      320
+    ]
   },
   {
     "id": "rmf-4-dance-rnb",
@@ -493,7 +669,10 @@ window.STATIONS = [
     "streams": [
       "https://rs6-krk2.rmfstream.pl/rmf_4"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "tyfloradio",
@@ -502,7 +681,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.tyflopodcast.net/"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      192
+    ]
   },
   {
     "id": "folk-radio",
@@ -511,7 +693,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.g-news.pl:8030/fr1"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "beat-city-krakow",
@@ -520,7 +705,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.beatcity.pl/listen/beat_city_krakow/radio.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      192
+    ]
   },
   {
     "id": "i-love-music",
@@ -529,7 +717,10 @@ window.STATIONS = [
     "streams": [
       "https://s3.slotex.pl:7150/stream"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      192
+    ]
   },
   {
     "id": "kiss-fm-poland",
@@ -538,7 +729,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.g-news.pl:8090/kissfm"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "vox-fm",
@@ -547,7 +741,10 @@ window.STATIONS = [
     "streams": [
       "https://pldm.one.pl/radio?url=https://www.eskago.pl/radio/vox-fm"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "zet-90s",
@@ -556,7 +753,10 @@ window.STATIONS = [
     "streams": [
       "https://zt02.cdn.eurozet.pl/ZET090.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rmf-classic-rock",
@@ -565,7 +765,10 @@ window.STATIONS = [
     "streams": [
       "https://rs201-krk.rmfstream.pl/rmf_classic_rock"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rmf-fm-128-kbps",
@@ -574,7 +777,10 @@ window.STATIONS = [
     "streams": [
       "https://rs101-krk.rmfstream.pl/rmf_fm"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "zet-po-polsku",
@@ -583,7 +789,10 @@ window.STATIONS = [
     "streams": [
       "https://zt.cdn.eurozet.pl/ZETPL1.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "zet-dance",
@@ -592,7 +801,10 @@ window.STATIONS = [
     "streams": [
       "https://pl01.cdn.eurozet.pl/ZETDAN.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rmf-maxx-poznan",
@@ -601,7 +813,10 @@ window.STATIONS = [
     "streams": [
       "https://rs103-krk-cyfronet.rmfstream.pl/MAXXXPOZ"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      48
+    ]
   },
   {
     "id": "zote-przeboje-bydgoszcz",
@@ -610,7 +825,10 @@ window.STATIONS = [
     "streams": [
       "https://radiostream.pl/tuba8902-1.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "eska-biaystok",
@@ -619,7 +837,10 @@ window.STATIONS = [
     "streams": [
       "https://waw.ic.smcdn.pl/2020-1.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "red7-kana-edm",
@@ -628,7 +849,10 @@ window.STATIONS = [
     "streams": [
       "https://s.red7.pl/edm256"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      256
+    ]
   },
   {
     "id": "radio-eska-braniewo",
@@ -637,7 +861,10 @@ window.STATIONS = [
     "streams": [
       "https://waw.ic.smcdn.pl/2520-2.aac"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      48
+    ]
   },
   {
     "id": "radio-7",
@@ -646,7 +873,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radio7.pl:443/radio7.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      192
+    ]
   },
   {
     "id": "meloradio-hot-dance",
@@ -655,7 +885,10 @@ window.STATIONS = [
     "streams": [
       "https://ml02.cdn.eurozet.pl/MELHDN.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bounce",
@@ -664,7 +897,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.bounce.radio/streamhd"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      256
+    ]
   },
   {
     "id": "zet-same-hity",
@@ -673,7 +909,10 @@ window.STATIONS = [
     "streams": [
       "https://zt.cdn.eurozet.pl/ZETHIT.mp3"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      128
+    ]
   },
   {
     "id": "wasze-radio-fm",
@@ -682,7 +921,10 @@ window.STATIONS = [
     "streams": [
       "https://sluchaj.link:5443/wasze"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      192
+    ]
   },
   {
     "id": "nasz-hajmat",
@@ -691,7 +933,10 @@ window.STATIONS = [
     "streams": [
       "https://s3.slotex.pl:7126/stream"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-fest-100-2-fm",
@@ -709,7 +954,10 @@ window.STATIONS = [
     "streams": [
       "https://an01.cdn.eurozet.pl/ant-kat.mp3"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-disco-party-disco-impreza",
@@ -718,7 +966,10 @@ window.STATIONS = [
     "streams": [
       "https://s3.slotex.pl/shoutcast/7046/stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radioparty-pl-trance-party",
@@ -727,7 +978,10 @@ window.STATIONS = [
     "streams": [
       "https://trance.radioparty.pl:8015/"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      64
+    ]
   },
   {
     "id": "planeta-fm",
@@ -736,7 +990,10 @@ window.STATIONS = [
     "streams": [
       "https://pl01.cdn.eurozet.pl/pla-net.mp3"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-7-poland",
@@ -745,7 +1002,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radio7.pl/;"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-rzeszow",
@@ -754,7 +1014,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.g-news.pl:8040/rzeszow"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "polskie-radio-dwojka-2",
@@ -763,7 +1026,10 @@ window.STATIONS = [
     "streams": [
       "https://stream12.polskieradio.pl/pr2/pr2.sdp/playlist.m3u8"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      323
+    ]
   },
   {
     "id": "dzikieradio",
@@ -772,7 +1038,10 @@ window.STATIONS = [
     "streams": [
       "https://ssl-1.radiohost.pl:11250/stream"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "antyradio-greatest",
@@ -781,7 +1050,10 @@ window.STATIONS = [
     "streams": [
       "https://an02.cdn.eurozet.pl/ANTGRE.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "meloradio-poznan",
@@ -790,7 +1062,10 @@ window.STATIONS = [
     "streams": [
       "https://ml03.cdn.eurozet.pl/mel-poz.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "polskie-radio-1030-chicago-wnvr",
@@ -799,7 +1074,10 @@ window.STATIONS = [
     "streams": [
       "https://s1.reliastream.com/proxy/polskieradio?mp=/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rmf-k-pop",
@@ -808,7 +1086,10 @@ window.STATIONS = [
     "streams": [
       "https://rs8-krk2-cyfronet.rmfstream.pl/GAMEMUSIC"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      64
+    ]
   },
   {
     "id": "r357",
@@ -817,7 +1098,10 @@ window.STATIONS = [
     "streams": [
       "https://radio357.s3.eu-central-1.amazonaws.com/stream/29ce0221-3d37-47d9-97b9-559cfad16ed3.m3u8"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      96
+    ]
   },
   {
     "id": "radio-macabrismix",
@@ -826,7 +1110,10 @@ window.STATIONS = [
     "streams": [
       "https://panel.macabrismix.com.pl/listen/macabris_mix_radio_station_1-2c6_ghz/autodj.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-misiek",
@@ -835,7 +1122,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/5hfdntgf8yzuv"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      96
+    ]
   },
   {
     "id": "rmf-muzyka-filmowa",
@@ -844,7 +1134,10 @@ window.STATIONS = [
     "streams": [
       "https://rs102-krk.rmfstream.pl/rmf_muzyka_filmowa"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-max-hit-polska",
@@ -853,7 +1146,10 @@ window.STATIONS = [
     "streams": [
       "https://s3.slotex.pl:7370/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-plus-106-1-krakow",
@@ -862,7 +1158,10 @@ window.STATIONS = [
     "streams": [
       "https://waw.ic.smcdn.pl/4070-1.mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-super-fm-97-5-fm-szczecin",
@@ -871,7 +1170,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.super.fm:8443/superfm.mp3?1703660705890"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      192
+    ]
   },
   {
     "id": "dj-tekness",
@@ -880,7 +1182,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/xcmv558wquhvv"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      192
+    ]
   },
   {
     "id": "eska-katowice",
@@ -889,7 +1194,10 @@ window.STATIONS = [
     "streams": [
       "https://ic2.smcdn.pl/2220-1.mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-silesia-fm",
@@ -898,7 +1206,10 @@ window.STATIONS = [
     "streams": [
       "https://s1.slotex.pl/shoutcast/7926/stream?sid=1"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "wesoa-43",
@@ -907,7 +1218,10 @@ window.STATIONS = [
     "streams": [
       "https://s1.slotex.pl:7650/stream"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-tango-uno",
@@ -916,7 +1230,10 @@ window.STATIONS = [
     "streams": [
       "https://radiotangouno-online.pl/radio/8000/radio.mp3"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "meloradio-opole",
@@ -925,7 +1242,10 @@ window.STATIONS = [
     "streams": [
       "https://ml02.cdn.eurozet.pl/mel-opl.mp3"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-eska-starachowice",
@@ -934,7 +1254,10 @@ window.STATIONS = [
     "streams": [
       "https://ic1.smcdn.pl/2400-1.mp3"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-kacik-rodzinny",
@@ -943,7 +1266,10 @@ window.STATIONS = [
     "streams": [
       "https://s3.slotex.pl:7374/stream"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ckwr-98-5-real-community-radio-kitchener",
@@ -952,7 +1278,10 @@ window.STATIONS = [
     "streams": [
       "https://stream2.statsradio.com:8150/stream"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      319
+    ]
   },
   {
     "id": "radio-kolor",
@@ -970,7 +1299,10 @@ window.STATIONS = [
     "streams": [
       "https://s3.slotex.pl:7272/stream"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "meloradio-wrocaw",
@@ -979,7 +1311,10 @@ window.STATIONS = [
     "streams": [
       "https://ml02.cdn.eurozet.pl/mel-wro.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-elka-leszno",
@@ -988,7 +1323,10 @@ window.STATIONS = [
     "streams": [
       "https://rs103-krk.rmfstream.pl/audioxi_elka"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-warszawa-106-2-fm",
@@ -997,7 +1335,10 @@ window.STATIONS = [
     "streams": [
       "https://stream2.technologicznie.net/radio_warszawa.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      160
+    ]
   },
   {
     "id": "woods-hit-radio-ac",
@@ -1006,7 +1347,10 @@ window.STATIONS = [
     "streams": [
       "https://cast4.asurahosting.com/proxy/nigel/stream"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      64
+    ]
   },
   {
     "id": "jazzkultura",
@@ -1015,7 +1359,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radio.co/s1136b59f3/listen"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-rmf-maxx-warszawa",
@@ -1024,7 +1371,10 @@ window.STATIONS = [
     "streams": [
       "https://rs202-krk.rmfstream.pl/MAXXXWAW"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      48
+    ]
   },
   {
     "id": "zet-latino",
@@ -1033,7 +1383,10 @@ window.STATIONS = [
     "streams": [
       "https://ch.cdn.eurozet.pl/ZETLTN.mp3"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "kapita",
@@ -1042,7 +1395,10 @@ window.STATIONS = [
     "streams": [
       "https://radiokapitalpl.out.airtime.pro/radiokapitalpl_a"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-vaticana-polska",
@@ -1051,7 +1407,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.vaticannews.va/stream-pl"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-alesia",
@@ -1060,7 +1419,10 @@ window.STATIONS = [
     "streams": [
       "https://air.alesia.live/alesia"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      160
+    ]
   },
   {
     "id": "chillizet-ladies-om",
@@ -1069,7 +1431,10 @@ window.STATIONS = [
     "streams": [
       "https://ch01.cdn.eurozet.pl/CHILAD.mp3?t=1709721264195?redirected=01"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radioff",
@@ -1078,7 +1443,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radioff.com/stream.mp3"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "beat-city-gdansk",
@@ -1087,7 +1455,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.beatcity.pl/listen/beat_city_gdansk/radio.mp3"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      192
+    ]
   },
   {
     "id": "happy-station",
@@ -1096,7 +1467,8 @@ window.STATIONS = [
     "streams": [
       "https://s3.slotex.pl/shoutcast/7496/stream"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "offline": true
   },
   {
     "id": "zet-impreza",
@@ -1105,7 +1477,10 @@ window.STATIONS = [
     "streams": [
       "https://zt.cdn.eurozet.pl/ZETPAR.mp3"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "beat-city-warszawa",
@@ -1114,7 +1489,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.beatcity.pl/listen/beat_city_warszawa/radio.mp3"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      192
+    ]
   },
   {
     "id": "vox-fm-disco-90",
@@ -1123,7 +1501,10 @@ window.STATIONS = [
     "streams": [
       "https://ic1.smcdn.pl/6170-1.mp3"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "konin-fm",
@@ -1132,7 +1513,10 @@ window.STATIONS = [
     "streams": [
       "https://stream2.technologicznie.net/konin.fm"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-zuawy",
@@ -1141,7 +1525,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiojar.com/q87xmtvrrg8uv"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-olsztyn",
@@ -1150,7 +1537,10 @@ window.STATIONS = [
     "streams": [
       "https://rostr1.radioolsztyn.pl:8443/RO"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rmf-maxxx-krakow",
@@ -1159,7 +1549,10 @@ window.STATIONS = [
     "streams": [
       "https://rs102-krk.rmfstream.pl/MAXXXKRA"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      48
+    ]
   },
   {
     "id": "plus",
@@ -1168,7 +1561,10 @@ window.STATIONS = [
     "streams": [
       "https://pl.cdn.eurozet.pl/plu-gdn.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "mdk-space-radio",
@@ -1177,7 +1573,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.mdkband.com/stream.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      160
+    ]
   },
   {
     "id": "rock-radio",
@@ -1186,7 +1585,10 @@ window.STATIONS = [
     "streams": [
       "https://radiostream.pl/tuba8-1.mp3?cache=1650763965"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-fraszka",
@@ -1195,7 +1597,10 @@ window.STATIONS = [
     "streams": [
       "https://s3.slotex.pl:7132/;"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rmf-maxx-wocawek",
@@ -1204,7 +1609,10 @@ window.STATIONS = [
     "streams": [
       "https://rs203-krk-cyfronet.rmfstream.pl/rmf_maxxx_wlc"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-pogoda-gdansk",
@@ -1213,7 +1621,10 @@ window.STATIONS = [
     "streams": [
       "https://radiostream.pl/tuba145-1.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-dht-kana-gowny",
@@ -1222,7 +1633,10 @@ window.STATIONS = [
     "streams": [
       "https://radiodht.com/stream_main/"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      192
+    ]
   },
   {
     "id": "vox-fm-disco-party",
@@ -1231,7 +1645,10 @@ window.STATIONS = [
     "streams": [
       "https://ic1.smcdn.pl/6180-1.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "zet-pop-rock",
@@ -1240,7 +1657,10 @@ window.STATIONS = [
     "streams": [
       "https://zt.cdn.eurozet.pl/ZETPRK.mp3"
     ],
-    "added": "2026-11-10"
+    "added": "2026-11-10",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-safira",
@@ -1249,7 +1669,10 @@ window.STATIONS = [
     "streams": [
       "https://ec1.yesstreaming.net:2340/stream"
     ],
-    "added": "2026-11-10"
+    "added": "2026-11-10",
+    "br": [
+      128
+    ]
   },
   {
     "id": "nasze-nowe-radio",
@@ -1258,7 +1681,10 @@ window.STATIONS = [
     "streams": [
       "https://s3.slotex.pl:7388/stream"
     ],
-    "added": "2026-11-10"
+    "added": "2026-11-10",
+    "br": [
+      256
+    ]
   },
   {
     "id": "radio-freee-89-9-fm",
@@ -1267,7 +1693,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.radio.lublin.pl:8843/radiofreeeacp"
     ],
-    "added": "2026-11-10"
+    "added": "2026-11-10",
+    "br": [
+      128
+    ]
   },
   {
     "id": "eska-odz",
@@ -1276,7 +1705,10 @@ window.STATIONS = [
     "streams": [
       "https://ic1.smcdn.pl/2380-1.mp3"
     ],
-    "added": "2026-11-10"
+    "added": "2026-11-10",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rmf-maxxx-kielce",
@@ -1285,7 +1717,10 @@ window.STATIONS = [
     "streams": [
       "https://rs6-krk2.rmfstream.pl/rmf_maxxx_kie"
     ],
-    "added": "2026-11-10"
+    "added": "2026-11-10",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-ram",
@@ -1294,7 +1729,10 @@ window.STATIONS = [
     "streams": [
       "https://stream2.prw.pl:8001/radioram"
     ],
-    "added": "2026-11-11"
+    "added": "2026-11-11",
+    "br": [
+      320
+    ]
   },
   {
     "id": "antyradio-makak",
@@ -1303,7 +1741,10 @@ window.STATIONS = [
     "streams": [
       "https://an.cdn.eurozet.pl/ANTMAK.mp3"
     ],
-    "added": "2026-11-11"
+    "added": "2026-11-11",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-zote-przeboje-bieszczady",
@@ -1312,7 +1753,10 @@ window.STATIONS = [
     "streams": [
       "https://radiostream.pl/tuba8946-1.mp3"
     ],
-    "added": "2026-11-11"
+    "added": "2026-11-11",
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

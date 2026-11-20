@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream1.relaxfm.lt/relaxfm128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -24,6 +27,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.m-1.fm/m1plius/mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -32,6 +38,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ice.leviracloud.eu/phr192-mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -40,6 +49,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream2.rockfm.lt/crf128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -48,6 +60,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://netradio.ziniur.lt/ziniur_64.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -56,6 +71,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://n23-eu.rcs.revma.com/8cwskd80zxcwv?rj-ttl=5&rj-tok=AAABoLM9aPsAjNpxlJ9phX3bxg"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -64,6 +82,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream1.zipfm.lt/zipfm128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -72,6 +93,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream1.relaxfm.lt/rrb128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -80,6 +104,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://netradio.ziniur.lt/easyfm.mp3"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -96,6 +123,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast1.my-control-panel.com/proxy/eventas/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -105,6 +135,10 @@ window.STATIONS = [
     "streams": [
       "https://solid55.streamupsolutions.com/proxy/opcubjpd/stream",
       "https://solid55.streamupsolutions.com/proxy/ugeiluxh/stream"
+    ],
+    "br": [
+      192,
+      192
     ]
   },
   {
@@ -113,6 +147,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://c34.radioboss.fm:9058/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -121,6 +158,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://halo.streamerr.co/listen/beveikradijas/radio.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -129,6 +169,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://securestream.casthost.net:8617/fm99"
+    ],
+    "br": [
+      170
     ]
   },
   {
@@ -137,6 +180,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.m-1.fm/laluna/mp3"
+    ],
+    "br": [
+      160
     ]
   },
   {
@@ -145,6 +191,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://eteris.startfm.lt/startfm.mp3"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -153,6 +202,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream4.radijas.lt/relaxfm"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -161,6 +213,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.rcs.revma.com/8cwskd80zxcwv"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -169,6 +224,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://wowzaott1.penki.lt/jazzfm/jazzfm.stream/playlist.m3u8"
+    ],
+    "br": [
+      89
     ]
   },
   {
@@ -177,6 +235,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://usa6.fastcast4u.com/proxy/wsjfhd?mp=/1"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -185,6 +246,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.m-1.fm/laluna/high"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -193,6 +257,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.e99.live/main"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -201,6 +268,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.patejago.lt/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -209,6 +279,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s10.webradio-hosting.com/proxy/fredradiolt/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -217,6 +290,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.goldfm.lt/gerasfm.aac"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -225,6 +301,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://mrpl.babrai.com/stream.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -233,6 +312,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://a13.asurahosting.com/listen/free_radio_jolly/radio.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -241,6 +323,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://c20.radioboss.fm:8752/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -266,4 +351,4 @@ window.STATIONS = [
     "hidden": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

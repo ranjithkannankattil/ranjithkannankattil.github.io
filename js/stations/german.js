@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://mangoradio.stream.laut.fm/mangoradio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -19,6 +22,12 @@ window.STATIONS = [
       "https://st01.sslstream.dlf.de/dlf/01/high/aac/stream.aac?aggregator=web",
       "https://st01.sslstream.dlf.de/dlf/01/low/opus/stream.opus?aggregator=web",
       "https://st01.sslstream.dlf.de/dlf/01/mid/aac/stream.aac?aggregator=web"
+    ],
+    "br": [
+      128,
+      256,
+      24,
+      96
     ]
   },
   {
@@ -27,6 +36,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://liveradio.swr.de/sw282p3/swr3/play.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -36,6 +48,10 @@ window.STATIONS = [
     "streams": [
       "https://wdr-1live-live.icecast.wdr.de/wdr/1live/live/mp3/128/stream.mp3",
       "https://wdr-1live-live.icecastssl.wdr.de/wdr/1live/live/mp3/128/stream.mp3"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -44,6 +60,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://dispatcher.rndfnk.com/br/br3/live/mp3/mid"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -52,6 +71,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://orf-live.ors-shoutcast.at/oe3-q2a"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -61,6 +83,10 @@ window.STATIONS = [
     "streams": [
       "https://wdr-wdr5-live.icecast.wdr.de/wdr/wdr5/live/mp3/128/stream.mp3",
       "https://wdr-wdr5-live.icecastssl.wdr.de/wdr/wdr5/live/mp3/128/stream.mp3"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -69,6 +95,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://mp3channels.webradio.rockantenne.de/rockantenne"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -77,6 +106,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://breakz-2012-high.rautemusik.fm/?ref=radiobrowser-top100-clubcharts"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -86,6 +118,10 @@ window.STATIONS = [
     "streams": [
       "https://f131.rndfnk.com/ard/rbb/radioeins/live/mp3/128/stream.mp3?cid=01FC1WH12KJ93TCQPDSE2E5PZ9&sid=3KnSnWiSw6mfEyYtIyhWmkXWca3&token=bPO4Y-B8A2inVn3kqUseFO7dWODyPt7IPYwLEG5HUkc&tvf=IyBpZcc43xhmMTMxLnJuZGZuay5jb20",
       "https://d131.rndfnk.com/ard/rbb/radioeins/live/mp3/128/stream.mp3?cid=01FC1WH12KJ93TCQPDSE2E5PZ9&sid=3KozWk07f1yvNVTwGV8gofxSDxM&token=4inenNbPpMeSaFW11CcJ948ud7C59Ql4mGHetwoaqFA&tvf=lUlcEklj3xhkMTMxLnJuZGZuay5jb20"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -94,6 +130,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://orf-live.ors-shoutcast.at/fm4-q2a"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -102,6 +141,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://breakz-2012-high.rautemusik.fm/?ref=rb-djclubcharts"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -110,6 +152,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streams.90s90s.de/pop/mp3-192/streams.90s90s.de/"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -118,6 +163,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://breakz-high.rautemusik.fm/?ref=radiobrowser-top100-djcharts"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -126,6 +174,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://0nlineradio.radioho.st/classical-classical-music-for-sleep?ref=radio-browser26"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -134,6 +185,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streams.80s80s.de/web/mp3-192/streams.80s80s.de/"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -142,6 +196,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://dispatcher.rndfnk.com/br/br24/live/mp3/mid"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -150,6 +207,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://dispatcher.rndfnk.com/rbb/inforadio/live/mp3/mid"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -158,6 +218,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://mp3channels.webradio.rockantenne.de/heavy-metal"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -166,6 +229,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://wdr-wdr2-rheinland.icecast.wdr.de/wdr/wdr2/rheinland/mp3/128/stream.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -174,6 +240,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://radio.nius.de/live?ref=radiobrowser"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -182,6 +251,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://mp3.ffh.de/radioffh/hqlivestream.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -190,6 +262,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.rockantenne.de/alternative/stream/mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -198,6 +273,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://st02.sslstream.dlf.de/dlf/02/128/mp3/stream.mp3?aggregator=web"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -207,6 +285,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.sunshine-live.de/live/mp3-192/stream.sunshine-live.de/",
       "https://sunsl.streamabc.net/sunsl-sslsimulcast-mp3-192-4434053?sABC=6557p1o3%230%236080533n48sp2nrq0o4389q6o67o3qps%23fgernz.fhafuvar-yvir.qr&aw_0_1st.playerid=stream.sunshine-live.de&amsparams=playerid:stream.sunshine-live.de;skey:1700250035"
+    ],
+    "br": [
+      192,
+      192
     ]
   },
   {
@@ -215,6 +297,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://wdr-wdr4-live.icecastssl.wdr.de/wdr/wdr4/live/mp3/128/stream.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -223,6 +308,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://dispatcher.rndfnk.com/br/br1/obb/mp3/mid"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -231,6 +319,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://0nlineradio.radioho.st/lounge-ibiza-chillout-lounge?ref=rb26"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -239,6 +330,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://icecast.ndr.de/ndr/ndrinfo/live/mp3/128/stream.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -247,6 +341,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://breakz-high.rautemusik.fm/?ref=rb-djclubcharts0326"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -255,6 +352,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://dispatcher.rndfnk.com/br/br2/live/mp3/mid"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -263,6 +363,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://breakz-high.rautemusik.fm/?ref=radiobrowser-deejay-remixes-radio"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -271,6 +374,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.srg-ssr.ch/m/drs3/mp3_128"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -279,6 +385,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.streams.klassikradio.de/klassikradio-deutschland/stream/mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -287,6 +396,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://mp3channels.webradio.antenne.de/chillout"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -295,6 +407,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://mp3channels.webradio.antenne.de/antenne"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -303,6 +418,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://icecast.ndr.de/ndr/ndrinfo/hamburg/mp3/128/stream.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -311,6 +429,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.ndr.de/ndr/ndr2/niedersachsen/mp3/128/stream.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -319,6 +440,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://0n-classicrock.radionetz.de/0n-classicrock.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -327,6 +451,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://0nlineradio.radioho.st/0r-90s?ref=radio-browser26"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -345,7 +472,10 @@ window.STATIONS = [
     "streams": [
       "https://ors-sn03.ors-shoutcast.at/oe3-q1a"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "kontrafunk",
@@ -354,7 +484,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.multhielemedia.de/listen/kontrafunk/radio.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "104-6-rtl",
@@ -363,7 +496,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.104.6rtl.com/rtl-live/mp3-192/radio-browser.info/"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "sunshine-live-techno",
@@ -372,7 +508,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.sunshine-live.de/techno/mp3-192/stream.sunshine-live.de/"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "o1-orf-hq",
@@ -381,7 +520,10 @@ window.STATIONS = [
     "streams": [
       "https://orf-live.ors-shoutcast.at/oe1-q2a"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "deutschlandfunk-nova-dlf",
@@ -390,7 +532,10 @@ window.STATIONS = [
     "streams": [
       "https://st03.sslstream.dlf.de/dlf/03/high/aac/stream.aac?aggregator=web"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      192
+    ]
   },
   {
     "id": "bayern-1-franken",
@@ -399,7 +544,10 @@ window.STATIONS = [
     "streams": [
       "https://dispatcher.rndfnk.com/br/br1/franken/mp3/mid"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fritz",
@@ -408,7 +556,10 @@ window.STATIONS = [
     "streams": [
       "https://dispatcher.rndfnk.com/rbb/fritz/live/mp3/mid"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "antenne-bayern-classic-rock-live",
@@ -417,7 +568,10 @@ window.STATIONS = [
     "streams": [
       "https://mp3channels.webradio.antenne.de/classic-rock-live"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fm4-orf",
@@ -426,7 +580,10 @@ window.STATIONS = [
     "streams": [
       "https://orf-live.ors-shoutcast.at/fm4-q1a"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-bob-bobs-alternative-rock",
@@ -435,7 +592,10 @@ window.STATIONS = [
     "streams": [
       "https://streams.radiobob.de/bob-alternative/mp3-192/streams.radiobob.de/"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-bollerwagen",
@@ -444,7 +604,10 @@ window.STATIONS = [
     "streams": [
       "https://ffn-stream19.radiohost.de/radiobollerwagen_mp3-192?ref=radioplayer&listenerid=31363233323633323031-323030333a64653a343731363a3730313a623731343a346664383a313761363a39386165-3537373636-4d6f7a696c6c612f352e3020285831313b205562"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      192
+    ]
   },
   {
     "id": "swr4-bw",
@@ -453,7 +616,10 @@ window.STATIONS = [
     "streams": [
       "https://liveradio.swr.de/sw890cl/swr4bw/"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      96
+    ]
   },
   {
     "id": "wdr-2-rhein-und-ruhr",
@@ -462,7 +628,10 @@ window.STATIONS = [
     "streams": [
       "https://wdr-wdr2-rheinruhr.icecast.wdr.de/wdr/wdr2/rheinruhr/mp3/128/stream.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "schwarzwaldradio",
@@ -471,7 +640,10 @@ window.STATIONS = [
     "streams": [
       "https://edge61.streamonkey.net/fho-schwarzwaldradiolive/stream/mp3?aggregator=smk-m3u-mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "n-joy",
@@ -480,7 +652,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.ndr.de/ndr/njoy/live/mp3/128/stream.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "br-klassik",
@@ -489,7 +664,10 @@ window.STATIONS = [
     "streams": [
       "https://dispatcher.rndfnk.com/br/brklassik/live/mp3/high"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      256
+    ]
   },
   {
     "id": "trancebase-fm",
@@ -498,7 +676,10 @@ window.STATIONS = [
     "streams": [
       "https://listen.trancebase.fm/tunein-aac-hd-pls"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      256
+    ]
   },
   {
     "id": "sunshine-live-die-90er",
@@ -507,7 +688,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.sunshine-live.de/90er/mp3-192/stream.sunshine-live.de"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      192
+    ]
   },
   {
     "id": "blasmusikradio-mit-bernd",
@@ -516,7 +700,10 @@ window.STATIONS = [
     "streams": [
       "https://blasmusikradiomitbernd.stream.laut.fm/blasmusikradio_mit_bernd?t302=2026-10-22_11-14-48&uuid=1c862183-4ad1-31ac-d614-244ec1af5ae8"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "wdr-cosmo",
@@ -525,7 +712,10 @@ window.STATIONS = [
     "streams": [
       "https://wdr-cosmo-live.icecast.wdr.de/wdr/cosmo/live/mp3/128/stream.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "vintage-radio",
@@ -534,7 +724,10 @@ window.STATIONS = [
     "streams": [
       "https://vintageradio.ice.infomaniak.ch/vintageradio-high.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ndr-2-hamburg",
@@ -543,7 +736,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.ndr.de/ndr/ndr2/hamburg/mp3/128/stream.mp3?1728423809880&aggregator=web"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ndr-1-niedersachsen",
@@ -552,7 +748,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.ndr.de/ndr/ndr1niedersachsen/hannover/mp3/128/stream.mp3?1728424471708&aggregator=web"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-88-6",
@@ -561,7 +760,10 @@ window.STATIONS = [
     "streams": [
       "https://radio886.at/streams/radio_88.6/mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hr3",
@@ -570,7 +772,10 @@ window.STATIONS = [
     "streams": [
       "https://dispatcher.rndfnk.com/hr/hr3/live/mp3/128/stream.mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "srf-4-news",
@@ -579,7 +784,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.srg-ssr.ch/m/drs4news/mp3_128"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-bob-classic-rock",
@@ -588,7 +796,10 @@ window.STATIONS = [
     "streams": [
       "https://streams.radiobob.de/bob-classicrock/mp3-192/streams.radiobob.de/"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      192
+    ]
   },
   {
     "id": "orf-radio-wien",
@@ -597,7 +808,10 @@ window.STATIONS = [
     "streams": [
       "https://orf-live.ors-shoutcast.at/wie-q1a"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "trance-by-rautemusik-rm-fm",
@@ -606,7 +820,10 @@ window.STATIONS = [
     "streams": [
       "https://trance-high.rautemusik.fm/?ref=radiobrowser"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      192
+    ]
   },
   {
     "id": "wdr-2-ruhrgebiet",
@@ -615,7 +832,10 @@ window.STATIONS = [
     "streams": [
       "https://wdr-wdr2-ruhrgebiet.icecastssl.wdr.de/wdr/wdr2/ruhrgebiet/mp3/128/stream.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "wdr-2-ostwestfalen-lippe",
@@ -624,7 +844,10 @@ window.STATIONS = [
     "streams": [
       "https://wdr-wdr2-ostwestfalenlippe.icecast.wdr.de/wdr/wdr2/ostwestfalenlippe/mp3/128/stream.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ndr-1-welle-nord",
@@ -633,7 +856,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.ndr.de/ndr/ndr1wellenord/kiel/mp3/128/stream.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "0-n-80s-on-radio",
@@ -643,7 +869,11 @@ window.STATIONS = [
       "https://0n-80s.radionetz.de/0n-80s.aac",
       "https://0n-80s.radionetz.de/0n-80s.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      64,
+      128
+    ]
   },
   {
     "id": "radio-srf-3",
@@ -652,7 +882,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.srg-ssr.ch/m/drs3/aacp_96"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      88
+    ]
   },
   {
     "id": "mdr-aktuell",
@@ -661,7 +894,10 @@ window.STATIONS = [
     "streams": [
       "https://mdr-284340-0.sslcast.mdr.de/mdr/284340/0/mp3/high/stream.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "mdr-jump",
@@ -670,7 +906,10 @@ window.STATIONS = [
     "streams": [
       "https://mdr-284320-0.sslcast.mdr.de/mdr/284320/0/mp3/high/stream.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hr1",
@@ -679,7 +918,10 @@ window.STATIONS = [
     "streams": [
       "https://dispatcher.rndfnk.com/hr/hr1/live/mp3/128/stream.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "technolovers-edm",
@@ -688,7 +930,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.technolovers.fm/edm?ref=radiobrowser"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      192
+    ]
   },
   {
     "id": "0-n-70s-on-radio",
@@ -697,7 +942,10 @@ window.STATIONS = [
     "streams": [
       "https://0n-70s.radionetz.de/0n-70s.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-swiss-classic-german",
@@ -706,7 +954,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.srg-ssr.ch/m/rsc_de/mp3_128"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bremen-vier",
@@ -715,7 +966,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.radiobremen.de/rb/bremenvier/live/mp3/128/stream.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "berliner-rundfunk-91-4",
@@ -724,7 +978,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.berliner-rundfunk.de/brf/mp3-128/internetradio/"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "energy-zurich-nrj",
@@ -733,7 +990,10 @@ window.STATIONS = [
     "streams": [
       "https://energyzuerich.ice.infomaniak.ch/energyzuerich-high.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bremen-eins",
@@ -742,7 +1002,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.radiobremen.de/rb/bremeneins/live/mp3/128/stream.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "techno-by-rautemusik-fm",
@@ -751,7 +1014,10 @@ window.STATIONS = [
     "streams": [
       "https://streams.rautemusik.fm/techno/mp3-192/?ref=radiobrowser"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      192
+    ]
   },
   {
     "id": "bayern-1-niederbayern-oberpfalz",
@@ -760,7 +1026,10 @@ window.STATIONS = [
     "streams": [
       "https://dispatcher.rndfnk.com/br/br1/nbopf/mp3/mid"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "orf-radio-oberosterreich-hq",
@@ -769,7 +1038,10 @@ window.STATIONS = [
     "streams": [
       "https://orf-live.ors-shoutcast.at/ooe-q2a"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      192
+    ]
   },
   {
     "id": "lounge-by-rautemusik-rm-fm",
@@ -778,7 +1050,10 @@ window.STATIONS = [
     "streams": [
       "https://lounge-high.rautemusik.fm/?ref=radiobrowser"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      192
+    ]
   },
   {
     "id": "best-of-rock-fm-alternative-rock",
@@ -787,7 +1062,10 @@ window.STATIONS = [
     "streams": [
       "https://bestofrockfm.stream.vip/altrock/mp3-256/bestofrock.fm/"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      256
+    ]
   },
   {
     "id": "swr-dasding",
@@ -796,7 +1074,10 @@ window.STATIONS = [
     "streams": [
       "https://liveradio.swr.de/d9zadj3/dasding/"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-bob-nu-metal",
@@ -805,7 +1086,10 @@ window.STATIONS = [
     "streams": [
       "https://streams.radiobob.de/numetal/mp3-192/"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      192
+    ]
   },
   {
     "id": "schlagerparadies",
@@ -814,7 +1098,10 @@ window.STATIONS = [
     "streams": [
       "https://webstream.schlagerparadies.de/schlager30842"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      192
+    ]
   },
   {
     "id": "absolut-relax",
@@ -832,7 +1119,10 @@ window.STATIONS = [
     "streams": [
       "https://streams.fluxfm.de/live/mp3-320/audio/"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      320
+    ]
   },
   {
     "id": "98-8-kiss-fm",
@@ -841,7 +1131,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.kissfm.de/kissfm/mp3-128/internetradio/"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "mdr-kultur",
@@ -850,7 +1143,10 @@ window.STATIONS = [
     "streams": [
       "https://mdr-284310-0.sslcast.mdr.de/mdr/284310/0/mp3/high/stream.mp3"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "90s90s-eurodance",
@@ -859,7 +1155,10 @@ window.STATIONS = [
     "streams": [
       "https://regiocast.streamabc.net/regc-90s90seurodance7558633-mp3-192-3419489?sABC=6nr0n036%230%23nq59s62359o2nr38nsp8150610pq18p9%23fgernzf.90f90f.qr&aw_0_1st.playerid=streams.90s90s.de&amsparams=playerid:streams.90s90s.de;skey:1793105974"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      192
+    ]
   },
   {
     "id": "technolovers-electro-house",
@@ -868,7 +1167,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.technolovers.fm/electro-house?ref=radiobrowser"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      192
+    ]
   },
   {
     "id": "bytefm",
@@ -877,7 +1179,10 @@ window.STATIONS = [
     "streams": [
       "https://bytefm.cast.addradio.de/bytefm/main/high/stream"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      192
+    ]
   },
   {
     "id": "antenne-steiermark",
@@ -886,7 +1191,10 @@ window.STATIONS = [
     "streams": [
       "https://live.antenne.at/as"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ndr-90-3",
@@ -895,7 +1203,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.ndr.de/ndr/ndr903/hamburg/mp3/128/stream.mp3?1728425642817&aggregator=web"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "perfect-deep-house",
@@ -904,7 +1215,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiojar.com/asngk2sg798uv?1659885393"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      192
+    ]
   },
   {
     "id": "die-maus",
@@ -913,7 +1227,10 @@ window.STATIONS = [
     "streams": [
       "https://wdr-diemaus-live.icecastssl.wdr.de/wdr/diemaus/live/mp3/128/stream.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "0-n-60s-on-radio",
@@ -922,7 +1239,10 @@ window.STATIONS = [
     "streams": [
       "https://0n-60s.radionetz.de/0n-60s.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "wdr-3",
@@ -931,7 +1251,10 @@ window.STATIONS = [
     "streams": [
       "https://wdr-wdr3-live.icecast.wdr.de/wdr/wdr3/live/mp3/128/stream.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sex-by-rautemusik-rm-fm",
@@ -940,7 +1263,10 @@ window.STATIONS = [
     "streams": [
       "https://sex-high.rautemusik.fm/?ref=radiobrowser"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      192
+    ]
   },
   {
     "id": "rock-antenne-classic-perlen",
@@ -949,7 +1275,10 @@ window.STATIONS = [
     "streams": [
       "https://mp3channels.webradio.rockantenne.de/classic-perlen"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "lounge-fm-100-austria",
@@ -958,7 +1287,10 @@ window.STATIONS = [
     "streams": [
       "https://s35.derstream.net/100austria.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "wdr-4-rhein-und-ruhr",
@@ -967,7 +1299,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.wdr.de/wdr/wdr4/rheinruhr/mp3/128/stream.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "antenne-brandenburg",
@@ -976,7 +1311,10 @@ window.STATIONS = [
     "streams": [
       "https://dispatcher.rndfnk.com/rbb/antennebrandenburg/live/mp3/mid"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "0-n-smooth-jazz-on-radio",
@@ -985,7 +1323,10 @@ window.STATIONS = [
     "streams": [
       "https://0n-smoothjazz.radionetz.de/0n-smoothjazz.aac"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      64
+    ]
   },
   {
     "id": "technolovers-deep-house",
@@ -994,7 +1335,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.technolovers.fm/deep-house?ref=radiobrowser"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      192
+    ]
   },
   {
     "id": "swr-aktuell",
@@ -1003,7 +1347,10 @@ window.STATIONS = [
     "streams": [
       "https://liveradio.swr.de/sw282p3/swraktuell/play.aac"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "swr1",
@@ -1012,7 +1359,10 @@ window.STATIONS = [
     "streams": [
       "https://dispatcher.rndfnk.com/swr/swr1/bw/mp3/128/stream.mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "antenne-bayern-oldies-but-goldies",
@@ -1021,7 +1371,10 @@ window.STATIONS = [
     "streams": [
       "https://mp3channels.webradio.antenne.de/oldies-but-goldies"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "0-n-christmas-on-radio",
@@ -1030,7 +1383,10 @@ window.STATIONS = [
     "streams": [
       "https://0n-christmas.radionetz.de/0n-christmas.mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "jazz-radio-swiss",
@@ -1039,7 +1395,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.srg-ssr.ch/m/rsj/mp3_128"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "chillout-piano-by-epic-piano",
@@ -1048,7 +1407,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.epic-piano.com/chillout-piano?ref=radiobrowser"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      192
+    ]
   },
   {
     "id": "1-a-christmas-on-radio",
@@ -1057,7 +1419,10 @@ window.STATIONS = [
     "streams": [
       "https://1a-christmas.radionetz.de/1a-christmas.aac"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      64
+    ]
   },
   {
     "id": "housetime-fm",
@@ -1066,7 +1431,10 @@ window.STATIONS = [
     "streams": [
       "https://listen.housetime.fm/tunein-aac-hd-pls"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      256
+    ]
   },
   {
     "id": "best-of-techno",
@@ -1075,7 +1443,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.laut.fm/best-of-techno"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "br-heimat",
@@ -1084,7 +1455,10 @@ window.STATIONS = [
     "streams": [
       "https://dispatcher.rndfnk.com/br/brheimat/live/mp3/mid"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rbb-88-8-radio-berlin",
@@ -1093,7 +1467,10 @@ window.STATIONS = [
     "streams": [
       "https://dispatcher.rndfnk.com/rbb/rbb888/live/mp3/mid"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sunshine-live-vocal-trance",
@@ -1102,7 +1479,10 @@ window.STATIONS = [
     "streams": [
       "https://sunsl.streamabc.net/sunsl-vocaltrance-mp3-192-5826863?sABC=6nr69n80%230%23nq59s62359o2nr38nsp8150610pq18p9%23fgernz.fhafuvar-yvir.qr&aw_0_1st.playerid=stream.sunshine-live.de&amsparams=playerid:stream.sunshine-live.de;skey:1793497728"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      192
+    ]
   },
   {
     "id": "wdr-2-munsterland",
@@ -1111,7 +1491,10 @@ window.STATIONS = [
     "streams": [
       "https://wdr-wdr2-muensterland.icecast.wdr.de/wdr/wdr2/muensterland/mp3/128/stream.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "techno-lovers-fm-vocal-trance",
@@ -1120,7 +1503,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.technolovers.fm/vocal-trance"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      192
+    ]
   },
   {
     "id": "bremen-zwei-neu",
@@ -1129,7 +1515,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.radiobremen.de/rb/bremenzwei/live/mp3/128/stream.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "jesus-is-lord-radio",
@@ -1138,7 +1527,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-285.surfernetwork.com/thdtw5xd9eiuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ0aGR0dzV4ZDllaXV2IiwiaG9zdCI6InN0cmVhbS0yODUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiI0OUMxUU9PMFIyeTl5SThnTno0VTB3IiwiaWF0IjoxNzg1OTU0NjI0LCJleHAiOjE3ODU5NTQ2ODR9.TEC2qyYYTCv3OjNepwCqgyWWPAoxPRanj5XLmznekcA"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      64
+    ]
   },
   {
     "id": "0-n-90s-on-radio",
@@ -1147,7 +1539,10 @@ window.STATIONS = [
     "streams": [
       "https://0n-90s.radionetz.de/0n-90s.mp3"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "wdr-1live-diggi",
@@ -1156,7 +1551,10 @@ window.STATIONS = [
     "streams": [
       "https://wdr-1live-diggi.icecast.wdr.de/wdr/1live/diggi/mp3/128/stream.mp3"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rai-sudtirol",
@@ -1174,7 +1572,10 @@ window.STATIONS = [
     "streams": [
       "https://icepool.silvacast.com/RADIOPALOMA.mp3"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-bob-livestream-national",
@@ -1183,7 +1584,10 @@ window.STATIONS = [
     "streams": [
       "https://streams.radiobob.de/bob-national/mp3-192/mediaplayer"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      192
+    ]
   },
   {
     "id": "the-wolf-new-country-and-the-legends",
@@ -1192,7 +1596,10 @@ window.STATIONS = [
     "streams": [
       "https://radio21.streamabc.net/radio21-radio21dabns-mp3-192-3908190"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      192
+    ]
   },
   {
     "id": "0-n-chillout-on-radio",
@@ -1201,7 +1608,10 @@ window.STATIONS = [
     "streams": [
       "https://0n-chillout.radionetz.de/0n-chillout.mp3"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ballermann-radio",
@@ -1210,7 +1620,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.bmr-radio.de/"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      192
+    ]
   },
   {
     "id": "epic-classical-classical-music-for-sleep",
@@ -1219,7 +1632,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.epic-classical.com/classical-music-for-sleep"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      192
+    ]
   },
   {
     "id": "austria-first-osterreichs-patriotenradio",
@@ -1228,7 +1644,10 @@ window.STATIONS = [
     "streams": [
       "https://n01a-eu.rcs.revma.com/3zudpqfxh0cwv?rj-ttl=5&rj-tok=AAABm8uuzlsAWVPrc0mLiKWX-Q"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      320
+    ]
   },
   {
     "id": "88-6-hard-rock",
@@ -1237,7 +1656,10 @@ window.STATIONS = [
     "streams": [
       "https://radio886.at/streams/88.6_Hard_Rock/mp3"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "energy-hit-music-only",
@@ -1246,7 +1668,10 @@ window.STATIONS = [
     "streams": [
       "https://edge62.streamonkey.net/energy-digital/stream/mp3"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "mosh-head-black-metal-id",
@@ -1255,7 +1680,10 @@ window.STATIONS = [
     "streams": [
       "https://moshhead-blackmetal.stream.laut.fm/moshhead-blackmetal"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hr4",
@@ -1264,7 +1692,10 @@ window.STATIONS = [
     "streams": [
       "https://dispatcher.rndfnk.com/hr/hr4/live/mp3/high"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "90s90s-grunge",
@@ -1273,7 +1704,10 @@ window.STATIONS = [
     "streams": [
       "https://streams.90s90s.de/grunge/mp3-192/"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-argovia",
@@ -1282,7 +1716,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.streambase.ch/argovia/mp3-192/direct/"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      192
+    ]
   },
   {
     "id": "ndr-kultur",
@@ -1291,7 +1728,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.ndr.de/ndr/ndrkultur/live/aac/192/stream.aac"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      192
+    ]
   },
   {
     "id": "egofm-bayern",
@@ -1300,7 +1740,10 @@ window.STATIONS = [
     "streams": [
       "https://cast.egofm.de/egofm.mp3?ar-distributor=radio-browser"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "egofm",
@@ -1309,7 +1752,10 @@ window.STATIONS = [
     "streams": [
       "https://cast.egofm.de/egofm.mp3?ar-distributor=ffa0&aw_0_req.gdpr=true"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bayern-1-schwaben",
@@ -1318,7 +1764,10 @@ window.STATIONS = [
     "streams": [
       "https://dispatcher.rndfnk.com/br/br1/schwaben/mp3/mid"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "inforadio-vom-rbb",
@@ -1327,7 +1776,10 @@ window.STATIONS = [
     "streams": [
       "https://dispatcher.rndfnk.com/rbb/inforadio/live/mp3/low?aggregator=tunein"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      64
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

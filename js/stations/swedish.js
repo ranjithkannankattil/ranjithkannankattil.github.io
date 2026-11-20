@@ -9,6 +9,10 @@ window.STATIONS = [
     "streams": [
       "https://live-bauerse-fm.sharp-stream.com/mixmegapol_instream_se_mp3",
       "https://live-bauerse-fm.sharp-stream.com/mixmegapol_instream_se_aacp"
+    ],
+    "br": [
+      128,
+      56
     ]
   },
   {
@@ -20,6 +24,12 @@ window.STATIONS = [
       "https://edge1.sr.se/p1-aac-320",
       "https://live1.sr.se/p1-aac-32",
       "https://sverigesradio.se/topsy/direkt/srapi/132-hi-aac-http"
+    ],
+    "br": [
+      94,
+      312,
+      128,
+      312
     ]
   },
   {
@@ -30,6 +40,11 @@ window.STATIONS = [
       "https://live1.sr.se/p3-mp3-96",
       "https://edge1.sr.se/p3-aac-320",
       "https://live1.sr.se/p3-aac-320"
+    ],
+    "br": [
+      160,
+      280,
+      280
     ]
   },
   {
@@ -58,6 +73,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live1.sr.se/p4gbg-aac-320"
+    ],
+    "br": [
+      312
     ]
   },
   {
@@ -66,6 +84,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-bauerse-fm.sharp-stream.com/mixmegapol_instream_se_mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -74,6 +95,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.piraterock.se:8101/webradio"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -82,6 +106,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://edge1.sr.se/p4sth-aac-320"
+    ],
+    "br": [
+      312
     ]
   },
   {
@@ -90,6 +117,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.dbmedia.se/crr96"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -106,6 +136,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://live1.sr.se/p4ostg-mp3-96"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -114,6 +147,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/tf8vczzxrg0uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -122,6 +158,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live1.sr.se/p4plus-aac-320"
+    ],
+    "br": [
+      312
     ]
   },
   {
@@ -130,6 +169,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.dbmedia.se/gk60tal96"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -138,6 +180,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.dbmedia.se/gkhbg96"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -147,6 +192,10 @@ window.STATIONS = [
     "streams": [
       "https://live1.sr.se/p4blek-mp3-96",
       "https://sverigesradio.se/topsy/direkt/213-lo-mp3.m3u"
+    ],
+    "br": [
+      86,
+      0
     ]
   },
   {
@@ -173,6 +222,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-bauerse-fm.sharp-stream.com/nostalgi_mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -191,6 +243,11 @@ window.STATIONS = [
       "https://live1.sr.se/p2-flac",
       "https://live1.sr.se/p2-aac-320",
       "https://edge1.sr.se/p2-flac"
+    ],
+    "br": [
+      128,
+      328,
+      128
     ]
   },
   {
@@ -199,6 +256,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live1.sr.se/p4vbtn-mp3-96"
+    ],
+    "br": [
+      112
     ]
   },
   {
@@ -207,6 +267,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sstream.ueteknik.se/listen/wolffm/radio.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -215,6 +278,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radio943.se/stream"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -223,6 +289,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://live1.sr.se/p4kalm-mp3-96"
+    ],
+    "br": [
+      88
     ]
   },
   {
@@ -231,6 +300,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.live.yle.fi/radio/YleX3M/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -239,6 +311,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://www.sverigesradio.se/topsy/direkt/srapi/206.mp3"
+    ],
+    "br": [
+      164
     ]
   },
   {
@@ -247,6 +322,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live1.sr.se/p4vnrl-mp3-96"
+    ],
+    "br": [
+      144
     ]
   },
   {
@@ -255,6 +333,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://fwd.autopo.st/runedervall"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -263,6 +344,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.live.yle.fi/radio/YleVegaVastnyland/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -271,6 +355,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sc.dansbandsradio.se/dbr64.aac"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -279,6 +366,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.dbmedia.se/gk96"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -287,6 +377,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.dbmedia.se/gk80tal96"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -295,6 +388,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://replaynewsse.ice.infomaniak.ch/replaynewsse-128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -303,6 +399,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live1.sr.se/p4sth-aac-32"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -311,6 +410,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live1.sr.se/p4hall-aac-128"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -319,6 +421,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.hitcity.se/live.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -327,6 +432,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://live1.sr.se/p4jkpg-aac-320"
+    ],
+    "br": [
+      288
     ]
   },
   {
@@ -335,6 +443,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live1.sr.se/dingata-aac-320"
+    ],
+    "br": [
+      312
     ]
   },
   {
@@ -344,7 +455,10 @@ window.STATIONS = [
     "streams": [
       "https://live-bauerse-fm.sharp-stream.com/nrj_instreamtest_se_mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sveriges-kristna-radio",
@@ -353,7 +467,10 @@ window.STATIONS = [
     "streams": [
       "https://s2.radio.co/sfbf5f5b85/listen"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "bananradion",
@@ -362,7 +479,10 @@ window.STATIONS = [
     "streams": [
       "https://lyssna.bananradion.se/listen/bananradion/128aac"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sveriges-radio-sr-sisuradio",
@@ -371,7 +491,10 @@ window.STATIONS = [
     "streams": [
       "https://live1.sr.se/finska-aac-320"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      312
+    ]
   },
   {
     "id": "dagnys-jukebox",
@@ -380,7 +503,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.dagnysjukebox.se/dagny"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "vinyl-fm-se",
@@ -398,7 +524,10 @@ window.STATIONS = [
     "streams": [
       "https://live1.sr.se/p4vstm-mp3-96"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      114
+    ]
   },
   {
     "id": "sveriges-radio-ekot-sander-direkt",
@@ -407,7 +536,10 @@ window.STATIONS = [
     "streams": [
       "https://live1.sr.se/ekotdirekt-aac-320"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      312
+    ]
   },
   {
     "id": "sauna-radio",
@@ -416,7 +548,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.saunaradio.com/live"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sveriges-radio-p4-malmohus",
@@ -425,7 +560,10 @@ window.STATIONS = [
     "streams": [
       "https://live1.sr.se/p4malm-aac-32"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      32
+    ]
   },
   {
     "id": "roslagen-live",
@@ -434,7 +572,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.mediarosenqvist.com/listen/roslagen-live/radio.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-uppsala",
@@ -443,7 +584,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.mediarosenqvist.com/listen/radio-uppsala/radio.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      192
+    ]
   },
   {
     "id": "sveriges-radio-p2-sprak-och-musik",
@@ -452,7 +596,10 @@ window.STATIONS = [
     "streams": [
       "https://live1.sr.se/p2sm-aac-320"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      312
+    ]
   },
   {
     "id": "sr-p2",
@@ -470,7 +617,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radio.bubb.la/stream.mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      160
+    ]
   },
   {
     "id": "sveriges-radio-p6",
@@ -479,7 +629,10 @@ window.STATIONS = [
     "streams": [
       "https://live1.sr.se/p6-aac-320"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      312
+    ]
   },
   {
     "id": "translation-of-the-quran-in-swedish",
@@ -488,7 +641,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8232/;"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "strul-fm",
@@ -497,7 +653,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.streamaudio.de:8000/strul-fm"
     ],
-    "added": "2026-11-14"
+    "added": "2026-11-14",
+    "br": [
+      128
+    ]
   },
   {
     "id": "tjenamors-radio",
@@ -506,7 +665,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.tjenamors.se/listen/tjenamors_radio/radio.mp3"
     ],
-    "added": "2026-11-15"
+    "added": "2026-11-15",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-aftonbladet",
@@ -524,7 +686,10 @@ window.STATIONS = [
     "streams": [
       "https://live1.sr.se/knattekanalen-aac-320"
     ],
-    "added": "2026-11-17"
+    "added": "2026-11-17",
+    "br": [
+      312
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

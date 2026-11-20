@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.convoynetwork.com/stream"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/FM999_56.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/ACIR22_s01AAC.aac"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.servicioswebmx.com/8146/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -40,6 +52,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/CARACOL_RADIOAAC.aac"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -48,6 +63,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio10.stweb.tv/radio10/live/playlist.m3u8"
+    ],
+    "br": [
+      65
     ]
   },
   {
@@ -56,6 +74,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/XHMFMAAC_SC.aac"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -64,6 +85,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/DISNEY_ARG_BA_ADP.aac"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -72,6 +96,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.freepi.io:8200/stream"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -80,6 +107,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://liveradio.mediainbox.net/popular.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -88,6 +118,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://panel.retrolandigital.com/radio/8110/listen"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -96,6 +129,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://liveaudio.lamusica.com/MIA_WCMQ_icy"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -104,6 +140,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://18363.live.streamtheworld.com:443/XHDFMFMAAC.aac"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -112,6 +151,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://panel.retrolandigital.com/listen/cumbias_inmortales_radio/listen"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -120,6 +162,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://27593.live.streamtheworld.com/CARACOL_RADIOAAC_SC"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -128,6 +173,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/XHPSFMAAC.aac"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -144,6 +192,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/XHFAJ_FMAAC.aac"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -152,6 +203,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s2.radio.co:80/s9ecef4f68/listen"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -160,6 +214,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://server1.stweb.tv/rcvos/live/playlist.m3u8"
+    ],
+    "br": [
+      66
     ]
   },
   {
@@ -168,6 +225,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/XEPHAMAAC.aac"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -177,6 +237,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/ACIR20_s01AAC.aac",
       "https://18193.live.streamtheworld.com:443/ACIR20_S01AAC.aac"
+    ],
+    "br": [
+      48,
+      48
     ]
   },
   {
@@ -185,6 +249,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.stereoanime.com/listen/stereoanime/128"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -193,6 +260,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://mdstrm.com/audio/5fab0687bcd6c2389ee9480c/live.m3u8"
+    ],
+    "br": [
+      130
     ]
   },
   {
@@ -201,6 +271,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.freepi.io:8202/stream"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -209,6 +282,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://neptuno-2-audio.mediaserver.digital/79525baf-b0f5-4013-a8bd-3c5c293c6561"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -217,6 +293,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://rocafmadrid.radioca.st/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -225,6 +304,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streamingcwsradio20.com:9410/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -233,6 +315,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.infinityhdstream.com/7054/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -241,6 +326,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/MIX_MEDELLINAAC.aac"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -249,6 +337,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://chino.republicahosting.com:2316/live"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -257,6 +348,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://19993.live.streamtheworld.com/VERONICA_SC"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -265,6 +359,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/ACIR11_s01AAC.aac"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -273,6 +370,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://panel.retrolandigital.com/listen/oldies_internet_radio/listen"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -281,6 +381,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio02.ferozo.com/proxy/ra01000409?mp=/stream"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -289,6 +392,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/KEBUENAAAC.aac"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -297,6 +403,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/XEFRAMAAC.aac"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -305,6 +414,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://80.streeemer.com/listen/80s/radio.aac"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -313,6 +425,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/XEQR_FMAAC.aac"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -322,7 +437,8 @@ window.STATIONS = [
     "streams": [
       "https://canelaradio.makrodigital.com/stream/canelaradioguayaquil"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "blu-radio-senal-nacional",
@@ -331,7 +447,10 @@ window.STATIONS = [
     "streams": [
       "https://27403.live.streamtheworld.com/BLURADIO_SC"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      256
+    ]
   },
   {
     "id": "caracol-radio-colombia",
@@ -340,7 +459,10 @@ window.STATIONS = [
     "streams": [
       "https://24253.live.streamtheworld.com/CARACOL_RADIOAAC_SC"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      32
+    ]
   },
   {
     "id": "jesus-is-lord-radio",
@@ -349,7 +471,10 @@ window.STATIONS = [
     "streams": [
       "https://s3.radio.co/s97f38db97/listen"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      48
+    ]
   },
   {
     "id": "los-40-principales-mexico",
@@ -358,7 +483,10 @@ window.STATIONS = [
     "streams": [
       "https://14843.live.streamtheworld.com/LOS40_MEXICO_SC"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "la-salsa-maestra",
@@ -367,7 +495,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/c1skkw28pfeuv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "amor-solo-musica-romantica",
@@ -376,7 +507,10 @@ window.STATIONS = [
     "streams": [
       "https://18373.live.streamtheworld.com:443/XHSHFMAAC.aac"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      48
+    ]
   },
   {
     "id": "1-oldies",
@@ -385,7 +519,10 @@ window.STATIONS = [
     "streams": [
       "https://80sexitos.stream.laut.fm/80sexitos"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-panamericana",
@@ -395,7 +532,11 @@ window.STATIONS = [
       "https://mdstrm.com/audio/6598b62dded1380470f4e539/icecast.audio",
       "https://stream.zeno.fm/pnwpbyfambruv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      125,
+      192
+    ]
   },
   {
     "id": "groove-wave-lounge",
@@ -404,7 +545,10 @@ window.STATIONS = [
     "streams": [
       "https://stm1.srvif.com:7576/;"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "w-radio-ciudad-de-mexico-televisa-radio",
@@ -413,7 +557,10 @@ window.STATIONS = [
     "streams": [
       "https://26383.live.streamtheworld.com/W_RADIOAAC_SC"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      192
+    ]
   },
   {
     "id": "studio-92-92-5-fm-lima",
@@ -422,7 +569,10 @@ window.STATIONS = [
     "streams": [
       "https://mdstrm.com/audio/5fada553978fe1080e3ac5ea/icecast.audio"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      192
+    ]
   },
   {
     "id": "los40-la-radio-de-los-conciertos",
@@ -431,7 +581,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_MEXICOAAC.aac"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      192
+    ]
   },
   {
     "id": "fieramix",
@@ -440,7 +593,10 @@ window.STATIONS = [
     "streams": [
       "https://c11.radioboss.fm:18269/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      256
+    ]
   },
   {
     "id": "besame-medellin-94-9-fm",
@@ -449,7 +605,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/BESAME_MEDELLINAAC.aac"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      64
+    ]
   },
   {
     "id": "bachata-radio",
@@ -458,7 +617,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.domiplay.net:8002/;"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      64
+    ]
   },
   {
     "id": "raxies-fm",
@@ -467,7 +629,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/annpmyskb4jtv"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "la-noventera",
@@ -476,7 +641,10 @@ window.STATIONS = [
     "streams": [
       "https://host.gometri.com/proxy/lanoventera/stream/"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "la-salsa-cubana",
@@ -485,7 +653,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/uf2r0d5ny39uv"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ritmo-96-5-fm",
@@ -494,7 +665,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/y0br5ck4ququv"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "los40-colombia",
@@ -503,7 +677,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_COLOMBIAAAC.aac"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      64
+    ]
   },
   {
     "id": "mix-bogota",
@@ -512,7 +689,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/MIX_BOGOTAAAC.aac"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      64
+    ]
   },
   {
     "id": "le-bon-mix-hifi-flac-1411-kbps",
@@ -530,7 +710,10 @@ window.STATIONS = [
     "streams": [
       "https://play10.tikast.com/proxy/colsalsadura?mp=/stream"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "olimpica-stereo-bogota",
@@ -539,7 +722,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/OLP_BOGOTAAAC.aac"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      64
+    ]
   },
   {
     "id": "emisoras-unidas-89-7",
@@ -548,7 +734,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zenolive.com/z96sq8tndseuv"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      160
+    ]
   },
   {
     "id": "radio-hrn-la-voz-de-honduras",
@@ -557,7 +746,10 @@ window.STATIONS = [
     "streams": [
       "https://ice42.securenetsystems.net/HRN"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      32
+    ]
   },
   {
     "id": "metro-95-1",
@@ -566,7 +758,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/METRO.mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      96
+    ]
   },
   {
     "id": "aspen-102-3",
@@ -575,7 +770,10 @@ window.STATIONS = [
     "streams": [
       "https://24503.live.streamtheworld.com/ASPENAAC.aac"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      64
+    ]
   },
   {
     "id": "urbana-play-104-3-10-2026",
@@ -593,7 +791,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/h7lnwv51bh5uv"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "la-100-clasicos-disco-retro-clasicos",
@@ -602,7 +803,10 @@ window.STATIONS = [
     "streams": [
       "https://27323.live.streamtheworld.com/FCLASICOS_56AAC.aac?"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-la-romantica",
@@ -611,7 +815,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/28hgnyp8568uv"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "nuevaolera",
@@ -620,7 +827,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/4q99spjike0uv"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      320
+    ]
   },
   {
     "id": "caracas-salsa-romantica",
@@ -629,7 +839,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-285.surfernetwork.com/ftly191pojttv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJmdGx5MTkxcG9qdHR2IiwiaG9zdCI6InN0cmVhbS0yODUuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6ImM5anZ1QUtvVE1HMEVkOUpuNGEweEEiLCJpYXQiOjE3OTMxMDQyMDAsImV4cCI6MTc5MzEwNDI2MH0.hkktqROdPf-apppsb6jparXCjSqF-ctfagSrklnpO3s"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "100-9-play-fm",
@@ -638,7 +851,10 @@ window.STATIONS = [
     "streams": [
       "https://mdstrm.com/audio/5c8d6406f98fbf269f57c82c/icecast.audio"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      93
+    ]
   },
   {
     "id": "beatles-radio",
@@ -647,7 +863,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/e4auhdgm6cquv"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "love-fm-all-you-need-is-love",
@@ -666,7 +885,8 @@ window.STATIONS = [
     "streams": [
       "https://canelaradio.makrodigital.com/stream/canelaradioquito"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "offline": true
   },
   {
     "id": "baladas-rs",
@@ -675,7 +895,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/7ans8mgv2ehvv"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-boing-97-3-rosario",
@@ -684,7 +907,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.redboing.com/radio/8000/radio.aac"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "el-sol-medellin-107-9-fm",
@@ -693,7 +919,10 @@ window.STATIONS = [
     "streams": [
       "https://us-b4-p-e-qg12-audio.cdn.mdstrm.com/live-audio-aw/632c9d30aa9ace684913b853"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      125
+    ]
   },
   {
     "id": "blue-100-7-fm",
@@ -702,7 +931,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/BLUE_FM_100_7AAC.aac"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      64
+    ]
   },
   {
     "id": "pura-gracia-radio-wrpg-db",
@@ -711,7 +943,10 @@ window.STATIONS = [
     "streams": [
       "https://26343.live.streamtheworld.com:443/SAM05AAC459_SC"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "exa-fm-101-7-guatemala",
@@ -720,7 +955,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/czdkk32qduhvv"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      96
+    ]
   },
   {
     "id": "primera-88-1",
@@ -729,7 +967,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiojar.com/5705c71sn2zuv"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      320
+    ]
   },
   {
     "id": "la-mega-medellin-92-9-fm",
@@ -738,7 +979,10 @@ window.STATIONS = [
     "streams": [
       "https://us-b4-p-e-qg12-audio.cdn.mdstrm.com/live-audio-aw/632cb48f613bac0856b931ab"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      125
+    ]
   },
   {
     "id": "rock-and-pop",
@@ -747,7 +991,10 @@ window.STATIONS = [
     "streams": [
       "https://27323.live.streamtheworld.com/ROCK_AND_POPAAC_SC"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      56
+    ]
   },
   {
     "id": "teletica-radio",
@@ -765,7 +1012,10 @@ window.STATIONS = [
     "streams": [
       "https://emiteradio.com/proxy/cumbia90s?mp=/stream"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      128
+    ]
   },
   {
     "id": "la-x-medellin-103-9-fm",
@@ -774,7 +1024,10 @@ window.STATIONS = [
     "streams": [
       "https://tupanel.info:8000/stream"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      64
+    ]
   },
   {
     "id": "techno-live-sets",
@@ -783,7 +1036,10 @@ window.STATIONS = [
     "streams": [
       "https://streamlive1.hearthis.at:8000/1329668.ogg?time=1783357004"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      256
+    ]
   },
   {
     "id": "radio-marti",
@@ -792,7 +1048,10 @@ window.STATIONS = [
     "streams": [
       "https://ocb01.akacast.akamaistream.net/7/365/437903/v1/ibb.akacast.akamaistream.net/ocb01"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "blu-radio-bogota-89-9",
@@ -801,7 +1060,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/BLURADIO.mp3"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      256
+    ]
   },
   {
     "id": "mix-ochentas-new-wave-glam-y-rock-de-los",
@@ -810,7 +1072,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/ACIR13_s01AAC.aac"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      48
+    ]
   },
   {
     "id": "mega-98-3",
@@ -819,7 +1084,10 @@ window.STATIONS = [
     "streams": [
       "https://mega.stweb.tv/mega983/live/playlist.m3u8"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      99
+    ]
   },
   {
     "id": "fiesta-vallenata",
@@ -828,7 +1096,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/qlznh4yhpvytv"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "tropical-100-salsa",
@@ -837,7 +1108,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/cjgfujr8yhbvv"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "onda-cero-te-activa",
@@ -846,7 +1120,10 @@ window.STATIONS = [
     "streams": [
       "https://mdstrm.com/audio/6598b65ab398c90871aff8cc/icecast.audio"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      125
+    ]
   },
   {
     "id": "neverland",
@@ -855,7 +1132,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/oaqigxpfjzqvv"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bachata-hits",
@@ -864,7 +1144,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/prbf8rrgvzzuv"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      160
+    ]
   },
   {
     "id": "chilango-radio-la-radio-que-viene-viene",
@@ -873,7 +1156,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radio.co/s938b68214/listen"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      192
+    ]
   },
   {
     "id": "navidad-venezuela",
@@ -882,7 +1168,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/vbvpvf6a6uvtv"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "96-7-radio-rebelde-fm",
@@ -891,7 +1180,8 @@ window.STATIONS = [
     "streams": [
       "https://theonestopradio.com/stream?url=https://icecast.teveo.cu/zrXXWK9F"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "offline": true
   },
   {
     "id": "tropical-100-mix",
@@ -900,7 +1190,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/esgo1lafgtstv"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "80s-hits",
@@ -909,7 +1202,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.laut.fm/80sexitos"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "alternativa-by-mix-rock-alternativo",
@@ -918,7 +1214,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/ACIR12_s01AAC.aac"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      48
+    ]
   },
   {
     "id": "boleros-inolvidables-fmlima",
@@ -927,7 +1226,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/5t45zksv7mruv"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "la-kalle",
@@ -936,7 +1238,10 @@ window.STATIONS = [
     "streams": [
       "https://24273.live.streamtheworld.com/LA_KALLE_SC"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "urbano-106-105-9-fm-san-jose-costa-rica",
@@ -945,7 +1250,10 @@ window.STATIONS = [
     "streams": [
       "https://usa18.fastcast4u.com/proxy/rmoohhrw?mp=/1"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-salsa-peru",
@@ -954,7 +1262,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/f19941g3teruv"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      192
+    ]
   },
   {
     "id": "reggaeton-92-3-fm",
@@ -963,7 +1274,10 @@ window.STATIONS = [
     "streams": [
       "https://streampanel.online/8495/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "la-kalle-96-1-lima",
@@ -972,7 +1286,10 @@ window.STATIONS = [
     "streams": [
       "https://lakalle.egostreaming.pe/radio/a7b9c3e4567f8d0123456789/"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rumba-98-1-fm",
@@ -981,7 +1298,10 @@ window.STATIONS = [
     "streams": [
       "https://cast20.plugstreaming.com:2020/stream/r981/;"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      64
+    ]
   },
   {
     "id": "babel",
@@ -990,7 +1310,10 @@ window.STATIONS = [
     "streams": [
       "https://radios.iwstreaming.uy/8030/stream"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "instrumentales",
@@ -999,7 +1322,10 @@ window.STATIONS = [
     "streams": [
       "https://protvradiostream.com:8350/live"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "tropicana-medellin-98-9-fm",
@@ -1008,7 +1334,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/TR_MEDELLINAAC.aac"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      56
+    ]
   },
   {
     "id": "los40-chile",
@@ -1017,7 +1346,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_CHILEAAC.aac"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      56
+    ]
   },
   {
     "id": "radio-romantica",
@@ -1026,7 +1358,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-282.surfernetwork.com/cploshirboutv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJjcGxvc2hpcmJvdXR2IiwiaG9zdCI6InN0cmVhbS0yODIuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6IjdpN1NPUlRPUUl5dmhpWng4UnFzOFEiLCJpYXQiOjE3OTM1NTUwNjYsImV4cCI6MTc5MzU1NTEyNn0.gCfV82he_ksRQrq0-4ox3eug0u_ZAG_jrJVqXhdNXME"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-campesina-cubana",
@@ -1035,7 +1370,10 @@ window.STATIONS = [
     "streams": [
       "https://radiocampesinacubana.stream.laut.fm/radiocampesinacubana?uuid=8b1edfba-38e5-c401-17c0-ed80dff25234&t302=2026-11-01_23-25-05"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "beethoven-santiago-fm",
@@ -1053,7 +1391,8 @@ window.STATIONS = [
     "streams": [
       "https://streamingecuador.net:8287/hcjb"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "offline": true
   },
   {
     "id": "atb-radio",
@@ -1062,7 +1401,10 @@ window.STATIONS = [
     "streams": [
       "https://streamingenbolivia.com/8006/stream"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "esplendida-91-9-fm",
@@ -1071,7 +1413,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/jyrqyy8he4tvv"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-el-conquistador-fm-santiago",
@@ -1080,7 +1425,10 @@ window.STATIONS = [
     "streams": [
       "https://stream10.usastreams.com/9314/stream/"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-activa-89-7-fm-hermosillo-sonora",
@@ -1099,7 +1447,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.twinskaraoke.com/listen/neuro_21/radio.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-furgoncino",
@@ -1108,7 +1459,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiojar.com/sf65dpxy9vzuv"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "la-rancherita-91-7-fm-los-mochis",
@@ -1117,7 +1471,10 @@ window.STATIONS = [
     "streams": [
       "https://radios.blumhost.es/8124/;"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      64
+    ]
   },
   {
     "id": "la-tukka-ec",
@@ -1126,7 +1483,10 @@ window.STATIONS = [
     "streams": [
       "https://grupomundodigital.com:8673/live"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      48
+    ]
   },
   {
     "id": "rt-espanol",
@@ -1144,7 +1504,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/OLP_CALI.mp3"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      96
+    ]
   },
   {
     "id": "el-espectador-810",
@@ -1153,7 +1516,10 @@ window.STATIONS = [
     "streams": [
       "https://espectador-1.nty.uy/"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "el-club-de-la-pluma",
@@ -1162,7 +1528,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming01.shockmedia.com.ar:10728/stream"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "clasica-102-5-guatemala",
@@ -1171,7 +1540,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/CLASICA_1065AAC.aac"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-cristiana-venezuela",
@@ -1180,7 +1552,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/r7zrx18xcfhvv"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "los-40-republica-dominicana",
@@ -1189,7 +1564,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/sse58hcighnvv?dist=los40-web-live_streaming_play"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "llaneros-por-venezuela",
@@ -1198,7 +1576,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/12bg6xa7hv8uv"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      48
+    ]
   },
   {
     "id": "radio-viva-95-3-guatemala",
@@ -1207,7 +1588,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/uus2ugdadkhvv"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      96
+    ]
   },
   {
     "id": "baladas-del-recuerdo",
@@ -1216,7 +1600,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/g7vk70rqr68uv"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      192
+    ]
   },
   {
     "id": "jumbo-deep-radio",
@@ -1225,7 +1612,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/juhqepbmmxqvv"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "super-estacion-88-9",
@@ -1234,7 +1624,10 @@ window.STATIONS = [
     "streams": [
       "https://emisorasdigitales2.com/8018/stream"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "navidad-grupera",
@@ -1243,7 +1636,10 @@ window.STATIONS = [
     "streams": [
       "https://radioforte.com/8006/stream"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sonar-105-3-fm",
@@ -1252,7 +1648,10 @@ window.STATIONS = [
     "streams": [
       "https://mdstrm.com/audio/5c915724519bce27671c4d15/icecast.audio?property=radiobox"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      93
+    ]
   },
   {
     "id": "jc-la-bruja",
@@ -1261,7 +1660,10 @@ window.STATIONS = [
     "streams": [
       "https://s7.yesstreaming.net:8040/stream?1655753305283"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rosate-con-bachata",
@@ -1270,7 +1672,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-281.surfernetwork.com/uagzy1yc5uhvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ1YWd6eTF5YzV1aHZ2IiwiaG9zdCI6InN0cmVhbS0yODEuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6IjBFSV9vQVpBVEtHc0VBX3J3T0RrZlEiLCJpYXQiOjE3OTM5NDk3NTcsImV4cCI6MTc5Mzk0OTgxN30.yJdWIGTlnxbBPejAre1ZXxcIVLseydSl_SkNh8LF3AY"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-globo-88-5-mhz",
@@ -1279,7 +1684,10 @@ window.STATIONS = [
     "streams": [
       "https://api.condoristream.com/stream/radioglobo"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rockeando-con-regueton",
@@ -1288,7 +1696,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-204.surfernetwork.com/ck2uqw2dgphvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJjazJ1cXcyZGdwaHZ2IiwiaG9zdCI6InN0cmVhbS0yMDQuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6IjdNdXc3cnBvVHBTMUV3MUs4M1hOV1EiLCJpYXQiOjE3OTM5MzgzMjIsImV4cCI6MTc5MzkzODM4Mn0.9UZWVCbPAPNXkXC5mX_7n4MkZ8e-oJ55pOXgko5TiBw"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "peru-folk-radio",
@@ -1297,7 +1708,10 @@ window.STATIONS = [
     "streams": [
       "https://raymistream.net/listen/perufolkradio/live"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "adn-radio",
@@ -1306,7 +1720,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/ADNAAC.aac"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      56
+    ]
   },
   {
     "id": "amor-solo-pop-pop-y-baladas-en-espanol",
@@ -1315,7 +1732,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/ACIR03_s01AAC.aac"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      48
+    ]
   },
   {
     "id": "modelo-97-7-fm",
@@ -1324,7 +1744,10 @@ window.STATIONS = [
     "streams": [
       "https://usa3.lhdserver.es:8197/stream"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

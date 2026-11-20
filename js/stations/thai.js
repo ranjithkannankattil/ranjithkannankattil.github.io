@@ -9,6 +9,10 @@ window.STATIONS = [
     "streams": [
       "https://coolism-web.cdn.byteark.com/;stream/1",
       "https://coolism-web3rd.cdn.byteark.com/stream/1/"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -25,6 +29,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio10.plathong.net/7238/;stream.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -33,6 +40,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cdn-edge.iiptvcdn.com/radio_edge/45d4-d521-cbfc-d686-0123/playlist.m3u8"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -49,6 +59,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio10.plathong.net/7110/;stream.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -57,6 +70,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://inter.lannaradio.com/radio/8000/radio.mp3"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -65,6 +81,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://mdr13.ddns.net/radio/am1197"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -73,6 +92,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ozone2.javmemory.com/Inter.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -81,6 +103,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://fastly.live.brightcove.com/6392745120112/ap-southeast-1/6415628290001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoicWN6dGF6LmVncmVzcy5wcHRpOHciLCJhY2NvdW50X2lkIjoiNjQxNTYyODI5MDAwMSIsImVobiI6ImZhc3RseS5saXZlLmJyaWdodGNvdmUuY29tIiwiaXNzIjoiYmxpdmUtcGxheWJhY2stc291cmNlLWFwaSIsInN1YiI6InBhdGhtYXB0b2tlbiIsImF1ZCI6WyI2NDE1NjI4MjkwMDAxIl0sImp0aSI6IjYzOTI3NDUxMjAxMTIifQ.w9Q_oqsE_WFClGF5tLVDtHnz5zfHHgNpumxVYNx4yYw/playlist-hls.m3u8"
+    ],
+    "br": [
+      801
     ]
   },
   {
@@ -89,6 +114,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ozone2.javmemory.com/Forlife.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -97,6 +125,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ozone2.javmemory.com/Looktung.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -105,6 +136,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cdn-edge.iiptvcdn.com/live_event/smil:4f6e-aa34-2034-5492-c82d.smil/playlist.m3u8?null"
+    ],
+    "br": [
+      978
     ]
   },
   {
@@ -113,6 +147,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.chiliradio.app/radiored"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -121,6 +158,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://cdn-th2.livestreaming.in.th/shoutcast/8610"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -129,6 +169,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cdn-th2.login.in.th/shoutcast/8030"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -137,6 +180,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sapircast.caster.fm:17039/aRsGW"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -145,6 +191,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://tv-live.tpchannel.org/live/tv.m3u8"
+    ],
+    "br": [
+      154
     ]
   },
   {
@@ -153,6 +202,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://80sv2.hostpleng.com/?url=http://112.121.151.133:8109/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -161,6 +213,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio12.plathong.net/7234/;stream.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -169,6 +224,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cdn-edge.iiptvcdn.com/live_event/smil:a834-75a7-a662-db55-5fa3.smil/playlist.m3u8?null"
+    ],
+    "br": [
+      978
     ]
   },
   {
@@ -185,6 +243,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio10.plathong.net/7590/;stream.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -193,6 +254,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cdn-edge.iiptvcdn.com/live_event/smil:98ff-027d-46aa-1a6a-8480.smil/playlist.m3u8?null"
+    ],
+    "br": [
+      978
     ]
   },
   {
@@ -201,6 +265,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cdn-th2.livestreaming.in.th/shoutcast/8615"
+    ],
+    "br": [
+      40
     ]
   },
   {
@@ -209,6 +276,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://cdn-edge.iiptvcdn.com/live_event/smil:f180-054a-38d7-ce66-f7cf.smil/playlist.m3u8"
+    ],
+    "br": [
+      628
     ]
   },
   {
@@ -217,6 +287,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio14.plathong.net/7154/;stream.mp3"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -225,6 +298,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio9.plathong.net/7076"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -233,6 +309,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://pakeefm.org/stream/300006/"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -250,6 +329,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ozone2.javmemory.com/Music.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -258,6 +340,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://livefta.malimarcdn.com/ftaedge00/nat.sdp/playlist.m3u8"
+    ],
+    "br": [
+      2435
     ]
   },
   {
@@ -266,6 +351,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://radio1.ohmi-design.com/8086/;"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -275,7 +363,10 @@ window.STATIONS = [
     "streams": [
       "https://lb-media.mcot.net/RegionRadio/ChumphonLangsuan.stream_aac/playlist.m3u8"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "krb-radio-2",
@@ -294,7 +385,9 @@ window.STATIONS = [
       "https://radio11.plathong.net/7050/;stream.mp3"
     ],
     "added": "2026-10-29",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "translation-of-the-quran-in-thai",
@@ -303,7 +396,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8134/;"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "mun-forward-103",
@@ -312,7 +408,10 @@ window.STATIONS = [
     "streams": [
       "https://cdn-th2.livestreaming.in.th/shoutcast/8730"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "mun-forward-xtra-88",
@@ -321,7 +420,10 @@ window.STATIONS = [
     "streams": [
       "https://cdn-th2.livestreaming.in.th/shoutcast/8795"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "friends-bangkok",
@@ -330,7 +432,10 @@ window.STATIONS = [
     "streams": [
       "https://c14.radioboss.fm:8369/stream"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      192
+    ]
   },
   {
     "id": "great-93-fm",
@@ -339,7 +444,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.vpsthai.net/proxy/chydhnxz/stream/1/"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "komodo",
@@ -348,7 +456,10 @@ window.STATIONS = [
     "streams": [
       "https://komodo.out.airtime.pro/komodo_a"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      64
+    ]
   },
   {
     "id": "best-radio-fm-89-0-mhz",
@@ -358,7 +469,9 @@ window.STATIONS = [
       "https://80sv2.hostpleng.com/?url=http://112.121.150.133:8198/;"
     ],
     "added": "2026-11-13",
-    "offline": true
+    "br": [
+      48
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

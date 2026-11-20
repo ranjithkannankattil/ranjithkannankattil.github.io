@@ -9,6 +9,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.omroep.nl/radio1-bb-mp3",
       "https://icecast.omroep.nl/radio1-sb-aac"
+    ],
+    "br": [
+      192,
+      32
     ]
   },
   {
@@ -18,6 +22,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.omroep.nl/radio2-bb-mp3",
       "https://icecast.omroep.nl/radio2-sb-aac"
+    ],
+    "br": [
+      192,
+      32
     ]
   },
   {
@@ -26,6 +34,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://secure.live-streams.nl/main"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -34,6 +45,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast-qmusicbe-cdp.triple-it.nl/qmusic.aac"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -42,6 +56,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO10.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -51,6 +68,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/KINK.mp3",
       "https://29033.live.streamtheworld.com/KINKAAC2_SC"
+    ],
+    "br": [
+      192,
+      96
     ]
   },
   {
@@ -61,6 +82,11 @@ window.STATIONS = [
       "https://stream.joe.nl/joe/aachigh",
       "https://icecast-qmusicbe-cdp.triple-it.nl/joe.mp3",
       "https://icecast-qmusicnl-cdp.triple-it.nl/Joe_nl.mp3"
+    ],
+    "br": [
+      95,
+      128,
+      128
     ]
   },
   {
@@ -69,6 +95,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.slam.nl/slam"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -79,6 +108,11 @@ window.STATIONS = [
       "https://icecast.vrtcdn.be/radio1-high.mp3",
       "https://icecast.vrtcdn.be/radio1.aac",
       "https://f8e0a3fc90d142e68cd424a56b220f0d.mediatailor.us-east-1.amazonaws.com/v1/manifest/7c1b669ef36eb1e845184b6345b06cd264fc4eb7/5bzs1cW9_vrt-audio-only-v1/d65e4279-e3bc-4151-af02-02ffe699135d/0.m3u8"
+    ],
+    "br": [
+      128,
+      0,
+      0
     ]
   },
   {
@@ -88,6 +122,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.omroep.nl/radio5-bb-mp3",
       "https://icecast.omroep.nl/radio5-sb-aac"
+    ],
+    "br": [
+      192,
+      32
     ]
   },
   {
@@ -96,6 +134,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.vrtcdn.be/mnm-high.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -104,6 +145,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.100p.nl/100pctnl.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -114,6 +158,11 @@ window.STATIONS = [
       "https://icecast.vrtcdn.be/stubru-mid.mp3",
       "https://icecast.vrtcdn.be/stubru-high.mp3",
       "https://icecast.vrtcdn.be/stubru.aac"
+    ],
+    "br": [
+      128,
+      128,
+      0
     ]
   },
   {
@@ -123,6 +172,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.bnr.nl/bnr_mp3_128_20",
       "https://stream.bnr.nl/bnr_aac_96_20"
+    ],
+    "br": [
+      128,
+      96
     ]
   },
   {
@@ -132,6 +185,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SKYRADIO.mp3",
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SKYRADIOAAC.aac"
+    ],
+    "br": [
+      128,
+      64
     ]
   },
   {
@@ -140,6 +197,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/NOSTALGIEWHATAFEELING.mp3?dist=radiobrowser"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -157,6 +217,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast-qmusicnl-cdp.triple-it.nl/Qmusic_nl_live.mp3",
       "https://stream.qmusic.nl/qmusic/aac"
+    ],
+    "br": [
+      128,
+      95
     ]
   },
   {
@@ -165,6 +229,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR08.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -173,6 +240,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.omroep.nl/3fm-sb-aac"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -181,6 +251,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.vrtcdn.be/stubru_tijdloze-high.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -189,6 +262,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.vrtcdn.be/klara-high.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -198,6 +274,10 @@ window.STATIONS = [
     "streams": [
       "https://streams.radio.dpgmedia.cloud/redirect/willy_be/aac",
       "https://icecast-qmusicbe-cdp.triple-it.nl/willy.mp3"
+    ],
+    "br": [
+      95,
+      128
     ]
   },
   {
@@ -206,6 +286,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast-qmusicnl-cdp.triple-it.nl/Qmusic_nl_nonstop_96.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -214,6 +297,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://classic.nl/streams/?s=main"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -222,6 +308,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR13AAC.aac"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -230,6 +319,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming.omroepbrabant.nl/mp3hq"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -238,6 +330,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.vrtcdn.be/mnm_hits-high.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -246,6 +341,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.omroep.nl/radio4-bb-mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -254,6 +352,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.deep.radio/hd"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -262,6 +363,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast-qmusicbe-cdp.triple-it.nl/joe_80s_90s.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -270,6 +374,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR04.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -278,6 +385,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.omroep.nl/3fm-bb-mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -286,6 +396,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://d2e9xgjjdd9cr5.cloudfront.net/icecast/rijnmond/radio-mp3"
+    ],
+    "br": [
+      160
     ]
   },
   {
@@ -294,6 +407,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://hardcorepower.beheerstream.nl/8012/stream"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -302,6 +418,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.omroep.nl/radio2-sterrennl-mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -310,6 +429,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR08.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -318,6 +440,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.gal.io/arrow"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -326,6 +451,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast-qmusicnl-cdp.triple-it.nl/Qmusic_nl_fouteuur_96.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -334,6 +462,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radionl.fm/radionl"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -343,7 +474,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.tukkerfm.nl/tukkerfm"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "classicnl-opera",
@@ -352,7 +486,10 @@ window.STATIONS = [
     "streams": [
       "https://classic.nl/streams/?s=opera"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      256
+    ]
   },
   {
     "id": "real-hardstyle-radio",
@@ -361,7 +498,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.realhardstyle.nl/"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "klara-continuo",
@@ -370,7 +510,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.vrtcdn.be/klaracontinuo-high.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sky-radio-lounge",
@@ -379,7 +522,10 @@ window.STATIONS = [
     "streams": [
       "https://28983.live.streamtheworld.com/SRGSTR07AAC_SC"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      64
+    ]
   },
   {
     "id": "veronica-rock-radio",
@@ -388,7 +534,10 @@ window.STATIONS = [
     "streams": [
       "https://21223.live.streamtheworld.com/VERONICAAAC.aac"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      64
+    ]
   },
   {
     "id": "slam-housuh-in-de-pauzuh",
@@ -397,7 +546,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.slam.nl/WEB16_MP3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sky-radio-hits",
@@ -406,7 +558,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SRGSTR01.mp3?dist=skyradio_web&ttag=talpa_consent:0&gdpr=1&gdpr_consent=BO2svb6O2svb6ADABANLDTAAAAAxKAAA"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "all-oldies-channel",
@@ -415,7 +570,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.alloldieschannel.com:8000/stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "vrt-radio-2-west-vlaanderen",
@@ -424,7 +582,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.vrtcdn.be/ra2wvl-high.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "slam-non-stop",
@@ -433,7 +594,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiocorp.nl/web10_mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "qmusic-foute-uur",
@@ -442,7 +606,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.qmusic.nl/fouteuur/aac"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      96
+    ]
   },
   {
     "id": "538",
@@ -451,7 +618,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR09.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rtv-noord",
@@ -460,7 +630,10 @@ window.STATIONS = [
     "streams": [
       "https://media.rtvnoord.nl/icecast/rtvnoord/radio"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-gelderland",
@@ -469,7 +642,10 @@ window.STATIONS = [
     "streams": [
       "https://d2od87akyl46nm.cloudfront.net/icecast/omroepgelderland/radiogelderland"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "vrt-radio-2-vlaams-brabant",
@@ -487,7 +663,10 @@ window.STATIONS = [
     "streams": [
       "https://25243.live.streamtheworld.com/KINK_SC"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      192
+    ]
   },
   {
     "id": "omroep-zeeland-radio",
@@ -496,7 +675,10 @@ window.STATIONS = [
     "streams": [
       "https://d3isaxd2t6q8zm.cloudfront.net/icecast/omroepzeeland/omroepzeeland_radio"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "joe-70s-80s",
@@ -505,7 +687,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast-qmusicnl-cdp.triple-it.nl/Joe_nl_high.aac"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      96
+    ]
   },
   {
     "id": "radio-m-utrecht",
@@ -514,7 +699,10 @@ window.STATIONS = [
     "streams": [
       "https://d18rwjdhpr8dcw.cloudfront.net/icecast/rtvutrecht/radiomutrecht-bb-mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      192
+    ]
   },
   {
     "id": "willy-class-x",
@@ -523,7 +711,10 @@ window.STATIONS = [
     "streams": [
       "https://streams.radio.dpgmedia.cloud/redirect/willy_be_class_x/aac"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      96
+    ]
   },
   {
     "id": "radio-noordzee",
@@ -532,7 +723,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR17.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "npo-funx-nl",
@@ -541,7 +735,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.omroep.nl/funx-bb-mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      192
+    ]
   },
   {
     "id": "npo-blend",
@@ -550,7 +747,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.omroep.nl/npoblend-bb-mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      192
+    ]
   },
   {
     "id": "piraten-fm-1",
@@ -559,7 +759,10 @@ window.STATIONS = [
     "streams": [
       "https://piraten.fm/top/1"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      192
+    ]
   },
   {
     "id": "vrt-radio-2-bene-bene",
@@ -568,7 +771,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.vrtcdn.be/radio2_benebene-high.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "studio-brussel-vuurland",
@@ -586,7 +792,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SERVICE06.mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      192
+    ]
   },
   {
     "id": "grand-prix-radio",
@@ -595,7 +804,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/GRAND_PRIX_RADIO.mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      192
+    ]
   },
   {
     "id": "sky-radio-lovesongs",
@@ -604,7 +816,10 @@ window.STATIONS = [
     "streams": [
       "https://22723.live.streamtheworld.com/SRGSTR03AAC_SC"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      64
+    ]
   },
   {
     "id": "pinguin-classics",
@@ -613,7 +828,10 @@ window.STATIONS = [
     "streams": [
       "https://streams.pinguinradio.com/PinguinClassics192.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      192
+    ]
   },
   {
     "id": "groot-nieuws-radio",
@@ -622,7 +840,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/GNR.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      192
+    ]
   },
   {
     "id": "kink-90-s",
@@ -631,7 +852,10 @@ window.STATIONS = [
     "streams": [
       "https://22663.live.streamtheworld.com/KINK_90S_SC"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      192
+    ]
   },
   {
     "id": "only-80-s-radio",
@@ -640,7 +864,10 @@ window.STATIONS = [
     "streams": [
       "https://server-28.stream-server.nl:8850/stream"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      192
+    ]
   },
   {
     "id": "jesus-is-lord-radio",
@@ -649,7 +876,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-285.surfernetwork.com/thdtw5xd9eiuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ0aGR0dzV4ZDllaXV2IiwiaG9zdCI6InN0cmVhbS0yODUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiI0OUMxUU9PMFIyeTl5SThnTno0VTB3IiwiaWF0IjoxNzg1OTU0NjI0LCJleHAiOjE3ODU5NTQ2ODR9.TEC2qyYYTCv3OjNepwCqgyWWPAoxPRanj5XLmznekcA"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      64
+    ]
   },
   {
     "id": "vrt-radio-1-classics",
@@ -658,7 +888,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.vrtcdn.be/radio1_classics-high.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "538-90s",
@@ -667,7 +900,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR21AAC.aac"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      96
+    ]
   },
   {
     "id": "slam-housuh-in-de-pauzuh-96",
@@ -676,7 +912,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.slam.nl/WEB16_AAC"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      96
+    ]
   },
   {
     "id": "studio-brussel-untz",
@@ -694,7 +933,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/TLPSTR01.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "slam-mixmarathon",
@@ -703,7 +945,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiocorp.nl/web13_mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sublime-soul-classics",
@@ -712,7 +957,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.sublime.nl/web22_mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "alswin-ambient-music",
@@ -721,7 +969,10 @@ window.STATIONS = [
     "streams": [
       "https://server7.radio-streams.net/proxy/jwoiiktx/stream"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      64
+    ]
   },
   {
     "id": "mega-hit-fm",
@@ -730,7 +981,10 @@ window.STATIONS = [
     "streams": [
       "https://megahitfm.krioyohosting.com:1012/stream"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-2-antwerpen",
@@ -739,7 +993,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.vrtcdn.be/ra2ant-high.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "brf2-radio",
@@ -748,7 +1005,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.brf.be/brf2-high.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "q-music-belgie",
@@ -757,7 +1017,10 @@ window.STATIONS = [
     "streams": [
       "https://streams.radio.dpgmedia.cloud/redirect/qmusic_be/aac"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      95
+    ]
   },
   {
     "id": "radio-2-limburg",
@@ -766,7 +1029,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.vrtcdn.be/ra2lim-high.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "npo-funx-hip-hop",
@@ -775,7 +1041,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.omroep.nl/funx-hiphopfb-bb-mp3"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      192
+    ]
   },
   {
     "id": "npo-radio-4",
@@ -784,7 +1053,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.omroep.nl/radio4-sb-aac"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      32
+    ]
   },
   {
     "id": "npo-radio-4-concerten",
@@ -793,7 +1065,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.omroep.nl/radio4-eigentijds-mp3"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      192
+    ]
   },
   {
     "id": "slam-hardstyle",
@@ -802,7 +1077,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.slam.nl/web11_mp3"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "1achterhoek",
@@ -811,7 +1089,10 @@ window.STATIONS = [
     "streams": [
       "https://nlpo.stream.vip/achterhoek/mp3-192/nlpo.stream.vip/"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-538-party",
@@ -820,7 +1101,10 @@ window.STATIONS = [
     "streams": [
       "https://22533.live.streamtheworld.com/TLPSTR16_SC"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "kink-classics",
@@ -829,7 +1113,10 @@ window.STATIONS = [
     "streams": [
       "https://25243.live.streamtheworld.com/KINK_DNA_SC"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-2-oost-vlaanderen",
@@ -838,7 +1125,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.vrtcdn.be/ra2ovl-high.mp3"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "the-finest-amsterdam",
@@ -847,7 +1137,10 @@ window.STATIONS = [
     "streams": [
       "https://live.thefinest.amsterdam/hq"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      256
+    ]
   },
   {
     "id": "kink80s",
@@ -856,7 +1149,10 @@ window.STATIONS = [
     "streams": [
       "https://29043.live.streamtheworld.com/KINK_DNA_SC"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      192
+    ]
   },
   {
     "id": "pinguin-on-the-rocks",
@@ -865,7 +1161,10 @@ window.STATIONS = [
     "streams": [
       "https://streams.pinguinradio.com/PinguinOnTheRocks192.mp3"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      192
+    ]
   },
   {
     "id": "joe-all-the-way",
@@ -874,7 +1173,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/JOE.mp3"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sublime-jazz",
@@ -883,7 +1185,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.sublime.nl/web21_mp3"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "nostalgie-extra-what-a-feeling",
@@ -892,7 +1197,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/NOSTALGIEWAFEXTRA.mp3"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      192
+    ]
   },
   {
     "id": "sky-radio-smooth-hits",
@@ -901,7 +1209,10 @@ window.STATIONS = [
     "streams": [
       "https://25223.live.streamtheworld.com/SRGSTR15AAC_SC"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-veronica-de-beste-90-s",
@@ -910,7 +1221,10 @@ window.STATIONS = [
     "streams": [
       "https://21633.live.streamtheworld.com/DAB02_AAC.aac"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      96
+    ]
   },
   {
     "id": "q-foute-radio",
@@ -919,7 +1233,10 @@ window.STATIONS = [
     "streams": [
       "https://streams.radio.dpgmedia.cloud/redirect/foute_radio_be/mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fantasy-radio-italo-disco",
@@ -928,7 +1245,10 @@ window.STATIONS = [
     "streams": [
       "https://italo.live-streams.nl/fantasy"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      256
+    ]
   },
   {
     "id": "groot-nieuws-radio-blijde-klanken",
@@ -937,7 +1257,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/GNRBK.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      192
+    ]
   },
   {
     "id": "vrt-radio-2-oost-vlaanderen",
@@ -955,7 +1278,10 @@ window.STATIONS = [
     "streams": [
       "https://stream2.rgrfm.be/"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      192
+    ]
   },
   {
     "id": "tis-vloms-affligem-be-ns",
@@ -964,7 +1290,10 @@ window.STATIONS = [
     "streams": [
       "https://cast1.torontocast.com:4605/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-texel",
@@ -973,7 +1302,10 @@ window.STATIONS = [
     "streams": [
       "https://cast6.asurahosting.com/proxy/radiotex/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      192
+    ]
   },
   {
     "id": "opsinjoor-volksradio",
@@ -982,7 +1314,10 @@ window.STATIONS = [
     "streams": [
       "https://media2.hostin.cc/volksradio.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-538-ibiza",
@@ -991,7 +1326,10 @@ window.STATIONS = [
     "streams": [
       "https://22613.live.streamtheworld.com/TLPSTR19_SC"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bnl",
@@ -1000,7 +1338,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.bnlradio.be/stream.mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      192
+    ]
   },
   {
     "id": "citymusic",
@@ -1009,7 +1350,10 @@ window.STATIONS = [
     "streams": [
       "https://play.citymusic.be/citymusic.mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      192
+    ]
   },
   {
     "id": "192-radio-hq",
@@ -1018,7 +1362,10 @@ window.STATIONS = [
     "streams": [
       "https://server-27.stream-server.nl:8192/stream"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-continu",
@@ -1028,7 +1375,11 @@ window.STATIONS = [
       "https://stream.radiocontinu.nl/radio-continu",
       "https://stream.radiocontinu.nl/radiocontinu"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      96,
+      192
+    ]
   },
   {
     "id": "vlaamse-wonderjaren",
@@ -1037,7 +1388,10 @@ window.STATIONS = [
     "streams": [
       "https://cast1.torontocast.com:3305/stream"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "translation-of-the-quran-in-dutch",
@@ -1046,7 +1400,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8382/;"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "boo",
@@ -1055,7 +1412,10 @@ window.STATIONS = [
     "streams": [
       "https://stream03.level27.be/;stream.mp3"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      320
+    ]
   },
   {
     "id": "vrt-radio-bene",
@@ -1073,7 +1433,10 @@ window.STATIONS = [
     "streams": [
       "https://candlelight.nl/candlelight.mp3"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "simone-fm",
@@ -1082,7 +1445,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.simone.nl/simone"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      192
+    ]
   },
   {
     "id": "qmusic-maximum-hits",
@@ -1091,7 +1457,10 @@ window.STATIONS = [
     "streams": [
       "https://audio-streaming.qmusic.be/q-maximum-hits.aac"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      96
+    ]
   },
   {
     "id": "vrt-radio-1-low",
@@ -1100,7 +1469,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.vrtcdn.be/radio1-mid.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "funx-slow-jamz",
@@ -1109,7 +1481,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.omroep.nl/funx-slowjamzfb-bb-mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-hulchul",
@@ -1118,7 +1493,10 @@ window.STATIONS = [
     "streams": [
       "https://everestcast.live-streams.nl:18015/stream"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      320
+    ]
   },
   {
     "id": "frenchcore24fm-radio",
@@ -1127,7 +1505,10 @@ window.STATIONS = [
     "streams": [
       "https://a8.asurahosting.com:7890/radio.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "qmusic-10s",
@@ -1136,7 +1517,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.qmusic.nl/10s/aac"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      96
+    ]
   },
   {
     "id": "br6-radio",
@@ -1145,7 +1529,10 @@ window.STATIONS = [
     "streams": [
       "https://qxjr001.digiplay.nl/stream/9160/stream"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      192
+    ]
   },
   {
     "id": "funx",
@@ -1154,7 +1541,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.omroep.nl/funx-sb-aac"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      32
+    ]
   },
   {
     "id": "rivierenland-radio",
@@ -1163,7 +1553,10 @@ window.STATIONS = [
     "streams": [
       "https://server-28.stream-server.nl:8802/stream"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      320
+    ]
   },
   {
     "id": "qmusic-q-allstars",
@@ -1172,7 +1565,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast-qmusicbe-cdp.triple-it.nl/q-allstars.aac"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      95
+    ]
   },
   {
     "id": "100-nl-liefde",
@@ -1181,7 +1577,10 @@ window.STATIONS = [
     "streams": [
       "https://www.mp3streams.nl/zender/100-nl-liefde/stream/105-aac-96"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      96
+    ]
   },
   {
     "id": "nrj-belgie",
@@ -1190,7 +1589,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/NRJBELGIE.mp3?dist=radiobrowser"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      192
+    ]
   },
   {
     "id": "omrop-fryslan-radio",
@@ -1199,7 +1601,10 @@ window.STATIONS = [
     "streams": [
       "https://d3pvma9xb2775h.cloudfront.net/icecast/omropfryslan/radio.mp3"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      192
+    ]
   },
   {
     "id": "christmas-hits-radio-nl",
@@ -1208,7 +1613,10 @@ window.STATIONS = [
     "streams": [
       "https://stream06.dotpoint.nl:8006/stream"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "npo-funx-arab",
@@ -1217,7 +1625,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.omroep.nl/funx-arabfb-bb-mp3"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      192
+    ]
   },
   {
     "id": "soulradio",
@@ -1226,7 +1637,10 @@ window.STATIONS = [
     "streams": [
       "https://29093.live.streamtheworld.com/SOULRADIOAAC_SC"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      96
+    ]
   },
   {
     "id": "radio-538-verruckte-stunde",
@@ -1235,7 +1649,10 @@ window.STATIONS = [
     "streams": [
       "https://22713.live.streamtheworld.com/TLPSTR21_SC"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bnr-business-beats",
@@ -1244,7 +1661,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/BNR_BUSINESS_BEATS.mp3"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "pinguin-radio",
@@ -1253,7 +1673,10 @@ window.STATIONS = [
     "streams": [
       "https://streams.pinguinradio.com/PinguinRadio320.mp3"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      320
+    ]
   },
   {
     "id": "mixstream-radio-dance",
@@ -1262,7 +1685,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.mixstream.nl/dance.mp3"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      192
+    ]
   },
   {
     "id": "amsterdam-funk-channel-afc-low-bandwidth",
@@ -1271,7 +1697,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.afc.fm/index.html?sid=2"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      256
+    ]
   },
   {
     "id": "veronica-goud-van-oud",
@@ -1280,7 +1709,10 @@ window.STATIONS = [
     "streams": [
       "https://21633.live.streamtheworld.com/DAB01_AAC.aac"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      96
+    ]
   },
   {
     "id": "sinterklaas-radio",
@@ -1289,7 +1721,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.tbmp.nl:8000/sinterklaasradiohigh.mp3"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      320
+    ]
   },
   {
     "id": "pinguin-pluche",
@@ -1298,7 +1733,10 @@ window.STATIONS = [
     "streams": [
       "https://samcloud.spacial.com/api/listen?sid=98569&m=sc&rid=174384"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      192
+    ]
   },
   {
     "id": "rtv-oost-radio",
@@ -1307,7 +1745,10 @@ window.STATIONS = [
     "streams": [
       "https://streams.rtvoost.nl/audio/oost/mp3"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "l1-radio",
@@ -1316,7 +1757,10 @@ window.STATIONS = [
     "streams": [
       "https://d34pj260kw1xmk.cloudfront.net/icecast/l1/radio-bb-mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      256
+    ]
   },
   {
     "id": "jazz-de-ville-easy",
@@ -1325,7 +1769,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.jazzradiobymaestro.com/easy"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "jazz-de-ville-jazzy",
@@ -1334,7 +1781,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.jazzradiobymaestro.com/jazzy"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

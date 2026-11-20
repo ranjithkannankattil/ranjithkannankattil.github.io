@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/playlist.m3u8"
+    ],
+    "br": [
+      93
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/x1q3r3qdxy8uv"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/1t5ceyhcxbruv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/x23ttc8e0chvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -40,6 +52,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/dkpdmc8e0chvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -50,7 +65,9 @@ window.STATIONS = [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio112/playlist.m3u8"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "br": [
+      85
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://aud-stream-radiorock.nm-elemental.nelonenmedia.fi/playlist.m3u8"
+    ],
+    "br": [
+      263
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.live.yle.fi/radio/YleX/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.live.yle.fi/radio/YleRS/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://c4.radioboss.fm:18123/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -49,6 +61,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.live.yle.fi/radio/YleHameenlinna/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -57,6 +72,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.broadcast.radio/fugefm"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -65,6 +83,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://aud-stream-groove.nm-elemental.nelonenmedia.fi/playlist.m3u8"
+    ],
+    "br": [
+      263
     ]
   },
   {
@@ -73,6 +94,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://icecast.live.yle.fi/radio/YleTurku/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -81,6 +105,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast.radiokeskisuomalainen.fi/radiokeskisuomalainen"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -89,6 +116,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.radioplay.fi/fi_suomirap_128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -97,6 +127,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.live.yle.fi/radio/YleJKL/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -105,6 +138,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://st.downtime.fi/sun.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -114,6 +150,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.live.yle.fi/radio/YleKlassinen/icecast.audio",
       "https://yleradiolive5.akamaized.net/hls/live/20000872/yleklassinen/master.m3u8"
+    ],
+    "br": [
+      128,
+      64
     ]
   },
   {
@@ -122,6 +162,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.live.yle.fi/radio/YleTampere/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -130,6 +173,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.live.yle.fi/radio/YleRovaniemi/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -138,6 +184,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.live.yle.fi/radio/YleRadio1Hifi/icecast.audio"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -146,6 +195,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.live.yle.fi/radio/YleVegaOstnyland/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -154,6 +206,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s3.radio.co/scfd7273b2/listen"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -170,6 +225,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.protonbroadcast.com:8443/ramona.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -178,6 +236,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://jarviradio.radiotaajuus.fi:9000/jrpuhe"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -186,6 +247,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.live.yle.fi/radio/YleKuopio/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -194,6 +258,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://radio.diks.fi/karjalainensyke"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -212,6 +279,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://kesaseuraradio.out.airtime.pro/kesaseuraradio_b"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -220,6 +290,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://c40.radioboss.fm:8056/stream"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -228,6 +301,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://n09.radiojar.com/n6yg5q0z8vzuv.m4a"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -236,6 +312,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast.savonaallot.fi/savonaallot"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -244,6 +323,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://wr2.downtime.fi/kaakko.aac"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -252,6 +334,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://moygid.online/fi/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -260,6 +345,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.live.yle.fi/radio/YleLahti/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -268,6 +356,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://jarviradio.radiotaajuus.fi:9000/jr"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -276,6 +367,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://st.downtime.fi/kiakko-tappara.aac"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -284,6 +378,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s3.myradiostream.com:4976/;"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -292,6 +389,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.live.yle.fi/radio/YleKotka/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -300,6 +400,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.radioplay.fi/fi_radiocity_128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -308,6 +411,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.radioplay.fi/fi_auranaallot_128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -316,6 +422,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.protonbroadcast.com:8443/radiovaasa.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -324,6 +433,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://servidor39-5.brlogic.com:7076/live"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -333,7 +445,10 @@ window.STATIONS = [
     "streams": [
       "https://cast2.radiovoima.fi/voima.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-helsinki",
@@ -342,7 +457,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiohelsinki.fi/stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      256
+    ]
   },
   {
     "id": "radio-city-kiekkoradio",
@@ -351,7 +469,10 @@ window.STATIONS = [
     "streams": [
       "https://wr2.downtime.fi/kiekko.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sveriges-radio-sr-sisuradio",
@@ -360,7 +481,10 @@ window.STATIONS = [
     "streams": [
       "https://live1.sr.se/finska-aac-320"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      312
+    ]
   },
   {
     "id": "radio-mega",
@@ -369,7 +493,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.radioplay.fi/fi_radiomega_128.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-patmos",
@@ -378,7 +505,10 @@ window.STATIONS = [
     "streams": [
       "https://s3.yesstreaming.net:7011/radio"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ida-radio",
@@ -387,7 +517,10 @@ window.STATIONS = [
     "streams": [
       "https://broadcast.idaidaida.net:8000/stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      320
+    ]
   },
   {
     "id": "yle-radio-suomi-kajaani",
@@ -405,7 +538,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.radioplay.fi/fi_classic_128.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "tekoalyradio",
@@ -414,7 +550,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.radioplay.fi/fi_tekoalyradio_128.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "yle-radio-suomi-joensuu",
@@ -423,7 +562,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.live.yle.fi/radio/YleJoensuu/icecast.audio"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-tuottaja1",
@@ -432,7 +574,10 @@ window.STATIONS = [
     "streams": [
       "https://kaupunkiradio.radiotaajuus.fi:9013/radio"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      320
+    ]
   },
   {
     "id": "yle-radio-suomi-pori",
@@ -441,7 +586,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.live.yle.fi/radio/YlePori/icecast.audio"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "pride-radio",
@@ -450,7 +598,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.radioplay.fi/fi_pride_128.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      68
+    ]
   },
   {
     "id": "radio-dei-lahti",
@@ -459,7 +610,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.dei.fi:8443/lahti"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      256
+    ]
   },
   {
     "id": "radio-dei-kajaani",
@@ -468,7 +622,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.dei.fi:8443/kajaani"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      256
+    ]
   },
   {
     "id": "sss-radio",
@@ -477,7 +634,10 @@ window.STATIONS = [
     "streams": [
       "https://uvn-67-97.tll01.zonevs.eu/sss-radio"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      320
+    ]
   },
   {
     "id": "jouluradio",
@@ -486,7 +646,10 @@ window.STATIONS = [
     "streams": [
       "https://aud-stream-jouluradio01.nm-elemental.nelonenmedia.fi/master.m3u8"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      138
+    ]
   },
   {
     "id": "rouhea-joulu",
@@ -495,7 +658,10 @@ window.STATIONS = [
     "streams": [
       "https://aud-stream-jouluradio06.nm-elemental.nelonenmedia.fi/master.m3u8"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      138
+    ]
   },
   {
     "id": "sea-fm",
@@ -504,7 +670,10 @@ window.STATIONS = [
     "streams": [
       "https://s3.myradiostream.com:4976/stream"
     ],
-    "added": "2026-11-17"
+    "added": "2026-11-17",
+    "br": [
+      192
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

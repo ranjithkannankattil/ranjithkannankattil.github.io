@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/t2ekq8zsgtzuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://a7.asurahosting.com:8140/radio.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -25,6 +31,10 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio138/chunklist.m3u8",
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio138/playlist.m3u8"
+    ],
+    "br": [
+      0,
+      127
     ]
   },
   {
@@ -33,6 +43,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/bahhkuge5zhvv"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -41,6 +54,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://centova.radioservers.biz/proxy/eastfmc1/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -49,6 +65,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://ais-sa1.streamon.fm/7681_64k.mp3"
+    ],
+    "br": [
+      70
     ]
   },
   {
@@ -57,6 +76,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://gurbanikirtan.radioca.st/start.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -65,6 +87,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s4.radio.co/sfefce156f/listen"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -73,6 +98,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ice9.securenetsystems.net/CIRVFM"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -81,6 +109,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zenolive.com/0xsvm1nr7a5tv"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -89,6 +120,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://bolpunjabi-ekamsoftware.radioca.st/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -97,6 +131,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ice24.securenetsystems.net/CKYE"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -105,6 +142,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ice10.securenetsystems.net/CKYR"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -113,6 +153,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/vpak30btzwzuv"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -122,7 +165,9 @@ window.STATIONS = [
     "streams": [
       "https://ais-sa1.streamon.fm/7676_48k.aac"
     ],
-    "offline": true
+    "br": [
+      96
+    ]
   },
   {
     "id": "dreamzz-punjabi-radio",
@@ -130,6 +175,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://c7.radioboss.fm/stream/52"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -138,6 +186,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://c2.radioboss.fm:8276/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -146,6 +197,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream9.broadcast.co.nz:8000/radiospicewebsiteaudio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -154,6 +208,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://s20.reliastream.com/stream/8134"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -162,6 +219,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ice66.securenetsystems.net/CIRF"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -170,6 +230,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/4pd041xv1a0uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -178,6 +241,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://radio.sikhnet.com/proxy/channel9/live"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -186,6 +252,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.canstream.co.uk:8161/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -194,6 +263,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://samaalhr107-itelservices.radioca.st/stream"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -203,6 +275,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/019324w4ez4tv",
       "https://stream.zenolive.com/019324w4ez4tv"
+    ],
+    "br": [
+      32,
+      32
     ]
   },
   {
@@ -212,7 +288,10 @@ window.STATIONS = [
     "streams": [
       "https://streamasiacdn.atc-labs.com/radiomaharani.aac"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "live-kirtan-sri-harmandir-sahib",
@@ -221,7 +300,10 @@ window.STATIONS = [
     "streams": [
       "https://live.sgpc.net:8443/;nocache=889869"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      96
+    ]
   },
   {
     "id": "desi-world-radio",
@@ -230,7 +312,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zenolive.com/4mbfcn4mf24tv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      64
+    ]
   },
   {
     "id": "live-fm",
@@ -239,7 +324,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.aiir.com/dbv0rxpwp6ytv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      320
+    ]
   },
   {
     "id": "red-fm",
@@ -248,7 +336,10 @@ window.STATIONS = [
     "streams": [
       "https://ice24.securenetsystems.net/CKYE?playSessionID=FEC6C3A5-AAAF-839F-F4F9CC684849AEA6"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      32
+    ]
   },
   {
     "id": "live-gurbani-sri-darbar-sahib-sgpc",
@@ -257,7 +348,10 @@ window.STATIONS = [
     "streams": [
       "https://live.sgpc.net:8443/;stream.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      96
+    ]
   },
   {
     "id": "jap-radio",
@@ -266,7 +360,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/r3m0whh0kxquv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-central-24",
@@ -275,7 +372,10 @@ window.STATIONS = [
     "streams": [
       "https://casper.radioca.st/;"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "redflow",
@@ -284,7 +384,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.fixupcare.com/live.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "desi-world-radio-usa",
@@ -293,7 +396,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/4mbfcn4mf24tv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      64
+    ]
   },
   {
     "id": "krpi-ferndale-1550-am",
@@ -302,7 +408,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/KRPIAM_SC"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-singh-naad",
@@ -320,7 +429,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8140/;"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "oye-radio",
@@ -329,7 +441,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.oye.radio/listen/oye_radio/radio.mp3"
     ],
-    "added": "2026-11-10"
+    "added": "2026-11-10",
+    "br": [
+      192
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

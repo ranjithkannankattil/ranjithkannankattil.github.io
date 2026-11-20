@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-icy.dr.dk/A/A05H.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -17,6 +20,10 @@ window.STATIONS = [
     "streams": [
       "https://live-icy.dr.dk/A/A22H.mp3",
       "https://drliveradio2.akamaized.net/hls/live/2118698/p8/playlist-320000.m3u8"
+    ],
+    "br": [
+      128,
+      0
     ]
   },
   {
@@ -25,6 +32,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-icy.dr.dk/A/A08H.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -33,6 +43,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-icy.dr.dk/A/A14H.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -41,6 +54,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://live-icy.gss.dr.dk/A/A03H.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -49,6 +65,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-icy.dr.dk/A/A07H.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -57,6 +76,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://netradio.classicfm.dk/classicrock"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -65,6 +87,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radioserver.dk/abc"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -73,6 +98,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-bauerdk.sharp-stream.com//popfm80.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -81,6 +109,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-icy.dr.dk/A/A27L.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -89,6 +120,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://live-icy.dr.dk/A/A29H.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -98,6 +132,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.partyfm.dk/Party320/",
       "https://stream1.partyfm.dk/Party320"
+    ],
+    "br": [
+      320,
+      320
     ]
   },
   {
@@ -106,6 +144,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-icy.dr.dk/A/A12H.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -114,6 +155,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-bauerdk.sharp-stream.com/DK_HQ_RP11.aac"
+    ],
+    "br": [
+      95
     ]
   },
   {
@@ -122,6 +166,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-icy.dr.dk/A/A11H.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -130,6 +177,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-bauerdk.sharp-stream.com/popfm128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -138,6 +188,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-bauerdk.sharp-stream.com/thevoice_dk_mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -146,6 +199,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://live-icy.dr.dk/A/A02L.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -154,6 +210,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-icy.dr.dk/A/A10H.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -162,6 +221,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://netradio.radio4.dk/radio4"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -170,6 +232,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://webradio.classicfm.dk/classichorsens"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -178,6 +243,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.anr.dk/anr"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -187,6 +255,10 @@ window.STATIONS = [
     "streams": [
       "https://live-icy.dr.dk/A/A09L.mp3",
       "https://live-icy.dr.dk/A/A09H.mp3"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -195,6 +267,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-icy.dr.dk/A/A25H.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -203,6 +278,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.radiojar.com/fqt2y0ds97zuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -211,6 +289,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radioserver.dk/gofm"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -219,6 +300,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-icy.dr.dk/A/A13H.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -227,6 +311,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-bauerdk.sharp-stream.com/radio100_dk_mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -235,6 +322,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-icy.dr.dk/A/A04H.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -243,6 +333,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://webradio.skala.fm/kolding"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -251,6 +344,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-bauerdk.sharp-stream.com/myrock_dk_mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -259,6 +355,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://media.limfjordnetradio.dk/plusslager128"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -267,6 +366,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://tx-2.retro-radio.dk/TX-2"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -275,6 +377,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-icy.dr.dk/A/A06H.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -283,6 +388,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://webradio.radioviborg.dk/viborg"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -291,6 +399,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streammp3.retro-radio.dk/retro-mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -299,6 +410,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://media.limfjordnetradio.dk/limfjord128"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -308,6 +422,10 @@ window.STATIONS = [
     "streams": [
       "https://live-icy.dr.dk/A/A15H.mp3",
       "https://drliveradio2.akamaized.net/hls/live/2118698/p4esbjerg/playlist-320000.m3u8"
+    ],
+    "br": [
+      128,
+      0
     ]
   },
   {
@@ -316,6 +434,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://radio1.jfmtech.dk/diablo.aac"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -324,6 +445,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streamer.radio.co/s6a9beb92e/listen"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -333,7 +457,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.vinylhits.dk/vinylmp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "dansbandsradio-se",
@@ -342,7 +469,10 @@ window.STATIONS = [
     "streams": [
       "https://sc.dansbandsradio.se/dbr64.aac"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      64
+    ]
   },
   {
     "id": "globus-guld-jul",
@@ -351,7 +481,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.probroadcast.dk/guldjul"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "mix-fm",
@@ -360,7 +493,10 @@ window.STATIONS = [
     "streams": [
       "https://hello.citrus3.com:2020/stream/mixfm"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      256
+    ]
   },
   {
     "id": "limfjord-plus",
@@ -369,7 +505,10 @@ window.STATIONS = [
     "streams": [
       "https://media.limfjordnetradio.dk/plus128"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "dr-p5-sjlland",
@@ -378,7 +517,10 @@ window.STATIONS = [
     "streams": [
       "https://live-icy.dr.dk/A19H_master2.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "vinyl-hits",
@@ -387,7 +529,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.vinylhits.dk/vinylaac"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "2town-radio",
@@ -396,7 +541,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.radio.co/sd9d980ff0/listen"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "dr-ramasjang-ultra-radio",
@@ -405,7 +553,10 @@ window.STATIONS = [
     "streams": [
       "https://live-icy.gss.dr.dk/A/A24H.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "classical-relaxation-radio-art",
@@ -414,7 +565,10 @@ window.STATIONS = [
     "streams": [
       "https://air.radioart.online/hClassical_relaxation.mp3?dlid=db5ceb796b3f6b3b40cb449ed670f317"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-victoria-esbjerg",
@@ -423,7 +577,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.probroadcast.dk/victoria"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      160
+    ]
   },
   {
     "id": "radio-playback",
@@ -432,7 +589,10 @@ window.STATIONS = [
     "streams": [
       "https://stream02.radioplayback.dk/stream"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      192
+    ]
   },
   {
     "id": "globus-guld-country",
@@ -441,7 +601,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.probroadcast.dk/guldcountrymp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      160
+    ]
   },
   {
     "id": "charlie-tourist-sydvest",
@@ -450,7 +613,10 @@ window.STATIONS = [
     "streams": [
       "https://ec6.yesstreaming.net:4385/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      320
+    ]
   },
   {
     "id": "vlr-kolding",
@@ -459,7 +625,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio.vlr.dk/vlrkolding"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      192
+    ]
   },
   {
     "id": "magic-lumora-radio",
@@ -468,7 +637,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.radio.co/sea3f7bae2/listen"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "partyradio-pro",
@@ -477,7 +649,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.partyradio.pro/listen/partyradio/stream"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      320
+    ]
   },
   {
     "id": "julekanalen-classic-fm-jul",
@@ -486,7 +661,10 @@ window.STATIONS = [
     "streams": [
       "https://netradio.julekanalen.dk/julekanalen"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      192
+    ]
   },
   {
     "id": "classic-fm-stjylland",
@@ -495,7 +673,10 @@ window.STATIONS = [
     "streams": [
       "https://netradio.classicfm.dk/cla8a"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-mfk",
@@ -504,7 +685,10 @@ window.STATIONS = [
     "streams": [
       "https://stream1.radiomfk.dk/radiomfk"
     ],
-    "added": "2026-11-11"
+    "added": "2026-11-11",
+    "br": [
+      192
+    ]
   },
   {
     "id": "dr-p6-beat",
@@ -513,7 +697,10 @@ window.STATIONS = [
     "streams": [
       "https://drliveradio2.akamaized.net/hls/live/2118698/p6/masterab.m3u8"
     ],
-    "added": "2026-11-12"
+    "added": "2026-11-12",
+    "br": [
+      106
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

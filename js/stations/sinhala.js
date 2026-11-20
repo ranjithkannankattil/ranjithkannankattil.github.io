@@ -16,6 +16,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://srv01.onlineradio.voaplus.com/siyathafm"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -24,6 +27,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://mbc.thestreamtech.com:7032/index.html"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -32,6 +38,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://cp12.serverse.com/proxy/itnfm?mp=/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -40,6 +49,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://shaincast.caster.fm:48148/listen.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -48,6 +60,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio-station.hadawatha.lk/listen/jothi-fm/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -56,6 +71,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/fz1quc2fzacuv"
+    ],
+    "br": [
+      56
     ]
   },
   {
@@ -72,6 +90,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/1tcs4fbw7rquv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -80,6 +101,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://s11.myradiostream.com:25116/listen.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -88,6 +112,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://radio.lotustechnologieslk.net:2020/stream/hirufmgarden"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -96,6 +123,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://mbc.thestreamtech.com:7032/"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -104,6 +134,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://rangiri.radioca.st/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -112,6 +145,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://altair.streamerr.co/stream/8036"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -120,6 +156,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://altair.streamerr.co/stream/8054"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -128,6 +167,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cp11.serverse.com/proxy/classic/stream"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -137,6 +179,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/3PVRAAC.aac",
       "https://playerservices.streamtheworld.com/api/livestream-redirect/3PVR.mp3"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -146,7 +192,10 @@ window.STATIONS = [
     "streams": [
       "https://s46.myradiostream.com:11156/listen.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "shaa-fm",
@@ -155,7 +204,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.lotustechnologieslk.net:2020/stream/shaafmgarden"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "translation-of-the-quran-in-sinhalese",
@@ -164,7 +216,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8118/;"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "youth-fm",
@@ -173,7 +228,10 @@ window.STATIONS = [
     "streams": [
       "https://ec6.yesstreaming.net:1920/stream"
     ],
-    "added": "2026-11-19"
+    "added": "2026-11-19",
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

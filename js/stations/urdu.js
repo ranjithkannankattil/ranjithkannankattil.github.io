@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/dbstwo3dvhhtv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://server.mediacast4u.stream/8002/stream"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://samaakhi107-itelservices.radioca.st/stream"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.cityfm89.com/stream"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -40,6 +52,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://whmsonic.radio.gov.pk:7004/stream?type=http&nocache=12"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -48,6 +63,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cc.vmakerhost.com/proxy/karachi?mp=/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -56,6 +74,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://whmsonic.radio.gov.pk:7005/stream?type=http&nocache=12"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -64,6 +85,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://whmsonic.radio.gov.pk:8070/relay?type=http&nocache=9"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -72,6 +96,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://whmsonic.radio.gov.pk:8026/relay?type=http&nocache=9"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -80,6 +107,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://radio.universalhealthradio.org/uhr-ur.mp3"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -88,6 +118,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://whmsonic.radio.gov.pk:7002/stream?type=http&nocache=12"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -96,6 +129,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://whmsonic.radio.gov.pk:8034/stream?type=http&nocache=12"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -104,6 +140,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://amorfm_192.streampartner.nl/stream"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -112,6 +151,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ice8.securenetsystems.net/SGTRADIO"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -120,6 +162,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://whmsonic.radio.gov.pk:7008/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -128,6 +173,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/f9h69cgbu68uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -136,6 +184,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://whmsonic.radio.gov.pk:8076/relay?type=http&nocache=9"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -144,6 +195,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://whmsonic.radio.gov.pk:8088/stream?type=http&nocache=4"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -152,6 +206,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://onlineradio.websoftitnepal.com/8030/stream"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -160,6 +217,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://everestcast.live-streams.nl:18015/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -168,6 +228,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://taiyabahmbolton.radioca.st/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -176,6 +239,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ads-direct.sharp-stream.com/1458.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -185,7 +251,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/7rsl8fsccf8uv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "raagam-air-24-7",
@@ -194,7 +263,10 @@ window.STATIONS = [
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudioragam/hlspbaudioragam_Auto.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      32
+    ]
   },
   {
     "id": "all4masti",
@@ -203,7 +275,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/bahhkuge5zhvv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      64
+    ]
   },
   {
     "id": "live-fm",
@@ -212,7 +287,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.aiir.com/dbv0rxpwp6ytv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-vivid-voice",
@@ -221,7 +299,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/xuin6ocdc2juv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-asian-air",
@@ -230,7 +311,10 @@ window.STATIONS = [
     "streams": [
       "https://s2.citrus3.com:8282/stream"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-central-24",
@@ -239,7 +323,10 @@ window.STATIONS = [
     "streams": [
       "https://casper.radioca.st/;"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ckye-fm-93-1-red-fm-vancouver-bc",
@@ -248,7 +335,10 @@ window.STATIONS = [
     "streams": [
       "https://ice24.securenetsystems.net/CKYE"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      32
+    ]
   },
   {
     "id": "radio-mirpur",
@@ -257,7 +347,10 @@ window.STATIONS = [
     "streams": [
       "https://whmsonic.radio.gov.pk:8074/?type=http&nocache=9"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      40
+    ]
   },
   {
     "id": "radio-sangam",
@@ -266,7 +359,10 @@ window.STATIONS = [
     "streams": [
       "https://mediaserv68.live-streams.nl:8067/stream"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "power-radio-fm-99-islamabad",
@@ -286,7 +382,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8006/;"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ckyr-fm-106-7-red-fm-calgary-ab",
@@ -295,7 +394,10 @@ window.STATIONS = [
     "streams": [
       "https://ice10.securenetsystems.net/CKYR"
     ],
-    "added": "2026-11-13"
+    "added": "2026-11-13",
+    "br": [
+      32
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

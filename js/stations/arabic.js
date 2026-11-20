@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://n12.radiojar.com/8s5u5tpdtwzuv?listening-from-radio-garden=1620219571863&rj-tok=AAABeTyl2zYARSWbLVnrEOlqGw&rj-ttl=5"
+    ],
+    "br": [
+      80
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://9090streaming.mobtada.com/9090FMEGYPT"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -34,6 +40,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://dc5.serverse.com/proxy/pbmhbvxs/stream"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -42,6 +51,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/zsgrfxg71s8uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -50,6 +62,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://qurango.net/radio/mishary_alafasi"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -58,6 +73,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://qurango.net/radio/mustafa_ismail"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -66,6 +84,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/qb1zvsykm98uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -74,6 +95,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://l3.itworkscdn.net/itwaudio/9012/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -82,6 +106,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radiojar.com/8s5u5tpdtwzuv"
+    ],
+    "br": [
+      80
     ]
   },
   {
@@ -90,6 +117,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://broadcast.ice.infomaniak.ch/aswat-high.mp3?.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -98,6 +128,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.rcs.revma.com/7hnrkawf4p8uv.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -106,6 +139,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/egynebf171zuv.acc"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -114,6 +150,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://qurango.net/radio/yasser_aldosari"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -132,6 +171,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://qurango.net/radio/tarateel"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -140,6 +182,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://edge.mixlr.com/channel/kijwr"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -148,6 +193,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://edge.mixlr.com/channel/qtqeb"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -156,6 +204,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://radio.mp3islam.com/listen/abdulbasit/radio.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -164,6 +215,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://edge.mixlr.com/channel/rumps"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -172,6 +226,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/9vrahqqfuuhvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -180,6 +237,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://l3.itworkscdn.net/alarabyradiolive/alarabyradio_audio/icecast.audio"
+    ],
+    "br": [
+      56
     ]
   },
   {
@@ -188,6 +248,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiohits882.radioca.st/;"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -196,6 +259,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://broadcast.shoutstream.co.uk/stream/8112"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -204,6 +270,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://cdn.live.easybroadcast.io/live/83_medi1radio-maghreb_8s9i4bn/playlist.m3u8"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -212,6 +281,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://n0e.radiojar.com/8s5u5tpdtwzuv?rj=&rj-tok=AAABg5BDP0EA2ElNLJYUJTsVcg&rj-ttl=5"
+    ],
+    "br": [
+      80
     ]
   },
   {
@@ -220,6 +292,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.radiojar.com/0tpy1h0kxtzuv"
+    ],
+    "br": [
+      80
     ]
   },
   {
@@ -228,6 +303,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.skynewsarabia.com/hls/sna_720.m3u8"
+    ],
+    "br": [
+      530
     ]
   },
   {
@@ -236,6 +314,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/xbohf8qf5uauv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -244,6 +325,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://fm.alarabiya.net/fm/myStream/playlist.m3u8"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -252,6 +336,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://broadcast.shoutstream.co.uk:8078/stream"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -260,6 +347,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://qurango.net/radio/mix"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -277,6 +367,10 @@ window.STATIONS = [
     "streams": [
       "https://live-hls-audio-web-aja.getaj.net/VOICE-AJA/index.m3u8",
       "https://live-hls-web-aja.getaj.net/AJA/index.m3u8"
+    ],
+    "br": [
+      99,
+      429
     ]
   },
   {
@@ -285,6 +379,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://hitradio-maroc.ice.infomaniak.ch/hitradio-maroc-128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -293,6 +390,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://eu4.fastcast4u.com/proxy/aabdul00?mp=/1"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -301,6 +401,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/542gubz258quv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -309,6 +412,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/u1wbm3k7gxquv"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -317,6 +423,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/v7n499m8ckhvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -325,6 +434,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.damasradio.fm/radio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -334,7 +446,10 @@ window.STATIONS = [
     "streams": [
       "https://listen.radioking.com/radio/252934/stream/297385"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "fairuz",
@@ -343,7 +458,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/xkhnk4vee18uv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "illizi",
@@ -352,7 +470,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio2.tda.dz:8001/Illizi_64K.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      64
+    ]
   },
   {
     "id": "noor-al-eman",
@@ -361,7 +482,10 @@ window.STATIONS = [
     "streams": [
       "https://edge.mixlr.com/channel/boaht"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "adwaafm",
@@ -370,7 +494,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/5bxh2nh0x1zuv?1681882617017"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "voice-of-lebanon-sawtlebnan-radio",
@@ -379,7 +506,10 @@ window.STATIONS = [
     "streams": [
       "https://l3.itworkscdn.net/itwaudio/9054/stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-10",
@@ -388,7 +518,10 @@ window.STATIONS = [
     "streams": [
       "https://s1.reliastream.com/proxy/almaqrami?mp=/stream"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      96
+    ]
   },
   {
     "id": "el-bahdja",
@@ -397,7 +530,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio3.tda.dz:8001/ElBahdja_64K.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      64
+    ]
   },
   {
     "id": "darusalam-radio",
@@ -406,7 +542,10 @@ window.STATIONS = [
     "streams": [
       "https://streams.radio.co/s0975ec186/listen"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "5-replay-news",
@@ -415,7 +554,10 @@ window.STATIONS = [
     "streams": [
       "https://replaynewsar.ice.infomaniak.ch/replaynewsar-128.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "monte-carlo-doualiya",
@@ -424,7 +566,10 @@ window.STATIONS = [
     "streams": [
       "https://montecarlodoualiya128k.ice.infomaniak.ch/mc-doualiya.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "alifalif-fm",
@@ -433,7 +578,10 @@ window.STATIONS = [
     "streams": [
       "https://alifalifjobs.com/radio/8000/AlifAlifLive.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "skyrock-casablanca",
@@ -442,7 +590,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.skyrock.net/s/casa_aac_64k"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "aswat-fm",
@@ -451,7 +602,10 @@ window.STATIONS = [
     "streams": [
       "https://broadcast.ice.infomaniak.ch/aswat-high.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ajyal-palestine",
@@ -460,7 +614,10 @@ window.STATIONS = [
     "streams": [
       "https://streamer.mada.ps:8208/ajyal"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "zitouna-zitouna-fm",
@@ -469,7 +626,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.radiotunisienne.tn/radiozaitouna"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      192
+    ]
   },
   {
     "id": "station-11",
@@ -478,7 +638,10 @@ window.STATIONS = [
     "streams": [
       "https://edge.mixlr.com/channel/rwumx"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "huna-aden-fm",
@@ -487,7 +650,10 @@ window.STATIONS = [
     "streams": [
       "https://c30.radioboss.fm:18267/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "quran-radio-from-sharjah",
@@ -496,7 +662,10 @@ window.STATIONS = [
     "streams": [
       "https://l3.itworkscdn.net/smcquranlive/quranradiolive/icecast.audio"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      56
+    ]
   },
   {
     "id": "sawt-al-farah",
@@ -505,7 +674,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.garden/api/ara/content/listen/TBbZ87vu/channel.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "chaine-1",
@@ -514,7 +686,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio1.tda.dz:8001/Chaine1_64K.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-12",
@@ -523,7 +698,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/b67qheuk54zuv"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-13",
@@ -532,7 +710,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/4g8xck48kfhvv"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "algerie-internationale",
@@ -541,7 +722,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio3.tda.dz:8001/Internationale_64K.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      64
+    ]
   },
   {
     "id": "maura-ar",
@@ -550,7 +734,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/fpasc3up26ptv"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-exterior-de-espana",
@@ -559,7 +746,10 @@ window.STATIONS = [
     "streams": [
       "https://dispatcher.rndfnk.com/crtve/rneree/main/mp3/high"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-14",
@@ -568,7 +758,10 @@ window.STATIONS = [
     "streams": [
       "https://audio.osina.cloud:9323/stream"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "saudi-quran1",
@@ -577,7 +770,10 @@ window.STATIONS = [
     "streams": [
       "https://n01.radiojar.com/0tpy1h0kxtzuv?rj-ttl=5&rj-tok=AAABjrUiYUAAxwNU2wDdcOap9w"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      96
+    ]
   },
   {
     "id": "turkmen-fm",
@@ -586,7 +782,10 @@ window.STATIONS = [
     "streams": [
       "https://radyo1.radyo-dinle.tc/8284/stream;"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "syria-tv",
@@ -595,7 +794,10 @@ window.STATIONS = [
     "streams": [
       "https://live.kwikmotion.com/syriatvlive/syriatv_audio/playlist.m3u8"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      129
+    ]
   },
   {
     "id": "mfm-radio",
@@ -604,7 +806,10 @@ window.STATIONS = [
     "streams": [
       "https://a5.asurahosting.com:7980/radio.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      256
+    ]
   },
   {
     "id": "fame-fm-lebanon",
@@ -613,7 +818,10 @@ window.STATIONS = [
     "streams": [
       "https://l3.itworkscdn.net/itwaudio/9044/stream"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "al-bilad-radio-yaqoubi",
@@ -622,7 +830,10 @@ window.STATIONS = [
     "streams": [
       "https://streamer.radio.co/sb38bf6e66/listen"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      64
+    ]
   },
   {
     "id": "quran-radio-kuwait",
@@ -631,7 +842,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.mp3islam.com/listen/quran_radio/radio.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      64
+    ]
   },
   {
     "id": "jil-fm",
@@ -640,7 +854,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio1.tda.dz:8001/Jeunesse_64K.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      64
+    ]
   },
   {
     "id": "u-radio",
@@ -649,7 +866,10 @@ window.STATIONS = [
     "streams": [
       "https://uradio-aac.ice.infomaniak.ch/uradio.aac"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "mx2",
@@ -658,7 +878,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/66gp9qukxaquv"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "a-shams",
@@ -667,7 +890,10 @@ window.STATIONS = [
     "streams": [
       "https://cdna.streamgates.net/Ashams/Live/icecast.audio"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-liban",
@@ -676,7 +902,10 @@ window.STATIONS = [
     "streams": [
       "https://media2.streambrothers.com:2020/stream/8194"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      64
+    ]
   },
   {
     "id": "anghamy",
@@ -685,7 +914,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.avazfarsi.com:8010/radio.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sawt-el-ghad-tarab",
@@ -694,7 +926,10 @@ window.STATIONS = [
     "streams": [
       "https://sawtelghad.org:7007/;"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-15",
@@ -703,7 +938,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/ctmapun6ot5vv"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "tarab-radio",
@@ -712,7 +950,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/fy8achbq97zuv"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-16",
@@ -721,7 +962,10 @@ window.STATIONS = [
     "streams": [
       "https://albal-lbnet2.radioca.st/stream.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "adeem",
@@ -730,7 +974,10 @@ window.STATIONS = [
     "streams": [
       "https://usa19.fastcast4u.com/adeem"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-helmna",
@@ -739,7 +986,10 @@ window.STATIONS = [
     "streams": [
       "https://radiohelmna.com/stream/;"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      32
+    ]
   },
   {
     "id": "tizi-ouzou",
@@ -748,7 +998,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio2.tda.dz:8001/TiziOuzou_64K.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      64
+    ]
   },
   {
     "id": "coran",
@@ -757,7 +1010,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio1.tda.dz:8001/Coran_64K.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      64
+    ]
   },
   {
     "id": "zaman-fm",
@@ -766,7 +1022,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio2.tda.dz:8001/Zamen_64K.mp3"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      64
+    ]
   },
   {
     "id": "oran",
@@ -775,7 +1034,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio2.tda.dz:8001/Oran_64K.mp3"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      64
+    ]
   },
   {
     "id": "chaine-3",
@@ -784,7 +1046,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio1.tda.dz:8001/Chaine3_64K.mp3"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      64
+    ]
   },
   {
     "id": "fenn-radio",
@@ -793,7 +1058,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/76e9f1gsduhvv"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "marrakechplus",
@@ -802,7 +1070,10 @@ window.STATIONS = [
     "streams": [
       "https://cast5.my-control-panel.com/proxy/marrakec/stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "tlemcen",
@@ -811,7 +1082,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio1.tda.dz:8001/Tlemcen_64K.mp3"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      64
+    ]
   },
   {
     "id": "105-7-fm",
@@ -820,7 +1094,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/r6eprdta6nhvv"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hala-fm",
@@ -830,7 +1107,9 @@ window.STATIONS = [
       "https://listen-halafm.sharp-stream.com/halafmlow.mp3"
     ],
     "added": "2026-10-31",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "sba-riyadh-radio-91-5-fm",
@@ -839,7 +1118,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/pdeizhgrtrstv"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "med-radio",
@@ -848,7 +1130,10 @@ window.STATIONS = [
     "streams": [
       "https://medradio.ice.infomaniak.ch/medradio-128.mp3"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      96
+    ]
   },
   {
     "id": "almunir-radio-tripoli",
@@ -857,7 +1142,10 @@ window.STATIONS = [
     "streams": [
       "https://live.munir.ly/proxy/almunirtip/stream"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-yan-plus",
@@ -866,7 +1154,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/7nqu31p6xg0uv"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fm",
@@ -875,7 +1166,10 @@ window.STATIONS = [
     "streams": [
       "https://edge.mixlr.com/channel/vnvcj"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-express-fm",
@@ -884,7 +1178,10 @@ window.STATIONS = [
     "streams": [
       "https://expressfm.ice.infomaniak.ch/expressfm-64.mp3"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      64
+    ]
   },
   {
     "id": "ghardaia",
@@ -893,7 +1190,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio1.tda.dz:8001/Ghardaia_64K.mp3"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      64
+    ]
   },
   {
     "id": "101-4-hatay-tempo-fm",
@@ -902,7 +1202,10 @@ window.STATIONS = [
     "streams": [
       "https://sslyayin.netyayin.net:1215/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      96
+    ]
   },
   {
     "id": "tamanrasset",
@@ -911,7 +1214,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio1.tda.dz:8001/Tamanrasset_64K.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      64
+    ]
   },
   {
     "id": "chaine-2",
@@ -920,7 +1226,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio2.tda.dz:8001/Chaine2_64K.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      64
+    ]
   },
   {
     "id": "tripoli-fm-lebanon",
@@ -929,7 +1238,10 @@ window.STATIONS = [
     "streams": [
       "https://cast4.my-control-panel.com/proxy/tripolifm/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fred-film-radio",
@@ -938,7 +1250,10 @@ window.STATIONS = [
     "streams": [
       "https://s10.webradio-hosting.com/proxy/fredradioar/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bbc-arabic-1413-am",
@@ -947,7 +1262,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.live.vc.bbcmedia.co.uk/bbc_world_service"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      56
+    ]
   },
   {
     "id": "setif",
@@ -956,7 +1274,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio3.tda.dz:8001/Setif_64K.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      64
+    ]
   },
   {
     "id": "constantine",
@@ -965,7 +1286,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio3.tda.dz:8001/Constantine_64K.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      64
+    ]
   },
   {
     "id": "medina-fm",
@@ -974,7 +1298,10 @@ window.STATIONS = [
     "streams": [
       "https://medinafm.ice.infomaniak.ch/medinafm-64.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      64
+    ]
   },
   {
     "id": "mbc-mood",
@@ -983,7 +1310,10 @@ window.STATIONS = [
     "streams": [
       "https://radio-mbc-mood.mbc.net/radio-mbc-mood.m3u8"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      70
+    ]
   },
   {
     "id": "annaba",
@@ -992,7 +1322,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio1.tda.dz:8001/Annaba_64K.mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      64
+    ]
   },
   {
     "id": "omniradio-sheikh-mahmoud-ali-al-banna",
@@ -1001,7 +1334,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.xecod.com/station/albanna"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      32
+    ]
   },
   {
     "id": "mp3quran",
@@ -1010,7 +1346,10 @@ window.STATIONS = [
     "streams": [
       "https://qurango.net/radio/mahmoud_khalil_alhussary"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "omniradio-sheikh-abdulbasit-abdulsamad",
@@ -1019,7 +1358,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.xecod.com/station/abdulbasit"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      32
+    ]
   },
   {
     "id": "hala-sabratha",
@@ -1028,7 +1370,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/1dy2395z3k8uv"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "arta-radio",
@@ -1037,7 +1382,10 @@ window.STATIONS = [
     "streams": [
       "https://edge.mixlr.com/channel/qtgru"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "medina-fm-nostalgie",
@@ -1046,7 +1394,10 @@ window.STATIONS = [
     "streams": [
       "https://medinanachat.ice.infomaniak.ch/medinanachat-128.mp3"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "emaar-fm-radio",
@@ -1055,7 +1406,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/4luag56o066uv"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sawt-el-ghad",
@@ -1064,7 +1418,10 @@ window.STATIONS = [
     "streams": [
       "https://l3.itworkscdn.net/itwaudio/9030/stream"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sba-jeddah-radio-98-0-fm",
@@ -1082,7 +1439,10 @@ window.STATIONS = [
     "streams": [
       "https://medinatarab.ice.infomaniak.ch/medinatarab-128.mp3"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "virgin-radio-lebanon",
@@ -1091,7 +1451,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/dwxw3p9vea0uv"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "almunir-radio-benghazi",
@@ -1100,7 +1463,10 @@ window.STATIONS = [
     "streams": [
       "https://live.munir.ly/proxy/almunir/stream"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "zine-bladi",
@@ -1109,7 +1475,10 @@ window.STATIONS = [
     "streams": [
       "https://asmaki.ma:8000/radio.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      96
+    ]
   },
   {
     "id": "radio-hala",
@@ -1118,7 +1487,10 @@ window.STATIONS = [
     "streams": [
       "https://hala-alrayamedia.radioca.st/;"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      160
+    ]
   },
   {
     "id": "radio-misk",
@@ -1127,7 +1499,10 @@ window.STATIONS = [
     "streams": [
       "https://live.misk.art/stream"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      192
+    ]
   },
   {
     "id": "ayat-al-quran-radio",
@@ -1136,7 +1511,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/1fatuk10fkhvv"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-arts-tripoli",
@@ -1145,7 +1523,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/z9wfrdpmgg0uv"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "mosaiquefm",
@@ -1154,7 +1535,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.mosaiquefm.net/mosalive"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      90
+    ]
   },
   {
     "id": "babnet-tunisie",
@@ -1163,7 +1547,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.babnet.net/?type=https"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-alhara",
@@ -1172,7 +1559,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radioalhara.net/ra"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "culture",
@@ -1181,7 +1571,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio3.tda.dz:8001/Culture_64K.mp3"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      64
+    ]
   },
   {
     "id": "virgin-radio-lebanon-stars",
@@ -1190,7 +1583,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/h66yxnapga0uv"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "omniradio-holy-quran-radio-cairo",
@@ -1199,7 +1595,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.xecod.com/station/quran-cairo"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      32
+    ]
   },
   {
     "id": "ain-temouchent",
@@ -1208,7 +1607,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio1.tda.dz:8001/AinTimouchent_64K.mp3"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      64
+    ]
   },
   {
     "id": "atlantic-radio-maroc",
@@ -1217,7 +1619,10 @@ window.STATIONS = [
     "streams": [
       "https://atlantic-sonic.nindohost.net:9300/stream"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      64
+    ]
   },
   {
     "id": "asima-online-radio",
@@ -1226,7 +1631,10 @@ window.STATIONS = [
     "streams": [
       "https://asima.out.airtime.pro/asima_a"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fyrozzzz",
@@ -1235,7 +1643,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/k1o5gpvancntv"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bbc-arabic",
@@ -1244,7 +1655,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      56
+    ]
   },
   {
     "id": "quran-radio-jo",
@@ -1262,7 +1676,10 @@ window.STATIONS = [
     "streams": [
       "https://listen.radioking.com/radio/710810/stream/776366"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      192
+    ]
   },
   {
     "id": "wa3-radio",
@@ -1271,7 +1688,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.wa3.live/wa3.mp3"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "omniradio-sheikh-mahmoud-khalil-al-hussa",
@@ -1280,7 +1700,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.xecod.com/station/alhussary"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      32
+    ]
   },
   {
     "id": "omniradio-sheikh-mohammed-siddiq-al-mins",
@@ -1289,7 +1712,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.xecod.com/station/alminshawi"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      32
+    ]
   },
   {
     "id": "omniradio-sheikh-mishary-rashid-al-afasy",
@@ -1298,7 +1724,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.xecod.com/station/alafasi"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      32
+    ]
   },
   {
     "id": "omniradio-sheikh-ahmad-tamim-al-maraghi",
@@ -1307,7 +1736,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.xecod.com/station/ahmad-tamim"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      32
+    ]
   },
   {
     "id": "biskra",
@@ -1316,7 +1748,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio3.tda.dz:8001/Biskra_64K.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      64
+    ]
   },
   {
     "id": "omniradio-abu-bakr-al-shatri",
@@ -1325,7 +1760,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.xecod.com/station/abubakr-shatri"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      32
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

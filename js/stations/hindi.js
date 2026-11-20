@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://eu8.fastcast4u.com/proxy/clyedupq/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://drive.uber.radio/uber/bollywoodnow/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://carol.epichosts.co.uk:8570/;"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://azuracast.vibesounds.in:8010/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -40,6 +52,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://strmreg.1.fm/bombaybeats_mobile_mp3"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -48,6 +63,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/87xam8pf7tzuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -56,6 +74,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/0zkr7x8ztm0uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -64,6 +85,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://www.desizoneradio.com/relay3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -72,6 +96,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/dbstwo3dvhhtv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -80,6 +107,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/rm4i9pdex3cuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -88,6 +118,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/playlist.m3u8"
+    ],
+    "br": [
+      93
     ]
   },
   {
@@ -96,6 +129,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/84h97t3ewg0uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -104,6 +140,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/v2zfmxef798uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -112,6 +151,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/g95zm67prfhvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -120,6 +162,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/0ghtfp8ztm0uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -128,6 +173,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://leo.streamerr.co/8004/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -136,6 +184,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/yv2k0dp18vzuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -144,6 +195,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/btrks671ynhvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -152,6 +206,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.radioudaan.com/listen/radio_udaan/radio.mp3"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -160,6 +217,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/143d7gty24zuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -168,6 +228,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s7.everestcast.com:1155/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -176,6 +239,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/fdgs82xkzhhvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -184,6 +250,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/nhrtcxg09u8uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -192,6 +261,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://feeds.intoday.in/aajtak/api/master.m3u8"
+    ],
+    "br": [
+      255
     ]
   },
   {
@@ -200,6 +272,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sp14.instainternet.com/8044/stream"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -208,6 +283,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/u7eee0hyzp8uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -216,6 +294,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://drive.uber.radio/uber/bollywood2010s/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -224,6 +305,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/7rsl8fsccf8uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -232,6 +316,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://drive.uber.radio/uber/lrbollywood/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -240,6 +327,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://drive.uber.radio/uber/bollywooddance/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -248,6 +338,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/a5h7vfret68uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -257,7 +350,11 @@ window.STATIONS = [
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio007/hlspbaudio007_Auto.m3u8"
     ],
-    "hidden": true
+    "hidden": true,
+    "br": [
+      32
+    ],
+    "offline": true
   },
   {
     "id": "radio-mirchi-usa",
@@ -265,6 +362,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streams.radio.co/s8d06d0298/listen"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -273,6 +373,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/60ef4p33vxquv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -281,6 +384,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://2.mystreaming.net/uber/bollywood2000s/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -289,6 +395,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/6n6ewddtad0uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -297,6 +406,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/yg1qhsbaqv5tv"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -306,7 +418,10 @@ window.STATIONS = [
     "streams": [
       "https://strm112.1.fm/bombaybeats_mobile_mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      256
+    ]
   },
   {
     "id": "shreyaghosal",
@@ -315,7 +430,10 @@ window.STATIONS = [
     "streams": [
       "https://drive.uber.radio/uber/bollywoodshreyaghosal/icecast.audio"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "2b-radio-sangam-krishna",
@@ -324,7 +442,10 @@ window.STATIONS = [
     "streams": [
       "https://millenniumhits.out.airtime.pro:8000/millenniumhits_a"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      48
+    ]
   },
   {
     "id": "mixify-bollywood",
@@ -333,7 +454,10 @@ window.STATIONS = [
     "streams": [
       "https://server.mixify.in/listen/listen/radio.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      64
+    ]
   },
   {
     "id": "bollywood-love",
@@ -342,7 +466,10 @@ window.STATIONS = [
     "streams": [
       "https://drive.uber.radio/uber/bollywoodlove/icecast.audio"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "mohammed-rafi",
@@ -351,7 +478,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/6yqvumgfxtzuv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fever-104-fm",
@@ -360,7 +490,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.canstream.co.uk:8115/live.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "vividh-bharti-mumbai",
@@ -370,7 +503,11 @@ window.STATIONS = [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio011/hlspbaudio011_Auto.m3u8"
     ],
     "added": "2026-10-22",
-    "hidden": true
+    "hidden": true,
+    "br": [
+      32
+    ],
+    "offline": true
   },
   {
     "id": "sandesh-radio",
@@ -379,7 +516,10 @@ window.STATIONS = [
     "streams": [
       "https://sandeshradio2017.radioca.st/stream"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radionev",
@@ -388,7 +528,10 @@ window.STATIONS = [
     "streams": [
       "https://a7.asurahosting.com:8140/radio.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      192
+    ]
   },
   {
     "id": "classic-radio-bhakti-sangeet",
@@ -397,7 +540,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/epylmeu4zf7vv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "tune-india-radio",
@@ -406,7 +552,10 @@ window.STATIONS = [
     "streams": [
       "https://s2.radio.co/se5e166e2f/listen#.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      96
+    ]
   },
   {
     "id": "mixify-hindi-hits",
@@ -415,7 +564,10 @@ window.STATIONS = [
     "streams": [
       "https://server.mixify.in/listen/new_hits/radio.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      64
+    ]
   },
   {
     "id": "gazal-radio-london",
@@ -424,7 +576,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.webhostnepal.com/8018/stream"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      64
+    ]
   },
   {
     "id": "mohobbat-radio",
@@ -433,7 +588,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/t2ekq8zsgtzuv"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bhajans-radio-guyana",
@@ -442,7 +600,10 @@ window.STATIONS = [
     "streams": [
       "https://s5.citrus3.com:8148/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-maharani",
@@ -451,7 +612,10 @@ window.STATIONS = [
     "streams": [
       "https://streamasiacdn.atc-labs.com/radiomaharani.aac"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "raagam-air-24-7",
@@ -460,7 +624,10 @@ window.STATIONS = [
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudioragam/hlspbaudioragam_Auto.m3u8"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      32
+    ]
   },
   {
     "id": "ar-radio",
@@ -469,7 +636,10 @@ window.STATIONS = [
     "streams": [
       "https://free.rcast.net/200660"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      32
+    ]
   },
   {
     "id": "live-fm",
@@ -478,7 +648,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.aiir.com/dbv0rxpwp6ytv"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      320
+    ]
   },
   {
     "id": "shaiva-lahari",
@@ -487,7 +660,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.shaivam.org/listen/shaiva-lahari/radio.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "harman-beats",
@@ -496,7 +672,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/jmi0hwxrgmauv"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "2b-radio-sangam-shri-ram",
@@ -505,7 +684,10 @@ window.STATIONS = [
     "streams": [
       "https://dard.out.airtime.pro:8000/dard_a"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      48
+    ]
   },
   {
     "id": "radio-gyansthali-89-6-fm",
@@ -514,7 +696,10 @@ window.STATIONS = [
     "streams": [
       "https://streamasiacdn.atc-labs.com/gyansthali.aac"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      96
+    ]
   },
   {
     "id": "2b-radio-sangam-devi-maa",
@@ -523,7 +708,10 @@ window.STATIONS = [
     "streams": [
       "https://ibadat.out.airtime.pro:8000/ibadat_a"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-sangwari",
@@ -532,7 +720,10 @@ window.STATIONS = [
     "streams": [
       "https://servidor19.brlogic.com:7002/live"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "desi-hits-2000s",
@@ -541,7 +732,10 @@ window.STATIONS = [
     "streams": [
       "https://www.desizoneradio.com/relay2"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "arijitsingh",
@@ -550,7 +744,10 @@ window.STATIONS = [
     "streams": [
       "https://drive.uber.radio/uber/bollywoodaruitsingh/icecast.audio"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-manpasand",
@@ -559,7 +756,10 @@ window.STATIONS = [
     "streams": [
       "https://c5.radioboss.fm:18125/stream"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      256
+    ]
   },
   {
     "id": "bollywood-mix",
@@ -568,7 +768,10 @@ window.STATIONS = [
     "streams": [
       "https://drive.uber.radio/uber/bollywoodmix/icecast.audio"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "4lobos-bollywood-radio",
@@ -577,7 +780,10 @@ window.STATIONS = [
     "streams": [
       "https://puma.streemlion.com:4130/stream"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bollywood-alka-yagnik",
@@ -586,7 +792,10 @@ window.STATIONS = [
     "streams": [
       "https://drive.uber.radio/uber/bollywoodalkayagnik/icecast.audio"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "agra-radio",
@@ -595,7 +804,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/m1krtxpk11zuv"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "mellow-bangla",
@@ -604,7 +816,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.mellowbangla.com/stream"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      192
+    ]
   },
   {
     "id": "rangeela-radio",
@@ -613,7 +828,10 @@ window.STATIONS = [
     "streams": [
       "https://rangeelaradio.radioca.st/;"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      192
+    ]
   },
   {
     "id": "lyca-radio-1458-am",
@@ -622,7 +840,10 @@ window.STATIONS = [
     "streams": [
       "https://ads-direct.sharp-stream.com/1458.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      192
+    ]
   },
   {
     "id": "hitsofbollywood",
@@ -631,7 +852,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/a2gyqzwpwfeuv"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bollywoodandbeyond",
@@ -640,7 +864,10 @@ window.STATIONS = [
     "streams": [
       "https://s6.yesstreaming.net/proxy/john1237?mp=/live"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "lyca-gold",
@@ -649,7 +876,10 @@ window.STATIONS = [
     "streams": [
       "https://listen-lycaradio.sharp-stream.com/1035.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      192
+    ]
   },
   {
     "id": "bolly-102-9-fm",
@@ -658,7 +888,10 @@ window.STATIONS = [
     "streams": [
       "https://ice6.securenetsystems.net/INTRADIO?type=.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      32
+    ]
   },
   {
     "id": "hits-fm-91-2",
@@ -667,7 +900,10 @@ window.STATIONS = [
     "streams": [
       "https://usa15.fastcast4u.com/proxy/hitsfm912?mp=/1"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      64
+    ]
   },
   {
     "id": "mukesh-radio",
@@ -676,7 +912,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/mrcz5sus1p8uv"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      112
+    ]
   },
   {
     "id": "radio-asikakana",
@@ -685,7 +924,10 @@ window.STATIONS = [
     "streams": [
       "https://mars.streamerr.co/8154/stream"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      192
+    ]
   },
   {
     "id": "bollywood-sonu-nigam",
@@ -694,7 +936,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.exclusive.radio/uber/bollywoodsonunigam/icecast.audio"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "93-5-jamshedpur",
@@ -703,7 +948,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-281.surfernetwork.com/9phrkb1e3v8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI5cGhya2IxZTN2OHV2IiwiaG9zdCI6InN0cmVhbS0yODEuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJIc2hqLVN5dVJoMm5ZZ0Fvbi1Fbm13IiwiaWF0IjoxNzkzMTE2MDcxLCJleHAiOjE3OTMxMTYxMzF9.NyLqCeI1zRJzbG5WcSSBHDNUC07p0mSR-O9hsmopGUk"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-rimjhim",
@@ -712,7 +960,10 @@ window.STATIONS = [
     "streams": [
       "https://streamasiacdn.atc-labs.com/radiorimjhim.aac"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      64
+    ]
   },
   {
     "id": "bhakti-sagar-durga-maa",
@@ -721,7 +972,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/syu0rdutvxhvv"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bhaktisudha",
@@ -730,7 +984,10 @@ window.STATIONS = [
     "streams": [
       "https://n0a.radiojar.com/cfqyfcspcv8uv"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "2b-radio-sangam-shiva",
@@ -739,7 +996,10 @@ window.STATIONS = [
     "streams": [
       "https://hot.out.airtime.pro:8000/hot_a"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      48
+    ]
   },
   {
     "id": "all4masti",
@@ -748,7 +1008,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/bahhkuge5zhvv"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      64
+    ]
   },
   {
     "id": "anbu-fm-hindi",
@@ -757,7 +1020,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/u7yaqq493v8uv"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      128
+    ]
   },
   {
     "id": "2b-radio-sangam-ganesha",
@@ -766,7 +1032,10 @@ window.STATIONS = [
     "streams": [
       "https://radio2bindia.out.airtime.pro:8000/radio2bindia_a"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      48
+    ]
   },
   {
     "id": "hawamahal-radio",
@@ -775,7 +1044,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/csw7fv7sz1zuv"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-rang",
@@ -784,7 +1056,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/n58tt09cqchvv"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bollywoodmuziq",
@@ -793,7 +1068,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/uy91e749fv8uv"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-mirchi-bay-area",
@@ -802,7 +1080,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SFO_HIN_PSTAAC.aac"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      64
+    ]
   },
   {
     "id": "bhakti-world-hanuman",
@@ -811,7 +1092,10 @@ window.STATIONS = [
     "streams": [
       "https://2bhanuman.out.airtime.pro:8000/2bhanuman_a"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      64
+    ]
   },
   {
     "id": "2b-radio-sangam-guruvar",
@@ -820,7 +1104,10 @@ window.STATIONS = [
     "streams": [
       "https://iskon2b.out.airtime.pro:8000/iskon2b_a"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radioolive",
@@ -829,7 +1116,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/OLIVE1063.mp3"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bollywood-workout",
@@ -838,7 +1128,10 @@ window.STATIONS = [
     "streams": [
       "https://drive.uber.radio/uber/bollywoodworkout/icecast.audio"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "aakashvani",
@@ -858,7 +1151,10 @@ window.STATIONS = [
     "streams": [
       "https://drive.uber.radio/uber/bollywood2000s/icecast.audio"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-audio",
@@ -867,7 +1163,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/fvrx47wpg0quv"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bollywood-diwali-party",
@@ -876,7 +1175,10 @@ window.STATIONS = [
     "streams": [
       "https://drive.uber.radio/uber/bollywooddiwali/icecast.audio"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "np-24-radio",
@@ -885,7 +1187,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/8wk1s0pt008uv"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hitsbollywood",
@@ -894,7 +1199,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/rqqps6cbe3quv"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cjrk-fm-102-7-east-fm-toronto-on",
@@ -903,7 +1211,10 @@ window.STATIONS = [
     "streams": [
       "https://centova.radioservers.biz/proxy/eastfmc1/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "himal-radio",
@@ -912,7 +1223,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.webhostnepal.com/8020/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-bollywood-gaane-purane",
@@ -921,7 +1235,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/hem5rrfn07zuv"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "suno-sharda-90-8fm",
@@ -930,7 +1247,10 @@ window.STATIONS = [
     "streams": [
       "https://streamasiacdn.atc-labs.com/shardaradio.aac"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      64
+    ]
   },
   {
     "id": "redflow",
@@ -939,7 +1259,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.fixupcare.com/live.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-wow-bollywood",
@@ -948,7 +1271,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/d22wrdbst5quv.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "mahakatha-radio",
@@ -957,7 +1283,10 @@ window.STATIONS = [
     "streams": [
       "https://mahakatharadio.com/api/station/live.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      320
+    ]
   },
   {
     "id": "indianlinkradio",
@@ -966,7 +1295,10 @@ window.STATIONS = [
     "streams": [
       "https://indianlink1.radioca.st/;"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-active-90-4-fm",
@@ -975,7 +1307,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/xwhhyc5nyk8uv"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "air-kozhikode-real-fm",
@@ -984,7 +1319,10 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio083/playlist.m3u8"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      129
+    ]
   },
   {
     "id": "aural-radio",
@@ -993,7 +1331,10 @@ window.STATIONS = [
     "streams": [
       "https://live.auralradiokerala.in/auralradio/mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-saptarang",
@@ -1002,7 +1343,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/ttcsc4tf8yzuv"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      64
+    ]
   },
   {
     "id": "bharat-fm",
@@ -1011,7 +1355,10 @@ window.STATIONS = [
     "streams": [
       "https://s2.radio.co/s44bb88930/listen#.mp3?ver=997168"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-bula-masti",
@@ -1020,7 +1367,10 @@ window.STATIONS = [
     "streams": [
       "https://c7.radioboss.fm:18052/stream"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "gurgaon-ki-awaaz-fm",
@@ -1029,7 +1379,10 @@ window.STATIONS = [
     "streams": [
       "https://gurgaonradio.out.airtime.pro/gurgaonradio_a"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      64
+    ]
   },
   {
     "id": "sunrise-radio",
@@ -1038,7 +1391,10 @@ window.STATIONS = [
     "streams": [
       "https://stream1.themediasite.co.uk/8070/stream"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      320
+    ]
   },
   {
     "id": "mbc-radio-mauritius",
@@ -1056,7 +1412,10 @@ window.STATIONS = [
     "streams": [
       "https://s1.citrus3.com:8124/stream"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bbcasiannetwork",
@@ -1065,7 +1424,10 @@ window.STATIONS = [
     "streams": [
       "https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/audio_syndication_low_sbr_v1/cfs/bbc_asian_network.m3u8"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      102
+    ]
   },
   {
     "id": "goldenvoiceradio",
@@ -1074,7 +1436,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/s3sqemewrg0uv"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "abee-radio",
@@ -1083,7 +1448,10 @@ window.STATIONS = [
     "streams": [
       "https://abee.radioca.st/stream"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-krishna",
@@ -1092,7 +1460,10 @@ window.STATIONS = [
     "streams": [
       "https://millenniumhits.out.airtime.pro:8000/millenniumhits_a?fbclid=IwAR0qP_F8RgDCq3gX8g7U8Dmm_uZedtPrqxCf8iIDAW5Jcd5ktA0XMs6BJu4"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      48
+    ]
   },
   {
     "id": "radio-central-24",
@@ -1101,7 +1472,10 @@ window.STATIONS = [
     "streams": [
       "https://casper.radioca.st/stream"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-vivid-voice",
@@ -1110,7 +1484,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/xuin6ocdc2juv"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "air-bhopal",
@@ -1128,7 +1505,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/g372rxef798uv"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "tinder-radio",
@@ -1137,7 +1517,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.exclusive.radio/er/bollywood/icecast.audio"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ujala-radio",
@@ -1146,7 +1529,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.ujala.nl/ujala"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      192
+    ]
   },
   {
     "id": "shuddh-desi-radio",
@@ -1155,7 +1541,10 @@ window.STATIONS = [
     "streams": [
       "https://streamer.radio.co/se30891e37/listen"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-olive-retro",
@@ -1164,7 +1553,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_OLIVE_RETRO_S03_SC"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      96
+    ]
   },
   {
     "id": "radio-terna-90-4-fm",
@@ -1173,7 +1565,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.garden/api/ara/content/listen/MzpZd2nQ/channel.mp3"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      64
+    ]
   },
   {
     "id": "spice-fm",
@@ -1182,7 +1577,10 @@ window.STATIONS = [
     "streams": [
       "https://spice988fm.radioca.st/stream"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      320
+    ]
   },
   {
     "id": "bhakti-world-media-shri-ram",
@@ -1191,7 +1589,10 @@ window.STATIONS = [
     "streams": [
       "https://dard.out.airtime.pro/dard_a"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      48
+    ]
   },
   {
     "id": "jaipur-radio",
@@ -1200,7 +1601,10 @@ window.STATIONS = [
     "streams": [
       "https://streamasiacdn.atc-labs.com/jaipurradio.aac"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bollywood-vishal-shekhar",
@@ -1209,7 +1613,10 @@ window.STATIONS = [
     "streams": [
       "https://drive.uber.radio/uber/bollywoodvishalandshekhar/icecast.audio"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "west-indian-vibes-radio",
@@ -1218,7 +1625,10 @@ window.STATIONS = [
     "streams": [
       "https://s6.citrus3.com:8396/stream"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "translation-of-the-quran-in-hindi",
@@ -1227,7 +1637,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8126/;"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sangeet-samvaad",
@@ -1236,7 +1649,10 @@ window.STATIONS = [
     "streams": [
       "https://ample.radiojar.com/7mh06pa8uwzuv"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sportify-bollywood-workout",
@@ -1245,7 +1661,10 @@ window.STATIONS = [
     "streams": [
       "https://drive.uber.radio/uber/sportifybollywood/icecast.audio"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "jesus-alive-radio",
@@ -1254,7 +1673,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zenolive.com/qyb8s75nsceuv"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      64
+    ]
   },
   {
     "id": "fnffmbollywood",
@@ -1263,7 +1685,10 @@ window.STATIONS = [
     "streams": [
       "https://usa1.fastcast4u.com/proxy/qrekthei?mp=/1"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      64
+    ]
   },
   {
     "id": "bollywood-neha-kakkar",
@@ -1272,7 +1697,10 @@ window.STATIONS = [
     "streams": [
       "https://drive.uber.radio/uber/bollywoodneharkakkar/icecast.audio"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-welcome-90-8fm",
@@ -1281,7 +1709,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/2tm4yz0pvxhvv"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      96
+    ]
   },
   {
     "id": "bhaktiworld-media-devi-maa",
@@ -1290,7 +1721,10 @@ window.STATIONS = [
     "streams": [
       "https://ibadat.out.airtime.pro:8000/ibadat_a?_ga=2.112683904.548091236.15820292%2013-1175002648.1580299245"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      64
+    ]
   },
   {
     "id": "taj-92-3-fm",
@@ -1299,7 +1733,10 @@ window.STATIONS = [
     "streams": [
       "https://ice66.securenetsystems.net/TAJ"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      32
+    ]
   },
   {
     "id": "hindvani-fm",
@@ -1317,7 +1754,10 @@ window.STATIONS = [
     "streams": [
       "https://radiocast.cr8tive-digital.com/radiofaza"
     ],
-    "added": "2026-11-10"
+    "added": "2026-11-10",
+    "br": [
+      128
+    ]
   },
   {
     "id": "brisvaani-radio",
@@ -1326,7 +1766,10 @@ window.STATIONS = [
     "streams": [
       "https://centova71.instainternet.com/proxy/brisvaaniradio?mp=/stream"
     ],
-    "added": "2026-11-10"
+    "added": "2026-11-10",
+    "br": [
+      112
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

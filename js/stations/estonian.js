@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://radio.globalexport.ee/stream.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://c4.radioboss.fm:18123/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -34,6 +40,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://icecast.err.ee/vikerraadio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -43,6 +52,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.leviracloud.eu/star320-mp3",
       "https://ice.leviracloud.eu/star96-aac"
+    ],
+    "br": [
+      320,
+      0
     ]
   },
   {
@@ -51,6 +64,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://edge03.cdn.bitflip.ee:8888/NRJ"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -59,6 +75,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://le301.euddn.net/0aab89e0d60ff8d3f6e2bbc532edbd3ad068911dc8d3d3c4cce04f8ff2f28ec24f179cefc780cbd1866b32dfc57b5ed4496935521369b663e23558ee8b5a3be651256db42b0d8ebd1344f2989d07d135a880b4830bb4a0547170287b13f824f97218425fd367cf7e50e7ceafc4080acf04a7c1e44ed2c4f4bf0aac513b5772a93552052bb1fee647a9416af42b8356f046a7cca69dbf7b485c4938a731e3e00213367c4a2d50aeb0f81781263e053687/myhits.aac"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -67,6 +86,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://le302.euddn.net/ce6d1e0eeb065441feac668dd3039740b055678fe0baf94e283f31ef01c437125a2b5218f8ea9677787f3c993779724817458da42fa54211aa1e725b5a78270bbedefc09b9ad03878caeb1ac11ee9edd340cf2866b0f3991f62577d5b5b0ff78b7b86726015b15769ec3206c1fb7904b28b952e487d42e9dcf10700df4103e7f59c75157f2ca864b3f5d3909f3caafa246c304f13d7768ec0aaf0dd8987a972833b379c3268166adcb4c08d734425de5/kuld.aac"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -76,6 +98,10 @@ window.STATIONS = [
     "streams": [
       "https://edge02.cdn.bitflip.ee:8888/KISS",
       "https://stream.skymedia.ee/live/KISS"
+    ],
+    "br": [
+      320,
+      320
     ]
   },
   {
@@ -84,6 +110,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.hostbee.nl:5740/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -92,6 +121,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://le305.euddn.net/6fc16c442df09e4d38c4c30fac29e469433021605b53be0bc2062128e87df31e6a336b41e3910b2af9ac174edfddb311cca3fa2e2d93419f94aa5bd7eec7d43929e82afa62bd42ef4448e8b925aa1cd6f45115b119dfc28ec6a160841b83caad7ce5121d98691036b6dea3e82fc26600b7f22da31918ef6c5a7e583445661b22d4d17cfb1bc004603655576c0d7576c308ec9c549a97e18bb0b25adc90d645dbd41dfb84ccb7b3560e5363dcc7304937/kidzone.aac"
+    ],
+    "br": [
+      160
     ]
   },
   {
@@ -100,6 +132,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://le304.euddn.net/98f3739dbf43b558d1f20986b521211cd8505fc17d9cd10bd449f4d0644f1407c4379f9ef9e373fa72bc64161ad4f4f4bfd25d0d7212382ae3fd040e567e6ab2c23b2792d7dc2282b81b64cfeb8eb4cb7ea6408a06f54b82465cf56883a37379e6285cd59118909f2a263db30724c7952037ec7e1159e868f72f7b31dc73c66d8e88d5de1a3bfdbf4ec05adb16342dfc77718d125c90b8921cb9747d92385bd96e89b259413f8161c6ac0e67f09b05d3/kuku_low.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -108,6 +143,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://maggie.torontocast.com:8110/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -117,6 +155,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.err.ee/raadio2korge.mp3",
       "https://icecast.err.ee/raadio2.mp3"
+    ],
+    "br": [
+      320,
+      128
     ]
   },
   {
@@ -125,6 +167,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.skymedia.ee/live/SKYPLUS"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -133,6 +178,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.skymedia.ee/live/RETRO"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -141,6 +189,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://le305.euddn.net/0d62a6155dcd04d4073797b3dde014bddf833ab80b327858048767316c8526c6aa19b2da621b8c6768f5d5dbae771b8a548500e97e5b2f1276757aad532061d50cd39c85a1d0c0f479567b7fc66c3b55f09d3f1bcc941a9b08f15eba2fc20d8eced50bab54daba70cbf543b2a8c381375346f77de47f19c7e9e0ef065b11b1445e29b49a104c2a26dfe41a91218dc55019d228473f9d97a9412dca62023465796ce1904870c4f5dfeec6873b814c1f6b/md_mhdance.aac"
+    ],
+    "br": [
+      160
     ]
   },
   {
@@ -149,6 +200,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.relaxfm.ee/instrumental"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -157,6 +211,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/dghp9excl67vv"
+    ],
+    "br": [
+      112
     ]
   },
   {
@@ -165,6 +222,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.err.ee/r2pkorge.mp3"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -173,6 +233,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cdn.treraadio.ee/ringfm"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -181,6 +244,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://edge01.cdn.bitflip.ee:8888/NRJ?_i=5b8169cb"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -189,6 +255,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://shoutcast.finestfm.fi/;"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -205,6 +274,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://www.aripaev.ee/raadio/stream.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -232,6 +304,10 @@ window.STATIONS = [
     "streams": [
       "https://c4.radioboss.fm:18123/stream",
       "https://c4.radioboss.fm:18123/live"
+    ],
+    "br": [
+      320,
+      320
     ]
   },
   {
@@ -240,6 +316,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://edge05.cdn.bitflip.ee:8888/R7"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -264,6 +343,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://le306.euddn.net/51aa5b6b001e27d78403f5ff219f291b9cf1f0091892b215933585866ec3417d027e2b56ec4e0c4d7b9251d4e8626683b14511ef6595cac746458bc01b375ee8aa15a84658cf636d5b20e490c1f8e8e34b4353d6705865fff8d7a0da8c3604deda9fda2e0b633398e982ec5142b30737997004a2a97299cbb4ec4579bc1400b94e5b8fcab8aa402b9e9c731aa466500c1f96ad7c1e10f3de7140831a87645e49bf1c4eb7414187ddbccc2be23e25cc7162fba43e23314f04d8c4f0ad41b960ba/MHR_myhitsrock.aac"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -272,6 +354,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.skymedia.ee/live/RetroJ6ulud"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -280,6 +365,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sapircast.caster.fm:11309/OsZpV"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -288,6 +376,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sb.err.ee/live/r2chill.m3u8?short=true"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -305,6 +396,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.err.ee/raadiotallinn.mp3?type=.mp3/;stream.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -313,6 +407,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.relaxfm.ee/cafe"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -321,6 +418,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://puma.streemlion.com:1830/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -329,6 +429,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.err.ee/live/r2pop.m3u8?short=true"
+    ],
+    "br": [
+      82
     ]
   },
   {
@@ -349,7 +452,10 @@ window.STATIONS = [
     "streams": [
       "https://le306.euddn.net/a5731fc77d99cdf19376dbde3dfe4ab17dc4a6a0134bbd79dc77445ba495ede3d514ba7a0ebfd06f1243c1f72a38cd90dab00793379d546c8de3ea496e032465f284e7b8586d6de0c29d0f601ce0c93ad71d116fac19257610f566654fe755faf7ad9d030ee6583475237c3c5a0803e25cfb5f9fe436f03d6986c977b0dd055cfaceef9f5a70cbd6017d00dd773a3da1d08052efad3b59b5a343583081b9bd1a0c0497ac745b1729878aa0ce846b3603/hitmix.aac"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "power-hit-radio",
@@ -367,7 +473,10 @@ window.STATIONS = [
     "streams": [
       "https://broadcast.idaidaida.net:8000/stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      320
+    ]
   },
   {
     "id": "legendaarne-raadio",
@@ -376,7 +485,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.skymedia.ee/live/Legendaarne"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "r2altpop",
@@ -394,7 +506,10 @@ window.STATIONS = [
     "streams": [
       "https://sc2.flamebox.org/bigfm-hd"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      320
+    ]
   },
   {
     "id": "nrj-estonia",
@@ -403,7 +518,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.skymedia.ee/live/NRJ"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      320
+    ]
   },
   {
     "id": "xl-radio-estonia",
@@ -412,7 +530,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.rcast.net/69794"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      320
+    ]
   },
   {
     "id": "xfm-eesti",
@@ -421,7 +542,10 @@ window.STATIONS = [
     "streams": [
       "https://sc2.treraadio.ee/xfm-tallinn"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      320
+    ]
   },
   {
     "id": "tagatuba-fm",
@@ -430,7 +554,10 @@ window.STATIONS = [
     "streams": [
       "https://mcr.streams.gr:10416/stream"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      320
+    ]
   },
   {
     "id": "err-klassikaraadio",
@@ -439,7 +566,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.err.ee/klassikaraadio.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "nrj-dnb",
@@ -448,7 +578,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.skymedia.ee/live/NRJdnb"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      256
+    ]
   },
   {
     "id": "kaguraadio",
@@ -475,7 +608,10 @@ window.STATIONS = [
     "streams": [
       "https://le303.euddn.net/5f20979051399149309be13d13511ca5b860aa0a11b077085c418677f98193b62a8242840c650bdc369550f4355e3b79b0d9236e886ab9d5cf38bb890c0179c14c741b27035cdd81249cd9a252241191490e1ae1e8caad5b33e5f5340532ed96a5d6a2609c6f3f80300162c9ca736782d5aa39e7f9310c9315a581dbe85d953585b346e9e8b1eee24212ec9834b8f498119f48e37909cd91189328ccb7b0df78d7bf3f48b04b2334059f8ee4ec971d41b7d23f613cd81d546604952901159bc9/elmaritantsuohtu.aac"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      192
+    ]
   },
   {
     "id": "elmari-ballaadid",
@@ -484,7 +620,10 @@ window.STATIONS = [
     "streams": [
       "https://le305.euddn.net/203b22924acd9edf6df0f55dc2c5b925bcc0a26c9bf7bc77af90d37abb4f40e557c3cf0db9fe245805fcf30f1339e86e681101d873559975ca3bda5b8bfe0d1a94106a4d339795adc9792e0224c1144bdc9bf93be7197994c622c79e09ec1918fa689afa79215ccc7121e4171201edb23300b02f7732c0767dfece4753b8da5d8009d214f74e467c213837156d81d9ffd6b8941a4826f5eea67a7e95c74293035cd93b24084852218c179fe2dc7a485586ac5c05c7cd1043715e6bc7ebdd365f/EB_elmariballaadid.aac"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "r2chill",
@@ -502,7 +641,10 @@ window.STATIONS = [
     "streams": [
       "https://live.err.ee/live/r2alt.m3u8?short=true"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      82
+    ]
   },
   {
     "id": "r2extra-rock",
@@ -511,7 +653,10 @@ window.STATIONS = [
     "streams": [
       "https://sb.err.ee/live/r2rock.m3u8"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      64
+    ]
   },
   {
     "id": "retro-fm-eestikas",
@@ -520,7 +665,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.skymedia.ee/live/retro2.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      256
+    ]
   },
   {
     "id": "tre-raadio-pohja-eesti",
@@ -529,7 +677,10 @@ window.STATIONS = [
     "streams": [
       "https://cdn.treraadio.ee/pohja-tre"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      256
+    ]
   },
   {
     "id": "sooviraadio",
@@ -538,7 +689,10 @@ window.STATIONS = [
     "streams": [
       "https://media.uunox.net:8888/;"
     ],
-    "added": "2026-11-13"
+    "added": "2026-11-13",
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

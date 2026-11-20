@@ -16,6 +16,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://bokradio.highquality.radiostream.co.za/"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -32,6 +35,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://zas3.ndx.co.za:8002/stream"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -56,6 +62,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://c42.radioboss.fm:8073/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -64,6 +73,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://edge.iono.fm/xice/jacarandafm_live_high.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -72,6 +84,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s5.radio.co/s68c6f4028/listen"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -80,6 +95,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/KFM.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -88,6 +106,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://edge.iono.fm/xice/88_high.mp3"
+    ],
+    "br": [
+      80
     ]
   },
   {
@@ -112,6 +133,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://helderberg.highquality.radiostream.co.za/"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -120,6 +144,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://zas3.ndx.co.za:8040/stream"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -136,6 +163,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://www.dn-radio.co.za/listen/world_gospel_radio/radio.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -152,6 +182,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://uslradio.net:8008/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -160,6 +193,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://faithofgodseedchurch.stream.laut.fm/faithofgodseedchurch"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -168,6 +204,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://zas1.ndx.co.za:9917/stream"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -176,6 +215,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.radiojar.com/n6c576nrga0uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -185,7 +227,10 @@ window.STATIONS = [
     "streams": [
       "https://superagent-269bfe30.base44.app/functions/kaleidoscopeRadio?go=stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-overberg-2",
@@ -194,7 +239,10 @@ window.STATIONS = [
     "streams": [
       "https://zas7.ndx.co.za:8040/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      48
+    ]
   },
   {
     "id": "radio-daspoort",
@@ -203,7 +251,10 @@ window.STATIONS = [
     "streams": [
       "https://c32.radioboss.fm:8899/stream"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hits-1-mallorca",
@@ -212,7 +263,10 @@ window.STATIONS = [
     "streams": [
       "https://radio7.pro-fhi.net/radio/9006/hits1ibiza"
     ],
-    "added": "2026-11-12"
+    "added": "2026-11-12",
+    "br": [
+      192
+    ]
   },
   {
     "id": "daybreak-radio",
@@ -221,7 +275,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.inksnapp.co.za/listen/daybreak_radio/radio.mp3"
     ],
-    "added": "2026-11-13"
+    "added": "2026-11-13",
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

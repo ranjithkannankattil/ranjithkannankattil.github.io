@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zenolive.com/2vghnwshsqzuv.aac"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/48w230kx8vzuv.aac"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/tqnws2eafwzuv.aac"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://usa2.fastcast4u.com/proxy/tamilsun?mp=/;"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -40,6 +52,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.lotustechnologieslk.net:8006/;stream.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -59,6 +74,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://tamilpanpalai.radioca.st/ind"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -75,6 +93,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://centova.aarenworld.com/proxy/894tamilfm/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -83,6 +104,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/r2gn1pgm4qruv"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -91,6 +115,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://a9oldhits-a9media.radioca.st/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -99,6 +126,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/aad4e51qz7zuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -107,6 +137,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://mbc.thestreamtech.com:8086/stream"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -115,6 +148,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/2fhh49f3zf8uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -123,6 +159,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://free.rcast.net/200660"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -131,6 +170,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/x7wc1xgllvsvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -147,6 +189,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/r4znzpvskchvv"
+    ],
+    "br": [
+      112
     ]
   },
   {
@@ -155,6 +200,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/yavek61461zuv.aac"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -163,6 +211,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/0wck59rarchvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -179,6 +230,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/ob6tjg8gulptv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -187,6 +241,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/nam8d1h6gxquv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -195,6 +252,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudioragam/hlspbaudioragam_Auto.m3u8"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -203,6 +263,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://vpmurugun.radioca.st/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -211,6 +274,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/p88vvwd0gm0uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -219,6 +285,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/egprld1sdsvvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -227,6 +296,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://centova.radioservers.biz/proxy/eastfmc1/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -243,6 +315,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://vtfm2020-vtfm.radioca.st/stream"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -259,6 +334,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/dkxftg6k7tzuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -267,6 +345,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://psrlive4.listenon.in/mohan?station=mohanradio"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -275,6 +356,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio021/playlist.m3u8"
+    ],
+    "br": [
+      79
     ]
   },
   {
@@ -283,6 +367,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio025/masterlist.m3u8"
+    ],
+    "br": [
+      79
     ]
   },
   {
@@ -299,6 +386,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast4.asurahosting.com/proxy/neville/stream"
+    ],
+    "br": [
+      160
     ]
   },
   {
@@ -307,6 +397,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/MINNAL_FMAAC.aac"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -315,6 +408,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/nxggffwgtp8uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -324,7 +420,10 @@ window.STATIONS = [
     "streams": [
       "https://usa3.fastcast4u.com/proxy/jeifm?mp=/1"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      320
+    ]
   },
   {
     "id": "britishindiantamilradio",
@@ -333,7 +432,10 @@ window.STATIONS = [
     "streams": [
       "https://hello.citrus3.com:2020/stream/britishindiantamilradio"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "tamil-comedy-radio",
@@ -342,7 +444,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/tmgktm50dzzuv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "tamil-2021-latest-hits",
@@ -351,7 +456,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/dkxftg6k7tzuv.aac"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "chillax-fm",
@@ -360,7 +468,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/ohhsihm2byluv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-suno-tamil",
@@ -369,7 +480,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_SUNO_TAMIL_S01.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      96
+    ]
   },
   {
     "id": "tamil-amuthu-bakthi-radio",
@@ -378,7 +492,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/bpc3ucypmm0uv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      32
+    ]
   },
   {
     "id": "american-tamil-radio",
@@ -387,7 +504,10 @@ window.STATIONS = [
     "streams": [
       "https://cp11.serverse.com/proxy/hgsmgluv?mp=/stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "friendstamilfm",
@@ -396,7 +516,10 @@ window.STATIONS = [
     "streams": [
       "https://usa15.fastcast4u.com/proxy/tammus00?mp=/;"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sahara-fm-tamil",
@@ -405,7 +528,10 @@ window.STATIONS = [
     "streams": [
       "https://azuracast.vibesounds.in:8000/radio.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "chennai-fm-rainbow",
@@ -414,7 +540,10 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio022/playlist.m3u8"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      78
+    ]
   },
   {
     "id": "fmrainbowtamil",
@@ -423,7 +552,10 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio022/playlist.m3u8"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      78
+    ]
   },
   {
     "id": "mellisai-fm",
@@ -432,7 +564,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/e9hsbbbey4zuv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      80
+    ]
   },
   {
     "id": "jn-fm-tamil-classic",
@@ -441,7 +576,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/qkdmq6d7kfhvv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "slbc-tamil-national-service",
@@ -450,7 +588,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/xekhrn4zetzuv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "vasantham-fm",
@@ -459,7 +600,10 @@ window.STATIONS = [
     "streams": [
       "https://cp12.serverse.com/proxy/vasanthamfm?mp=/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "harris-jeyaraj",
@@ -468,7 +612,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/0bhsthssutzuv"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "live-fm",
@@ -477,7 +624,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.aiir.com/dbv0rxpwp6ytv"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      320
+    ]
   },
   {
     "id": "shaiva-lahari",
@@ -486,7 +636,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.shaivam.org/listen/shaiva-lahari/radio.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "tamil-amuthu-trichy-radio",
@@ -495,7 +648,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/feyrkb9htp8uv"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "vadivelucomedyradio",
@@ -504,7 +660,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/02n962ezyp8uv"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "vaigai-fm",
@@ -524,7 +683,10 @@ window.STATIONS = [
     "streams": [
       "https://tamilkaterumbufm-prabak78.radioca.st/stream"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "instrumental-music-radio",
@@ -533,7 +695,10 @@ window.STATIONS = [
     "streams": [
       "https://azuracast.vibesounds.in:8030/radio.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "g-tamil-fm",
@@ -542,7 +707,10 @@ window.STATIONS = [
     "streams": [
       "https://gtr-unicast2u.radioca.st/stream"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "covai-fm",
@@ -551,7 +719,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/kzd2e3tx24zuv"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ajithfm",
@@ -560,7 +731,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/ntkhu40k17zuv"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      64
+    ]
   },
   {
     "id": "anurata-fm",
@@ -569,7 +743,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-175.surfernetwork.com/ozta21if4wiuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJvenRhMjFpZjR3aXV2IiwiaG9zdCI6InN0cmVhbS0xNzUuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJyUkd6M0tLZFNyMlBZZGsyVnhnZjVnIiwiaWF0IjoxNzg0NTMwMTc0LCJleHAiOjE3ODQ1MzAyMzR9.Khjm_0DYMavj313kQ8M2rYQZDPcBu-rj5u9LKtSdsw8"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "swisstamilradio",
@@ -578,7 +755,10 @@ window.STATIONS = [
     "streams": [
       "https://usa19.fastcast4u.com/swiss"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "tubetamilfm",
@@ -587,7 +767,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/p5k41f436qzuv"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      64
+    ]
   },
   {
     "id": "vanavilfm-radio-maestro",
@@ -596,7 +779,10 @@ window.STATIONS = [
     "streams": [
       "https://s7.yesstreaming.net:8092/stream"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      192
+    ]
   },
   {
     "id": "oli-968-radio",
@@ -605,7 +791,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/OLI968FMAAC.aac"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      48
+    ]
   },
   {
     "id": "vividhbharathitamil",
@@ -614,7 +803,10 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio024/playlist.m3u8"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      78
+    ]
   },
   {
     "id": "oli-968",
@@ -623,7 +815,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/OLI968FM_PREM.aac"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      64
+    ]
   },
   {
     "id": "aural-radio",
@@ -632,7 +827,10 @@ window.STATIONS = [
     "streams": [
       "https://live.auralradiokerala.in/auralradio/mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "amma-fm",
@@ -641,7 +839,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-176.surfernetwork.com/amp1qadecchvv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJhbXAxcWFkZWNjaHZ2IiwiaG9zdCI6InN0cmVhbS0xNzYuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJfUHA1bE93NlNRMk55bTg2bG9uMHV3IiwiaWF0IjoxNzg0NTI2Mjg1LCJleHAiOjE3ODQ1MjYzNDV9.Ofe0vRsrMX41iMh9rZe_LNXFMu99ZReEIt6qaY8Pzjw"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "thentamilradio",
@@ -650,7 +851,10 @@ window.STATIONS = [
     "streams": [
       "https://usa9.fastcast4u.com/proxy/thentamilfm?mp=/;"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "chellam-fm",
@@ -659,7 +863,10 @@ window.STATIONS = [
     "streams": [
       "https://sugu.radioca.st/stream/;stream/1"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "tamil-amuthu-mellisai-radio",
@@ -668,7 +875,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/bfh4ywts2f8uv"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "arumbu-fm",
@@ -677,7 +887,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/22db1xmde2zuv"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "thayagam-tamil-radio",
@@ -686,7 +899,10 @@ window.STATIONS = [
     "streams": [
       "https://s3.yesstreaming.net:17045/stream"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      320
+    ]
   },
   {
     "id": "valipokan-fm",
@@ -695,7 +911,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/dcts7v7sef9uv"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "a9radionewhits",
@@ -704,7 +923,10 @@ window.STATIONS = [
     "streams": [
       "https://a9newhits-a9media.radioca.st/stream"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "lifefmkarur",
@@ -713,7 +935,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/k0qrmtts91zuv"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      96
+    ]
   },
   {
     "id": "abinayamfm",
@@ -722,7 +947,10 @@ window.STATIONS = [
     "streams": [
       "https://usa11.fastcast4u.com/proxy/ajaydk?mp=/;"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "abctamil",
@@ -731,7 +959,10 @@ window.STATIONS = [
     "streams": [
       "https://eu8.fastcast4u.com/proxy/ailevdcu?mp=/;"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      32
+    ]
   },
   {
     "id": "aanmeega-sudar",
@@ -740,7 +971,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-289.surfernetwork.com/ymkr7th4f2zuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJ5bWtyN3RoNGYyenV2IiwiaG9zdCI6InN0cmVhbS0yODkuc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJZNmNQQ3AteVJVbXRTSks2dVdlNXVBIiwiaWF0IjoxNzg0NTI4NzY1LCJleHAiOjE3ODQ1Mjg4MjV9.-PYWGdeUiHa1nlERt-tUNoOnxWj-FgqTK3i2Oi5sQ9s"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "arni-city-fm",
@@ -749,7 +983,10 @@ window.STATIONS = [
     "streams": [
       "https://usa9.fastcast4u.com/proxy/arnifm?mp=/1"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      64
+    ]
   },
   {
     "id": "mohanhits",
@@ -758,7 +995,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/wkqvzsg1238uv"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      64
+    ]
   },
   {
     "id": "ilctamil",
@@ -767,7 +1007,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/vewxk5336qzuv"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ibctamil",
@@ -776,7 +1019,10 @@ window.STATIONS = [
     "streams": [
       "https://rbx2.hnux.com/http://10454.cloudrad.io:6176/;stream.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "om-radio-singapore",
@@ -785,7 +1031,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/OMRADIO_S01AAC_SC"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      64
+    ]
   },
   {
     "id": "bakthi-malai-radio",
@@ -794,7 +1043,10 @@ window.STATIONS = [
     "streams": [
       "https://bakthiisai-unicast2u.radioca.st/stream"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      128
+    ]
   },
   {
     "id": "dharisanam-fm",
@@ -803,7 +1055,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/b741tfumhm8uv"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      128
+    ]
   },
   {
     "id": "tamil-murasam-fm",
@@ -812,7 +1067,10 @@ window.STATIONS = [
     "streams": [
       "https://tamilmurasam.radioca.st/live"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      160
+    ]
   },
   {
     "id": "universal-health-radio",
@@ -821,7 +1079,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.universalhealthradio.org/uhr-ta.mp3"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      48
+    ]
   },
   {
     "id": "eye-tamil-radio",
@@ -830,7 +1091,10 @@ window.STATIONS = [
     "streams": [
       "https://streams.radio.co/s937ac5492/listen"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      96
+    ]
   },
   {
     "id": "pollachifm",
@@ -839,7 +1103,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/f29eh57d3qzuv"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "tamilrockyfm",
@@ -848,7 +1115,10 @@ window.STATIONS = [
     "streams": [
       "https://centova71.instainternet.com/proxy/tamilrockyfm?mp=/stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "shiva-tattvam",
@@ -857,7 +1127,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.shaivam.org/listen/shiva-tattvam/radio.mp3"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "tamil-amuthu-madurai-radio",
@@ -866,7 +1139,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/utmhndkgtp8uv"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "tamil-amuthu-nellai-radio",
@@ -875,7 +1151,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/gdkvpstgtp8uv"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "a9-radio",
@@ -884,7 +1163,10 @@ window.STATIONS = [
     "streams": [
       "https://a9radio1-a9media.radioca.st/stream"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ilayaraja-radio",
@@ -911,7 +1193,10 @@ window.STATIONS = [
     "streams": [
       "https://cp1.hostcrate.com/8910/stream"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "friendstamilchatfm",
@@ -920,7 +1205,10 @@ window.STATIONS = [
     "streams": [
       "https://usa3.fastcast4u.com/proxy/dhayanib?mp=/;"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "trt-tamil-oli-fm",
@@ -929,7 +1217,10 @@ window.STATIONS = [
     "streams": [
       "https://radio13.pro-fhi.net:19236/stream.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "muthamilradio",
@@ -938,7 +1229,10 @@ window.STATIONS = [
     "streams": [
       "https://ec2.yesstreaming.net:2540/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "kummalamradio",
@@ -947,7 +1241,10 @@ window.STATIONS = [
     "streams": [
       "https://kummalam.stream.laut.fm/kummalam"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "pudugai-isai-fm",
@@ -956,7 +1253,10 @@ window.STATIONS = [
     "streams": [
       "https://pudhugaisaifm-prabak78.radioca.st/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "vaanam-fm-hd",
@@ -965,7 +1265,10 @@ window.STATIONS = [
     "streams": [
       "https://fra-ranger01.dedicateware.com:8008/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      192
+    ]
   },
   {
     "id": "mukil-fm",
@@ -974,7 +1277,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/9s8119m1rzzuv"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "yet-radio",
@@ -983,7 +1289,10 @@ window.STATIONS = [
     "streams": [
       "https://play.yetradio.com/stream/yetradio"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-paramankurichi",
@@ -992,7 +1301,10 @@ window.STATIONS = [
     "streams": [
       "https://vpmurugun.radioca.st/autodj"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "kathiravanfm",
@@ -1001,7 +1313,10 @@ window.STATIONS = [
     "streams": [
       "https://kathiravanfm-prabak78.radioca.st/stream"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "vanavilfm-arr-radio",
@@ -1010,7 +1325,10 @@ window.STATIONS = [
     "streams": [
       "https://s7.yesstreaming.net:8038/stream"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "mukil-fm-radio",
@@ -1019,7 +1337,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/phv06yfkwzzuv"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "isai-fm",
@@ -1028,7 +1349,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/7b78sdv2x1zuv"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "isaiolifm",
@@ -1037,7 +1361,10 @@ window.STATIONS = [
     "streams": [
       "https://centova71.instainternet.com/proxy/isaiolifmadmin?mp=/stream&1691245966241"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cheemaifm",
@@ -1046,7 +1373,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/oogj1rc9cdctv"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ullasamfm",
@@ -1055,7 +1385,10 @@ window.STATIONS = [
     "streams": [
       "https://eu10.fastcast4u.com:6740/stream"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "asal-fm",
@@ -1064,7 +1397,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/pzgws1kc41zuv"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "thaalam-radio",
@@ -1073,7 +1409,10 @@ window.STATIONS = [
     "streams": [
       "https://thaalam.out.airtime.pro/thaalam_b"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      64
+    ]
   },
   {
     "id": "tamil-amuthu-kovilpatti-radio",
@@ -1082,7 +1421,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/4cmhxc3ktp8uv"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "thavakalai-radio",
@@ -1091,7 +1433,10 @@ window.STATIONS = [
     "streams": [
       "https://mars.streamerr.co/8274/stream"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radiovaanam",
@@ -1100,7 +1445,10 @@ window.STATIONS = [
     "streams": [
       "https://sathees.radioca.st/;"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "tamilaruvifm",
@@ -1109,7 +1457,10 @@ window.STATIONS = [
     "streams": [
       "https://servidor18-4.brlogic.com:7740/live"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "thendralradio",
@@ -1118,7 +1469,10 @@ window.STATIONS = [
     "streams": [
       "https://thenralw.radioca.st/LiveStream"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      96
+    ]
   },
   {
     "id": "fm-gold-chennai",
@@ -1136,7 +1490,10 @@ window.STATIONS = [
     "streams": [
       "https://centova71.instainternet.com/proxy/sweetyfm?mp=/stream2"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      160
+    ]
   },
   {
     "id": "tamil-amuthu-chennai-radio",
@@ -1145,7 +1502,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/k9e5pmbktp8uv"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      32
+    ]
   },
   {
     "id": "thandora-fm",
@@ -1154,7 +1514,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/7us8bucomafvv"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "thendral-fm-radio",
@@ -1163,7 +1526,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/xzt706p3h2zuv"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sirpifm",
@@ -1172,7 +1538,10 @@ window.STATIONS = [
     "streams": [
       "https://sirpifmhd-unicast2u.radioca.st/stream"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      64
+    ]
   },
   {
     "id": "pozhil-fm",
@@ -1181,7 +1550,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/ssnf4ya44d0uv"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sstamilradio",
@@ -1190,7 +1562,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.rcast.net/68750"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "thiruneriya-thamizhosai",
@@ -1199,7 +1574,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.shaivam.org/listen/thiruneriya-thamizhosai/radio.mp3"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "subikshafm",
@@ -1208,7 +1586,10 @@ window.STATIONS = [
     "streams": [
       "https://usa8.fastcast4u.com/proxy/subikshafm?mp=/1"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "tamizen",
@@ -1217,7 +1598,10 @@ window.STATIONS = [
     "streams": [
       "https://c34.radioboss.fm:18023/stream"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      192
+    ]
   },
   {
     "id": "tamil-amuthu-covai-radio",
@@ -1226,7 +1610,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/dzxv07vktp8uv"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "time-fm",
@@ -1235,7 +1622,10 @@ window.STATIONS = [
     "streams": [
       "https://neramfm.com:8000/stream"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "translation-of-the-quran-in-tamil",
@@ -1244,7 +1634,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8008/;"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "njsunriseradio",
@@ -1253,7 +1646,10 @@ window.STATIONS = [
     "streams": [
       "https://njsunrise.out.airtime.pro/njsunrise_a"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      64
+    ]
   },
   {
     "id": "mtrfm",
@@ -1262,7 +1658,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.mediacp.eu/stream/mtr-fm/stream"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "the-leader-fm",
@@ -1271,7 +1670,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/whwy245c2wzuv"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      192
+    ]
   },
   {
     "id": "sivan-radio",
@@ -1280,7 +1682,10 @@ window.STATIONS = [
     "streams": [
       "https://sivanradio.radioca.st/stream"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      320
+    ]
   },
   {
     "id": "ttrfm",
@@ -1298,7 +1703,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.pixelinmedia.com/vallamai"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "yugam-radio",
@@ -1307,7 +1715,10 @@ window.STATIONS = [
     "streams": [
       "https://s6.yesstreaming.net:19012/stream"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "vasantha-ragam-fm",
@@ -1316,7 +1727,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/xpbsngksa2zuv"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      112
+    ]
   },
   {
     "id": "nanban-fm",
@@ -1325,7 +1739,10 @@ window.STATIONS = [
     "streams": [
       "https://nanbanfm-unicast2u.radioca.st/stream"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

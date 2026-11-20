@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://azura.yesfm.com.ph/listen/yes_fm_manila/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://azura.loveradio.com.ph/listen/love_radio_manila/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zenolive.com/gzudz59nz9duv"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s74.radiolize.com:8020/radio.mp3?t=1780673757445"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -41,6 +53,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-42.zeno.fm/1noxhem5qpkuv",
       "https://stream.zeno.fm/1noxhem5qpkuv"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -49,6 +65,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/sbmi7cx5z8buv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -57,6 +76,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/0cdp55nqam0uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -66,6 +88,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-37.zeno.fm/26ea0anpms8uv",
       "https://stream.zeno.fm/26ea0anpms8uv"
+    ],
+    "br": [
+      64,
+      64
     ]
   },
   {
@@ -74,6 +100,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://centova.radioservers.biz/proxy/eastfmc1/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -82,6 +111,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/2uhuu5hvzqzuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -90,6 +122,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream-288.surfernetwork.com/g1pmt17nz9duv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJnMXBtdDE3bno5ZHV2IiwiaG9zdCI6InN0cmVhbS0yODguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJMaXZRVVVnMVJBNllJVm1CMzZweXlRIiwiaWF0IjoxNzgxNjc4NzM0LCJleHAiOjE3ODE2Nzg3OTR9.5G1wZmONFqXySurSj1Oj6_UtSmcJMwlc6JJy2oL7fX8"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -98,6 +133,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/yu9dryfs7x8uv.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -106,6 +144,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://radio.905heartfm.com:8000/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -114,6 +155,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/03v7z8edgphvv.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -122,6 +166,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/ewvmpjn7kultv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -130,6 +177,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/vvsqe5qk7yzuv"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -138,6 +188,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://5b2959fe11444.streamlock.net/radio/fm961.stream/playlist.m3u8"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -146,6 +199,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/MYXFMAAC.aac"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -154,6 +210,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radiojar.com/yus0r2bghd3vv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -162,6 +221,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://listen.streamaudio.co/proxy/kaibiganradio/opm"
+    ],
+    "br": [
+      112
     ]
   },
   {
@@ -171,6 +233,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/7neg6f1hbm0uv",
       "https://cast4.servcast.net/proxy/v81radioworldwide/live"
+    ],
+    "br": [
+      128,
+      64
     ]
   },
   {
@@ -179,6 +245,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/fp689r8sty8uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -187,6 +256,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://islamicbulletin.site:8030/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -195,6 +267,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://edge.mixlr.com/channel/gtqpn?listening-from-radio-garden=1654604184"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -203,6 +278,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/82bb4d2uz68uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -211,6 +289,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ais-sa1.streamon.fm/7681_64k.mp3"
+    ],
+    "br": [
+      70
     ]
   },
   {
@@ -219,6 +300,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/b1vknfz1yedvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -227,6 +311,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/yyzp7bv9qchvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -235,6 +322,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ais-edge50-live365-dal02.cdnstream.com/a63316"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -244,6 +334,10 @@ window.STATIONS = [
     "streams": [
       "https://cast5.servcast.net/proxy/truefmph/stream",
       "https://radio.tv5.com.ph/truefm/audio.stream/playlist.m3u8"
+    ],
+    "br": [
+      32,
+      64
     ]
   },
   {
@@ -252,6 +346,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://edge.mixlr.com/channel/gtqpn"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -260,6 +357,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://eu10.fastcast4u.com:6300/;?type=http&fbclid=IwY2xjawFqDntleHRuA2FlbQIxMQABHTTxwatDLaI3zkRXdSFYydXbOIRIvpABKZ_UJtqR3_vuCOvdsqzoeP80-Q_aem_slP_LtUYWwu6xNl3wmsesA"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -268,6 +368,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streamer.radio.co/sec36cd5f1/listen"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -276,6 +379,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/h0y9yu8hzk8uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -284,6 +390,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/67srwcmawgqtv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -292,6 +401,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-sg1.galuhmedia.co.id/listen/galuhmedia/stream"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -300,6 +412,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/2ss1hgnu6hhvv"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -308,6 +423,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast3.my-control-panel.com/proxy/ronald/stream"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -316,6 +434,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://n0d.radiojar.com/yus0r2bghd3vv?rj-ttl=5&rj-tok=AAABlJu7jsUAmyVUk6qFVdTweA"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -324,6 +445,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streamnavs.net:8133/live"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -333,7 +457,10 @@ window.STATIONS = [
     "streams": [
       "https://us1.amfmph.com/ssl/rmniloilo?mp=/stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      24
+    ]
   },
   {
     "id": "palawan-wave-fm",
@@ -342,7 +469,10 @@ window.STATIONS = [
     "streams": [
       "https://xcite.radyoph.com:8020/dzrt"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radyo-natin-madridejos",
@@ -351,7 +481,10 @@ window.STATIONS = [
     "streams": [
       "https://tx.radyonatinfm.com:8010/madridejos"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      64
+    ]
   },
   {
     "id": "galactic-hearts-radio",
@@ -360,7 +493,10 @@ window.STATIONS = [
     "streams": [
       "https://ca.azura.linkodev.ch/listen/galactic_hearts_radio/jttcgalactichearts"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      320
+    ]
   },
   {
     "id": "star-fm-92-7-pampanga",
@@ -370,7 +506,11 @@ window.STATIONS = [
       "https://stream-13.zeno.fm/g1pmt17nz9duv",
       "https://stream.zeno.fm/g1pmt17nz9duv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      96,
+      96
+    ]
   },
   {
     "id": "89-7-manila-zounds",
@@ -379,7 +519,10 @@ window.STATIONS = [
     "streams": [
       "https://visayas.radyonatinfm.com:8000/stream"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "vibe-radio",
@@ -388,7 +531,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/zf0ac4raqy8uv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "105-9-hot-fm-manila",
@@ -397,7 +543,10 @@ window.STATIONS = [
     "streams": [
       "https://a8.asurahosting.com:6820/radio.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      320
+    ]
   },
   {
     "id": "taps-radio-ilagan",
@@ -406,7 +555,10 @@ window.STATIONS = [
     "streams": [
       "https://us1.amfmph.com/ssl/tapsradioilagan?mp=/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      48
+    ]
   },
   {
     "id": "newsline-central-luzon-105-5-fm",
@@ -415,7 +567,10 @@ window.STATIONS = [
     "streams": [
       "https://makatistream.brigadanews.ph/"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-maria-philippines",
@@ -424,7 +579,10 @@ window.STATIONS = [
     "streams": [
       "https://dreamsiteradiocp2.com/proxy/rmphilippine?mp=/stream?ver=748140"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      32
+    ]
   },
   {
     "id": "dxbh-hope-radio-103-7mhz",
@@ -444,7 +602,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/a3th9bd1fs8uv"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "28-2-goodvibes-fm",
@@ -453,7 +614,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/fu24r3f24c9uv"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sayhifm",
@@ -472,7 +636,10 @@ window.STATIONS = [
     "streams": [
       "https://usa5.fastcast4u.com/proxy/mcbntiktok?mp=/1"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "king-radio-tabuk-city",
@@ -481,7 +648,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/hqmmdrw2b48uv?aw_0_req_lsid=213084d0938e3fc5344aa1adb0f8fb3a&triton-uid=cookie%3A7cebc1db-d1a7-403b-87ca-ccba0eb42e6b"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "marino-news-fm-zamboanga",
@@ -490,7 +660,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/4xq4cb6x6k0uv"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "taps-radio-alicia",
@@ -499,7 +672,10 @@ window.STATIONS = [
     "streams": [
       "https://us1.amfmph.com/ssl/tapsradi?mp=/stream&1642337283814"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      64
+    ]
   },
   {
     "id": "kizzfm-uk-90-9",
@@ -508,7 +684,10 @@ window.STATIONS = [
     "streams": [
       "https://azura.kizzfmuk90-9.com/listen/kizzfmuk/radio.mp3?1689855016244"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      192
+    ]
   },
   {
     "id": "kpmw-mix-105-5",
@@ -517,7 +696,10 @@ window.STATIONS = [
     "streams": [
       "https://s5.radio.co/s16a1d562a/listen"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      64
+    ]
   },
   {
     "id": "star-fm-95-5-cebu",
@@ -527,7 +709,11 @@ window.STATIONS = [
       "https://stream-146.zeno.fm/60cb36c29heuv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI2MGNiMzZjMjloZXV2IiwiaG9zdCI6InN0cmVhbS0xNDYuemVuby5mbSIsInJ0dGwiOjUsImp0aSI6ImJMWEdONUVnUWFpUG1ETU1EeUhYX2ciLCJpYXQiOjE3NDE0MzA4NjIsImV4cCI6MTc0MTQzMDkyMn0.4qElo5I_0GF5A3aE5mUfF6T44wqKi0drur2zii2Q0KA",
       "https://stream.zeno.fm/60cb36c29heuv"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      96,
+      96
+    ]
   },
   {
     "id": "105-9-energy-fm-dwla",
@@ -536,7 +722,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/dnddzf0osc1uv"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "newsline-central-luzon-103-1-fm",
@@ -545,7 +734,10 @@ window.STATIONS = [
     "streams": [
       "https://gvamaudio.tail160f79.ts.net/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "99-5-dzyw-koolfm",
@@ -554,7 +746,10 @@ window.STATIONS = [
     "streams": [
       "https://listen.smilemediaph.com/listen/koolfm/radio.mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "translation-of-the-quran-in-tagalog",
@@ -563,7 +758,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8114/;"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "zexfm",
@@ -572,7 +770,10 @@ window.STATIONS = [
     "streams": [
       "https://listen.smilemediaph.com/listen/zexfm/radio.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "filipino-music-central",
@@ -581,7 +782,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/yqkru9yv3yzuv"
     ],
-    "added": "2026-11-12"
+    "added": "2026-11-12",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fmr-98-3-camiguin",
@@ -590,7 +794,10 @@ window.STATIONS = [
     "streams": [
       "https://de3.amfmph.com/ssl/fmrcamiguin?mp=/live"
     ],
-    "added": "2026-11-14"
+    "added": "2026-11-14",
+    "br": [
+      64
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

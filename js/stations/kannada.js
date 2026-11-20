@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/fcsk9ryerd0uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/68snnbug8rhvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_SUNO_MELODY_S06.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudioragam/hlspbaudioragam_Auto.m3u8"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -40,6 +52,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio026/hlspbaudio026_Auto.m3u8"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -49,6 +64,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zenolive.com/bbs8prb015quv",
       "https://stream.zeno.fm/6quh1pfnt1duv"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -57,6 +76,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://radio.shaivam.org/listen/shaiva-lahari/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -66,6 +88,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zenolive.com/7g8axtgtsg0uv",
       "https://stream.zeno.fm/7g8axtgtsg0uv"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -74,6 +100,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/45f9c2byfy8uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -82,6 +111,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio030/hlspbaudio030_Auto.m3u8"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -90,6 +122,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radiojar.com/g6dgm6m6p3hvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -98,6 +133,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/kc4wg3ent1duv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -106,6 +144,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio028/hlspbaudio028_Auto.m3u8"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -114,6 +155,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/kgw2tp5p1y5tv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -122,8 +166,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://d3n2o48cmfppr2.cloudfront.net/svymradio.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "fm-rainbow-kannada",
@@ -131,6 +174,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio027/hlspbaudio027_Auto.m3u8"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -140,7 +186,10 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio031/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      95
+    ]
   },
   {
     "id": "live-fm",
@@ -149,7 +198,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.aiir.com/dbv0rxpwp6ytv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      320
+    ]
   },
   {
     "id": "translation-of-the-quran-in-kannada",
@@ -158,7 +210,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8132/;"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-daijiworld-konkani",
@@ -167,7 +222,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.garden/api/ara/content/listen/wnpDPXNr/channel.mp3"
     ],
-    "added": "2026-11-19"
+    "added": "2026-11-19",
+    "br": [
+      64
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

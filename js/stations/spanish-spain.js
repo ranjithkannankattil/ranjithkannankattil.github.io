@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/CADENASER.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -17,6 +20,10 @@ window.STATIONS = [
     "streams": [
       "https://cadena100-streamers-mp3.flumotion.com/cope/cadena100.mp3",
       "https://cadena100-cope.flumotion.com/chunks.m3u8"
+    ],
+    "br": [
+      128,
+      0
     ]
   },
   {
@@ -25,6 +32,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/Los40.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -33,6 +43,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RAC_1.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -41,6 +54,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://wecast09-h-cloud.flumotion.com/copesedes/sevilla-mas.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -49,6 +65,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://atres-live.ondacero.es/live/ondacero/bitrate_1.m3u8"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -58,6 +77,10 @@ window.STATIONS = [
     "streams": [
       "https://adhandler.kissfmradio.cires21.com/get_link?url=https://bbkissfm.kissfmradio.cires21.com/bbkissfm.mp3",
       "https://adhandler.kissfmradio.cires21.com/get_link?url=https://bbkissfm.kissfmradio.cires21.com/bbkissfm.mp3&lang=es"
+    ],
+    "br": [
+      56,
+      56
     ]
   },
   {
@@ -66,6 +89,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://net1-cope-rrcast.flumotion.com/cope/net1-low.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -74,6 +100,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/CADENADIAL.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -82,6 +111,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_URBAN.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -91,6 +123,10 @@ window.STATIONS = [
     "streams": [
       "https://sonic.mediatelekom.net/9316/stream",
       "https://www.marca.com/radio/geoblock/getSrcApp.php?dial=Nacional&dist=radiomarcaweb"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -99,6 +135,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://d131.rndfnk.com/star/crtve/rne5/main/mp3/128/stream.mp3?aggregator=tunein&cid=01GEP4MW5CAHPYP1EXHVKWFJ8W&sid=2OeE42hivuba6dTGvjnMGjKByQe&token=cdczXcnimVx4AY4iamqYbTMdu3cK7oBxmS2UQN9cWc0&tvf=pdPcDBxuVxdkMTMxLnJuZGZuay5jb20"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -107,6 +146,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://flucast34-h-cloud.flumotion.com/cope/rockfm-low.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -116,6 +158,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_CLASSIC.mp3",
       "https://22543.live.streamtheworld.com/LOS40_CLASSIC.mp3"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -124,6 +170,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RAC_MES_1.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -140,6 +189,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://flucast16-h-cloud.flumotion.com/cope/net1.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -148,6 +200,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://flucast13-h-cloud.flumotion.com/cope/net1.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -156,6 +211,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streams.radio.co/se1a320b47/listen"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -164,6 +222,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_DANCE_SC"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -172,6 +233,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://wecast09-h-cloud.flumotion.com/copesedes/cartagena.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -180,6 +244,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://d121.rndfnk.com/star/crtve/rne1/mad/mp3/128/stream.mp3?cid=01GEM7S23A9B744SKFN04XA893&sid=2HgEg5aD71G8EuEf67MKTba5AnL&token=n_qXJorii6EVsZ_IP-RSzQP8sRamUc8gqb1nDnqiNT8&tvf=HHgasgd8KBdkMTIxLnJuZGZuay5jb20"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -188,6 +255,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SER_BARCELONA.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -196,6 +266,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://80sexitos.stream.laut.fm/80sexitos"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -212,6 +285,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://shoutcast.ccma.cat/ccma/catalunyainformacioHD.mp3"
+    ],
+    "br": [
+      56
     ]
   },
   {
@@ -220,6 +296,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://c2.auracast.net:8048/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -228,6 +307,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://shoutcast.ccma.cat/ccma/catalunyaradioHD.mp3"
+    ],
+    "br": [
+      56
     ]
   },
   {
@@ -236,6 +318,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ztnr.rtve.es/ztnr/1694255.m3u8"
+    ],
+    "br": [
+      1155
     ]
   },
   {
@@ -244,6 +329,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://libertaddigital-radio-live1.flumotion.com/libertaddigital/ld-live1-low.mp3"
+    ],
+    "br": [
+      56
     ]
   },
   {
@@ -252,6 +340,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SER_MAS_MADRID.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -260,6 +351,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://atres-live.ondacero.es/live/delegaciones/oc/malaga/master.m3u8"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -268,6 +362,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://edge4.peta.live365.net/b05055_128mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -276,6 +373,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://pureibizaradio.clubbingradios.com:9518/PureIbizaRadio"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -284,6 +384,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIOMARCA_NACIONAL_SC"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -292,6 +395,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://wecast-bl01.flumotion.com/copesedes/santander.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -300,6 +406,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://27833.live.streamtheworld.com/RADIOLEAAC_SC"
+    ],
+    "br": [
+      56
     ]
   },
   {
@@ -316,6 +425,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://wecast-bl01.flumotion.com/copesedes/lacoruna.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -324,6 +436,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radiojar.com/asngk2sg798uv?1659885393"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -333,7 +448,10 @@ window.STATIONS = [
     "streams": [
       "https://streamer.radio.co/sb748f24ad/listen"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "cadena-ser-sevilla",
@@ -342,7 +460,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SER_SEVILLA.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cope-granada-sta-fe",
@@ -351,7 +472,10 @@ window.STATIONS = [
     "streams": [
       "https://granada-copesedes-rrcast.flumotion.com/copesedes/granada-low.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      56
+    ]
   },
   {
     "id": "canal-fiesta-radio",
@@ -360,7 +484,10 @@ window.STATIONS = [
     "streams": [
       "https://rtva-live-radio.flumotion.com/rtva/cfr.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      320
+    ]
   },
   {
     "id": "80s-90s-absolute-hits",
@@ -369,7 +496,10 @@ window.STATIONS = [
     "streams": [
       "https://live.streamthe.world/absolutehits"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hit-fm",
@@ -378,7 +508,10 @@ window.STATIONS = [
     "streams": [
       "https://adhandler.kissfmradio.cires21.com/get_link?url=https://bbhitfm.kissfmradio.cires21.com/bbhitfm.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      56
+    ]
   },
   {
     "id": "ibiza-x-radio",
@@ -396,7 +529,10 @@ window.STATIONS = [
     "streams": [
       "https://ais-sa2.cdnstream1.com/2208_128.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "flaix-fm",
@@ -405,7 +541,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.flaixfm.cat/icecast"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      125
+    ]
   },
   {
     "id": "radiole-espana",
@@ -414,7 +553,10 @@ window.STATIONS = [
     "streams": [
       "https://20043.live.streamtheworld.com/RADIOLE.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "los-40-catalunya",
@@ -423,7 +565,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_CAT_SC"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      96
+    ]
   },
   {
     "id": "electrodanceworld-radio",
@@ -432,7 +577,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/s70bvdgqks8uv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "punk-irratia",
@@ -441,7 +589,10 @@ window.STATIONS = [
     "streams": [
       "https://punkirratia.net:8443/punk"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      192
+    ]
   },
   {
     "id": "rac105",
@@ -450,7 +601,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RAC105.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "europa-fm-guipuzcoa",
@@ -459,7 +613,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/se76qau1hc9uv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "canal-sur-radio-andalucia",
@@ -468,7 +625,10 @@ window.STATIONS = [
     "streams": [
       "https://rtva-live-radio.flumotion.com/rtva/csr.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      320
+    ]
   },
   {
     "id": "cadena-ser",
@@ -477,7 +637,10 @@ window.STATIONS = [
     "streams": [
       "https://27953.live.streamtheworld.com/CADENASER_ALT1AAC.aac"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      56
+    ]
   },
   {
     "id": "hits-1-ibiza",
@@ -486,7 +649,10 @@ window.STATIONS = [
     "streams": [
       "https://hits1spain-audiomediaradio.radioca.st/hits1mallorca"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      192
+    ]
   },
   {
     "id": "1000-hits-spain",
@@ -495,7 +661,10 @@ window.STATIONS = [
     "streams": [
       "https://c2.auracast.net:8022/;"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "flamenco-radio",
@@ -504,7 +673,10 @@ window.STATIONS = [
     "streams": [
       "https://rtva-live-radio.flumotion.com/rtva/flamenco.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      320
+    ]
   },
   {
     "id": "80-hits-barcelona",
@@ -513,7 +685,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.laut.fm/80sexitos"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "informa-radio",
@@ -522,7 +697,10 @@ window.STATIONS = [
     "streams": [
       "https://24x7.red:42045/informa"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "blue-marlin-ibiza",
@@ -531,7 +709,10 @@ window.STATIONS = [
     "streams": [
       "https://ibizasonica.streaming-pro.com:8001/bluemarlin"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-maria-espana",
@@ -540,7 +721,10 @@ window.STATIONS = [
     "streams": [
       "https://dreamsiteradiocp4.com/proxy/rmspain1?mp=/stream/1/"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-marca-barcelona-2",
@@ -549,7 +733,10 @@ window.STATIONS = [
     "streams": [
       "https://radiomarcabcnmedia.dns-lcinternet.com:9000/stream"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      96
+    ]
   },
   {
     "id": "funky-corner-radio-spain",
@@ -558,7 +745,10 @@ window.STATIONS = [
     "streams": [
       "https://ais-sa2.cdnstream1.com/2447_96.aac"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      96
+    ]
   },
   {
     "id": "radio-exterior-de-espana",
@@ -567,7 +757,10 @@ window.STATIONS = [
     "streams": [
       "https://dispatcher.rndfnk.com/crtve/rneree/main/mp3/high"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cope-gijon",
@@ -576,7 +769,10 @@ window.STATIONS = [
     "streams": [
       "https://wecast-bl01.flumotion.com/copesedes/gijon.mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      96
+    ]
   },
   {
     "id": "megastarfm",
@@ -585,7 +781,10 @@ window.STATIONS = [
     "streams": [
       "https://flucast14-h-cloud.flumotion.com/cope/megastar.mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "onda-cero-sevilla",
@@ -594,7 +793,10 @@ window.STATIONS = [
     "streams": [
       "https://atres-live.ondacero.es/live/delegaciones/oc/sevilla/master.m3u8"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rne-r5-madrid",
@@ -603,7 +805,10 @@ window.STATIONS = [
     "streams": [
       "https://d121.rndfnk.com/star/crtve/rne5/mad/mp3/128/stream.mp3?cid=01GEP4QN2TSXQQDS2JQA783NYX&sid=2HgHkKUje0YQl468xMDmJHKhDmz&token=bRjUW1ZmpjTaF8EgRmo3u6OCUep9WTHKjib0rpzUUzw&tvf=FG8P7Wd9KBdkMTIxLnJuZGZuay5jb20"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cadena-ser-coruna",
@@ -612,7 +817,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SER_ASO_CORUNA.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      96
+    ]
   },
   {
     "id": "esradio-galicia",
@@ -621,7 +829,10 @@ window.STATIONS = [
     "streams": [
       "https://libertaddigital-radio-live2.flumotion.com/libertaddigital/ld-live2-low.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      56
+    ]
   },
   {
     "id": "radio-espana",
@@ -630,7 +841,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-280.surfernetwork.com/7ywx2u45vv8uv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiI3eXd4MnU0NXZ2OHV2IiwiaG9zdCI6InN0cmVhbS0yODAuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6Ik42WDBkd1ZZUV91SFppM21TV1l2WlEiLCJpYXQiOjE3OTMwNTI5NjIsImV4cCI6MTc5MzA1MzAyMn0._TALtfzf6AumrpbETHG5K6fF_FxkuulZxBV7rrxzioA"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      96
+    ]
   },
   {
     "id": "bikinifm",
@@ -639,7 +853,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.emisorasmusicales.net/listen/bikini_fm/bikinifm.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cadena-ser-radio-zamora",
@@ -648,7 +865,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SER_ASO_ZAMORA.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      96
+    ]
   },
   {
     "id": "cadena-ser-radio-valencia",
@@ -657,7 +877,10 @@ window.STATIONS = [
     "streams": [
       "https://20043.live.streamtheworld.com/SER_VALENCIA_SC"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      96
+    ]
   },
   {
     "id": "dark-city-signal",
@@ -666,7 +889,10 @@ window.STATIONS = [
     "streams": [
       "https://audiostream.hkprime.com/stream"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      160
+    ]
   },
   {
     "id": "radio-intereconomia",
@@ -675,7 +901,10 @@ window.STATIONS = [
     "streams": [
       "https://intereconomia.emitironline.com/"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "a-punt",
@@ -684,7 +913,10 @@ window.STATIONS = [
     "streams": [
       "https://fastly.live.brightcove.com/1854461588069069227/eu-central-1/6057955885001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoiZWFxNWh4LmVncmVzcy53YzQ3bTEiLCJhY2NvdW50X2lkIjoiNjA1Nzk1NTg4NTAwMSIsImVobiI6ImZhc3RseS5saXZlLmJyaWdodGNvdmUuY29tIiwiaXNzIjoiYmxpdmUtcGxheWJhY2stc291cmNlLWFwaSIsInN1YiI6InBhdGhtYXB0b2tlbiIsImF1ZCI6WyI2MDU3OTU1ODg1MDAxIl0sImp0aSI6IjE4NTQ0NjE1ODgwNjkwNjkyMjcifQ.RKqA-z0MRntFVph2G3tE9YzBp7vfdMXcynOKpyqvZTg/playlist-hls-dvr.m3u8"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      7500
+    ]
   },
   {
     "id": "digital-hits-fm",
@@ -693,7 +925,10 @@ window.STATIONS = [
     "streams": [
       "https://dhits.frilab.com:8443/dhits"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "onda-cero-valencia",
@@ -702,7 +937,10 @@ window.STATIONS = [
     "streams": [
       "https://atres-live.ondacero.es/live/delegaciones/oc/valencia/master.m3u8"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hkm-radio",
@@ -711,7 +949,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zenolive.com/rhf9cqkz3yzuv.aac"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "esradio",
@@ -720,7 +961,10 @@ window.STATIONS = [
     "streams": [
       "https://libertaddigital-radio-live1.flumotion.com/libertaddigital/ld-live1-high.aac"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      56
+    ]
   },
   {
     "id": "rne-radio-nacional-de-espana",
@@ -729,7 +973,10 @@ window.STATIONS = [
     "streams": [
       "https://dispatcher.rndfnk.com/crtve/rne1/mad/mp3/high"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cadena-ser-madrid-sur",
@@ -738,7 +985,10 @@ window.STATIONS = [
     "streams": [
       "https://25453.live.streamtheworld.com/SER_MAS_MADRID_SC"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cadena-dial-arahal",
@@ -747,7 +997,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/DIAL_ASO_MORON.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cope-zaragoza",
@@ -756,7 +1009,10 @@ window.STATIONS = [
     "streams": [
       "https://zaragoza-copesedes-rrcast.flumotion.com/copesedes/zaragoza-low.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      56
+    ]
   },
   {
     "id": "inselradio-mallorca",
@@ -765,7 +1021,10 @@ window.STATIONS = [
     "streams": [
       "https://addrad.io/445fxk9"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ibiza-sonica",
@@ -774,7 +1033,10 @@ window.STATIONS = [
     "streams": [
       "https://ibizasonica.streaming-pro.com:8000/ibizasonica"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-nervion",
@@ -783,7 +1045,10 @@ window.STATIONS = [
     "streams": [
       "https://gruponervion.streaming-pro.com:6131/"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      128
+    ]
   },
   {
     "id": "100-salsa",
@@ -802,7 +1067,10 @@ window.STATIONS = [
     "streams": [
       "https://axarquia.emisiononline.es/radio/8000/radio.mp3"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "loca-fm-industrial",
@@ -811,7 +1079,10 @@ window.STATIONS = [
     "streams": [
       "https://s02.fjperezdj.com:8076/live"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "buena-fm",
@@ -820,7 +1091,10 @@ window.STATIONS = [
     "streams": [
       "https://sonic.mediatelekom.net/8156/stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ibiza-global-classics",
@@ -829,7 +1103,10 @@ window.STATIONS = [
     "streams": [
       "https://control.streaming-pro.com:8000/ibizaglobalclassics.mp3"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-bob",
@@ -838,7 +1115,10 @@ window.STATIONS = [
     "streams": [
       "https://streams.radiobob.de/bob-national/mp3-192/homepage?mode=preroll&aw_0_1st.skey=1671400102&cb=286873666&aw_0_1st.playerid=radiobob_web&aw_0_req.userConsentV2=CPkIkEAPkIkEAAFADBDECvCsAP_AAEPAAAYgI9td_H__bW9j-f5_aft0eY1P9_rz7uQzDhfNk-4F3L_W_LwX52E7NF36tq4KmR4ku1LBIQNlHMHUDUmwaokVryHsak2cpSNKJ7BEknMZOydYGF9Pmxtj-QKY5v5_d3bx2D-t_9v-39z338VXn3d53-_02PDdV599Dfn9fR_b89KP9958v4v8_____3_e__3_74I9gEmGrcQBdmWODNoGEUCIEYVhIRQKACCgGFogIAHBwU7KwCfWECABAKAIwIgQ4AowIBAAAJAEhEAEgRYIAAARAIAAQAIAEIAGBgEFgBYGAQAAgGgYohQACBIAZEBEUpgQFQJBAS2VCCUFUhphAFWWAFAIjYKABEEgIpAAEBYOAYIkBKxYIEmKN8gBGCFAKJUIAgaADAAEEexEAGAAII9ioAMAAQR7GQAYAAgj2AAA.YAAAAAAAAAAA&aw_0_1st.kuid=kppidff_PQ5ovBN7&aw_0_1st.ksg=%5B%22vz9c46692%22%5D&listenerid=c47683ff451bdf8ebe068dea8a897b50"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      192
+    ]
   },
   {
     "id": "mariskal-rock",
@@ -847,7 +1127,10 @@ window.STATIONS = [
     "streams": [
       "https://media.profesionalhosting.com:8047/stream"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      192
+    ]
   },
   {
     "id": "costa-del-mar-smooth-jazz",
@@ -856,7 +1139,10 @@ window.STATIONS = [
     "streams": [
       "https://radio4.cdm-radio.com:18024/stream-mp3-Smooth"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      96
+    ]
   },
   {
     "id": "cadena-ser-radio-vigo",
@@ -865,7 +1151,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SER_ASO_VIGO.mp3"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      96
+    ]
   },
   {
     "id": "radio-planeta-costa-del-sol",
@@ -874,7 +1163,10 @@ window.STATIONS = [
     "streams": [
       "https://radioplaneta.emitironline.com/radio"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      192
+    ]
   },
   {
     "id": "cope-tenerife",
@@ -883,7 +1175,10 @@ window.STATIONS = [
     "streams": [
       "https://wecast02-o-cloud.flumotion.com/copesedes/tenerife-mas.mp3"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      96
+    ]
   },
   {
     "id": "remember-the-music-fm-96-6",
@@ -892,7 +1187,10 @@ window.STATIONS = [
     "streams": [
       "https://eu1.lhdserver.es:9041/stream"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rne-radio-5-galicia",
@@ -901,7 +1199,10 @@ window.STATIONS = [
     "streams": [
       "https://d141.rndfnk.com/star/crtve/rne5/lcg/mp3/128/stream.mp3?cid=01GEP53FAF08XXF9WHNDFYA8SJ&sid=3LVX7yIAfVTJLH6YianctF4gINJ&token=sUP2SSTA5wtZHC1qQKu2JDea_sxI13_Wm69Hu766qvY&tvf=ZKodW9AC5BhkMTQxLnJuZGZuay5jb20"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cope-albacete",
@@ -910,7 +1211,10 @@ window.STATIONS = [
     "streams": [
       "https://wecast-bl01.flumotion.com/copesedes/albacete.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      96
+    ]
   },
   {
     "id": "rne-radio-5",
@@ -919,7 +1223,10 @@ window.STATIONS = [
     "streams": [
       "https://d141.rndfnk.com/star/crtve/rne5/cad/mp3/128/stream.mp3?cid=01GEPXNR2GD70SEGJYN9G1TQCA&sid=3LUDtXqmZdLddZCoAwZ0R31njVT&token=RLz5WDGirQu2ATInCYFWKLZ1hmXWZDILXbXriaQoivw&tvf=XpqjDV3e4xhkMTQxLnJuZGZuay5jb20"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-nature",
@@ -928,7 +1235,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/3ac97ysh6f0uv.aac"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "deep-nu-house-radio-by-so-so",
@@ -937,7 +1247,10 @@ window.STATIONS = [
     "streams": [
       "https://c4.radioboss.fm:18286/dnh"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      192
+    ]
   },
   {
     "id": "onda-cero-cadiz",
@@ -946,7 +1259,10 @@ window.STATIONS = [
     "streams": [
       "https://atres-live.ondacero.es/live/delegaciones/oc/cadiz/master.m3u8"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "china-fmfm92-9",
@@ -955,7 +1271,10 @@ window.STATIONS = [
     "streams": [
       "https://radioserver12.profesionalhosting.com/proxy/pkg152387/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      160
+    ]
   },
   {
     "id": "misterio-fm",
@@ -964,7 +1283,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/zr1ntv61fchvv"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cadena-ser-zaragoza",
@@ -973,7 +1295,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SER_MAS_ZARAGOZA.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "99-9-plaza-radio-valencia",
@@ -982,7 +1307,10 @@ window.STATIONS = [
     "streams": [
       "https://stream1.solstreaming.com:8112/stream"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      192
+    ]
   },
   {
     "id": "rockfm-101-7",
@@ -991,7 +1319,10 @@ window.STATIONS = [
     "streams": [
       "https://flucast10-o-cloud.flumotion.com/cope/rockfm.aac"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      64
+    ]
   },
   {
     "id": "ibiza-deep-house",
@@ -1000,7 +1331,10 @@ window.STATIONS = [
     "streams": [
       "https://radio2.vip-radios.fm:18027/stream-128kmp3-IbizaDeep"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-galega",
@@ -1009,7 +1343,10 @@ window.STATIONS = [
     "streams": [
       "https://crtvg-radiogalega-hls.flumotion.cloud/playlist.m3u8"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      192
+    ]
   },
   {
     "id": "ibiza-sonica-club",
@@ -1018,7 +1355,10 @@ window.STATIONS = [
     "streams": [
       "https://ibizasonica.streaming-pro.com:8011/sonicaclub"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "1000-80s-hits",
@@ -1027,7 +1367,10 @@ window.STATIONS = [
     "streams": [
       "https://ais-sa9.cdnstream1.com/1898_128"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rne-radio-1-galicia",
@@ -1036,7 +1379,10 @@ window.STATIONS = [
     "streams": [
       "https://dispatcher.rndfnk.com/crtve/rne1/gal/mp3/high"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hitz-latino-fm",
@@ -1045,7 +1391,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/aq899a53rs8uv"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "loca-fm-deep-techno",
@@ -1054,7 +1403,10 @@ window.STATIONS = [
     "streams": [
       "https://s02.fjperezdj.com:8066/live"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "remember-vip-techno",
@@ -1063,7 +1415,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/xilwjn4t17qvv"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "catalunya-musica-catmusica",
@@ -1072,7 +1427,10 @@ window.STATIONS = [
     "streams": [
       "https://shoutcast.ccma.cat/ccma/catalunyamusicaHD.mp3"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      56
+    ]
   },
   {
     "id": "radio-moscatel-107-1-fm-axarquia-espana",
@@ -1081,7 +1439,10 @@ window.STATIONS = [
     "streams": [
       "https://axarquia.emisiononline.es/radio/8040/radio.mp3"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "esradio-castilla-y-leon",
@@ -1090,7 +1451,10 @@ window.STATIONS = [
     "streams": [
       "https://libertaddigital-radio-live4.flumotion.com/libertaddigital/ld-live4-med.aac"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      56
+    ]
   },
   {
     "id": "copesal",
@@ -1099,7 +1463,10 @@ window.STATIONS = [
     "streams": [
       "https://salamanca-copesedes-rrcast.flumotion.com/copesedes/salamanca-low.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      56
+    ]
   },
   {
     "id": "esradio-granada",
@@ -1108,7 +1475,10 @@ window.STATIONS = [
     "streams": [
       "https://azura.abcorp.es/listen/esradio_granada/radio.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "el-toro-tv",
@@ -1126,7 +1496,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SER_EXTREMADURAAAC.aac"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rock-fm-espana-128",
@@ -1154,7 +1527,10 @@ window.STATIONS = [
     "streams": [
       "https://mdstrm.com/audio/67d2a8685ae4234de49e40f6/live.m3u8?_=1748201428470&dnt=true&player=67bf8d9eb8fdbbe59cb3dc1e&uid=ZGjN46saKhxpR9l4R89Rah2jvFyKlii2&sid=Ylu5J6JhzLU9YYjHNlrKub2B78xqLdvG&pid=FM2735sWw0sy8ShSstpnBPcUEKzC3DWC&an=lightning-player&at=web-app&av=v1.0.19&sc=0&ds=67bf8b74ff9cc60dd3e575b4&ref=www.capitalradio.es&res=1600x900"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      65
+    ]
   },
   {
     "id": "amor-fm",
@@ -1163,7 +1539,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/fqmu9c005hhvv"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      320
+    ]
   },
   {
     "id": "esradio-madrid",
@@ -1172,7 +1551,10 @@ window.STATIONS = [
     "streams": [
       "https://libertaddigital-radio-live1.flumotion.com/libertaddigital/ld-live1-med.aac"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      56
+    ]
   },
   {
     "id": "loca-progressive-house",
@@ -1181,7 +1563,10 @@ window.STATIONS = [
     "streams": [
       "https://s02.fjperezdj.com:8056/live?listening-from-radio-garden=1647634146"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "loca-fm-ambient",
@@ -1190,7 +1575,10 @@ window.STATIONS = [
     "streams": [
       "https://s02.fjperezdj.com:8036/live"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-matorral",
@@ -1199,7 +1587,10 @@ window.STATIONS = [
     "streams": [
       "https://topradio.uno/proxy/radiomatorral/stream"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "los40",
@@ -1208,7 +1599,10 @@ window.STATIONS = [
     "streams": [
       "https://20103.live.streamtheworld.com/LOS40_SC"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "openlab-radio",
@@ -1217,7 +1611,10 @@ window.STATIONS = [
     "streams": [
       "https://ice04.fluidstream.net/openlab.mp3"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "delicious-beach-formentera-lounge-radio",
@@ -1226,7 +1623,10 @@ window.STATIONS = [
     "streams": [
       "https://server31435.streamplus.de/;stream.mp3"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-marca-asturias",
@@ -1235,7 +1635,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.enacast.com/radiomarcaasturiasHD.mp3"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cafe-del-mar-channel-2",
@@ -1244,7 +1647,10 @@ window.STATIONS = [
     "streams": [
       "https://s4.radio.co/seeae9c220/listen"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      192
+    ]
   },
   {
     "id": "ibiza-world-club-tour-channel",
@@ -1253,7 +1659,10 @@ window.STATIONS = [
     "streams": [
       "https://ibiza-audiomediaradio.radioca.st/ibiza"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      192
+    ]
   },
   {
     "id": "maxima-fm",
@@ -1262,7 +1671,10 @@ window.STATIONS = [
     "streams": [
       "https://en-directo.frequence-radio.com/amp/redirect.php?radio=maxima-fm"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "doom-radio-beats-to-rip-tear-to",
@@ -1271,7 +1683,10 @@ window.STATIONS = [
     "streams": [
       "https://dcealopez.es/rip-tear-radio-live"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      320
+    ]
   },
   {
     "id": "cadena-ser-valencia",
@@ -1280,7 +1695,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SER_MAS_VALENCIA.mp3"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "energia-flamenca",
@@ -1289,7 +1707,10 @@ window.STATIONS = [
     "streams": [
       "https://axarquia.emisiononline.es/radio/8020/radio.mp3"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "gta-sa-k-rose",
@@ -1298,7 +1719,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/hvnu0rfuifguv"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "esradio-asturias",
@@ -1307,7 +1731,10 @@ window.STATIONS = [
     "streams": [
       "https://server9.emitironline.com:8822/;"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      48
+    ]
   },
   {
     "id": "ibiza-global-radio",
@@ -1316,7 +1743,10 @@ window.STATIONS = [
     "streams": [
       "https://listenssl.ibizaglobalradio.com:8024/ibizaglobalradio.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hits-1-mallorca",
@@ -1325,7 +1755,10 @@ window.STATIONS = [
     "streams": [
       "https://radio7.pro-fhi.net/radio/9006/hits1ibiza"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      192
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

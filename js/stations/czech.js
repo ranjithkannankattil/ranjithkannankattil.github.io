@@ -9,6 +9,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast1.play.cz/kissdelta128.mp3",
       "https://icecast4.play.cz/kiss128.mp3"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -17,6 +21,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://icecast8.play.cz/cro1-128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -25,6 +32,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/ROCK_RADIO_128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -33,6 +43,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://westradio.cz/radio/8010/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -49,6 +62,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ice.abradio.cz/oldiesradio128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -57,6 +73,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://icecast6.play.cz/cro2-128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -65,6 +84,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ice3.abradio.cz/povidka128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -73,6 +95,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://rozhlas.stream/radiozurnal_sport_high.aac"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -81,6 +106,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast5.play.cz/cro3-128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -89,6 +117,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ice.abradio.cz/hit90128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -97,6 +128,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://rozhlas.stream/plus_mp3_128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -105,6 +139,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ice.abradio.cz/fajn128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -114,6 +151,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/EVROPA2AAC.aac",
       "https://playerservices.streamtheworld.com/api/livestream-redirect/EVROPA2.mp3"
+    ],
+    "br": [
+      64,
+      96
     ]
   },
   {
@@ -122,6 +163,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_HUMOR.aac"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -130,6 +174,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast8.play.cz/freeradio128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -138,6 +185,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ice.radia.cz/oldiesradio128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -146,6 +196,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ice.actve.net/web-e2-flashback"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -154,6 +207,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.sepia.sk/ceskyimpuls128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -162,6 +218,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast2.play.cz/radiobeat128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -170,6 +229,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ice.abradio.cz/rockradio128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -178,6 +240,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ice.abradio.cz/blanikcz128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -186,6 +251,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast3.play.cz/hey-radio128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -194,6 +262,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ice.abradio.cz/hit80128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -202,6 +273,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.sepia.sk:8000/impuls128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -210,6 +284,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast1.play.cz/signal128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -218,6 +295,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ice.abradio.cz/faktor128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -226,6 +306,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ice3.abradio.cz/pohadka128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -234,6 +317,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ice.abradio.cz/blanikfm128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -242,6 +328,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_BLANIK_128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -250,6 +339,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast6.play.cz/casrock128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -258,6 +350,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.laut.fm/radio-dance-eu"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -266,6 +361,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast2.play.cz/radio1.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -274,6 +372,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ice.abradio.cz/metalomanie128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -282,6 +383,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ice.abradio.cz/orion128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -290,6 +394,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://rozhlas.stream/jazz.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -298,6 +405,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://rozhlas.stream/ceske_budejovice_high.aac"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -306,6 +416,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ice.abradio.cz/znamkapunku128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -314,6 +427,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://rozhlas.stream/wave_mp3_128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -322,6 +438,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.mediawork.cz/retrotv/retrotvHQ1/playlist.m3u8"
+    ],
+    "br": [
+      3119
     ]
   },
   {
@@ -331,7 +450,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.actve.net/fm-frekvence1-aac"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      64
+    ]
   },
   {
     "id": "hvezda",
@@ -351,7 +473,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast8.play.cz/expres128mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cesky-rozhlas-hradec-kralove",
@@ -360,7 +485,10 @@ window.STATIONS = [
     "streams": [
       "https://rozhlas.stream/hradec_kralove.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rock-radio-cz-rock",
@@ -369,7 +497,10 @@ window.STATIONS = [
     "streams": [
       "https://ice2.radia.cz/rockzabava128.aac"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "evropa-2-actve",
@@ -378,7 +509,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.actve.net/fm-evropa2-128"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hitradio-zlin",
@@ -387,7 +521,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.radia.cz/radiozlin128.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cro-ostrava",
@@ -396,7 +533,10 @@ window.STATIONS = [
     "streams": [
       "https://rozhlas.stream/ostrava_high.aac"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      192
+    ]
   },
   {
     "id": "hardcoreradio-cz",
@@ -405,7 +545,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.hardcoreradio.cz/listen/hardcore_radio/radio.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      192
+    ]
   },
   {
     "id": "hitradio-city-zona-lasky",
@@ -414,7 +557,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.abradio.cz/cityzl128.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "dance-club-radio",
@@ -423,7 +569,10 @@ window.STATIONS = [
     "streams": [
       "https://ice4.abradio.cz/dance128.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "pigy-cz-pohadky",
@@ -432,7 +581,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.actve.net/web-pg-pohadky"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-pisnicka",
@@ -441,7 +593,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.slagr-radio.cz/pisnicka"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "phonk-nation-radio",
@@ -450,7 +605,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.mxnticek.eu/listen/phonk/128.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-proglas",
@@ -459,7 +617,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast2.play.cz/proglas128"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rockova-zabava",
@@ -468,7 +629,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.abradio.cz/rockzabava128.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rock-max",
@@ -477,7 +641,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.abradio.cz/rockmax256.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "pigy-cz-pisnicky-z-pohadek",
@@ -486,7 +653,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.actve.net/web-pg-pisnicky"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "helax-93-7",
@@ -495,7 +665,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.abradio.cz/helax128.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cro-sever",
@@ -504,7 +677,10 @@ window.STATIONS = [
     "streams": [
       "https://rozhlas.stream/sever_high.aac"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      192
+    ]
   },
   {
     "id": "classic-praha",
@@ -513,7 +689,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast8.play.cz/classic128.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fajn-fresh",
@@ -522,7 +701,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.abradio.cz/fajnfresh128.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cro-d-dur",
@@ -531,7 +713,10 @@ window.STATIONS = [
     "streams": [
       "https://rozhlas.stream/ddur.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "county",
@@ -540,7 +725,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast4.play.cz/country128.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fresh-radio-103-6",
@@ -549,7 +737,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.beatzone.cz/radio/8000/128.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "frekvence-1-youradio-osmdesatky",
@@ -558,7 +749,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.actve.net/web-80"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-samson",
@@ -567,7 +761,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast8.play.cz/samsonfm128.mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      192
+    ]
   },
   {
     "id": "queenradio-net",
@@ -576,7 +773,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiojar.com/4gw72qm8u68uv"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      192
+    ]
   },
   {
     "id": "hitradio-city-brno",
@@ -585,7 +785,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.abradio.cz/magicbrno128.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "pigy-cz-disko-trysko",
@@ -594,7 +797,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.actve.net/web-pg-disko"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hitradio-vysocina",
@@ -603,7 +809,10 @@ window.STATIONS = [
     "streams": [
       "https://ice5.abradio.cz/hitvysocina128.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-xaver",
@@ -621,7 +830,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast6.play.cz/casradio128.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "jc1-televize-jizni-cechy",
@@ -639,7 +851,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast6.play.cz/color192.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-bonton",
@@ -648,7 +863,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.actve.net/fm-bonton-128"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "chat-rdio",
@@ -657,7 +875,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.chatradio.cz/chatradio"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hitradio-fm",
@@ -666,7 +887,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.abradio.cz/hitradiofm128.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio7",
@@ -675,7 +899,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast8.play.cz/radio7-128.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "frekvence-1-youradio-ceskoslovenske-hity",
@@ -684,7 +911,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.actve.net/web-e2-csweb"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bikers-radio-doupe",
@@ -693,7 +923,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast7.play.cz/bikersradiodoupe128.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      160
+    ]
   },
   {
     "id": "radio-city-fm",
@@ -702,7 +935,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.abradio.cz/cityfm128.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "frekvence-1-youradio-legendy",
@@ -711,7 +947,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.actve.net/web-f1-legendy"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-love-it",
@@ -720,7 +959,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.ihypnosis.org.uk/stream"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "kiss-hady",
@@ -729,7 +971,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast8.play.cz/kisshady128.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-povadka",
@@ -738,7 +983,10 @@ window.STATIONS = [
     "streams": [
       "https://ice3.radia.cz/povidka128.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "netro-life-radio-100-8-fm",
@@ -747,7 +995,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast9.play.cz/netro-life-radio.mp3"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-folk",
@@ -756,7 +1007,10 @@ window.STATIONS = [
     "streams": [
       "https://ice2.abradio.cz/folk64a.aac"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      64
+    ]
   },
   {
     "id": "slagr-radio",
@@ -765,7 +1019,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.slagr-radio.cz/mp3"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      128
+    ]
   },
   {
     "id": "plzen-tv",
@@ -783,7 +1040,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast7.play.cz/relax128.mp3"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hitradio-fm-crystal",
@@ -792,7 +1052,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.abradio.cz/crystal128.mp3"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "mnau-tv",
@@ -801,7 +1064,10 @@ window.STATIONS = [
     "streams": [
       "https://5ca49f2417d90.streamlock.net/mnau/livestream/playlist.m3u8"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      3291
+    ]
   },
   {
     "id": "rock-radio-sumava",
@@ -810,7 +1076,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.abradio.cz/sumava128.mp3"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "signal-radio-brno",
@@ -819,7 +1088,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast6.play.cz/signal-brno128.mp3"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bojlerroom",
@@ -828,7 +1100,10 @@ window.STATIONS = [
     "streams": [
       "https://ice4.abradio.cz/bojler_room_128.aac"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      320
+    ]
   },
   {
     "id": "gold-impuls",
@@ -837,7 +1112,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.sepia.sk/gold128.mp3"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-koleda",
@@ -846,7 +1124,10 @@ window.STATIONS = [
     "streams": [
       "https://ice3.radia.cz/koleda_64.aac"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-blanik-2",
@@ -855,7 +1136,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.abradio.cz/blanikfm64.mp3"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-diana-retro-club",
@@ -864,7 +1148,10 @@ window.STATIONS = [
     "streams": [
       "https://westradio.cz/radio/8000/radio.mp3"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "slow-down-radijo",
@@ -873,7 +1160,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast9.play.cz/slowdown.mp3"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      160
+    ]
   },
   {
     "id": "black-hornet-radio",
@@ -882,7 +1172,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast2.play.cz/bhradio-192.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      192
+    ]
   },
   {
     "id": "underground-radio",
@@ -891,7 +1184,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast2.play.cz/Underground128.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-jazzinec",
@@ -900,7 +1196,10 @@ window.STATIONS = [
     "streams": [
       "https://ice3.abradio.cz/jazzinec128.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-energic",
@@ -909,7 +1208,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast9.play.cz/energic.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-wave",
@@ -918,7 +1220,10 @@ window.STATIONS = [
     "streams": [
       "https://rozhlas.stream/wave_mp3_256.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-frm",
@@ -927,7 +1232,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast1.play.cz/fajnrock128.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-nostalgie",
@@ -936,7 +1244,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast3.play.cz/radio-nostalgie128.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cro-radiozurnal-sport-adhoc-stream-1",
@@ -945,7 +1256,10 @@ window.STATIONS = [
     "streams": [
       "https://rozhlas.stream/radiozurnal_sport_adhoc_1_high.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-ostravan",
@@ -954,7 +1268,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast9.play.cz/radio-ostravan-256.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      256
+    ]
   },
   {
     "id": "radio-vaticana-cestina",
@@ -963,7 +1280,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.vaticannews.va/stream-cs"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radia-cz-fire",
@@ -981,7 +1301,10 @@ window.STATIONS = [
     "streams": [
       "https://ice4.abradio.cz/coop128.mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cesky-rozhlas-karlovy-vary",
@@ -990,7 +1313,10 @@ window.STATIONS = [
     "streams": [
       "https://rozhlas.stream/karlovy_vary.mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cesky-rozhlas-stredni-cechy",
@@ -999,7 +1325,10 @@ window.STATIONS = [
     "streams": [
       "https://rozhlas.stream/region.mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-prostor",
@@ -1008,7 +1337,10 @@ window.STATIONS = [
     "streams": [
       "https://bcast.spmmedia.cz/prostor-mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-praha",
@@ -1017,7 +1349,10 @@ window.STATIONS = [
     "streams": [
       "https://rozhlas.stream/radio_dab_praha_high.aac"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      192
+    ]
   },
   {
     "id": "chat-radio",
@@ -1026,7 +1361,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.chatujme.cz:8000/chatradio"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "retro-music-tv",
@@ -1044,7 +1382,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast8.play.cz/skyrock128.mp3"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-daruvar",
@@ -1053,7 +1394,10 @@ window.STATIONS = [
     "streams": [
       "https://mcp1.mydataknox.com:8020/live.mp3"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      256
+    ]
   },
   {
     "id": "radio-jih",
@@ -1062,7 +1406,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast6.play.cz/jih32.mp3"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      32
+    ]
   },
   {
     "id": "ocko-expres",
@@ -1080,7 +1427,10 @@ window.STATIONS = [
     "streams": [
       "https://sachsen3.stream.laut.fm/sachsen3?t302=2026-11-01_20-32-00&aggregator=AmeliusCoppola&ref=Radioautistentroll&uuid=8734aa60-1d09-e44e-116e-3604734cb94d"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-mb",
@@ -1089,7 +1439,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast3.play.cz/radiomb.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ocko-star",
@@ -1098,7 +1451,10 @@ window.STATIONS = [
     "streams": [
       "https://ocko-live-dash.ssl.cdn.cra.cz/cra_live2/ocko_gold.stream.1.smil/playlist.m3u8"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      928
+    ]
   },
   {
     "id": "radio-jih-cimbalka",
@@ -1107,7 +1463,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast6.play.cz/jihcimbalka128.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "webradio-epigon",
@@ -1116,7 +1475,10 @@ window.STATIONS = [
     "streams": [
       "https://ice3.abradio.cz/epigon128.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cro-radiozurnal-sport-stream-adhoc-2",
@@ -1125,7 +1487,10 @@ window.STATIONS = [
     "streams": [
       "https://rozhlas.stream/radiozurnal_sport_adhoc_2_high.mp3"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "kiss-proton",
@@ -1134,7 +1499,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast1.play.cz/kissproton128.mp3"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "shinto",
@@ -1143,7 +1511,10 @@ window.STATIONS = [
     "streams": [
       "https://s49.myradiostream.com/8142/listen.mp3"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      192
+    ]
   },
   {
     "id": "hitradio-contact",
@@ -1152,7 +1523,10 @@ window.STATIONS = [
     "streams": [
       "https://ice3.abradio.cz/hitradiocontact128.mp3"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hit-poprock",
@@ -1161,7 +1535,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.abradio.cz/hitpoprock128.mp3"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "aspira-radio",
@@ -1170,7 +1547,10 @@ window.STATIONS = [
     "streams": [
       "https://www.aspiraradio.cz/radio/8000/radio.mp3?aspira"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      192
+    ]
   },
   {
     "id": "fajn-rock-music",
@@ -1179,7 +1559,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast2.play.cz/fajnrock192.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      192
+    ]
   },
   {
     "id": "slymacks-radio",
@@ -1188,7 +1571,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.slymacks.com/"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-66",
@@ -1197,7 +1583,10 @@ window.STATIONS = [
     "streams": [
       "https://ice3.abradio.cz/route128.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      192
+    ]
   },
   {
     "id": "dwg-radio-cesky",
@@ -1206,7 +1595,10 @@ window.STATIONS = [
     "streams": [
       "https://server25530.streamplus.de/;stream.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      64
+    ]
   },
   {
     "id": "rock-radio-legend-of-rock",
@@ -1215,7 +1607,10 @@ window.STATIONS = [
     "streams": [
       "https://ice2.radia.cz/legends_of_rock_128.aac"
     ],
-    "added": "2026-11-12"
+    "added": "2026-11-12",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-zeitung",
@@ -1224,7 +1619,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiojar.com/2h1bhm7zhxquv"
     ],
-    "added": "2026-11-14"
+    "added": "2026-11-14",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rock-radio-metalomanie",
@@ -1233,7 +1631,10 @@ window.STATIONS = [
     "streams": [
       "https://ice2.radia.cz/metalomanie128.aac"
     ],
-    "added": "2026-11-14"
+    "added": "2026-11-14",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rock-radio-alternative-rock",
@@ -1242,7 +1643,10 @@ window.STATIONS = [
     "streams": [
       "https://ice2.radia.cz/znamkapunku128.aac"
     ],
-    "added": "2026-11-14"
+    "added": "2026-11-14",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rock-radio-stage",
@@ -1251,7 +1655,10 @@ window.STATIONS = [
     "streams": [
       "https://ice2.radia.cz/rockzabava128.aac?1"
     ],
-    "added": "2026-11-14"
+    "added": "2026-11-14",
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

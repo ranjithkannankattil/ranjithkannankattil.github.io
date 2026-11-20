@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://listen.radioking.com/radio/119251/stream/158701"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://amed.ozelip.com/8040/;"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/xzzu8kynq2zuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://gundifm.ozelip.com:7830/;"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -40,6 +52,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streaming.radionomy.com/JamendoLounge"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -48,6 +63,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://radio.host247.net/spedafm"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -56,6 +74,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio-trtradyo6.medya.trt.com.tr/master.m3u8"
+    ],
+    "br": [
+      141
     ]
   },
   {
@@ -64,6 +85,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/h6mn2c8ha8zuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -72,6 +96,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/x0xhw6c6g2zuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -89,6 +116,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/7wozjkc8x0vvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -97,6 +127,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://amed.ozelip.com/8040/stream"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -106,6 +139,10 @@ window.STATIONS = [
     "streams": [
       "https://denge-cudi.stream.laut.fm/denge-cudi?pl=m3u",
       "https://denge-cudi.stream.laut.fm/denge-cudi"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -114,6 +151,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://direct.rfpp.net/fpp.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -122,6 +162,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://yayin.superfmradyo.com.tr/superfm/stream"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -130,6 +173,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radyositesihazir.com:8004/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -138,6 +184,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://dengeqamishlo.stream.laut.fm/dengeqamishlo"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -146,6 +195,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radyo.yayindakiler.com:3050/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -154,6 +206,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ssl22.radyotelekom.com:8172/;"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -162,6 +217,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radyositesihazir.com:8056/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -170,6 +228,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://anadolu.liderhost.com.tr/9404/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -178,6 +239,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://anadolu.liderhost.com.tr/9078/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -186,6 +250,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radyo1.radyo-dinle.tc/8156/stream"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -194,6 +261,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sslyayin.netyayin.net/radyozergan/;"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -203,7 +273,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8110/;"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "halkn-sesi-radyo",
@@ -212,7 +285,10 @@ window.STATIONS = [
     "streams": [
       "https://halkinse.80.yayin.com.tr/;"
     ],
-    "added": "2026-11-16"
+    "added": "2026-11-16",
+    "br": [
+      64
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

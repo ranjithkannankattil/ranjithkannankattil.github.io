@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.kissfm.ro/kissfm.aacp"
+    ],
+    "br": [
+      80
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://edge76.rcs-rds.ro/digifm/digifm.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.magicfm.ro/magicfm.aacp"
+    ],
+    "br": [
+      80
     ]
   },
   {
@@ -50,6 +59,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://listen.radioking.com/radio/701141/stream/766385"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -58,6 +70,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://astreaming.edi.ro:8443/EuropaFM_aac"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -66,6 +81,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.magicfm.ro/magic.party.mix"
+    ],
+    "br": [
+      80
     ]
   },
   {
@@ -74,6 +92,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radio-impuls.ro/stream"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -82,6 +103,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radioanisoara.ro:8080/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -90,6 +114,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.rockfm.ro/rockfm.aacp"
+    ],
+    "br": [
+      80
     ]
   },
   {
@@ -98,6 +125,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream4.srr.ro:8443/romania-actualitati"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -106,6 +136,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://astreaming.edi.ro:8443/VirginRadio_aac"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -114,6 +147,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.sonicpanel.ro/8112/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -122,6 +158,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.djradio.ro/radio/8000/stream.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -130,6 +169,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.rockfm.ro/hard.rock"
+    ],
+    "br": [
+      80
     ]
   },
   {
@@ -138,6 +180,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://live.radionostalgia.ro:8443/nostalgia.aac"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -146,6 +191,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://edge126.rcs-rds.ro/profm/dancefm.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -154,6 +202,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.kissfm.ro/Magic-90s"
+    ],
+    "br": [
+      80
     ]
   },
   {
@@ -162,6 +213,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.kissfm.ro/magic.lite"
+    ],
+    "br": [
+      80
     ]
   },
   {
@@ -170,6 +224,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://mars.streamerr.co/radiomanelevechi"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -178,6 +235,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/w8461rwck5zuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -186,6 +246,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streams.radiozum.md/listen/zum4/ZUM4"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -194,6 +257,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_opera/live.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -202,6 +268,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://efir.retrofm.md:8000/retro"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -210,6 +279,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiocdn.nxthost.com/radio-deea"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -218,6 +290,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://dc.digi.live.kissfm.ro/magiclove"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -226,6 +301,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.kissfm.ro/Magic-80s"
+    ],
+    "br": [
+      80
     ]
   },
   {
@@ -234,6 +312,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.magicfm.ro/magic.gold.hits"
+    ],
+    "br": [
+      80
     ]
   },
   {
@@ -242,6 +323,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radioboom.ro/listen/boom_house_music/radio.mp3"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -250,6 +334,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://dc.digi.live.kissfm.ro/magic-movies"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -258,6 +345,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio-romantic.ro/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -266,6 +356,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_chopin/live.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -274,6 +367,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://spacefm.live/radio/8000/spacefm128"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -282,6 +378,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.kissfm.ro/kiss.hits.from.the.10s"
+    ],
+    "br": [
+      80
     ]
   },
   {
@@ -290,6 +389,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio3.dixi.md/listen/hit_fm_tricolour/hitfmtricolor128.aac"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -308,6 +410,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_relax/live.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -316,6 +421,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/ze76t581tm0uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -324,6 +432,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://petrecere.radiotequila.ro/7000/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -333,7 +444,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.dixi.md:9443/Roks"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "clasic-radio-strauss-bucuresti",
@@ -342,7 +456,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_strauss/live.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "acustic-radio",
@@ -351,7 +468,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/xmgnc6mcwnhvv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "adjud-fm",
@@ -360,7 +480,10 @@ window.STATIONS = [
     "streams": [
       "https://live.adjudfm.ro:8000/adjudfm.aac"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-vacanta-gold",
@@ -369,7 +492,10 @@ window.STATIONS = [
     "streams": [
       "https://stream4.srr.ro:8443/gold_rv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      320
+    ]
   },
   {
     "id": "clasic-radio-mozart-bucuresti",
@@ -378,7 +504,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_mozart/live.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      192
+    ]
   },
   {
     "id": "magic-fm-gold",
@@ -387,7 +516,10 @@ window.STATIONS = [
     "streams": [
       "https://live.kissfm.ro/magic.gold.hits"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      80
+    ]
   },
   {
     "id": "magic-fm-party-mix",
@@ -396,7 +528,10 @@ window.STATIONS = [
     "streams": [
       "https://live.kissfm.ro/magic.party.mix"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      80
+    ]
   },
   {
     "id": "radio-blue-romania",
@@ -405,7 +540,10 @@ window.STATIONS = [
     "streams": [
       "https://asculta.muzicaok.de:8002/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-liberty-muzica-romaneasca-bucurest",
@@ -414,7 +552,10 @@ window.STATIONS = [
     "streams": [
       "https://sonicssl.namehost.ro/7060/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "tranquila-manele-romania",
@@ -423,7 +564,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radiotranquila.net:8032/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "clasic-radio-bach-bucuresti",
@@ -432,7 +576,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_bach/live.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      192
+    ]
   },
   {
     "id": "prob-radio",
@@ -441,7 +588,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radioprob.ro:8888/stream"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      320
+    ]
   },
   {
     "id": "play-radio-91-6",
@@ -459,7 +609,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_romanesc/live.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      192
+    ]
   },
   {
     "id": "clasic-radio-rnb-soul-bucuresti",
@@ -468,7 +621,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_rnb/live.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      256
+    ]
   },
   {
     "id": "romania-antena-satelor",
@@ -477,7 +633,10 @@ window.STATIONS = [
     "streams": [
       "https://stream4.srr.ro:8443/antena-satelor"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-greu-de-difuzat",
@@ -486,7 +645,10 @@ window.STATIONS = [
     "streams": [
       "https://greudedifuzat.ro/stream/"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "activ-fm",
@@ -495,7 +657,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.clever-host.ro/8008/stream"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      160
+    ]
   },
   {
     "id": "bistrita-fm-92-6",
@@ -504,7 +669,10 @@ window.STATIONS = [
     "streams": [
       "https://audio-edge-cmc51.fra.h.radiomast.io/66f238bb-8b61-4196-a8c3-28aea07235e8"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "clasic-radio-60-bucuresti",
@@ -513,7 +681,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_60/live.mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-energy-cugir",
@@ -522,7 +693,10 @@ window.STATIONS = [
     "streams": [
       "https://sonicssl.namehost.ro/8790/stream/;"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-oradea",
@@ -531,7 +705,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radiooradea.ro/9000/stream"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "love-pro-dj-radio-chisinau",
@@ -540,7 +717,10 @@ window.STATIONS = [
     "streams": [
       "https://live.prodjradio.net:8000/;"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      320
+    ]
   },
   {
     "id": "clasic-radio-popular-bucuresti",
@@ -549,7 +729,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_popular/live.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "kiss-fm-chisinau",
@@ -558,7 +741,10 @@ window.STATIONS = [
     "streams": [
       "https://dc.digi.live.kissfm.ro/kissfm.chisinau"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      80
+    ]
   },
   {
     "id": "jurnal-fm",
@@ -567,7 +753,10 @@ window.STATIONS = [
     "streams": [
       "https://audio.jurnalfm.md/hq"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      96
+    ]
   },
   {
     "id": "clasic-radio-vivaldi-bucuresti",
@@ -576,7 +765,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_vivaldi/live.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-tequila-oldies",
@@ -585,7 +777,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/5a1utt11fkhvv"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      192
+    ]
   },
   {
     "id": "kiss-millenium-hits",
@@ -594,7 +789,10 @@ window.STATIONS = [
     "streams": [
       "https://live.kissfm.ro/milleniumhits"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      80
+    ]
   },
   {
     "id": "bitter-sweet-music-braila-128-0-fm",
@@ -603,7 +801,10 @@ window.STATIONS = [
     "streams": [
       "https://sonicssl.namehost.ro/8520/stream"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-folclor-buzau",
@@ -612,7 +813,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radiofolclorbuzaufm.ro:8910/stream"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sport-total-fm-spt-fm-bucuresti-105-8-fm",
@@ -630,7 +834,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radiocartier.eu:8048/stream"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "urban-fm",
@@ -639,7 +846,10 @@ window.STATIONS = [
     "streams": [
       "https://urbanfm.ro:8777/live"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      64
+    ]
   },
   {
     "id": "glasul-nordului-darabani-bt",
@@ -648,7 +858,10 @@ window.STATIONS = [
     "streams": [
       "https://ssl.asculta.live/8096/stream"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-zum-1",
@@ -657,7 +870,10 @@ window.STATIONS = [
     "streams": [
       "https://streams.radiozum.md/listen/zum1/ZUM1"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      192
+    ]
   },
   {
     "id": "magic-fm-jazz",
@@ -666,7 +882,10 @@ window.STATIONS = [
     "streams": [
       "https://dc.digi.live.kissfm.ro/magic-jazz"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "realitatea-fm",
@@ -675,7 +894,10 @@ window.STATIONS = [
     "streams": [
       "https://shout.realitatea.net:8001/rfmweb"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      141
+    ]
   },
   {
     "id": "radio-plai",
@@ -684,7 +906,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radioplai.md/live"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-ai-nostri",
@@ -693,7 +918,10 @@ window.STATIONS = [
     "streams": [
       "https://s5.radio.co/sfd9f42d1d/listen"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-armonia-romania",
@@ -702,7 +930,10 @@ window.STATIONS = [
     "streams": [
       "https://a1.bisericilive.com/mainradioarmoniaro.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cozy-fm",
@@ -711,7 +942,10 @@ window.STATIONS = [
     "streams": [
       "https://live.cozyfm.ro:8010/live"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-somes-bistrita-96-6-fm",
@@ -720,7 +954,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.mediacp.eu/stream/radiosomes"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      64
+    ]
   },
   {
     "id": "super-fm-brasov-93-8-fm",
@@ -729,7 +966,10 @@ window.STATIONS = [
     "streams": [
       "https://live.superfm.ro/stream.mp3"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      192
+    ]
   },
   {
     "id": "play-radio-cafe",
@@ -747,7 +987,10 @@ window.STATIONS = [
     "streams": [
       "https://alexwolfradio.com:1040/stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "stil-mix-manele-107-9-mhz-fm",
@@ -756,7 +999,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/zt84vax7ptzuv"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-guerrilla",
@@ -765,7 +1011,10 @@ window.STATIONS = [
     "streams": [
       "https://live.guerrillaradio.ro:8443/guerrilla.aac"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      96
+    ]
   },
   {
     "id": "stil-mix-radio-manele",
@@ -774,7 +1023,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/87sktrysmuqtv"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "clasic-radio-blues-bucuresti",
@@ -783,7 +1035,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_blues/live.mp3"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      320
+    ]
   },
   {
     "id": "clasic-radio-folk-bucuresti",
@@ -792,7 +1047,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_folk/live.mp3"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "club-radio",
@@ -801,7 +1059,10 @@ window.STATIONS = [
     "streams": [
       "https://live.clubradio.ro/listen/clubradio/live"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      192
+    ]
   },
   {
     "id": "megapolis-fm",
@@ -810,7 +1071,10 @@ window.STATIONS = [
     "streams": [
       "https://megapolisfm.md:8443/886"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "clasic-radio-90-bucuresti",
@@ -819,7 +1083,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_90/live.mp3"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      320
+    ]
   },
   {
     "id": "magic-slagare",
@@ -828,7 +1095,10 @@ window.STATIONS = [
     "streams": [
       "https://dc.digi.live.kissfm.ro/slagare"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "magic-tv",
@@ -837,7 +1107,10 @@ window.STATIONS = [
     "streams": [
       "https://tv.broadcasting.ro/magictv/925f90db-5c88-4190-a53d-5163cdffe6f4.m3u8"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      1408
+    ]
   },
   {
     "id": "clasic-radio-80-bucuresti",
@@ -846,7 +1119,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_80/live.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      320
+    ]
   },
   {
     "id": "stil-romania-radio-stil-manele",
@@ -855,7 +1131,10 @@ window.STATIONS = [
     "streams": [
       "https://mp3.radiostill.ro:8888/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fun-radio-romania",
@@ -864,7 +1143,10 @@ window.STATIONS = [
     "streams": [
       "https://online.webcastradio.ro/fun"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      256
+    ]
   },
   {
     "id": "total-radio-bucuresti-94-2-fm",
@@ -873,7 +1155,10 @@ window.STATIONS = [
     "streams": [
       "https://radiototal.radioca.st/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-goldies",
@@ -882,7 +1167,10 @@ window.STATIONS = [
     "streams": [
       "https://s10.streamingcloud.online/stream/13664"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-doxologia",
@@ -891,7 +1179,10 @@ window.STATIONS = [
     "streams": [
       "https://rlive.doxologia.ro/stream.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      64
+    ]
   },
   {
     "id": "smile-fm",
@@ -900,7 +1191,10 @@ window.STATIONS = [
     "streams": [
       "https://sonicssl.namehost.ro/8050/;"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      48
+    ]
   },
   {
     "id": "vocea-basarabiei",
@@ -909,7 +1203,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.noroc.tv/radiovb_aac"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      96
+    ]
   },
   {
     "id": "radio-flo-manele",
@@ -918,7 +1215,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radioflomanele.ro/8084/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      320
+    ]
   },
   {
     "id": "clasic-radio-soundtrack-bucuresti",
@@ -927,7 +1227,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_soundtrack/live.mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-brasov",
@@ -936,7 +1239,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radiobrasov.ro/stream.mp3?nocache=${Math.random()}"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-liberty-manele-bucuresti",
@@ -945,7 +1251,10 @@ window.STATIONS = [
     "streams": [
       "https://sonicssl.namehost.ro/7770/stream"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "traditional-radio-manele",
@@ -954,7 +1263,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.ascultatare.ro/7000/stream"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "clasic-radio-bluejazz-bucuresti",
@@ -963,7 +1275,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_bluejazz/live.mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "magic-de-pahar",
@@ -972,7 +1287,10 @@ window.STATIONS = [
     "streams": [
       "https://dc.digi.live.kissfm.ro/magicdepahar"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "moinesti-fm",
@@ -981,7 +1299,10 @@ window.STATIONS = [
     "streams": [
       "https://listen.moinestifm.ro/radio.mp3"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sighet-fm-sighetu-marmatiei-89-3-fm",
@@ -990,7 +1311,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.zifer.ro/SighetFM"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "love-marilena-galati",
@@ -999,7 +1323,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.sonicpanel.ro/8068/stream"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "activ-romania",
@@ -1008,7 +1335,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/72xsfrg0bfhvv"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "duxradio-brasov",
@@ -1017,7 +1347,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.duxradio.ro:8002/stream"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-doza-urban",
@@ -1026,7 +1359,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/cezx5b1nw98uv"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "black-rhino-radio",
@@ -1035,7 +1371,10 @@ window.STATIONS = [
     "streams": [
       "https://blackrhinoradio.out.airtime.pro/blackrhinoradio_a"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      192
+    ]
   },
   {
     "id": "hit-fm-chisinau-101-7-fm",
@@ -1044,7 +1383,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.dixi.md:9443/HitFM"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "clasic-radio-jazz-bucuresti",
@@ -1053,7 +1395,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_jazz/live.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-teatru-rominia-braila",
@@ -1062,7 +1407,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-179.surfernetwork.com/cb4dyqnat4itv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJjYjRkeXFuYXQ0aXR2IiwiaG9zdCI6InN0cmVhbS0xNzkuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6IjZ5d2M1TUlwU2xDSGU1ZDRJU2luVWciLCJpYXQiOjE3OTM1Njk2MDQsImV4cCI6MTc5MzU2OTY2NH0.eD1Jw79ilAFpjrrPIddg0QIqFQQozOv8pU-ClOeYS6w"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "romania-cultural",
@@ -1071,7 +1419,10 @@ window.STATIONS = [
     "streams": [
       "https://stream4.srr.ro:8443/romania-cultural"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      96
+    ]
   },
   {
     "id": "getarum-radio",
@@ -1080,7 +1431,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.clever-host.ro/8010/stream"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      64
+    ]
   },
   {
     "id": "rock-fm-blues",
@@ -1089,7 +1443,10 @@ window.STATIONS = [
     "streams": [
       "https://live.rockfm.ro/blues"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      80
+    ]
   },
   {
     "id": "rock-fm-ballads",
@@ -1098,7 +1455,10 @@ window.STATIONS = [
     "streams": [
       "https://live.rockfm.ro/ballads.rock"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      80
+    ]
   },
   {
     "id": "radio-marketescu-reggae-trip-hop",
@@ -1107,7 +1467,10 @@ window.STATIONS = [
     "streams": [
       "https://s37.radiolize.com/radio/8100/radio.mp3"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hit-fm-eurovision-hits",
@@ -1116,7 +1479,10 @@ window.STATIONS = [
     "streams": [
       "https://radio7.dixi.md/listen/hit_fm_eurovision_hits/eurovisionhits.aac"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-vaticana-romania",
@@ -1125,7 +1491,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.vaticannews.va/stream-ro"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "extravaganza-radio",
@@ -1134,7 +1503,10 @@ window.STATIONS = [
     "streams": [
       "https://s3.radio.co/s1492c0564/listen"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-rfi-moldova",
@@ -1143,7 +1515,10 @@ window.STATIONS = [
     "streams": [
       "https://asculta.radiorfi.ro/live.mp3"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-zum-2",
@@ -1152,7 +1527,10 @@ window.STATIONS = [
     "streams": [
       "https://streams.radiozum.md/listen/zum2/ZUM2"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hm-radio",
@@ -1161,7 +1539,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/1nykd3t9f7qtv"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "supravibe-radio",
@@ -1170,7 +1551,10 @@ window.STATIONS = [
     "streams": [
       "https://supraviberadio-radiohosting.radioca.st/stream"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-rfm",
@@ -1179,7 +1563,10 @@ window.STATIONS = [
     "streams": [
       "https://shout.realitatea.net:8001/mixt"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-relax-tricolor",
@@ -1188,7 +1575,10 @@ window.STATIONS = [
     "streams": [
       "https://radio1.dixi.md/listen/relax_tricolor/relaxtricolor128.aac"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sky-fm-radio-sky-constanta-101-1-fm",
@@ -1197,7 +1587,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radiosky.ro/radiosky.mp3"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      192
+    ]
   },
   {
     "id": "soft-rock-radio",
@@ -1206,7 +1599,10 @@ window.STATIONS = [
     "streams": [
       "https://gold.streamguys1.com/softrock.mp3"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "west-city-radio",
@@ -1215,7 +1611,10 @@ window.STATIONS = [
     "streams": [
       "https://live.westcityradio.ro:8000/mp3"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      192
+    ]
   },
   {
     "id": "pro-fm-statia-cluj-napoca-99-8-fm",
@@ -1224,7 +1623,10 @@ window.STATIONS = [
     "streams": [
       "https://radioendirect.net/stream/125928"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-balkan-romania",
@@ -1233,7 +1635,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radiobalkan.ro:8102/stream"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-brasov-87-8-fm",
@@ -1242,7 +1647,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radiobrasov.ro/stream.mp3"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      192
+    ]
   },
   {
     "id": "spacefm-romania-spacefm-dance",
@@ -1251,7 +1659,10 @@ window.STATIONS = [
     "streams": [
       "https://spacefm.live/listen/spacefm_romania/spacefm192"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      192
+    ]
   },
   {
     "id": "translation-of-the-quran-in-romanian",
@@ -1260,7 +1671,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8022/;"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-boom-rock",
@@ -1269,7 +1683,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radioboom.ro/listen/boom_rock/radio.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      320
+    ]
   },
   {
     "id": "clasic-radio-greek-music-bucuresti",
@@ -1278,7 +1695,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radioclasic.com/listen/radio_clasic_greek/live.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      320
+    ]
   },
   {
     "id": "stil-romania-radio-stil-popular",
@@ -1287,7 +1707,10 @@ window.STATIONS = [
     "streams": [
       "https://popular.radiostill.ro/8176/stream"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-galati",
@@ -1296,7 +1719,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-galati.radiogalati.ro/"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-trinitas-88-5",
@@ -1305,7 +1731,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radiotrinitas.ro:8003/;stream.nsv"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      32
+    ]
   },
   {
     "id": "radio-doza-manele",
@@ -1314,7 +1743,10 @@ window.STATIONS = [
     "streams": [
       "https://manele.radiodoza.eu:8100/stream"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rockstar-radio",
@@ -1323,7 +1755,10 @@ window.STATIONS = [
     "streams": [
       "https://a5.asurahosting.com:7120/radio.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostreaming.ert.gr/ert-zeppelin"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -17,6 +20,10 @@ window.STATIONS = [
     "streams": [
       "https://netradio.live24.gr/sportfm7712",
       "https://sportfm.live24.gr/sportfm7712?344b685e2518b0370f0d731432f51438"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -25,6 +32,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radiojar.com/pepper"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -33,6 +43,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://netradio.live24.gr/realfm"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -41,6 +54,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i5.streams.ovh:14030/live"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -49,6 +65,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://netradio.live24.gr/orange9320"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -57,6 +76,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.newageradio.gr/listen/hq/radio.aac"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -65,6 +87,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://nmcdn-ea00263bf2fa4959b1207c5b169d1517.msvdn.net/icecastRelay/S92303783/lih0S0uubyJi/icecast"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -73,6 +98,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://athina984.live24.gr/athina984"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -81,6 +109,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://n01.radiojar.com/819r8wupdrruv?rj-ttl=5&rj-tok=AAABePEMVGgAGH9g3lsAx7imBA"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -89,6 +120,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://netradio.live24.gr/kissfmathens"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -105,6 +139,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radiojar.com/aw1w2xfx1vduv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -113,6 +150,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.newageradio.gr/listen/jazz/radio.aac"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -121,6 +161,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.1055rock.gr:31056/live"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -129,6 +172,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://netradio.live24.gr/athinaradio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -137,6 +183,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://radiostreaming.ert.gr/ert-erasport"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -145,6 +194,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://netradio.live24.gr/loveradio-1000"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -162,6 +214,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://n13.radiojar.com/t0x7dyqmsuhvv?rj-ttl=5&rj-tok=AAABhH0rD-QAgA2xJnC5B93PWQ"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -170,6 +225,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostreaming.ert.gr/ert-talaika"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -178,6 +236,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://netradio.live24.gr/skai1003"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -186,6 +247,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sfera.live24.gr/sfera4132"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -194,6 +258,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://orange.live24.gr/orange9320"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -202,6 +269,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://derti.live24.gr/derty1000"
+    ],
+    "br": [
+      160
     ]
   },
   {
@@ -210,6 +280,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://n0e.radiojar.com/083wqknmsuhvv?rj-ttl=5&rj-tok=AAABhHgFMdoAMjpYSw5BtqF9Zg"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -218,6 +291,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://maxhfm.streams.gr/ic/maxhfm/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -226,6 +302,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostreaming.ert.gr/ert-kosmos"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -234,6 +313,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s7.yesstreaming.net/stream/8000"
+    ],
+    "br": [
+      160
     ]
   },
   {
@@ -242,6 +324,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream1.468.gr/8004/stream"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -250,6 +335,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://netradio.live24.gr/music892"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -258,6 +346,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://kissfm.live24.gr/kissfmathens"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -266,6 +357,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://best.live24.gr/best1222"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -274,6 +368,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://skai.live24.gr/skai1003"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -282,6 +379,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://rdst.win:59450/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -290,6 +390,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://solid24.streamupsolutions.com/proxy/nilxzqeg?mp=/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -298,6 +401,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.radiojar.com/kokkino-ath.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -306,6 +412,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostreaming.ert.gr/ert-webjazz"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -314,6 +423,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostreaming.ert.gr/ert-deftero"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -322,6 +434,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.newageradio.gr/listen/jazz/radio.flac"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -331,7 +446,10 @@ window.STATIONS = [
     "streams": [
       "https://radiostreaming.ert.gr/ert-trito"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      256
+    ]
   },
   {
     "id": "90s-heaven",
@@ -340,7 +458,10 @@ window.STATIONS = [
     "streams": [
       "https://sp3.streams.ovh/8070/stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "laikos-fm",
@@ -359,7 +480,10 @@ window.STATIONS = [
     "streams": [
       "https://samcloud.spacial.com/api/listen?sid=99064&m=sc&rid=175019&t=ssl"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "galaxy-92",
@@ -368,7 +492,10 @@ window.STATIONS = [
     "streams": [
       "https://netradio.live24.gr/galaxy9292"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-4",
@@ -377,7 +504,10 @@ window.STATIONS = [
     "streams": [
       "https://radiostreaming.ert.gr/ert-proto"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      256
+    ]
   },
   {
     "id": "rock-fm-96-9",
@@ -386,7 +516,10 @@ window.STATIONS = [
     "streams": [
       "https://az10.yesstreaming.net:8060/radio.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      320
+    ]
   },
   {
     "id": "89-5",
@@ -395,7 +528,10 @@ window.STATIONS = [
     "streams": [
       "https://loki.mental-media.gr:8038/index.html"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-5",
@@ -404,7 +540,10 @@ window.STATIONS = [
     "streams": [
       "https://radiostreaming.ert.gr/ert-defteroparadosiaka"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      256
+    ]
   },
   {
     "id": "apacik-radyo",
@@ -413,7 +552,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.34bit.net/ar.aac"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "imagine-897-thessaloniki-gr",
@@ -422,7 +564,10 @@ window.STATIONS = [
     "streams": [
       "https://imagine897.radioca.st/stream"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "easy",
@@ -431,7 +576,10 @@ window.STATIONS = [
     "streams": [
       "https://easy972.live24.gr/easy972"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "disco-cafe",
@@ -440,7 +588,10 @@ window.STATIONS = [
     "streams": [
       "https://azuracast.streams.ovh:8260/radio.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      320
+    ]
   },
   {
     "id": "athens-dee-jay-95-2",
@@ -449,7 +600,10 @@ window.STATIONS = [
     "streams": [
       "https://netradio.live24.gr/athensdeejay"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      192
+    ]
   },
   {
     "id": "trito-live",
@@ -458,7 +612,10 @@ window.STATIONS = [
     "streams": [
       "https://r1.cloudskep.com/cybcr/cybc3/icecast.audio"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      56
+    ]
   },
   {
     "id": "athens-radio-trance",
@@ -467,7 +624,10 @@ window.STATIONS = [
     "streams": [
       "https://cast.streams.ovh:8008/;"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      320
+    ]
   },
   {
     "id": "rainbow-89-2",
@@ -476,7 +636,10 @@ window.STATIONS = [
     "streams": [
       "https://n06.radiojar.com/akf7zea5kzuvv?rj-ttl=5&rj-tok=AAABjW_i2S8Az6X2ujnqoLooNA"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hit-ellinikos",
@@ -485,7 +648,8 @@ window.STATIONS = [
     "streams": [
       "https://solid9.streamupsolutions.com/proxy/zvbgdllc?mp=/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "happy-104",
@@ -494,7 +658,10 @@ window.STATIONS = [
     "streams": [
       "https://ath10400fm-radioplayer.live24.gr/ath10400fm"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      192
+    ]
   },
   {
     "id": "kids-radio",
@@ -512,7 +679,10 @@ window.STATIONS = [
     "streams": [
       "https://link.radiojar.com/c27wx6pdh8vtv"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "1st-greek-hits-flac-radio-lossless",
@@ -521,7 +691,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.newageradio.gr/listen/flac_gr/radio.flac"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rebel-105-2",
@@ -530,7 +703,10 @@ window.STATIONS = [
     "streams": [
       "https://netradio.live24.gr/rebel1052"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      192
+    ]
   },
   {
     "id": "vanilla-radio-com-fresh-flavours-stream",
@@ -539,7 +715,10 @@ window.STATIONS = [
     "streams": [
       "https://fresh.vanillaradio.com:8028/live"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "1st-greek-folk-flac-radio",
@@ -548,7 +727,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.newageradio.gr/listen/folk_gr/radio.aac"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      320
+    ]
   },
   {
     "id": "90-5",
@@ -557,7 +739,10 @@ window.STATIONS = [
     "streams": [
       "https://rdst.win:48000/stream?type=.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "focus-103-6",
@@ -566,7 +751,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.greekstream.net/focusfm"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "skylos-fm",
@@ -575,7 +763,10 @@ window.STATIONS = [
     "streams": [
       "https://n04.radiojar.com/819r8wupdrruv?1776102680"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      320
+    ]
   },
   {
     "id": "coffee-web-radio",
@@ -584,7 +775,10 @@ window.STATIONS = [
     "streams": [
       "https://solid9.streamupsolutions.com/proxy/teqgebwz/stream"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "real-97-8",
@@ -593,7 +787,10 @@ window.STATIONS = [
     "streams": [
       "https://realfm.live24.gr/realfm"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      192
+    ]
   },
   {
     "id": "status-107-7",
@@ -602,7 +799,10 @@ window.STATIONS = [
     "streams": [
       "https://loki.mental-media.gr/proxy/statusf1?mp=/stream:8000/;stream/1"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "mad-radio-106-2",
@@ -611,7 +811,10 @@ window.STATIONS = [
     "streams": [
       "https://mediaserver.mad.tv/stream"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      192
+    ]
   },
   {
     "id": "105fm",
@@ -620,7 +823,10 @@ window.STATIONS = [
     "streams": [
       "https://105fm.espiv.net/listen/105fm/stream.mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      320
+    ]
   },
   {
     "id": "athens-rock-96-9",
@@ -629,7 +835,10 @@ window.STATIONS = [
     "streams": [
       "https://az10.yesstreaming.net/radio/8060/radio.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      320
+    ]
   },
   {
     "id": "ert3-102-fm",
@@ -638,7 +847,10 @@ window.STATIONS = [
     "streams": [
       "https://radiostreaming.ert.gr/ert-102fm"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      192
+    ]
   },
   {
     "id": "metropolis",
@@ -647,7 +859,10 @@ window.STATIONS = [
     "streams": [
       "https://metromedia.live24.gr/metropolis955thess"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "dromos-89-8",
@@ -665,7 +880,10 @@ window.STATIONS = [
     "streams": [
       "https://air.radioart.com/fMeditation.mp3?dlid="
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      96
+    ]
   },
   {
     "id": "republic-100-3",
@@ -674,7 +892,10 @@ window.STATIONS = [
     "streams": [
       "https://netradio.live24.gr/republicthess"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "1st-greek-folk-flac-radio-lossless",
@@ -683,7 +904,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.newageradio.gr/listen/folk_gr/radio.flac"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "1st-greek-new-age-flac-radio",
@@ -692,7 +916,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.newageradio.gr/listen/hq/radio.flac"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sohos-88-7",
@@ -701,7 +928,10 @@ window.STATIONS = [
     "streams": [
       "https://eu7.fastcast4u.com/proxy/sohosfm?mp=/1"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "proto-live",
@@ -710,7 +940,10 @@ window.STATIONS = [
     "streams": [
       "https://r1.cloudskep.com/cybcr/cybc1/icecast.audio"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      56
+    ]
   },
   {
     "id": "rainbow-89-pop",
@@ -719,7 +952,10 @@ window.STATIONS = [
     "streams": [
       "https://n05.radiojar.com/ztqh29c8ktuvv?rj-ttl=5&rj-tok=AAABjW_eWdoAP4LPpPaNlupsMA"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "corfu-dee-jay-97-5",
@@ -728,7 +964,10 @@ window.STATIONS = [
     "streams": [
       "https://sh.onweb.gr:7083/stream?type=http&nocache=35812"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-saranda",
@@ -737,7 +976,10 @@ window.STATIONS = [
     "streams": [
       "https://s64.radiolize.com/radio/8050/radio.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      192
+    ]
   },
   {
     "id": "1st-greek-80s-flac-radio",
@@ -746,7 +988,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.newageradio.gr/listen/80s/radio.aac"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      320
+    ]
   },
   {
     "id": "thess-94-5",
@@ -755,7 +1000,10 @@ window.STATIONS = [
     "streams": [
       "https://eu7.fastcast4u.com/proxy/nmarog02?mp=/1"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ekrixi",
@@ -764,7 +1012,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.greekstream.net/ekrixifm"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sfera-94-4",
@@ -773,7 +1024,10 @@ window.STATIONS = [
     "streams": [
       "https://netradio.live24.gr/sfera941nauplio"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "yellow",
@@ -782,7 +1036,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.greekstream.net/yellow"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      160
+    ]
   },
   {
     "id": "paranoise",
@@ -791,7 +1048,10 @@ window.STATIONS = [
     "streams": [
       "https://paranoisewebcast.radioca.st/stream"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      320
+    ]
   },
   {
     "id": "laiko-107",
@@ -800,7 +1060,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/58uqx820dnzuv"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      128
+    ]
   },
   {
     "id": "laikinota",
@@ -809,7 +1072,10 @@ window.STATIONS = [
     "streams": [
       "https://laikinota.gr/laikinota"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      192
+    ]
   },
   {
     "id": "blue-space-107-2-fm-athens",
@@ -818,7 +1084,10 @@ window.STATIONS = [
     "streams": [
       "https://sp1.19cloudsnetwork.gr/8008/stream?1701442520261"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      192
+    ]
   },
   {
     "id": "sokfm-104-8",
@@ -836,7 +1105,10 @@ window.STATIONS = [
     "streams": [
       "https://netradio.live24.gr/zoo908thess"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      192
+    ]
   },
   {
     "id": "2000stafm",
@@ -845,7 +1117,10 @@ window.STATIONS = [
     "streams": [
       "https://s3.unlimitedradiohosting.com/stream/two-thousand-on-fm"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      192
+    ]
   },
   {
     "id": "rebetiko-sealabs",
@@ -854,7 +1129,10 @@ window.STATIONS = [
     "streams": [
       "https://rebetiko.sealabs.net/radio"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      40
+    ]
   },
   {
     "id": "radio-98-4",
@@ -863,7 +1141,10 @@ window.STATIONS = [
     "streams": [
       "https://cast4.my-control-panel.com/proxy/anastas2/stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      160
+    ]
   },
   {
     "id": "memories-radio",
@@ -872,7 +1153,10 @@ window.STATIONS = [
     "streams": [
       "https://stream1.468.gr/8108/stream"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      320
+    ]
   },
   {
     "id": "athens-free-radio",
@@ -890,7 +1174,10 @@ window.STATIONS = [
     "streams": [
       "https://n0f.radiojar.com/n4dzb3znn3quv.mp3?rj-ttl=5&rj-tok=AAABeKi_TokAUTY4EzBEHHiJzQ"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "blueswave-radio",
@@ -899,7 +1186,10 @@ window.STATIONS = [
     "streams": [
       "https://blueswave.radio:8100/hifiblues"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radioactive",
@@ -908,7 +1198,10 @@ window.STATIONS = [
     "streams": [
       "https://streamyourdream.org:8050/radioactive"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      192
+    ]
   },
   {
     "id": "super-sport-fm-104-0",
@@ -917,7 +1210,10 @@ window.STATIONS = [
     "streams": [
       "https://r1.cloudskep.com/radio3/supersportfm/icecast.audio"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      56
+    ]
   },
   {
     "id": "hyevibes",
@@ -926,7 +1222,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.hyevibes.com/listen/hyevibes/radio.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      192
+    ]
   },
   {
     "id": "easy-fm-972",
@@ -935,7 +1234,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiojar.com/cthtwxk5yvduv.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-sfera-102-2",
@@ -944,7 +1246,10 @@ window.STATIONS = [
     "streams": [
       "https://securestreams3.autopo.st:1417/sfera"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "1o",
@@ -953,7 +1258,10 @@ window.STATIONS = [
     "streams": [
       "https://i2.streams.ovh:7109/stream?type=http&nocache=11373"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      320
+    ]
   },
   {
     "id": "skai-patras",
@@ -962,7 +1270,10 @@ window.STATIONS = [
     "streams": [
       "https://i.streams.ovh:9519/stream?type=http&nocache=5"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "1st-greek-folk-flac-radio-mp3",
@@ -971,7 +1282,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.newageradio.gr/listen/folk_gr/radio.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-art-solo-piano",
@@ -980,7 +1294,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radioart.com/fSolo_piano.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      96
+    ]
   },
   {
     "id": "radio-9",
@@ -989,7 +1306,10 @@ window.STATIONS = [
     "streams": [
       "https://solid55.streamupsolutions.com/proxy/gygasbfj?mp=/live"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "prime-100-3",
@@ -998,7 +1318,10 @@ window.STATIONS = [
     "streams": [
       "https://s20.myradiostream.com:6738/;listen.pls"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      192
+    ]
   },
   {
     "id": "91-4-fm",
@@ -1007,7 +1330,10 @@ window.STATIONS = [
     "streams": [
       "https://n09.radiojar.com/275p8ssmb?rj-ttl=5&rj-tok=AAABe5KoPq0A-SETCU2cfsnBjA"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "studio-19",
@@ -1016,7 +1342,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.crete.ovh:8443/1"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      32
+    ]
   },
   {
     "id": "d-code-96-2",
@@ -1025,7 +1354,10 @@ window.STATIONS = [
     "streams": [
       "https://s15.myradiostream.com/:13980/listen.mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      192
+    ]
   },
   {
     "id": "ert-pirgos-102-4",
@@ -1034,7 +1366,10 @@ window.STATIONS = [
     "streams": [
       "https://radiostreaming.ert.gr/ert-pyrgos"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-art-fusion",
@@ -1043,7 +1378,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radioart.com/fFusion.mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      96
+    ]
   },
   {
     "id": "rainbow-89-christmas",
@@ -1052,7 +1390,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiojar.com/4nwwcyesv8hvv"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "87-6",
@@ -1071,7 +1412,10 @@ window.STATIONS = [
     "streams": [
       "https://eco.onestreaming.com/proxy/cosmoradio/stream"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-6",
@@ -1089,7 +1433,10 @@ window.STATIONS = [
     "streams": [
       "https://sportfm.live24.gr/sportfm7712"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "new-wave-80s-earth-radio",
@@ -1098,7 +1445,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/uv6z1a5rxrhvv?n=c591a1f389cfb97e3358"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "karamela-92-4",
@@ -1107,7 +1457,10 @@ window.STATIONS = [
     "streams": [
       "https://netradio.live24.gr/924fm-thess"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "101-1",
@@ -1116,7 +1469,10 @@ window.STATIONS = [
     "streams": [
       "https://onairmediagroup.live24.gr/glenti1011xanthi"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      160
+    ]
   },
   {
     "id": "jackson-palace",
@@ -1125,7 +1481,10 @@ window.STATIONS = [
     "streams": [
       "https://jacksonspalace.radioca.st/stream?type=http&nocache=220"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "blue-space",
@@ -1134,7 +1493,10 @@ window.STATIONS = [
     "streams": [
       "https://sp1.19cloudsnetwork.gr/8008/stream"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      192
+    ]
   },
   {
     "id": "aktina-104-7",
@@ -1143,7 +1505,10 @@ window.STATIONS = [
     "streams": [
       "https://sc2.streamwithq.com:2000/stream/Tiskardiassoulaika/stream"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      256
+    ]
   },
   {
     "id": "sfera-96-6",
@@ -1152,7 +1517,10 @@ window.STATIONS = [
     "streams": [
       "https://n01.radiojar.com/mg2vq26eewzuv?rj-ttl=5&rj-tok=AAABePDKYnkA9kVa1QYWTKFxIQ"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      320
+    ]
   },
   {
     "id": "aktina-104-7-2",
@@ -1161,7 +1529,10 @@ window.STATIONS = [
     "streams": [
       "https://sc2.streamwithq.com:8016/stream?type=http&nocache=65312"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      256
+    ]
   },
   {
     "id": "makedonia-1386",
@@ -1170,7 +1541,10 @@ window.STATIONS = [
     "streams": [
       "https://webinternetradio.eu:48238/"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      256
+    ]
   },
   {
     "id": "ekfrasi",
@@ -1179,7 +1553,10 @@ window.STATIONS = [
     "streams": [
       "https://neos.win:59340/stream"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "libero-107-4-fm",
@@ -1188,7 +1565,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.libero.fm:10770/live?178383342258"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      64
+    ]
   },
   {
     "id": "best-radio-92-6",
@@ -1197,7 +1577,10 @@ window.STATIONS = [
     "streams": [
       "https://netradio.live24.gr/best1222"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      256
+    ]
   },
   {
     "id": "1st-greek-hits-radio",
@@ -1206,7 +1589,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.newageradio.gr/listen/flac_gr/radio.mp3"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "splash-online",
@@ -1215,7 +1601,10 @@ window.STATIONS = [
     "streams": [
       "https://rdst.win:48198/live"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      192
+    ]
   },
   {
     "id": "deejay-97-5-greece-corfu",
@@ -1224,7 +1613,10 @@ window.STATIONS = [
     "streams": [
       "https://sh.onweb.gr:7083/stream"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      192
+    ]
   },
   {
     "id": "mousikos-98-6",
@@ -1233,7 +1625,10 @@ window.STATIONS = [
     "streams": [
       "https://netradio.live24.gr/derty1000"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      160
+    ]
   },
   {
     "id": "farsala-web-radio",
@@ -1242,7 +1637,10 @@ window.STATIONS = [
     "streams": [
       "https://ams-pioneer02.dedicateware.com:1955/stream"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      192
+    ]
   },
   {
     "id": "skylos-69",
@@ -1251,7 +1649,10 @@ window.STATIONS = [
     "streams": [
       "https://i6.streams.ovh/ic/skylos69/stream"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      320
+    ]
   },
   {
     "id": "active-107-4",
@@ -1260,7 +1661,10 @@ window.STATIONS = [
     "streams": [
       "https://securestreams3.autopo.st:1417/active"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "02-radio-station",
@@ -1269,7 +1673,10 @@ window.STATIONS = [
     "streams": [
       "https://centova.gr-net.gr/proxy/dimitrio/stream"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "velvet-ballads-96-8-fm",
@@ -1278,7 +1685,10 @@ window.STATIONS = [
     "streams": [
       "https://metromedia.live24.gr/velvet968thess"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "amvrakia-fm-91-9",
@@ -1287,7 +1697,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.streams.ovh:1195/stream"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      320
+    ]
   },
   {
     "id": "chroma-105-8-thessaloniki",
@@ -1296,7 +1709,10 @@ window.STATIONS = [
     "streams": [
       "https://hroma1058thess.live24.gr/hroma1058thess"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rythmos-fm",
@@ -1305,7 +1721,10 @@ window.STATIONS = [
     "streams": [
       "https://ample.radiojar.com/aw1w2xfx1vduv.mp3"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "venus-radio-99-3",
@@ -1314,7 +1733,10 @@ window.STATIONS = [
     "streams": [
       "https://sh.onweb.gr/8410/;"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "alpha-98-9",
@@ -1323,7 +1745,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiojar.com/xcdg6yggzfeuv"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      192
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

@@ -17,7 +17,11 @@ window.STATIONS = [
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio008/hlspbaudio008_Auto.m3u8"
     ],
-    "hidden": true
+    "hidden": true,
+    "br": [
+      32
+    ],
+    "offline": true
   },
   {
     "id": "radio-4-public-health-marathi",
@@ -25,6 +29,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://cast4.my-control-panel.com/proxy/demo4usv/live"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -33,6 +40,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/c0adewsyw8quv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -41,6 +51,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://radio.shaivam.org/listen/shaiva-lahari/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -49,6 +62,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://mahakatharadio.com/api/station/live.mp3"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -58,7 +74,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/dbstwo3dvhhtv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-maharani",
@@ -67,7 +86,10 @@ window.STATIONS = [
     "streams": [
       "https://streamasiacdn.atc-labs.com/radiomaharani.aac"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "air-nanded",
@@ -77,7 +99,9 @@ window.STATIONS = [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio072/playlist.m3u8"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "br": [
+      95
+    ]
   },
   {
     "id": "air-kolhapur",
@@ -87,7 +111,9 @@ window.STATIONS = [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio063/playlist.m3u8"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "br": [
+      93
+    ]
   },
   {
     "id": "translation-of-the-quran-in-kashmiri",
@@ -96,7 +122,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8108/;"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "translation-of-the-quran-in-assamese",
@@ -105,7 +134,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8384/;"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-daijiworld-konkani",
@@ -114,7 +146,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.garden/api/ara/content/listen/wnpDPXNr/channel.mp3"
     ],
-    "added": "2026-11-19"
+    "added": "2026-11-19",
+    "br": [
+      64
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

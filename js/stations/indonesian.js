@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://sonora-radio.arenastreaming.com/8130/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radiojar.com/4ywdgup3bnzuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream-ssl.arenastreaming.com:8000/jakarta"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -40,6 +49,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/us5bsznu3rptv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -48,6 +60,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://c5.siar.us/proxy/ssfm/stream"
+    ],
+    "br": [
+      56
     ]
   },
   {
@@ -56,6 +71,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://mettaswara.com:8700/d4d"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -72,6 +90,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radiojar.com/7csmg90fuqruv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -80,6 +101,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.campursarifm.com/listen/campursari/campursari892"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -88,6 +112,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://a8.siar.us/listen/campursari/stream"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -96,6 +123,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/21/9221/rritjpinangpro2.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -104,6 +134,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/d16n50mkzhhvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -112,6 +145,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-pd-bdg.dimasalfaridzi.my.id/delta"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -120,6 +156,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.classynetradio.com:8000/classySD"
+    ],
+    "br": [
+      80
     ]
   },
   {
@@ -136,6 +175,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-pd-bdg.dimasalfaridzi.my.id/prambors"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -144,6 +186,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.lokermusik.com/listen/lokermusik/lokermusik"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -152,6 +197,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/21/9221/rritjpinangpro1.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -160,6 +208,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://i.klikhost.com/8266/stream"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -168,6 +219,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://svara-stream.radioddns.net/yogyakarta_voksradio"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -176,6 +230,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.klcbsofficial.com/listen/newage/klcbs-newage"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -184,6 +241,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://a3.alhastream.com:4010/radio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -192,6 +252,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://a2.siar.us//listen//suarasoneta//radio.mp3"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -200,6 +263,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream-node0.rri.co.id/streaming/14/9014/kbrn.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -208,6 +274,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com:9154/stream"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -217,6 +286,10 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:9620/;",
       "https://i.klikhost.com:9620/stream"
+    ],
+    "br": [
+      64,
+      64
     ]
   },
   {
@@ -225,6 +298,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/wvq442iwm6ztv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -243,6 +319,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://n03.radiojar.com/4ywdgup3bnzuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -252,6 +331,10 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:9134/stream",
       "https://i.klikhost.com:8272/;"
+    ],
+    "br": [
+      64,
+      64
     ]
   },
   {
@@ -260,6 +343,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sundaradio.com/live/sundaradio"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -269,7 +355,9 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:8500/;super.mp3"
     ],
-    "offline": true
+    "br": [
+      192
+    ]
   },
   {
     "id": "bahtera-yudha-fm-surabaya",
@@ -277,6 +365,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.bahterayudhafm.com:8050/;rojer.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -285,6 +376,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.heartline.co.id:8443/djati_aceh"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -293,6 +387,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio-streaming.tegalkota.go.id/stream.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -301,6 +398,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://i.klikhost.com/9604/stream.aac"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -309,6 +409,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/ar3nv92ahfhvv"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -317,6 +420,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://server.radioimeldafm.co.id/radio/8040/gajahmadafm"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -325,6 +431,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-node2.rri.co.id/streaming/14/9314/rrisngliatpro1.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -334,7 +443,10 @@ window.STATIONS = [
     "streams": [
       "https://moshhead-blackmetal.stream.laut.fm/moshhead-blackmetal"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "alternatif-radio-jakarta",
@@ -343,7 +455,10 @@ window.STATIONS = [
     "streams": [
       "https://void.idserverhost.com/8016/stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "pejuang-kopi",
@@ -352,7 +467,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/sthgzynfcd0uv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "koplo-fm",
@@ -361,7 +479,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/uvlmugvqrnkvv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ras-fm-jakarta",
@@ -370,7 +491,10 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com/9006/stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      48
+    ]
   },
   {
     "id": "pandu-musik-radio",
@@ -379,7 +503,10 @@ window.STATIONS = [
     "streams": [
       "https://usa3.fastcast4u.com/proxy/pandumusikradio?mp=/1"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      96
+    ]
   },
   {
     "id": "elgangga-fm",
@@ -388,7 +515,10 @@ window.STATIONS = [
     "streams": [
       "https://b.alhastream.com:5140/radio"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      48
+    ]
   },
   {
     "id": "klcbs-fusion",
@@ -397,7 +527,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.klcbsofficial.com/listen/fusion/klcbs-fusion"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "amandit-93-9-fm",
@@ -406,7 +539,10 @@ window.STATIONS = [
     "streams": [
       "https://b.alhastream.com:5035/radio"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      320
+    ]
   },
   {
     "id": "gajahmada-fm",
@@ -415,7 +551,10 @@ window.STATIONS = [
     "streams": [
       "https://server.radioimeldafm.co.id:8040/gajahmadafm"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      64
+    ]
   },
   {
     "id": "yaski-radio",
@@ -424,7 +563,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.heartline.co.id:8443/radio_yaski_stereo"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      48
+    ]
   },
   {
     "id": "heartline-tangerang",
@@ -433,7 +575,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.heartline.co.id:8443/heartline_tangerang"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      48
+    ]
   },
   {
     "id": "rri-pro-4-jakarta",
@@ -442,7 +587,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-node1.rri.co.id/streaming/25/9025/rrijakartapro4.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      64
+    ]
   },
   {
     "id": "jpi-fm-solo",
@@ -451,7 +599,10 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com/9618/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      64
+    ]
   },
   {
     "id": "bimasakti-fm-kebumen",
@@ -460,7 +611,10 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:9622/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      64
+    ]
   },
   {
     "id": "rri-pro1-banjarmasin",
@@ -469,7 +623,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-node0.rri.co.id/streaming/19/9019/rribanjarmasinpro1.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      64
+    ]
   },
   {
     "id": "pop-fm-semarang",
@@ -478,7 +635,10 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:9612/stream.aac"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      64
+    ]
   },
   {
     "id": "kiara-4u",
@@ -497,7 +657,10 @@ window.STATIONS = [
     "streams": [
       "https://ig.idstreamer.com/listen/arif_channel/stream"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rri-pro-2-jakarta",
@@ -506,7 +669,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-node1.rri.co.id/streaming/25/9025/rrijakartapro2.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      64
+    ]
   },
   {
     "id": "mandarin-station-fm-98-3",
@@ -515,7 +681,10 @@ window.STATIONS = [
     "streams": [
       "https://stream01-ssl.arenastreaming.com:8043/stream"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      64
+    ]
   },
   {
     "id": "synchronize-radio",
@@ -534,7 +703,10 @@ window.STATIONS = [
     "streams": [
       "https://radioislamindonesia.com/aliman.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rri-pro-2-bandung",
@@ -543,7 +715,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-node0.rri.co.id/streaming/15/9015/rribandungpro2.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "trangkil-fm",
@@ -552,7 +727,10 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com/8228/;radio"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      48
+    ]
   },
   {
     "id": "bandung-death-metal-syndicate",
@@ -561,7 +739,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/t9wdzppre5zuv"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "666-forgotten-castle",
@@ -570,7 +751,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/j9tx7izezf4vv"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-swara-semarang",
@@ -590,7 +774,10 @@ window.STATIONS = [
     "streams": [
       "https://az2.radioislam.my.id:8150/;stream.nsv"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      32
+    ]
   },
   {
     "id": "hard-rock-fm",
@@ -599,7 +786,10 @@ window.STATIONS = [
     "streams": [
       "https://n06.radiojar.com/7csmg90fuqruv"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "arb-fm-jakarta",
@@ -608,7 +798,10 @@ window.STATIONS = [
     "streams": [
       "https://void.idserverhost.com/8018/stream"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-pensiunan",
@@ -617,7 +810,10 @@ window.STATIONS = [
     "streams": [
       "https://pu.klikhost.com/proxy/radiopensiunan/stream"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "yasika-fm-jogja",
@@ -626,7 +822,10 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:9610/stream"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      64
+    ]
   },
   {
     "id": "rri-pro-1-kupang",
@@ -635,7 +834,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-node2.rri.co.id/streaming/13/9213/rrikupangpro1.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "trax-fm-semarang",
@@ -644,8 +846,7 @@ window.STATIONS = [
     "streams": [
       "https://n0f.radiojar.com/fr9zqhv80k8uv"
     ],
-    "added": "2026-10-28",
-    "offline": true
+    "added": "2026-10-28"
   },
   {
     "id": "rri-pro-1-bandung",
@@ -654,7 +855,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-node0.rri.co.id/streaming/15/9015/rribandungpro1.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "voks-radio-bali-99-3-fm",
@@ -664,7 +868,9 @@ window.STATIONS = [
       "https://svara-stream.radioddns.net/bali_voksradio_993fm"
     ],
     "added": "2026-10-28",
-    "offline": true
+    "br": [
+      160
+    ]
   },
   {
     "id": "imelda-fm",
@@ -673,7 +879,10 @@ window.STATIONS = [
     "streams": [
       "https://server.radioimeldafm.co.id:8030/imeldafm"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      160
+    ]
   },
   {
     "id": "voks-radio-bali",
@@ -683,7 +892,11 @@ window.STATIONS = [
       "https://a3.alhastream.com:4010/radio",
       "https://a3.alhastream.com:4000/radio"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128,
+      128
+    ]
   },
   {
     "id": "tjandra-fm-cianjur",
@@ -692,7 +905,10 @@ window.STATIONS = [
     "streams": [
       "https://live.tjandrafm.com/listen/tjandrafm/stream"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      64
+    ]
   },
   {
     "id": "mettaswara-slow-rock",
@@ -701,7 +917,10 @@ window.STATIONS = [
     "streams": [
       "https://mettaswara.com:8700//slowrock"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      64
+    ]
   },
   {
     "id": "rri-pro-4-101-3-fm-tanjungpinang",
@@ -710,7 +929,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-node2.rri.co.id/streaming/21/9221/rritjpinangpro4.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      64
+    ]
   },
   {
     "id": "jiz-89-5-fm",
@@ -719,7 +941,10 @@ window.STATIONS = [
     "streams": [
       "https://pu.klikhost.com/proxy/jizfm/stream"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      64
+    ]
   },
   {
     "id": "kinozal-tv",
@@ -728,7 +953,10 @@ window.STATIONS = [
     "streams": [
       "https://listen7.myradio24.com/kinozaltv"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      128
+    ]
   },
   {
     "id": "braya-radio",
@@ -737,7 +965,10 @@ window.STATIONS = [
     "streams": [
       "https://live.brayaradio.com/listen/brayaradio/stream"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      64
+    ]
   },
   {
     "id": "hitz-91-2-fm-belitung",
@@ -746,7 +977,10 @@ window.STATIONS = [
     "streams": [
       "https://play.bilitonesefm.com/listen/radiohitzfm/stream"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      94
+    ]
   },
   {
     "id": "galuh-media-streaming-cianjur-indonesia",
@@ -755,7 +989,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-sg1.galuhmedia.co.id/listen/galuhmedia/stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-salvator",
@@ -764,7 +1001,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radiosalvator.com/listen/radiosalvator/radiosalvator"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-streaming-sehati",
@@ -773,7 +1013,10 @@ window.STATIONS = [
     "streams": [
       "https://c4.siar.us:8092/autodj"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hard-rock-fm-surabaya",
@@ -791,7 +1034,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-node0.rri.co.id/streaming/15/9015/rribandungpro4.mp3"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "replay-news-bahasa-indonesia",
@@ -800,7 +1046,10 @@ window.STATIONS = [
     "streams": [
       "https://replaynewsin.ice.infomaniak.ch/replaynewsin-128.mp3"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radar-cbs-tegal",
@@ -809,7 +1058,10 @@ window.STATIONS = [
     "streams": [
       "https://a5.siar.us/radio/8010/radio"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      48
+    ]
   },
   {
     "id": "radio-bola",
@@ -818,7 +1070,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radiobola.co.id/listen/radiobola/stream"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "dna-fm-jepara",
@@ -827,7 +1082,10 @@ window.STATIONS = [
     "streams": [
       "https://sc.dnafm.net/listen/dnafm/live"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "klcbs-tropical",
@@ -836,7 +1094,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.klcbsofficial.com/listen/tropical/klcbs-tropical"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sti-fm-nunukan",
@@ -845,7 +1106,10 @@ window.STATIONS = [
     "streams": [
       "https://live.stifmnunukan.com/listen/stifm/stream"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-manggarai-88",
@@ -854,7 +1118,10 @@ window.STATIONS = [
     "streams": [
       "https://radiomanggarai88.online/listen/rm88/radio.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rri-pro-4-yogyakarta",
@@ -863,7 +1130,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-node0.rri.co.id/streaming/17/9017/rrijogjapro4.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      64
+    ]
   },
   {
     "id": "elpas-radio",
@@ -872,7 +1142,10 @@ window.STATIONS = [
     "streams": [
       "https://live.elpasradio.com/listen/elpasradio/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      64
+    ]
   },
   {
     "id": "istara-fm-surabaya",
@@ -892,7 +1165,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-node0.rri.co.id/streaming/17/9017/rrijogjapro2.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      64
+    ]
   },
   {
     "id": "pro-1-rri-makassar",
@@ -901,7 +1177,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-node0.rri.co.id/streaming/22/9022/rrimakasarpro1.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      64
+    ]
   },
   {
     "id": "style-94-6-fm-tasikmalaya",
@@ -910,7 +1189,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.stylefmtasik.com/listen/stylefmtasik/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "joss-885-am",
@@ -919,7 +1201,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.swadesifm.com/radio/8000/radio.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      96
+    ]
   },
   {
     "id": "rri-pro-1-manado",
@@ -928,7 +1213,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-node1.rri.co.id/streaming/40/9040/rrimanadopro1.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "camajaya-fm",
@@ -938,7 +1226,9 @@ window.STATIONS = [
       "https://ssg.streamingmurah.com:8078/;"
     ],
     "added": "2026-11-03",
-    "offline": true
+    "br": [
+      32
+    ]
   },
   {
     "id": "wawa-radio-101-2-fm",
@@ -947,7 +1237,10 @@ window.STATIONS = [
     "streams": [
       "https://xn--tmz.xn--6frz82g/streams"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      256
+    ]
   },
   {
     "id": "wawa-radio-101-2",
@@ -956,7 +1249,10 @@ window.STATIONS = [
     "streams": [
       "https://securestream.casthost.net:8219/stream"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "prambors-semarang",
@@ -965,7 +1261,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.tujuhcahaya.com/radio/8020/radio.mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "translation-of-the-quran-in-indonesian",
@@ -974,7 +1273,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8106/;"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "norrm",
@@ -983,7 +1285,10 @@ window.STATIONS = [
     "streams": [
       "https://listen.norrm.com/default"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-ntala-gewang",
@@ -992,7 +1297,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radiostream.id/listen/radiontalagewang/live"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rri-pro-1-jakarta",
@@ -1001,7 +1309,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-node1.rri.co.id/streaming/25/9025/rrijakartapro1.mp3"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "suara-salira",
@@ -1010,7 +1321,10 @@ window.STATIONS = [
     "streams": [
       "https://live.suarasalira.com/listen/suarasalira/stream"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      64
+    ]
   },
   {
     "id": "ananda-radio-bandung",
@@ -1019,7 +1333,10 @@ window.STATIONS = [
     "streams": [
       "https://sx.alhasmedia.com/radio/8220/radio"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "tarakan-fm",
@@ -1028,7 +1345,10 @@ window.STATIONS = [
     "streams": [
       "https://live.tarakanfm.com/listen/tarakanfm/stream"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      80
+    ]
   },
   {
     "id": "rri-pro-1-yogyakarta",
@@ -1037,7 +1357,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-node0.rri.co.id/streaming/17/9017/rrijogjapro1.mp3"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-bantul-89-10-fm",
@@ -1046,7 +1369,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.swadesifm.com/radio/8130/radio.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      96
+    ]
   },
   {
     "id": "nusa-fm",
@@ -1055,7 +1381,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/n5tergcf4v8uv"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      64
+    ]
   },
   {
     "id": "fress-fm",
@@ -1065,7 +1394,9 @@ window.STATIONS = [
       "https://streaming.fressfm.com:11185/stream"
     ],
     "added": "2026-11-05",
-    "offline": true
+    "br": [
+      96
+    ]
   },
   {
     "id": "rri-channel-5",
@@ -1074,7 +1405,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-node1.rri.co.id/streaming/41/8941/chlima.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "galau-jikan-fm-indonesia",
@@ -1093,7 +1427,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.coolkas.com/listen/radiocmn/radiocmn"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      64
+    ]
   },
   {
     "id": "kradio-hss",
@@ -1102,7 +1439,10 @@ window.STATIONS = [
     "streams": [
       "https://live.kradionews.com/listen/kradio/stream"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      80
+    ]
   },
   {
     "id": "cocojo-radio",
@@ -1111,7 +1451,10 @@ window.STATIONS = [
     "streams": [
       "https://live.cocojoradio.com/listen/cocojoradio/cocojoradio"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      64
+    ]
   },
   {
     "id": "safasindo-fm",
@@ -1120,7 +1463,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.safasindo.com/listen/radio_safasindo/radio.mp3"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rri-pro-3-palembang",
@@ -1129,7 +1475,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-node0.rri.go.id/streaming/14/9014/kbrn.mp3"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "96-1-fm-radio-bravo-fm-kebumen",
@@ -1138,7 +1487,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.swadesifm.com/radio/8090/radio.mp3"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      96
+    ]
   },
   {
     "id": "hot-93-2-fm",
@@ -1147,7 +1499,10 @@ window.STATIONS = [
     "streams": [
       "https://wz.mari.co.id:1936/web_hotfm/hotfm/playlist.m3u8"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      44
+    ]
   },
   {
     "id": "komodo",
@@ -1156,7 +1511,10 @@ window.STATIONS = [
     "streams": [
       "https://komodo.out.airtime.pro/komodo_a"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      64
+    ]
   },
   {
     "id": "vos-radio",
@@ -1165,7 +1523,10 @@ window.STATIONS = [
     "streams": [
       "https://live.voss.my.id/listen/voss/voss"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      96
+    ]
   },
   {
     "id": "b-104-6-fm",
@@ -1174,7 +1535,10 @@ window.STATIONS = [
     "streams": [
       "https://play.bilitonesefm.com/listen/radiobfm/stream"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "beat-radio-indonesia",
@@ -1183,7 +1547,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.beatradioid.com:8000/stream"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "dehills-radio",
@@ -1192,7 +1559,10 @@ window.STATIONS = [
     "streams": [
       "https://live.dehills.id/listen/dehills/stream"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      94
+    ]
   },
   {
     "id": "ada-radio-online",
@@ -1201,7 +1571,10 @@ window.STATIONS = [
     "streams": [
       "https://adaradio.kradionews.com/listen/adaradio/stream"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      64
+    ]
   },
   {
     "id": "nindy-radio-98-2-fm",
@@ -1210,7 +1583,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.garden/api/ara/content/listen/823zxnHk/channel.mp3"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rri-pro-4-ambon",
@@ -1219,7 +1595,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-node2.rri.co.id/streaming/15/9315/rriambonpro4.mp3"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      32
+    ]
   },
   {
     "id": "kiara-mpc-radio",
@@ -1237,7 +1616,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/jw6ys87h2dguv"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-suara-itmi",
@@ -1246,7 +1628,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.itmi.or.id:8190/radio"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      48
+    ]
   },
   {
     "id": "harley-radio-show",
@@ -1255,7 +1640,10 @@ window.STATIONS = [
     "streams": [
       "https://live.harleyradioshow.com/listen/harleyradio/harleyradio"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      64
+    ]
   },
   {
     "id": "singosari-fm-brebes-official-station",
@@ -1265,7 +1653,9 @@ window.STATIONS = [
       "https://s2.free-shoutcast.com/stream/18096"
     ],
     "added": "2026-11-12",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "onix-radio",
@@ -1275,7 +1665,9 @@ window.STATIONS = [
       "https://pu.klikhost.com/proxy/onixradio/stream"
     ],
     "added": "2026-11-12",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "homebrew-radio",
@@ -1284,7 +1676,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.homebrew.my.id/listen/homebrew-radio/radio.mp3"
     ],
-    "added": "2026-11-13"
+    "added": "2026-11-13",
+    "br": [
+      192
+    ]
   },
   {
     "id": "zenith-fm-salatiga",
@@ -1294,7 +1689,9 @@ window.STATIONS = [
       "https://i.klikhost.com:9616/stream"
     ],
     "added": "2026-11-14",
-    "offline": true
+    "br": [
+      64
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

@@ -20,6 +20,9 @@ window.STATIONS = [
       "https://listen.openstream.co/4626/audio",
       "https://sp14.instainternet.com/8050/stream",
       "https://stream.aiir.com/dbv0rxpwp6ytv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -28,6 +31,9 @@ window.STATIONS = [
     "category": "fm",
     "streams": [
       "https://centova.aarenworld.com/proxy/922radiokhushi/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -46,6 +52,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SUNO917_SC",
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SUNO917.mp3"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -54,6 +64,9 @@ window.STATIONS = [
     "category": "fm",
     "streams": [
       "https://osrnstream.olivesuno.com/suno876.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -63,6 +76,10 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio229/chunklist.m3u8",
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio229/playlist.m3u8"
+    ],
+    "br": [
+      0,
+      96
     ]
   },
   {
@@ -71,6 +88,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://ice31.securenetsystems.net/RADIOKERAL"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -80,6 +100,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/512rbf1e3qzuv",
       "https://stream.qfmradio.qa/986fm"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -88,6 +112,9 @@ window.STATIONS = [
     "category": "fm",
     "streams": [
       "https://stream.aiir.com/dbv0rxpwp6ytv"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -96,6 +123,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://live.sarrit.com:8040/radio.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -104,6 +134,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://stream.nammude.uk/listen/radio_lemon_live_newzealand_-_copy/radio.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -171,6 +204,9 @@ window.STATIONS = [
     "category": "air",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
+    ],
+    "br": [
+      94
     ]
   },
   {
@@ -194,7 +230,11 @@ window.STATIONS = [
       "https://radio.wavespb.com/live/b69c296065db7627/b69c296065db7627.m3u8",
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio083/playlist.m3u8"
     ],
-    "akv": "Akashvani Kozhikode Real FM"
+    "akv": "Akashvani Kozhikode Real FM",
+    "br": [
+      0,
+      129
+    ]
   },
   {
     "id": "radio90fm",
@@ -202,6 +242,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://ice42.securenetsystems.net/CR90?type=.mp3"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -220,6 +263,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.nammude.uk/listen/nammude_uk/live",
       "https://live.sarrit.com/listen/nammude_uk/live"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -236,6 +283,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://cast1.my-control-panel.com/proxy/myradio90fm/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -253,6 +303,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://radio.helloradio.in/radio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -261,6 +314,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://icecast.octosignals.com/benziger"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -269,6 +325,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://s2.radio.co/s3801784f1/listen"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -299,6 +358,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://s2.myradiostream.com/5538/listen.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -307,6 +369,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://cast1.my-control-panel.com/proxy/radiomattoli/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -315,6 +380,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://cast1.my-control-panel.com/proxy/enteradio/stream"
+    ],
+    "br": [
+      112
     ]
   },
   {
@@ -323,6 +391,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://radiosavre.com:8060/radio.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -331,6 +402,9 @@ window.STATIONS = [
     "category": "fm",
     "streams": [
       "https://icecast.octosignals.com/radiomacfast"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -340,6 +414,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/epyhxgc1y8huv",
       "https://stream.zeno.fm/epyhxgc1y8huv.mp3"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -349,6 +427,10 @@ window.STATIONS = [
     "streams": [
       "https://d98pmgd7by0qx.cloudfront.net/radiomalabar.m3u8",
       "https://streamasiacdn.atc-labs.com/radiomalabar.aac"
+    ],
+    "br": [
+      0,
+      64
     ]
   },
   {
@@ -357,6 +439,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://cast1.my-control-panel.com/proxy/ahaliafm/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -365,6 +450,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://onair.junefm.in/live"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -383,6 +471,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://icecast.octosignals.com/sargakshetrafm"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -392,6 +483,10 @@ window.STATIONS = [
     "streams": [
       "https://443-1.autopo.st/183/stream",
       "https://cp3.shoutcheap.com:18145/stream"
+    ],
+    "br": [
+      320,
+      0
     ]
   },
   {
@@ -408,6 +503,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://a5.asurahosting.com:7450/radio.mp3"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -417,6 +515,10 @@ window.STATIONS = [
     "streams": [
       "https://a5.asurahosting.com/listen/malayalamfm_live/radio.mp3",
       "https://a5.asurahosting.com:7770/radio.mp3"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -426,6 +528,10 @@ window.STATIONS = [
     "streams": [
       "https://live.accessmedia.nz/PlanetFM.stream_aac/playlist.m3u8",
       "https://live.accessmedia.nz/PlanetFM.stream/playlist.m3u8"
+    ],
+    "br": [
+      151,
+      135
     ]
   },
   {
@@ -434,6 +540,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://fm.ashrayafm90.com/ashrayafm"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -442,6 +551,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://radio.digitalmalayali.in/listen/stream/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -460,6 +572,9 @@ window.STATIONS = [
     "category": "artist",
     "streams": [
       "https://stream.zeno.fm/dubvcz3rkrhvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -468,6 +583,9 @@ window.STATIONS = [
     "category": "artist",
     "streams": [
       "https://stream.zeno.fm/5vva7u4ts0quv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -476,6 +594,9 @@ window.STATIONS = [
     "category": "artist",
     "streams": [
       "https://stream.zeno.fm/9x1sw687nf9uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -494,6 +615,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://live.sarrit.com:8140/lemonaustralia"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -502,6 +626,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://s5.radio.co/s6e27496ef/listen"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -510,6 +637,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://usa8.fastcast4u.com/proxy/auralradio?mp=/1/;stream.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -518,6 +648,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://fm.thamizhinifm.com/listen/premamfm/radio.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -526,6 +659,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://stream.zeno.fm/ap5sacmsn7zuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -542,6 +678,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://stream.zeno.fm/g8cx7tggb3quv.aac"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -551,6 +690,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/fu94u25kqd0uv",
       "https://stream.zeno.fm/fu94u25kqd0uv/;stream.mp3"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -559,6 +702,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://eu10.fastcast4u.com:14910/;"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -575,6 +721,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://radiomalayalamfm.com/radio/8000/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -583,6 +732,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://stream.zeno.fm/g2zves9gdwzuv"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -591,6 +743,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://sallapambyasset.com/api/Stream/Live"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -609,6 +764,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://free.rcast.net/200660"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -617,6 +775,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://stream.zeno.fm/ekthuu9bfwzuv"
+    ],
+    "br": [
+      56
     ]
   },
   {
@@ -635,6 +796,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://listen.openstream.co/6761/audio"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -653,6 +817,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://c30.radioboss.fm/stream/560"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -661,6 +828,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://stream.zeno.fm/7fmywrmrga0uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -677,7 +847,8 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://freestream.hu:8340/radiome"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "thaalamradio",
@@ -705,6 +876,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://sonic01.instainternet.com/8002/stream"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -733,6 +907,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://radiosarangi.logichost.in/listen/sarangi/radio.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -741,6 +918,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://stream.zeno.fm/zrfx7zy2wwzuv.aac"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -749,6 +929,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://live.auralradiokerala.in/auralradio/mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -758,6 +941,10 @@ window.STATIONS = [
     "streams": [
       "https://c30.radioboss.fm:8964/stream",
       "https://c4.radioboss.fm:8547/autodj"
+    ],
+    "br": [
+      128,
+      0
     ]
   },
   {
@@ -776,6 +963,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://stream.zeno.fm/qgqrxfte41zuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -804,6 +994,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://radiosavre.com:8020/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -812,6 +1005,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://gains.reviveradio.net/proxy/rafaradio?mp=/stream"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -830,6 +1026,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://ice31.securenetsystems.net/DVN"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -838,6 +1037,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://s2.citrus3.com:8046/stream"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -854,6 +1056,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://gains.reviveradio.net/proxy/revivemalayalam?mp=/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -880,6 +1085,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://gains.reviveradio.net/proxy/bafaradio/stream"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -888,6 +1096,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://streaming.radio.co/s4f2cc35de/listen"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -896,6 +1107,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://ephphatha.radioca.st/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -904,6 +1118,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://ice7.securenetsystems.net/AMENFM"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -912,6 +1129,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/g5ay9q4dgrruv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -930,6 +1150,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://patmos.cdnstream.com/proxy/luminous/?mp=/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -948,6 +1171,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://dreamsiteradiocp2.com/proxy/rmindia1?mp=/stream"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -964,6 +1190,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://cast4.my-control-panel.com/proxy/muthnabi/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -972,6 +1201,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://peaceradio.out.airtime.pro/peaceradio_a"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -980,6 +1212,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://radioislamin.out.airtime.pro/radioislamin_a"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -998,6 +1233,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://darhdth.radioca.st/stream"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -1016,6 +1254,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/08e1vkshcc9uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -1024,6 +1265,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/wbtn4zwb998uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -1032,6 +1276,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/x7mve2vt01zuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -1051,7 +1298,10 @@ window.STATIONS = [
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudioragam/hlspbaudioragam_Auto.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      32
+    ]
   },
   {
     "id": "anbu-fm-malayalam",
@@ -1060,7 +1310,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/8ca40byv4x8uv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fm-city-100-1",
@@ -1069,7 +1322,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/4yfsm0d8n98uv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      112
+    ]
   },
   {
     "id": "vividh-bharati-thiruvananthapuram",
@@ -1078,7 +1334,10 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      93
+    ]
   },
   {
     "id": "aural-oldies",
@@ -1088,7 +1347,11 @@ window.STATIONS = [
       "https://stream.zeno.fm/anrf216cu68uv",
       "https://stream.zeno.fm/tksfwb1mgzzuv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128,
+      128
+    ]
   },
   {
     "id": "shaiva-lahari",
@@ -1097,7 +1360,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.shaivam.org/listen/shaiva-lahari/radio.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "shahimsha-online-radio",
@@ -1106,7 +1372,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.shahimsha.com/listen/shahimsha/radio.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "planet-black",
@@ -1115,7 +1384,10 @@ window.STATIONS = [
     "streams": [
       "https://mp3.planetradio.de/plrchannels/hqblackbeats.aac"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "mala90",
@@ -1124,7 +1396,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/gm3g9amzm0hvv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "retro-ma",
@@ -1133,7 +1408,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/b6augfmdanzuv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "malever",
@@ -1142,7 +1420,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/5u6gkp9sp0hvv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "kalabhavan-mani-radio",
@@ -1151,7 +1432,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/s6hhy943w0hvv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hallos-radio",
@@ -1160,7 +1444,10 @@ window.STATIONS = [
     "streams": [
       "https://usa8.fastcast4u.com/proxy/auralradio?mp=/1"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      64
+    ]
   },
   {
     "id": "jesus-radio-malayalam",
@@ -1169,7 +1456,10 @@ window.STATIONS = [
     "streams": [
       "https://gains.reviveradio.net/proxy/jesusreigns?mp=/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "malysadan",
@@ -1178,7 +1468,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/8g9nvr1rkrhvv"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "translation-of-the-quran-in-malayalam",
@@ -1187,7 +1480,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8060/;"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "kairali-news",
@@ -1196,7 +1492,10 @@ window.STATIONS = [
     "streams": [
       "https://cdn.pishow.tv/ott/live/1469/master.m3u8"
     ],
-    "added": "2026-11-14"
+    "added": "2026-11-14",
+    "br": [
+      691
+    ]
   },
   {
     "id": "kairaly-tv",
@@ -1205,7 +1504,10 @@ window.STATIONS = [
     "streams": [
       "https://mumt01.tangotv.in/O5aw8Zn3KAIRALI/index.m3u8"
     ],
-    "added": "2026-11-14"
+    "added": "2026-11-14",
+    "br": [
+      2010
+    ]
   },
   {
     "id": "asianet",
@@ -1227,4 +1529,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T01:36Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

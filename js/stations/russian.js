@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ep256.hostingradio.ru:8052/europaplus256.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://pub0201.101.ru/stream/trust/mp3/128/24?"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nashe1.hostingradio.ru/rock-128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://dfm-dfmrusdance.hostingradio.ru/dfmrusdance96.aacp?0.9987259013359274"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -40,6 +52,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://dfm-disc90.hostingradio.ru/disc9096.aacp"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -48,6 +63,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://retroserver.streamr.ru:8043/retro256.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -56,6 +74,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://kpradio.hostingradio.ru:8000/russia.radiokp128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -64,6 +85,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://icecast-rian.cdnvideo.ru/voicerus"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -72,6 +96,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://listen9.myradio24.com/6262"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -80,6 +107,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://chanson.hostingradio.ru:8041/chanson128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -88,6 +118,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://bookradio.hostingradio.ru:8069/fm"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -96,6 +129,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://icecast-vgtrk.cdnvideo.ru/vestifm_aac_32kbps"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -104,6 +140,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://kpradio.hostingradio.ru:8000/64"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -112,6 +151,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://rock.volna.top/RusRock"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -120,6 +162,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://dorognoe.hostingradio.ru:8000/radio"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -128,6 +173,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://bfm.hostingradio.ru:9075/fm"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -136,6 +184,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://retro.volna.top/Retro"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -152,6 +203,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://chanson.hostingradio.ru:8041/chanson-uncensored256.mp3"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -160,6 +214,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.anon.fm/radio"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -168,6 +225,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream2.datacenter.by/radiusfm_main"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -184,6 +244,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ep128server.streamr.ru:8030/ep128"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -192,6 +255,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://dorognoe.hostingradio.ru:8000/dorognoe"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -200,6 +266,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast-vgtrk.cdnvideo.ru/vestifm_mp3_64kbps"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -208,6 +277,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nashe.streamr.ru/nashe-128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -216,6 +288,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://azura-cast.radiokansk.ru/listen/radiokansk/live"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -234,6 +309,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://rfe04.akacast.akamaistream.net/7/509/437762/v1/ibb.akacast.akamaistream.net/rfe04.m3u"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -242,6 +320,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://icecast-zvezda.mediacdn.ru/radio/zvezda/zvezda_128"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -258,6 +339,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://daystream.palmerablanca.com/daystream-128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -266,6 +350,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream2.datacenter.by/dushevnoe"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -290,6 +377,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nashe1.hostingradio.ru/nashe-128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -298,6 +388,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://pub0102.101.ru:8443/stream/personal/aacp/64/1785788"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -314,6 +407,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://evcast.mediacp.eu:2075/stream"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -322,6 +418,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio7server.streamr.ru:8040/radio7256.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -331,7 +430,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.autoliferadio.com:8090/radio"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "98-9-fm",
@@ -340,7 +442,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.rusradio.by:8443/live128"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "breaking-bass-air",
@@ -349,7 +454,10 @@ window.STATIONS = [
     "streams": [
       "https://aircast.breaking-bass.ru:8443/air"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      320
+    ]
   },
   {
     "id": "101-ru",
@@ -358,7 +466,10 @@ window.STATIONS = [
     "streams": [
       "https://pub0201.101.ru/stream/pro/aac/64/144"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      64
+    ]
   },
   {
     "id": "trance-is-star-radio",
@@ -367,7 +478,10 @@ window.STATIONS = [
     "streams": [
       "https://myradio24.org/tisradio"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      320
+    ]
   },
   {
     "id": "station-17",
@@ -376,7 +490,10 @@ window.STATIONS = [
     "streams": [
       "https://live.zhanafm.kz:8443/vasheradio"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fm-70e",
@@ -385,7 +502,10 @@ window.STATIONS = [
     "streams": [
       "https://retro70.hostingradio.ru:8025/retro70-128.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "life-fm",
@@ -403,7 +523,10 @@ window.STATIONS = [
     "streams": [
       "https://myradio24.org/bosscomaz"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-18",
@@ -412,7 +535,10 @@ window.STATIONS = [
     "streams": [
       "https://media.govoritmoskva.ru:8880/ru64.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-19",
@@ -421,7 +547,10 @@ window.STATIONS = [
     "streams": [
       "https://seva.ru/radio/stream"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-20",
@@ -430,7 +559,10 @@ window.STATIONS = [
     "streams": [
       "https://rr-vysockij.hostingradio.ru/vysockij96.aacp"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      96
+    ]
   },
   {
     "id": "fm-93-6",
@@ -439,7 +571,10 @@ window.STATIONS = [
     "streams": [
       "https://kommersant77.hostingradio.ru:8085/kommersant128.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-21",
@@ -448,7 +583,10 @@ window.STATIONS = [
     "streams": [
       "https://listen6.myradio24.com/odesradio"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "101-ru-michael-jackson",
@@ -457,7 +595,10 @@ window.STATIONS = [
     "streams": [
       "https://srv01.gpmradio.ru/stream/pro/aac/64/52"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      64
+    ]
   },
   {
     "id": "95-6-fm",
@@ -466,7 +607,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.mediacdn.ru/radio/zvezda/zvezda_96"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      32
+    ]
   },
   {
     "id": "radio-shanson",
@@ -475,7 +619,10 @@ window.STATIONS = [
     "streams": [
       "https://chanson.hostingradio.ru:8041/chanson256.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "96-2fm",
@@ -494,7 +641,9 @@ window.STATIONS = [
       "https://s40.myradiostream.com/:22546/listen.mp3?"
     ],
     "added": "2026-10-25",
-    "offline": true
+    "br": [
+      160
+    ]
   },
   {
     "id": "station-22",
@@ -503,7 +652,10 @@ window.STATIONS = [
     "streams": [
       "https://listen7.myradio24.com/alexx333"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      320
+    ]
   },
   {
     "id": "fm-90e",
@@ -512,7 +664,10 @@ window.STATIONS = [
     "streams": [
       "https://retro90.hostingradio.ru:8025/retro90-128.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-23",
@@ -521,7 +676,10 @@ window.STATIONS = [
     "streams": [
       "https://choco.hostingradio.ru:10010/fm"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "dfm",
@@ -539,7 +697,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast-mirtv.cdnvideo.ru/radio_mir_256"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      346
+    ]
   },
   {
     "id": "radio-exterior-de-espana",
@@ -548,7 +709,10 @@ window.STATIONS = [
     "streams": [
       "https://dispatcher.rndfnk.com/crtve/rneree/main/mp3/high"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hit-fm-2000s-hits",
@@ -557,7 +721,10 @@ window.STATIONS = [
     "streams": [
       "https://radio3.dixi.md/listen/hit_fm_2000s_hits/hitfm2000hit128.aac"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-25",
@@ -566,7 +733,10 @@ window.STATIONS = [
     "streams": [
       "https://rr-sovclass.hostingradio.ru/sovclass96.aacp"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      96
+    ]
   },
   {
     "id": "101-ru-abba",
@@ -575,7 +745,10 @@ window.STATIONS = [
     "streams": [
       "https://srv01.gpmradio.ru/stream/pro/aac/64/104"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-ultra",
@@ -584,7 +757,10 @@ window.STATIONS = [
     "streams": [
       "https://nashe1.hostingradio.ru/ultra-192.mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      192
+    ]
   },
   {
     "id": "echo-online",
@@ -593,7 +769,10 @@ window.STATIONS = [
     "streams": [
       "https://i1.echofm.online:8443/stream"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-26",
@@ -602,7 +781,10 @@ window.STATIONS = [
     "streams": [
       "https://rmg.hostingradio.ru:80/russkijrok96.aacp"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      96
+    ]
   },
   {
     "id": "kommersant-fm-93-6-moscow",
@@ -611,7 +793,10 @@ window.STATIONS = [
     "streams": [
       "https://kommersant77.hostingradio.ru:8016/kommersant64.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      64
+    ]
   },
   {
     "id": "1000-hits-radio",
@@ -620,7 +805,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.1000hit.ru:8000/stream128"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "club-hits-2000s",
@@ -629,7 +817,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.retrolan.party:8000/radio.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-gameplay",
@@ -638,7 +829,10 @@ window.STATIONS = [
     "streams": [
       "https://c22.radioboss.fm:8144/GamePlay"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "101-ru-modern-talking",
@@ -647,7 +841,10 @@ window.STATIONS = [
     "streams": [
       "https://srv01.gpmradio.ru/stream/pro/aac/64/115"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      64
+    ]
   },
   {
     "id": "russian-chinese-music-radio",
@@ -656,7 +853,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/txtltqtgns3vv"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "maximum",
@@ -665,7 +865,10 @@ window.STATIONS = [
     "streams": [
       "https://maximum.hostingradio.ru/maximum128.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-27",
@@ -674,7 +877,10 @@ window.STATIONS = [
     "streams": [
       "https://rfe-ingest.akamaized.net/hls/live/2035254/axia04/playlist.m3u8"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      141
+    ]
   },
   {
     "id": "anison",
@@ -683,7 +889,10 @@ window.STATIONS = [
     "streams": [
       "https://pool.anison.fm:9000/AniSonFM(320)?"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      320
+    ]
   },
   {
     "id": "hit-fm",
@@ -710,7 +919,10 @@ window.STATIONS = [
     "streams": [
       "https://dfm-trance.hostingradio.ru/trance96.aacp"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      96
+    ]
   },
   {
     "id": "station-28",
@@ -719,7 +931,10 @@ window.STATIONS = [
     "streams": [
       "https://rr-russkijrok.hostingradio.ru/russkijrok96.aacp"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      96
+    ]
   },
   {
     "id": "radio-record-deep",
@@ -737,7 +952,10 @@ window.STATIONS = [
     "streams": [
       "https://mc-mcgold.hostingradio.ru/mcgold96.aacp"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      96
+    ]
   },
   {
     "id": "relax-fm-smooth-jazz",
@@ -746,7 +964,10 @@ window.STATIONS = [
     "streams": [
       "https://pub0201.101.ru/stream/trust/mp3/128/31?"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-30",
@@ -755,7 +976,10 @@ window.STATIONS = [
     "streams": [
       "https://retroserver.streamr.ru:8043/retro128"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "eurodance",
@@ -773,7 +997,10 @@ window.STATIONS = [
     "streams": [
       "https://efir.retrofm.md:8000/retro"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      128
+    ]
   },
   {
     "id": "dfm-party",
@@ -782,7 +1009,10 @@ window.STATIONS = [
     "streams": [
       "https://dfm-party.hostingradio.ru/dfmparty96.aacp"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      96
+    ]
   },
   {
     "id": "station-31",
@@ -800,7 +1030,10 @@ window.STATIONS = [
     "streams": [
       "https://air.dnbfm.ru/listen/player/play"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "maximum-2",
@@ -818,7 +1051,10 @@ window.STATIONS = [
     "streams": [
       "https://cast.thiff.com/proxy/laarmeni?mp=/stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      192
+    ]
   },
   {
     "id": "russian-bards",
@@ -827,7 +1063,10 @@ window.STATIONS = [
     "streams": [
       "https://russianbards.com/stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "roks",
@@ -836,7 +1075,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.roks.com:8443/live256"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      160
+    ]
   },
   {
     "id": "monte-carlo",
@@ -854,7 +1096,10 @@ window.STATIONS = [
     "streams": [
       "https://evcast.mediacp.eu:1965/stream"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      256
+    ]
   },
   {
     "id": "retro-belarus",
@@ -863,7 +1108,10 @@ window.STATIONS = [
     "streams": [
       "https://air.sammit.tv:8443/retro"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      256
+    ]
   },
   {
     "id": "radio-record-disco-funk",
@@ -881,7 +1129,10 @@ window.STATIONS = [
     "streams": [
       "https://live.relaxfm.lv/03"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      96
+    ]
   },
   {
     "id": "remix-fm",
@@ -890,7 +1141,10 @@ window.STATIONS = [
     "streams": [
       "https://air4.amgradio.ru/RemixFM"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-33",
@@ -908,7 +1162,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.astv.ru/stream.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "offline": true
   },
   {
     "id": "fm-5",
@@ -917,7 +1172,10 @@ window.STATIONS = [
     "streams": [
       "https://hls-01-retro-vecherinka.emgsound.ru/20/playlist.m3u8"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      36
+    ]
   },
   {
     "id": "87-9-fm",
@@ -926,7 +1184,10 @@ window.STATIONS = [
     "streams": [
       "https://live.novoeradio.by:444/live/narodnoeradio_aac128/icecast.audio"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "relax-fm-instrumental",
@@ -935,7 +1196,10 @@ window.STATIONS = [
     "streams": [
       "https://pub0201.101.ru/stream/pro/aac/64/28?"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      64
+    ]
   },
   {
     "id": "record-chill-house",
@@ -953,7 +1217,10 @@ window.STATIONS = [
     "streams": [
       "https://hermitage.hostingradio.ru/hermitage128.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      256
+    ]
   },
   {
     "id": "101-ru-italo-disco",
@@ -962,7 +1229,10 @@ window.STATIONS = [
     "streams": [
       "https://srv01.gpmradio.ru/stream/pro/aac/64/161"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-36",
@@ -971,7 +1241,10 @@ window.STATIONS = [
     "streams": [
       "https://casseta-disco.ru:6275/stream?x=1711899723831"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-37",
@@ -980,7 +1253,10 @@ window.STATIONS = [
     "streams": [
       "https://live.humorfm.by:8443/avtoradio"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      160
+    ]
   },
   {
     "id": "station-38",
@@ -989,7 +1265,10 @@ window.STATIONS = [
     "streams": [
       "https://iskatel.hostingradio.ru:8015/iskatel-128.mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "russian-lounge",
@@ -998,7 +1277,10 @@ window.STATIONS = [
     "streams": [
       "https://muzdolet.com/radio.mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      192
+    ]
   },
   {
     "id": "brokenbeats",
@@ -1017,7 +1299,10 @@ window.STATIONS = [
     "streams": [
       "https://stream1.unknownclient.com/radio-lenta.mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "record-minimal",
@@ -1035,7 +1320,10 @@ window.STATIONS = [
     "streams": [
       "https://stream1.radiord.ru:8000/live96.aac"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      96
+    ]
   },
   {
     "id": "russian-mix",
@@ -1053,7 +1341,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.purewave.ru:8443/live128.mp3"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-unistar",
@@ -1080,7 +1371,10 @@ window.STATIONS = [
     "streams": [
       "https://nashe1.hostingradio.ru/nashe-256"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      256
+    ]
   },
   {
     "id": "deep-one",
@@ -1089,7 +1383,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.deep1.ru/deep1mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fm-retro-fm",
@@ -1098,7 +1395,10 @@ window.STATIONS = [
     "streams": [
       "https://live.retrofm.lv/retrofmlatvia"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      96
+    ]
   },
   {
     "id": "coldstar-radio-low-quality",
@@ -1107,7 +1407,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.coldstar.online/low.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "18",
@@ -1116,7 +1419,10 @@ window.STATIONS = [
     "streams": [
       "https://ic1.radiosignal.one/vanya-mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      192
+    ]
   },
   {
     "id": "record-trancemission",
@@ -1143,7 +1449,10 @@ window.STATIONS = [
     "streams": [
       "https://radiohub.kz/s/retrofm/112/playlist.m3u8"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      116
+    ]
   },
   {
     "id": "stand-up",
@@ -1152,7 +1461,10 @@ window.STATIONS = [
     "streams": [
       "https://pub0102.101.ru:8443/stream/pro/aac/64/448"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      64
+    ]
   },
   {
     "id": "mcm",
@@ -1161,7 +1473,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio.mcm.fm:10443/hit128"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-7-semey",
@@ -1170,7 +1485,10 @@ window.STATIONS = [
     "streams": [
       "https://listen2.myradio24.com/8334"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fm-80e",
@@ -1179,7 +1497,10 @@ window.STATIONS = [
     "streams": [
       "https://retro80.hostingradio.ru:8025/retro80-128.mp3"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "nrj-russia",
@@ -1197,7 +1518,10 @@ window.STATIONS = [
     "streams": [
       "https://audio.jurnalfm.md/hq"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      96
+    ]
   },
   {
     "id": "made-in-russia-dance-radio",
@@ -1206,7 +1530,10 @@ window.STATIONS = [
     "streams": [
       "https://listen7.myradio24.com/9083"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-44",
@@ -1215,7 +1542,10 @@ window.STATIONS = [
     "streams": [
       "https://pub0101.101.ru/stream/pro/aac/64/36"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      64
+    ]
   },
   {
     "id": "89-1fm",
@@ -1224,7 +1554,10 @@ window.STATIONS = [
     "streams": [
       "https://jazz.streamr.ru/jazz-128.mp3"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "soloviev-fm",
@@ -1242,7 +1575,10 @@ window.STATIONS = [
     "streams": [
       "https://dirxiph.amgradio.ru/RusRock"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "pirate-station",
@@ -1260,7 +1596,10 @@ window.STATIONS = [
     "streams": [
       "https://emgspb.hostingradio.ru/eldoradio128.mp3"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rdtk",
@@ -1269,7 +1608,10 @@ window.STATIONS = [
     "streams": [
       "https://rdtk.out.airtime.pro/rdtk_a"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-45",
@@ -1278,7 +1620,10 @@ window.STATIONS = [
     "streams": [
       "https://misato.ru-hoster.com:8037/stream"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "russian-hits",
@@ -1296,7 +1641,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.powerfm.lv:1095/stream"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      64
+    ]
   },
   {
     "id": "fm-6",
@@ -1314,7 +1662,10 @@ window.STATIONS = [
     "streams": [
       "https://cast.severmedia.ru:5443/Comedy_11_01"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "woods-hit-radio-ac",
@@ -1323,7 +1674,10 @@ window.STATIONS = [
     "streams": [
       "https://cast4.asurahosting.com/proxy/nigel/stream"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      64
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

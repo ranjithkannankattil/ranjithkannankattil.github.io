@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://dc4.serverse.com/proxy/ccmxrgub/stream"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://dc4.serverse.com/proxy/pearlfm/stream/1/"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://c24.radioboss.fm:18185/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/ymapb78yznhvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -40,6 +52,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/xna2aad7gc9uv"
+    ],
+    "br": [
+      112
     ]
   },
   {
@@ -48,6 +63,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://c32.radioboss.fm:18320/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -56,6 +74,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/m96foqqk7bxuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -64,6 +85,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/iydttapi8rguv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -72,6 +96,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/6s8719ctbphvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -80,6 +107,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://s39.myradiostream.com/:15664/;"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -88,6 +118,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/lbca7zintcnuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -96,6 +129,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s44.myradiostream.com/8138/listen.mp3"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -104,6 +140,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/8t4dtkxfgkuuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -112,6 +151,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/6hs5suuvqfhvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -120,6 +162,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/eyzf4ddwqcmvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -128,6 +173,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/cuejngegi8btv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -136,6 +184,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/wcancipcbrevv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -144,6 +195,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/vstzctms6rhvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -152,6 +206,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/1gfmyttkephvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -160,6 +217,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/6icyyzi1hawuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -178,6 +238,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/s961sfesdmntv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -186,6 +249,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/hkzgeqlcjoxuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -194,6 +260,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/vyx334hsbphvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -202,6 +271,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/bn7dbg8w0nhvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -210,6 +282,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/1uhqawtfk5zuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -218,6 +293,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/v73tc5gwaphvv"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -227,7 +305,10 @@ window.STATIONS = [
     "streams": [
       "https://cast5.my-control-panel.com/proxy/busogaroyalradio/stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "block-fm-103-2",
@@ -236,7 +317,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/gxjhbloltwluv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      112
+    ]
   },
   {
     "id": "radio-sinza",
@@ -245,7 +329,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/raoopfak6k2vv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "enjiri-radio",
@@ -254,7 +341,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/xdb8nazajqcvv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "exodus-comfort-radio",
@@ -263,7 +353,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/k2zma0qewtjvv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "great-hits-manchester",
@@ -272,7 +365,10 @@ window.STATIONS = [
     "streams": [
       "https://listen-nation.sharp-stream.com/hull.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-ssese-101-9-fm",
@@ -281,7 +377,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/bphnslpg8p1uv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-simba",
@@ -290,7 +389,10 @@ window.STATIONS = [
     "streams": [
       "https://radiosimba-atunwadigital.streamguys1.com/radiosimba"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      96
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

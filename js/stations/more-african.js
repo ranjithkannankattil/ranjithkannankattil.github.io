@@ -16,6 +16,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://hopefy.fanantenanahoanao.org/listen/hopefy_radio_mg/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -24,6 +27,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/5b5i6nuqbxtvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -32,6 +38,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://edge.iono.fm/xice/161_medium.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -40,6 +49,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.afrikanabestsounds.com/listen/live_african/radio.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -49,7 +61,10 @@ window.STATIONS = [
     "streams": [
       "https://listen.tropicastradio.com/stations/gwjhbnsfzq/live.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fpp-frequence-paris-plurielle-rfpp",
@@ -58,7 +73,10 @@ window.STATIONS = [
     "streams": [
       "https://direct.rfpp.net/fpp.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "innovation-fm",
@@ -67,7 +85,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.fdvi.org/live"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "alefamusic",
@@ -76,7 +97,10 @@ window.STATIONS = [
     "streams": [
       "https://www.radioking.com/play/alefamusic"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-rsf-109-antanifotsy",
@@ -85,7 +109,10 @@ window.STATIONS = [
     "streams": [
       "https://listen.tropicastradio.com/stations/3freccr11b/live.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "translation-of-the-quran-in-somali",
@@ -94,7 +121,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8020/;"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-zimbabwe",
@@ -103,7 +133,10 @@ window.STATIONS = [
     "streams": [
       "https://mainradiostreaming.zbc.co.zw:8040/nhepfenuro.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      192
+    ]
   },
   {
     "id": "fiderana-web-radio",
@@ -112,7 +145,10 @@ window.STATIONS = [
     "streams": [
       "https://a9.asurahosting.com/listen/fiderana/radio.mp3"
     ],
-    "added": "2026-11-12"
+    "added": "2026-11-12",
+    "br": [
+      192
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

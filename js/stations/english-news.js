@@ -10,7 +10,11 @@ window.STATIONS = [
       "https://stream.live.vc.bbcmedia.co.uk/bbc_world_service",
       "https://as-hls-ww-live.akamaized.net/pool_87948813/live/ww/bbc_world_service/bbc_world_service.isml/bbc_world_service-audio%3d128000.norewind.m3u8"
     ],
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      56,
+      0
+    ]
   },
   {
     "id": "npr-24-hour-program-stream",
@@ -19,7 +23,10 @@ window.STATIONS = [
     "streams": [
       "https://npr-ice.streamguys1.com/live.mp3"
     ],
-    "where": "US"
+    "where": "US",
+    "br": [
+      96
+    ]
   },
   {
     "id": "cnn",
@@ -28,7 +35,10 @@ window.STATIONS = [
     "streams": [
       "https://tunein.cdnstream1.com/2868_96.mp3"
     ],
-    "where": "US"
+    "where": "US",
+    "br": [
+      96
+    ]
   },
   {
     "id": "cnn-international-audio",
@@ -37,7 +47,10 @@ window.STATIONS = [
     "streams": [
       "https://tunein.cdnstream1.com/3519_96.aac"
     ],
-    "where": "US"
+    "where": "US",
+    "br": [
+      95
+    ]
   },
   {
     "id": "fox-news-radio",
@@ -46,7 +59,10 @@ window.STATIONS = [
     "streams": [
       "https://live.amperwave.net/direct/foxnewsradio-foxnewsradioaac-imc?source=fnr.web"
     ],
-    "where": "US"
+    "where": "US",
+    "br": [
+      64
+    ]
   },
   {
     "id": "msnbc",
@@ -55,7 +71,10 @@ window.STATIONS = [
     "streams": [
       "https://tunein.cdnstream1.com/3511_96.mp3"
     ],
-    "where": "US"
+    "where": "US",
+    "br": [
+      96
+    ]
   },
   {
     "id": "nbc-news-radio",
@@ -73,7 +92,10 @@ window.STATIONS = [
     "streams": [
       "https://cbsn-us.cbsnstream.cbsnews.com/out/v1/55a8648e8f134e82a470f83d562deeca/master.m3u8"
     ],
-    "where": "US"
+    "where": "US",
+    "br": [
+      273
+    ]
   },
   {
     "id": "sky-news-australia-radio",
@@ -82,7 +104,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/NOVA_SKYNEWSAAC.aac"
     ],
-    "where": "Australia"
+    "where": "Australia",
+    "br": [
+      64
+    ]
   },
   {
     "id": "gb-news",
@@ -91,7 +116,10 @@ window.STATIONS = [
     "streams": [
       "https://listen-gbnews.sharp-stream.com/gbnews.mp3"
     ],
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      128
+    ]
   },
   {
     "id": "times-radio",
@@ -100,7 +128,10 @@ window.STATIONS = [
     "streams": [
       "https://timesradio.wireless.radio/stream"
     ],
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      128
+    ]
   },
   {
     "id": "lbc-news",
@@ -109,7 +140,10 @@ window.STATIONS = [
     "streams": [
       "https://media-ssl.musicradio.com/LBCNewsUK"
     ],
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      48
+    ]
   },
   {
     "id": "al-jazeera-english",
@@ -127,7 +161,10 @@ window.STATIONS = [
     "streams": [
       "https://28453.live.streamtheworld.com/938NOW_PREM_SC"
     ],
-    "where": "Singapore"
+    "where": "Singapore",
+    "br": [
+      64
+    ]
   },
   {
     "id": "abc-newsradio",
@@ -136,7 +173,10 @@ window.STATIONS = [
     "streams": [
       "https://abc.streamguys1.com/live/newsradio/icecast.audio"
     ],
-    "where": "Australia"
+    "where": "Australia",
+    "br": [
+      56
+    ]
   },
   {
     "id": "bloomberg-uk",
@@ -154,7 +194,10 @@ window.STATIONS = [
     "streams": [
       "https://edge.audioxi.com/NT"
     ],
-    "where": "Ireland"
+    "where": "Ireland",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cbc-radio-one-vancouver",
@@ -163,7 +206,10 @@ window.STATIONS = [
     "streams": [
       "https://27033.live.streamtheworld.com/CBU2FM_CBC_SC"
     ],
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      128
+    ]
   },
   {
     "id": "wnyc-93-9-fm",
@@ -172,7 +218,10 @@ window.STATIONS = [
     "streams": [
       "https://fm939.wnyc.org/wnycfm.aac"
     ],
-    "where": "US"
+    "where": "US",
+    "br": [
+      31
+    ]
   },
   {
     "id": "cgtn-radio",
@@ -190,7 +239,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.houstonpublicmedia.org/news-aac"
     ],
-    "where": "US"
+    "where": "US",
+    "br": [
+      64
+    ]
   },
   {
     "id": "wamu-88-5-washington",
@@ -199,7 +251,10 @@ window.STATIONS = [
     "streams": [
       "https://wamu.cdnstream1.com/wamu.mp3"
     ],
-    "where": "US"
+    "where": "US",
+    "br": [
+      96
+    ]
   },
   {
     "id": "bbc-radio-4",
@@ -239,7 +294,10 @@ window.STATIONS = [
       "https://icecast.rte.ie/radio1"
     ],
     "added": "2026-10-22",
-    "where": "Ireland"
+    "where": "Ireland",
+    "br": [
+      160
+    ]
   },
   {
     "id": "bbc-news-hd-720p",
@@ -259,7 +317,10 @@ window.STATIONS = [
       "https://citi973fm.radioca.st/index.html:80/;stream.mp3"
     ],
     "added": "2026-10-22",
-    "where": "Ghana"
+    "where": "Ghana",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bloomberg-am-new-york-ny",
@@ -269,7 +330,10 @@ window.STATIONS = [
       "https://29314.live.streamtheworld.com/WBBRNYAAC_SC"
     ],
     "added": "2026-10-22",
-    "where": "US"
+    "where": "US",
+    "br": [
+      32
+    ]
   },
   {
     "id": "3aw-melbourne-693-am",
@@ -279,7 +343,10 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/3AW.mp3"
     ],
     "added": "2026-10-23",
-    "where": "Australia"
+    "where": "Australia",
+    "br": [
+      48
+    ]
   },
   {
     "id": "radio-plus-mauritius",
@@ -289,7 +356,10 @@ window.STATIONS = [
       "https://stream.radioplus.mu:8000/radio.mp3"
     ],
     "added": "2026-10-23",
-    "where": "Mauritius"
+    "where": "Mauritius",
+    "br": [
+      128
+    ]
   },
   {
     "id": "power-98-7",
@@ -309,7 +379,10 @@ window.STATIONS = [
       "https://mmg.streamguys1.com/JoyFM-mp3?key=8689cc761932e3151f94ddbdbfdf4aa0f4000234b5caeaaa179a2fc0d59a4be9b8b774c3653cb14d1fd76f5cbf80e482&awparams=playerid%3ASGplayer%3B&amsparams=playerid%3ASGplayer%3Bskey%3A1609840716923%3B&aw_0_req.gdpr=true&us_privacy=1YNN"
     ],
     "added": "2026-10-23",
-    "where": "Ghana"
+    "where": "Ghana",
+    "br": [
+      128
+    ]
   },
   {
     "id": "lbc-london",
@@ -319,7 +392,10 @@ window.STATIONS = [
       "https://media-ice.musicradio.com/LBCUKMP3Low"
     ],
     "added": "2026-10-23",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      48
+    ]
   },
   {
     "id": "abc-radio-national",
@@ -329,7 +405,10 @@ window.STATIONS = [
       "https://abc.streamguys1.com/live/rnnsw/icecast.audio"
     ],
     "added": "2026-10-23",
-    "where": "Australia"
+    "where": "Australia",
+    "br": [
+      56
+    ]
   },
   {
     "id": "bbc-radio-scotland",
@@ -349,7 +428,10 @@ window.STATIONS = [
       "https://ice31.securenetsystems.net/0079"
     ],
     "added": "2026-10-24",
-    "where": "Malawi"
+    "where": "Malawi",
+    "br": [
+      32
+    ]
   },
   {
     "id": "ujyaalo-90-network",
@@ -359,7 +441,10 @@ window.STATIONS = [
       "https://stream.zenolive.com/wtuvp08xq1duv"
     ],
     "added": "2026-10-24",
-    "where": "Nepal"
+    "where": "Nepal",
+    "br": [
+      112
+    ]
   },
   {
     "id": "redfm",
@@ -369,7 +454,10 @@ window.STATIONS = [
       "https://22273.live.streamtheworld.com/RED_FMAAC.aac"
     ],
     "added": "2026-10-24",
-    "where": "Malaysia"
+    "where": "Malaysia",
+    "br": [
+      64
+    ]
   },
   {
     "id": "falklands-radio-530-stanley",
@@ -379,7 +467,10 @@ window.STATIONS = [
       "https://streaming.broadcastradio.com:8332/flklnd"
     ],
     "added": "2026-10-24",
-    "where": "The Falkland Islands Malvinas"
+    "where": "The Falkland Islands Malvinas",
+    "br": [
+      128
+    ]
   },
   {
     "id": "kcrw-88-9-fm-live",
@@ -389,7 +480,10 @@ window.STATIONS = [
       "https://streams.kcrw.com/kcrw_mp3?aw_0_1st.playerid=radio-browser.info"
     ],
     "added": "2026-10-24",
-    "where": "US"
+    "where": "US",
+    "br": [
+      192
+    ]
   },
   {
     "id": "abc-radio-sydney",
@@ -399,7 +493,10 @@ window.STATIONS = [
       "https://mediaserviceslive.akamaized.net/hls/live/2038302/localsydney/masterhq.m3u8"
     ],
     "added": "2026-10-25",
-    "where": "Australia"
+    "where": "Australia",
+    "br": [
+      82
+    ]
   },
   {
     "id": "774-abc-melbourne",
@@ -409,7 +506,10 @@ window.STATIONS = [
       "https://streaming.abc-cdn.net.au/audio/hls/localmelbourne.m3u8?source=web"
     ],
     "added": "2026-10-25",
-    "where": "Australia"
+    "where": "Australia",
+    "br": [
+      82
+    ]
   },
   {
     "id": "wtam-1100-cleveland-ohio",
@@ -429,7 +529,10 @@ window.STATIONS = [
       "https://dispatcher.rndfnk.com/crtve/rneree/main/mp3/high"
     ],
     "added": "2026-10-26",
-    "where": "Spain"
+    "where": "Spain",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ctv-news-audio-channel",
@@ -439,7 +542,10 @@ window.STATIONS = [
       "https://29324.live.streamtheworld.com/TV_CTV_NEWSAAC_SC"
     ],
     "added": "2026-10-26",
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      40
+    ]
   },
   {
     "id": "fresh-105-9-fm-ibadan",
@@ -449,7 +555,10 @@ window.STATIONS = [
       "https://stream.zenolive.com/e9x2n97b9uduv"
     ],
     "added": "2026-10-26",
-    "where": "Nigeria"
+    "where": "Nigeria",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rte-radio-1",
@@ -459,7 +568,10 @@ window.STATIONS = [
       "https://liveaudio.rte.ie/hls-radio/radio1/chunklist.m3u8"
     ],
     "added": "2026-10-27",
-    "where": "Ireland"
+    "where": "Ireland",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-jamaica-94fm",
@@ -469,7 +581,10 @@ window.STATIONS = [
       "https://stream.zeno.fm/cub84trbgy5tv"
     ],
     "added": "2026-10-27",
-    "where": "Jamaica"
+    "where": "Jamaica",
+    "br": [
+      128
+    ]
   },
   {
     "id": "raxies-fm",
@@ -479,7 +594,10 @@ window.STATIONS = [
       "https://stream.zeno.fm/annpmyskb4jtv"
     ],
     "added": "2026-10-27",
-    "where": "Chile"
+    "where": "Chile",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ofm-94-97-fm-bloemfontein",
@@ -499,7 +617,10 @@ window.STATIONS = [
       "https://29308.live.streamtheworld.com/WBBRAMAAC_SC"
     ],
     "added": "2026-10-27",
-    "where": "US"
+    "where": "US",
+    "br": [
+      32
+    ]
   },
   {
     "id": "cgtn-english",
@@ -519,7 +640,10 @@ window.STATIONS = [
       "https://naijafmlagos-atunwadigital.streamguys1.com/naijafmlagos/playlist.m3u8"
     ],
     "added": "2026-10-28",
-    "where": "Nigeria"
+    "where": "Nigeria",
+    "br": [
+      128
+    ]
   },
   {
     "id": "70-s-80-s-90-s-riw-vintage-channel",
@@ -529,7 +653,10 @@ window.STATIONS = [
       "https://stream.laut.fm/70s-80s-90s-riw-vintage-channel"
     ],
     "added": "2026-10-28",
-    "where": "Germany"
+    "where": "Germany",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cbc-radio-one-toronto-on",
@@ -539,7 +666,10 @@ window.STATIONS = [
       "https://17813.live.streamtheworld.com/CBLAFM_CBC_SC"
     ],
     "added": "2026-10-28",
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      128
+    ]
   },
   {
     "id": "630-ched",
@@ -549,7 +679,10 @@ window.STATIONS = [
       "https://corus.leanstream.co/CHEDAM-MP3"
     ],
     "added": "2026-10-28",
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      128
+    ]
   },
   {
     "id": "link-fm-rsa-ec",
@@ -559,7 +692,10 @@ window.STATIONS = [
       "https://de2.streamingpulse.com/ssl/LinkFM"
     ],
     "added": "2026-10-28",
-    "where": "South Africa"
+    "where": "South Africa",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cfrb-news-talk-1010-toronto-on",
@@ -569,7 +705,10 @@ window.STATIONS = [
       "https://29324.live.streamtheworld.com/CFRBAMAAC_SC"
     ],
     "added": "2026-10-28",
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      56
+    ]
   },
   {
     "id": "bloomberg-99-1-105-7-hd2",
@@ -579,7 +718,10 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/WBBRDCAAC.aac"
     ],
     "added": "2026-10-29",
-    "where": "US"
+    "where": "US",
+    "br": [
+      32
+    ]
   },
   {
     "id": "agidigbo-88-7-fm",
@@ -589,7 +731,10 @@ window.STATIONS = [
       "https://agidigbostream.com.ng/radio/8000/radio.mp3"
     ],
     "added": "2026-10-29",
-    "where": "Nigeria"
+    "where": "Nigeria",
+    "br": [
+      128
+    ]
   },
   {
     "id": "wrko-am-680",
@@ -609,7 +754,10 @@ window.STATIONS = [
       "https://stream.audioxi.com/98"
     ],
     "added": "2026-10-29",
-    "where": "Ireland"
+    "where": "Ireland",
+    "br": [
+      192
+    ]
   },
   {
     "id": "fox-news",
@@ -619,7 +767,10 @@ window.STATIONS = [
       "https://247preview.foxnews.com/hls/live/2020027/fncv3preview/primary.m3u8"
     ],
     "added": "2026-10-29",
-    "where": "US"
+    "where": "US",
+    "br": [
+      311
+    ]
   },
   {
     "id": "ifeng",
@@ -639,7 +790,10 @@ window.STATIONS = [
       "https://mmg.streamguys1.com/NhyiraFM-mp3?key=63d8990dfe4438ae984fd70d2d2b4bd31c842c474987bd810ac0e8e0fd62e8cf2015661105cced63ccfdca89a8422ab1"
     ],
     "added": "2026-10-30",
-    "where": "Ghana"
+    "where": "Ghana",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bbc-radio-london",
@@ -659,7 +813,10 @@ window.STATIONS = [
       "https://radio.localstreamgh.com/listen/ahenfie_radio_/radio.mp3"
     ],
     "added": "2026-10-30",
-    "where": "Ghana"
+    "where": "Ghana",
+    "br": [
+      192
+    ]
   },
   {
     "id": "truckers-radio-usa",
@@ -669,7 +826,10 @@ window.STATIONS = [
       "https://streamer.radio.co/s81d30349a/low"
     ],
     "added": "2026-10-31",
-    "where": "US"
+    "where": "US",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-vaticana-english",
@@ -679,7 +839,10 @@ window.STATIONS = [
       "https://radio.vaticannews.va/stream-en"
     ],
     "added": "2026-10-31",
-    "where": "The Holy See"
+    "where": "The Holy See",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cbc-radio-1-ottawa-cbo-fm",
@@ -699,7 +862,10 @@ window.STATIONS = [
       "https://mainradiostreaming.zbc.co.zw:8020/national.mp3"
     ],
     "added": "2026-10-31",
-    "where": "Zimbabwe"
+    "where": "Zimbabwe",
+    "br": [
+      192
+    ]
   },
   {
     "id": "wbez-91-5-chicago-public-radio",
@@ -709,7 +875,10 @@ window.STATIONS = [
       "https://stream.wbez.org/wbez128.mp3"
     ],
     "added": "2026-10-31",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "vob-92-9-fm",
@@ -719,7 +888,10 @@ window.STATIONS = [
       "https://ice66.securenetsystems.net:80/VOB929"
     ],
     "added": "2026-10-31",
-    "where": "Barbados"
+    "where": "Barbados",
+    "br": [
+      48
+    ]
   },
   {
     "id": "arirang-radio",
@@ -739,7 +911,10 @@ window.STATIONS = [
       "https://hongkongstream.axr.online/"
     ],
     "added": "2026-11-01",
-    "where": "Hong Kong"
+    "where": "Hong Kong",
+    "br": [
+      64
+    ]
   },
   {
     "id": "bfm-89-9-malaysia",
@@ -749,7 +924,10 @@ window.STATIONS = [
       "https://22253.live.streamtheworld.com/BFM_SC"
     ],
     "added": "2026-11-01",
-    "where": "Malaysia"
+    "where": "Malaysia",
+    "br": [
+      96
+    ]
   },
   {
     "id": "talksport",
@@ -759,7 +937,10 @@ window.STATIONS = [
       "https://radio.talksport.com/stream"
     ],
     "added": "2026-11-02",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      63
+    ]
   },
   {
     "id": "y-fm",
@@ -769,7 +950,10 @@ window.STATIONS = [
       "https://mbc.thestreamtech.com:7032/index.html"
     ],
     "added": "2026-11-02",
-    "where": "Sri Lanka"
+    "where": "Sri Lanka",
+    "br": [
+      64
+    ]
   },
   {
     "id": "2gb-873-sydney",
@@ -779,7 +963,10 @@ window.STATIONS = [
       "https://28093.live.streamtheworld.com/2GBAAC_O/HLS/playlist.m3u8"
     ],
     "added": "2026-11-02",
-    "where": "Australia"
+    "where": "Australia",
+    "br": [
+      48
+    ]
   },
   {
     "id": "abc-triple-j-queensland-20220701",
@@ -789,7 +976,10 @@ window.STATIONS = [
       "https://mediaserviceslive.akamaized.net/hls/live/2038347/triplejqld/masterhq.m3u8"
     ],
     "added": "2026-11-02",
-    "where": "Australia"
+    "where": "Australia",
+    "br": [
+      140
+    ]
   },
   {
     "id": "gb-news-uk-48k-eaac",
@@ -799,7 +989,10 @@ window.STATIONS = [
       "https://listen-gbnews.sharp-stream.com/gbnews.aac"
     ],
     "added": "2026-11-02",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      127
+    ]
   },
   {
     "id": "fabulous-103",
@@ -809,7 +1002,10 @@ window.STATIONS = [
       "https://fabulous.thailandstreaming.net/fabulous.mp3"
     ],
     "added": "2026-11-02",
-    "where": "Thailand"
+    "where": "Thailand",
+    "br": [
+      224
+    ]
   },
   {
     "id": "deutsche-welle-radio",
@@ -819,7 +1015,10 @@ window.STATIONS = [
       "https://dw.audiostream.io/dw/1027/mp3/64/dw08"
     ],
     "added": "2026-11-02",
-    "where": "Germany"
+    "where": "Germany",
+    "br": [
+      64
+    ]
   },
   {
     "id": "npr-news-radio-107-7-fm",
@@ -829,7 +1028,10 @@ window.STATIONS = [
       "https://npr-ice.streamguys1.com/live.aac"
     ],
     "added": "2026-11-02",
-    "where": "Saudi Arabia"
+    "where": "Saudi Arabia",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radiumfm-world",
@@ -839,7 +1041,10 @@ window.STATIONS = [
       "https://stream.radiumfm.com/world"
     ],
     "added": "2026-11-02",
-    "where": "Antarctica"
+    "where": "Antarctica",
+    "br": [
+      128
+    ]
   },
   {
     "id": "lbc-london-news",
@@ -849,7 +1054,10 @@ window.STATIONS = [
       "https://media-ice.musicradio.com/LBC1152"
     ],
     "added": "2026-11-03",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      48
+    ]
   },
   {
     "id": "dreamstar-radio-ksa-94-3-fm",
@@ -859,7 +1067,10 @@ window.STATIONS = [
       "https://stream.zeno.fm/h0y9yu8hzk8uv"
     ],
     "added": "2026-11-03",
-    "where": "Saudi Arabia"
+    "where": "Saudi Arabia",
+    "br": [
+      128
+    ]
   },
   {
     "id": "4bc-brisbane-882-am",
@@ -869,7 +1080,10 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/4BC.mp3"
     ],
     "added": "2026-11-03",
-    "where": "Australia"
+    "where": "Australia",
+    "br": [
+      96
+    ]
   },
   {
     "id": "al-jazeera-english-live",
@@ -879,7 +1093,10 @@ window.STATIONS = [
       "https://live-hls-web-aje-gcp.thehlive.com/AJE/index.m3u8"
     ],
     "added": "2026-11-03",
-    "where": "Qatar"
+    "where": "Qatar",
+    "br": [
+      429
+    ]
   },
   {
     "id": "dw-english-hd",
@@ -889,7 +1106,10 @@ window.STATIONS = [
       "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8"
     ],
     "added": "2026-11-03",
-    "where": "Germany"
+    "where": "Germany",
+    "br": [
+      1061
+    ]
   },
   {
     "id": "612-abc-brisbane",
@@ -899,7 +1119,10 @@ window.STATIONS = [
       "https://streaming.abc-cdn.net.au/audio/hls/localbrisbane.m3u8?source=web"
     ],
     "added": "2026-11-03",
-    "where": "Australia"
+    "where": "Australia",
+    "br": [
+      82
+    ]
   },
   {
     "id": "bbc-sounds-news",
@@ -909,7 +1132,10 @@ window.STATIONS = [
       "https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/pc_hd_abr_v2/ak/bbc_sounds_news.m3u8"
     ],
     "added": "2026-11-04",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      102
+    ]
   },
   {
     "id": "capricorn-fm",
@@ -929,7 +1155,10 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/MONOCLE_24.mp3"
     ],
     "added": "2026-11-04",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      192
+    ]
   },
   {
     "id": "2sm-srn-sydney",
@@ -939,7 +1168,10 @@ window.STATIONS = [
       "https://cast4.asurahosting.com/proxy/2sm1269/stream"
     ],
     "added": "2026-11-04",
-    "where": "Australia"
+    "where": "Australia",
+    "br": [
+      32
+    ]
   },
   {
     "id": "730-cknw",
@@ -949,7 +1181,10 @@ window.STATIONS = [
       "https://corus.leanstream.co/CKNWAM-MP3?type=.mp3&playertype=dplayer"
     ],
     "added": "2026-11-04",
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      128
+    ]
   },
   {
     "id": "whyy-90-9-philadelphia-pa",
@@ -959,7 +1194,10 @@ window.STATIONS = [
       "https://whyy.streamguys1.com/whyy-mp3"
     ],
     "added": "2026-11-04",
-    "where": "US"
+    "where": "US",
+    "br": [
+      64
+    ]
   },
   {
     "id": "qbs-radio-97-5",
@@ -969,7 +1207,10 @@ window.STATIONS = [
       "https://live.kwikmotion.com/qmcqbsradiolive/qbsradio/playlist.m3u8"
     ],
     "added": "2026-11-05",
-    "where": "Qatar"
+    "where": "Qatar",
+    "br": [
+      128
+    ]
   },
   {
     "id": "6pr-perth-882-am",
@@ -979,7 +1220,10 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/6PR.mp3"
     ],
     "added": "2026-11-05",
-    "where": "Australia"
+    "where": "Australia",
+    "br": [
+      48
+    ]
   },
   {
     "id": "newstalk-zb-christchurch",
@@ -989,7 +1233,10 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/NZME_41AAC.m3u8"
     ],
     "added": "2026-11-05",
-    "where": "New Zealand"
+    "where": "New Zealand",
+    "br": [
+      64
+    ]
   },
   {
     "id": "cbc-north-iqaluit-nu",
@@ -999,7 +1246,10 @@ window.STATIONS = [
       "https://27033.live.streamtheworld.com/CFFBAM_CBC_SC"
     ],
     "added": "2026-11-05",
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      128
+    ]
   },
   {
     "id": "abc-classic-fm-20220701",
@@ -1009,7 +1259,10 @@ window.STATIONS = [
       "https://mediaserviceslive.akamaized.net/hls/live/2038316/classicfmnsw/masterhq.m3u8"
     ],
     "added": "2026-11-05",
-    "where": "Australia"
+    "where": "Australia",
+    "br": [
+      140
+    ]
   },
   {
     "id": "cbc-radio-one-winnipeg-mb",
@@ -1019,7 +1272,10 @@ window.STATIONS = [
       "https://22983.live.streamtheworld.com/CBWAM_CBC_SC"
     ],
     "added": "2026-11-05",
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bbc-radio-ulster",
@@ -1039,7 +1295,10 @@ window.STATIONS = [
       "https://cbcradiolive.akamaized.net/hls/live/2041039/ES_R1MCG/master.m3u8"
     ],
     "added": "2026-11-06",
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      48
+    ]
   },
   {
     "id": "albania-360-radio",
@@ -1049,7 +1308,10 @@ window.STATIONS = [
       "https://radio.albania360.net/listen/albania_360_radio/radio.mp3"
     ],
     "added": "2026-11-06",
-    "where": "Albania"
+    "where": "Albania",
+    "br": [
+      192
+    ]
   },
   {
     "id": "cbc-radio-one-vancouver-bc",
@@ -1059,7 +1321,10 @@ window.STATIONS = [
       "https://22983.live.streamtheworld.com/CBU2FM_CBC_SC"
     ],
     "added": "2026-11-06",
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      128
+    ]
   },
   {
     "id": "98-4-capital-fm",
@@ -1069,7 +1334,10 @@ window.STATIONS = [
       "https://atunwadigital.streamguys1.com/capitalfm"
     ],
     "added": "2026-11-06",
-    "where": "Kenya"
+    "where": "Kenya",
+    "br": [
+      128
+    ]
   },
   {
     "id": "107-3-bbc-radio-uganda",
@@ -1079,7 +1347,10 @@ window.STATIONS = [
       "https://stream.live.vc.bbcmedia.co.uk/bbc_world_service_west_africa"
     ],
     "added": "2026-11-06",
-    "where": "Uganda"
+    "where": "Uganda",
+    "br": [
+      56
+    ]
   },
   {
     "id": "capital-radio",
@@ -1089,7 +1360,10 @@ window.STATIONS = [
       "https://capitalradio.radioca.st/stream"
     ],
     "added": "2026-11-07",
-    "where": "United Republic Of Tanzania"
+    "where": "United Republic Of Tanzania",
+    "br": [
+      64
+    ]
   },
   {
     "id": "102-5-abc-perth",
@@ -1099,7 +1373,10 @@ window.STATIONS = [
       "https://streaming.abc-cdn.net.au/audio/hls/localperth.m3u8?source=web"
     ],
     "added": "2026-11-07",
-    "where": "Australia"
+    "where": "Australia",
+    "br": [
+      82
+    ]
   },
   {
     "id": "newstalk-zb-wellington",
@@ -1109,7 +1386,10 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/NZME_31AAC.m3u8"
     ],
     "added": "2026-11-07",
-    "where": "New Zealand"
+    "where": "New Zealand",
+    "br": [
+      64
+    ]
   },
   {
     "id": "2gb-sydney-873-am",
@@ -1119,7 +1399,10 @@ window.STATIONS = [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/2GB.mp3"
     ],
     "added": "2026-11-07",
-    "where": "Australia"
+    "where": "Australia",
+    "br": [
+      48
+    ]
   },
   {
     "id": "ecr-east-coast-radio-kwazulu-natal",
@@ -1129,7 +1412,10 @@ window.STATIONS = [
       "https://edge.iono.fm/xice/ecr_live_medium.aac"
     ],
     "added": "2026-11-07",
-    "where": "South Africa"
+    "where": "South Africa",
+    "br": [
+      48
+    ]
   },
   {
     "id": "abc-radio-melbourne",
@@ -1139,7 +1425,10 @@ window.STATIONS = [
       "https://mediaserviceslive.akamaized.net/hls/live/2038300/localmelbourne/masterhq.m3u8"
     ],
     "added": "2026-11-07",
-    "where": "Australia"
+    "where": "Australia",
+    "br": [
+      82
+    ]
   },
   {
     "id": "rri-voice-of-indonesia",
@@ -1149,7 +1438,10 @@ window.STATIONS = [
       "https://stream-node0.rri.co.id/streaming/25/9125/voi.mp3"
     ],
     "added": "2026-11-08",
-    "where": "Indonesia"
+    "where": "Indonesia",
+    "br": [
+      128
+    ]
   },
   {
     "id": "702-abc-sydney",
@@ -1159,7 +1451,10 @@ window.STATIONS = [
       "https://streaming.abc-cdn.net.au/audio/hls/localsydney.m3u8?source=web"
     ],
     "added": "2026-11-08",
-    "where": "Australia"
+    "where": "Australia",
+    "br": [
+      82
+    ]
   },
   {
     "id": "bbc-tv",
@@ -1169,7 +1464,10 @@ window.STATIONS = [
       "https://stream.live.vc.bbcmedia.co.uk/bbc_world_service?s=1619733260&e=1619747660&h=f8bc47f18c4b24de16cf2efa7951f91d"
     ],
     "added": "2026-11-08",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      56
+    ]
   },
   {
     "id": "fumba-town-radio",
@@ -1179,7 +1477,10 @@ window.STATIONS = [
       "https://stream.perspektiveausland.app/listen/fumba_town_radio/radio.mp3"
     ],
     "added": "2026-11-08",
-    "where": "United Republic Of Tanzania"
+    "where": "United Republic Of Tanzania",
+    "br": [
+      128
+    ]
   },
   {
     "id": "99-5-dzyw-koolfm",
@@ -1189,7 +1490,10 @@ window.STATIONS = [
       "https://listen.smilemediaph.com/listen/koolfm/radio.mp3"
     ],
     "added": "2026-11-08",
-    "where": "The Philippines"
+    "where": "The Philippines",
+    "br": [
+      128
+    ]
   },
   {
     "id": "abc-radio-australia",
@@ -1199,7 +1503,10 @@ window.STATIONS = [
       "https://mediaserviceslive.akamaized.net/hls/live/2038266/ramulti/masterhq.m3u8"
     ],
     "added": "2026-11-08",
-    "where": "Australia"
+    "where": "Australia",
+    "br": [
+      82
+    ]
   },
   {
     "id": "whbe-espn-louisville",
@@ -1219,7 +1526,10 @@ window.STATIONS = [
       "https://wunc-ice.streamguys1.com/wunc-128-mp3"
     ],
     "added": "2026-11-09",
-    "where": "US"
+    "where": "US",
+    "br": [
+      56
+    ]
   },
   {
     "id": "zifm-stereo",
@@ -1239,7 +1549,10 @@ window.STATIONS = [
       "https://stream85.polskieradio.pl/pr5/pr5.sdp/playlist.m3u8"
     ],
     "added": "2026-11-09",
-    "where": "Poland"
+    "where": "Poland",
+    "br": [
+      131
+    ]
   },
   {
     "id": "nettalk-america",
@@ -1249,7 +1562,10 @@ window.STATIONS = [
       "https://stream.zeno.fm/st9bhqvgvceuv"
     ],
     "added": "2026-11-09",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "talkradio",
@@ -1259,7 +1575,10 @@ window.STATIONS = [
       "https://radio.talkradio.co.uk/stream"
     ],
     "added": "2026-11-09",
-    "where": "Uganda"
+    "where": "Uganda",
+    "br": [
+      63
+    ]
   },
   {
     "id": "talk-radio-europe",
@@ -1269,7 +1588,10 @@ window.STATIONS = [
       "https://s3.yesstreaming.net:7014/stream"
     ],
     "added": "2026-11-09",
-    "where": "Spain"
+    "where": "Spain",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cbc-radio-one-ottawa-on",
@@ -1279,7 +1601,10 @@ window.STATIONS = [
       "https://26733.live.streamtheworld.com/CBOFM_CBC_SC"
     ],
     "added": "2026-11-09",
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      128
+    ]
   },
   {
     "id": "npr-program-stream",
@@ -1289,7 +1614,10 @@ window.STATIONS = [
       "https://npr-hls.streamguys1.com/npr/live.aac/playlist.m3u8"
     ],
     "added": "2026-11-09",
-    "where": "US"
+    "where": "US",
+    "br": [
+      64
+    ]
   },
   {
     "id": "cbc-radio-one-prince-george-bc",
@@ -1299,7 +1627,10 @@ window.STATIONS = [
       "https://27033.live.streamtheworld.com/CBYGFM_CBC_SC"
     ],
     "added": "2026-11-10",
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      128
+    ]
   },
   {
     "id": "afn-360-naples",
@@ -1309,7 +1640,10 @@ window.STATIONS = [
       "https://23623.live.streamtheworld.com/AFNE_NAP_SC"
     ],
     "added": "2026-11-10",
-    "where": "Italy"
+    "where": "Italy",
+    "br": [
+      96
+    ]
   },
   {
     "id": "chqr-770-global-news-radio-calgary-ab",
@@ -1319,7 +1653,10 @@ window.STATIONS = [
       "https://live.leanstream.co/CHQRAM-MP3"
     ],
     "added": "2026-11-10",
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      128
+    ]
   },
   {
     "id": "96-6-sky-abc-radio",
@@ -1329,7 +1666,10 @@ window.STATIONS = [
       "https://cast.skyradio105.com/proxy/skyradio105/stream"
     ],
     "added": "2026-11-10",
-    "where": "Saudi Arabia"
+    "where": "Saudi Arabia",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cbc-radio-one-thunder-bay-on",
@@ -1339,7 +1679,10 @@ window.STATIONS = [
       "https://17813.live.streamtheworld.com/CBQTFM_CBC_SC"
     ],
     "added": "2026-11-10",
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      128
+    ]
   },
   {
     "id": "105fm",
@@ -1349,7 +1692,10 @@ window.STATIONS = [
       "https://105fm.espiv.net/listen/105fm/stream.mp3"
     ],
     "added": "2026-11-10",
-    "where": "Greece"
+    "where": "Greece",
+    "br": [
+      320
+    ]
   },
   {
     "id": "pordeus-fm",
@@ -1359,7 +1705,10 @@ window.STATIONS = [
       "https://stream.zenolive.com/92ptm8uua2zuv.aac"
     ],
     "added": "2026-11-11",
-    "where": "Brazil"
+    "where": "Brazil",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cjad-800",
@@ -1380,7 +1729,10 @@ window.STATIONS = [
       "https://rogers-hls.leanstream.co/rogers/tor680.stream/playlist.m3u8"
     ],
     "added": "2026-11-11",
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      47
+    ]
   },
   {
     "id": "kpub-npr-arizona",
@@ -1390,7 +1742,10 @@ window.STATIONS = [
       "https://knau.streamguys1.com/kpub-mp3"
     ],
     "added": "2026-11-12",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "702-johannesburg",
@@ -1400,7 +1755,10 @@ window.STATIONS = [
       "https://28573.live.streamtheworld.com/FM702_SC"
     ],
     "added": "2026-11-12",
-    "where": "South Africa"
+    "where": "South Africa",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-stella-toscana",
@@ -1410,7 +1768,10 @@ window.STATIONS = [
       "https://stream4.xdevel.com/audio0s975906-620/stream/icecast.audio"
     ],
     "added": "2026-11-12",
-    "where": "Italy"
+    "where": "Italy",
+    "br": [
+      128
+    ]
   },
   {
     "id": "star-fm-95-5-cebu",
@@ -1421,7 +1782,11 @@ window.STATIONS = [
       "https://stream.zeno.fm/60cb36c29heuv"
     ],
     "added": "2026-11-12",
-    "where": "The Philippines"
+    "where": "The Philippines",
+    "br": [
+      96,
+      96
+    ]
   },
   {
     "id": "info-radio-ghana",
@@ -1431,7 +1796,10 @@ window.STATIONS = [
       "https://stream.zeno.fm/ey34mac27vzuv"
     ],
     "added": "2026-11-12",
-    "where": "Ghana"
+    "where": "Ghana",
+    "br": [
+      64
+    ]
   },
   {
     "id": "ckut-90-3-fm",
@@ -1441,7 +1809,10 @@ window.STATIONS = [
       "https://ckut.out.airtime.pro/ckut_a"
     ],
     "added": "2026-11-12",
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      192
+    ]
   },
   {
     "id": "china-radio-1",
@@ -1461,7 +1832,10 @@ window.STATIONS = [
       "https://stream.zeno.fm/qvudrrg5tasvv"
     ],
     "added": "2026-11-13",
-    "where": "Nigeria"
+    "where": "Nigeria",
+    "br": [
+      128
+    ]
   },
   {
     "id": "knkx",
@@ -1471,7 +1845,10 @@ window.STATIONS = [
       "https://knkx-live-a.edge.audiocdn.com/6284_128k"
     ],
     "added": "2026-11-13",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rthk-radio-3",
@@ -1481,7 +1858,10 @@ window.STATIONS = [
       "https://rthkradio3-live.akamaized.net/hls/live/2040079/radio3/master.m3u8"
     ],
     "added": "2026-11-13",
-    "where": "Hong Kong"
+    "where": "Hong Kong",
+    "br": [
+      70
+    ]
   },
   {
     "id": "cape-talk",
@@ -1491,7 +1871,10 @@ window.STATIONS = [
       "https://25553.live.streamtheworld.com/CAPE_TALK_SC"
     ],
     "added": "2026-11-13",
-    "where": "South Africa"
+    "where": "South Africa",
+    "br": [
+      64
+    ]
   },
   {
     "id": "94-9-news-now",
@@ -1501,7 +1884,10 @@ window.STATIONS = [
       "https://crystalout.surfernetwork.com:8001/WJJF-FM_MP3"
     ],
     "added": "2026-11-13",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

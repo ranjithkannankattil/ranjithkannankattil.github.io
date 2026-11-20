@@ -16,6 +16,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://radio.mslivecdn.com:6278/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -24,6 +27,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.ap9fm.in/radio/8000/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -32,6 +38,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio032/playlist.m3u8"
+    ],
+    "br": [
+      95
     ]
   },
   {
@@ -40,6 +49,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudioragam/hlspbaudioragam_Auto.m3u8"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -56,6 +68,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://radio.universalhealthradio.org/uhr-te.mp3"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -64,6 +79,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://radio.shaivam.org/listen/shaiva-lahari/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -98,8 +116,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/5d9989b5189a8f4a/5d9989b5189a8f4a.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "akashvani-tirupati",
@@ -108,8 +125,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/1119aa26b4e9f653/1119aa26b4e9f653.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "fm-rainbow-visakhapatnam",
@@ -127,7 +143,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.aiir.com/dbv0rxpwp6ytv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      320
+    ]
   },
   {
     "id": "akashvani-markapur",
@@ -136,8 +155,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/b11784e3b37b7620/b11784e3b37b7620.m3u8"
     ],
-    "added": "2026-10-27",
-    "offline": true
+    "added": "2026-10-27"
   },
   {
     "id": "akashvani-visakhapatnam",
@@ -155,8 +173,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/8bc9175bb717c13b/8bc9175bb717c13b.m3u8"
     ],
-    "added": "2026-10-28",
-    "offline": true
+    "added": "2026-10-28"
   },
   {
     "id": "voice-of-truth-radio-telugu",
@@ -165,7 +182,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.truth.fm:8000/telugu"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "translation-of-the-quran-in-telugu",
@@ -174,7 +194,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8130/;"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "oye-radio",
@@ -183,7 +206,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.oye.radio/listen/oye_radio/radio.mp3"
     ],
-    "added": "2026-11-10"
+    "added": "2026-11-10",
+    "br": [
+      192
+    ]
   },
   {
     "id": "akashvani-kothagudem",
@@ -192,8 +218,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/8416764ec0889597/8416764ec0889597.m3u8"
     ],
-    "added": "2026-11-13",
-    "offline": true
+    "added": "2026-11-13"
   },
   {
     "id": "akashvani-warangal",
@@ -202,8 +227,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/deae7120a205bfff/deae7120a205bfff.m3u8"
     ],
-    "added": "2026-11-13",
-    "offline": true
+    "added": "2026-11-13"
   },
   {
     "id": "akashvani-anantapur",
@@ -212,8 +236,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/3bcd83926d6c3cca/3bcd83926d6c3cca.m3u8"
     ],
-    "added": "2026-11-13",
-    "offline": true
+    "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

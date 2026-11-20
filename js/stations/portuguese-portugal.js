@@ -10,6 +10,11 @@ window.STATIONS = [
       "https://23603.live.streamtheworld.com/RFMAAC.aac",
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RFMAAC_SC",
       "https://22593.live.streamtheworld.com/RFMAAC.aac"
+    ],
+    "br": [
+      64,
+      64,
+      64
     ]
   },
   {
@@ -18,6 +23,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://directo.tsf.pt/tsfdirecto.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -27,6 +35,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-icy.bauermedia.pt/comercial.mp3",
       "https://stream-icy.bauermedia.pt/rctuga.aac"
+    ],
+    "br": [
+      128,
+      127
     ]
   },
   {
@@ -35,6 +47,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://25583.live.streamtheworld.com/MEGA_HITS_SC"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -43,6 +58,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-icy.bauermedia.pt/m8080.aac"
+    ],
+    "br": [
+      127
     ]
   },
   {
@@ -51,6 +69,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://29345.live.streamtheworld.com/RADIO_RENASCENCA_SC"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -59,6 +80,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://23543.live.streamtheworld.com/OCEANPACIFICAAC.aac"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -68,6 +92,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-icy.bauermedia.pt/m80.mp3",
       "https://stream-icy.bauermedia.pt/m80.aac"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -76,6 +104,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://80.streeemer.com/listen/80s/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -84,6 +115,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.streemlion.com:1150/stream"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -93,7 +127,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
     ],
-    "offline": true
+    "offline": true,
+    "br": [
+      171
+    ]
   },
   {
     "id": "m80-radio-ballads",
@@ -101,6 +138,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-icy.bauermedia.pt/m80ballads.aac"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -109,6 +149,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nl.digitalrm.pt:8048/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -117,6 +160,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-icy.bauermedia.pt/m80nacional.aac"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -125,6 +171,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-icy.bauermedia.pt/m8060.aac"
+    ],
+    "br": [
+      127
     ]
   },
   {
@@ -141,6 +190,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://27793.live.streamtheworld.com/RFM_PORTUGALAAC.aac"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -149,6 +201,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiocast.rtp.pt/antena180a.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -157,6 +212,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://proic1.evspt.com/oxigenio_aac"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -165,6 +223,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-icy.bauermedia.pt/cidade.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -173,6 +234,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-icy.bauermedia.pt/rckids.aac"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -181,6 +245,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-new.deepmix.net/deep-mix-radio-320.mp3"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -189,6 +256,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-icy.bauermedia.pt/smooth.aac"
+    ],
+    "br": [
+      127
     ]
   },
   {
@@ -197,6 +267,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiocast.rtp.pt/antena380a.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -206,6 +279,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8",
       "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8"
+    ],
+    "br": [
+      173,
+      173
     ]
   },
   {
@@ -214,6 +291,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sp0.redeaudio.com/8154/stream"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -222,6 +302,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiocast.rtp.pt/antena1fado80a.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -231,7 +314,9 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
     ],
-    "offline": true
+    "br": [
+      184
+    ]
   },
   {
     "id": "cidade-fm-2",
@@ -239,6 +324,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-hls.bauermedia.pt/cidade.aac/playlist.m3u8"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -247,6 +335,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ec2.yesstreaming.net:3025/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -255,6 +346,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s4.radio.co/s7e7b6c165/listen"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -263,6 +357,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://default.benficaplay.cdn.videokit.cloud/out/v1/benficaplay-default/benficaplay_benficaplay-radio_08de155dbd06_audio/benficaplay_benficaplay-radio_08de155dbd06_hls/benficaplay-radio-hls.m3u8"
+    ],
+    "br": [
+      7500
     ]
   },
   {
@@ -271,6 +368,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.streemlion.com:4870/stream"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -280,6 +380,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8",
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
+    ],
+    "br": [
+      259,
+      262
     ]
   },
   {
@@ -288,6 +392,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radios2.justweb.pt/8054/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -296,6 +403,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sp0.redeaudio.com:10977/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -304,6 +414,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://smartmedia.stmxp.net:8068/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -312,6 +425,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.streamaudio.de:8000/radio-dom-bosco-fm"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -320,6 +436,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-icy.bauermedia.pt/smoothsoul.aac"
+    ],
+    "br": [
+      127
     ]
   },
   {
@@ -328,6 +447,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://2000.streeemer.com/listen/2000s/radio.aac"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -337,7 +459,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-hls.bauermedia.pt/comercial.aac/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      127
+    ]
   },
   {
     "id": "rdp-africa-portugal",
@@ -347,7 +472,9 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/rdpafrica80a/playlist.m3u8"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "br": [
+      194
+    ]
   },
   {
     "id": "antena-1-acores-portugal",
@@ -356,7 +483,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena1acores80a/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      194
+    ]
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -365,7 +495,10 @@ window.STATIONS = [
     "streams": [
       "https://audio.serv.pt/8012/stream.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-orbital",
@@ -375,7 +508,9 @@ window.STATIONS = [
       "https://centova.radio.com.pt/proxy/401?mp=/stream"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-paralelo",
@@ -384,7 +519,10 @@ window.STATIONS = [
     "streams": [
       "https://radioparalelo.indymedia.pt/listen/paralelo/radio.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "rfm-latinas",
@@ -393,7 +531,10 @@ window.STATIONS = [
     "streams": [
       "https://25693.live.streamtheworld.com/RFM_LATINASAAC.aac"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-nova-era",
@@ -403,7 +544,9 @@ window.STATIONS = [
       "https://centova.radio.com.pt/proxy/478?mp=/stream"
     ],
     "added": "2026-10-23",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-renascenca-2",
@@ -412,7 +555,10 @@ window.STATIONS = [
     "streams": [
       "https://22593.live.streamtheworld.com/RADIO_RENASCENCAAAC.aac"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      64
+    ]
   },
   {
     "id": "antena-2-opera",
@@ -421,7 +567,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena2opera80a/playlist.m3u8"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      167
+    ]
   },
   {
     "id": "radio-observador",
@@ -430,7 +579,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/OBSERVADORAAC.aac?dist=web-popup&devicename=aac"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      96
+    ]
   },
   {
     "id": "radio-elvas",
@@ -439,7 +591,10 @@ window.STATIONS = [
     "streams": [
       "https://radios2.justweb.pt:8066/stream?type=http&nocache=297"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cantinho-dos-emigrantes",
@@ -448,7 +603,10 @@ window.STATIONS = [
     "streams": [
       "https://cast.redewt.net:9825/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "m80-radio-pop",
@@ -457,7 +615,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-icy.bauermedia.pt/m80pop.aac"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ruc-radio-universidade-de-coimbra",
@@ -466,7 +627,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.ruc.pt/high"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      256
+    ]
   },
   {
     "id": "m80-radio-dance",
@@ -475,7 +639,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-icy.bauermedia.pt/m80dance.aac"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      127
+    ]
   },
   {
     "id": "ntr-network-radio",
@@ -484,7 +651,10 @@ window.STATIONS = [
     "streams": [
       "https://is.ntradio.pt/ntr"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-amor-portugal",
@@ -493,7 +663,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radioamorportugal.com:8443/rap.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-onda-azul",
@@ -502,7 +675,10 @@ window.STATIONS = [
     "streams": [
       "https://ecmanager4.pro-fhi.net:1540/stream"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      192
+    ]
   },
   {
     "id": "metalon-the-heavy",
@@ -511,7 +687,10 @@ window.STATIONS = [
     "streams": [
       "https://radiometalon.com/radio/8000/radio.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-movimento",
@@ -520,7 +699,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.rcast.net/61025"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "nove3cinco",
@@ -530,7 +712,9 @@ window.STATIONS = [
       "https://centova.radio.com.pt/proxy/522?mp=/stream&1715267171"
     ],
     "added": "2026-10-25",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "m80-radio-90s",
@@ -539,7 +723,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-icy.bauermedia.pt/m8090.aac"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-xl",
@@ -548,7 +735,10 @@ window.STATIONS = [
     "streams": [
       "https://radios.justweb.pt/8002/stream"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "m80-radio-rock",
@@ -557,7 +747,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-icy.bauermedia.pt/m80rock.aac"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-clube-pacos-de-ferreira-101-8-fm",
@@ -566,7 +759,10 @@ window.STATIONS = [
     "streams": [
       "https://servidor15-3.brlogic.com:7088/live?source=15118"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      96
+    ]
   },
   {
     "id": "radio-comercial-rock",
@@ -575,7 +771,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-icy.bauermedia.pt/rcrock.aac"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "smooth-jazz-portugal",
@@ -584,7 +783,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-hls.bauermedia.pt/smojazz.aac/playlist.m3u8"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "m80-radio-indie",
@@ -593,7 +795,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-icy.bauermedia.pt/m80indie.aac"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      127
+    ]
   },
   {
     "id": "00-s-rfm",
@@ -602,7 +807,10 @@ window.STATIONS = [
     "streams": [
       "https://27793.live.streamtheworld.com/LIVESTREAMAAC.aac"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      64
+    ]
   },
   {
     "id": "76-8-oceano-pacifico",
@@ -611,7 +819,10 @@ window.STATIONS = [
     "streams": [
       "https://cp-1.owh.radio.br/listen/owh_s35225/radio-mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      96
+    ]
   },
   {
     "id": "mrr-manitu-rock-radio",
@@ -620,7 +831,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.streemlion.com:4515/stream"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rds-romantica",
@@ -629,7 +843,10 @@ window.STATIONS = [
     "streams": [
       "https://s9.yesstreaming.net:9066/stream"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      320
+    ]
   },
   {
     "id": "cidade-hiphop",
@@ -638,7 +855,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-hls.bauermedia.pt/cidhiphop.aac/playlist.m3u8"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      127
+    ]
   },
   {
     "id": "nitfm",
@@ -647,7 +867,10 @@ window.STATIONS = [
     "streams": [
       "https://sp0.redeaudio.com/8028/stream/"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-comercial-dance",
@@ -656,7 +879,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-icy.bauermedia.pt/rcdance.aac"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      127
+    ]
   },
   {
     "id": "radio-maria-portugal",
@@ -665,7 +891,10 @@ window.STATIONS = [
     "streams": [
       "https://dreamsiteradiocp5.com/proxy/rmportugal1?mp=/stream"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-medio-tejo",
@@ -674,7 +903,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.expandenarrativa.pt/radio"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "2000-comercial-online-lisboa-portugal",
@@ -683,7 +915,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-hls.bauermedia.pt/rcbest2000.aac/playlist.m3u8"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      127
+    ]
   },
   {
     "id": "estacao-diaria-radio-viseu-96-8-fm",
@@ -693,7 +928,9 @@ window.STATIONS = [
       "https://centova.radio.com.pt/proxy/430?mp=/stream"
     ],
     "added": "2026-10-28",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-algoritmo",
@@ -702,7 +939,10 @@ window.STATIONS = [
     "streams": [
       "https://jagsilva.com/stream"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      192
+    ]
   },
   {
     "id": "palavra-antiga-kids",
@@ -711,7 +951,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.palavraantiga.org/listen/kids/radio.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      192
+    ]
   },
   {
     "id": "m80-radio-soul",
@@ -720,7 +963,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-icy.bauermedia.pt/m80soul.aac"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      127
+    ]
   },
   {
     "id": "radio-noar",
@@ -729,7 +975,10 @@ window.STATIONS = [
     "streams": [
       "https://radios.justweb.pt/8034/stream"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-palavra-antiga",
@@ -738,7 +987,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.palavraantiga.org/listen/palavraantiga/radio.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      192
+    ]
   },
   {
     "id": "porao-da-nau-radio",
@@ -747,7 +999,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/rwmao7mxxt8vv"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      32
+    ]
   },
   {
     "id": "radio-biblia",
@@ -756,7 +1011,10 @@ window.STATIONS = [
     "streams": [
       "https://servidor30-4.brlogic.com:7398/live?source=website"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-metal-on-toxic",
@@ -765,7 +1023,10 @@ window.STATIONS = [
     "streams": [
       "https://radiometalon.com/listen/radio_metal_on_toxic/radio.mp3"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      192
+    ]
   },
   {
     "id": "noite-fm",
@@ -774,7 +1035,10 @@ window.STATIONS = [
     "streams": [
       "https://servidor.noite.pt:9002/stream"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      320
+    ]
   },
   {
     "id": "rio-radio-internacional-odemira",
@@ -783,7 +1047,10 @@ window.STATIONS = [
     "streams": [
       "https://hts02.brascast.com:10476/live"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-record-porto",
@@ -792,7 +1059,10 @@ window.STATIONS = [
     "streams": [
       "https://nl.digitalrm.pt:8028/stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "batida-fm",
@@ -801,7 +1071,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-icy.rayo.pt/batidafm.mp3?direct=true"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "msfs-radio",
@@ -810,7 +1083,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.msfsradio.com/listen/msfs/radio.mp3"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-rock-pirata",
@@ -819,7 +1095,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.softshell-octatonic.ts.net/stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      320
+    ]
   },
   {
     "id": "voz-do-neiva",
@@ -828,7 +1107,10 @@ window.STATIONS = [
     "streams": [
       "https://sp0.redeaudio.com/8092/stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-rcp-var",
@@ -837,7 +1119,10 @@ window.STATIONS = [
     "streams": [
       "https://sonic.servsonic.com/8028/stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rfm-dance-it",
@@ -846,7 +1131,10 @@ window.STATIONS = [
     "streams": [
       "https://25453.live.streamtheworld.com/DANCEONTHEFLOORAAC.aac"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      64
+    ]
   },
   {
     "id": "posto-emissor-do-funchal-pef-canal-2-fm",
@@ -856,7 +1144,9 @@ window.STATIONS = [
       "https://centova.radio.com.pt/proxy/426?mp=/stream;"
     ],
     "added": "2026-11-01",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-calheta",
@@ -865,7 +1155,10 @@ window.STATIONS = [
     "streams": [
       "https://player.radiocalheta.pt/listen/radiocalheta/live"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-comercial-natal",
@@ -874,7 +1167,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-icy.bauermedia.pt/rcxmas.aac"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      127
+    ]
   },
   {
     "id": "radio-clube-madeira-106-8-fm",
@@ -883,7 +1179,10 @@ window.STATIONS = [
     "streams": [
       "https://audio.serv.pt/8020/stream.mp3"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-foz-do-mondego",
@@ -892,7 +1191,10 @@ window.STATIONS = [
     "streams": [
       "https://nl.digitalrm.pt:8216/stream"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-vizela",
@@ -901,7 +1203,10 @@ window.STATIONS = [
     "streams": [
       "https://proxy-audio.ptisp.com:8100/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-freguesia-de-belem",
@@ -910,7 +1215,10 @@ window.STATIONS = [
     "streams": [
       "https://s2.radio.co/s0ddea4a53/listen"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      192
+    ]
   },
   {
     "id": "gongas-radio",
@@ -919,7 +1227,10 @@ window.STATIONS = [
     "streams": [
       "https://a6.asurahosting.com:7930/radio.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      192
+    ]
   },
   {
     "id": "97fm-radio-clube-de-pombal",
@@ -929,7 +1240,9 @@ window.STATIONS = [
       "https://centova.radios.com.pt/proxy/410?mp=/stream"
     ],
     "added": "2026-11-02",
-    "offline": true
+    "br": [
+      192
+    ]
   },
   {
     "id": "m80-radio-70s",
@@ -938,7 +1251,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-icy.bauermedia.pt/m8070.aac"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      127
+    ]
   },
   {
     "id": "radio-lafoes-fm",
@@ -947,7 +1263,10 @@ window.STATIONS = [
     "streams": [
       "https://sp0.redeaudio.com/9304/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "total-fm",
@@ -956,7 +1275,10 @@ window.STATIONS = [
     "streams": [
       "https://eu57-sonic.instainternet.com:8068/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "posto-emissor-do-funchal-pef-canal-1-om",
@@ -966,7 +1288,9 @@ window.STATIONS = [
       "https://centova.radio.com.pt/proxy/422?mp=/stream;"
     ],
     "added": "2026-11-02",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-marginal",
@@ -976,7 +1300,11 @@ window.STATIONS = [
       "https://stream-radio-marginal-by.newsgen.io/rmlive.mp3",
       "https://centova.radios.pt/proxy/499?mp=/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128,
+      128
+    ]
   },
   {
     "id": "radio-metal-on-the-heavy",
@@ -985,7 +1313,10 @@ window.STATIONS = [
     "streams": [
       "https://radiometalon.com/listen/radio_metal_on_the_heavy/radio.mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      192
+    ]
   },
   {
     "id": "antena-2-main",
@@ -994,7 +1325,10 @@ window.STATIONS = [
     "streams": [
       "https://radiocast.rtp.pt/antena280a.mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "80rock-pt",
@@ -1003,7 +1337,10 @@ window.STATIONS = [
     "streams": [
       "https://rs2.ptservidor.com:2199/proxy/febrites?mp=/stream"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-fronteira",
@@ -1012,7 +1349,10 @@ window.STATIONS = [
     "streams": [
       "https://radios2.justweb.pt/8074/stream"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-meio-do-mato",
@@ -1021,7 +1361,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.meiodomato.com/stream"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      160
+    ]
   },
   {
     "id": "radio-amigos-do-mundo",
@@ -1030,7 +1373,10 @@ window.STATIONS = [
     "streams": [
       "https://sonic.servsonic.com:7004/stream"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "antenna-2-opera",
@@ -1039,7 +1385,10 @@ window.STATIONS = [
     "streams": [
       "https://radiocast.rtp.pt/antena2opera80a.mp3"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rfm-jazzy",
@@ -1048,7 +1397,10 @@ window.STATIONS = [
     "streams": [
       "https://27753.live.streamtheworld.com/RFM_JAZZYAAC.aac"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-alto-minho",
@@ -1057,7 +1409,10 @@ window.STATIONS = [
     "streams": [
       "https://ec2.yesstreaming.net:3705/stream"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      320
+    ]
   },
   {
     "id": "jovembsk-mix",
@@ -1066,7 +1421,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/4nc1mzdp81xuv"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "jovembsk",
@@ -1075,7 +1433,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/ppgb4k7vhqztv"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-metal-on-the-brutal",
@@ -1084,7 +1445,10 @@ window.STATIONS = [
     "streams": [
       "https://radiometalon.com/listen/radio_metal_on_the_brutal/radio.mp3"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-lusitania",
@@ -1093,7 +1457,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/lusitania80a/playlist.m3u8"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      169
+    ]
   },
   {
     "id": "radio-viseu",
@@ -1102,7 +1469,10 @@ window.STATIONS = [
     "streams": [
       "https://s2.radio.co/sf5c3ab01d/listen"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "jovembsk-dance",
@@ -1111,7 +1481,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/1wux17cbfkcuv"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-marinahais",
@@ -1120,7 +1493,10 @@ window.STATIONS = [
     "streams": [
       "https://radios2.justweb.pt/8052/stream"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rtp-mundo",
@@ -1139,7 +1515,9 @@ window.STATIONS = [
       "https://centova.radios.pt/proxy/404?mp=/stream"
     ],
     "added": "2026-11-05",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-tagide",
@@ -1148,7 +1526,10 @@ window.STATIONS = [
     "streams": [
       "https://azuracast.rhoster.pt/listen/radio_tagide/radio.mp3"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "esr-east-side-radio",
@@ -1157,7 +1538,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.ether.esr.li/esr-ch1.aac"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-metropolitana-portugal",
@@ -1166,7 +1550,10 @@ window.STATIONS = [
     "streams": [
       "https://radios.justweb.pt/8074/stream"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-musgo",
@@ -1184,7 +1571,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/9prct7k8h0hvv"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-metal-on-the-thrasher",
@@ -1193,7 +1583,10 @@ window.STATIONS = [
     "streams": [
       "https://radiometalon.com/listen/radio_metal_on_the_thrasher/radio.mp3"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-rds",
@@ -1202,7 +1595,10 @@ window.STATIONS = [
     "streams": [
       "https://s9.yesstreaming.net:7070/stream"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      320
+    ]
   },
   {
     "id": "antena-3-madeira-portugal",
@@ -1211,7 +1607,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming-live.rtp.pt/liveradio/antena3madeira80a/playlist.m3u8"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      172
+    ]
   },
   {
     "id": "radio-quantica",
@@ -1220,7 +1619,10 @@ window.STATIONS = [
     "streams": [
       "https://libretime.radioquantica.com/main.mp3"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      256
+    ]
   },
   {
     "id": "radialistas-de-viseu",
@@ -1229,7 +1631,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/77r7ufhaz98uv"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-portugal-mais",
@@ -1238,7 +1643,10 @@ window.STATIONS = [
     "streams": [
       "https://sv15.hdradios.net:7432/stream"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rua-fm",
@@ -1248,7 +1656,9 @@ window.STATIONS = [
       "https://centova.radio.com.pt/proxy/037?mp=/stream"
     ],
     "added": "2026-11-08",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "radiofutura-pt",
@@ -1257,7 +1667,10 @@ window.STATIONS = [
     "streams": [
       "https://s4.radio.co/s7e7b6c165/low"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-regional-do-centro",
@@ -1266,7 +1679,10 @@ window.STATIONS = [
     "streams": [
       "https://nl.digitalrm.pt:8030/stream?1671017145140="
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-entermedia",
@@ -1275,7 +1691,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.radioentermedia.com/listen/entermedia/radio.mp3"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-eu-sou-goias",
@@ -1284,7 +1703,10 @@ window.STATIONS = [
     "streams": [
       "https://live9.livemus.com.br:27374/stream"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-fm",
@@ -1293,7 +1715,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RFM.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-popular-de-source",
@@ -1302,7 +1727,10 @@ window.STATIONS = [
     "streams": [
       "https://nl.digitalrm.pt:8072/stream?1671016403075="
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "wave-vibes",
@@ -1311,7 +1739,10 @@ window.STATIONS = [
     "streams": [
       "https://a6.asurahosting.com/listen/wave_vibes/radio.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-sol-madeira-103-7-fm",
@@ -1320,7 +1751,10 @@ window.STATIONS = [
     "streams": [
       "https://audio.serv.pt/8010/stream.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-palmeira-madeira-96-1-fm",
@@ -1329,7 +1763,10 @@ window.STATIONS = [
     "streams": [
       "https://audio.serv.pt/8018/stream.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radar",
@@ -1338,7 +1775,10 @@ window.STATIONS = [
     "streams": [
       "https://proic1.evspt.com/radar_mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      192
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

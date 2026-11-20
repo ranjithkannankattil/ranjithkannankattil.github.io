@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://canli.arabeskinmerkezi.com:9180/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play.asanradio.az/"
+    ],
+    "br": [
+      112
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.itv.az/rtmp:/radio/playlist.m3u8"
+    ],
+    "br": [
+      323
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://myradio24.org/bosscomaz"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -40,6 +52,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.autoliferadio.com:8090/radio"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -48,6 +63,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.livetv.az/yurdfm"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -65,7 +83,9 @@ window.STATIONS = [
     "streams": [
       "https://s40.myradiostream.com/:22546/listen.mp3?"
     ],
-    "offline": true
+    "br": [
+      160
+    ]
   },
   {
     "id": "media-fm-105-5",
@@ -73,6 +93,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.livetv.az/mediafm"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -81,6 +104,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s2.myradiostream.com/5286/listen.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -107,6 +133,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.livetv.az/antennfm"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -115,6 +144,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.livetv.az/mediamugam"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -123,6 +155,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.dinle.az/dalgafm"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -131,6 +166,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.dinle.az/planetfm"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -139,6 +177,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://janya-ayaztv.vgcdn.net/ptnr-WebApp/title-Ayaz_TV/v1/vglive-sk-934820/main.m3u8"
+    ],
+    "br": [
+      800
     ]
   },
   {
@@ -147,6 +188,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.livetv.az/mediajazz"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -155,6 +199,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://trucker.autoliferadio.com:1045/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -163,6 +210,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.livestreamtv.ca/azstar/amlst:azstar/playlist.m3u8"
+    ],
+    "br": [
+      4280
     ]
   },
   {
@@ -181,7 +231,10 @@ window.STATIONS = [
     "streams": [
       "https://audiostr.atv.az/106.3fm"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      192
+    ]
   },
   {
     "id": "translation-of-the-quran-in-azerbaijani",
@@ -190,7 +243,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8386/;"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "106fm",
@@ -199,7 +255,10 @@ window.STATIONS = [
     "streams": [
       "https://audiostr.atv.az/106fm"
     ],
-    "added": "2026-11-19"
+    "added": "2026-11-19",
+    "br": [
+      128
+    ]
   },
   {
     "id": "baku-retro-fm",
@@ -208,7 +267,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.bakuradioalliance.az/retrofm"
     ],
-    "added": "2026-11-19"
+    "added": "2026-11-19",
+    "br": [
+      192
+    ]
   },
   {
     "id": "baku-hit-fm",
@@ -217,7 +279,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.bakuradioalliance.az/hitfm"
     ],
-    "added": "2026-11-19"
+    "added": "2026-11-19",
+    "br": [
+      192
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

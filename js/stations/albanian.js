@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://az1.sednastream.com/radio/8150/Live?1582297952"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://www.rtvpendimi.com:8020/stream"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://cp1.sednastream.com/proxy/alporadio/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-286.surfernetwork.com/nxlpc8voddftv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJueGxwYzh2b2RkZnR2IiwiaG9zdCI6InN0cmVhbS0yODYuc3VyZmVybmV0d29yay5jb20iLCJ0bSI6ZmFsc2UsInJ0dGwiOjUsImp0aSI6IjNaSGpKNG5oUVJhNUJYNnVuajdqV3ciLCJpYXQiOjE3OTI1Mzc1NTMsImV4cCI6MTc5MjUzNzYxM30.0B4LyGIvUsWNtsIp8-6KqHFGEVO1S9A3lALCDHSnIao"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -40,6 +52,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/brc5btguqg8uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -48,6 +63,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/d6v0xkba04zuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -56,6 +74,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s64.radiolize.com/radio/8050/radio.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -64,6 +85,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.nestnews.al/listen/nest-radio/radio.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -72,6 +96,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/vzp9uf0u3ehvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -80,6 +107,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://radio.albania360.net/listen/albania_360_radio/radio.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -88,6 +118,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://fire.doscast.com:8064/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -104,6 +137,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://broadcast.shoutcheap.com/proxy/alban/stream"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -112,6 +148,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://dreamsiteradiocp2.com/proxy/rmalbania7?mp=/stream"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -120,6 +159,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://cp1.sednastream.com/proxy/radioemanuel/stream"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -128,6 +170,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.bisedoshqip.de/radio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -136,6 +181,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/2OOOAAC.aac"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -144,6 +192,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://a8.asurahosting.com:8570/radio.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -152,6 +203,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://a9.asurahosting.com/listen/radio_marimanga/radio.mp3"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -160,7 +214,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radio-zemra.eu/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radionatyra",
@@ -168,6 +223,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://mars.streamerr.co/8266/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -176,6 +234,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiokoha.radioca.st/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -184,6 +245,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://live.radiostreaming.al/9998/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -192,6 +256,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://listen.radioking.com/radio/465815/stream/521297"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -200,6 +267,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play.primeradio.al/primeshqip"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -208,6 +278,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://www.rtvpendimi.com:8014/stream"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -216,6 +289,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radios.albaniadigitalradio.al/albanialoveradio"
+    ],
+    "br": [
+      160
     ]
   },
   {
@@ -224,6 +300,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.radiolushnja.al/listen/radio_lushnja/radio.mp3"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -232,6 +311,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.iradio.pro/proxy/radiojehona?mp=/1"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -240,6 +322,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://onlineradio.cfd/listen/muzeradio/radio.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -248,6 +333,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://a1.asurahosting.com:8780/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -256,6 +344,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.louderhost.com/nrgal"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -264,6 +355,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://live.radiostreaming.al:8002/stream;"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -272,6 +366,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cp1.sednastream.com/proxy/radioshqip/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -280,6 +377,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/ubzj8twgccstv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -288,6 +388,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cp1.sednastream.com/proxy/shqipfolk/live"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -296,6 +399,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://cp1.sednastream.com/proxy/radiosol/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -304,6 +410,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://onair.pulsefm.cloud/listen/pulsefm/pulsefm"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -312,6 +421,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://radio.ngjallja.org/radio_ngjallja"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -320,6 +432,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cp1.sednastream.com/proxy/radioone94?mp=/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -329,7 +444,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.glamradio.fm:8443/glamradio"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-shqip-folklor",
@@ -338,7 +456,8 @@ window.STATIONS = [
     "streams": [
       "https://live.radio-zemra.eu/folklor"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "prime-gold",
@@ -347,7 +466,10 @@ window.STATIONS = [
     "streams": [
       "https://play.primeradio.al/primegold"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      256
+    ]
   },
   {
     "id": "radio-rainca",
@@ -356,7 +478,10 @@ window.STATIONS = [
     "streams": [
       "https://radiocast.ch:8000/stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-dj-98-2",
@@ -365,7 +490,10 @@ window.STATIONS = [
     "streams": [
       "https://radios.albaniadigitalradio.al/albaniaradiodj"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-popullore",
@@ -374,7 +502,10 @@ window.STATIONS = [
     "streams": [
       "https://cp1.sednastream.com/proxy/shqipfolk/stream"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-mergimi",
@@ -383,7 +514,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.radiomergimi.com:8114/stream"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-1",
@@ -401,7 +535,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/vkqjn43uuptuv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-iliria",
@@ -410,7 +547,10 @@ window.STATIONS = [
     "streams": [
       "https://onlineradio.cfd/listen/radio_iliria/radio.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-ejani",
@@ -428,7 +568,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/c7x08ebksg8uv"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-club-bar",
@@ -437,7 +580,10 @@ window.STATIONS = [
     "streams": [
       "https://cp1.sednastream.com/proxy/deephouse/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-4",
@@ -446,7 +592,10 @@ window.STATIONS = [
     "streams": [
       "https://play.4plusmedia.tv/radio.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      192
+    ]
   },
   {
     "id": "lefutur-radio",
@@ -455,7 +604,10 @@ window.STATIONS = [
     "streams": [
       "https://listen.radioking.com/radio/320837/stream/503612"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-club-bar-bit",
@@ -464,7 +616,10 @@ window.STATIONS = [
     "streams": [
       "https://cp1.sednastream.com/proxy/clubbit/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-7",
@@ -473,7 +628,10 @@ window.STATIONS = [
     "streams": [
       "https://rpn.bozztv.com/radio/Med7-RadioTirana/icecast.audio"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "paper-radio",
@@ -482,7 +640,10 @@ window.STATIONS = [
     "streams": [
       "https://business.playfm.al:8170/paperplay"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-dielli",
@@ -491,7 +652,10 @@ window.STATIONS = [
     "streams": [
       "https://radiodielli.synology.me/listen/radiodielli/radio.mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "prime-radio",
@@ -500,7 +664,10 @@ window.STATIONS = [
     "streams": [
       "https://play.primeradio.al/prime"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      256
+    ]
   },
   {
     "id": "truth-fm-albania",
@@ -509,7 +676,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.truth.fm:8000/tfmal"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "translation-of-the-quran-in-albanian",
@@ -518,7 +688,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8116/;"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "chill-albania",
@@ -527,7 +700,10 @@ window.STATIONS = [
     "streams": [
       "https://streams.radiomast.io/346318d3-5312-4a69-8f80-64d75640fd35"
     ],
-    "added": "2026-11-13"
+    "added": "2026-11-13",
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

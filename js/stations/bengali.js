@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiofoorti.fm/api/stream"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/2k6xfu1pvs8uv"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -32,6 +38,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/spqbxkqxdf9uv"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -48,6 +57,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://audio.streamcast.xyz/listen/radiogoongoon/radio.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -56,6 +68,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.mellowbangla.com/stream"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -64,6 +79,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play.dhakafm904.com/;"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -80,6 +98,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/be5bqmk1k18uv"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -88,6 +109,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/xuin6ocdc2juv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -104,6 +128,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SP_R3563475_SC"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -112,6 +139,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://listen.radioking.com/radio/1743/stream/125"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -120,6 +150,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://s3.myradiostream.com:14498/listen.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -128,6 +161,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://radio.universalhealthradio.org/uhr-bn.mp3"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -136,6 +172,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/xush70b1cbruv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -144,6 +183,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/eabgu655puquv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -152,6 +194,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/10rt7tpf6ehvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -177,6 +222,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/krk4kw830tzuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -186,7 +234,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/u7eee0hyzp8uv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "live-fm",
@@ -195,7 +246,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.aiir.com/dbv0rxpwp6ytv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      320
+    ]
   },
   {
     "id": "translation-of-the-quran-in-bengali",
@@ -204,7 +258,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8128/;"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-khushbu",
@@ -213,7 +270,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.pblab.in/radiokhushbu"
     ],
-    "added": "2026-11-13"
+    "added": "2026-11-13",
+    "br": [
+      20
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

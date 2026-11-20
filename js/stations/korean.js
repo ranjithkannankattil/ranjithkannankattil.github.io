@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://radiolive.ytn.co.kr/radio/_definst_/20211118_fmlive/playlist.m3u8"
+    ],
+    "br": [
+      108
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://cdnfm.tbs.seoul.kr/tbs/_definst_/tbs_fm_web_360.smil/chunklist.m3u8"
+    ],
+    "br": [
+      414
     ]
   },
   {
@@ -25,7 +31,9 @@ window.STATIONS = [
     "streams": [
       "https://vod3.obs.co.kr:444/live/obsstream1/radio.stream/playlist.m3u8"
     ],
-    "offline": true
+    "br": [
+      156
+    ]
   },
   {
     "id": "ifm",
@@ -33,6 +41,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.ifm.kr/live/aod1/playlist.m3u8"
+    ],
+    "br": [
+      125
     ]
   },
   {
@@ -41,6 +52,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://mediaworks.dema.mil.kr/live_edge/audio.sdp/playlist.m3u8"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -49,6 +63,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/15318233/64k.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -57,6 +74,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://replaynewskr.ice.infomaniak.ch/replaynewskr-128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -65,6 +85,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast2.sayclub.com/saycast2/24sky/llhls.m3u8"
+    ],
+    "br": [
+      125
     ]
   },
   {
@@ -73,6 +96,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.yojosuknam.com/live.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -81,6 +107,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://antares.dribbcast.com/proxy/kpop?mp=/s"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -90,6 +119,10 @@ window.STATIONS = [
     "streams": [
       "https://listen.moe/kpop/stream",
       "https://listen.moe/kpop/fallback"
+    ],
+    "br": [
+      192,
+      192
     ]
   },
   {
@@ -98,6 +131,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://kpop.onlyhit.us/play"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -106,6 +142,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s5.radio.co/s0a9796fe3/listen"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -114,6 +153,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sbs-ice.streamguys1.com/sbs-popasia-sbs-web"
+    ],
+    "br": [
+      97
     ]
   },
   {
@@ -122,6 +164,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ais-edge50-live365-dal02.cdnstream.com/a63316"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -130,6 +175,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://juka-kpop.stream.laut.fm/juka-kpop?t302=2021-04-01_09-03-35&uuid=6aa06ca0-9a01-407d-91af-155d24c5c405"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -138,6 +186,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/oldwnjuma3duv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -218,7 +269,10 @@ window.STATIONS = [
     "streams": [
       "https://centova.radioservers.biz/proxy/eastfmc1/stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "mbc-fm4u",
@@ -227,7 +281,10 @@ window.STATIONS = [
     "streams": [
       "https://live.andongmbc.co.kr/live/fmlive/playlist.m3u8"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      37
+    ]
   },
   {
     "id": "mbc-fm",
@@ -247,7 +304,10 @@ window.STATIONS = [
     "streams": [
       "https://antares.dribbcast.com/proxy/apop?mp=/s?"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fm105-2",
@@ -256,7 +316,10 @@ window.STATIONS = [
     "streams": [
       "https://listen7.myradio24.com/69366"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fm-2",
@@ -265,7 +328,10 @@ window.STATIONS = [
     "streams": [
       "https://listen7.myradio24.com/69366"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "mbc-fm4u-2",
@@ -274,7 +340,10 @@ window.STATIONS = [
     "streams": [
       "https://live.andongmbc.co.kr/live/fmlive/playlist.m3u8"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      37
+    ]
   },
   {
     "id": "ebs-tv-kids",
@@ -283,7 +352,10 @@ window.STATIONS = [
     "streams": [
       "https://ebsonairios.ebs.co.kr/ebsufamilypc/familypc1m/playlist.m3u8"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      1153
+    ]
   },
   {
     "id": "buddhist-true-network-tv",
@@ -292,7 +364,10 @@ window.STATIONS = [
     "streams": [
       "https://btn.nowcdn.co.kr/btn/btnlive01/playlist.m3u8"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      1310
+    ]
   },
   {
     "id": "ebs-tv-1",
@@ -301,7 +376,10 @@ window.STATIONS = [
     "streams": [
       "https://ebsonair.ebs.co.kr/groundwavefamilypc/familypc1m/playlist.m3u8"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      1150
+    ]
   },
   {
     "id": "cbs-joy4u",
@@ -310,7 +388,10 @@ window.STATIONS = [
     "streams": [
       "https://m-aac.cbs.co.kr/mweb_cbscmc/_definst_/cbscmc.stream/playlist.m3u8"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      98
+    ]
   },
   {
     "id": "chkg-fm-96-1-fairchild-radio-vancouver-b",
@@ -319,7 +400,10 @@ window.STATIONS = [
     "streams": [
       "https://5b2959fe11444.streamlock.net/radio/fm961.stream/playlist.m3u8"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      48
+    ]
   },
   {
     "id": "ebs-tv-i",
@@ -328,7 +412,10 @@ window.STATIONS = [
     "streams": [
       "https://ebsonairios.ebs.co.kr/plus1familypc/familypc1m/playlist.m3u8"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      1148
+    ]
   },
   {
     "id": "gukak-tv",
@@ -337,7 +424,10 @@ window.STATIONS = [
     "streams": [
       "https://mgugaklive.nowcdn.co.kr/gugakvideo/gugakvideo.stream/playlist.m3u8"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      4432
+    ]
   },
   {
     "id": "96-kool-fm",
@@ -346,7 +436,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/97qzdqafuqzuv"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "vibe-radio",
@@ -355,7 +448,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/zf0ac4raqy8uv"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station",
@@ -364,7 +460,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/r0tbse9jnbptv"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cinz-net-radio",
@@ -373,7 +472,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.cinz.net/"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fred-film-radio",
@@ -382,7 +484,10 @@ window.STATIONS = [
     "streams": [
       "https://s10.webradio-hosting.com/proxy/fredradiokr/stream"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ebs-tune-in",
@@ -391,7 +496,10 @@ window.STATIONS = [
     "streams": [
       "https://ebsonair.ebs.co.kr/fmradiofamilypc/familypc1m/playlist.m3u8"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      614
+    ]
   },
   {
     "id": "rmf-k-pop",
@@ -400,7 +508,10 @@ window.STATIONS = [
     "streams": [
       "https://rs8-krk2-cyfronet.rmfstream.pl/GAMEMUSIC"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-2",
@@ -409,7 +520,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/5022144/64k.mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      64
+    ]
   },
   {
     "id": "gugakfm",
@@ -428,7 +542,8 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/20324/64k.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "offline": true
   },
   {
     "id": "gukak",
@@ -437,7 +552,10 @@ window.STATIONS = [
     "streams": [
       "https://mgugaklive.nowcdn.co.kr/gugakradio/gugakradio.stream/playlist.m3u8"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      195
+    ]
   },
   {
     "id": "kbs-1r",
@@ -479,7 +597,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.whrwfm.org/new"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      320
+    ]
   },
   {
     "id": "europa-plus-k-pop",
@@ -488,7 +609,10 @@ window.STATIONS = [
     "streams": [
       "https://hls-01-europaplus-kpop.emgsound.ru/europaplus-kpop/112/playlist.m3u8"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      116
+    ]
   },
   {
     "id": "ebs-tv-e",
@@ -497,7 +621,10 @@ window.STATIONS = [
     "streams": [
       "https://ebsonair.ebs.co.kr/plus3familypc/familypc1m/playlist.m3u8"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      1155
+    ]
   },
   {
     "id": "ebs-tv-plus-2",
@@ -506,7 +633,10 @@ window.STATIONS = [
     "streams": [
       "https://ebsonairios.ebs.co.kr/plus2familypc/familypc1m/playlist.m3u8"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      1135
+    ]
   },
   {
     "id": "cnr-8",
@@ -524,7 +654,10 @@ window.STATIONS = [
     "streams": [
       "https://ebsonair.ebs.co.kr/ebs2familypc/familypc1m/playlist.m3u8"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      1158
+    ]
   },
   {
     "id": "bbn-korean",
@@ -533,7 +666,10 @@ window.STATIONS = [
     "streams": [
       "https://streams.radiomast.io/678de728-1691-4eb7-bf37-057bcc9b12f5"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-5",
@@ -551,7 +687,10 @@ window.STATIONS = [
     "streams": [
       "https://radio3.dixi.md/listen/kpop_hits/kpop_hits.aac"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-6",
@@ -560,7 +699,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/i3q4bwnzxp1uv"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sbs-love-fm",
@@ -591,7 +733,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8136/;"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "big-b-radio",
@@ -600,7 +745,10 @@ window.STATIONS = [
     "streams": [
       "https://antares.dribbcast.com/proxy/apop?mp=/s"
     ],
-    "added": "2026-11-13"
+    "added": "2026-11-13",
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://naxidigital-exyu128ssl.streaming.rs:8242/;stream.nsv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sslstream.okradio.net/;?type=http&nocache=8804"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://naxidigital-80s128ssl.streaming.rs:8042/;"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://naxidigital-cafe128ssl.streaming.rs:8022/;"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -48,6 +60,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://rtsradio-live.morescreens.com/RTS_2_004/playlist.m3u8"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -56,6 +71,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://naxidigital-house128ssl.streaming.rs:8002/;"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -64,6 +82,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.coolradio.rs/cool320"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -72,6 +93,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radios.rs:9016/;*.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -80,6 +104,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radios.rs:9038/;*.mp3"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -88,6 +115,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio3-64ssl.streaming.rs:9212/;*.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -96,6 +126,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.tdiradio.com/tdiradiobezreklama.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -104,6 +137,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radios.rs:9042/stream"
+    ],
+    "br": [
+      36
     ]
   },
   {
@@ -120,6 +156,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://centova.dukahosting.com/proxy/021kafe/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -128,6 +167,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://naxidigital-love128ssl.streaming.rs:8102/;"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -136,6 +178,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://srv.mediastriming.com/8330/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -144,6 +189,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://e3.radiomorava.rs/radio/8000/radiomorava128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -152,6 +200,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.pumpaj.info/listen/pumpaj_radio/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -160,6 +211,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.rsg.rs/live/"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -168,6 +222,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://samcloud.spacial.com/api/listen?sid=99064&m=sc&rid=175019&t=ssl"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -176,6 +233,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://naxidigital-boem128ssl.streaming.rs:8162/;"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -208,6 +268,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radios.rs:9058/stream"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -216,6 +279,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radios.rs:9030/;"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -224,6 +290,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radios.rs:9076/stream"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -232,6 +301,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radios.rs:9068/stream"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -240,6 +312,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/rp1swb5pgzzuv"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -248,6 +323,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://naxidigital-classic128ssl.streaming.rs:8032/;"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -256,6 +334,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://naxidigital-kids128ssl.streaming.rs:8052/;"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -272,6 +353,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://naxidigital-lounge128ssl.streaming.rs:8252/;stream.nsv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -280,6 +364,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://naxidigital-hype128ssl.streaming.rs:8272/;"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -288,6 +375,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.iradio.pro/proxy/densomaniak?mp=/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -296,6 +386,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://naxidigital-dance128ssl.streaming.rs:8112/;"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -304,6 +397,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radios.rs:9066/stream"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -312,6 +408,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radios.rs:9044/stream"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -320,6 +419,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streamer.radio.co/s34d2c17d8/listen"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -329,7 +431,10 @@ window.STATIONS = [
     "streams": [
       "https://cast2.my-control-panel.com/proxy/kissdoog/stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "naxi-clubbing-radio",
@@ -338,7 +443,10 @@ window.STATIONS = [
     "streams": [
       "https://naxidigital-clubbing128ssl.streaming.rs:8092/;"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-s-2000-te-folk",
@@ -347,7 +455,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radios.rs:9060/stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      64
+    ]
   },
   {
     "id": "nas-mm-radio-97-8",
@@ -356,7 +467,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.dukahosting.com:7045/stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-021",
@@ -365,7 +479,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.dukahosting.com/8006/stream"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      80
+    ]
   },
   {
     "id": "rock-radio-belgrade",
@@ -374,7 +491,10 @@ window.STATIONS = [
     "streams": [
       "https://edge9.pink.rs/rockstream"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      192
+    ]
   },
   {
     "id": "station-2",
@@ -392,7 +512,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/abn3hm6w768uv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-s-juzni",
@@ -401,7 +524,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radios.rs:9038/stream"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      32
+    ]
   },
   {
     "id": "naxi-gold-radio",
@@ -410,7 +536,10 @@ window.STATIONS = [
     "streams": [
       "https://naxidigital-gold128ssl.streaming.rs:8062/;stream.nsv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-s3-folk-stars",
@@ -419,7 +548,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radios.rs:9024/;"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      64
+    ]
   },
   {
     "id": "domus-radio",
@@ -428,7 +560,10 @@ window.STATIONS = [
     "streams": [
       "https://libretime.domusradio.com/icecast/main"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      256
+    ]
   },
   {
     "id": "radio-lola",
@@ -437,7 +572,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.tdiradio.com/radiolola.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "202",
@@ -455,7 +593,10 @@ window.STATIONS = [
     "streams": [
       "https://aradiostream.atvbl.com/live"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      96
+    ]
   },
   {
     "id": "radio-bobar",
@@ -464,7 +605,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radios.rs:9082/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-sumadinac-juzni-vetar",
@@ -473,7 +617,10 @@ window.STATIONS = [
     "streams": [
       "https://media.srb-streaming.com/stream/radio-sumadinac-juzni"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-021-100-domace",
@@ -482,7 +629,10 @@ window.STATIONS = [
     "streams": [
       "https://centova.dukahosting.com/proxy/021domaca/stream"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-3",
@@ -500,7 +650,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radios.rs:9016/;"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      64
+    ]
   },
   {
     "id": "nas-radio-107-80-zabalj",
@@ -509,7 +662,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.dukahosting.com:7043/;"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-4",
@@ -527,7 +683,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.iradio.pro/proxy/radiobanja2?mp=/stream"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "super-fm",
@@ -536,7 +695,10 @@ window.STATIONS = [
     "streams": [
       "https://onair.superfm.rs/superfm.mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "big-radio-2-banja-luka",
@@ -545,7 +707,10 @@ window.STATIONS = [
     "streams": [
       "https://big2.bigportal.ba:8080/big2"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      36
+    ]
   },
   {
     "id": "radio-aparat",
@@ -554,7 +719,10 @@ window.STATIONS = [
     "streams": [
       "https://stream4.rcast.net/72355/"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      192
+    ]
   },
   {
     "id": "dah-provincije",
@@ -563,7 +731,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.iradio.pro/proxy/radioforca?mp=/stream"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "jat-radio",
@@ -572,7 +743,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.radiojat.rs/radiojat.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-fruska-gora",
@@ -581,7 +755,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.iradio.pro/proxy/radiofruskagora?mp=/stream"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "naxi-evergreen-radio",
@@ -590,7 +767,10 @@ window.STATIONS = [
     "streams": [
       "https://naxidigital-evergreen128ssl.streaming.rs:8012/;"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "kiss-fm-balkan",
@@ -599,7 +779,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/kwku1q84p48uv"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "lolipop",
@@ -608,7 +791,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.tdiradio.com/lollipop.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-021-disco-funk",
@@ -617,7 +803,10 @@ window.STATIONS = [
     "streams": [
       "https://centova.dukahosting.com/proxy/021disco/stream"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "plus-radio-hit",
@@ -626,7 +815,10 @@ window.STATIONS = [
     "streams": [
       "https://26343.live.streamtheworld.com/SAM10AAC060_SC"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      64
+    ]
   },
   {
     "id": "yu-novi-pazar",
@@ -635,7 +827,10 @@ window.STATIONS = [
     "streams": [
       "https://yuradio.ipradio.rs:9036/;"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      96
+    ]
   },
   {
     "id": "klas-radio",
@@ -644,7 +839,10 @@ window.STATIONS = [
     "streams": [
       "https://media.srb-streaming.com:9014/stream"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      48
+    ]
   },
   {
     "id": "naxi-jazz-radio",
@@ -653,7 +851,10 @@ window.STATIONS = [
     "streams": [
       "https://naxidigital-jazz128ssl.streaming.rs:8172/;stream.nsv"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-subotica-104-4",
@@ -673,7 +874,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.en.rs/radio/8000/radio.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "naxi-70e",
@@ -682,7 +886,10 @@ window.STATIONS = [
     "streams": [
       "https://naxidigital-70s128ssl.streaming.rs:8042/;"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "naxi-latino-radio",
@@ -691,7 +898,10 @@ window.STATIONS = [
     "streams": [
       "https://naxidigital-latino128ssl.streaming.rs:8232/;stream.nsv"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "play-radio",
@@ -700,7 +910,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.playradio.rs:8443/play.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "naxi-fresh-radio",
@@ -709,7 +922,10 @@ window.STATIONS = [
     "streams": [
       "https://naxidigital-fresh128ssl.streaming.rs:8212/;stream.nsv"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-s2",
@@ -718,7 +934,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radios.rs:9002/;"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      64
+    ]
   },
   {
     "id": "lotel2",
@@ -727,7 +946,10 @@ window.STATIONS = [
     "streams": [
       "https://s1.skeletor.rs/lotel"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-s-pop-folk",
@@ -736,7 +958,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radios.rs:9046/stream"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      64
+    ]
   },
   {
     "id": "naxi-mix-radio",
@@ -745,7 +970,10 @@ window.STATIONS = [
     "streams": [
       "https://naxidigital-mix128ssl.streaming.rs:8222/;stream.nsv"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      128
+    ]
   },
   {
     "id": "zrenjanin-103-6",
@@ -754,7 +982,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.dukahosting.com:7031/stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-021-rock",
@@ -763,7 +994,10 @@ window.STATIONS = [
     "streams": [
       "https://centova.dukahosting.com/proxy/rock/stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-s-rock",
@@ -772,7 +1006,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radios.rs:9032/stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-s-80e",
@@ -781,7 +1018,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radios.rs:9036/stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      36
+    ]
   },
   {
     "id": "radio-in",
@@ -790,7 +1030,10 @@ window.STATIONS = [
     "streams": [
       "https://radioinnis-naxinacional.streaming.rs:8622/;"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-ritam-srca",
@@ -799,7 +1042,10 @@ window.STATIONS = [
     "streams": [
       "https://s4.radio.co/s0f65dad2d/listen"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-s-mix",
@@ -808,7 +1054,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radios.rs:9010/stream"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      36
+    ]
   },
   {
     "id": "bigfm-balkan",
@@ -817,7 +1066,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.bigfm.de/balkan/mp3-128/onlineradiobox"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-sumadinac",
@@ -826,7 +1078,10 @@ window.STATIONS = [
     "streams": [
       "https://media.srb-streaming.com/stream/radio-sumadinac-uzivo"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      96
+    ]
   },
   {
     "id": "hit-radio-istok",
@@ -835,7 +1090,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.tvistok.com/radio/8000/live"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "play-radio-party",
@@ -844,7 +1102,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.playradio.rs:8443/party.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "kolubara-96-9",
@@ -853,7 +1114,10 @@ window.STATIONS = [
     "streams": [
       "https://kolubara.name.ba:8000/stream/1/"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      64
+    ]
   },
   {
     "id": "play-radio-rock",
@@ -862,7 +1126,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.playradio.rs:8443/rock.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "naxi-r-n-b-radio",
@@ -871,7 +1138,10 @@ window.STATIONS = [
     "streams": [
       "https://naxidigital-rnb128ssl.streaming.rs:8122/;stream.nsv"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-kiss-lazarevac-106-1",
@@ -880,7 +1150,10 @@ window.STATIONS = [
     "streams": [
       "https://cast2.asurahosting.com/proxy/kissdoog/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-s-classic",
@@ -889,7 +1162,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radios.rs:9074/stream"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-s-latino",
@@ -898,7 +1174,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radios.rs:9054/stream"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      36
+    ]
   },
   {
     "id": "civijas-radio",
@@ -907,7 +1186,10 @@ window.STATIONS = [
     "streams": [
       "https://media.srb-streaming.com:9078/stream"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-patrola-021",
@@ -916,7 +1198,10 @@ window.STATIONS = [
     "streams": [
       "https://srv.mediastriming.com/8444/stream"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ok-prelo-radio",
@@ -925,7 +1210,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.okplus.rs/listen/prelo/radio.mp3"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "lux-radio",
@@ -934,7 +1222,10 @@ window.STATIONS = [
     "streams": [
       "https://lux-naxinacional.streaming.rs:8607/;"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-s-starogradski",
@@ -943,7 +1234,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radios.rs:9064/stream"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-s-pop-ballads",
@@ -952,7 +1246,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radios.rs:9056/stream"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-sloboda-kraljevo",
@@ -961,7 +1258,10 @@ window.STATIONS = [
     "streams": [
       "https://audio.slobodafm.com:8000/radio.mp3"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-s-2000-e",
@@ -970,7 +1270,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radios.rs:9052/stream"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      64
+    ]
   },
   {
     "id": "red-radio-beograd",
@@ -979,7 +1282,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.redradio.rs/sid=1"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      192
+    ]
   },
   {
     "id": "sun-radio-novi-sad",
@@ -988,7 +1294,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiojar.com/4qawu2xta2zuv.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "resavski-radio",
@@ -997,7 +1306,10 @@ window.STATIONS = [
     "streams": [
       "https://e3.radiomorava.rs/radio/8010/resavskiradio128.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "naxi-rock-radio",
@@ -1006,7 +1318,10 @@ window.STATIONS = [
     "streams": [
       "https://naxidigital-rock128ssl.streaming.rs:8182/;"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "play-radio-balkan",
@@ -1015,7 +1330,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.playradio.rs:8443/balkan.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-novosti-ex-yu",
@@ -1024,7 +1342,10 @@ window.STATIONS = [
     "streams": [
       "https://novosti.radiostreaming.rs/novosti2"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      140
+    ]
   },
   {
     "id": "rsg-relax",
@@ -1033,7 +1354,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.rsg.rs/relax/"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-sumadinac-narodna",
@@ -1042,7 +1366,10 @@ window.STATIONS = [
     "streams": [
       "https://media.srb-streaming.com/stream/radio-sumadinac-narodna"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      96
+    ]
   },
   {
     "id": "3",
@@ -1060,7 +1387,10 @@ window.STATIONS = [
     "streams": [
       "https://centova.dukahosting.com/proxy/futog/stream"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-osvit",
@@ -1069,7 +1399,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.dukahosting.com/8020/stream"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-sremac-102-7",
@@ -1078,7 +1411,10 @@ window.STATIONS = [
     "streams": [
       "https://mpc2.mediacp.eu:8282/sremac"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      256
+    ]
   },
   {
     "id": "rsg-party-time",
@@ -1087,7 +1423,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.rsg.rs/partytime/"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-s-sport-urban",
@@ -1096,7 +1435,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radios.rs:9080/stream"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-roska",
@@ -1105,7 +1447,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/q7300aptbwzuv"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      112
+    ]
   },
   {
     "id": "jack-radio-varvarin",
@@ -1114,7 +1459,10 @@ window.STATIONS = [
     "streams": [
       "https://media.radioexs.com/stream/jackradio"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-krusevac-93-2",
@@ -1123,7 +1471,10 @@ window.STATIONS = [
     "streams": [
       "https://krusevac.ipradio.rs:9014/;stream.mp3"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      96
+    ]
   },
   {
     "id": "egeta-radio-2-narodna-muzika",
@@ -1132,7 +1483,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/g7awzbwvzutvv"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "egeta-radio-1-vlaska-muzika",
@@ -1141,7 +1495,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/agprfe1186dvv"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-sumadinac-krajiska",
@@ -1150,7 +1507,10 @@ window.STATIONS = [
     "streams": [
       "https://media.srb-streaming.com/stream/radio-sumadinac-krajiska"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      64
+    ]
   },
   {
     "id": "wtf-radio",
@@ -1159,7 +1519,10 @@ window.STATIONS = [
     "streams": [
       "https://live.wtfradio.rs/wtfradio.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-pancevo",
@@ -1168,7 +1531,10 @@ window.STATIONS = [
     "streams": [
       "https://s29.myradiostream.com:16654/;"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "egata-radio",
@@ -1177,7 +1543,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/kcn3b5gfuhruv"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-s4",
@@ -1186,7 +1555,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radios.rs:9006/;"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      64
+    ]
   },
   {
     "id": "laguna",
@@ -1195,7 +1567,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radiolaguna.rs/laguna"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "skc-slobodni",
@@ -1213,7 +1588,10 @@ window.STATIONS = [
     "streams": [
       "https://media.srb-streaming.com/stream/radio-sumadija"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "play-radio-urban",
@@ -1222,7 +1600,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.playradio.rs:8443/urban.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "plus-radio-nostalgija",
@@ -1231,7 +1612,10 @@ window.STATIONS = [
     "streams": [
       "https://samcloud.spacial.com/api/listen?sid=104138&rid=181424&f=aac,any&br=64000,any"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-podrinje",
@@ -1240,7 +1624,10 @@ window.STATIONS = [
     "streams": [
       "https://s1.skeletor.rs/podrinje"
     ],
-    "added": "2026-11-10"
+    "added": "2026-11-10",
+    "br": [
+      128
+    ]
   },
   {
     "id": "gudalo-i-struna",
@@ -1249,7 +1636,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/kpcnnvbdfjtvv"
     ],
-    "added": "2026-11-10"
+    "added": "2026-11-10",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-san-loznica",
@@ -1258,7 +1648,8 @@ window.STATIONS = [
     "streams": [
       "https://s1.skeletor.rs/san"
     ],
-    "added": "2026-11-10"
+    "added": "2026-11-10",
+    "offline": true
   },
   {
     "id": "radio-s-folk-stars",
@@ -1267,7 +1658,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radios.rs:9024/stream"
     ],
-    "added": "2026-11-10"
+    "added": "2026-11-10",
+    "br": [
+      64
+    ]
   },
   {
     "id": "naxi-70-e-3",
@@ -1276,7 +1670,10 @@ window.STATIONS = [
     "streams": [
       "https://naxidigital-70s128ssl.streaming.rs:8382/;"
     ],
-    "added": "2026-11-10"
+    "added": "2026-11-10",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-starcevo",
@@ -1285,7 +1682,10 @@ window.STATIONS = [
     "streams": [
       "https://mpc2.mediacp.eu:8350/stream"
     ],
-    "added": "2026-11-10"
+    "added": "2026-11-10",
+    "br": [
+      320
+    ]
   },
   {
     "id": "plus-radio-rock",
@@ -1294,7 +1694,10 @@ window.STATIONS = [
     "streams": [
       "https://samcloud.spacial.com/api/listen?sid=137873&rid=292677&f=aac,any&br=64000"
     ],
-    "added": "2026-11-12"
+    "added": "2026-11-12",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-s-trap-rap",
@@ -1303,7 +1706,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radios.rs:9030/stream"
     ],
-    "added": "2026-11-12"
+    "added": "2026-11-12",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-s-modern-classic",
@@ -1312,7 +1718,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radios.rs:9072/stream"
     ],
-    "added": "2026-11-12"
+    "added": "2026-11-12",
+    "br": [
+      64
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

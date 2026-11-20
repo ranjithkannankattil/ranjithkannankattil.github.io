@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.otvoreni.hr/otvoreni"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.yammat.fm/radio/8000/yammat.mp3"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://27743.live.streamtheworld.com/PROGRAM2AAC_SC"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://25443.live.streamtheworld.com/PROGRAM1AAC_SC"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -40,6 +52,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ec2s.crolive.com.hr:7015/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -48,6 +63,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://slusaj.hr:10446/stream?type=http&nocache=9"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -56,6 +74,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://mirm.live/mir.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -64,6 +85,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.pumpaj.info/listen/pumpaj_radio/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -72,6 +96,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/yetzdv442k8uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -80,6 +107,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://audio.social3.hr/listen/bravo_kids/stream?3367"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -88,6 +118,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s8.iqstreaming.com:2020/stream/zagorski/stream"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -96,6 +129,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://azuracast.novi-net.net/listen/radiomax/radiomax.aac?refresh=1676766574706"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -104,6 +140,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://audio.alter-media.hr:7025/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -112,6 +151,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ec2s.crolive.com.hr:8455/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -121,6 +163,10 @@ window.STATIONS = [
     "streams": [
       "https://stream2.otvoreni.hr/otvoreni",
       "https://stream.otvoreni.hr/stream48"
+    ],
+    "br": [
+      48,
+      48
     ]
   },
   {
@@ -129,6 +175,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s8.iqstreaming.com:2020/stream/radio-kaj2/stream"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -137,6 +186,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SLJEME.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -145,6 +197,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://listen.radioking.com/radio/626884/stream/689500"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -153,6 +208,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.hkr.hr/hkr.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -161,6 +219,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream2.otvoreni.hr/fitness"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -169,6 +230,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://s8.iqstreaming.com:8048/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -177,6 +241,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ec2s.crolive.com.hr:2415/stream"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -185,6 +252,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ec2s.crolive.com.hr:6035/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -193,6 +263,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.otvoreni.hr/hot"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -201,6 +274,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s8.ssl-stream.com/prolaznik"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -209,6 +285,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.podravskiradio.hr/live"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -217,6 +296,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s8.iqstreaming.com:8014/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -225,6 +307,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radiostudent.hr/audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -233,6 +318,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.otvoreni.hr/chill"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -241,6 +329,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://klfmorgborg.radioca.st/stream?type=http&nocache=1089"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -250,7 +341,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radio.si/Aktual"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "slavonski-radio",
@@ -259,7 +353,10 @@ window.STATIONS = [
     "streams": [
       "https://ec2s.crolive.com.hr:8035/stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-busovaca",
@@ -268,7 +365,10 @@ window.STATIONS = [
     "streams": [
       "https://ec2s.crolive.com.hr:1510/stream"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-101",
@@ -277,7 +377,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radio101.hr:9531/stream.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-centar-studio-porec",
@@ -286,7 +389,10 @@ window.STATIONS = [
     "streams": [
       "https://radiocentar.hr:8282/stream.aac"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      320
+    ]
   },
   {
     "id": "jr-radio",
@@ -295,7 +401,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/pdkt234k698uv.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      64
+    ]
   },
   {
     "id": "hrvatski-radio-rock",
@@ -304,7 +413,10 @@ window.STATIONS = [
     "streams": [
       "https://29345.live.streamtheworld.com/HR_ROCK_SC"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hrt-radio-split",
@@ -313,7 +425,10 @@ window.STATIONS = [
     "streams": [
       "https://23623.live.streamtheworld.com/SPLITAAC_SC"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      64
+    ]
   },
   {
     "id": "tranzistor",
@@ -322,7 +437,10 @@ window.STATIONS = [
     "streams": [
       "https://ec2s.crolive.com.hr/tranzistor"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ckwr-98-5-real-community-radio-kitchener",
@@ -331,7 +449,10 @@ window.STATIONS = [
     "streams": [
       "https://stream2.statsradio.com:8150/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      319
+    ]
   },
   {
     "id": "braniteljski-radio-nepokoreni-grad-osije",
@@ -340,7 +461,10 @@ window.STATIONS = [
     "streams": [
       "https://s3.radio.co/se83499ee0/listen"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hrvatski-radio-pop-glazba",
@@ -349,7 +473,10 @@ window.STATIONS = [
     "streams": [
       "https://28513.live.streamtheworld.com/HR_POP_SC"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-rojc",
@@ -358,7 +485,10 @@ window.STATIONS = [
     "streams": [
       "https://cf.widecastcdn.live/Z07ww1NUNl/live.m3u8"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-megaton",
@@ -367,7 +497,10 @@ window.STATIONS = [
     "streams": [
       "https://chopin.bizmusic.net/radio/8030/radio.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      320
+    ]
   },
   {
     "id": "hrt-radio-dubrovnik",
@@ -376,7 +509,10 @@ window.STATIONS = [
     "streams": [
       "https://28503.live.streamtheworld.com/DUBROVNIKAAC_SC"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      64
+    ]
   },
   {
     "id": "hrt-radio-pula",
@@ -385,7 +521,10 @@ window.STATIONS = [
     "streams": [
       "https://29341.live.streamtheworld.com/PULAAAC_SC"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-zelina",
@@ -394,7 +533,10 @@ window.STATIONS = [
     "streams": [
       "https://ec2s.crolive.com.hr:1690/stream"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-krka",
@@ -403,7 +545,10 @@ window.STATIONS = [
     "streams": [
       "https://cmr-hosting.com/9700/stream"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      320
+    ]
   },
   {
     "id": "hrt-radio-osijek",
@@ -412,7 +557,10 @@ window.STATIONS = [
     "streams": [
       "https://22193.live.streamtheworld.com/OSIJEKAAC_SC"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-maestral",
@@ -421,7 +569,10 @@ window.STATIONS = [
     "streams": [
       "https://ec2s.crolive.com.hr:1630/stream"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hrt-hr-3-treci-program",
@@ -430,7 +581,10 @@ window.STATIONS = [
     "streams": [
       "https://25443.live.streamtheworld.com/PROGRAM3AAC_SC"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hkr",
@@ -439,7 +593,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.hkr.hr:8000/hkr.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hrvatski-radio-frankfurt",
@@ -448,7 +605,10 @@ window.STATIONS = [
     "streams": [
       "https://a9.asurahosting.com:7110/radio.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hrt-radio-knin",
@@ -457,7 +617,10 @@ window.STATIONS = [
     "streams": [
       "https://28033.live.streamtheworld.com/KNINAAC_SC"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-sunce",
@@ -466,7 +629,10 @@ window.STATIONS = [
     "streams": [
       "https://shoutcast.pondi.hr:8002/;*.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      96
+    ]
   },
   {
     "id": "hrt-glas-hrvatske",
@@ -475,7 +641,10 @@ window.STATIONS = [
     "streams": [
       "https://25693.live.streamtheworld.com/VOICEOFCROATIAAAC_SC"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-postaja-odzak",
@@ -484,7 +653,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.rcast.net/70602"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-vinkovci",
@@ -493,7 +665,10 @@ window.STATIONS = [
     "streams": [
       "https://onlineradiobox.com/json/hr/vinkovci/play?platform=web"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-92-fm",
@@ -502,7 +677,10 @@ window.STATIONS = [
     "streams": [
       "https://onlineradiobox.com/json/hr/92fm/play?platform=web"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      192
+    ]
   },
   {
     "id": "mr4-nemzetisegi-adasok",
@@ -511,7 +689,10 @@ window.STATIONS = [
     "streams": [
       "https://mr-stream.connectmedia.hu/4744/mr4.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-grubisno-polje",
@@ -520,7 +701,10 @@ window.STATIONS = [
     "streams": [
       "https://ec2s.crolive.com.hr:8215/stream"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-105-selnica-hr",
@@ -529,7 +713,10 @@ window.STATIONS = [
     "streams": [
       "https://azuracast.novi-net.net/radio/8050/radio105.aac"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-roska",
@@ -538,7 +725,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/q7300aptbwzuv"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      112
+    ]
   },
   {
     "id": "radio-akovo",
@@ -547,7 +737,10 @@ window.STATIONS = [
     "streams": [
       "https://ec2s.crolive.com.hr:8305/stream"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      128
+    ]
   },
   {
     "id": "otvoreni-radio-love",
@@ -556,7 +749,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.otvoreni.hr/love"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      48
+    ]
   },
   {
     "id": "otvoreni-radio-fitness",
@@ -565,7 +761,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.otvoreni.hr/fitness"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      48
+    ]
   },
   {
     "id": "balkan-beatz-radio",
@@ -574,7 +773,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.balkanbeatz.de/listen/balkan-beatz/radio.mp3"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-biograd-na-moru",
@@ -583,7 +785,10 @@ window.STATIONS = [
     "streams": [
       "https://onlineradiobox.com/json/hr/bnm/play?platform=web"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-baranja",
@@ -592,7 +797,10 @@ window.STATIONS = [
     "streams": [
       "https://s8.iqstreaming.com:2020/stream/radio_baranja/stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-belisce",
@@ -601,7 +809,10 @@ window.STATIONS = [
     "streams": [
       "https://mcp1.mydataknox.com:8006/stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-orahovica",
@@ -610,7 +821,10 @@ window.STATIONS = [
     "streams": [
       "https://ec2s.crolive.com.hr:2595/stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hrvatski-radio-klasik",
@@ -619,7 +833,10 @@ window.STATIONS = [
     "streams": [
       "https://28513.live.streamtheworld.com/HR_CLASSICS_SC"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hrt-radio-zadar",
@@ -628,7 +845,10 @@ window.STATIONS = [
     "streams": [
       "https://28563.live.streamtheworld.com/ZADARAAC_SC"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      64
+    ]
   },
   {
     "id": "super-radio",
@@ -637,7 +857,10 @@ window.STATIONS = [
     "streams": [
       "https://mcp1.mydataknox.com:8010/stream"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      320
+    ]
   },
   {
     "id": "hrt-radio-rijeka",
@@ -646,7 +869,10 @@ window.STATIONS = [
     "streams": [
       "https://29103.live.streamtheworld.com/RIJEKAAAC_SC"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-vaticana-hrvatski",
@@ -655,7 +881,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.vaticannews.va/stream-hr"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-jaska",
@@ -664,7 +893,10 @@ window.STATIONS = [
     "streams": [
       "https://uk1.streamingpulse.com/ssl/RadioJaska"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "otvoreni-love",
@@ -673,7 +905,10 @@ window.STATIONS = [
     "streams": [
       "https://stream2.otvoreni.hr/love"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      48
+    ]
   },
   {
     "id": "radio-marija-hrvatska",
@@ -682,7 +917,10 @@ window.STATIONS = [
     "streams": [
       "https://dreamsiteradiocp2.com/proxy/rmcroatia?mp=/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      96
+    ]
   },
   {
     "id": "radio-sova",
@@ -691,7 +929,10 @@ window.STATIONS = [
     "streams": [
       "https://evcast.mediacp.eu:1960/stream"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      256
+    ]
   },
   {
     "id": "raido-slatina",
@@ -700,7 +941,10 @@ window.STATIONS = [
     "streams": [
       "https://a1.asurahosting.com/listen/radio_slatina/radio.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-nu",
@@ -709,7 +953,10 @@ window.STATIONS = [
     "streams": [
       "https://slusaj.hr:10445/stream?type=http&nocache=634"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-tvornica-zagreb",
@@ -718,7 +965,10 @@ window.STATIONS = [
     "streams": [
       "https://cast5.asurahosting.com/proxy/tvornica_main/stream"
     ],
-    "added": "2026-11-12"
+    "added": "2026-11-12",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-dalmacija",
@@ -727,7 +977,10 @@ window.STATIONS = [
     "streams": [
       "https://shoutcast.pondi.hr:9000/;stream/1"
     ],
-    "added": "2026-11-12"
+    "added": "2026-11-12",
+    "br": [
+      72
+    ]
   },
   {
     "id": "radio-imotski",
@@ -736,7 +989,10 @@ window.STATIONS = [
     "streams": [
       "https://radioimotski.radioca.st/stream"
     ],
-    "added": "2026-11-12"
+    "added": "2026-11-12",
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

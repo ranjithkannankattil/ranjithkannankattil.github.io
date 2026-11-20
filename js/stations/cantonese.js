@@ -8,7 +8,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/20500149/64k.mp3"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-2",
@@ -33,7 +34,9 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/5022379/64k.mp3"
     ],
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "903",
@@ -52,7 +55,9 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/5022107/64k.mp3"
     ],
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-5",
@@ -68,6 +73,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/1259/64k.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -86,6 +94,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/1262/64k.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -94,6 +105,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://s26.myradiostream.com:20274/listen.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -102,6 +116,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://1603884249.rsc.cdn77.org/1603884249/index.m3u8"
+    ],
+    "br": [
+      100
     ]
   },
   {
@@ -110,6 +127,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://5b2959fe11444.streamlock.net/radio/fm947.stream/playlist.m3u8"
+    ],
+    "br": [
+      51
     ]
   },
   {
@@ -118,6 +138,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://vip.wongsong.cn/proxy/wongsong/stream-mp3-WongSong"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -134,6 +157,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stm2.rthk.hk/radio2"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -151,6 +177,10 @@ window.STATIONS = [
     "streams": [
       "https://stm.rthk.hk/radio1",
       "https://rthkradio1-live.akamaized.net/hls/live/2035313/radio1/master.m3u8"
+    ],
+    "br": [
+      32,
+      70
     ]
   },
   {
@@ -159,6 +189,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://us2.maindigitalstream.com/ssl/KVTO"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -167,6 +200,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qingting.fm/live/1277/64k.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -175,6 +211,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://lhttp.qtfm.cn/live/20212427/64k.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -183,6 +222,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://1946218710.rsc.cdn77.org/1946218710/index.m3u8"
+    ],
+    "br": [
+      80
     ]
   },
   {
@@ -199,6 +241,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://rthkradio5-live.akamaized.net/hls/live/2040081/radio5/master.m3u8"
+    ],
+    "br": [
+      70
     ]
   },
   {
@@ -207,6 +252,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stm.rthk.hk/radio2"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -215,6 +263,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://rthkradio3-live.akamaized.net/hls/live/2040079/radio3/master.m3u8"
+    ],
+    "br": [
+      70
     ]
   },
   {
@@ -223,6 +274,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sbs-ice.streamguys1.com/sbs-popasia-sbs-web"
+    ],
+    "br": [
+      97
     ]
   },
   {
@@ -232,6 +286,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.live365.com/a57743_2",
       "https://das-edge14-live365-dal02.cdnstream.com/a57743_2"
+    ],
+    "br": [
+      320,
+      320
     ]
   },
   {
@@ -240,6 +298,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://lhttp.qtfm.cn/live/1254/64k.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -248,6 +309,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://lhttp.qingting.fm/live/4848/64k.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -256,6 +320,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://lhttp.qtfm.cn/live/471/64k.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -272,6 +339,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ptmirror3.passiontimes.hk/hls3/stream.m3u8"
+    ],
+    "br": [
+      220
     ]
   },
   {
@@ -280,6 +350,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://5b2959fe11444.streamlock.net/radio/am1430.stream/playlist.m3u8"
+    ],
+    "br": [
+      51
     ]
   },
   {
@@ -297,6 +370,10 @@ window.STATIONS = [
     "streams": [
       "https://rthkradio4-live.akamaized.net/hls/live/2040080/radio4/master.m3u8",
       "https://stm.rthk.hk/radio4"
+    ],
+    "br": [
+      70,
+      32
     ]
   },
   {
@@ -305,6 +382,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://voa-ingest.akamaized.net/hls/live/2035206/151_124L/playlist.m3u8"
+    ],
+    "br": [
+      141
     ]
   },
   {
@@ -313,6 +393,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/5022062/64k.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -321,6 +404,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://lhttp.qingting.fm/live/20192/64k.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -329,6 +415,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://rthkradiocmgrgb-live.akamaized.net/hls/live/2046112/radiocmgrgb/master.m3u8"
+    ],
+    "br": [
+      70
     ]
   },
   {
@@ -339,7 +428,11 @@ window.STATIONS = [
       "https://das-edge14-live365-dal02.cdnstream.com/a57743_2",
       "https://das-edge11-live365-dal03.cdnstream.com/a57743_2"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      320,
+      320
+    ]
   },
   {
     "id": "sound-of-hope-australia-cantonese",
@@ -348,7 +441,10 @@ window.STATIONS = [
     "streams": [
       "https://sohcan.out.airtime.pro:8000/sohcan_a"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "946",
@@ -393,7 +489,10 @@ window.STATIONS = [
     "streams": [
       "https://rthkradiocnrhk-live.akamaized.net/hls/live/2046111/radiocnrhk/master.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      70
+    ]
   },
   {
     "id": "888",
@@ -402,7 +501,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/1278/64k.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-26",
@@ -411,7 +513,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qtfm.cn/live/468/64k.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-27",
@@ -429,7 +534,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/20500163/64k.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      64
+    ]
   },
   {
     "id": "cnr-7",
@@ -456,7 +564,10 @@ window.STATIONS = [
     "streams": [
       "https://acast01.kolorboxlab.com/radio/8010/radio.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "record-fm-100-3-macau",
@@ -465,7 +576,10 @@ window.STATIONS = [
     "streams": [
       "https://nl.digitalrm.pt:8028/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-29",
@@ -474,7 +588,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/15318689/64k.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      64
+    ]
   },
   {
     "id": "asia-fm-106-9",
@@ -492,7 +609,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/4955/64k.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      64
+    ]
   },
   {
     "id": "szr-fm-97-1-macau-hd2",
@@ -501,7 +621,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-hls.bauermedia.pt/cidade.aac/playlist.m3u8"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-31",
@@ -510,7 +633,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qtfm.cn/live/469/64k.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-32",
@@ -520,7 +646,9 @@ window.STATIONS = [
       "https://lhttp-hw.qtfm.cn/live/1283/64k.mp3"
     ],
     "added": "2026-10-25",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-33",
@@ -529,7 +657,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/20500213/64k.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-34",
@@ -538,7 +669,8 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qtfm.cn/live/5022392/64k.mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "offline": true
   },
   {
     "id": "station-35",
@@ -547,7 +679,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/5061/64k.mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      64
+    ]
   },
   {
     "id": "m80-radio-macau-80s",
@@ -556,7 +691,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-icy.bauermedia.pt/m8080.aac"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      127
+    ]
   },
   {
     "id": "station-36",
@@ -565,7 +703,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/1263/64k.mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-37",
@@ -574,7 +715,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/20701/64k.mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      64
+    ]
   },
   {
     "id": "956",
@@ -583,7 +727,8 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/5037/64k.mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "offline": true
   },
   {
     "id": "kradio",
@@ -592,7 +737,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/4uih7z8lxj9uv"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-38",
@@ -601,7 +749,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qtfm.cn/live/15318429/64k.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-39",
@@ -610,7 +761,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/15318668/64k.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-40",
@@ -619,7 +773,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/20211602/64k.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-41",
@@ -628,7 +785,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/20500088/64k.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-42",
@@ -637,7 +797,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/20211702/64k.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      64
+    ]
   },
   {
     "id": "90-1-nbc-fm-narwee-90-1-fm",
@@ -665,7 +828,9 @@ window.STATIONS = [
       "https://lhttp-hw.qtfm.cn/live/1282/64k.mp3"
     ],
     "added": "2026-11-15",
-    "offline": true
+    "br": [
+      64
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

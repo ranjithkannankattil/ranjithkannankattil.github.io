@@ -33,6 +33,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://de2.streamingpulse.com/ssl/LinkFM"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -41,6 +44,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/uoscm48onclvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -49,6 +55,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://radiohost.ifastekpanel.com/listen/kingdom/live"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -66,7 +75,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/xs6zeac1ts8uv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "umhlobo-wenene-fm",
@@ -75,7 +87,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/UMHLOBOWENENEAAC.aac"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      48
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

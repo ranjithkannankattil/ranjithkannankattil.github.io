@@ -9,6 +9,10 @@ window.STATIONS = [
     "streams": [
       "https://28563.live.streamtheworld.com/KAN_BET.mp3",
       "https://25583.live.streamtheworld.com/KAN_BET.mp3?dist=bynetredirect&1737047133"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -17,6 +21,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://api.bynetcdn.com/Redirector/glz/glglz/ICE-LIVE"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -25,6 +32,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streamer.mada.ps:8208/ajyal"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -33,6 +43,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://glzwizzlv.bynetcdn.com/glz_mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -41,6 +54,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://glzwizzlv.bynetcdn.com/glglz_mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -49,6 +65,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://27873.live.streamtheworld.com/KAN_GIMMEL.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -57,6 +76,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://glzwizzlv.bynetcdn.com/glglz_mp3?awCollectionId=misc&awEpisodeId=glglz"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -65,6 +87,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://glzwizzlv.bynetcdn.com/glz_mp3?awCollectionId=misc&awEpisodeId=glz"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -73,6 +98,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://102.livecdn.biz/102fm_aac"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -81,6 +109,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cdn.cybercdn.live/Radios_100FM/Audio/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -89,6 +120,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://cdn.cybercdn.live/Kol_Rega/Live_Audio/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -98,6 +132,10 @@ window.STATIONS = [
     "streams": [
       "https://eco-live.mediacast.co.il/99fm_aac",
       "https://eco01.livecdn.biz/ecolive/99fm_aac/icecast.audio?hash=1559501510715.m4a"
+    ],
+    "br": [
+      64,
+      64
     ]
   },
   {
@@ -106,6 +144,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://media2.93fm.co.il/live-new"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -114,6 +155,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://kancdn.medonecdn.net/livehls/oil/kancdn-live/live/radio/kan_88/live.livx/playlist.m3u8?renditions&dvr=7200000"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -122,6 +166,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://glzicylv01.bynetcdn.com/glglz_mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -130,6 +177,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.kab.tv/live1-heb-574bcfd5.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -138,6 +188,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://rs.mizrahit.fm:7777/arabellavie"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -146,6 +199,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://cdn.cybercdn.live/Galei_Israel/Live/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -154,6 +210,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://www.rs.mizrahit.fm:7777/"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -162,6 +221,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://1075.livecdn.biz/radiohaifa"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -171,6 +233,10 @@ window.STATIONS = [
     "streams": [
       "https://rocky.kupernet.com/stream",
       "https://icecast.live/proxy/zerock/zerock"
+    ],
+    "br": [
+      128,
+      0
     ]
   },
   {
@@ -179,6 +245,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://99.mediacast.co.il/99fm_aac?hash=1559501510715.m4a"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -187,6 +256,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://cdn.cybercdn.live/Darom_97FM/Live/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -195,6 +267,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cdn.cybercdn.live/Hatahana_1015/Live_Audio/icecast.audio"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -203,6 +278,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://media2.93fm.co.il/livemusic"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -211,6 +289,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://radio.streamgates.net/stream/101fm"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -219,6 +300,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radioangelika.com/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -227,6 +311,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://cdn.cybercdn.live/Lev_Hamedina/Audio/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -235,6 +322,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.live/ivr"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -243,6 +333,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast.breslevforyou.co.il/listen/halachot/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -251,6 +344,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast.breslevforyou.co.il/listen/music-toravezimra/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -259,6 +355,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://live.ecast.co.il/stream/sahar/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -267,6 +366,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/KAN_KOL_HAMUSICA.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -275,6 +377,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cdn.cybercdn.live/Darom_1015FM/Live/icecast.audio"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -283,6 +388,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast.breslevforyou.co.il/listen/radiobreslev/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -291,6 +399,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast.breslevforyou.co.il/listen/shorts/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -299,6 +410,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://gb25.streamgates.net/radios-audio/100Nostalgia/playlist.m3u8"
+    ],
+    "br": [
+      147
     ]
   },
   {
@@ -307,6 +421,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://gb25.streamgates.net/radios-audio/100StandUp/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -315,6 +432,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cdn.cybercdn.live/Kol_Barama/Music/icecast.audio"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -323,6 +443,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://radio.streamgates.net/stream/1045fm"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -332,7 +455,10 @@ window.STATIONS = [
     "streams": [
       "https://kzradio.mediacast.co.il/kzradio_live/kzradio/icecast.audio"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "chabad-org-jewish-music",
@@ -341,7 +467,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radio.co/sdfd68a101/listen"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "kol-hai",
@@ -350,7 +479,10 @@ window.STATIONS = [
     "streams": [
       "https://live.kcm.fm/livemusic"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-6",
@@ -359,7 +491,10 @@ window.STATIONS = [
     "streams": [
       "https://cast.breslevforyou.co.il/listen/books/radio.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ivri-6",
@@ -368,7 +503,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.radio.co/sa06221901/listen"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "kinshasa-fm",
@@ -377,7 +515,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.kinshasafm.xyz/listen/kinshasafm/radio.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "chabad-org-torah-classes-radio",
@@ -386,7 +527,10 @@ window.STATIONS = [
     "streams": [
       "https://streams.radio.co/s9f35c3afc/listen"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-jai-96-3",
@@ -404,7 +548,10 @@ window.STATIONS = [
     "streams": [
       "https://gb25.streamgates.net/radios-audio/100Stars/icecast.audio"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "martha-kowaski",
@@ -413,7 +560,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.live365.com/a95708"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "wjpr-1640-am-the-jhper-edison-new-jersey",
@@ -422,7 +572,10 @@ window.STATIONS = [
     "streams": [
       "https://ice41.securenetsystems.net:80/WJPRAM"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      32
+    ]
   },
   {
     "id": "kol-radio",
@@ -431,7 +584,10 @@ window.STATIONS = [
     "streams": [
       "https://uksoutha.streaming.broadcast.radio:20691/kolradio"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "wmdi-107-9-kol-bramah-lakewood-new-jerse",
@@ -440,7 +596,10 @@ window.STATIONS = [
     "streams": [
       "https://us2.maindigitalstream.com/stream/kolbramah"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "kan-reshet-bet",
@@ -449,7 +608,10 @@ window.STATIONS = [
     "streams": [
       "https://r.il.cdn-redge.media/livehls/oil/kancdn-live/live/radio/kan_reshet_bet/live.livx/playlist.m3u8?renditions"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      192
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

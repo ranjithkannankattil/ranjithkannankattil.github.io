@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/hiut6cwfoneuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/WAI_FM_IBAN.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_KLASIK.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.rcs.revma.com/drakdf8mtd3vv/hls.m3u8"
+    ],
+    "br": [
+      24
     ]
   },
   {
@@ -40,6 +52,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/ooaqxeogpfdvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -48,6 +63,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/KELANTAN_FMAAC.aac"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -56,6 +74,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiorosak.radioca.st/stream"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -64,6 +85,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/NASIONAL_FM.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -80,6 +104,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://22243.live.streamtheworld.com/TERENGGANU_FMAAC_SC"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -98,6 +125,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/ASYIK_FMAAC_SC"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -106,6 +136,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/ASYIK_FM.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -114,6 +147,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_KLASIKAAC_SC"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -122,6 +158,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/zqxbxkviipcvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -130,6 +169,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/WAI_FM_BK.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -139,7 +181,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8016/;"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "kool-fm",
@@ -148,7 +193,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.rcs.revma.com/3930238mtd3vv/hls.m3u8"
     ],
-    "added": "2026-11-10"
+    "added": "2026-11-10",
+    "br": [
+      24
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

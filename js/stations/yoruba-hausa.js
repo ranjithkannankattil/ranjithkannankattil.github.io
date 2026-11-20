@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://agidigbostream.com.ng/radio/8000/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/v3geyw3zrzzuv"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/287z97ksdg8uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/c4ghegiwnkcvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -40,6 +52,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://cast1.asurahosting.com/proxy/brightb1/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -48,6 +63,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://eu8.fastcast4u.com/proxy/usakufm?mp=/1"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -56,6 +74,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://radio.fmmaria.com:8020/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -64,6 +85,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://fm.imediaport.com/1radio"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -80,6 +104,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://listen.radioking.com/radio/876181/stream/946306"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -89,7 +116,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zenolive.com/e9x2n97b9uduv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "glow-99-1-fm-akure",
@@ -99,7 +129,8 @@ window.STATIONS = [
       "https://stream-176.zeno.fm/mwam2yirv1pvv",
       "https://stream.zeno.fm/mwam2yirv1pvv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "crest-91-1-fm-ibadan",
@@ -108,7 +139,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/qvudrrg5tasvv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "afrikana-radio-live-african",
@@ -117,7 +151,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.afrikanabestsounds.com/listen/live_african/radio.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "zuria-fm",
@@ -126,7 +163,10 @@ window.STATIONS = [
     "streams": [
       "https://atunwadigital.streamguys1.com/yfm1025kumasi"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      256
+    ]
   },
   {
     "id": "ccc-worldwide-radio",
@@ -135,7 +175,10 @@ window.STATIONS = [
     "streams": [
       "https://cccworldwide.net/radio/live.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "translation-of-the-quran-in-yoruba",
@@ -144,7 +187,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8038/;"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "voice-of-hope-africa",
@@ -153,7 +199,10 @@ window.STATIONS = [
     "streams": [
       "https://fm.imediaport.com/voha"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      64
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://direct.franceinter.fr/live/franceinter-hifi.aac"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://icecast.radiofrance.fr/franceinfo-hifi.aac"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://icecast.radiofrance.fr/franceculture-hifi.aac"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -33,6 +42,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.radiofrance.fr/fip-hifi.aac",
       "https://stream.radiofrance.fr/fip/fip_hifi.m3u8"
+    ],
+    "br": [
+      192,
+      0
     ]
   },
   {
@@ -41,6 +54,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.radiofrance.fr/fipjazz-hifi.aac"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -50,6 +66,10 @@ window.STATIONS = [
     "streams": [
       "https://audio.bfmtv.com/rmcradio_128.mp3",
       "https://audio.bfmtv.com/rmcradio_128.mp3?aw_0_1st.playerId=RMC_audio_web&aggregator=RMC_audio_web"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -58,6 +78,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.europe1.fr/europe1.aac"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -66,6 +89,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://audio.bfmtv.com/bfmbusiness_128.mp3?aw_0_1st.playerId=BFMBusiness_audio_web&aggregator=BFMBusiness_audio_web"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -74,6 +100,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://audio.bfmtv.com/bfmradio_128.mp3"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -82,6 +111,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://radios.rtbf.be/laprem1ere-64.aac"
+    ],
+    "br": [
+      160
     ]
   },
   {
@@ -90,6 +122,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.funradio.fr/fun-1-44-128"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -98,6 +133,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.skyrock.net/s/natio_mp3_128k"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -106,6 +144,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.skyrock.net/s/klassiks_aac_64k?tvr_name=radiofr&tvr_section1=64aac"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -114,6 +155,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.nrjaudio.fm/ou7xugf3s5gi?origine=playernrj&aw_0_req.userConsentV2=&aw_0_1st.station=NRJ-Hits"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -122,6 +166,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.nrjaudio.fm/ou5k6tirv93h"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -130,6 +177,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://europe2.lmn.fm/europe2.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -138,6 +188,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://novazz.ice.infomaniak.ch/novazz-128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -146,6 +199,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ouifm.ice.infomaniak.ch/ouifm-high.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -154,6 +210,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiofg.impek.com/fg"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -162,6 +221,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.rfm.fr/rfm-wr10.aac"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -170,6 +232,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://jazzradio.ice.infomaniak.ch/jazzradio-high.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -178,6 +243,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://jazzblues.ice.infomaniak.ch/jazzblues-high.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -186,6 +254,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://jazz-wr01.ice.infomaniak.ch/jazz-wr01-128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -194,6 +265,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream1.chantefrance.com/cf-80"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -202,6 +276,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://100radio-80.ice.infomaniak.ch/100radio-80-128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -210,6 +287,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://madein80.leswebradios.fr/"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -218,6 +298,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream-eurodance90.fr/radio/8000/128.mp3?1627933323"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -226,6 +309,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.nrjaudio.fm/ou8oqegk7oiu?aw_0_1st.station=Rire-Chansons-SKETCHES&origine=mytuner"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -234,6 +320,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.nrjaudio.fm/ouwgjmsk6j4d?aw_0_1st.station=Rire-Chansons-CANULARS&origine=mytuner"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -242,6 +331,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://hd.lagrosseradio.info/lagrosseradio-reggae-192.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -250,6 +342,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://listen.radioking.com/radio/467555/stream/523739"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -258,6 +353,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/o9bspgm4y78vv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -266,6 +364,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/bqdbb6hd0neuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -274,6 +375,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zenolive.com/rq40edfn3reuv"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -283,7 +387,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.creacast.com/sudradio"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "alouette",
@@ -292,7 +399,10 @@ window.STATIONS = [
     "streams": [
       "https://alouette.ice.infomaniak.ch/alouette-high.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-courtoisie",
@@ -301,7 +411,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.creacast.com/radio-courtoisie"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "france-musique",
@@ -310,7 +423,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.radiofrance.fr/francemusique-hifi.aac"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-orient",
@@ -319,7 +435,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.rcs.revma.com/7hnrkawf4p8uv.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rts-92-5-rsi",
@@ -337,7 +456,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.nrjaudio.fm/ou62iyxp336f?origine=fluxradios&aw_0_1st.station=Nostalgie-80-90"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-meuh",
@@ -346,7 +468,10 @@ window.STATIONS = [
     "streams": [
       "https://radiomeuh.ice.infomaniak.ch/radiomeuh-128.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "france-bleu-provence",
@@ -355,7 +480,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.radiofrance.fr/fbprovence-midfi.mp3?ID=radiofrance"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "yumi-co-radio",
@@ -364,7 +492,10 @@ window.STATIONS = [
     "streams": [
       "https://yumicoradio.net/stream"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      256
+    ]
   },
   {
     "id": "radio-freedom-fm",
@@ -373,7 +504,10 @@ window.STATIONS = [
     "streams": [
       "https://freedomice.streamakaci.com/freedom.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      96
+    ]
   },
   {
     "id": "rts-la-premiere",
@@ -382,7 +516,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.srg-ssr.ch/m/la-1ere/mp3_128"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "chante-france",
@@ -391,7 +528,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.chantefrance.com/Chante_France"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-plus-mauritius",
@@ -400,7 +540,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radioplus.mu:8000/radio.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "el-bahdja",
@@ -409,7 +552,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio3.tda.dz:8001/ElBahdja_64K.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      64
+    ]
   },
   {
     "id": "generations-rap-fr-gold",
@@ -418,7 +564,10 @@ window.STATIONS = [
     "streams": [
       "https://gene-wr06.ice.infomaniak.ch/gene-wr06.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "latina-reggaeton",
@@ -427,7 +576,10 @@ window.STATIONS = [
     "streams": [
       "https://latinareggaeton.ice.infomaniak.ch/latinareggaeton.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fip-reggae",
@@ -436,7 +588,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.radiofrance.fr/fipreggae-hifi.aac"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      192
+    ]
   },
   {
     "id": "tropiques-fm",
@@ -445,7 +600,10 @@ window.STATIONS = [
     "streams": [
       "https://listen.radioking.com/radio/8916/stream/19088"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "nrj-nouveaux-hits-2026",
@@ -454,7 +612,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.nrjaudio.fm/ouucqs5n3nje"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rtbf-classic-21",
@@ -463,7 +624,10 @@ window.STATIONS = [
     "streams": [
       "https://radios.rtbf.be/classic21-128.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      160
+    ]
   },
   {
     "id": "hits-1-algerie",
@@ -472,7 +636,10 @@ window.STATIONS = [
     "streams": [
       "https://radio12.pro-fhi.net/listen/whmnrlow/stream"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      192
+    ]
   },
   {
     "id": "chante-france-60-s",
@@ -481,7 +648,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.chantefrance.com/cf-60"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fip-jazz-hi-fi",
@@ -508,7 +678,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.srg-ssr.ch/m/rsj/mp3_128"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "algerie-internationale",
@@ -517,7 +690,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio3.tda.dz:8001/Internationale_64K.mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      64
+    ]
   },
   {
     "id": "00-radio-canada-montreal",
@@ -526,7 +702,10 @@ window.STATIONS = [
     "streams": [
       "https://rcavliveaudio.akamaized.net/hls/live/2006635/P-2QMTL0_MTL/adaptive_192/master.m3u8"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      48
+    ]
   },
   {
     "id": "generations-funk",
@@ -535,7 +714,10 @@ window.STATIONS = [
     "streams": [
       "https://gene-wr05.ice.infomaniak.ch/gene-wr05.mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "mouv",
@@ -544,7 +726,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.radiofrance.fr/mouv-hifi.aac"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      192
+    ]
   },
   {
     "id": "couleur3",
@@ -553,7 +738,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.srg-ssr.ch/m/couleur3/aacp_96"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      96
+    ]
   },
   {
     "id": "nostalgie-best-of-70-80-90",
@@ -562,7 +750,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.nrjaudio.fm/oumrpo8fnozc"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-la-belle-aventure",
@@ -571,7 +762,10 @@ window.STATIONS = [
     "streams": [
       "https://flux.radiolabelleaventure.com/listen/radio_la_belle_aventure/radio.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      192
+    ]
   },
   {
     "id": "jazz-radio-funk",
@@ -580,7 +774,10 @@ window.STATIONS = [
     "streams": [
       "https://jazz-wr06.ice.infomaniak.ch/jazz-wr06-128.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cherie-fm-2000",
@@ -589,7 +786,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.nrjaudio.fm/ouf2ebtx4thg"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fip-musiques-du-monde",
@@ -598,7 +798,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.radiofrance.fr/fipworld-hifi.aac"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      192
+    ]
   },
   {
     "id": "hit-radio-morocco",
@@ -607,7 +810,10 @@ window.STATIONS = [
     "streams": [
       "https://hitradio-maroc.ice.infomaniak.ch/hitradio-maroc-128.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "innovation-fm",
@@ -616,7 +822,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.fdvi.org/live"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "france-musique-la-baroque",
@@ -625,7 +834,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.radiofrance.fr/francemusiquebaroque-hifi.aac"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      192
+    ]
   },
   {
     "id": "latina-salsa",
@@ -634,7 +846,10 @@ window.STATIONS = [
     "streams": [
       "https://latinasalsa.ice.infomaniak.ch/latinasalsa.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fip-rock",
@@ -643,7 +858,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.radiofrance.fr/fiprock-hifi.aac"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      192
+    ]
   },
   {
     "id": "latina",
@@ -652,7 +870,10 @@ window.STATIONS = [
     "streams": [
       "https://start-latina.ice.infomaniak.ch/start-latina-high.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "skyrock-casablanca",
@@ -661,7 +882,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.skyrock.net/s/casa_aac_64k"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "chaine-1",
@@ -670,7 +894,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio1.tda.dz:8001/Chaine1_64K.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      64
+    ]
   },
   {
     "id": "medi-1-radio",
@@ -679,7 +906,10 @@ window.STATIONS = [
     "streams": [
       "https://cdn.live.easybroadcast.io/live/83_medi1radio-maghreb_8s9i4bn/playlist.m3u8"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      192
+    ]
   },
   {
     "id": "jil-fm",
@@ -688,7 +918,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio1.tda.dz:8001/Jeunesse_64K.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      64
+    ]
   },
   {
     "id": "rci-martinique",
@@ -697,7 +930,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.rcs.revma.com/t0abpqyspwzuv"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "tizi-ouzou",
@@ -706,7 +942,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio2.tda.dz:8001/TiziOuzou_64K.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      64
+    ]
   },
   {
     "id": "coran",
@@ -715,7 +954,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio1.tda.dz:8001/Coran_64K.mp3"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      64
+    ]
   },
   {
     "id": "zaman-fm",
@@ -724,7 +966,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio2.tda.dz:8001/Zamen_64K.mp3"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      64
+    ]
   },
   {
     "id": "oran",
@@ -733,7 +978,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio2.tda.dz:8001/Oran_64K.mp3"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      64
+    ]
   },
   {
     "id": "exo-fm-reunion",
@@ -742,7 +990,10 @@ window.STATIONS = [
     "streams": [
       "https://exofmreunion.ice.infomaniak.ch/exofmreunion-64.aac"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      64
+    ]
   },
   {
     "id": "rtl-100-80",
@@ -751,7 +1002,10 @@ window.STATIONS = [
     "streams": [
       "https://live.m6radio.quortex.io/webpHJPXnXrN7B6J7Q8mcqmxP/webradio/rtl100pc80/130/audio-64000/index.m3u8"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      64
+    ]
   },
   {
     "id": "jesus-is-lord-radio",
@@ -760,7 +1014,10 @@ window.STATIONS = [
     "streams": [
       "https://s3.radio.co/s97f38db97/listen"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      48
+    ]
   },
   {
     "id": "marrakechplus",
@@ -769,7 +1026,10 @@ window.STATIONS = [
     "streams": [
       "https://cast5.my-control-panel.com/proxy/marrakec/stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "meme-dans-les-orties",
@@ -778,7 +1038,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.sk8ter.org:8443/stream"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      192
+    ]
   },
   {
     "id": "jazz-radio-soul",
@@ -787,7 +1050,10 @@ window.STATIONS = [
     "streams": [
       "https://jazz-wr10.ice.infomaniak.ch/jazz-wr10-128.mp3"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-express-fm",
@@ -796,7 +1062,10 @@ window.STATIONS = [
     "streams": [
       "https://expressfm.ice.infomaniak.ch/expressfm-64.mp3"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      64
+    ]
   },
   {
     "id": "monte-carlo",
@@ -814,7 +1083,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.rcs.revma.com/1g8a3ufsyp3vv"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      320
+    ]
   },
   {
     "id": "ghardaia",
@@ -823,7 +1095,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio1.tda.dz:8001/Ghardaia_64K.mp3"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      64
+    ]
   },
   {
     "id": "fip-electro",
@@ -832,7 +1107,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.radiofrance.fr/fipelectro-hifi.aac"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      192
+    ]
   },
   {
     "id": "medina-fm",
@@ -841,7 +1119,10 @@ window.STATIONS = [
     "streams": [
       "https://medinafm.ice.infomaniak.ch/medinafm-64.mp3"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      64
+    ]
   },
   {
     "id": "tamanrasset",
@@ -850,7 +1131,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio1.tda.dz:8001/Tamanrasset_64K.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      64
+    ]
   },
   {
     "id": "chaine-2",
@@ -859,7 +1143,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio2.tda.dz:8001/Chaine2_64K.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      64
+    ]
   },
   {
     "id": "mfm-radio",
@@ -868,7 +1155,10 @@ window.STATIONS = [
     "streams": [
       "https://a5.asurahosting.com:7980/radio.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      256
+    ]
   },
   {
     "id": "radio-exterior-de-espana",
@@ -877,7 +1167,10 @@ window.STATIONS = [
     "streams": [
       "https://dispatcher.rndfnk.com/crtve/rneree/main/mp3/high"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "chaine-3",
@@ -886,7 +1179,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio1.tda.dz:8001/Chaine3_64K.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-star-maroc-fm",
@@ -895,7 +1191,10 @@ window.STATIONS = [
     "streams": [
       "https://a2.asurahosting.com:6100/radio.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      320
+    ]
   },
   {
     "id": "setif",
@@ -904,7 +1203,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio3.tda.dz:8001/Setif_64K.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      64
+    ]
   },
   {
     "id": "tlemcen",
@@ -913,7 +1215,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio1.tda.dz:8001/Tlemcen_64K.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      64
+    ]
   },
   {
     "id": "constantine",
@@ -922,7 +1227,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio3.tda.dz:8001/Constantine_64K.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      64
+    ]
   },
   {
     "id": "ancient-fm",
@@ -931,7 +1239,10 @@ window.STATIONS = [
     "streams": [
       "https://mediaserv73.live-streams.nl:18058/stream"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-swiss-classic",
@@ -940,7 +1251,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.srg-ssr.ch/srgssr/rsc_de/aac/96"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      96
+    ]
   },
   {
     "id": "radio-contact",
@@ -949,7 +1263,10 @@ window.STATIONS = [
     "streams": [
       "https://n22a-eu.rcs.revma.com/6gygqc1gy7uvv"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      320
+    ]
   },
   {
     "id": "fip-groove",
@@ -958,7 +1275,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.radiofrance.fr/fipgroove-hifi.aac"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      192
+    ]
   },
   {
     "id": "jazz-radio-piano-jazz",
@@ -967,7 +1287,10 @@ window.STATIONS = [
     "streams": [
       "https://jzr-piano.ice.infomaniak.ch/jzr-piano.mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-caroline-la-radio-de-bretagne",
@@ -976,7 +1299,10 @@ window.STATIONS = [
     "streams": [
       "https://radiocaroline.ice.infomaniak.ch/radiocaroline-128.mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      160
+    ]
   },
   {
     "id": "cherie-fm-poitiers-dab",
@@ -985,7 +1311,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.nrjaudio.fm/ougo42rb92oc"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      256
+    ]
   },
   {
     "id": "jazz-radio-electro-swing",
@@ -994,7 +1323,10 @@ window.STATIONS = [
     "streams": [
       "https://jazz-wr04.ice.infomaniak.ch/jazz-wr04-128.mp3"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "france-bleu-paris",
@@ -1003,7 +1335,10 @@ window.STATIONS = [
     "streams": [
       "https://direct.francebleu.fr/live/fb1071-midfi.mp3"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "nostalgie-60-70",
@@ -1012,7 +1347,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.nrjaudio.fm/ougfkxrb92oc"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rcf",
@@ -1021,7 +1359,10 @@ window.STATIONS = [
     "streams": [
       "https://rcf.streamakaci.com/rcfdigital.mp3?platform=site"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cherie-fm-rap-2000",
@@ -1030,7 +1371,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.nrjaudio.fm/ouv6enoarp52"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-kassara-barikama-107-4-kayes",
@@ -1039,7 +1383,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/0ef19uaxh4duv"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ici-100-chanson-francaise",
@@ -1048,7 +1395,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.radiofrance.fr/fbchansonfrancaise-hifi.aac"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      192
+    ]
   },
   {
     "id": "la-premiere-bruxelles",
@@ -1057,7 +1407,10 @@ window.STATIONS = [
     "streams": [
       "https://radios.rtbf.be/laprem1erebxl-128.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      160
+    ]
   },
   {
     "id": "radio-chablais",
@@ -1066,7 +1419,10 @@ window.STATIONS = [
     "streams": [
       "https://radiochablais.ice.infomaniak.ch/radiochablais-high.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "nrj-clermont",
@@ -1075,7 +1431,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.nrjaudio.fm/oumrck8fnozc"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      64
+    ]
   },
   {
     "id": "tipik",
@@ -1084,7 +1443,10 @@ window.STATIONS = [
     "streams": [
       "https://radios.rtbf.be/pure-128.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      160
+    ]
   },
   {
     "id": "rts-matam-89-1",
@@ -1093,7 +1455,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/kxud8vhqt1duv"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-misk",
@@ -1102,7 +1467,10 @@ window.STATIONS = [
     "streams": [
       "https://live.misk.art/stream"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      192
+    ]
   },
   {
     "id": "rtl-france",
@@ -1111,7 +1479,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.rtl.fr/rtl-1-44-128"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "100-radio-hit",
@@ -1120,7 +1491,10 @@ window.STATIONS = [
     "streams": [
       "https://100radio-hit.ice.infomaniak.ch/100radio-hit-128.mp3"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "grrif",
@@ -1129,7 +1503,10 @@ window.STATIONS = [
     "streams": [
       "https://rjb.ice.infomaniak.ch/rjb-high.mp3"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-tchad",
@@ -1138,7 +1515,10 @@ window.STATIONS = [
     "streams": [
       "https://strhls.streamakaci.tv/str_tchad_radio/str_tchad_radio/icecast.audio?fbclid=IwAR32Ir_eHaV-HSrh46OVT_VeTZt5KoNggoq8qzeSiAeZTJNBKKUtsSNUtcY"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      125
+    ]
   },
   {
     "id": "frequence-3-gold",
@@ -1156,7 +1536,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio3.tda.dz:8001/Culture_64K.mp3"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      64
+    ]
   },
   {
     "id": "france-musique-classique-easy",
@@ -1165,7 +1548,10 @@ window.STATIONS = [
     "streams": [
       "https://direct.francemusique.fr/live/francemusiqueeasyclassique-hifi.mp3"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "france-info-lofi",
@@ -1174,7 +1560,10 @@ window.STATIONS = [
     "streams": [
       "https://direct.franceinfo.fr/live/franceinfo-lofi.mp3"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      32
+    ]
   },
   {
     "id": "azot-radio",
@@ -1183,7 +1572,10 @@ window.STATIONS = [
     "streams": [
       "https://azotradio1.ice.infomaniak.ch/azotradio1-128.mp3"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fip-cultes",
@@ -1192,7 +1584,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiofrance.fr/fipcultes/fipcultes.m3u8?id=radiofranceBose"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      105
+    ]
   },
   {
     "id": "atlantic-radio-maroc",
@@ -1201,7 +1596,10 @@ window.STATIONS = [
     "streams": [
       "https://atlantic-sonic.nindohost.net:9300/stream"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-fg-at-work",
@@ -1210,7 +1608,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.rcs.revma.com/2v1zz979n98uv"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      192
+    ]
   },
   {
     "id": "timtimol-fm-91-9-ourossogui",
@@ -1219,7 +1620,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/4yx608hnu1duv"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "wa3-radio",
@@ -1228,7 +1632,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.wa3.live/wa3.mp3"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "u-radio",
@@ -1237,7 +1644,10 @@ window.STATIONS = [
     "streams": [
       "https://uradio-aac.ice.infomaniak.ch/uradio.aac"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "or-fm-89-6-orkadiere",
@@ -1246,7 +1656,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/gy7fpc2am1duv"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "biskra",
@@ -1255,7 +1668,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio3.tda.dz:8001/Biskra_64K.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      64
+    ]
   },
   {
     "id": "bordj-bou-arreridj",
@@ -1264,7 +1680,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio3.tda.dz:8001/BordjBouArreridj_64K.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      64
+    ]
   },
   {
     "id": "la-grosse-radio-metal",
@@ -1273,7 +1692,10 @@ window.STATIONS = [
     "streams": [
       "https://hd.lagrosseradio.info/lagrosseradio-metal-192.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      192
+    ]
   },
   {
     "id": "generations-rap-u-s",
@@ -1282,7 +1704,10 @@ window.STATIONS = [
     "streams": [
       "https://generationfm-underground.ice.infomaniak.ch/generationfm-underground-high.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "generations-r-b",
@@ -1291,7 +1716,10 @@ window.STATIONS = [
     "streams": [
       "https://generationfm-slowjam.ice.infomaniak.ch/generationfm-slowjam-high.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "jazz-radio-only-women",
@@ -1300,7 +1728,10 @@ window.STATIONS = [
     "streams": [
       "https://jazz-wr16.ice.infomaniak.ch/jazz-wr16-128.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "jazz-radio-latin-jazz",
@@ -1309,7 +1740,10 @@ window.STATIONS = [
     "streams": [
       "https://jazz-wr09.ice.infomaniak.ch/jazz-wr09-128.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "m-radio",
@@ -1318,7 +1752,10 @@ window.STATIONS = [
     "streams": [
       "https://mfm.ice.infomaniak.ch/mfm-128.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "isekoi-radio-chill-zone",
@@ -1327,7 +1764,10 @@ window.STATIONS = [
     "streams": [
       "https://public.isekoi-radio.com/listen/chill/radio.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      320
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

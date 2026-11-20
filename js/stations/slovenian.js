@@ -9,6 +9,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radio.si/Radio1",
       "https://live.radio1.si/Radio1"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -17,6 +21,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://mp3.rtvslo.si/val202"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -25,6 +32,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radio.si/Antena"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -33,6 +43,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radio.si/BestFM"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -41,6 +54,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radio.si/Krka"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -49,6 +65,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://live.radio.si/Toti"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -57,6 +76,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://mp3.rtvslo.si/ars"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -65,6 +87,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radio.si/Robin"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -73,6 +98,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://orf-live.ors-shoutcast.at/wie-q1a"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -81,6 +109,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.nextmedia.si/proxy/rocks_1?mp=/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -89,6 +120,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://zvok.ragla.si/gr"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -97,6 +131,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.nextmedia.si/proxy/rockr1_1?mp=/rock;"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -105,6 +142,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radio.si/Radio1Rock?t=1776880155210"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -113,6 +153,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://radio.vaticannews.va/stream-sl"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -121,6 +164,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.nextmedia.si/proxy/enter_1?mp=/enter"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -129,6 +175,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://jurepeterka.radioca.st/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -137,6 +186,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream2.nextmedia.si/hls/frj/live.m3u8"
+    ],
+    "br": [
+      38
     ]
   },
   {
@@ -145,6 +197,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.stajerskival.si:8443/live"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -153,6 +208,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://mp3.rtvslo.si/ra1"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -161,6 +219,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radiometeor.si/listen/meteor/live.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -169,6 +230,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.nextmedia.si/proxy/rocks_2?mp=/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -177,6 +241,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://mp3.rtvslo.si/rmb"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -185,6 +252,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream2.nextmedia.si/hls/gex/live.m3u8"
+    ],
+    "br": [
+      38
     ]
   },
   {
@@ -193,6 +263,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://evcast.mediacp.eu:1480/stream"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -201,6 +274,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radio.si/Koroski"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -209,6 +285,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.nextmedia.si/proxy/rocks_3?mp=/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -217,6 +296,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://mp3.rtvslo.si/rakp"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -225,6 +307,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.radioterminal.si/live"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -233,6 +318,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ors-sn03.ors-shoutcast.at/slo-q2a"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -241,6 +329,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.nextmedia.si/proxy/rocks_3?mp=/rock?uid=rrweb"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -249,6 +340,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.1chi.si/zica"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -257,6 +351,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radio.si/Radio1VE"
+    ],
+    "br": [
+      160
     ]
   },
   {
@@ -266,7 +363,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radio.si/Aktual"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-1-80-a",
@@ -275,7 +375,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radio1.si/Radio80"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-roska",
@@ -284,7 +387,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/q7300aptbwzuv"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      112
+    ]
   },
   {
     "id": "radio-trst-a",
@@ -296,4 +402,4 @@ window.STATIONS = [
     "added": "2026-11-18"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

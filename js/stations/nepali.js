@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio-broadcast.ekantipur.com/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://usa15.fastcast4u.com/proxy/hitsfm912?mp=/1"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.live.vc.bbcmedia.co.uk/bbc_nepali_radio"
+    ],
+    "br": [
+      56
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.softnep.net:10828/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -40,6 +52,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zenolive.com/wtuvp08xq1duv"
+    ],
+    "br": [
+      112
     ]
   },
   {
@@ -48,6 +63,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/fvrx47wpg0quv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -65,6 +83,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://radio.universalhealthradio.org/uhr-ne.mp3"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -74,6 +95,10 @@ window.STATIONS = [
     "streams": [
       "https://live.itech.host/himalayaradio",
       "https://live.itech.host/himalayaradio?1588276425741"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -90,6 +115,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.softnep.net:10854/;stream.nsv;type=mp3&volume=70"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -98,6 +126,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.softnep.net:10994/;stream.nsv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -106,6 +137,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.softnep.net:10988/;stream.nsv&type=mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -114,6 +148,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio11.plathong.net/7136/;stream.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -123,7 +160,10 @@ window.STATIONS = [
     "streams": [
       "https://stream1.radionepal.gov.np/live/"
     ],
-    "added": "2026-11-13"
+    "added": "2026-11-13",
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

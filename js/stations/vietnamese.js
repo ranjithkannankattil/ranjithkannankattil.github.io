@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://str.vov.gov.vn/vovlive/vov1vov5Vietnamese.sdp_aac/playlist.m3u8"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -24,6 +27,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/jxniabwipmhtv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -40,6 +46,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://cdn.thhp.vn/live/285c1421f29d05045909836b37313898e2f/playlist.m3u8"
+    ],
+    "br": [
+      201
     ]
   },
   {
@@ -48,6 +57,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://gbw.ynradio.cn/radio/gjgb.stream/playlist.m3u8"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -56,6 +68,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://replaynewsvi.ice.infomaniak.ch/replaynewsve-128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -64,6 +79,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://5b2959fe11444.streamlock.net/radio/fm961.stream/playlist.m3u8"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -98,7 +116,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8120/;"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rfi-tieng-viet",
@@ -107,7 +128,10 @@ window.STATIONS = [
     "streams": [
       "https://rfivietnamien96k.ice.infomaniak.ch/rfivietnamien-96k.mp3"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      96
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

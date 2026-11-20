@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.dkradio.lv/01"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://muste.latvijasradio.lv/pieci/smil:k2.smil/playlist.m3u8"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radioswh.lv:8443/swh_lv"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.relaxfm.lv/01"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -40,6 +52,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://muste.latvijasradio.lv/shoutcast/mp4:lr2a.stream/playlist.m3u8"
+    ],
+    "br": [
+      161
     ]
   },
   {
@@ -48,6 +63,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://topradio.live.advailo.com/topradio/mp3/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -56,6 +74,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streams.chillaxfm.lv/chillaxfm"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -64,6 +85,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streams.radioskonto.lv:8443/lounge-private"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -72,6 +96,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://starfm.live.advailo.com/audio/mp3/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -80,6 +107,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radiotev.lv:8443/radiov"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -88,6 +118,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streams.radioskonto.lv:8443/skonto-70-80-90"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -96,6 +129,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://streams.radiotev.lv:8443/lv"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -104,6 +140,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://radio.lkr.lv/;?type=http&nocache=40"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -112,6 +151,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.xo.fm/xofm128"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -120,6 +162,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.loungefm.lv:8443/lounge"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -128,6 +173,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streams.radiotev.lv:8443/dance"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -136,6 +184,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/EHR_LATVIESU_HITI.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -144,6 +195,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streams.radioskonto.lv:8443/skonto-juniors"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -152,6 +206,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streams.radioskonto.lv:8443/chill"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -160,6 +217,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.ehrhiti.lv:8000/Stream_67.mp3"
+    ],
+    "br": [
+      112
     ]
   },
   {
@@ -168,6 +228,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://25633.live.streamtheworld.com/EHR_SUPERHITS_HIPHOP_RNBAAC.aac"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -176,6 +239,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.ehrhiti.lv:8000/Stream_32.mp3"
+    ],
+    "br": [
+      112
     ]
   },
   {
@@ -184,6 +250,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.ehrhiti.lv:8000/Stream_25.mp3"
+    ],
+    "br": [
+      112
     ]
   },
   {
@@ -192,6 +261,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.ehrhiti.lv:8000/Stream_23.mp3"
+    ],
+    "br": [
+      112
     ]
   },
   {
@@ -208,6 +280,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streams.chillaxfm.lv/chillax"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -216,6 +291,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://28933.live.streamtheworld.com/LATVIESU_HITI_DEJU_HITIAAC.aac"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -224,6 +302,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/EHR_LIDO_GARSU_HITIAAC.aac"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -232,6 +313,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://27943.live.streamtheworld.com/EHR_SUPERHITS.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -240,6 +324,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://29053.live.streamtheworld.com/EHR_SUPERHITS_GOLDAAC.aac"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -248,6 +335,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.tligradio.org/listen/latvian/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -256,6 +346,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.ivofm.lv/listen/ivofm/radio.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -264,6 +357,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radioswh.lv:8443/spinmp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -281,6 +377,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://25643.live.streamtheworld.com/LATVIESU_HITI_LV_REPSAAC.aac"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -289,6 +388,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://muste.latvijasradio.lv/pieci/smil:k6.smil/playlist.m3u8"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -297,6 +399,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://muste.latvijasradio.lv/pieci/smil:k5.smil/playlist.m3u8"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -305,6 +410,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://dreamsiteradiocp2.com/proxy/rmlatvia?mp=/stream"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -313,6 +421,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/LATVIESU_HITI_ZELTA_HITIAAC.aac"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -321,6 +432,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://muste.latvijasradio.lv/pieci/smil:k3.smil/playlist.m3u8"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -330,7 +444,10 @@ window.STATIONS = [
     "streams": [
       "https://muste.latvijasradio.lv/pieci/smil:k1.smil/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      64
+    ]
   },
   {
     "id": "european-hit-radio-c-c-radio",
@@ -339,7 +456,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/EHR_IDEAL_MUSICAAC.aac"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      96
+    ]
   },
   {
     "id": "cave-lounge",
@@ -348,7 +468,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/geuwghjjyjjtv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "gradio-lv-one",
@@ -357,7 +480,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.gradio.lv/gradio-one.mp4a"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "latvijas-radio-1",
@@ -366,7 +492,10 @@ window.STATIONS = [
     "streams": [
       "https://muste.latvijasradio.lv/shoutcast/mp4:lr1a.stream/playlist.m3u8"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      129
+    ]
   },
   {
     "id": "radio-viens",
@@ -375,7 +504,10 @@ window.STATIONS = [
     "streams": [
       "https://radioviens.lv/live"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      256
+    ]
   },
   {
     "id": "ehr-party-service",
@@ -384,7 +516,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.ehrhiti.lv:8000/Stream_12.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      112
+    ]
   },
   {
     "id": "europa",
@@ -393,7 +528,10 @@ window.STATIONS = [
     "streams": [
       "https://live-radioliepaja.lv/listen/europa/radio"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      192
+    ]
   },
   {
     "id": "ehr-ideal-music",
@@ -402,7 +540,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.ehrhiti.lv:8000/Stream_78.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      112
+    ]
   },
   {
     "id": "your-city-padio",
@@ -411,7 +552,10 @@ window.STATIONS = [
     "streams": [
       "https://c28.radioboss.fm:18234/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-energy-lv",
@@ -420,7 +564,10 @@ window.STATIONS = [
     "streams": [
       "https://radio2.radioenergy.lv:9000/"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-7",
@@ -429,7 +576,10 @@ window.STATIONS = [
     "streams": [
       "https://listen.radio7.lv:2053/Radio7"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ehr-gold",
@@ -438,7 +588,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.ehrhiti.lv:8000/Stream_64.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "latvijas-radio-lr6-naba",
@@ -447,7 +600,10 @@ window.STATIONS = [
     "streams": [
       "https://muste.latvijasradio.lv/shoutcast/mp4:naba.stream/playlist.m3u8"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ehr-rise-shine",
@@ -456,7 +612,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.ehrhiti.lv:8000/Stream_36.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      112
+    ]
   },
   {
     "id": "ehr-festivalu-hiti",
@@ -465,7 +624,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.ehrhiti.lv:8000/Stream_73.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      96
+    ]
   },
   {
     "id": "european-hit-radio-superhits-chillout-hi",
@@ -474,7 +636,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/EHR_SUPER_HITS_CHILLOUTAAC.aac"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      96
+    ]
   },
   {
     "id": "european-hit-radio-lmt-straume",
@@ -483,7 +648,10 @@ window.STATIONS = [
     "streams": [
       "https://28993.live.streamtheworld.com/EHR_LMT_STRAUMEAAC.aac"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      96
+    ]
   },
   {
     "id": "european-hit-radio-kool-hits",
@@ -492,7 +660,10 @@ window.STATIONS = [
     "streams": [
       "https://25583.live.streamtheworld.com/EHR_KOOLAAC.aac"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      96
+    ]
   },
   {
     "id": "skonto-hiti",
@@ -501,7 +672,10 @@ window.STATIONS = [
     "streams": [
       "https://streams.radioskonto.lv:8443/skonto-hiti"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      192
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

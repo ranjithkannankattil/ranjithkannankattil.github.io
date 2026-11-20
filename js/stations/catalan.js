@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RAC_1.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RAC_MES_1.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/SER_BARCELONA.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://shoutcast.ccma.cat/ccma/catalunyainformacioHD.mp3"
+    ],
+    "br": [
+      56
     ]
   },
   {
@@ -40,6 +52,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RAC105.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -48,6 +63,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://radiomarcabcnmedia.dns-lcinternet.com:9000/stream"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -56,6 +74,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streamer.radio.co/sb748f24ad/listen"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -64,6 +85,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.flaixfm.cat/icecast"
+    ],
+    "br": [
+      125
     ]
   },
   {
@@ -72,6 +96,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://eu1.lhdserver.es:9041/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -80,6 +107,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://fastly.live.brightcove.com/1854461588069069227/eu-central-1/6057955885001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoiZWFxNWh4LmVncmVzcy53YzQ3bTEiLCJhY2NvdW50X2lkIjoiNjA1Nzk1NTg4NTAwMSIsImVobiI6ImZhc3RseS5saXZlLmJyaWdodGNvdmUuY29tIiwiaXNzIjoiYmxpdmUtcGxheWJhY2stc291cmNlLWFwaSIsInN1YiI6InBhdGhtYXB0b2tlbiIsImF1ZCI6WyI2MDU3OTU1ODg1MDAxIl0sImp0aSI6IjE4NTQ0NjE1ODgwNjkwNjkyMjcifQ.RKqA-z0MRntFVph2G3tE9YzBp7vfdMXcynOKpyqvZTg/playlist-hls-dvr.m3u8"
+    ],
+    "br": [
+      7500
     ]
   },
   {
@@ -88,6 +118,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://shoutcast.ccma.cat/ccma/catalunyamusicaHD.mp3"
+    ],
+    "br": [
+      56
     ]
   },
   {
@@ -96,6 +129,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.giraweb.com/8020/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -104,6 +140,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://alziraradiomob.streaming-pro.com:6172/alziraradio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -112,6 +151,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.flaixbac.cat/icecast"
+    ],
+    "br": [
+      125
     ]
   },
   {
@@ -120,6 +162,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://dhits.frilab.com:8443/dhits"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -128,6 +173,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://strcdn.klm99.com/8100/stream"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -136,6 +184,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://relay.stream.enacast-cloud.com:40323/radiollancaHD.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -144,6 +195,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://pr1cen101.emisionlocal.com/proxy/radiovilareal?mp=/live"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -152,6 +206,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.ib3radio.com/ib3radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -160,6 +217,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/LOS40_CAT_SC"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -168,6 +228,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://enacast.com/laplanaradio/streams/HD"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -176,6 +239,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://enacast.com/radioabadiademontserrat/streams/HD"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -184,6 +250,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://eu1.fastcast4u.com/proxy/antena2000?mp=/1"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -192,6 +261,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://enacast.com/alcudiaradio/streams/HD"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -201,7 +273,9 @@ window.STATIONS = [
     "streams": [
       "https://directe.eixamplebarcelonaradio.com:8443/radioOnline"
     ],
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "comboi-la-radio-de-la-terreta",
@@ -209,6 +283,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.emisorasmusicales.net/listen/comboi/comboi.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -217,6 +294,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.martiproduccions.com/listen/taronjagirona/taronjagirona"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -225,6 +305,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://enacast.com/radiotarrega/streams/HD"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -241,6 +324,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://shoutcast.ccma.cat/ccma/icatHD.mp3"
+    ],
+    "br": [
+      56
     ]
   },
   {
@@ -249,6 +335,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://server8.emitironline.com:10824/"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -257,6 +346,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://enacast.com/alpicatradio/streams/SD"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -265,6 +357,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://enacast.com/radioaltea/streams/HD"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -273,6 +368,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.enacast.com/radiohospitalet56.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -281,6 +379,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://enacast.com/canalblau/streams/SD"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -289,6 +390,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://enacast.com/radioarenysdemunt/streams/HD"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -297,6 +401,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.recasound.es/proxy/radiomurta/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -305,6 +412,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://relay.stream.enacast-cloud.com:30049/mataroradioHD.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -313,6 +423,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://ascella.streamerr.co/listen/radiosantfruitos/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -321,6 +434,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://relay.stream.enacast-cloud.com:30048/rap56.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -330,7 +446,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.giraweb.com/8010/stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      320
+    ]
   },
   {
     "id": "remember-radio-joventut",
@@ -339,7 +458,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.idelta.es/listen/radio_joventut/stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-ciutat-de-badalona",
@@ -348,7 +470,10 @@ window.STATIONS = [
     "streams": [
       "https://enacast.com/radiob/streams/HD"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "vilassar-radio",
@@ -357,7 +482,10 @@ window.STATIONS = [
     "streams": [
       "https://relay.stream.enacast-cloud.com:40226/radiovilassardemarHD.mp3?us_privacy=1YNY56.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "formula-cat",
@@ -366,7 +494,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.rubostudio.es/listen/cat/radio.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "catalunya-musica",
@@ -384,7 +515,10 @@ window.STATIONS = [
     "streams": [
       "https://enacast.com/radioribarroja/streams/SD"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      96
+    ]
   },
   {
     "id": "radio-vilablareix",
@@ -393,7 +527,10 @@ window.STATIONS = [
     "streams": [
       "https://enacast.com/radiovilablareix/streams/SD"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-la-selva",
@@ -402,7 +539,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.enacast.com/radiolaselva56.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-valencianismo",
@@ -411,7 +551,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/oqux7fanb3lvv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "pollenca",
@@ -429,7 +572,10 @@ window.STATIONS = [
     "streams": [
       "https://ido.omedia.cat/listen/idofm/idofm.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rne-radio-5-barcelona",
@@ -438,7 +584,10 @@ window.STATIONS = [
     "streams": [
       "https://f111.rndfnk.com/star/crtve/rne5/bcn/aac/128/stream.aac?cid=01GEP66PD2Z35HZMWWYTNPZDNA&sid=3FcfW2W3jdWkXz7vkD72zU2Ngq6&token=LHRzylmDW8bb20dv4Y5loVc683Q4WaYIA3aHusJnd9Q&tvf=VK9SHi5cvBhmMTExLnJuZGZuay5jb20"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-manlleu",
@@ -447,7 +596,10 @@ window.STATIONS = [
     "streams": [
       "https://enacast.com/radiomanlleu/streams/HD"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      140
+    ]
   },
   {
     "id": "ona-mediterrania",
@@ -456,7 +608,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.enacast.com/onamediterrania128.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-seu",
@@ -465,7 +620,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.enacast.com/radiolaseu128.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-santvi-107-4fm",
@@ -474,7 +632,10 @@ window.STATIONS = [
     "streams": [
       "https://dhits.frilab.com:8443/santvi"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "esplugues-fm",
@@ -483,7 +644,10 @@ window.STATIONS = [
     "streams": [
       "https://antares.dribbcast.com/proxy/espluguesfm?mp=/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-sitges",
@@ -492,7 +656,10 @@ window.STATIONS = [
     "streams": [
       "https://s2.radio.co/s8e5dffe5e/listen"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      320
+    ]
   },
   {
     "id": "altafulla-radio",
@@ -501,7 +668,10 @@ window.STATIONS = [
     "streams": [
       "https://enacast.com/altafullaradio/streams/HD"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "totradio",
@@ -510,7 +680,10 @@ window.STATIONS = [
     "streams": [
       "https://www.totradio.com:8000/128kbps"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      160
+    ]
   },
   {
     "id": "radio-cornella",
@@ -519,7 +692,10 @@ window.STATIONS = [
     "streams": [
       "https://enacast.com/radiocornella/streams/SD"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-ulldecona",
@@ -528,7 +704,10 @@ window.STATIONS = [
     "streams": [
       "https://enacast.com/radioulldecona/streams/HD"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-vilafant",
@@ -537,7 +716,10 @@ window.STATIONS = [
     "streams": [
       "https://sonic.mediatelekom.net/9986/stream"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-gava",
@@ -546,7 +728,10 @@ window.STATIONS = [
     "streams": [
       "https://enacast.com/radiogava/streams/SD"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cugat-radio",
@@ -555,7 +740,10 @@ window.STATIONS = [
     "streams": [
       "https://directe.cugat.cat/directeHQ.mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-gallinera",
@@ -564,7 +752,10 @@ window.STATIONS = [
     "streams": [
       "https://radiobot.radioslibres.info/listen/radio_gallinera/radio.mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-sentmenat",
@@ -573,7 +764,10 @@ window.STATIONS = [
     "streams": [
       "https://enacast.com/radiosentmenat/streams/HD"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      96
+    ]
   },
   {
     "id": "radio-el-vendrell",
@@ -582,7 +776,10 @@ window.STATIONS = [
     "streams": [
       "https://enacast.com/rtvelvendrell/streams/SD"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      56
+    ]
   },
   {
     "id": "radio-puig-reig",
@@ -591,7 +788,10 @@ window.STATIONS = [
     "streams": [
       "https://enacast.com/puigreig/streams/SD"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      56
+    ]
   },
   {
     "id": "radio-rapita",
@@ -600,7 +800,10 @@ window.STATIONS = [
     "streams": [
       "https://enacast.com/radiorapita/streams/SD"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-palafrugell",
@@ -609,7 +812,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.martiproduccions.com/radiopalafrugell"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-hostafrancs",
@@ -618,7 +824,10 @@ window.STATIONS = [
     "streams": [
       "https://radiohostafrancs.cat/directe.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-l-om",
@@ -627,7 +836,10 @@ window.STATIONS = [
     "streams": [
       "https://radiolom.es:8800/;stream.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-ponts",
@@ -636,7 +848,10 @@ window.STATIONS = [
     "streams": [
       "https://enacast.com/radioponts/streams/HD"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "tarragona-radio",
@@ -645,7 +860,10 @@ window.STATIONS = [
     "streams": [
       "https://enacast.com/tarragonaradio/streams/SD"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-silenci",
@@ -654,7 +872,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.enacast.com:8000/radiosilenci56.mp3"
     ],
-    "added": "2026-11-17"
+    "added": "2026-11-17",
+    "br": [
+      56
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

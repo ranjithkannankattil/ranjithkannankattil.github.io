@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/qpn8mkt8c4duv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play.streamafrica.net/japancitypop"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://kathy.torontocast.com:3330/stream/1/?esPlayer&cb=82181.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.gotanno.love/;"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -48,6 +60,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://quincy.torontocast.com:2020/stream.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -57,6 +72,10 @@ window.STATIONS = [
     "streams": [
       "https://j.onlyhit.us/play",
       "https://cdn.onlyhitsradio.net/japan"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -65,6 +84,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://masterpl.hls.nhkworld.jp/hls/r1/live/master.m3u8"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -73,6 +95,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream2.rcast.net/70945"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -81,6 +106,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://yumicoradio.net/stream"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -89,6 +117,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://rocafmadrid.radioca.st/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -97,6 +128,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.stereoanime.com/listen/stereoanime/128"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -105,6 +139,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://fmsetagaya834.out.airtime.pro/fmsetagaya834_a"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -113,6 +150,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s3.radio.co/sc8d895604/listen"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -121,6 +161,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://listen.moe/stream"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -129,6 +172,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://replaynewsja.ice.infomaniak.ch/replaynewsja-128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -137,6 +183,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://shonanbeachfm.out.airtime.pro:8000/shonanbeachfm_a"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -145,6 +194,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/oaqigxpfjzqvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -153,6 +205,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://quincy.torontocast.com:2070/stream.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -161,6 +216,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://relay0.r-a-d.io/main.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -169,6 +227,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://tunein-live-b.cdnstream1.com/3885_128.mp3?aw_0_1st.skey=1733919523&lat=37.751&lon=-97.822&aw_0_1st.abtest=&aw_0_1st.stationId=s321092&aw_0_1st.premium=false&source=TuneIn&aw_0_req.gdpr=true&aw_0_1st.platform=tunein&aw_0_1st.genre_id=g11&aw_0_1st.class=music&aw_0_1st.ads_partner_alias=ce.Other&aw_0_azn.planguage=en&aw_0_1st.is_ondemand=false&aw_0_1st.topicId=na&aw_0_1st.affiliateIds=a38725%2ca40075&aw_0_1st.bandId=16"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -177,6 +238,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://antares.dribbcast.com/proxy/jpop?mp=/s"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -185,6 +249,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.twinskaraoke.com/listen/neuro_21/radio.mp3"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -193,6 +260,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ottava2.out.airtime.pro:8000/ottava2_a"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -201,6 +271,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://pool.anison.fm:9000/AniSonFM(320)?"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -209,6 +282,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s10.webradio-hosting.com/proxy/fredradiojp/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -217,6 +293,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://antares.dribbcast.com/proxy/apop?mp=/s"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -225,6 +304,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/48533y95cnruv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -233,6 +315,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://securestreams.autopo.st:2592/stream?t=1769818665235"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -241,6 +326,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/ricmeoweux2uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -249,6 +337,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radicrojapan.out.airtime.pro/radicrojapan_a"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -257,6 +348,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast.animenexusla.com/radio/8000/animenexus"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -266,6 +360,10 @@ window.STATIONS = [
     "streams": [
       "https://kathy.torontocast.com:3060/;?shoutcast",
       "https://kathy.torontocast.com:3060/stream"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -274,6 +372,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast3.torontocast.com:1170/;"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -282,6 +383,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://aska.ru-hoster.com:8093/mikuparu"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -290,6 +394,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sbs-ice.streamguys1.com/sbs-popasia-sbs-web"
+    ],
+    "br": [
+      97
     ]
   },
   {
@@ -298,6 +405,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://vocaloid.radioca.st/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -306,6 +416,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://kathy.torontocast.com:3340/;?shoutcast"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -314,6 +427,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://listen.moe/opus"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -322,6 +438,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://vrc.gate.vrtv.jp/live?p=g&u=d"
+    ],
+    "br": [
+      931
     ]
   },
   {
@@ -331,7 +450,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.vrstv.jp/"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      1428
+    ]
   },
   {
     "id": "wave-anime-radio",
@@ -340,7 +462,10 @@ window.STATIONS = [
     "streams": [
       "https://channel_2.waveani.fun/stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "animenfo-radio",
@@ -349,7 +474,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zenolive.com/xwa8ckz7mzzuv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "big-b-radio-asian-pop",
@@ -358,7 +486,10 @@ window.STATIONS = [
     "streams": [
       "https://antares.dribbcast.com/proxy/apop?mp=/s?"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bbn-japanese",
@@ -367,7 +498,10 @@ window.STATIONS = [
     "streams": [
       "https://streams.radiomast.io/a622d414-52a6-4426-b3b8-ed2a4dbb704b"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      64
+    ]
   },
   {
     "id": "animeradio-de",
@@ -376,7 +510,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.animeradio.de/animeradio.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      192
+    ]
   },
   {
     "id": "jpop-powerplay-kawaii",
@@ -385,7 +522,10 @@ window.STATIONS = [
     "streams": [
       "https://kathy.torontocast.com:3060/stream/1/?esPlayer&cb=221391.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "galau-jikan-fm-indonesia",
@@ -404,7 +544,10 @@ window.STATIONS = [
     "streams": [
       "https://kathy.torontocast.com:3350/;?shoutcast"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "milcpod",
@@ -413,7 +556,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.milradio.info:9000/milcpod.m3u8"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      211
+    ]
   },
   {
     "id": "radio-linguas",
@@ -422,7 +568,10 @@ window.STATIONS = [
     "streams": [
       "https://radiolinguas.eu:8001/radiolinguas"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "mdk-space-radio",
@@ -431,7 +580,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.mdkband.com/stream.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      160
+    ]
   },
   {
     "id": "ia-music-news-japanese",
@@ -440,7 +592,10 @@ window.STATIONS = [
     "streams": [
       "https://ianewsja.ice.infomaniak.ch/ianewsja-128.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "doujinstyle-radio",
@@ -449,7 +604,10 @@ window.STATIONS = [
     "streams": [
       "https://streams.radio.co:80/s5ff57669c/listen"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      192
+    ]
   },
   {
     "id": "eden-radio",
@@ -458,7 +616,10 @@ window.STATIONS = [
     "streams": [
       "https://edenofthewest.com/listen/eden-radio/radio.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      192
+    ]
   },
   {
     "id": "anime-radio",
@@ -467,7 +628,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.laut.fm/animefm"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cinz-net-radio",
@@ -476,7 +640,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.cinz.net/"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "dankfm",
@@ -485,7 +652,10 @@ window.STATIONS = [
     "streams": [
       "https://internetradio.dankassassin368.com/DankFM.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "vocaloplus-vocaloid-more",
@@ -494,7 +664,10 @@ window.STATIONS = [
     "streams": [
       "https://link.zeno.fm/h77s0pfrcseuv/source"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      256
+    ]
   },
   {
     "id": "animecol-radio",
@@ -503,7 +676,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/6bfysacxc6quv"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "wrep",
@@ -512,7 +688,10 @@ window.STATIONS = [
     "streams": [
       "https://c13.radioboss.fm:8200/stream"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      48
+    ]
   },
   {
     "id": "hitsujikai-radio",
@@ -530,7 +709,10 @@ window.STATIONS = [
     "streams": [
       "https://phate.io/listen"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      192
+    ]
   },
   {
     "id": "free-fm-love",
@@ -539,7 +721,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/umsptm6rvy8uv"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "anime",
@@ -548,7 +733,10 @@ window.STATIONS = [
     "streams": [
       "https://animklatu.stream.laut.fm/animklatu?uuid=ee9a04b6-61e6-f283-01fd-49db913b1189&t302=2026-10-27_14-04-09"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radi-fm-nippon",
@@ -557,7 +745,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radi.fm/stream/ja.aac"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "otaku-musicradio",
@@ -566,7 +757,10 @@ window.STATIONS = [
     "streams": [
       "https://kathy.torontocast.com:2880/;"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      192
+    ]
   },
   {
     "id": "kawaii-music",
@@ -575,7 +769,10 @@ window.STATIONS = [
     "streams": [
       "https://kawaii-music.stream.laut.fm/kawaii-music"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "gensokyo-radio",
@@ -593,7 +790,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.shadowfr69.eu/mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      256
+    ]
   },
   {
     "id": "free-fm-x-mas",
@@ -602,7 +802,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/h60er015v68uv"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      112
+    ]
   },
   {
     "id": "radio-doki",
@@ -611,7 +814,10 @@ window.STATIONS = [
     "streams": [
       "https://kuronegai.radioca.st/stream"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "asia-dream-radio-japan-hits",
@@ -620,7 +826,10 @@ window.STATIONS = [
     "streams": [
       "https://quincy.torontocast.com:2020/;"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-animklatu",
@@ -629,7 +838,10 @@ window.STATIONS = [
     "streams": [
       "https://animklatu.stream.laut.fm/animklatu?t302=2026-10-27_06-59-01&uuid=3522d895-e97b-14d8-a100-c196346bb007"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "j-pop-powerplay-kawaii-http",
@@ -638,7 +850,10 @@ window.STATIONS = [
     "streams": [
       "https://kathy.torontocast.com:3060/;"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-spider",
@@ -647,7 +862,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/ullfy4hf9lhtv"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-nikey",
@@ -656,7 +874,10 @@ window.STATIONS = [
     "streams": [
       "https://stm8.voxhd.com.br:7996/stream%22"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      64
+    ]
   },
   {
     "id": "soundlink",
@@ -665,7 +886,10 @@ window.STATIONS = [
     "streams": [
       "https://howlingf-gecko.radioca.st/autodj"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-gambaru",
@@ -674,7 +898,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/b3tz3g94vv8uv"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "kaizen-live-radio",
@@ -683,7 +910,10 @@ window.STATIONS = [
     "streams": [
       "https://radiostreaming.pro/8386/stream"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      128
+    ]
   },
   {
     "id": "save-room-fm",
@@ -692,7 +922,10 @@ window.STATIONS = [
     "streams": [
       "https://saveroomfm.duckdns.org/stream"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radioroins",
@@ -701,7 +934,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/dd3rxeuxznhvv"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      80
+    ]
   },
   {
     "id": "t-spigot-radio",
@@ -710,7 +946,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.tspigot.net/radio/radio.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      192
+    ]
   },
   {
     "id": "retro-ko-radio",
@@ -719,7 +958,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.retroko.com/listen/retroko/radio.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      192
+    ]
   },
   {
     "id": "lucky-fm",
@@ -738,7 +980,10 @@ window.STATIONS = [
     "streams": [
       "https://s8.citrus3.com:8200/stream"
     ],
-    "added": "2026-11-16"
+    "added": "2026-11-16",
+    "br": [
+      192
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

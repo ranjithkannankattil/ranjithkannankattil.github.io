@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.zhanafm.kz:8443/vasheradio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.darhanradio.com/live"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio-streams.kaztrk.kz/shalqar/shalqar/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.beufm.kz/beufm"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -40,6 +52,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio-streams.kaztrk.kz/qazradio/qazradio/icecast.audio"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -48,6 +63,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.zhanafm.kz:8443/zhanarock"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -56,6 +74,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.zhanafm.kz:8443/zhanafm_onair"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -64,6 +85,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.ns.kz/radions"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -72,6 +96,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio-streams.kaztrk.kz/classic/classic/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -80,6 +107,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://listen4.myradio24.com/8162"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -88,6 +118,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://okeyradio.ru/okey"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -96,6 +129,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.zhanafm.kz:8443/pionerfm"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -104,6 +140,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.zhanafm.kz:8443/zhanalounge"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -112,6 +151,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.zhanafm.kz:8443/zhanamix"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -120,6 +162,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/1908/64k.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -128,6 +173,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiobulbul.stream.laut.fm/radiobulbul"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -136,6 +184,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://lhttp.qingting.fm/live/5022692/64k.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -153,7 +204,10 @@ window.STATIONS = [
     "streams": [
       "https://stream4.rcast.net/74046"
     ],
-    "added": "2026-11-17"
+    "added": "2026-11-17",
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play.global.audio/nrj128"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play.global.audio/veronikahi.aac"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play.global.audio/vanillahi.aac"
+    ],
+    "br": [
+      160
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://listen.radiofolkmix.com/folkmixios"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -40,6 +52,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play.global.audio/cityrabhi.aac"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -48,6 +63,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nova-radio.neterra.tv/veselinaretro"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -56,6 +74,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streams.badrockradio.net/hard-heavy"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -64,6 +85,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play.global.audio/bgestrada"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -72,6 +96,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play.global.audio/6bez10.aac"
+    ],
+    "br": [
+      56
     ]
   },
   {
@@ -80,6 +107,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://cdn.bweb.bg/radio/btv-radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -90,6 +120,11 @@ window.STATIONS = [
       "https://play.global.audio/energy-90s",
       "https://play.global.audio/energy-90s.ogg",
       "https://play.global.audio/energy-90s.aac"
+    ],
+    "br": [
+      128,
+      0,
+      48
     ]
   },
   {
@@ -98,6 +133,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://a12.asurahosting.com/listen/darik_radio/radio.mp3"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -106,6 +144,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play.global.audio/cityhi.aac"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -114,6 +155,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play.global.audio/energy-00s.aac"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -122,6 +166,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://play.global.audio/testbhi.aac"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -130,6 +177,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://lb-hls.cdn.bg/2032/fls/Kardzhali.stream/playlist.m3u8"
+    ],
+    "br": [
+      41
     ]
   },
   {
@@ -138,6 +188,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://bss1.neterra.tv/veselina/veselina.m3u8"
+    ],
+    "br": [
+      106
     ]
   },
   {
@@ -146,6 +199,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play.global.audio/cafehi.aac"
+    ],
+    "br": [
+      160
     ]
   },
   {
@@ -154,6 +210,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streams.badrockradio.net/classic-rock"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -162,6 +221,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streams.badrockradio.net/golden-era"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -178,6 +240,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play.global.audio/cityrab.aac"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -186,6 +251,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://lb-hls.cdn.bg/2032/fls/Sofia.stream/playlist.m3u8"
+    ],
+    "br": [
+      41
     ]
   },
   {
@@ -194,6 +262,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play-radio0.jump.bg:7146/;stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -202,6 +273,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://samcloud.spacial.com/api/listen?sid=99064&m=sc&rid=175019&t=ssl"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -210,6 +284,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radyo.yayin.com.tr:4474/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -218,6 +295,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.vidinlan.com/mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -234,6 +314,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://lb-hls.cdn.bg/2032/fls/Plovdiv.stream/playlist.m3u8"
+    ],
+    "br": [
+      41
     ]
   },
   {
@@ -242,6 +325,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sc.mpbnl.nl/radionostalgia.mp3"
+    ],
+    "br": [
+      384
     ]
   },
   {
@@ -250,6 +336,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://28933.live.streamtheworld.com/RADIO_1AAC_H.aac"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -258,6 +347,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.haskovo.net:9443/"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -266,6 +358,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://ssl22.radyotelekom.com/8386/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -274,6 +369,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://play.euronews.bg/euronews-high"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -282,6 +380,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play.hitfmbg.com/hitfm-high"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -290,6 +391,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.sweetradio.online:8001/tvr"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -298,6 +402,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play-radio6.jump.bg:7016/play;"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -306,6 +413,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.comnet.bg:12301/radio-folk.mp3"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -314,6 +424,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play-radio0.jump.bg:7598/;"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -322,6 +435,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://g5.turbohost.eu/proxy/romantic/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -331,7 +447,10 @@ window.STATIONS = [
     "streams": [
       "https://cdn.bweb.bg/radio/jazz-fm.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      320
+    ]
   },
   {
     "id": "n-joy-bg",
@@ -340,7 +459,10 @@ window.STATIONS = [
     "streams": [
       "https://cdn.bweb.bg/radio/njoy.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      112
+    ]
   },
   {
     "id": "metro-hits-radio",
@@ -349,7 +471,10 @@ window.STATIONS = [
     "streams": [
       "https://eu1.reliastream.com/proxy/mhr?mp=/MHR"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "darik-nostalgie",
@@ -358,7 +483,10 @@ window.STATIONS = [
     "streams": [
       "https://a10.asurahosting.com:7600/radio.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "95-7-fm",
@@ -385,7 +513,10 @@ window.STATIONS = [
     "streams": [
       "https://eu1.reliastream.com/proxy/mdr?mp=/MDR"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      112
+    ]
   },
   {
     "id": "city-radio-bulgaria",
@@ -403,7 +534,10 @@ window.STATIONS = [
     "streams": [
       "https://streams.badrockradio.net/national"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      320
+    ]
   },
   {
     "id": "station-7",
@@ -421,7 +555,10 @@ window.STATIONS = [
     "streams": [
       "https://28933.live.streamtheworld.com/RADIO_VERONIKAAAC_H.aac"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "energy-100-5-fm",
@@ -430,7 +567,10 @@ window.STATIONS = [
     "streams": [
       "https://29103.live.streamtheworld.com/RADIO_ENERGYAAC_H.aac"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-nova",
@@ -439,7 +579,10 @@ window.STATIONS = [
     "streams": [
       "https://25453.live.streamtheworld.com/RADIO_NOVAAAC_H.aac"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "99-7-fm",
@@ -448,7 +591,10 @@ window.STATIONS = [
     "streams": [
       "https://focusradio.dataserv.cc/1"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      320
+    ]
   },
   {
     "id": "dark-wave-radomir",
@@ -457,7 +603,10 @@ window.STATIONS = [
     "streams": [
       "https://dwrstream.eu/?ver=209395"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      32
+    ]
   },
   {
     "id": "station-8",
@@ -466,7 +615,10 @@ window.STATIONS = [
     "streams": [
       "https://lb-hls.cdn.bg/2032/fls/Vidin.stream/playlist.m3u8"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      41
+    ]
   },
   {
     "id": "radio-bella",
@@ -475,7 +627,10 @@ window.STATIONS = [
     "streams": [
       "https://online.radiobella.com/listen/radio.bella/radio.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      192
+    ]
   },
   {
     "id": "bulgaria-on-air-103-9-fm",
@@ -484,7 +639,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radio.bgonair.bg/RadioBOA"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      320
+    ]
   },
   {
     "id": "petipolk-radio",
@@ -493,7 +651,10 @@ window.STATIONS = [
     "streams": [
       "https://cast4.my-control-panel.com/proxy/anatoli1/stream"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      192
+    ]
   },
   {
     "id": "briefley-radio",
@@ -502,7 +663,10 @@ window.STATIONS = [
     "streams": [
       "https://listen.radioking.com/radio/772229/stream/839543"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-retro-samokov",
@@ -511,7 +675,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.jump.bg/proxy/stanimi1/radioRETRO"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-9",
@@ -520,7 +687,10 @@ window.STATIONS = [
     "streams": [
       "https://lb-hls.cdn.bg/2032/fls/Shumen.stream/playlist.m3u8"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      41
+    ]
   },
   {
     "id": "radio-ruse",
@@ -538,7 +708,10 @@ window.STATIONS = [
     "streams": [
       "https://play.global.audio/radio1-koledahi.aac"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "93-1-fm",
@@ -556,7 +729,10 @@ window.STATIONS = [
     "streams": [
       "https://cdn.btv.bg/radio/btv-radio.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "city-latin",
@@ -565,7 +741,10 @@ window.STATIONS = [
     "streams": [
       "https://play.global.audio/citylatinhi.aac"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fm-94-4-fm",
@@ -574,7 +753,10 @@ window.STATIONS = [
     "streams": [
       "https://pulsar.atlantis.bg:8443/fmplusnew"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-nova-bulgaria",
@@ -592,7 +774,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.jump.bg/proxy/feedyyy02?mp=/MLR70S"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-vaticana-bulgaria",
@@ -601,7 +786,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.vaticannews.va/stream-bg"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "metro-country-rock-hd",
@@ -610,7 +798,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.jump.bg/proxy/feed104?mp=/MSRR"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fred-film-radio",
@@ -619,7 +810,10 @@ window.STATIONS = [
     "streams": [
       "https://s10.webradio-hosting.com/proxy/fredradiobg/stream"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-fresh-ruse-93-6-fm",
@@ -628,7 +822,10 @@ window.STATIONS = [
     "streams": [
       "https://streamer2.atlantis.bg:8443/fresh"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-1-rock",
@@ -637,7 +834,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_1_ROCKAAC_H.aac"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "97-4-fm",
@@ -646,7 +846,10 @@ window.STATIONS = [
     "streams": [
       "https://27913.live.streamtheworld.com/BG_RADIOAAC_H.aac"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "98-6-fm",
@@ -664,7 +867,10 @@ window.STATIONS = [
     "streams": [
       "https://lb-hls.cdn.bg/2032/fls/Burgas.stream/playlist.m3u8"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      41
+    ]
   },
   {
     "id": "nova-news",
@@ -673,7 +879,10 @@ window.STATIONS = [
     "streams": [
       "https://play.global.audio/novanewshi.aac"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-12",
@@ -682,7 +891,10 @@ window.STATIONS = [
     "streams": [
       "https://qft.monster/listen/radio_qfte/radio.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-tuturutka-97-4-evropa",
@@ -691,7 +903,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/uc2rmbyhvd5uv"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "note-fm",
@@ -700,7 +915,10 @@ window.STATIONS = [
     "streams": [
       "https://sc.mpbnl.nl/notefm.mp3"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      384
+    ]
   },
   {
     "id": "mixx",
@@ -709,7 +927,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.comnet.bg:12301/radio-mixx.mp3"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      320
+    ]
   },
   {
     "id": "station-13",
@@ -718,7 +939,10 @@ window.STATIONS = [
     "streams": [
       "https://lb-hls.cdn.bg/2032/fls/Blagoevgrad.stream/playlist.m3u8"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      41
+    ]
   },
   {
     "id": "n-joy-101-6-fm",
@@ -727,7 +951,10 @@ window.STATIONS = [
     "streams": [
       "https://cdn.btv.bg/radio/njoy.mp3"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-caribrod",
@@ -736,7 +963,10 @@ window.STATIONS = [
     "streams": [
       "https://as1.radioserveri.com:8220/radio.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radioto-bg",
@@ -745,7 +975,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.jump.bg/proxy/radiotobg2?mp=/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-atlantic",
@@ -754,7 +987,10 @@ window.STATIONS = [
     "streams": [
       "https://c32.radioboss.fm:8853/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "interhit",
@@ -763,7 +999,10 @@ window.STATIONS = [
     "streams": [
       "https://play.123castbg.eu:18425/stream"
     ],
-    "added": "2026-11-16"
+    "added": "2026-11-16",
+    "br": [
+      128
+    ]
   },
   {
     "id": "easy-radio-bg",
@@ -772,7 +1011,10 @@ window.STATIONS = [
     "streams": [
       "https://live.easyradio.bg/192?type=.mp3"
     ],
-    "added": "2026-11-17"
+    "added": "2026-11-17",
+    "br": [
+      192
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

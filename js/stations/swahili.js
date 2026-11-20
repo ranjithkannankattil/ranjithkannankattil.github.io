@@ -9,7 +9,9 @@ window.STATIONS = [
     "streams": [
       "https://eatv.radioca.st/stream"
     ],
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "jesus-is-lord-radio",
@@ -17,6 +19,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://s3.radio.co/s97f38db97/listen"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -25,6 +30,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/xwx18us91k8uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -33,6 +41,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/ymapb78yznhvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -41,6 +52,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio4.pro-fhi.net/live/RadioMotoButemboBeni?1712401009868"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -49,6 +63,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/5w8y7wcf9x8uv"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -57,6 +74,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://capitalradio.radioca.st/stream"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -65,6 +85,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://replaynewssw.ice.infomaniak.ch/replaynewssw-128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -73,6 +96,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/cmgkmed5u18uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -81,6 +107,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://s2.citrus3.com:8050/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -89,6 +118,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/r6vaqx5zbg0uv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -97,6 +129,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://dw.audiostream.io/dw/1027/mp3/64/dw08"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -105,6 +140,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/raoopfak6k2vv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -113,6 +151,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/eequgfw72hhvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -129,6 +170,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.afrikanabestsounds.com/listen/live_african/radio.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -137,6 +181,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/xdb8nazajqcvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -145,6 +192,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://radio.universalhealthradio.org/uhr-sw.mp3"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -153,6 +203,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/7u8xbck3v7zuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -161,6 +214,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/3zgc6zpfvorvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -170,7 +226,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.radionomy.com/JamendoLounge"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "104-1-favour-fm-gulu-104-1-fm",
@@ -179,7 +238,10 @@ window.STATIONS = [
     "streams": [
       "https://us5new.listen2myradio.com:2199/listen.php?port=8138&type=ice&mount=stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      64
+    ]
   },
   {
     "id": "heavenly-altar-church-radio-kampala",
@@ -188,7 +250,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/6s8719ctbphvv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "nakawa-online-radio-kampala",
@@ -197,7 +262,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/6hs5suuvqfhvv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "sanctuary-fm-kampala",
@@ -206,7 +274,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/vyx334hsbphvv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rfi-kiswahili",
@@ -215,7 +286,10 @@ window.STATIONS = [
     "streams": [
       "https://rfiswahili96k.ice.infomaniak.ch/rfiswahili-96k.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      96
+    ]
   },
   {
     "id": "bnx-media-fm-kampala",
@@ -224,7 +298,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/6icyyzi1hawuv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "voice-of-heaven-kampala",
@@ -233,7 +310,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/s961sfesdmntv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "promise-radio-ug",
@@ -242,7 +322,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/hkzgeqlcjoxuv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "makie-max-radio",
@@ -261,7 +344,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/bphnslpg8p1uv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "glory-fm-maganjo-kampala",
@@ -270,7 +356,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/bn7dbg8w0nhvv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "gospel-kingz",
@@ -279,7 +368,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/vstzctms6rhvv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-jambo",
@@ -288,7 +380,10 @@ window.STATIONS = [
     "streams": [
       "https://radiojambo-atunwadigital.streamguys1.com/radiojambo"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-citizen",
@@ -297,7 +392,10 @@ window.STATIONS = [
     "streams": [
       "https://radiocitizen-atunwadigital.streamguys1.com/radiocitizen/playlist.m3u8"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      130
+    ]
   },
   {
     "id": "tafsir-in-swahili",
@@ -306,7 +404,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8176/;"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "translation-of-the-quran-in-swahili",
@@ -315,7 +416,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8262/;"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-kaya",
@@ -324,7 +428,10 @@ window.STATIONS = [
     "streams": [
       "https://usa9-vn.mixstream.net:8084/;"
     ],
-    "added": "2026-11-13"
+    "added": "2026-11-13",
+    "br": [
+      112
+    ]
   },
   {
     "id": "kizazi-radio",
@@ -333,7 +440,10 @@ window.STATIONS = [
     "streams": [
       "https://a4.asurahosting.com:8430/radio.mp3"
     ],
-    "added": "2026-11-17"
+    "added": "2026-11-17",
+    "br": [
+      192
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

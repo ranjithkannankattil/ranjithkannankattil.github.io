@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://icestreaming.rai.it/1.mp3"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icestreaming.rai.it/2.mp3"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icestreaming.rai.it/3.mp3"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/radiodeejay/radiodeejay/master_ma.m3u8"
+    ],
+    "br": [
+      122
     ]
   },
   {
@@ -40,6 +52,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S97044836/tbbP8T1ZRPBL/playlist_audio.m3u8"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -48,6 +63,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.unitedradio.it/Radio105.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -57,6 +75,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.unitedradio.it/Virgin.mp3",
       "https://icy.unitedradio.it/Virgin.mp3"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -65,6 +87,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.unitedradio.it/RMC.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -73,6 +98,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.unitedradio.it/r101"
+    ],
+    "br": [
+      95
     ]
   },
   {
@@ -81,6 +109,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/radiocapital/radiocapital/master_ma.m3u8"
+    ],
+    "br": [
+      122
     ]
   },
   {
@@ -89,6 +120,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/radiom2o/radiom2o/master_ma.m3u8"
+    ],
+    "br": [
+      122
     ]
   },
   {
@@ -97,6 +131,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://livex.radiopopolare.it/radiopop"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -105,6 +142,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://sportiva.inmystream.it/stream/sportiva"
+    ],
+    "br": [
+      36
     ]
   },
   {
@@ -121,6 +161,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icstream.rds.radio/rdsrelax"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -129,6 +172,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://onair.armisa.it/listen/armisa/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -137,6 +183,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icy.unitedradio.it/VirginRockClassics.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -145,6 +194,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://funkyradio.streamingmedia.it/play.mp3"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -153,6 +205,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://rblive.it:8170/radio.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -161,6 +216,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://classichitsradio.streamingmedia.it/play"
+    ],
+    "br": [
+      194
     ]
   },
   {
@@ -169,6 +227,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S51100361/Sz3kCA55PrRh/playlist_audio.m3u8"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -177,6 +238,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://wma01.fluidstream.net/birikina"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -185,6 +249,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/webradio/deejay80/playlist.m3u8"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -193,6 +260,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icy.unitedradio.it/105Dance90.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -201,6 +271,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream10.xdevel.com/audio32s975552-1839/stream/icecast.audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -209,6 +282,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S3160845/0tuSetc8UFkF/playlist_audio.m3u8"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -217,6 +293,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.laut.fm/m2o-originals-radio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -225,6 +304,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nr8.newradio.it:19574/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -233,6 +315,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://wma01.fluidstream.net/piterpan"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -241,6 +326,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.srg-ssr.ch/m/rsc_it/mp3_128"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -249,6 +337,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icy.unitedradio.it/101Legend.aac"
+    ],
+    "br": [
+      95
     ]
   },
   {
@@ -257,6 +348,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sr15.inmystream.it:8000/stream"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -265,6 +359,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/webradio/capitalwitalia/playlist.m3u8"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -281,6 +378,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nr9.newradio.it/proxy/ebaruffa?mp=/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -299,7 +399,10 @@ window.STATIONS = [
     "streams": [
       "https://az1.mediacp.eu/listen/radiodimensionerelax/radio.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "r101-made-in-italy",
@@ -308,7 +411,10 @@ window.STATIONS = [
     "streams": [
       "https://icy.unitedradio.it/R101MadeInItaly.aac"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      95
+    ]
   },
   {
     "id": "nature-radio-sleep",
@@ -317,7 +423,10 @@ window.STATIONS = [
     "streams": [
       "https://az1.mediacp.eu/listen/natureradiosleep/radio.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-bruno-made-in-italy",
@@ -335,7 +444,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.rcs.revma.com/sv2hu8qqv6bwv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "jazz-radio-swiss",
@@ -344,7 +456,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.srg-ssr.ch/m/rsj/mp3_128"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-volami-nel-cuore",
@@ -362,7 +477,10 @@ window.STATIONS = [
     "streams": [
       "https://icstream.rds.radio/disco"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      256
+    ]
   },
   {
     "id": "italia-italia-80",
@@ -371,7 +489,10 @@ window.STATIONS = [
     "streams": [
       "https://icy.unitedradio.it/um016.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-radicale",
@@ -380,7 +501,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radioradicale.it/live.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      64
+    ]
   },
   {
     "id": "romantica-radio",
@@ -389,7 +513,10 @@ window.STATIONS = [
     "streams": [
       "https://vetrina.multi-radio.com/romanticaradio"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      64
+    ]
   },
   {
     "id": "one-dance",
@@ -398,7 +525,10 @@ window.STATIONS = [
     "streams": [
       "https://ice10.fluidstream.net/rn1_2.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      256
+    ]
   },
   {
     "id": "rai-news-24",
@@ -418,7 +548,10 @@ window.STATIONS = [
     "streams": [
       "https://ice10.fluidstream.net/anni60tn.aac"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      64
+    ]
   },
   {
     "id": "rds",
@@ -436,7 +569,10 @@ window.STATIONS = [
     "streams": [
       "https://sphera.fluidstream.eu/company.aac"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-m2o-dance",
@@ -445,7 +581,10 @@ window.STATIONS = [
     "streams": [
       "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/radiom2odance/radiom2odance/master_ma.m3u8"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      122
+    ]
   },
   {
     "id": "musica-jazz-radio",
@@ -454,7 +593,10 @@ window.STATIONS = [
     "streams": [
       "https://ice03.fluidstream.net/mjr.aac"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-onda-rossa",
@@ -472,7 +614,10 @@ window.STATIONS = [
     "streams": [
       "https://icy.unitedradio.it/VirginRock70.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rai-radio-1-sport",
@@ -481,7 +626,10 @@ window.STATIONS = [
     "streams": [
       "https://icestreaming.rai.it/13.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      256
+    ]
   },
   {
     "id": "radio-swiss-pop",
@@ -490,7 +638,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.srg-ssr.ch/srgssr/rsp/aac/96"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      88
+    ]
   },
   {
     "id": "mc2-cafe-del-mar-collection",
@@ -499,7 +650,10 @@ window.STATIONS = [
     "streams": [
       "https://n13a-eu.rcs.revma.com/a2n83wxayk3vv?rj-ttl=5&rj-tok=AAABndIfXksAiTXrqw2SmfAauA"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-popolare-milano",
@@ -508,7 +662,10 @@ window.STATIONS = [
     "streams": [
       "https://livex.radiopopolare.it/radiopop2"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-bianconera",
@@ -517,7 +674,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.tmwradio.com/bianconera.aac"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      64
+    ]
   },
   {
     "id": "deejay-suona-italia",
@@ -526,7 +686,10 @@ window.STATIONS = [
     "streams": [
       "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/webradio/deejaysuonaitalia/playlist.m3u8"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rigiriamo-web-radio",
@@ -535,7 +698,10 @@ window.STATIONS = [
     "streams": [
       "https://onair7.xdevel.com/proxy/xautocloud_zswr_1060?mp=/;stream/;"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "virgin-radio-rock-80",
@@ -544,7 +710,10 @@ window.STATIONS = [
     "streams": [
       "https://icy.unitedradio.it/VirginRock80.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "retesport-italia",
@@ -553,7 +722,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.ithost.it/retesport.ogg"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      48
+    ]
   },
   {
     "id": "radio-kiss-kiss-hits",
@@ -562,7 +734,10 @@ window.STATIONS = [
     "streams": [
       "https://ice08.fluidstream.net/kk_hits.aac"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rai-radio-classica-filodiffusione",
@@ -571,7 +746,10 @@ window.STATIONS = [
     "streams": [
       "https://icestreaming.rai.it/5.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      256
+    ]
   },
   {
     "id": "radio-marte",
@@ -580,7 +758,10 @@ window.STATIONS = [
     "streams": [
       "https://stream1.xdevel.com/audio0s975753-313/stream/icecast.audio"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-105-zoo-radio",
@@ -589,7 +770,10 @@ window.STATIONS = [
     "streams": [
       "https://icy.unitedradio.it/105Zoo.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-romanista",
@@ -598,7 +782,10 @@ window.STATIONS = [
     "streams": [
       "https://romanista.newradio.it/stream"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-sei-italia",
@@ -607,7 +794,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.ithost.it/radiosei.ogg"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      32
+    ]
   },
   {
     "id": "globo-vintage",
@@ -616,7 +806,10 @@ window.STATIONS = [
     "streams": [
       "https://m100.newradio.it/m100-64"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      96
+    ]
   },
   {
     "id": "italian-radio-only-romantic-italian-musi",
@@ -625,7 +818,10 @@ window.STATIONS = [
     "streams": [
       "https://italianradio.streamingmedia.it/play"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      100
+    ]
   },
   {
     "id": "radio-monte-carlo-fm",
@@ -634,7 +830,10 @@ window.STATIONS = [
     "streams": [
       "https://icy.unitedradio.it/RMC.aac"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      95
+    ]
   },
   {
     "id": "italia-italia-70",
@@ -643,7 +842,10 @@ window.STATIONS = [
     "streams": [
       "https://icy.unitedradio.it/um020.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "italo-disco",
@@ -652,7 +854,10 @@ window.STATIONS = [
     "streams": [
       "https://italo-disco.stream.laut.fm/italo-disco"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "venice-classic-radio",
@@ -661,7 +866,10 @@ window.STATIONS = [
     "streams": [
       "https://uk2.streamingpulse.com/ssl/vcr1"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-italia-anni-60",
@@ -670,7 +878,10 @@ window.STATIONS = [
     "streams": [
       "https://ice04.fluidstream.net/ria60_bo.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "monte-carlo",
@@ -688,7 +899,10 @@ window.STATIONS = [
     "streams": [
       "https://funkyradio.streamingmedia.it/audio.aac"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      132
+    ]
   },
   {
     "id": "rds-radio-dimensione-suono",
@@ -697,7 +911,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.rds.radio/audio/rds.stream_aac/playlist.m3u8"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      131
+    ]
   },
   {
     "id": "controradio",
@@ -706,7 +923,10 @@ window.STATIONS = [
     "streams": [
       "https://s4.yesstreaming.net:17199/stream"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      256
+    ]
   },
   {
     "id": "radio-105-rap-italia",
@@ -715,7 +935,10 @@ window.STATIONS = [
     "streams": [
       "https://icy.unitedradio.it/105RapItalia.mp3"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      128
+    ]
   },
   {
     "id": "virgin-radio-hard-rock",
@@ -724,7 +947,10 @@ window.STATIONS = [
     "streams": [
       "https://icy.unitedradio.it/VirginHardRock.mp3"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      128
+    ]
   },
   {
     "id": "disco-radio",
@@ -751,7 +977,10 @@ window.STATIONS = [
     "streams": [
       "https://icy.unitedradio.it/Virgin_03.mp3"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-marilu",
@@ -760,7 +989,10 @@ window.STATIONS = [
     "streams": [
       "https://wma01.fluidstream.net/marilu"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      64
+    ]
   },
   {
     "id": "pop-radio-swiss",
@@ -769,7 +1001,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.srg-ssr.ch/m/rsp/mp3_128"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "forever-90",
@@ -778,7 +1013,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.laut.fm/forever90"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "deejay-time",
@@ -787,7 +1025,10 @@ window.STATIONS = [
     "streams": [
       "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/webradio/deejaytime/playlist.m3u8"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-kiss-kiss-history-hits",
@@ -796,7 +1037,10 @@ window.STATIONS = [
     "streams": [
       "https://ice08.fluidstream.net/kk_history.aac"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-romantic",
@@ -816,7 +1060,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.radiomargherita.com/stream/radiomargherita"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-swiss-jazz",
@@ -825,7 +1072,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.srg-ssr.ch/srgssr/rsj/aac/96"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      88
+    ]
   },
   {
     "id": "lattemiele-marche-abruzzo",
@@ -834,7 +1084,10 @@ window.STATIONS = [
     "streams": [
       "https://ice02.fluidstream.net/fluid016.aac"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-gamma-5",
@@ -843,7 +1096,10 @@ window.STATIONS = [
     "streams": [
       "https://ice09.fluidstream.net/fluid0902.aac?FLID=6"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-105-hiphop-rnb",
@@ -852,7 +1108,10 @@ window.STATIONS = [
     "streams": [
       "https://icy.unitedradio.it/105HipHopRnB.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "70-80-disco-funk-modernsoul-e-boogie",
@@ -861,7 +1120,10 @@ window.STATIONS = [
     "streams": [
       "https://discofunk.streamingmedia.it/play"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radioone",
@@ -870,7 +1132,10 @@ window.STATIONS = [
     "streams": [
       "https://cp1.sednastream.com/proxy/radioone94?mp=/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "easy-network-jazz-soul",
@@ -879,7 +1144,10 @@ window.STATIONS = [
     "streams": [
       "https://sphera.fluidstream.eu/easy_jazz.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-105-miami",
@@ -888,7 +1156,10 @@ window.STATIONS = [
     "streams": [
       "https://icy.unitedradio.it/105Miami.mp3"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-swiss-classic",
@@ -897,7 +1168,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.srg-ssr.ch/srgssr/rsc_de/aac/96"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      96
+    ]
   },
   {
     "id": "cafe-del-mar-collection",
@@ -906,7 +1180,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.rcs.revma.com/bn68enmp81uvv.xspf"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-party-groove",
@@ -915,7 +1192,10 @@ window.STATIONS = [
     "streams": [
       "https://stream15.top-ix.org/partygroove"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      192
+    ]
   },
   {
     "id": "jungle-planet-radio",
@@ -924,7 +1204,10 @@ window.STATIONS = [
     "streams": [
       "https://phoebe.streamerr.co:3650/;?type=http&nocache=1739137731"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      320
+    ]
   },
   {
     "id": "rai-isoradio",
@@ -933,7 +1216,10 @@ window.STATIONS = [
     "streams": [
       "https://icestreaming.rai.it/6.mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      256
+    ]
   },
   {
     "id": "radio-capital-classic-rock",
@@ -942,7 +1228,10 @@ window.STATIONS = [
     "streams": [
       "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/webradio/capitalclassicrock/playlist.m3u8"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "classic-radio-swiss",
@@ -951,7 +1240,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.srg-ssr.ch/m/rsc_de/mp3_128"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "antenna-1-fm-107-1-roma",
@@ -960,7 +1252,10 @@ window.STATIONS = [
     "streams": [
       "https://a1-it.newradio.it/stream"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      256
+    ]
   },
   {
     "id": "r101-la-banda-di-r101",
@@ -969,7 +1264,10 @@ window.STATIONS = [
     "streams": [
       "https://icy.unitedradio.it/R101LaBanda.aac"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      95
+    ]
   },
   {
     "id": "hostal-azul-radio",
@@ -978,7 +1276,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/b4m2tic2ibbtv"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ram-power-102-7",
@@ -996,7 +1297,10 @@ window.STATIONS = [
     "streams": [
       "https://icy.unitedradio.it/Subasio.mp3"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-bellla-monella",
@@ -1005,7 +1309,10 @@ window.STATIONS = [
     "streams": [
       "https://ice02.fluidstream.net/bella.mp3"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "chkg-fm-96-1-fairchild-radio-vancouver-b",
@@ -1014,7 +1321,10 @@ window.STATIONS = [
     "streams": [
       "https://5b2959fe11444.streamlock.net/radio/fm961.stream/playlist.m3u8"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      48
+    ]
   },
   {
     "id": "radio-wow",
@@ -1023,7 +1333,10 @@ window.STATIONS = [
     "streams": [
       "https://sphera.fluidstream.eu/fluid_wow.mp3?FLID=6"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-furgoncino",
@@ -1032,7 +1345,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiojar.com/sf65dpxy9vzuv"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-crc",
@@ -1041,7 +1357,10 @@ window.STATIONS = [
     "streams": [
       "https://stream9.xdevel.com/audio2s975936-745/stream/icecast.audio"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-centrale-montorio-al-vomano",
@@ -1050,7 +1369,10 @@ window.STATIONS = [
     "streams": [
       "https://s1.forstream.it:8070/radiocentrale.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-manila",
@@ -1059,7 +1381,10 @@ window.STATIONS = [
     "streams": [
       "https://stream15.top-ix.org:8000/radiomanila"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ritmo-80",
@@ -1068,7 +1393,10 @@ window.STATIONS = [
     "streams": [
       "https://ice02.fluidstream.net/ritmo80.aac"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      64
+    ]
   },
   {
     "id": "giornale-radio",
@@ -1077,7 +1405,10 @@ window.STATIONS = [
     "streams": [
       "https://gr.fluidstream.eu/gr1.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-capital-music",
@@ -1086,7 +1417,10 @@ window.STATIONS = [
     "streams": [
       "https://4c4b867c89244861ac216426883d1ad0.msvdn.net/webradio/capitalmusic/playlist.m3u8"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-sud-orientale-rso",
@@ -1095,7 +1429,10 @@ window.STATIONS = [
     "streams": [
       "https://nrf1.newradio.it/stream/9750"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      96
+    ]
   },
   {
     "id": "albania-360-radio",
@@ -1104,7 +1441,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.albania360.net/listen/albania_360_radio/radio.mp3"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      192
+    ]
   },
   {
     "id": "rsc-radio-studio-centrale",
@@ -1113,7 +1453,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.studiocentrale.it/radio/8020/radio.mp3?_=1"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-gelosa",
@@ -1122,7 +1465,10 @@ window.STATIONS = [
     "streams": [
       "https://ice02.fluidstream.net/gelosa"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-napoli",
@@ -1131,7 +1477,10 @@ window.STATIONS = [
     "streams": [
       "https://ice06.fluidstream.net/RadioNapoli.mp3?FLID=6"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rai-radio-kids",
@@ -1140,7 +1489,10 @@ window.STATIONS = [
     "streams": [
       "https://icestreaming.rai.it/11.mp3"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      256
+    ]
   },
   {
     "id": "radio-60-70-80",
@@ -1149,7 +1501,10 @@ window.STATIONS = [
     "streams": [
       "https://ice.studiopiu.net/607080.aac"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      48
+    ]
   },
   {
     "id": "italia-italia-90",
@@ -1158,7 +1513,10 @@ window.STATIONS = [
     "streams": [
       "https://icy.unitedradio.it/um018.mp3"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "70-80-it",
@@ -1167,7 +1525,10 @@ window.STATIONS = [
     "streams": [
       "https://onair18.xdevel.com/proxy/7080it?mp=/stream"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      320
+    ]
   },
   {
     "id": "lifegate-radio",
@@ -1176,7 +1537,10 @@ window.STATIONS = [
     "streams": [
       "https://router.xdevel.com/audio0s975809-345/stream/icecast.audio"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rmi-euro-disco",
@@ -1185,7 +1549,10 @@ window.STATIONS = [
     "streams": [
       "https://ams-pioneer02.dedicateware.com:2655/stream"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      320
+    ]
   },
   {
     "id": "virgin-radio-rock-ballads",
@@ -1194,7 +1561,10 @@ window.STATIONS = [
     "streams": [
       "https://icy.unitedradio.it/Virgin_06.mp3"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "mc2",
@@ -1203,7 +1573,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.rcs.revma.com/fxp289cp81uvv.xspf"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      128
+    ]
   },
   {
     "id": "gedi-radio-capital-music",
@@ -1212,7 +1585,10 @@ window.STATIONS = [
     "streams": [
       "https://streamcdnr16-4c4b867c89244861ac216426883d1ad0.msvdn.net/webradio/capitalmusic/playlist.m3u8"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-number-one",
@@ -1221,7 +1597,10 @@ window.STATIONS = [
     "streams": [
       "https://rn1.fluidstream.eu/rn1.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      256
+    ]
   },
   {
     "id": "radio-classica",
@@ -1230,7 +1609,10 @@ window.STATIONS = [
     "streams": [
       "https://stream10.xdevel.com/audio0s978096-2470/stream/icecast.audio"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-80-afro",
@@ -1239,7 +1621,10 @@ window.STATIONS = [
     "streams": [
       "https://sphera.fluidstream.eu/r80_afro.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      192
+    ]
   },
   {
     "id": "woods-hit-radio-ac",
@@ -1248,7 +1633,10 @@ window.STATIONS = [
     "streams": [
       "https://cast4.asurahosting.com/proxy/nigel/stream"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-x",
@@ -1257,7 +1645,10 @@ window.STATIONS = [
     "streams": [
       "https://eu2.fastcast4u.com/proxy/radiox?mp=/1"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-19",
@@ -1266,7 +1657,10 @@ window.STATIONS = [
     "streams": [
       "https://rn1.fluidstream.eu/radio19.aac?FLID=6"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "grs-gruppo-radio-sperone",
@@ -1275,7 +1669,10 @@ window.STATIONS = [
     "streams": [
       "https://onair7.xdevel.com/proxy/xautocloud_luge_1982?mp=/;1/"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      320
+    ]
   },
   {
     "id": "italia-hits-italia",
@@ -1284,7 +1681,10 @@ window.STATIONS = [
     "streams": [
       "https://icy.unitedradio.it/um011.mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-globo",
@@ -1293,7 +1693,10 @@ window.STATIONS = [
     "streams": [
       "https://globo.newradio.it/globorm128"
     ],
-    "added": "2026-11-10"
+    "added": "2026-11-10",
+    "br": [
+      128
+    ]
   },
   {
     "id": "translation-of-the-quran-in-italiano",
@@ -1302,7 +1705,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8146/;"
     ],
-    "added": "2026-11-10"
+    "added": "2026-11-10",
+    "br": [
+      128
+    ]
   },
   {
     "id": "lo-zoo-di-105",
@@ -1311,7 +1717,10 @@ window.STATIONS = [
     "streams": [
       "https://icy.unitedradio.it/105Zoo.aac"
     ],
-    "added": "2026-11-10"
+    "added": "2026-11-10",
+    "br": [
+      95
+    ]
   },
   {
     "id": "dimensione-suono-roma",
@@ -1320,7 +1729,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.dimensionesuonoroma.radio/audio/dsr.stream_aac64/playlist.m3u8"
     ],
-    "added": "2026-11-10"
+    "added": "2026-11-10",
+    "br": [
+      66
+    ]
   },
   {
     "id": "radio-rouge-italy",
@@ -1329,7 +1741,10 @@ window.STATIONS = [
     "streams": [
       "https://nl1.streamingpulse.com/ssl/radiorougeitaly"
     ],
-    "added": "2026-11-10"
+    "added": "2026-11-10",
+    "br": [
+      320
+    ]
   },
   {
     "id": "virgin-radio-rock-party",
@@ -1338,7 +1753,10 @@ window.STATIONS = [
     "streams": [
       "https://icy.unitedradio.it/VirginRockParty.mp3"
     ],
-    "added": "2026-11-10"
+    "added": "2026-11-10",
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostream.neotel.mk/justmusicradio"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://samcloud.spacial.com/api/listen?sid=99064&m=sc&rid=175019&t=ssl"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostar.pro/stream/exyuretro.php"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s2.free-shoutcast.com/stream/18058"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -40,6 +52,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiofortuna.ipradio.mk/;*.mp3%22"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -48,6 +63,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.bubamara.com.mk/live"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -56,6 +74,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostar.pro/stream/worldretro.php"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -72,6 +93,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s1.skyradio.com.mk/;*.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -80,6 +104,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://eu4.fastcast4u.com/proxy/stilradiomk?mp=/1"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -88,6 +115,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostream.neotel.mk/kanal103"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -96,6 +126,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://vod-c57.interspace.com/channel_abr/47/playlist.m3u8"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -104,6 +137,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://eu4.fastcast4u.com/proxy/metradio?mp=/1"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -112,6 +148,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostar.pro/stream/mknarodna.php"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -120,6 +159,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostar.pro/stream/starlive.php"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -128,6 +170,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostar.pro/stream/boemi.php"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -136,6 +181,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s1.skyradio.com.mk/hits.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -144,6 +192,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://s2.stationplaylist.com:9280/macedonia.aac"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -152,6 +203,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostar.pro/stream/narodna.php"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -160,6 +214,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostar.pro/stream/starplus.php"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -169,6 +226,10 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/3PVRAAC.aac",
       "https://playerservices.streamtheworld.com/api/livestream-redirect/3PVR.mp3"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -177,6 +238,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://metromedia.live24.gr/metropolis955thess"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -185,6 +249,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radiogbg.se:8050/relay4"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -194,7 +261,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radioplus.mu:8000/radio.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "play-radio",
@@ -203,7 +273,10 @@ window.STATIONS = [
     "streams": [
       "https://live.playfm.mk:8046/live"
     ],
-    "added": "2026-11-12"
+    "added": "2026-11-12",
+    "br": [
+      128
+    ]
   },
   {
     "id": "90-1-nbc-fm-narwee-90-1-fm",
@@ -221,7 +294,10 @@ window.STATIONS = [
     "streams": [
       "https://radiostream.neotel.mk/samomk"
     ],
-    "added": "2026-11-13"
+    "added": "2026-11-13",
+    "br": [
+      256
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

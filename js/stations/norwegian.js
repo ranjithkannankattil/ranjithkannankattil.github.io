@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cdn0-47115-liveicecast0.dna.contentdelivery.net/p3_mp3_h"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -17,6 +20,10 @@ window.STATIONS = [
     "streams": [
       "https://p4.p4groupaudio.com/P04_AH",
       "https://p4.p4groupaudio.com/P04_MM"
+    ],
+    "br": [
+      192,
+      128
     ]
   },
   {
@@ -25,6 +32,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cdn0-47115-liveicecast0.dna.contentdelivery.net/jazz_mp3_h"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -33,6 +43,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://cdn0-47115-liveicecast0.dna.contentdelivery.net/nyheter_aac_h"
+    ],
+    "br": [
+      158
     ]
   },
   {
@@ -41,6 +54,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-bauerno.sharp-stream.com/radionorge_no_mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -49,6 +65,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://p5n.p4groupaudio.com/P05AAH"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -57,6 +76,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-bauerno.sharp-stream.com/radiorock_no_mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -65,6 +87,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-bauerno.sharp-stream.com/kiss_no_mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -75,6 +100,11 @@ window.STATIONS = [
       "https://p11.p4groupaudio.com/P11_MH",
       "https://p11.p4groupaudio.com/P11_MM",
       "https://p11.p4groupaudio.com/P11_AH"
+    ],
+    "br": [
+      192,
+      128,
+      192
     ]
   },
   {
@@ -83,6 +113,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.rthits.no/rthits192"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -91,6 +124,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://p6.p4groupaudio.com/P06_MM"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -99,6 +135,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cdn0-47115-liveicecast0.dna.contentdelivery.net/klassisk_mp3_h"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -107,6 +146,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://p4.p4groupaudio.com/P04_MH"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -115,6 +157,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cdn0-47115-liveicecast0.dna.contentdelivery.net/p1_dk14_mp3_h"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -123,6 +168,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://p5.p4groupaudio.com/P05_MM"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -131,6 +179,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-bauerno.sharp-stream.com/radiorock_no_aac"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -139,6 +190,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.laut.fm/north-beyond"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -147,6 +201,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.radio102.no/radio102_hq"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -155,6 +212,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.radiosotra.no:8443/radiosotra"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -163,6 +223,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://p10.p4groupaudio.com/P10_AH"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -172,6 +235,10 @@ window.STATIONS = [
     "streams": [
       "https://nrj.p4groupaudio.com/NRJ_MM",
       "https://nrj.p4groupaudio.com/NRJ_AH"
+    ],
+    "br": [
+      128,
+      192
     ]
   },
   {
@@ -181,6 +248,10 @@ window.STATIONS = [
     "streams": [
       "https://lyd.nrk.no/icecast/aac/high/s0w7hwn47m/p1_dk7",
       "https://lyd.nrk.no/icecast/mp3/high/s0w7hwn47m/p1_dk7"
+    ],
+    "br": [
+      159,
+      192
     ]
   },
   {
@@ -189,6 +260,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cdn0-47115-liveicecast0.dna.contentdelivery.net/p1_dk15_mp3_h"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -197,6 +271,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-bauerno.sharp-stream.com/station17_no_mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -205,6 +282,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cdn0-47115-liveicecast0.dna.contentdelivery.net/p1_dk2_mp3_h"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -213,6 +293,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.rcast.net/67165"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -221,6 +304,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://p9.p4groupaudio.com/P09_MH"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -229,6 +315,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live-bauerno.sharp-stream.com/p247mix_no_mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -237,6 +326,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lyd.radiokos.no/kos_lq"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -245,6 +337,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radionova.no/mp3"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -253,6 +348,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.radio3.no/Radio3Bodo48?rp_source=1&=&&___cb=322377588283394"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -261,6 +359,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://p7.p4groupaudio.com/P07_AH"
+    ],
+    "br": [
+      191
     ]
   },
   {
@@ -269,6 +370,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://audio.jaerradiogruppen.no/tonsberg_hq"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -277,6 +381,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://cdn0-47115-liveicecast0.dna.contentdelivery.net/sport_aac_h"
+    ],
+    "br": [
+      159
     ]
   },
   {
@@ -285,6 +392,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sc.dansbandsradio.se/dbr64.aac"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -293,6 +403,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lyd.nrk.no/icecast/aac/high/s0w7hwn47m/folkemusikk"
+    ],
+    "br": [
+      159
     ]
   },
   {
@@ -301,6 +414,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://radio.p7.no/listen/p7_kristen_pop/kristen_pop"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -309,6 +425,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nettradio.radiobo.com/radiobo-high"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -317,6 +436,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://p8.p4groupaudio.com/P08_MM"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -334,7 +456,10 @@ window.STATIONS = [
     "streams": [
       "https://lyd.radiodsf.no/dsf_hq"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-trndelag",
@@ -343,7 +468,10 @@ window.STATIONS = [
     "streams": [
       "https://nettradio.radiotrondelag.no:8443/radio_trondelag"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-rox",
@@ -352,7 +480,10 @@ window.STATIONS = [
     "streams": [
       "https://live-nors.sharp-stream.com/nors13.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "nrk-p1",
@@ -361,7 +492,10 @@ window.STATIONS = [
     "streams": [
       "https://nrk-live-radio-world.akamaized.net/p1pluss/muxed.m3u8?adap=audio&aco=aac"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      64
+    ]
   },
   {
     "id": "nrk-p1-vestfold",
@@ -370,7 +504,10 @@ window.STATIONS = [
     "streams": [
       "https://lyd.nrk.no/icecast/aac/high/s0w7hwn47m/p1_dk12"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      159
+    ]
   },
   {
     "id": "norsk-pop",
@@ -379,7 +516,10 @@ window.STATIONS = [
     "streams": [
       "https://live-bauerno.sharp-stream.com/norskpop_no_mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ordentlig-radio",
@@ -388,7 +528,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.oradio.no/oradio_hq"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-revolt",
@@ -397,7 +540,10 @@ window.STATIONS = [
     "streams": [
       "https://direkte.radiorevolt.no/revolt.aac"
     ],
-    "added": "2026-11-14"
+    "added": "2026-11-14",
+    "br": [
+      128
+    ]
   },
   {
     "id": "nrk-p1-hordaland",
@@ -406,7 +552,10 @@ window.STATIONS = [
     "streams": [
       "https://cdn0-47115-liveicecast0.dna.contentdelivery.net/p1_dk8_aac_h"
     ],
-    "added": "2026-11-15"
+    "added": "2026-11-15",
+    "br": [
+      159
+    ]
   },
   {
     "id": "radio-l-lillesand",
@@ -415,7 +564,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radio-l.no/rlihq"
     ],
-    "added": "2026-11-15"
+    "added": "2026-11-15",
+    "br": [
+      128
+    ]
   },
   {
     "id": "nettvy-radio",
@@ -424,7 +576,10 @@ window.STATIONS = [
     "streams": [
       "https://nettvy.no/radio/stream"
     ],
-    "added": "2026-11-19"
+    "added": "2026-11-19",
+    "br": [
+      320
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

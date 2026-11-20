@@ -10,7 +10,11 @@ window.STATIONS = [
       "https://icecast.walmradio.com:8443/classic_opus",
       "https://icecast.walmradio.com:8443/classic"
     ],
-    "where": "US"
+    "where": "US",
+    "br": [
+      192,
+      320
+    ]
   },
   {
     "id": "101-smooth-jazz",
@@ -19,7 +23,10 @@ window.STATIONS = [
     "streams": [
       "https://jking.cdnstream1.com/b22139_128mp3"
     ],
-    "where": "US"
+    "where": "US",
+    "br": [
+      192
+    ]
   },
   {
     "id": "heart-80s",
@@ -28,7 +35,10 @@ window.STATIONS = [
     "streams": [
       "https://media-ssl.musicradio.com/Heart80sMP3"
     ],
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      128
+    ]
   },
   {
     "id": "capital-uk",
@@ -37,7 +47,10 @@ window.STATIONS = [
     "streams": [
       "https://media-ssl.musicradio.com/CapitalUK"
     ],
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      48
+    ]
   },
   {
     "id": "adroit-jazz-underground",
@@ -46,7 +59,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.walmradio.com:8443/jazz_opus"
     ],
-    "where": "US"
+    "where": "US",
+    "br": [
+      192
+    ]
   },
   {
     "id": "classic-fm",
@@ -56,7 +72,11 @@ window.STATIONS = [
       "https://ice-the.musicradio.com/ClassicFMMP3",
       "https://ice-sov.musicradio.com/ClassicFMHD?hdauth=:2000000000:a290d4b39a16153061d4c743008b9fe8d424a7e5ec6469d40acf51fdcd336e80"
     ],
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      128,
+      192
+    ]
   },
   {
     "id": "102-7-kiis-fm-los-angeles",
@@ -74,7 +94,10 @@ window.STATIONS = [
     "streams": [
       "https://relax.stream.publicradio.org/relax.mp3"
     ],
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "capital-fm-london",
@@ -83,7 +106,10 @@ window.STATIONS = [
     "streams": [
       "https://media-ice.musicradio.com/CapitalMP3"
     ],
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      128
+    ]
   },
   {
     "id": "gold",
@@ -92,7 +118,10 @@ window.STATIONS = [
     "streams": [
       "https://media-ssl.musicradio.com/GoldMP3"
     ],
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bbc-radio-6-music",
@@ -110,7 +139,10 @@ window.STATIONS = [
     "streams": [
       "https://az1.mediacp.eu/listen/airport-lounge-radio/radio.mp3"
     ],
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      128
+    ]
   },
   {
     "id": "z100-new-york",
@@ -128,7 +160,10 @@ window.STATIONS = [
     "streams": [
       "https://media-ssl.musicradio.com/Heart90sMP3"
     ],
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      128
+    ]
   },
   {
     "id": "heart-dance",
@@ -137,7 +172,10 @@ window.STATIONS = [
     "streams": [
       "https://media-ssl.musicradio.com/HeartDanceMP3"
     ],
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      128
+    ]
   },
   {
     "id": "somafm-secret-agent",
@@ -146,7 +184,10 @@ window.STATIONS = [
     "streams": [
       "https://ice5.somafm.com/secretagent-128-mp3"
     ],
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "big-r-radio-80s-metal",
@@ -155,7 +196,10 @@ window.STATIONS = [
     "streams": [
       "https://bigrradio.cdnstream1.com/5186_128"
     ],
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "80s-drive",
@@ -164,7 +208,10 @@ window.STATIONS = [
     "streams": [
       "https://samcloud.spacial.com/api/listen?sid=111415&m=sc&rid=293634&t=ssl?&80sradio128mp3stereo44"
     ],
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bbc-radio-3",
@@ -182,7 +229,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radioparadise.com/rock-320"
     ],
-    "where": "US"
+    "where": "US",
+    "br": [
+      320
+    ]
   },
   {
     "id": "classic-fm-calm",
@@ -191,7 +241,10 @@ window.STATIONS = [
     "streams": [
       "https://media-ice.musicradio.com/ClassicFMCalmMP3"
     ],
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      128
+    ]
   },
   {
     "id": "magic-radio",
@@ -200,7 +253,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-mz.hellorayo.co.uk/magicnational.mp3?direct=true&aw_0_1st.playerid=BMUK_TuneIn&aw_0_1st.skey=7374499933&stationCode=mag"
     ],
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      112
+    ]
   },
   {
     "id": "radio-x",
@@ -209,7 +265,10 @@ window.STATIONS = [
     "streams": [
       "https://media-the.musicradio.com/RadioXUK"
     ],
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      48
+    ]
   },
   {
     "id": "hard-rock-heaven",
@@ -218,7 +277,10 @@ window.STATIONS = [
     "streams": [
       "https://hydra.cdnstream.com/1521_128"
     ],
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "kexp-seattle",
@@ -227,7 +289,10 @@ window.STATIONS = [
     "streams": [
       "https://kexp.streamguys1.com/kexp160.aac?listenerid=f4bcb5c771d830fbdd4195088a946ea6&awparams=companionAds%3Atrue"
     ],
-    "where": "US"
+    "where": "US",
+    "br": [
+      162
+    ]
   },
   {
     "id": "planet-rock",
@@ -236,7 +301,10 @@ window.STATIONS = [
     "streams": [
       "https://stream-mz.hellorayo.co.uk/planetrock.aac?direct=true&aw_0_1st.playerid=BMUK_Airable&aw_0_1st.skey=6778249992"
     ],
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      47
+    ]
   },
   {
     "id": "100-acid-jazz",
@@ -245,7 +313,10 @@ window.STATIONS = [
     "streams": [
       "https://mpc1.mediacp.eu:8356/stream"
     ],
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      128
+    ]
   },
   {
     "id": "somafm-indie-pop-rocks",
@@ -254,7 +325,10 @@ window.STATIONS = [
     "streams": [
       "https://ice6.somafm.com/indiepop-128-aac"
     ],
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "101-smooth-jazz-mellow-mix",
@@ -263,7 +337,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.live365.com/b48071_128mp3"
     ],
-    "where": "US"
+    "where": "US",
+    "br": [
+      192
+    ]
   },
   {
     "id": "a-mississippi-blues",
@@ -272,7 +349,10 @@ window.STATIONS = [
     "streams": [
       "https://cast1.torontocast.com:4450/;?type=http&nocache=1745625391"
     ],
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      320
+    ]
   },
   {
     "id": "somafm-underground-80s",
@@ -281,7 +361,10 @@ window.STATIONS = [
     "streams": [
       "https://ice6.somafm.com/u80s-128-mp3"
     ],
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "somafm-left-coast-70s",
@@ -290,7 +373,10 @@ window.STATIONS = [
     "streams": [
       "https://ice2.somafm.com/seventies-320-mp3"
     ],
-    "where": "US"
+    "where": "US",
+    "br": [
+      320
+    ]
   },
   {
     "id": "smooth-jazz-24-7",
@@ -299,7 +385,10 @@ window.STATIONS = [
     "streams": [
       "https://jking.cdnstream1.com/b75154_128mp3"
     ],
-    "where": "US"
+    "where": "US",
+    "br": [
+      192
+    ]
   },
   {
     "id": "80s-90s-super-pop-hits",
@@ -308,7 +397,10 @@ window.STATIONS = [
     "streams": [
       "https://s4.myradiostream.com:7344/listen.mp3?"
     ],
-    "where": "Australia"
+    "where": "Australia",
+    "br": [
+      192
+    ]
   },
   {
     "id": "heart",
@@ -317,7 +409,10 @@ window.STATIONS = [
     "streams": [
       "https://media-the.musicradio.com/HeartNorthLancsCumbria"
     ],
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      48
+    ]
   },
   {
     "id": "somafm-heavyweight-reggae",
@@ -326,7 +421,10 @@ window.STATIONS = [
     "streams": [
       "https://ice2.somafm.com/reggae-256-mp3"
     ],
-    "where": "US"
+    "where": "US",
+    "br": [
+      320
+    ]
   },
   {
     "id": "walm-2-hd",
@@ -336,7 +434,10 @@ window.STATIONS = [
       "https://icecast.walmradio.com:8443/walm2"
     ],
     "added": "2026-10-22",
-    "where": "US"
+    "where": "US",
+    "br": [
+      320
+    ]
   },
   {
     "id": "walm-2",
@@ -346,7 +447,10 @@ window.STATIONS = [
       "https://icecast.walmradio.com:8443/walm2_opus"
     ],
     "added": "2026-10-22",
-    "where": "US"
+    "where": "US",
+    "br": [
+      192
+    ]
   },
   {
     "id": "bbc-radio-2",
@@ -356,7 +460,10 @@ window.STATIONS = [
       "https://a.files.bbci.co.uk/ms6/live/3441A116-B12E-4D2F-ACA8-C1984642FA4B/audio/simulcast/hls/nonuk/pc_hd_abr_v2/cf/bbc_radio_two.m3u8"
     ],
     "added": "2026-10-22",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      102
+    ]
   },
   {
     "id": "outlaw-country-music-radio",
@@ -366,7 +473,10 @@ window.STATIONS = [
       "https://r.bgp.rodeo/listen/outlaw/radio.mp3"
     ],
     "added": "2026-10-22",
-    "where": "US"
+    "where": "US",
+    "br": [
+      320
+    ]
   },
   {
     "id": "96-7-kiss-fm-khfi-fm-austin",
@@ -386,7 +496,10 @@ window.STATIONS = [
       "https://kpop.onlyhit.us/play"
     ],
     "added": "2026-10-22",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "kiss-the-best-vibes-energy",
@@ -396,7 +509,10 @@ window.STATIONS = [
       "https://live-bauerkiss.sharp-stream.com/kissnational.aac?direct=true&aw_0_1st.skey=1602676850&rp_source=1&=&&___cb=60456375243858"
     ],
     "added": "2026-10-23",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      47
+    ]
   },
   {
     "id": "181-fm-kickin-country",
@@ -406,7 +522,10 @@ window.STATIONS = [
       "https://listen.181fm.com/181-kickincountry_128k.mp3"
     ],
     "added": "2026-10-23",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "181-fm-80-s-country",
@@ -416,7 +535,10 @@ window.STATIONS = [
       "https://listen.181fm.com/181-80scountry_128k.mp3"
     ],
     "added": "2026-10-23",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rock-fm-classic-rock",
@@ -426,7 +548,10 @@ window.STATIONS = [
       "https://audiotainment-sw.streamabc.net/atsw-classicrock-mp3-128-2538548?"
     ],
     "added": "2026-10-23",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "heart-70s",
@@ -436,7 +561,10 @@ window.STATIONS = [
       "https://media-ssl.musicradio.com/Heart70sMP3"
     ],
     "added": "2026-10-23",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      128
+    ]
   },
   {
     "id": "181-fm-90-s-country",
@@ -446,7 +574,10 @@ window.STATIONS = [
       "https://listen.181fm.com/181-90scountry_128k.mp3"
     ],
     "added": "2026-10-23",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "nu-metal-radio",
@@ -456,7 +587,10 @@ window.STATIONS = [
       "https://stream.revma.ihrhls.com/zc9483/hls.m3u8"
     ],
     "added": "2026-10-24",
-    "where": "US"
+    "where": "US",
+    "br": [
+      24
+    ]
   },
   {
     "id": "classic-fm-movies",
@@ -466,7 +600,10 @@ window.STATIONS = [
       "https://media-ice.musicradio.com/ClassicFMMoviesMP3"
     ],
     "added": "2026-10-24",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      128
+    ]
   },
   {
     "id": "1-oldies",
@@ -476,7 +613,10 @@ window.STATIONS = [
       "https://80sexitos.stream.laut.fm/80sexitos"
     ],
     "added": "2026-10-24",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "metal-rock-radio",
@@ -486,7 +626,10 @@ window.STATIONS = [
       "https://kathy.torontocast.com:2800/;"
     ],
     "added": "2026-10-24",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "static-90s-2000s-alt-rock",
@@ -496,7 +639,10 @@ window.STATIONS = [
       "https://r.bgp.rodeo/listen/static/radio.mp3"
     ],
     "added": "2026-10-24",
-    "where": "US"
+    "where": "US",
+    "br": [
+      320
+    ]
   },
   {
     "id": "erotica-lounge",
@@ -506,7 +652,10 @@ window.STATIONS = [
       "https://stream.zeno.fm/89asra0sfa0uv"
     ],
     "added": "2026-10-25",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bbc-radio-1-dance",
@@ -526,7 +675,10 @@ window.STATIONS = [
       "https://kathy.torontocast.com:3590/;?type=http&nocache=1739707069"
     ],
     "added": "2026-10-25",
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      320
+    ]
   },
   {
     "id": "bbc-radio-1xtra",
@@ -546,7 +698,10 @@ window.STATIONS = [
       "https://media-ice.musicradio.com/HeartUKMP3"
     ],
     "added": "2026-10-25",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      128
+    ]
   },
   {
     "id": "94-7-kumu",
@@ -556,7 +711,10 @@ window.STATIONS = [
       "https://pacificmedia.cdnstream1.com/2783_128.mp3"
     ],
     "added": "2026-10-25",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "jfsr-jazz-funk-soul-radio",
@@ -566,7 +724,10 @@ window.STATIONS = [
       "https://s2.radio.co/s22ae5a8a6/listen"
     ],
     "added": "2026-10-26",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      320
+    ]
   },
   {
     "id": "hd-radio-classic-rock-usa",
@@ -576,7 +737,10 @@ window.STATIONS = [
       "https://hdradioclassicrock-rfritschka.radioca.st/;"
     ],
     "added": "2026-10-26",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "181-fm-highway-181",
@@ -586,7 +750,10 @@ window.STATIONS = [
       "https://listen.181fm.com/181-highway_128k.mp3"
     ],
     "added": "2026-10-26",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "somafm-metal-detector",
@@ -596,7 +763,10 @@ window.STATIONS = [
       "https://ice5.somafm.com/metal-128-aac"
     ],
     "added": "2026-10-26",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "kexp-90-3-fm-seattle",
@@ -606,7 +776,10 @@ window.STATIONS = [
       "https://kexp-mp3-128.streamguys1.com/kexp128.mp3"
     ],
     "added": "2026-10-26",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "101-1-wjrr-orlando-s-rock-station",
@@ -626,7 +799,10 @@ window.STATIONS = [
       "https://az1.mediacp.eu/listen/100coverslounge/radio.mp3"
     ],
     "added": "2026-10-27",
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      128
+    ]
   },
   {
     "id": "somafm-poptron",
@@ -636,7 +812,10 @@ window.STATIONS = [
       "https://ice2.somafm.com/poptron-128-mp3"
     ],
     "added": "2026-10-27",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "smoothjazz-com",
@@ -646,7 +825,10 @@ window.STATIONS = [
       "https://smoothjazz.cdnstream1.com/2585_128.mp3"
     ],
     "added": "2026-10-27",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bbc-radio-3-unwind",
@@ -666,7 +848,10 @@ window.STATIONS = [
       "https://icecast.thisisdax.com/ClassicFM-M-Gaming"
     ],
     "added": "2026-10-27",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      48
+    ]
   },
   {
     "id": "radio-x-classic-rock",
@@ -676,7 +861,10 @@ window.STATIONS = [
       "https://media-ice.musicradio.com/RadioXClassicRockMP3"
     ],
     "added": "2026-10-28",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      128
+    ]
   },
   {
     "id": "capital-anthems-the-songs-capital-made-f",
@@ -686,7 +874,10 @@ window.STATIONS = [
       "https://media-ssl.musicradio.com/CapitalAnthemsMP3"
     ],
     "added": "2026-10-28",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      128
+    ]
   },
   {
     "id": "tmm-1",
@@ -696,7 +887,10 @@ window.STATIONS = [
       "https://listen-msmn.sharp-stream.com/nme1.mp3"
     ],
     "added": "2026-10-28",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cbc-music-atlantic-halifax-mp3-stream",
@@ -706,7 +900,10 @@ window.STATIONS = [
       "https://26183.live.streamtheworld.com/CBH_CBC_SC"
     ],
     "added": "2026-10-28",
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hot-gold",
@@ -716,7 +913,10 @@ window.STATIONS = [
       "https://stream1.hippynet.co.uk/stream/hotgold/dorset"
     ],
     "added": "2026-10-28",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      160
+    ]
   },
   {
     "id": "181-fm-the-eagle-classic",
@@ -726,7 +926,10 @@ window.STATIONS = [
       "https://listen.181fm.com/181-eagle_128k.mp3"
     ],
     "added": "2026-10-29",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "jazu-japanese-jazz",
@@ -736,7 +939,10 @@ window.STATIONS = [
       "https://tunein-live-b.cdnstream1.com/3885_128.mp3?aw_0_1st.skey=1733919523&lat=37.751&lon=-97.822&aw_0_1st.abtest=&aw_0_1st.stationId=s321092&aw_0_1st.premium=false&source=TuneIn&aw_0_req.gdpr=true&aw_0_1st.platform=tunein&aw_0_1st.genre_id=g11&aw_0_1st.class=music&aw_0_1st.ads_partner_alias=ce.Other&aw_0_azn.planguage=en&aw_0_1st.is_ondemand=false&aw_0_1st.topicId=na&aw_0_1st.affiliateIds=a38725%2ca40075&aw_0_1st.bandId=16"
     ],
     "added": "2026-10-29",
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      128
+    ]
   },
   {
     "id": "london-soul-radio",
@@ -746,7 +952,10 @@ window.STATIONS = [
       "https://londonsoulradio.out.airtime.pro:8000/londonsoulradio_a"
     ],
     "added": "2026-10-29",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      128
+    ]
   },
   {
     "id": "z100-whtz-fm-100-3-new-york",
@@ -776,7 +985,10 @@ window.STATIONS = [
       "https://mediaserv73.live-streams.nl:18058/stream"
     ],
     "added": "2026-10-29",
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      128
+    ]
   },
   {
     "id": "cbc-music-pacific-vancouver-mp3-stream",
@@ -786,7 +998,10 @@ window.STATIONS = [
       "https://26733.live.streamtheworld.com/CBUFM_CBC_SC"
     ],
     "added": "2026-10-30",
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      128
+    ]
   },
   {
     "id": "christian-rock-dot-net",
@@ -796,7 +1011,10 @@ window.STATIONS = [
       "https://listen.christianrock.net/stream/11/"
     ],
     "added": "2026-10-30",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "classic-fm-essential-classical",
@@ -806,7 +1024,10 @@ window.STATIONS = [
       "https://icecast.thisisdax.com/ClassicFM-M-Essential"
     ],
     "added": "2026-10-30",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      48
+    ]
   },
   {
     "id": "classic-hits-109",
@@ -816,7 +1037,10 @@ window.STATIONS = [
       "https://broadcast.classichits109.com/70s-90s"
     ],
     "added": "2026-10-31",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-x-90s",
@@ -826,7 +1050,10 @@ window.STATIONS = [
       "https://media-ice.musicradio.com/RadioX90sMP3"
     ],
     "added": "2026-10-31",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      128
+    ]
   },
   {
     "id": "kiss-uk",
@@ -836,7 +1063,10 @@ window.STATIONS = [
       "https://live-kiss.sharp-stream.com/kiss100.mp3"
     ],
     "added": "2026-10-31",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      112
+    ]
   },
   {
     "id": "hard-rock-halloween",
@@ -846,7 +1076,10 @@ window.STATIONS = [
       "https://streaming.live365.com/a10373"
     ],
     "added": "2026-10-31",
-    "where": "US"
+    "where": "US",
+    "br": [
+      192
+    ]
   },
   {
     "id": "181-fm-beatles",
@@ -856,7 +1089,10 @@ window.STATIONS = [
       "https://listen.181fm.com/181-beatles_128k.mp3"
     ],
     "added": "2026-10-31",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "abc-jazz",
@@ -866,7 +1102,10 @@ window.STATIONS = [
       "https://mediaserviceslive.akamaized.net/hls/live/2038319/abcjazz/index.m3u8"
     ],
     "added": "2026-11-01",
-    "where": "Australia"
+    "where": "Australia",
+    "br": [
+      140
+    ]
   },
   {
     "id": "sbs-popasia",
@@ -876,7 +1115,10 @@ window.STATIONS = [
       "https://sbs-ice.streamguys1.com/sbs-popasia-sbs-web"
     ],
     "added": "2026-11-01",
-    "where": "Australia"
+    "where": "Australia",
+    "br": [
+      97
+    ]
   },
   {
     "id": "181-fm-the-rock-hardrock",
@@ -886,7 +1128,10 @@ window.STATIONS = [
       "https://listen.181fm.com/181-hardrock_128k.mp3"
     ],
     "added": "2026-11-01",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "jazz-88-minneapolis-kbem",
@@ -896,7 +1141,10 @@ window.STATIONS = [
       "https://kbem-live.streamguys1.com/kbem_aac"
     ],
     "added": "2026-11-01",
-    "where": "US"
+    "where": "US",
+    "br": [
+      95
+    ]
   },
   {
     "id": "wwoz-new-orleans-public-radio",
@@ -906,7 +1154,10 @@ window.STATIONS = [
       "https://www.wwoz.org/listen/hi"
     ],
     "added": "2026-11-01",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "christmas-fm-classical-carols",
@@ -916,7 +1167,10 @@ window.STATIONS = [
       "https://christmasfm.cdnstream1.com/2549_64.aac"
     ],
     "added": "2026-11-01",
-    "where": "Ireland"
+    "where": "Ireland",
+    "br": [
+      64
+    ]
   },
   {
     "id": "102-5-wdve",
@@ -936,7 +1190,10 @@ window.STATIONS = [
       "https://us9.maindigitalstream.com/ssl/kgrr"
     ],
     "added": "2026-11-02",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "smooth-jazz-wnua-95-5-chicago-il",
@@ -946,7 +1203,10 @@ window.STATIONS = [
       "https://vip2.fastcast4u.com/proxy/wnua?mp=/1"
     ],
     "added": "2026-11-02",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rautemusik-country",
@@ -956,7 +1216,10 @@ window.STATIONS = [
       "https://country-high.rautemusik.fm/"
     ],
     "where": "Germany",
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      192
+    ]
   },
   {
     "id": "0nlineradio-country",
@@ -966,7 +1229,10 @@ window.STATIONS = [
       "https://stream.0nlineradio.com/country"
     ],
     "where": "Germany",
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      192
+    ]
   },
   {
     "id": "country-108",
@@ -976,7 +1242,10 @@ window.STATIONS = [
       "https://icepool.silvacast.com/COUNTRY108.mp3"
     ],
     "where": "Denmark",
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "backroad-country-radio",
@@ -986,7 +1255,10 @@ window.STATIONS = [
       "https://stream.backroadcountryradio.com/listen/backroad/radio.mp3"
     ],
     "where": "Germany",
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "smooth-country",
@@ -996,7 +1268,10 @@ window.STATIONS = [
       "https://media-ssl.musicradio.com/SmoothCountry"
     ],
     "where": "UK",
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      48
+    ]
   },
   {
     "id": "abc-country",
@@ -1006,7 +1281,10 @@ window.STATIONS = [
       "https://mediaserviceslive.akamaized.net/hls/live/2038322/abccountry/index.m3u8"
     ],
     "where": "Australia",
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      140
+    ]
   },
   {
     "id": "somafm-boot-liquor",
@@ -1017,7 +1295,11 @@ window.STATIONS = [
       "https://ice5.somafm.com/bootliquor-128-aac"
     ],
     "where": "US",
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      320,
+      128
+    ]
   },
   {
     "id": "181-fm-real-country",
@@ -1027,7 +1309,10 @@ window.STATIONS = [
       "https://listen.181fm.com/181-realcountry_128k.mp3"
     ],
     "where": "US",
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "181-fm-front-porch",
@@ -1037,7 +1322,10 @@ window.STATIONS = [
       "https://listen.181fm.com/181-frontporch_128k.mp3"
     ],
     "where": "US",
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hpr1-traditional-classic-country",
@@ -1047,7 +1335,10 @@ window.STATIONS = [
       "https://us2.maindigitalstream.com/ssl/7713"
     ],
     "where": "US",
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "highway-country-radio",
@@ -1069,7 +1360,10 @@ window.STATIONS = [
       "https://streaming.radiostreamlive.com/radiocountrylive_devices"
     ],
     "where": "US",
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "folk-alley-freshgrass",
@@ -1079,7 +1373,10 @@ window.STATIONS = [
       "https://freshgrass.streamguys1.com/ss1-128mp3"
     ],
     "where": "US",
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "the-bluegrass-jamboree",
@@ -1089,7 +1386,10 @@ window.STATIONS = [
       "https://the-bluegrass-jamboree.radiocult.fm/stream"
     ],
     "where": "US",
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      192
+    ]
   },
   {
     "id": "exclusively-shania-twain",
@@ -1098,7 +1398,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.exclusive.radio/er/shaniatwain/icecast.audio"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "exclusively-george-strait",
@@ -1107,7 +1410,10 @@ window.STATIONS = [
     "streams": [
       "https://nl4.mystreaming.net/er/georgestrait/icecast.audio"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "exclusively-randy-travis",
@@ -1116,7 +1422,10 @@ window.STATIONS = [
     "streams": [
       "https://nl4.mystreaming.net/er/randytravis/icecast.audio"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "top-hits",
@@ -1126,7 +1435,10 @@ window.STATIONS = [
       "https://api.onlyhit.us/tophits"
     ],
     "added": "2026-11-02",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rte-lyric-fm",
@@ -1136,7 +1448,10 @@ window.STATIONS = [
       "https://icecast.rte.ie/lyric"
     ],
     "added": "2026-11-02",
-    "where": "Ireland"
+    "where": "Ireland",
+    "br": [
+      160
+    ]
   },
   {
     "id": "bbc-radio-1",
@@ -1156,7 +1471,10 @@ window.STATIONS = [
       "https://mediaserviceslive.akamaized.net/hls/live/2038308/triplejnsw/master.m3u8"
     ],
     "added": "2026-11-02",
-    "where": "Australia"
+    "where": "Australia",
+    "br": [
+      140
+    ]
   },
   {
     "id": "indie-x-fm",
@@ -1166,7 +1484,10 @@ window.STATIONS = [
       "https://kathy.torontocast.com:2695/stream"
     ],
     "added": "2026-11-02",
-    "where": "US"
+    "where": "US",
+    "br": [
+      320
+    ]
   },
   {
     "id": "gritty-rock-radio",
@@ -1176,7 +1497,10 @@ window.STATIONS = [
       "https://listen.radioking.com/radio/10713/stream/224413"
     ],
     "added": "2026-11-02",
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      192
+    ]
   },
   {
     "id": "70-80-90-vibrazioni-rock-radio",
@@ -1186,7 +1510,10 @@ window.STATIONS = [
       "https://maggie.torontocast.com:2020/stream/vibrazionirockradio"
     ],
     "added": "2026-11-03",
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      128
+    ]
   },
   {
     "id": "181-fm-the-mix",
@@ -1196,7 +1523,10 @@ window.STATIONS = [
       "https://listen.181fm.com/181-themix_128k.mp3"
     ],
     "added": "2026-11-03",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "midnite-radio-the-original",
@@ -1206,7 +1536,10 @@ window.STATIONS = [
       "https://a7.asurahosting.com:7510/radio.mp3"
     ],
     "added": "2026-11-03",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-essex",
@@ -1216,7 +1549,10 @@ window.STATIONS = [
       "https://stream.aiir.com/ujzy590c3stvv"
     ],
     "added": "2026-11-03",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      256
+    ]
   },
   {
     "id": "truckers-radio-usa",
@@ -1226,7 +1562,10 @@ window.STATIONS = [
       "https://streamer.radio.co/s81d30349a/low"
     ],
     "added": "2026-11-03",
-    "where": "US"
+    "where": "US",
+    "br": [
+      64
+    ]
   },
   {
     "id": "heart-london-106-2",
@@ -1236,7 +1575,10 @@ window.STATIONS = [
       "https://media-ice.musicradio.com/HeartLondon"
     ],
     "added": "2026-11-03",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      48
+    ]
   },
   {
     "id": "abc-triple-j-queensland-20220701",
@@ -1246,7 +1588,10 @@ window.STATIONS = [
       "https://mediaserviceslive.akamaized.net/hls/live/2038347/triplejqld/masterhq.m3u8"
     ],
     "added": "2026-11-04",
-    "where": "Australia"
+    "where": "Australia",
+    "br": [
+      140
+    ]
   },
   {
     "id": "only-hits",
@@ -1256,7 +1601,10 @@ window.STATIONS = [
       "https://api.onlyhit.us/play"
     ],
     "added": "2026-11-04",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "all-classical-portland",
@@ -1266,7 +1614,10 @@ window.STATIONS = [
       "https://allclassical.streamguys1.com/ac96k"
     ],
     "added": "2026-11-04",
-    "where": "US"
+    "where": "US",
+    "br": [
+      96
+    ]
   },
   {
     "id": "suite-jazz-radio",
@@ -1276,7 +1627,10 @@ window.STATIONS = [
       "https://jenny.torontocast.com:2000/stream/suitejazzradio"
     ],
     "added": "2026-11-04",
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      128
+    ]
   },
   {
     "id": "neuro-21-station",
@@ -1286,7 +1640,10 @@ window.STATIONS = [
       "https://radio.twinskaraoke.com/listen/neuro_21/radio.mp3"
     ],
     "added": "2026-11-04",
-    "where": "US"
+    "where": "US",
+    "br": [
+      320
+    ]
   },
   {
     "id": "crucial-velocity-radio",
@@ -1296,7 +1653,10 @@ window.STATIONS = [
       "https://ais-sa2.cdnstream1.com/1369_128"
     ],
     "added": "2026-11-04",
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      192
+    ]
   },
   {
     "id": "hearme-classic-hard-rock",
@@ -1306,7 +1666,8 @@ window.STATIONS = [
       "https://radio.hearme.fm:8250/stream"
     ],
     "added": "2026-11-05",
-    "where": "UK"
+    "where": "UK",
+    "offline": true
   },
   {
     "id": "truckersfm",
@@ -1316,7 +1677,10 @@ window.STATIONS = [
       "https://radio.truckers.fm/"
     ],
     "added": "2026-11-05",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      320
+    ]
   },
   {
     "id": "70s-classics-sydney",
@@ -1326,7 +1690,10 @@ window.STATIONS = [
       "https://stream.zeno.fm/glsntnn7et8vv"
     ],
     "added": "2026-11-05",
-    "where": "Australia"
+    "where": "Australia",
+    "br": [
+      128
+    ]
   },
   {
     "id": "today-fm",
@@ -1336,7 +1703,10 @@ window.STATIONS = [
       "https://stream.audioxi.com/TD"
     ],
     "added": "2026-11-05",
-    "where": "Ireland"
+    "where": "Ireland",
+    "br": [
+      128
+    ]
   },
   {
     "id": "absolute-classic-rock",
@@ -1346,7 +1716,10 @@ window.STATIONS = [
       "https://stream-ar.hellorayo.co.uk/absoluteclassicrock.aac?aw_0_1st.skey=1602676850&direct=true&rp_source=1"
     ],
     "added": "2026-11-05",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      47
+    ]
   },
   {
     "id": "classic-fm-uk",
@@ -1356,7 +1729,10 @@ window.STATIONS = [
       "https://media-the.musicradio.com/ClassicFM"
     ],
     "added": "2026-11-05",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      48
+    ]
   },
   {
     "id": "cafe-80-s",
@@ -1366,7 +1742,10 @@ window.STATIONS = [
       "https://streams.loudspeaker.org/listen/cafe-80s/channel_8"
     ],
     "added": "2026-11-06",
-    "where": "US"
+    "where": "US",
+    "br": [
+      96
+    ]
   },
   {
     "id": "bbc-radio-1-anthems",
@@ -1386,7 +1765,10 @@ window.STATIONS = [
       "https://22983.live.streamtheworld.com/CBLFM_CBC_SC"
     ],
     "added": "2026-11-06",
-    "where": "Canada"
+    "where": "Canada",
+    "br": [
+      128
+    ]
   },
   {
     "id": "calm-radio-bach",
@@ -1397,7 +1779,9 @@ window.STATIONS = [
     ],
     "added": "2026-11-06",
     "where": "Canada",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "the-jazz-groove-west",
@@ -1407,7 +1791,10 @@ window.STATIONS = [
       "https://west-aac-64.streamthejazzgroove.com/stream"
     ],
     "added": "2026-11-06",
-    "where": "US"
+    "where": "US",
+    "br": [
+      64
+    ]
   },
   {
     "id": "80-hits",
@@ -1417,7 +1804,10 @@ window.STATIONS = [
       "https://stream.laut.fm/80sexitos"
     ],
     "added": "2026-11-06",
-    "where": "US"
+    "where": "US",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bbc-asian-network",
@@ -1437,7 +1827,10 @@ window.STATIONS = [
       "https://onlineradiobox.com/json/fr/teenagekicks/play"
     ],
     "added": "2026-11-07",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      128
+    ]
   },
   {
     "id": "chaos-fm",
@@ -1458,7 +1851,10 @@ window.STATIONS = [
       "https://streaming.live365.com/a38225"
     ],
     "added": "2026-11-07",
-    "where": "US"
+    "where": "US",
+    "br": [
+      192
+    ]
   },
   {
     "id": "absolute-radio",
@@ -1468,7 +1864,10 @@ window.STATIONS = [
       "https://stream-ar.hellorayo.co.uk/absoluteradio.aac?aw_0_1st.skey=1602676850&direct=true&rp_source=1"
     ],
     "added": "2026-11-07",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      47
+    ]
   },
   {
     "id": "psychedelicized-radio-music-for-your-hea",
@@ -1478,7 +1877,10 @@ window.STATIONS = [
       "https://stream.psychedelicized.com/listen/psychedelicized/radio.mp3"
     ],
     "added": "2026-11-07",
-    "where": "UK"
+    "where": "UK",
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

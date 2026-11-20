@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://mmg.streamguys1.com/AdomFM-mp3?key=9099965b0e49394af3be11b42a71f0faa90378311d2d85f5983495217e350f0a4636df5ecf5ea3f63e53cb9026d89102&awparams=playerid%3ASGplayer%3B&amsparams=playerid%3ASGplayer%3Bskey%3A1609841442537%3B&aw_0_req.gdpr=true&us_privacy=1YNN"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://mmg.streamguys1.com/AsempaFM-mp3?key=23f81ad063fc94d769b3f56668d742562a0645bb7ba0f5633dbce7d73d151195adfd4a7b4b2afeeff7fb81cf4ef6e790&awparams=playerid%3ASGplayer%3B&amsparams=playerid%3ASGplayer%3Bskey%3A1609843961148%3B&aw_0_req.gdpr=true&us_privacy=1YNN"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://atunwadigital.streamguys1.com/angelfm"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -33,6 +42,10 @@ window.STATIONS = [
     "streams": [
       "https://mmg.streamguys1.com/NhyiraFM-mp3?key=63d8990dfe4438ae984fd70d2d2b4bd31c842c474987bd810ac0e8e0fd62e8cf2015661105cced63ccfdca89a8422ab1",
       "https://mmg.streamguys1.com/NhyiraFM-mp3?key=b37c365ed033b3e65a85fc860f6611ee8562838eeb6e0489764968a4153d826217219cfacc395f2cc2389573fb59870a&awparams=playerid%3ASGplayer%3B&amsparams=playerid%3ASGplayer%3Bskey%3A1609844395217%3B&aw_0_req.gdpr=true&us_privacy=1YNN"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -41,6 +54,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streaming.radio.co/s92f890821/listen"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -49,6 +65,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sunny-radio-server.cloud-ip.cc/radio/sunnyradio?t=1782488511159"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -57,6 +76,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://agoofm-atunwadigital.streamguys1.com/agoofm"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -65,6 +87,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zenolive.com/ep91zyvc9zquv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -73,6 +98,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/ey5mddtbdfeuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -81,6 +109,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/erjhljewkybuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -89,6 +120,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://a00.w3gradle.com/a21.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -97,6 +131,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://streamer.radio.co:80/s362651905/listen"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -105,6 +142,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://omanfm-atunwadigital.streamguys1.com/omanfm?amsparams=playerid%3ASGplayer%3Bskey%3A1611555812774%3B&awparams=playerid%3ASGplayer%3Bplayerid%3ASGplayer%3Bplayerid%3ASGplayer%3B&aw_0_req.gdpr=true&us_privacy=1YNN&aw_0_req.gdpr=true&us_privacy=1YNN&aw_0_req.gdpr=true&us_privacy=1YNN"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -113,6 +153,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://opemsuofm-atunwadigital.streamguys1.com/opemsuofm"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -122,7 +165,9 @@ window.STATIONS = [
     "streams": [
       "https://atunwadigital.streamguys1.com/hellofm"
     ],
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "connect-fm",
@@ -130,6 +175,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/13tbqr42u8quv"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -138,6 +186,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/ey34mac27vzuv"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -146,6 +197,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://atlfm1005.radioca.st/stream?type=http&nocache=231"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -154,6 +208,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/3zqct1ury8quv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -162,6 +219,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://listen.openstream.co/4103/audio"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -170,6 +230,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://radio.parousiaempire.org:8000/radio.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -178,6 +241,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/8ct99fxeq8quv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -187,6 +253,10 @@ window.STATIONS = [
     "streams": [
       "https://node-10.zeno.fm/pg5c7zx3p0quv?rj-ttl=5&rj-tok=AAABdtd3XeAAU1f9o-yKlGaPXg",
       "https://stream.zeno.fm/pg5c7zx3p0quv"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -195,6 +265,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://ssl.nexuscast.com:8060/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -203,6 +276,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://mmg.streamguys1.com/LuvFM-mp3?key=64c68f3397eadf448520da5c47847f30b48defff1ca52821a9d5817e516774af24fe51fe4829d41ccf1b4b9d0eca1eec&awparams=playerid%3ASGplayer%3B&amsparams=playerid%3ASGplayer%3Bskey%3A1609844133655%3B&aw_0_req.gdpr=true&us_privacy=1YNN"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -211,6 +287,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/qr6xwu5v44zuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -219,6 +298,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/5bpw8cyuvueuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -227,6 +309,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/u90nayh18qzuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -235,6 +320,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/d079m8zuhnruv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -243,6 +331,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.afrikanabestsounds.com/listen/live_african/radio.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -251,6 +342,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radiovexa.com/allos-fm.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -259,6 +353,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/84f29pevuxhvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -267,6 +364,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/249ba9e1q0quv"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -275,6 +375,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/whaba8v8d4duv"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -283,6 +386,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://atunwadigital.streamguys1.com/happyfm989accra"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -291,6 +397,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/qpq7hygy77zuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -308,6 +417,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://atunwadigital.streamguys1.com/yfm1079accra"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -316,6 +428,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/bbpfy9pk21zuv"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -325,7 +440,10 @@ window.STATIONS = [
     "streams": [
       "https://peacefm-atunwadigital.streamguys1.com/peacefm?amsparams=playerid%3ASGplayer%3Bskey%3A1611468493100%3B&awparams=playerid%3ASGplayer%3Bplayerid%3ASGplayer%3Bplayerid%3ASGplayer%3B&us_privacy=1YNN&us_privacy=1YNN&us_privacy=1YNN"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "ahenfie-fm-106-1mhz",
@@ -334,7 +452,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.localstreamgh.com/listen/ahenfie_radio_/radio.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "sompa-106-5fm-accra",
@@ -343,7 +464,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/55sg1lh4pqquv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "akomapa-fm",
@@ -352,7 +476,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.streamgenial.stream/cxxs2usduv8uv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      32
+    ]
   },
   {
     "id": "fruitful-radio",
@@ -361,7 +488,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/zavpry0xx7zuv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "jet-radio-online",
@@ -370,7 +500,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/9564yrw5v2quv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "asaase-radio-99-5fm-accra",
@@ -379,7 +512,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiojar.com/cyg76xcvp0hvv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "wooden-radio",
@@ -388,7 +524,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/9ux8wtex9qzuv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "dadi-fm",
@@ -397,7 +536,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/afzd4f4nq7zuv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      96
+    ]
   },
   {
     "id": "bramcom-radio-online",
@@ -406,7 +548,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/5k38xxf1v7zuv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "kastle-fm",
@@ -415,7 +560,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/evaq9ab4k0hvv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "neat-fm",
@@ -424,7 +572,10 @@ window.STATIONS = [
     "streams": [
       "https://atunwadigital.streamguys1.com/neatfm"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      64
+    ]
   },
   {
     "id": "kobbyros-radio",
@@ -433,7 +584,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/47nz3zut26duv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rehic-radio",
@@ -442,7 +596,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/hqbxxmq50tzuv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-ned",
@@ -451,7 +608,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/qsa068q31tzuv"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "kok-radio",
@@ -460,7 +620,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/z5xgdb10tueuv"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "secret-fm-online",
@@ -469,7 +632,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/rgts3k9c37zuv"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "moonlite-fm",
@@ -478,7 +644,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.lensnetworks.com/proxy/moonlite?mp=/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      64
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

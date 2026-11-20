@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://ice31.securenetsystems.net/TIMESFM"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://host2.streamafrica.net/listen/twr_malawi/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://s5.radio.co/s7b138c0fa/listen"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://play.streamafrica.net/btsynod"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -50,6 +62,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://strw3.openstream.co/495"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -58,6 +73,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://live.netradio.pro/listen/jojofm/radio.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -66,6 +84,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://play.streamafrica.net/umunthu"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -74,6 +95,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://live.netradio.pro/listen/mphate/radio.mp3"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -82,6 +106,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://c38.radioboss.fm/stream/253"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -90,6 +117,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://live.netradio.pro/listen/lingfm/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -108,6 +138,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://live.netradio.pro/listen/choicemw/radio.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -116,6 +149,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/3g0hr9czuhhvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -124,6 +160,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://play.streamafrica.net/yetu"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -152,6 +191,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://servidor19.brlogic.com:7168/live"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -160,6 +202,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://live.netradio.pro:3082/radio.mp3?&amp;_ic2=1"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -168,6 +213,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://host2.streamafrica.net/listen/mzati_radio/radio.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -176,6 +224,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://c20.radioboss.fm:8493/stream"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -184,6 +235,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://play.streamafrica.net/vol"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -192,6 +246,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://host2.streamafrica.net/listen/kasupe_radio/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -200,6 +257,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/3g3e4rfktuhvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -218,6 +278,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://s7.myradiostream.com:60218/;;"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -226,6 +289,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/8shobxsbmnuvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -234,6 +300,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://play.streamafrica.net/mlimi"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -242,6 +311,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/xu1r09mf5nhvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -250,6 +322,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://live.netradio.pro/listen/chanco/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -258,6 +333,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://host2.streamafrica.net/listen/kuwala_radio/radio.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -266,6 +344,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/xm5v24frd0hvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -274,6 +355,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://live.netradio.pro/listen/mtcr/radio.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -282,6 +366,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.zeno.fm/o4ycgg6wgrfvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -290,6 +377,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.zeno.fm/azvru1b7vlatv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -298,6 +388,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://lbsradio-dexterity.radioca.st/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -307,7 +400,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/ohodrsmndawtv"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

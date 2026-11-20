@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radiovlna.sk/vlna-hi.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.funradio.sk:8000/fun128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.bauermedia.sk/128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.bauermedia.sk/europa2.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -40,6 +52,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.funradio.sk:8000/dance128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -48,6 +63,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.stv.livebox.sk/regina-ke_128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -56,6 +74,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://icecast.stv.livebox.sk/slovensko_128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -64,6 +85,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.bauermedia.sk/rock-hi.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -72,6 +96,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radiovlna.sk/party-hi.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -80,6 +107,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.stv.livebox.sk/devin_128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -88,6 +118,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://vysielanie.online/radio/8020/SV128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -96,6 +129,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.stv.livebox.sk/litera_128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -104,6 +140,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.stv.livebox.sk/regina-bb_128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -112,6 +151,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/eyac00cx1nhvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -120,6 +162,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://solid33.streamupsolutions.com/proxy/mujdmamw/trnavske"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -137,6 +182,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://online.radiokiks.sk:8000/kiks_czsk.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -145,6 +193,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.stv.livebox.sk/fm_128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -153,6 +204,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/6gd9c6yn4nhvv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -161,6 +215,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.stv.livebox.sk/regina-ba_128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -169,6 +226,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream3.bestfm.sk:8000/128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -177,6 +237,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radiovlna.sk/gold-hi.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -185,6 +248,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://online.radiokiks.sk:8000/kiks_big90s.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -193,6 +259,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.funradio.sk:8000/chill128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -201,6 +270,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.funradio.sk:8000/cs128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -209,6 +281,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.21.sk/detskeradio-192.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -217,6 +292,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiosity.online:8000/aac"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -225,6 +303,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.mxnticek.eu/listen/phonk/128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -233,6 +314,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://online.radiokiks.sk:8000/kiks_hq.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -241,6 +325,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://stream.dobreradio.sk/dobreradio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -249,6 +336,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://radioserver.online/proxy/radiosuita/radiosuita.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -257,6 +347,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://play.radio7.sk/128"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -265,6 +358,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.funradio.sk:8000/milenialky128.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -283,6 +379,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://solid67.streamupsolutions.com/proxy/reqsithw/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -291,6 +390,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://mpc1.mediacp.eu/stream/demo2"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -299,6 +401,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://online.radiokiks.sk:8000/kiks_rock.mp3"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -307,6 +412,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.radiovlna.sk:8000/rock-hi.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -315,6 +423,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://hitradioslovakia.stream.laut.fm/hitradioslovakia"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -323,6 +434,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://solid1.streamupsolutions.com/proxy/vhhggmih/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -332,7 +446,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.subfm.sk/subfm"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "fun-radio-80-90",
@@ -341,7 +458,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.funradio.sk:8000/80-90-128.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "bb-fm-radio",
@@ -350,7 +470,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.bbfm.sk/bbfm128.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "rusynfm",
@@ -359,7 +482,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.rusyn.fm/rusyny.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "patria-radio",
@@ -368,7 +494,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.stv.livebox.sk/patria_128.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-pisnicka",
@@ -377,7 +506,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.slagr-radio.cz/pisnicka"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-expres-2",
@@ -386,7 +518,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.bauermedia.sk/expres-hi.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "slagr-radio",
@@ -395,7 +530,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.slagr-radio.cz/mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "tv-lux-audio",
@@ -404,7 +542,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.tvlux.sk/lux/lux.stream_aac/playlist.m3u8"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      96
+    ]
   },
   {
     "id": "ta3",
@@ -413,7 +554,10 @@ window.STATIONS = [
     "streams": [
       "https://n13.stv.livebox.sk/ta3/685d9a141bd846e8facf83bc378da26b/1.smil/chunklist_b2691072.m3u8"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      631
+    ]
   },
   {
     "id": "radio-rebeca",
@@ -422,7 +566,10 @@ window.STATIONS = [
     "streams": [
       "https://mpc2.mediacp.eu:8200/rebecaweb"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-viva-metropol",
@@ -431,7 +578,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.sepia.sk:8000/viva128.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-rsi",
@@ -440,7 +590,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.stv.livebox.sk/rsi_128.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-metropolitan",
@@ -449,7 +602,10 @@ window.STATIONS = [
     "streams": [
       "https://mpc2.mediacp.eu:8214/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      320
+    ]
   },
   {
     "id": "fresh-radio",
@@ -458,7 +614,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast2.radionet.sk/freshradio.sk"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-sebastian",
@@ -467,7 +626,10 @@ window.STATIONS = [
     "streams": [
       "https://s2.ssl-stream.com/listen/radiosebastian/radio.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-parada",
@@ -476,7 +638,10 @@ window.STATIONS = [
     "streams": [
       "https://extra.mediacp.eu/stream/RadioParada,o.z."
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "metalscena-netradio",
@@ -485,7 +650,10 @@ window.STATIONS = [
     "streams": [
       "https://listen.radioking.com/radio/263218/stream/308365"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-pyramida",
@@ -494,7 +662,10 @@ window.STATIONS = [
     "streams": [
       "https://icecast.stv.livebox.sk/klasika_128.mp3"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fred-film-radio-25-slovencina",
@@ -503,7 +674,10 @@ window.STATIONS = [
     "streams": [
       "https://s10.webradio-hosting.com/proxy/fredradiosk/stream"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "party-radio",
@@ -512,7 +686,10 @@ window.STATIONS = [
     "streams": [
       "https://mpc1.mediacp.eu/stream/partyradio"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-vaticana-solvencina",
@@ -521,7 +698,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.vaticannews.va/stream-sk"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-laskaro",
@@ -530,7 +710,10 @@ window.STATIONS = [
     "streams": [
       "https://servidor38-1.brlogic.com:7204/live"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      192
+    ]
   },
   {
     "id": "europa-2-fitness",
@@ -539,7 +722,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.bauermedia.sk/fitness-hi.aac"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      95
+    ]
   },
   {
     "id": "europa-2-zvuk-ulice",
@@ -548,7 +734,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.bauermedia.sk/zvuk-ulice-hi.aac"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      96
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";

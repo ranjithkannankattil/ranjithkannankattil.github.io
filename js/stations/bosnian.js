@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast.name.ba:8000/;"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -16,6 +19,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://webtvstream.bhtelecom.ba/bh_radio1.m3u8"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -24,6 +30,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://team-data.ba:10000/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -32,6 +41,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.leftor.com/proxy/studiom2/stream"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -40,6 +52,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast2.name.ba/proxy/glasdrine/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -48,6 +63,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream1.custom.ba/listen/radio_miljacka/radio.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -56,6 +74,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_kameleon.m3u8"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -64,6 +85,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.hkr.hr/hkr.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -72,6 +96,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.tnt.ba/radio/8020/live?1616060583"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -80,6 +107,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.rsgmedia.ba/listen/radio_mix/radio.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -88,6 +118,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://sonicpanel.vmakerhost.com/8192/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -96,6 +129,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_hit_fm.m3u8"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -104,6 +140,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast1.asurahosting.com/proxy/betradio/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -112,6 +151,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://zpilipov-geckohost.radioca.st/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -120,6 +162,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_fbih.m3u8"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -128,6 +173,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_valentino.m3u8"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -136,6 +184,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://r.name.ba:7115/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -144,6 +195,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radiomajevica.com:7520/live"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -152,6 +206,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_tk.m3u8"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -160,6 +217,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_gradacac.m3u8"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -168,6 +228,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiousk.radioca.st/stream/"
+    ],
+    "br": [
+      24
     ]
   },
   {
@@ -176,6 +239,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_usora.m3u8"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -184,6 +250,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://ec2s.crolive.com.hr:1510/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -193,6 +262,10 @@ window.STATIONS = [
     "streams": [
       "https://n08.radiojar.com/bugesa4nn3quv?rj-ttl=5&rj-tok=AAABikFH4NsAib8tua7OjeefLg",
       "https://n11.radiojar.com/bugesa4nn3quv?rj-ttl=5&rj-tok=AAABihgJBEQA_ptijcBtD6_jYw"
+    ],
+    "br": [
+      128,
+      128
     ]
   },
   {
@@ -201,6 +274,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.zeno.fm/4qe0awx37wquv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -209,6 +285,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s3.free-shoutcast.com/stream/18156"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -217,6 +296,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_7_tuzla.m3u8"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -225,6 +307,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_rtrs.m3u8"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -233,6 +318,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_usk.m3u8"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -241,6 +329,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://443-1.autopo.st/45?type=http"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -250,7 +341,10 @@ window.STATIONS = [
     "streams": [
       "https://mojstream.eu:8114/kontaktradio"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      320
+    ]
   },
   {
     "id": "moj-radio",
@@ -259,7 +353,10 @@ window.STATIONS = [
     "streams": [
       "https://webtvstream.bhtelecom.ba/moj_radio.m3u8"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-bosanski-petrovac",
@@ -269,7 +366,10 @@ window.STATIONS = [
       "https://webtvstream.bhtelecom.ba/radio_bosanski_petrovac.m3u8"
     ],
     "added": "2026-10-24",
-    "offline": true
+    "offline": true,
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-bosanska-krupa",
@@ -278,7 +378,10 @@ window.STATIONS = [
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_bosanska_krupa.m3u8"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-ljubuski",
@@ -287,7 +390,10 @@ window.STATIONS = [
     "streams": [
       "https://s8.iqstreaming.com:8044/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      96
+    ]
   },
   {
     "id": "banjalucki-sevdah-radio-sehercani",
@@ -296,7 +402,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/wazhcyi9ak5vv"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-feral-kalesija",
@@ -305,7 +414,10 @@ window.STATIONS = [
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_feral_kalesija.m3u8"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-gbg-sevdah",
@@ -314,7 +426,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiogbg.se:8050/relay4"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-postaja-odzak",
@@ -323,7 +438,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.rcast.net/70602"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-vogosca",
@@ -332,7 +450,10 @@ window.STATIONS = [
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_vogosca.m3u8"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-gracanica",
@@ -341,7 +462,10 @@ window.STATIONS = [
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_gracanica.m3u8"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-konjic",
@@ -350,7 +474,10 @@ window.STATIONS = [
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_konjic.m3u8"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-ask-ilidza",
@@ -359,7 +486,10 @@ window.STATIONS = [
     "streams": [
       "https://webtvstream.bhtelecom.ba/radio_ask.m3u8"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-roska",
@@ -368,7 +498,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/q7300aptbwzuv"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      112
+    ]
   },
   {
     "id": "radio-usk-2",
@@ -377,7 +510,10 @@ window.STATIONS = [
     "streams": [
       "https://radiousk2.radioca.st/;"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "translation-of-the-quran-in-bosnian",
@@ -386,7 +522,10 @@ window.STATIONS = [
     "streams": [
       "https://serverkw.quran-uni.com:8030/;"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "antena-sarajevo",
@@ -395,7 +534,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.rsgmedia.ba/listen/antena_sarajevo/radio.mp3"
     ],
-    "added": "2026-11-16"
+    "added": "2026-11-16",
+    "br": [
+      192
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-19T22:17Z";
+window.STATIONS_CHECKED = "2026-11-20T03:07Z";
