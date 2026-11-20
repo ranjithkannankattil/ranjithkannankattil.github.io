@@ -95,7 +95,6 @@
     "malayalam:radiomangalam": 64,
     "malayalam:radiome": 2,
     "malayalam:radionellika": 64,
-    "malayalam:radioneythal": 1,
     "malayalam:radioutsav": 64,
     "malayalam:radiovatakara": 64,
     "malayalam:ragamradio": 64,
@@ -2080,11 +2079,6 @@
   "https://s2.free-shoutcast.com/stream/18096": {
     "fails": 1,
     "last_reason": "HTTP 401, 0 bytes",
-    "since": "2026-11-20"
-  },
-  "https://s2.myradiostream.com/5538/listen.mp3": {
-    "fails": 1,
-    "last_reason": "HTTP 401 error page",
     "since": "2026-11-20"
   },
   "https://s3.slotex.pl/shoutcast/7496/stream": {
