@@ -341,7 +341,7 @@ class DeviceTest {
     @Test fun t21_pause_stays_paused() {
         playSomething()
         main { b.pause() }
-        assertTrue(waitFor(5_000, "paused") { !main { b.isPlaying } })
+        assertTrue(waitFor(5_000, "paused") { !b.isPlaying })
         main { b.pause() }                                  // pressing pause again (car screens can lag): still fine
         Thread.sleep(45_000)                                // long enough for any reconnect / resume helper to fire
         assertFalse("still paused 45 s later", main { b.playWhenReady })
