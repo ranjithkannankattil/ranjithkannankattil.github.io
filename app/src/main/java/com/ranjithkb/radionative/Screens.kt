@@ -58,7 +58,8 @@ private val Pad = 24.dp
 
 /** A full page drawn over the app (not a separate window), with ← and a spaced-capitals title. */
 @Composable
-fun SubPage(title: String, close: () -> Unit, scroll: Boolean = true, body: @Composable ColumnScope.() -> Unit) {
+fun SubPage(title: String, close: () -> Unit, scroll: Boolean = true, scrollState: androidx.compose.foundation.ScrollState? = null,
+            body: @Composable ColumnScope.() -> Unit) {
     BackHandler(onBack = close)
     Column(Modifier.fillMaxSize().background(Paper).pointerInput(Unit) { detectTapGestures { } }
         .statusBarsPadding().navigationBarsPadding().imePadding()) {
@@ -66,7 +67,8 @@ fun SubPage(title: String, close: () -> Unit, scroll: Boolean = true, body: @Com
             IconButton(close, Modifier.size(52.dp)) { LineIcon(R.drawable.ln_back, "Back", 24) }
             Label(title, Title, 13, weight = FontWeight.Medium)
         }
-        Column((if (scroll) Modifier.verticalScroll(rememberScrollState()) else Modifier).fillMaxWidth()
+        val own = rememberScrollState()
+        Column((if (scroll) Modifier.verticalScroll(scrollState ?: own) else Modifier).fillMaxWidth()
             .padding(start = Pad, end = Pad, bottom = 28.dp), content = body)
     }
 }
@@ -189,10 +191,11 @@ fun ThemeChoice(t: ThemeDef, w: Int, onPick: () -> Unit) {
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-fun SettingsScreen(close: () -> Unit, open: (String) -> Unit) {
+fun SettingsScreen(close: () -> Unit, scroll: androidx.compose.foundation.ScrollState? = null, open: (String) -> Unit) {
     val ctx = LocalContext.current
     fun save() = Theme.save(ctx)
-    SubPage(t("Settings"), close) {
+    // the scroll position is kept by the caller, so coming back from Data saver, Colour theme… lands where you were
+    SubPage(t("Settings"), close, scrollState = scroll) {
         SectionHead("App language · ആപ്പിന്റെ ഭാഷ · ऐप की भाषा")
         Segmented(Lang.CODES.map { Lang.NAMES[it]!! }, Lang.CODES.indexOf(Lang.code)) { Lang.set(ctx, Lang.CODES[it]) }
         SectionHead(t("Appearance"))

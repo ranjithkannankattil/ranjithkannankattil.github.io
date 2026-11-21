@@ -397,10 +397,13 @@ fun App(c: MediaController?) {
     if (full) FullPlayer(now, c, cast, onCloseAll = { closeAll() }) { full = false }
     if (sortSheet) SortSheet(sort, { sort = it; prefs.edit().putString("sort", it).apply()
         if (it == "heard" || it == "rated") scope.launch { stats = Stats.get(ctx) } }) { sortSheet = false }
+    // Settings remembers how far down you were while you visit one of its pages; it opens at the top again next time
+    val settingsScroll = androidx.compose.foundation.rememberScrollState()
+    LaunchedEffect(page) { if (page == null) settingsScroll.scrollTo(0) }
     page?.let { pg ->
         Box(Modifier.fillMaxSize()) {
             when (pg) {
-                "settings" -> SettingsScreen({ page = null }) { page = it }
+                "settings" -> SettingsScreen({ page = null }, settingsScroll) { page = it }
                 "themes" -> ThemesScreen { page = "settings" }
                 "look" -> PlayerLookScreen { page = "settings" }
                 "eq" -> EqualiserScreen { page = "settings" }

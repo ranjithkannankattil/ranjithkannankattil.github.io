@@ -313,6 +313,24 @@ class ScreensTest {
         Header(onSearch = {})
         FavsTab(sts.take(4), now(), { "Malayalam" }, {}, recent = sts.take(5).mapIndexed { i, s -> Recent.Item(s, "Malayalam",
             System.currentTimeMillis() - i * 30 * 3_600_000L) }, onRecent = {}, onChanged = {}, favs = Favs(rule.activity), onPicks = {}) } }
+    // Settings → Data saver → back: Settings stays where you were (it jumped to the top before, his report 21 Nov 2026)
+    @Test fun s01_settings_keeps_its_place_after_a_sub_page() {
+        var page by androidx.compose.runtime.mutableStateOf("settings")
+        val sc = androidx.compose.foundation.ScrollState(0)
+        rule.setContent { Box(Modifier.fillMaxSize()) { when (page) {
+            "settings" -> SettingsScreen({}, sc) { page = it }
+            "data" -> DataSaverScreen { page = "settings" }
+        } } }
+        rule.onNodeWithText("Data saver").performScrollTo().performClick(); rule.waitForIdle()
+        val y = sc.value
+        assertTrue("Settings should have scrolled down to Data saver", y > 0)
+        rule.onNodeWithText("Always").performClick()                 // change the setting, as he did
+        rule.onNodeWithContentDescription("Back").performClick(); rule.waitForIdle()
+        rule.onNodeWithText("Data saver").assertExists()
+        assertEquals(y, sc.value)
+        DataSaver.save(rule.activity, DataSaver.OFF)
+    }
+
     // ---- Favourites as tiles (Settings → Favourites → Tiles)
     private fun tiles(name: String, dark: Boolean, lang: String = "en") {
         Theme.favTiles = true; Lang.code = lang
