@@ -204,6 +204,7 @@ class DeviceTest {
     }
 
     @Test fun t10_alarm_rings_and_fades_in() {
+        Alarm.all(ctx).forEach { Alarm.remove(ctx, it.id) }      // earlier tests' alarms, also cancelled with Android
         ctx.getSharedPreferences("alarm", 0).edit().clear().commit()
         val (list, i) = playSomething()
         val st = list[i]
