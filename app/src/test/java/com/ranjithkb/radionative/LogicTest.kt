@@ -256,6 +256,14 @@ class LogicTest {
         ctx.getSharedPreferences("tour", 0).edit().clear().commit()
         Tour.done(ctx); assertFalse(Tour.shouldShow(ctx))
     }
+    @Test fun tour_shows_once_more_after_the_29_update() {
+        val ctx = RuntimeEnvironment.getApplication()
+        val p = ctx.getSharedPreferences("tour", 0)
+        p.edit().clear().putBoolean("done", true).commit()          // saw (or skipped) the 2.7 tour
+        assertTrue("people who saw the old tour see the new one once", Tour.shouldShow(ctx))
+        Tour.done(ctx); assertFalse(Tour.shouldShow(ctx))
+        p.edit().clear().commit(); assertTrue("fresh installs see it", Tour.shouldShow(ctx))
+    }
 
     // ---------------- most heard / top rated
     private val a = Station("a", "Zeta FM", "fm", listOf("x"), "malayalam")

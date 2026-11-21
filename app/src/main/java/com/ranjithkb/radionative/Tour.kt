@@ -48,26 +48,22 @@ object Tour {
         Step("langs", "Languages", "Your languages sit in this row. ALL LANGUAGES opens the full list of 70+; hold a language to pin it."),
         Step("sort", "Sort", "⇅ sorts the stations: A–Z, the list's own order, most heard this week, or top rated."),
         Step("row", "Play and keep", "Tap a station to play it. Tap ♡ to keep it in your Favourites."),
-        Step("header", "Search and Settings", "Search every station by name, or say it. ⚙ Settings has colour themes, text size, the equaliser and alarms."),
+        Step("header", "Search and Settings", "Search every station by name, or say it. ⚙ Settings has the app language, colour themes, text size, data saver, the equaliser and alarms."),
         Step("player", "The player", "Play and pause here. Tap the bar for the big player: swipe its cover to change the player look, from a 1930s radio to a 1990s tuner."),
-        Step("nav", "Stations, Favourites, Info", "Favourites keeps your stations in your own order. Info has what's new, sharing, and this tour again."),
+        Step("nav", "Stations, Favourites, Info", "Favourites keeps your stations in your own order, as a list or as tiles. Info has what's new, sharing, and this tour again."),
     )
     val COUNT = STEPS.size
 
     /** Where each part of the screen is, filled in as the screen is drawn. */
     val targets = mutableStateMapOf<String, Rect>()
 
+    /** Raise this when the tour has something new worth showing to everyone once more (2 = 2.9: language, data saver, tiles). */
+    const val VERSION = 2
     private fun p(ctx: Context) = ctx.getSharedPreferences("tour", Context.MODE_PRIVATE)
-    fun done(ctx: Context) = p(ctx).edit().putBoolean("done", true).apply()
+    fun done(ctx: Context) = p(ctx).edit().putBoolean("done", true).putInt("seen", VERSION).apply()
 
-    /** Only on a fresh install, once. People updating from an older version already know their way. */
-    fun shouldShow(ctx: Context): Boolean {
-        if (p(ctx).getBoolean("done", false)) return false
-        val fresh = runCatching { val i = ctx.packageManager.getPackageInfo(ctx.packageName, 0); i.firstInstallTime == i.lastUpdateTime }
-            .getOrDefault(false)
-        if (!fresh) done(ctx)
-        return fresh
-    }
+    /** Once on a fresh install, and once more for everyone when [VERSION] goes up (his wish, 21 Nov 2026). */
+    fun shouldShow(ctx: Context): Boolean = p(ctx).getInt("seen", 0) < VERSION
 }
 
 fun Modifier.tourTarget(id: String) = onGloballyPositioned { c ->

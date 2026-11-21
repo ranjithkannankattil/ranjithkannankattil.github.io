@@ -362,6 +362,14 @@ class DeviceTest {
         }
     }
 
+    // ---- "Jost should be the base font" (21 Nov 2026): in Malayalam, Jost for English and numbers, Manjari for Malayalam
+    @Test fun t23_malayalam_keeps_jost_for_english() {
+        Theme.load(ctx)
+        val mixed = MixedFonts.with(FONTS.first { it.id == "jost" })
+        log("mixed Jost + Manjari font built: ${mixed != null} (Android ${Build.VERSION.SDK_INT})")
+        if (Build.VERSION.SDK_INT >= 29) assertNotNull("Jost with Manjari for Malayalam letters", mixed)
+    }
+
     // ---- his car bug (Nov 2026): after pressing pause, the radio started again by itself
     @Test fun t21_pause_stays_paused() {
         playSomething()

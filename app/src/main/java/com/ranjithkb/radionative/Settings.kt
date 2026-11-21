@@ -102,6 +102,7 @@ object Theme {
     /** Set by the TV screen: a TV always uses the dark look, whatever re-reads the settings later (the player, the car). */
     @Volatile var tvDark = false
     fun load(ctx: Context) {
+        MixedFonts.res = ctx.applicationContext.resources
         val p = prefs(ctx)
         themeId = p.getString("theme", "velvet")!!.let { id -> if (THEMES.any { it.id == id }) id else "velvet" }
         mode = if (tvDark) "dark" else p.getString("mode", "phone")!!.let { if (it in listOf("phone", "light", "dark")) it else "phone" }
@@ -144,8 +145,37 @@ val FONTS = listOf(
     FontChoice("phone", "Phone font", "Phone", null),
 )
 
-/** The app's typeface: the one chosen in Settings (Jost unless changed). */
-val Poppins: FontFamily get() = if (Lang.code == "ml") Manjari      // Malayalam app words: Manjari (it has Latin letters too)
-    else (FONTS.firstOrNull { it.id == Theme.font } ?: FONTS[0]).family
+/**
+ * The app's typeface: the one chosen in Settings (Jost unless changed). Malayalam letters always come from Manjari,
+ * while English words, station names and times stay in the base font (his note, 21 Nov 2026: "Jost should be the
+ * base font"). Android 10+ builds that mix; older phones use Manjari for everything when the app is in Malayalam.
+ */
+val Poppins: FontFamily get() {
+    val choice = FONTS.firstOrNull { it.id == Theme.font } ?: FONTS[0]
+    if (Lang.code != "ml") return choice.family
+    return MixedFonts.with(choice) ?: Manjari
+}
+object MixedFonts {
+    @Volatile var res: android.content.res.Resources? = null
+    private val cache = HashMap<String, FontFamily>()
+    fun with(c: FontChoice): FontFamily? {
+        if (android.os.Build.VERSION.SDK_INT < 29) return null
+        val r = res ?: return null
+        cache[c.id]?.let { return it }
+        return runCatching { build(r, c) }.getOrNull()?.also { cache[c.id] = it }
+    }
+    @androidx.annotation.RequiresApi(29)
+    private fun build(r: android.content.res.Resources, c: FontChoice): FontFamily {
+        fun font(id: Int, w: Int) = android.graphics.fonts.Font.Builder(r, id).setWeight(w).build()
+        val ml = android.graphics.fonts.FontFamily.Builder(font(R.font.manjari_regular, 300))
+            .addFont(font(R.font.manjari_regular, 400)).addFont(font(R.font.manjari_bold, 500))
+            .addFont(font(R.font.manjari_bold, 600)).addFont(font(R.font.manjari_bold, 700)).build()
+        val ids = c.res ?: return Manjari                  // "Phone font": stays as before (Manjari in Malayalam)
+        val base = android.graphics.fonts.FontFamily.Builder(font(ids[0], 300)).addFont(font(ids[1], 400))
+            .addFont(font(ids[2], 500)).addFont(font(ids[3], 600)).addFont(font(ids[3], 700)).build()
+        val tf = android.graphics.Typeface.CustomFallbackBuilder(base).addCustomFallback(ml).setSystemFallback("sans-serif").build()
+        return FontFamily(androidx.compose.ui.text.font.Typeface(tf))
+    }
+}
 val Manjari: FontFamily by lazy { FontFamily(Font(R.font.manjari_regular, FontWeight.Light), Font(R.font.manjari_regular, FontWeight.Normal),
     Font(R.font.manjari_bold, FontWeight.Medium), Font(R.font.manjari_bold, FontWeight.SemiBold), Font(R.font.manjari_bold, FontWeight.Bold)) }
