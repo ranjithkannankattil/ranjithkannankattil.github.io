@@ -90,7 +90,6 @@
     "malayalam:radiomangalam": 66,
     "malayalam:radiome": 4,
     "malayalam:radionellika": 66,
-    "malayalam:radioneythal": 2,
     "malayalam:radioutsav": 66,
     "malayalam:radiovatakara": 66,
     "malayalam:ragamradio": 66,
@@ -2010,11 +2009,6 @@
     "since": "2026-11-12"
   },
   "https://s2.myradiostream.com/5286/listen.mp3": {
-    "fails": 2,
-    "last_reason": "HTTP 500 error page",
-    "since": "2026-11-20"
-  },
-  "https://s2.myradiostream.com/5538/listen.mp3": {
     "fails": 2,
     "last_reason": "HTTP 500 error page",
     "since": "2026-11-20"

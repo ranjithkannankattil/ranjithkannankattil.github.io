@@ -358,8 +358,7 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://s2.myradiostream.com/5538/listen.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radiomattoli",
@@ -1528,4 +1527,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T08:13Z";
+window.STATIONS_CHECKED = "2026-11-21T18:33Z";
