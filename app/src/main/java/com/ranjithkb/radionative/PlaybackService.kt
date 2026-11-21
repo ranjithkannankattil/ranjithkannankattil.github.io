@@ -126,6 +126,7 @@ class PlaybackService : MediaLibraryService() {
         return super.onStartCommand(intent, flags, startId)
     }
     private var alarmForeground = false
+    private var focusJob: kotlinx.coroutines.Job? = null
 
     override fun onCreate() {
         super.onCreate()
@@ -165,7 +166,8 @@ class PlaybackService : MediaLibraryService() {
                 // asks for the sound back, and if it can't have it the alarm sound rings (the ring loop sees to that).
                 if (ringing && reason == Player.PLAY_WHEN_READY_CHANGE_REASON_AUDIO_FOCUS_LOSS) {
                     AlarmLog.note(this@PlaybackService, "another app took the sound; the alarm carries on")
-                    scope.launch {
+                    focusJob?.cancel()
+                    focusJob = scope.launch {         // belongs to this alarm only: Stop or the next alarm cancels it
                         kotlinx.coroutines.delay(2_000)
                         if (ringing && !session.player.playWhenReady) session.player.play()
                         kotlinx.coroutines.delay(6_000)
@@ -357,7 +359,7 @@ class PlaybackService : MediaLibraryService() {
     /** Stop / Snooze / pause: everything about the alarm ends (the radio too, unless [pause] is false). */
     private fun stopRing(pause: Boolean) {
         val was = ringing
-        ringing = false; ringJob?.cancel(); ringJob = null; candidates.clear(); stopTone(); alarmUntil = 0
+        ringing = false; ringJob?.cancel(); ringJob = null; focusJob?.cancel(); focusJob = null; candidates.clear(); stopTone(); alarmUntil = 0
         if (was) { AlarmLog.note(this, "stopped"); if (pause) { session.player.pause(); player.volume = 1f } }
         // the alarm's own foreground notification: let go of it (the radio, if it plays on, has its usual notification)
         if (alarmForeground) { alarmForeground = false
