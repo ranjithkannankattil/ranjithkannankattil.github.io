@@ -126,6 +126,13 @@ class PlaybackService : MediaLibraryService() {
         return super.onStartCommand(intent, flags, startId)
     }
     private var alarmForeground = false
+    /** Keeps the phone awake while an alarm rings (it may still be connecting or trying backups with the screen off). */
+    private var ringLock: android.os.PowerManager.WakeLock? = null
+
+    // His 9:13 test (21 Nov 2026): when the alarm moved to a backup station the player dropped out of the foreground
+    // for a moment and Android froze it. While an alarm rings, it stays in the foreground whatever the player does.
+    override fun onUpdateNotification(session: MediaSession, startInForegroundRequired: Boolean) =
+        super.onUpdateNotification(session, startInForegroundRequired || ringing)
     private var focusJob: kotlinx.coroutines.Job? = null
 
     override fun onCreate() {
@@ -150,7 +157,10 @@ class PlaybackService : MediaLibraryService() {
                     if (e is IcyInfo && !e.title.isNullOrBlank()) nowPlaying(e.title!!)
                 }
             }
-            override fun onPlayerError(error: PlaybackException) = onFailed(error)
+            override fun onPlayerError(error: PlaybackException) {
+                if (ringing) AlarmLog.note(this@PlaybackService, "station error: ${error.errorCodeName}")
+                onFailed(error)
+            }
             override fun onAudioSessionIdChanged(audioSessionId: Int) = eq.attach(audioSessionId)
             override fun onPlayWhenReadyChanged(playWhenReady: Boolean, reason: Int) {
                 if (reason != Player.PLAY_WHEN_READY_CHANGE_REASON_USER_REQUEST)
@@ -309,6 +319,12 @@ class PlaybackService : MediaLibraryService() {
         stopRing(pause = false)
         resumer.cancel(); giveUpReconnect()
         ringing = true; ringId = args.getInt("id", 1)
+        runCatching {
+            ringLock?.let { if (it.isHeld) it.release() }
+            ringLock = getSystemService(android.os.PowerManager::class.java)
+                .newWakeLock(android.os.PowerManager.PARTIAL_WAKE_LOCK, "velvet:alarm")
+                .apply { acquire(Alarm.RING_MAX_MS + 6 * 60_000L) }        // never longer than the alarm can ring
+        }
         val p = session.player
         val primary = itemOf(args.getString("station")?.let { runCatching { org.json.JSONObject(it) }.getOrNull() })
             ?: savedQueue()?.let { q -> q.mediaItems.getOrNull(q.startIndex) }
@@ -351,6 +367,7 @@ class PlaybackService : MediaLibraryService() {
     private fun nextCandidate(): Boolean {
         val n = candidates.removeFirstOrNull()
         if (n == null) { startTone(); return false }
+        AlarmLog.note(this, "trying ${n.mediaId}")
         val p = session.player
         p.setMediaItem(n); candidateAt = System.currentTimeMillis(); p.prepare(); p.play()
         return true
@@ -359,7 +376,8 @@ class PlaybackService : MediaLibraryService() {
     /** Stop / Snooze / pause: everything about the alarm ends (the radio too, unless [pause] is false). */
     private fun stopRing(pause: Boolean) {
         val was = ringing
-        ringing = false; ringJob?.cancel(); ringJob = null; focusJob?.cancel(); focusJob = null; candidates.clear(); stopTone(); alarmUntil = 0
+        ringing = false; ringJob?.cancel(); ringJob = null; focusJob?.cancel(); focusJob = null
+        runCatching { ringLock?.let { if (it.isHeld) it.release() } }; ringLock = null; candidates.clear(); stopTone(); alarmUntil = 0
         if (was) { AlarmLog.note(this, "stopped"); if (pause) { session.player.pause(); player.volume = 1f } }
         // the alarm's own foreground notification: let go of it (the radio, if it plays on, has its usual notification)
         if (alarmForeground) { alarmForeground = false
