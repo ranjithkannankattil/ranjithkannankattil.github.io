@@ -219,7 +219,7 @@ class ScreensTest {
         rule.onNodeWithText("A favourite that's working").performClick(); rule.waitForIdle()
         capture("v09c-backup-choices")
         rule.onNodeWithText("The phone's alarm sound").performClick(); rule.waitForIdle()
-        rule.onNode(hasClickLabel("Save alarm")).performScrollTo().performClick(); rule.waitForIdle()
+        rule.onNode(hasClickLabel("Save alarm")).assertIsDisplayed().performClick(); rule.waitForIdle()
         val l = Alarm.all(rule.activity)
         assertEquals(4, l.size)
         val n = l.first { it.id == 4 }

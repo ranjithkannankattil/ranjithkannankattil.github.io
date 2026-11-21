@@ -59,13 +59,14 @@ private val Pad = 24.dp
 /** A full page drawn over the app (not a separate window), with ← and a spaced-capitals title. */
 @Composable
 fun SubPage(title: String, close: () -> Unit, scroll: Boolean = true, scrollState: androidx.compose.foundation.ScrollState? = null,
-            body: @Composable ColumnScope.() -> Unit) {
+            action: (@Composable () -> Unit)? = null, body: @Composable ColumnScope.() -> Unit) {
     BackHandler(onBack = close)
     Column(Modifier.fillMaxSize().background(Paper).pointerInput(Unit) { detectTapGestures { } }
         .statusBarsPadding().navigationBarsPadding().imePadding()) {
         Row(Modifier.padding(start = 10.dp, end = 20.dp, top = 12.dp), verticalAlignment = Alignment.CenterVertically) {
             IconButton(close, Modifier.size(52.dp)) { LineIcon(R.drawable.ln_back, "Back", 24) }
             Label(title, Title, 13, weight = FontWeight.Medium)
+            if (action != null) { Spacer(Modifier.weight(1f)); action() }      // e.g. Save, always in reach
         }
         val own = rememberScrollState()
         Column((if (scroll) Modifier.verticalScroll(scrollState ?: own) else Modifier).fillMaxWidth()
@@ -577,7 +578,12 @@ fun AlarmEdit(start: Alarm.Setup, isNew: Boolean, choices: List<Pair<Station, St
     var pickBackup by remember { mutableStateOf(false) }
     val is24 = android.text.format.DateFormat.is24HourFormat(ctx)
     Box(Modifier.fillMaxSize()) {
-    SubPage(t(if (isNew) "New alarm" else "Alarm"), close) {
+    // Save sits in the top bar, so it's there without scrolling (his note, 21 Nov 2026)
+    SubPage(t(if (isNew) "New alarm" else "Alarm"), close, action = {
+        Box(Modifier.heightIn(min = 44.dp).clip(RoundedCornerShape(22.dp)).background(Title)
+            .clickable(onClickLabel = t("Save alarm")) { Alarm.save(ctx, s.copy(on = true)); close() }
+            .padding(horizontal = 22.dp), contentAlignment = Alignment.Center) { Label(t("Save"), Paper, 11) }
+    }) {
         Text(Alarm.timeLabel(s.hour, s.minute, is24), Modifier.fillMaxWidth().padding(top = 10.dp)
             .clickable(onClickLabel = t("Change the time")) { pickTime = true }, fontSize = 64.sp, fontWeight = FontWeight.Light,
             color = Title, textAlign = androidx.compose.ui.text.style.TextAlign.Center)
@@ -612,10 +618,7 @@ fun AlarmEdit(start: Alarm.Setup, isNew: Boolean, choices: List<Pair<Station, St
         SectionHead(t("Volume") + " · ${s.volume}%")
         Slider(s.volume.toFloat(), { s = s.copy(volume = (it / 5).toInt() * 5) },
             valueRange = 20f..100f, colors = SliderDefaults.colors(thumbColor = Accent, activeTrackColor = Accent, inactiveTrackColor = Line))
-        Box(Modifier.padding(top = 22.dp).fillMaxWidth().heightIn(min = 52.dp).background(Title)
-            .clickable(onClickLabel = t("Save alarm")) { Alarm.save(ctx, s.copy(on = true)); close() }, contentAlignment = Alignment.Center) {
-            Label(t("Save alarm"), Paper, 11) }
-        if (!isNew) Box(Modifier.padding(top = 10.dp).fillMaxWidth().heightIn(min = 52.dp)
+        if (!isNew) Box(Modifier.padding(top = 22.dp).fillMaxWidth().heightIn(min = 52.dp)
             .clickable(onClickLabel = t("Delete alarm")) { Alarm.remove(ctx, s.id); close() }, contentAlignment = Alignment.Center) {
             Label(t("Delete alarm"), AccentText, 11) }
     }
