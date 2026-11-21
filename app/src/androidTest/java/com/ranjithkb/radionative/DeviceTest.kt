@@ -370,6 +370,28 @@ class DeviceTest {
         if (Build.VERSION.SDK_INT >= 29) assertNotNull("Jost with Manjari for Malayalam letters", mixed)
     }
 
+    // ---- his 8:52 alarm (21 Nov 2026): woken in the background, the player was refused the sound (Android 15+ rule)
+    // and frozen. Now the alarm starts the player as a foreground service first.
+    @Test fun t24_alarm_from_the_background_plays_as_a_foreground_service() {
+        val (list, i) = playSomething(); main { b.pause() }
+        ctx.getSharedPreferences("alarmlog", 0).edit().clear().commit()
+        val st = Alarm.stationJson(asStation(list[i]), "English")
+        val a = Alarm.fresh(ctx).copy(days = emptySet(), station = st, fadeSec = 0, volume = 80)
+        Alarm.save(ctx, a)
+        shell("input keyevent KEYCODE_HOME"); Thread.sleep(1_500)          // the app in the background, like at 8:52
+        try {
+            ctx.sendBroadcast(android.content.Intent(ctx, AlarmReceiver::class.java).setAction(AlarmReceiver.RING).putExtra("id", a.id))
+            assertTrue("the alarm's station plays", waitFor(30_000, "alarm from background") { b.isPlaying })
+            val fg = shell("dumpsys activity services ${ctx.packageName}/com.ranjithkb.radionative.PlaybackService")
+            log("alarm from background: log=${AlarmLog.all(ctx).take(4)}; foreground=${fg.contains("isForeground=true")}")
+            assertTrue("the player runs as a foreground service", fg.contains("isForeground=true"))
+            assertFalse("Android didn't take the sound away", AlarmLog.all(ctx).any { it.contains("another app took the sound") })
+        } finally {
+            main { b.sendCustomCommand(SessionCommand(PlaybackService.ALARM_STOP, Bundle.EMPTY), Bundle.EMPTY) }
+            Thread.sleep(1_000); Alarm.remove(ctx, a.id)
+        }
+    }
+
     // ---- his car bug (Nov 2026): after pressing pause, the radio started again by itself
     @Test fun t21_pause_stays_paused() {
         playSomething()

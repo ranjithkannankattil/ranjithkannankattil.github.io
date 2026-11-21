@@ -95,7 +95,7 @@ class PlaybackService : MediaLibraryService() {
         private val WAITS = longArrayOf(1_500, 3_000, 5_000, 8_000, 12_000, 20_000, 30_000)
         fun delayMs(n: Int): Long = WAITS[n.coerceIn(0, WAITS.size - 1)]
     }
-    companion object { const val CLOSE = "velvet.close"; const val ALARM = "velvet.alarm"; const val ALARM_STOP = "velvet.alarm.stop"; const val RESUME = "velvet.resume" }
+    companion object { const val CLOSE = "velvet.close"; const val ALARM = "velvet.alarm"; const val ALARM_STOP = "velvet.alarm.stop"; const val ALARM_START = "velvet.alarm.start"; const val RESUME = "velvet.resume" }
     private lateinit var eq: EqEngine
     private lateinit var resumer: ResumeWatcher
     private var tone: android.media.Ringtone? = null
@@ -104,6 +104,28 @@ class PlaybackService : MediaLibraryService() {
         if (k != null && k.startsWith("eq")) eq.apply()
         if (k == "theme" || k == "mode") VelvetWidget.refresh(this)
     }
+
+    /**
+     * An alarm starts the player directly (not through a controller): it becomes a foreground service at once,
+     * showing the alarm notification, so Android gives it the sound and doesn't freeze it (Android 15+).
+     */
+    override fun onStartCommand(intent: android.content.Intent?, flags: Int, startId: Int): Int {
+        if (intent?.action == ALARM_START) {
+            val args = intent.extras ?: Bundle()
+            val setup = Alarm.byId(this, args.getInt("id", 1))
+            val n = setup?.let { Alarm.ringingNotification(this, it, tone = false) }
+            if (n != null) try {
+                if (android.os.Build.VERSION.SDK_INT >= 29)
+                    startForeground(Alarm.NOTE_ID, n, android.content.pm.ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PLAYBACK)
+                else startForeground(Alarm.NOTE_ID, n)
+                alarmForeground = true
+            } catch (e: Exception) { AlarmLog.note(this, "couldn't become a foreground service: $e") }
+            ring(args)
+            return START_NOT_STICKY
+        }
+        return super.onStartCommand(intent, flags, startId)
+    }
+    private var alarmForeground = false
 
     override fun onCreate() {
         super.onCreate()
@@ -336,7 +358,11 @@ class PlaybackService : MediaLibraryService() {
     private fun stopRing(pause: Boolean) {
         val was = ringing
         ringing = false; ringJob?.cancel(); ringJob = null; candidates.clear(); stopTone(); alarmUntil = 0
-        if (was) { Alarm.clearRinging(this); AlarmLog.note(this, "stopped"); if (pause) { session.player.pause(); player.volume = 1f } }
+        if (was) { AlarmLog.note(this, "stopped"); if (pause) { session.player.pause(); player.volume = 1f } }
+        // the alarm's own foreground notification: let go of it (the radio, if it plays on, has its usual notification)
+        if (alarmForeground) { alarmForeground = false
+            if (!session.player.isPlaying) runCatching { stopForeground(STOP_FOREGROUND_DETACH) } }
+        if (was) Alarm.clearRinging(this)
     }
 
     private var toneOn = false

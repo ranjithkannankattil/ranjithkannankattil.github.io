@@ -231,6 +231,14 @@ object Alarm {
     /** [sound]: the notification itself rings the phone's alarm sound, over and over until Stop (the guard's last resort). */
     fun showRinging(ctx: Context, s: Setup, tone: Boolean, sound: Boolean = false) {
         val nm = ctx.getSystemService(NotificationManager::class.java) ?: return
+        val n = ringingNotification(ctx, s, tone, sound) ?: return
+        if (!nm.areNotificationsEnabled()) AlarmLog.note(ctx, "notifications are off for Radio Velvet")
+        try { if (sound) nm.cancel(NOTE_ID); nm.notify(NOTE_ID, n) } catch (e: SecurityException) { AlarmLog.note(ctx, "can't show the alarm: $e") }
+    }
+
+    /** The "Alarm · 7:00 am" notification with Stop and Snooze (also what the player shows while it starts as a foreground service). */
+    fun ringingNotification(ctx: Context, s: Setup, tone: Boolean, sound: Boolean = false): android.app.Notification? {
+        val nm = ctx.getSystemService(NotificationManager::class.java) ?: return null
         if (Build.VERSION.SDK_INT >= 26 && nm.getNotificationChannel("alarm") == null)
             nm.createNotificationChannel(NotificationChannel("alarm", "Alarm", NotificationManager.IMPORTANCE_HIGH).apply {
                 description = "Stop or snooze an alarm"; setSound(null, null) })
@@ -253,8 +261,7 @@ object Alarm {
             .setVisibility(NotificationCompat.VISIBILITY_PUBLIC).setContentIntent(open)
             .addAction(0, "Stop", stop).addAction(0, "Snooze $SNOOZE_MIN min", snooze).setTimeoutAfter(RING_MAX_MS).build()
         if (sound) n.flags = n.flags or android.app.Notification.FLAG_INSISTENT     // keeps ringing until Stop / Snooze
-        if (!nm.areNotificationsEnabled()) AlarmLog.note(ctx, "notifications are off for Radio Velvet")
-        try { if (sound) nm.cancel(NOTE_ID); nm.notify(NOTE_ID, n) } catch (e: SecurityException) { AlarmLog.note(ctx, "can't show the alarm: $e") }
+        return n
     }
     fun clearRinging(ctx: Context) { ctx.getSystemService(NotificationManager::class.java)?.cancel(NOTE_ID) }
 }
@@ -311,7 +318,14 @@ class AlarmReceiver : BroadcastReceiver() {
         val args = Bundle().apply {
             putInt("id", s.id); putString("station", s.station?.toString()); putInt("fade", s.fadeSec); putInt("volume", s.volume)
             putString("backup", s.backup); putBoolean("down", Alarm.knownDown(ctx, s.id)) }
-        send(ctx, PlaybackService.ALARM, args)
+        // His 8:52 alarm (21 Nov 2026): Android 15+ gives the sound only to an app on screen or running as a foreground
+        // service, so a player woken in the background was refused the sound and then frozen. An alarm may start a
+        // foreground service: the player starts as one first, then plays.
+        val started = runCatching {
+            androidx.core.content.ContextCompat.startForegroundService(ctx,
+                Intent(ctx, PlaybackService::class.java).setAction(PlaybackService.ALARM_START).putExtras(args)); true }
+            .getOrElse { AlarmLog.note(ctx, "couldn't start the player in the foreground: $it"); false }
+        if (!started) send(ctx, PlaybackService.ALARM, args)
     }
 
     private fun send(ctx: Context, cmd: String, args: Bundle) {
