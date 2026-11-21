@@ -337,6 +337,31 @@ class DeviceTest {
         assertFalse(main { b.isPlaying })
     }
 
+    // ---- his 7:50 alarm (21 Nov 2026): another app took the sound the moment it rang, and the alarm ended in silence
+    @Test fun t22_alarm_survives_another_app_taking_the_sound() {
+        val (list, i) = playSomething(); main { b.pause() }
+        ctx.getSharedPreferences("alarmlog", 0).edit().clear().commit()
+        main { b.sendCustomCommand(SessionCommand(PlaybackService.ALARM, Bundle.EMPTY), Bundle().apply {
+            putString("station", Alarm.stationJson(asStation(list[i]), "English").toString()); putInt("fade", 0); putInt("volume", 80) }) }
+        val am = ctx.getSystemService(AudioManager::class.java)
+        val req = AudioFocusRequest.Builder(AudioManager.AUDIOFOCUS_GAIN)
+            .setAudioAttributes(AudioAttributes.Builder().setUsage(AudioAttributes.USAGE_MEDIA).build())
+            .setOnAudioFocusChangeListener { }.build()
+        Thread.sleep(300)                                    // right as it starts, like at 7:50
+        am.requestAudioFocus(req)
+        try {
+            assertTrue("the radio gave way to the other app", waitFor(5_000, "gave way") { !b.playWhenReady })
+            assertTrue("the radio comes back or the alarm sound rings",
+                waitFor(30_000, "alarm carries on") { b.isPlaying || AlarmLog.all(ctx).any { it.contains("tone") } })
+            assertFalse("the alarm was not ended by the other app", AlarmLog.all(ctx).take(4).any { it.endsWith("stopped") })
+            log("alarm after another app took the sound: playing=${main { b.isPlaying }}, log=${AlarmLog.all(ctx).take(4)}")
+        } finally {
+            am.abandonAudioFocusRequest(req)
+            main { b.sendCustomCommand(SessionCommand(PlaybackService.ALARM_STOP, Bundle.EMPTY), Bundle.EMPTY) }
+            Thread.sleep(1_000)
+        }
+    }
+
     // ---- his car bug (Nov 2026): after pressing pause, the radio started again by itself
     @Test fun t21_pause_stays_paused() {
         playSomething()

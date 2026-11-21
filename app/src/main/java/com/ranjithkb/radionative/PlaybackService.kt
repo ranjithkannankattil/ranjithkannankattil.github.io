@@ -138,6 +138,19 @@ class PlaybackService : MediaLibraryService() {
                         Player.PLAY_WHEN_READY_CHANGE_REASON_REMOTE -> "cast device"
                         else -> "reason $reason" } + ")")
                 if (playWhenReady) return
+                // His 7:50 alarm (21 Nov 2026): another app took the sound the moment it rang, and that used to end
+                // the alarm and its backups. An alarm only ends with Stop, Snooze or a pause you press: here the radio
+                // asks for the sound back, and if it can't have it the alarm sound rings (the ring loop sees to that).
+                if (ringing && reason == Player.PLAY_WHEN_READY_CHANGE_REASON_AUDIO_FOCUS_LOSS) {
+                    AlarmLog.note(this@PlaybackService, "another app took the sound; the alarm carries on")
+                    scope.launch {
+                        kotlinx.coroutines.delay(2_000)
+                        if (ringing && !session.player.playWhenReady) session.player.play()
+                        kotlinx.coroutines.delay(6_000)
+                        if (ringing && !session.player.isPlaying) startTone()
+                    }
+                    return
+                }
                 stopTone(); giveUpReconnect()
                 if (ringing) stopRing(pause = false)
                 if (System.currentTimeMillis() > alarmUntil) player.volume = 1f
