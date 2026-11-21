@@ -37,7 +37,7 @@ class LogicTest {
             assertTrue("it keeps ringing until Stop", n.flags and android.app.Notification.FLAG_INSISTENT != 0)
             assertEquals("alarm_sound", n.channelId)
             assertFalse("rings once, not again", Alarm.guardShouldRing(ctx, s.id))
-            assertTrue(AlarmLog.all(ctx).any { it.startsWith("guard ${s.id}") })
+            assertTrue(AlarmLog.all(ctx).any { it.contains("guard ${s.id}: nothing played") })
             // the radio came on (or Stop was pressed): the guard stays quiet
             Alarm.markFired(ctx, s.id); Alarm.markAnswered(ctx)
             assertFalse(Alarm.guardShouldRing(ctx, s.id))
