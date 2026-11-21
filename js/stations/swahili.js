@@ -239,9 +239,7 @@ window.STATIONS = [
       "https://us5new.listen2myradio.com:2199/listen.php?port=8138&type=ice&mount=stream"
     ],
     "added": "2026-10-22",
-    "br": [
-      96
-    ]
+    "offline": true
   },
   {
     "id": "heavenly-altar-church-radio-kampala",
@@ -446,4 +444,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T22:01Z";
+window.STATIONS_CHECKED = "2026-11-21T08:13Z";

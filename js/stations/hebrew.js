@@ -135,7 +135,7 @@ window.STATIONS = [
     ],
     "br": [
       64,
-      0
+      64
     ]
   },
   {
@@ -178,7 +178,9 @@ window.STATIONS = [
     "streams": [
       "https://icecast.kab.tv/live1-heb-574bcfd5.mp3"
     ],
-    "offline": true
+    "br": [
+      96
+    ]
   },
   {
     "id": "mizrahit-fm-best",
@@ -352,9 +354,7 @@ window.STATIONS = [
     "streams": [
       "https://live.ecast.co.il/stream/sahar/stream"
     ],
-    "br": [
-      320
-    ]
+    "offline": true
   },
   {
     "id": "kan-kol-hamusica",
@@ -408,7 +408,7 @@ window.STATIONS = [
       "https://gb25.streamgates.net/radios-audio/100Nostalgia/playlist.m3u8"
     ],
     "br": [
-      147
+      144
     ]
   },
   {
@@ -610,4 +610,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T22:01Z";
+window.STATIONS_CHECKED = "2026-11-21T08:13Z";

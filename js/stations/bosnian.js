@@ -85,6 +85,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.hkr.hr/hkr.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -365,7 +368,8 @@ window.STATIONS = [
     "added": "2026-10-24",
     "br": [
       128
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-bosanska-krupa",
@@ -536,4 +540,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T22:01Z";
+window.STATIONS_CHECKED = "2026-11-21T08:13Z";

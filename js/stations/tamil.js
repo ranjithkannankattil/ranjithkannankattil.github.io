@@ -66,7 +66,8 @@ window.STATIONS = [
       "http://radios.crabdance.com:8002/2",
       "http://radios.crabdance.com:8002/3"
     ],
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "tamil-panpalai-gold",
@@ -85,8 +86,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "89-4-tamil-fm",
@@ -370,7 +370,7 @@ window.STATIONS = [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio025/masterlist.m3u8"
     ],
     "br": [
-      80
+      79
     ]
   },
   {
@@ -379,8 +379,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio129/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "tamil-ragam",
@@ -807,7 +806,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      78
+      79
     ]
   },
   {
@@ -1177,7 +1176,10 @@ window.STATIONS = [
     "streams": [
       "https://psrlive2.listenon.in/ir?ah=0e81749e37789e5fb8c290926ce87e3f"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      48
+    ]
   },
   {
     "id": "kannadasan-radio",
@@ -1186,7 +1188,10 @@ window.STATIONS = [
     "streams": [
       "https://psrlive2.listenon.in/kavi?station=kaviyarasarradio"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      48
+    ]
   },
   {
     "id": "isaiyaruvi-fm",
@@ -1220,7 +1225,9 @@ window.STATIONS = [
       "https://radio13.pro-fhi.net:19236/stream.mp3"
     ],
     "added": "2026-11-02",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "muthamilradio",
@@ -1410,9 +1417,7 @@ window.STATIONS = [
       "https://thaalam.out.airtime.pro/thaalam_b"
     ],
     "added": "2026-11-04",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "tamil-amuthu-kovilpatti-radio",
@@ -1745,4 +1750,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T22:01Z";
+window.STATIONS_CHECKED = "2026-11-21T08:13Z";

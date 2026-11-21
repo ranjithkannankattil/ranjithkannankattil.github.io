@@ -338,6 +338,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radivo.thx8te.kh.ua/listen/radivo/radio.mp3"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -552,7 +555,10 @@ window.STATIONS = [
     "streams": [
       "https://a9.asurahosting.com:7390/radio.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      192
+    ]
   },
   {
     "id": "station-8",
@@ -1258,7 +1264,9 @@ window.STATIONS = [
       "https://complex.in.ua/zhudachiv"
     ],
     "added": "2026-11-02",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "teren-fm",
@@ -1501,4 +1509,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T22:01Z";
+window.STATIONS_CHECKED = "2026-11-21T08:13Z";

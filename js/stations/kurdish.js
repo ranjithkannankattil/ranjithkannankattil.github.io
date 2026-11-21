@@ -77,8 +77,7 @@ window.STATIONS = [
     ],
     "br": [
       141
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "axa-rojava",
@@ -293,4 +292,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T22:01Z";
+window.STATIONS_CHECKED = "2026-11-21T08:13Z";

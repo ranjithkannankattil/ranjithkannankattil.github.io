@@ -714,7 +714,7 @@ window.STATIONS = [
     "added": "2026-10-26",
     "where": "UK",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -993,9 +993,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "where": "Israel",
-    "br": [
-      320
-    ]
+    "offline": true
   },
   {
     "id": "red-state-talk-radio",
@@ -1430,7 +1428,7 @@ window.STATIONS = [
     "added": "2026-11-05",
     "where": "Qatar",
     "br": [
-      129
+      128
     ]
   },
   {
@@ -1876,4 +1874,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T22:01Z";
+window.STATIONS_CHECKED = "2026-11-21T08:13Z";

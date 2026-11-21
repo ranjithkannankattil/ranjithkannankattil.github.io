@@ -208,6 +208,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.hkr.hr/hkr.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -448,7 +451,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      96
+      319
     ]
   },
   {
@@ -590,7 +593,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.hkr.hr:8000/hkr.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hrvatski-radio-frankfurt",
@@ -599,7 +605,10 @@ window.STATIONS = [
     "streams": [
       "https://a9.asurahosting.com:7110/radio.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hrt-radio-knin",
@@ -622,7 +631,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      96
+      80
     ]
   },
   {
@@ -982,8 +991,8 @@ window.STATIONS = [
     ],
     "added": "2026-11-12",
     "br": [
-      128
+      160
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T22:01Z";
+window.STATIONS_CHECKED = "2026-11-21T08:13Z";

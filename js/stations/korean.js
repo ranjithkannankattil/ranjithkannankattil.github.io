@@ -10,7 +10,7 @@ window.STATIONS = [
       "https://radiolive.ytn.co.kr/radio/_definst_/20211118_fmlive/playlist.m3u8"
     ],
     "br": [
-      126
+      120
     ]
   },
   {
@@ -32,7 +32,7 @@ window.STATIONS = [
       "https://vod3.obs.co.kr:444/live/obsstream1/radio.stream/playlist.m3u8"
     ],
     "br": [
-      137
+      140
     ]
   },
   {
@@ -155,7 +155,7 @@ window.STATIONS = [
       "https://sbs-ice.streamguys1.com/sbs-popasia-sbs-web"
     ],
     "br": [
-      96
+      97
     ]
   },
   {
@@ -354,7 +354,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      1155
+      1157
     ]
   },
   {
@@ -366,7 +366,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      1291
+      1271
     ]
   },
   {
@@ -378,7 +378,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      1147
+      1152
     ]
   },
   {
@@ -390,7 +390,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      98
+      96
     ]
   },
   {
@@ -414,7 +414,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      1140
+      1146
     ]
   },
   {
@@ -426,7 +426,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      4447
+      4437
     ]
   },
   {
@@ -498,7 +498,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      614
+      615
     ]
   },
   {
@@ -625,7 +625,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      1150
+      1143
     ]
   },
   {
@@ -637,7 +637,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      1111
+      1137
     ]
   },
   {
@@ -658,7 +658,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      1152
+      1149
     ]
   },
   {
@@ -753,4 +753,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T22:01Z";
+window.STATIONS_CHECKED = "2026-11-21T08:13Z";

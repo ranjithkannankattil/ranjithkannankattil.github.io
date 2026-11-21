@@ -460,10 +460,7 @@ window.STATIONS = [
     "streams": [
       "https://sp3.streams.ovh/8070/stream"
     ],
-    "added": "2026-10-22",
-    "br": [
-      128
-    ]
+    "added": "2026-10-22"
   },
   {
     "id": "laikos-fm",
@@ -1462,9 +1459,7 @@ window.STATIONS = [
       "https://netradio.live24.gr/924fm-thess"
     ],
     "added": "2026-11-04",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "101-1",
@@ -1677,7 +1672,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "br": [
-      128
+      192
     ]
   },
   {
@@ -1753,4 +1748,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T22:01Z";
+window.STATIONS_CHECKED = "2026-11-21T08:13Z";

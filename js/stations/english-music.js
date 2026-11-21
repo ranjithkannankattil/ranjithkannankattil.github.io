@@ -13,7 +13,7 @@ window.STATIONS = [
     "where": "US",
     "br": [
       192,
-      320
+      0
     ]
   },
   {
@@ -303,7 +303,7 @@ window.STATIONS = [
     ],
     "where": "UK",
     "br": [
-      47
+      48
     ]
   },
   {
@@ -508,7 +508,7 @@ window.STATIONS = [
     "added": "2026-10-23",
     "where": "UK",
     "br": [
-      47
+      48
     ]
   },
   {
@@ -1035,7 +1035,9 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "where": "US",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-x-90s",
@@ -1112,7 +1114,7 @@ window.STATIONS = [
     "added": "2026-11-01",
     "where": "Australia",
     "br": [
-      96
+      97
     ]
   },
   {
@@ -1715,7 +1717,7 @@ window.STATIONS = [
     "added": "2026-11-05",
     "where": "UK",
     "br": [
-      47
+      48
     ]
   },
   {
@@ -1880,4 +1882,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T22:01Z";
+window.STATIONS_CHECKED = "2026-11-21T08:13Z";

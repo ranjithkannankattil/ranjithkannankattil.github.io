@@ -1228,7 +1228,9 @@ window.STATIONS = [
       "https://webradio3.tda.dz:8001/Constantine_64K.mp3"
     ],
     "added": "2026-11-02",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "ancient-fm",
@@ -1768,4 +1770,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T22:01Z";
+window.STATIONS_CHECKED = "2026-11-21T08:13Z";

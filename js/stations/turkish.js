@@ -63,8 +63,8 @@ window.STATIONS = [
       "https://moondigitalmaster.radyotvonline.net/kafaradyo/playlist.m3u8"
     ],
     "br": [
-      64,
-      64
+      63,
+      63
     ]
   },
   {
@@ -303,7 +303,7 @@ window.STATIONS = [
       "https://moondigitaledge.radyotvonline.net/palnostalji/playlist.m3u8"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -495,7 +495,8 @@ window.STATIONS = [
     "added": "2026-10-23",
     "br": [
       141
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "power-dance",
@@ -554,7 +555,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      150
+      151
     ]
   },
   {
@@ -638,8 +639,7 @@ window.STATIONS = [
     "added": "2026-10-25",
     "br": [
       141
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radyo-mezopotamya",
@@ -675,8 +675,7 @@ window.STATIONS = [
     "added": "2026-10-25",
     "br": [
       141
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "dinamo-fm-legacy",
@@ -1018,7 +1017,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -1244,8 +1243,7 @@ window.STATIONS = [
     "added": "2026-11-02",
     "br": [
       141
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "bestefm",
@@ -1335,8 +1333,7 @@ window.STATIONS = [
     "added": "2026-11-04",
     "br": [
       106
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "gonul-fm-97-3",
@@ -1576,8 +1573,7 @@ window.STATIONS = [
     "streams": [
       "https://yayin1.canlitv.fun/radyo/gencfm/chunklist_w1257533803.m3u8"
     ],
-    "added": "2026-11-08",
-    "offline": true
+    "added": "2026-11-08"
   },
   {
     "id": "bitlis-fm-98-8",
@@ -1748,4 +1744,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T22:01Z";
+window.STATIONS_CHECKED = "2026-11-21T08:13Z";

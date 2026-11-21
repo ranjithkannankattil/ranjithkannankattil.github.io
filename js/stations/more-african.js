@@ -98,9 +98,7 @@ window.STATIONS = [
       "https://www.radioking.com/play/alefamusic"
     ],
     "added": "2026-10-22",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "radio-rsf-109-antanifotsy",
@@ -145,7 +143,10 @@ window.STATIONS = [
     "streams": [
       "https://a9.asurahosting.com/listen/fiderana/radio.mp3"
     ],
-    "added": "2026-11-12"
+    "added": "2026-11-12",
+    "br": [
+      192
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T22:01Z";
+window.STATIONS_CHECKED = "2026-11-21T08:13Z";

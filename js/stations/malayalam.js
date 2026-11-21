@@ -283,6 +283,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://cast1.my-control-panel.com/proxy/myradio90fm/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -397,6 +400,9 @@ window.STATIONS = [
     "category": "fm",
     "streams": [
       "https://icecast.octosignals.com/radiomacfast"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -422,7 +428,7 @@ window.STATIONS = [
     ],
     "br": [
       0,
-      128
+      64
     ]
   },
   {
@@ -442,6 +448,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://onair.junefm.in/live"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -494,7 +503,7 @@ window.STATIONS = [
       "https://a5.asurahosting.com:7450/radio.mp3"
     ],
     "br": [
-      192
+      320
     ]
   },
   {
@@ -519,7 +528,7 @@ window.STATIONS = [
       "https://live.accessmedia.nz/PlanetFM.stream/playlist.m3u8"
     ],
     "br": [
-      148,
+      151,
       135
     ]
   },
@@ -1313,7 +1322,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      112
+      96
     ]
   },
   {
@@ -1325,7 +1334,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      95
+      94
     ]
   },
   {
@@ -1484,7 +1493,8 @@ window.STATIONS = [
     "added": "2026-11-14",
     "br": [
       691
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "kairaly-tv",
@@ -1495,7 +1505,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-14",
     "br": [
-      2540
+      2530
     ]
   },
   {
@@ -1518,4 +1528,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T03:16Z";
+window.STATIONS_CHECKED = "2026-11-21T08:13Z";

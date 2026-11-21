@@ -678,7 +678,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      128
+      256
     ]
   },
   {
@@ -1163,9 +1163,7 @@ window.STATIONS = [
       "https://stream.astv.ru/stream.mp3"
     ],
     "added": "2026-11-02",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "fm-5",
@@ -1684,4 +1682,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T22:01Z";
+window.STATIONS_CHECKED = "2026-11-21T08:13Z";

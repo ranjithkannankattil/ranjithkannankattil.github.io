@@ -236,7 +236,7 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      128
+      320
     ]
   },
   {
@@ -556,9 +556,7 @@ window.STATIONS = [
       "https://us1.amfmph.com/ssl/tapsradioilagan?mp=/stream"
     ],
     "added": "2026-10-24",
-    "br": [
-      48
-    ]
+    "offline": true
   },
   {
     "id": "newsline-central-luzon-105-5-fm",
@@ -800,4 +798,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T22:01Z";
+window.STATIONS_CHECKED = "2026-11-21T08:13Z";

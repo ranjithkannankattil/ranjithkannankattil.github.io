@@ -47,7 +47,7 @@ window.STATIONS = [
       "https://icecast-qmusicbe-cdp.triple-it.nl/qmusic.aac"
     ],
     "br": [
-      96
+      95
     ]
   },
   {
@@ -84,7 +84,7 @@ window.STATIONS = [
       "https://icecast-qmusicnl-cdp.triple-it.nl/Joe_nl.mp3"
     ],
     "br": [
-      96,
+      95,
       128,
       128
     ]
@@ -220,7 +220,7 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      95
+      96
     ]
   },
   {
@@ -608,7 +608,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      95
+      96
     ]
   },
   {
@@ -689,7 +689,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      95
+      96
     ]
   },
   {
@@ -1338,7 +1338,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.bnlradio.be/stream.mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      192
+    ]
   },
   {
     "id": "citymusic",
@@ -1516,7 +1519,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "br": [
-      95
+      96
     ]
   },
   {
@@ -1564,7 +1567,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-06",
     "br": [
-      95
+      96
     ]
   },
   {
@@ -1784,4 +1787,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T22:01Z";
+window.STATIONS_CHECKED = "2026-11-21T08:13Z";

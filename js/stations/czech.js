@@ -440,7 +440,7 @@ window.STATIONS = [
       "https://stream.mediawork.cz/retrotv/retrotvHQ1/playlist.m3u8"
     ],
     "br": [
-      3280
+      3188
     ]
   },
   {
@@ -1066,7 +1066,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "br": [
-      3630
+      3744
     ]
   },
   {
@@ -1269,9 +1269,7 @@ window.STATIONS = [
       "https://icecast9.play.cz/radio-ostravan-256.mp3"
     ],
     "added": "2026-11-02",
-    "br": [
-      256
-    ]
+    "offline": true
   },
   {
     "id": "radio-vaticana-cestina",
@@ -1661,4 +1659,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T22:01Z";
+window.STATIONS_CHECKED = "2026-11-21T08:13Z";

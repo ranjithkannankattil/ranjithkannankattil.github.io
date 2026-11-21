@@ -237,7 +237,9 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
     ],
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-17",
@@ -381,7 +383,7 @@ window.STATIONS = [
       "https://lhttp.qtfm.cn/live/20500187/64k.mp3"
     ],
     "br": [
-      64
+      16
     ]
   },
   {
@@ -627,8 +629,7 @@ window.STATIONS = [
     "streams": [
       "https://live.fm891.net/192k.aac"
     ],
-    "added": "2026-10-26",
-    "offline": true
+    "added": "2026-10-26"
   },
   {
     "id": "station-31",
@@ -756,7 +757,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      52
+      51
     ]
   },
   {
@@ -1240,7 +1241,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-04",
     "br": [
-      96
+      97
     ]
   },
   {
@@ -1601,4 +1602,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T22:01Z";
+window.STATIONS_CHECKED = "2026-11-21T08:13Z";

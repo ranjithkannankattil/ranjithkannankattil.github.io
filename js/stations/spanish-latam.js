@@ -216,7 +216,7 @@ window.STATIONS = [
       "https://server1.stweb.tv/rcvos/live/playlist.m3u8"
     ],
     "br": [
-      68
+      66
     ]
   },
   {
@@ -738,7 +738,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      128
+      160
     ]
   },
   {
@@ -748,7 +748,10 @@ window.STATIONS = [
     "streams": [
       "https://ice42.securenetsystems.net/HRN"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      32
+    ]
   },
   {
     "id": "metro-95-1",
@@ -1753,4 +1756,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T22:01Z";
+window.STATIONS_CHECKED = "2026-11-21T08:13Z";

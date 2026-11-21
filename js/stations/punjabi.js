@@ -32,10 +32,7 @@ window.STATIONS = [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio138/chunklist.m3u8",
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio138/playlist.m3u8"
     ],
-    "br": [
-      0,
-      127
-    ]
+    "offline": true
   },
   {
     "id": "all4masti",
@@ -447,4 +444,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T22:01Z";
+window.STATIONS_CHECKED = "2026-11-21T08:13Z";

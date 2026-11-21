@@ -27,7 +27,7 @@ window.STATIONS = [
       128,
       192,
       24,
-      128
+      96
     ]
   },
   {
@@ -1788,4 +1788,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T22:01Z";
+window.STATIONS_CHECKED = "2026-11-21T08:13Z";

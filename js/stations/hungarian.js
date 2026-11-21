@@ -284,7 +284,9 @@ window.STATIONS = [
     "streams": [
       "https://icast.connectmedia.hu/5115/live.mp3"
     ],
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-1-sopron",
@@ -326,7 +328,9 @@ window.STATIONS = [
     "streams": [
       "https://icast.connectmedia.hu/5232/live.mp3"
     ],
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "best-fm-budapest",
@@ -743,7 +747,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "br": [
-      192
+      256
     ]
   },
   {
@@ -837,7 +841,10 @@ window.STATIONS = [
     "streams": [
       "https://a9.asurahosting.com/listen/passion_radio_hungary/radio.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      192
+    ]
   },
   {
     "id": "zalan-radio",
@@ -859,9 +866,7 @@ window.STATIONS = [
       "https://radioinside.eu/live.mp3"
     ],
     "added": "2026-10-29",
-    "br": [
-      192
-    ]
+    "offline": true
   },
   {
     "id": "manna-fm-98-6",
@@ -1279,7 +1284,9 @@ window.STATIONS = [
       "https://icast.connectmedia.hu/5116/live.mp3/;"
     ],
     "added": "2026-11-04",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-gaga-csikszek",
@@ -1513,7 +1520,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radioone.hu/ch5"
     ],
-    "added": "2026-11-20"
+    "added": "2026-11-20",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-1-szombathely",
@@ -1522,7 +1532,10 @@ window.STATIONS = [
     "streams": [
       "https://icast.connectmedia.hu/5216/live.mp3"
     ],
-    "added": "2026-11-20"
+    "added": "2026-11-20",
+    "br": [
+      128
+    ]
   },
   {
     "id": "groove-cafe",
@@ -1531,7 +1544,19 @@ window.STATIONS = [
     "streams": [
       "https://www.radiogroove.hu/cafe.mp3"
     ],
-    "added": "2026-11-20"
+    "added": "2026-11-20",
+    "br": [
+      192
+    ]
+  },
+  {
+    "id": "groove-city",
+    "name": "Groove City",
+    "category": "music",
+    "streams": [
+      "https://www.radiogroove.hu/city.mp3/"
+    ],
+    "added": "2026-11-21"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T22:01Z";
+window.STATIONS_CHECKED = "2026-11-21T08:13Z";

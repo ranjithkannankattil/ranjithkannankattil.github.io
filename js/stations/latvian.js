@@ -218,7 +218,9 @@ window.STATIONS = [
     "streams": [
       "https://stream.ehrhiti.lv:8000/Stream_67.mp3"
     ],
-    "offline": true
+    "br": [
+      112
+    ]
   },
   {
     "id": "european-hit-radio-superhits-hiphop-rnb",
@@ -238,7 +240,9 @@ window.STATIONS = [
     "streams": [
       "https://stream.ehrhiti.lv:8000/Stream_32.mp3"
     ],
-    "offline": true
+    "br": [
+      112
+    ]
   },
   {
     "id": "ehr-fresh",
@@ -247,7 +251,9 @@ window.STATIONS = [
     "streams": [
       "https://stream.ehrhiti.lv:8000/Stream_25.mp3"
     ],
-    "offline": true
+    "br": [
+      112
+    ]
   },
   {
     "id": "ehr-darbam",
@@ -256,7 +262,9 @@ window.STATIONS = [
     "streams": [
       "https://stream.ehrhiti.lv:8000/Stream_23.mp3"
     ],
-    "offline": true
+    "br": [
+      112
+    ]
   },
   {
     "id": "radio-liepaja",
@@ -509,7 +517,9 @@ window.STATIONS = [
       "https://stream.ehrhiti.lv:8000/Stream_12.mp3"
     ],
     "added": "2026-10-23",
-    "offline": true
+    "br": [
+      112
+    ]
   },
   {
     "id": "europa",
@@ -531,7 +541,9 @@ window.STATIONS = [
       "https://stream.ehrhiti.lv:8000/Stream_78.mp3"
     ],
     "added": "2026-10-23",
-    "offline": true
+    "br": [
+      112
+    ]
   },
   {
     "id": "your-city-padio",
@@ -577,7 +589,9 @@ window.STATIONS = [
       "https://stream.ehrhiti.lv:8000/Stream_64.mp3"
     ],
     "added": "2026-10-24",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "latvijas-radio-lr6-naba",
@@ -599,7 +613,9 @@ window.STATIONS = [
       "https://stream.ehrhiti.lv:8000/Stream_36.mp3"
     ],
     "added": "2026-10-24",
-    "offline": true
+    "br": [
+      112
+    ]
   },
   {
     "id": "ehr-festivalu-hiti",
@@ -660,4 +676,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-20T22:01Z";
+window.STATIONS_CHECKED = "2026-11-21T08:13Z";
