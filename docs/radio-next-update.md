@@ -1,5 +1,14 @@
 # Radio Velvet: plan for the next update
 
+## Next version after 2.9.0 (his call, 21 Nov 2026): **fluid UI**
+He wants the next app version to be about a fluid UI: smooth, natural movement everywhere (screen changes, lists,
+the player opening and closing, tabs, sheets), no jumps or sudden redraws. Ask him for the moments that feel stiff
+today before building; show before/after recordings.
+- Also waiting for his OK: the Info tab as **"You"** (profile header, three numbers, one short list with icons,
+  Help & feedback, About folded into one row, version in a small footer).
+- Kathakali padam email: still needs a To address. News channels email: in his Gmail drafts, Bcc to 7 channels.
+
+
 **Status 14 Nov:** everything below except the tip jar / Buy Me a Coffee (19, 22) is built: website live, app in the Dev build (2.5.0-dev) waiting for his test before Play.
 
 Collected from Ranjith and testers. Build when he says "go".
