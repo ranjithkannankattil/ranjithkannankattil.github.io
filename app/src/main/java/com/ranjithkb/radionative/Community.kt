@@ -125,6 +125,7 @@ object Crash {
     fun record(ctx: Context, e: Throwable) {
         val (error, trace) = summary(e)
         p(ctx).edit().putString("error", error).putString("trace", trace).putLong("at", System.currentTimeMillis()).commit()
+        runCatching { AlarmLog.note(ctx, "crash: $error · " + trace.lines().drop(1).firstOrNull { "ranjithkb" in it }?.trim().orEmpty()) }
     }
 
     fun sendSaved(ctx: Context, scope: CoroutineScope) {

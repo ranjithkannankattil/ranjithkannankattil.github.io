@@ -347,12 +347,17 @@ class PlaybackService : MediaLibraryService() {
         ringJob = scope.launch {
             val steps = fade * 4
             var i = 0
+            var lastNote = 0L
             while (ringing) {
                 kotlinx.coroutines.delay(250)
                 val now = System.currentTimeMillis()
                 val pl = session.player
                 if (pl.isPlaying) { if (pl === local && i < steps) { i++; player.volume = 0.05f + (target - 0.05f) * i / steps } }
                 else {
+                    if ((now - start) / 10_000 != lastNote) { lastNote = (now - start) / 10_000
+                        AlarmLog.note(this@PlaybackService, "${(now - start) / 1000} s: not on air yet (" + when (pl.playbackState) {
+                            Player.STATE_BUFFERING -> "connecting"; Player.STATE_IDLE -> "idle"; Player.STATE_ENDED -> "ended"; else -> "ready" } +
+                            (if (pl.playWhenReady) "" else ", paused") + ")") }
                     // this station has had its chance (stuck connecting): the next one
                     if (now - candidateAt > 9_000 && candidates.isNotEmpty()) nextCandidate()
                     if (now - start > Alarm.TONE_AFTER_MS && !toneOn) startTone()
@@ -400,7 +405,11 @@ class PlaybackService : MediaLibraryService() {
             if (ringing) Alarm.byId(this, ringId)?.let { Alarm.showRinging(this, it, tone = true) }
             if (tone?.isPlaying != false) Alarm.markAnswered(this)      // if the sound didn't start, the guard still rings
             AlarmLog.note(this, "tone" + if (tone?.isPlaying == false) " (didn't start)" else "")
-        } catch (e: Exception) { }
+        } catch (e: Exception) {
+            AlarmLog.note(this, "alarm sound failed: $e")
+            // the notification rings it instead (works without the player)
+            if (ringing) Alarm.byId(this, ringId)?.let { Alarm.showRinging(this, it, tone = true, sound = true) }
+        }
     }
     private fun stopTone() { try { tone?.stop() } catch (e: Exception) { }; tone = null; toneOn = false }
 
