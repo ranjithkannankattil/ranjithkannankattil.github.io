@@ -1,0 +1,107 @@
+--------- beginning of main
+11-21 06:56:03.723  4771  4899 I VELVET-TEST: top folders: 75 ([Favourites, Velvet Selection, English News, English Talk, English Music])
+11-21 06:56:04.211  4771  4899 I VELVET-TEST: malayalam in the car: 114 stations
+11-21 06:56:07.559  4771  4899 I VELVET-TEST: car pictures: 11 logos, 29 badges in the first 40 Malayalam stations
+11-21 06:56:10.488  4771  4899 I VELVET-TEST: playing BBC World Service
+11-21 06:56:11.129  4771  4899 I VELVET-TEST: next: st|english-news:bbc-world-service -> st|english-news:npr-24-hour-program-stream
+11-21 06:56:14.586  4771  4899 I VELVET-TEST: list 152, started at 0, wrap ok (app and car)
+11-21 06:56:16.708  4771  4899 I VELVET-TEST: playing BBC World Service
+11-21 06:56:17.038  4771  4899 I VELVET-TEST: airplane mode ON
+11-21 06:56:57.039  4771  4899 I VELVET-TEST: after 40 s without signal: playing=false state=2
+11-21 06:56:57.054  4771  4899 I VELVET-TEST: airplane mode OFF
+11-21 06:57:03.634  4771  4899 I VELVET-TEST: reconnected by itself
+11-21 06:57:05.451  4771  4899 I VELVET-TEST: playing BBC World Service
+11-21 06:57:14.087  4771  4899 I VELVET-TEST: playing BBC World Service
+11-21 06:57:19.849  4771  4899 I VELVET-TEST: resumed after another app's sound
+11-21 06:57:21.990  4771  4899 I VELVET-TEST: playing BBC World Service
+11-21 06:57:38.189  4771  4899 I VELVET-TEST: playing BBC World Service
+11-21 06:57:51.205  4771  4899 I VELVET-TEST: playing BBC World Service
+11-21 06:57:54.206  4771  4899 I VELVET-TEST: visualiser: fresh=true, loudest band=0.7112812, loudest sample=0.1673584
+11-21 06:57:55.990  4771  4899 I VELVET-TEST: playing BBC World Service
+11-21 06:57:58.138  4771  4899 I VELVET-TEST: exact alarms allowed: true
+11-21 06:57:58.170  4771  4899 I VELVET-TEST: next alarm clock: 1795415400000
+11-21 06:57:59.549  4771  4899 I VELVET-TEST: playing BBC World Service
+11-21 06:58:01.370  4771  4899 I VELVET-TEST: widget shows: BBC World Service playing=false
+11-21 06:58:03.831  4771  4899 I VELVET-TEST: stats: 205 heard, 64 rated
+11-21 06:58:05.268  4771  4899 I VELVET-TEST: playing BBC World Service
+11-21 06:58:15.443  4771  4899 I VELVET-TEST: dead station → st|english-news:bbc-world-service in 10167 ms; log: [21 Nov 06:58:15  on air: st|english-news:bbc-world-service, 21 Nov 06:58:14  trying st|english-news:bbc-world-service, 21 Nov 06:58:05  ring 1: st|english-news:deadtest, 3 backups]
+11-21 06:58:35.966  4771  4899 I VELVET-TEST: tone after 20443 ms; log: [21 Nov 06:58:35  tone, 21 Nov 06:58:35  20 s: not on air yet (connecting), 21 Nov 06:58:25  10 s: not on air yet (connecting), 21 Nov 06:58:15  ring 7: st|english-news:deadtest, 0 backups]
+11-21 06:59:17.716  4771  4899 I VELVET-TEST: next alarm: want Soon Sat Nov 21 09:10:00 UTC 2026, Android has Sat Nov 21 09:10:00 UTC 2026
+11-21 06:59:19.406  4771  4899 I VELVET-TEST: playing BBC World Service
+11-21 06:59:20.504  4771  4899 I VELVET-TEST: quiet check: working station true, dead one false
+11-21 06:59:21.982  4771  4899 I VELVET-TEST: playing BBC World Service
+11-21 06:59:25.577  4771  4899 I VELVET-TEST: playing BBC World Service
+11-21 06:59:49.899  4771  4899 I VELVET-TEST: playing BBC World Service
+11-21 07:00:34.938  4771  4899 I VELVET-TEST: play log: [21 Nov 06:59:49  pause by com.ranjithkb.radio, 21 Nov 06:59:49  pause by com.ranjithkb.radio, 21 Nov 06:59:49  play by com.ranjithkb.radio, 21 Nov 06:59:48  pause by com.ranjithkb.radio, 21 Nov 06:59:26  pause by com.ranjithkb.radio, 21 Nov 06:59:25  play by app]
+11-21 07:00:36.853  4771  4899 I VELVET-TEST: playing BBC World Service
+11-21 07:00:39.551  4771  4899 I VELVET-TEST: alarm after another app took the sound: playing=true, log=[21 Nov 07:00:39  on air: st|english-news:bbc-world-service, 21 Nov 07:00:37  another app took the sound; the alarm carries on, 21 Nov 07:00:36  ring 1: st|english-news:bbc-world-service, 3 backups]
+11-21 07:00:40.594  4771  4899 I VELVET-TEST: mixed Jost + Manjari font built: true (Android 34)
+11-21 07:00:42.308  4771  4899 I VELVET-TEST: playing BBC World Service
+11-21 07:00:45.782  4771  4899 I VELVET-TEST: alarm from background: log=[21 Nov 07:00:45  on air: st|english-news:bbc-world-service, 21 Nov 07:00:43  ring 1: st|english-news:bbc-world-service, 3 backups, 21 Nov 07:00:43  fired 1]; foreground=true
+11-21 07:00:51.558  4771  4899 I VELVET-TEST: cathedral original light: 803x1103, 401 colours
+11-21 07:00:51.848  4771  4899 I VELVET-TEST: cathedral original dark: 803x1103, 398 colours
+11-21 07:00:52.117  4771  4899 I VELVET-TEST: cathedral theme light: 803x1103, 411 colours
+11-21 07:00:52.377  4771  4899 I VELVET-TEST: cathedral theme dark: 803x1103, 409 colours
+11-21 07:00:52.989  4771  4899 I VELVET-TEST: valve original light: 1080x1099, 309 colours
+11-21 07:00:53.254  4771  4899 I VELVET-TEST: valve original dark: 1080x1099, 310 colours
+11-21 07:00:53.510  4771  4899 I VELVET-TEST: valve theme light: 1080x1099, 331 colours
+11-21 07:00:53.773  4771  4899 I VELVET-TEST: valve theme dark: 1080x1099, 330 colours
+11-21 07:00:54.040  4771  4899 I VELVET-TEST: transistor original light: 1080x935, 389 colours
+11-21 07:00:54.299  4771  4899 I VELVET-TEST: transistor original dark: 1080x935, 391 colours
+11-21 07:00:54.577  4771  4899 I VELVET-TEST: transistor theme light: 1080x935, 422 colours
+11-21 07:00:54.832  4771  4899 I VELVET-TEST: transistor theme dark: 1080x935, 422 colours
+11-21 07:00:55.290  4771  4899 I VELVET-TEST: receiver original light: 1080x953, 357 colours
+11-21 07:00:55.583  4771  4899 I VELVET-TEST: receiver original dark: 1080x953, 355 colours
+11-21 07:00:55.821  4771  4899 I VELVET-TEST: receiver theme light: 1080x953, 452 colours
+11-21 07:00:56.071  4771  4899 I VELVET-TEST: receiver theme dark: 1080x953, 450 colours
+11-21 07:00:56.519  4771  4899 I VELVET-TEST: boombox original light: 1080x584, 162 colours
+11-21 07:00:56.707  4771  4899 I VELVET-TEST: boombox original dark: 1080x584, 163 colours
+11-21 07:00:56.893  4771  4899 I VELVET-TEST: boombox theme light: 1080x584, 339 colours
+11-21 07:00:57.083  4771  4899 I VELVET-TEST: boombox theme dark: 1080x584, 333 colours
+11-21 07:00:57.316  4771  4899 I VELVET-TEST: digital original light: 1080x953, 260 colours
+11-21 07:00:57.526  4771  4899 I VELVET-TEST: digital original dark: 1080x953, 248 colours
+11-21 07:00:57.723  4771  4899 I VELVET-TEST: digital theme light: 1080x953, 457 colours
+11-21 07:00:57.924  4771  4899 I VELVET-TEST: digital theme dark: 1080x953, 473 colours
+11-21 07:01:02.378  4771  4899 I VELVET-TEST: tuning: 2 -> 3 -> 2
+11-21 07:01:07.516  4771  4899 I VELVET-TEST: volume: 7 -> 9
+11-21 07:01:11.843  4771  4899 I VELVET-TEST: equaliser from knobs: [6, 0, 0, 0, -6] (Custom)
+11-21 07:01:26.320  4771  4899 I VELVET-TEST: radio meters get sound: fresh=true peak=0.34353638
+11-21 07:01:29.390  4771  4899 I VELVET-TEST: ---- cathedral
+11-21 07:01:30.261  4771  4899 I VELVET-TEST: cathedral tuning ok
+11-21 07:01:31.480  4771  4899 I VELVET-TEST: cathedral volume ok
+11-21 07:01:31.551  4771  4899 I VELVET-TEST: ---- valve
+11-21 07:01:32.403  4771  4899 I VELVET-TEST: valve tuning ok
+11-21 07:01:33.517  4771  4899 I VELVET-TEST: valve volume ok
+11-21 07:01:33.566  4771  4899 I VELVET-TEST: ---- transistor
+11-21 07:01:34.472  4771  4899 I VELVET-TEST: transistor tuning ok
+11-21 07:01:35.879  4771  4899 I VELVET-TEST: transistor volume ok
+11-21 07:01:35.917  4771  4899 I VELVET-TEST: ---- receiver
+11-21 07:01:36.638  4771  4899 I VELVET-TEST: receiver tuning ok
+11-21 07:01:37.703  4771  4899 I VELVET-TEST: receiver volume ok
+11-21 07:01:40.162  4771  4899 I VELVET-TEST: receiver Bass ok
+11-21 07:01:42.381  4771  4899 I VELVET-TEST: receiver Treble ok
+11-21 07:01:42.407  4771  4899 I VELVET-TEST: ---- boombox
+11-21 07:01:44.211  4771  4899 I VELVET-TEST: boombox keys ok
+11-21 07:01:44.253  4771  4899 I VELVET-TEST: ---- digital
+11-21 07:01:46.399  4771  4899 I VELVET-TEST: digital Bass ok
+11-21 07:01:48.402  4771  4899 I VELVET-TEST: digital Mid ok
+11-21 07:01:50.404  4771  4899 I VELVET-TEST: digital Treble ok
+11-21 07:01:51.256  4771  4899 I VELVET-TEST: digital volume ok
+11-21 07:02:00.122  4771  4899 I VELVET-TEST: volume knob redraw: 227 pixels changed
+11-21 07:02:05.321  4771  4899 I VELVET-TEST: cathedral tuning by turning round ok
+11-21 07:02:05.927  4771  4899 I VELVET-TEST: valve tuning by turning round ok
+11-21 07:02:06.575  4771  4899 I VELVET-TEST: receiver tuning by turning round ok
+11-21 07:02:07.008  4771  4899 I VELVET-TEST: cathedral volume by turning round ok: 7 -> 11 -> 6
+11-21 07:02:07.578  4771  4899 I VELVET-TEST: valve volume by turning round ok: 7 -> 10 -> 4
+11-21 07:02:08.220  4771  4899 I VELVET-TEST: receiver volume by turning round ok: 7 -> 11 -> 5
+11-21 07:02:08.762  4771  4899 I VELVET-TEST: digital volume by turning round ok: 7 -> 11 -> 6
+11-21 07:02:09.226  4771  4899 I VELVET-TEST: after the knob turns: MSNBC playing=true
+11-21 07:02:14.234  4771  4899 I VELVET-TEST: cathedral: look swipe ok
+11-21 07:02:14.712  4771  4899 I VELVET-TEST: valve: look swipe ok
+11-21 07:02:15.188  4771  4899 I VELVET-TEST: transistor: look swipe ok
+11-21 07:02:15.691  4771  4899 I VELVET-TEST: receiver: look swipe ok
+11-21 07:02:16.116  4771  4899 I VELVET-TEST: boombox: look swipe ok
+11-21 07:02:16.541  4771  4899 I VELVET-TEST: digital: look swipe ok
+11-21 07:02:24.429  4771  4899 I VELVET-TEST: fast spin: 17 stations on (list of 152)
+11-21 07:02:39.018  4771  4899 I VELVET-TEST: receiver reset knobs ok
+11-21 07:02:40.423  4771  4899 I VELVET-TEST: digital reset knobs ok

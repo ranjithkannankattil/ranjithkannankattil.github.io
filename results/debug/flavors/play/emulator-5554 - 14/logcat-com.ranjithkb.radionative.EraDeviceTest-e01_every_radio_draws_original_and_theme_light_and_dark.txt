@@ -1,0 +1,851 @@
+11-21 07:00:46.859  4771  4899 I TestRunner: started: e01_every_radio_draws_original_and_theme_light_and_dark(com.ranjithkb.radionative.EraDeviceTest)
+11-21 07:00:46.872   881   888 I ndroid.systemui: Background concurrent copying GC freed 859070(19MB) AllocSpace objects, 50(6780KB) LOS objects, 48% free, 25MB/49MB, paused 106us,34us total 220.297ms
+11-21 07:00:46.897  4771  4899 W FileTestStorage: Output properties is not supported.
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: enableTracing failed. You may need to upgrade your androidx.tracing:tracing version
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: java.lang.NoSuchMethodError: No static method forceEnableAppTracing()V in class Landroidx/tracing/Trace; or its super classes (declaration of 'androidx.tracing.Trace' appears in /data/app/~~3C5Z84YNdwIYbST9worhSg==/com.ranjithkb.radio-5CBB8ETAJ-rjTU1VgPoTQw==/base.apk!classes5.dex)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at androidx.test.platform.tracing.AndroidXTracer.enableTracing(AndroidXTracer.java:57)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at androidx.test.platform.tracing.Tracing.<init>(Tracing.java:53)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at androidx.test.platform.tracing.Tracing.<clinit>(Tracing.java:49)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at androidx.test.espresso.base.BaseLayerModule.providesTracing(BaseLayerModule.java:1)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at androidx.test.espresso.base.BaseLayerModule_ProvidesTracingFactory.providesTracing(BaseLayerModule_ProvidesTracingFactory.java:1)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at androidx.test.espresso.base.BaseLayerModule_ProvidesTracingFactory.get(BaseLayerModule_ProvidesTracingFactory.java:1)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at androidx.test.espresso.base.BaseLayerModule_ProvidesTracingFactory.get(BaseLayerModule_ProvidesTracingFactory.java:2)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at androidx.test.espresso.core.internal.deps.dagger.internal.DoubleCheck.get(DoubleCheck.java:6)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at androidx.test.espresso.base.IdlingResourceRegistry_Factory.get(IdlingResourceRegistry_Factory.java:1)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at androidx.test.espresso.base.IdlingResourceRegistry_Factory.get(IdlingResourceRegistry_Factory.java:2)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at androidx.test.espresso.core.internal.deps.dagger.internal.DoubleCheck.get(DoubleCheck.java:6)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at androidx.test.espresso.DaggerBaseLayerComponent$BaseLayerComponentImpl.idlingResourceRegistry(DaggerBaseLayerComponent.java:1)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at androidx.test.espresso.Espresso.<clinit>(Espresso.java:3)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at androidx.compose.ui.test.EspressoLink_androidKt.runEspressoOnIdle(EspressoLink.android.kt:92)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at androidx.compose.ui.test.EspressoLink.runUntilIdle(EspressoLink.android.kt:79)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.runTest(ComposeUiTest.android.kt:326)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1.evaluate(AndroidComposeTestRule.android.kt:271)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at androidx.test.ext.junit.runners.AndroidJUnit4.run(AndroidJUnit4.java:162)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at org.junit.runners.Suite.runChild(Suite.java:128)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at org.junit.runners.Suite.runChild(Suite.java:27)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:68)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at androidx.test.internal.runner.TestExecutor.execute(TestExecutor.java:59)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at androidx.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:463)
+11-21 07:00:46.901  4771  4899 E AndroidXTracer: 	at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:2402)
+11-21 07:00:46.901  4771  4899 I Tracing : Tracer added: class androidx.test.platform.tracing.AndroidXTracer
+11-21 07:00:46.915  4771  4771 D EventInjectionStrategy: Creating injection strategy with input manager.
+11-21 07:00:46.921  4771  4771 W ranjithkb.radio: Accessing hidden method Landroid/hardware/input/InputManager;->getInstance()Landroid/hardware/input/InputManager; (unsupported, reflection, allowed)
+11-21 07:00:46.921  4771  4771 W ranjithkb.radio: Accessing hidden method Landroid/hardware/input/InputManager;->injectInputEvent(Landroid/view/InputEvent;I)Z (unsupported, reflection, allowed)
+11-21 07:00:46.921  4771  4771 W ranjithkb.radio: Accessing hidden field Landroid/hardware/input/InputManager;->INJECT_INPUT_EVENT_MODE_WAIT_FOR_FINISH:I (unsupported, reflection, allowed)
+11-21 07:00:46.925  4771  4771 W ranjithkb.radio: Accessing hidden method Landroid/os/MessageQueue;->next()Landroid/os/Message; (unsupported, reflection, allowed)
+11-21 07:00:46.925  4771  4771 W ranjithkb.radio: Accessing hidden field Landroid/os/MessageQueue;->mMessages:Landroid/os/Message; (unsupported, reflection, allowed)
+11-21 07:00:46.925  4771  4771 W ranjithkb.radio: Accessing hidden method Landroid/os/Message;->recycleUnchecked()V (unsupported, reflection, allowed)
+11-21 07:00:46.926  4771  4899 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@9b868bc]
+11-21 07:00:46.933  4771  4899 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+11-21 07:00:46.959   400   400 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+11-21 07:00:46.969   881   923 D SplashScreenView: Build android.window.SplashScreenView{14f06ba V.E...... ......ID 0,0-0,0}
+11-21 07:00:46.969   881   923 D SplashScreenView: Icon: view: null drawable: null size: 0
+11-21 07:00:46.969   881   923 D SplashScreenView: Branding: view: android.view.View{8eb96b G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+11-21 07:00:47.069  1157  1748 D EGL_emulation: app_time_stats: avg=22077.56ms min=34.79ms max=220324.14ms count=10
+11-21 07:00:47.142   526  2271 W system_server: Long monitor contention with owner appscheduling.default (614) at int com.android.server.am.ActivityManagerService.bindServiceInstance(android.app.IApplicationThread, android.os.IBinder, android.content.Intent, java.lang.String, android.app.IServiceConnection, long, java.lang.String, boolean, int, java.lang.String, android.app.IApplicationThread, java.lang.String, int)(ActivityManagerService.java:13404) waiters=1 in void com.android.server.am.ActivityManagerService.setHasTopUi(boolean) for 166ms
+11-21 07:00:47.145  4771  6736 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+11-21 07:00:47.149  4771  6736 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+11-21 07:00:47.152  4771  6736 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+11-21 07:00:47.170  4771  4771 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@e6fa56d in: PRE_ON_CREATE
+11-21 07:00:47.173  4771  4771 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+11-21 07:00:47.178  5647  5647 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.constellation.service.START pkg=com.google.android.gms }
+11-21 07:00:47.201  3320  3320 I DialerCallerIdFeedbackDeletionWorker: com.android.dialer.calleridfeedback.impl.database.retention.CallerIdFeedbackDeletionWorker.startWork:60 startWork
+11-21 07:00:47.201  3320  3320 I DialerCallerIdFeedbackEnabledFn: com.android.dialer.calleridfeedback.impl.CallerIdFeedbackEnabledFn.isEnabled:41 Caller ID feedback enabled [CONTEXT ratelimit_period="1 MINUTES [skipped: 1]" ]
+11-21 07:00:47.203  3320  3360 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=16a908bd-c7f8-49b2-929d-81ce17d1bb2d, tags={ com.google.apps.tiktok.contrib.work.TikTokListenableWorker, TikTokWorker#com.android.dialer.calleridfeeback.impl.database.retention.CallerIdFeedbackDeletionWorker } ]
+11-21 07:00:47.205  3320  3320 I DialerXatuMetricsWorker: com.android.dialer.xatu.impl.storage.postcall.XatuMetricsWorker.startWork:66 enter
+11-21 07:00:47.347  4771  4771 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@e6fa56d in: CREATED
+11-21 07:00:47.361  4771  4771 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=androidx.activity.ComponentActivity@e6fa56d
+11-21 07:00:47.362  4771  4771 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@e6fa56d in: STARTED
+11-21 07:00:47.363  4771  4771 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=androidx.activity.ComponentActivity@e6fa56d
+11-21 07:00:47.376  4771  4771 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@e6fa56d in: RESUMED
+11-21 07:00:47.376  4771  4771 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=androidx.activity.ComponentActivity@e6fa56d
+11-21 07:00:47.376  3320  3386 I DialerCallerIdFeedbackDatabase: com.android.dialer.calleridfeedback.impl.database.CallerIdFeedbackDatabase.deleteAllMatching:409 feedbackCreationTimestamp list empty
+11-21 07:00:47.377  3320  3386 I DialerCallerIdFeedbackDatabase: com.android.dialer.calleridfeedback.impl.database.CallerIdFeedbackDatabase$1.onSuccess:351 Deleted old caller IDs.
+11-21 07:00:47.387  4771  4771 D CompatibilityChangeReporter: Compat change id reported: 237531167; UID 10192; state: DISABLED
+11-21 07:00:47.388  4771  4771 W OpenGLRenderer: Unknown dataspace 0
+11-21 07:00:47.412   881   933 D EGL_emulation: app_time_stats: avg=322322.00ms min=322322.00ms max=322322.00ms count=1
+11-21 07:00:47.420  3320  3362 I WM-WorkerWrapper: Worker result SUCCESS for Work [ id=0cce3181-d100-4272-b22e-9cde6d67c5ec, tags={ com.google.apps.tiktok.contrib.work.TikTokListenableWorker, TikTokWorker#com.android.dialer.xatu.impl.storage.postcall.XatuMetricsWorker } ]
+11-21 07:00:47.465   881   933 D EGL_emulation: app_time_stats: avg=231.17ms min=70.05ms max=684.50ms count=7
+11-21 07:00:47.534  5447  5447 W rules.WifiRx: FenceState currentState is not true
+11-21 07:00:47.537  5447  5447 W rules.WifiRx: FenceState currentState is not true
+11-21 07:00:47.541   400   502 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10192 pid=4771
+11-21 07:00:47.541   400   502 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10192 => denied (311 us)
+11-21 07:00:47.541   400   502 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10192 pid=4771
+11-21 07:00:47.541   400   502 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10192 => denied (73 us)
+11-21 07:00:47.541   400   502 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10192 pid=4771
+11-21 07:00:47.542   400   502 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10192 => denied (50 us)
+11-21 07:00:47.550   400   413 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10192 pid=0
+11-21 07:00:47.550   400   413 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10192 => denied (9589 us)
+11-21 07:00:47.600  4771  6734 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+11-21 07:00:47.653   134   134 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+11-21 07:00:47.654  4771  6734 I Gralloc4: mapper 4.x is not supported
+11-21 07:00:47.786   526  1314 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10192 pid=0
+11-21 07:00:47.786   526  1314 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10192 => denied (331 us)
+11-21 07:00:47.786   526  1314 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10192 pid=0
+11-21 07:00:47.786   526  1314 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10192 => denied (38 us)
+11-21 07:00:47.786   526  1314 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10192 pid=0
+11-21 07:00:47.786   526  1314 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10192 => denied (21 us)
+11-21 07:00:47.806   526   548 W ziparchive: Unable to open '/data/app/~~3C5Z84YNdwIYbST9worhSg==/com.ranjithkb.radio-5CBB8ETAJ-rjTU1VgPoTQw==/base.dm': No such file or directory
+11-21 07:00:47.815  1157  1157 I ActivityThread: Schedule relaunch activity: com.google.android.apps.nexuslauncher.NexusLauncherActivity
+11-21 07:00:47.815  1157  1157 I ActivityThread: Schedule relaunch activity: com.google.android.apps.nexuslauncher.NexusLauncherActivity
+11-21 07:00:47.821  1157  2005 D OneSearchSuggestProvider: Shut down the binder channel
+11-21 07:00:47.823  4771  4899 W SurfaceComposerClient: Sync transaction timed out waiting for commit callback.
+11-21 07:00:47.829  1157  1194 I ImeTracker: com.google.android.apps.nexuslauncher:f5ebe701: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+11-21 07:00:47.831  1157  2005 E io.grpc.internal.z1: *~*~*~ Channel {0} was not shutdown properly!!! ~*~*~*
+11-21 07:00:47.831  1157  2005 E io.grpc.internal.z1:     Make sure to call shutdown()/shutdownNow() and wait until awaitTermination() returns true.
+11-21 07:00:47.831  1157  2005 E io.grpc.internal.z1: java.lang.RuntimeException: ManagedChannel allocation site
+11-21 07:00:47.831  1157  2005 E io.grpc.internal.z1: 	at io.grpc.internal.y1.<init>(Unknown Source:20)
+11-21 07:00:47.831  1157  2005 E io.grpc.internal.z1: 	at io.grpc.internal.z1.<init>(Unknown Source:9)
+11-21 07:00:47.831  1157  2005 E io.grpc.internal.z1: 	at io.grpc.binder.d.a(Unknown Source:211)
+11-21 07:00:47.831  1157  2005 E io.grpc.internal.z1: 	at com.google.android.apps.nexuslauncher.allapps.N0.d(Unknown Source:88)
+11-21 07:00:47.831  1157  2005 E io.grpc.internal.z1: 	at com.google.android.apps.nexuslauncher.allapps.N0.c(Unknown Source:0)
+11-21 07:00:47.831  1157  2005 E io.grpc.internal.z1: 	at com.google.android.apps.nexuslauncher.allapps.A0.run(Unknown Source:22)
+11-21 07:00:47.831  1157  2005 E io.grpc.internal.z1: 	at com.android.launcher3.util.LooperExecutor.execute(Unknown Source:12)
+11-21 07:00:47.831  1157  2005 E io.grpc.internal.z1: 	at com.google.android.apps.nexuslauncher.allapps.y0.apply(Unknown Source:34)
+11-21 07:00:47.831  1157  2005 E io.grpc.internal.z1: 	at java.util.concurrent.CompletableFuture.uniExceptionally(CompletableFuture.java:966)
+11-21 07:00:47.831  1157  2005 E io.grpc.internal.z1: 	at java.util.concurrent.CompletableFuture$UniExceptionally.tryFire(CompletableFuture.java:950)
+11-21 07:00:47.831  1157  2005 E io.grpc.internal.z1: 	at java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:486)
+11-21 07:00:47.831  1157  2005 E io.grpc.internal.z1: 	at java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2138)
+11-21 07:00:47.831  1157  2005 E io.grpc.internal.z1: 	at com.google.android.apps.nexuslauncher.allapps.H0.onResult(Unknown Source:59)
+11-21 07:00:47.831  1157  2005 E io.grpc.internal.z1: 	at android.app.appsearch.SearchSessionUtil$1.lambda$onResult$0(SearchSessionUtil.java:129)
+11-21 07:00:47.831  1157  2005 E io.grpc.internal.z1: 	at android.app.appsearch.SearchSessionUtil$1.$r8$lambda$_nlk9WiPjSfaAsqKYmp0aPvSRC0(SearchSessionUtil.java:1)
+11-21 07:00:47.831  1157  2005 E io.grpc.internal.z1: 	at android.app.appsearch.SearchSessionUtil$1$$ExternalSyntheticLambda0.run(R8$$SyntheticClass:13)
+11-21 07:00:47.831  1157  2005 E io.grpc.internal.z1: 	at android.os.Handler.handleCallback(Handler.java:958)
+11-21 07:00:47.831  1157  2005 E io.grpc.internal.z1: 	at android.os.Handler.dispatchMessage(Handler.java:99)
+11-21 07:00:47.831  1157  2005 E io.grpc.internal.z1: 	at android.os.Looper.loopOnce(Looper.java:205)
+11-21 07:00:47.831  1157  2005 E io.grpc.internal.z1: 	at android.os.Looper.loop(Looper.java:294)
+11-21 07:00:47.831  1157  2005 E io.grpc.internal.z1: 	at android.os.HandlerThread.run(HandlerThread.java:67)
+11-21 07:00:47.834  1157  1994 I IPCThreadState: oneway function results for code 2 on binder at 0x7bcee3c6fa10 will be dropped but finished with status UNKNOWN_TRANSACTION
+11-21 07:00:47.835   526   864 I ImeTracker: com.google.android.apps.nexuslauncher:f5ebe701: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-21 07:00:47.839   526   548 I ActivityTaskManager: Displayed com.ranjithkb.radio/androidx.activity.ComponentActivity for user 0: +856ms
+11-21 07:00:47.840   881   922 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@556d486
+11-21 07:00:47.848   526  2271 I ImeTracker: com.ranjithkb.radio:261b80f9: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+11-21 07:00:47.849   526  2271 I ImeTracker: com.ranjithkb.radio:261b80f9: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-21 07:00:47.851  1157  1157 D b/254119092: clearActivity
+11-21 07:00:47.851  1157  1157 D b/254119092: mActivity and mContext agree taskbarIsPresent=false
+11-21 07:00:47.853   526  2335 W InputManager-JNI: Input channel object 'c4cdfe Splash Screen com.ranjithkb.radio (client)' was disposed without first being removed with the input manager!
+11-21 07:00:47.858  4771  4771 I MediaController: Init 9a47c98 [AndroidXMedia3/1.5.1] [emu64xa, sdk_gphone64_x86_64, Google, 34]
+11-21 07:00:47.868  5540  6583 I DiscoveryManager: Filter criteria(CC1AD845) scannerFlags(0)
+11-21 07:00:47.872  1766  3206 I PBSessionCacheImpl: Deleted sessionId[7768745382715718] from persistence.
+11-21 07:00:47.884  1766  2391 I A       : Using proto config with mendel
+11-21 07:00:47.884  1766  2391 I A       : Using proto config with mendel
+11-21 07:00:47.884  1766  2391 W SearchServiceCore: Abort, client detached.
+11-21 07:00:47.886  5540  6583 W DatabaseProcessor: processLocalDevices: failed to get the network info with non-null networkId.
+11-21 07:00:47.888  5540  6583 W GuestModeDeviceProber: setFilterCriteria
+11-21 07:00:47.895  5540  6583 W DatabaseProcessor: processLocalDevices: failed to get the network info with non-null networkId.
+11-21 07:00:47.895  5540  6583 I CastDatabase: Saving the database
+11-21 07:00:47.897  1157  1157 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@b027977
+11-21 07:00:47.898  1157  1157 W WindowOnBackDispatcher: OnBackInvokedCallback is not enabled for the application.
+11-21 07:00:47.898  1157  1157 W WindowOnBackDispatcher: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+11-21 07:00:47.901  5540  6583 I SQLiteCastStore: [CastNetworkInfo] saved: 0, skipped: 0, [CastDeviceInfo]: saved 0, skipped 0, [Paired Guest Mode DeviceInfo] saved: 0, skipped: 0. [ProbedNetworks]: saved 0, skipped: 0, [ProbedSocketAddress]: saved 0, skipped: 0, [Network-Device pairs]: saved: 0
+11-21 07:00:47.908  5540  5540 I CastMediaRouteProvider: Published 0 routes
+11-21 07:00:47.908  5540  5540 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.mdns.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+11-21 07:00:47.908  5540  5540 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.mdns.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+11-21 07:00:47.927  1457  1457 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+11-21 07:00:47.928  1457  1457 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+11-21 07:00:47.928  1457  1457 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.ranjithkb.radio fieldId=0 fieldName=null extras=null}, false)
+11-21 07:00:47.929  1457  1457 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+11-21 07:00:47.929  1457  1457 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+11-21 07:00:47.930  1457  1457 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+11-21 07:00:47.930  1457  1457 I KeyboardModeManager: KeyboardModeManager.setInputView():364 setInputView() : supportsOneHandedMode=true
+11-21 07:00:47.930  1457  1457 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+11-21 07:00:47.931  1457  1457 I KeyboardModeManager: KeyboardModeManager.setInputView():356 setInputView() : entry=hwn{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_device=phone_device_size=default_enable_adaptive_text_editing=true_enable_inline_suggestions_on_client_side=false_enable_large_tablet_batch_1=false_enable_large_tablet_batch_2=false_enable_more_candidates_view_for_multilingual=false_enable_nav_redesign=false_enable_number_row=false_enable_preemptive_decode=true_enable_secondary_symbols=false_expressions=normal_four_or_more_letter_rows=false_keyboard_mode=normal_language=en-US_orientation=portrait_physical_keyboard=qwerty_show_secondary_digits=true_show_suggestions=true_split_with_duplicate_keys=true_variant=qwerty, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}
+11-21 07:00:47.934  1457  1457 I StyledKeyboardTheme: StyledKeyboardTheme.<init>():87 Pref: [], themeName: [silk:], darkMode: [false], cacheKey: [overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff0f0f3-ff76d1ff-ce191c6173d879ea127e4e40bfd70d3c]
+11-21 07:00:47.935  1457  1457 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+11-21 07:00:47.935  1457  1457 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+11-21 07:00:47.935  1457  1457 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+11-21 07:00:47.935  1457  1457 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+11-21 07:00:47.935  1457  1457 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+11-21 07:00:47.936  1457  1457 I GoogleInputMethodService: GoogleInputMethodService.initializeKeyboardTheme():1343 Apply keyboard theme: theme_border_bottom4dp_stylesheet_noshadow_gsans_pillkey_silkpopup_refinedkp_materiallight_phone_400_overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff0f0f3-ff76d1ff-ce191c6173d879ea127e4e40bfd70d3c_port
+11-21 07:00:47.938  1457  1457 I GoogleInputMethodService: GoogleInputMethodService.onCreateInputView():1768 onCreateInputView()
+11-21 07:00:47.941  5540  6584 D TrafficStats: tagSocket(163) with statsTag=0x30000900, statsUid=-1
+11-21 07:00:47.943  1157  1194 I AiAiSuggestUi: Connecting to system intelligence module.
+11-21 07:00:47.946  1580  1580 I AiAiOverview: Created AiAiContentSuggestionsService.
+11-21 07:00:47.949  1157  1184 I AiAiSuggestUi: Successfully connected to system intelligence:
+11-21 07:00:47.958  1457  1457 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+11-21 07:00:47.962  1457  1457 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():189 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+11-21 07:00:47.968  1457  1457 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+11-21 07:00:47.968  1457  1457 I KeyboardModeManager: KeyboardModeManager.setInputView():364 setInputView() : supportsOneHandedMode=true
+11-21 07:00:47.969  1457  1457 I AndroidIME: KeyboardViewManager.updateKeyboardBackgroundFrameVisibility():357 Set background frame visibility. old:8, new:8
+11-21 07:00:47.969  1457  1457 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+11-21 07:00:47.969  1457  1457 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+11-21 07:00:47.970  1457  1457 I KeyboardModeManager: KeyboardModeManager.setInputView():356 setInputView() : entry=hwn{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_device=phone_device_size=default_enable_adaptive_text_editing=true_enable_inline_suggestions_on_client_side=false_enable_large_tablet_batch_1=false_enable_large_tablet_batch_2=false_enable_more_candidates_view_for_multilingual=false_enable_nav_redesign=false_enable_number_row=false_enable_preemptive_decode=true_enable_secondary_symbols=false_expressions=normal_four_or_more_letter_rows=false_keyboard_mode=normal_language=en-US_orientation=portrait_physical_keyboard=qwerty_show_secondary_digits=true_show_suggestions=true_split_with_duplicate_keys=true_variant=qwerty, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}
+11-21 07:00:47.974   526   809 D ConnectivityService: NetReassign [no changes] [c 1] [a 0] [i 1]
+11-21 07:00:48.013  1157  1157 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+11-21 07:00:48.021  1157  1157 D DeviceSearchAlg: search timeout = %d200
+11-21 07:00:48.027  1157  1157 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+11-21 07:00:48.027  1157  1157 W BcSmartspaceView: Current card is not present in the Adapter; cannot log.
+11-21 07:00:48.032  5540  6433 W DatabaseProcessor: processLocalDevices: failed to get the network info with non-null networkId.
+11-21 07:00:48.036  1157  1157 I OverviewComponentObserver: updateOverviewTargets: mIsHomeDisabled=false, isDefaultHomeNull=false, mIsDefaultHome=true
+11-21 07:00:48.044  5540  5552 I FontLog : Updating from directory version 0 to 25 from disk [CONTEXT service_id=132 ]
+11-21 07:00:48.044  5540  5540 I CastMediaRouteProvider: Published 0 routes
+11-21 07:00:48.045  5540  5619 I FontLog : Using directory in FlatBuffer format [CONTEXT service_id=132 ]
+11-21 07:00:48.047  5540  6762 W ctxmgr  : [NetworkStateProducer] No state change for network connection context [CONTEXT service_id=47 ]
+11-21 07:00:48.048  5540  5552 I FontLog : Received query Noto Color Emoji Compat, URI content://com.google.android.gms.fonts [CONTEXT service_id=132 ]
+11-21 07:00:48.049  5540  5552 I FontLog : Query [emojicompat-emoji-font] resolved to {Noto Color Emoji Compat, wdth 100.0, wght 400, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+11-21 07:00:48.050  5540  5552 I FontLog : Fetch {Noto Color Emoji Compat, wdth 100.0, wght 400, ital 0.0, bestEffort false} end status Status{statusCode=SUCCESS, resolution=null} [CONTEXT service_id=132 ]
+11-21 07:00:48.053   526  1314 I WifiService: acquireMulticastLock uid=10132
+11-21 07:00:48.057  1033  6230 D IpClient.wlan0: set max DTIM multiplier to 1
+11-21 07:00:48.058   526   800 E WifiStaIfaceAidlImpl: installApfPacketFilter failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+11-21 07:00:48.060   526   800 E WifiStaIfaceAidlImpl: setDtimMultiplier failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+11-21 07:00:48.075  5540  5552 I FontLog : Pulling font file for id = 1, cache size = 1 [CONTEXT service_id=132 ]
+11-21 07:00:48.076  1580  1580 I AiAiEcho: SearchContextManagerImpl::setSearchContext resultTypes=[141151] extras=[Bundle[mParcelledData.dataSize=684]] sessionId=[com.google.android.apps.nexuslauncher:921829a7-45ff-41e8-a865-8035f74b658e,0]
+11-21 07:00:48.078  1157  1194 D SearchTargetUtil:  query= size=1
+11-21 07:00:48.078  1157  1194 D SearchTargetUtil: layoutType=icon_row resultType=4096 packageName= extras=Bundle{icon_container_enabled=true,zero_state_all_apps_web_suggest_count=3,rank=1.0,key_ipc_start=426461,hide_subtitle=true,zero_state_qsb_web_suggest_count=10,}ParentID: null targetID: SESSION_INFO:0::zero_state_flags
+11-21 07:00:48.086  5540  5552 I FontLog : Pulling font file for id = 1, cache size = 1 [CONTEXT service_id=132 ]
+11-21 07:00:48.089  1157  1157 D AutofillManager: view is not autofillable - activity denied for autofill
+11-21 07:00:48.100  1157  1157 I ContentCaptureHelper: Setting logging level to DEBUG
+11-21 07:00:48.100  1157  1157 D ContentCaptureManager: setFlushViewTreeAppearingEventDisabled(): setting to false
+11-21 07:00:48.100  1157  1157 D ContentCaptureManager: updateWindowAttributes(): window flags=-2137980672
+11-21 07:00:48.103  1157  1157 D ContentCaptureManager: updateWindowAttributes(): window flags=-2137980672
+11-21 07:00:48.110  1157  1194 I ImeTracker: com.google.android.apps.nexuslauncher:eeb8b52f: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+11-21 07:00:48.110   526   864 I ImeTracker: com.google.android.apps.nexuslauncher:eeb8b52f: onCancelled at PHASE_SERVER_CLIENT_FOCUSED
+11-21 07:00:48.112  1157  1194 I ImeTracker: com.google.android.apps.nexuslauncher:6c65e29c: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+11-21 07:00:48.112   526   864 I ImeTracker: com.google.android.apps.nexuslauncher:6c65e29c: onCancelled at PHASE_SERVER_CLIENT_FOCUSED
+11-21 07:00:48.122  1157  1157 W BcSmartspaceCard: No title view to update
+11-21 07:00:48.123  1157  1157 I BcSmartspaceCard: setFormattedContentDescription: text=null, iconDescription=null, contentDescription=null
+11-21 07:00:48.158  1157  1157 D TISBindHelper: TIS service connected
+11-21 07:00:48.159  1157  1157 D b/254119092: Set mActivity=com.google.android.apps.nexuslauncher.NexusLauncherActivity@dee6dfb
+11-21 07:00:48.159  1157  1157 D b/254119092: mActivity and mContext agree taskbarIsPresent=false
+11-21 07:00:48.160  1157  1157 D MainContentCaptureSession: handleScheduleFlush(act:com.google.android.apps.nexuslauncher/.NexusLauncherActivity [state=1 (WAITING_FOR_SERVER), disabled=false], reason=FORCE_FLUSH): not a timeout reason because mDirectServiceInterface is not ready yet
+11-21 07:00:48.173  1580  2092 I AiAiStatsd: Successfully logged feature usage for VISUAL_CORTEX.
+11-21 07:00:48.187  1766  1766 I ImeTracker: com.google.android.googlequicksearchbox:search:98ef5262: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+11-21 07:00:48.187  1766  1766 I ImeTracker: com.google.android.googlequicksearchbox:search:98ef5262: onFailed at PHASE_CLIENT_VIEW_SERVED
+11-21 07:00:48.204  1766  1766 W PhoneWindow: Previously focused view reported id 2131435089 during save, but can't be found during restore.
+11-21 07:00:48.226  1766  1766 I ImeTracker: com.google.android.googlequicksearchbox:search:288edaee: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+11-21 07:00:48.227  1766  1766 I ImeTracker: com.google.android.googlequicksearchbox:search:288edaee: onFailed at PHASE_CLIENT_VIEW_SERVED
+11-21 07:00:48.230  1766  1766 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@3683f62
+11-21 07:00:48.236   526  1029 W InputManager-JNI: Input channel object '118ad8 com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity (client)' was disposed without first being removed with the input manager!
+11-21 07:00:48.248  4771  4951 D MediaCodec: keep callback message for reclaim
+11-21 07:00:48.248  4771  5133 I CCodecConfig: query failed after returning 7 values (BAD_INDEX)
+11-21 07:00:48.249  4771  5133 D BufferPoolAccessor2.0: bufferpool2 0x7bce73c23958 : 5(40960 size) total buffers - 1(8192 size) used buffers - 2623/2651 (recycle/alloc) - 103/5038 (fetch/transfer)
+11-21 07:00:48.249  4771  5133 W Codec2Client: query -- param skipped: index = 1342179345.
+11-21 07:00:48.250  4771  5133 W Codec2Client: query -- param skipped: index = 2415921170.
+11-21 07:00:48.266  6209  6209 V AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio
+11-21 07:00:48.278   881   881 D MediaDataManager: State updated outside of notification
+11-21 07:00:48.279   397  1352 D audioserver: FGS Logger Transaction failed
+11-21 07:00:48.279   397  1352 D audioserver: -129
+11-21 07:00:48.282   881   881 W ConstraintSet: id unknown center_vertical_guideline
+11-21 07:00:48.283   881   881 W ConstraintSet: id unknown action_button_guideline
+11-21 07:00:48.283   881   881 W ConstraintSet: id unknown icon
+11-21 07:00:48.283   881   881 W ConstraintSet: id unknown media_seamless
+11-21 07:00:48.283   881   881 W ConstraintSet: id unknown media_action_barrier_start
+11-21 07:00:48.283   881   881 W ConstraintSet: id unknown media_action_barrier_end
+11-21 07:00:48.283   881   881 W ConstraintSet: id unknown media_action_barrier_top
+11-21 07:00:48.283   881   881 W ConstraintSet: id unknown remove_text
+11-21 07:00:48.283   881   881 W ConstraintSet: id unknown settings
+11-21 07:00:48.283   881   881 W ConstraintSet: id unknown dismiss
+11-21 07:00:48.284   881   881 W ConstraintSet: id unknown cancel
+11-21 07:00:48.295  6209  6209 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-21 07:00:48.295  6209  6209 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=426654, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:48.295  6209  6209 D MediaControlGattService: updatePlayerState: playbackState= PAUSED
+11-21 07:00:48.295  6209  6209 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-21 07:00:48.295  6209  6209 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-21 07:00:48.295  6209  6209 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-21 07:00:48.295  6209  6209 W MediaControlGattService: Feature PLAYBACK_SPEED_NOTIFY support: true
+11-21 07:00:48.297   335  6771 I resolv  : GetAddrInfoHandler::run: {106 106 106 983146 10192 0}
+11-21 07:00:48.302   335  6772 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+11-21 07:00:48.303  6209  6209 W MediaControlGattService: Feature TRACK_POSITION(BIT 7) support: true
+11-21 07:00:48.303  6209  6209 W MediaControlGattService: Feature TRACK_POSITION_NOTIFY support: true
+11-21 07:00:48.303  6209  6209 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-21 07:00:48.304  6209  6209 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-21 07:00:48.304  6209  6209 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-21 07:00:48.304  6209  6209 W MediaControlGattService: Feature MEDIA_CONTROL_POINT_OPCODES_SUPPORTED(BIT 19) support: true
+11-21 07:00:48.304  6209  6209 W MediaControlGattService: Feature MEDIA_CONTROL_POINT_OPCODES_SUPPORTED_NOTIFY support: true
+11-21 07:00:48.305  6209  6209 W MediaControlGattService: Feature TRACK_TITLE(BIT 5) support: true
+11-21 07:00:48.305   335  6773 I resolv  : res_nmkquery: (QUERY, IN, A)
+11-21 07:00:48.305  6209  6209 W MediaControlGattService: Feature TRACK_TITLE(BIT 5) support: true
+11-21 07:00:48.305  6209  6209 W MediaControlGattService: Feature TRACK_TITLE_NOTIFY support: true
+11-21 07:00:48.305  6209  6209 W MediaControlGattService: Feature TRACK_DURATION(BIT 6) support: true
+11-21 07:00:48.305  6209  6209 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-21 07:00:48.305  6209  6209 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-21 07:00:48.305  6209  6209 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-21 07:00:48.305  6209  6209 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-21 07:00:48.305  6209  6209 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-21 07:00:48.305  6209  6209 W MediaControlGattService: Feature TRACK_CHANGED(BIT 4) support: true
+11-21 07:00:48.316  1766  1766 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@254910e
+11-21 07:00:48.317   335  6772 I resolv  : res_nsend: used send_dg 143 terrno: 0
+11-21 07:00:48.317  6209  6209 V AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio
+11-21 07:00:48.317   335  6772 I resolv  : doQuery: rcode=0, ancount=1, return value=143
+11-21 07:00:48.318   526  1002 W InputManager-JNI: Input channel object 'cf220e8 com.google.android.googlequicksearchbox/android.app.ContextImpl (client)' was disposed without first being removed with the input manager!
+11-21 07:00:48.334   335  6773 I resolv  : res_nsend: used send_dg 78 terrno: 0
+11-21 07:00:48.334   335  6773 I resolv  : doQuery: rcode=0, ancount=2, return value=78
+11-21 07:00:48.337  4771  6770 D TrafficStats: tagSocket(170) with statsTag=0xffffffff, statsUid=-1
+11-21 07:00:48.355  4771  4771 I VELVET-PLAY: play by com.ranjithkb.radio
+11-21 07:00:48.358  6209  6209 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-21 07:00:48.359  6209  6209 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=426734, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:48.359  6209  6209 D AvrcpTargetJni: sendMediaUpdateNative
+11-21 07:00:48.359  6209  6209 I bt_stack: [INFO:avrcp_service.cc(515)] virtual void bluetooth::avrcp::AvrcpService::SendMediaUpdate(bool, bool, bool) track_changed=1 :  play_state=1 :  queue=1
+11-21 07:00:48.360  6209  6209 W AudioMediaPlayerWrapper: onMetadataChanged(): com.ranjithkb.radio tried to update with no new data
+11-21 07:00:48.360  6209  6209 W AudioMediaPlayerWrapper: onMetadataChanged(): com.ranjithkb.radio tried to update with no new data
+11-21 07:00:48.360  6209  6209 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=426654, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:48.361  6209  6209 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-21 07:00:48.361  6209  6209 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=426654, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:48.362  6209  6209 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-21 07:00:48.362  6209  6209 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=426719, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:48.363  6209  6209 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-21 07:00:48.364  6209  6209 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=426719, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:48.365   526  2348 I WifiService: acquireWifiLock uid=10192 lockMode=3
+11-21 07:00:48.366  6209  6209 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-21 07:00:48.366  6209  6209 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=426728, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:48.366  6209  6209 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-21 07:00:48.367  6209  6209 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=426728, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:48.367  6209  6209 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-21 07:00:48.367  6209  6209 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=426734, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:48.370  6209  6209 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-21 07:00:48.373  6209  6209 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=426734, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:48.373  6209  6209 E AudioMediaPlayerWrapper: The callback playback state doesn't match the current state
+11-21 07:00:48.373  6209  6209 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-21 07:00:48.375  6209  6209 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=426755, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:48.388  6209  6209 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-21 07:00:48.388  6209  6209 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=426755, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:48.388  6209  6209 D MediaControlGattService: updatePlayerState: playbackState= PAUSED
+11-21 07:00:48.388  6209  6209 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-21 07:00:48.388  6209  6209 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-21 07:00:48.388  6209  6209 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-21 07:00:48.388  6209  6209 W MediaControlGattService: Feature PLAYBACK_SPEED_NOTIFY support: true
+11-21 07:00:48.389  6209  6209 W MediaControlGattService: Feature TRACK_POSITION(BIT 7) support: true
+11-21 07:00:48.389  6209  6209 W MediaControlGattService: Feature TRACK_POSITION_NOTIFY support: true
+11-21 07:00:48.389  6209  6209 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-21 07:00:48.389  6209  6209 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-21 07:00:48.390  6209  6209 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-21 07:00:48.390  6209  6209 W MediaControlGattService: Feature MEDIA_CONTROL_POINT_OPCODES_SUPPORTED(BIT 19) support: true
+11-21 07:00:48.390  6209  6209 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-21 07:00:48.390  6209  6209 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-21 07:00:48.390  6209  6209 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-21 07:00:48.390  6209  6209 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-21 07:00:48.390  6209  6209 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-21 07:00:48.390  6209  6209 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=426755, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:48.403  6209  6209 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-21 07:00:48.403  6209  6209 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=426755, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:48.403  6209  6209 D AvrcpTargetJni: sendMediaUpdateNative
+11-21 07:00:48.403  6209  6209 I bt_stack: [INFO:avrcp_service.cc(515)] virtual void bluetooth::avrcp::AvrcpService::SendMediaUpdate(bool, bool, bool) track_changed=0 :  play_state=1 :  queue=0
+11-21 07:00:48.452  6209  6209 V AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio
+11-21 07:00:48.455  4771  4790 I ranjithkb.radio: Background concurrent copying GC freed 101088(4975KB) AllocSpace objects, 93(3660KB) LOS objects, 49% free, 11MB/22MB, paused 75us,12us total 274.975ms
+11-21 07:00:48.456  6209  6209 W AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio tried to update with no new data
+11-21 07:00:48.457  6209  6209 V AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio
+11-21 07:00:48.461  6209  6209 W AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio tried to update with no new data
+11-21 07:00:48.491  6209  6209 D AudioMediaPlayerWrapper: com.ranjithkb.radio Only Title and Artist info sync for metadata
+11-21 07:00:48.494  6209  6209 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-21 07:00:48.494  6209  6209 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=426755, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:48.494  6209  6209 D AvrcpTargetJni: sendMediaUpdateNative
+11-21 07:00:48.498  6209  6209 I bt_stack: [INFO:avrcp_service.cc(515)] virtual void bluetooth::avrcp::AvrcpService::SendMediaUpdate(bool, bool, bool) track_changed=1 :  play_state=0 :  queue=0
+11-21 07:00:48.499  6209  6209 D AudioMediaPlayerWrapper: com.ranjithkb.radio Only Title and Artist info sync for metadata
+11-21 07:00:48.502  6209  6209 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-21 07:00:48.502  6209  6209 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=426755, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:48.506  6209  6209 W MediaControlGattService: Feature TRACK_POSITION(BIT 7) support: true
+11-21 07:00:48.506  6209  6209 W MediaControlGattService: Feature TRACK_POSITION_NOTIFY support: true
+11-21 07:00:48.506  6209  6209 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-21 07:00:48.507  6209  6209 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-21 07:00:48.507  6209  6209 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-21 07:00:48.507  6209  6209 W MediaControlGattService: Feature TRACK_TITLE(BIT 5) support: true
+11-21 07:00:48.507  6209  6209 W MediaControlGattService: Feature TRACK_DURATION(BIT 6) support: true
+11-21 07:00:48.507  6209  6209 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-21 07:00:48.610  1580  2055 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-21 07:00:48.610  1580  2055 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-21 07:00:48.631   881   933 D EGL_emulation: app_time_stats: avg=583.10ms min=54.04ms max=1112.16ms count=2
+11-21 07:00:48.684  1580  2055 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-21 07:00:48.684  1580  2055 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-21 07:00:48.690   881   927 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-21 07:00:48.692  1580  2055 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-21 07:00:48.692  1580  2055 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-21 07:00:48.694   881   881 W ConstraintSet: id unknown center_vertical_guideline
+11-21 07:00:48.694   881   881 W ConstraintSet: id unknown action_button_guideline
+11-21 07:00:48.694   881   881 W ConstraintSet: id unknown icon
+11-21 07:00:48.694   881   881 W ConstraintSet: id unknown media_seamless
+11-21 07:00:48.694   881   881 W ConstraintSet: id unknown media_action_barrier_start
+11-21 07:00:48.694   881   881 W ConstraintSet: id unknown media_action_barrier_end
+11-21 07:00:48.694   881   881 W ConstraintSet: id unknown media_action_barrier_top
+11-21 07:00:48.694   881   881 W ConstraintSet: id unknown remove_text
+11-21 07:00:48.694   881   881 W ConstraintSet: id unknown settings
+11-21 07:00:48.694   881   881 W ConstraintSet: id unknown dismiss
+11-21 07:00:48.694   881   881 W ConstraintSet: id unknown cancel
+11-21 07:00:48.709   881   881 W ConstraintSet: id unknown center_vertical_guideline
+11-21 07:00:48.709   881   881 W ConstraintSet: id unknown action_button_guideline
+11-21 07:00:48.709   881   881 W ConstraintSet: id unknown icon
+11-21 07:00:48.709   881   881 W ConstraintSet: id unknown media_seamless
+11-21 07:00:48.709   881   881 W ConstraintSet: id unknown media_action_barrier_start
+11-21 07:00:48.709   881   881 W ConstraintSet: id unknown media_action_barrier_end
+11-21 07:00:48.710   881   881 W ConstraintSet: id unknown media_action_barrier_top
+11-21 07:00:48.710   881   881 W ConstraintSet: id unknown remove_text
+11-21 07:00:48.710   881   881 W ConstraintSet: id unknown settings
+11-21 07:00:48.710   881   881 W ConstraintSet: id unknown dismiss
+11-21 07:00:48.710   881   881 W ConstraintSet: id unknown cancel
+11-21 07:00:48.722   881   927 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-21 07:00:48.743   881   881 W ConstraintSet: id unknown center_vertical_guideline
+11-21 07:00:48.743   881   881 W ConstraintSet: id unknown action_button_guideline
+11-21 07:00:48.743   881   881 W ConstraintSet: id unknown icon
+11-21 07:00:48.743   881   881 W ConstraintSet: id unknown media_seamless
+11-21 07:00:48.743   881   881 W ConstraintSet: id unknown media_action_barrier_start
+11-21 07:00:48.743   881   881 W ConstraintSet: id unknown media_action_barrier_end
+11-21 07:00:48.743   881   881 W ConstraintSet: id unknown media_action_barrier_top
+11-21 07:00:48.743   881   881 W ConstraintSet: id unknown remove_text
+11-21 07:00:48.743   881   881 W ConstraintSet: id unknown settings
+11-21 07:00:48.743   881   881 W ConstraintSet: id unknown dismiss
+11-21 07:00:48.743   881   881 W ConstraintSet: id unknown cancel
+11-21 07:00:48.818   341  1615 D android.hardware.audio@7.1-impl.ranchu: threadLoop: entering standby, frames: 5717440
+11-21 07:00:48.836  6209  6209 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=427218, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:48.837  6209  6209 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-21 07:00:48.837  6209  6209 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=427218, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:48.837  6209  6209 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-21 07:00:48.920   881   927 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-21 07:00:48.922   881   881 W ConstraintSet: id unknown center_vertical_guideline
+11-21 07:00:48.922   881   881 W ConstraintSet: id unknown action_button_guideline
+11-21 07:00:48.922   881   881 W ConstraintSet: id unknown icon
+11-21 07:00:48.922   881   881 W ConstraintSet: id unknown media_seamless
+11-21 07:00:48.922   881   881 W ConstraintSet: id unknown media_action_barrier_start
+11-21 07:00:48.922   881   881 W ConstraintSet: id unknown media_action_barrier_end
+11-21 07:00:48.922   881   881 W ConstraintSet: id unknown media_action_barrier_top
+11-21 07:00:48.922   881   881 W ConstraintSet: id unknown remove_text
+11-21 07:00:48.922   881   881 W ConstraintSet: id unknown settings
+11-21 07:00:48.922   881   881 W ConstraintSet: id unknown dismiss
+11-21 07:00:48.922   881   881 W ConstraintSet: id unknown cancel
+11-21 07:00:49.648  4771  4951 D MediaCodec: keep callback message for reclaim
+11-21 07:00:49.649  4771  5133 I CCodecConfig: query failed after returning 7 values (BAD_INDEX)
+11-21 07:00:49.650  4771  5133 W Codec2Client: query -- param skipped: index = 1342179345.
+11-21 07:00:49.650  4771  5133 W Codec2Client: query -- param skipped: index = 2415921170.
+11-21 07:00:49.652  4771  5133 D CCodecBufferChannel: [c2.android.mp3.decoder#544] MediaCodec discarded an unknown buffer
+11-21 07:00:49.653  4771  5133 D CCodecBufferChannel: [c2.android.mp3.decoder#544] MediaCodec discarded an unknown buffer
+11-21 07:00:49.653  4771  5133 D CCodecBufferChannel: [c2.android.mp3.decoder#544] MediaCodec discarded an unknown buffer
+11-21 07:00:49.653  4771  5133 D CCodecBufferChannel: [c2.android.mp3.decoder#544] MediaCodec discarded an unknown buffer
+11-21 07:00:49.654  4771  4951 I DMCodecAdapterFactory: Creating an asynchronous MediaCodec adapter for track type audio
+11-21 07:00:49.655  4771  4951 D MediaCodec: MediaCodec::reclaim(0x7bcea3c730a0) c2.android.mp3.decoder
+11-21 07:00:49.658   478   489 D BufferPoolAccessor2.0: bufferpool2 0x7f504e5a09d8 : 0(0 size) total buffers - 0(0 size) used buffers - 2496/2519 (recycle/alloc) - 29/2519 (fetch/transfer)
+11-21 07:00:49.659  4771  5133 D MediaCodec: flushMediametrics
+11-21 07:00:49.659  4771  4951 D MediaCodec: MediaCodec looper is gone, skip reclaim
+11-21 07:00:49.659  4771  4951 D MediaCodec: flushMediametrics
+11-21 07:00:49.660  4771  4951 W MediaCodec: no metrics handle found
+11-21 07:00:49.660  4771  6775 D CCodec  : allocate(c2.android.mp3.decoder)
+11-21 07:00:49.660   478   489 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+11-21 07:00:49.660   478   489 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+11-21 07:00:49.660  4771  6774 I hw-BpHwBinder: onLastStrongRef automatically unlinking death recipients
+11-21 07:00:49.661  4771  6775 I CCodec  : setting up 'default' as default (vendor) store
+11-21 07:00:49.662  4771  6775 I CCodec  : Created component [c2.android.mp3.decoder]
+11-21 07:00:49.662  4771  6775 D CCodecConfig: read media type: audio/mpeg
+11-21 07:00:49.663  4771  6775 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.max-count.values
+11-21 07:00:49.663  4771  6775 D ReflectedParamUpdater: extent() != 1 for single value type: output.subscribed-indices.values
+11-21 07:00:49.663  4771  6775 D ReflectedParamUpdater: extent() != 1 for single value type: input.buffers.allocator-ids.values
+11-21 07:00:49.664  4771  6775 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.allocator-ids.values
+11-21 07:00:49.664  4771  6775 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.allocator-ids.values
+11-21 07:00:49.664  4771  6775 D ReflectedParamUpdater: extent() != 1 for single value type: output.buffers.pool-ids.values
+11-21 07:00:49.664  4771  6775 D ReflectedParamUpdater: extent() != 1 for single value type: algo.buffers.pool-ids.values
+11-21 07:00:49.666  4771  6775 I CCodecConfig: query failed after returning 7 values (BAD_INDEX)
+11-21 07:00:49.666  4771  6775 D CCodecConfig: c2 config diff is Dict {
+11-21 07:00:49.666  4771  6775 D CCodecConfig:   c2::u32 coded.bitrate.value = 64000
+11-21 07:00:49.666  4771  6775 D CCodecConfig:   c2::u32 input.buffers.max-size.value = 8192
+11-21 07:00:49.666  4771  6775 D CCodecConfig:   c2::u32 input.delay.value = 0
+11-21 07:00:49.666  4771  6775 D CCodecConfig:   string input.media-type.value = "audio/mpeg"
+11-21 07:00:49.666  4771  6775 D CCodecConfig:   string output.media-type.value = "audio/raw"
+11-21 07:00:49.666  4771  6775 D CCodecConfig:   c2::u32 raw.channel-count.value = 2
+11-21 07:00:49.666  4771  6775 D CCodecConfig:   c2::u32 raw.sample-rate.value = 44100
+11-21 07:00:49.666  4771  6775 D CCodecConfig: }
+11-21 07:00:49.667  4771  6775 I MediaCodec: MediaCodec will operate in async mode
+11-21 07:00:49.668  4771  6775 D MediaCodec: flushMediametrics
+11-21 07:00:49.668  4771  6775 D CCodec  : [c2.android.mp3.decoder] buffers are bound to CCodec for this session
+11-21 07:00:49.668  4771  6775 D CCodecConfig: no c2 equivalents for log-session-id
+11-21 07:00:49.668  4771  6775 D CCodecConfig: no c2 equivalents for flags
+11-21 07:00:49.668  4771  6775 D CCodecConfig: config failed => CORRUPTED
+11-21 07:00:49.669  4771  6775 W Codec2Client: query -- param skipped: index = 1107298332.
+11-21 07:00:49.669  4771  6775 D CCodec  : client requested max input size 4096, which is smaller than what component recommended (8192); overriding with component recommendation.
+11-21 07:00:49.669  4771  6775 W CCodec  : This behavior is subject to change. It is recommended that app developers double check whether the requested max input size is in reasonable range.
+11-21 07:00:49.669  4771  6775 D CCodec  : encoding statistics level = 0
+11-21 07:00:49.669  4771  6775 D CCodec  : setup formats input: AMessage(what = 0x00000000) = {
+11-21 07:00:49.669  4771  6775 D CCodec  :   int32_t bitrate = 64000
+11-21 07:00:49.669  4771  6775 D CCodec  :   int32_t channel-count = 2
+11-21 07:00:49.669  4771  6775 D CCodec  :   int32_t max-input-size = 8192
+11-21 07:00:49.669  4771  6775 D CCodec  :   string mime = "audio/mpeg"
+11-21 07:00:49.669  4771  6775 D CCodec  :   int32_t sample-rate = 44100
+11-21 07:00:49.669  4771  6775 D CCodec  : }
+11-21 07:00:49.669  4771  6775 D CCodec  : setup formats output: AMessage(what = 0x00000000) = {
+11-21 07:00:49.669  4771  6775 D CCodec  :   int32_t channel-count = 2
+11-21 07:00:49.669  4771  6775 D CCodec  :   string mime = "audio/raw"
+11-21 07:00:49.669  4771  6775 D CCodec  :   int32_t sample-rate = 44100
+11-21 07:00:49.669  4771  6775 D CCodec  :   int32_t android._config-pcm-encoding = 2
+11-21 07:00:49.669  4771  6775 D CCodec  : }
+11-21 07:00:49.669  4771  6775 I CCodecConfig: query failed after returning 7 values (BAD_INDEX)
+11-21 07:00:49.669  4771  4951 D MediaCodec: keep callback message for reclaim
+11-21 07:00:49.670  4771  6775 W Codec2Client: query -- param skipped: index = 1342179345.
+11-21 07:00:49.670  4771  6775 W Codec2Client: query -- param skipped: index = 2415921170.
+11-21 07:00:49.670  4771  6775 D CCodecBufferChannel: [c2.android.mp3.decoder#466] Created input block pool with allocatorID 16 => poolID 20 - OK (0)
+11-21 07:00:49.671  4771  6775 I CCodecBufferChannel: [c2.android.mp3.decoder#466] Created output block pool with allocatorID 16 => poolID 32 - OK
+11-21 07:00:49.671  4771  6775 D CCodecBufferChannel: [c2.android.mp3.decoder#466] Configured output block pool ids 32 => OK
+11-21 07:00:49.672   478  6776 D SimpleC2Component: Using output block pool with poolID 32 => got 32 - 0
+11-21 07:00:49.687   478  6776 I C2SoftMp3Dec: Reconfiguring decoder: 0->44100 Hz, 0->2 channels
+11-21 07:00:49.688  6209  6209 V AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio
+11-21 07:00:49.697  6209  6209 W AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio tried to update with no new data
+11-21 07:00:49.698  6209  6209 V AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio
+11-21 07:00:49.701   397  1151 W AudioFlinger: createTrack_l(): mismatch between requested flags (00000008) and output flags (00000002)
+11-21 07:00:49.702   397  1151 D AudioFlinger: Client defaulted notificationFrames to 8024 for frameCount 16048
+11-21 07:00:49.703   397  1151 D AF::TrackHandle: OpPlayAudio: track:84 usage:1 not muted
+11-21 07:00:49.705  6209  6209 W AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio tried to update with no new data
+11-21 07:00:49.707  6209  6209 W AudioMediaPlayerWrapper: onMetadataChanged(): com.ranjithkb.radio tried to update with no new data
+11-21 07:00:49.708  6209  6209 W AudioMediaPlayerWrapper: onMetadataChanged(): com.ranjithkb.radio tried to update with no new data
+11-21 07:00:49.712   397  1151 D audioserver: FGS Logger Transaction failed
+11-21 07:00:49.712   397  1151 D audioserver: -129
+11-21 07:00:49.713  6209  6209 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PLAYING(3), position=0, buffered position=4022, speed=1.0, updated=428094, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:49.719   881   881 D MediaDataManager: State updated outside of notification
+11-21 07:00:49.724  6209  6209 D AudioMediaPlayerWrapper: com.ranjithkb.radio Only Title and Artist info sync for metadata
+11-21 07:00:49.725  6209  6209 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-21 07:00:49.725  6209  6209 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=PLAYING(3), position=6, buffered position=4022, speed=1.0, updated=428107, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:49.725  6209  6209 D AvrcpTargetJni: sendMediaUpdateNative
+11-21 07:00:49.726  6209  6209 I bt_stack: [INFO:avrcp_service.cc(515)] virtual void bluetooth::avrcp::AvrcpService::SendMediaUpdate(bool, bool, bool) track_changed=0 :  play_state=1 :  queue=0
+11-21 07:00:49.726  6209  6209 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PLAYING(3), position=0, buffered position=4022, speed=1.0, updated=428094, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:49.728  6209  6209 D AudioMediaPlayerWrapper: com.ranjithkb.radio Only Title and Artist info sync for metadata
+11-21 07:00:49.729   881   881 W ConstraintSet: id unknown center_vertical_guideline
+11-21 07:00:49.729  6209  6209 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-21 07:00:49.730  6209  6209 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=PLAYING(3), position=10, buffered position=4022, speed=1.0, updated=428111, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:49.730   881   881 W ConstraintSet: id unknown action_button_guideline
+11-21 07:00:49.731  6209  6209 D MediaControlGattService: updatePlayerState: playbackState= PLAYING
+11-21 07:00:49.731  6209  6209 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-21 07:00:49.731  6209  6209 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-21 07:00:49.731  6209  6209 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-21 07:00:49.731  6209  6209 W MediaControlGattService: Feature PLAYBACK_SPEED_NOTIFY support: true
+11-21 07:00:49.731   881   881 W ConstraintSet: id unknown icon
+11-21 07:00:49.731   881   881 W ConstraintSet: id unknown media_seamless
+11-21 07:00:49.731   881   881 W ConstraintSet: id unknown media_action_barrier_start
+11-21 07:00:49.731   881   881 W ConstraintSet: id unknown media_action_barrier_end
+11-21 07:00:49.731   881   881 W ConstraintSet: id unknown media_action_barrier_top
+11-21 07:00:49.732  6209  6209 W MediaControlGattService: Feature TRACK_POSITION(BIT 7) support: true
+11-21 07:00:49.732  6209  6209 W MediaControlGattService: Feature TRACK_POSITION_NOTIFY support: true
+11-21 07:00:49.732  6209  6209 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-21 07:00:49.732   881   881 W ConstraintSet: id unknown remove_text
+11-21 07:00:49.732   881   881 W ConstraintSet: id unknown settings
+11-21 07:00:49.732  6209  6209 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-21 07:00:49.732  6209  6209 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-21 07:00:49.732   881   881 W ConstraintSet: id unknown dismiss
+11-21 07:00:49.732  6209  6209 W MediaControlGattService: Feature MEDIA_CONTROL_POINT_OPCODES_SUPPORTED(BIT 19) support: true
+11-21 07:00:49.732  6209  6209 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-21 07:00:49.732  6209  6209 D MediaControlGattService: updateMediaStateChar
+11-21 07:00:49.732  6209  6209 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-21 07:00:49.732  6209  6209 D MediaControlGattService: updateMediaStateChar setting to state= 1
+11-21 07:00:49.733  6209  6209 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-21 07:00:49.733  6209  6209 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-21 07:00:49.733  6209  6209 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-21 07:00:49.733  6209  6209 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-21 07:00:49.733   881   881 W ConstraintSet: id unknown cancel
+11-21 07:00:49.733  6209  6209 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PLAYING(3), position=0, buffered position=4022, speed=1.0, updated=428101, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:49.734  6209  6209 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-21 07:00:49.734  6209  6209 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PLAYING(3), position=0, buffered position=4022, speed=1.0, updated=428101, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:49.734  6209  6209 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-21 07:00:49.746  4771  4771 D MediaRouter: onRestoreRoute() : route=RouteInfo{ name=Phone, description=null, status=null, category=RouteCategory{ name=System types=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO  groupable=false }, supportedTypes=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO , presentationDisplay=null }
+11-21 07:00:49.746  4771  4771 V MediaRouter: Selecting route: RouteInfo{ name=Phone, description=null, status=null, category=RouteCategory{ name=System types=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO  groupable=false }, supportedTypes=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO , presentationDisplay=null }
+11-21 07:00:49.776  4771  4951 D AudioTrack: getTimestamp_l(44): device stall time corrected using current time 428159220119
+11-21 07:00:49.901  1580  2055 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-21 07:00:49.902  1580  2055 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-21 07:00:49.914   881   933 D EGL_emulation: app_time_stats: avg=320.69ms min=35.85ms max=982.86ms count=4
+11-21 07:00:49.948  1580  2055 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-21 07:00:49.949  1580  2055 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-21 07:00:49.959   881   927 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-21 07:00:49.989   881   881 W ConstraintSet: id unknown center_vertical_guideline
+11-21 07:00:49.989   881   881 W ConstraintSet: id unknown action_button_guideline
+11-21 07:00:49.989   881   881 W ConstraintSet: id unknown icon
+11-21 07:00:49.989   881   881 W ConstraintSet: id unknown media_seamless
+11-21 07:00:49.989   881   881 W ConstraintSet: id unknown media_action_barrier_start
+11-21 07:00:49.989   881   881 W ConstraintSet: id unknown media_action_barrier_end
+11-21 07:00:49.989   881   881 W ConstraintSet: id unknown media_action_barrier_top
+11-21 07:00:49.989   881   881 W ConstraintSet: id unknown remove_text
+11-21 07:00:49.989   881   881 W ConstraintSet: id unknown settings
+11-21 07:00:49.989   881   881 W ConstraintSet: id unknown dismiss
+11-21 07:00:49.989   881   881 W ConstraintSet: id unknown cancel
+11-21 07:00:50.028   881   881 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+11-21 07:00:50.177   881   927 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-21 07:00:50.202   881   881 W ConstraintSet: id unknown center_vertical_guideline
+11-21 07:00:50.202   881   881 W ConstraintSet: id unknown action_button_guideline
+11-21 07:00:50.202   881   881 W ConstraintSet: id unknown icon
+11-21 07:00:50.202   881   881 W ConstraintSet: id unknown media_seamless
+11-21 07:00:50.202   881   881 W ConstraintSet: id unknown media_action_barrier_start
+11-21 07:00:50.202   881   881 W ConstraintSet: id unknown media_action_barrier_end
+11-21 07:00:50.202   881   881 W ConstraintSet: id unknown media_action_barrier_top
+11-21 07:00:50.202   881   881 W ConstraintSet: id unknown remove_text
+11-21 07:00:50.202   881   881 W ConstraintSet: id unknown settings
+11-21 07:00:50.202   881   881 W ConstraintSet: id unknown dismiss
+11-21 07:00:50.202   881   881 W ConstraintSet: id unknown cancel
+11-21 07:00:50.422   397   505 D AudioFlinger: mixer(0x7ec47b1bd930) throttle end: throttle time(2)
+11-21 07:00:51.032  5540  6433 W AdaptiveDiscoveryWorker: Exiting Adaptive Discovery. Current NetworkInfo is NULL.
+11-21 07:00:51.166  4771  4795 I OpenGLRenderer: Davey! duration=1233ms; Flags=0, FrameTimelineVsyncId=69145, IntendedVsync=428275676360, Vsync=428459009686, InputEventId=0, HandleInputStart=428461286181, AnimationStart=428461288655, PerformTraversalsStart=428461290198, DrawStart=428481778011, FrameDeadline=428292343026, FrameInterval=428461145188, FrameStartTime=16666666, SyncQueued=428497743494, SyncStart=428497791204, IssueDrawCommandsStart=428497825056, SwapBuffers=429440768707, FrameCompleted=429509584376, DequeueBufferDuration=3457, QueueBufferDuration=155631, GpuCompleted=429509584376, SwapBuffersCompleted=429500754348, DisplayPresentTime=1390900922309148672, CommandSubmissionCompleted=429440768707,
+11-21 07:00:51.172   397   505 D AudioFlinger: mixer(0x7ec47b1bd930) throttle end: throttle time(11)
+11-21 07:00:51.532   397   505 D AudioFlinger: mixer(0x7ec47b1bd930) throttle end: throttle time(9)
+11-21 07:00:51.558  4771  4899 I VELVET-TEST: cathedral original light: 803x1103, 401 colours
+11-21 07:00:51.789   397   505 D AudioFlinger: mixer(0x7ec47b1bd930) throttle end: throttle time(10)
+11-21 07:00:51.848  4771  4899 I VELVET-TEST: cathedral original dark: 803x1103, 398 colours
+11-21 07:00:52.099   397   505 D AudioFlinger: mixer(0x7ec47b1bd930) throttle end: throttle time(5)
+11-21 07:00:52.117  4771  4899 I VELVET-TEST: cathedral theme light: 803x1103, 411 colours
+11-21 07:00:52.183  4771  6734 D EGL_emulation: app_time_stats: avg=365.04ms min=30.52ms max=3334.53ms count=12
+11-21 07:00:52.326   397   505 D AudioFlinger: mixer(0x7ec47b1bd930) throttle end: throttle time(17)
+11-21 07:00:52.344  4771  4790 I ranjithkb.radio: Background young concurrent copying GC freed 49664(1164KB) AllocSpace objects, 1(3460KB) LOS objects, 13% free, 19MB/22MB, paused 7.935ms,130us total 22.294ms
+11-21 07:00:52.377  4771  4899 I VELVET-TEST: cathedral theme dark: 803x1103, 409 colours
+11-21 07:00:52.810  6209  6209 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PLAYING(3), position=2970, buffered position=34403, speed=1.0, updated=431192, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:52.813  6209  6209 D AudioMediaPlayerWrapper: com.ranjithkb.radio Only Title and Artist info sync for metadata
+11-21 07:00:52.817  6209  6209 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-21 07:00:52.818  6209  6209 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=PLAYING(3), position=2974, buffered position=34403, speed=1.0, updated=431196, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:52.818  6209  6209 D MediaControlGattService: updatePlayerState: playbackState= PLAYING
+11-21 07:00:52.818  6209  6209 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-21 07:00:52.818  6209  6209 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-21 07:00:52.818  6209  6209 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-21 07:00:52.818  6209  6209 W MediaControlGattService: Feature TRACK_POSITION(BIT 7) support: true
+11-21 07:00:52.818  6209  6209 W MediaControlGattService: Feature TRACK_POSITION_NOTIFY support: true
+11-21 07:00:52.819  6209  6209 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-21 07:00:52.819  6209  6209 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-21 07:00:52.819  6209  6209 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-21 07:00:52.823  6209  6209 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-21 07:00:52.823  6209  6209 W MediaControlGattService: Feature MEDIA_CONTROL_POINT_OPCODES_SUPPORTED(BIT 19) support: true
+11-21 07:00:52.823  6209  6209 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-21 07:00:52.823  6209  6209 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-21 07:00:52.823  6209  6209 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-21 07:00:52.823  6209  6209 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-21 07:00:52.823  6209  6209 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-21 07:00:52.824  6209  6209 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PLAYING(3), position=2970, buffered position=34403, speed=1.0, updated=431192, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:52.844  6209  6209 D AudioMediaPlayerWrapper: com.ranjithkb.radio Only Title and Artist info sync for metadata
+11-21 07:00:52.848  6209  6209 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-21 07:00:52.848  6209  6209 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=PLAYING(3), position=3005, buffered position=34403, speed=1.0, updated=431227, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:52.848  6209  6209 D AvrcpTargetJni: sendMediaUpdateNative
+11-21 07:00:52.849  6209  6209 I bt_stack: [INFO:avrcp_service.cc(515)] virtual void bluetooth::avrcp::AvrcpService::SendMediaUpdate(bool, bool, bool) track_changed=0 :  play_state=1 :  queue=0
+11-21 07:00:52.923   397   505 D AudioFlinger: mixer(0x7ec47b1bd930) throttle end: throttle time(4)
+11-21 07:00:52.989  4771  4899 I VELVET-TEST: valve original light: 1080x1099, 309 colours
+11-21 07:00:53.254  4771  4899 I VELVET-TEST: valve original dark: 1080x1099, 310 colours
+11-21 07:00:53.325  4771  6734 D EGL_emulation: app_time_stats: avg=124.82ms min=25.50ms max=522.10ms count=9
+11-21 07:00:53.510  4771  4899 I VELVET-TEST: valve theme light: 1080x1099, 331 colours
+11-21 07:00:53.773  4771  4899 I VELVET-TEST: valve theme dark: 1080x1099, 330 colours
+11-21 07:00:53.981   397   505 D AudioFlinger: mixer(0x7ec47b1bd930) throttle end: throttle time(7)
+11-21 07:00:54.040  4771  4899 I VELVET-TEST: transistor original light: 1080x935, 389 colours
+11-21 07:00:54.275   397   505 D AudioFlinger: mixer(0x7ec47b1bd930) throttle end: throttle time(27)
+11-21 07:00:54.299  4771  4899 I VELVET-TEST: transistor original dark: 1080x935, 391 colours
+11-21 07:00:54.376  4771  6734 D EGL_emulation: app_time_stats: avg=83.45ms min=27.68ms max=169.84ms count=12
+11-21 07:00:54.525   397   505 D AudioFlinger: mixer(0x7ec47b1bd930) throttle end: throttle time(5)
+11-21 07:00:54.577  4771  4899 I VELVET-TEST: transistor theme light: 1080x935, 422 colours
+11-21 07:00:54.705   478   879 D BufferPoolAccessor2.0: bufferpool2 0x7f504e5a09d8 : 0(0 size) total buffers - 0(0 size) used buffers - 2496/2519 (recycle/alloc) - 29/2519 (fetch/transfer)
+11-21 07:00:54.706   478   879 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 1
+11-21 07:00:54.832  4771  4899 I VELVET-TEST: transistor theme dark: 1080x935, 422 colours
+11-21 07:00:55.069  4771  6775 D BufferPoolAccessor2.0: bufferpool2 0x7bce73c337b8 : 5(40960 size) total buffers - 1(8192 size) used buffers - 219/224 (recycle/alloc) - 5/444 (fetch/transfer)
+11-21 07:00:55.079   478  6776 D BufferPoolAccessor2.0: bufferpool2 0x7f504e59f9a8 : 4(18432 size) total buffers - 1(4608 size) used buffers - 219/223 (recycle/alloc) - 4/222 (fetch/transfer)
+11-21 07:00:55.094  4771  5006 D BufferPoolAccessor2.0: bufferpool2 0x7bce73c23958 : 0(0 size) total buffers - 0(0 size) used buffers - 2632/2660 (recycle/alloc) - 103/5038 (fetch/transfer)
+11-21 07:00:55.094  4771  5006 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 1
+11-21 07:00:55.290  4771  4899 I VELVET-TEST: receiver original light: 1080x953, 357 colours
+11-21 07:00:55.428  4771  6734 D EGL_emulation: app_time_stats: avg=115.86ms min=26.32ms max=388.08ms count=9
+11-21 07:00:55.567   397   505 D AudioFlinger: mixer(0x7ec47b1bd930) throttle end: throttle time(33)
+11-21 07:00:55.583  4771  4899 I VELVET-TEST: receiver original dark: 1080x953, 355 colours
+11-21 07:00:55.773   397   505 D AudioFlinger: mixer(0x7ec47b1bd930) throttle end: throttle time(2)
+11-21 07:00:55.821  4771  4899 I VELVET-TEST: receiver theme light: 1080x953, 452 colours
+11-21 07:00:55.823  6209  6209 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PLAYING(3), position=5985, buffered position=37982, speed=1.0, updated=434205, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:55.826  6209  6209 D AudioMediaPlayerWrapper: com.ranjithkb.radio Only Title and Artist info sync for metadata
+11-21 07:00:55.828  6209  6209 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-21 07:00:55.828  6209  6209 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=PLAYING(3), position=5989, buffered position=37982, speed=1.0, updated=434209, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:55.829  6209  6209 D MediaControlGattService: updatePlayerState: playbackState= PLAYING
+11-21 07:00:55.829  6209  6209 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-21 07:00:55.829  6209  6209 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-21 07:00:55.829  6209  6209 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-21 07:00:55.829  6209  6209 W MediaControlGattService: Feature TRACK_POSITION(BIT 7) support: true
+11-21 07:00:55.829  6209  6209 W MediaControlGattService: Feature TRACK_POSITION_NOTIFY support: true
+11-21 07:00:55.830  6209  6209 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-21 07:00:55.830  6209  6209 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-21 07:00:55.830  6209  6209 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-21 07:00:55.830  6209  6209 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-21 07:00:55.830  6209  6209 W MediaControlGattService: Feature MEDIA_CONTROL_POINT_OPCODES_SUPPORTED(BIT 19) support: true
+11-21 07:00:55.831  6209  6209 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-21 07:00:55.831  6209  6209 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-21 07:00:55.831  6209  6209 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-21 07:00:55.831  6209  6209 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-21 07:00:55.832  6209  6209 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-21 07:00:55.832  6209  6209 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PLAYING(3), position=5985, buffered position=37982, speed=1.0, updated=434205, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:55.834  6209  6209 D AudioMediaPlayerWrapper: com.ranjithkb.radio Only Title and Artist info sync for metadata
+11-21 07:00:55.839  6209  6209 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-21 07:00:55.840  6209  6209 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=PLAYING(3), position=5998, buffered position=37982, speed=1.0, updated=434218, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:55.840  6209  6209 D AvrcpTargetJni: sendMediaUpdateNative
+11-21 07:00:55.841  6209  6209 I bt_stack: [INFO:avrcp_service.cc(515)] virtual void bluetooth::avrcp::AvrcpService::SendMediaUpdate(bool, bool, bool) track_changed=0 :  play_state=1 :  queue=0
+11-21 07:00:56.071  4771  4899 I VELVET-TEST: receiver theme dark: 1080x953, 450 colours
+11-21 07:00:56.292   397   505 D AudioFlinger: mixer(0x7ec47b1bd930) throttle end: throttle time(48)
+11-21 07:00:56.438  4771  6734 D EGL_emulation: app_time_stats: avg=90.33ms min=24.91ms max=354.01ms count=11
+11-21 07:00:56.498  4771  4790 I ranjithkb.radio: Background young concurrent copying GC freed 112349(2512KB) AllocSpace objects, 3(11MB) LOS objects, 41% free, 17MB/30MB, paused 10.524ms,17us total 24.976ms
+11-21 07:00:56.519  4771  4899 I VELVET-TEST: boombox original light: 1080x584, 162 colours
+11-21 07:00:56.707  4771  4899 I VELVET-TEST: boombox original dark: 1080x584, 163 colours
+11-21 07:00:56.882   397   505 D AudioFlinger: mixer(0x7ec47b1bd930) throttle end: throttle time(6)
+11-21 07:00:56.893  4771  4899 I VELVET-TEST: boombox theme light: 1080x584, 339 colours
+11-21 07:00:57.083  4771  4899 I VELVET-TEST: boombox theme dark: 1080x584, 333 colours
+11-21 07:00:57.316  4771  4899 I VELVET-TEST: digital original light: 1080x953, 260 colours
+11-21 07:00:57.454  4771  6734 D EGL_emulation: app_time_stats: avg=66.79ms min=24.70ms max=141.64ms count=15
+11-21 07:00:57.487  5647  5647 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.checkin.START pkg=com.google.android.gms }
+11-21 07:00:57.526  4771  4899 I VELVET-TEST: digital original dark: 1080x953, 248 colours
+11-21 07:00:57.723  4771  4899 I VELVET-TEST: digital theme light: 1080x953, 457 colours
+11-21 07:00:57.924  4771  4899 I VELVET-TEST: digital theme dark: 1080x953, 473 colours
+11-21 07:00:57.926  4771  4771 I MediaController: Release 9a47c98 [AndroidXMedia3/1.5.1] [emu64xa, sdk_gphone64_x86_64, Google, 34] [media3.common, media3.session, media3.exoplayer, media3.decoder, media3.cast, media3.exoplayer.hls, media3.datasource, media3.extractor]
+11-21 07:00:57.926  4771  4771 I VELVET-PLAY: pause by com.ranjithkb.radio
+11-21 07:00:57.929   526  2271 I WifiService: releaseWifiLock uid=10192
+11-21 07:00:57.932  6209  6209 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=8089, buffered position=39967, speed=0.0, updated=436314, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:57.934   881   881 D MediaDataManager: State updated outside of notification
+11-21 07:00:57.936  6209  6209 D AudioMediaPlayerWrapper: com.ranjithkb.radio Only Title and Artist info sync for metadata
+11-21 07:00:57.937   881   881 W ConstraintSet: id unknown center_vertical_guideline
+11-21 07:00:57.937   881   881 W ConstraintSet: id unknown action_button_guideline
+11-21 07:00:57.937   881   881 W ConstraintSet: id unknown icon
+11-21 07:00:57.937   881   881 W ConstraintSet: id unknown media_seamless
+11-21 07:00:57.937   881   881 W ConstraintSet: id unknown media_action_barrier_start
+11-21 07:00:57.937   881   881 W ConstraintSet: id unknown media_action_barrier_end
+11-21 07:00:57.937   881   881 W ConstraintSet: id unknown media_action_barrier_top
+11-21 07:00:57.937   881   881 W ConstraintSet: id unknown remove_text
+11-21 07:00:57.937   881   881 W ConstraintSet: id unknown settings
+11-21 07:00:57.937   881   881 W ConstraintSet: id unknown dismiss
+11-21 07:00:57.937   881   881 W ConstraintSet: id unknown cancel
+11-21 07:00:57.941  6209  6209 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-21 07:00:57.942  6209  6209 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=PAUSED(2), position=8089, buffered position=39967, speed=0.0, updated=436316, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:57.942  6209  6209 D AvrcpTargetJni: sendMediaUpdateNative
+11-21 07:00:57.942  6209  6209 I bt_stack: [INFO:avrcp_service.cc(515)] virtual void bluetooth::avrcp::AvrcpService::SendMediaUpdate(bool, bool, bool) track_changed=0 :  play_state=1 :  queue=0
+11-21 07:00:57.942  6209  6209 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=8089, buffered position=39967, speed=0.0, updated=436314, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:57.951  1580  2055 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-21 07:00:57.951  1580  2055 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-21 07:00:57.954  6209  6209 D AudioMediaPlayerWrapper: com.ranjithkb.radio Only Title and Artist info sync for metadata
+11-21 07:00:57.962  6209  6209 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-21 07:00:57.962  6209  6209 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=PAUSED(2), position=8089, buffered position=39967, speed=0.0, updated=436316, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:57.962  6209  6209 D MediaControlGattService: updatePlayerState: playbackState= PAUSED
+11-21 07:00:57.962  6209  6209 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-21 07:00:57.962  6209  6209 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-21 07:00:57.962  6209  6209 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-21 07:00:57.962  6209  6209 W MediaControlGattService: Feature PLAYBACK_SPEED_NOTIFY support: true
+11-21 07:00:57.963  6209  6209 W MediaControlGattService: Feature TRACK_POSITION(BIT 7) support: true
+11-21 07:00:57.963  6209  6209 W MediaControlGattService: Feature TRACK_POSITION_NOTIFY support: true
+11-21 07:00:57.963  6209  6209 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-21 07:00:57.963  6209  6209 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-21 07:00:57.964  6209  6209 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-21 07:00:57.964  6209  6209 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-21 07:00:57.964  6209  6209 W MediaControlGattService: Feature MEDIA_CONTROL_POINT_OPCODES_SUPPORTED(BIT 19) support: true
+11-21 07:00:57.964  6209  6209 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-21 07:00:57.964  6209  6209 D MediaControlGattService: updateMediaStateChar
+11-21 07:00:57.965  6209  6209 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-21 07:00:57.965  6209  6209 D MediaControlGattService: updateMediaStateChar setting to state= 2
+11-21 07:00:57.965  6209  6209 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-21 07:00:57.965  6209  6209 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-21 07:00:57.965  6209  6209 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-21 07:00:57.966  6209  6209 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-21 07:00:57.966  6209  6209 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=8089, buffered position=39967, speed=0.0, updated=436316, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:57.966  6209  6209 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-21 07:00:57.967  6209  6209 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=8089, buffered position=39967, speed=0.0, updated=436316, actions=7339703, custom actions=[], active item id=2, error=null}
+11-21 07:00:57.967  6209  6209 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-21 07:00:57.972   881   923 D SplashScreenView: Build android.window.SplashScreenView{f0398e6 V.E...... ......ID 0,0-0,0}
+11-21 07:00:57.972   881   923 D SplashScreenView: Icon: view: null drawable: null size: 0
+11-21 07:00:57.972   881   923 D SplashScreenView: Branding: view: android.view.View{5025e27 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+11-21 07:00:57.974  4771  4771 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@e6fa56d in: PAUSED
+11-21 07:00:57.974  4771  4771 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=androidx.activity.ComponentActivity@e6fa56d
+11-21 07:00:58.002   336   336 D Zygote  : Forked child process 6782
+11-21 07:00:58.025  6782  6782 I thkb.radio.test: Late-enabling -Xcheck:jni
+11-21 07:00:58.026   400   400 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+11-21 07:00:58.032   881   933 D EGL_emulation: app_time_stats: avg=2029.42ms min=49.28ms max=7687.58ms count=4
+11-21 07:00:58.061  6782  6782 I thkb.radio.test: Using CollectorTypeCC GC.
+11-21 07:00:58.062  6782  6782 W thkb.radio.test: Unexpected CPU variant for x86: x86_64.
+11-21 07:00:58.062  6782  6782 W thkb.radio.test: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+11-21 07:00:58.084   397   505 D audioserver: FGS Logger Transaction failed
+11-21 07:00:58.084   397   505 D audioserver: -129
+11-21 07:00:58.087   414   428 I adbd    : jdwp connection from 6782
+11-21 07:00:58.150  1580  2055 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-21 07:00:58.150  1580  2055 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-21 07:00:58.152  1580  2055 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-21 07:00:58.152  1580  2055 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-21 07:00:58.206  6782  6782 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10193; state: ENABLED
+11-21 07:00:58.206  6782  6782 D CompatibilityChangeReporter: Compat change id reported: 242716250; UID 10193; state: ENABLED
+11-21 07:00:58.217  6782  6782 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+11-21 07:00:58.223   881   927 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-21 07:00:58.242  6782  6782 D nativeloader: Configuring clns-6 for other apk /system/framework/android.test.mock.jar. target_sdk_version=36, uses_libraries=ALL, library_path=/data/app/~~XsY39Fp1Yy0YAMblSf-jvA==/com.ranjithkb.radio.test-iTnWBv9C1kgd2KjxC1TKaw==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.ranjithkb.radio.test
+11-21 07:00:58.243  6782  6782 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+11-21 07:00:58.248  6782  6782 D nativeloader: Configuring clns-7 for other apk /system/framework/android.test.runner.jar. target_sdk_version=36, uses_libraries=ALL, library_path=/data/app/~~XsY39Fp1Yy0YAMblSf-jvA==/com.ranjithkb.radio.test-iTnWBv9C1kgd2KjxC1TKaw==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.ranjithkb.radio.test
+11-21 07:00:58.251  6782  6782 W ziparchive: Unable to open '/data/app/~~XsY39Fp1Yy0YAMblSf-jvA==/com.ranjithkb.radio.test-iTnWBv9C1kgd2KjxC1TKaw==/base.dm': No such file or directory
+11-21 07:00:58.252  6782  6782 W ziparchive: Unable to open '/data/app/~~XsY39Fp1Yy0YAMblSf-jvA==/com.ranjithkb.radio.test-iTnWBv9C1kgd2KjxC1TKaw==/base.dm': No such file or directory
+11-21 07:00:58.294  6209  6264 D BtGatt.ScanManager: uid 10132 isForeground true scanMode -1
+11-21 07:00:58.294  6209  6264 D BtGatt.ScanManager: uid 10132 isForeground true scanMode -1
+11-21 07:00:58.295  4771  4771 W GlobalMediaRouter: Ignoring invalid provider descriptor: null
+11-21 07:00:58.295  5540  6767 I DiscoveryManager: Filter criteria(null) scannerFlags(0)
+11-21 07:00:58.296  5540  6767 W DatabaseProcessor: processLocalDevices: failed to get the network info with non-null networkId.
+11-21 07:00:58.298  5540  5540 I CastMediaRouteProvider: Published 0 routes
+11-21 07:00:58.299  5540  6767 W GuestModeDeviceProber: setFilterCriteria
+11-21 07:00:58.299   526  2348 I WifiService: releaseMulticastLock uid=10132
+11-21 07:00:58.301   881   933 D EGL_emulation: app_time_stats: avg=5444.58ms min=553.62ms max=10335.53ms count=2
+11-21 07:00:58.308  1033  6230 D IpClient.wlan0: set max DTIM multiplier to 2
+11-21 07:00:58.309   526   800 E WifiStaIfaceAidlImpl: installApfPacketFilter failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+11-21 07:00:58.311   526   800 E WifiStaIfaceAidlImpl: setDtimMultiplier failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+11-21 07:00:58.311  5540  6767 W DatabaseProcessor: processLocalDevices: failed to get the network info with non-null networkId.
+11-21 07:00:58.311  5540  6767 W DatabaseProcessor: processLocalDevices: failed to get the network info with non-null networkId.
+11-21 07:00:58.315  6782  6782 D nativeloader: Configuring clns-8 for other apk /data/app/~~XsY39Fp1Yy0YAMblSf-jvA==/com.ranjithkb.radio.test-iTnWBv9C1kgd2KjxC1TKaw==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~XsY39Fp1Yy0YAMblSf-jvA==/com.ranjithkb.radio.test-iTnWBv9C1kgd2KjxC1TKaw==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.ranjithkb.radio.test
+11-21 07:00:58.317   526  6798 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+11-21 07:00:58.340  6782  6782 V GraphicsEnvironment: Currently set values for:
+11-21 07:00:58.340  6782  6782 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+11-21 07:00:58.340  6782  6782 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+11-21 07:00:58.341  6782  6782 V GraphicsEnvironment: ANGLE GameManagerService for com.ranjithkb.radio.test: false
+11-21 07:00:58.341  6782  6782 V GraphicsEnvironment: com.ranjithkb.radio.test is not listed in per-application setting
+11-21 07:00:58.341  6782  6782 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-21 07:00:58.400  6782  6803 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+11-21 07:00:58.402  6782  6803 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+11-21 07:00:58.405  6782  6803 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+11-21 07:00:58.422  6782  6782 D CompatibilityChangeReporter: Compat change id reported: 237531167; UID 10193; state: DISABLED
+11-21 07:00:58.423  6782  6782 W OpenGLRenderer: Unknown dataspace 0
+11-21 07:00:58.461   400   413 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10193 pid=0
+11-21 07:00:58.461   400   413 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10193 => denied (126 us)
+11-21 07:00:58.461   400   413 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10193 pid=0
+11-21 07:00:58.461   400   413 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10193 => denied (389 us)
+11-21 07:00:58.462   400   503 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10193 pid=6782
+11-21 07:00:58.462   400   503 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10193 => denied (85 us)
+11-21 07:00:58.498   400   413 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10193 pid=0
+11-21 07:00:58.498   400   413 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10193 => denied (36487 us)
+11-21 07:00:58.514   400   400 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+11-21 07:00:58.521   881   927 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-21 07:00:58.526   881   881 W ConstraintSet: id unknown center_vertical_guideline
+11-21 07:00:58.527  6782  6801 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+11-21 07:00:58.534  4771  4771 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@e6fa56d in: STOPPED
+11-21 07:00:58.535   881   881 W ConstraintSet: id unknown action_button_guideline
+11-21 07:00:58.538   881   881 W ConstraintSet: id unknown icon
+11-21 07:00:58.538   881   881 W ConstraintSet: id unknown media_seamless
+11-21 07:00:58.538   881   881 W ConstraintSet: id unknown media_action_barrier_start
+11-21 07:00:58.538   881   881 W ConstraintSet: id unknown media_action_barrier_end
+11-21 07:00:58.540  4771  4771 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=androidx.activity.ComponentActivity@e6fa56d
+11-21 07:00:58.541   881   881 W ConstraintSet: id unknown media_action_barrier_top
+11-21 07:00:58.541   881   881 W ConstraintSet: id unknown remove_text
+11-21 07:00:58.541   881   881 W ConstraintSet: id unknown settings
+11-21 07:00:58.542   881   881 W ConstraintSet: id unknown dismiss
+11-21 07:00:58.542   881   881 W ConstraintSet: id unknown cancel
+11-21 07:00:58.562   134   134 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+11-21 07:00:58.562  6782  6801 I Gralloc4: mapper 4.x is not supported
+11-21 07:00:58.567  4771  4771 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@e6fa56d in: DESTROYED
+11-21 07:00:58.568  4771  4771 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+11-21 07:00:58.568  4771  4771 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@ae274bd
+11-21 07:00:58.588   526  2335 W InputManager-JNI: Input channel object 'd8d6be3 com.ranjithkb.radio/androidx.activity.ComponentActivity (client)' was disposed without first being removed with the input manager!
+11-21 07:00:58.863   526  2335 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10193 pid=0
+11-21 07:00:58.871   881   927 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-21 07:00:58.873   526  2335 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10193 => denied (9357 us)
+11-21 07:00:58.883  6209  6264 D BtGatt.ScanManager: uid 10132 isForeground true scanMode -1
+11-21 07:00:58.883  6209  6264 D BtGatt.ScanManager: uid 10132 isForeground true scanMode -1
+11-21 07:00:58.886   881   881 W ConstraintSet: id unknown center_vertical_guideline
+11-21 07:00:58.887   881   881 W ConstraintSet: id unknown action_button_guideline
+11-21 07:00:58.887   881   881 W ConstraintSet: id unknown icon
+11-21 07:00:58.887   881   881 W ConstraintSet: id unknown media_seamless
+11-21 07:00:58.887   881   881 W ConstraintSet: id unknown media_action_barrier_start
+11-21 07:00:58.887   881   881 W ConstraintSet: id unknown media_action_barrier_end
+11-21 07:00:58.887   881   881 W ConstraintSet: id unknown media_action_barrier_top
+11-21 07:00:58.888   881   881 W ConstraintSet: id unknown remove_text
+11-21 07:00:58.888   881   881 W ConstraintSet: id unknown settings
+11-21 07:00:58.888   881   881 W ConstraintSet: id unknown dismiss
+11-21 07:00:58.888   881   881 W ConstraintSet: id unknown cancel
+11-21 07:00:58.890   526  2335 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10193 pid=0
+11-21 07:00:58.906   526  2335 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10193 => denied (16118 us)
+11-21 07:00:58.915   526  2335 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10193 pid=0
+11-21 07:00:58.920   526  2335 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10193 => denied (5384 us)
+11-21 07:00:58.922  4771  4899 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@9b868bc]
+11-21 07:00:58.931   526   535 I system_server: NativeAlloc concurrent copying GC freed 392376(15MB) AllocSpace objects, 17(356KB) LOS objects, 47% free, 26MB/50MB, paused 68us,50us total 386.169ms
+11-21 07:00:58.933   526   536 W JavaBinder: BinderProxy is being destroyed but the application did not call unlinkToDeath to unlink all of its death recipients beforehand.  Releasing leaked death recipient: com.android.server.wm.ActivityRecord$$ExternalSyntheticLambda0
+11-21 07:00:58.933   526   536 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+11-21 07:00:58.955  4771  4899 I TestRunner: finished: e01_every_radio_draws_original_and_theme_light_and_dark(com.ranjithkb.radionative.EraDeviceTest)

@@ -1,0 +1,324 @@
+11-21 06:56:04.376  4771  4899 I TestRunner: started: t02_car_pictures_open(com.ranjithkb.radionative.DeviceTest)
+11-21 06:56:04.381  4771  4771 I SessionManager: End session for com.ranjithkb.radio
+11-21 06:56:04.391  4771  4771 I MediaSessionImpl: Release 3665fd6 [AndroidXMedia3/1.5.1] [emu64xa, sdk_gphone64_x86_64, Google, 34] [media3.common, media3.session, media3.exoplayer, media3.decoder, media3.cast]
+11-21 06:56:04.404  1078  1078 V MediaPlayerList: onActiveSessionsChanged: number of controllers: 1
+11-21 06:56:04.406  1078  1078 D MediaPlayerList: onActiveSessionsChanged: controller: com.google.android.googlequicksearchbox
+11-21 06:56:04.407  1078  1078 V MediaPlayerList: onActiveSessionsChanged: number of controllers: 1
+11-21 06:56:04.408  1078  1078 D MediaPlayerList: onActiveSessionsChanged: controller: com.google.android.googlequicksearchbox
+11-21 06:56:04.420  4771  4771 I MediaController: Release 923a837 [AndroidXMedia3/1.5.1] [emu64xa, sdk_gphone64_x86_64, Google, 34] [media3.common, media3.session, media3.exoplayer, media3.decoder, media3.cast]
+11-21 06:56:04.444  4771  4771 I ExoPlayerImpl: Release df36d03 [AndroidXMedia3/1.5.1] [emu64xa, sdk_gphone64_x86_64, Google, 34] [media3.common, media3.session, media3.exoplayer, media3.decoder, media3.cast]
+11-21 06:56:04.473   526   557 E system_server: No package ID 7f found for resource ID 0x7f08038b.
+11-21 06:56:04.473   526   557 E system_server: No package ID 7f found for resource ID 0x7f150be5.
+11-21 06:56:04.473   526   557 E system_server: No package ID 7f found for resource ID 0x7f150be5.
+11-21 06:56:04.476   526   557 E system_server: No package ID 7f found for resource ID 0x7f150be4.
+11-21 06:56:04.508  1157  1748 D EGL_emulation: app_time_stats: avg=513.43ms min=62.87ms max=964.00ms count=2
+11-21 06:56:04.581  1580  1580 I AiAiEcho: AppFetcherImpl onPackageChanged com.google.android.apps.messaging.
+11-21 06:56:04.581  1580  2749 I AiAiEcho: AppIndexer Package:[com.google.android.apps.messaging] UserProfile:[0] Enabled:[true].
+11-21 06:56:04.581  1580  2749 I AiAiEcho: AppFetcherImplV2 updateApps package:[com.google.android.apps.messaging], userId:[0], reason:[package is updated.].
+11-21 06:56:04.606  2831  3046 W ChimeraUtils: Module com.google.android.gms.nearby_en missing resource null(0)
+11-21 06:56:04.611   335   377 I netd    : tetherGetStats() -> {[]} <0.31ms>
+11-21 06:56:04.624  4771  4771 I MediaController: Init 4342b07 [AndroidXMedia3/1.5.1] [emu64xa, sdk_gphone64_x86_64, Google, 34]
+11-21 06:56:04.628   335   377 I netd    : bandwidthSetGlobalAlert(2097152) <0.11ms>
+11-21 06:56:04.634  4771  4771 I ExoPlayerImpl: Init 1eab7d2 [AndroidXMedia3/1.5.1] [emu64xa, sdk_gphone64_x86_64, Google, 34]
+11-21 06:56:04.647  3230  3438 I Icing   : Indexing com.google.android.gms-internal.3p:MobileApplication from com.google.android.gms
+11-21 06:56:04.656  3230  3438 I Icing   : Indexing done com.google.android.gms-internal.3p:MobileApplication
+11-21 06:56:04.660  3230  3438 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:04.722  4771  4771 I MediaSessionImpl: Init 2805759 [AndroidXMedia3/1.5.1] [emu64xa, sdk_gphone64_x86_64, Google, 34]
+11-21 06:56:04.732  4490  4595 W Bugle   : TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-21 06:56:04.733  1580  1580 I AiAiEcho: AppFetcherImpl onPackageChanged com.google.android.gms.
+11-21 06:56:04.734  1580  2748 I AiAiEcho: AppIndexer Package:[com.google.android.gms] UserProfile:[0] Enabled:[true].
+11-21 06:56:04.734  1580  2748 I AiAiEcho: AppFetcherImplV2 updateApps package:[com.google.android.gms], userId:[0], reason:[package is updated.].
+11-21 06:56:04.748  1078  1078 V MediaPlayerList: onActiveSessionsChanged: number of controllers: 1
+11-21 06:56:04.748  1078  1078 D MediaPlayerList: onActiveSessionsChanged: controller: com.google.android.googlequicksearchbox
+11-21 06:56:04.748  1078  1078 V MediaPlayerList: onActiveSessionsChanged: number of controllers: 1
+11-21 06:56:04.749  1078  1078 D MediaPlayerList: onActiveSessionsChanged: controller: com.google.android.googlequicksearchbox
+11-21 06:56:04.754  1078  1078 V MediaPlayerList: onActiveSessionsChanged: number of controllers: 2
+11-21 06:56:04.754  1078  1078 D MediaPlayerList: onActiveSessionsChanged: controller: com.google.android.googlequicksearchbox
+11-21 06:56:04.754  1078  1078 D MediaPlayerList: onActiveSessionsChanged: controller: com.ranjithkb.radio
+11-21 06:56:04.755  1078  1078 V MediaPlayerList: onActiveSessionsChanged: number of controllers: 2
+11-21 06:56:04.755  1078  1078 D MediaPlayerList: onActiveSessionsChanged: controller: com.google.android.googlequicksearchbox
+11-21 06:56:04.756  1078  1078 D MediaPlayerList: onActiveSessionsChanged: controller: com.ranjithkb.radio
+11-21 06:56:04.799  4771  4771 I MediaController: Init 6561015 [AndroidXMedia3/1.5.1] [emu64xa, sdk_gphone64_x86_64, Google, 34]
+11-21 06:56:04.857   892  1076 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms.supervision, role: android.app.role.SYSTEM_SUPERVISION
+11-21 06:56:04.858   892  1076 I Role    : com.google.android.gms not qualified for android.app.role.SYSTEM_CALL_STREAMING due to missing RequiredComponent{mIntentFilterData=IntentFilterData{mAction='android.telecom.CallStreamingService', mCategories='[]', mDataScheme='null', mDataType='null'}, mMinTargetSdkVersion=1, mFlags='0', mPermission='android.permission.BIND_CALL_STREAMING_SERVICE', mQueryFlags=0, mMetaData=[]}
+11-21 06:56:04.859   892  1076 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms, role: android.app.role.SYSTEM_CALL_STREAMING
+11-21 06:56:04.860   892  1076 W Role    : Default holder doesn't have required signing certificate: com.google.android.apps.work.clouddpc:23962F4B43B9857638EA66F4D419518EAE282491ACDA4B94707BD59003C45E58
+11-21 06:56:04.891  3230  3438 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:04.974  3230  3438 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:04.974  3230  3438 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:04.975  3230  3438 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:04.980  3230  3438 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:05.225  3230  3438 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:05.235   892  1076 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms.supervision, role: android.app.role.SYSTEM_SUPERVISION
+11-21 06:56:05.241   892  1076 I Role    : com.google.android.gms not qualified for android.app.role.SYSTEM_CALL_STREAMING due to missing RequiredComponent{mIntentFilterData=IntentFilterData{mAction='android.telecom.CallStreamingService', mCategories='[]', mDataScheme='null', mDataType='null'}, mMinTargetSdkVersion=1, mFlags='0', mPermission='android.permission.BIND_CALL_STREAMING_SERVICE', mQueryFlags=0, mMetaData=[]}
+11-21 06:56:05.241   892  1076 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms, role: android.app.role.SYSTEM_CALL_STREAMING
+11-21 06:56:05.244   892  1076 W Role    : Default holder doesn't have required signing certificate: com.google.android.apps.work.clouddpc:23962F4B43B9857638EA66F4D419518EAE282491ACDA4B94707BD59003C45E58
+11-21 06:56:05.339  3230  3438 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:05.378  3230  3438 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:05.382  3230  3438 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:05.400   892  1076 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms.supervision, role: android.app.role.SYSTEM_SUPERVISION
+11-21 06:56:05.403   892  1076 I Role    : com.google.android.gms not qualified for android.app.role.SYSTEM_CALL_STREAMING due to missing RequiredComponent{mIntentFilterData=IntentFilterData{mAction='android.telecom.CallStreamingService', mCategories='[]', mDataScheme='null', mDataType='null'}, mMinTargetSdkVersion=1, mFlags='0', mPermission='android.permission.BIND_CALL_STREAMING_SERVICE', mQueryFlags=0, mMetaData=[]}
+11-21 06:56:05.403   892  1076 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms, role: android.app.role.SYSTEM_CALL_STREAMING
+11-21 06:56:05.404   892  1076 W Role    : Default holder doesn't have required signing certificate: com.google.android.apps.work.clouddpc:23962F4B43B9857638EA66F4D419518EAE282491ACDA4B94707BD59003C45E58
+11-21 06:56:05.436   335  4941 I resolv  : GetAddrInfoHandler::run: {101 101 101 983141 10192 0}
+11-21 06:56:05.437   335  4942 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+11-21 06:56:05.441   335  4943 I resolv  : res_nmkquery: (QUERY, IN, A)
+11-21 06:56:05.471  3230  3438 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:05.474   335  4944 I resolv  : GetAddrInfoHandler::run: {101 786533 101 983141 10132 0}
+11-21 06:56:05.475   335  4946 I resolv  : res_nmkquery: (QUERY, IN, A)
+11-21 06:56:05.475   335  4945 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+11-21 06:56:05.486   335  4946 I resolv  : res_nsend: used send_dg 79 terrno: 0
+11-21 06:56:05.486   335  4946 I resolv  : doQuery: rcode=0, ancount=2, return value=79
+11-21 06:56:05.486   335  4942 I resolv  : res_nsend: used send_dg 93 terrno: 0
+11-21 06:56:05.487   335  4945 I resolv  : res_nsend: used send_dg 91 terrno: 0
+11-21 06:56:05.487   335  4942 I resolv  : doQuery: rcode=0, ancount=2, return value=93
+11-21 06:56:05.487   335  4945 I resolv  : doQuery: rcode=0, ancount=2, return value=91
+11-21 06:56:05.488   335  4943 I resolv  : res_nsend: used send_dg 69 terrno: 0
+11-21 06:56:05.488   335  4943 I resolv  : doQuery: rcode=0, ancount=2, return value=69
+11-21 06:56:05.489  4771  4899 D TrafficStats: tagSocket(106) with statsTag=0xffffffff, statsUid=-1
+11-21 06:56:05.490  2831  3775 D TrafficStats: tagSocket(-1) with statsTag=0x30000407, statsUid=-1
+11-21 06:56:05.491  2831  3775 I TrafficStats: tagSocketFd(-1, 805307399, -1) failed with errno-9
+11-21 06:56:05.497  2831  3775 D TrafficStats: tagSocket(268) with statsTag=0x30000407, statsUid=-1
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: Could not register for notifications with InnerTube:
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: abqx: zvm: Precondition check failed.
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: 	at abqn.apply(Unknown Source:4)
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: 	at yyi.r(PG:5)
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: 	at yyi.b(PG:2)
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: 	at abqp.d(PG:4)
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: 	at agsb.c(PG:63)
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: 	at agsb.j(PG:38)
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: 	at agsb.d(PG:3)
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: 	at agrz.run(Unknown Source:2)
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: 	at smg.run(PG:2)
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: 	at java.lang.Thread.run(Thread.java:1012)
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: 	at snu.run(PG:5)
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: Caused by: zvm: Precondition check failed.
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: 	at abpb.e(PG:5)
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: 	at zhp.f(PG:1)
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: 	at zhp.e(PG:1)
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: 	at zgl.run(PG:19)
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: 	at aosb.run(PG:3)
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: 	at yxr.run(PG:11)
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: 	at java.lang.Thread.run(Thread.java:1012)
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: Caused by: efc
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: 	at zgl.run(PG:13)
+11-21 06:56:05.530  1891  2195 W YouTubeMusic: 	... 5 more
+11-21 06:56:05.558  3230  3438 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:05.599  3230  3690 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:05.608  3230  3690 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:05.658   892  1076 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms.supervision, role: android.app.role.SYSTEM_SUPERVISION
+11-21 06:56:05.668   892  1076 I Role    : com.google.android.gms not qualified for android.app.role.SYSTEM_CALL_STREAMING due to missing RequiredComponent{mIntentFilterData=IntentFilterData{mAction='android.telecom.CallStreamingService', mCategories='[]', mDataScheme='null', mDataType='null'}, mMinTargetSdkVersion=1, mFlags='0', mPermission='android.permission.BIND_CALL_STREAMING_SERVICE', mQueryFlags=0, mMetaData=[]}
+11-21 06:56:05.668   892  1076 E RoleControllerServiceImpl: Default/fallback role holder package doesn't qualify for the role, package: com.google.android.gms, role: android.app.role.SYSTEM_CALL_STREAMING
+11-21 06:56:05.669   892  1076 W Role    : Default holder doesn't have required signing certificate: com.google.android.apps.work.clouddpc:23962F4B43B9857638EA66F4D419518EAE282491ACDA4B94707BD59003C45E58
+11-21 06:56:05.692  3230  4700 W PhenotypeRegOp: Phenotype bulk registration failed [CONTEXT service_id=231 ]
+11-21 06:56:05.692  3230  4700 W PhenotypeRegOp: java.util.concurrent.TimeoutException: Timed out waiting for Task
+11-21 06:56:05.692  3230  4700 W PhenotypeRegOp: 	at cfsz.o(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+11-21 06:56:05.692  3230  4700 W PhenotypeRegOp: 	at com.google.android.gms.common.config.PhenotypeRegistrationOperation.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):6)
+11-21 06:56:05.692  3230  4700 W PhenotypeRegOp: 	at com.google.android.gms.common.config.PhenotypeRegistrationOperation.onHandleIntent(:com.google.android.gms@231818047@23.18.18 (190800-535401451):19)
+11-21 06:56:05.692  3230  4700 W PhenotypeRegOp: 	at com.google.android.chimera.IntentOperation.onHandleIntent(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+11-21 06:56:05.692  3230  4700 W PhenotypeRegOp: 	at zhv.onHandleIntent(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+11-21 06:56:05.692  3230  4700 W PhenotypeRegOp: 	at hjm.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):3)
+11-21 06:56:05.692  3230  4700 W PhenotypeRegOp: 	at hjl.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):11)
+11-21 06:56:05.692  3230  4700 W PhenotypeRegOp: 	at dfhf.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+11-21 06:56:05.692  3230  4700 W PhenotypeRegOp: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-21 06:56:05.692  3230  4700 W PhenotypeRegOp: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-21 06:56:05.692  3230  4700 W PhenotypeRegOp: 	at java.lang.Thread.run(Thread.java:1012)
+11-21 06:56:05.694  3230  4705 W gle.android.gms: Long monitor contention with owner [com.google.android.gms.chimera.container.intentoperation.GmsIntentOperationChimeraService-Executor] processing com.google.android.gms.chimera.debug.ModuleSetJournalUpdate$ModuleSetJournalIntentOperation for action com.google.android.chimera.MODULE_CONFIGURATION_CHANGED (4700) at void hjm.run()(:com.google.android.gms@231818047@23.18.18 (190800-535401451):3) waiters=0 in void hjm.run() for 8.829s
+11-21 06:56:05.702  3230  4705 E PhenotypeRegOp: Attempting to overwrite config package for com.google.android.gms.games [CONTEXT service_id=231 ]
+11-21 06:56:05.703  3230  4705 E PhenotypeRegOp: Attempting to overwrite config package for com.google.android.gms.maps#com.google.android.gms [CONTEXT service_id=231 ]
+11-21 06:56:05.704  3230  4705 E PhenotypeRegOp: Attempting to overwrite config package for com.google.android.gms.cast [CONTEXT service_id=231 ]
+11-21 06:56:05.705  3230  4705 E PhenotypeRegOp: Attempting to overwrite config package for com.google.android.gms.mobile_data_plan [CONTEXT service_id=231 ]
+11-21 06:56:05.716  3230  4705 E PhenotypeRegOp: Attempting to overwrite config package for com.google.android.gms.udc [CONTEXT service_id=231 ]
+11-21 06:56:05.871  4771  4947 D ProfileInstaller: Installing profile for com.ranjithkb.radio
+11-21 06:56:05.888  3230  3690 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:05.891  3230  3690 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:05.907  3230  3690 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:05.913  3230  3690 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:05.939  3230  3690 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:05.940  3230  3690 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:05.953  3230  3690 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:05.954  3230  3690 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:05.957  4771  4790 W ranjithkb.radio: Cleared Reference was only reachable from finalizer (only reported once)
+11-21 06:56:05.967  4771  4790 I ranjithkb.radio: Background concurrent copying GC freed 141089(6664KB) AllocSpace objects, 59(2896KB) LOS objects, 49% free, 5378KB/10MB, paused 34us,7us total 158.814ms
+11-21 06:56:05.968  2831  2968 I AlarmManager: setExactAndAllowWhileIdle [name: GCM_HB_ALARM type: 2 triggerAtMillis: 674351]
+11-21 06:56:05.995  2831  2968 I AlarmManager: setExactAndAllowWhileIdle [name: GCM_HB_ALARM type: 2 triggerAtMillis: 674378]
+11-21 06:56:05.998  3230  3690 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:06.003  3230  3690 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:06.006  2831  3987 I AlarmManager: setExactAndAllowWhileIdle [name: GCM_HB_ALARM type: 2 triggerAtMillis: 674389]
+11-21 06:56:06.008  3230  3690 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:06.008  3230  3690 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:06.018  3230  3690 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:06.022  3230  3690 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:06.031  3230  3690 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:06.033  3230  3690 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:06.092  3230  3690 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:06.095  3230  3690 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:06.106  4771  4899 D CompatibilityChangeReporter: Compat change id reported: 247079863; UID 10192; state: ENABLED
+11-21 06:56:06.123   335   377 I netd    : tetherGetStats() -> {[]} <0.39ms>
+11-21 06:56:06.128   335   377 I netd    : bandwidthSetGlobalAlert(2097152) <0.06ms>
+11-21 06:56:06.129   335   377 I netd    : bandwidthRemoveInterfaceQuota(eth0) <0.32ms>
+11-21 06:56:06.130   335   377 I netd    : bandwidthSetInterfaceQuota(eth0, 9223372036854775807) <0.32ms>
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: Failed to apply ContentProviderOperation(type=insert uri=content://media/internal/file values={instance_id=null, compilation=null, disc_number=null, duration=10170, is_ringtone=1, album_artist=null, resolution=null, orientation=null, artist=<unknown>, author=null, height=null, is_drm=0, is_audiobook=0, date_modified=1720722121, writer=null, composer=null, _modifier=3, is_recording=0, datetaken=null, mime_type=audio/ogg, is_notification=0, bitrate=192000, cd_track_number=null, xmp=[], year=null, _data=/product/media/audio/ringtones/Perseus.ogg, _size=236343, album=ringtones, genre=null, is_alarm=0, title=Perseus, track=null, width=null, is_music=0, document_id=null, is_podcast=0, capture_framerate=null, num_tracks=1, original_document_id=null, media_type=2} exceptionAllowed)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: files._data (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.util.DatabaseUtils.executeInsert(DatabaseUtils.java:456)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.util.SQLiteQueryBuilder.insert(SQLiteQueryBuilder.java:611)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.util.SQLiteQueryBuilder.lambda$insert$1(SQLiteQueryBuilder.java:575)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.util.SQLiteQueryBuilder.$r8$lambda$z6PmNgi8nEawad46M5nyYc14aRM(SQLiteQueryBuilder.java:0)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.util.SQLiteQueryBuilder$$ExternalSyntheticLambda4.apply(R8$$SyntheticClass:0)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.DatabaseHelper.runWithTransaction(DatabaseHelper.java:850)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.util.SQLiteQueryBuilder.insert(SQLiteQueryBuilder.java:574)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.lambda$insertAllowingUpsert$20(MediaProvider.java:4846)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.$r8$lambda$A8_bSAcDGkyGiCcvRo57xoMQkf8(MediaProvider.java:0)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider$$ExternalSyntheticLambda39.apply(R8$$SyntheticClass:0)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.DatabaseHelper.runWithTransaction(DatabaseHelper.java:850)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.insertAllowingUpsert(MediaProvider.java:4836)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.insertFile(MediaProvider.java:4818)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.insertInternal(MediaProvider.java:5287)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.insert(MediaProvider.java:4980)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at android.content.ContentProviderOperation.applyInternal(ContentProviderOperation.java:375)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at android.content.ContentProviderOperation.apply(ContentProviderOperation.java:347)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at android.content.ContentProvider.applyBatch(ContentProvider.java:2653)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.applyBatch(MediaProvider.java:5339)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at android.content.ContentProvider.applyBatch(ContentProvider.java:2644)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at android.content.ContentResolver.applyBatch(ContentResolver.java:2246)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.applyPending(ModernMediaScanner.java:938)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.maybeApplyPending(ModernMediaScanner.java:928)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.visitFile(ModernMediaScanner.java:834)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.visitFile(ModernMediaScanner.java:319)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at java.nio.file.Files.walkFileTree(Files.java:2670)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at java.nio.file.Files.walkFileTree(Files.java:2742)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.walkFileTree(ModernMediaScanner.java:435)
+11-21 06:56:06.146  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.runInternal(ModernMediaScanner.java:398)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.run(ModernMediaScanner.java:387)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner.scanDirectory(ModernMediaScanner.java:246)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.scanDirectory(MediaProvider.java:1939)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.MediaService.onScanVolume(MediaService.java:204)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.MediaService.onScanVolume(MediaService.java:172)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.MediaService.onHandleWork(MediaService.java:95)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at androidx.core.app.JobIntentService$CommandProcessor.doInBackground(JobIntentService.java:396)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at androidx.core.app.JobIntentService$CommandProcessor.doInBackground(JobIntentService.java:387)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at android.os.AsyncTask$3.call(AsyncTask.java:394)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at java.lang.Thread.run(Thread.java:1012)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: Failed to apply ContentProviderOperation(type=insert uri=content://media/internal/file values={instance_id=null, compilation=null, disc_number=null, duration=3498, is_ringtone=1, album_artist=null, resolution=null, orientation=null, artist=<unknown>, author=null, height=null, is_drm=0, is_audiobook=0, date_modified=1720722121, writer=null, composer=null, _modifier=3, is_recording=0, datetaken=null, mime_type=audio/ogg, is_notification=0, bitrate=80000, cd_track_number=null, xmp=[], year=null, _data=/product/media/audio/ringtones/CanisMajor.ogg, _size=31133, album=ringtones, genre=null, is_alarm=0, title=Canis Major, track=null, width=null, is_music=0, document_id=null, is_podcast=0, capture_framerate=null, num_tracks=1, original_document_id=null, media_type=2} exceptionAllowed)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: android.database.sqlite.SQLiteConstraintException: UNIQUE constraint failed: files._data (code 2067 SQLITE_CONSTRAINT_UNIQUE)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at android.database.sqlite.SQLiteConnection.nativeExecuteForLastInsertedRowId(Native Method)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at android.database.sqlite.SQLiteConnection.executeForLastInsertedRowId(SQLiteConnection.java:961)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at android.database.sqlite.SQLiteSession.executeForLastInsertedRowId(SQLiteSession.java:790)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at android.database.sqlite.SQLiteStatement.executeInsert(SQLiteStatement.java:89)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.util.DatabaseUtils.executeInsert(DatabaseUtils.java:456)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.util.SQLiteQueryBuilder.insert(SQLiteQueryBuilder.java:611)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.util.SQLiteQueryBuilder.lambda$insert$1(SQLiteQueryBuilder.java:575)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.util.SQLiteQueryBuilder.$r8$lambda$z6PmNgi8nEawad46M5nyYc14aRM(SQLiteQueryBuilder.java:0)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.util.SQLiteQueryBuilder$$ExternalSyntheticLambda4.apply(R8$$SyntheticClass:0)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.DatabaseHelper.runWithTransaction(DatabaseHelper.java:850)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.util.SQLiteQueryBuilder.insert(SQLiteQueryBuilder.java:574)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.lambda$insertAllowingUpsert$20(MediaProvider.java:4846)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.$r8$lambda$A8_bSAcDGkyGiCcvRo57xoMQkf8(MediaProvider.java:0)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider$$ExternalSyntheticLambda39.apply(R8$$SyntheticClass:0)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.DatabaseHelper.runWithTransaction(DatabaseHelper.java:850)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.insertAllowingUpsert(MediaProvider.java:4836)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.insertFile(MediaProvider.java:4818)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.insertInternal(MediaProvider.java:5287)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.insert(MediaProvider.java:4980)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at android.content.ContentProviderOperation.applyInternal(ContentProviderOperation.java:375)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at android.content.ContentProviderOperation.apply(ContentProviderOperation.java:347)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at android.content.ContentProvider.applyBatch(ContentProvider.java:2653)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.applyBatch(MediaProvider.java:5339)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at android.content.ContentProvider.applyBatch(ContentProvider.java:2644)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at android.content.ContentResolver.applyBatch(ContentResolver.java:2246)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.applyPending(ModernMediaScanner.java:938)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.maybeApplyPending(ModernMediaScanner.java:928)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.visitFile(ModernMediaScanner.java:834)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.visitFile(ModernMediaScanner.java:319)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at java.nio.file.Files.walkFileTree(Files.java:2670)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at java.nio.file.Files.walkFileTree(Files.java:2742)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.walkFileTree(ModernMediaScanner.java:435)
+11-21 06:56:06.148  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.runInternal(ModernMediaScanner.java:398)
+11-21 06:56:06.149  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner$Scan.run(ModernMediaScanner.java:387)
+11-21 06:56:06.149  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.scan.ModernMediaScanner.scanDirectory(ModernMediaScanner.java:246)
+11-21 06:56:06.149  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.MediaProvider.scanDirectory(MediaProvider.java:1939)
+11-21 06:56:06.149  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.MediaService.onScanVolume(MediaService.java:204)
+11-21 06:56:06.149  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.MediaService.onScanVolume(MediaService.java:172)
+11-21 06:56:06.149  1550  2118 W ModernMediaScanner: 	at com.android.providers.media.MediaService.onHandleWork(MediaService.java:95)
+11-21 06:56:06.149  1550  2118 W ModernMediaScanner: 	at androidx.core.app.JobIntentService$CommandProcessor.doInBackground(JobIntentService.java:396)
+11-21 06:56:06.149  1550  2118 W ModernMediaScanner: 	at androidx.core.app.JobIntentService$CommandProcessor.doInBackground(JobIntentService.java:387)
+11-21 06:56:06.149  1550  2118 W ModernMediaScanner: 	at android.os.AsyncTask$3.call(AsyncTask.java:394)
+11-21 06:56:06.149  1550  2118 W ModernMediaScanner: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+11-21 06:56:06.149  1550  2118 W ModernMediaScanner: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-21 06:56:06.149  1550  2118 W ModernMediaScanner: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-21 06:56:06.149  1550  2118 W ModernMediaScanner: 	at java.lang.Thread.run(Thread.java:1012)
+11-21 06:56:06.212  3230  3690 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:06.222  3230  3690 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:06.348  3230  3690 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:06.352  3230  3690 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:06.366  3230  3690 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:06.368  3230  3690 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:06.372  3230  3690 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:06.373  3230  3690 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:06.406  3230  3690 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:06.407  3230  3690 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:06.414  3230  3690 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:06.415  3230  3690 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:06.419  3230  3690 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:06.425  3230  3230 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.feedback.internal.IFeedbackService dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsBoundBrokerService }
+11-21 06:56:06.428  3230  3690 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:06.434  3230  3690 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:06.437  3230  3690 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:06.470  3230  3690 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:06.471  3230  3690 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:06.545  3230  3690 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:06.546  3230  3690 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:06.567  3230  3690 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:06.568  3230  3690 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:06.592  3230  3690 I Icing   : Indexing com.google.android.gms-apps from com.google.android.gms
+11-21 06:56:06.593  3230  3690 I Icing   : Indexing done com.google.android.gms-apps
+11-21 06:56:06.595  2831  2831 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.pseudonymous.service.START pkg=com.google.android.gms }
+11-21 06:56:06.791  2831  2839 I .gms.persistent: Background young concurrent copying GC freed 201220(11MB) AllocSpace objects, 0(0B) LOS objects, 36% free, 16MB/25MB, paused 30us,146us total 178.916ms
+11-21 06:56:07.388  2129  3026 I HttpGrpcBindableService: [pfd-write] DOWNLOAD COMPLETE: Downloaded 38498810 bytes from URL [https://storage.googleapis.com/captions/aiai-en-US-v3003.zip].
+11-21 06:56:07.391  1580  2574 I AstreaHttpConnection: Download completed for url [https://storage.googleapis.com/captions/aiai-en-US-v3003.zip].
+11-21 06:56:07.397  1580  2087 I SP.AiAi : <==== Finishing job {W:b:u:l, bg}, 34551 ms. elapsed since start
+11-21 06:56:07.405  1580  2087 I SP.AiAi : Download stopped: captions_i18n_v0_en-US:asr_en-US_v3003, succeeded, size: 38498810
+11-21 06:56:07.432  1580  2087 I SP.AiAi : Scheduling job with delay of 0s for {W:b:I:l, bg}, 1 candidates
+11-21 06:56:07.454  4490  4606 I Bugle   : BugleStartup: Registering SIM change receiver...
+11-21 06:56:07.455  4490  4606 I Bugle   : BugleStartup: Updating app config...
+11-21 06:56:07.464   335   377 I netd    : tetherGetStats() -> {[]} <1.47ms>
+11-21 06:56:07.465  4490  4606 I Bugle   : BugleStartup: Done with SIM change receiver & app config.
+11-21 06:56:07.466  4490  4606 I Bugle   : BugleStartup: Handling shared prefs upgrade & Load MMS Configuration...
+11-21 06:56:07.469  4490  4595 D CompatibilityChangeReporter: Compat change id reported: 147600208; UID 10129; state: ENABLED
+11-21 06:56:07.470   335   377 I netd    : bandwidthSetGlobalAlert(2097152) <0.06ms>
+11-21 06:56:07.479  1766  1766 I BgTaskExecutorImpl: Starting EXCLUSIVE background task UPLOAD_ASSISTANT_DEVICE_SETTINGS.
+11-21 06:56:07.484  1766  2475 I NetworkRecognitionRnr: Using pair HTTP connection
+11-21 06:56:07.486  1766  2415 I A       : [Upload] Connected
+11-21 06:56:07.489  4490  4948 I BugleRcsEngine: [67] bscg.c: do not delay first event
+11-21 06:56:07.490  4490  4595 I Bugle   : Upgrading shared prefs from -1 to 2
+11-21 06:56:07.493  4490  4599 W Bugle   : TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-21 06:56:07.495  4349  4397 W AllowlistedPackageIdentifiers: Is debuggable: false
+11-21 06:56:07.500  1766  2409 W LocationOracle: getBestLocation(): no location is available
+11-21 06:56:07.501  4490  4599 W Bugle   : TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-21 06:56:07.509  4490  4595 I BugleBackup: Registering preference change listener for "buglesub_1".
+11-21 06:56:07.512  4490  4610 I BugleRcsEngine: [49] bscg.c: SIM delay is not enabled
+11-21 06:56:07.512  4490  4610 W BugleRcsEngine: [49] bscd.a: (Sim): process intent: android.intent.action.SIM_STATE_CHANGED
+11-21 06:56:07.515  1766  2136 W CronetNetworkRqstWrppr: Upload request without a content type.
+11-21 06:56:07.521  4490  4948 I BugleRcsEngine: [67] bscd.o: (Sim): Processing an intent
+11-21 06:56:07.521  4490  4948 I BugleRcsEngine: [67] bscd.z: (Sim): SIM state LOADED
+11-21 06:56:07.525  4490  4660 W Bugle   : BuglePhoneNumberUtils: canonicalizeMccMnc: invalid mccmnc. mcc: null, mnc: null
+11-21 06:56:07.530  4490  4948 I BugleRcsEngine: [67] bsgz.b: EngineBroadcaster: Broadcasting provisioning intent rcs.intent.action.rcsSimSwap to Bugle with extras redacted-pii:[chars:86] from source SIM_STATE_TRACKER
+11-21 06:56:07.534  4490  4948 I BugleRcsEngine: [67] bscd.z: (Sim): SIM changed: true. current id: redacted-pii:sim_id[chars:20,last3:897]; stored id: redacted-pii:sim_id[chars:0,last3:]; isFiDevice: false; subId: 1; slotIndex: 0
+11-21 06:56:07.545  4490  4948 I BugleRcsEngine: [67] bscd.z: (Sim): Skipping writing subId because this is main bugle process.
+11-21 06:56:07.559  4771  4899 I VELVET-TEST: car pictures: 11 logos, 29 badges in the first 40 Malayalam stations
+11-21 06:56:07.560  4771  4771 I MediaController: Release 4342b07 [AndroidXMedia3/1.5.1] [emu64xa, sdk_gphone64_x86_64, Google, 34] [media3.common, media3.session, media3.exoplayer, media3.decoder, media3.cast]
+11-21 06:56:07.560  4771  4771 I VELVET-PLAY: pause by com.ranjithkb.radio
+11-21 06:56:07.562  4771  4899 I TestRunner: finished: t02_car_pictures_open(com.ranjithkb.radionative.DeviceTest)
