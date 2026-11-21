@@ -196,6 +196,27 @@ object Alarm {
             try { c.responseCode in 200..299 && c.inputStream.read(ByteArray(2048)) > 0 } finally { c.disconnect() }
         }.getOrDefault(false)
     }
+    // ------------------------------------------------------------ the guard: an alarm must make a sound even if the player never starts
+
+    const val GUARD_MS = 40_000L
+    /** The receiver fired this alarm now; nothing has answered yet. */
+    fun markFired(ctx: Context, id: Int) = p(ctx).edit().putInt("fired_id", id).putLong("fired_at", System.currentTimeMillis())
+        .putBoolean("answered", false).commit()
+    /** The radio is on air, the player's alarm sound rang, or someone pressed Stop / Snooze: the guard has nothing to do. */
+    fun markAnswered(ctx: Context) = p(ctx).edit().putBoolean("answered", true).apply()
+    /** Should the guard ring? Only for the alarm that just fired, within a few minutes, and only if nothing answered. */
+    fun guardShouldRing(ctx: Context, id: Int, now: Long = System.currentTimeMillis()): Boolean {
+        val pr = p(ctx)
+        return pr.getInt("fired_id", -1) == id && !pr.getBoolean("answered", true) && now - pr.getLong("fired_at", 0) in 0..(5 * 60_000L)
+    }
+    fun setGuard(ctx: Context, id: Int) {
+        val am = ctx.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        val at = System.currentTimeMillis() + GUARD_MS
+        val pi = pending(ctx, AlarmReceiver.GUARD, id, 8000 + id)
+        try { if (canExact(ctx)) am.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, at, pi) else am.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, at, pi) }
+        catch (e: SecurityException) { am.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, at, pi) }
+    }
+
     fun markChecked(ctx: Context, id: Int, ok: Boolean) =
         p(ctx).edit().putBoolean("ok_$id", ok).putLong("checked_$id", System.currentTimeMillis()).apply()
     /** The check said the station is down (and it was this morning's check, not an old one). */
@@ -207,21 +228,33 @@ object Alarm {
     // ------------------------------------------------------------ the notification while it rings
 
     const val NOTE_ID = 4411
-    fun showRinging(ctx: Context, s: Setup, tone: Boolean) {
+    /** [sound]: the notification itself rings the phone's alarm sound, over and over until Stop (the guard's last resort). */
+    fun showRinging(ctx: Context, s: Setup, tone: Boolean, sound: Boolean = false) {
         val nm = ctx.getSystemService(NotificationManager::class.java) ?: return
         if (Build.VERSION.SDK_INT >= 26 && nm.getNotificationChannel("alarm") == null)
             nm.createNotificationChannel(NotificationChannel("alarm", "Alarm", NotificationManager.IMPORTANCE_HIGH).apply {
                 description = "Stop or snooze an alarm"; setSound(null, null) })
+        val alarmUri = android.media.RingtoneManager.getDefaultUri(android.media.RingtoneManager.TYPE_ALARM)
+            ?: android.media.RingtoneManager.getDefaultUri(android.media.RingtoneManager.TYPE_RINGTONE)
+        if (sound && Build.VERSION.SDK_INT >= 26 && nm.getNotificationChannel("alarm_sound") == null)
+            nm.createNotificationChannel(NotificationChannel("alarm_sound", "Alarm sound (backup)", NotificationManager.IMPORTANCE_HIGH).apply {
+                description = "Rings when the radio can't start for an alarm"
+                setSound(alarmUri, android.media.AudioAttributes.Builder().setUsage(android.media.AudioAttributes.USAGE_ALARM)
+                    .setContentType(android.media.AudioAttributes.CONTENT_TYPE_SONIFICATION).build())
+                enableVibration(true); setBypassDnd(true) })
         val stop = pending(ctx, AlarmReceiver.STOP, s.id, 6000 + s.id)
         val snooze = pending(ctx, AlarmReceiver.SNOOZE, s.id, 7000 + s.id)
         val open = PendingIntent.getActivity(ctx, 9, Intent(ctx, MainActivity::class.java), PendingIntent.FLAG_IMMUTABLE)
         val title = s.name.ifBlank { "Alarm" } + " · " + timeLabel(s.hour, s.minute, android.text.format.DateFormat.is24HourFormat(ctx))
         val text = if (tone) "The radio isn't answering, so the alarm sound is ringing." else s.station?.optString("name")?.ifBlank { null } ?: "Radio Velvet"
-        val n = NotificationCompat.Builder(ctx, "alarm").setSmallIcon(R.drawable.ic_logo_mark).setContentTitle(title).setContentText(text)
+        val n = NotificationCompat.Builder(ctx, if (sound) "alarm_sound" else "alarm").setSmallIcon(R.drawable.ic_logo_mark).setContentTitle(title).setContentText(text)
+            .apply { if (sound) { setSound(alarmUri, android.media.AudioManager.STREAM_ALARM); setVibrate(longArrayOf(0, 800, 600)) } }
             .setCategory(NotificationCompat.CATEGORY_ALARM).setPriority(NotificationCompat.PRIORITY_MAX).setOngoing(true)
             .setVisibility(NotificationCompat.VISIBILITY_PUBLIC).setContentIntent(open)
             .addAction(0, "Stop", stop).addAction(0, "Snooze $SNOOZE_MIN min", snooze).setTimeoutAfter(RING_MAX_MS).build()
-        try { nm.notify(NOTE_ID, n) } catch (e: SecurityException) { }
+        if (sound) n.flags = n.flags or android.app.Notification.FLAG_INSISTENT     // keeps ringing until Stop / Snooze
+        if (!nm.areNotificationsEnabled()) AlarmLog.note(ctx, "notifications are off for Radio Velvet")
+        try { if (sound) nm.cancel(NOTE_ID); nm.notify(NOTE_ID, n) } catch (e: SecurityException) { AlarmLog.note(ctx, "can't show the alarm: $e") }
     }
     fun clearRinging(ctx: Context) { ctx.getSystemService(NotificationManager::class.java)?.cancel(NOTE_ID) }
 }
@@ -234,6 +267,7 @@ class AlarmReceiver : BroadcastReceiver() {
         const val CHECK = "com.ranjithkb.radio.ALARM_CHECK"
         const val STOP = "com.ranjithkb.radio.ALARM_STOP"
         const val SNOOZE = "com.ranjithkb.radio.ALARM_SNOOZE"
+        const val GUARD = "com.ranjithkb.radio.ALARM_GUARD"
     }
 
     override fun onReceive(ctx: Context, intent: Intent) {
@@ -247,7 +281,15 @@ class AlarmReceiver : BroadcastReceiver() {
                 val done = goAsync()
                 Thread { try { Alarm.markChecked(ctx, id, Alarm.streamAnswers(streams)) } finally { done.finish() } }.start()
             }
+            GUARD -> {
+                if (!Alarm.guardShouldRing(ctx, id)) return
+                val s = Alarm.byId(ctx, id) ?: return
+                AlarmLog.note(ctx, "guard ${id}: nothing played in ${Alarm.GUARD_MS / 1000} s, ringing the alarm sound")
+                Alarm.markAnswered(ctx)
+                Alarm.showRinging(ctx, s, tone = true, sound = true)
+            }
             STOP, SNOOZE -> {
+                Alarm.markAnswered(ctx)
                 if (intent.action == SNOOZE) Alarm.snooze(ctx, id)
                 Alarm.clearRinging(ctx)
                 send(ctx, PlaybackService.ALARM_STOP, Bundle())
@@ -257,8 +299,10 @@ class AlarmReceiver : BroadcastReceiver() {
     }
 
     private fun ring(ctx: Context, id: Int, snoozed: Boolean) {
-        val s = Alarm.byId(ctx, id) ?: return
-        if (!s.on && !snoozed) return
+        val s = Alarm.byId(ctx, id) ?: run { AlarmLog.note(ctx, "fired $id: no such alarm"); return }
+        if (!s.on && !snoozed) { AlarmLog.note(ctx, "fired $id: it's off"); return }
+        AlarmLog.note(ctx, "fired $id" + if (snoozed) " (snooze)" else "")
+        Alarm.markFired(ctx, id); Alarm.setGuard(ctx, id)        // whatever happens next, something rings
         if (!snoozed) {
             // a one-off alarm switches itself off; repeating ones are set for their next day
             if (s.days.isEmpty()) Alarm.save(ctx, s.copy(on = false)) else Alarm.schedule(ctx)
@@ -277,9 +321,12 @@ class AlarmReceiver : BroadcastReceiver() {
         f.addListener({
             try {
                 val c = f.get()
-                c.sendCustomCommand(SessionCommand(cmd, Bundle.EMPTY), args)
-                    .addListener({ c.release(); done.finish() }, MoreExecutors.directExecutor())
-            } catch (e: Exception) { done.finish() }
+                val r = c.sendCustomCommand(SessionCommand(cmd, Bundle.EMPTY), args)
+                r.addListener({
+                    val code = runCatching { r.get().resultCode }.getOrDefault(-999)
+                    if (code != androidx.media3.session.SessionResult.RESULT_SUCCESS) AlarmLog.note(app, "player said $code to $cmd")
+                    c.release(); done.finish() }, MoreExecutors.directExecutor())
+            } catch (e: Exception) { AlarmLog.note(app, "couldn't reach the player for $cmd: ${e.cause ?: e}"); done.finish() }
         }, MoreExecutors.directExecutor())
     }
 }

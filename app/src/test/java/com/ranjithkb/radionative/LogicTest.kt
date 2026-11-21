@@ -22,6 +22,33 @@ class LogicTest {
         clear(); set(y, m - 1, d, h, min, 0) }
 
     // ---------------- alarm
+    // His report 21 Nov 2026: a 7:50 "Once" alarm switched itself off but made no sound. Whatever the player does,
+    // the guard 40 s later must ring the phone's alarm sound from the notification itself.
+    @Test fun alarm_guard_rings_when_nothing_played() {
+        val ctx = RuntimeEnvironment.getApplication()
+        val s = Alarm.fresh(ctx).copy(days = emptySet()); Alarm.save(ctx, s)
+        try {
+            Alarm.markFired(ctx, s.id)
+            assertTrue(Alarm.guardShouldRing(ctx, s.id))
+            AlarmReceiver().onReceive(ctx, android.content.Intent(ctx, AlarmReceiver::class.java).setAction(AlarmReceiver.GUARD).putExtra("id", s.id))
+            val nm = ctx.getSystemService(android.app.NotificationManager::class.java)
+            val n = org.robolectric.Shadows.shadowOf(nm).getNotification(Alarm.NOTE_ID)
+            assertNotNull("the alarm notification is up", n)
+            assertTrue("it keeps ringing until Stop", n.flags and android.app.Notification.FLAG_INSISTENT != 0)
+            assertEquals("alarm_sound", n.channelId)
+            assertFalse("rings once, not again", Alarm.guardShouldRing(ctx, s.id))
+            assertTrue(AlarmLog.all(ctx).any { it.startsWith("guard ${s.id}") })
+            // the radio came on (or Stop was pressed): the guard stays quiet
+            Alarm.markFired(ctx, s.id); Alarm.markAnswered(ctx)
+            assertFalse(Alarm.guardShouldRing(ctx, s.id))
+            // an old firing (10 min ago) never rings late
+            Alarm.markFired(ctx, s.id)
+            assertFalse(Alarm.guardShouldRing(ctx, s.id, System.currentTimeMillis() + 10 * 60_000L))
+            // another alarm's guard doesn't ring for this one
+            assertFalse(Alarm.guardShouldRing(ctx, s.id + 1))
+        } finally { Alarm.remove(ctx, s.id); Alarm.clearRinging(ctx) }
+    }
+
     @Test fun alarm_later_today() {      // Sat 14 Nov 2026, 06:00 → 07:00 same day (every day)
         val n = Alarm.next(cal(2026, 11, 14, 6, 0), 7, 0, (1..7).toSet())
         assertEquals(14, n.get(Calendar.DAY_OF_MONTH)); assertEquals(7, n.get(Calendar.HOUR_OF_DAY)); assertEquals(0, n.get(Calendar.MINUTE))

@@ -152,7 +152,7 @@ class PlaybackService : MediaLibraryService() {
             }
             // listening time: count only while sound is actually playing
             override fun onIsPlayingChanged(isPlaying: Boolean) {
-                if (isPlaying) { stopTone(); onAir(); if (ringing) AlarmLog.note(this@PlaybackService, "on air: " + (player.currentMediaItem?.mediaId ?: "")) }
+                if (isPlaying) { stopTone(); onAir(); if (ringing) { Alarm.markAnswered(this@PlaybackService); AlarmLog.note(this@PlaybackService, "on air: " + (player.currentMediaItem?.mediaId ?: "")) } }
                 val item = player.currentMediaItem
                 if (isPlaying && item != null) Listen.start(this@PlaybackService, item.mediaId.removePrefix("st|"),
                     item.mediaMetadata.extras?.getString("station") ?: item.mediaMetadata.station?.toString() ?: "")
@@ -339,7 +339,8 @@ class PlaybackService : MediaLibraryService() {
                 if (android.os.Build.VERSION.SDK_INT >= 28) isLooping = true
                 play() }
             if (ringing) Alarm.byId(this, ringId)?.let { Alarm.showRinging(this, it, tone = true) }
-            AlarmLog.note(this, "tone")
+            if (tone?.isPlaying != false) Alarm.markAnswered(this)      // if the sound didn't start, the guard still rings
+            AlarmLog.note(this, "tone" + if (tone?.isPlaying == false) " (didn't start)" else "")
         } catch (e: Exception) { }
     }
     private fun stopTone() { try { tone?.stop() } catch (e: Exception) { }; tone = null; toneOn = false }
