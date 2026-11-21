@@ -64,7 +64,9 @@ window.STATIONS = [
     "streams": [
       "https://nova-radio.neterra.tv/veselinaretro"
     ],
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "badrock-hard-heavy",
@@ -447,7 +449,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      256
+      320
     ]
   },
   {
@@ -1018,4 +1020,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T08:13Z";
+window.STATIONS_CHECKED = "2026-11-21T20:44Z";

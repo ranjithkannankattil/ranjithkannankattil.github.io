@@ -237,9 +237,7 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
     ],
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "station-17",
@@ -383,7 +381,7 @@ window.STATIONS = [
       "https://lhttp.qtfm.cn/live/20500187/64k.mp3"
     ],
     "br": [
-      16
+      64
     ]
   },
   {
@@ -1365,10 +1363,7 @@ window.STATIONS = [
     "streams": [
       "https://a.tunzilla.com/http://onairnow.ddns.net:8000/chinese.mp3"
     ],
-    "added": "2026-11-06",
-    "br": [
-      320
-    ]
+    "added": "2026-11-06"
   },
   {
     "id": "fm-24",
@@ -1602,4 +1597,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T08:13Z";
+window.STATIONS_CHECKED = "2026-11-21T20:44Z";

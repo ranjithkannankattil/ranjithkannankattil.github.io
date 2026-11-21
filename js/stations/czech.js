@@ -440,7 +440,7 @@ window.STATIONS = [
       "https://stream.mediawork.cz/retrotv/retrotvHQ1/playlist.m3u8"
     ],
     "br": [
-      3188
+      3144
     ]
   },
   {
@@ -1066,7 +1066,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "br": [
-      3744
+      3314
     ]
   },
   {
@@ -1090,7 +1090,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "br": [
-      128
+      32
     ]
   },
   {
@@ -1100,10 +1100,7 @@ window.STATIONS = [
     "streams": [
       "https://ice4.abradio.cz/bojler_room_128.aac"
     ],
-    "added": "2026-11-01",
-    "br": [
-      320
-    ]
+    "added": "2026-11-01"
   },
   {
     "id": "gold-impuls",
@@ -1269,7 +1266,9 @@ window.STATIONS = [
       "https://icecast9.play.cz/radio-ostravan-256.mp3"
     ],
     "added": "2026-11-02",
-    "offline": true
+    "br": [
+      256
+    ]
   },
   {
     "id": "radio-vaticana-cestina",
@@ -1659,4 +1658,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T08:13Z";
+window.STATIONS_CHECKED = "2026-11-21T20:44Z";

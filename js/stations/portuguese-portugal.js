@@ -95,7 +95,7 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      128
+      127
     ]
   },
   {
@@ -128,7 +128,7 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
     ],
     "br": [
-      166
+      175
     ]
   },
   {
@@ -139,7 +139,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m80ballads.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -235,7 +235,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/rckids.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -280,9 +280,10 @@ window.STATIONS = [
       "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
     ],
     "br": [
-      166,
-      166
-    ]
+      180,
+      180
+    ],
+    "offline": true
   },
   {
     "id": "golofm",
@@ -314,7 +315,7 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
     ],
     "br": [
-      178
+      183
     ]
   },
   {
@@ -325,7 +326,7 @@ window.STATIONS = [
       "https://stream-hls.bauermedia.pt/cidade.aac/playlist.m3u8"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -382,7 +383,7 @@ window.STATIONS = [
     ],
     "br": [
       262,
-      260
+      259
     ]
   },
   {
@@ -437,7 +438,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/smoothsoul.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -472,7 +473,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      179
+      189
     ]
   },
   {
@@ -484,8 +485,9 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      180
-    ]
+      188
+    ],
+    "offline": true
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -641,7 +643,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -725,7 +727,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -749,7 +751,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -785,7 +787,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -881,7 +883,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -917,7 +919,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -1001,7 +1003,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      32
+      128
     ]
   },
   {
@@ -1169,7 +1171,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-01",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -1459,7 +1461,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "br": [
-      164
+      170
     ]
   },
   {
@@ -1609,8 +1611,9 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "br": [
-      168
-    ]
+      181
+    ],
+    "offline": true
   },
   {
     "id": "radio-quantica",
@@ -1657,7 +1660,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-08",
     "br": [
-      128
+      112
     ]
   },
   {
@@ -1781,4 +1784,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T08:13Z";
+window.STATIONS_CHECKED = "2026-11-21T20:44Z";

@@ -495,8 +495,7 @@ window.STATIONS = [
     "added": "2026-10-23",
     "br": [
       141
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "power-dance",
@@ -602,7 +601,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      64
+      63
     ]
   },
   {
@@ -1342,7 +1341,10 @@ window.STATIONS = [
     "streams": [
       "https://sslyayin.netyayin.net/gonulfm/stream"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      96
+    ]
   },
   {
     "id": "bestefm-mix",
@@ -1744,4 +1746,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T08:13Z";
+window.STATIONS_CHECKED = "2026-11-21T20:44Z";

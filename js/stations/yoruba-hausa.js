@@ -97,7 +97,9 @@ window.STATIONS = [
     "streams": [
       "https://airtime.dclm.org/radio/8070/hausa"
     ],
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "hausa-fulani-radio",
@@ -207,6 +209,15 @@ window.STATIONS = [
     "br": [
       64
     ]
+  },
+  {
+    "id": "spiritflow-sounds-radio",
+    "name": "SpiritFlow Sounds Radio",
+    "category": "devotional",
+    "streams": [
+      "https://radio.spiritflowsounds.com/listen/spiritflow-sounds-radio/radio.mp3?utm_source=chatgpt.com"
+    ],
+    "added": "2026-11-21"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T08:13Z";
+window.STATIONS_CHECKED = "2026-11-21T20:44Z";

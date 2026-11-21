@@ -366,7 +366,7 @@ window.STATIONS = [
       "https://stream.zeno.fm/249ba9e1q0quv"
     ],
     "br": [
-      64
+      96
     ]
   },
   {
@@ -483,11 +483,13 @@ window.STATIONS = [
     "name": "Fruitful Radio",
     "category": "devotional",
     "streams": [
+      "https://node-09.zeno.fm/zavpry0xx7zuv?rj-ttl=5&rj-tok=AAABdx1fAO8AKVWNGL-5qa1y9A",
       "https://stream.zeno.fm/zavpry0xx7zuv"
     ],
     "added": "2026-10-22",
     "br": [
-      128
+      128,
+      0
     ]
   },
   {
@@ -643,4 +645,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T08:13Z";
+window.STATIONS_CHECKED = "2026-11-21T20:44Z";

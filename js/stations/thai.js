@@ -342,7 +342,7 @@ window.STATIONS = [
       "https://livefta.malimarcdn.com/ftaedge00/nat.sdp/playlist.m3u8"
     ],
     "br": [
-      2477
+      2395
     ]
   },
   {
@@ -375,7 +375,10 @@ window.STATIONS = [
     "streams": [
       "https://nontawat3664.i234.me:8443/stream"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      320
+    ]
   },
   {
     "id": "cwk-radio",
@@ -385,9 +388,7 @@ window.STATIONS = [
       "https://radio11.plathong.net/7050/;stream.mp3"
     ],
     "added": "2026-10-29",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "translation-of-the-quran-in-thai",
@@ -474,4 +475,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T08:13Z";
+window.STATIONS_CHECKED = "2026-11-21T20:44Z";

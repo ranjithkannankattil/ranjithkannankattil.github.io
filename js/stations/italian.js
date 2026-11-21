@@ -218,7 +218,7 @@ window.STATIONS = [
       "https://classichitsradio.streamingmedia.it/play"
     ],
     "br": [
-      194
+      196
     ]
   },
   {
@@ -339,7 +339,7 @@ window.STATIONS = [
       "https://icy.unitedradio.it/101Legend.aac"
     ],
     "br": [
-      96
+      95
     ]
   },
   {
@@ -820,7 +820,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      100
+      101
     ]
   },
   {
@@ -901,7 +901,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      128
+      133
     ]
   },
   {
@@ -1759,4 +1759,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T08:13Z";
+window.STATIONS_CHECKED = "2026-11-21T20:44Z";

@@ -253,9 +253,6 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudioragam/hlspbaudioragam_Auto.m3u8"
-    ],
-    "br": [
-      32
     ]
   },
   {
@@ -359,7 +356,7 @@ window.STATIONS = [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio021/playlist.m3u8"
     ],
     "br": [
-      79
+      78
     ]
   },
   {
@@ -370,7 +367,7 @@ window.STATIONS = [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio025/masterlist.m3u8"
     ],
     "br": [
-      79
+      80
     ]
   },
   {
@@ -541,10 +538,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio022/playlist.m3u8"
     ],
-    "added": "2026-10-23",
-    "br": [
-      78
-    ]
+    "added": "2026-10-23"
   },
   {
     "id": "fmrainbowtamil",
@@ -553,10 +547,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio022/playlist.m3u8"
     ],
-    "added": "2026-10-23",
-    "br": [
-      78
-    ]
+    "added": "2026-10-23"
   },
   {
     "id": "mellisai-fm",
@@ -804,10 +795,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio024/playlist.m3u8"
     ],
-    "added": "2026-10-26",
-    "br": [
-      79
-    ]
+    "added": "2026-10-26"
   },
   {
     "id": "oli-968",
@@ -1177,9 +1165,7 @@ window.STATIONS = [
       "https://psrlive2.listenon.in/ir?ah=0e81749e37789e5fb8c290926ce87e3f"
     ],
     "added": "2026-11-01",
-    "br": [
-      48
-    ]
+    "offline": true
   },
   {
     "id": "kannadasan-radio",
@@ -1750,4 +1736,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T08:13Z";
+window.STATIONS_CHECKED = "2026-11-21T20:44Z";

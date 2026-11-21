@@ -84,7 +84,7 @@ window.STATIONS = [
       "https://icecast-qmusicnl-cdp.triple-it.nl/Joe_nl.mp3"
     ],
     "br": [
-      95,
+      96,
       128,
       128
     ]
@@ -276,7 +276,7 @@ window.STATIONS = [
       "https://icecast-qmusicbe-cdp.triple-it.nl/willy.mp3"
     ],
     "br": [
-      96,
+      95,
       128
     ]
   },
@@ -608,7 +608,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      96
+      95
     ]
   },
   {
@@ -713,7 +713,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      95
+      96
     ]
   },
   {
@@ -1019,7 +1019,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      96
+      95
     ]
   },
   {
@@ -1787,4 +1787,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T08:13Z";
+window.STATIONS_CHECKED = "2026-11-21T20:44Z";

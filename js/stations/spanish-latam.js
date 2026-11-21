@@ -216,7 +216,7 @@ window.STATIONS = [
       "https://server1.stweb.tv/rcvos/live/playlist.m3u8"
     ],
     "br": [
-      66
+      67
     ]
   },
   {
@@ -381,9 +381,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio02.ferozo.com/proxy/ra01000409?mp=/stream"
-    ],
-    "br": [
-      32
     ]
   },
   {
@@ -1018,7 +1015,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-30",
     "br": [
-      128
+      96
     ]
   },
   {
@@ -1756,4 +1753,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T08:13Z";
+window.STATIONS_CHECKED = "2026-11-21T20:44Z";

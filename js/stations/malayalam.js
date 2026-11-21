@@ -179,7 +179,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/7df6f2a8c3c4d33b/7df6f2a8c3c4d33b.m3u8"
     ],
-    "akv": "FM Rainbow Kochi"
+    "akv": "FM Rainbow Kochi",
+    "offline": true
   },
   {
     "id": "aircalicut",
@@ -220,7 +221,8 @@ window.STATIONS = [
     "akv": "Akashvani Devikulam",
     "exclude": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "airkozhikodefm",
@@ -230,11 +232,7 @@ window.STATIONS = [
       "https://radio.wavespb.com/live/b69c296065db7627/b69c296065db7627.m3u8",
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio083/playlist.m3u8"
     ],
-    "akv": "Akashvani Kozhikode Real FM",
-    "br": [
-      0,
-      129
-    ]
+    "akv": "Akashvani Kozhikode Real FM"
   },
   {
     "id": "radio90fm",
@@ -284,9 +282,7 @@ window.STATIONS = [
     "streams": [
       "https://cast1.my-control-panel.com/proxy/myradio90fm/stream"
     ],
-    "br": [
-      320
-    ]
+    "offline": true
   },
   {
     "id": "airkannur",
@@ -295,7 +291,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/b82c91a395fc4a7d/b82c91a395fc4a7d.m3u8"
     ],
-    "akv": "Akashvani Kannur"
+    "akv": "Akashvani Kannur",
+    "offline": true
   },
   {
     "id": "helloradio",
@@ -337,7 +334,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/58390a2ed33cea4a/58390a2ed33cea4a.m3u8"
     ],
-    "akv": "Akashvani Manjeri"
+    "akv": "Akashvani Manjeri",
+    "offline": true
   },
   {
     "id": "akashvanithrissur",
@@ -350,7 +348,8 @@ window.STATIONS = [
     "akv": "Akashvani Thrissur",
     "exclude": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radioneythal",
@@ -358,6 +357,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://s2.myradiostream.com/5538/listen.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -400,9 +402,7 @@ window.STATIONS = [
     "streams": [
       "https://icecast.octosignals.com/radiomacfast"
     ],
-    "br": [
-      96
-    ]
+    "offline": true
   },
   {
     "id": "globalradio",
@@ -427,7 +427,7 @@ window.STATIONS = [
     ],
     "br": [
       0,
-      64
+      128
     ]
   },
   {
@@ -448,9 +448,7 @@ window.STATIONS = [
     "streams": [
       "https://onair.junefm.in/live"
     ],
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "radiomangalam",
@@ -502,7 +500,7 @@ window.STATIONS = [
       "https://a5.asurahosting.com:7450/radio.mp3"
     ],
     "br": [
-      320
+      192
     ]
   },
   {
@@ -527,7 +525,7 @@ window.STATIONS = [
       "https://live.accessmedia.nz/PlanetFM.stream/playlist.m3u8"
     ],
     "br": [
-      151,
+      150,
       135
     ]
   },
@@ -710,7 +708,8 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://streamasiahlscdn.atc-labs.com/karunasairadio.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radiomalayalam",
@@ -1295,10 +1294,7 @@ window.STATIONS = [
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudioragam/hlspbaudioragam_Auto.m3u8"
     ],
-    "added": "2026-10-22",
-    "br": [
-      32
-    ]
+    "added": "2026-10-22"
   },
   {
     "id": "anbu-fm-malayalam",
@@ -1321,7 +1317,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      96
+      112
     ]
   },
   {
@@ -1504,7 +1500,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-14",
     "br": [
-      2530
+      2610
     ]
   },
   {
@@ -1527,4 +1523,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T18:33Z";
+window.STATIONS_CHECKED = "2026-11-21T20:44Z";

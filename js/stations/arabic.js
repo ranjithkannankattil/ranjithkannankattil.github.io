@@ -108,7 +108,7 @@ window.STATIONS = [
       "https://stream.radiojar.com/8s5u5tpdtwzuv"
     ],
     "br": [
-      80
+      64
     ]
   },
   {
@@ -772,7 +772,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      96
+      80
     ]
   },
   {
@@ -1766,4 +1766,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T08:13Z";
+window.STATIONS_CHECKED = "2026-11-21T20:44Z";

@@ -1131,10 +1131,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.vaticannews.va/stream-uk"
     ],
-    "added": "2026-11-01",
-    "br": [
-      128
-    ]
+    "added": "2026-11-01"
   },
   {
     "id": "station-21",
@@ -1193,7 +1190,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-02",
     "br": [
-      248
+      240
     ]
   },
   {
@@ -1509,4 +1506,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T08:13Z";
+window.STATIONS_CHECKED = "2026-11-21T20:44Z";

@@ -440,7 +440,7 @@ window.STATIONS = [
       "https://vrc.gate.vrtv.jp/live?p=g&u=d"
     ],
     "br": [
-      927
+      1323
     ]
   },
   {
@@ -452,7 +452,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      1428
+      1444
     ]
   },
   {
@@ -889,7 +889,9 @@ window.STATIONS = [
       "https://howlingf-gecko.radioca.st/autodj"
     ],
     "added": "2026-10-29",
-    "offline": true
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-gambaru",
@@ -984,6 +986,15 @@ window.STATIONS = [
     "br": [
       192
     ]
+  },
+  {
+    "id": "natsumero-kissa-stupid-potato",
+    "name": "懐メロ喫茶 Natsumero Kissa (Stupid Potato)",
+    "category": "music",
+    "streams": [
+      "https://stupidpotato.com/natsumero-kissa/live"
+    ],
+    "added": "2026-11-21"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T08:13Z";
+window.STATIONS_CHECKED = "2026-11-21T20:44Z";

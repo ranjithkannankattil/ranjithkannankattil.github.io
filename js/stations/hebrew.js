@@ -179,7 +179,7 @@ window.STATIONS = [
       "https://icecast.kab.tv/live1-heb-574bcfd5.mp3"
     ],
     "br": [
-      96
+      80
     ]
   },
   {
@@ -354,7 +354,9 @@ window.STATIONS = [
     "streams": [
       "https://live.ecast.co.il/stream/sahar/stream"
     ],
-    "offline": true
+    "br": [
+      320
+    ]
   },
   {
     "id": "kan-kol-hamusica",
@@ -610,4 +612,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T08:13Z";
+window.STATIONS_CHECKED = "2026-11-21T20:44Z";

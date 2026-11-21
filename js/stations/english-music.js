@@ -13,7 +13,7 @@ window.STATIONS = [
     "where": "US",
     "br": [
       192,
-      0
+      320
     ]
   },
   {
@@ -397,10 +397,7 @@ window.STATIONS = [
     "streams": [
       "https://s4.myradiostream.com:7344/listen.mp3?"
     ],
-    "where": "Australia",
-    "br": [
-      192
-    ]
+    "where": "Australia"
   },
   {
     "id": "heart",
@@ -1717,7 +1714,7 @@ window.STATIONS = [
     "added": "2026-11-05",
     "where": "UK",
     "br": [
-      48
+      47
     ]
   },
   {
@@ -1840,7 +1837,9 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "where": "UK",
-    "offline": true
+    "br": [
+      192
+    ]
   },
   {
     "id": "progressive-rock-azusa",
@@ -1882,4 +1881,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T08:13Z";
+window.STATIONS_CHECKED = "2026-11-21T20:44Z";

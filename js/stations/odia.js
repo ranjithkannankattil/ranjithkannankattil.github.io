@@ -64,10 +64,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio112/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "br": [
-      85
-    ]
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T08:13Z";
+window.STATIONS_CHECKED = "2026-11-21T20:44Z";

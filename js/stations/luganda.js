@@ -21,7 +21,7 @@ window.STATIONS = [
       "https://dc4.serverse.com/proxy/pearlfm/stream/1/"
     ],
     "br": [
-      112
+      64
     ]
   },
   {
@@ -295,7 +295,7 @@ window.STATIONS = [
       "https://stream.zeno.fm/v73tc5gwaphvv"
     ],
     "br": [
-      192
+      128
     ]
   },
   {
@@ -395,4 +395,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T08:13Z";
+window.STATIONS_CHECKED = "2026-11-21T20:44Z";

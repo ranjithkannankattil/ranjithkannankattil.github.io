@@ -291,7 +291,7 @@ window.STATIONS = [
       "https://ais-sa1.streamon.fm/7681_64k.mp3"
     ],
     "br": [
-      70
+      74
     ]
   },
   {
@@ -556,7 +556,9 @@ window.STATIONS = [
       "https://us1.amfmph.com/ssl/tapsradioilagan?mp=/stream"
     ],
     "added": "2026-10-24",
-    "offline": true
+    "br": [
+      48
+    ]
   },
   {
     "id": "newsline-central-luzon-105-5-fm",
@@ -708,10 +710,7 @@ window.STATIONS = [
       "https://stream.zeno.fm/60cb36c29heuv"
     ],
     "added": "2026-10-28",
-    "br": [
-      96,
-      96
-    ]
+    "offline": true
   },
   {
     "id": "105-9-energy-fm-dwla",
@@ -798,4 +797,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T08:13Z";
+window.STATIONS_CHECKED = "2026-11-21T20:44Z";

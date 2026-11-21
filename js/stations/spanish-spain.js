@@ -375,7 +375,7 @@ window.STATIONS = [
       "https://pureibizaradio.clubbingradios.com:9518/PureIbizaRadio"
     ],
     "br": [
-      256
+      192
     ]
   },
   {
@@ -589,10 +589,7 @@ window.STATIONS = [
     "streams": [
       "https://punkirratia.net:8443/punk"
     ],
-    "added": "2026-10-23",
-    "br": [
-      192
-    ]
+    "added": "2026-10-23"
   },
   {
     "id": "rac105",
@@ -1762,4 +1759,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T08:13Z";
+window.STATIONS_CHECKED = "2026-11-21T20:44Z";

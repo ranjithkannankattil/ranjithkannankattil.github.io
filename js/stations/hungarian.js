@@ -747,7 +747,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "br": [
-      256
+      320
     ]
   },
   {
@@ -866,7 +866,9 @@ window.STATIONS = [
       "https://radioinside.eu/live.mp3"
     ],
     "added": "2026-10-29",
-    "offline": true
+    "br": [
+      192
+    ]
   },
   {
     "id": "manna-fm-98-6",
@@ -1463,7 +1465,10 @@ window.STATIONS = [
     "streams": [
       "https://lakihegyradio.hu/player/stream.php"
     ],
-    "added": "2026-11-12"
+    "added": "2026-11-12",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radioone-chillout",
@@ -1556,7 +1561,10 @@ window.STATIONS = [
     "streams": [
       "https://www.radiogroove.hu/city.mp3/"
     ],
-    "added": "2026-11-21"
+    "added": "2026-11-21",
+    "br": [
+      192
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T08:13Z";
+window.STATIONS_CHECKED = "2026-11-21T20:44Z";

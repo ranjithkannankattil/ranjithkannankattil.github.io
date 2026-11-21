@@ -72,7 +72,7 @@ window.STATIONS = [
       "https://astreaming.edi.ro:8443/EuropaFM_aac"
     ],
     "br": [
-      40
+      64
     ]
   },
   {
@@ -1752,4 +1752,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T08:13Z";
+window.STATIONS_CHECKED = "2026-11-21T20:44Z";
