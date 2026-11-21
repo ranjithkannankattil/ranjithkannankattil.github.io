@@ -120,8 +120,8 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
   its own LEANBACK launcher entry and banner. `tv-test.yml` drives it on an Android TV emulator (screenshots + video to branch
   `velvet-tv-results`). Play Console: Android TV form factor added by him 20 Nov 2026; TV screenshots + 1280×720 banner are on R2 at
   `radio/play/tv/` and went on the listing (run "Play store screenshots" with `tv`). Still to do: release a bundle with TV in it
-  (planned 2.9.0, after 2.8.0 is approved), mention "Android TV" in the description, then he opts in under Form factors.
-- **Next release (2.9.0, on `radio-native-dev`)**: Android TV, Favourites as tiles (Settings → Favourites), Settings keeps its
+  (2.9.0, sent 21 Nov), mention "Android TV" in the description, then he opts in under Form factors.
+- **2.9.0** (sent to Google 21 Nov 2026, code 2033, replacing 2.8.0 in review; he chose to send it before 2.8.0 was approved): Android TV, Favourites as tiles (Settings → Favourites), Settings keeps its
   scroll place, alarm Save in the top bar, and the alarm fix from his silent 7:50 alarm (21 Nov 2026): another app taking the
   sound no longer ends a ringing alarm (only Stop / Snooze / his own pause do), and a guard 40 s after firing
   (`AlarmReceiver.GUARD`) rings the alarm sound from an insistent notification if nothing played. Device test t22.
