@@ -93,7 +93,6 @@
     "malay:kelantan-fm": 1,
     "malay:myfriends-station": 23,
     "malayalam:air-akashvani-malayalam": 6,
-    "malayalam:airdevikulam": 1,
     "malayalam:greenradio": 65,
     "malayalam:keralafm": 65,
     "malayalam:mazhavilfm": 65,
@@ -2181,11 +2180,6 @@
     "since": "2026-11-20"
   },
   "https://radio.wavespb.com/live/deae7120a205bfff/deae7120a205bfff.m3u8": {
-    "fails": 1,
-    "last_reason": "playlist HTTP 404",
-    "since": "2026-11-20"
-  },
-  "https://radio.wavespb.com/live/e97acc829da9bf2a/e97acc829da9bf2a.m3u8": {
     "fails": 1,
     "last_reason": "playlist HTTP 404",
     "since": "2026-11-20"
