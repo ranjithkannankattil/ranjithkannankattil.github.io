@@ -85,11 +85,9 @@
     "malay:myfriends-station": 27,
     "malayalam:air-akashvani-malayalam": 10,
     "malayalam:airdevikulam": 1,
-    "malayalam:airkannur": 1,
     "malayalam:akashvanithrissur": 1,
     "malayalam:greenradio": 69,
     "malayalam:hallos-radio": 2,
-    "malayalam:junefm": 1,
     "malayalam:karunasairadio": 1,
     "malayalam:keralafm": 69,
     "malayalam:manjerifm": 1,
@@ -1948,11 +1946,6 @@
     "last_reason": "HTTP 404 error page",
     "since": "2026-11-20"
   },
-  "https://onair.junefm.in/live": {
-    "fails": 1,
-    "last_reason": "HTTP 404 error page",
-    "since": "2026-11-22"
-  },
   "https://play.radioking.io/sayhifm": {
     "fails": 15,
     "last_reason": "HTTP 404, 0 bytes",
@@ -2034,11 +2027,6 @@
     "since": "2026-11-22"
   },
   "https://radio.wavespb.com/live/b11784e3b37b7620/b11784e3b37b7620.m3u8": {
-    "fails": 1,
-    "last_reason": "playlist HTTP 404",
-    "since": "2026-11-22"
-  },
-  "https://radio.wavespb.com/live/b82c91a395fc4a7d/b82c91a395fc4a7d.m3u8": {
     "fails": 1,
     "last_reason": "playlist HTTP 404",
     "since": "2026-11-22"

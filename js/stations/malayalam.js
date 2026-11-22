@@ -294,8 +294,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/b82c91a395fc4a7d/b82c91a395fc4a7d.m3u8"
     ],
-    "akv": "Akashvani Kannur",
-    "offline": true
+    "akv": "Akashvani Kannur"
   },
   {
     "id": "helloradio",
@@ -462,8 +461,7 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://onair.junefm.in/live"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radiomangalam",
@@ -1536,4 +1534,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T20:58Z";
+window.STATIONS_CHECKED = "2026-11-22T23:41Z";
