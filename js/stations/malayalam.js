@@ -375,6 +375,15 @@ window.STATIONS = [
     ]
   },
   {
+    "id": "radiocu",
+    "name": "Radio CU (University of Calicut)",
+    "category": "online",
+    "streams": [
+      "https://cast1.my-control-panel.com/proxy/radioculive/stream"
+    ],
+    "added": "2026-11-22"
+  },
+  {
     "id": "enteradio",
     "name": "Ente Radio",
     "category": "online",
