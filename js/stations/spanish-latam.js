@@ -216,7 +216,7 @@ window.STATIONS = [
       "https://server1.stweb.tv/rcvos/live/playlist.m3u8"
     ],
     "br": [
-      67
+      66
     ]
   },
   {
@@ -381,7 +381,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio02.ferozo.com/proxy/ra01000409?mp=/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "la-ke-buena-ciudad-de-mexico-92-9-fm-xeq",
@@ -875,7 +876,8 @@ window.STATIONS = [
       "https://mdstrm.com/audio/66a01759c5aa2b85d66b5933/live.m3u8"
     ],
     "added": "2026-10-28",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "radio-canela-pichincha-106-5-fm",
@@ -1015,7 +1017,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-30",
     "br": [
-      96
+      128
     ]
   },
   {
@@ -1441,7 +1443,8 @@ window.STATIONS = [
       "https://mdstrm.com/audio/66ad14f0917845e9b7570bf2/live.m3u8"
     ],
     "added": "2026-11-05",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "neuro-21-station",
@@ -1753,4 +1756,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T20:44Z";
+window.STATIONS_CHECKED = "2026-11-22T07:58Z";

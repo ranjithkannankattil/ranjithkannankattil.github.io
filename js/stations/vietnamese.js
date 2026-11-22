@@ -48,7 +48,7 @@ window.STATIONS = [
       "https://cdn.thhp.vn/live/285c1421f29d05045909836b37313898e2f/playlist.m3u8"
     ],
     "br": [
-      73
+      203
     ]
   },
   {
@@ -80,9 +80,7 @@ window.STATIONS = [
     "streams": [
       "https://5b2959fe11444.streamlock.net/radio/fm961.stream/playlist.m3u8"
     ],
-    "br": [
-      48
-    ]
+    "offline": true
   },
   {
     "id": "vov-gthn",
@@ -134,4 +132,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T20:44Z";
+window.STATIONS_CHECKED = "2026-11-22T07:58Z";

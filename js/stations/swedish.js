@@ -75,7 +75,7 @@ window.STATIONS = [
       "https://live1.sr.se/p4gbg-aac-320"
     ],
     "br": [
-      296
+      312
     ]
   },
   {
@@ -160,7 +160,7 @@ window.STATIONS = [
       "https://live1.sr.se/p4plus-aac-320"
     ],
     "br": [
-      296
+      312
     ]
   },
   {
@@ -194,7 +194,7 @@ window.STATIONS = [
       "https://sverigesradio.se/topsy/direkt/213-lo-mp3.m3u"
     ],
     "br": [
-      188,
+      86,
       0
     ]
   },
@@ -279,9 +279,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.radio943.se/stream"
     ],
-    "br": [
-      192
-    ]
+    "offline": true
   },
   {
     "id": "p4-kalmar",
@@ -291,7 +289,7 @@ window.STATIONS = [
       "https://live1.sr.se/p4kalm-mp3-96"
     ],
     "br": [
-      98
+      88
     ]
   },
   {
@@ -324,7 +322,7 @@ window.STATIONS = [
       "https://live1.sr.se/p4vnrl-mp3-96"
     ],
     "br": [
-      164
+      144
     ]
   },
   {
@@ -619,7 +617,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      96
+      160
     ]
   },
   {
@@ -688,8 +686,8 @@ window.STATIONS = [
     ],
     "added": "2026-11-17",
     "br": [
-      248
+      312
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T20:44Z";
+window.STATIONS_CHECKED = "2026-11-22T07:58Z";

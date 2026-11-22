@@ -109,9 +109,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://n01.radiojar.com/819r8wupdrruv?rj-ttl=5&rj-tok=AAABePEMVGgAGH9g3lsAx7imBA"
-    ],
-    "br": [
-      320
     ]
   },
   {
@@ -1679,7 +1676,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "br": [
-      128
+      192
     ]
   },
   {
@@ -1755,4 +1752,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T20:44Z";
+window.STATIONS_CHECKED = "2026-11-22T07:58Z";

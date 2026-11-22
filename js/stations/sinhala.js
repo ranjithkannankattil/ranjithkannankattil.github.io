@@ -8,6 +8,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://a3.asurahosting.com/listen/ranfm/radio.mp3"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -234,4 +237,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T20:44Z";
+window.STATIONS_CHECKED = "2026-11-22T07:58Z";

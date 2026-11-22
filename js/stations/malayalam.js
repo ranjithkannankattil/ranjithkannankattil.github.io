@@ -207,7 +207,7 @@ window.STATIONS = [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
     ],
     "br": [
-      95
+      94
     ]
   },
   {
@@ -230,7 +230,11 @@ window.STATIONS = [
       "https://radio.wavespb.com/live/b69c296065db7627/b69c296065db7627.m3u8",
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio083/playlist.m3u8"
     ],
-    "akv": "Akashvani Kozhikode Real FM"
+    "akv": "Akashvani Kozhikode Real FM",
+    "br": [
+      0,
+      129
+    ]
   },
   {
     "id": "radio90fm",
@@ -279,6 +283,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://cast1.my-control-panel.com/proxy/myradio90fm/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -395,6 +402,9 @@ window.STATIONS = [
     "category": "fm",
     "streams": [
       "https://icecast.octosignals.com/radiomacfast"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -420,7 +430,7 @@ window.STATIONS = [
     ],
     "br": [
       0,
-      128
+      64
     ]
   },
   {
@@ -440,6 +450,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://onair.junefm.in/live"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -492,7 +505,7 @@ window.STATIONS = [
       "https://a5.asurahosting.com:7450/radio.mp3"
     ],
     "br": [
-      192
+      320
     ]
   },
   {
@@ -517,7 +530,7 @@ window.STATIONS = [
       "https://live.accessmedia.nz/PlanetFM.stream/playlist.m3u8"
     ],
     "br": [
-      150,
+      148,
       135
     ]
   },
@@ -625,9 +638,7 @@ window.STATIONS = [
     "streams": [
       "https://usa8.fastcast4u.com/proxy/auralradio?mp=/1/;stream.mp3"
     ],
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "premamfm",
@@ -1285,7 +1296,10 @@ window.STATIONS = [
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudioragam/hlspbaudioragam_Auto.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      32
+    ]
   },
   {
     "id": "anbu-fm-malayalam",
@@ -1429,9 +1443,7 @@ window.STATIONS = [
       "https://usa8.fastcast4u.com/proxy/auralradio?mp=/1"
     ],
     "added": "2026-10-24",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "jesus-radio-malayalam",
@@ -1490,7 +1502,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-14",
     "br": [
-      2610
+      2520
     ]
   },
   {
@@ -1513,4 +1525,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T03:17Z";
+window.STATIONS_CHECKED = "2026-11-22T07:58Z";

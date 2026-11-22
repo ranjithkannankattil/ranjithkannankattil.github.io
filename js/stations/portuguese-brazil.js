@@ -348,9 +348,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://8522.brasilstream.com.br/stream"
-    ],
-    "br": [
-      64
     ]
   },
   {
@@ -485,9 +482,7 @@ window.STATIONS = [
       "https://ssl.zoeweb.net/proxy/serradourada?mp=/stream"
     ],
     "added": "2026-10-22",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "bh-fm-102-1-mhz-zyc690",
@@ -865,10 +860,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming.engelhosting.com.br:10036/stream"
     ],
-    "added": "2026-10-27",
-    "br": [
-      128
-    ]
+    "added": "2026-10-27"
   },
   {
     "id": "radio-jornal-de-recife-90-3-fm",
@@ -984,7 +976,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      320
+      128
     ]
   },
   {
@@ -995,7 +987,6 @@ window.STATIONS = [
       "https://www.appradio.app:8010//live"
     ],
     "added": "2026-10-29",
-    "offline": true,
     "hidden": true
   },
   {
@@ -1765,4 +1756,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T20:44Z";
+window.STATIONS_CHECKED = "2026-11-22T07:58Z";

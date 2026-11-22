@@ -715,10 +715,7 @@ window.STATIONS = [
     "streams": [
       "https://sonic.mediatelekom.net/9986/stream"
     ],
-    "added": "2026-10-25",
-    "br": [
-      128
-    ]
+    "added": "2026-10-25"
   },
   {
     "id": "radio-gava",
@@ -848,9 +845,7 @@ window.STATIONS = [
       "https://enacast.com/radioponts/streams/HD"
     ],
     "added": "2026-10-28",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "tarragona-radio",
@@ -877,4 +872,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T20:44Z";
+window.STATIONS_CHECKED = "2026-11-22T07:58Z";

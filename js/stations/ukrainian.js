@@ -383,9 +383,7 @@ window.STATIONS = [
     "streams": [
       "https://cast.brg.ua/djfmdance_main_public_mp3_hq"
     ],
-    "br": [
-      256
-    ]
+    "offline": true
   },
   {
     "id": "loungefm-chill-out",
@@ -555,10 +553,7 @@ window.STATIONS = [
     "streams": [
       "https://a9.asurahosting.com:7390/radio.mp3"
     ],
-    "added": "2026-10-23",
-    "br": [
-      192
-    ]
+    "added": "2026-10-23"
   },
   {
     "id": "station-8",
@@ -1131,7 +1126,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.vaticannews.va/stream-uk"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-21",
@@ -1506,4 +1504,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T20:44Z";
+window.STATIONS_CHECKED = "2026-11-22T07:58Z";

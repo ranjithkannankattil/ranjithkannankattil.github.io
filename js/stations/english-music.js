@@ -444,7 +444,10 @@ window.STATIONS = [
       "https://icecast.walmradio.com:8443/walm2_opus"
     ],
     "added": "2026-10-22",
-    "where": "US"
+    "where": "US",
+    "br": [
+      192
+    ]
   },
   {
     "id": "bbc-radio-2",
@@ -1007,7 +1010,7 @@ window.STATIONS = [
     "added": "2026-10-30",
     "where": "US",
     "br": [
-      136
+      128
     ]
   },
   {
@@ -1111,7 +1114,7 @@ window.STATIONS = [
     "added": "2026-11-01",
     "where": "Australia",
     "br": [
-      97
+      96
     ]
   },
   {
@@ -1714,7 +1717,7 @@ window.STATIONS = [
     "added": "2026-11-05",
     "where": "UK",
     "br": [
-      47
+      48
     ]
   },
   {
@@ -1837,9 +1840,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "where": "UK",
-    "br": [
-      192
-    ]
+    "offline": true
   },
   {
     "id": "progressive-rock-azusa",
@@ -1881,4 +1882,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T20:44Z";
+window.STATIONS_CHECKED = "2026-11-22T07:58Z";

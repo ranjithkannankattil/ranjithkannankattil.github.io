@@ -157,7 +157,7 @@ window.STATIONS = [
       "https://live-bauerdk.sharp-stream.com/DK_HQ_RP11.aac"
     ],
     "br": [
-      95
+      96
     ]
   },
   {
@@ -457,10 +457,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.vinylhits.dk/vinylmp3"
     ],
-    "added": "2026-10-22",
-    "br": [
-      128
-    ]
+    "added": "2026-10-22"
   },
   {
     "id": "dansbandsradio-se",
@@ -703,4 +700,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T20:44Z";
+window.STATIONS_CHECKED = "2026-11-22T07:58Z";

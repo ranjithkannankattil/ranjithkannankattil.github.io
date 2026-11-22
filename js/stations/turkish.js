@@ -50,9 +50,7 @@ window.STATIONS = [
     "streams": [
       "https://live.radyofenomen.com/fenomen/128/icecast.audio"
     ],
-    "br": [
-      56
-    ]
+    "offline": true
   },
   {
     "id": "kafa-radyo",
@@ -392,9 +390,7 @@ window.STATIONS = [
     "streams": [
       "https://live.radyofenomen.com/fenomenclubbin/128/icecast.audio"
     ],
-    "br": [
-      56
-    ]
+    "offline": true
   },
   {
     "id": "radio-antalya",
@@ -554,7 +550,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      151
+      150
     ]
   },
   {
@@ -565,9 +561,7 @@ window.STATIONS = [
       "https://yayin.istanbulfm.com.tr/istanbulfm/playlist.m3u8"
     ],
     "added": "2026-10-24",
-    "br": [
-      129
-    ]
+    "offline": true
   },
   {
     "id": "ankara-universitesi-radyosu-radyo-ilef",
@@ -601,7 +595,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      63
+      64
     ]
   },
   {
@@ -661,7 +655,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      24
+      128
     ]
   },
   {
@@ -1016,7 +1010,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -1287,7 +1281,8 @@ window.STATIONS = [
     "streams": [
       "https://live.radyofenomen.com/fenomen2010/256/chunks.m3u8"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "offline": true
   },
   {
     "id": "fenomen-256",
@@ -1296,7 +1291,8 @@ window.STATIONS = [
     "streams": [
       "https://live.radyofenomen.com/fenomen/256/chunks.m3u8"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "offline": true
   },
   {
     "id": "bestefm-lounge",
@@ -1746,4 +1742,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T20:44Z";
+window.STATIONS_CHECKED = "2026-11-22T07:58Z";

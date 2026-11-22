@@ -64,9 +64,7 @@ window.STATIONS = [
     "streams": [
       "https://eu8.fastcast4u.com/proxy/usakufm?mp=/1"
     ],
-    "br": [
-      96
-    ]
+    "offline": true
   },
   {
     "id": "vicinity-95-3-fm",
@@ -170,9 +168,7 @@ window.STATIONS = [
       "https://atunwadigital.streamguys1.com/yfm1025kumasi"
     ],
     "added": "2026-10-22",
-    "br": [
-      256
-    ]
+    "offline": true
   },
   {
     "id": "ccc-worldwide-radio",
@@ -217,7 +213,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.spiritflowsounds.com/listen/spiritflow-sounds-radio/radio.mp3?utm_source=chatgpt.com"
     ],
-    "added": "2026-11-21"
+    "added": "2026-11-21",
+    "br": [
+      192
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T20:44Z";
+window.STATIONS_CHECKED = "2026-11-22T07:58Z";

@@ -954,10 +954,7 @@ window.STATIONS = [
     "streams": [
       "https://webradio1.tda.dz:8001/Coran_64K.mp3"
     ],
-    "added": "2026-10-30",
-    "br": [
-      64
-    ]
+    "added": "2026-10-30"
   },
   {
     "id": "zaman-fm",
@@ -1770,4 +1767,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T20:44Z";
+window.STATIONS_CHECKED = "2026-11-22T07:58Z";

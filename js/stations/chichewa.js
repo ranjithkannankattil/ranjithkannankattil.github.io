@@ -182,8 +182,9 @@ window.STATIONS = [
     "streams": [
       "https://play.streamafrica.net/profkradio"
     ],
-    "offline": true,
-    "hidden": true
+    "br": [
+      96
+    ]
   },
   {
     "id": "nathenje-community-radio",
@@ -269,8 +270,9 @@ window.STATIONS = [
     "streams": [
       "https://play.streamafrica.net/tigabane"
     ],
-    "offline": true,
-    "hidden": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "yoneco-fm",
@@ -389,7 +391,9 @@ window.STATIONS = [
     "streams": [
       "https://lbsradio-dexterity.radioca.st/stream"
     ],
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "marweltan-radio59",
@@ -404,4 +408,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T20:44Z";
+window.STATIONS_CHECKED = "2026-11-22T07:58Z";

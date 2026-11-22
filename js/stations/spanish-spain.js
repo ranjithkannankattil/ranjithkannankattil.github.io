@@ -296,9 +296,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://c2.auracast.net:8048/stream"
-    ],
-    "br": [
-      128
     ]
   },
   {
@@ -589,7 +586,10 @@ window.STATIONS = [
     "streams": [
       "https://punkirratia.net:8443/punk"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      192
+    ]
   },
   {
     "id": "rac105",
@@ -1759,4 +1759,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T20:44Z";
+window.STATIONS_CHECKED = "2026-11-22T07:58Z";

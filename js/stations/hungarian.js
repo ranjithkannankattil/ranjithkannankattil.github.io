@@ -747,7 +747,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "br": [
-      320
+      256
     ]
   },
   {
@@ -841,10 +841,7 @@ window.STATIONS = [
     "streams": [
       "https://a9.asurahosting.com/listen/passion_radio_hungary/radio.mp3"
     ],
-    "added": "2026-10-29",
-    "br": [
-      192
-    ]
+    "added": "2026-10-29"
   },
   {
     "id": "zalan-radio",
@@ -1465,10 +1462,7 @@ window.STATIONS = [
     "streams": [
       "https://lakihegyradio.hu/player/stream.php"
     ],
-    "added": "2026-11-12",
-    "br": [
-      320
-    ]
+    "added": "2026-11-12"
   },
   {
     "id": "radioone-chillout",
@@ -1567,4 +1561,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T20:44Z";
+window.STATIONS_CHECKED = "2026-11-22T07:58Z";

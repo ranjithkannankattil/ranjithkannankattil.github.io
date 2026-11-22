@@ -97,9 +97,7 @@ window.STATIONS = [
     "streams": [
       "https://whmsonic.radio.gov.pk:8026/relay?type=http&nocache=9"
     ],
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "universal-health-radio",
@@ -263,7 +261,10 @@ window.STATIONS = [
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudioragam/hlspbaudioragam_Auto.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      32
+    ]
   },
   {
     "id": "all4masti",
@@ -397,4 +398,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T20:44Z";
+window.STATIONS_CHECKED = "2026-11-22T07:58Z";

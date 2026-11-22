@@ -67,8 +67,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://1716664847.rsc.cdn77.org/1716664847/tracks-a1/mono.ts.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-6",
@@ -132,9 +131,7 @@ window.STATIONS = [
     "streams": [
       "https://5b2959fe11444.streamlock.net/radio/fm947.stream/playlist.m3u8"
     ],
-    "br": [
-      51
-    ]
+    "offline": true
   },
   {
     "id": "music-of-china",
@@ -229,7 +226,8 @@ window.STATIONS = [
     ],
     "br": [
       80
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-15",
@@ -280,7 +278,7 @@ window.STATIONS = [
       "https://sbs-ice.streamguys1.com/sbs-popasia-sbs-web"
     ],
     "br": [
-      97
+      96
     ]
   },
   {
@@ -346,7 +344,8 @@ window.STATIONS = [
     ],
     "br": [
       220
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "chkt-am1430-fairchild",
@@ -355,9 +354,7 @@ window.STATIONS = [
     "streams": [
       "https://5b2959fe11444.streamlock.net/radio/am1430.stream/playlist.m3u8"
     ],
-    "br": [
-      51
-    ]
+    "offline": true
   },
   {
     "id": "fm94-6946",
@@ -630,7 +627,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -653,7 +650,9 @@ window.STATIONS = [
       "https://lhttp-hw.qtfm.cn/live/1283/64k.mp3"
     ],
     "added": "2026-10-25",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-33",
@@ -837,7 +836,9 @@ window.STATIONS = [
       "https://lhttp-hw.qtfm.cn/live/1282/64k.mp3"
     ],
     "added": "2026-11-15",
-    "offline": true
+    "br": [
+      64
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T20:44Z";
+window.STATIONS_CHECKED = "2026-11-22T07:58Z";

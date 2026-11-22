@@ -276,7 +276,7 @@ window.STATIONS = [
       "https://icecast-qmusicbe-cdp.triple-it.nl/willy.mp3"
     ],
     "br": [
-      95,
+      96,
       128
     ]
   },
@@ -608,7 +608,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      95
+      96
     ]
   },
   {
@@ -713,7 +713,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      96
+      95
     ]
   },
   {
@@ -1787,4 +1787,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T20:44Z";
+window.STATIONS_CHECKED = "2026-11-22T07:58Z";

@@ -61,9 +61,7 @@ window.STATIONS = [
     "streams": [
       "https://netradio.ziniur.lt/ziniur_64.mp3"
     ],
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "radio-3",
@@ -290,9 +288,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.goldfm.lt/gerasfm.aac"
-    ],
-    "br": [
-      192
     ]
   },
   {
@@ -336,7 +331,6 @@ window.STATIONS = [
       "https://live.leproradio.com/rocks.ogg"
     ],
     "added": "2026-10-31",
-    "offline": true,
     "hidden": true
   },
   {
@@ -347,7 +341,6 @@ window.STATIONS = [
       "https://live.leproradio.com/criminal.ogg"
     ],
     "added": "2026-10-31",
-    "offline": true,
     "hidden": true
   },
   {
@@ -375,4 +368,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T20:44Z";
+window.STATIONS_CHECKED = "2026-11-22T07:58Z";

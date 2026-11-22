@@ -189,9 +189,7 @@ window.STATIONS = [
     "streams": [
       "https://5b2959fe11444.streamlock.net/radio/fm961.stream/playlist.m3u8"
     ],
-    "br": [
-      48
-    ]
+    "offline": true
   },
   {
     "id": "myx-radio",
@@ -291,7 +289,7 @@ window.STATIONS = [
       "https://ais-sa1.streamon.fm/7681_64k.mp3"
     ],
     "br": [
-      74
+      70
     ]
   },
   {
@@ -710,7 +708,10 @@ window.STATIONS = [
       "https://stream.zeno.fm/60cb36c29heuv"
     ],
     "added": "2026-10-28",
-    "offline": true
+    "br": [
+      96,
+      96
+    ]
   },
   {
     "id": "105-9-energy-fm-dwla",
@@ -797,4 +798,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T20:44Z";
+window.STATIONS_CHECKED = "2026-11-22T07:58Z";

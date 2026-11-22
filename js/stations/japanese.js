@@ -21,7 +21,7 @@ window.STATIONS = [
       "https://play.streamafrica.net/japancitypop"
     ],
     "br": [
-      128
+      192
     ]
   },
   {
@@ -396,7 +396,7 @@ window.STATIONS = [
       "https://sbs-ice.streamguys1.com/sbs-popasia-sbs-web"
     ],
     "br": [
-      97
+      96
     ]
   },
   {
@@ -440,7 +440,7 @@ window.STATIONS = [
       "https://vrc.gate.vrtv.jp/live?p=g&u=d"
     ],
     "br": [
-      1323
+      1044
     ]
   },
   {
@@ -889,9 +889,7 @@ window.STATIONS = [
       "https://howlingf-gecko.radioca.st/autodj"
     ],
     "added": "2026-10-29",
-    "br": [
-      320
-    ]
+    "offline": true
   },
   {
     "id": "radio-gambaru",
@@ -994,7 +992,10 @@ window.STATIONS = [
     "streams": [
       "https://stupidpotato.com/natsumero-kissa/live"
     ],
-    "added": "2026-11-21"
+    "added": "2026-11-21",
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T20:44Z";
+window.STATIONS_CHECKED = "2026-11-22T07:58Z";

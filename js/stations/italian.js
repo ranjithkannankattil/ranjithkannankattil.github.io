@@ -31,9 +31,7 @@ window.STATIONS = [
     "streams": [
       "https://icestreaming.rai.it/3.mp3"
     ],
-    "br": [
-      320
-    ]
+    "offline": true
   },
   {
     "id": "radio-deejay",
@@ -913,7 +911,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      130
+      131
     ]
   },
   {
@@ -1193,9 +1191,7 @@ window.STATIONS = [
       "https://stream15.top-ix.org/partygroove"
     ],
     "added": "2026-11-02",
-    "br": [
-      192
-    ]
+    "offline": true
   },
   {
     "id": "jungle-planet-radio",
@@ -1322,9 +1318,7 @@ window.STATIONS = [
       "https://5b2959fe11444.streamlock.net/radio/fm961.stream/playlist.m3u8"
     ],
     "added": "2026-11-04",
-    "br": [
-      48
-    ]
+    "offline": true
   },
   {
     "id": "radio-wow",
@@ -1731,7 +1725,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-10",
     "br": [
-      66
+      67
     ]
   },
   {
@@ -1759,4 +1753,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T20:44Z";
+window.STATIONS_CHECKED = "2026-11-22T07:58Z";

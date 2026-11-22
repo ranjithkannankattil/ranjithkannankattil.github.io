@@ -53,7 +53,9 @@ window.STATIONS = [
     "streams": [
       "https://radiokaleva.digitacdn.net/radio/kaleva/master.m3u8"
     ],
-    "offline": true
+    "br": [
+      138
+    ]
   },
   {
     "id": "yle-radio-suomi-hameenlinna",
@@ -217,6 +219,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://rollfm.online/"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -676,4 +681,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-21T20:44Z";
+window.STATIONS_CHECKED = "2026-11-22T07:58Z";
