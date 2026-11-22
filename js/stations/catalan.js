@@ -715,7 +715,10 @@ window.STATIONS = [
     "streams": [
       "https://sonic.mediatelekom.net/9986/stream"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-gava",
@@ -870,6 +873,15 @@ window.STATIONS = [
     "br": [
       56
     ]
+  },
+  {
+    "id": "radio-maricel",
+    "name": "Radio Maricel",
+    "category": "music",
+    "streams": [
+      "https://radioserver.radiomaricel.cat/proxy/radio_maricel?mp=/stream"
+    ],
+    "added": "2026-11-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T07:58Z";
+window.STATIONS_CHECKED = "2026-11-22T20:58Z";

@@ -441,7 +441,9 @@ window.STATIONS = [
       "https://peacefm-atunwadigital.streamguys1.com/peacefm?amsparams=playerid%3ASGplayer%3Bskey%3A1611468493100%3B&awparams=playerid%3ASGplayer%3Bplayerid%3ASGplayer%3Bplayerid%3ASGplayer%3B&us_privacy=1YNN&us_privacy=1YNN&us_privacy=1YNN"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "ahenfie-fm-106-1mhz",
@@ -538,7 +540,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      64
+      56
     ]
   },
   {
@@ -646,4 +648,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T07:58Z";
+window.STATIONS_CHECKED = "2026-11-22T20:58Z";

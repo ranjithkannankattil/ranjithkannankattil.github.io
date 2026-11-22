@@ -10,7 +10,7 @@ window.STATIONS = [
       "https://radiolive.ytn.co.kr/radio/_definst_/20211118_fmlive/playlist.m3u8"
     ],
     "br": [
-      114
+      150
     ]
   },
   {
@@ -32,7 +32,7 @@ window.STATIONS = [
       "https://vod3.obs.co.kr:444/live/obsstream1/radio.stream/playlist.m3u8"
     ],
     "br": [
-      147
+      165
     ]
   },
   {
@@ -155,7 +155,7 @@ window.STATIONS = [
       "https://sbs-ice.streamguys1.com/sbs-popasia-sbs-web"
     ],
     "br": [
-      96
+      97
     ]
   },
   {
@@ -235,10 +235,7 @@ window.STATIONS = [
       "https://radiolive.sbs.co.kr/powerpc/powerfm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTQ5MTQ0MDksInBhdGgiOiIvcG93ZXJmbS5zdHJlYW0iLCJkdXJhdGlvbiI6LTEsInVubyI6Ijg1OGY2NDc2LTAyNjctNGM4Ni04NzQyLWIyOTEwZjIxODg4OCIsImlhdCI6MTc5NDg3MTIwOX0.SC0Lh7pPAxHr77VbpYs938Q9XWa9QdjrsMtvK5GxFyw"
     ],
     "added": "2026-10-22",
-    "br": [
-      147,
-      0
-    ]
+    "offline": true
   },
   {
     "id": "kbs-1radio",
@@ -356,7 +353,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      1144
+      1153
     ]
   },
   {
@@ -368,7 +365,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      1292
+      1275
     ]
   },
   {
@@ -380,7 +377,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      1156
+      1146
     ]
   },
   {
@@ -403,7 +400,9 @@ window.STATIONS = [
       "https://5b2959fe11444.streamlock.net/radio/fm961.stream/playlist.m3u8"
     ],
     "added": "2026-10-25",
-    "offline": true
+    "br": [
+      48
+    ]
   },
   {
     "id": "ebs-tv-i",
@@ -414,7 +413,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      1138
+      1152
     ]
   },
   {
@@ -426,7 +425,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      4428
+      4421
     ]
   },
   {
@@ -625,7 +624,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      1143
+      1110
     ]
   },
   {
@@ -637,7 +636,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      1143
+      1111
     ]
   },
   {
@@ -658,7 +657,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      1148
+      1110
     ]
   },
   {
@@ -715,10 +714,7 @@ window.STATIONS = [
       "https://radiolive.sbs.co.kr/lovepc/lovefm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTQ5MDg0MTAsInBhdGgiOiIvbG92ZWZtLnN0cmVhbSIsImR1cmF0aW9uIjotMSwidW5vIjoiZGE1OWM3NmMtOTg0OS00YmFkLWJhZjktMzgyMzA3OWEzZTNiIiwiaWF0IjoxNzk0ODY1MjEwfQ.G-2kdU04HuaXrswP_JIPYXCjd10hbNcP0fOe2k2yoAs"
     ],
     "added": "2026-11-01",
-    "br": [
-      147,
-      0
-    ]
+    "offline": true
   },
   {
     "id": "cpbc",
@@ -729,10 +725,7 @@ window.STATIONS = [
       "https://cdn-radio-seoul.cpbc.co.kr/cpbcseoul/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTQ5MzI0MTMsInBhdGgiOiIvY3BiY3Nlb3VsIiwiZHVyYXRpb24iOi0xLCJ1bm8iOiIzNDFhMDkzNy0zNTQzLTQyYTctOTdjNi1kY2FjOWNlZmY1NTEiLCJpYXQiOjE3OTQ4ODkyMTN9.tWqVw0bssGUGJ6pWcDqhBIChuBDF6l-PgeJXpHPsrzg"
     ],
     "added": "2026-11-01",
-    "br": [
-      192,
-      0
-    ]
+    "offline": true
   },
   {
     "id": "translation-of-the-quran-in-korean",
@@ -759,4 +752,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T07:58Z";
+window.STATIONS_CHECKED = "2026-11-22T20:58Z";

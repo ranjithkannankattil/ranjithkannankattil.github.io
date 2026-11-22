@@ -237,9 +237,7 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qtfm.cn/live/20500215/64k.mp3"
     ],
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "station-17",
@@ -341,7 +339,9 @@ window.STATIONS = [
     "streams": [
       "https://5b2959fe11444.streamlock.net/radio/fm961.stream/playlist.m3u8"
     ],
-    "offline": true
+    "br": [
+      48
+    ]
   },
   {
     "id": "station-22",
@@ -754,7 +754,9 @@ window.STATIONS = [
       "https://5b2959fe11444.streamlock.net/radio/fm947.stream/playlist.m3u8"
     ],
     "added": "2026-10-28",
-    "offline": true
+    "br": [
+      51
+    ]
   },
   {
     "id": "russian-chinese-music-radio",
@@ -1189,8 +1191,7 @@ window.STATIONS = [
     "streams": [
       "https://play-radio-stream3.hndt.com/now/yorSd1X2/chunklist.m3u8"
     ],
-    "added": "2026-11-04",
-    "offline": true
+    "added": "2026-11-04"
   },
   {
     "id": "fred-film-radio",
@@ -1237,7 +1238,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-04",
     "br": [
-      96
+      97
     ]
   },
   {
@@ -1361,7 +1362,10 @@ window.STATIONS = [
     "streams": [
       "https://a.tunzilla.com/http://onairnow.ddns.net:8000/chinese.mp3"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      320
+    ]
   },
   {
     "id": "fm-24",
@@ -1595,4 +1599,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T07:58Z";
+window.STATIONS_CHECKED = "2026-11-22T20:58Z";

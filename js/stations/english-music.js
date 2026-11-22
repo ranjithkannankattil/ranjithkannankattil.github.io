@@ -303,7 +303,7 @@ window.STATIONS = [
     ],
     "where": "UK",
     "br": [
-      48
+      47
     ]
   },
   {
@@ -397,7 +397,10 @@ window.STATIONS = [
     "streams": [
       "https://s4.myradiostream.com:7344/listen.mp3?"
     ],
-    "where": "Australia"
+    "where": "Australia",
+    "br": [
+      192
+    ]
   },
   {
     "id": "heart",
@@ -1010,7 +1013,7 @@ window.STATIONS = [
     "added": "2026-10-30",
     "where": "US",
     "br": [
-      128
+      120
     ]
   },
   {
@@ -1114,7 +1117,7 @@ window.STATIONS = [
     "added": "2026-11-01",
     "where": "Australia",
     "br": [
-      96
+      97
     ]
   },
   {
@@ -1177,7 +1180,8 @@ window.STATIONS = [
       "https://stream.revma.ihrhls.com/zc2017"
     ],
     "added": "2026-11-02",
-    "where": "US"
+    "where": "US",
+    "offline": true
   },
   {
     "id": "97-3-the-rock",
@@ -1717,7 +1721,7 @@ window.STATIONS = [
     "added": "2026-11-05",
     "where": "UK",
     "br": [
-      48
+      47
     ]
   },
   {
@@ -1840,7 +1844,9 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "where": "UK",
-    "offline": true
+    "br": [
+      192
+    ]
   },
   {
     "id": "progressive-rock-azusa",
@@ -1865,7 +1871,7 @@ window.STATIONS = [
     "added": "2026-11-07",
     "where": "UK",
     "br": [
-      48
+      47
     ]
   },
   {
@@ -1882,4 +1888,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T07:58Z";
+window.STATIONS_CHECKED = "2026-11-22T20:58Z";

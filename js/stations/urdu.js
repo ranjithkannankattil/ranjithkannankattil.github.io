@@ -97,7 +97,9 @@ window.STATIONS = [
     "streams": [
       "https://whmsonic.radio.gov.pk:8026/relay?type=http&nocache=9"
     ],
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "universal-health-radio",
@@ -398,4 +400,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T07:58Z";
+window.STATIONS_CHECKED = "2026-11-22T20:58Z";

@@ -75,7 +75,7 @@ window.STATIONS = [
       "https://live1.sr.se/p4gbg-aac-320"
     ],
     "br": [
-      312
+      296
     ]
   },
   {
@@ -138,7 +138,7 @@ window.STATIONS = [
       "https://live1.sr.se/p4ostg-mp3-96"
     ],
     "br": [
-      128
+      96
     ]
   },
   {
@@ -246,7 +246,7 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      304,
+      328,
       128
     ]
   },
@@ -258,7 +258,7 @@ window.STATIONS = [
       "https://live1.sr.se/p4vbtn-mp3-96"
     ],
     "br": [
-      172
+      112
     ]
   },
   {
@@ -279,7 +279,9 @@ window.STATIONS = [
     "streams": [
       "https://stream.radio943.se/stream"
     ],
-    "offline": true
+    "br": [
+      192
+    ]
   },
   {
     "id": "p4-kalmar",
@@ -311,7 +313,7 @@ window.STATIONS = [
       "https://www.sverigesradio.se/topsy/direkt/srapi/206.mp3"
     ],
     "br": [
-      164
+      208
     ]
   },
   {
@@ -322,7 +324,7 @@ window.STATIONS = [
       "https://live1.sr.se/p4vnrl-mp3-96"
     ],
     "br": [
-      144
+      164
     ]
   },
   {
@@ -399,7 +401,7 @@ window.STATIONS = [
       "https://live1.sr.se/p4sth-aac-32"
     ],
     "br": [
-      128
+      32
     ]
   },
   {
@@ -524,7 +526,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      102
+      114
     ]
   },
   {
@@ -617,7 +619,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      160
+      96
     ]
   },
   {
@@ -690,4 +692,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T07:58Z";
+window.STATIONS_CHECKED = "2026-11-22T20:58Z";

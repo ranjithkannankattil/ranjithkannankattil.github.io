@@ -138,7 +138,7 @@ window.STATIONS = [
       "https://astreaming.edi.ro:8443/VirginRadio_aac"
     ],
     "br": [
-      64
+      128
     ]
   },
   {
@@ -540,7 +540,10 @@ window.STATIONS = [
     "streams": [
       "https://asculta.muzicaok.de:8002/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-liberty-muzica-romaneasca-bucurest",
@@ -1758,4 +1761,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T07:58Z";
+window.STATIONS_CHECKED = "2026-11-22T20:58Z";

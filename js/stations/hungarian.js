@@ -747,7 +747,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "br": [
-      256
+      320
     ]
   },
   {
@@ -841,7 +841,10 @@ window.STATIONS = [
     "streams": [
       "https://a9.asurahosting.com/listen/passion_radio_hungary/radio.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      192
+    ]
   },
   {
     "id": "zalan-radio",
@@ -1561,4 +1564,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T07:58Z";
+window.STATIONS_CHECKED = "2026-11-22T20:58Z";

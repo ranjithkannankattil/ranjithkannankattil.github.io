@@ -894,10 +894,7 @@ window.STATIONS = [
     "streams": [
       "https://webradio1.tda.dz:8001/Chaine1_64K.mp3"
     ],
-    "added": "2026-10-29",
-    "br": [
-      64
-    ]
+    "added": "2026-10-29"
   },
   {
     "id": "medi-1-radio",
@@ -954,7 +951,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio1.tda.dz:8001/Coran_64K.mp3"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      64
+    ]
   },
   {
     "id": "zaman-fm",
@@ -975,10 +975,7 @@ window.STATIONS = [
     "streams": [
       "https://webradio2.tda.dz:8001/Oran_64K.mp3"
     ],
-    "added": "2026-10-30",
-    "br": [
-      64
-    ]
+    "added": "2026-10-30"
   },
   {
     "id": "exo-fm-reunion",
@@ -1767,4 +1764,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T07:58Z";
+window.STATIONS_CHECKED = "2026-11-22T20:58Z";

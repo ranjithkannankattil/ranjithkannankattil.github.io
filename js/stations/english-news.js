@@ -939,7 +939,7 @@ window.STATIONS = [
     "added": "2026-11-02",
     "where": "UK",
     "br": [
-      64
+      63
     ]
   },
   {
@@ -991,7 +991,7 @@ window.STATIONS = [
     "added": "2026-11-02",
     "where": "UK",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -1785,10 +1785,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-12",
     "where": "The Philippines",
-    "br": [
-      96,
-      96
-    ]
+    "offline": true
   },
   {
     "id": "info-radio-ghana",
@@ -1892,4 +1889,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T07:58Z";
+window.STATIONS_CHECKED = "2026-11-22T20:58Z";

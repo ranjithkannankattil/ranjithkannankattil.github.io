@@ -25,7 +25,7 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      256,
+      192,
       24,
       96
     ]
@@ -463,7 +463,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.bigfm.de/deutschland/mp3-128/radio-browser"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "orf-hitradio-o3",
@@ -1785,4 +1788,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T07:58Z";
+window.STATIONS_CHECKED = "2026-11-22T20:58Z";

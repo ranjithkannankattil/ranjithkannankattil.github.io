@@ -60,7 +60,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m8080.aac"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -95,7 +95,7 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      128
+      127
     ]
   },
   {
@@ -129,7 +129,8 @@ window.STATIONS = [
     ],
     "br": [
       166
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "m80-radio-ballads",
@@ -139,7 +140,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m80ballads.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -161,7 +162,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m80nacional.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -257,7 +258,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/smooth.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -280,8 +281,8 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8"
     ],
     "br": [
-      170,
-      0
+      166,
+      166
     ]
   },
   {
@@ -314,9 +315,8 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
     ],
     "br": [
-      176
-    ],
-    "offline": true
+      179
+    ]
   },
   {
     "id": "cidade-fm-2",
@@ -378,12 +378,12 @@ window.STATIONS = [
     "name": "Antena 2",
     "category": "music",
     "streams": [
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR",
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8"
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8",
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
     ],
     "br": [
-      262,
-      259
+      259,
+      262
     ]
   },
   {
@@ -438,7 +438,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/smoothsoul.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -461,7 +461,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -473,9 +473,8 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      167
-    ],
-    "offline": true
+      184
+    ]
   },
   {
     "id": "antena-1-acores-portugal",
@@ -486,8 +485,9 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      185
-    ]
+      186
+    ],
+    "offline": true
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -570,9 +570,8 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      168
-    ],
-    "offline": true
+      165
+    ]
   },
   {
     "id": "radio-observador",
@@ -775,7 +774,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -787,7 +786,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -859,7 +858,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -883,7 +882,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -919,7 +918,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -1003,7 +1002,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      128
+      96
     ]
   },
   {
@@ -1171,7 +1170,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-01",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -1255,7 +1254,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-02",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -1365,7 +1364,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "br": [
-      224
+      192
     ]
   },
   {
@@ -1461,8 +1460,9 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "br": [
-      166
-    ]
+      167
+    ],
+    "offline": true
   },
   {
     "id": "radio-viseu",
@@ -1611,7 +1611,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "br": [
-      171
+      166
     ]
   },
   {
@@ -1659,7 +1659,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-08",
     "br": [
-      96
+      128
     ]
   },
   {
@@ -1783,4 +1783,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T07:58Z";
+window.STATIONS_CHECKED = "2026-11-22T20:58Z";

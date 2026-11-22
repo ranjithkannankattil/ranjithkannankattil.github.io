@@ -47,7 +47,7 @@ window.STATIONS = [
       "https://icecast-qmusicbe-cdp.triple-it.nl/qmusic.aac"
     ],
     "br": [
-      95
+      96
     ]
   },
   {
@@ -1019,7 +1019,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      95
+      96
     ]
   },
   {
@@ -1459,7 +1459,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-04",
     "br": [
-      96
+      95
     ]
   },
   {
@@ -1787,4 +1787,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T07:58Z";
+window.STATIONS_CHECKED = "2026-11-22T20:58Z";

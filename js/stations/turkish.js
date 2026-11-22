@@ -50,7 +50,9 @@ window.STATIONS = [
     "streams": [
       "https://live.radyofenomen.com/fenomen/128/icecast.audio"
     ],
-    "offline": true
+    "br": [
+      56
+    ]
   },
   {
     "id": "kafa-radyo",
@@ -61,8 +63,8 @@ window.STATIONS = [
       "https://moondigitalmaster.radyotvonline.net/kafaradyo/playlist.m3u8"
     ],
     "br": [
-      63,
-      63
+      64,
+      64
     ]
   },
   {
@@ -301,7 +303,7 @@ window.STATIONS = [
       "https://moondigitaledge.radyotvonline.net/palnostalji/playlist.m3u8"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -390,7 +392,9 @@ window.STATIONS = [
     "streams": [
       "https://live.radyofenomen.com/fenomenclubbin/128/icecast.audio"
     ],
-    "offline": true
+    "br": [
+      56
+    ]
   },
   {
     "id": "radio-antalya",
@@ -561,7 +565,9 @@ window.STATIONS = [
       "https://yayin.istanbulfm.com.tr/istanbulfm/playlist.m3u8"
     ],
     "added": "2026-10-24",
-    "offline": true
+    "br": [
+      129
+    ]
   },
   {
     "id": "ankara-universitesi-radyosu-radyo-ilef",
@@ -668,7 +674,8 @@ window.STATIONS = [
     "added": "2026-10-25",
     "br": [
       141
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "dinamo-fm-legacy",
@@ -1010,7 +1017,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -1281,8 +1288,7 @@ window.STATIONS = [
     "streams": [
       "https://live.radyofenomen.com/fenomen2010/256/chunks.m3u8"
     ],
-    "added": "2026-11-03",
-    "offline": true
+    "added": "2026-11-03"
   },
   {
     "id": "fenomen-256",
@@ -1291,8 +1297,7 @@ window.STATIONS = [
     "streams": [
       "https://live.radyofenomen.com/fenomen/256/chunks.m3u8"
     ],
-    "added": "2026-11-03",
-    "offline": true
+    "added": "2026-11-03"
   },
   {
     "id": "bestefm-lounge",
@@ -1328,7 +1333,8 @@ window.STATIONS = [
     "added": "2026-11-04",
     "br": [
       106
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "gonul-fm-97-3",
@@ -1742,4 +1748,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T07:58Z";
+window.STATIONS_CHECKED = "2026-11-22T20:58Z";

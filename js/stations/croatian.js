@@ -605,7 +605,10 @@ window.STATIONS = [
     "streams": [
       "https://a9.asurahosting.com:7110/radio.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hrt-radio-knin",
@@ -992,4 +995,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T07:58Z";
+window.STATIONS_CHECKED = "2026-11-22T20:58Z";

@@ -348,6 +348,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://8522.brasilstream.com.br/stream"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -482,7 +485,9 @@ window.STATIONS = [
       "https://ssl.zoeweb.net/proxy/serradourada?mp=/stream"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "bh-fm-102-1-mhz-zyc690",
@@ -860,7 +865,10 @@ window.STATIONS = [
     "streams": [
       "https://streaming.engelhosting.com.br:10036/stream"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-jornal-de-recife-90-3-fm",
@@ -878,10 +886,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.saopaulo01.com.br:10913/stream"
     ],
-    "added": "2026-10-28",
-    "br": [
-      128
-    ]
+    "added": "2026-10-28"
   },
   {
     "id": "lovetimes-romantic-music-hits",
@@ -951,9 +956,7 @@ window.STATIONS = [
       "https://ice.fabricahost.com.br/89aradiorockgo"
     ],
     "added": "2026-10-29",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "ilha-do-mel-fm",
@@ -976,7 +979,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      128
+      320
     ]
   },
   {
@@ -1756,4 +1759,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T07:58Z";
+window.STATIONS_CHECKED = "2026-11-22T20:58Z";

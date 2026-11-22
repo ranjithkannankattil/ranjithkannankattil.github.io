@@ -383,7 +383,9 @@ window.STATIONS = [
     "streams": [
       "https://cast.brg.ua/djfmdance_main_public_mp3_hq"
     ],
-    "offline": true
+    "br": [
+      256
+    ]
   },
   {
     "id": "loungefm-chill-out",
@@ -553,7 +555,10 @@ window.STATIONS = [
     "streams": [
       "https://a9.asurahosting.com:7390/radio.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      192
+    ]
   },
   {
     "id": "station-8",
@@ -1390,10 +1395,7 @@ window.STATIONS = [
     "streams": [
       "https://online-novodnistrovsk.pp.ua:8443/playHD"
     ],
-    "added": "2026-11-05",
-    "br": [
-      320
-    ]
+    "added": "2026-11-05"
   },
   {
     "id": "station-30",
@@ -1504,4 +1506,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T07:58Z";
+window.STATIONS_CHECKED = "2026-11-22T20:58Z";

@@ -145,7 +145,10 @@ window.STATIONS = [
     "streams": [
       "https://a9.asurahosting.com/listen/fiderana/radio.mp3"
     ],
-    "added": "2026-11-12"
+    "added": "2026-11-12",
+    "br": [
+      192
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T07:58Z";
+window.STATIONS_CHECKED = "2026-11-22T20:58Z";

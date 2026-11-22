@@ -99,9 +99,7 @@ window.STATIONS = [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio072/playlist.m3u8"
     ],
     "added": "2026-10-22",
-    "br": [
-      95
-    ]
+    "offline": true
   },
   {
     "id": "air-kolhapur",
@@ -112,7 +110,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      93
+      94
     ]
   },
   {
@@ -152,4 +150,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T07:58Z";
+window.STATIONS_CHECKED = "2026-11-22T20:58Z";

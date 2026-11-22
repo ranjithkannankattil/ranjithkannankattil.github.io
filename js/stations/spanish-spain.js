@@ -18,12 +18,10 @@ window.STATIONS = [
     "name": "Cadena 100",
     "category": "music",
     "streams": [
-      "https://cadena100-streamers-mp3.flumotion.com/cope/cadena100.mp3",
-      "https://cadena100-cope.flumotion.com/chunks.m3u8"
+      "https://cadena100-streamers-mp3.flumotion.com/cope/cadena100.mp3"
     ],
     "br": [
-      128,
-      0
+      128
     ]
   },
   {
@@ -296,6 +294,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://c2.auracast.net:8048/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -1759,4 +1760,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T07:58Z";
+window.STATIONS_CHECKED = "2026-11-22T20:58Z";

@@ -31,7 +31,9 @@ window.STATIONS = [
     "streams": [
       "https://icestreaming.rai.it/3.mp3"
     ],
-    "offline": true
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-deejay",
@@ -216,7 +218,7 @@ window.STATIONS = [
       "https://classichitsradio.streamingmedia.it/play"
     ],
     "br": [
-      196
+      192
     ]
   },
   {
@@ -337,7 +339,7 @@ window.STATIONS = [
       "https://icy.unitedradio.it/101Legend.aac"
     ],
     "br": [
-      95
+      96
     ]
   },
   {
@@ -411,7 +413,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      95
+      96
     ]
   },
   {
@@ -818,7 +820,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      101
+      96
     ]
   },
   {
@@ -911,7 +913,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      131
+      130
     ]
   },
   {
@@ -1191,7 +1193,9 @@ window.STATIONS = [
       "https://stream15.top-ix.org/partygroove"
     ],
     "added": "2026-11-02",
-    "offline": true
+    "br": [
+      192
+    ]
   },
   {
     "id": "jungle-planet-radio",
@@ -1318,7 +1322,9 @@ window.STATIONS = [
       "https://5b2959fe11444.streamlock.net/radio/fm961.stream/playlist.m3u8"
     ],
     "added": "2026-11-04",
-    "offline": true
+    "br": [
+      48
+    ]
   },
   {
     "id": "radio-wow",
@@ -1753,4 +1759,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T07:58Z";
+window.STATIONS_CHECKED = "2026-11-22T20:58Z";

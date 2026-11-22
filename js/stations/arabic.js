@@ -10,7 +10,7 @@ window.STATIONS = [
       "https://n12.radiojar.com/8s5u5tpdtwzuv?listening-from-radio-garden=1620219571863&rj-tok=AAABeTyl2zYARSWbLVnrEOlqGw&rj-ttl=5"
     ],
     "br": [
-      64
+      128
     ]
   },
   {
@@ -108,7 +108,7 @@ window.STATIONS = [
       "https://stream.radiojar.com/8s5u5tpdtwzuv"
     ],
     "br": [
-      64
+      80
     ]
   },
   {
@@ -283,7 +283,7 @@ window.STATIONS = [
       "https://n0e.radiojar.com/8s5u5tpdtwzuv?rj=&rj-tok=AAABg5BDP0EA2ElNLJYUJTsVcg&rj-ttl=5"
     ],
     "br": [
-      80
+      96
     ]
   },
   {
@@ -686,10 +686,7 @@ window.STATIONS = [
     "streams": [
       "https://webradio1.tda.dz:8001/Chaine1_64K.mp3"
     ],
-    "added": "2026-10-25",
-    "br": [
-      64
-    ]
+    "added": "2026-10-25"
   },
   {
     "id": "station-12",
@@ -772,7 +769,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      112
+      80
     ]
   },
   {
@@ -1010,7 +1007,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio1.tda.dz:8001/Coran_64K.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      64
+    ]
   },
   {
     "id": "zaman-fm",
@@ -1031,10 +1031,7 @@ window.STATIONS = [
     "streams": [
       "https://webradio2.tda.dz:8001/Oran_64K.mp3"
     ],
-    "added": "2026-10-30",
-    "br": [
-      64
-    ]
+    "added": "2026-10-30"
   },
   {
     "id": "chaine-3",
@@ -1763,4 +1760,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T07:58Z";
+window.STATIONS_CHECKED = "2026-11-22T20:58Z";

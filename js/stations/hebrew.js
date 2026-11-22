@@ -98,6 +98,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://102.livecdn.biz/102fm_aac"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -132,7 +135,7 @@ window.STATIONS = [
     ],
     "br": [
       64,
-      0
+      64
     ]
   },
   {
@@ -176,7 +179,7 @@ window.STATIONS = [
       "https://icecast.kab.tv/live1-heb-574bcfd5.mp3"
     ],
     "br": [
-      80
+      128
     ]
   },
   {
@@ -240,6 +243,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://99.mediacast.co.il/99fm_aac?hash=1559501510715.m4a"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -404,7 +410,7 @@ window.STATIONS = [
       "https://gb25.streamgates.net/radios-audio/100Nostalgia/playlist.m3u8"
     ],
     "br": [
-      146
+      145
     ]
   },
   {
@@ -606,4 +612,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T07:58Z";
+window.STATIONS_CHECKED = "2026-11-22T20:58Z";

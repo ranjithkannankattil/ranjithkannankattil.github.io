@@ -342,7 +342,7 @@ window.STATIONS = [
       "https://livefta.malimarcdn.com/ftaedge00/nat.sdp/playlist.m3u8"
     ],
     "br": [
-      2420
+      2412
     ]
   },
   {
@@ -410,7 +410,9 @@ window.STATIONS = [
       "https://cdn-th2.livestreaming.in.th/shoutcast/8730"
     ],
     "added": "2026-11-06",
-    "offline": true
+    "br": [
+      160
+    ]
   },
   {
     "id": "mun-forward-xtra-88",
@@ -468,9 +470,7 @@ window.STATIONS = [
       "https://80sv2.hostpleng.com/?url=http://112.121.150.133:8198/;"
     ],
     "added": "2026-11-13",
-    "br": [
-      48
-    ]
+    "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T07:58Z";
+window.STATIONS_CHECKED = "2026-11-22T20:58Z";
