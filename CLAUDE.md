@@ -116,6 +116,7 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
   presence" (he granted it 19 Nov 2026): run the "Play store screenshots" workflow on main (input: version) to put them on the
   listing (2.7.0's went up that day). Keep listing changes out of the release
   upload (a failed commit there would lose the release).
+- **2.10 (next)**: the agreed design is written up in `docs/radio-next-update.md` ("2.10 design, agreed 22 Nov 2026"); build it on `radio-native-dev` when he says go.
 - **Android TV** (on `radio-native-dev`, not released yet): `TvActivity.kt` (rows of stations for the remote, big player, always dark),
   its own LEANBACK launcher entry and banner. `tv-test.yml` drives it on an Android TV emulator (screenshots + video to branch
   `velvet-tv-results`). Play Console: Android TV form factor added by him 20 Nov 2026; TV screenshots + 1280×720 banner are on R2 at

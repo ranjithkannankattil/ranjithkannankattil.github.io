@@ -4,9 +4,52 @@
 He wants the next app version to be about a fluid UI: smooth, natural movement everywhere (screen changes, lists,
 the player opening and closing, tabs, sheets), no jumps or sudden redraws. Ask him for the moments that feel stiff
 today before building; show before/after recordings.
-- Also waiting for his OK: the Info tab as **"You"** (profile header, three numbers, one short list with icons,
-  Help & feedback, About folded into one row, version in a small footer).
 - Kathakali padam email: still needs a To address. News channels email: in his Gmail drafts, Bcc to 7 channels.
+
+### 2.10 design, agreed with him 22 Nov 2026 — build by the end of that week when he says go
+Canvas (9 boards, his reference): https://claude.ai/artifact/535HNVDHW8vb649BfDGzGe
+His reason: the app looks like one long list; in Settings you can't tell what is a setting.
+- **One look per kind of item**, used everywhere: opens a page = card with icon, current value in grey, ›;
+  on/off = same card with a switch (whole card toggles); pick one of 2–3 = pill inside the card; do it now =
+  filled accent button (max one per screen); just information = small grey text, no card; station = bigger card,
+  initials/logo, round play button, playing one glows in the accent colour.
+- **Colours always come from the chosen theme** (15 themes, light + dark); mockups are drawn in Velvet light.
+  Use the **new logo** (gold V with signal rings, `ic_logo_mark.xml` / site `assets/icons/radio-velvet-*.png`),
+  tinted to the theme. `drawable-nodpi/velvet_logo.png` is the OLD logo: don't use it; remove it in 2.10.
+- **Settings**: groups Language (English / Malayalam / Hindi — written in English, never in Malayalam script),
+  Look (theme, player look, text, visualiser), Favourites (List/Tiles), Sound, Data and playback (**Data saver
+  lives here only**, with this month's data), and at the bottom **App version**: app icon, "Radio Velvet 2.10.0 ·
+  Up to date · checked <time>", What's new, Check for updates; when newer exists the top turns accent "2.11 is
+  ready" + Update (Play users → Play; website users → download). Holding the version line opens PlayLog.
+- **You** (was Info): profile, "Your listening" three numbers (tap → Your listening), card Settings / **Alarms
+  (kept separate, not in Settings)** / Quick tour, Share Radio Velvet, Help and about. No version footer.
+- **Stations**: header = logo + RADIO VELVET (text centred on the V), search, settings. Row 1 scrolls sideways
+  with a soft fade at the right: ★ Velvet Selection chip (logo + small gold star), pinned languages, "All 70+".
+  Row 2 is a **sentence filter**: "All kinds from UAE · most heard first" — dotted-underlined words open short
+  sheets (kind; "Where from?" with station counts; order: Most heard, Best rated, A to Z, Light on data);
+  tapping a choice applies at once, no Apply button. Both rows fold away on scroll down.
+- **Languages sheet** (All 70+): search, your languages first then A–Z with letter jump. Each language has a
+  **Pin** button. "Pinned to your row" list with filled pins + drag handles; Malayalam is pinned by default
+  ("Pinned for you at the start") but can be unpinned/moved like any other; Undo after unpin; unpin all →
+  row keeps Selection + All 70+. Unpinned pick = dashed chip with a small pin inside (gone when another is
+  picked); first time a hint "Tap the pin to keep Portuguese here".
+- **Small player keeps all today's buttons**: tap to open player, play/pause, ♡, previous, next, sleep timer,
+  cast (and close when stopped).
+- **Your listening** page: Week / Month / Year / All time, big total card with day bars, totals (since start,
+  stations heard, usual time, data this month), month-by-month bars (tap a month), top stations, language
+  split. Personal minutes kept on the phone from 2.10 (history starts then), synced to users/{uid} when signed in.
+  **Share** button → card image in the current theme (Post 1080×1350 / Story 1080×1920), switches Show the
+  hours / Show station names, Save image / Share… (Android share sheet).
+- **Owner page** (website, hidden, noindex, only his Google sign-in): hours with change vs previous period,
+  hours-per-day chart (7 d / 30 d / 12 m / All), top stations, languages, Kerala vs Gulf stations, ratings,
+  requests waiting, Share button. Built nightly by the existing stats job from `listens/` (no Claude, nothing
+  new collected). It can't count people or their countries; that would need a new anonymous ID (ask first).
+- Motion: rows lift under the finger, pages slide in with the icon travelling to the title, switches spring,
+  pills glide, lists fade in row by row, numbers count up, chart bars grow.
+- Also in 2.10 (from earlier): bugs (radio turning itself on + Auto artwork flicker, Connecting… timeout,
+  widget doesn't open the app, three looks ignore the colour theme, text shifts between looks, remaining
+  translations), the share card drawn from the current player look, browse by country. Spotify-in-car
+  focus bug: recorded only, he said don't solve now.
 
 
 **Status 14 Nov:** everything below except the tip jar / Buy Me a Coffee (19, 22) is built: website live, app in the Dev build (2.5.0-dev) waiting for his test before Play.
