@@ -220,8 +220,7 @@ window.STATIONS = [
     "akv": "Akashvani Devikulam",
     "exclude": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "airkozhikodefm",
@@ -1480,8 +1479,7 @@ window.STATIONS = [
     "added": "2026-11-14",
     "br": [
       691
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "kairaly-tv",
@@ -1515,4 +1513,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T02:17Z";
+window.STATIONS_CHECKED = "2026-11-22T03:17Z";

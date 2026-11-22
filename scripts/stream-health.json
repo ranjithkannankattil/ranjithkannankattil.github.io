@@ -85,9 +85,7 @@
     "luganda:foundation-of-truth-radio": 67,
     "malay:myfriends-station": 25,
     "malayalam:air-akashvani-malayalam": 8,
-    "malayalam:airdevikulam": 1,
     "malayalam:greenradio": 67,
-    "malayalam:kairali-news": 2,
     "malayalam:keralafm": 67,
     "malayalam:mazhavilfm": 67,
     "malayalam:menorahradio": 67,
@@ -1736,11 +1734,6 @@
     "last_reason": "playlist HTTP 403",
     "since": "2026-11-17"
   },
-  "https://cdn.pishow.tv/ott/live/1469/master.m3u8": {
-    "fails": 2,
-    "last_reason": "segment HTTP 404, 555 bytes",
-    "since": "2026-11-21"
-  },
   "https://centova71.instainternet.com/proxy/tcrliveradio?mp=/stream": {
     "fails": 79,
     "last_reason": "HTTP 404 error page",
@@ -2077,11 +2070,6 @@
     "since": "2026-11-21"
   },
   "https://radio.wavespb.com/live/deae7120a205bfff/deae7120a205bfff.m3u8": {
-    "fails": 1,
-    "last_reason": "playlist HTTP 404",
-    "since": "2026-11-21"
-  },
-  "https://radio.wavespb.com/live/e97acc829da9bf2a/e97acc829da9bf2a.m3u8": {
     "fails": 1,
     "last_reason": "playlist HTTP 404",
     "since": "2026-11-21"
