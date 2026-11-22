@@ -28,6 +28,7 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.drawscope.rotate
 import androidx.compose.ui.graphics.drawscope.withTransform
 import androidx.compose.ui.graphics.lerp
+import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.semantics.*
@@ -599,4 +600,60 @@ private fun LookTile(id: String, w: Float, pick: () -> Unit) {
         }
         Text(era?.decade ?: "Today's player", fontSize = 11.sp, color = Soft)
     }
+}
+
+// ------------------------------------------------------------------ the share card in the player's own look
+
+/**
+ * The share card (1080 × 1350) as the big player looks right now: the same radio (drawn by the same code as the
+ * player), in the same colours (original materials or the listener's colour theme, light or dark), with the station
+ * on its dial and the song under it (his idea, 22 Nov 2026: "whatever radio is on the screen, made into the card").
+ */
+fun drawLookCard(ctx: Context, eraId: String, original: Boolean, dark: Boolean, themeId: String,
+                 song: String, artist: String, station: String, link: String, levels: FloatArray? = null): android.graphics.Bitmap {
+    val era = Eras.byId(eraId) ?: Eras.LIST[1]
+    val base = Palettes.of(themeId, dark)
+    val pal = if (original) Eras.pagePal(era.id, dark, base) else base
+    val skin = Eras.skin(era.id, original, themeId)
+    val W = 1080f; val H = 1350f
+    val img = androidx.compose.ui.graphics.ImageBitmap(W.toInt(), H.toInt())
+    val density = androidx.compose.ui.unit.Density(1f, 1f)
+    val tm = TextMeasurer(androidx.compose.ui.text.font.createFontFamilyResolver(ctx), density, androidx.compose.ui.unit.LayoutDirection.Ltr)
+    val (pos, freq) = Eras.dial(station, -1, 0)
+    val v = RadioVals(levels ?: RadioVals.still().levels, 1.2f, true, pos, freq, station, 0.6f, 2, 0, 1)
+    val bg = pal.paper; val ink = pal.ink; val soft = pal.inkSoft; val acc = pal.accentText
+    androidx.compose.ui.graphics.drawscope.CanvasDrawScope().draw(density, androidx.compose.ui.unit.LayoutDirection.Ltr,
+        androidx.compose.ui.graphics.Canvas(img), Size(W, H)) {
+        // the page: the player's own background, with a soft light behind the radio, like a lamp on a shelf
+        drawRect(bg)
+        drawRect(Brush.radialGradient(listOf(lerp(bg, Color.White, if (dark) 0.06f else 0.35f), bg), Offset(W / 2, 470f), 620f))
+        drawRect(acc.copy(alpha = 0.45f), Offset(48f, 48f), Size(W - 96f, H - 96f), style = Stroke(2f))
+        fun line(text: String, y: Float, size: Float, color: Color, weight: FontWeight = FontWeight.Normal, spacing: Float = 0f, lines: Int = 1): Float {
+            if (text.isBlank()) return y
+            val r = tm.measure(androidx.compose.ui.text.AnnotatedString(text),
+                TextStyle(fontFamily = Poppins, fontSize = size.sp, fontWeight = weight, color = color, letterSpacing = (spacing * size).sp,
+                    textAlign = androidx.compose.ui.text.style.TextAlign.Center, lineHeight = (size * 1.18f).sp),
+                maxLines = lines, overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
+                constraints = androidx.compose.ui.unit.Constraints.fixedWidth(880))
+            drawText(r, topLeft = Offset(100f, y))
+            return y + r.size.height
+        }
+        line("NOW PLAYING ON RADIO VELVET", 104f, 26f, acc, FontWeight.Medium, 0.22f)
+        // the radio itself, as large as the card allows, sitting on a soft shadow
+        val boxW = 860f; val boxH = 600f
+        val s = minOf(boxW / era.w, boxH / era.h)
+        val rw = era.w * s; val rh = era.h * s
+        val left = (W - rw) / 2; val top0 = 170f + (boxH - rh) / 2
+        drawOval(Color.Black.copy(alpha = if (dark) 0.35f else 0.16f), Offset(left + rw * 0.08f, top0 + rh - 6f), Size(rw * 0.84f, 34f))
+        withTransform({ translate(left, top0); scale(s, s, Offset.Zero) }) { drawEra(era.id, skin, v, tm) }
+        // the song under the radio; the station is on the radio's own dial too
+        var y = top0 + rh + 70f
+        val hasSong = song.isNotBlank() && song != station
+        y = line(if (hasSong) song else station, y, 58f, ink, FontWeight.Light, lines = 2) + 14f
+        y = line(if (hasSong) artist else "Live radio", y, 34f, soft) + 22f
+        if (hasSong) line(station.uppercase(), y, 26f, acc, FontWeight.Medium, 0.16f)
+        line("RADIO VELVET  ·  " + era.decade.uppercase() + " " + era.name.uppercase(), 1196f, 22f, acc, FontWeight.Medium, 0.2f)
+        line(link.removePrefix("https://"), 1236f, 24f, soft)
+    }
+    return img.asAndroidBitmap()
 }

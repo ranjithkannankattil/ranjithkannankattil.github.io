@@ -399,6 +399,19 @@ class ScreensTest {
                 .outputStream().use { b.compress(Bitmap.CompressFormat.PNG, 100, it) }
         }
     }
+    // Share card in the player's own look (mockups for him, 22 Nov 2026)
+    @Test fun sc01_share_cards_in_the_player_look() {
+        val ctx = rule.activity
+        val out = File("build/screens").apply { mkdirs() }
+        fun save(name: String, b: Bitmap) = File(out, "$name.png").outputStream().use { b.compress(Bitmap.CompressFormat.PNG, 100, it) }
+        val song = "Aaro Viral Meetiya"; val artist = "Shreya Ghoshal"; val st = "Radio Mango 91.9"; val link = "ranjithkb.com/radio.html?c=malayalam&s=radiomango"
+        save("sc01-standard", drawSongCard(ctx, song, artist, st, null, link, Palettes.of("velvet", true), "bars", "jost", null))
+        save("sc02-valve-original-light", drawLookCard(ctx, "valve", true, false, "velvet", song, artist, st, link))
+        save("sc03-boombox-original-dark", drawLookCard(ctx, "boombox", true, true, "velvet", song, artist, st, link))
+        save("sc04-valve-mytheme-dark", drawLookCard(ctx, "valve", false, true, "velvet", song, artist, st, link))
+        save("sc05-cathedral-original-dark", drawLookCard(ctx, "cathedral", true, true, "velvet", song, artist, st, link))
+        save("sc06-digital-mytheme-kadal", drawLookCard(ctx, "digital", false, false, "kadal", song, artist, st, link))
+    }
     @Test fun n24_player_visualiser_off_switch() = shot("n24-player-viz-off", false, viz = "off") { Player(true) }
     @Test fun n25_every_font() {
         rule.mainClock.autoAdvance = false
