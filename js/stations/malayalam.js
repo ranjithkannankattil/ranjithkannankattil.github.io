@@ -1053,6 +1053,15 @@ window.STATIONS = [
     ]
   },
   {
+    "id": "avefm",
+    "name": "AVE FM (Mananthavady)",
+    "category": "devotional",
+    "streams": [
+      "https://cast1.my-control-panel.com/proxy/avefm/stream"
+    ],
+    "added": "2026-11-23"
+  },
+  {
     "id": "shalomradio",
     "name": "Shalom Radio",
     "category": "devotional",
