@@ -207,7 +207,7 @@ window.STATIONS = [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
     ],
     "br": [
-      94
+      95
     ]
   },
   {
@@ -283,6 +283,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://cast1.my-control-panel.com/proxy/myradio90fm/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -311,9 +314,6 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://icecast.octosignals.com/benziger"
-    ],
-    "br": [
-      96
     ]
   },
   {
@@ -436,7 +436,7 @@ window.STATIONS = [
     ],
     "br": [
       0,
-      128
+      64
     ]
   },
   {
@@ -456,6 +456,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://onair.junefm.in/live"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -474,9 +477,6 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://icecast.octosignals.com/sargakshetrafm"
-    ],
-    "br": [
-      96
     ]
   },
   {
@@ -508,7 +508,7 @@ window.STATIONS = [
       "https://a5.asurahosting.com:7450/radio.mp3"
     ],
     "br": [
-      192
+      320
     ]
   },
   {
@@ -1531,4 +1531,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T03:54Z";
+window.STATIONS_CHECKED = "2026-11-23T08:47Z";

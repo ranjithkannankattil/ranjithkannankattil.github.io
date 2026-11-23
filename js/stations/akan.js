@@ -31,9 +31,7 @@ window.STATIONS = [
     "streams": [
       "https://atunwadigital.streamguys1.com/angelfm"
     ],
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "nhyira-104-5-fm",
@@ -540,7 +538,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      56
+      112
     ]
   },
   {
@@ -648,4 +646,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T20:58Z";
+window.STATIONS_CHECKED = "2026-11-23T08:47Z";

@@ -882,7 +882,10 @@ window.STATIONS = [
     "streams": [
       "https://radioserver.radiomaricel.cat/proxy/radio_maricel?mp=/stream"
     ],
-    "added": "2026-11-22"
+    "added": "2026-11-22",
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T20:58Z";
+window.STATIONS_CHECKED = "2026-11-23T08:47Z";

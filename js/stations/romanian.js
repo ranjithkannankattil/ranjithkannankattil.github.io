@@ -846,10 +846,7 @@ window.STATIONS = [
     "streams": [
       "https://urbanfm.ro:8777/live"
     ],
-    "added": "2026-10-28",
-    "br": [
-      64
-    ]
+    "added": "2026-10-28"
   },
   {
     "id": "glasul-nordului-darabani-bt",
@@ -1762,4 +1759,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T20:58Z";
+window.STATIONS_CHECKED = "2026-11-23T08:47Z";

@@ -645,7 +645,8 @@ window.STATIONS = [
     "where": "Nigeria",
     "br": [
       128
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "70-s-80-s-90-s-riw-vintage-channel",
@@ -864,10 +865,7 @@ window.STATIONS = [
       "https://mainradiostreaming.zbc.co.zw:8020/national.mp3"
     ],
     "added": "2026-10-31",
-    "where": "Zimbabwe",
-    "br": [
-      192
-    ]
+    "where": "Zimbabwe"
   },
   {
     "id": "wbez-91-5-chicago-public-radio",
@@ -993,7 +991,7 @@ window.STATIONS = [
     "added": "2026-11-02",
     "where": "UK",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -1213,7 +1211,7 @@ window.STATIONS = [
     "added": "2026-11-05",
     "where": "Qatar",
     "br": [
-      128
+      129
     ]
   },
   {
@@ -1789,7 +1787,10 @@ window.STATIONS = [
     ],
     "added": "2026-11-12",
     "where": "The Philippines",
-    "offline": true
+    "br": [
+      96,
+      96
+    ]
   },
   {
     "id": "info-radio-ghana",
@@ -1893,4 +1894,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T20:58Z";
+window.STATIONS_CHECKED = "2026-11-23T08:47Z";

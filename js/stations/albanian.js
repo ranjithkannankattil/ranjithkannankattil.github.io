@@ -482,7 +482,10 @@ window.STATIONS = [
     "streams": [
       "https://radiocast.ch:8000/stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      96
+    ]
   },
   {
     "id": "radio-dj-98-2",
@@ -713,7 +716,10 @@ window.STATIONS = [
     "streams": [
       "https://radyo1.radyo-dinle.tc:8276/stream"
     ],
-    "added": "2026-11-22"
+    "added": "2026-11-22",
+    "br": [
+      320
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T20:58Z";
+window.STATIONS_CHECKED = "2026-11-23T08:47Z";

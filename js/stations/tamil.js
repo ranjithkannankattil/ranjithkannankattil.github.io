@@ -86,8 +86,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "89-4-tamil-fm",
@@ -309,8 +308,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio098/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "vagai-tamil-fm",
@@ -348,6 +346,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://psrlive4.listenon.in/mohan?station=mohanradio"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -358,7 +359,7 @@ window.STATIONS = [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio021/playlist.m3u8"
     ],
     "br": [
-      78
+      79
     ]
   },
   {
@@ -378,8 +379,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio129/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "tamil-ragam",
@@ -543,7 +543,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      78
+      79
     ]
   },
   {
@@ -555,7 +555,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      78
+      79
     ]
   },
   {
@@ -901,9 +901,7 @@ window.STATIONS = [
       "https://s3.yesstreaming.net:17045/stream"
     ],
     "added": "2026-10-28",
-    "br": [
-      320
-    ]
+    "offline": true
   },
   {
     "id": "valipokan-fm",
@@ -1219,9 +1217,7 @@ window.STATIONS = [
       "https://radio13.pro-fhi.net:19236/stream.mp3"
     ],
     "added": "2026-11-02",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "muthamilradio",
@@ -1254,10 +1250,7 @@ window.STATIONS = [
     "streams": [
       "https://pudhugaisaifm-prabak78.radioca.st/stream"
     ],
-    "added": "2026-11-02",
-    "br": [
-      128
-    ]
+    "added": "2026-11-02"
   },
   {
     "id": "vaanam-fm-hd",
@@ -1432,7 +1425,10 @@ window.STATIONS = [
     "streams": [
       "https://mars.streamerr.co/8274/stream"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radiovaanam",
@@ -1690,7 +1686,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.massstream.net/8010/stream"
     ],
-    "added": "2026-11-08"
+    "added": "2026-11-08",
+    "br": [
+      64
+    ]
   },
   {
     "id": "vallamaiyin-alaikal-waves-of-power",
@@ -1741,4 +1740,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T20:58Z";
+window.STATIONS_CHECKED = "2026-11-23T08:47Z";

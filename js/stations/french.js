@@ -894,7 +894,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio1.tda.dz:8001/Chaine1_64K.mp3"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      64
+    ]
   },
   {
     "id": "medi-1-radio",
@@ -975,7 +978,10 @@ window.STATIONS = [
     "streams": [
       "https://webradio2.tda.dz:8001/Oran_64K.mp3"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      64
+    ]
   },
   {
     "id": "exo-fm-reunion",
@@ -1379,7 +1385,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "br": [
-      128
+      64
     ]
   },
   {
@@ -1764,4 +1770,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T20:58Z";
+window.STATIONS_CHECKED = "2026-11-23T08:47Z";

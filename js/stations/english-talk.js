@@ -282,7 +282,7 @@ window.STATIONS = [
     ],
     "where": "Canada",
     "br": [
-      48
+      47
     ]
   },
   {
@@ -718,7 +718,7 @@ window.STATIONS = [
     "added": "2026-10-26",
     "where": "UK",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -784,7 +784,8 @@ window.STATIONS = [
     "where": "Nigeria",
     "br": [
       128
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "cfrb-news-talk-1010-toronto-on",
@@ -983,10 +984,7 @@ window.STATIONS = [
       "https://mainradiostreaming.zbc.co.zw:8020/national.mp3"
     ],
     "added": "2026-10-30",
-    "where": "Zimbabwe",
-    "br": [
-      192
-    ]
+    "where": "Zimbabwe"
   },
   {
     "id": "radio-sahar",
@@ -1434,7 +1432,7 @@ window.STATIONS = [
     "added": "2026-11-05",
     "where": "Qatar",
     "br": [
-      128
+      129
     ]
   },
   {
@@ -1880,4 +1878,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T20:58Z";
+window.STATIONS_CHECKED = "2026-11-23T08:47Z";

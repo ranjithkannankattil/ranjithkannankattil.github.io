@@ -339,7 +339,7 @@ window.STATIONS = [
       "https://icy.unitedradio.it/101Legend.aac"
     ],
     "br": [
-      96
+      95
     ]
   },
   {
@@ -413,7 +413,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      96
+      95
     ]
   },
   {
@@ -914,7 +914,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      130
+      131
     ]
   },
   {
@@ -1371,9 +1371,7 @@ window.STATIONS = [
       "https://s1.forstream.it:8070/radiocentrale.mp3"
     ],
     "added": "2026-11-05",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "radio-manila",
@@ -1732,7 +1730,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-10",
     "br": [
-      67
+      66
     ]
   },
   {
@@ -1760,4 +1758,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T20:58Z";
+window.STATIONS_CHECKED = "2026-11-23T08:47Z";

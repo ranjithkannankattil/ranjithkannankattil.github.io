@@ -7,10 +7,12 @@ window.STATIONS = [
     "name": "Europa Plus",
     "category": "music",
     "streams": [
+      "https://hls-01-fresh.emgsound.ru/9/playlist.m3u8",
       "https://ep256.hostingradio.ru:8052/europaplus256.mp3"
     ],
     "br": [
-      128
+      36,
+      0
     ]
   },
   {
@@ -108,9 +110,7 @@ window.STATIONS = [
     "streams": [
       "https://chanson.hostingradio.ru:8041/chanson128.mp3"
     ],
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "station-5",
@@ -163,9 +163,7 @@ window.STATIONS = [
     "streams": [
       "https://dorognoe.hostingradio.ru:8000/radio"
     ],
-    "br": [
-      320
-    ]
+    "offline": true
   },
   {
     "id": "fm-3",
@@ -245,9 +243,7 @@ window.STATIONS = [
     "streams": [
       "https://ep128server.streamr.ru:8030/ep128"
     ],
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "dorognoe-radio",
@@ -256,9 +252,7 @@ window.STATIONS = [
     "streams": [
       "https://dorognoe.hostingradio.ru:8000/dorognoe"
     ],
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "station-10",
@@ -621,7 +615,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      128
+      256
     ]
   },
   {
@@ -678,7 +672,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      256
+      128
     ]
   },
   {
@@ -1684,4 +1678,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T20:58Z";
+window.STATIONS_CHECKED = "2026-11-23T08:47Z";

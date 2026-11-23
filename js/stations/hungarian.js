@@ -747,7 +747,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "br": [
-      320
+      256
     ]
   },
   {
@@ -1562,6 +1562,15 @@ window.STATIONS = [
     "br": [
       192
     ]
+  },
+  {
+    "id": "club-dance-online",
+    "name": "Club Dance Online",
+    "category": "music",
+    "streams": [
+      "https://stream.clubdance.online:8002/live.mp3"
+    ],
+    "added": "2026-11-23"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T20:58Z";
+window.STATIONS_CHECKED = "2026-11-23T08:47Z";

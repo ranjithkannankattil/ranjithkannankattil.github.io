@@ -160,7 +160,7 @@ window.STATIONS = [
       "https://trt.radyotvonline.net/trthaber"
     ],
     "br": [
-      131
+      137
     ]
   },
   {
@@ -601,7 +601,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      64
+      63
     ]
   },
   {
@@ -674,8 +674,7 @@ window.STATIONS = [
     "added": "2026-10-25",
     "br": [
       141
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "dinamo-fm-legacy",
@@ -1017,7 +1016,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -1333,8 +1332,7 @@ window.STATIONS = [
     "added": "2026-11-04",
     "br": [
       106
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "gonul-fm-97-3",
@@ -1403,10 +1401,7 @@ window.STATIONS = [
     "streams": [
       "https://edizfm.ozelip.com/8030/stream"
     ],
-    "added": "2026-11-05",
-    "br": [
-      128
-    ]
+    "added": "2026-11-05"
   },
   {
     "id": "radyo-kaptan",
@@ -1749,4 +1744,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T20:58Z";
+window.STATIONS_CHECKED = "2026-11-23T08:47Z";

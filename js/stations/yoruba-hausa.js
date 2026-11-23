@@ -170,7 +170,9 @@ window.STATIONS = [
       "https://atunwadigital.streamguys1.com/yfm1025kumasi"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "br": [
+      256
+    ]
   },
   {
     "id": "ccc-worldwide-radio",
@@ -221,4 +223,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T20:58Z";
+window.STATIONS_CHECKED = "2026-11-23T08:47Z";

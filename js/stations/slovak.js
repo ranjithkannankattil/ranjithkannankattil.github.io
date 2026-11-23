@@ -571,9 +571,7 @@ window.STATIONS = [
       "https://mpc2.mediacp.eu:8200/rebecaweb"
     ],
     "added": "2026-10-24",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "radio-viva-metropol",
@@ -728,7 +726,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "br": [
-      95
+      96
     ]
   },
   {
@@ -740,8 +738,8 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "br": [
-      96
+      95
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T20:58Z";
+window.STATIONS_CHECKED = "2026-11-23T08:47Z";

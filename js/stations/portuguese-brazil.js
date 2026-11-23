@@ -886,7 +886,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.saopaulo01.com.br:10913/stream"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "lovetimes-romantic-music-hits",
@@ -1759,4 +1762,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T20:58Z";
+window.STATIONS_CHECKED = "2026-11-23T08:47Z";

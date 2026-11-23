@@ -55,7 +55,8 @@ window.STATIONS = [
     ],
     "br": [
       138
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "yle-radio-suomi-hameenlinna",
@@ -681,4 +682,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T20:58Z";
+window.STATIONS_CHECKED = "2026-11-23T08:47Z";

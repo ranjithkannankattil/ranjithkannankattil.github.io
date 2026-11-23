@@ -396,7 +396,7 @@ window.STATIONS = [
       "https://sbs-ice.streamguys1.com/sbs-popasia-sbs-web"
     ],
     "br": [
-      97
+      96
     ]
   },
   {
@@ -440,7 +440,7 @@ window.STATIONS = [
       "https://vrc.gate.vrtv.jp/live?p=g&u=d"
     ],
     "br": [
-      1322
+      1035
     ]
   },
   {
@@ -888,10 +888,7 @@ window.STATIONS = [
     "streams": [
       "https://howlingf-gecko.radioca.st/autodj"
     ],
-    "added": "2026-10-29",
-    "br": [
-      320
-    ]
+    "added": "2026-10-29"
   },
   {
     "id": "radio-gambaru",
@@ -1006,7 +1003,10 @@ window.STATIONS = [
     "streams": [
       "https://aisa.radioalps.com/radio"
     ],
-    "added": "2026-11-22"
+    "added": "2026-11-22",
+    "br": [
+      192
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-22T20:58Z";
+window.STATIONS_CHECKED = "2026-11-23T08:47Z";
