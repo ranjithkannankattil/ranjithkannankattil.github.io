@@ -710,10 +710,7 @@ window.STATIONS = [
       "https://stream.zeno.fm/60cb36c29heuv"
     ],
     "added": "2026-10-28",
-    "br": [
-      96,
-      96
-    ]
+    "offline": true
   },
   {
     "id": "105-9-energy-fm-dwla",
@@ -784,7 +781,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-12",
     "br": [
-      128
+      96
     ]
   },
   {
@@ -800,4 +797,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

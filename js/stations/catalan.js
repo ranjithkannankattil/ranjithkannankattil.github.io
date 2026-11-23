@@ -230,7 +230,9 @@ window.STATIONS = [
     "streams": [
       "https://enacast.com/laplanaradio/streams/HD"
     ],
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "montserrat-radio",
@@ -645,9 +647,7 @@ window.STATIONS = [
       "https://antares.dribbcast.com/proxy/espluguesfm?mp=/stream"
     ],
     "added": "2026-10-24",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "radio-sitges",
@@ -888,4 +888,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

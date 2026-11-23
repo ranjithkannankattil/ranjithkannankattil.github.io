@@ -282,7 +282,7 @@ window.STATIONS = [
     ],
     "where": "Canada",
     "br": [
-      47
+      48
     ]
   },
   {
@@ -560,12 +560,14 @@ window.STATIONS = [
     "name": "CJAD 800",
     "category": "canada",
     "streams": [
+      "https://26303.live.streamtheworld.com/CJADAM_SC",
       "https://26183.live.streamtheworld.com/CJADAM_SC"
     ],
     "added": "2026-10-24",
     "where": "Canada",
     "br": [
-      48
+      48,
+      0
     ]
   },
   {
@@ -718,7 +720,7 @@ window.STATIONS = [
     "added": "2026-10-26",
     "where": "UK",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -784,8 +786,7 @@ window.STATIONS = [
     "where": "Nigeria",
     "br": [
       128
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "cfrb-news-talk-1010-toronto-on",
@@ -984,7 +985,10 @@ window.STATIONS = [
       "https://mainradiostreaming.zbc.co.zw:8020/national.mp3"
     ],
     "added": "2026-10-30",
-    "where": "Zimbabwe"
+    "where": "Zimbabwe",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-sahar",
@@ -1109,9 +1113,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-01",
     "where": "US",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "radio-east",
@@ -1131,12 +1133,14 @@ window.STATIONS = [
     "name": "Capital Radio",
     "category": "world",
     "streams": [
+      "https://radyo1.radyo-dinle.tc/8256/stream",
       "https://capitalradio.radioca.st/stream"
     ],
     "added": "2026-11-01",
     "where": "United Republic Of Tanzania",
     "br": [
-      64
+      128,
+      0
     ]
   },
   {
@@ -1878,4 +1882,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

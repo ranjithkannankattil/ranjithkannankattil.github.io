@@ -67,7 +67,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://1716664847.rsc.cdn77.org/1716664847/tracks-a1/mono.ts.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-6",
@@ -278,7 +279,7 @@ window.STATIONS = [
       "https://sbs-ice.streamguys1.com/sbs-popasia-sbs-web"
     ],
     "br": [
-      96
+      97
     ]
   },
   {
@@ -323,7 +324,9 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qtfm.cn/live/471/64k.mp3"
     ],
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "cnr-14",
@@ -501,7 +504,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/1278/64k.mp3"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-26",
@@ -623,7 +629,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -802,7 +808,9 @@ window.STATIONS = [
       "https://lhttp.qingting.fm/live/20211702/64k.mp3"
     ],
     "added": "2026-10-27",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "90-1-nbc-fm-narwee-90-1-fm",
@@ -835,4 +843,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

@@ -588,10 +588,7 @@ window.STATIONS = [
     "streams": [
       "https://punkirratia.net:8443/punk"
     ],
-    "added": "2026-10-23",
-    "br": [
-      192
-    ]
+    "added": "2026-10-23"
   },
   {
     "id": "rac105",
@@ -1417,7 +1414,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-04",
     "br": [
-      112
+      128
     ]
   },
   {
@@ -1763,4 +1760,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

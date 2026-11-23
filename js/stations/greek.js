@@ -1077,7 +1077,9 @@ window.STATIONS = [
       "https://laikinota.gr/laikinota"
     ],
     "added": "2026-10-30",
-    "offline": true
+    "br": [
+      192
+    ]
   },
   {
     "id": "blue-space-107-2-fm-athens",
@@ -1676,7 +1678,9 @@ window.STATIONS = [
       "https://centova.gr-net.gr/proxy/dimitrio/stream"
     ],
     "added": "2026-11-07",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "velvet-ballads-96-8-fm",
@@ -1751,4 +1755,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

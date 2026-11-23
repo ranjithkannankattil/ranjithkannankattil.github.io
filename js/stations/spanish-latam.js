@@ -216,7 +216,7 @@ window.STATIONS = [
       "https://server1.stweb.tv/rcvos/live/playlist.m3u8"
     ],
     "br": [
-      66
+      67
     ]
   },
   {
@@ -1760,4 +1760,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

@@ -22,7 +22,7 @@ window.STATIONS = [
       "https://p4.p4groupaudio.com/P04_MM"
     ],
     "br": [
-      192,
+      191,
       128
     ]
   },
@@ -181,7 +181,7 @@ window.STATIONS = [
       "https://live-bauerno.sharp-stream.com/radiorock_no_aac"
     ],
     "br": [
-      64
+      63
     ]
   },
   {
@@ -238,7 +238,7 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      192
+      191
     ]
   },
   {
@@ -582,4 +582,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

@@ -68,10 +68,12 @@ window.STATIONS = [
     "name": "Rádio Renascença",
     "category": "news",
     "streams": [
+      "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_RENASCENCA.mp3",
       "https://29345.live.streamtheworld.com/RADIO_RENASCENCA_SC"
     ],
     "br": [
-      64
+      64,
+      0
     ]
   },
   {
@@ -95,7 +97,7 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      128
+      127
     ]
   },
   {
@@ -139,7 +141,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m80ballads.aac"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -172,7 +174,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m8060.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -280,8 +282,8 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8"
     ],
     "br": [
-      195,
-      195
+      175,
+      175
     ]
   },
   {
@@ -314,7 +316,7 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
     ],
     "br": [
-      191
+      183
     ],
     "offline": true
   },
@@ -326,7 +328,7 @@ window.STATIONS = [
       "https://stream-hls.bauermedia.pt/cidade.aac/playlist.m3u8"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -438,7 +440,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/smoothsoul.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -461,7 +463,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -473,9 +475,8 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      168
-    ],
-    "offline": true
+      171
+    ]
   },
   {
     "id": "antena-1-acores-portugal",
@@ -486,7 +487,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      166
+      179
     ]
   },
   {
@@ -570,7 +571,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      167
+      165
     ]
   },
   {
@@ -750,7 +751,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -774,7 +775,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -798,7 +799,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -858,7 +859,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -966,7 +967,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -1364,7 +1365,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "br": [
-      160
+      224
     ]
   },
   {
@@ -1460,7 +1461,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "br": [
-      165
+      166
     ]
   },
   {
@@ -1610,7 +1611,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "br": [
-      165
+      166
     ],
     "offline": true
   },
@@ -1658,9 +1659,7 @@ window.STATIONS = [
       "https://centova.radio.com.pt/proxy/037?mp=/stream"
     ],
     "added": "2026-11-08",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "radiofutura-pt",
@@ -1783,4 +1782,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

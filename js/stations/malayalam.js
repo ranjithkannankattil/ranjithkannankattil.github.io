@@ -207,7 +207,7 @@ window.STATIONS = [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
     ],
     "br": [
-      95
+      94
     ]
   },
   {
@@ -314,6 +314,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://icecast.octosignals.com/benziger"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -411,6 +414,9 @@ window.STATIONS = [
     "category": "fm",
     "streams": [
       "https://icecast.octosignals.com/radiomacfast"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -477,6 +483,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://icecast.octosignals.com/sargakshetrafm"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -533,7 +542,7 @@ window.STATIONS = [
       "https://live.accessmedia.nz/PlanetFM.stream/playlist.m3u8"
     ],
     "br": [
-      151,
+      150,
       135
     ]
   },
@@ -1299,10 +1308,7 @@ window.STATIONS = [
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudioragam/hlspbaudioragam_Auto.m3u8"
     ],
-    "added": "2026-10-22",
-    "br": [
-      32
-    ]
+    "added": "2026-10-22"
   },
   {
     "id": "anbu-fm-malayalam",
@@ -1335,10 +1341,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "br": [
-      94
-    ]
+    "added": "2026-10-22"
   },
   {
     "id": "aural-oldies",
@@ -1531,4 +1534,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

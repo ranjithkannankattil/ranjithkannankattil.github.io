@@ -133,7 +133,10 @@ window.STATIONS = [
     "streams": [
       "https://mainradiostreaming.zbc.co.zw:8040/nhepfenuro.mp3"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      192
+    ]
   },
   {
     "id": "fiderana-web-radio",
@@ -148,4 +151,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

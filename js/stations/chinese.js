@@ -122,6 +122,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://lhttp.qtfm.cn/live/5022308/64k.mp3"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -435,7 +438,9 @@ window.STATIONS = [
       "https://lhttp-hw.qtfm.cn/live/5022308/64k.mp3"
     ],
     "added": "2026-10-23",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "101-fm101-7",
@@ -664,7 +669,9 @@ window.STATIONS = [
       "https://lhttp.qtfm.cn/live/1260/64k.mp3"
     ],
     "added": "2026-10-27",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "fm103-7",
@@ -673,7 +680,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/273/64k.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      64
+    ]
   },
   {
     "id": "voa-macau",
@@ -770,7 +780,9 @@ window.STATIONS = [
       "https://lhttp-hw.qtfm.cn/live/267/64k.mp3"
     ],
     "added": "2026-10-28",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-36",
@@ -804,7 +816,9 @@ window.STATIONS = [
       "https://lhttp.qingting.fm/live/274/64k.mp3"
     ],
     "added": "2026-10-29",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "cnr-9",
@@ -861,7 +875,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qtfm.cn/live/15318341/64k.mp3"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      64
+    ]
   },
   {
     "id": "jesus-is-lord-radio",
@@ -957,7 +974,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.ginnet.cloud/live0119lo-p4rb/_definst_/classic/playlist.m3u8"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      66
+    ]
   },
   {
     "id": "radi-fm",
@@ -1173,8 +1193,7 @@ window.STATIONS = [
     "streams": [
       "https://play-radio-stream3.hndt.com/now/yorSd1X2/chunklist.m3u8"
     ],
-    "added": "2026-11-04",
-    "offline": true
+    "added": "2026-11-04"
   },
   {
     "id": "fred-film-radio",
@@ -1221,7 +1240,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-04",
     "br": [
-      96
+      97
     ]
   },
   {
@@ -1582,4 +1601,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

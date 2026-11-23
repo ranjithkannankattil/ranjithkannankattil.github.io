@@ -30,7 +30,8 @@ window.STATIONS = [
     "streams": [
       "https://radyo.duhnet.tv/ak_dtvh_slowturk"
     ],
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "radyo-seymen",
@@ -303,7 +304,7 @@ window.STATIONS = [
       "https://moondigitaledge.radyotvonline.net/palnostalji/playlist.m3u8"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -554,7 +555,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      150
+      151
     ]
   },
   {
@@ -601,7 +602,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      63
+      64
     ]
   },
   {
@@ -1537,10 +1538,7 @@ window.STATIONS = [
     "streams": [
       "https://sslyayin.netyayin.net/radyozergan/;"
     ],
-    "added": "2026-11-07",
-    "br": [
-      128
-    ]
+    "added": "2026-11-07"
   },
   {
     "id": "dinamo-fm-live-from-minimuzikhol",
@@ -1744,4 +1742,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

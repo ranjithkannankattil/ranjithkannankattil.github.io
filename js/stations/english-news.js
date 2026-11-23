@@ -49,7 +49,7 @@ window.STATIONS = [
     ],
     "where": "US",
     "br": [
-      96
+      95
     ]
   },
   {
@@ -208,9 +208,7 @@ window.STATIONS = [
       "https://27033.live.streamtheworld.com/CBU2FM_CBC_SC"
     ],
     "where": "Canada",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "wnyc-93-9-fm",
@@ -645,8 +643,7 @@ window.STATIONS = [
     "where": "Nigeria",
     "br": [
       128
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "70-s-80-s-90-s-riw-vintage-channel",
@@ -865,7 +862,10 @@ window.STATIONS = [
       "https://mainradiostreaming.zbc.co.zw:8020/national.mp3"
     ],
     "added": "2026-10-31",
-    "where": "Zimbabwe"
+    "where": "Zimbabwe",
+    "br": [
+      192
+    ]
   },
   {
     "id": "wbez-91-5-chicago-public-radio",
@@ -939,7 +939,7 @@ window.STATIONS = [
     "added": "2026-11-02",
     "where": "UK",
     "br": [
-      63
+      64
     ]
   },
   {
@@ -991,7 +991,7 @@ window.STATIONS = [
     "added": "2026-11-02",
     "where": "UK",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -1245,12 +1245,14 @@ window.STATIONS = [
     "name": "CBC North - Iqaluit, NU",
     "category": "canada",
     "streams": [
+      "https://22983.live.streamtheworld.com/CFFBAM_CBC_SC",
       "https://27033.live.streamtheworld.com/CFFBAM_CBC_SC"
     ],
     "added": "2026-11-05",
     "where": "Canada",
     "br": [
-      128
+      128,
+      0
     ]
   },
   {
@@ -1359,12 +1361,14 @@ window.STATIONS = [
     "name": "Capital Radio",
     "category": "world",
     "streams": [
+      "https://radyo1.radyo-dinle.tc/8256/stream",
       "https://capitalradio.radioca.st/stream"
     ],
     "added": "2026-11-07",
     "where": "United Republic Of Tanzania",
     "br": [
-      64
+      128,
+      0
     ]
   },
   {
@@ -1630,9 +1634,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-10",
     "where": "Canada",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "afn-360-naples",
@@ -1787,10 +1789,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-12",
     "where": "The Philippines",
-    "br": [
-      96,
-      96
-    ]
+    "offline": true
   },
   {
     "id": "info-radio-ghana",
@@ -1894,4 +1893,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

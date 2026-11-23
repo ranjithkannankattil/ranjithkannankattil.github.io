@@ -597,9 +597,7 @@ window.STATIONS = [
       "https://play.4plusmedia.tv/radio.mp3"
     ],
     "added": "2026-10-24",
-    "br": [
-      192
-    ]
+    "offline": true
   },
   {
     "id": "lefutur-radio",
@@ -722,4 +720,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

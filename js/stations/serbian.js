@@ -156,9 +156,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://centova.dukahosting.com/proxy/021kafe/stream"
-    ],
-    "br": [
-      128
     ]
   },
   {
@@ -629,10 +626,7 @@ window.STATIONS = [
     "streams": [
       "https://centova.dukahosting.com/proxy/021domaca/stream"
     ],
-    "added": "2026-10-25",
-    "br": [
-      128
-    ]
+    "added": "2026-10-25"
   },
   {
     "id": "station-3",
@@ -803,10 +797,7 @@ window.STATIONS = [
     "streams": [
       "https://centova.dukahosting.com/proxy/021disco/stream"
     ],
-    "added": "2026-10-27",
-    "br": [
-      128
-    ]
+    "added": "2026-10-27"
   },
   {
     "id": "plus-radio-hit",
@@ -935,9 +926,7 @@ window.STATIONS = [
       "https://stream.radios.rs:9002/;"
     ],
     "added": "2026-10-29",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "lotel2",
@@ -995,9 +984,7 @@ window.STATIONS = [
       "https://centova.dukahosting.com/proxy/rock/stream"
     ],
     "added": "2026-10-31",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "radio-s-rock",
@@ -1388,9 +1375,7 @@ window.STATIONS = [
       "https://centova.dukahosting.com/proxy/futog/stream"
     ],
     "added": "2026-11-06",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "radio-osvit",
@@ -1726,4 +1711,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

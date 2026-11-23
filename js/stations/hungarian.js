@@ -1570,7 +1570,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.clubdance.online:8002/live.mp3"
     ],
-    "added": "2026-11-23"
+    "added": "2026-11-23",
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

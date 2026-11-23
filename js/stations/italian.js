@@ -413,7 +413,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      95
+      96
     ]
   },
   {
@@ -641,7 +641,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      88
+      128
     ]
   },
   {
@@ -914,7 +914,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      131
+      130
     ]
   },
   {
@@ -1075,7 +1075,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-01",
     "br": [
-      88
+      128
     ]
   },
   {
@@ -1171,7 +1171,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-02",
     "br": [
-      96
+      88
     ]
   },
   {
@@ -1371,7 +1371,9 @@ window.STATIONS = [
       "https://s1.forstream.it:8070/radiocentrale.mp3"
     ],
     "added": "2026-11-05",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-manila",
@@ -1718,7 +1720,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-10",
     "br": [
-      95
+      96
     ]
   },
   {
@@ -1730,7 +1732,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-10",
     "br": [
-      66
+      65
     ]
   },
   {
@@ -1758,4 +1760,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

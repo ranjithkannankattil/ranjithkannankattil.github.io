@@ -1563,10 +1563,7 @@ window.STATIONS = [
     "streams": [
       "https://radiobzlive.rai.it/RAIBZ_Livestream"
     ],
-    "added": "2026-11-06",
-    "br": [
-      192
-    ]
+    "added": "2026-11-06"
   },
   {
     "id": "radio-paloma",
@@ -1785,4 +1782,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

@@ -239,9 +239,7 @@ window.STATIONS = [
     "streams": [
       "https://antares.dribbcast.com/proxy/jpop?mp=/s"
     ],
-    "br": [
-      192
-    ]
+    "offline": true
   },
   {
     "id": "neuro-21-station",
@@ -294,9 +292,7 @@ window.STATIONS = [
     "streams": [
       "https://antares.dribbcast.com/proxy/apop?mp=/s"
     ],
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "real-love-music-radio-future-funk",
@@ -396,7 +392,7 @@ window.STATIONS = [
       "https://sbs-ice.streamguys1.com/sbs-popasia-sbs-web"
     ],
     "br": [
-      96
+      97
     ]
   },
   {
@@ -440,7 +436,7 @@ window.STATIONS = [
       "https://vrc.gate.vrtv.jp/live?p=g&u=d"
     ],
     "br": [
-      1035
+      1363
     ]
   },
   {
@@ -487,9 +483,7 @@ window.STATIONS = [
       "https://antares.dribbcast.com/proxy/apop?mp=/s?"
     ],
     "added": "2026-10-22",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "bbn-japanese",
@@ -1009,4 +1003,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

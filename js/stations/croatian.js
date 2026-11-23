@@ -411,11 +411,13 @@ window.STATIONS = [
     "name": "Hrvatski radio - Rock",
     "category": "music",
     "streams": [
+      "https://25643.live.streamtheworld.com/HR_ROCK_SC",
       "https://29345.live.streamtheworld.com/HR_ROCK_SC"
     ],
     "added": "2026-10-24",
     "br": [
-      128
+      128,
+      0
     ]
   },
   {
@@ -522,9 +524,7 @@ window.STATIONS = [
       "https://29341.live.streamtheworld.com/PULAAAC_SC"
     ],
     "added": "2026-10-27",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "radio-zelina",
@@ -991,8 +991,8 @@ window.STATIONS = [
     ],
     "added": "2026-11-12",
     "br": [
-      128
+      160
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

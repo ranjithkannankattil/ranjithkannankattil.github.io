@@ -504,9 +504,7 @@ window.STATIONS = [
       "https://usa3.fastcast4u.com/proxy/pandumusikradio?mp=/1"
     ],
     "added": "2026-10-22",
-    "br": [
-      96
-    ]
+    "offline": true
   },
   {
     "id": "elgangga-fm",
@@ -648,9 +646,7 @@ window.STATIONS = [
       "https://eu1.fastcast4u.com/proxy/kiarafm?mp=/1"
     ],
     "added": "2026-10-24",
-    "br": [
-      96
-    ]
+    "offline": true
   },
   {
     "id": "arif-channel",
@@ -696,7 +692,9 @@ window.STATIONS = [
       "https://streaming.shoutcast.com/synchronizeradio"
     ],
     "added": "2026-10-25",
-    "offline": true
+    "br": [
+      96
+    ]
   },
   {
     "id": "radio-suara-al-iman-846-am-surabaya",
@@ -1228,7 +1226,9 @@ window.STATIONS = [
       "https://ssg.streamingmurah.com:8078/;"
     ],
     "added": "2026-11-03",
-    "offline": true
+    "br": [
+      32
+    ]
   },
   {
     "id": "wawa-radio-101-2-fm",
@@ -1395,7 +1395,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "br": [
-      128
+      96
     ]
   },
   {
@@ -1655,9 +1655,7 @@ window.STATIONS = [
       "https://s2.free-shoutcast.com/stream/18096"
     ],
     "added": "2026-11-12",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "onix-radio",
@@ -1708,4 +1706,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

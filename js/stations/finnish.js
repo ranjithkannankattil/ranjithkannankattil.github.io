@@ -220,9 +220,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://rollfm.online/"
-    ],
-    "br": [
-      192
     ]
   },
   {
@@ -682,4 +679,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

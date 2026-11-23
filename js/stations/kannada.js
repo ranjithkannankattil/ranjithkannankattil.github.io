@@ -41,9 +41,6 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudioragam/hlspbaudioragam_Auto.m3u8"
-    ],
-    "br": [
-      32
     ]
   },
   {
@@ -52,9 +49,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio026/hlspbaudio026_Auto.m3u8"
-    ],
-    "br": [
-      32
     ]
   },
   {
@@ -186,10 +180,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio031/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "br": [
-      95
-    ]
+    "added": "2026-10-22"
   },
   {
     "id": "live-fm",
@@ -228,4 +219,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

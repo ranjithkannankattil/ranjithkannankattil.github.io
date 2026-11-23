@@ -690,7 +690,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      128
+      192
     ]
   },
   {
@@ -959,7 +959,9 @@ window.STATIONS = [
       "https://ice.fabricahost.com.br/89aradiorockgo"
     ],
     "added": "2026-10-29",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "ilha-do-mel-fm",
@@ -1591,10 +1593,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.saopaulo01.com.br/8300/stream/"
     ],
-    "added": "2026-11-07",
-    "br": [
-      128
-    ]
+    "added": "2026-11-07"
   },
   {
     "id": "gold-classic",
@@ -1762,4 +1761,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

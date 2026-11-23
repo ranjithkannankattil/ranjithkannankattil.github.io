@@ -47,7 +47,7 @@ window.STATIONS = [
       "https://icecast-qmusicbe-cdp.triple-it.nl/qmusic.aac"
     ],
     "br": [
-      96
+      95
     ]
   },
   {
@@ -220,7 +220,7 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      95
+      96
     ]
   },
   {
@@ -607,9 +607,7 @@ window.STATIONS = [
       "https://stream.qmusic.nl/fouteuur/aac"
     ],
     "added": "2026-10-23",
-    "br": [
-      95
-    ]
+    "offline": true
   },
   {
     "id": "538",
@@ -689,7 +687,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      96
+      95
     ]
   },
   {
@@ -713,7 +711,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      96
+      95
     ]
   },
   {
@@ -1019,7 +1017,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      95
+      96
     ]
   },
   {
@@ -1459,7 +1457,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-04",
     "br": [
-      95
+      96
     ]
   },
   {
@@ -1519,7 +1517,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "br": [
-      96
+      95
     ]
   },
   {
@@ -1567,7 +1565,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-06",
     "br": [
-      95
+      96
     ]
   },
   {
@@ -1787,4 +1785,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

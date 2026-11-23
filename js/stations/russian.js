@@ -12,7 +12,7 @@ window.STATIONS = [
     ],
     "br": [
       36,
-      0
+      128
     ]
   },
   {
@@ -110,7 +110,9 @@ window.STATIONS = [
     "streams": [
       "https://chanson.hostingradio.ru:8041/chanson128.mp3"
     ],
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-5",
@@ -163,7 +165,9 @@ window.STATIONS = [
     "streams": [
       "https://dorognoe.hostingradio.ru:8000/radio"
     ],
-    "offline": true
+    "br": [
+      320
+    ]
   },
   {
     "id": "fm-3",
@@ -243,7 +247,9 @@ window.STATIONS = [
     "streams": [
       "https://ep128server.streamr.ru:8030/ep128"
     ],
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "dorognoe-radio",
@@ -252,7 +258,9 @@ window.STATIONS = [
     "streams": [
       "https://dorognoe.hostingradio.ru:8000/dorognoe"
     ],
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-10",
@@ -672,7 +680,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      128
+      256
     ]
   },
   {
@@ -1678,4 +1686,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

@@ -674,9 +674,7 @@ window.STATIONS = [
       "https://radio.jump.bg/proxy/stanimi1/radioRETRO"
     ],
     "added": "2026-10-26",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "station-9",
@@ -1018,4 +1016,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

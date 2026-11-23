@@ -897,12 +897,14 @@ window.STATIONS = [
     "name": "CBC Music Atlantic (Halifax) MP3 Stream",
     "category": "jazz",
     "streams": [
+      "https://17813.live.streamtheworld.com/CBH_CBC_SC",
       "https://26183.live.streamtheworld.com/CBH_CBC_SC"
     ],
     "added": "2026-10-28",
     "where": "Canada",
     "br": [
-      128
+      128,
+      0
     ]
   },
   {
@@ -1117,7 +1119,7 @@ window.STATIONS = [
     "added": "2026-11-01",
     "where": "Australia",
     "br": [
-      96
+      97
     ]
   },
   {
@@ -1870,7 +1872,7 @@ window.STATIONS = [
     "added": "2026-11-07",
     "where": "UK",
     "br": [
-      47
+      48
     ]
   },
   {
@@ -1887,4 +1889,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

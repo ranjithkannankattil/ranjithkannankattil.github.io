@@ -38,9 +38,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio032/playlist.m3u8"
-    ],
-    "br": [
-      95
     ]
   },
   {
@@ -49,9 +46,6 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudioragam/hlspbaudioragam_Auto.m3u8"
-    ],
-    "br": [
-      32
     ]
   },
   {
@@ -240,4 +234,4 @@ window.STATIONS = [
     "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";

@@ -10,7 +10,7 @@ window.STATIONS = [
       "https://radiolive.ytn.co.kr/radio/_definst_/20211118_fmlive/playlist.m3u8"
     ],
     "br": [
-      138
+      132
     ]
   },
   {
@@ -32,7 +32,7 @@ window.STATIONS = [
       "https://vod3.obs.co.kr:444/live/obsstream1/radio.stream/playlist.m3u8"
     ],
     "br": [
-      140
+      137
     ]
   },
   {
@@ -52,9 +52,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://mediaworks.dema.mil.kr/live_edge/audio.sdp/playlist.m3u8"
-    ],
-    "br": [
-      128
     ]
   },
   {
@@ -108,9 +105,7 @@ window.STATIONS = [
     "streams": [
       "https://antares.dribbcast.com/proxy/kpop?mp=/s"
     ],
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "listen-moe-k-pop",
@@ -155,7 +150,7 @@ window.STATIONS = [
       "https://sbs-ice.streamguys1.com/sbs-popasia-sbs-web"
     ],
     "br": [
-      96
+      97
     ]
   },
   {
@@ -280,7 +275,10 @@ window.STATIONS = [
     "streams": [
       "https://live.andongmbc.co.kr/live/fmlive/playlist.m3u8"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      37
+    ]
   },
   {
     "id": "mbc-fm",
@@ -301,9 +299,7 @@ window.STATIONS = [
       "https://antares.dribbcast.com/proxy/apop?mp=/s?"
     ],
     "added": "2026-10-23",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "fm105-2",
@@ -336,7 +332,10 @@ window.STATIONS = [
     "streams": [
       "https://live.andongmbc.co.kr/live/fmlive/playlist.m3u8"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      37
+    ]
   },
   {
     "id": "ebs-tv-kids",
@@ -348,7 +347,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      1154
+      1149
     ]
   },
   {
@@ -361,7 +360,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      1234
+      1300
     ]
   },
   {
@@ -386,7 +385,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      100
+      98
     ]
   },
   {
@@ -411,7 +410,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      1154
+      1133
     ]
   },
   {
@@ -424,7 +423,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      4447
+      4446
     ]
   },
   {
@@ -496,7 +495,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      625
+      624
     ]
   },
   {
@@ -540,7 +539,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/20324/64k.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      64
+    ]
   },
   {
     "id": "gukak",
@@ -621,7 +623,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      1147
+      1146
     ]
   },
   {
@@ -634,7 +636,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      1144
+      1143
     ]
   },
   {
@@ -656,7 +658,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      1156
+      1139
     ]
   },
   {
@@ -746,9 +748,7 @@ window.STATIONS = [
       "https://antares.dribbcast.com/proxy/apop?mp=/s"
     ],
     "added": "2026-11-13",
-    "br": [
-      128
-    ]
+    "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T08:47Z";
+window.STATIONS_CHECKED = "2026-11-23T13:47Z";
