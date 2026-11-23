@@ -1090,13 +1090,6 @@
        }
       },
       {
-       "id": "english-news:cbc-radio-one-vancouver",
-       "name": {
-        "value": "CBC Radio One Vancouver",
-        "synonyms": []
-       }
-      },
-      {
        "id": "english-news:wnyc-93-9-fm",
        "name": {
         "value": "WNYC 93.9 FM",
@@ -1348,6 +1341,16 @@
        "name": {
         "value": "CGTN - English",
         "synonyms": []
+       }
+      },
+      {
+       "id": "english-news:naija-fm-102-7-lagos",
+       "name": {
+        "value": "Naija FM 102.7 Lagos",
+        "synonyms": [
+         "naija fm lagos",
+         "naija fm one hundred two point seven lagos"
+        ]
        }
       },
       {
@@ -1976,15 +1979,6 @@
        }
       },
       {
-       "id": "english-news:cbc-radio-one-prince-george-bc",
-       "name": {
-        "value": "CBC Radio One - Prince George, BC",
-        "synonyms": [
-         "cbc radio one - prince george bc"
-        ]
-       }
-      },
-      {
        "id": "english-news:afn-360-naples",
        "name": {
         "value": "AFN 360 Naples",
@@ -2071,16 +2065,6 @@
         "value": "Radio Stella Toscana",
         "synonyms": [
          "stella toscana"
-        ]
-       }
-      },
-      {
-       "id": "english-news:star-fm-95-5-cebu",
-       "name": {
-        "value": "Star FM 95.5 Cebu",
-        "synonyms": [
-         "star fm cebu",
-         "star fm ninety five point five cebu"
         ]
        }
       },
@@ -2517,13 +2501,6 @@
        "id": "english-talk:northwest-public-broadcasting-news",
        "name": {
         "value": "Northwest Public Broadcasting - News",
-        "synonyms": []
-       }
-      },
-      {
-       "id": "english-talk:wabc",
-       "name": {
-        "value": "WABC",
         "synonyms": []
        }
       },
@@ -3968,6 +3945,13 @@
        }
       },
       {
+       "id": "hindi:fm-gold-mumbai",
+       "name": {
+        "value": "FM Gold Mumbai",
+        "synonyms": []
+       }
+      },
+      {
        "id": "hindi:radio-mirchi-usa",
        "name": {
         "value": "Radio Mirchi USA",
@@ -4038,6 +4022,13 @@
        "id": "hindi:mohammed-rafi",
        "name": {
         "value": "Mohammed Rafi",
+        "synonyms": []
+       }
+      },
+      {
+       "id": "hindi:vividh-bharti-mumbai",
+       "name": {
+        "value": "Vividh Bharti Mumbai",
         "synonyms": []
        }
       },
@@ -5170,13 +5161,6 @@
        }
       },
       {
-       "id": "tamil:abinayamfm",
-       "name": {
-        "value": "Abinayam FM",
-        "synonyms": []
-       }
-      },
-      {
        "id": "tamil:abctamil",
        "name": {
         "value": "Abctamil",
@@ -5920,6 +5904,13 @@
        }
       },
       {
+       "id": "punjabi:air-punjabi",
+       "name": {
+        "value": "AIR Punjabi",
+        "synonyms": []
+       }
+      },
+      {
        "id": "punjabi:my-radio-580-edmonton",
        "name": {
         "value": "My Radio 580 Edmonton",
@@ -6332,6 +6323,15 @@
         "synonyms": [
          "kasoot haryanvi",
          "radio kasoot haryanvi"
+        ]
+       }
+      },
+      {
+       "id": "more-indian:fm-rainbow-mumbai-marathi",
+       "name": {
+        "value": "FM Rainbow Mumbai (Marathi)",
+        "synonyms": [
+         "fm rainbow mumbai marathi"
         ]
        }
       },
@@ -6838,6 +6838,13 @@
        "id": "akan:asempa-fm",
        "name": {
         "value": "Asempa FM",
+        "synonyms": []
+       }
+      },
+      {
+       "id": "akan:angel-fm",
+       "name": {
+        "value": "Angel FM",
         "synonyms": []
        }
       },
@@ -9783,13 +9790,6 @@
        }
       },
       {
-       "id": "korean:big-b-radio-k-pop",
-       "name": {
-        "value": "Big B Radio K-Pop",
-        "synonyms": []
-       }
-      },
-      {
        "id": "korean:listen-moe-k-pop",
        "name": {
         "value": "Listen.moe K-Pop",
@@ -9862,13 +9862,6 @@
        "id": "korean:mbc-fm4u",
        "name": {
         "value": "MBC FM4U",
-        "synonyms": []
-       }
-      },
-      {
-       "id": "korean:big-b-radio-asian-pop",
-       "name": {
-        "value": "Big B Radio - Asian pop",
         "synonyms": []
        }
       },
@@ -11960,6 +11953,15 @@
        }
       },
       {
+       "id": "portuguese-portugal:rdp-africa-portugal",
+       "name": {
+        "value": "RDP Africa (Portugal)",
+        "synonyms": [
+         "rdp africa portugal"
+        ]
+       }
+      },
+      {
        "id": "portuguese-portugal:radio-orbital",
        "name": {
         "value": "Radio Orbital",
@@ -12287,13 +12289,6 @@
        "id": "portuguese-portugal:radialistas-de-viseu",
        "name": {
         "value": "Radialistas de Viseu",
-        "synonyms": []
-       }
-      },
-      {
-       "id": "portuguese-portugal:rua-fm",
-       "name": {
-        "value": "RUA FM",
         "synonyms": []
        }
       },
@@ -13659,13 +13654,6 @@
         "synonyms": [
          "slam non stop"
         ]
-       }
-      },
-      {
-       "id": "dutch:qmusic-foute-uur",
-       "name": {
-        "value": "Qmusic Foute Uur",
-        "synonyms": []
        }
       },
       {
@@ -15534,6 +15522,13 @@
        }
       },
       {
+       "id": "greek:laikinota",
+       "name": {
+        "value": "LaikiNota",
+        "synonyms": []
+       }
+      },
+      {
        "id": "greek:blue-space-107-2-fm-athens",
        "name": {
         "value": "Blue Space 107,2 FM Athens",
@@ -15768,6 +15763,17 @@
         "synonyms": [
          "skylos",
          "skylos sixty nine"
+        ]
+       }
+      },
+      {
+       "id": "greek:02-radio-station",
+       "name": {
+        "value": "02 Radio Station",
+        "synonyms": [
+         "radio station",
+         "station",
+         "two radio station"
         ]
        }
       },
@@ -18256,19 +18262,6 @@
        }
       },
       {
-       "id": "serbian:radio-021-rock",
-       "name": {
-        "value": "Radio 021 Rock",
-        "synonyms": [
-         "021 rock",
-         "radio rock",
-         "radio twenty one rock",
-         "rock",
-         "twenty one rock"
-        ]
-       }
-      },
-      {
        "id": "serbian:radio-ritam-srca",
        "name": {
         "value": "Radio Ritam Srca",
@@ -18359,15 +18352,6 @@
        "name": {
         "value": "RSG Relax",
         "synonyms": []
-       }
-      },
-      {
-       "id": "serbian:radio-futog-krajina",
-       "name": {
-        "value": "Radio Futog Krajina",
-        "synonyms": [
-         "futog krajina"
-        ]
        }
       },
       {
@@ -18640,13 +18624,6 @@
        "id": "croatian:hrt-radio-dubrovnik",
        "name": {
         "value": "HRT Radio Dubrovnik",
-        "synonyms": []
-       }
-      },
-      {
-       "id": "croatian:hrt-radio-pula",
-       "name": {
-        "value": "HRT Radio Pula",
         "synonyms": []
        }
       },
@@ -19582,15 +19559,6 @@
        }
       },
       {
-       "id": "bulgarian:radio-retro-samokov",
-       "name": {
-        "value": "Radio Retro Samokov",
-        "synonyms": [
-         "retro samokov"
-        ]
-       }
-      },
-      {
        "id": "bulgarian:city-latin",
        "name": {
         "value": "City Latin",
@@ -19989,15 +19957,6 @@
         "value": "Radio Club Bar",
         "synonyms": [
          "club bar"
-        ]
-       }
-      },
-      {
-       "id": "albanian:radio-4",
-       "name": {
-        "value": "Radio 4+",
-        "synonyms": [
-         "radio 4 plus"
         ]
        }
       },
@@ -22213,13 +22172,6 @@
        }
       },
       {
-       "id": "catalan:esplugues-fm",
-       "name": {
-        "value": "Esplugues FM",
-        "synonyms": []
-       }
-      },
-      {
        "id": "catalan:radio-sitges",
        "name": {
         "value": "Radio Sitges",
@@ -23446,13 +23398,6 @@
        }
       },
       {
-       "id": "persian:radioyar",
-       "name": {
-        "value": "RadioYar",
-        "synonyms": []
-       }
-      },
-      {
        "id": "persian:go",
        "name": {
         "value": "Go",
@@ -24197,13 +24142,6 @@
        }
       },
       {
-       "id": "japanese:big-b-radio-jpop",
-       "name": {
-        "value": "Big B Radio - Jpop",
-        "synonyms": []
-       }
-      },
-      {
        "id": "japanese:real-love-music-radio-future-funk",
        "name": {
         "value": "Real Love Music - Radio Future Funk",
@@ -24717,13 +24655,6 @@
        }
       },
       {
-       "id": "indonesian:pandu-musik-radio",
-       "name": {
-        "value": "Pandu Musik Radio",
-        "synonyms": []
-       }
-      },
-      {
        "id": "indonesian:klcbs-fusion",
        "name": {
         "value": "KLCBS Fusion",
@@ -24754,13 +24685,6 @@
        }
       },
       {
-       "id": "indonesian:kiara-4u",
-       "name": {
-        "value": "Kiara 4U",
-        "synonyms": []
-       }
-      },
-      {
        "id": "indonesian:arif-channel",
        "name": {
         "value": "Arif Channel",
@@ -24774,6 +24698,13 @@
         "synonyms": [
          "rri pro two jakarta"
         ]
+       }
+      },
+      {
+       "id": "indonesian:synchronize-radio",
+       "name": {
+        "value": "Synchronize Radio",
+        "synonyms": []
        }
       },
       {
@@ -25300,15 +25231,6 @@
        "name": {
         "value": "Harley Radio Show",
         "synonyms": []
-       }
-      },
-      {
-       "id": "indonesian:singosari-fm-brebes-official-station",
-       "name": {
-        "value": "Singosari FM Brebes (Official Station)",
-        "synonyms": [
-         "singosari fm brebes official station"
-        ]
        }
       },
       {
