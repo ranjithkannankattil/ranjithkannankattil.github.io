@@ -204,9 +204,12 @@ def main() -> None:
     for k, (path, h) in found.items():
         col = k.split(":", 1)[0]
         have[k] = f"{MEDIA}/{col}/{path.name}?v={h}"
+    prev = json.loads(OUT.read_text()) if OUT.exists() else {}
     OUT.write_text(json.dumps({"updated": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ"),
-                               "note": "Station logos belong to their owners. Used only to show the station on Android Auto.",
-                               "logos": dict(sorted(have.items()))}, ensure_ascii=False, separators=(",", ":")) + "\n")
+                               "note": prev.get("note", "Station logos belong to their owners. Used only to show the station on Android Auto."),
+                               "logos": dict(sorted(have.items())),
+                               # stations whose own logo was given to us for use everywhere (player, song covers): kept as set by hand
+                               "everywhere": prev.get("everywhere", [])}, ensure_ascii=False, separators=(",", ":")) + "\n")
     TRIED.parent.mkdir(parents=True, exist_ok=True)
     TRIED.write_text(json.dumps(dict(sorted(tried.items())), indent=0) + "\n")
 

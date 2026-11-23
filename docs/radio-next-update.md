@@ -47,6 +47,11 @@ His reason: the app looks like one long list; in Settings you can't tell what is
   new collected). It can't count people or their countries; that would need a new anonymous ID (ask first).
 - Motion: rows lift under the finger, pages slide in with the icon travelling to the title, switches spring,
   pills glide, lists fade in row by row, numbers count up, chart bars grow.
+- **Station's own logo everywhere** (asked 23 Nov 2026, for Radio Utsav): stations listed in `everywhere` in
+  `js/station-logos.json` show their logo on station cards, the small player, the big player and as the cover for every
+  song (instead of iTunes art) and on share cards; other stations keep logos on Android Auto only. Radio Utsav's only
+  stream is http (`http://82.145.63.6:6094/mp=/stream`), which the app and the https website can't play, so it stays
+  hidden until there is an https link (ask the station, or pass it through a small Cloudflare proxy if he agrees).
 - Also in 2.10 (from earlier): bugs (radio turning itself on + Auto artwork flicker, Connecting… timeout,
   widget doesn't open the app, three looks ignore the colour theme, text shifts between looks, remaining
   translations), the share card drawn from the current player look, browse by country. Spotify-in-car
