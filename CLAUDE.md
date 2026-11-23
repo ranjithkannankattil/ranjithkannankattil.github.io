@@ -50,6 +50,8 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
   and `check_streams.py` skips them (its US servers can't judge them).
 - Stations that are the sound of a TV channel carry `"tv": true` (47 marked 23 Nov 2026): the page shows an outlined **TV** tag
   after the name; the app shows it and offers a "TV channels" kind in its filter from 2.10. Mark new TV audio streams the same way.
+- `"keep": true` = he confirmed the station plays; the stream checks never mark it offline or hidden (Utsav Live Radio,
+  whose only link is http). Stations with only http links play in the app (cleartext allowed) but are left off the https website.
 - ~5,300 stations in 70+ languages, one file per collection in `js/stations/`, list of collections in
   `js/collections.js`. Favourites are stored as `"<collection>:<station id>"` in `mr-favs2`, in his
   chosen order, and synced to Firestore when signed in (`js/radio-sync.js`).

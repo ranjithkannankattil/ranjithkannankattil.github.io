@@ -328,7 +328,8 @@ def main() -> None:
     for st in stations:
         # Stations that only stream inside one country ("geo": "AE" ...) can't be judged from GitHub's
         # US servers: leave them exactly as they are (the page and the app say where they play).
-        if st.get("geo"):
+        # "keep": true = he has confirmed the station plays (e.g. a server that refuses GitHub): never change it here.
+        if st.get("geo") or st.get("keep"):
             continue
         before = list(st["streams"])
         working, dead, unknown = [], [], []

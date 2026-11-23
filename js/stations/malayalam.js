@@ -981,13 +981,13 @@ window.STATIONS = [
   },
   {
     "id": "radioutsav",
-    "name": "Radio Utsav",
+    "name": "Utsav Live Radio",
     "category": "online",
+    "keep": true,
     "streams": [
       "http://82.145.63.6:6094/mp=/stream"
     ],
-    "offline": true,
-    "hidden": true
+    "added": "2026-11-23"
   },
   {
     "id": "kancheeravamradio",

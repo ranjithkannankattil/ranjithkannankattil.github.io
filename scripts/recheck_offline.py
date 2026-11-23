@@ -30,7 +30,7 @@ def main() -> None:
         if not path.exists():
             continue
         header, sts = load_stations(path)
-        todo = [st for st in sts if (st.get("offline") or st.get("hidden")) and not st.get("geo")]
+        todo = [st for st in sts if (st.get("offline") or st.get("hidden")) and not st.get("geo") and not st.get("keep")]
         if not todo:
             print(f"{cid}: nothing marked not working")
             continue

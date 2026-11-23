@@ -200,7 +200,7 @@
       ids.forEach((x, i) => { if (Array.isArray(lists[i])) list.push(...lists[i].map((st) => ({ ...st, _c: x }))); });
     }
     if (col !== c) return;
-    S = list.filter((st) => !st.hidden); byId = {};
+    S = list.filter((st) => !st.hidden && st.streams.some((u) => u.startsWith("https:"))); byId = {};
     renderStats(); renderChips(); render();
     if (user) $(".radio-bar").scrollIntoView({ behavior: "smooth", block: "nearest" });
   }
