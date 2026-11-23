@@ -148,6 +148,7 @@ window.STATIONS = [
   {
     "id": "al-jazeera-english",
     "name": "Al Jazeera English",
+    "tv": true,
     "category": "world",
     "streams": [
       "https://live-hls-audio-web-aje.getaj.net/VOICE-AJE/01.m3u8"
@@ -302,6 +303,7 @@ window.STATIONS = [
   {
     "id": "bbc-news-hd-720p",
     "name": "BBC News HD (720P)",
+    "tv": true,
     "category": "uk",
     "streams": [
       "https://vs-hls-push-ww-live.akamaized.net/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/t=3840/v=pv14/b=5070016/main.m3u8"
@@ -1088,6 +1090,7 @@ window.STATIONS = [
   {
     "id": "al-jazeera-english-live",
     "name": "Al Jazeera English (Live)",
+    "tv": true,
     "category": "world",
     "streams": [
       "https://live-hls-web-aje-gcp.thehlive.com/AJE/index.m3u8"
@@ -1101,6 +1104,7 @@ window.STATIONS = [
   {
     "id": "dw-english-hd",
     "name": "DW English HD",
+    "tv": true,
     "category": "world",
     "streams": [
       "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8"

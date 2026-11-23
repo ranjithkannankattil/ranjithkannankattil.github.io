@@ -27,7 +27,8 @@ His reason: the app looks like one long list; in Settings you can't tell what is
   with a soft fade at the right: ★ Velvet Selection chip (logo + small gold star), pinned languages, "All 70+".
   Row 2 is a **sentence filter**: "All kinds from UAE · most heard first" — dotted-underlined words open short
   sheets (kind; "Where from?" with station counts; order: Most heard, Best rated, A to Z, Light on data);
-  tapping a choice applies at once, no Apply button. Both rows fold away on scroll down.
+  tapping a choice applies at once, no Apply button. "All kinds" includes **TV channels** (stations with `"tv": true`),
+  and station cards show a small TV tag. Both rows fold away on scroll down.
 - **Languages sheet** (All 70+): search, your languages first then A–Z with letter jump. Each language has a
   **Pin** button. "Pinned to your row" list with filled pins + drag handles; Malayalam is pinned by default
   ("Pinned for you at the start") but can be unpinned/moved like any other; Undo after unpin; unpin all →

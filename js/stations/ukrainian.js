@@ -421,6 +421,7 @@ window.STATIONS = [
   {
     "id": "russia-today-germany",
     "name": "Russia Today Germany",
+    "tv": true,
     "category": "news",
     "streams": [
       "https://rt-ger.rttv.com/dvr/rtdeutsch/playlist.m3u8"

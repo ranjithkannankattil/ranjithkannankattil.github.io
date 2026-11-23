@@ -1447,6 +1447,7 @@ window.STATIONS = [
   {
     "id": "beyaz-tv",
     "name": "Beyaz TV",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://beyaztv-live.daioncdn.net/beyaztv/beyaztv_1080p.m3u8"

@@ -501,6 +501,7 @@ window.STATIONS = [
   {
     "id": "al-jazeera-english",
     "name": "Al Jazeera - English",
+    "tv": true,
     "category": "sport",
     "streams": [
       "https://live-hls-audio-web-aje.getaj.net/VOICE-AJE/01.m3u8"

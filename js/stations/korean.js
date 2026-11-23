@@ -347,6 +347,7 @@ window.STATIONS = [
   {
     "id": "ebs-tv-kids",
     "name": "EBS TV-Kids",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://ebsonairios.ebs.co.kr/ebsufamilypc/familypc1m/playlist.m3u8"
@@ -359,6 +360,7 @@ window.STATIONS = [
   {
     "id": "buddhist-true-network-tv",
     "name": "Buddhist True Network TV",
+    "tv": true,
     "category": "devotional",
     "streams": [
       "https://btn.nowcdn.co.kr/btn/btnlive01/playlist.m3u8"
@@ -371,6 +373,7 @@ window.STATIONS = [
   {
     "id": "ebs-tv-1",
     "name": "EBS TV-1",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://ebsonair.ebs.co.kr/groundwavefamilypc/familypc1m/playlist.m3u8"
@@ -407,6 +410,7 @@ window.STATIONS = [
   {
     "id": "ebs-tv-i",
     "name": "EBS TV-i",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://ebsonairios.ebs.co.kr/plus1familypc/familypc1m/playlist.m3u8"
@@ -419,6 +423,7 @@ window.STATIONS = [
   {
     "id": "gukak-tv",
     "name": "Gukak TV",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://mgugaklive.nowcdn.co.kr/gugakvideo/gugakvideo.stream/playlist.m3u8"
@@ -618,6 +623,7 @@ window.STATIONS = [
   {
     "id": "ebs-tv-e",
     "name": "EBS TV-e",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://ebsonair.ebs.co.kr/plus3familypc/familypc1m/playlist.m3u8"
@@ -630,6 +636,7 @@ window.STATIONS = [
   {
     "id": "ebs-tv-plus-2",
     "name": "EBS TV-Plus 2",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://ebsonairios.ebs.co.kr/plus2familypc/familypc1m/playlist.m3u8"
@@ -651,6 +658,7 @@ window.STATIONS = [
   {
     "id": "ebs-tv-2",
     "name": "EBS TV-2",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://ebsonair.ebs.co.kr/ebs2familypc/familypc1m/playlist.m3u8"

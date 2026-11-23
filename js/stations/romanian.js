@@ -1103,6 +1103,7 @@ window.STATIONS = [
   {
     "id": "magic-tv",
     "name": "Magic tv",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://tv.broadcasting.ro/magictv/925f90db-5c88-4190-a53d-5163cdffe6f4.m3u8"

@@ -313,6 +313,7 @@ window.STATIONS = [
   {
     "id": "24h-rtve-television",
     "name": "24h RTVE Televisión",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://ztnr.rtve.es/ztnr/1694255.m3u8"
@@ -907,6 +908,7 @@ window.STATIONS = [
   {
     "id": "a-punt",
     "name": "À Punt",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://fastly.live.brightcove.com/1854461588069069227/eu-central-1/6057955885001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoiZWFxNWh4LmVncmVzcy53YzQ3bTEiLCJhY2NvdW50X2lkIjoiNjA1Nzk1NTg4NTAwMSIsImVobiI6ImZhc3RseS5saXZlLmJyaWdodGNvdmUuY29tIiwiaXNzIjoiYmxpdmUtcGxheWJhY2stc291cmNlLWFwaSIsInN1YiI6InBhdGhtYXB0b2tlbiIsImF1ZCI6WyI2MDU3OTU1ODg1MDAxIl0sImp0aSI6IjE4NTQ0NjE1ODgwNjkwNjkyMjcifQ.RKqA-z0MRntFVph2G3tE9YzBp7vfdMXcynOKpyqvZTg/playlist-hls-dvr.m3u8"
@@ -1481,6 +1483,7 @@ window.STATIONS = [
   {
     "id": "el-toro-tv",
     "name": "El Toro TV",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://edge-nodo-002.streaming.hitcloser.net/eltorotv-streaming-web/tracks-v1a1/mono.m3u8"

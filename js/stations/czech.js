@@ -435,6 +435,7 @@ window.STATIONS = [
   {
     "id": "retro-music-television",
     "name": "Retro Music Television",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://stream.mediawork.cz/retrotv/retrotvHQ1/playlist.m3u8"
@@ -1027,6 +1028,7 @@ window.STATIONS = [
   {
     "id": "plzen-tv",
     "name": "Plzeň TV",
+    "tv": true,
     "category": "news",
     "streams": [
       "https://vysilani.zaktv.cz/broadcast/hls/ptv/index.m3u8"
@@ -1060,6 +1062,7 @@ window.STATIONS = [
   {
     "id": "mnau-tv",
     "name": "Mňau TV",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://5ca49f2417d90.streamlock.net/mnau/livestream/playlist.m3u8"
@@ -1366,6 +1369,7 @@ window.STATIONS = [
   {
     "id": "retro-music-tv",
     "name": "Retro Music TV",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://stream.mediawork.cz/retrotv/retrotvHQ1/chunklist_w627639048.m3u8"
@@ -1444,6 +1448,7 @@ window.STATIONS = [
   {
     "id": "ocko-star",
     "name": "Óčko Star",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://ocko-live-dash.ssl.cdn.cra.cz/cra_live2/ocko_gold.stream.1.smil/playlist.m3u8"

@@ -300,6 +300,7 @@ window.STATIONS = [
   {
     "id": "sky-arabia-news-tv",
     "name": "Sky Arabia News TV",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://stream.skynewsarabia.com/hls/sna_720.m3u8"
@@ -363,6 +364,7 @@ window.STATIONS = [
   {
     "id": "al-jazeera-arabic",
     "name": "Al Jazeera - Arabic",
+    "tv": true,
     "category": "news",
     "streams": [
       "https://live-hls-audio-web-aja.getaj.net/VOICE-AJA/index.m3u8",
@@ -787,6 +789,7 @@ window.STATIONS = [
   {
     "id": "syria-tv",
     "name": "Syria TV",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://live.kwikmotion.com/syriatvlive/syriatv_audio/playlist.m3u8"

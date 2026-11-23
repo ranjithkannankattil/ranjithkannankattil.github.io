@@ -82,6 +82,7 @@ window.STATIONS = [
   {
     "id": "eri-tv-tigrinya",
     "name": "Eri-TV (Tigrinya)",
+    "tv": true,
     "category": "news",
     "streams": [
       "https://jmc-live.ercdn.net/eritreatv/eritreatv.m3u8"

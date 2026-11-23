@@ -100,6 +100,7 @@ window.STATIONS = [
   {
     "id": "gmm25-digital-tv-channel-25",
     "name": "GMM25: digital TV channel 25",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://fastly.live.brightcove.com/6392745120112/ap-southeast-1/6415628290001/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJob3N0IjoicWN6dGF6LmVncmVzcy5wcHRpOHciLCJhY2NvdW50X2lkIjoiNjQxNTYyODI5MDAwMSIsImVobiI6ImZhc3RseS5saXZlLmJyaWdodGNvdmUuY29tIiwiaXNzIjoiYmxpdmUtcGxheWJhY2stc291cmNlLWFwaSIsInN1YiI6InBhdGhtYXB0b2tlbiIsImF1ZCI6WyI2NDE1NjI4MjkwMDAxIl0sImp0aSI6IjYzOTI3NDUxMjAxMTIifQ.w9Q_oqsE_WFClGF5tLVDtHnz5zfHHgNpumxVYNx4yYw/playlist-hls.m3u8"
@@ -133,6 +134,7 @@ window.STATIONS = [
   {
     "id": "nbt-north-digital-tv-channel-11",
     "name": "NBT North: digital TV channel 11",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://cdn-edge.iiptvcdn.com/live_event/smil:4f6e-aa34-2034-5492-c82d.smil/playlist.m3u8?null"
@@ -188,6 +190,7 @@ window.STATIONS = [
   {
     "id": "tp-tv-channel-digital-tv-channel-10",
     "name": "TP TV channel: digital TV channel 10",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://tv-live.tpchannel.org/live/tv.m3u8"
@@ -221,6 +224,7 @@ window.STATIONS = [
   {
     "id": "nbt-south-digital-tv-channel-11",
     "name": "NBT South: digital tv channel 11",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://cdn-edge.iiptvcdn.com/live_event/smil:a834-75a7-a662-db55-5fa3.smil/playlist.m3u8?null"
@@ -251,6 +255,7 @@ window.STATIONS = [
   {
     "id": "nbt-north-ease-digital-tv-channel-11",
     "name": "NBT North Ease: digital TV channel 11",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://cdn-edge.iiptvcdn.com/live_event/smil:98ff-027d-46aa-1a6a-8480.smil/playlist.m3u8?null"
@@ -273,6 +278,7 @@ window.STATIONS = [
   {
     "id": "nbt2hd",
     "name": "NBT2HD",
+    "tv": true,
     "category": "news",
     "streams": [
       "https://cdn-edge.iiptvcdn.com/live_event/smil:f180-054a-38d7-ce66-f7cf.smil/playlist.m3u8"
@@ -337,6 +343,7 @@ window.STATIONS = [
   {
     "id": "nat-tv",
     "name": "NAT TV",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://livefta.malimarcdn.com/ftaedge00/nat.sdp/playlist.m3u8"

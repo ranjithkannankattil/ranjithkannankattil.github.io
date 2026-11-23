@@ -48,6 +48,8 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
 - **radio.ranjithkb.com** is a Cloudflare redirect rule (proxied A record 192.0.2.1) to `ranjithkb.com/radio.html`.
 - Stations that stream only inside one country carry `"geo": "AE"` (etc.): the page and app say "Only plays in …",
   and `check_streams.py` skips them (its US servers can't judge them).
+- Stations that are the sound of a TV channel carry `"tv": true` (47 marked 23 Nov 2026): the page shows an outlined **TV** tag
+  after the name; the app shows it and offers a "TV channels" kind in its filter from 2.10. Mark new TV audio streams the same way.
 - ~5,300 stations in 70+ languages, one file per collection in `js/stations/`, list of collections in
   `js/collections.js`. Favourites are stored as `"<collection>:<station id>"` in `mr-favs2`, in his
   chosen order, and synced to Firestore when signed in (`js/radio-sync.js`).

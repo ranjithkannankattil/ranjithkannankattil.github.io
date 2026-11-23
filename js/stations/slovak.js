@@ -540,6 +540,7 @@ window.STATIONS = [
   {
     "id": "tv-lux-audio",
     "name": "TV Lux (audio)",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://stream.tvlux.sk/lux/lux.stream_aac/playlist.m3u8"
@@ -552,6 +553,7 @@ window.STATIONS = [
   {
     "id": "ta3",
     "name": "TA3",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://n13.stv.livebox.sk/ta3/685d9a141bd846e8facf83bc378da26b/1.smil/chunklist_b2691072.m3u8"

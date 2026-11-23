@@ -122,6 +122,7 @@ window.STATIONS = [
   {
     "id": "kn-music-tv",
     "name": "KN Music TV",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://cdn4.yayin.com.tr/kntv/tracks-v1a1/mono.m3u8"
@@ -174,6 +175,7 @@ window.STATIONS = [
   {
     "id": "ayaz-tv",
     "name": "Ayaz tv",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://janya-ayaztv.vgcdn.net/ptnr-WebApp/title-Ayaz_TV/v1/vglive-sk-934820/main.m3u8"
@@ -207,6 +209,7 @@ window.STATIONS = [
   {
     "id": "azstartv",
     "name": "AzStarTV",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://live.livestreamtv.ca/azstar/amlst:azstar/playlist.m3u8"
@@ -218,6 +221,7 @@ window.STATIONS = [
   {
     "id": "max-tv-azerbaycan",
     "name": "Max tv Azerbaycan",
+    "tv": true,
     "category": "music",
     "streams": [
       "https://cdn4.yayin.com.tr/maxtv/tracks-v1a1/mono.m3u8"

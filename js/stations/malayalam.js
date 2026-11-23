@@ -1487,6 +1487,7 @@ window.STATIONS = [
   {
     "id": "kairali-news",
     "name": "Kairali News",
+    "tv": true,
     "category": "online",
     "streams": [
       "https://cdn.pishow.tv/ott/live/1469/master.m3u8"
@@ -1499,6 +1500,7 @@ window.STATIONS = [
   {
     "id": "kairaly-tv",
     "name": "Kairaly TV",
+    "tv": true,
     "category": "online",
     "streams": [
       "https://mumt01.tangotv.in/O5aw8Zn3KAIRALI/index.m3u8"
@@ -1511,6 +1513,7 @@ window.STATIONS = [
   {
     "id": "asianet",
     "name": "Asianet",
+    "tv": true,
     "category": "online",
     "streams": [
       "https://da86m1sqpm3o0.cloudfront.net/28072023/smil:starasianet.smil/chunklist_b1928000.m3u8"

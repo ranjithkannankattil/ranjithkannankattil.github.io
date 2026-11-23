@@ -422,6 +422,7 @@
         s.offline || !(saving() || sortBy === "light") ? "" : weightLabel(s)].filter(Boolean).join(" · ");
       li.querySelector(".sub").textContent = [extra, sub].filter(Boolean).join(" · ");
       if (top3.has(key(s))) li.querySelector(".nm").insertAdjacentHTML("beforeend", ' <span class="top3" title="One of the three most heard this week">◆</span>');
+      if (s.tv) li.querySelector(".nm").insertAdjacentHTML("beforeend", ' <span class="tv-tag" title="The sound of a TV channel">TV</span>');
       if (isNew && !s.offline) li.querySelector(".nm").insertAdjacentHTML("beforeend", ' <span class="new-tag">New</span>');
       li.querySelector(".hit").onclick = () => (isCur(s) ? toggle() : play(s, list));
       li.querySelector(".fav").onclick = (e) => { e.stopPropagation(); toggleFav(key(s), s); };

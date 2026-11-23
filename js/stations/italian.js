@@ -533,6 +533,7 @@ window.STATIONS = [
   {
     "id": "rai-news-24",
     "name": "Rai News 24",
+    "tv": true,
     "category": "news",
     "streams": [
       "https://streamcdnb3-8e7439fdb1694c8da3a0fd63e4dda518.msvdn.net/rainews1/hls/rainews_2400/chunklist.m3u8"

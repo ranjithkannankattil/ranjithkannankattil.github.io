@@ -258,6 +258,7 @@ window.STATIONS = [
   {
     "id": "aaj-tak-news-radio",
     "name": "Aaj Tak News Radio",
+    "tv": true,
     "category": "news",
     "streams": [
       "https://feeds.intoday.in/aajtak/api/master.m3u8"
