@@ -88,7 +88,6 @@
     "malayalam:radiolemonbengaluru": 28,
     "malayalam:radiomallu": 73,
     "malayalam:radiomangalam": 73,
-    "malayalam:radiome": 11,
     "malayalam:radionellika": 73,
     "malayalam:radioutsav": 70,
     "malayalam:radiovatakara": 73,
@@ -1635,11 +1634,6 @@
     "fails": 1,
     "last_reason": "HTTP 0, 0 bytes",
     "since": "2026-10-20"
-  },
-  "https://freestream.hu:8340/radiome": {
-    "fails": 11,
-    "last_reason": "HTTP 404 error page",
-    "since": "2026-11-20"
   },
   "https://gains.reviveradio.net/proxy/menorah?mp=/stream": {
     "fails": 87,

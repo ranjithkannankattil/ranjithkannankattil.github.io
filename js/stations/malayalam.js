@@ -857,8 +857,7 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://freestream.hu:8340/radiome"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "thaalamradio",
@@ -1552,4 +1551,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T17:46Z";
