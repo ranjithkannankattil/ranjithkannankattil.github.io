@@ -1,7 +1,7 @@
 ## Alexa stream check
 
-Malayalam: **99 of 105** play the way an Echo needs.
-All checked: 172 of 180.
+Malayalam: **98 of 104** play the way an Echo needs.
+All checked: 172 of 179.
 
 | Station | Language | Result |
 |---|---|---|
@@ -14,16 +14,16 @@ All checked: 172 of 180.
 | 98.6 FM | malayalam | ✅ 200 audio/mpeg 16384B |
 | AIR Alappuzha | malayalam | ✅ 200 application/vnd.apple.mpegurl 93B |
 | AIR Ananthapuri FM | malayalam | ✅ 200 application/vnd.apple.mpegurl 199B |
-| AIR Devikulam | malayalam | ✅ 200 application/vnd.apple.mpegurl 370B |
 | AIR FM Rainbow Kochi | malayalam | ✅ 200 application/vnd.apple.mpegurl 370B |
-| AIR Kannur | malayalam | ✅ 200 application/vnd.apple.mpegurl 370B |
+| AIR Kannur | malayalam | ✅ 200 application/vnd.apple.mpegurl 369B |
 | AIR Kochi FM | malayalam | ✅ 200 application/vnd.apple.mpegurl 371B |
-| AIR Kozhikode (Calicut) | malayalam | ✅ 200 application/vnd.apple.mpegurl 370B |
-| AIR Kozhikode FM | malayalam | ✅ 200 application/vnd.apple.mpegurl 370B |
+| AIR Kozhikode (Calicut) | malayalam | ✅ 200 application/vnd.apple.mpegurl 371B |
+| AIR Kozhikode FM | malayalam | ✅ 200 application/vnd.apple.mpegurl 371B |
 | AIR Malayalam | malayalam | ✅ 200 application/vnd.apple.mpegurl 371B |
-| AIR Manjeri FM | malayalam | ✅ 200 application/vnd.apple.mpegurl 370B |
-| AIR Thrissur | malayalam | ✅ 200 application/vnd.apple.mpegurl 370B |
+| AIR Manjeri FM | malayalam | ✅ 200 application/vnd.apple.mpegurl 369B |
+| AIR Thrissur | malayalam | ✅ 200 application/vnd.apple.mpegurl 369B |
 | AR Radio | malayalam | ✅ 200 audio/mpeg 16384B |
+| AVE FM (Mananthavady) | malayalam | ✅ 200 audio/mpeg 16384B |
 | Aaha FM | malayalam | ✅ 200 audio/mpeg 16384B |
 | Ahalia FM | malayalam | ✅ 200 audio/mpeg 16384B |
 | Amen Radio | malayalam | ✅ 200 audio/aacp 16384B |
@@ -54,7 +54,7 @@ All checked: 172 of 180.
 | Kairali News | malayalam | ✅ 200 application/vnd.apple.mpegurl 370B |
 | Kairaly TV | malayalam | ✅ 200 application/vnd.apple.mpegurl 182B |
 | Kalabhavan Mani Radio | malayalam | ✅ 200 audio/mpeg 16384B |
-| Karunasai Radio | malayalam | ✅ 200 application/x-mpegurl 217B |
+| Karunasai Radio | malayalam | ✅ 200 application/x-mpegurl 216B |
 | Live FM 1072 | malayalam | ✅ 200 audio/aac 16384B |
 | Luminous FM | malayalam | ✅ 200 audio/mpeg 16384B |
 | Mala90 | malayalam | ✅ 200 audio/mpeg 16384B |
@@ -65,7 +65,6 @@ All checked: 172 of 180.
 | Mohanlal Hits | malayalam | ✅ 200 audio/mpeg 16384B |
 | Music FM | malayalam | ✅ 200 audio/mpeg 16384B |
 | Muthnabi | malayalam | ✅ 200 audio/mpeg 16384B |
-| My Radio FM | malayalam | ✅ 200 audio/mpeg 16384B |
 | N Devotional | malayalam | ✅ 200 audio/mpeg 16384B |
 | Naadan Chaaya Radio (Ireland) | malayalam | ✅ 200 audio/aac 16384B |
 | Nammude UK | malayalam | ✅ 200 audio/aac 16384B |
@@ -86,7 +85,7 @@ All checked: 172 of 180.
 | Radio Lemon New Zealand | malayalam | ✅ 200 audio/aac 16384B |
 | Radio Lime | malayalam | ✅ 200 audio/mpeg 16384B |
 | Radio Macfast 90.4 | malayalam | ✅ 200 audio/mpeg 16384B |
-| Radio Malabar | malayalam | ✅ 200 application/x-mpegurl 210B |
+| Radio Malabar | malayalam | ✅ 200 application/x-mpegurl 207B |
 | Radio Malayalam | malayalam | ✅ 200 audio/mpeg 16384B |
 | Radio Mango | malayalam | ✅ 200 audio/mpeg 16384B |
 | Radio Maria | malayalam | ✅ 200 audio/aacp 16384B |
@@ -110,6 +109,5 @@ All checked: 172 of 180.
 | Vividh Bharati Malayalam | malayalam | ✅ 200 application/vnd.apple.mpegurl 371B |
 | Vividh Bharati Thiruvananthapuram | malayalam | ✅ 200 application/vnd.apple.mpegurl 93B |
 | World to World | malayalam | ✅ 200 audio/aac 16384B |
-| Radio Aswat | arabic | ❌ HTTPError: HTTP Error 502: Bad Gateway |
 | Tamil Sun FM | tamil | ❌ BadStatusLine: ICY 200 OK
  |
