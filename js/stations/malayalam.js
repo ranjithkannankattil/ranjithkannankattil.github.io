@@ -220,8 +220,7 @@ window.STATIONS = [
     "akv": "Akashvani Devikulam",
     "exclude": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "airkozhikodefm",
@@ -284,8 +283,7 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://cast1.my-control-panel.com/proxy/myradio90fm/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "airkannur",
@@ -514,8 +512,7 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://a5.asurahosting.com:7450/radio.mp3"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "malayalamfmnz",
@@ -1549,4 +1546,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T06:04Z";
