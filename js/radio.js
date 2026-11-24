@@ -291,7 +291,7 @@
       b.onclick = () => { cat = k; renderChips(); render(); };
       chips.append(b);
     }
-    // Sort (like the app): usual order · A–Z · most heard this week · top rated. Remembered.
+    // Sort (like the app): usual order · A–Z · most heard (all time) · top rated. Remembered.
     // Not in the Velvet Selection (hand-picked order).
     if (col.id !== "picks") {
       const lab = document.createElement("label");
@@ -305,8 +305,8 @@
       chips.append(lab);
     }
   }
-  const needsStats = (v) => v === "heard" || v === "heardall" || v === "rated";
-  const SORTS = [["usual", "Usual order"], ["az", "A–Z"], ["heard", "Most heard this week"], ["heardall", "Most heard of all time"], ["rated", "Top rated"], ["light", "Lightest first"]];
+  const needsStats = (v) => v === "heard" || v === "rated";
+  const SORTS = [["usual", "Usual order"], ["az", "A–Z"], ["heard", "Most heard"], ["rated", "Top rated"], ["light", "Lightest first"]];
   // Data saver: each stream's weight comes from the twice-daily check ("br", kbps per stream, 0 = not known)
   const saving = () => !!window.RadioSettings?.saving?.();
   const lightest = (s) => Math.min(...(s.br || []).filter((k) => k > 0), Infinity);
@@ -328,15 +328,8 @@
   }
   if (needsStats(sortBy)) loadStats().then(() => { if (col && S.length) render(); });
   const MIN_RATINGS = 3;
-  const heardMin = (k) => (stats && stats.week && stats.week[k]) || 0;
   const heardAll = (k) => (stats && stats.total && stats.total[k]) || 0;   // every complete day since counting began
   const rating = (k) => { const r = stats && stats.ratings && stats.ratings[k]; return r && r[1] >= MIN_RATINGS ? r : null; };
-  function heardLabel(m) {
-    if (!m) return "Still collecting";
-    if (m < 60) return `${m} min this week`;
-    if (m < 120) return "1 hr this week";
-    return `${Math.floor(m / 60).toLocaleString("en-GB")} hrs this week`;
-  }
   function heardAllLabel(m) {
     if (!m) return "Still collecting";
     if (m < 120) return `${m} min in all`;
@@ -355,14 +348,13 @@
     );
     if (col.id !== "picks") {
       if (sortBy === "az") list.sort(byName);
-      else if (sortBy === "heard") list.sort((a, b) => heardMin(key(b)) - heardMin(key(a)));
-      else if (sortBy === "heardall") list.sort((a, b) => heardAll(key(b)) - heardAll(key(a)));
+      else if (sortBy === "heard") list.sort((a, b) => heardAll(key(b)) - heardAll(key(a)));   // most heard = of all time
       else if (sortBy === "light") list.sort((a, b) => (isFinite(lightest(a)) ? lightest(a) : 1e4) - (isFinite(lightest(b)) ? lightest(b) : 1e4));
       else if (sortBy === "rated") list.sort((a, b) => ((rating(key(b)) || [-1])[0] - (rating(key(a)) || [-1])[0]) ||
         ((stats && stats.ratings[key(b)] || [0, 0])[1] - (stats && stats.ratings[key(a)] || [0, 0])[1]));
     }
     top3 = new Set(sortBy === "heard" && col.id !== "picks"
-      ? list.filter((s) => heardMin(key(s)) >= 60).sort((a, b) => heardMin(key(b)) - heardMin(key(a))).slice(0, 3).map((s) => key(s)) : []);
+      ? list.filter((s) => heardAll(key(s)) >= 60).sort((a, b) => heardAll(key(b)) - heardAll(key(a))).slice(0, 3).map((s) => key(s)) : []);
     // stations that failed the latest check go to the bottom (order otherwise kept)
     list.sort((a, b) => (a.offline ? 1 : 0) - (b.offline ? 1 : 0));
     return list;
@@ -426,10 +418,10 @@
         </button>
         <button class="fav" aria-label="Favourite" aria-pressed="${favs.has(key(s))}"><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2Z"/></svg></button>`;
       li.querySelector(".nm").textContent = s.name;      // names come from a public directory: never as HTML
-      const extra = [s.offline || col.id === "picks" ? "" : sortBy === "heard" ? heardLabel(heardMin(key(s))) : sortBy === "heardall" ? heardAllLabel(heardAll(key(s))) : sortBy === "rated" ? ratedLabel(rating(key(s))) : "",
+      const extra = [s.offline || col.id === "picks" ? "" : sortBy === "heard" ? heardAllLabel(heardAll(key(s))) : sortBy === "rated" ? ratedLabel(rating(key(s))) : "",
         s.offline || !(saving() || sortBy === "light") ? "" : weightLabel(s)].filter(Boolean).join(" · ");
       li.querySelector(".sub").textContent = [extra, sub].filter(Boolean).join(" · ");
-      if (top3.has(key(s))) li.querySelector(".nm").insertAdjacentHTML("beforeend", ' <span class="top3" title="One of the three most heard this week">◆</span>');
+      if (top3.has(key(s))) li.querySelector(".nm").insertAdjacentHTML("beforeend", ' <span class="top3" title="One of the three most heard">◆</span>');
       if (s.tv) li.querySelector(".nm").insertAdjacentHTML("beforeend", ' <span class="tv-tag" title="The sound of a TV channel">TV</span>');
       if (isNew && !s.offline) li.querySelector(".nm").insertAdjacentHTML("beforeend", ' <span class="new-tag">New</span>');
       li.querySelector(".hit").onclick = () => (isCur(s) ? toggle() : play(s, list));
