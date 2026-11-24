@@ -108,6 +108,13 @@ His reason: the app looks like one long list; in Settings you can't tell what is
   which is what becomes Velvet Selection), **Most heard** = of all time (`total` in js/station-stats.json; he dropped
   "this week" on 24 Nov 2026: one Most heard everywhere, website done, app in 2.10 for every list), Top rated, A to Z, Light on data. The kind and
   place words narrow Velvet Selection the same way. Each listener's choice is remembered; it never changes his order.
+- **Bug (his report, 24 Nov 2026): the radio keeps playing when Android Auto disconnects** (it should pause, like a
+  car radio switching off). Today only `setHandleAudioBecomingNoisy(true)` pauses it, and leaving Android Auto
+  (cable or wireless projection) doesn't always send that "noisy" signal; or a pause happens and the
+  resume-after-other-apps helper starts it again. His PlayLog from the next disconnect tells which. Fix both ways:
+  watch the car connection (androidx.car.app `CarConnection`: projection → not connected) and pause with
+  PlayLog.who = "Android Auto disconnected"; that pause cancels the resume helper and reconnecting, like any pause.
+  Device test with a fake disconnect; he checks in the car.
 - Also in 2.10 (from earlier): bugs (radio turning itself on + Auto artwork flicker, Connecting… timeout,
   widget doesn't open the app, three looks ignore the colour theme, text shifts between looks, remaining
   translations), the share card drawn from the current player look, browse by country. Spotify-in-car
