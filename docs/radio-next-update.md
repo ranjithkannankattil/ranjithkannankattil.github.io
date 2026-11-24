@@ -62,6 +62,14 @@ His reason: the app looks like one long list; in Settings you can't tell what is
   and logo), kept private on that phone and synced with the account when signed in (`users/{uid}`), shown under
   Favourites with a "Yours" mark, playable in the car too; a quick check that the link plays before saving; an
   optional "Also suggest it for everyone" that sends it to Request a station.
+- **Feedback in Settings** (asked 24 Nov 2026), a group above App version: Suggest a station (link or just a name →
+  Firestore `requests`, as today), Request a feature, Send a thank-you note (both a short form → a new owner-only
+  `feedback` collection with kind feature/thanks, optional email for a reply, one a minute; rules + rules tests), and
+  Rate on Google Play (opens the Play listing). You loses Request a station / Write to us (now only in Feedback);
+  its last group becomes "About" with About Radio Velvet. Show feedback and thanks on the owner page.
+- **Google Play rating prompt**: already in Play builds (`Review.kt` + `ReviewRule`, once, after 4 days and 3 h of
+  listening). Change to **2 days and about 2 hours** as he asked; still once, never after a crash; Google decides
+  whether its sheet actually shows. Update the LogicTest cases.
 - Also in 2.10 (from earlier): bugs (radio turning itself on + Auto artwork flicker, Connecting… timeout,
   widget doesn't open the app, three looks ignore the colour theme, text shifts between looks, remaining
   translations), the share card drawn from the current player look, browse by country. Spotify-in-car
