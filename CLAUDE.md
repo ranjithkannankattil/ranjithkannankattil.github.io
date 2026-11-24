@@ -19,7 +19,7 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
 - **Writings**: never state how many pieces he wrote or over which years; keep descriptions generic.
   Blog version of a post is canonical over the Facebook copy.
 - **Copyheart**: his own work is free to copy (say so for his work only, not everything on the site).
-- The site is English-only — no translated pages.
+- The site is English-only — no translated pages (one exception he asked for: the Radio FAQ will offer Malayalam and Hindi).
 - **All media goes to Cloudflare R2**, served from `https://media.ranjithkb.com/` — photos, book
   PDFs, link-preview cards, audio, video and any other new images or files. Never commit media to
   the repo for the site to serve. To add some: commit it under `media-incoming/<path>`; the

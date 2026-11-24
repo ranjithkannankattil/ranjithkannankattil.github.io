@@ -72,7 +72,16 @@ His reason: the app looks like one long list; in Settings you can't tell what is
   whether its sheet actually shows. Update the LogicTest cases.
 - **FAQ for listeners** (asked 24 Nov 2026), one set of answers used in both places: a section on the Radio page
   (folded questions, linkable as radio.html#faq, after "About the app") and in the app as Settings → Help → FAQ
-  (searchable, works offline). Keep the text in one file on the site (e.g. `radio-faq.json`, English plus the app's
+  (searchable, works offline). Draft text (he is reviewing it): https://claude.ai/artifact/YCK9DKeDNNRAkkqeHDwAAT
+  Added 24 Nov 2026: a search box at the top (matches questions and answers as you type, in the chosen language);
+  every question has its own stable link (`radio.html#faq-<slug>`, and the app opens the same question from that
+  link); FAQ in English, Malayalam and Hindi (app follows the app language; the website gets a language switch on
+  the FAQ only — he asked for it, an exception to the English-only site rule); a "hobby project, run in spare time,
+  replies can take a while" note in Getting started and Contact; step-by-step setup for Android phone, Android
+  Auto, Android TV, iPhone/iPad (Add to Home Screen), CarPlay (no app: start on the phone, sound via the car),
+  computer and watches; the Quick tour; Malayalam-first default and how others pin their own language first.
+  His answers: no ads of our own stays true; Suggest a station on both the website and the app; no promised
+  time for removal requests. Keep the text in one file on the site (e.g. `radio-faq.json`, English plus the app's
   Malayalam and Hindi) so the app and the page read the same words. Plain words, short answers. Questions to cover:
   - Getting started: what Radio Velvet is; is it free (yes, no ads from us; some stations play their own ads);
     Android app vs website; iPhone (no app yet, use the website); Android TV; Android Auto; is there a Garmin app
