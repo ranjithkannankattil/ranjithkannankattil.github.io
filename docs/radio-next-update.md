@@ -52,6 +52,16 @@ His reason: the app looks like one long list; in Settings you can't tell what is
   song (instead of iTunes art) and on share cards; other stations keep logos on Android Auto only. Radio Utsav's only
   stream is http (`http://82.145.63.6:6094/mp=/stream`), which the app and the https website can't play, so it stays
   hidden until there is an https link (ask the station, or pass it through a small Cloudflare proxy if he agrees).
+- **Bug (tester, 24 Nov 2026): Android Auto next / previous in Favourites plays Velvet Selection stations.**
+  Cause found: `PlaybackService.onGetChildren` stores one sibling list per station id (`siblings[mediaId]`); a station in
+  both Favourites and Velvet Selection (or a language) gets whichever list the car loaded last, and the car loads
+  every tab. Fix: give car items a list-scoped id (e.g. `favs/<key>`, `picks/<key>`, `col|x/<key>`), strip the prefix
+  wherever the station key is read (Listen, CarArt, ratings, saved queue, alarm backups), and add a test that taps a
+  favourite after loading Velvet Selection and checks next / previous stay in Favourites.
+- **Tester suggestion (24 Nov 2026): add your own station.** "Add a station" (stream link + name, optional language
+  and logo), kept private on that phone and synced with the account when signed in (`users/{uid}`), shown under
+  Favourites with a "Yours" mark, playable in the car too; a quick check that the link plays before saving; an
+  optional "Also suggest it for everyone" that sends it to Request a station.
 - Also in 2.10 (from earlier): bugs (radio turning itself on + Auto artwork flicker, Connecting… timeout,
   widget doesn't open the app, three looks ignore the colour theme, text shifts between looks, remaining
   translations), the share card drawn from the current player look, browse by country. Spotify-in-car
