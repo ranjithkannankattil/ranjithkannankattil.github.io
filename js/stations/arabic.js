@@ -20,7 +20,9 @@ window.STATIONS = [
     "streams": [
       "https://9090streaming.mobtada.com/9090FMEGYPT"
     ],
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-2",
@@ -106,7 +108,7 @@ window.STATIONS = [
       "https://stream.radiojar.com/8s5u5tpdtwzuv"
     ],
     "br": [
-      128
+      80
     ]
   },
   {
@@ -281,7 +283,7 @@ window.STATIONS = [
       "https://n0e.radiojar.com/8s5u5tpdtwzuv?rj=&rj-tok=AAABg5BDP0EA2ElNLJYUJTsVcg&rj-ttl=5"
     ],
     "br": [
-      64
+      80
     ]
   },
   {
@@ -579,9 +581,7 @@ window.STATIONS = [
       "https://alifalifjobs.com/radio/8000/AlifAlifLive.mp3"
     ],
     "added": "2026-10-23",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "skyrock-casablanca",
@@ -772,7 +772,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      80
+      96
     ]
   },
   {
@@ -1767,4 +1767,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

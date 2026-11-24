@@ -161,7 +161,7 @@ window.STATIONS = [
       "https://trt.radyotvonline.net/trthaber"
     ],
     "br": [
-      137
+      122
     ]
   },
   {
@@ -205,7 +205,7 @@ window.STATIONS = [
       "https://trt.radyotvonline.net/trt1"
     ],
     "br": [
-      129
+      116
     ]
   },
   {
@@ -555,7 +555,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      151
+      150
     ]
   },
   {
@@ -1538,7 +1538,10 @@ window.STATIONS = [
     "streams": [
       "https://sslyayin.netyayin.net/radyozergan/;"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "dinamo-fm-live-from-minimuzikhol",
@@ -1742,4 +1745,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

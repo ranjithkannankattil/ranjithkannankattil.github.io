@@ -551,7 +551,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.rcs.revma.com/qp0xrd9mtd3vv"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "station-29",
@@ -680,10 +681,7 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/273/64k.mp3"
     ],
-    "added": "2026-10-27",
-    "br": [
-      64
-    ]
+    "added": "2026-10-27"
   },
   {
     "id": "voa-macau",
@@ -722,10 +720,7 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/5021912/64k.mp3"
     ],
-    "added": "2026-10-28",
-    "br": [
-      64
-    ]
+    "added": "2026-10-28"
   },
   {
     "id": "needs-radio",
@@ -1601,4 +1596,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

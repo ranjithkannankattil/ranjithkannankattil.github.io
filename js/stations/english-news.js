@@ -331,9 +331,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "where": "US",
-    "br": [
-      32
-    ]
+    "offline": true
   },
   {
     "id": "3aw-melbourne-693-am",
@@ -556,9 +554,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "where": "Nigeria",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "rte-radio-1",
@@ -707,7 +703,7 @@ window.STATIONS = [
     "added": "2026-10-28",
     "where": "Canada",
     "br": [
-      56
+      64
     ]
   },
   {
@@ -991,7 +987,7 @@ window.STATIONS = [
     "added": "2026-11-02",
     "where": "UK",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -1211,7 +1207,7 @@ window.STATIONS = [
     "added": "2026-11-05",
     "where": "Qatar",
     "br": [
-      129
+      128
     ]
   },
   {
@@ -1737,7 +1733,7 @@ window.STATIONS = [
     "added": "2026-11-11",
     "where": "Canada",
     "br": [
-      47
+      48
     ]
   },
   {
@@ -1789,7 +1785,10 @@ window.STATIONS = [
     ],
     "added": "2026-11-12",
     "where": "The Philippines",
-    "offline": true
+    "br": [
+      96,
+      96
+    ]
   },
   {
     "id": "info-radio-ghana",
@@ -1893,4 +1892,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

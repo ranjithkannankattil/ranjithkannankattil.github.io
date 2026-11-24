@@ -294,9 +294,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/v73tc5gwaphvv"
     ],
-    "br": [
-      192
-    ]
+    "offline": true
   },
   {
     "id": "busoga-royal-radio",
@@ -395,4 +393,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

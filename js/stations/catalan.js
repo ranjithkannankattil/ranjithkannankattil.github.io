@@ -647,7 +647,9 @@ window.STATIONS = [
       "https://antares.dribbcast.com/proxy/espluguesfm?mp=/stream"
     ],
     "added": "2026-10-24",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-sitges",
@@ -849,7 +851,9 @@ window.STATIONS = [
       "https://enacast.com/radioponts/streams/HD"
     ],
     "added": "2026-10-28",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "tarragona-radio",
@@ -888,4 +892,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

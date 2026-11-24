@@ -540,7 +540,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      56
+      64
     ]
   },
   {
@@ -648,4 +648,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

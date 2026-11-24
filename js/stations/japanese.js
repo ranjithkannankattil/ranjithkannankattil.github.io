@@ -239,7 +239,9 @@ window.STATIONS = [
     "streams": [
       "https://antares.dribbcast.com/proxy/jpop?mp=/s"
     ],
-    "offline": true
+    "br": [
+      192
+    ]
   },
   {
     "id": "neuro-21-station",
@@ -292,7 +294,9 @@ window.STATIONS = [
     "streams": [
       "https://antares.dribbcast.com/proxy/apop?mp=/s"
     ],
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "real-love-music-radio-future-funk",
@@ -436,7 +440,7 @@ window.STATIONS = [
       "https://vrc.gate.vrtv.jp/live?p=g&u=d"
     ],
     "br": [
-      1363
+      1405
     ]
   },
   {
@@ -483,7 +487,9 @@ window.STATIONS = [
       "https://antares.dribbcast.com/proxy/apop?mp=/s?"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "bbn-japanese",
@@ -882,7 +888,10 @@ window.STATIONS = [
     "streams": [
       "https://howlingf-gecko.radioca.st/autodj"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-gambaru",
@@ -1003,4 +1012,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

@@ -597,7 +597,9 @@ window.STATIONS = [
       "https://play.4plusmedia.tv/radio.mp3"
     ],
     "added": "2026-10-24",
-    "offline": true
+    "br": [
+      192
+    ]
   },
   {
     "id": "lefutur-radio",
@@ -667,9 +669,7 @@ window.STATIONS = [
       "https://play.primeradio.al/prime"
     ],
     "added": "2026-10-27",
-    "br": [
-      256
-    ]
+    "offline": true
   },
   {
     "id": "truth-fm-albania",
@@ -720,4 +720,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

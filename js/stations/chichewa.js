@@ -281,9 +281,7 @@ window.STATIONS = [
     "streams": [
       "https://s7.myradiostream.com:60218/;;"
     ],
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "moyo-fm",
@@ -408,4 +406,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

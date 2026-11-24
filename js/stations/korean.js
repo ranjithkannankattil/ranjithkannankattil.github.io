@@ -10,7 +10,7 @@ window.STATIONS = [
       "https://radiolive.ytn.co.kr/radio/_definst_/20211118_fmlive/playlist.m3u8"
     ],
     "br": [
-      132
+      100
     ]
   },
   {
@@ -32,7 +32,7 @@ window.STATIONS = [
       "https://vod3.obs.co.kr:444/live/obsstream1/radio.stream/playlist.m3u8"
     ],
     "br": [
-      137
+      152
     ]
   },
   {
@@ -105,7 +105,9 @@ window.STATIONS = [
     "streams": [
       "https://antares.dribbcast.com/proxy/kpop?mp=/s"
     ],
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "listen-moe-k-pop",
@@ -299,7 +301,9 @@ window.STATIONS = [
       "https://antares.dribbcast.com/proxy/apop?mp=/s?"
     ],
     "added": "2026-10-23",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "fm105-2",
@@ -347,7 +351,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      1149
+      1152
     ]
   },
   {
@@ -360,7 +364,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      1300
+      1292
     ]
   },
   {
@@ -373,7 +377,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      1151
+      1152
     ]
   },
   {
@@ -385,7 +389,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      98
+      97
     ]
   },
   {
@@ -410,7 +414,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      1133
+      1137
     ]
   },
   {
@@ -423,7 +427,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      4446
+      4419
     ]
   },
   {
@@ -495,7 +499,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      624
+      628
     ]
   },
   {
@@ -540,9 +544,7 @@ window.STATIONS = [
       "https://lhttp-hw.qtfm.cn/live/20324/64k.mp3"
     ],
     "added": "2026-10-27",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "gukak",
@@ -623,7 +625,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      1146
+      1158
     ]
   },
   {
@@ -636,7 +638,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      1143
+      1147
     ]
   },
   {
@@ -658,7 +660,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      1139
+      1152
     ]
   },
   {
@@ -748,7 +750,9 @@ window.STATIONS = [
       "https://antares.dribbcast.com/proxy/apop?mp=/s"
     ],
     "added": "2026-11-13",
-    "offline": true
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

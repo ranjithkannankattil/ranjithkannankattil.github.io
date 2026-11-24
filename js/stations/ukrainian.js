@@ -207,7 +207,9 @@ window.STATIONS = [
     "streams": [
       "https://s5.radioforge.com:7908/live?n=77357"
     ],
-    "offline": true
+    "br": [
+      192
+    ]
   },
   {
     "id": "24-breaking-live",
@@ -938,10 +940,7 @@ window.STATIONS = [
     "streams": [
       "https://service.ptrk.tv:8443/PTRK"
     ],
-    "added": "2026-10-29",
-    "br": [
-      192
-    ]
+    "added": "2026-10-29"
   },
   {
     "id": "radio-jazz-fm",
@@ -1508,4 +1507,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

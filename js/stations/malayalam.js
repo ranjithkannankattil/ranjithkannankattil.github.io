@@ -220,7 +220,8 @@ window.STATIONS = [
     "akv": "Akashvani Devikulam",
     "exclude": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "airkozhikodefm",
@@ -284,9 +285,7 @@ window.STATIONS = [
     "streams": [
       "https://cast1.my-control-panel.com/proxy/myradio90fm/stream"
     ],
-    "br": [
-      320
-    ]
+    "offline": true
   },
   {
     "id": "airkannur",
@@ -516,9 +515,7 @@ window.STATIONS = [
     "streams": [
       "https://a5.asurahosting.com:7450/radio.mp3"
     ],
-    "br": [
-      320
-    ]
+    "offline": true
   },
   {
     "id": "malayalamfmnz",
@@ -542,7 +539,7 @@ window.STATIONS = [
       "https://live.accessmedia.nz/PlanetFM.stream/playlist.m3u8"
     ],
     "br": [
-      150,
+      151,
       135
     ]
   },
@@ -1059,7 +1056,10 @@ window.STATIONS = [
     "streams": [
       "https://cast1.my-control-panel.com/proxy/avefm/stream"
     ],
-    "added": "2026-11-23"
+    "added": "2026-11-23",
+    "br": [
+      360
+    ]
   },
   {
     "id": "shalomradio",
@@ -1317,7 +1317,10 @@ window.STATIONS = [
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudioragam/hlspbaudioragam_Auto.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      32
+    ]
   },
   {
     "id": "anbu-fm-malayalam",
@@ -1350,7 +1353,10 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      94
+    ]
   },
   {
     "id": "aural-oldies",
@@ -1519,7 +1525,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-14",
     "br": [
-      2520
+      2240
     ]
   },
   {
@@ -1543,4 +1549,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

@@ -390,6 +390,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio-streaming.tegalkota.go.id/stream.mp3"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -881,7 +884,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      160
+      128
     ]
   },
   {
@@ -1704,6 +1707,15 @@ window.STATIONS = [
     "br": [
       128
     ]
+  },
+  {
+    "id": "radio-kita-tasikmalaya",
+    "name": "Radio Kita Tasikmalaya",
+    "category": "music",
+    "streams": [
+      "https://stream.radiokita.my.id/listen/radiokita/radiokita"
+    ],
+    "added": "2026-11-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

@@ -291,7 +291,7 @@ window.STATIONS = [
       "https://ais-sa1.streamon.fm/7681_64k.mp3"
     ],
     "br": [
-      74
+      70
     ]
   },
   {
@@ -710,7 +710,10 @@ window.STATIONS = [
       "https://stream.zeno.fm/60cb36c29heuv"
     ],
     "added": "2026-10-28",
-    "offline": true
+    "br": [
+      96,
+      96
+    ]
   },
   {
     "id": "105-9-energy-fm-dwla",
@@ -781,7 +784,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-12",
     "br": [
-      96
+      128
     ]
   },
   {
@@ -797,4 +800,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

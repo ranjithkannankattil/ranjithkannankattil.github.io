@@ -215,7 +215,7 @@ window.STATIONS = [
       "https://live.livestreamtv.ca/azstar/amlst:azstar/playlist.m3u8"
     ],
     "br": [
-      3380
+      4130
     ]
   },
   {
@@ -287,6 +287,15 @@ window.STATIONS = [
     "br": [
       192
     ]
+  },
+  {
+    "id": "radio-space-104fm",
+    "name": "Radio Space 104FM",
+    "category": "music",
+    "streams": [
+      "https://stream.surfernetwork.com/rxzd8t0l1ivvv"
+    ],
+    "added": "2026-11-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

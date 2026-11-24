@@ -67,8 +67,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://1716664847.rsc.cdn77.org/1716664847/tracks-a1/mono.ts.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-6",
@@ -98,9 +97,7 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qtfm.cn/live/1262/64k.mp3"
     ],
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "fm90-6-radio-chinese",
@@ -313,9 +310,7 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/4848/64k.mp3"
     ],
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "station-19",
@@ -408,9 +403,7 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/20192/64k.mp3"
     ],
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "rthk-radio-8",
@@ -629,7 +622,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -701,7 +694,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -784,9 +777,7 @@ window.STATIONS = [
       "https://lhttp.qingting.fm/live/20211602/64k.mp3"
     ],
     "added": "2026-10-27",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "station-41",
@@ -837,10 +828,7 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/1282/64k.mp3"
     ],
-    "added": "2026-11-15",
-    "br": [
-      64
-    ]
+    "added": "2026-11-15"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

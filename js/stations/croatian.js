@@ -453,7 +453,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      96
+      319
     ]
   },
   {
@@ -993,6 +993,33 @@ window.STATIONS = [
     "br": [
       160
     ]
+  },
+  {
+    "id": "antena-love",
+    "name": "Antena Love",
+    "category": "music",
+    "streams": [
+      "https://audio.social3.hr/listen/antena_love/radio.mp3"
+    ],
+    "added": "2026-11-24"
+  },
+  {
+    "id": "radio-korzo",
+    "name": "Radio Korzo",
+    "category": "music",
+    "streams": [
+      "https://c8.hostingcentar.com/streams/radiokorzo/"
+    ],
+    "added": "2026-11-24"
+  },
+  {
+    "id": "antena-club",
+    "name": "Antena Club",
+    "category": "music",
+    "streams": [
+      "https://audio.social3.hr/listen/antena_hit/radio.mp3"
+    ],
+    "added": "2026-11-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

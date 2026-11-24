@@ -391,7 +391,8 @@ window.STATIONS = [
     "added": "2026-10-27",
     "br": [
       130
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "tafsir-in-swahili",
@@ -442,4 +443,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

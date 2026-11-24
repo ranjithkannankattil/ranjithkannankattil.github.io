@@ -410,7 +410,7 @@ window.STATIONS = [
       "https://gb25.streamgates.net/radios-audio/100Nostalgia/playlist.m3u8"
     ],
     "br": [
-      147
+      148
     ]
   },
   {
@@ -612,4 +612,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

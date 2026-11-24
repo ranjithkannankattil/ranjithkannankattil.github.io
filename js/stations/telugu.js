@@ -38,6 +38,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio032/playlist.m3u8"
+    ],
+    "br": [
+      95
     ]
   },
   {
@@ -46,6 +49,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudioragam/hlspbaudioragam_Auto.m3u8"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -212,8 +218,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/8416764ec0889597/8416764ec0889597.m3u8"
     ],
-    "added": "2026-11-13",
-    "offline": true
+    "added": "2026-11-13"
   },
   {
     "id": "akashvani-warangal",
@@ -234,4 +239,4 @@ window.STATIONS = [
     "added": "2026-11-13"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

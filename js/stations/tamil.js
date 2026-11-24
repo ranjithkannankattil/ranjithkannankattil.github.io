@@ -107,7 +107,7 @@ window.STATIONS = [
       "https://stream.zeno.fm/r2gn1pgm4qruv"
     ],
     "br": [
-      64
+      128
     ]
   },
   {
@@ -253,6 +253,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudioragam/hlspbaudioragam_Auto.m3u8"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -354,6 +357,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio021/playlist.m3u8"
+    ],
+    "br": [
+      78
     ]
   },
   {
@@ -537,7 +543,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      79
+      78
     ]
   },
   {
@@ -549,7 +555,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      79
+      78
     ]
   },
   {
@@ -800,7 +806,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      78
+      79
     ]
   },
   {
@@ -895,7 +901,9 @@ window.STATIONS = [
       "https://s3.yesstreaming.net:17045/stream"
     ],
     "added": "2026-10-28",
-    "offline": true
+    "br": [
+      320
+    ]
   },
   {
     "id": "valipokan-fm",
@@ -941,7 +949,9 @@ window.STATIONS = [
       "https://usa11.fastcast4u.com/proxy/ajaydk?mp=/;"
     ],
     "added": "2026-10-28",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "abctamil",
@@ -1737,4 +1747,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

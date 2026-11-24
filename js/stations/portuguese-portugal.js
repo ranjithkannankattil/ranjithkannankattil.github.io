@@ -60,7 +60,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m8080.aac"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -130,7 +130,7 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
     ],
     "br": [
-      166
+      169
     ]
   },
   {
@@ -141,7 +141,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m80ballads.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -163,7 +163,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m80nacional.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -174,7 +174,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m8060.aac"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -259,7 +259,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/smooth.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -282,8 +282,8 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8"
     ],
     "br": [
-      175,
-      175
+      189,
+      189
     ]
   },
   {
@@ -316,7 +316,7 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
     ],
     "br": [
-      183
+      165
     ],
     "offline": true
   },
@@ -328,7 +328,7 @@ window.STATIONS = [
       "https://stream-hls.bauermedia.pt/cidade.aac/playlist.m3u8"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -384,7 +384,7 @@ window.STATIONS = [
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
     ],
     "br": [
-      260,
+      259,
       262
     ]
   },
@@ -475,7 +475,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      171
+      182
     ]
   },
   {
@@ -487,7 +487,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      179
+      166
     ]
   },
   {
@@ -571,7 +571,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      165
+      167
     ]
   },
   {
@@ -643,7 +643,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -787,7 +787,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -883,7 +883,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -919,7 +919,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -1003,7 +1003,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      96
+      128
     ]
   },
   {
@@ -1255,7 +1255,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-02",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -1365,7 +1365,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "br": [
-      224
+      320
     ]
   },
   {
@@ -1461,7 +1461,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "br": [
-      166
+      171
     ]
   },
   {
@@ -1611,9 +1611,8 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "br": [
-      166
-    ],
-    "offline": true
+      191
+    ]
   },
   {
     "id": "radio-quantica",
@@ -1659,7 +1658,9 @@ window.STATIONS = [
       "https://centova.radio.com.pt/proxy/037?mp=/stream"
     ],
     "added": "2026-11-08",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "radiofutura-pt",
@@ -1782,4 +1783,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

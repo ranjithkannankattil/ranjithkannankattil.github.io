@@ -303,7 +303,7 @@ window.STATIONS = [
     ],
     "where": "UK",
     "br": [
-      48
+      47
     ]
   },
   {
@@ -1782,10 +1782,7 @@ window.STATIONS = [
       "https://streams.calmradio.com:6828/stream"
     ],
     "added": "2026-11-06",
-    "where": "Canada",
-    "br": [
-      128
-    ]
+    "where": "Canada"
   },
   {
     "id": "the-jazz-groove-west",
@@ -1889,4 +1886,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

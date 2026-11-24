@@ -720,7 +720,7 @@ window.STATIONS = [
     "added": "2026-10-26",
     "where": "UK",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -798,7 +798,7 @@ window.STATIONS = [
     "added": "2026-10-27",
     "where": "Canada",
     "br": [
-      56
+      64
     ]
   },
   {
@@ -1048,9 +1048,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "where": "Nigeria",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "bfm-89-9-malaysia",
@@ -1436,7 +1434,7 @@ window.STATIONS = [
     "added": "2026-11-05",
     "where": "Qatar",
     "br": [
-      129
+      128
     ]
   },
   {
@@ -1882,4 +1880,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

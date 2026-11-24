@@ -413,7 +413,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      96
+      95
     ]
   },
   {
@@ -641,7 +641,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      128
+      88
     ]
   },
   {
@@ -1075,7 +1075,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-01",
     "br": [
-      128
+      88
     ]
   },
   {
@@ -1171,7 +1171,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-02",
     "br": [
-      88
+      128
     ]
   },
   {
@@ -1720,7 +1720,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-10",
     "br": [
-      96
+      95
     ]
   },
   {
@@ -1732,7 +1732,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-10",
     "br": [
-      65
+      66
     ]
   },
   {
@@ -1760,4 +1760,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

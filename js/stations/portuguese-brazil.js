@@ -131,9 +131,6 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://8903.brasilstream.com.br/stream"
-    ],
-    "br": [
-      64
     ]
   },
   {
@@ -808,10 +805,7 @@ window.STATIONS = [
     "streams": [
       "https://8214.brasilstream.com.br/stream"
     ],
-    "added": "2026-10-26",
-    "br": [
-      128
-    ]
+    "added": "2026-10-26"
   },
   {
     "id": "98-rock",
@@ -1593,7 +1587,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.saopaulo01.com.br/8300/stream/"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "gold-classic",
@@ -1761,4 +1758,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

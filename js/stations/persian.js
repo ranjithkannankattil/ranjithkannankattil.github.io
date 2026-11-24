@@ -77,7 +77,9 @@ window.STATIONS = [
     "streams": [
       "https://shoutcast.glwiz.com/RadioYAR.mp3"
     ],
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "go",
@@ -292,4 +294,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";

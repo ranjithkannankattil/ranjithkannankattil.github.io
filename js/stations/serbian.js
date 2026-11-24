@@ -156,6 +156,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://centova.dukahosting.com/proxy/021kafe/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -626,7 +629,10 @@ window.STATIONS = [
     "streams": [
       "https://centova.dukahosting.com/proxy/021domaca/stream"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-3",
@@ -797,7 +803,10 @@ window.STATIONS = [
     "streams": [
       "https://centova.dukahosting.com/proxy/021disco/stream"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      128
+    ]
   },
   {
     "id": "plus-radio-hit",
@@ -984,7 +993,9 @@ window.STATIONS = [
       "https://centova.dukahosting.com/proxy/rock/stream"
     ],
     "added": "2026-10-31",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-s-rock",
@@ -1053,10 +1064,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.bigfm.de/balkan/mp3-128/onlineradiobox"
     ],
-    "added": "2026-11-01",
-    "br": [
-      128
-    ]
+    "added": "2026-11-01"
   },
   {
     "id": "radio-sumadinac",
@@ -1375,7 +1383,9 @@ window.STATIONS = [
       "https://centova.dukahosting.com/proxy/futog/stream"
     ],
     "added": "2026-11-06",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-osvit",
@@ -1711,4 +1721,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-23T13:47Z";
+window.STATIONS_CHECKED = "2026-11-24T01:40Z";
