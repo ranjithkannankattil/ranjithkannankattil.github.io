@@ -417,7 +417,7 @@ window.STATIONS = [
     "added": "2026-10-24",
     "br": [
       128,
-      0
+      128
     ]
   },
   {
@@ -453,7 +453,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      319
+      96
     ]
   },
   {
@@ -524,7 +524,9 @@ window.STATIONS = [
       "https://29341.live.streamtheworld.com/PULAAAC_SC"
     ],
     "added": "2026-10-27",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-zelina",
@@ -631,7 +633,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      96
+      80
     ]
   },
   {
@@ -678,7 +680,9 @@ window.STATIONS = [
       "https://onlineradiobox.com/json/hr/92fm/play?platform=web"
     ],
     "added": "2026-10-29",
-    "offline": true
+    "br": [
+      192
+    ]
   },
   {
     "id": "mr4-nemzetisegi-adasok",
@@ -989,7 +993,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-12",
     "br": [
-      128
+      160
     ]
   },
   {
@@ -1035,7 +1039,10 @@ window.STATIONS = [
     "streams": [
       "https://audio.social3.hr/listen/antena_rock/radio.mp3"
     ],
-    "added": "2026-11-24"
+    "added": "2026-11-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "antena-istra-i-primorje",
@@ -1044,7 +1051,10 @@ window.STATIONS = [
     "streams": [
       "https://audio.social3.hr/listen/antena_istraprimorje/radio.mp3"
     ],
-    "added": "2026-11-24"
+    "added": "2026-11-24",
+    "br": [
+      256
+    ]
   },
   {
     "id": "antena-fit",
@@ -1053,7 +1063,10 @@ window.STATIONS = [
     "streams": [
       "https://audio.social3.hr/listen/antena_dance/radio.mp3"
     ],
-    "added": "2026-11-24"
+    "added": "2026-11-24",
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

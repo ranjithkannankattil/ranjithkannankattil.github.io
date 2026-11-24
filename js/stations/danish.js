@@ -457,10 +457,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.vinylhits.dk/vinylmp3"
     ],
-    "added": "2026-10-22",
-    "br": [
-      128
-    ]
+    "added": "2026-10-22"
   },
   {
     "id": "dansbandsradio-se",
@@ -529,10 +526,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.vinylhits.dk/vinylaac"
     ],
-    "added": "2026-10-22",
-    "br": [
-      128
-    ]
+    "added": "2026-10-22"
   },
   {
     "id": "2town-radio",
@@ -685,10 +679,7 @@ window.STATIONS = [
     "streams": [
       "https://stream1.radiomfk.dk/radiomfk"
     ],
-    "added": "2026-11-11",
-    "br": [
-      192
-    ]
+    "added": "2026-11-11"
   },
   {
     "id": "dr-p6-beat",
@@ -703,4 +694,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

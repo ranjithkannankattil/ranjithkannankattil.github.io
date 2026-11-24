@@ -32,7 +32,7 @@ window.STATIONS = [
       "https://vod3.obs.co.kr:444/live/obsstream1/radio.stream/playlist.m3u8"
     ],
     "br": [
-      158
+      145
     ]
   },
   {
@@ -355,7 +355,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      1150
+      1155
     ]
   },
   {
@@ -368,7 +368,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      1333
+      1277
     ]
   },
   {
@@ -381,7 +381,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      1157
+      1151
     ]
   },
   {
@@ -393,7 +393,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      96
+      97
     ]
   },
   {
@@ -418,7 +418,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      1149
+      1145
     ]
   },
   {
@@ -431,7 +431,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      4426
+      4438
     ]
   },
   {
@@ -503,7 +503,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      614
+      624
     ]
   },
   {
@@ -631,7 +631,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      1150
+      1145
     ]
   },
   {
@@ -644,7 +644,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      1150
+      1136
     ]
   },
   {
@@ -666,7 +666,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      1152
+      1142
     ]
   },
   {
@@ -761,4 +761,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

@@ -369,10 +369,7 @@ window.STATIONS = [
       "https://icecast.walmradio.com:8443/walm2_opus"
     ],
     "added": "2026-10-22",
-    "where": "US",
-    "br": [
-      192
-    ]
+    "where": "US"
   },
   {
     "id": "times-radio",
@@ -567,7 +564,7 @@ window.STATIONS = [
     "where": "Canada",
     "br": [
       48,
-      0
+      48
     ]
   },
   {
@@ -657,7 +654,9 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "where": "The Philippines",
-    "offline": true
+    "br": [
+      96
+    ]
   },
   {
     "id": "kogo-am-600",
@@ -795,9 +794,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "where": "Canada",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "radiostorm-comedy-104",
@@ -1046,9 +1043,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "where": "Nigeria",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "bfm-89-9-malaysia",
@@ -1111,7 +1106,9 @@ window.STATIONS = [
     ],
     "added": "2026-11-01",
     "where": "US",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-east",
@@ -1289,12 +1286,14 @@ window.STATIONS = [
     "name": "Christian Talk FM",
     "category": "us",
     "streams": [
+      "https://n07.radiojar.com/cm4by4kt2ceuv?rj-ttl=5&rj-tok=AAABel9L5qIAT_t_lI31ovcv0A",
       "https://ample.radiojar.com/cm4by4kt2ceuv"
     ],
     "added": "2026-11-03",
     "where": "US",
     "br": [
-      128
+      128,
+      0
     ]
   },
   {
@@ -1525,7 +1524,7 @@ window.STATIONS = [
     "added": "2026-11-06",
     "where": "Tonga",
     "br": [
-      64
+      32
     ]
   },
   {
@@ -1880,4 +1879,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

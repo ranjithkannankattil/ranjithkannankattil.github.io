@@ -484,10 +484,7 @@ window.STATIONS = [
     "streams": [
       "https://cast.mediaonline.net.ua/loungefm320"
     ],
-    "added": "2026-10-22",
-    "br": [
-      320
-    ]
+    "added": "2026-10-22"
   },
   {
     "id": "radio-jazz-gold-fm",
@@ -940,10 +937,7 @@ window.STATIONS = [
     "streams": [
       "https://service.ptrk.tv:8443/PTRK"
     ],
-    "added": "2026-10-29",
-    "br": [
-      192
-    ]
+    "added": "2026-10-29"
   },
   {
     "id": "radio-jazz-fm",
@@ -1373,7 +1367,9 @@ window.STATIONS = [
       "https://stream.blits-fm.ua/stream64"
     ],
     "added": "2026-11-04",
-    "offline": true
+    "br": [
+      320
+    ]
   },
   {
     "id": "happy-radio",
@@ -1508,4 +1504,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

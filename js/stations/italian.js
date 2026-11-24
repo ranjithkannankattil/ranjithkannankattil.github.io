@@ -217,7 +217,9 @@ window.STATIONS = [
     "streams": [
       "https://classichitsradio.streamingmedia.it/play"
     ],
-    "offline": true
+    "br": [
+      192
+    ]
   },
   {
     "id": "rtl-102-5-disco",
@@ -912,7 +914,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      132
+      130
     ]
   },
   {
@@ -1073,7 +1075,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-01",
     "br": [
-      128
+      88
     ]
   },
   {
@@ -1169,7 +1171,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-02",
     "br": [
-      96
+      88
     ]
   },
   {
@@ -1758,4 +1760,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

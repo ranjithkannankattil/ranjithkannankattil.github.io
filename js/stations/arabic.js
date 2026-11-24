@@ -10,7 +10,7 @@ window.STATIONS = [
       "https://n12.radiojar.com/8s5u5tpdtwzuv?listening-from-radio-garden=1620219571863&rj-tok=AAABeTyl2zYARSWbLVnrEOlqGw&rj-ttl=5"
     ],
     "br": [
-      64
+      80
     ]
   },
   {
@@ -108,7 +108,7 @@ window.STATIONS = [
       "https://stream.radiojar.com/8s5u5tpdtwzuv"
     ],
     "br": [
-      80
+      64
     ]
   },
   {
@@ -283,7 +283,7 @@ window.STATIONS = [
       "https://n0e.radiojar.com/8s5u5tpdtwzuv?rj=&rj-tok=AAABg5BDP0EA2ElNLJYUJTsVcg&rj-ttl=5"
     ],
     "br": [
-      80
+      64
     ]
   },
   {
@@ -294,7 +294,7 @@ window.STATIONS = [
       "https://stream.radiojar.com/0tpy1h0kxtzuv"
     ],
     "br": [
-      80
+      160
     ]
   },
   {
@@ -437,7 +437,9 @@ window.STATIONS = [
     "streams": [
       "https://stream.damasradio.fm/radio"
     ],
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-manarat",
@@ -797,7 +799,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      129
+      128
     ]
   },
   {
@@ -1312,9 +1314,7 @@ window.STATIONS = [
       "https://radio-mbc-mood.mbc.net/radio-mbc-mood.m3u8"
     ],
     "added": "2026-11-03",
-    "br": [
-      70
-    ]
+    "offline": true
   },
   {
     "id": "annaba",
@@ -1767,4 +1767,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

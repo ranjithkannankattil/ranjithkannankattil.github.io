@@ -237,7 +237,9 @@ window.STATIONS = [
       "https://us5new.listen2myradio.com:2199/listen.php?port=8138&type=ice&mount=stream"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "heavenly-altar-church-radio-kampala",
@@ -448,7 +450,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.secretoffuture.com/listen/vof_sounds_fm/radio.mp3"
     ],
-    "added": "2026-11-24"
+    "added": "2026-11-24",
+    "br": [
+      192
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

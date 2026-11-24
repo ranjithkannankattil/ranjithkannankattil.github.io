@@ -123,7 +123,9 @@ window.STATIONS = [
     "streams": [
       "https://stream-288.surfernetwork.com/g1pmt17nz9duv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJnMXBtdDE3bno5ZHV2IiwiaG9zdCI6InN0cmVhbS0yODguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJMaXZRVVVnMVJBNllJVm1CMzZweXlRIiwiaWF0IjoxNzgxNjc4NzM0LCJleHAiOjE3ODE2Nzg3OTR9.5G1wZmONFqXySurSj1Oj6_UtSmcJMwlc6JJy2oL7fX8"
     ],
-    "offline": true
+    "br": [
+      96
+    ]
   },
   {
     "id": "rage-music-philippines",
@@ -289,7 +291,7 @@ window.STATIONS = [
       "https://ais-sa1.streamon.fm/7681_64k.mp3"
     ],
     "br": [
-      80
+      71
     ]
   },
   {
@@ -505,7 +507,7 @@ window.STATIONS = [
     "added": "2026-10-23",
     "br": [
       96,
-      0
+      96
     ]
   },
   {
@@ -623,7 +625,8 @@ window.STATIONS = [
       "https://play.radioking.io/sayhifm"
     ],
     "added": "2026-10-25",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "tictoc-radio",
@@ -780,7 +783,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-12",
     "br": [
-      128
+      96
     ]
   },
   {
@@ -796,4 +799,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

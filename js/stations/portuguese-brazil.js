@@ -725,7 +725,9 @@ window.STATIONS = [
       "https://s05.w3bserver.com:20025/;"
     ],
     "added": "2026-10-25",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-bandeirantes-90-9-fm",
@@ -759,7 +761,9 @@ window.STATIONS = [
       "https://radio.saopaulo01.com.br:10948/stream"
     ],
     "added": "2026-10-26",
-    "offline": true
+    "br": [
+      48
+    ]
   },
   {
     "id": "89fm-radio-rock",
@@ -1742,7 +1746,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.psybrazil.com.br/electro"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-am-news",
@@ -1757,4 +1764,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

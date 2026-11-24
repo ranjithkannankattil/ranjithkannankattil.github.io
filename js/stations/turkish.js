@@ -661,7 +661,9 @@ window.STATIONS = [
       "https://radyomar.80.yayin.com.tr/;"
     ],
     "added": "2026-10-25",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "trt-trabzon",
@@ -1015,7 +1017,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -1241,7 +1243,8 @@ window.STATIONS = [
     "added": "2026-11-02",
     "br": [
       141
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "bestefm",
@@ -1743,4 +1746,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

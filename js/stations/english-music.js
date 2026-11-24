@@ -303,7 +303,7 @@ window.STATIONS = [
     ],
     "where": "UK",
     "br": [
-      48
+      47
     ]
   },
   {
@@ -447,10 +447,7 @@ window.STATIONS = [
       "https://icecast.walmradio.com:8443/walm2_opus"
     ],
     "added": "2026-10-22",
-    "where": "US",
-    "br": [
-      192
-    ]
+    "where": "US"
   },
   {
     "id": "bbc-radio-2",
@@ -511,7 +508,7 @@ window.STATIONS = [
     "added": "2026-10-23",
     "where": "UK",
     "br": [
-      48
+      47
     ]
   },
   {
@@ -904,7 +901,7 @@ window.STATIONS = [
     "where": "Canada",
     "br": [
       128,
-      0
+      128
     ]
   },
   {
@@ -1722,7 +1719,7 @@ window.STATIONS = [
     "added": "2026-11-05",
     "where": "UK",
     "br": [
-      48
+      47
     ]
   },
   {
@@ -1766,12 +1763,14 @@ window.STATIONS = [
     "name": "CBC Music Eastern (Toronto) MP3 Stream",
     "category": "jazz",
     "streams": [
+      "https://26373.live.streamtheworld.com/CBLFM_CBC_SC",
       "https://22983.live.streamtheworld.com/CBLFM_CBC_SC"
     ],
     "added": "2026-11-06",
     "where": "Canada",
     "br": [
-      128
+      128,
+      0
     ]
   },
   {
@@ -1872,7 +1871,7 @@ window.STATIONS = [
     "added": "2026-11-07",
     "where": "UK",
     "br": [
-      47
+      48
     ]
   },
   {
@@ -1889,4 +1888,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

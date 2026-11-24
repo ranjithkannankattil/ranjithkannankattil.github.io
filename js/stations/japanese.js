@@ -440,7 +440,7 @@ window.STATIONS = [
       "https://vrc.gate.vrtv.jp/live?p=g&u=d"
     ],
     "br": [
-      1261
+      1470
     ]
   },
   {
@@ -462,10 +462,7 @@ window.STATIONS = [
     "streams": [
       "https://channel_2.waveani.fun/stream"
     ],
-    "added": "2026-10-22",
-    "br": [
-      192
-    ]
+    "added": "2026-10-22"
   },
   {
     "id": "animenfo-radio",
@@ -668,7 +665,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      256
+      112
     ]
   },
   {
@@ -888,8 +885,7 @@ window.STATIONS = [
     "streams": [
       "https://howlingf-gecko.radioca.st/autodj"
     ],
-    "added": "2026-10-29",
-    "offline": true
+    "added": "2026-10-29"
   },
   {
     "id": "radio-gambaru",
@@ -1010,4 +1006,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

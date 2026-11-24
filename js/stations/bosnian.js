@@ -31,7 +31,9 @@ window.STATIONS = [
     "streams": [
       "https://team-data.ba:10000/stream"
     ],
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-studio-m",
@@ -39,6 +41,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.leftor.com/proxy/studiom2/stream"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -148,7 +153,7 @@ window.STATIONS = [
       "https://zpilipov-geckohost.radioca.st/stream"
     ],
     "br": [
-      192
+      128
     ]
   },
   {
@@ -305,7 +310,8 @@ window.STATIONS = [
     ],
     "br": [
       128
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-usk",
@@ -363,7 +369,8 @@ window.STATIONS = [
     "added": "2026-10-24",
     "br": [
       128
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-bosanska-krupa",
@@ -534,4 +541,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

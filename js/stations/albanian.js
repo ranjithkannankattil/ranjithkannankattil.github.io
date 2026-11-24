@@ -85,6 +85,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.nestnews.al/listen/nest-radio/radio.mp3"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -593,10 +596,7 @@ window.STATIONS = [
     "streams": [
       "https://play.4plusmedia.tv/radio.mp3"
     ],
-    "added": "2026-10-24",
-    "br": [
-      192
-    ]
+    "added": "2026-10-24"
   },
   {
     "id": "lefutur-radio",
@@ -717,6 +717,15 @@ window.STATIONS = [
     "br": [
       320
     ]
+  },
+  {
+    "id": "radio-pilafi",
+    "name": "Radio Pilafi",
+    "category": "music",
+    "streams": [
+      "https://radio-pilafi.jah24dhs83y8b8.workers.dev/live/radio.mp3"
+    ],
+    "added": "2026-11-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

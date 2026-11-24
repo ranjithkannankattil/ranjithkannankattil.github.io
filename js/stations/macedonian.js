@@ -18,10 +18,12 @@ window.STATIONS = [
     "name": "Balkan Radio",
     "category": "music",
     "streams": [
+      "https://home.radionrg.com/listen/balkanradio/radio.mp3",
       "https://samcloud.spacial.com/api/listen?sid=99064&m=sc&rid=175019&t=ssl"
     ],
     "br": [
-      128
+      128,
+      0
     ]
   },
   {
@@ -273,7 +275,10 @@ window.STATIONS = [
     "streams": [
       "https://live.playfm.mk:8046/live"
     ],
-    "added": "2026-11-12"
+    "added": "2026-11-12",
+    "br": [
+      128
+    ]
   },
   {
     "id": "90-1-nbc-fm-narwee-90-1-fm",
@@ -297,4 +302,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

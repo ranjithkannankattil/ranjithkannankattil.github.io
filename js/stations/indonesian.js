@@ -322,6 +322,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://n03.radiojar.com/4ywdgup3bnzuv"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -693,10 +696,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming.shoutcast.com/synchronizeradio"
     ],
-    "added": "2026-10-25",
-    "br": [
-      96
-    ]
+    "added": "2026-10-25"
   },
   {
     "id": "radio-suara-al-iman-846-am-surabaya",
@@ -870,9 +870,7 @@ window.STATIONS = [
       "https://svara-stream.radioddns.net/bali_voksradio_993fm"
     ],
     "added": "2026-10-28",
-    "br": [
-      160
-    ]
+    "offline": true
   },
   {
     "id": "imelda-fm",
@@ -883,7 +881,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      160
+      128
     ]
   },
   {
@@ -1133,7 +1131,9 @@ window.STATIONS = [
       "https://stream-node0.rri.co.id/streaming/17/9017/rrijogjapro4.mp3"
     ],
     "added": "2026-11-02",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "elpas-radio",
@@ -1166,7 +1166,9 @@ window.STATIONS = [
       "https://stream-node0.rri.co.id/streaming/17/9017/rrijogjapro2.mp3"
     ],
     "added": "2026-11-02",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "pro-1-rri-makassar",
@@ -1356,7 +1358,9 @@ window.STATIONS = [
       "https://stream-node0.rri.co.id/streaming/17/9017/rrijogjapro1.mp3"
     ],
     "added": "2026-11-04",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-bantul-89-10-fm",
@@ -1391,7 +1395,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "br": [
-      96
+      128
     ]
   },
   {
@@ -1651,9 +1655,7 @@ window.STATIONS = [
       "https://s2.free-shoutcast.com/stream/18096"
     ],
     "added": "2026-11-12",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "onix-radio",
@@ -1716,4 +1718,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

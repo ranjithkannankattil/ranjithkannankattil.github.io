@@ -9,9 +9,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/playlist.m3u8"
     ],
-    "br": [
-      94
-    ]
+    "offline": true
   },
   {
     "id": "radio-deewana",
@@ -64,10 +62,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio112/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "br": [
-      85
-    ]
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

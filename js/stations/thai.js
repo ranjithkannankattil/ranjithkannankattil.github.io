@@ -71,7 +71,9 @@ window.STATIONS = [
     "streams": [
       "https://inter.lannaradio.com/radio/8000/radio.mp3"
     ],
-    "offline": true
+    "br": [
+      320
+    ]
   },
   {
     "id": "am-1197-khz-stereo",
@@ -349,7 +351,7 @@ window.STATIONS = [
       "https://livefta.malimarcdn.com/ftaedge00/nat.sdp/playlist.m3u8"
     ],
     "br": [
-      2416
+      2403
     ]
   },
   {
@@ -480,8 +482,8 @@ window.STATIONS = [
     ],
     "added": "2026-11-13",
     "br": [
-      48
+      52
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

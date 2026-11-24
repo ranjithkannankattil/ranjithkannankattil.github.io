@@ -119,9 +119,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/playlist.m3u8"
     ],
-    "br": [
-      94
-    ]
+    "offline": true
   },
   {
     "id": "my-radio-dj",
@@ -351,11 +349,7 @@ window.STATIONS = [
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio007/hlspbaudio007_Auto.m3u8"
     ],
-    "hidden": true,
-    "br": [
-      32
-    ],
-    "offline": true
+    "hidden": true
   },
   {
     "id": "radio-mirchi-usa",
@@ -507,8 +501,7 @@ window.STATIONS = [
     "hidden": true,
     "br": [
       32
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "sandesh-radio",
@@ -699,7 +692,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      96
+      128
     ]
   },
   {
@@ -915,7 +908,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      112
+      128
     ]
   },
   {
@@ -1320,10 +1313,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio083/playlist.m3u8"
     ],
-    "added": "2026-11-03",
-    "br": [
-      129
-    ]
+    "added": "2026-11-03"
   },
   {
     "id": "aural-radio",
@@ -1439,7 +1429,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-04",
     "br": [
-      128
+      96
     ]
   },
   {
@@ -1773,4 +1763,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

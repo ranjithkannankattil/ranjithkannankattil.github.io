@@ -404,9 +404,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiojar.com/kokkino-ath.mp3"
     ],
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "kosmos-jazz",
@@ -480,11 +478,13 @@ window.STATIONS = [
     "name": "Balkan Radio",
     "category": "music",
     "streams": [
+      "https://home.radionrg.com/listen/balkanradio/radio.mp3",
       "https://samcloud.spacial.com/api/listen?sid=99064&m=sc&rid=175019&t=ssl"
     ],
     "added": "2026-10-22",
     "br": [
-      128
+      128,
+      0
     ]
   },
   {
@@ -1679,7 +1679,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "br": [
-      192
+      128
     ]
   },
   {
@@ -1755,4 +1755,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

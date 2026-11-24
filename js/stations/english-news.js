@@ -208,7 +208,9 @@ window.STATIONS = [
       "https://27033.live.streamtheworld.com/CBU2FM_CBC_SC"
     ],
     "where": "Canada",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "wnyc-93-9-fm",
@@ -541,9 +543,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "where": "Canada",
-    "br": [
-      40
-    ]
+    "offline": true
   },
   {
     "id": "fresh-105-9-fm-ibadan",
@@ -554,9 +554,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "where": "Nigeria",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "rte-radio-1",
@@ -612,12 +610,14 @@ window.STATIONS = [
     "name": "WBBR 1130 \"Bloomberg Radio\" New York, NY",
     "category": "us",
     "streams": [
+      "https://18863.live.streamtheworld.com/WBBRAMAAC_SC",
       "https://29308.live.streamtheworld.com/WBBRAMAAC_SC"
     ],
     "added": "2026-10-27",
     "where": "US",
     "br": [
-      32
+      32,
+      0
     ]
   },
   {
@@ -704,9 +704,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "where": "Canada",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "bloomberg-99-1-105-7-hd2",
@@ -937,7 +935,7 @@ window.STATIONS = [
     "added": "2026-11-02",
     "where": "UK",
     "br": [
-      64
+      63
     ]
   },
   {
@@ -1243,8 +1241,8 @@ window.STATIONS = [
     "name": "CBC North - Iqaluit, NU",
     "category": "canada",
     "streams": [
-      "https://22983.live.streamtheworld.com/CFFBAM_CBC_SC",
-      "https://27033.live.streamtheworld.com/CFFBAM_CBC_SC"
+      "https://27033.live.streamtheworld.com/CFFBAM_CBC_SC",
+      "https://22983.live.streamtheworld.com/CFFBAM_CBC_SC"
     ],
     "added": "2026-11-05",
     "where": "Canada",
@@ -1275,9 +1273,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "where": "Canada",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "bbc-radio-ulster",
@@ -1324,9 +1320,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-06",
     "where": "Canada",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "98-4-capital-fm",
@@ -1581,7 +1575,7 @@ window.STATIONS = [
     "added": "2026-11-09",
     "where": "Uganda",
     "br": [
-      63
+      64
     ]
   },
   {
@@ -1632,7 +1626,9 @@ window.STATIONS = [
     ],
     "added": "2026-11-10",
     "where": "Canada",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "afn-360-naples",
@@ -1735,7 +1731,7 @@ window.STATIONS = [
     "added": "2026-11-11",
     "where": "Canada",
     "br": [
-      48
+      47
     ]
   },
   {
@@ -1894,4 +1890,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

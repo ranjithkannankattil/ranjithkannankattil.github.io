@@ -29,10 +29,9 @@ window.STATIONS = [
     "name": "AIR Punjabi",
     "category": "news",
     "streams": [
-      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio138/chunklist.m3u8",
-      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio138/playlist.m3u8"
-    ],
-    "offline": true
+      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio138/playlist.m3u8",
+      "https://air.pc.cdn.bitgravity.com/air/live/pbaudio138/chunklist.m3u8"
+    ]
   },
   {
     "id": "all4masti",
@@ -64,7 +63,7 @@ window.STATIONS = [
       "https://ais-sa1.streamon.fm/7681_64k.mp3"
     ],
     "br": [
-      80
+      71
     ]
   },
   {
@@ -444,4 +443,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

@@ -73,7 +73,7 @@ window.STATIONS = [
     ],
     "br": [
       64,
-      0
+      64
     ]
   },
   {
@@ -97,7 +97,7 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      127
+      128
     ]
   },
   {
@@ -130,8 +130,9 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
     ],
     "br": [
-      168
-    ]
+      172
+    ],
+    "offline": true
   },
   {
     "id": "m80-radio-ballads",
@@ -163,7 +164,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m80nacional.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -213,9 +214,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://proic1.evspt.com/oxigenio_aac"
-    ],
-    "br": [
-      192
     ]
   },
   {
@@ -237,7 +235,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/rckids.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -259,7 +257,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/smooth.aac"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -278,14 +276,13 @@ window.STATIONS = [
     "name": "Antena 3",
     "category": "music",
     "streams": [
-      "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8",
-      "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8"
+      "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8",
+      "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
     ],
     "br": [
-      166,
-      166
-    ],
-    "offline": true
+      172,
+      172
+    ]
   },
   {
     "id": "golofm",
@@ -317,7 +314,7 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
     ],
     "br": [
-      166
+      178
     ],
     "offline": true
   },
@@ -329,7 +326,7 @@ window.STATIONS = [
       "https://stream-hls.bauermedia.pt/cidade.aac/playlist.m3u8"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -387,7 +384,8 @@ window.STATIONS = [
     "br": [
       262,
       259
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rca-radio-clube-de-armamar",
@@ -464,7 +462,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -476,7 +474,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      177
+      172
     ],
     "offline": true
   },
@@ -489,8 +487,9 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      190
-    ]
+      176
+    ],
+    "offline": true
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -573,7 +572,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      165
+      177
     ]
   },
   {
@@ -621,7 +620,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -645,7 +644,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -729,7 +728,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -753,7 +752,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -801,7 +800,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -885,7 +884,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -969,7 +968,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -1173,7 +1172,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-01",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -1367,7 +1366,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "br": [
-      192
+      256
     ]
   },
   {
@@ -1463,7 +1462,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "br": [
-      170
+      169
     ]
   },
   {
@@ -1613,9 +1612,8 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "br": [
-      179
-    ],
-    "offline": true
+      170
+    ]
   },
   {
     "id": "radio-quantica",
@@ -1786,4 +1784,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

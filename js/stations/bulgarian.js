@@ -64,7 +64,9 @@ window.STATIONS = [
     "streams": [
       "https://nova-radio.neterra.tv/veselinaretro"
     ],
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "badrock-hard-heavy",
@@ -270,10 +272,12 @@ window.STATIONS = [
     "name": "Balkan Radio",
     "category": "music",
     "streams": [
+      "https://home.radionrg.com/listen/balkanradio/radio.mp3",
       "https://samcloud.spacial.com/api/listen?sid=99064&m=sc&rid=175019&t=ssl"
     ],
     "br": [
-      128
+      128,
+      0
     ]
   },
   {
@@ -459,7 +463,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      128
+      112
     ]
   },
   {
@@ -674,7 +678,9 @@ window.STATIONS = [
       "https://radio.jump.bg/proxy/stanimi1/radioRETRO"
     ],
     "added": "2026-10-26",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-9",
@@ -1016,4 +1022,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

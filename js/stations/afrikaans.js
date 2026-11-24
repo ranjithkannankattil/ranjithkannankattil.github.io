@@ -227,10 +227,7 @@ window.STATIONS = [
     "streams": [
       "https://superagent-269bfe30.base44.app/functions/kaleidoscopeRadio?go=stream"
     ],
-    "added": "2026-10-31",
-    "br": [
-      128
-    ]
+    "added": "2026-10-31"
   },
   {
     "id": "radio-overberg-2",
@@ -281,4 +278,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

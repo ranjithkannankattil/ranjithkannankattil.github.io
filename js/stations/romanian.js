@@ -138,7 +138,7 @@ window.STATIONS = [
       "https://astreaming.edi.ro:8443/VirginRadio_aac"
     ],
     "br": [
-      64
+      128
     ]
   },
   {
@@ -346,9 +346,7 @@ window.STATIONS = [
     "streams": [
       "https://radio-romantic.ro/stream"
     ],
-    "br": [
-      320
-    ]
+    "offline": true
   },
   {
     "id": "clasic-radio-chopin-bucuresti",
@@ -1762,4 +1760,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

@@ -141,7 +141,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play-radio-stream3.hndt.com/now/WUBA5hW2/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-10",
@@ -438,9 +439,7 @@ window.STATIONS = [
       "https://lhttp-hw.qtfm.cn/live/5022308/64k.mp3"
     ],
     "added": "2026-10-23",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "101-fm101-7",
@@ -1193,8 +1192,7 @@ window.STATIONS = [
     "streams": [
       "https://play-radio-stream3.hndt.com/now/yorSd1X2/chunklist.m3u8"
     ],
-    "added": "2026-11-04",
-    "offline": true
+    "added": "2026-11-04"
   },
   {
     "id": "fred-film-radio",
@@ -1308,7 +1306,10 @@ window.STATIONS = [
     "streams": [
       "https://happyradio.com.tw/live"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      128
+    ]
   },
   {
     "id": "china-fmfm92-9",
@@ -1329,10 +1330,7 @@ window.STATIONS = [
     "streams": [
       "https://flv.ccdntech.com/live/_definst_/mp4:vod117_Live/live1/playlist.m3u8"
     ],
-    "added": "2026-11-06",
-    "br": [
-      67
-    ]
+    "added": "2026-11-06"
   },
   {
     "id": "station-53",
@@ -1599,4 +1597,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";

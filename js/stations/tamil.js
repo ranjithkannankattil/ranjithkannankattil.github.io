@@ -368,9 +368,6 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio025/masterlist.m3u8"
-    ],
-    "br": [
-      80
     ]
   },
   {
@@ -541,10 +538,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio022/playlist.m3u8"
     ],
-    "added": "2026-10-23",
-    "br": [
-      79
-    ]
+    "added": "2026-10-23"
   },
   {
     "id": "fmrainbowtamil",
@@ -553,10 +547,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio022/playlist.m3u8"
     ],
-    "added": "2026-10-23",
-    "br": [
-      79
-    ]
+    "added": "2026-10-23"
   },
   {
     "id": "mellisai-fm",
@@ -804,10 +795,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio024/playlist.m3u8"
     ],
-    "added": "2026-10-26",
-    "br": [
-      79
-    ]
+    "added": "2026-10-26"
   },
   {
     "id": "oli-968",
@@ -1747,4 +1735,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T10:56Z";
+window.STATIONS_CHECKED = "2026-11-24T23:47Z";
