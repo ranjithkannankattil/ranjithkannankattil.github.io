@@ -105,7 +105,8 @@ His reason: the app looks like one long list; in Settings you can't tell what is
   - For stations: how to get listed, using your own logo, asking to be removed.
 - **Sort Velvet Selection** (asked 24 Nov 2026), in the app and on the Radio page: the order word in the sentence
   filter also works on Velvet Selection. Choices: **Velvet's order** (default: the order of his own favourites,
-  which is what becomes Velvet Selection), Most heard this week, Top rated, A to Z, Light on data. The kind and
+  which is what becomes Velvet Selection), Most heard this week, **Most heard of all time** (`total` in
+  js/station-stats.json; on the website since 24 Nov 2026, the app gets it in 2.10 for every list), Top rated, A to Z, Light on data. The kind and
   place words narrow Velvet Selection the same way. Each listener's choice is remembered; it never changes his order.
 - Also in 2.10 (from earlier): bugs (radio turning itself on + Auto artwork flicker, Connecting… timeout,
   widget doesn't open the app, three looks ignore the colour theme, text shifts between looks, remaining
