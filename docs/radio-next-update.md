@@ -70,6 +70,30 @@ His reason: the app looks like one long list; in Settings you can't tell what is
 - **Google Play rating prompt**: already in Play builds (`Review.kt` + `ReviewRule`, once, after 4 days and 3 h of
   listening). Change to **2 days and about 2 hours** as he asked; still once, never after a crash; Google decides
   whether its sheet actually shows. Update the LogicTest cases.
+- **FAQ for listeners** (asked 24 Nov 2026), one set of answers used in both places: a section on the Radio page
+  (folded questions, linkable as radio.html#faq, after "About the app") and in the app as Settings → Help → FAQ
+  (searchable, works offline). Keep the text in one file on the site (e.g. `radio-faq.json`, English plus the app's
+  Malayalam and Hindi) so the app and the page read the same words. Plain words, short answers. Questions to cover:
+  - Getting started: what Radio Velvet is; is it free (yes, no ads from us; some stations play their own ads);
+    Android app vs website; iPhone (no app yet, use the website); Android TV; Android Auto; is there a Garmin app
+    (not possible to play on the watch; phone controls work).
+  - Finding stations: languages and pinning; Velvet Selection; the sentence filter (kind, place, order);
+    Most heard / Top rated; the TV tag; "Only plays in …"; why a station is missing and how to suggest one;
+    adding your own private station.
+  - Playing: a station won't play / keeps reconnecting; why some stations stop outside their country; song names
+    and covers (from the station / iTunes, may be wrong); Data saver and how much data an hour uses;
+    sleep timer; equaliser; carry on after videos; playing in the car (next / previous follow the list you
+    started from); casting to a TV or speaker.
+  - Alarms: how they work, what happens if the station is down (backups, then the alarm sound), battery settings
+    that can stop alarms on some phones, Stop / Snooze.
+  - Favourites and account: saving favourites, tiles vs list, signing in with Google to sync phone and website,
+    what is stored, deleting your account and data.
+  - Look and language: colour themes, player looks, text size, app language (English / Malayalam / Hindi).
+  - Privacy: what is counted (anonymous minutes per station; nothing about you), crash reports, your listening
+    page stays on the phone unless signed in, link to the privacy page.
+  - Help: Feedback (suggest a station, request a feature, thank-you note), Rate on Google Play, updates and
+    What's new, joining the Early access test, contact hello@ranjithkb.com.
+  - For stations: how to get listed, using your own logo, asking to be removed.
 - Also in 2.10 (from earlier): bugs (radio turning itself on + Auto artwork flicker, Connecting… timeout,
   widget doesn't open the app, three looks ignore the colour theme, text shifts between looks, remaining
   translations), the share card drawn from the current player look, browse by country. Spotify-in-car
