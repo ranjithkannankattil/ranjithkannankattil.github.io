@@ -215,7 +215,7 @@ window.STATIONS = [
       "https://live.livestreamtv.ca/azstar/amlst:azstar/playlist.m3u8"
     ],
     "br": [
-      4130
+      4610
     ]
   },
   {
@@ -295,7 +295,8 @@ window.STATIONS = [
     "streams": [
       "https://stream.surfernetwork.com/rxzd8t0l1ivvv"
     ],
-    "added": "2026-11-24"
+    "added": "2026-11-24",
+    "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";

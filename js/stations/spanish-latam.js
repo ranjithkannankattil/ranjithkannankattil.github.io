@@ -216,7 +216,7 @@ window.STATIONS = [
       "https://server1.stweb.tv/rcvos/live/playlist.m3u8"
     ],
     "br": [
-      69
+      67
     ]
   },
   {
@@ -382,9 +382,7 @@ window.STATIONS = [
     "streams": [
       "https://radio02.ferozo.com/proxy/ra01000409?mp=/stream"
     ],
-    "br": [
-      32
-    ]
+    "offline": true
   },
   {
     "id": "la-ke-buena-ciudad-de-mexico-92-9-fm-xeq",
@@ -1495,7 +1493,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "br": [
-      48
+      32
     ]
   },
   {
@@ -1760,4 +1758,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";

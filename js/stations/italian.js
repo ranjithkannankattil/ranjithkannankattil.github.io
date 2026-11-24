@@ -217,9 +217,7 @@ window.STATIONS = [
     "streams": [
       "https://classichitsradio.streamingmedia.it/play"
     ],
-    "br": [
-      192
-    ]
+    "offline": true
   },
   {
     "id": "rtl-102-5-disco",
@@ -339,7 +337,7 @@ window.STATIONS = [
       "https://icy.unitedradio.it/101Legend.aac"
     ],
     "br": [
-      95
+      96
     ]
   },
   {
@@ -914,7 +912,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      130
+      132
     ]
   },
   {
@@ -1075,7 +1073,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-01",
     "br": [
-      88
+      128
     ]
   },
   {
@@ -1171,7 +1169,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-02",
     "br": [
-      128
+      96
     ]
   },
   {
@@ -1732,7 +1730,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-10",
     "br": [
-      66
+      67
     ]
   },
   {
@@ -1760,4 +1758,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";

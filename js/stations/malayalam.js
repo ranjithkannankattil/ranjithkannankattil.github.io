@@ -207,7 +207,7 @@ window.STATIONS = [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
     ],
     "br": [
-      94
+      96
     ]
   },
   {
@@ -283,6 +283,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://cast1.my-control-panel.com/proxy/myradio90fm/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -439,7 +442,7 @@ window.STATIONS = [
     ],
     "br": [
       0,
-      64
+      128
     ]
   },
   {
@@ -512,6 +515,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://a5.asurahosting.com:7450/radio.mp3"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -1546,4 +1552,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T06:04Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";

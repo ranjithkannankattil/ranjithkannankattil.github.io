@@ -303,7 +303,7 @@ window.STATIONS = [
       "https://stream.zeno.fm/wvq442iwm6ztv"
     ],
     "br": [
-      128
+      96
     ]
   },
   {
@@ -322,9 +322,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://n03.radiojar.com/4ywdgup3bnzuv"
-    ],
-    "br": [
-      128
     ]
   },
   {
@@ -649,7 +646,9 @@ window.STATIONS = [
       "https://eu1.fastcast4u.com/proxy/kiarafm?mp=/1"
     ],
     "added": "2026-10-24",
-    "offline": true
+    "br": [
+      96
+    ]
   },
   {
     "id": "arif-channel",
@@ -884,7 +883,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      128
+      160
     ]
   },
   {
@@ -1134,9 +1133,7 @@ window.STATIONS = [
       "https://stream-node0.rri.co.id/streaming/17/9017/rrijogjapro4.mp3"
     ],
     "added": "2026-11-02",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "elpas-radio",
@@ -1169,9 +1166,7 @@ window.STATIONS = [
       "https://stream-node0.rri.co.id/streaming/17/9017/rrijogjapro2.mp3"
     ],
     "added": "2026-11-02",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "pro-1-rri-makassar",
@@ -1314,7 +1309,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-04",
     "br": [
-      128
+      32
     ]
   },
   {
@@ -1361,9 +1356,7 @@ window.STATIONS = [
       "https://stream-node0.rri.co.id/streaming/17/9017/rrijogjapro1.mp3"
     ],
     "added": "2026-11-04",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "radio-bantul-89-10-fm",
@@ -1658,7 +1651,9 @@ window.STATIONS = [
       "https://s2.free-shoutcast.com/stream/18096"
     ],
     "added": "2026-11-12",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "onix-radio",
@@ -1715,7 +1710,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiokita.my.id/listen/radiokita/radiokita"
     ],
-    "added": "2026-11-24"
+    "added": "2026-11-24",
+    "br": [
+      96
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";

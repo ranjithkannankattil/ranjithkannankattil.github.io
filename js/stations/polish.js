@@ -1362,7 +1362,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radio.co/s1136b59f3/listen"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-rmf-maxx-warszawa",
@@ -1637,7 +1640,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-09",
     "br": [
-      208
+      192
     ]
   },
   {
@@ -1761,4 +1764,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";

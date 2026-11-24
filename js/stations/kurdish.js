@@ -128,9 +128,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://amed.ozelip.com/8040/stream"
-    ],
-    "br": [
-      64
     ]
   },
   {
@@ -292,4 +289,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";

@@ -25,7 +25,7 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      192,
+      256,
       24,
       128
     ]
@@ -534,7 +534,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      256
+      192
     ]
   },
   {
@@ -884,7 +884,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "br": [
-      88
+      112
     ]
   },
   {
@@ -1785,4 +1785,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";

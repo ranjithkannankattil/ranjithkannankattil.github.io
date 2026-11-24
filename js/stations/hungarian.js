@@ -961,7 +961,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radio.co/s3fd8d173f/listen"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "roxy-radio",
@@ -1573,4 +1576,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";

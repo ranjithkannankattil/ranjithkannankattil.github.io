@@ -940,7 +940,10 @@ window.STATIONS = [
     "streams": [
       "https://service.ptrk.tv:8443/PTRK"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-jazz-fm",
@@ -1370,9 +1373,7 @@ window.STATIONS = [
       "https://stream.blits-fm.ua/stream64"
     ],
     "added": "2026-11-04",
-    "br": [
-      320
-    ]
+    "offline": true
   },
   {
     "id": "happy-radio",
@@ -1507,4 +1508,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";

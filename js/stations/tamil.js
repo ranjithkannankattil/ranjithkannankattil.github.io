@@ -359,7 +359,7 @@ window.STATIONS = [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio021/playlist.m3u8"
     ],
     "br": [
-      78
+      79
     ]
   },
   {
@@ -370,7 +370,7 @@ window.STATIONS = [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio025/masterlist.m3u8"
     ],
     "br": [
-      79
+      80
     ]
   },
   {
@@ -543,7 +543,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      78
+      79
     ]
   },
   {
@@ -555,7 +555,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      78
+      79
     ]
   },
   {
@@ -1747,4 +1747,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";

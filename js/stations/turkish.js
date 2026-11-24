@@ -64,8 +64,8 @@ window.STATIONS = [
       "https://moondigitalmaster.radyotvonline.net/kafaradyo/playlist.m3u8"
     ],
     "br": [
-      64,
-      64
+      63,
+      63
     ]
   },
   {
@@ -661,9 +661,7 @@ window.STATIONS = [
       "https://radyomar.80.yayin.com.tr/;"
     ],
     "added": "2026-10-25",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "trt-trabzon",
@@ -1745,4 +1743,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";

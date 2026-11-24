@@ -10,7 +10,7 @@ window.STATIONS = [
       "https://n12.radiojar.com/8s5u5tpdtwzuv?listening-from-radio-garden=1620219571863&rj-tok=AAABeTyl2zYARSWbLVnrEOlqGw&rj-ttl=5"
     ],
     "br": [
-      80
+      64
     ]
   },
   {
@@ -437,9 +437,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.damasradio.fm/radio"
     ],
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "radio-manarat",
@@ -581,7 +579,9 @@ window.STATIONS = [
       "https://alifalifjobs.com/radio/8000/AlifAlifLive.mp3"
     ],
     "added": "2026-10-23",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "skyrock-casablanca",
@@ -772,7 +772,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      96
+      80
     ]
   },
   {
@@ -1767,4 +1767,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";

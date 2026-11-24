@@ -131,6 +131,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://8903.brasilstream.com.br/stream"
+    ],
+    "br": [
+      64
     ]
   },
   {
@@ -722,9 +725,7 @@ window.STATIONS = [
       "https://s05.w3bserver.com:20025/;"
     ],
     "added": "2026-10-25",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "radio-bandeirantes-90-9-fm",
@@ -758,9 +759,7 @@ window.STATIONS = [
       "https://radio.saopaulo01.com.br:10948/stream"
     ],
     "added": "2026-10-26",
-    "br": [
-      48
-    ]
+    "offline": true
   },
   {
     "id": "89fm-radio-rock",
@@ -805,7 +804,10 @@ window.STATIONS = [
     "streams": [
       "https://8214.brasilstream.com.br/stream"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "98-rock",
@@ -1740,10 +1742,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.psybrazil.com.br/electro"
     ],
-    "added": "2026-11-09",
-    "br": [
-      192
-    ]
+    "added": "2026-11-09"
   },
   {
     "id": "radio-am-news",
@@ -1758,4 +1757,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";

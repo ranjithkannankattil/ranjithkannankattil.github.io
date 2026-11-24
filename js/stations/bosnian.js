@@ -31,9 +31,7 @@ window.STATIONS = [
     "streams": [
       "https://team-data.ba:10000/stream"
     ],
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "radio-studio-m",
@@ -41,9 +39,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.leftor.com/proxy/studiom2/stream"
-    ],
-    "br": [
-      96
     ]
   },
   {
@@ -539,4 +534,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";

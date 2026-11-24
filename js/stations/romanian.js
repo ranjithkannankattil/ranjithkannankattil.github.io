@@ -564,7 +564,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radiotranquila.net:8032/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "clasic-radio-bach-bucuresti",
@@ -1129,7 +1132,10 @@ window.STATIONS = [
     "streams": [
       "https://mp3.radiostill.ro:8888/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      128
+    ]
   },
   {
     "id": "fun-radio-romania",
@@ -1702,7 +1708,10 @@ window.STATIONS = [
     "streams": [
       "https://popular.radiostill.ro/8176/stream"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-galati",
@@ -1753,4 +1762,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";

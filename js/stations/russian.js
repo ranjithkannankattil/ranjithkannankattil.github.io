@@ -680,7 +680,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      128
+      256
     ]
   },
   {
@@ -701,7 +701,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      326
+      346
     ]
   },
   {
@@ -1246,7 +1246,9 @@ window.STATIONS = [
       "https://casseta-disco.ru:6275/stream?x=1711899723831"
     ],
     "added": "2026-11-02",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-37",
@@ -1684,4 +1686,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";

@@ -678,9 +678,7 @@ window.STATIONS = [
       "https://onlineradiobox.com/json/hr/92fm/play?platform=web"
     ],
     "added": "2026-10-29",
-    "br": [
-      192
-    ]
+    "offline": true
   },
   {
     "id": "mr4-nemzetisegi-adasok",
@@ -991,7 +989,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-12",
     "br": [
-      160
+      128
     ]
   },
   {
@@ -1001,7 +999,10 @@ window.STATIONS = [
     "streams": [
       "https://audio.social3.hr/listen/antena_love/radio.mp3"
     ],
-    "added": "2026-11-24"
+    "added": "2026-11-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-korzo",
@@ -1010,7 +1011,10 @@ window.STATIONS = [
     "streams": [
       "https://c8.hostingcentar.com/streams/radiokorzo/"
     ],
-    "added": "2026-11-24"
+    "added": "2026-11-24",
+    "br": [
+      256
+    ]
   },
   {
     "id": "antena-club",
@@ -1019,7 +1023,37 @@ window.STATIONS = [
     "streams": [
       "https://audio.social3.hr/listen/antena_hit/radio.mp3"
     ],
+    "added": "2026-11-24",
+    "br": [
+      128
+    ]
+  },
+  {
+    "id": "antena-xmas",
+    "name": "Antena Xmas",
+    "category": "music",
+    "streams": [
+      "https://audio.social3.hr/listen/antena_rock/radio.mp3"
+    ],
+    "added": "2026-11-24"
+  },
+  {
+    "id": "antena-istra-i-primorje",
+    "name": "Antena Istra i Primorje",
+    "category": "music",
+    "streams": [
+      "https://audio.social3.hr/listen/antena_istraprimorje/radio.mp3"
+    ],
+    "added": "2026-11-24"
+  },
+  {
+    "id": "antena-fit",
+    "name": "Antena Fit",
+    "category": "music",
+    "streams": [
+      "https://audio.social3.hr/listen/antena_dance/radio.mp3"
+    ],
     "added": "2026-11-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";

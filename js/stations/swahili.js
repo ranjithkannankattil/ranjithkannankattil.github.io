@@ -391,8 +391,7 @@ window.STATIONS = [
     "added": "2026-10-27",
     "br": [
       130
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "tafsir-in-swahili",
@@ -441,6 +440,15 @@ window.STATIONS = [
     "br": [
       192
     ]
+  },
+  {
+    "id": "vof-sounds-fm",
+    "name": "VOF Sounds FM",
+    "category": "news",
+    "streams": [
+      "https://radio.secretoffuture.com/listen/vof_sounds_fm/radio.mp3"
+    ],
+    "added": "2026-11-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";

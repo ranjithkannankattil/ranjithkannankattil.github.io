@@ -38,7 +38,7 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      128
+      127
     ]
   },
   {
@@ -130,7 +130,7 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
     ],
     "br": [
-      169
+      168
     ]
   },
   {
@@ -141,7 +141,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m80ballads.aac"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -163,7 +163,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m80nacional.aac"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -174,7 +174,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m8060.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -282,9 +282,10 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8"
     ],
     "br": [
-      189,
-      189
-    ]
+      166,
+      166
+    ],
+    "offline": true
   },
   {
     "id": "golofm",
@@ -316,7 +317,7 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
     ],
     "br": [
-      165
+      166
     ],
     "offline": true
   },
@@ -328,7 +329,7 @@ window.STATIONS = [
       "https://stream-hls.bauermedia.pt/cidade.aac/playlist.m3u8"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -380,12 +381,12 @@ window.STATIONS = [
     "name": "Antena 2",
     "category": "music",
     "streams": [
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8",
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR",
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8"
     ],
     "br": [
-      259,
-      262
+      262,
+      259
     ]
   },
   {
@@ -475,8 +476,9 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      182
-    ]
+      177
+    ],
+    "offline": true
   },
   {
     "id": "antena-1-acores-portugal",
@@ -487,7 +489,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      166
+      190
     ]
   },
   {
@@ -571,7 +573,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      167
+      165
     ]
   },
   {
@@ -619,7 +621,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -643,7 +645,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -787,7 +789,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -859,7 +861,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -883,7 +885,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -919,7 +921,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -1003,7 +1005,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      128
+      32
     ]
   },
   {
@@ -1171,7 +1173,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-01",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -1365,7 +1367,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "br": [
-      320
+      192
     ]
   },
   {
@@ -1461,7 +1463,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "br": [
-      171
+      170
     ]
   },
   {
@@ -1611,8 +1613,9 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "br": [
-      191
-    ]
+      179
+    ],
+    "offline": true
   },
   {
     "id": "radio-quantica",
@@ -1783,4 +1786,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";

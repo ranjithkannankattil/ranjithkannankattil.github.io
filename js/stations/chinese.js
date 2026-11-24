@@ -551,8 +551,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.rcs.revma.com/qp0xrd9mtd3vv"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "station-29",
@@ -681,7 +680,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/273/64k.mp3"
     ],
-    "added": "2026-10-27"
+    "added": "2026-10-27",
+    "br": [
+      64
+    ]
   },
   {
     "id": "voa-macau",
@@ -720,7 +722,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/5021912/64k.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      64
+    ]
   },
   {
     "id": "needs-radio",
@@ -1188,7 +1193,8 @@ window.STATIONS = [
     "streams": [
       "https://play-radio-stream3.hndt.com/now/yorSd1X2/chunklist.m3u8"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "offline": true
   },
   {
     "id": "fred-film-radio",
@@ -1302,10 +1308,7 @@ window.STATIONS = [
     "streams": [
       "https://happyradio.com.tw/live"
     ],
-    "added": "2026-11-05",
-    "br": [
-      128
-    ]
+    "added": "2026-11-05"
   },
   {
     "id": "china-fmfm92-9",
@@ -1596,4 +1599,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";

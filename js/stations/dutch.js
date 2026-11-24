@@ -84,7 +84,7 @@ window.STATIONS = [
       "https://icecast-qmusicnl-cdp.triple-it.nl/Joe_nl.mp3"
     ],
     "br": [
-      96,
+      95,
       128,
       128
     ]
@@ -1459,7 +1459,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-04",
     "br": [
-      95
+      96
     ]
   },
   {
@@ -1519,7 +1519,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "br": [
-      96
+      95
     ]
   },
   {
@@ -1787,4 +1787,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";

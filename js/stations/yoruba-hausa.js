@@ -120,7 +120,9 @@ window.STATIONS = [
       "https://stream.zenolive.com/e9x2n97b9uduv"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "glow-99-1-fm-akure",
@@ -131,7 +133,10 @@ window.STATIONS = [
       "https://stream.zeno.fm/mwam2yirv1pvv"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "br": [
+      128,
+      128
+    ]
   },
   {
     "id": "crest-91-1-fm-ibadan",
@@ -218,4 +223,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";

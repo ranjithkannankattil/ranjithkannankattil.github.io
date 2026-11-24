@@ -85,9 +85,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.nestnews.al/listen/nest-radio/radio.mp3"
-    ],
-    "br": [
-      192
     ]
   },
   {
@@ -669,7 +666,9 @@ window.STATIONS = [
       "https://play.primeradio.al/prime"
     ],
     "added": "2026-10-27",
-    "offline": true
+    "br": [
+      256
+    ]
   },
   {
     "id": "truth-fm-albania",
@@ -720,4 +719,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";

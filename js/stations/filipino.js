@@ -123,9 +123,7 @@ window.STATIONS = [
     "streams": [
       "https://stream-288.surfernetwork.com/g1pmt17nz9duv?zt=eyJhbGciOiJIUzI1NiJ9.eyJzdHJlYW0iOiJnMXBtdDE3bno5ZHV2IiwiaG9zdCI6InN0cmVhbS0yODguc3VyZmVybmV0d29yay5jb20iLCJydHRsIjo1LCJqdGkiOiJMaXZRVVVnMVJBNllJVm1CMzZweXlRIiwiaWF0IjoxNzgxNjc4NzM0LCJleHAiOjE3ODE2Nzg3OTR9.5G1wZmONFqXySurSj1Oj6_UtSmcJMwlc6JJy2oL7fX8"
     ],
-    "br": [
-      96
-    ]
+    "offline": true
   },
   {
     "id": "rage-music-philippines",
@@ -291,7 +289,7 @@ window.STATIONS = [
       "https://ais-sa1.streamon.fm/7681_64k.mp3"
     ],
     "br": [
-      70
+      80
     ]
   },
   {
@@ -446,9 +444,7 @@ window.STATIONS = [
     "streams": [
       "https://streamnavs.net:8133/live"
     ],
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "rmn-dyri-iloilo",
@@ -503,13 +499,13 @@ window.STATIONS = [
     "name": "Star FM 92.7 Pampanga",
     "category": "news",
     "streams": [
-      "https://stream-13.zeno.fm/g1pmt17nz9duv",
-      "https://stream.zeno.fm/g1pmt17nz9duv"
+      "https://stream.zeno.fm/g1pmt17nz9duv",
+      "https://stream-13.zeno.fm/g1pmt17nz9duv"
     ],
     "added": "2026-10-23",
     "br": [
       96,
-      96
+      0
     ]
   },
   {
@@ -800,4 +796,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";

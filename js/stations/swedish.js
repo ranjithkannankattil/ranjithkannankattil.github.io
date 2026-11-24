@@ -291,7 +291,7 @@ window.STATIONS = [
       "https://live1.sr.se/p4kalm-mp3-96"
     ],
     "br": [
-      88
+      98
     ]
   },
   {
@@ -324,7 +324,7 @@ window.STATIONS = [
       "https://live1.sr.se/p4vnrl-mp3-96"
     ],
     "br": [
-      164
+      144
     ]
   },
   {
@@ -619,7 +619,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      96
+      80
     ]
   },
   {
@@ -688,8 +688,17 @@ window.STATIONS = [
     ],
     "added": "2026-11-17",
     "br": [
-      312
+      248
     ]
+  },
+  {
+    "id": "radio-viking-101-4",
+    "name": "Radio Viking 101.4",
+    "category": "music",
+    "streams": [
+      "https://n25-eu.rcs.revma.com/qp6w2wzrruhvv?rj-ttl=5&amp"
+    ],
+    "added": "2026-11-24"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";

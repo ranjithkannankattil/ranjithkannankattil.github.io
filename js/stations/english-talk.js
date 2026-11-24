@@ -282,7 +282,7 @@ window.STATIONS = [
     ],
     "where": "Canada",
     "br": [
-      48
+      47
     ]
   },
   {
@@ -657,9 +657,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "where": "The Philippines",
-    "br": [
-      96
-    ]
+    "offline": true
   },
   {
     "id": "kogo-am-600",
@@ -1048,7 +1046,9 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "where": "Nigeria",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "bfm-89-9-malaysia",
@@ -1880,4 +1880,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";

@@ -179,7 +179,7 @@ window.STATIONS = [
       "https://icecast.kab.tv/live1-heb-574bcfd5.mp3"
     ],
     "br": [
-      80
+      112
     ]
   },
   {
@@ -410,7 +410,7 @@ window.STATIONS = [
       "https://gb25.streamgates.net/radios-audio/100Nostalgia/playlist.m3u8"
     ],
     "br": [
-      148
+      145
     ]
   },
   {
@@ -612,4 +612,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T01:40Z";
+window.STATIONS_CHECKED = "2026-11-24T10:56Z";
