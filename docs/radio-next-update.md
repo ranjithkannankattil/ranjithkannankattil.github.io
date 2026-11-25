@@ -115,6 +115,11 @@ His reason: the app looks like one long list; in Settings you can't tell what is
   watch the car connection (androidx.car.app `CarConnection`: projection → not connected) and pause with
   PlayLog.who = "Android Auto disconnected"; that pause cancels the resume helper and reconnecting, like any pause.
   Device test with a fake disconnect; he checks in the car.
+  Second tester (Anoop, 25 Nov 2026): car on Bluetooth + Android Auto; on leaving the car the Bluetooth drops and
+  the radio carries on (or starts) on the phone speaker, even in a meeting. So also: when the sound moves from a
+  car / Bluetooth device to the phone speaker, stay paused (AudioDeviceCallback: car/BT output removed → pause), and
+  ignore a "play" that arrives in the first ~10 s after that disconnect (some cars send one as they disconnect).
+  The PlayLog of a tester shows which of these it is.
 - **Even volume between stations** (tester suggestion, 25 Nov 2026: "each station has a different volume; keep it
   the same when changing station"). Settings → Sound → **Even volume** (on by default, can be switched off). Two parts:
   1. Each station's usual loudness is measured by the twice-daily stream check (a 20-second sample, ffmpeg's
