@@ -273,8 +273,7 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://cast1.my-control-panel.com/proxy/myradio90fm/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "airkannur",
@@ -283,8 +282,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/b82c91a395fc4a7d/b82c91a395fc4a7d.m3u8"
     ],
-    "akv": "Akashvani Kannur",
-    "offline": true
+    "akv": "Akashvani Kannur"
   },
   {
     "id": "helloradio",
@@ -326,8 +324,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/58390a2ed33cea4a/58390a2ed33cea4a.m3u8"
     ],
-    "akv": "Akashvani Manjeri",
-    "offline": true
+    "akv": "Akashvani Manjeri"
   },
   {
     "id": "akashvanithrissur",
@@ -340,8 +337,7 @@ window.STATIONS = [
     "akv": "Akashvani Thrissur",
     "exclude": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radioneythal",
@@ -405,8 +401,7 @@ window.STATIONS = [
     "category": "fm",
     "streams": [
       "https://icecast.octosignals.com/radiomacfast"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "globalradio",
@@ -712,8 +707,7 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://streamasiahlscdn.atc-labs.com/karunasairadio.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radiomalayalam",
@@ -1542,4 +1536,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T23:47Z";
+window.STATIONS_CHECKED = "2026-11-25T02:30Z";
