@@ -138,7 +138,7 @@ window.STATIONS = [
       "https://live1.sr.se/p4ostg-mp3-96"
     ],
     "br": [
-      96
+      128
     ]
   },
   {
@@ -194,7 +194,7 @@ window.STATIONS = [
       "https://sverigesradio.se/topsy/direkt/213-lo-mp3.m3u"
     ],
     "br": [
-      86,
+      188,
       0
     ]
   },
@@ -258,7 +258,7 @@ window.STATIONS = [
       "https://live1.sr.se/p4vbtn-mp3-96"
     ],
     "br": [
-      172
+      112
     ]
   },
   {
@@ -321,7 +321,7 @@ window.STATIONS = [
       "https://live1.sr.se/p4vnrl-mp3-96"
     ],
     "br": [
-      164
+      144
     ]
   },
   {
@@ -398,7 +398,7 @@ window.STATIONS = [
       "https://live1.sr.se/p4sth-aac-32"
     ],
     "br": [
-      128
+      32
     ]
   },
   {
@@ -616,7 +616,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      96
+      128
     ]
   },
   {
@@ -701,4 +701,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

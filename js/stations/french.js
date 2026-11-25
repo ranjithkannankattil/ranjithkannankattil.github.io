@@ -376,9 +376,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.zenolive.com/rq40edfn3reuv"
     ],
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "sud-radio",
@@ -740,7 +738,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "br": [
-      104
+      96
     ]
   },
   {
@@ -1253,7 +1251,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "br": [
-      88
+      128
     ]
   },
   {
@@ -1385,7 +1383,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "br": [
-      64
+      128
     ]
   },
   {
@@ -1770,4 +1768,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

@@ -84,7 +84,7 @@ window.STATIONS = [
       "https://icecast-qmusicnl-cdp.triple-it.nl/Joe_nl.mp3"
     ],
     "br": [
-      96,
+      95,
       128,
       128
     ]
@@ -220,7 +220,7 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      96
+      95
     ]
   },
   {
@@ -608,7 +608,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      96
+      95
     ]
   },
   {
@@ -689,7 +689,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      95
+      96
     ]
   },
   {
@@ -1351,9 +1351,7 @@ window.STATIONS = [
       "https://play.citymusic.be/citymusic.mp3"
     ],
     "added": "2026-11-03",
-    "br": [
-      192
-    ]
+    "offline": true
   },
   {
     "id": "192-radio-hq",
@@ -1459,7 +1457,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-04",
     "br": [
-      96
+      95
     ]
   },
   {
@@ -1567,7 +1565,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-06",
     "br": [
-      96
+      95
     ]
   },
   {
@@ -1787,4 +1785,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

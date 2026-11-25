@@ -64,8 +64,8 @@ window.STATIONS = [
       "https://moondigitalmaster.radyotvonline.net/kafaradyo/playlist.m3u8"
     ],
     "br": [
-      63,
-      63
+      64,
+      64
     ]
   },
   {
@@ -403,6 +403,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://my.radiolize.com/radio/8000/radio.mp3"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -493,7 +496,8 @@ window.STATIONS = [
     "added": "2026-10-23",
     "br": [
       141
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "power-dance",
@@ -693,10 +697,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiotedu.com/lofi"
     ],
-    "added": "2026-10-26",
-    "br": [
-      320
-    ]
+    "added": "2026-10-26"
   },
   {
     "id": "canliradyo-tr-canl-radyo-mac-dinle",
@@ -859,9 +860,7 @@ window.STATIONS = [
       "https://radyodinle.cansuyufm.com/17175/stream;"
     ],
     "added": "2026-10-28",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "dinamo-fm-smog",
@@ -1037,9 +1036,7 @@ window.STATIONS = [
       "https://sslyayin.radyoyayini.com:7067/stream"
     ],
     "added": "2026-10-31",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "metropol-fm-anadolu-nun-sesi",
@@ -1189,10 +1186,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiotedu.com/classic-flac"
     ],
-    "added": "2026-11-02",
-    "br": [
-      320
-    ]
+    "added": "2026-11-02"
   },
   {
     "id": "lp-roman-fm",
@@ -1240,7 +1234,8 @@ window.STATIONS = [
     "added": "2026-11-02",
     "br": [
       141
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "bestefm",
@@ -1330,7 +1325,8 @@ window.STATIONS = [
     "added": "2026-11-04",
     "br": [
       106
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "gonul-fm-97-3",
@@ -1688,10 +1684,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiotedu.com/rock"
     ],
-    "added": "2026-11-09",
-    "br": [
-      320
-    ]
+    "added": "2026-11-09"
   },
   {
     "id": "translation-of-the-quran-in-turkish",
@@ -1742,4 +1735,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

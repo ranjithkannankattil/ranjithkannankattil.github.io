@@ -282,7 +282,7 @@ window.STATIONS = [
     ],
     "where": "Canada",
     "br": [
-      47
+      48
     ]
   },
   {
@@ -343,10 +343,7 @@ window.STATIONS = [
       "https://icecast.walmradio.com:8443/walm2"
     ],
     "added": "2026-10-22",
-    "where": "US",
-    "br": [
-      320
-    ]
+    "where": "US"
   },
   {
     "id": "npr-24-hour-program-stream",
@@ -797,7 +794,9 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "where": "Canada",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "radiostorm-comedy-104",
@@ -1525,7 +1524,7 @@ window.STATIONS = [
     "added": "2026-11-06",
     "where": "Tonga",
     "br": [
-      32
+      64
     ]
   },
   {
@@ -1880,4 +1879,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

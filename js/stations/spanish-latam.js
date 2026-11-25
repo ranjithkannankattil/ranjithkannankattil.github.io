@@ -216,7 +216,7 @@ window.STATIONS = [
       "https://server1.stweb.tv/rcvos/live/playlist.m3u8"
     ],
     "br": [
-      67
+      66
     ]
   },
   {
@@ -382,7 +382,9 @@ window.STATIONS = [
     "streams": [
       "https://radio02.ferozo.com/proxy/ra01000409?mp=/stream"
     ],
-    "offline": true
+    "br": [
+      32
+    ]
   },
   {
     "id": "la-ke-buena-ciudad-de-mexico-92-9-fm-xeq",
@@ -643,7 +645,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      64
+      128
     ]
   },
   {
@@ -1183,7 +1185,10 @@ window.STATIONS = [
     "streams": [
       "https://theonestopradio.com/stream?url=https://icecast.teveo.cu/zrXXWK9F"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      64
+    ]
   },
   {
     "id": "tropical-100-mix",
@@ -1755,4 +1760,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

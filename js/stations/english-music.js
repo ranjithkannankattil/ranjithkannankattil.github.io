@@ -185,9 +185,7 @@ window.STATIONS = [
       "https://ice5.somafm.com/secretagent-128-mp3"
     ],
     "where": "US",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "big-r-radio-80s-metal",
@@ -326,9 +324,7 @@ window.STATIONS = [
       "https://ice6.somafm.com/indiepop-128-aac"
     ],
     "where": "US",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "101-smooth-jazz-mellow-mix",
@@ -362,9 +358,7 @@ window.STATIONS = [
       "https://ice6.somafm.com/u80s-128-mp3"
     ],
     "where": "US",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "somafm-left-coast-70s",
@@ -397,10 +391,7 @@ window.STATIONS = [
     "streams": [
       "https://s4.myradiostream.com:7344/listen.mp3?"
     ],
-    "where": "Australia",
-    "br": [
-      192
-    ]
+    "where": "Australia"
   },
   {
     "id": "heart",
@@ -434,10 +425,7 @@ window.STATIONS = [
       "https://icecast.walmradio.com:8443/walm2"
     ],
     "added": "2026-10-22",
-    "where": "US",
-    "br": [
-      320
-    ]
+    "where": "US"
   },
   {
     "id": "walm-2",
@@ -1293,14 +1281,14 @@ window.STATIONS = [
     "name": "Soma FM Boot Liquor",
     "category": "country",
     "streams": [
-      "https://ice6.somafm.com/bootliquor-320-mp3",
-      "https://ice5.somafm.com/bootliquor-128-aac"
+      "https://ice5.somafm.com/bootliquor-128-aac",
+      "https://ice6.somafm.com/bootliquor-320-mp3"
     ],
     "where": "US",
     "added": "2026-11-02",
     "br": [
-      320,
-      128
+      128,
+      0
     ]
   },
   {
@@ -1351,8 +1339,9 @@ window.STATIONS = [
     ],
     "where": "Canada",
     "added": "2026-11-02",
-    "offline": true,
-    "hidden": true
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-country-live-new-york",
@@ -1773,7 +1762,7 @@ window.STATIONS = [
     "where": "Canada",
     "br": [
       128,
-      0
+      128
     ]
   },
   {
@@ -1891,4 +1880,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

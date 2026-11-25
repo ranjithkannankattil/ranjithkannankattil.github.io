@@ -110,9 +110,7 @@ window.STATIONS = [
     "streams": [
       "https://streamer.radio.co/sb38bf6e66/listen"
     ],
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "radio-mojahed",
@@ -300,7 +298,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.truth.fm:8000/pipfa"
     ],
-    "added": "2026-11-25"
+    "added": "2026-11-25",
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

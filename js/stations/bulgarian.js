@@ -63,6 +63,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://nova-radio.neterra.tv/veselinaretro"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -274,7 +277,7 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      0
+      128
     ]
   },
   {
@@ -448,7 +451,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      320
+      256
     ]
   },
   {
@@ -675,7 +678,9 @@ window.STATIONS = [
       "https://radio.jump.bg/proxy/stanimi1/radioRETRO"
     ],
     "added": "2026-10-26",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "station-9",
@@ -1017,4 +1022,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

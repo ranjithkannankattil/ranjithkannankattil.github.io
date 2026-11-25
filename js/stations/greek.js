@@ -36,7 +36,7 @@ window.STATIONS = [
     ],
     "br": [
       192,
-      0
+      192
     ]
   },
   {
@@ -488,7 +488,7 @@ window.STATIONS = [
     "added": "2026-10-22",
     "br": [
       128,
-      0
+      128
     ]
   },
   {
@@ -1092,10 +1092,7 @@ window.STATIONS = [
     "streams": [
       "https://sp1.19cloudsnetwork.gr/8008/stream?1701442520261"
     ],
-    "added": "2026-10-31",
-    "br": [
-      192
-    ]
+    "added": "2026-10-31"
   },
   {
     "id": "sokfm-104-8",
@@ -1501,10 +1498,7 @@ window.STATIONS = [
     "streams": [
       "https://sp1.19cloudsnetwork.gr/8008/stream"
     ],
-    "added": "2026-11-05",
-    "br": [
-      192
-    ]
+    "added": "2026-11-05"
   },
   {
     "id": "aktina-104-7",
@@ -1759,4 +1753,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

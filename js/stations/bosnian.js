@@ -41,6 +41,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.leftor.com/proxy/studiom2/stream"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -82,6 +85,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.hkr.hr/hkr.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -147,7 +153,7 @@ window.STATIONS = [
       "https://zpilipov-geckohost.radioca.st/stream"
     ],
     "br": [
-      128
+      192
     ]
   },
   {
@@ -534,4 +540,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

@@ -36,7 +36,9 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/4804/64k.mp3"
     ],
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-3",
@@ -53,7 +55,9 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qtfm.cn/live/20500172/64k.mp3"
     ],
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-5",
@@ -62,7 +66,9 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/4915/64k.mp3"
     ],
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-6",
@@ -135,8 +141,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://play-radio-stream3.hndt.com/now/WUBA5hW2/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-10",
@@ -870,7 +875,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qtfm.cn/live/15318341/64k.mp3"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      64
+    ]
   },
   {
     "id": "jesus-is-lord-radio",
@@ -1174,7 +1182,9 @@ window.STATIONS = [
       "https://lhttp.qtfm.cn/live/4847/64k.mp3"
     ],
     "added": "2026-11-04",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "station-49",
@@ -1183,8 +1193,7 @@ window.STATIONS = [
     "streams": [
       "https://play-radio-stream3.hndt.com/now/yorSd1X2/chunklist.m3u8"
     ],
-    "added": "2026-11-04",
-    "offline": true
+    "added": "2026-11-04"
   },
   {
     "id": "fred-film-radio",
@@ -1433,7 +1442,10 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/275/64k.mp3"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      64
+    ]
   },
   {
     "id": "my-fm",
@@ -1589,4 +1601,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

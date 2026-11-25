@@ -208,6 +208,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.hkr.hr/hkr.mp3"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -450,7 +453,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      96
+      319
     ]
   },
   {
@@ -592,7 +595,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.hkr.hr:8000/hkr.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hrvatski-radio-frankfurt",
@@ -662,9 +668,7 @@ window.STATIONS = [
       "https://onlineradiobox.com/json/hr/vinkovci/play?platform=web"
     ],
     "added": "2026-10-29",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "radio-92-fm",
@@ -987,7 +991,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-12",
     "br": [
-      170
+      128
     ]
   },
   {
@@ -1063,4 +1067,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

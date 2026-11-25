@@ -226,7 +226,7 @@ window.STATIONS = [
       "https://wowzaott1.penki.lt/jazzfm/jazzfm.stream/playlist.m3u8"
     ],
     "br": [
-      89
+      90
     ]
   },
   {
@@ -335,7 +335,10 @@ window.STATIONS = [
     "streams": [
       "https://live.leproradio.com/rocks.ogg"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "criminal-tribe",
@@ -344,7 +347,10 @@ window.STATIONS = [
     "streams": [
       "https://live.leproradio.com/criminal.ogg"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      128
+    ]
   },
   {
     "id": "mrpl-classics",
@@ -371,4 +377,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

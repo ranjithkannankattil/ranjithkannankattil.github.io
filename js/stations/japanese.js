@@ -440,7 +440,7 @@ window.STATIONS = [
       "https://vrc.gate.vrtv.jp/live?p=g&u=d"
     ],
     "br": [
-      1366
+      1263
     ]
   },
   {
@@ -535,9 +535,7 @@ window.STATIONS = [
       "https://radio.gjfm.my.id/listen/gjfm/siaran"
     ],
     "added": "2026-10-23",
-    "br": [
-      80
-    ]
+    "offline": true
   },
   {
     "id": "j-club-powerplay-hiphop-asia-dream-radio",
@@ -668,7 +666,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      256
+      128
     ]
   },
   {
@@ -1010,4 +1008,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

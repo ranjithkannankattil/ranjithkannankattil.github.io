@@ -366,7 +366,7 @@ window.STATIONS = [
       "https://stream.zeno.fm/249ba9e1q0quv"
     ],
     "br": [
-      96
+      64
     ]
   },
   {
@@ -407,9 +407,7 @@ window.STATIONS = [
     "streams": [
       "https://atunwadigital.streamguys1.com/yfm979takoradi"
     ],
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "yfm-107-9-accra",
@@ -648,4 +646,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

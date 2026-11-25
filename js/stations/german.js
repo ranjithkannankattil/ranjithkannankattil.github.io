@@ -25,7 +25,7 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      256,
+      192,
       24,
       128
     ]
@@ -463,7 +463,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.bigfm.de/deutschland/mp3-128/radio-browser"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "orf-hitradio-o3",
@@ -884,7 +887,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "br": [
-      128
+      88
     ]
   },
   {
@@ -1383,7 +1386,10 @@ window.STATIONS = [
     "streams": [
       "https://0n-christmas.radionetz.de/0n-christmas.mp3"
     ],
-    "added": "2026-11-03"
+    "added": "2026-11-03",
+    "br": [
+      128
+    ]
   },
   {
     "id": "jazz-radio-swiss",
@@ -1782,4 +1788,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

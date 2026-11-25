@@ -108,7 +108,7 @@ window.STATIONS = [
       "https://stream.radiojar.com/8s5u5tpdtwzuv"
     ],
     "br": [
-      80
+      64
     ]
   },
   {
@@ -283,7 +283,7 @@ window.STATIONS = [
       "https://n0e.radiojar.com/8s5u5tpdtwzuv?rj=&rj-tok=AAABg5BDP0EA2ElNLJYUJTsVcg&rj-ttl=5"
     ],
     "br": [
-      80
+      64
     ]
   },
   {
@@ -294,7 +294,7 @@ window.STATIONS = [
       "https://stream.radiojar.com/0tpy1h0kxtzuv"
     ],
     "br": [
-      96
+      64
     ]
   },
   {
@@ -774,7 +774,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      96
+      80
     ]
   },
   {
@@ -834,9 +834,7 @@ window.STATIONS = [
       "https://streamer.radio.co/sb38bf6e66/listen"
     ],
     "added": "2026-10-27",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "quran-radio-kuwait",
@@ -1769,4 +1767,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

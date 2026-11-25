@@ -226,7 +226,7 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      0
+      128
     ]
   },
   {
@@ -937,7 +937,9 @@ window.STATIONS = [
       "https://stream.radios.rs:9002/;"
     ],
     "added": "2026-10-29",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "lotel2",
@@ -1726,4 +1728,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

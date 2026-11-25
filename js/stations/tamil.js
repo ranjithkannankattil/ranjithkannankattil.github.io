@@ -86,7 +86,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "89-4-tamil-fm",
@@ -107,7 +108,7 @@ window.STATIONS = [
       "https://stream.zeno.fm/r2gn1pgm4qruv"
     ],
     "br": [
-      128
+      64
     ]
   },
   {
@@ -357,9 +358,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio021/playlist.m3u8"
-    ],
-    "br": [
-      79
     ]
   },
   {
@@ -368,9 +366,6 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio025/masterlist.m3u8"
-    ],
-    "br": [
-      79
     ]
   },
   {
@@ -379,7 +374,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio129/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "tamil-ragam",
@@ -541,10 +537,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio022/playlist.m3u8"
     ],
-    "added": "2026-10-23",
-    "br": [
-      79
-    ]
+    "added": "2026-10-23"
   },
   {
     "id": "fmrainbowtamil",
@@ -553,10 +546,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio022/playlist.m3u8"
     ],
-    "added": "2026-10-23",
-    "br": [
-      79
-    ]
+    "added": "2026-10-23"
   },
   {
     "id": "mellisai-fm",
@@ -804,10 +794,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio024/playlist.m3u8"
     ],
-    "added": "2026-10-26",
-    "br": [
-      79
-    ]
+    "added": "2026-10-26"
   },
   {
     "id": "oli-968",
@@ -1457,9 +1444,7 @@ window.STATIONS = [
       "https://servidor18-4.brlogic.com:7740/live"
     ],
     "added": "2026-11-05",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "thendralradio",
@@ -1747,4 +1732,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

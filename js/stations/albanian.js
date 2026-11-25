@@ -482,10 +482,7 @@ window.STATIONS = [
     "streams": [
       "https://radiocast.ch:8000/stream"
     ],
-    "added": "2026-10-22",
-    "br": [
-      96
-    ]
+    "added": "2026-10-22"
   },
   {
     "id": "radio-dj-98-2",
@@ -596,7 +593,10 @@ window.STATIONS = [
     "streams": [
       "https://play.4plusmedia.tv/radio.mp3"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      192
+    ]
   },
   {
     "id": "lefutur-radio",
@@ -702,7 +702,9 @@ window.STATIONS = [
       "https://streams.radiomast.io/346318d3-5312-4a69-8f80-64d75640fd35"
     ],
     "added": "2026-11-13",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-helix-104-4-fm",
@@ -729,4 +731,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

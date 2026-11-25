@@ -138,7 +138,7 @@ window.STATIONS = [
       "https://astreaming.edi.ro:8443/VirginRadio_aac"
     ],
     "br": [
-      128
+      64
     ]
   },
   {
@@ -346,7 +346,9 @@ window.STATIONS = [
     "streams": [
       "https://radio-romantic.ro/stream"
     ],
-    "offline": true
+    "br": [
+      320
+    ]
   },
   {
     "id": "clasic-radio-chopin-bucuresti",
@@ -562,10 +564,7 @@ window.STATIONS = [
     "streams": [
       "https://live.radiotranquila.net:8032/stream"
     ],
-    "added": "2026-10-24",
-    "br": [
-      128
-    ]
+    "added": "2026-10-24"
   },
   {
     "id": "clasic-radio-bach-bucuresti",
@@ -1703,10 +1702,7 @@ window.STATIONS = [
     "streams": [
       "https://popular.radiostill.ro/8176/stream"
     ],
-    "added": "2026-11-09",
-    "br": [
-      128
-    ]
+    "added": "2026-11-09"
   },
   {
     "id": "radio-galati",
@@ -1757,4 +1753,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

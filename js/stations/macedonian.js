@@ -23,7 +23,7 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      0
+      128
     ]
   },
   {
@@ -33,7 +33,9 @@ window.STATIONS = [
     "streams": [
       "https://radiostar.pro/stream/exyuretro.php"
     ],
-    "offline": true
+    "br": [
+      256
+    ]
   },
   {
     "id": "time-fm-gevgelija",
@@ -75,7 +77,9 @@ window.STATIONS = [
     "streams": [
       "https://radiostar.pro/stream/worldretro.php"
     ],
-    "offline": true
+    "br": [
+      256
+    ]
   },
   {
     "id": "sky-folk",
@@ -147,7 +151,9 @@ window.STATIONS = [
     "streams": [
       "https://radiostar.pro/stream/mknarodna.php"
     ],
-    "offline": true
+    "br": [
+      256
+    ]
   },
   {
     "id": "star-radio-live-skopje-macedonia",
@@ -156,7 +162,9 @@ window.STATIONS = [
     "streams": [
       "https://radiostar.pro/stream/starlive.php"
     ],
-    "offline": true
+    "br": [
+      256
+    ]
   },
   {
     "id": "star-radio-boemi-skopje-macedonia",
@@ -165,7 +173,9 @@ window.STATIONS = [
     "streams": [
       "https://radiostar.pro/stream/boemi.php"
     ],
-    "offline": true
+    "br": [
+      256
+    ]
   },
   {
     "id": "sky-radio-hits-skopje-macedonia",
@@ -196,7 +206,9 @@ window.STATIONS = [
     "streams": [
       "https://radiostar.pro/stream/narodna.php"
     ],
-    "offline": true
+    "br": [
+      256
+    ]
   },
   {
     "id": "star-radio-plus-skopje-macedonia",
@@ -205,7 +217,9 @@ window.STATIONS = [
     "streams": [
       "https://radiostar.pro/stream/starplus.php"
     ],
-    "offline": true
+    "br": [
+      192
+    ]
   },
   {
     "id": "plenty-valley-fm-mill-park-melbourne-88-",
@@ -261,10 +275,7 @@ window.STATIONS = [
     "streams": [
       "https://live.playfm.mk:8046/live"
     ],
-    "added": "2026-11-12",
-    "br": [
-      128
-    ]
+    "added": "2026-11-12"
   },
   {
     "id": "90-1-nbc-fm-narwee-90-1-fm",
@@ -288,4 +299,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

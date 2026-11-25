@@ -225,7 +225,7 @@ window.STATIONS = [
       "https://p10.p4groupaudio.com/P10_AH"
     ],
     "br": [
-      192
+      191
     ]
   },
   {
@@ -238,7 +238,7 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      192
+      191
     ]
   },
   {
@@ -582,4 +582,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

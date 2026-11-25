@@ -8,9 +8,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/playlist.m3u8"
-    ],
-    "br": [
-      94
     ]
   },
   {
@@ -64,10 +61,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio112/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "br": [
-      85
-    ]
+    "added": "2026-10-22"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

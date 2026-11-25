@@ -38,7 +38,7 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      128
+      127
     ]
   },
   {
@@ -60,7 +60,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m8080.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -97,7 +97,7 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      128
+      127
     ]
   },
   {
@@ -130,7 +130,7 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
     ],
     "br": [
-      168
+      171
     ]
   },
   {
@@ -163,7 +163,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m80nacional.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -174,7 +174,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m8060.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -213,6 +213,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://proic1.evspt.com/oxigenio_aac"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -279,8 +282,8 @@ window.STATIONS = [
       "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
     ],
     "br": [
-      170,
-      170
+      167,
+      167
     ]
   },
   {
@@ -313,9 +316,8 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
     ],
     "br": [
-      185
-    ],
-    "offline": true
+      182
+    ]
   },
   {
     "id": "cidade-fm-2",
@@ -325,7 +327,7 @@ window.STATIONS = [
       "https://stream-hls.bauermedia.pt/cidade.aac/playlist.m3u8"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -382,7 +384,7 @@ window.STATIONS = [
     ],
     "br": [
       262,
-      260
+      259
     ]
   },
   {
@@ -437,7 +439,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/smoothsoul.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -460,7 +462,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -471,7 +473,10 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/rdpafrica80a/playlist.m3u8"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "offline": true,
+    "br": [
+      183
+    ]
   },
   {
     "id": "antena-1-acores-portugal",
@@ -482,9 +487,8 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      192
-    ],
-    "offline": true
+      190
+    ]
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -567,9 +571,8 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      165
-    ],
-    "offline": true
+      163
+    ]
   },
   {
     "id": "radio-observador",
@@ -616,7 +619,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -640,7 +643,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -748,7 +751,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -772,7 +775,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -856,7 +859,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -880,7 +883,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -916,7 +919,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -1000,7 +1003,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      32
+      128
     ]
   },
   {
@@ -1168,7 +1171,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-01",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -1252,7 +1255,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-02",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -1362,7 +1365,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "br": [
-      160
+      320
     ]
   },
   {
@@ -1458,7 +1461,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "br": [
-      175
+      168
     ]
   },
   {
@@ -1608,7 +1611,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "br": [
-      167
+      165
     ]
   },
   {
@@ -1774,7 +1777,10 @@ window.STATIONS = [
     "streams": [
       "https://proic1.evspt.com/radar_mp3"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      192
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

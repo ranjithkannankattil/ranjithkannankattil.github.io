@@ -702,10 +702,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.vaticannews.va/stream-sk"
     ],
-    "added": "2026-10-26",
-    "br": [
-      128
-    ]
+    "added": "2026-10-26"
   },
   {
     "id": "radio-laskaro",
@@ -744,4 +741,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

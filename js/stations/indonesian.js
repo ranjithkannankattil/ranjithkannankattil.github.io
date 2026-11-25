@@ -543,7 +543,9 @@ window.STATIONS = [
       "https://b.alhastream.com:5035/radio"
     ],
     "added": "2026-10-23",
-    "offline": true
+    "br": [
+      320
+    ]
   },
   {
     "id": "gajahmada-fm",
@@ -871,9 +873,7 @@ window.STATIONS = [
       "https://svara-stream.radioddns.net/bali_voksradio_993fm"
     ],
     "added": "2026-10-28",
-    "br": [
-      160
-    ]
+    "offline": true
   },
   {
     "id": "imelda-fm",
@@ -884,7 +884,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      128
+      160
     ]
   },
   {
@@ -1421,9 +1421,7 @@ window.STATIONS = [
       "https://radio.gjfm.my.id/listen/gjfm/siaran"
     ],
     "added": "2026-11-05",
-    "br": [
-      80
-    ]
+    "offline": true
   },
   {
     "id": "radio-cmn",
@@ -1469,7 +1467,9 @@ window.STATIONS = [
       "https://radio.safasindo.com/listen/radio_safasindo/radio.mp3"
     ],
     "added": "2026-11-06",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "rri-pro-3-palembang",
@@ -1656,9 +1656,7 @@ window.STATIONS = [
       "https://s2.free-shoutcast.com/stream/18096"
     ],
     "added": "2026-11-12",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "onix-radio",
@@ -1727,7 +1725,10 @@ window.STATIONS = [
     "streams": [
       "https://listen.bellasalamfm.com/listen/radiobellasalam/live"
     ],
-    "added": "2026-11-25"
+    "added": "2026-11-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "delta-99-2-fm-makassar",
@@ -1736,7 +1737,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radioalikhwan.com/listen/delta_fm_makassar/hd"
     ],
-    "added": "2026-11-25"
+    "added": "2026-11-25",
+    "br": [
+      32
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";

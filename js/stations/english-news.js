@@ -543,7 +543,9 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "where": "Canada",
-    "offline": true
+    "br": [
+      40
+    ]
   },
   {
     "id": "fresh-105-9-fm-ibadan",
@@ -554,9 +556,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "where": "Nigeria",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "rte-radio-1",
@@ -619,7 +619,7 @@ window.STATIONS = [
     "where": "US",
     "br": [
       32,
-      0
+      32
     ]
   },
   {
@@ -706,7 +706,9 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "where": "Canada",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "bloomberg-99-1-105-7-hd2",
@@ -937,7 +939,7 @@ window.STATIONS = [
     "added": "2026-11-02",
     "where": "UK",
     "br": [
-      63
+      64
     ]
   },
   {
@@ -1250,7 +1252,7 @@ window.STATIONS = [
     "where": "Canada",
     "br": [
       128,
-      0
+      128
     ]
   },
   {
@@ -1275,7 +1277,9 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "where": "Canada",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "bbc-radio-ulster",
@@ -1322,7 +1326,9 @@ window.STATIONS = [
     ],
     "added": "2026-11-06",
     "where": "Canada",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "98-4-capital-fm",
@@ -1892,4 +1898,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T23:13Z";
