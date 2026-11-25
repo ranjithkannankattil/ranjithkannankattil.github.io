@@ -124,6 +124,14 @@ His reason: the app looks like one long list; in Settings you can't tell what is
      several seconds, with a limiter so loud songs never clip; never fast enough to "pump" music.
   App only: the website can't change the volume of most stations' streams (browsers block it for other sites'
   audio). Test: switching between a quiet and a loud station stays within about 2 dB; he checks by ear in the car.
+- **Bug (tester, 25 Nov 2026): Favourites can't be seen on wide, short screens** (landscape phones and Android car
+  stereos running the phone app). Cause found: in `FavouritesTab` (MainActivity.kt) the Recently played strip
+  (`RecentStrip`, about 170 dp: label + 96 dp tiles + names) and the "N favourites / Reorder" row sit in a fixed
+  `Column` above the list, so on a screen ~400 dp tall, with the player bar and bottom tabs, nothing is left for
+  the favourites. Fix: make the strip and that row the first items of the favourites list, so they scroll away;
+  on short screens (height < 480 dp) show Recently played as one slim row of small chips (or folded behind a
+  "Recently played ›" line); and in landscape use a side rail instead of bottom tabs and a slimmer player bar so
+  lists get the height. Screen tests at 800×400 and 1280×480 (car stereo sizes), plus phone landscape.
 - Also in 2.10 (from earlier): bugs (radio turning itself on + Auto artwork flicker, Connecting… timeout,
   widget doesn't open the app, three looks ignore the colour theme, text shifts between looks, remaining
   translations), the share card drawn from the current player look, browse by country. Spotify-in-car
