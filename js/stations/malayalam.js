@@ -213,8 +213,7 @@ window.STATIONS = [
     "akv": "Akashvani Devikulam",
     "exclude": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "airkozhikodefm",
@@ -1342,8 +1341,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "aural-oldies",
@@ -1536,4 +1534,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T02:30Z";
+window.STATIONS_CHECKED = "2026-11-25T03:30Z";

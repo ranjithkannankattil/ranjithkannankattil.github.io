@@ -73,7 +73,6 @@
     "luganda:radio-yoo": 3,
     "malay:myfriends-station": 32,
     "malayalam:air-akashvani-malayalam": 15,
-    "malayalam:airdevikulam": 1,
     "malayalam:greenradio": 74,
     "malayalam:hallos-radio": 7,
     "malayalam:keralafm": 74,
@@ -98,7 +97,6 @@
     "malayalam:tcrliveradio": 72,
     "malayalam:thaalamradio": 74,
     "malayalam:tharangamradio": 74,
-    "malayalam:vividh-bharati-thiruvananthapuram": 1,
     "more-indian:air-kolhapur": 1,
     "more-indian:air-nanded": 1,
     "more-indian:fm-rainbow-mumbai-marathi": 44,
@@ -1531,11 +1529,6 @@
     "last_reason": "HTTP 530 error page",
     "since": "2026-11-04"
   },
-  "https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/playlist.m3u8": {
-    "fails": 3,
-    "last_reason": "playlist HTTP 404",
-    "since": "2026-11-24"
-  },
   "https://air.pc.cdn.bitgravity.com/air/live/pbaudio063/playlist.m3u8": {
     "fails": 1,
     "last_reason": "playlist HTTP 404",
@@ -1867,11 +1860,6 @@
     "since": "2026-11-24"
   },
   "https://radio.wavespb.com/live/deae7120a205bfff/deae7120a205bfff.m3u8": {
-    "fails": 1,
-    "last_reason": "playlist HTTP 404",
-    "since": "2026-11-24"
-  },
-  "https://radio.wavespb.com/live/e97acc829da9bf2a/e97acc829da9bf2a.m3u8": {
     "fails": 1,
     "last_reason": "playlist HTTP 404",
     "since": "2026-11-24"
