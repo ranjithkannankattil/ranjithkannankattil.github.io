@@ -88,7 +88,6 @@
     "malayalam:air-akashvani-malayalam": 16,
     "malayalam:greenradio": 75,
     "malayalam:hallos-radio": 8,
-    "malayalam:junefm": 1,
     "malayalam:keralafm": 75,
     "malayalam:mazhavilfm": 75,
     "malayalam:menorahradio": 75,
@@ -1750,11 +1749,6 @@
     "fails": 11,
     "last_reason": "HTTP 404 error page",
     "since": "2026-11-20"
-  },
-  "https://onair.junefm.in/live": {
-    "fails": 1,
-    "last_reason": "HTTP 404 error page",
-    "since": "2026-11-25"
   },
   "https://online-novodnistrovsk.pp.ua:8443/playHD": {
     "fails": 1,

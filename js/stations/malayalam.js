@@ -463,8 +463,7 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://onair.junefm.in/live"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radiomangalam",
@@ -1553,4 +1552,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T09:44Z";
+window.STATIONS_CHECKED = "2026-11-25T12:56Z";
