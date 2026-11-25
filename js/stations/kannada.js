@@ -52,6 +52,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio026/hlspbaudio026_Auto.m3u8"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -141,6 +144,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio028/hlspbaudio028_Auto.m3u8"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -160,8 +166,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://d3n2o48cmfppr2.cloudfront.net/svymradio.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "fm-rainbow-kannada",
@@ -169,6 +174,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio027/hlspbaudio027_Auto.m3u8"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -220,4 +228,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T23:47Z";
+window.STATIONS_CHECKED = "2026-11-25T09:44Z";

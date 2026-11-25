@@ -36,9 +36,7 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/4804/64k.mp3"
     ],
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "station-3",
@@ -55,9 +53,7 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qtfm.cn/live/20500172/64k.mp3"
     ],
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "station-5",
@@ -66,9 +62,7 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qingting.fm/live/4915/64k.mp3"
     ],
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "station-6",
@@ -439,7 +433,9 @@ window.STATIONS = [
       "https://lhttp-hw.qtfm.cn/live/5022308/64k.mp3"
     ],
     "added": "2026-10-23",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "101-fm101-7",
@@ -874,10 +870,7 @@ window.STATIONS = [
     "streams": [
       "https://lhttp.qtfm.cn/live/15318341/64k.mp3"
     ],
-    "added": "2026-10-30",
-    "br": [
-      64
-    ]
+    "added": "2026-10-30"
   },
   {
     "id": "jesus-is-lord-radio",
@@ -1181,9 +1174,7 @@ window.STATIONS = [
       "https://lhttp.qtfm.cn/live/4847/64k.mp3"
     ],
     "added": "2026-11-04",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "station-49",
@@ -1192,7 +1183,8 @@ window.STATIONS = [
     "streams": [
       "https://play-radio-stream3.hndt.com/now/yorSd1X2/chunklist.m3u8"
     ],
-    "added": "2026-11-04"
+    "added": "2026-11-04",
+    "offline": true
   },
   {
     "id": "fred-film-radio",
@@ -1330,7 +1322,10 @@ window.STATIONS = [
     "streams": [
       "https://flv.ccdntech.com/live/_definst_/mp4:vod117_Live/live1/playlist.m3u8"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      67
+    ]
   },
   {
     "id": "station-53",
@@ -1438,10 +1433,7 @@ window.STATIONS = [
     "streams": [
       "https://lhttp-hw.qtfm.cn/live/275/64k.mp3"
     ],
-    "added": "2026-11-07",
-    "br": [
-      64
-    ]
+    "added": "2026-11-07"
   },
   {
     "id": "my-fm",
@@ -1597,4 +1589,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T23:47Z";
+window.STATIONS_CHECKED = "2026-11-25T09:44Z";

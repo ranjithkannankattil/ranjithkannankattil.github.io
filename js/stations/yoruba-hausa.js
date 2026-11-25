@@ -120,7 +120,9 @@ window.STATIONS = [
       "https://stream.zenolive.com/e9x2n97b9uduv"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "glow-99-1-fm-akure",
@@ -165,9 +167,7 @@ window.STATIONS = [
       "https://atunwadigital.streamguys1.com/yfm1025kumasi"
     ],
     "added": "2026-10-22",
-    "br": [
-      256
-    ]
+    "offline": true
   },
   {
     "id": "ccc-worldwide-radio",
@@ -224,7 +224,10 @@ window.STATIONS = [
     "streams": [
       "https://fm.imediaport.com/okn"
     ],
-    "added": "2026-11-24"
+    "added": "2026-11-24",
+    "br": [
+      64
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T23:47Z";
+window.STATIONS_CHECKED = "2026-11-25T09:44Z";

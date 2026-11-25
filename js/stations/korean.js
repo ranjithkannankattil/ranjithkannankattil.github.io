@@ -10,7 +10,7 @@ window.STATIONS = [
       "https://radiolive.ytn.co.kr/radio/_definst_/20211118_fmlive/playlist.m3u8"
     ],
     "br": [
-      132
+      174
     ]
   },
   {
@@ -32,7 +32,7 @@ window.STATIONS = [
       "https://vod3.obs.co.kr:444/live/obsstream1/radio.stream/playlist.m3u8"
     ],
     "br": [
-      145
+      136
     ]
   },
   {
@@ -355,7 +355,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      1155
+      1151
     ]
   },
   {
@@ -368,7 +368,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      1277
+      1301
     ]
   },
   {
@@ -381,7 +381,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      1151
+      1143
     ]
   },
   {
@@ -418,7 +418,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      1145
+      1148
     ]
   },
   {
@@ -431,7 +431,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      4438
+      4423
     ]
   },
   {
@@ -503,7 +503,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      624
+      636
     ]
   },
   {
@@ -631,7 +631,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      1145
+      1135
     ]
   },
   {
@@ -644,7 +644,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      1136
+      1143
     ]
   },
   {
@@ -666,7 +666,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      1142
+      1153
     ]
   },
   {
@@ -761,4 +761,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T23:47Z";
+window.STATIONS_CHECKED = "2026-11-25T09:44Z";

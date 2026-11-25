@@ -98,7 +98,7 @@ window.STATIONS = [
       "https://stream.zeno.fm/yetzdv442k8uv"
     ],
     "br": [
-      128
+      96
     ]
   },
   {
@@ -208,9 +208,6 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.hkr.hr/hkr.mp3"
-    ],
-    "br": [
-      128
     ]
   },
   {
@@ -595,10 +592,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.hkr.hr:8000/hkr.mp3"
     ],
-    "added": "2026-10-28",
-    "br": [
-      128
-    ]
+    "added": "2026-10-28"
   },
   {
     "id": "hrvatski-radio-frankfurt",
@@ -993,7 +987,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-12",
     "br": [
-      160
+      170
     ]
   },
   {
@@ -1069,4 +1063,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T23:47Z";
+window.STATIONS_CHECKED = "2026-11-25T09:44Z";

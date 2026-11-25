@@ -1130,10 +1130,7 @@ window.STATIONS = [
     "streams": [
       "https://mp3.radiostill.ro:8888/stream"
     ],
-    "added": "2026-11-02",
-    "br": [
-      128
-    ]
+    "added": "2026-11-02"
   },
   {
     "id": "fun-radio-romania",
@@ -1760,4 +1757,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T23:47Z";
+window.STATIONS_CHECKED = "2026-11-25T09:44Z";

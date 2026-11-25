@@ -351,7 +351,7 @@ window.STATIONS = [
       "https://livefta.malimarcdn.com/ftaedge00/nat.sdp/playlist.m3u8"
     ],
     "br": [
-      2403
+      2445
     ]
   },
   {
@@ -422,7 +422,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-06",
     "br": [
-      192
+      128
     ]
   },
   {
@@ -482,8 +482,8 @@ window.STATIONS = [
     ],
     "added": "2026-11-13",
     "br": [
-      52
+      48
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T23:47Z";
+window.STATIONS_CHECKED = "2026-11-25T09:44Z";

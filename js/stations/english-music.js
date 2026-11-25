@@ -303,7 +303,7 @@ window.STATIONS = [
     ],
     "where": "UK",
     "br": [
-      47
+      48
     ]
   },
   {
@@ -447,7 +447,10 @@ window.STATIONS = [
       "https://icecast.walmradio.com:8443/walm2_opus"
     ],
     "added": "2026-10-22",
-    "where": "US"
+    "where": "US",
+    "br": [
+      192
+    ]
   },
   {
     "id": "bbc-radio-2",
@@ -1871,7 +1874,7 @@ window.STATIONS = [
     "added": "2026-11-07",
     "where": "UK",
     "br": [
-      48
+      47
     ]
   },
   {
@@ -1888,4 +1891,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T23:47Z";
+window.STATIONS_CHECKED = "2026-11-25T09:44Z";

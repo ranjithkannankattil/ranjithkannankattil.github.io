@@ -550,9 +550,7 @@ window.STATIONS = [
       "https://pc.costa-server.info.pl:11020/listen/costas_ambient_radio/radio.mp3"
     ],
     "added": "2026-10-24",
-    "br": [
-      192
-    ]
+    "offline": true
   },
   {
     "id": "radioparty-pl-vocal-trance",
@@ -1223,7 +1221,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "br": [
-      64
+      128
     ]
   },
   {
@@ -1764,4 +1762,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T23:47Z";
+window.STATIONS_CHECKED = "2026-11-25T09:44Z";

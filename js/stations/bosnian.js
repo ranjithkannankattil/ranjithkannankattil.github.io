@@ -41,9 +41,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://stream.leftor.com/proxy/studiom2/stream"
-    ],
-    "br": [
-      96
     ]
   },
   {
@@ -85,9 +82,6 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://stream.hkr.hr/hkr.mp3"
-    ],
-    "br": [
-      128
     ]
   },
   {
@@ -242,7 +236,8 @@ window.STATIONS = [
     ],
     "br": [
       128
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-busovaca",
@@ -310,8 +305,7 @@ window.STATIONS = [
     ],
     "br": [
       128
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-usk",
@@ -369,8 +363,7 @@ window.STATIONS = [
     "added": "2026-10-24",
     "br": [
       128
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-bosanska-krupa",
@@ -541,4 +534,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T23:47Z";
+window.STATIONS_CHECKED = "2026-11-25T09:44Z";

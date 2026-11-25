@@ -31,10 +31,12 @@ window.STATIONS = [
     "name": "Pepper 96.6",
     "category": "music",
     "streams": [
+      "https://pepper966.live24.gr/pepper9660",
       "https://stream.radiojar.com/pepper"
     ],
     "br": [
-      192
+      192,
+      0
     ]
   },
   {
@@ -404,7 +406,9 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiojar.com/kokkino-ath.mp3"
     ],
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "kosmos-jazz",
@@ -1755,4 +1759,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T23:47Z";
+window.STATIONS_CHECKED = "2026-11-25T09:44Z";

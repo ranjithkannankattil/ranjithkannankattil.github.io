@@ -702,9 +702,7 @@ window.STATIONS = [
       "https://streams.radiomast.io/346318d3-5312-4a69-8f80-64d75640fd35"
     ],
     "added": "2026-11-13",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "radio-helix-104-4-fm",
@@ -725,7 +723,10 @@ window.STATIONS = [
     "streams": [
       "https://radio-pilafi.jah24dhs83y8b8.workers.dev/live/radio.mp3"
     ],
-    "added": "2026-11-24"
+    "added": "2026-11-24",
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T23:47Z";
+window.STATIONS_CHECKED = "2026-11-25T09:44Z";

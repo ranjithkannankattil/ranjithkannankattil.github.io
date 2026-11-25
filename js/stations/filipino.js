@@ -446,7 +446,9 @@ window.STATIONS = [
     "streams": [
       "https://streamnavs.net:8133/live"
     ],
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "rmn-dyri-iloilo",
@@ -783,7 +785,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-12",
     "br": [
-      96
+      128
     ]
   },
   {
@@ -799,4 +801,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T23:47Z";
+window.STATIONS_CHECKED = "2026-11-25T09:44Z";

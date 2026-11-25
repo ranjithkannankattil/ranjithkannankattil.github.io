@@ -303,7 +303,7 @@ window.STATIONS = [
       "https://stream.zeno.fm/wvq442iwm6ztv"
     ],
     "br": [
-      96
+      128
     ]
   },
   {
@@ -507,7 +507,9 @@ window.STATIONS = [
       "https://usa3.fastcast4u.com/proxy/pandumusikradio?mp=/1"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "br": [
+      96
+    ]
   },
   {
     "id": "elgangga-fm",
@@ -541,9 +543,7 @@ window.STATIONS = [
       "https://b.alhastream.com:5035/radio"
     ],
     "added": "2026-10-23",
-    "br": [
-      320
-    ]
+    "offline": true
   },
   {
     "id": "gajahmada-fm",
@@ -696,7 +696,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming.shoutcast.com/synchronizeradio"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "offline": true
   },
   {
     "id": "radio-suara-al-iman-846-am-surabaya",
@@ -870,7 +871,9 @@ window.STATIONS = [
       "https://svara-stream.radioddns.net/bali_voksradio_993fm"
     ],
     "added": "2026-10-28",
-    "offline": true
+    "br": [
+      160
+    ]
   },
   {
     "id": "imelda-fm",
@@ -1466,9 +1469,7 @@ window.STATIONS = [
       "https://radio.safasindo.com/listen/radio_safasindo/radio.mp3"
     ],
     "added": "2026-11-06",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "rri-pro-3-palembang",
@@ -1655,7 +1656,9 @@ window.STATIONS = [
       "https://s2.free-shoutcast.com/stream/18096"
     ],
     "added": "2026-11-12",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "onix-radio",
@@ -1716,6 +1719,24 @@ window.STATIONS = [
     "br": [
       96
     ]
+  },
+  {
+    "id": "bellasalam-87-6-fm-tasikmalaya",
+    "name": "Bellasalam 87.6 FM Tasikmalaya",
+    "category": "music",
+    "streams": [
+      "https://listen.bellasalamfm.com/listen/radiobellasalam/live"
+    ],
+    "added": "2026-11-25"
+  },
+  {
+    "id": "delta-99-2-fm-makassar",
+    "name": "Delta 99.2 FM Makassar",
+    "category": "music",
+    "streams": [
+      "https://stream.radioalikhwan.com/listen/delta_fm_makassar/hd"
+    ],
+    "added": "2026-11-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T23:47Z";
+window.STATIONS_CHECKED = "2026-11-25T09:44Z";

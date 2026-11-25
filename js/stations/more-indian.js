@@ -17,7 +17,11 @@ window.STATIONS = [
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio008/hlspbaudio008_Auto.m3u8"
     ],
-    "hidden": true
+    "hidden": true,
+    "br": [
+      32
+    ],
+    "offline": true
   },
   {
     "id": "radio-4-public-health-marathi",
@@ -95,7 +99,9 @@ window.STATIONS = [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio072/playlist.m3u8"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "br": [
+      95
+    ]
   },
   {
     "id": "air-kolhapur",
@@ -105,7 +111,9 @@ window.STATIONS = [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio063/playlist.m3u8"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "br": [
+      93
+    ]
   },
   {
     "id": "translation-of-the-quran-in-kashmiri",
@@ -144,4 +152,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T23:47Z";
+window.STATIONS_CHECKED = "2026-11-25T09:44Z";

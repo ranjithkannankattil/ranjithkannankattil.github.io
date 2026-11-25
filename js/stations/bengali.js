@@ -214,8 +214,9 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiotreetal.com/listen"
     ],
-    "offline": true,
-    "hidden": true
+    "br": [
+      48
+    ]
   },
   {
     "id": "radio-quarantine-kolkata",
@@ -277,4 +278,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T23:47Z";
+window.STATIONS_CHECKED = "2026-11-25T09:44Z";

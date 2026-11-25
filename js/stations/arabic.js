@@ -108,7 +108,7 @@ window.STATIONS = [
       "https://stream.radiojar.com/8s5u5tpdtwzuv"
     ],
     "br": [
-      64
+      80
     ]
   },
   {
@@ -283,7 +283,7 @@ window.STATIONS = [
       "https://n0e.radiojar.com/8s5u5tpdtwzuv?rj=&rj-tok=AAABg5BDP0EA2ElNLJYUJTsVcg&rj-ttl=5"
     ],
     "br": [
-      64
+      80
     ]
   },
   {
@@ -294,7 +294,7 @@ window.STATIONS = [
       "https://stream.radiojar.com/0tpy1h0kxtzuv"
     ],
     "br": [
-      160
+      96
     ]
   },
   {
@@ -774,7 +774,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      80
+      96
     ]
   },
   {
@@ -1314,7 +1314,9 @@ window.STATIONS = [
       "https://radio-mbc-mood.mbc.net/radio-mbc-mood.m3u8"
     ],
     "added": "2026-11-03",
-    "offline": true
+    "br": [
+      70
+    ]
   },
   {
     "id": "annaba",
@@ -1767,4 +1769,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T23:47Z";
+window.STATIONS_CHECKED = "2026-11-25T09:44Z";

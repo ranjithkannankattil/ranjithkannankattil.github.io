@@ -67,8 +67,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://1716664847.rsc.cdn77.org/1716664847/tracks-a1/mono.ts.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-6",
@@ -345,7 +344,8 @@ window.STATIONS = [
     ],
     "br": [
       220
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "chkt-am1430-fairchild",
@@ -538,9 +538,7 @@ window.STATIONS = [
       "https://lhttp-hw.qtfm.cn/live/20500163/64k.mp3"
     ],
     "added": "2026-10-23",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "cnr-7",
@@ -616,9 +614,7 @@ window.STATIONS = [
       "https://lhttp.qingting.fm/live/4955/64k.mp3"
     ],
     "added": "2026-10-24",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "szr-fm-97-1-macau-hd2",
@@ -843,4 +839,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T23:47Z";
+window.STATIONS_CHECKED = "2026-11-25T09:44Z";

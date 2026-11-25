@@ -207,9 +207,7 @@ window.STATIONS = [
     "streams": [
       "https://s5.radioforge.com:7908/live?n=77357"
     ],
-    "br": [
-      192
-    ]
+    "offline": true
   },
   {
     "id": "24-breaking-live",
@@ -484,7 +482,10 @@ window.STATIONS = [
     "streams": [
       "https://cast.mediaonline.net.ua/loungefm320"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-jazz-gold-fm",
@@ -937,7 +938,8 @@ window.STATIONS = [
     "streams": [
       "https://service.ptrk.tv:8443/PTRK"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "offline": true
   },
   {
     "id": "radio-jazz-fm",
@@ -1259,9 +1261,7 @@ window.STATIONS = [
       "https://complex.in.ua/zhudachiv"
     ],
     "added": "2026-11-02",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "teren-fm",
@@ -1391,9 +1391,7 @@ window.STATIONS = [
       "https://online-novodnistrovsk.pp.ua:8443/playHD"
     ],
     "added": "2026-11-05",
-    "br": [
-      320
-    ]
+    "offline": true
   },
   {
     "id": "station-30",
@@ -1504,4 +1502,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T23:47Z";
+window.STATIONS_CHECKED = "2026-11-25T09:44Z";

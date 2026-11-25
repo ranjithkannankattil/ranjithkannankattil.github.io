@@ -276,7 +276,7 @@ window.STATIONS = [
       "https://icecast-qmusicbe-cdp.triple-it.nl/willy.mp3"
     ],
     "br": [
-      95,
+      96,
       128
     ]
   },
@@ -689,7 +689,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      96
+      95
     ]
   },
   {
@@ -1019,7 +1019,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      96
+      95
     ]
   },
   {
@@ -1459,7 +1459,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-04",
     "br": [
-      95
+      96
     ]
   },
   {
@@ -1518,7 +1518,9 @@ window.STATIONS = [
       "https://stream.qmusic.nl/10s/aac"
     ],
     "added": "2026-11-05",
-    "offline": true
+    "br": [
+      95
+    ]
   },
   {
     "id": "br6-radio",
@@ -1565,7 +1567,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-06",
     "br": [
-      95
+      96
     ]
   },
   {
@@ -1785,4 +1787,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T23:47Z";
+window.STATIONS_CHECKED = "2026-11-25T09:44Z";

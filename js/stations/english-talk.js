@@ -369,7 +369,10 @@ window.STATIONS = [
       "https://icecast.walmradio.com:8443/walm2_opus"
     ],
     "added": "2026-10-22",
-    "where": "US"
+    "where": "US",
+    "br": [
+      192
+    ]
   },
   {
     "id": "times-radio",
@@ -1128,14 +1131,12 @@ window.STATIONS = [
     "name": "Capital Radio",
     "category": "world",
     "streams": [
-      "https://radyo1.radyo-dinle.tc/8256/stream",
-      "https://capitalradio.radioca.st/stream"
+      "https://radyo1.radyo-dinle.tc/8256/stream"
     ],
     "added": "2026-11-01",
     "where": "United Republic Of Tanzania",
     "br": [
-      128,
-      0
+      128
     ]
   },
   {
@@ -1293,7 +1294,7 @@ window.STATIONS = [
     "where": "US",
     "br": [
       128,
-      0
+      128
     ]
   },
   {
@@ -1879,4 +1880,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T23:47Z";
+window.STATIONS_CHECKED = "2026-11-25T09:44Z";

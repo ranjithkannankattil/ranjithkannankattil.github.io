@@ -38,7 +38,7 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      127
+      128
     ]
   },
   {
@@ -130,9 +130,8 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
     ],
     "br": [
-      172
-    ],
-    "offline": true
+      168
+    ]
   },
   {
     "id": "m80-radio-ballads",
@@ -142,7 +141,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m80ballads.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -164,7 +163,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m80nacional.aac"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -175,7 +174,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m8060.aac"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -257,7 +256,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/smooth.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -280,8 +279,8 @@ window.STATIONS = [
       "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
     ],
     "br": [
-      172,
-      172
+      170,
+      170
     ]
   },
   {
@@ -314,7 +313,7 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
     ],
     "br": [
-      178
+      185
     ],
     "offline": true
   },
@@ -383,9 +382,8 @@ window.STATIONS = [
     ],
     "br": [
       262,
-      259
-    ],
-    "offline": true
+      260
+    ]
   },
   {
     "id": "rca-radio-clube-de-armamar",
@@ -439,7 +437,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/smoothsoul.aac"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -462,7 +460,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -473,9 +471,6 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/rdpafrica80a/playlist.m3u8"
     ],
     "added": "2026-10-22",
-    "br": [
-      172
-    ],
     "offline": true
   },
   {
@@ -487,7 +482,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      176
+      192
     ],
     "offline": true
   },
@@ -572,8 +567,9 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      177
-    ]
+      165
+    ],
+    "offline": true
   },
   {
     "id": "radio-observador",
@@ -644,7 +640,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -728,7 +724,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -776,7 +772,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -800,7 +796,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -860,7 +856,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -884,7 +880,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -968,7 +964,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -1256,7 +1252,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-02",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -1366,7 +1362,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "br": [
-      256
+      160
     ]
   },
   {
@@ -1462,7 +1458,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "br": [
-      169
+      175
     ]
   },
   {
@@ -1612,7 +1608,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "br": [
-      170
+      167
     ]
   },
   {
@@ -1660,7 +1656,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-08",
     "br": [
-      128
+      112
     ]
   },
   {
@@ -1778,10 +1774,7 @@ window.STATIONS = [
     "streams": [
       "https://proic1.evspt.com/radar_mp3"
     ],
-    "added": "2026-11-09",
-    "br": [
-      192
-    ]
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T23:47Z";
+window.STATIONS_CHECKED = "2026-11-25T09:44Z";

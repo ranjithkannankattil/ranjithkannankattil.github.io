@@ -76,6 +76,10 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio229/chunklist.m3u8",
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio229/playlist.m3u8"
+    ],
+    "br": [
+      0,
+      96
     ]
   },
   {
@@ -99,7 +103,7 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      128
+      0
     ]
   },
   {
@@ -201,6 +205,9 @@ window.STATIONS = [
     "category": "air",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
+    ],
+    "br": [
+      95
     ]
   },
   {
@@ -223,7 +230,11 @@ window.STATIONS = [
       "https://radio.wavespb.com/live/b69c296065db7627/b69c296065db7627.m3u8",
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio083/playlist.m3u8"
     ],
-    "akv": "Akashvani Kozhikode Real FM"
+    "akv": "Akashvani Kozhikode Real FM",
+    "br": [
+      0,
+      129
+    ]
   },
   {
     "id": "radio90fm",
@@ -243,7 +254,8 @@ window.STATIONS = [
     "streams": [
       "https://streaming.radiokerala.in/listen/radio_kerala/radio.mp3"
     ],
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "nammuderadio",
@@ -272,6 +284,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://cast1.my-control-panel.com/proxy/myradio90fm/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -400,6 +415,9 @@ window.STATIONS = [
     "category": "fm",
     "streams": [
       "https://icecast.octosignals.com/radiomacfast"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -446,9 +464,7 @@ window.STATIONS = [
     "streams": [
       "https://onair.junefm.in/live"
     ],
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "radiomangalam",
@@ -500,7 +516,7 @@ window.STATIONS = [
       "https://a5.asurahosting.com:7450/radio.mp3"
     ],
     "br": [
-      192
+      320
     ]
   },
   {
@@ -525,7 +541,7 @@ window.STATIONS = [
       "https://live.accessmedia.nz/PlanetFM.stream/playlist.m3u8"
     ],
     "br": [
-      148,
+      151,
       135
     ]
   },
@@ -1341,7 +1357,10 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      94
+    ]
   },
   {
     "id": "aural-oldies",
@@ -1534,4 +1553,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T03:30Z";
+window.STATIONS_CHECKED = "2026-11-25T09:44Z";

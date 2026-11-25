@@ -292,6 +292,15 @@ window.STATIONS = [
     "br": [
       192
     ]
+  },
+  {
+    "id": "hope-for-tomorrow",
+    "name": "Hope for Tomorrow",
+    "category": "devotional",
+    "streams": [
+      "https://radio.truth.fm:8000/pipfa"
+    ],
+    "added": "2026-11-25"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T23:47Z";
+window.STATIONS_CHECKED = "2026-11-25T09:44Z";

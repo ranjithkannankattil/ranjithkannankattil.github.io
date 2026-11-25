@@ -554,7 +554,9 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "where": "Nigeria",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "rte-radio-1",
@@ -1575,7 +1577,7 @@ window.STATIONS = [
     "added": "2026-11-09",
     "where": "Uganda",
     "br": [
-      64
+      63
     ]
   },
   {
@@ -1890,4 +1892,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T23:47Z";
+window.STATIONS_CHECKED = "2026-11-25T09:44Z";

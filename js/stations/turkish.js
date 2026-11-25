@@ -304,7 +304,7 @@ window.STATIONS = [
       "https://moondigitaledge.radyotvonline.net/palnostalji/playlist.m3u8"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -403,9 +403,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://my.radiolize.com/radio/8000/radio.mp3"
-    ],
-    "br": [
-      320
     ]
   },
   {
@@ -1017,7 +1014,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -1243,8 +1240,7 @@ window.STATIONS = [
     "added": "2026-11-02",
     "br": [
       141
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "bestefm",
@@ -1746,4 +1742,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-24T23:47Z";
+window.STATIONS_CHECKED = "2026-11-25T09:44Z";
