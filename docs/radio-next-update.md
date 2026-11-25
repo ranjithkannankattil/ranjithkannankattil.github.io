@@ -115,6 +115,15 @@ His reason: the app looks like one long list; in Settings you can't tell what is
   watch the car connection (androidx.car.app `CarConnection`: projection → not connected) and pause with
   PlayLog.who = "Android Auto disconnected"; that pause cancels the resume helper and reconnecting, like any pause.
   Device test with a fake disconnect; he checks in the car.
+- **Even volume between stations** (tester suggestion, 25 Nov 2026: "each station has a different volume; keep it
+  the same when changing station"). Settings → Sound → **Even volume** (on by default, can be switched off). Two parts:
+  1. Each station's usual loudness is measured by the twice-daily stream check (a 20-second sample, ffmpeg's
+     EBU R128 loudness meter) and saved as `"lufs"` per stream in the station files; the app starts each station
+     at the gain that brings it to about −16 LUFS, so the jump is gone the moment you switch (limited to ±10 dB).
+  2. While playing, a gentle audio step in the player (next to the visualiser's) evens out slow drifts over
+     several seconds, with a limiter so loud songs never clip; never fast enough to "pump" music.
+  App only: the website can't change the volume of most stations' streams (browsers block it for other sites'
+  audio). Test: switching between a quiet and a loud station stays within about 2 dB; he checks by ear in the car.
 - Also in 2.10 (from earlier): bugs (radio turning itself on + Auto artwork flicker, Connecting… timeout,
   widget doesn't open the app, three looks ignore the colour theme, text shifts between looks, remaining
   translations), the share card drawn from the current player look, browse by country. Spotify-in-car
