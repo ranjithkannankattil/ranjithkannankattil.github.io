@@ -49,6 +49,7 @@ object Listen {
         sp.put(key, sp.optLong(key) + ms)
         e.putString("sp", sp.toString())
         e.apply()
+        History.add(ctx, key, ms)
     }
 
     data class Totals(val total: Long, val week: Long, val top: List<Pair<String, Long>>)
@@ -91,17 +92,30 @@ object Listen {
                     // keep the 10 biggest stations, enough for the top 5 across devices
                     all.keys().asSequence().sortedByDescending { all.getJSONObject(it).optLong("ms") }.take(10)
                         .forEach { k -> put(k.replace('.', '_'), all.getJSONObject(k)) } } })
+                .put("hist", History.forAccount(ctx))
             Account.http("${Account.DOCS}/users/$uid?updateMask.fieldPaths=listen.$me", "PATCH",
                 JSONObject().put("fields", JSONObject().put("listen", fv(JSONObject().put(me, mine)))).toString(), bearer = t)
             val d = Account.http("${Account.DOCS}/users/$uid", "GET", null, bearer = t)
             val devs = (d.optJSONObject("fields")?.optJSONObject("listen")?.let { plain(it) } as? JSONObject) ?: JSONObject()
             var total = 0L; var week = 0L; val tops = ArrayList<JSONObject>()
+            val others = ArrayList<History.Data>()
             devs.keys().forEach { k -> val o = devs.getJSONObject(k)
+                if (k != me) o.optJSONObject("hist")?.let { h -> others.add(History.parse(h.optJSONObject("days")?.toString() ?: "{}",
+                    h.optJSONObject("months")?.toString() ?: "{}", "{}", h.optJSONObject("sm")?.toString() ?: "{}")) }
                 total += o.optLong("total"); if (o.optString("weekKey") == weekKey()) week += o.optLong("week")
                 o.optJSONObject("top")?.let { tops.add(it) } }
+            merged = History.merge(History.local(ctx), others)
             Totals(total, week, topOf(tops))
         } catch (e: Exception) { null }
     }
+
+    /** Every phone's day-by-day history together, after [account] has read it (null when not signed in). */
+    @Volatile private var merged: History.Data? = null
+    fun accountHistory(ctx: Context): History.Data? = merged
+
+    /** Station names you've heard, by station key (for the Your listening page). */
+    fun names(ctx: Context): Map<String, String> = runCatching { val o = JSONObject(p(ctx).getString("top", "{}")!!)
+        o.keys().asSequence().associateWith { o.optJSONObject(it)?.optString("n").orEmpty() }.filterValues { it.isNotBlank() } }.getOrDefault(emptyMap())
 
     // ---- everyone's total (anonymous)
     private const val STATS = "projects/ranjithkb-radio/databases/(default)/documents/stats/listening"

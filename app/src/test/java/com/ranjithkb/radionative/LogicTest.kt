@@ -617,4 +617,31 @@ class LogicTest {
         assertEquals(0, side(50f, 100)); assertEquals(0, side(40f, 100)); assertEquals(0, side(60f, 100))
         assertEquals(1, side(67f, 100)); assertEquals(-1, side(33f, 100))
     }
+
+    // ---------------- your listening (2.10)
+    @Test fun history_adds_up_by_day_month_and_station() {
+        val ctx = RuntimeEnvironment.getApplication()
+        val day = Calendar.getInstance().apply { set(2026, Calendar.NOVEMBER, 26, 10, 0) }
+        History.add(ctx, "malayalam:club-fm", 60_000L, day)
+        History.add(ctx, "malayalam:club-fm", 30_000L, day)
+        History.add(ctx, "hindi:mirchi", 120_000L, (day.clone() as Calendar).apply { add(Calendar.DAY_OF_YEAR, -1) })
+        val d = History.local(ctx)
+        val week = History.bars(d, History.Period.WEEK, day)
+        assertEquals(7, week.size)
+        assertEquals(90_000L, week.last().second); assertEquals(120_000L, week[5].second)
+        assertEquals(30, History.bars(d, History.Period.MONTH, day).size)
+        val year = History.bars(d, History.Period.YEAR, day)
+        assertEquals(12, year.size); assertEquals(210_000L, year.last().second)
+        val st = History.stations(d, History.Period.WEEK, day)
+        assertEquals("hindi:mirchi", st.first().first)
+        assertEquals(listOf("hindi" to 120_000L, "malayalam" to 90_000L), History.languages(st))
+        assertEquals(210_000L, History.total(History.bars(d, History.Period.ALL, day)))
+    }
+
+    @Test fun history_merges_other_phones() {
+        val a = History.parse("""{"2026-11-26":1000}""", """{"2026-11":1000}""", "{}", """{"2026-11":{"x:y":1000}}""")
+        val b = History.parse("""{"2026-11-26":500}""", """{"2026-11":500,"2026-10":200}""", "{}", """{"2026-11":{"x:y":500}}""")
+        val m = History.merge(a, listOf(b))
+        assertEquals(1500L, m.days["2026-11-26"]); assertEquals(200L, m.months["2026-10"]); assertEquals(1500L, m.sm["2026-11"]!!["x:y"])
+    }
 }

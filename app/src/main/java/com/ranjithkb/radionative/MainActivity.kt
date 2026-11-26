@@ -442,6 +442,7 @@ fun App(c: MediaController?) {
         Box(Modifier.fillMaxSize()) {
             when (pg) {
                 "settings" -> SettingsScreen({ page = null }, settingsScroll, update) { page = it }
+                "listening" -> ListeningScreen { page = null }
                 "text" -> TextFontScreen { page = "settings" }
                 "feature", "thanks" -> FeedbackScreen(pg) { page = "settings" }
                 "themes" -> ThemesScreen { page = "settings" }
@@ -782,7 +783,7 @@ fun InfoTab(languages: Int, update: Update?, onPage: (String) -> Unit = {}, onSi
                 confirmButton = { TextButton({ ask = false; scope.launch { Account.deleteAccount(ctx); Session.name = null } }) { Text(t("Delete")) } },
                 dismissButton = { TextButton({ ask = false }) { Text(t("Cancel")) } })
         }
-        item { ListeningTiles() }
+        item { ListeningTiles { onPage("listening") } }
         item {
             Group(modifier = Modifier.padding(top = 20.dp)) {
                 NavItem(t("Settings"), sub = t("Colours, text, sound, data saver, feedback"), drawable = R.drawable.ln_gear) { onPage("settings") }
@@ -846,13 +847,17 @@ fun InfoTab(languages: Int, update: Update?, onPage: (String) -> Unit = {}, onSi
 
 /** You → three numbers: this week, all your listening, favourites. Counted on this phone (or your account when signed in). */
 @Composable
-fun ListeningTiles() {
+fun ListeningTiles(open: () -> Unit = {}) {
     val ctx = LocalContext.current
     var mine by remember { mutableStateOf(Listen.local(ctx)) }
     LaunchedEffect(Session.name) { Listen.account(ctx)?.let { mine = it } }
     val favs = remember { Favs(ctx).all().size }
-    GroupHead(t("Your listening"), Modifier.padding(top = 10.dp))
-    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+    Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.Bottom) {
+        GroupHead(t("Your listening"), Modifier.padding(top = 10.dp).weight(1f))
+        TextButton(open, Modifier.heightIn(min = 44.dp)) { Text(t("See all") + " ›", color = AccentText) }
+    }
+    Row(Modifier.fillMaxWidth().clip(RoundedCornerShape(16.dp)).clickable(onClickLabel = t("Your listening"), onClick = open),
+        horizontalArrangement = Arrangement.spacedBy(10.dp)) {
         @Composable fun Tile(n: String, label: String) = Column(Modifier.weight(1f).shadow(2.dp, RoundedCornerShape(16.dp))
             .clip(RoundedCornerShape(16.dp)).background(CardBg).padding(vertical = 14.dp, horizontal = 8.dp),
             horizontalAlignment = Alignment.CenterHorizontally) {
