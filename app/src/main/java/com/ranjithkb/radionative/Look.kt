@@ -22,6 +22,7 @@ import androidx.compose.material.icons.filled.*
 import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.PushPin
+import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Mic
 import androidx.compose.material.icons.outlined.Radio
 import androidx.compose.material3.*
@@ -108,7 +109,7 @@ fun Header(onSearch: () -> Unit, onSettings: () -> Unit = {}, onAddOwn: (() -> U
         Text("RADIO VELVET", Modifier.weight(1f), fontSize = 13.sp, letterSpacing = 4.4.sp, fontWeight = FontWeight.Medium, color = Title)
         // add your own station: a small + beside Settings (tester's idea, 26 Nov 2026), so Favourites keep their room
         if (onAddOwn != null) IconButton(onAddOwn, Modifier.size(48.dp)) {
-            Icon(androidx.compose.material.icons.Icons.Outlined.Add, t("Add your own station"), Modifier.size(24.dp), tint = Title) }
+            Icon(Icons.Outlined.Add, t("Add your own station"), Modifier.size(24.dp), tint = Title) }
         IconButton(onSettings, Modifier.size(48.dp)) { LineIcon(R.drawable.ln_gear, "Settings", 22) }
         IconButton(onSearch, Modifier.size(48.dp)) { LineIcon(R.drawable.ln_search, "Search all stations", 22) }
     }
