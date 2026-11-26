@@ -449,7 +449,10 @@ class LogicTest {
             .putInt("spacing", -3).putString("viz", "laser").commit()
         Theme.load(ctx)
         assertEquals("velvet", Theme.themeId); assertEquals("phone", Theme.mode); assertEquals(2, Theme.text)
-        assertEquals("jost", Theme.font); assertEquals(0, Theme.spacing); assertEquals("off", Theme.viz)
+        assertEquals("jost", Theme.font); assertEquals("off", Theme.viz)
+        assertEquals(1, Theme.spacing)          // 2.10: everyone starts once on Comfortable rows
+        Theme.prefs(ctx).edit().putInt("spacing", -3).commit(); Theme.load(ctx)
+        assertEquals(0, Theme.spacing)          // after that, a bad saved value falls back safely
         Theme.themeId = "kadal"; Theme.mode = "dark"; Theme.text = 1; Theme.save(ctx); Theme.themeId = "velvet"; Theme.load(ctx)
         assertEquals("kadal", Theme.themeId); assertEquals("dark", Theme.mode); assertEquals(1, Theme.text)
         Theme.prefs(ctx).edit().clear().commit(); Theme.load(ctx); assertEquals("velvet", Theme.themeId); assertEquals("off", Theme.viz)
