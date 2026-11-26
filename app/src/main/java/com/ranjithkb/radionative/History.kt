@@ -242,8 +242,9 @@ private fun BarChart(bars: List<Pair<String, Long>>, modifier: Modifier = Modifi
             drawRect(base, Offset(0f, size.height - 1.5f), Size(size.width, 1.5f))
         }
         Row(Modifier.fillMaxWidth().padding(top = 6.dp)) {
-            bars.forEach { (l, _) -> Text(l, Modifier.weight(1f), fontSize = 11.sp, color = Soft, maxLines = 1,
-                textAlign = androidx.compose.ui.text.style.TextAlign.Center, softWrap = false) }
+            // a day number may be wider than its bar: let it spill over its neighbours (they have no label)
+            bars.forEach { (l, _) -> Box(Modifier.weight(1f).wrapContentWidth(unbounded = true)) {
+                Text(l, fontSize = 11.sp, color = Soft, maxLines = 1, softWrap = false) } }
         }
     }
 }

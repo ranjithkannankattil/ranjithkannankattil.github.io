@@ -376,7 +376,7 @@ fun BottomNav(tab: Int, favCount: Int, go: (Int) -> Unit) {
 @Composable
 fun SideRail(tab: Int, favCount: Int, go: (Int) -> Unit) {
     Row(Modifier.fillMaxHeight().background(Paper).statusBarsPadding().navigationBarsPadding()) {
-        Column(Modifier.width(84.dp).fillMaxHeight(), verticalArrangement = Arrangement.Center) {
+        Column(Modifier.width(96.dp).fillMaxHeight(), verticalArrangement = Arrangement.Center) {
             listOf(Triple(R.drawable.ln_radio, t("Stations"), 0), Triple(R.drawable.ln_heart, t("Favourites"), 1),
                 Triple(R.drawable.ln_person, t("You"), 2)).forEach { (icon, label, i) ->
                 val on = tab == i
@@ -388,7 +388,7 @@ fun SideRail(tab: Int, favCount: Int, go: (Int) -> Unit) {
                         contentAlignment = Alignment.Center) {
                         LineIcon(if (on && i == 1) R.drawable.ln_heart_fill else icon, null, 22, if (on) pillInk else Soft)
                     }
-                    Label(if (i == 1) "$label $favCount" else label, if (on) pillInk else Soft, 9, Modifier.padding(top = 3.dp),
+                    Label(label, if (on) pillInk else Soft, 9, Modifier.padding(top = 3.dp),
                         if (on) FontWeight.SemiBold else FontWeight.Medium)
                 }
             }
