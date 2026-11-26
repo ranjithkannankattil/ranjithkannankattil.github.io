@@ -291,6 +291,20 @@ fun App(c: MediaController?) {
     LaunchedEffect(now.id) { kotlinx.coroutines.delay(500); recentPlayed = Recent.all(ctx) }
     LaunchedEffect(Unit) { Review.maybeAsk(ctx) }
     var search by remember { mutableStateOf(false) }
+    // Back (tester, 26 Nov 2026: on a car screen Back kept closing the app). Pages, search and the big player close
+    // themselves first (their own handlers come later, so they win); then Favourites / You go back to Stations, and
+    // only a second Back within 2.5 s on Stations leaves the app.
+    var lastBack by remember { mutableLongStateOf(0L) }
+    androidx.activity.compose.BackHandler {
+        when {
+            full -> full = false
+            page != null -> page = null
+            tab != 0 -> go(0)
+            System.currentTimeMillis() - lastBack < 2500 -> (ctx as? android.app.Activity)?.moveTaskToBack(true)
+            else -> { lastBack = System.currentTimeMillis()
+                android.widget.Toast.makeText(ctx, t("Press back again to leave"), android.widget.Toast.LENGTH_SHORT).show() }
+        }
+    }
     // first-time tour (fresh installs only; Info → Quick tour replays it)
     var tourStep by remember { mutableIntStateOf(if (Tour.shouldShow(ctx)) 0 else -1) }
     fun endTour() { tourStep = -1; Tour.done(ctx) }

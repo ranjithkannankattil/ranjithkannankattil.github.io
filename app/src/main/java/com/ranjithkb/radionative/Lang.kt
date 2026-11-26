@@ -400,6 +400,7 @@ object Lang {
         "Hide for today" to "ഇന്നത്തേക്ക് മറയ്ക്കുക",
         "Signing in…" to "സൈൻ ഇൻ ചെയ്യുന്നു…",
         "Sign in to keep your favourites on every device and on ranjithkb.com." to "പ്രിയപ്പെട്ടവ എല്ലാ ഫോണിലും ranjithkb.com-ലും കിട്ടാൻ സൈൻ ഇൻ ചെയ്യുക.",
+        "Press back again to leave" to "പുറത്തുകടക്കാൻ വീണ്ടും ബാക്ക് അമർത്തുക",
     )
     private val HI: Map<String, String> = mapOf(
         "+  Add an alarm" to "+  अलार्म जोड़ें",
@@ -764,6 +765,7 @@ object Lang {
         "Hide for today" to "आज के लिए छिपाएँ",
         "Signing in…" to "साइन इन हो रहा है…",
         "Sign in to keep your favourites on every device and on ranjithkb.com." to "अपने पसंदीदा हर फ़ोन और ranjithkb.com पर रखने के लिए साइन इन करें।",
+        "Press back again to leave" to "बाहर निकलने के लिए फिर से बैक दबाएँ",
     )
 }
 
