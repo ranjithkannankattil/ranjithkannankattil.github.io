@@ -37,6 +37,7 @@
     }
     $("#adState").textContent = "Comments appear on the radio page only after you approve them.";
     show("#adOwner", true);
+    window.dispatchEvent(new Event("radio:owner"));   // radio-owner.js draws the listening numbers and requests
     const pub = await R.published({ limit: 50 });
     await nameStations([...waiting, ...pub]);
     drawWaiting();

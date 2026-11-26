@@ -29,6 +29,12 @@ try {
     return upgradeToGoogle(auth, A, provider);
   };
   R.signOut = () => A.signOut(auth);
+  // owner page: the latest requests, feature ideas and thank-you notes (the rules let only the owner read them)
+  R.requests = async (n = 60) => {
+    const db = F.getFirestore(app);
+    const snap = await F.getDocs(F.query(F.collection(db, "requests"), F.orderBy("ts", "desc"), F.limit(n)));
+    return snap.docs.map((d) => ({ id: d.id, ...d.data() }));
+  };
   window.RadioRatings = R;
   // an open station panel reloads when someone signs in or out
   let firstAuth = true;

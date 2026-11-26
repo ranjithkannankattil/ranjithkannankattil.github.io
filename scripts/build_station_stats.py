@@ -71,6 +71,7 @@ def main() -> None:
     week: dict[str, int] = {}
     total: dict[str, int] = dict(old.get("total", {}))
     done = set(old.get("days", []))
+    perday: dict[str, int] = dict(old.get("perday", {}))   # all stations together, minutes per complete day (owner page)
     for i in range(0, 8):                       # today + the 7 days before (for "total", complete days only)
         day = (today - dt.timedelta(days=i)).isoformat()
         m = day_minutes(day)
@@ -81,9 +82,12 @@ def main() -> None:
             for k, v in m.items():
                 total[k] = total.get(k, 0) + v
             done.add(day)
+        if i >= 1:
+            perday[day] = sum(m.values())
     data = {"updated": dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%MZ"),
             "week": dict(sorted(week.items())), "total": dict(sorted(total.items())),
-            "ratings": dict(sorted(ratings().items())), "days": sorted(done)[-60:]}
+            "ratings": dict(sorted(ratings().items())), "days": sorted(done)[-60:],
+            "perday": dict(sorted(perday.items())[-800:])}
     OUT.write_text(json.dumps(data, separators=(",", ":"), ensure_ascii=False) + "\n")
     print(f"{len(week)} stations heard this week, {len(data['ratings'])} rated")
 
