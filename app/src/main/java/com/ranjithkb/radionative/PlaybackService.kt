@@ -173,18 +173,8 @@ class PlaybackService : MediaLibraryService() {
             // After 25 s of connecting: the station's next link; failing that one fresh try; then stop trying.
             override fun onPlaybackStateChanged(state: Int) {
                 stuckJob?.cancel()
-                if (state != Player.STATE_BUFFERING || !player.playWhenReady) { if (state == Player.STATE_READY) stuckTries = 0; return }
-                stuckJob = scope.launch {
-                    kotlinx.coroutines.delay(STUCK_MS)
-                    if (player.playbackState != Player.STATE_BUFFERING || !player.playWhenReady || player.isPlaying) return@launch
-                    PlayLog.note(this@PlaybackService, "still connecting after ${STUCK_MS / 1000} s")
-                    when {
-                        nextSource() -> {}
-                        ringing -> nextCandidate()
-                        stuckTries++ < 1 -> { player.prepare(); player.play() }
-                        else -> { stuckTries = 0; PlayLog.who = "no sound from the station"; player.pause() }
-                    }
-                }
+                if (state == Player.STATE_READY) stuckTries = 0
+                if (state == Player.STATE_BUFFERING && player.playWhenReady) armStuck()
             }
             override fun onPlayWhenReadyChanged(playWhenReady: Boolean, reason: Int) {
                 if (reason != Player.PLAY_WHEN_READY_CHANGE_REASON_USER_REQUEST)
@@ -504,6 +494,23 @@ class PlaybackService : MediaLibraryService() {
 
     private var stuckJob: kotlinx.coroutines.Job? = null
     private var stuckTries = 0
+
+    /** Starts (again) the 25 s watch on "Connecting…". Re-armed by itself after a fresh try, because a retry that
+     *  stays in "connecting" doesn't report a new state (the emulator check t27 caught that). */
+    private fun armStuck() {
+        stuckJob?.cancel()
+        stuckJob = scope.launch {
+            kotlinx.coroutines.delay(STUCK_MS)
+            if (player.playbackState != Player.STATE_BUFFERING || !player.playWhenReady || player.isPlaying) return@launch
+            PlayLog.note(this@PlaybackService, "still connecting after ${STUCK_MS / 1000} s")
+            when {
+                nextSource() -> armStuck()
+                ringing -> nextCandidate()
+                stuckTries++ < 1 -> { player.stop(); player.prepare(); player.play(); armStuck() }
+                else -> { stuckTries = 0; PlayLog.who = "no sound from the station"; player.pause() }
+            }
+        }
+    }
 
     private fun onFailed(error: PlaybackException) {
         val network = error.errorCode in 2000..2999

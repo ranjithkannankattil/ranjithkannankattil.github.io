@@ -91,7 +91,8 @@ class DeviceTest {
         val ml = children("col|malayalam")
         log("malayalam in the car: ${ml.size} stations")
         assertTrue(ml.size >= 50)
-        assertTrue(ml.all { it.mediaMetadata.isPlayable == true && it.mediaId.startsWith("st|malayalam:") })
+        // since 2.10 a car item carries the list it was shown in: "col|malayalam>st|malayalam:<id>"
+        assertTrue(ml.all { it.mediaMetadata.isPlayable == true && it.mediaId.startsWith("col|malayalam>st|malayalam:") })
     }
 
     @Test fun t02_car_pictures_open() {
