@@ -699,7 +699,9 @@ window.STATIONS = [
       "https://streaming.shoutcast.com/synchronizeradio"
     ],
     "added": "2026-10-25",
-    "offline": true
+    "br": [
+      96
+    ]
   },
   {
     "id": "radio-suara-al-iman-846-am-surabaya",
@@ -873,7 +875,9 @@ window.STATIONS = [
       "https://svara-stream.radioddns.net/bali_voksradio_993fm"
     ],
     "added": "2026-10-28",
-    "offline": true
+    "br": [
+      160
+    ]
   },
   {
     "id": "imelda-fm",
@@ -1656,7 +1660,9 @@ window.STATIONS = [
       "https://s2.free-shoutcast.com/stream/18096"
     ],
     "added": "2026-11-12",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "onix-radio",
@@ -1743,4 +1749,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

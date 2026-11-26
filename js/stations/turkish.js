@@ -304,7 +304,7 @@ window.STATIONS = [
       "https://moondigitaledge.radyotvonline.net/palnostalji/playlist.m3u8"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -496,8 +496,7 @@ window.STATIONS = [
     "added": "2026-10-23",
     "br": [
       141
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "power-dance",
@@ -649,10 +648,7 @@ window.STATIONS = [
     "streams": [
       "https://anadolu.liderhost.com.tr/9404/stream"
     ],
-    "added": "2026-10-25",
-    "br": [
-      128
-    ]
+    "added": "2026-10-25"
   },
   {
     "id": "radyo-karadeniz",
@@ -697,7 +693,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiotedu.com/lofi"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      320
+    ]
   },
   {
     "id": "canliradyo-tr-canl-radyo-mac-dinle",
@@ -860,7 +859,9 @@ window.STATIONS = [
       "https://radyodinle.cansuyufm.com/17175/stream;"
     ],
     "added": "2026-10-28",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "dinamo-fm-smog",
@@ -1013,7 +1014,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -1036,7 +1037,9 @@ window.STATIONS = [
       "https://sslyayin.radyoyayini.com:7067/stream"
     ],
     "added": "2026-10-31",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "metropol-fm-anadolu-nun-sesi",
@@ -1186,7 +1189,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiotedu.com/classic-flac"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "br": [
+      320
+    ]
   },
   {
     "id": "lp-roman-fm",
@@ -1234,8 +1240,7 @@ window.STATIONS = [
     "added": "2026-11-02",
     "br": [
       141
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "bestefm",
@@ -1325,8 +1330,7 @@ window.STATIONS = [
     "added": "2026-11-04",
     "br": [
       106
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "gonul-fm-97-3",
@@ -1684,7 +1688,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radiotedu.com/rock"
     ],
-    "added": "2026-11-09"
+    "added": "2026-11-09",
+    "br": [
+      320
+    ]
   },
   {
     "id": "translation-of-the-quran-in-turkish",
@@ -1735,4 +1742,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

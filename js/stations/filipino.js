@@ -291,7 +291,7 @@ window.STATIONS = [
       "https://ais-sa1.streamon.fm/7681_64k.mp3"
     ],
     "br": [
-      67
+      71
     ]
   },
   {
@@ -801,4 +801,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

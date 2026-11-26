@@ -268,9 +268,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://efir.retrofm.md:8000/retro"
-    ],
-    "br": [
-      128
     ]
   },
   {
@@ -903,10 +900,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.radioplai.md/live"
     ],
-    "added": "2026-10-29",
-    "br": [
-      128
-    ]
+    "added": "2026-10-29"
   },
   {
     "id": "radio-ai-nostri",
@@ -1753,4 +1747,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

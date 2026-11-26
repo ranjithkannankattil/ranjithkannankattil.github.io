@@ -19,9 +19,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://c4.radioboss.fm:18123/stream"
-    ],
-    "br": [
-      320
     ]
   },
   {
@@ -223,9 +220,7 @@ window.STATIONS = [
     "streams": [
       "https://icecast.err.ee/r2pkorge.mp3"
     ],
-    "br": [
-      320
-    ]
+    "offline": true
   },
   {
     "id": "tre-raadio-ring-fm",
@@ -295,19 +290,20 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.err.ee/raadio2.opus"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "vomba-fm-2",
     "name": "Vömba FM",
     "category": "music",
     "streams": [
-      "https://c4.radioboss.fm:18123/stream",
-      "https://c4.radioboss.fm:18123/live"
+      "https://c4.radioboss.fm:18123/live",
+      "https://c4.radioboss.fm:18123/stream"
     ],
     "br": [
       320,
-      320
+      0
     ]
   },
   {
@@ -335,7 +331,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.err.ee/vikerraadio.opus"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "myhits-rock",
@@ -601,7 +598,8 @@ window.STATIONS = [
     "streams": [
       "https://icecast.err.ee/r2pop.opus"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "elmari-tantsuohtu",
@@ -634,7 +632,8 @@ window.STATIONS = [
     "streams": [
       "https://icecast.err.ee/r2chill.opus"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "offline": true
   },
   {
     "id": "r2extra-altpop",
@@ -697,4 +696,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

@@ -25,7 +25,7 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      192,
+      256,
       24,
       128
     ]
@@ -463,10 +463,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.bigfm.de/deutschland/mp3-128/radio-browser"
     ],
-    "added": "2026-10-22",
-    "br": [
-      128
-    ]
+    "added": "2026-10-22"
   },
   {
     "id": "orf-hitradio-o3",
@@ -763,10 +760,7 @@ window.STATIONS = [
     "streams": [
       "https://radio886.at/streams/radio_88.6/mp3"
     ],
-    "added": "2026-10-26",
-    "br": [
-      128
-    ]
+    "added": "2026-10-26"
   },
   {
     "id": "hr3",
@@ -1662,10 +1656,7 @@ window.STATIONS = [
     "streams": [
       "https://radio886.at/streams/88.6_Hard_Rock/mp3"
     ],
-    "added": "2026-11-07",
-    "br": [
-      128
-    ]
+    "added": "2026-11-07"
   },
   {
     "id": "energy-hit-music-only",
@@ -1788,4 +1779,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

@@ -110,7 +110,9 @@ window.STATIONS = [
     "streams": [
       "https://streamer.radio.co/sb38bf6e66/listen"
     ],
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "radio-mojahed",
@@ -162,9 +164,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://auds1.intacs.com/adorationgospelfm"
-    ],
-    "br": [
-      128
     ]
   },
   {
@@ -304,4 +303,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

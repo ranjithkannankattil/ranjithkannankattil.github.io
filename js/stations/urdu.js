@@ -130,7 +130,9 @@ window.STATIONS = [
     "streams": [
       "https://whmsonic.radio.gov.pk:8034/stream?type=http&nocache=12"
     ],
-    "offline": true
+    "br": [
+      96
+    ]
   },
   {
     "id": "amor-fm",
@@ -398,4 +400,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

@@ -529,7 +529,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.vinylhits.dk/vinylaac"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      128
+    ]
   },
   {
     "id": "2town-radio",
@@ -700,4 +703,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

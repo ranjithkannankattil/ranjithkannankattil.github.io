@@ -521,9 +521,7 @@ window.STATIONS = [
       "https://stream.bauermedia.sk/expres-hi.mp3"
     ],
     "added": "2026-10-23",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "slagr-radio",
@@ -702,7 +700,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.vaticannews.va/stream-sk"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-laskaro",
@@ -737,8 +738,8 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "br": [
-      96
+      95
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

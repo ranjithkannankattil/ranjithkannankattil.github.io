@@ -280,6 +280,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://cast1.my-control-panel.com/proxy/myradio90fm/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -408,6 +411,9 @@ window.STATIONS = [
     "category": "fm",
     "streams": [
       "https://icecast.octosignals.com/radiomacfast"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -453,6 +459,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://onair.junefm.in/live"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -505,7 +514,7 @@ window.STATIONS = [
       "https://a5.asurahosting.com:7450/radio.mp3"
     ],
     "br": [
-      192
+      320
     ]
   },
   {
@@ -530,7 +539,7 @@ window.STATIONS = [
       "https://live.accessmedia.nz/PlanetFM.stream/playlist.m3u8"
     ],
     "br": [
-      151,
+      150,
       135
     ]
   },
@@ -1346,7 +1355,10 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/playlist.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      93
+    ]
   },
   {
     "id": "aural-oldies",
@@ -1539,4 +1551,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T05:05Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

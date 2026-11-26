@@ -440,7 +440,7 @@ window.STATIONS = [
       "https://vrc.gate.vrtv.jp/live?p=g&u=d"
     ],
     "br": [
-      1263
+      1343
     ]
   },
   {
@@ -815,9 +815,7 @@ window.STATIONS = [
       "https://kuronegai.radioca.st/stream"
     ],
     "added": "2026-10-28",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "asia-dream-radio-japan-hits",
@@ -969,7 +967,8 @@ window.STATIONS = [
       "https://luckyfm.duckdns.org:5000/stream"
     ],
     "added": "2026-11-16",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "tjs-japanese-radio-station",
@@ -1008,4 +1007,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

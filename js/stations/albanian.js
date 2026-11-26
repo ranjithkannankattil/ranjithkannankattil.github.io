@@ -138,9 +138,7 @@ window.STATIONS = [
     "streams": [
       "https://broadcast.shoutcheap.com/proxy/alban/stream"
     ],
-    "br": [
-      192
-    ]
+    "offline": true
   },
   {
     "id": "radio-maria-albania-programi-per-amerike",
@@ -482,7 +480,10 @@ window.STATIONS = [
     "streams": [
       "https://radiocast.ch:8000/stream"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      96
+    ]
   },
   {
     "id": "radio-dj-98-2",
@@ -731,4 +732,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

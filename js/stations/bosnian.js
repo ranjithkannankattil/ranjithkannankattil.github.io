@@ -31,9 +31,7 @@ window.STATIONS = [
     "streams": [
       "https://team-data.ba:10000/stream"
     ],
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "radio-studio-m",
@@ -242,8 +240,7 @@ window.STATIONS = [
     ],
     "br": [
       128
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radio-busovaca",
@@ -540,4 +537,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

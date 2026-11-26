@@ -185,7 +185,9 @@ window.STATIONS = [
       "https://ice5.somafm.com/secretagent-128-mp3"
     ],
     "where": "US",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "big-r-radio-80s-metal",
@@ -324,7 +326,9 @@ window.STATIONS = [
       "https://ice6.somafm.com/indiepop-128-aac"
     ],
     "where": "US",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "101-smooth-jazz-mellow-mix",
@@ -358,7 +362,9 @@ window.STATIONS = [
       "https://ice6.somafm.com/u80s-128-mp3"
     ],
     "where": "US",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "somafm-left-coast-70s",
@@ -425,7 +431,10 @@ window.STATIONS = [
       "https://icecast.walmradio.com:8443/walm2"
     ],
     "added": "2026-10-22",
-    "where": "US"
+    "where": "US",
+    "br": [
+      320
+    ]
   },
   {
     "id": "walm-2",
@@ -499,7 +508,7 @@ window.STATIONS = [
     "added": "2026-10-23",
     "where": "UK",
     "br": [
-      47
+      48
     ]
   },
   {
@@ -1288,7 +1297,7 @@ window.STATIONS = [
     "added": "2026-11-02",
     "br": [
       128,
-      0
+      320
     ]
   },
   {
@@ -1711,7 +1720,7 @@ window.STATIONS = [
     "added": "2026-11-05",
     "where": "UK",
     "br": [
-      47
+      48
     ]
   },
   {
@@ -1863,7 +1872,7 @@ window.STATIONS = [
     "added": "2026-11-07",
     "where": "UK",
     "br": [
-      47
+      48
     ]
   },
   {
@@ -1880,4 +1889,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

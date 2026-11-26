@@ -10,7 +10,7 @@ window.STATIONS = [
       "https://n12.radiojar.com/8s5u5tpdtwzuv?listening-from-radio-garden=1620219571863&rj-tok=AAABeTyl2zYARSWbLVnrEOlqGw&rj-ttl=5"
     ],
     "br": [
-      80
+      64
     ]
   },
   {
@@ -108,7 +108,7 @@ window.STATIONS = [
       "https://stream.radiojar.com/8s5u5tpdtwzuv"
     ],
     "br": [
-      64
+      80
     ]
   },
   {
@@ -259,9 +259,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://broadcast.shoutstream.co.uk/stream/8112"
-    ],
-    "br": [
-      128
     ]
   },
   {
@@ -294,7 +291,7 @@ window.STATIONS = [
       "https://stream.radiojar.com/0tpy1h0kxtzuv"
     ],
     "br": [
-      64
+      80
     ]
   },
   {
@@ -337,9 +334,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://broadcast.shoutstream.co.uk:8078/stream"
-    ],
-    "br": [
-      128
     ]
   },
   {
@@ -652,10 +646,7 @@ window.STATIONS = [
     "streams": [
       "https://c30.radioboss.fm:18267/stream"
     ],
-    "added": "2026-10-24",
-    "br": [
-      128
-    ]
+    "added": "2026-10-24"
   },
   {
     "id": "quran-radio-from-sharjah",
@@ -834,7 +825,9 @@ window.STATIONS = [
       "https://streamer.radio.co/sb38bf6e66/listen"
     ],
     "added": "2026-10-27",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "quran-radio-kuwait",
@@ -1396,9 +1389,7 @@ window.STATIONS = [
       "https://medinanachat.ice.infomaniak.ch/medinanachat-128.mp3"
     ],
     "added": "2026-11-04",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "emaar-fm-radio",
@@ -1441,9 +1432,7 @@ window.STATIONS = [
       "https://medinatarab.ice.infomaniak.ch/medinatarab-128.mp3"
     ],
     "added": "2026-11-04",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "virgin-radio-lebanon",
@@ -1767,4 +1756,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

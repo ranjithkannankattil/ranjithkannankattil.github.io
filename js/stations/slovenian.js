@@ -21,9 +21,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://mp3.rtvslo.si/val202"
-    ],
-    "br": [
-      192
     ]
   },
   {
@@ -241,9 +238,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://mp3.rtvslo.si/rmb"
-    ],
-    "br": [
-      192
     ]
   },
   {
@@ -296,9 +290,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://mp3.rtvslo.si/rakp"
-    ],
-    "br": [
-      192
     ]
   },
   {
@@ -402,4 +393,4 @@ window.STATIONS = [
     "added": "2026-11-18"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

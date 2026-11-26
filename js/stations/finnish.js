@@ -41,9 +41,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://c4.radioboss.fm:18123/stream"
-    ],
-    "br": [
-      320
     ]
   },
   {
@@ -55,7 +52,8 @@ window.STATIONS = [
     ],
     "br": [
       138
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "yle-radio-suomi-hameenlinna",
@@ -678,4 +676,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

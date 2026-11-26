@@ -31,9 +31,7 @@ window.STATIONS = [
     "streams": [
       "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_SUNO_MELODY_S06.mp3"
     ],
-    "br": [
-      96
-    ]
+    "offline": true
   },
   {
     "id": "raagam-air-247",
@@ -52,9 +50,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio026/hlspbaudio026_Auto.m3u8"
-    ],
-    "br": [
-      32
     ]
   },
   {
@@ -111,6 +106,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio030/hlspbaudio030_Auto.m3u8"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -141,6 +139,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio028/hlspbaudio028_Auto.m3u8"
+    ],
+    "br": [
+      32
     ]
   },
   {
@@ -160,8 +161,7 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://d3n2o48cmfppr2.cloudfront.net/svymradio.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "fm-rainbow-kannada",
@@ -220,4 +220,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

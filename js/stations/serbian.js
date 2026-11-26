@@ -1068,10 +1068,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.bigfm.de/balkan/mp3-128/onlineradiobox"
     ],
-    "added": "2026-11-01",
-    "br": [
-      128
-    ]
+    "added": "2026-11-01"
   },
   {
     "id": "radio-sumadinac",
@@ -1728,4 +1725,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

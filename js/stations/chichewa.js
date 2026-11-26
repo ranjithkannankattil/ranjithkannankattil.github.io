@@ -63,9 +63,7 @@ window.STATIONS = [
     "streams": [
       "https://strw3.openstream.co/495"
     ],
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "jojo-fm",
@@ -408,4 +406,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

@@ -60,7 +60,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m8080.aac"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -130,7 +130,7 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
     ],
     "br": [
-      171
+      173
     ]
   },
   {
@@ -163,7 +163,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m80nacional.aac"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -174,7 +174,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m8060.aac"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -237,7 +237,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/rckids.aac"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -259,7 +259,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/smooth.aac"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -278,12 +278,12 @@ window.STATIONS = [
     "name": "Antena 3",
     "category": "music",
     "streams": [
-      "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8",
-      "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
+      "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8",
+      "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8"
     ],
     "br": [
-      167,
-      167
+      189,
+      189
     ]
   },
   {
@@ -316,8 +316,9 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
     ],
     "br": [
-      182
-    ]
+      168
+    ],
+    "offline": true
   },
   {
     "id": "cidade-fm-2",
@@ -327,7 +328,7 @@ window.STATIONS = [
       "https://stream-hls.bauermedia.pt/cidade.aac/playlist.m3u8"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -379,12 +380,12 @@ window.STATIONS = [
     "name": "Antena 2",
     "category": "music",
     "streams": [
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR",
-      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8"
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8",
+      "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
     ],
     "br": [
-      262,
-      259
+      259,
+      262
     ]
   },
   {
@@ -475,7 +476,7 @@ window.STATIONS = [
     "added": "2026-10-22",
     "offline": true,
     "br": [
-      183
+      175
     ]
   },
   {
@@ -487,8 +488,9 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      190
-    ]
+      183
+    ],
+    "offline": true
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -571,7 +573,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      163
+      164
     ]
   },
   {
@@ -751,7 +753,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -775,7 +777,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -787,7 +789,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -883,7 +885,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -1171,7 +1173,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-01",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -1255,7 +1257,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-02",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -1365,7 +1367,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "br": [
-      320
+      224
     ]
   },
   {
@@ -1611,8 +1613,9 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "br": [
-      165
-    ]
+      183
+    ],
+    "offline": true
   },
   {
     "id": "radio-quantica",
@@ -1783,4 +1786,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

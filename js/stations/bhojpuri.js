@@ -32,7 +32,7 @@ window.STATIONS = [
       "https://stream.zeno.fm/7yhq985hnxhvv"
     ],
     "br": [
-      128
+      192
     ]
   },
   {
@@ -58,4 +58,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

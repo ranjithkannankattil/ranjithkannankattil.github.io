@@ -282,7 +282,7 @@ window.STATIONS = [
     ],
     "where": "Canada",
     "br": [
-      48
+      47
     ]
   },
   {
@@ -343,7 +343,10 @@ window.STATIONS = [
       "https://icecast.walmradio.com:8443/walm2"
     ],
     "added": "2026-10-22",
-    "where": "US"
+    "where": "US",
+    "br": [
+      320
+    ]
   },
   {
     "id": "npr-24-hour-program-stream",
@@ -717,7 +720,7 @@ window.STATIONS = [
     "added": "2026-10-26",
     "where": "UK",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -983,9 +986,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-30",
     "where": "Zimbabwe",
-    "br": [
-      192
-    ]
+    "offline": true
   },
   {
     "id": "radio-sahar",
@@ -1879,4 +1880,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

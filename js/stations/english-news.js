@@ -556,7 +556,9 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "where": "Nigeria",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "rte-radio-1",
@@ -863,9 +865,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "where": "Zimbabwe",
-    "br": [
-      192
-    ]
+    "offline": true
   },
   {
     "id": "wbez-91-5-chicago-public-radio",
@@ -939,7 +939,7 @@ window.STATIONS = [
     "added": "2026-11-02",
     "where": "UK",
     "br": [
-      64
+      63
     ]
   },
   {
@@ -991,7 +991,7 @@ window.STATIONS = [
     "added": "2026-11-02",
     "where": "UK",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -1739,7 +1739,7 @@ window.STATIONS = [
     "added": "2026-11-11",
     "where": "Canada",
     "br": [
-      47
+      48
     ]
   },
   {
@@ -1898,4 +1898,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

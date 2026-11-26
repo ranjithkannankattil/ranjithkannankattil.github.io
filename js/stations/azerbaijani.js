@@ -215,7 +215,7 @@ window.STATIONS = [
       "https://live.livestreamtv.ca/azstar/amlst:azstar/playlist.m3u8"
     ],
     "br": [
-      3740
+      3790
     ]
   },
   {
@@ -307,7 +307,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.day.az:9443/aac192"
     ],
-    "added": "2026-11-25"
+    "added": "2026-11-25",
+    "br": [
+      192
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

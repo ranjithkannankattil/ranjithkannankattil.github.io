@@ -410,7 +410,7 @@ window.STATIONS = [
       "https://gb25.streamgates.net/radios-audio/100Nostalgia/playlist.m3u8"
     ],
     "br": [
-      148
+      147
     ]
   },
   {
@@ -537,7 +537,8 @@ window.STATIONS = [
     "streams": [
       "https://vivo.solumedia.com:19360/jaitv/jaitv.m3u8"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "offline": true
   },
   {
     "id": "radios-100fm-100-stars",
@@ -610,6 +611,15 @@ window.STATIONS = [
     "br": [
       192
     ]
+  },
+  {
+    "id": "israeli-jewish-radio-florida-107-1-fm-mi",
+    "name": "Israeli Jewish Radio Florida - 107.1 FM Miami",
+    "category": "music",
+    "streams": [
+      "https://w296dk.online:8443/WEBAPP"
+    ],
+    "added": "2026-11-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

@@ -999,10 +999,7 @@ window.STATIONS = [
     "streams": [
       "https://efir.retrofm.md:8000/retro"
     ],
-    "added": "2026-10-30",
-    "br": [
-      128
-    ]
+    "added": "2026-10-30"
   },
   {
     "id": "dfm-party",
@@ -1686,4 +1683,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

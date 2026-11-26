@@ -118,6 +118,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/playlist.m3u8"
+    ],
+    "br": [
+      93
     ]
   },
   {
@@ -691,7 +694,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      128
+      96
     ]
   },
   {
@@ -955,7 +958,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      128
+      64
     ]
   },
   {
@@ -977,10 +980,7 @@ window.STATIONS = [
     "streams": [
       "https://n0a.radiojar.com/cfqyfcspcv8uv"
     ],
-    "added": "2026-10-29",
-    "br": [
-      128
-    ]
+    "added": "2026-10-29"
   },
   {
     "id": "2b-radio-sangam-shiva",
@@ -1765,4 +1765,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

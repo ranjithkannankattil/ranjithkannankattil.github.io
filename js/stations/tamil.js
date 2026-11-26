@@ -86,8 +86,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "89-4-tamil-fm",
@@ -374,8 +373,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio129/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "tamil-ragam",
@@ -537,7 +535,10 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio022/playlist.m3u8"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      79
+    ]
   },
   {
     "id": "fmrainbowtamil",
@@ -546,7 +547,10 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio022/playlist.m3u8"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      79
+    ]
   },
   {
     "id": "mellisai-fm",
@@ -557,7 +561,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      80
+      96
     ]
   },
   {
@@ -794,7 +798,10 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio024/playlist.m3u8"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      79
+    ]
   },
   {
     "id": "oli-968",
@@ -1444,7 +1451,9 @@ window.STATIONS = [
       "https://servidor18-4.brlogic.com:7740/live"
     ],
     "added": "2026-11-05",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "thendralradio",
@@ -1732,4 +1741,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";

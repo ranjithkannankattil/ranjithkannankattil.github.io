@@ -120,7 +120,9 @@ window.STATIONS = [
       "https://stream.zenolive.com/e9x2n97b9uduv"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "glow-99-1-fm-akure",
@@ -230,4 +232,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-25T23:13Z";
+window.STATIONS_CHECKED = "2026-11-26T09:25Z";
