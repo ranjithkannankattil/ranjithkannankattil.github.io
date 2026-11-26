@@ -21,6 +21,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material.icons.outlined.Info
+import androidx.compose.material.icons.outlined.PushPin
 import androidx.compose.material.icons.outlined.Mic
 import androidx.compose.material.icons.outlined.Radio
 import androidx.compose.material3.*
@@ -125,12 +126,12 @@ fun PicksHeading(empty: Boolean) = Row(Modifier.fillMaxWidth().heightIn(min = 44
         overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis)
 }
 
-class LangTab(val id: String, val label: String, val pinned: Boolean = false, val star: Boolean = false, val icon: Boolean = false)
+class LangTab(val id: String, val label: String, val pinned: Boolean = false, val star: Boolean = false, val icon: Boolean = false, val pinnable: Boolean = false)
 
 /** Languages in spaced capitals; a fine line under the one you're on. Press and hold to pin, move or remove. */
 @OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
 @Composable
-fun LangTabs(tabs: List<LangTab>, selected: String, onClick: (LangTab) -> Unit, onLong: (LangTab) -> Unit) {
+fun LangTabs(tabs: List<LangTab>, selected: String, onClick: (LangTab) -> Unit, onLong: (LangTab) -> Unit, onPin: (LangTab) -> Unit = {}) {
     val haptic = androidx.compose.ui.platform.LocalHapticFeedback.current
     val ctx = androidx.compose.ui.platform.LocalContext.current
     Column(Modifier.padding(horizontal = Pad)) {
@@ -148,8 +149,11 @@ fun LangTabs(tabs: List<LangTab>, selected: String, onClick: (LangTab) -> Unit, 
                         // the Velvet Selection: the Velvet logo with a star (TalkBack still reads its name)
                         if (t.star) VelvetStar(t.label, 28)
                         else {
-                            if (t.pinned) { Icon(Icons.Filled.PushPin, "Pinned", Modifier.size(11.dp), tint = Soft); Spacer(Modifier.width(4.dp)) }
                             Label(t.label, if (on) Title else Soft, 10, weight = if (on) FontWeight.SemiBold else FontWeight.Medium)
+                            // a language you're on but haven't pinned: a small pin to keep it in the row
+                            if (!t.pinned && t.pinnable) Box(Modifier.size(32.dp).clickable(onClickLabel = "Pin ${t.label} to your row") { onPin(t) },
+                                contentAlignment = Alignment.Center) {
+                                Icon(Icons.Outlined.PushPin, null, Modifier.size(15.dp), tint = AccentText) }
                         }
                     }
                     Box(Modifier.height(1.dp).fillMaxWidth().background(if (on) Title else Color.Transparent))
@@ -370,7 +374,8 @@ fun BottomNav(tab: Int, favCount: Int, go: (Int) -> Unit) {
 @Composable
 fun PlayerContent(now: NowState, c: androidx.media3.session.MediaController?, language: String, cast: CastUi,
                   onCast: () -> Unit, onShare: () -> Unit, onSpotify: (() -> Unit)?, onSleep: () -> Unit,
-                  onCloseAll: () -> Unit, collapse: () -> Unit, rating: @Composable () -> Unit) {
+                  onCloseAll: () -> Unit, collapse: () -> Unit, isFav: Boolean = false, onFav: (() -> Unit)? = null,
+                  rating: @Composable () -> Unit) {
     val station = now.md.station?.toString() ?: ""
     val song = now.md.title?.toString() ?: ""
     val hasSong = song.isNotBlank() && song != station
@@ -439,7 +444,13 @@ fun PlayerContent(now: NowState, c: androidx.media3.session.MediaController?, la
             ThemeToast(slide.peek ?: shown)   // one name pop-up over both: the coming look while sliding, then the new one
             }
             Column(Modifier.fillMaxWidth().padding(top = 16.dp), horizontalAlignment = Alignment.CenterHorizontally) {
-                if (hasSong) Label("On $station", AccentText, 10)
+                // the ♡ sits right by the station's name, within thumb reach (agreed 26 Nov)
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Label(if (hasSong) "On $station" else station, AccentText, 10, Modifier.weight(1f, fill = false))
+                    if (onFav != null) IconButton(onFav, Modifier.size(44.dp)) {
+                        LineIcon(if (isFav) R.drawable.ln_heart_fill else R.drawable.ln_heart,
+                            if (isFav) "Remove $station from favourites" else "Add $station to favourites", 22, if (isFav) AccentText else Soft) }
+                }
                 val big = if (hasSong) song else station
                 Text(big, fontSize = if (big.length > 24) 22.sp else 26.sp, lineHeight = if (big.length > 24) 27.sp else 31.sp,
                     fontWeight = FontWeight.Light, letterSpacing = 0.5.sp, color = Title, textAlign = TextAlign.Center, maxLines = 2,

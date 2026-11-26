@@ -72,8 +72,8 @@ class Leveller(private val target: Float = -18f, private val maxDb: Float = 10f,
     }
 
     companion object {
-        /** Soft limiter for one sample (-1..1 after gain): untouched up to 0.9, then rounded off below 1. */
-        fun limit(y: Float): Float { val a = abs(y); return if (a <= 0.9f) y else Math.copySign(0.9f + 0.1f * tanh((a - 0.9f) / 0.1f).toFloat(), y) }
+        /** Soft limiter for one sample (-1..1 after gain): untouched up to 0.9, then rounded off so it never passes 0.98. */
+        fun limit(y: Float): Float { val a = abs(y); return if (a <= 0.9f) y else Math.copySign(0.9f + 0.08f * tanh((a - 0.9f) / 0.08f).toFloat(), y) }
     }
 }
 

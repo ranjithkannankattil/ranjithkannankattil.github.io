@@ -227,7 +227,8 @@ fun App(c: MediaController?) {
     // languages you've listened to, most recent first (shown as quick buttons on Stations)
     var recent by remember { mutableStateOf(prefs.getString("recent", "")!!.split(',').filter { it.isNotBlank() }) }
     // languages pinned to the row, in the listener's own order (always shown)
-    var pinned by remember { mutableStateOf(prefs.getString("pinned", "")!!.split(',').filter { it.isNotBlank() }) }
+    // Malayalam is pinned for you at the start (2.10); it can be unpinned or moved like any other language
+    var pinned by remember { mutableStateOf((prefs.getString("pinned", null) ?: "malayalam").split(',').filter { it.isNotBlank() }) }
     fun savePins(l: List<String>) { pinned = l; prefs.edit().putString("pinned", l.joinToString(",")).apply() }
     fun saveRecent(l: List<String>) { recent = l; prefs.edit().putString("recent", l.joinToString(",")).apply() }
     LaunchedEffect(colId) {
@@ -334,11 +335,13 @@ fun App(c: MediaController?) {
                         exit = androidx.compose.animation.shrinkVertically() + androidx.compose.animation.fadeOut()) {
                     Column {
                     val tabs = listOf(LangTab(PICKS, t("Velvet Selection"), star = true)) +
-                        (pinned + recent.filter { it !in pinned }).mapNotNull { id -> cols.find { it.id == id } }.map { LangTab(it.id, it.name, it.id in pinned) } +
+                        // pinned languages, then the one you're on if it isn't pinned (it shows a pin to keep it)
+                        (pinned + listOf(colId).filter { it !in pinned }).mapNotNull { id -> cols.find { it.id == id } }.map { LangTab(it.id, it.name, it.id in pinned, pinnable = true) } +
                         (if (colId == ALL) listOf(LangTab(ALL, t("Every station"))) else emptyList()) +
                         listOf(LangTab("_langs", t("All languages"), icon = true))
                     Box(Modifier.tourTarget("langs")) {
                         LangTabs(tabs, colId, onClick = { t -> if (t.id == "_langs") pickLang = true else colId = t.id },
+                            onPin = { t -> savePins(pinned + t.id) },
                             onLong = { t -> cols.find { it.id == t.id }?.let { pillMenu = it } }) }
                     val favHere = stations.count { it.key in favKeys }
                     val cats = buildList {
@@ -422,8 +425,10 @@ fun App(c: MediaController?) {
             confirmButton = { TextButton({ done() }) { Text(t("Cancel")) } })
     }
     if (arrangePins) ArrangePins(pinned.mapNotNull { id -> cols.find { it.id == id } }, onSave = { savePins(it) }) { arrangePins = false }
-    if (pickLang) LanguageDialog(cols, colId, { if (it == PICKS && colId != PICKS) lastCol = colId; colId = it; go(0); pickLang = false }) { pickLang = false }
-    if (full) FullPlayer(now, c, cast, onCloseAll = { closeAll() }) { full = false }
+    if (pickLang) LanguageDialog(cols, colId, { if (it == PICKS && colId != PICKS) lastCol = colId; colId = it; go(0); pickLang = false },
+        pinned = pinned, onPin = { id -> savePins(if (id in pinned) pinned - id else pinned + id) }, onArrange = { pickLang = false; arrangePins = true }) { pickLang = false }
+    if (full) { val fk = now.id?.removePrefix("st|")
+        FullPlayer(now, c, cast, onCloseAll = { closeAll() }, isFav = favList.any { it.key == fk }, onFav = { toggleFavKey(fk) }) { full = false } }
     if (sortSheet) {
         val forPicks = colId == PICKS
         SortSheet(if (forPicks) picksSort else sort, {
@@ -614,7 +619,8 @@ ScrollButtons(listState, Modifier.align(Alignment.BottomEnd))
 }
 
 @Composable
-fun LanguageDialog(cols: List<Collection>, current: String, onPick: (String) -> Unit, onClose: () -> Unit) {
+fun LanguageDialog(cols: List<Collection>, current: String, onPick: (String) -> Unit, pinned: List<String> = emptyList(),
+                   onPin: (String) -> Unit = {}, onArrange: () -> Unit = {}, onClose: () -> Unit) {
     var q by remember { mutableStateOf("") }
     val ctx = LocalContext.current
     // number of stations in each language (loaded in the background; cached for a few hours)
@@ -651,7 +657,21 @@ fun LanguageDialog(cols: List<Collection>, current: String, onPick: (String) -> 
                                 if (c.native.isNotBlank()) Text(c.native, color = InkSoft, fontSize = 13.sp)
                             }
                             counts[c.id]?.let { Text("$it", color = Accent, fontWeight = FontWeight.SemiBold, fontSize = 14.sp) }
+                            // Pin: keeps the language in your top row (filled = pinned; tap again to unpin)
+                            val on = c.id in pinned
+                            IconButton({ onPin(c.id) }, Modifier.size(48.dp)) {
+                                Icon(if (on) Icons.Filled.PushPin else Icons.Outlined.PushPin,
+                                    if (on) "Unpin ${c.name}" else "Pin ${c.name} to your row", tint = if (on) Accent else Soft) }
                         }
+                    }
+                    if (q.isBlank() && pinned.isNotEmpty()) {
+                        item { Row(Modifier.fillMaxWidth().padding(16.dp, 14.dp, 8.dp, 2.dp), verticalAlignment = Alignment.CenterVertically) {
+                            Text(t("PINNED TO YOUR ROW"), Modifier.weight(1f), fontSize = 12.sp, color = InkSoft, letterSpacing = 1.sp)
+                            if (pinned.size > 1) TextButton(onArrange, Modifier.heightIn(min = 44.dp)) { Text(t("Arrange"), color = AccentText) }
+                        } }
+                        items(pinned.mapNotNull { id -> cols.find { it.id == id } }, key = { "pin-" + it.id }) { LangRow(it) }
+                        item { Text(t("Tap a pin to keep a language in your top row, or to take it out."),
+                            Modifier.padding(16.dp, 4.dp, 16.dp, 8.dp), fontSize = 13.sp, color = InkSoft) }
                     }
                     items(first, key = { it.id }) { LangRow(it) }
                     if (q.isBlank()) item {
@@ -695,7 +715,7 @@ fun Art(now: NowState, size: Int) {
 
 /** The big player as a full screen, with the share and sleep menus on top of it. */
 @Composable
-fun FullPlayer(now: NowState, c: MediaController?, cast: CastUi, onCloseAll: () -> Unit, close: () -> Unit) {
+fun FullPlayer(now: NowState, c: MediaController?, cast: CastUi, onCloseAll: () -> Unit, isFav: Boolean = false, onFav: (() -> Unit)? = null, close: () -> Unit) {
     val scope = rememberCoroutineScope()
     val ctx = LocalContext.current
     var share by remember { mutableStateOf(false) }
@@ -712,7 +732,7 @@ fun FullPlayer(now: NowState, c: MediaController?, cast: CastUi, onCloseAll: () 
     Box(Modifier.fillMaxSize()) {
         PlayerContent(now, c, now.md.extras?.getString("lang") ?: "", cast, onCast = { Cast.open(ctx, Theme.dark) },
             onShare = { share = true }, onSpotify = if (hasSong) ({ scope.launch { openInSpotify(ctx, song, artist) } }) else null,
-            onSleep = { sleep = true }, onCloseAll = onCloseAll, collapse = close) {
+            onSleep = { sleep = true }, onCloseAll = onCloseAll, collapse = close, isFav = isFav, onFav = onFav) {
             now.id?.removePrefix("st|")?.let { k -> RatingRow(k)
                 TextButton({ comments = true }, Modifier.heightIn(min = 44.dp)) { Text(t("Comments"), color = AccentText, fontSize = 14.sp) } }
         }
