@@ -1,0 +1,987 @@
+{
+ "updated": "2026-11-26",
+ "sections": {
+  "en": {
+   "Getting started": "Getting started",
+   "Setting up on your devices": "Setting up on your devices",
+   "Finding stations": "Finding stations",
+   "Playing": "Playing",
+   "Alarms": "Alarms",
+   "Favourites and account": "Favourites and account",
+   "Look and language": "Look and language",
+   "Privacy": "Privacy",
+   "Help and feedback": "Help and feedback",
+   "For radio stations": "For radio stations"
+  },
+  "ml": {
+   "Getting started": "തുടക്കം",
+   "Setting up on your devices": "നിങ്ങളുടെ ഉപകരണങ്ങളിൽ",
+   "Finding stations": "നിലയങ്ങൾ കണ്ടെത്താൻ",
+   "Playing": "കേൾക്കുമ്പോൾ",
+   "Alarms": "അലാറങ്ങൾ",
+   "Favourites and account": "പ്രിയപ്പെട്ടവയും അക്കൗണ്ടും",
+   "Look and language": "രൂപവും ഭാഷയും",
+   "Privacy": "സ്വകാര്യത",
+   "Help and feedback": "സഹായവും അഭിപ്രായവും",
+   "For radio stations": "റേഡിയോ നിലയങ്ങൾക്ക്"
+  },
+  "hi": {
+   "Getting started": "शुरुआत",
+   "Setting up on your devices": "आपके डिवाइस पर",
+   "Finding stations": "स्टेशन ढूँढना",
+   "Playing": "सुनना",
+   "Alarms": "अलार्म",
+   "Favourites and account": "पसंदीदा और खाता",
+   "Look and language": "रूप और भाषा",
+   "Privacy": "निजता",
+   "Help and feedback": "मदद और सुझाव",
+   "For radio stations": "रेडियो स्टेशनों के लिए"
+  }
+ },
+ "items": [
+  {
+   "id": "what-is-radio-velvet",
+   "section": "Getting started",
+   "en": {
+    "q": "What is Radio Velvet?",
+    "a": "A free radio app and website with about 5,300 live stations in more than 70 languages. It was made first for Malayalis in Kerala, the Gulf and around the world, so Malayalam comes first, but you can listen to stations from everywhere."
+   },
+   "ml": {
+    "q": "Radio Velvet എന്താണ്?",
+    "a": "70-ലധികം ഭാഷകളിലായി ഏകദേശം 5,300 തത്സമയ നിലയങ്ങളുള്ള സൗജന്യ റേഡിയോ ആപ്പും വെബ്സൈറ്റും. കേരളത്തിലും ഗൾഫിലും ലോകമെങ്ങുമുള്ള മലയാളികൾക്കായാണ് ആദ്യം ഉണ്ടാക്കിയത്, അതിനാൽ Malayalam ആദ്യം വരും; എങ്കിലും എല്ലായിടത്തെയും നിലയങ്ങൾ കേൾക്കാം."
+   },
+   "hi": {
+    "q": "Radio Velvet क्या है?",
+    "a": "एक मुफ़्त रेडियो ऐप और वेबसाइट, जिसमें 70 से ज़्यादा भाषाओं में लगभग 5,300 लाइव स्टेशन हैं। इसे पहले केरल, खाड़ी देशों और दुनिया भर के मलयालियों के लिए बनाया गया, इसलिए Malayalam पहले आता है, लेकिन आप हर जगह के स्टेशन सुन सकते हैं।"
+   }
+  },
+  {
+   "id": "who-makes-it",
+   "section": "Getting started",
+   "en": {
+    "q": "Who makes Radio Velvet?",
+    "a": "One person, Ranjith, as a hobby project in his free time. It is not a company and has no support team, so replies to messages and fixes can take a while. Thank you for your patience."
+   },
+   "ml": {
+    "q": "Radio Velvet ആരാണ് ഉണ്ടാക്കുന്നത്?",
+    "a": "ഒരാൾ — രഞ്ജിത്ത് — ഒഴിവുസമയത്ത് ചെയ്യുന്ന ഒരു ഹോബി പ്രോജക്ട്. ഇതൊരു കമ്പനിയല്ല, സപ്പോർട്ട് ടീമും ഇല്ല; അതിനാൽ മറുപടിക്കും തിരുത്തലുകൾക്കും കുറച്ച് സമയമെടുത്തേക്കാം. ക്ഷമയ്ക്ക് നന്ദി."
+   },
+   "hi": {
+    "q": "Radio Velvet कौन बनाता है?",
+    "a": "एक व्यक्ति, रंजीत, अपने खाली समय में एक शौक़िया प्रोजेक्ट के रूप में। यह कोई कंपनी नहीं है और कोई सपोर्ट टीम नहीं है, इसलिए जवाब और सुधार में समय लग सकता है। धैर्य के लिए धन्यवाद।"
+   }
+  },
+  {
+   "id": "quick-tour",
+   "section": "Getting started",
+   "en": {
+    "q": "Is there a quick tour of the app?",
+    "a": "Yes. The app shows a short tour the first time you open it. To see it again any time, open Info → Quick tour (from 2.10: You → Quick tour)."
+   },
+   "ml": {
+    "q": "ആപ്പിന്റെ ഒരു ചെറു പരിചയം ഉണ്ടോ?",
+    "a": "ഉണ്ട്. ആദ്യമായി ആപ്പ് തുറക്കുമ്പോൾ ഒരു ചെറു പരിചയം കാണിക്കും. വീണ്ടും കാണാൻ Info → Quick tour തുറക്കുക (2.10 മുതൽ: നിങ്ങൾ → ചെറു പരിചയം)."
+   },
+   "hi": {
+    "q": "क्या ऐप की कोई छोटी सैर है?",
+    "a": "हाँ। पहली बार ऐप खोलने पर एक छोटी सैर दिखती है। इसे फिर से देखने के लिए Info → Quick tour खोलें (2.10 से: आप → छोटी सैर)।"
+   }
+  },
+  {
+   "id": "is-it-free",
+   "section": "Getting started",
+   "en": {
+    "q": "Is it free?",
+    "a": "Yes. There is no subscription and Radio Velvet adds no ads of its own. Some stations play their own adverts, just as they do on air."
+   },
+   "ml": {
+    "q": "ഇത് സൗജന്യമാണോ?",
+    "a": "അതെ. വരിസംഖ്യയില്ല, Radio Velvet സ്വന്തമായി പരസ്യങ്ങൾ ചേർക്കുന്നില്ല. ചില നിലയങ്ങൾ പ്രക്ഷേപണത്തിലെന്നപോലെ അവരുടെ പരസ്യങ്ങൾ കേൾപ്പിക്കും."
+   },
+   "hi": {
+    "q": "क्या यह मुफ़्त है?",
+    "a": "हाँ। कोई सदस्यता नहीं, और Radio Velvet अपनी ओर से कोई विज्ञापन नहीं जोड़ता। कुछ स्टेशन अपने विज्ञापन चलाते हैं, जैसे प्रसारण में।"
+   }
+  },
+  {
+   "id": "app-or-website",
+   "section": "Getting started",
+   "en": {
+    "q": "Do I need the app, or is the website enough?",
+    "a": "The [website](https://ranjithkb.com/radio.html) works in any browser on a phone or computer. The Android app adds lock-screen and car controls, alarms, the sleep timer, the equaliser, player looks and Android Auto. Sign in with Google and your favourites are the same in both."
+   },
+   "ml": {
+    "q": "ആപ്പ് വേണോ, വെബ്സൈറ്റ് മതിയോ?",
+    "a": "[വെബ്സൈറ്റ്](https://ranjithkb.com/radio.html) ഫോണിലോ കമ്പ്യൂട്ടറിലോ ഏത് ബ്രൗസറിലും പ്രവർത്തിക്കും. ലോക്ക് സ്ക്രീനിലും കാറിലുമുള്ള നിയന്ത്രണം, അലാറം, സ്ലീപ് ടൈമർ, ഈക്വലൈസർ, പ്ലെയർ രൂപങ്ങൾ, Android Auto എന്നിവ Android ആപ്പിൽ അധികമായുണ്ട്. Google ഉപയോഗിച്ച് സൈൻ ഇൻ ചെയ്താൽ രണ്ടിലും ഒരേ പ്രിയപ്പെട്ടവ."
+   },
+   "hi": {
+    "q": "ऐप चाहिए या वेबसाइट काफ़ी है?",
+    "a": "[वेबसाइट](https://ranjithkb.com/radio.html) फ़ोन या कंप्यूटर के किसी भी ब्राउज़र में चलती है। Android ऐप में लॉक-स्क्रीन और कार कंट्रोल, अलार्म, स्लीप टाइमर, इक्वलाइज़र, प्लेयर के रूप और Android Auto भी हैं। Google से साइन इन करें तो दोनों में एक ही पसंदीदा रहेंगे।"
+   }
+  },
+  {
+   "id": "devices",
+   "section": "Getting started",
+   "en": {
+    "q": "Which devices does it work on?",
+    "a": "Android phones and tablets, Android Auto, Android TV, and any browser on an iPhone, iPad or computer. Step-by-step instructions for each are in Setting up on your devices."
+   },
+   "ml": {
+    "q": "ഏതൊക്കെ ഉപകരണങ്ങളിൽ പ്രവർത്തിക്കും?",
+    "a": "Android ഫോണുകളും ടാബ്ലറ്റുകളും, Android Auto, Android TV, iPhone, iPad, കമ്പ്യൂട്ടർ എന്നിവയിലെ ഏത് ബ്രൗസറും. ഓരോന്നിനുമുള്ള വിശദമായ വഴികൾ 'നിങ്ങളുടെ ഉപകരണങ്ങളിൽ' എന്ന ഭാഗത്തുണ്ട്."
+   },
+   "hi": {
+    "q": "यह किन डिवाइस पर चलता है?",
+    "a": "Android फ़ोन और टैबलेट, Android Auto, Android TV, और iPhone, iPad या कंप्यूटर का कोई भी ब्राउज़र। हर एक के लिए चरण-दर-चरण तरीका 'आपके डिवाइस पर' भाग में है।"
+   }
+  },
+  {
+   "id": "android-phone",
+   "section": "Setting up on your devices",
+   "en": {
+    "q": "Android phone or tablet",
+    "a": "1. Open [Radio Velvet on Google Play](https://play.google.com/store/apps/details?id=com.ranjithkb.radio) and tap Install. A phone without Google Play can download the app from the card at the top of the [Radio page](https://ranjithkb.com/radio.html).\n1. Open the app. A short tour shows the main parts; you can skip it and replay it later.\n1. Tap a station to play it, and the heart to keep it in Favourites.\n1. Optional: sign in with Google so your favourites follow you to the website and a new phone."
+   },
+   "ml": {
+    "q": "Android ഫോൺ അല്ലെങ്കിൽ ടാബ്ലറ്റ്",
+    "a": "1. [Google Play-യിലെ Radio Velvet](https://play.google.com/store/apps/details?id=com.ranjithkb.radio) തുറന്ന് Install അമർത്തുക. Google Play ഇല്ലാത്ത ഫോണിൽ [റേഡിയോ പേജിന്റെ](https://ranjithkb.com/radio.html) മുകളിലെ കാർഡിൽ നിന്ന് ആപ്പ് ഡൗൺലോഡ് ചെയ്യാം.\n1. ആപ്പ് തുറക്കുക. പ്രധാന ഭാഗങ്ങൾ ഒരു ചെറു പരിചയം കാണിക്കും; ഒഴിവാക്കി പിന്നീട് കാണാം.\n1. ഒരു നിലയം തൊട്ടാൽ പ്ലേ ആകും; ഹൃദയചിഹ്നം തൊട്ടാൽ പ്രിയപ്പെട്ടവയിൽ ചേരും.\n1. വേണമെങ്കിൽ: Google ഉപയോഗിച്ച് സൈൻ ഇൻ ചെയ്യുക; പ്രിയപ്പെട്ടവ വെബ്സൈറ്റിലും പുതിയ ഫോണിലും കിട്ടും."
+   },
+   "hi": {
+    "q": "Android फ़ोन या टैबलेट",
+    "a": "1. [Google Play पर Radio Velvet](https://play.google.com/store/apps/details?id=com.ranjithkb.radio) खोलें और Install दबाएँ। जिस फ़ोन में Google Play नहीं है, वह [रेडियो पेज](https://ranjithkb.com/radio.html) के ऊपर वाले कार्ड से ऐप डाउनलोड कर सकता है।\n1. ऐप खोलें। एक छोटी सैर मुख्य हिस्से दिखाती है; इसे छोड़कर बाद में देख सकते हैं।\n1. स्टेशन चलाने के लिए उसे छुएँ, और पसंदीदा में रखने के लिए दिल का निशान।\n1. चाहें तो: Google से साइन इन करें ताकि पसंदीदा वेबसाइट और नए फ़ोन पर भी मिलें।"
+   }
+  },
+  {
+   "id": "android-auto",
+   "section": "Setting up on your devices",
+   "en": {
+    "q": "Android Auto (in the car)",
+    "a": "1. Install Radio Velvet on your phone and open it once. Save a few favourites; they appear first in the car.\n1. Connect the phone to the car with a USB cable, or wirelessly if your car supports it.\n1. On the car screen, open the list of apps and tap Radio Velvet.\n1. Not there? On the phone, open Settings → Connected devices → Connection preferences → Android Auto → Customise launcher, and turn Radio Velvet on. (Menu names differ a little between phones.)\n1. Pick Favourites, Velvet Selection or a language, then a station.\n1. The next and previous buttons, on screen or on the steering wheel, move through the list you started from.\n1. On mobile data, turn on Data saver to use less data on long drives."
+   },
+   "ml": {
+    "q": "Android Auto (കാറിൽ)",
+    "a": "1. ഫോണിൽ Radio Velvet ഇൻസ്റ്റാൾ ചെയ്ത് ഒരിക്കൽ തുറക്കുക. കുറച്ച് പ്രിയപ്പെട്ടവ ചേർക്കുക; കാറിൽ അവ ആദ്യം വരും.\n1. USB കേബിൾ വഴിയോ, കാർ പിന്തുണയ്ക്കുന്നെങ്കിൽ വയർലെസ്സായോ ഫോൺ കാറുമായി ബന്ധിപ്പിക്കുക.\n1. കാറിന്റെ സ്ക്രീനിൽ ആപ്പുകളുടെ പട്ടിക തുറന്ന് Radio Velvet തൊടുക.\n1. കാണുന്നില്ലേ? ഫോണിൽ Settings → Connected devices → Connection preferences → Android Auto → Customise launcher തുറന്ന് Radio Velvet ഓൺ ചെയ്യുക. (ഫോണുകൾക്കനുസരിച്ച് മെനു പേരുകൾ അല്പം മാറും.)\n1. പ്രിയപ്പെട്ടവ, Velvet Selection അല്ലെങ്കിൽ ഒരു ഭാഷ തിരഞ്ഞെടുത്ത് ഒരു നിലയം തൊടുക.\n1. സ്ക്രീനിലോ സ്റ്റിയറിങ്ങിലോ ഉള്ള അടുത്തത്/മുമ്പത്തേത് ബട്ടണുകൾ നിങ്ങൾ തുടങ്ങിയ പട്ടികയിലൂടെ നീങ്ങും.\n1. മൊബൈൽ ഡാറ്റയിലാണെങ്കിൽ, നീണ്ട യാത്രകളിൽ ഡാറ്റ കുറയ്ക്കാൻ ഡാറ്റ സേവർ ഓൺ ചെയ്യുക."
+   },
+   "hi": {
+    "q": "Android Auto (कार में)",
+    "a": "1. फ़ोन पर Radio Velvet इंस्टॉल करें और एक बार खोलें। कुछ पसंदीदा जोड़ें; कार में ये सबसे पहले दिखेंगे।\n1. फ़ोन को USB केबल से, या कार सपोर्ट करे तो वायरलेस से, कार से जोड़ें।\n1. कार की स्क्रीन पर ऐप की सूची खोलें और Radio Velvet छुएँ।\n1. नहीं दिख रहा? फ़ोन पर Settings → Connected devices → Connection preferences → Android Auto → Customise launcher खोलें और Radio Velvet चालू करें। (फ़ोन के हिसाब से मेन्यू के नाम थोड़े अलग हो सकते हैं।)\n1. पसंदीदा, Velvet Selection या कोई भाषा चुनें, फिर एक स्टेशन।\n1. स्क्रीन या स्टीयरिंग के अगला/पिछला बटन उसी सूची में आगे-पीछे जाते हैं जहाँ से आपने शुरू किया।\n1. मोबाइल डेटा पर लंबी यात्रा में कम डेटा के लिए डेटा सेवर चालू करें।"
+   }
+  },
+  {
+   "id": "android-tv",
+   "section": "Setting up on your devices",
+   "en": {
+    "q": "Android TV",
+    "a": "1. On the TV, open the Google Play Store, search for Radio Velvet and install it. If it doesn't show yet, it is still being approved for TVs.\n1. Open it from the Apps row on the TV's home screen.\n1. Use the remote's arrows to move between rows of stations and press OK to play. Back returns to the list.\n1. The TV version is always dark, so it is easy on the eyes in a dim room."
+   },
+   "ml": {
+    "q": "Android TV",
+    "a": "1. ടിവിയിൽ Google Play Store തുറന്ന് Radio Velvet തിരഞ്ഞ് ഇൻസ്റ്റാൾ ചെയ്യുക. ഇതുവരെ കാണുന്നില്ലെങ്കിൽ ടിവികൾക്കുള്ള അംഗീകാരം നടക്കുകയാണ്.\n1. ടിവിയുടെ ഹോം സ്ക്രീനിലെ Apps നിരയിൽ നിന്ന് തുറക്കുക.\n1. റിമോട്ടിലെ അമ്പടയാളങ്ങൾ കൊണ്ട് നിലയങ്ങളുടെ നിരകളിലൂടെ നീങ്ങി OK അമർത്തിയാൽ പ്ലേ ആകും. Back അമർത്തിയാൽ പട്ടികയിലേക്ക് മടങ്ങും.\n1. ടിവി പതിപ്പ് എപ്പോഴും ഇരുണ്ട നിറത്തിലാണ്; മങ്ങിയ മുറിയിൽ കണ്ണിന് സുഖം."
+   },
+   "hi": {
+    "q": "Android TV",
+    "a": "1. टीवी पर Google Play Store खोलें, Radio Velvet खोजें और इंस्टॉल करें। अगर अभी न दिखे, तो टीवी के लिए मंज़ूरी चल रही है।\n1. टीवी की होम स्क्रीन की Apps पंक्ति से खोलें।\n1. रिमोट के तीरों से स्टेशनों की पंक्तियों में घूमें और OK दबाकर चलाएँ। Back से सूची पर लौटें।\n1. टीवी वाला रूप हमेशा गहरे रंग में रहता है, ताकि कम रोशनी में आँखों को आराम रहे।"
+   }
+  },
+  {
+   "id": "iphone",
+   "section": "Setting up on your devices",
+   "en": {
+    "q": "iPhone or iPad",
+    "a": "There is no iPhone app yet, but the website works well.\n1. Open Safari and go to [ranjithkb.com/radio.html](https://ranjithkb.com/radio.html) (or radio.ranjithkb.com).\n1. Tap the Share button, then Add to Home Screen. Radio Velvet now opens like an app from its icon.\n1. Tap a station. It keeps playing with the screen locked; the lock-screen arrows change station.\n1. Optional: sign in with Google to keep your favourites."
+   },
+   "ml": {
+    "q": "iPhone അല്ലെങ്കിൽ iPad",
+    "a": "iPhone ആപ്പ് ഇതുവരെ ഇല്ല, പക്ഷേ വെബ്സൈറ്റ് നന്നായി പ്രവർത്തിക്കും.\n1. Safari തുറന്ന് [ranjithkb.com/radio.html](https://ranjithkb.com/radio.html) (അല്ലെങ്കിൽ radio.ranjithkb.com) തുറക്കുക.\n1. Share ബട്ടൺ തൊട്ട് Add to Home Screen തിരഞ്ഞെടുക്കുക. ഇനി ഐക്കണിൽ നിന്ന് ഒരു ആപ്പ് പോലെ തുറക്കാം.\n1. ഒരു നിലയം തൊടുക. സ്ക്രീൻ ലോക്ക് ചെയ്താലും പ്ലേ ചെയ്യും; ലോക്ക് സ്ക്രീനിലെ അമ്പടയാളങ്ങൾ നിലയം മാറ്റും.\n1. വേണമെങ്കിൽ: പ്രിയപ്പെട്ടവ സൂക്ഷിക്കാൻ Google ഉപയോഗിച്ച് സൈൻ ഇൻ ചെയ്യുക."
+   },
+   "hi": {
+    "q": "iPhone या iPad",
+    "a": "अभी iPhone ऐप नहीं है, लेकिन वेबसाइट अच्छी चलती है।\n1. Safari खोलें और [ranjithkb.com/radio.html](https://ranjithkb.com/radio.html) (या radio.ranjithkb.com) पर जाएँ।\n1. Share बटन दबाएँ, फिर Add to Home Screen। अब Radio Velvet अपने आइकन से ऐप की तरह खुलेगा।\n1. कोई स्टेशन छुएँ। स्क्रीन लॉक होने पर भी चलता रहेगा; लॉक-स्क्रीन के तीर स्टेशन बदलते हैं।\n1. चाहें तो: पसंदीदा रखने के लिए Google से साइन इन करें।"
+   }
+  },
+  {
+   "id": "carplay",
+   "section": "Setting up on your devices",
+   "en": {
+    "q": "Apple CarPlay",
+    "a": "There is no CarPlay app. You can still listen in the car:\n1. Start a station on the iPhone (from the home-screen icon) before you set off.\n1. Connect the iPhone to the car by cable or wirelessly. The sound comes through the car speakers, and on most cars the Now Playing screen shows it with pause and play.\n1. Choosing another station has to be done on the phone, so do it only when parked."
+   },
+   "ml": {
+    "q": "Apple CarPlay",
+    "a": "CarPlay ആപ്പ് ഇല്ല. എങ്കിലും കാറിൽ കേൾക്കാം:\n1. യാത്ര തുടങ്ങും മുമ്പ് iPhone-ൽ (ഹോം സ്ക്രീൻ ഐക്കണിൽ നിന്ന്) ഒരു നിലയം തുടങ്ങുക.\n1. കേബിൾ വഴിയോ വയർലെസ്സായോ iPhone കാറുമായി ബന്ധിപ്പിക്കുക. കാറിന്റെ സ്പീക്കറിൽ ശബ്ദം വരും; മിക്ക കാറുകളിലും Now Playing സ്ക്രീനിൽ പോസ്, പ്ലേ എന്നിവ കാണാം.\n1. മറ്റൊരു നിലയം തിരഞ്ഞെടുക്കാൻ ഫോൺ വേണം; അതിനാൽ വണ്ടി നിർത്തിയിട്ട് മാത്രം ചെയ്യുക."
+   },
+   "hi": {
+    "q": "Apple CarPlay",
+    "a": "CarPlay ऐप नहीं है। फिर भी कार में सुन सकते हैं:\n1. निकलने से पहले iPhone पर (होम-स्क्रीन आइकन से) कोई स्टेशन चालू करें।\n1. iPhone को केबल या वायरलेस से कार से जोड़ें। आवाज़ कार के स्पीकर में आएगी, और ज़्यादातर कारों में Now Playing स्क्रीन पर पॉज़ और प्ले दिखेगा।\n1. दूसरा स्टेशन फ़ोन पर ही चुनना होगा, इसलिए यह गाड़ी रोककर ही करें।"
+   }
+  },
+  {
+   "id": "computer",
+   "section": "Setting up on your devices",
+   "en": {
+    "q": "Computer",
+    "a": "Open [ranjithkb.com/radio.html](https://ranjithkb.com/radio.html) in any browser (Chrome, Edge, Safari, Firefox). Nothing to install."
+   },
+   "ml": {
+    "q": "കമ്പ്യൂട്ടർ",
+    "a": "ഏത് ബ്രൗസറിലും (Chrome, Edge, Safari, Firefox) [ranjithkb.com/radio.html](https://ranjithkb.com/radio.html) തുറക്കുക. ഒന്നും ഇൻസ്റ്റാൾ ചെയ്യേണ്ട."
+   },
+   "hi": {
+    "q": "कंप्यूटर",
+    "a": "किसी भी ब्राउज़र (Chrome, Edge, Safari, Firefox) में [ranjithkb.com/radio.html](https://ranjithkb.com/radio.html) खोलें। कुछ इंस्टॉल नहीं करना।"
+   }
+  },
+  {
+   "id": "smartwatch",
+   "section": "Setting up on your devices",
+   "en": {
+    "q": "Garmin or other smartwatch",
+    "a": "Watches can't play live radio themselves. If your watch has music controls for your phone, it can pause, play and change station while the radio plays on the phone."
+   },
+   "ml": {
+    "q": "Garmin അല്ലെങ്കിൽ മറ്റ് സ്മാർട്ട് വാച്ച്",
+    "a": "വാച്ചുകൾക്ക് തനിയെ തത്സമയ റേഡിയോ പ്ലേ ചെയ്യാനാവില്ല. ഫോണിലെ സംഗീതം നിയന്ത്രിക്കാനുള്ള സൗകര്യം വാച്ചിലുണ്ടെങ്കിൽ, ഫോണിൽ റേഡിയോ പ്ലേ ചെയ്യുമ്പോൾ പോസ് ചെയ്യാനും പ്ലേ ചെയ്യാനും നിലയം മാറ്റാനും കഴിയും."
+   },
+   "hi": {
+    "q": "Garmin या दूसरी स्मार्टवॉच",
+    "a": "घड़ियाँ खुद लाइव रेडियो नहीं चला सकतीं। अगर आपकी घड़ी में फ़ोन का संगीत चलाने के कंट्रोल हैं, तो फ़ोन पर रेडियो चलते समय वह पॉज़, प्ले और स्टेशन बदल सकती है।"
+   }
+  },
+  {
+   "id": "choose-language",
+   "section": "Finding stations",
+   "en": {
+    "q": "How do I choose a language?",
+    "a": "The row of languages at the top of Stations starts with Malayalam. Swipe it sideways for others, or tap All languages at the end of the row to search every language."
+   },
+   "ml": {
+    "q": "ഭാഷ എങ്ങനെ തിരഞ്ഞെടുക്കും?",
+    "a": "നിലയങ്ങളുടെ മുകളിലെ ഭാഷാ നിര Malayalam-ൽ തുടങ്ങുന്നു. മറ്റുള്ളവയ്ക്കായി വശത്തേക്ക് നീക്കുക, അല്ലെങ്കിൽ നിരയുടെ അവസാനത്തെ 'എല്ലാ ഭാഷകളും' തൊട്ട് എല്ലാ ഭാഷകളിലും തിരയുക."
+   },
+   "hi": {
+    "q": "भाषा कैसे चुनें?",
+    "a": "स्टेशनों के ऊपर भाषाओं की पंक्ति Malayalam से शुरू होती है। दूसरी भाषाओं के लिए इसे बगल में सरकाएँ, या पंक्ति के आख़िर में 'सभी भाषाएँ' छूकर हर भाषा में खोजें।"
+   }
+  },
+  {
+   "id": "malayalam-first",
+   "section": "Finding stations",
+   "en": {
+    "q": "Why does everything start in Malayalam? I listen in another language.",
+    "a": "Radio Velvet was made first for Malayalis, so a new install opens on Malayalam stations. You can put your own language first in a few taps (from 2.10): tap All languages at the end of the language row, find your language and tap its pin. It joins the top row; use Arrange to put it in front, and unpin Malayalam if you don't need it. The app remembers your choice."
+   },
+   "ml": {
+    "q": "എല്ലാം Malayalam-ൽ തുടങ്ങുന്നത് എന്തുകൊണ്ട്? ഞാൻ മറ്റൊരു ഭാഷയാണ് കേൾക്കുന്നത്.",
+    "a": "Radio Velvet ആദ്യം മലയാളികൾക്കായി ഉണ്ടാക്കിയതിനാൽ പുതിയ ഇൻസ്റ്റാളിൽ Malayalam നിലയങ്ങൾ ആദ്യം തുറക്കും. കുറച്ച് തൊടലുകളിൽ നിങ്ങളുടെ ഭാഷ ആദ്യം വയ്ക്കാം (2.10 മുതൽ): ഭാഷാ നിരയുടെ അവസാനത്തെ 'എല്ലാ ഭാഷകളും' തൊട്ട്, നിങ്ങളുടെ ഭാഷ കണ്ടെത്തി അതിന്റെ പിൻ തൊടുക. അത് മുകളിലെ നിരയിൽ ചേരും; 'ക്രമീകരിക്കുക' ഉപയോഗിച്ച് മുന്നിലേക്ക് മാറ്റാം, വേണ്ടെങ്കിൽ Malayalam അൺപിൻ ചെയ്യാം. ആപ്പ് നിങ്ങളുടെ തിരഞ്ഞെടുപ്പ് ഓർക്കും."
+   },
+   "hi": {
+    "q": "सब कुछ Malayalam से क्यों शुरू होता है? मैं दूसरी भाषा सुनता/सुनती हूँ।",
+    "a": "Radio Velvet पहले मलयालियों के लिए बना था, इसलिए नए इंस्टॉल पर Malayalam स्टेशन खुलते हैं। कुछ ही टैप में अपनी भाषा पहले रखें (2.10 से): भाषा पंक्ति के आख़िर में 'सभी भाषाएँ' छुएँ, अपनी भाषा ढूँढें और उसका पिन छुएँ। वह ऊपर की पंक्ति में आ जाएगी; 'क्रम बदलें' से उसे आगे रखें, और ज़रूरत न हो तो Malayalam का पिन हटा दें। ऐप आपकी पसंद याद रखेगा।"
+   }
+  },
+  {
+   "id": "pin-language",
+   "section": "Finding stations",
+   "en": {
+    "q": "What does pinning a language do? (from 2.10)",
+    "a": "A pinned language stays in your top row. In the All languages list, tap the pin next to a language; tap the filled pin to remove it. A language you open without pinning shows a small pin in the row, so you can keep it with one tap. Malayalam is pinned for you at the start, but you can unpin or move it like any other."
+   },
+   "ml": {
+    "q": "ഒരു ഭാഷ പിൻ ചെയ്താൽ എന്ത് സംഭവിക്കും? (2.10 മുതൽ)",
+    "a": "പിൻ ചെയ്ത ഭാഷ മുകളിലെ നിരയിൽ നിൽക്കും. 'എല്ലാ ഭാഷകളും' പട്ടികയിൽ ഭാഷയുടെ അടുത്തുള്ള പിൻ തൊടുക; നിറമുള്ള പിൻ വീണ്ടും തൊട്ടാൽ മാറും. പിൻ ചെയ്യാതെ തുറന്ന ഭാഷയ്ക്ക് നിരയിൽ ഒരു ചെറിയ പിൻ കാണാം; ഒറ്റ തൊടലിൽ സൂക്ഷിക്കാം. തുടക്കത്തിൽ Malayalam പിൻ ചെയ്തിരിക്കും, പക്ഷേ മറ്റേതിനെയും പോലെ അത് മാറ്റുകയോ നീക്കുകയോ ചെയ്യാം."
+   },
+   "hi": {
+    "q": "भाषा पिन करने से क्या होता है? (2.10 से)",
+    "a": "पिन की गई भाषा आपकी ऊपर की पंक्ति में रहती है। 'सभी भाषाएँ' सूची में भाषा के पास पिन छुएँ; भरे हुए पिन को फिर छूने से हट जाएगी। बिना पिन किए खोली गई भाषा पंक्ति में एक छोटा पिन दिखाती है, ताकि एक टैप में रख सकें। शुरू में Malayalam पिन रहता है, पर उसे भी बाकी की तरह हटा या खिसका सकते हैं।"
+   }
+  },
+  {
+   "id": "velvet-selection",
+   "section": "Finding stations",
+   "en": {
+    "q": "What is Velvet Selection?",
+    "a": "A short list of stations picked by hand for good sound and reliable streams. It is the first chip in the top row, with the gold star. You can sort it by most heard or top rated; Velvet's order is the hand-picked order."
+   },
+   "ml": {
+    "q": "Velvet Selection എന്താണ്?",
+    "a": "നല്ല ശബ്ദത്തിനും ഇടമുറിയാത്ത സ്ട്രീമിനുമായി കൈകൊണ്ട് തിരഞ്ഞെടുത്ത നിലയങ്ങളുടെ ഒരു ചെറു പട്ടിക. മുകളിലെ നിരയിലെ സ്വർണ നക്ഷത്രമുള്ള ആദ്യ ചിപ്പ്. കൂടുതൽ കേട്ടതോ മികച്ച റേറ്റിങ്ങോ അനുസരിച്ച് ക്രമപ്പെടുത്താം; 'വെൽവെറ്റിന്റെ ക്രമം' കൈകൊണ്ട് തിരഞ്ഞെടുത്ത ക്രമമാണ്."
+   },
+   "hi": {
+    "q": "Velvet Selection क्या है?",
+    "a": "अच्छी आवाज़ और भरोसेमंद स्ट्रीम के लिए हाथ से चुने गए स्टेशनों की छोटी सूची। यह ऊपर की पंक्ति की पहली चिप है, सुनहरे तारे वाली। इसे सबसे ज़्यादा सुने या सबसे अच्छी रेटिंग से क्रम में लगा सकते हैं; 'वेल्वेट का क्रम' हाथ से चुना गया क्रम है।"
+   }
+  },
+  {
+   "id": "narrow-list",
+   "section": "Finding stations",
+   "en": {
+    "q": "How do I narrow the list? (from 2.10)",
+    "a": "Under the languages is one line such as “All kinds · most heard first”. Tap an underlined word to change it: the kind of station (film songs, devotional, news, TV channels…) or the order."
+   },
+   "ml": {
+    "q": "പട്ടിക എങ്ങനെ ചുരുക്കാം? (2.10 മുതൽ)",
+    "a": "ഭാഷകൾക്ക് താഴെ “എല്ലാ തരവും · കൂടുതൽ കേട്ടത് ആദ്യം” പോലെ ഒരു വരിയുണ്ട്. അടിവരയിട്ട വാക്ക് തൊട്ട് മാറ്റാം: നിലയത്തിന്റെ തരം (സിനിമാഗാനം, ഭക്തി, വാർത്ത, ടിവി ചാനലുകൾ…) അല്ലെങ്കിൽ ക്രമം."
+   },
+   "hi": {
+    "q": "सूची छोटी कैसे करें? (2.10 से)",
+    "a": "भाषाओं के नीचे एक पंक्ति है, जैसे “सभी तरह के · सबसे ज़्यादा सुने पहले”। रेखांकित शब्द छूकर बदलें: स्टेशन का प्रकार (फ़िल्मी गाने, भक्ति, समाचार, टीवी चैनल…) या क्रम।"
+   }
+  },
+  {
+   "id": "most-heard-top-rated",
+   "section": "Finding stations",
+   "en": {
+    "q": "What are Most heard and Top rated?",
+    "a": "Most heard puts first the stations people have listened to most since Radio Velvet started counting. Top rated uses the stars listeners give. Both are worked out every night from anonymous totals; nothing about you is counted."
+   },
+   "ml": {
+    "q": "'കൂടുതൽ കേട്ടത്', 'മികച്ച റേറ്റിങ്' എന്നിവ എന്താണ്?",
+    "a": "Radio Velvet എണ്ണാൻ തുടങ്ങിയത് മുതൽ ആളുകൾ ഏറ്റവും കൂടുതൽ കേട്ട നിലയങ്ങൾ 'കൂടുതൽ കേട്ടത്' ആദ്യം കാണിക്കും. 'മികച്ച റേറ്റിങ്' കേൾവിക്കാർ നൽകുന്ന നക്ഷത്രങ്ങൾ ഉപയോഗിക്കുന്നു. രണ്ടും എല്ലാ രാത്രിയും പേരില്ലാത്ത ആകെക്കണക്കുകളിൽ നിന്ന് കണക്കാക്കുന്നു; നിങ്ങളെക്കുറിച്ച് ഒന്നും എണ്ണുന്നില്ല."
+   },
+   "hi": {
+    "q": "'सबसे ज़्यादा सुने' और 'सबसे अच्छी रेटिंग' क्या हैं?",
+    "a": "'सबसे ज़्यादा सुने' उन स्टेशनों को पहले रखता है जिन्हें Radio Velvet के गिनती शुरू करने के बाद से लोगों ने सबसे ज़्यादा सुना। 'सबसे अच्छी रेटिंग' श्रोताओं के दिए तारों से बनती है। दोनों हर रात बेनाम कुल आँकड़ों से निकाले जाते हैं; आपके बारे में कुछ नहीं गिना जाता।"
+   }
+  },
+  {
+   "id": "tv-tag",
+   "section": "Finding stations",
+   "en": {
+    "q": "What does the TV tag mean?",
+    "a": "The station is the sound of a TV channel, such as a news channel. Expect gaps or adverts made for the screen."
+   },
+   "ml": {
+    "q": "TV അടയാളം എന്താണ്?",
+    "a": "ഈ നിലയം ഒരു ടിവി ചാനലിന്റെ (ഉദാഹരണത്തിന് വാർത്താ ചാനൽ) ശബ്ദമാണ്. സ്ക്രീനിനായുള്ള ഇടവേളകളോ പരസ്യങ്ങളോ പ്രതീക്ഷിക്കാം."
+   },
+   "hi": {
+    "q": "TV निशान का क्या मतलब है?",
+    "a": "यह स्टेशन किसी टीवी चैनल (जैसे समाचार चैनल) की आवाज़ है। स्क्रीन के लिए बने विराम या विज्ञापन आ सकते हैं।"
+   }
+  },
+  {
+   "id": "only-plays-in",
+   "section": "Finding stations",
+   "en": {
+    "q": "What does “Only plays in …” mean?",
+    "a": "The broadcaster allows listening only inside that country. Outside it, the station may stay silent."
+   },
+   "ml": {
+    "q": "“… ൽ മാത്രം പ്ലേ ആകും” എന്നാൽ എന്ത്?",
+    "a": "ആ രാജ്യത്തിനുള്ളിൽ മാത്രമേ കേൾക്കാൻ പ്രക്ഷേപകർ അനുവദിക്കുന്നുള്ളൂ. പുറത്ത് നിലയം നിശ്ശബ്ദമായേക്കാം."
+   },
+   "hi": {
+    "q": "“सिर्फ़ … में चलता है” का क्या मतलब है?",
+    "a": "प्रसारक सिर्फ़ उसी देश के अंदर सुनने की अनुमति देता है। बाहर स्टेशन चुप रह सकता है।"
+   }
+  },
+  {
+   "id": "station-missing",
+   "section": "Finding stations",
+   "en": {
+    "q": "A station I like is missing. What can I do?",
+    "a": "Use Suggest a station (Settings → Feedback in the app, or on the Radio page). A link to its stream helps, but its name and city are enough."
+   },
+   "ml": {
+    "q": "എനിക്കിഷ്ടമുള്ള ഒരു നിലയം ഇല്ല. എന്തു ചെയ്യാം?",
+    "a": "'ഒരു നിലയം നിർദേശിക്കുക' ഉപയോഗിക്കുക (ആപ്പിൽ സെറ്റിങ്സ് → അഭിപ്രായം, അല്ലെങ്കിൽ റേഡിയോ പേജിൽ). സ്ട്രീം ലിങ്ക് ഉണ്ടെങ്കിൽ നല്ലത്, പക്ഷേ പേരും സ്ഥലവും മതി."
+   },
+   "hi": {
+    "q": "मेरा पसंदीदा स्टेशन नहीं है। क्या करूँ?",
+    "a": "'कोई स्टेशन सुझाएँ' इस्तेमाल करें (ऐप में सेटिंग्स → सुझाव, या रेडियो पेज पर)। स्ट्रीम का लिंक हो तो अच्छा, वरना नाम और शहर काफ़ी हैं।"
+   }
+  },
+  {
+   "id": "own-station",
+   "section": "Finding stations",
+   "en": {
+    "q": "Can I add my own station? (from 2.10)",
+    "a": "Yes. In Favourites tap Add your own station (or Settings → Favourites → Your own stations), give it a name and paste its stream link. The app checks the link before saving. It stays private on your phone and shows in Favourites with a “Yours” mark, in the car too."
+   },
+   "ml": {
+    "q": "എന്റെ സ്വന്തം നിലയം ചേർക്കാമോ? (2.10 മുതൽ)",
+    "a": "ചേർക്കാം. പ്രിയപ്പെട്ടവയിൽ 'സ്വന്തം നിലയം ചേർക്കുക' തൊടുക (അല്ലെങ്കിൽ സെറ്റിങ്സ് → പ്രിയപ്പെട്ടവ → നിങ്ങളുടെ സ്വന്തം നിലയങ്ങൾ), ഒരു പേര് നൽകി സ്ട്രീം ലിങ്ക് ഒട്ടിക്കുക. സൂക്ഷിക്കും മുമ്പ് ആപ്പ് ലിങ്ക് പരിശോധിക്കും. ഇത് നിങ്ങളുടെ ഫോണിൽ സ്വകാര്യമായി ഇരിക്കും; പ്രിയപ്പെട്ടവയിൽ, കാറിലും, “നിങ്ങളുടേത്” എന്ന അടയാളത്തോടെ കാണാം."
+   },
+   "hi": {
+    "q": "क्या मैं अपना स्टेशन जोड़ सकता/सकती हूँ? (2.10 से)",
+    "a": "हाँ। पसंदीदा में 'अपना स्टेशन जोड़ें' छुएँ (या सेटिंग्स → पसंदीदा → आपके अपने स्टेशन), नाम दें और स्ट्रीम लिंक चिपकाएँ। सहेजने से पहले ऐप लिंक जाँचता है। यह आपके फ़ोन पर निजी रहता है और पसंदीदा में, कार में भी, “आपका” निशान के साथ दिखता है।"
+   }
+  },
+  {
+   "id": "wont-play",
+   "section": "Playing",
+   "en": {
+    "q": "A station won't play or keeps saying Connecting. Why?",
+    "a": "The station's own server may be down or busy. Radio Velvet tries its other links and reconnects on its own for a while. Try another station and come back later. Every station is tested twice a day, and ones that stop working are set aside until they play again."
+   },
+   "ml": {
+    "q": "ഒരു നിലയം പ്ലേ ആകുന്നില്ല, അല്ലെങ്കിൽ 'കണക്റ്റ് ചെയ്യുന്നു' എന്ന് തുടരുന്നു. എന്തുകൊണ്ട്?",
+    "a": "നിലയത്തിന്റെ സ്വന്തം സർവർ പ്രവർത്തിക്കാത്തതോ തിരക്കിലോ ആകാം. Radio Velvet അതിന്റെ മറ്റ് ലിങ്കുകൾ നോക്കുകയും കുറച്ചുനേരം തനിയെ വീണ്ടും ബന്ധിപ്പിക്കുകയും ചെയ്യും. മറ്റൊരു നിലയം കേട്ട് പിന്നീട് വരിക. എല്ലാ നിലയങ്ങളും ദിവസം രണ്ടുതവണ പരിശോധിക്കുന്നു; പ്രവർത്തിക്കാത്തവ വീണ്ടും പ്ലേ ആകും വരെ മാറ്റിവയ്ക്കും."
+   },
+   "hi": {
+    "q": "स्टेशन नहीं चल रहा या 'कनेक्ट हो रहा है' ही दिखता है। क्यों?",
+    "a": "स्टेशन का अपना सर्वर बंद या व्यस्त हो सकता है। Radio Velvet उसके दूसरे लिंक आज़माता है और कुछ देर अपने-आप फिर जुड़ता है। कोई दूसरा स्टेशन सुनें और बाद में लौटें। हर स्टेशन दिन में दो बार जाँचा जाता है, और जो काम करना बंद कर दें उन्हें फिर चलने तक अलग रखा जाता है।"
+   }
+  },
+  {
+   "id": "abroad",
+   "section": "Playing",
+   "en": {
+    "q": "Why does a station play at home but not abroad?",
+    "a": "Some broadcasters allow listening only from their own country. These are marked “Only plays in …” when we know."
+   },
+   "ml": {
+    "q": "നാട്ടിൽ പ്ലേ ആകുന്ന നിലയം വിദേശത്ത് ആകാത്തത് എന്തുകൊണ്ട്?",
+    "a": "ചില പ്രക്ഷേപകർ സ്വന്തം രാജ്യത്ത് നിന്ന് മാത്രമേ കേൾക്കാൻ അനുവദിക്കൂ. അറിയാവുന്നവ “… ൽ മാത്രം പ്ലേ ആകും” എന്ന് അടയാളപ്പെടുത്തിയിട്ടുണ്ട്."
+   },
+   "hi": {
+    "q": "स्टेशन देश में चलता है पर विदेश में नहीं, क्यों?",
+    "a": "कुछ प्रसारक सिर्फ़ अपने देश से सुनने देते हैं। जिनका पता है, उन पर “सिर्फ़ … में चलता है” लिखा है।"
+   }
+  },
+  {
+   "id": "song-names",
+   "section": "Playing",
+   "en": {
+    "q": "Where do the song names and covers come from?",
+    "a": "The song name comes from the station itself. The cover is looked up by that name, so it can now and then be the wrong picture, or missing when a station sends no song name."
+   },
+   "ml": {
+    "q": "പാട്ടിന്റെ പേരും ചിത്രവും എവിടെ നിന്ന് വരുന്നു?",
+    "a": "പാട്ടിന്റെ പേര് നിലയം തന്നെ അയയ്ക്കുന്നതാണ്. ആ പേര് വച്ചാണ് ചിത്രം തിരയുന്നത്; അതിനാൽ ചിലപ്പോൾ തെറ്റായ ചിത്രം വരാം, പേര് അയയ്ക്കാത്ത നിലയങ്ങൾക്ക് ചിത്രം ഇല്ലാതാകാം."
+   },
+   "hi": {
+    "q": "गानों के नाम और तस्वीरें कहाँ से आती हैं?",
+    "a": "गाने का नाम स्टेशन खुद भेजता है। तस्वीर उसी नाम से खोजी जाती है, इसलिए कभी-कभी ग़लत हो सकती है, या जब स्टेशन नाम न भेजे तो नहीं दिखती।"
+   }
+  },
+  {
+   "id": "data-use",
+   "section": "Playing",
+   "en": {
+    "q": "How much data does radio use?",
+    "a": "Roughly 30 MB an hour for a light stream (64 kbps) and about 60 MB an hour for a typical one (128 kbps). Data saver picks each station's lightest link and skips song pictures. Set it to work only on mobile data, or always. Settings shows how much the radio used this month."
+   },
+   "ml": {
+    "q": "റേഡിയോ എത്ര ഡാറ്റ ഉപയോഗിക്കും?",
+    "a": "ലഘുവായ സ്ട്രീമിന് (64 kbps) മണിക്കൂറിൽ ഏകദേശം 30 MB, സാധാരണ സ്ട്രീമിന് (128 kbps) ഏകദേശം 60 MB. ഡാറ്റ സേവർ ഓരോ നിലയത്തിന്റെയും ഏറ്റവും ലഘുവായ ലിങ്ക് തിരഞ്ഞെടുക്കുകയും പാട്ടിന്റെ ചിത്രങ്ങൾ ഒഴിവാക്കുകയും ചെയ്യും. മൊബൈൽ ഡാറ്റയിൽ മാത്രമോ എപ്പോഴുമോ ആക്കാം. ഈ മാസം റേഡിയോ എത്ര ഉപയോഗിച്ചെന്ന് സെറ്റിങ്സിൽ കാണാം."
+   },
+   "hi": {
+    "q": "रेडियो कितना डेटा लेता है?",
+    "a": "हल्की स्ट्रीम (64 kbps) के लिए लगभग 30 MB प्रति घंटा, और आम स्ट्रीम (128 kbps) के लिए लगभग 60 MB। डेटा सेवर हर स्टेशन का सबसे हल्का लिंक चुनता है और गानों की तस्वीरें छोड़ देता है। इसे सिर्फ़ मोबाइल डेटा पर या हमेशा चालू रखें। सेटिंग्स में दिखता है कि इस महीने रेडियो ने कितना डेटा लिया।"
+   }
+  },
+  {
+   "id": "even-volume",
+   "section": "Playing",
+   "en": {
+    "q": "Some stations are louder than others. Can that be evened out? (from 2.10)",
+    "a": "Yes. Even volume (Settings → Sound, on at the start) gently brings every station to about the same loudness, so changing station doesn't make you reach for the volume. The app remembers each station's level on your phone."
+   },
+   "ml": {
+    "q": "ചില നിലയങ്ങൾക്ക് ശബ്ദം കൂടുതലാണ്. ഒരുപോലെയാക്കാമോ? (2.10 മുതൽ)",
+    "a": "ആക്കാം. 'ഒരേ ശബ്ദനില' (സെറ്റിങ്സ് → ശബ്ദം; തുടക്കത്തിൽ ഓൺ) എല്ലാ നിലയങ്ങളെയും പതുക്കെ ഏകദേശം ഒരേ ശബ്ദത്തിലാക്കും; നിലയം മാറ്റുമ്പോൾ വോളിയം തിരിക്കേണ്ടി വരില്ല. ഓരോ നിലയത്തിന്റെയും നില ആപ്പ് ഫോണിൽ ഓർക്കും."
+   },
+   "hi": {
+    "q": "कुछ स्टेशन ज़्यादा तेज़ हैं। क्या आवाज़ एक-सी हो सकती है? (2.10 से)",
+    "a": "हाँ। 'एक-सी आवाज़' (सेटिंग्स → आवाज़; शुरू से चालू) हर स्टेशन को धीरे-धीरे लगभग एक जैसी आवाज़ पर लाती है, ताकि स्टेशन बदलने पर वॉल्यूम न बदलना पड़े। ऐप हर स्टेशन का स्तर आपके फ़ोन पर याद रखता है।"
+   }
+  },
+  {
+   "id": "sleep-timer",
+   "section": "Playing",
+   "en": {
+    "q": "Can the radio switch itself off?",
+    "a": "Yes, with the sleep timer. Pick a time in the player and the radio fades out and stops."
+   },
+   "ml": {
+    "q": "റേഡിയോ തനിയെ ഓഫ് ആകുമോ?",
+    "a": "ആകും, സ്ലീപ് ടൈമർ ഉപയോഗിച്ച്. പ്ലെയറിൽ ഒരു സമയം തിരഞ്ഞെടുത്താൽ റേഡിയോ പതുക്കെ ശബ്ദം കുറച്ച് നിൽക്കും."
+   },
+   "hi": {
+    "q": "क्या रेडियो अपने-आप बंद हो सकता है?",
+    "a": "हाँ, स्लीप टाइमर से। प्लेयर में समय चुनें, रेडियो धीरे-धीरे धीमा होकर बंद हो जाएगा।"
+   }
+  },
+  {
+   "id": "equaliser",
+   "section": "Playing",
+   "en": {
+    "q": "Can I change the sound?",
+    "a": "Yes, with the equaliser in Settings → Sound. Choose a preset or set bass, middle and treble yourself."
+   },
+   "ml": {
+    "q": "ശബ്ദം മാറ്റാമോ?",
+    "a": "മാറ്റാം, സെറ്റിങ്സ് → ശബ്ദം എന്നതിലെ ഈക്വലൈസർ ഉപയോഗിച്ച്. ഒരു പ്രീസെറ്റ് തിരഞ്ഞെടുക്കാം, അല്ലെങ്കിൽ ബാസ്, മിഡിൽ, ട്രെബിൾ സ്വയം ക്രമീകരിക്കാം."
+   },
+   "hi": {
+    "q": "क्या आवाज़ बदल सकते हैं?",
+    "a": "हाँ, सेटिंग्स → आवाज़ में इक्वलाइज़र से। कोई प्रीसेट चुनें या बास, मिडल और ट्रेबल खुद सेट करें।"
+   }
+  },
+  {
+   "id": "after-videos",
+   "section": "Playing",
+   "en": {
+    "q": "The radio stopped when I watched a video. Can it carry on?",
+    "a": "Turn on Carry on after videos in Settings (until 2.10 it is called Resume after other apps). The radio then starts again when the other app stops. It never restarts over a phone call."
+   },
+   "ml": {
+    "q": "വീഡിയോ കണ്ടപ്പോൾ റേഡിയോ നിന്നു. തുടരുമോ?",
+    "a": "സെറ്റിങ്സിൽ 'വീഡിയോയ്ക്ക് ശേഷം തുടരുക' ഓൺ ചെയ്യുക (2.10 വരെ Resume after other apps). മറ്റേ ആപ്പ് നിൽക്കുമ്പോൾ റേഡിയോ വീണ്ടും തുടങ്ങും. ഫോൺ വിളിക്കിടയിൽ ഒരിക്കലും തുടങ്ങില്ല."
+   },
+   "hi": {
+    "q": "वीडियो देखते समय रेडियो रुक गया। क्या वह फिर चल सकता है?",
+    "a": "सेटिंग्स में 'वीडियो के बाद फिर चलाएँ' चालू करें (2.10 तक इसका नाम Resume after other apps है)। दूसरा ऐप रुकने पर रेडियो फिर शुरू होगा। फ़ोन कॉल के दौरान कभी नहीं।"
+   }
+  },
+  {
+   "id": "car-next-previous",
+   "section": "Playing",
+   "en": {
+    "q": "How do next and previous work in the car?",
+    "a": "They move through the list you started from: your Favourites, Velvet Selection, or a language. (from 2.10: this is fixed for Favourites.)"
+   },
+   "ml": {
+    "q": "കാറിൽ അടുത്തത്/മുമ്പത്തേത് എങ്ങനെ പ്രവർത്തിക്കുന്നു?",
+    "a": "നിങ്ങൾ തുടങ്ങിയ പട്ടികയിലൂടെ നീങ്ങും: പ്രിയപ്പെട്ടവ, Velvet Selection, അല്ലെങ്കിൽ ഒരു ഭാഷ. (2.10 മുതൽ: പ്രിയപ്പെട്ടവയിലെ പ്രശ്നം പരിഹരിച്ചു.)"
+   },
+   "hi": {
+    "q": "कार में अगला/पिछला कैसे काम करता है?",
+    "a": "ये उसी सूची में आगे-पीछे जाते हैं जहाँ से आपने शुरू किया: पसंदीदा, Velvet Selection, या कोई भाषा। (2.10 से: पसंदीदा वाली दिक्कत ठीक हो गई।)"
+   }
+  },
+  {
+   "id": "car-disconnect",
+   "section": "Playing",
+   "en": {
+    "q": "Does the radio stop when I leave the car? (from 2.10)",
+    "a": "Yes. When Android Auto or the car's Bluetooth disconnects, the radio pauses and doesn't start again on the phone by itself."
+   },
+   "ml": {
+    "q": "കാറിൽ നിന്ന് ഇറങ്ങുമ്പോൾ റേഡിയോ നിൽക്കുമോ? (2.10 മുതൽ)",
+    "a": "നിൽക്കും. Android Auto-യോ കാറിന്റെ Bluetooth-ഓ വിച്ഛേദിക്കുമ്പോൾ റേഡിയോ പോസ് ആകും; ഫോണിൽ തനിയെ വീണ്ടും തുടങ്ങില്ല."
+   },
+   "hi": {
+    "q": "कार से उतरने पर क्या रेडियो रुकता है? (2.10 से)",
+    "a": "हाँ। Android Auto या कार का Bluetooth कटने पर रेडियो रुक जाता है और फ़ोन पर अपने-आप फिर शुरू नहीं होता।"
+   }
+  },
+  {
+   "id": "cast",
+   "section": "Playing",
+   "en": {
+    "q": "Can I play the radio on a TV or speaker?",
+    "a": "Yes. Tap the cast button in the player and choose a Chromecast or Google Cast speaker on the same Wi-Fi."
+   },
+   "ml": {
+    "q": "ടിവിയിലോ സ്പീക്കറിലോ റേഡിയോ കേൾക്കാമോ?",
+    "a": "കേൾക്കാം. പ്ലെയറിലെ കാസ്റ്റ് ബട്ടൺ തൊട്ട്, അതേ Wi-Fi-യിലുള്ള Chromecast അല്ലെങ്കിൽ Google Cast സ്പീക്കർ തിരഞ്ഞെടുക്കുക."
+   },
+   "hi": {
+    "q": "क्या टीवी या स्पीकर पर रेडियो चला सकते हैं?",
+    "a": "हाँ। प्लेयर में कास्ट बटन छुएँ और उसी Wi-Fi पर Chromecast या Google Cast स्पीकर चुनें।"
+   }
+  },
+  {
+   "id": "how-alarms-work",
+   "section": "Alarms",
+   "en": {
+    "q": "How do radio alarms work?",
+    "a": "Set a time, the days and a station. At that time the radio starts on its own, even with the screen locked. You can keep several alarms."
+   },
+   "ml": {
+    "q": "റേഡിയോ അലാറം എങ്ങനെ പ്രവർത്തിക്കുന്നു?",
+    "a": "സമയം, ദിവസങ്ങൾ, ഒരു നിലയം എന്നിവ തിരഞ്ഞെടുക്കുക. ആ സമയത്ത് സ്ക്രീൻ ലോക്ക് ആണെങ്കിലും റേഡിയോ തനിയെ തുടങ്ങും. ഒന്നിലധികം അലാറങ്ങൾ വയ്ക്കാം."
+   },
+   "hi": {
+    "q": "रेडियो अलार्म कैसे काम करता है?",
+    "a": "समय, दिन और एक स्टेशन चुनें। उस समय स्क्रीन लॉक होने पर भी रेडियो अपने-आप चालू हो जाएगा। कई अलार्म रख सकते हैं।"
+   }
+  },
+  {
+   "id": "station-down",
+   "section": "Alarms",
+   "en": {
+    "q": "What if the station is down when the alarm goes off?",
+    "a": "Two minutes before, the app quietly checks the station. If it still won't play, the app tries the station's other links, then your backup (your favourites, a station you chose, or a plain tone). If nothing plays within about 20 seconds, the phone's own alarm sound rings, so you are never left without an alarm."
+   },
+   "ml": {
+    "q": "അലാറം അടിക്കുമ്പോൾ നിലയം പ്രവർത്തിക്കുന്നില്ലെങ്കിലോ?",
+    "a": "രണ്ട് മിനിറ്റ് മുമ്പ് ആപ്പ് നിശ്ശബ്ദമായി നിലയം പരിശോധിക്കും. എന്നിട്ടും പ്ലേ ആകുന്നില്ലെങ്കിൽ നിലയത്തിന്റെ മറ്റ് ലിങ്കുകളും പിന്നെ നിങ്ങളുടെ ബാക്കപ്പും (പ്രിയപ്പെട്ടവ, നിങ്ങൾ തിരഞ്ഞെടുത്ത നിലയം, അല്ലെങ്കിൽ ഒരു സാധാരണ ടോൺ) നോക്കും. ഏകദേശം 20 സെക്കൻഡിനുള്ളിൽ ഒന്നും പ്ലേ ആയില്ലെങ്കിൽ ഫോണിന്റെ സ്വന്തം അലാറം ശബ്ദം മുഴങ്ങും; അലാറം ഇല്ലാതെ പോകില്ല."
+   },
+   "hi": {
+    "q": "अलार्म बजते समय स्टेशन बंद हो तो?",
+    "a": "दो मिनट पहले ऐप चुपचाप स्टेशन जाँचता है। फिर भी न चले तो स्टेशन के दूसरे लिंक, फिर आपका बैकअप (पसंदीदा, आपका चुना स्टेशन, या एक सादी टोन) आज़माता है। लगभग 20 सेकंड में कुछ न चले तो फ़ोन का अपना अलार्म बजता है, ताकि आप कभी बिना अलार्म न रहें।"
+   }
+  },
+  {
+   "id": "stop-snooze",
+   "section": "Alarms",
+   "en": {
+    "q": "How do I stop or snooze it?",
+    "a": "Use Stop or Snooze (10 minutes) on the alarm notification, or open the app."
+   },
+   "ml": {
+    "q": "എങ്ങനെ നിർത്താം, സ്നൂസ് ചെയ്യാം?",
+    "a": "അലാറം നോട്ടിഫിക്കേഷനിലെ Stop അല്ലെങ്കിൽ Snooze (10 മിനിറ്റ്) ഉപയോഗിക്കുക, അല്ലെങ്കിൽ ആപ്പ് തുറക്കുക."
+   },
+   "hi": {
+    "q": "इसे कैसे रोकें या स्नूज़ करें?",
+    "a": "अलार्म नोटिफ़िकेशन पर Stop या Snooze (10 मिनट) दबाएँ, या ऐप खोलें।"
+   }
+  },
+  {
+   "id": "alarms-not-ringing",
+   "section": "Alarms",
+   "en": {
+    "q": "My alarm didn't ring. What should I check?",
+    "a": "Some phones stop apps in the background to save battery. In the phone's settings, set Radio Velvet's battery use to Unrestricted, and allow alarms and notifications for it. Then use Feedback to tell us what happened; the app keeps a short alarm log that helps."
+   },
+   "ml": {
+    "q": "അലാറം അടിച്ചില്ല. എന്ത് നോക്കണം?",
+    "a": "ബാറ്ററി ലാഭിക്കാൻ ചില ഫോണുകൾ പശ്ചാത്തലത്തിലുള്ള ആപ്പുകൾ നിർത്തും. ഫോണിന്റെ സെറ്റിങ്സിൽ Radio Velvet-ന്റെ ബാറ്ററി ഉപയോഗം Unrestricted ആക്കുക, അലാറങ്ങളും നോട്ടിഫിക്കേഷനുകളും അനുവദിക്കുക. എന്നിട്ട് 'അഭിപ്രായം' വഴി എന്ത് സംഭവിച്ചെന്ന് അറിയിക്കുക; ആപ്പ് സൂക്ഷിക്കുന്ന ചെറിയ അലാറം ലോഗ് സഹായിക്കും."
+   },
+   "hi": {
+    "q": "मेरा अलार्म नहीं बजा। क्या जाँचूँ?",
+    "a": "कुछ फ़ोन बैटरी बचाने के लिए पीछे चल रहे ऐप रोक देते हैं। फ़ोन की सेटिंग्स में Radio Velvet की बैटरी Unrestricted करें, और उसके लिए अलार्म और नोटिफ़िकेशन की अनुमति दें। फिर 'सुझाव' से बताएँ कि क्या हुआ; ऐप एक छोटा अलार्म लॉग रखता है जो मदद करता है।"
+   }
+  },
+  {
+   "id": "save-favourite",
+   "section": "Favourites and account",
+   "en": {
+    "q": "How do I save a favourite?",
+    "a": "Tap the heart on a station, in the list or in the big player. Your favourites appear first in the app and in the car."
+   },
+   "ml": {
+    "q": "പ്രിയപ്പെട്ടവയിൽ എങ്ങനെ ചേർക്കാം?",
+    "a": "പട്ടികയിലോ വലിയ പ്ലെയറിലോ നിലയത്തിന്റെ ഹൃദയചിഹ്നം തൊടുക. പ്രിയപ്പെട്ടവ ആപ്പിലും കാറിലും ആദ്യം വരും."
+   },
+   "hi": {
+    "q": "पसंदीदा कैसे जोड़ें?",
+    "a": "सूची में या बड़े प्लेयर में स्टेशन का दिल का निशान छुएँ। पसंदीदा ऐप और कार में सबसे पहले दिखते हैं।"
+   }
+  },
+  {
+   "id": "favourites-look",
+   "section": "Favourites and account",
+   "en": {
+    "q": "Can I change how favourites look?",
+    "a": "Yes. In Settings → Favourites, choose List or Tiles. Use Reorder to drag them into your order."
+   },
+   "ml": {
+    "q": "പ്രിയപ്പെട്ടവ കാണിക്കുന്ന രീതി മാറ്റാമോ?",
+    "a": "മാറ്റാം. സെറ്റിങ്സ് → പ്രിയപ്പെട്ടവ എന്നതിൽ പട്ടിക അല്ലെങ്കിൽ ടൈലുകൾ തിരഞ്ഞെടുക്കുക. ക്രമം മാറ്റാൻ 'ക്രമം മാറ്റുക' ഉപയോഗിച്ച് വലിച്ചുനീക്കുക."
+   },
+   "hi": {
+    "q": "क्या पसंदीदा दिखने का तरीका बदल सकते हैं?",
+    "a": "हाँ। सेटिंग्स → पसंदीदा में सूची या टाइल चुनें। अपना क्रम बनाने के लिए 'क्रम बदलें / हटाएँ' से खींचें।"
+   }
+  },
+  {
+   "id": "why-sign-in",
+   "section": "Favourites and account",
+   "en": {
+    "q": "Why sign in?",
+    "a": "Signing in with Google keeps your favourites and default language the same on your phone and the website, and keeps them safe if you change phones. Everything else works without signing in."
+   },
+   "ml": {
+    "q": "എന്തിന് സൈൻ ഇൻ ചെയ്യണം?",
+    "a": "Google ഉപയോഗിച്ച് സൈൻ ഇൻ ചെയ്താൽ നിങ്ങളുടെ പ്രിയപ്പെട്ടവയും സ്ഥിരം ഭാഷയും ഫോണിലും വെബ്സൈറ്റിലും ഒരുപോലെയാകും; ഫോൺ മാറിയാലും നഷ്ടപ്പെടില്ല. മറ്റെല്ലാം സൈൻ ഇൻ ഇല്ലാതെയും പ്രവർത്തിക്കും."
+   },
+   "hi": {
+    "q": "साइन इन क्यों करें?",
+    "a": "Google से साइन इन करने पर आपके पसंदीदा और मुख्य भाषा फ़ोन और वेबसाइट पर एक जैसे रहते हैं, और फ़ोन बदलने पर भी सुरक्षित रहते हैं। बाकी सब बिना साइन इन के भी चलता है।"
+   }
+  },
+  {
+   "id": "what-is-stored",
+   "section": "Favourites and account",
+   "en": {
+    "q": "What is stored when I sign in?",
+    "a": "Your favourites list, your default language, the stars you give stations and your own listening time (so it adds up across your phones). Only you can see it."
+   },
+   "ml": {
+    "q": "സൈൻ ഇൻ ചെയ്യുമ്പോൾ എന്തൊക്കെ സൂക്ഷിക്കും?",
+    "a": "നിങ്ങളുടെ പ്രിയപ്പെട്ടവയുടെ പട്ടിക, സ്ഥിരം ഭാഷ, നിലയങ്ങൾക്ക് നൽകുന്ന നക്ഷത്രങ്ങൾ, നിങ്ങളുടെ കേൾവി സമയം (ഫോണുകൾ തമ്മിൽ കൂട്ടിച്ചേർക്കാൻ). നിങ്ങൾക്ക് മാത്രമേ കാണാനാകൂ."
+   },
+   "hi": {
+    "q": "साइन इन करने पर क्या सहेजा जाता है?",
+    "a": "आपकी पसंदीदा सूची, मुख्य भाषा, स्टेशनों को दिए तारे और आपका सुनने का समय (ताकि आपके सभी फ़ोन का जोड़ बने)। इसे सिर्फ़ आप देख सकते हैं।"
+   }
+  },
+  {
+   "id": "delete-account",
+   "section": "Favourites and account",
+   "en": {
+    "q": "How do I delete my account?",
+    "a": "In the app: Info (from 2.10: You) → tap your name → Delete account. It removes your sign-in and everything saved with it."
+   },
+   "ml": {
+    "q": "അക്കൗണ്ട് എങ്ങനെ ഇല്ലാതാക്കാം?",
+    "a": "ആപ്പിൽ: Info (2.10 മുതൽ: നിങ്ങൾ) → നിങ്ങളുടെ പേര് തൊടുക → അക്കൗണ്ട് ഇല്ലാതാക്കുക. സൈൻ ഇന്നും അതോടൊപ്പം സൂക്ഷിച്ചതെല്ലാം നീക്കും."
+   },
+   "hi": {
+    "q": "खाता कैसे हटाएँ?",
+    "a": "ऐप में: Info (2.10 से: आप) → अपना नाम छुएँ → खाता हटाएँ। इससे आपका साइन-इन और उसके साथ सहेजा सब कुछ हट जाता है।"
+   }
+  },
+  {
+   "id": "colours",
+   "section": "Look and language",
+   "en": {
+    "q": "Can I change the colours?",
+    "a": "Yes. Settings → Colour theme has 15 themes, each in light and dark, or following your phone."
+   },
+   "ml": {
+    "q": "നിറങ്ങൾ മാറ്റാമോ?",
+    "a": "മാറ്റാം. സെറ്റിങ്സ് → നിറം എന്നതിൽ 15 തീമുകൾ ഉണ്ട്; ഓരോന്നും ഇളം നിറത്തിലും ഇരുണ്ട നിറത്തിലും, അല്ലെങ്കിൽ ഫോണിനനുസരിച്ച്."
+   },
+   "hi": {
+    "q": "क्या रंग बदल सकते हैं?",
+    "a": "हाँ। सेटिंग्स → रंग थीम में 15 थीम हैं, हर एक हल्के और गहरे रंग में, या फ़ोन के अनुसार।"
+   }
+  },
+  {
+   "id": "player-looks",
+   "section": "Look and language",
+   "en": {
+    "q": "What are player looks?",
+    "a": "The big player can look like a real radio from one era, from a 1930s cathedral set to a 1990s digital tuner. The knobs work: turn the tuning knob to change station and the volume knob for volume. Standard is the plain look."
+   },
+   "ml": {
+    "q": "പ്ലെയർ രൂപങ്ങൾ എന്താണ്?",
+    "a": "വലിയ പ്ലെയറിനെ ഒരു കാലഘട്ടത്തിലെ യഥാർഥ റേഡിയോ പോലെയാക്കാം — 1930-കളിലെ കത്തീഡ്രൽ സെറ്റ് മുതൽ 1990-കളിലെ ഡിജിറ്റൽ ട്യൂണർ വരെ. നോബുകൾ പ്രവർത്തിക്കും: ട്യൂണിങ് നോബ് തിരിച്ചാൽ നിലയം മാറും, വോളിയം നോബ് ശബ്ദം മാറ്റും. 'സാധാരണ' ലളിതമായ രൂപമാണ്."
+   },
+   "hi": {
+    "q": "प्लेयर के रूप क्या हैं?",
+    "a": "बड़ा प्लेयर किसी दौर के असली रेडियो जैसा दिख सकता है — 1930 के कैथेड्रल सेट से 1990 के डिजिटल ट्यूनर तक। नॉब काम करते हैं: ट्यूनिंग नॉब से स्टेशन बदलें और वॉल्यूम नॉब से आवाज़। 'सामान्य' सादा रूप है।"
+   }
+  },
+  {
+   "id": "bigger-text",
+   "section": "Look and language",
+   "en": {
+    "q": "Can I make the text bigger?",
+    "a": "Yes, in Settings → Text and font. Row size (Compact, Comfortable, Expanded) changes how roomy the station lists are."
+   },
+   "ml": {
+    "q": "എഴുത്ത് വലുതാക്കാമോ?",
+    "a": "ആക്കാം, സെറ്റിങ്സ് → എഴുത്തും ഫോണ്ടും എന്നതിൽ. നിര വലുപ്പം (ചെറുത്, സുഖപ്രദം, വിശാലം) നിലയങ്ങളുടെ പട്ടിക എത്ര ഇടവിട്ട് കാണിക്കണമെന്ന് മാറ്റും."
+   },
+   "hi": {
+    "q": "क्या अक्षर बड़े कर सकते हैं?",
+    "a": "हाँ, सेटिंग्स → अक्षर और फ़ॉन्ट में। पंक्ति का आकार (छोटा, आरामदायक, बड़ा) स्टेशन सूची की खुली जगह बदलता है।"
+   }
+  },
+  {
+   "id": "app-language",
+   "section": "Look and language",
+   "en": {
+    "q": "Can the app be in Malayalam or Hindi?",
+    "a": "Yes. Settings → Language: English, Malayalam or Hindi. On newer Android phones you can also set it in the phone's own language settings for the app."
+   },
+   "ml": {
+    "q": "ആപ്പ് മലയാളത്തിലോ ഹിന്ദിയിലോ ആക്കാമോ?",
+    "a": "ആക്കാം. സെറ്റിങ്സ് → ഭാഷ: English, Malayalam, Hindi. പുതിയ Android ഫോണുകളിൽ ഫോണിന്റെ സ്വന്തം ഭാഷാ സെറ്റിങ്സിലും ഈ ആപ്പിനായി മാറ്റാം."
+   },
+   "hi": {
+    "q": "क्या ऐप मलयालम या हिंदी में हो सकता है?",
+    "a": "हाँ। सेटिंग्स → भाषा: English, Malayalam या Hindi। नए Android फ़ोन में फ़ोन की अपनी भाषा सेटिंग्स से भी इस ऐप की भाषा बदल सकते हैं।"
+   }
+  },
+  {
+   "id": "tracking",
+   "section": "Privacy",
+   "en": {
+    "q": "Does Radio Velvet track me?",
+    "a": "No. To work out Most heard, the app and website add up minutes per station per day, with nothing that identifies you. There are no advertising trackers."
+   },
+   "ml": {
+    "q": "Radio Velvet എന്നെ നിരീക്ഷിക്കുന്നുണ്ടോ?",
+    "a": "ഇല്ല. 'കൂടുതൽ കേട്ടത്' കണക്കാക്കാൻ ആപ്പും വെബ്സൈറ്റും ഓരോ നിലയത്തിന്റെയും ദിവസേനയുള്ള മിനിറ്റുകൾ കൂട്ടുന്നു; നിങ്ങളെ തിരിച്ചറിയുന്ന ഒന്നും ഇല്ല. പരസ്യ ട്രാക്കറുകൾ ഇല്ല."
+   },
+   "hi": {
+    "q": "क्या Radio Velvet मुझ पर नज़र रखता है?",
+    "a": "नहीं। 'सबसे ज़्यादा सुने' के लिए ऐप और वेबसाइट हर स्टेशन के रोज़ के मिनट जोड़ते हैं, आपकी पहचान बताने वाली कोई चीज़ नहीं। कोई विज्ञापन ट्रैकर नहीं।"
+   }
+  },
+  {
+   "id": "crashes",
+   "section": "Privacy",
+   "en": {
+    "q": "What happens when the app crashes?",
+    "a": "A short technical report is sent so the fault can be fixed. It holds no personal details and is deleted once the bug is fixed."
+   },
+   "ml": {
+    "q": "ആപ്പ് ക്രാഷ് ആയാൽ എന്ത് സംഭവിക്കും?",
+    "a": "തകരാർ പരിഹരിക്കാൻ ഒരു ചെറിയ സാങ്കേതിക റിപ്പോർട്ട് അയയ്ക്കും. അതിൽ വ്യക്തിപരമായ വിവരങ്ങളില്ല; പ്രശ്നം പരിഹരിച്ചാൽ ഇല്ലാതാക്കും."
+   },
+   "hi": {
+    "q": "ऐप क्रैश होने पर क्या होता है?",
+    "a": "गड़बड़ी ठीक करने के लिए एक छोटी तकनीकी रिपोर्ट भेजी जाती है। उसमें कोई निजी जानकारी नहीं होती और बग ठीक होने पर हटा दी जाती है।"
+   }
+  },
+  {
+   "id": "listening-history",
+   "section": "Privacy",
+   "en": {
+    "q": "Who can see my listening history? (from 2.10)",
+    "a": "Your listening page (You → Your listening) is kept on your phone. If you sign in, it is also saved to your account so it follows you to a new phone. Nobody else sees it, unless you share its picture."
+   },
+   "ml": {
+    "q": "എന്റെ കേൾവി ചരിത്രം ആർക്ക് കാണാം? (2.10 മുതൽ)",
+    "a": "നിങ്ങളുടെ കേൾവി പേജ് (നിങ്ങൾ → നിങ്ങളുടെ കേൾവി) ഫോണിലാണ് സൂക്ഷിക്കുന്നത്. സൈൻ ഇൻ ചെയ്താൽ പുതിയ ഫോണിലും കിട്ടാൻ അക്കൗണ്ടിലും സൂക്ഷിക്കും. അതിന്റെ ചിത്രം നിങ്ങൾ പങ്കിട്ടാലല്ലാതെ മറ്റാരും കാണില്ല."
+   },
+   "hi": {
+    "q": "मेरे सुनने का इतिहास कौन देख सकता है? (2.10 से)",
+    "a": "आपका सुनने वाला पेज (आप → आपका सुनना) आपके फ़ोन पर रहता है। साइन इन करने पर यह आपके खाते में भी सहेजा जाता है ताकि नए फ़ोन पर मिले। जब तक आप उसकी तस्वीर शेयर न करें, कोई और नहीं देखता।"
+   }
+  },
+  {
+   "id": "privacy-notice",
+   "section": "Privacy",
+   "en": {
+    "q": "Where is the full privacy notice?",
+    "a": "At [ranjithkb.com/privacy.html](https://ranjithkb.com/privacy.html)."
+   },
+   "ml": {
+    "q": "പൂർണ സ്വകാര്യതാ അറിയിപ്പ് എവിടെ?",
+    "a": "[ranjithkb.com/privacy.html](https://ranjithkb.com/privacy.html) ൽ."
+   },
+   "hi": {
+    "q": "पूरी निजता सूचना कहाँ है?",
+    "a": "[ranjithkb.com/privacy.html](https://ranjithkb.com/privacy.html) पर।"
+   }
+  },
+  {
+   "id": "feedback",
+   "section": "Help and feedback",
+   "en": {
+    "q": "How do I suggest a station, ask for a feature or say thanks?",
+    "a": "In the app: Settings → Feedback (from 2.10). Suggest a station, Request a feature or Send a thank-you note each open a short form. Add your email only if you'd like a reply."
+   },
+   "ml": {
+    "q": "ഒരു നിലയം നിർദേശിക്കാനോ, സൗകര്യം ആവശ്യപ്പെടാനോ, നന്ദി പറയാനോ എങ്ങനെ?",
+    "a": "ആപ്പിൽ: സെറ്റിങ്സ് → അഭിപ്രായം (2.10 മുതൽ). 'ഒരു നിലയം നിർദേശിക്കുക', 'ഒരു സൗകര്യം ആവശ്യപ്പെടുക', 'ഒരു നന്ദി കുറിപ്പ് അയയ്ക്കുക' — ഓരോന്നും ഒരു ചെറിയ ഫോം തുറക്കും. മറുപടി വേണമെങ്കിൽ മാത്രം ഇമെയിൽ ചേർക്കുക."
+   },
+   "hi": {
+    "q": "स्टेशन सुझाने, सुविधा माँगने या धन्यवाद कहने के लिए क्या करें?",
+    "a": "ऐप में: सेटिंग्स → सुझाव (2.10 से)। 'कोई स्टेशन सुझाएँ', 'कोई सुविधा माँगें' या 'धन्यवाद संदेश भेजें' — हर एक एक छोटा फ़ॉर्म खोलता है। जवाब चाहिए तभी ईमेल डालें।"
+   }
+  },
+  {
+   "id": "rate",
+   "section": "Help and feedback",
+   "en": {
+    "q": "How do I rate the app?",
+    "a": "Settings → Feedback → Rate on Google Play, or [open the Play Store page](https://play.google.com/store/apps/details?id=com.ranjithkb.radio). A rating helps other people find Radio Velvet."
+   },
+   "ml": {
+    "q": "ആപ്പ് എങ്ങനെ റേറ്റ് ചെയ്യാം?",
+    "a": "സെറ്റിങ്സ് → അഭിപ്രായം → Google Play-യിൽ റേറ്റ് ചെയ്യുക, അല്ലെങ്കിൽ [Play Store പേജ് തുറക്കുക](https://play.google.com/store/apps/details?id=com.ranjithkb.radio). റേറ്റിങ് മറ്റുള്ളവർക്ക് Radio Velvet കണ്ടെത്താൻ സഹായിക്കും."
+   },
+   "hi": {
+    "q": "ऐप को रेटिंग कैसे दें?",
+    "a": "सेटिंग्स → सुझाव → Google Play पर रेटिंग दें, या [Play Store पेज खोलें](https://play.google.com/store/apps/details?id=com.ranjithkb.radio)। रेटिंग से दूसरों को Radio Velvet ढूँढने में मदद मिलती है।"
+   }
+  },
+  {
+   "id": "new-version",
+   "section": "Help and feedback",
+   "en": {
+    "q": "How do I get the newest version?",
+    "a": "Google Play updates the app on its own. The bottom of Settings shows your version, What's new and Check for updates."
+   },
+   "ml": {
+    "q": "ഏറ്റവും പുതിയ പതിപ്പ് എങ്ങനെ കിട്ടും?",
+    "a": "Google Play ആപ്പ് തനിയെ പുതുക്കും. സെറ്റിങ്സിന്റെ ഏറ്റവും താഴെ നിങ്ങളുടെ പതിപ്പും പുതിയ മാറ്റങ്ങളും 'അപ്ഡേറ്റ് ഉണ്ടോ എന്ന് നോക്കുക' എന്നതും ഉണ്ട്."
+   },
+   "hi": {
+    "q": "नया संस्करण कैसे मिले?",
+    "a": "Google Play ऐप को अपने-आप अपडेट करता है। सेटिंग्स में सबसे नीचे आपका संस्करण, क्या नया है, और 'अपडेट देखें' है।"
+   }
+  },
+  {
+   "id": "early-access",
+   "section": "Help and feedback",
+   "en": {
+    "q": "Can I try new features early?",
+    "a": "Yes. Join the Early access test from the app card on the Radio page; it is open to anyone."
+   },
+   "ml": {
+    "q": "പുതിയ സൗകര്യങ്ങൾ നേരത്തെ പരീക്ഷിക്കാമോ?",
+    "a": "പരീക്ഷിക്കാം. റേഡിയോ പേജിലെ ആപ്പ് കാർഡിൽ നിന്ന് Early access പരീക്ഷണത്തിൽ ചേരുക; ആർക്കും ചേരാം."
+   },
+   "hi": {
+    "q": "क्या नई सुविधाएँ पहले आज़मा सकते हैं?",
+    "a": "हाँ। रेडियो पेज के ऐप कार्ड से Early access टेस्ट में शामिल हों; यह सबके लिए खुला है।"
+   }
+  },
+  {
+   "id": "contact",
+   "section": "Help and feedback",
+   "en": {
+    "q": "How do I contact you?",
+    "a": "Write to hello@ranjithkb.com. Radio Velvet is a one-person hobby project run in spare time, so a reply can take a few days, sometimes longer. Every message is read."
+   },
+   "ml": {
+    "q": "നിങ്ങളെ എങ്ങനെ ബന്ധപ്പെടാം?",
+    "a": "hello@ranjithkb.com ലേക്ക് എഴുതുക. Radio Velvet ഒഴിവുസമയത്ത് ഒരാൾ നടത്തുന്ന ഹോബി പ്രോജക്ടാണ്; മറുപടിക്ക് കുറച്ച് ദിവസം, ചിലപ്പോൾ അതിൽ കൂടുതൽ, എടുത്തേക്കാം. എല്ലാ സന്ദേശവും വായിക്കും."
+   },
+   "hi": {
+    "q": "आपसे कैसे संपर्क करें?",
+    "a": "hello@ranjithkb.com पर लिखें। Radio Velvet खाली समय में एक व्यक्ति का शौक़िया प्रोजेक्ट है, इसलिए जवाब में कुछ दिन, कभी ज़्यादा, लग सकते हैं। हर संदेश पढ़ा जाता है।"
+   }
+  },
+  {
+   "id": "get-listed",
+   "section": "For radio stations",
+   "en": {
+    "q": "How can our station be listed?",
+    "a": "Write to hello@ranjithkb.com with your station's name and its stream link. A secure (https) link plays in both the app and the website; an older http link plays only in the app. Listeners connect straight to your own stream, so every listen counts for you."
+   },
+   "ml": {
+    "q": "ഞങ്ങളുടെ നിലയം എങ്ങനെ ചേർക്കാം?",
+    "a": "നിലയത്തിന്റെ പേരും സ്ട്രീം ലിങ്കും സഹിതം hello@ranjithkb.com ലേക്ക് എഴുതുക. സുരക്ഷിത (https) ലിങ്ക് ആപ്പിലും വെബ്സൈറ്റിലും പ്ലേ ആകും; പഴയ http ലിങ്ക് ആപ്പിൽ മാത്രം. കേൾവിക്കാർ നേരിട്ട് നിങ്ങളുടെ സ്ട്രീമിലേക്കാണ് ബന്ധിപ്പിക്കുന്നത്; എല്ലാ കേൾവിയും നിങ്ങൾക്കുതന്നെ."
+   },
+   "hi": {
+    "q": "हमारा स्टेशन कैसे जुड़ सकता है?",
+    "a": "स्टेशन का नाम और स्ट्रीम लिंक hello@ranjithkb.com पर भेजें। सुरक्षित (https) लिंक ऐप और वेबसाइट दोनों में चलता है; पुराना http लिंक सिर्फ़ ऐप में। श्रोता सीधे आपकी स्ट्रीम से जुड़ते हैं, इसलिए हर सुनना आपके खाते में गिना जाता है।"
+   }
+  },
+  {
+   "id": "station-logo",
+   "section": "For radio stations",
+   "en": {
+    "q": "Can you show our own logo?",
+    "a": "Yes. Send it with permission to use it, and it can appear on your station's card, the player and song covers."
+   },
+   "ml": {
+    "q": "ഞങ്ങളുടെ ലോഗോ കാണിക്കാമോ?",
+    "a": "കാണിക്കാം. ഉപയോഗിക്കാനുള്ള അനുമതിയോടെ അയച്ചാൽ നിലയത്തിന്റെ കാർഡിലും പ്ലെയറിലും പാട്ടിന്റെ ചിത്രങ്ങളിലും കാണിക്കാം."
+   },
+   "hi": {
+    "q": "क्या आप हमारा लोगो दिखा सकते हैं?",
+    "a": "हाँ। इस्तेमाल की अनुमति के साथ भेजें, तो यह स्टेशन के कार्ड, प्लेयर और गानों की तस्वीरों में दिख सकता है।"
+   }
+  },
+  {
+   "id": "remove-or-change",
+   "section": "For radio stations",
+   "en": {
+    "q": "How do we ask to be removed or change our details?",
+    "a": "Write to hello@ranjithkb.com and it will be done as soon as possible."
+   },
+   "ml": {
+    "q": "നീക്കം ചെയ്യാനോ വിവരങ്ങൾ മാറ്റാനോ എങ്ങനെ ആവശ്യപ്പെടാം?",
+    "a": "hello@ranjithkb.com ലേക്ക് എഴുതുക; എത്രയും വേഗം ചെയ്യും."
+   },
+   "hi": {
+    "q": "हटाने या जानकारी बदलने के लिए कैसे कहें?",
+    "a": "hello@ranjithkb.com पर लिखें, जल्द से जल्द कर दिया जाएगा।"
+   }
+  }
+ ]
+}

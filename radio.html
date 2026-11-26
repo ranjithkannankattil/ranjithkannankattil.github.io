@@ -26,7 +26,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Manjari:wght@400;700&display=swap"></noscript>
 <link rel="stylesheet" href="css/style.css?v=18">
-<link rel="stylesheet" href="css/radio.css?v=45">
+<link rel="stylesheet" href="css/radio.css?v=46">
 </head>
 <body data-section="radio" class="wide">
 
@@ -164,6 +164,21 @@
     <a class="ra-btn" href="https://github.com/ranjithkannankattil/ranjithkannankattil.github.io/releases/latest/download/Radio.apk" rel="noopener">Download APK <span class="ra-size">14 MB</span></a>
   </aside>
 
+  <section class="faq" id="faq" aria-labelledby="faqTitle">
+    <div class="diamond-rule"><span class="diamond-mark">◆</span></div>
+    <div class="faq-head">
+      <h2 class="faq-title" id="faqTitle">Questions and answers</h2>
+      <div class="faq-lang" role="group" aria-label="FAQ language">
+        <button type="button" data-lang="en" aria-pressed="true">English</button>
+        <button type="button" data-lang="ml" aria-pressed="false">Malayalam</button>
+        <button type="button" data-lang="hi" aria-pressed="false">Hindi</button>
+      </div>
+    </div>
+    <p class="faq-intro">Radio Velvet is one person's hobby project, made in spare time, so a reply can take a few days. Every message to <a href="mailto:hello@ranjithkb.com">hello@ranjithkb.com</a> is read.</p>
+    <label class="faq-search"><span class="sr-only">Search the questions</span><input type="search" id="faqSearch" placeholder="Search the questions" autocomplete="off"></label>
+    <div id="faqList" class="faq-list"><p class="faq-empty">Loading…</p></div>
+  </section>
+
   <p class="radio-note">Streams belong to their broadcasters and some go offline from time to time. If one doesn't start, the next source is tried automatically.</p>
   <p class="radio-note acct-note" id="acctNote" hidden>Signing in is optional. It stores your Google account ID and email with your list of favourite stations and your default language, so they appear on any device you sign in on — nothing else. Sign out any time; to have your saved list deleted, get in touch. <a href="privacy.html">Privacy details</a>.</p>
 </main>
@@ -267,5 +282,6 @@
 <script src="js/visits.js?v=2" defer></script>
 <script src="js/app-download.js?v=6" defer></script>
 <script src="js/app-update.js?v=2" defer></script>
+<script src="js/radio-faq.js?v=1" defer></script>
 </body>
 </html>

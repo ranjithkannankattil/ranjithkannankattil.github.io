@@ -711,3 +711,34 @@ body[data-rv-space="2"] .radio-card .hit{ min-height:78px; padding-top:1.2rem; p
 .rv-msg{ margin:0; color:var(--accent); min-height:1.2em; }
 .radio-player .rv-viz{ display:block; width:100%; height:34px; margin:0 0 .35rem; }
 .radio-player .rv-viz[data-style="circle"]{ height:64px; }
+
+/* ---------- Questions and answers (radio-faq.json; same file the app reads) ---------- */
+.faq{ margin-top:2.5rem; scroll-margin-top:5rem; }
+.faq-head{ display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:.75rem 1.5rem; }
+.faq-title{ font-family:var(--f-display); font-weight:600; font-size:1.6rem; margin:0; }
+.faq-lang{ display:flex; gap:.25rem; }
+.faq-lang button{ min-height:44px; padding:0 .85rem; background:none; border:0; border-bottom:2px solid transparent; color:var(--ink-soft);
+  font-family:var(--f-mono); font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; cursor:pointer; }
+.faq-lang button[aria-pressed="true"]{ color:var(--ink); border-bottom-color:var(--accent); }
+.faq-intro{ color:var(--ink-soft); margin:.75rem 0 1rem; max-width:44rem; }
+.faq-search{ display:block; }
+.faq-search input{ width:100%; min-height:48px; font:inherit; font-size:1rem; padding:.6rem .2rem; background:transparent; color:var(--ink);
+  border:0; border-bottom:1px solid var(--line); }
+.faq-search input:focus{ outline:none; border-bottom-color:var(--accent); }
+.faq-sec{ font-family:var(--f-mono); font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); margin:2rem 0 .4rem; }
+.faq-item{ border-bottom:1px solid var(--line); scroll-margin-top:5rem; }
+.faq-item summary{ list-style:none; cursor:pointer; min-height:48px; display:flex; align-items:center; gap:1rem; padding:.7rem 0;
+  font-family:var(--f-display); font-weight:500; font-size:1.05rem; color:var(--ink); }
+.faq-item summary::-webkit-details-marker{ display:none; }
+.faq-item summary::after{ content:"+"; margin-left:auto; color:var(--ink-soft); font-size:1.3rem; }
+.faq-item[open] summary::after{ content:"–"; }
+.faq-item:target summary, .faq-item.hit summary{ color:var(--accent); }
+.faq-a{ padding:0 0 1rem; color:var(--ink); max-width:44rem; }
+.faq-a p{ margin:.2rem 0 .6rem; }
+.faq-a ol{ margin:.2rem 0 .6rem; padding-left:1.4rem; }
+.faq-a li{ margin:.25rem 0; }
+.faq-link{ display:inline-flex; align-items:center; min-height:44px; background:none; border:0; padding:0; color:var(--accent);
+  font-family:var(--f-mono); font-size:.72rem; letter-spacing:.06em; text-transform:uppercase; cursor:pointer; }
+.faq-empty{ color:var(--ink-soft); padding:1rem 0; }
+.faq [lang="ml"]{ font-family:"Manjari", var(--f-body, serif); }
+.sr-only{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
