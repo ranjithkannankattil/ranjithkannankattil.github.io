@@ -582,12 +582,13 @@ fun FavsTab(list: List<Station>, now: NowState, langOf: (Station) -> String, onP
     val headInList = !edit && !Theme.favTiles
     @Composable fun Head() = Column {
         if (!edit) RecentStrip(recent, now.id?.removePrefix("st|"), onRecent)
-        Row(Modifier.fillMaxWidth().padding(16.dp, 10.dp), verticalAlignment = Alignment.CenterVertically) {
+        Row(Modifier.fillMaxWidth().padding(start = 20.dp, end = 8.dp, top = 2.dp, bottom = 2.dp), verticalAlignment = Alignment.CenterVertically) {
             Text(if (list.isEmpty()) "No favourites yet. Tap ♡ on any station, in any language."
-                 else if (edit) "Drag ≡ to move a station" else "${list.size} favourites", Modifier.weight(1f), color = InkSoft)
+                 else if (edit) "Drag ≡ to move a station" else "${list.size} " + t("favourites"), Modifier.weight(1f), color = Soft, fontSize = 14.sp)
+            // quiet: a small icon, so it doesn't draw the eye away from the stations (tester, 26 Nov 2026)
             if (list.isNotEmpty()) {
-                if (edit) Button({ edit = false }, Modifier.heightIn(min = 48.dp)) { Text(t("Done")) }
-                else OutlinedButton({ edit = true }, Modifier.heightIn(min = 48.dp)) { Text(t("Reorder / remove")) }
+                if (edit) TextButton({ edit = false }, Modifier.heightIn(min = 48.dp)) { Text(t("Done"), color = AccentText, fontWeight = FontWeight.Medium) }
+                else IconButton({ edit = true }, Modifier.size(48.dp)) { Icon(Icons.Outlined.SwapVert, t("Reorder / remove"), tint = Soft) }
             }
         }
         if (list.isEmpty()) OutlinedButton(onPicks, Modifier.padding(horizontal = 16.dp).heightIn(min = 48.dp)) {
