@@ -610,18 +610,28 @@ class ScreensTest {
     @Test fun r08_player_text_stays_put() = sameSpotInEveryLook("phone")
     @Test @Config(qualifiers = "w360dp-h640dp-xxhdpi") fun r09_player_text_stays_put_small() = sameSpotInEveryLook("small")
 
-    // every look in "My colour theme" (Kaavu, green), light and dark: none may keep the default plum
-    @Test fun r100_theme_cathedral() = shot("r10-theme-cathedral", false, theme = "kaavu", look = "cathedral", lookColours = "theme") { Player(true) }
-    @Test fun r110_theme_dark_cathedral() = shot("r11-theme-dark-cathedral", true, theme = "kaavu", look = "cathedral", lookColours = "theme") { Player(true) }
-    @Test fun r101_theme_valve() = shot("r10-theme-valve", false, theme = "kaavu", look = "valve", lookColours = "theme") { Player(true) }
-    @Test fun r111_theme_dark_valve() = shot("r11-theme-dark-valve", true, theme = "kaavu", look = "valve", lookColours = "theme") { Player(true) }
-    @Test fun r102_theme_transistor() = shot("r10-theme-transistor", false, theme = "kaavu", look = "transistor", lookColours = "theme") { Player(true) }
-    @Test fun r112_theme_dark_transistor() = shot("r11-theme-dark-transistor", true, theme = "kaavu", look = "transistor", lookColours = "theme") { Player(true) }
-    @Test fun r103_theme_receiver() = shot("r10-theme-receiver", false, theme = "kaavu", look = "receiver", lookColours = "theme") { Player(true) }
-    @Test fun r113_theme_dark_receiver() = shot("r11-theme-dark-receiver", true, theme = "kaavu", look = "receiver", lookColours = "theme") { Player(true) }
-    @Test fun r104_theme_boombox() = shot("r10-theme-boombox", false, theme = "kaavu", look = "boombox", lookColours = "theme") { Player(true) }
-    @Test fun r114_theme_dark_boombox() = shot("r11-theme-dark-boombox", true, theme = "kaavu", look = "boombox", lookColours = "theme") { Player(true) }
-    @Test fun r105_theme_digital() = shot("r10-theme-digital", false, theme = "kaavu", look = "digital", lookColours = "theme") { Player(true) }
-    @Test fun r115_theme_dark_digital() = shot("r11-theme-dark-digital", true, theme = "kaavu", look = "digital", lookColours = "theme") { Player(true) }
+    // every look in "My colour theme" (Kaavu, green), light and dark: none may keep the default plum.
+    // The radio animates while it plays, so the clock is wound by hand (like the other look tests).
+    private fun themedLook(era: String, dark: Boolean) {
+        Theme.mode = "phone"; Theme.sysDark = dark; Theme.themeId = "kaavu"; Theme.viz = "off"; Theme.text = 0
+        Theme.font = "jost"; Theme.spacing = 1; Theme.look = era; Theme.lookColours = "theme"; Theme.playerOpen = true
+        rule.mainClock.autoAdvance = false
+        rule.setContent { MaterialTheme(typography = PoppinsType) { Surface(Modifier.fillMaxSize(), color = Paper) { Player(true) } } }
+        rule.mainClock.advanceTimeBy(1200)
+        capture((if (dark) "r11-theme-dark-" else "r10-theme-") + era)
+        Theme.look = "std"; Theme.playerOpen = false; Theme.themeId = "velvet"; Theme.mode = "phone"; Theme.sysDark = false
+    }
+    @Test fun r100_theme_cathedral() = themedLook("cathedral", false)
+    @Test fun r110_theme_dark_cathedral() = themedLook("cathedral", true)
+    @Test fun r101_theme_valve() = themedLook("valve", false)
+    @Test fun r111_theme_dark_valve() = themedLook("valve", true)
+    @Test fun r102_theme_transistor() = themedLook("transistor", false)
+    @Test fun r112_theme_dark_transistor() = themedLook("transistor", true)
+    @Test fun r103_theme_receiver() = themedLook("receiver", false)
+    @Test fun r113_theme_dark_receiver() = themedLook("receiver", true)
+    @Test fun r104_theme_boombox() = themedLook("boombox", false)
+    @Test fun r114_theme_dark_boombox() = themedLook("boombox", true)
+    @Test fun r105_theme_digital() = themedLook("digital", false)
+    @Test fun r115_theme_dark_digital() = themedLook("digital", true)
 }
 

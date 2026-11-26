@@ -43,6 +43,18 @@ jobs:
       - name: Screenshots of the screens (light and dark, phone sizes)
         continue-on-error: true
         run: gradle --no-daemon :app:testPlayDebugUnitTest --tests "*ScreensTest*"
+      - name: Checks for reported problems (screen tests r…) must pass
+        run: |
+          python3 - <<'PY'
+          import glob, sys, xml.etree.ElementTree as ET
+          bad = []
+          for f in glob.glob("app/build/test-results/testPlayDebugUnitTest/*ScreensTest*.xml"):
+              for tc in ET.parse(f).getroot().iter("testcase"):
+                  if tc.get("name", "").startswith("r") and (tc.find("failure") is not None or tc.find("error") is not None):
+                      bad.append(tc.get("name"))
+          print("failed regression checks:", bad or "none")
+          sys.exit(1 if bad else 0)
+          PY
       - name: Save screenshots and test results to the velvet-dev-screens branch (readable without downloads)
         if: always()
         run: |
