@@ -84,7 +84,7 @@ private fun pressedScale(src: MutableInteractionSource): Float {
 }
 
 @Composable
-private fun RowBody(icon: ImageVector?, drawable: Int?, title: String, sub: String?, trailing: @Composable RowScope.() -> Unit) {
+private fun RowScope.RowBody(icon: ImageVector?, drawable: Int?, title: String, sub: String?, trailing: @Composable RowScope.() -> Unit) {
     if (icon != null || drawable != null) { IconTile(icon, drawable); Spacer(Modifier.width(14.dp)) }
     Column(Modifier.weight(1f).padding(vertical = 4.dp)) {
         Text(title, fontSize = 16.5.sp, fontWeight = FontWeight.Medium, color = Title, lineHeight = 21.sp)

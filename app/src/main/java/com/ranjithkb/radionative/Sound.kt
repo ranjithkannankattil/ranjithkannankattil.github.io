@@ -256,7 +256,7 @@ fun androidx.media3.common.Player.prevStation() { val n = mediaItemCount; if (n 
 /** ExoPlayer with the visualiser's copy of the sound. */
 class VelvetRenderers(ctx: Context) : DefaultRenderersFactory(ctx) {
     override fun buildAudioSink(context: Context, enableFloatOutput: Boolean, enableAudioTrackPlaybackParams: Boolean): AudioSink =
-        DefaultAudioSink.Builder(context).setAudioProcessors(arrayOf(TeeAudioProcessor(Viz.sink)))
+        DefaultAudioSink.Builder(context).setAudioProcessors(arrayOf(EvenVolumeProcessor(), TeeAudioProcessor(Viz.sink)))
             .setEnableAudioTrackPlaybackParams(enableAudioTrackPlaybackParams).build()
 }
 

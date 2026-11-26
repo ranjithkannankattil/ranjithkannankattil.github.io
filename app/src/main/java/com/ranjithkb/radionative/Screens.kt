@@ -228,6 +228,10 @@ fun SettingsScreen(close: () -> Unit, scroll: androidx.compose.foundation.Scroll
         }
         Group(t("Sound")) {
             NavItem(t("Equaliser"), if (Eq.on(ctx)) Eq.preset(ctx) else t("Off"), icon = Icons.Outlined.Tune) { open("eq") }
+            RowLine()
+            var even by remember { mutableStateOf(EvenVolume.on.also { EvenVolume.load(ctx) }) }
+            ToggleItem(t("Even volume"), even, icon = Icons.Outlined.GraphicEq,
+                sub = t("Every station at about the same loudness, so changing station never jumps")) { even = it; EvenVolume.set(ctx, it) }
         }
         Group(t("Data and playback")) {
             NavItem(t("Data saver"), when (DataSaver.mode) { DataSaver.ON -> t("Always"); DataSaver.MOBILE -> t("On mobile data"); else -> t("Off") } +
@@ -601,12 +605,12 @@ val SORTS = listOf("usual" to "Usual order", "az" to "A–Z", "heard" to "Most h
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun SortSheet(current: String, onPick: (String) -> Unit, close: () -> Unit) {
+fun SortSheet(current: String, onPick: (String) -> Unit, close: () -> Unit, picks: Boolean = false) {
     ModalBottomSheet(onDismissRequest = close, containerColor = Paper, scrimColor = Color.Black.copy(alpha = 0.35f),
         dragHandle = { Box(Modifier.padding(top = 12.dp, bottom = 8.dp).size(36.dp, 3.dp).background(Line)) }) {
         Column(Modifier.padding(start = Pad, end = Pad, bottom = 24.dp)) {
             Label(t("Sort stations"), Soft, 10, Modifier.padding(bottom = 6.dp))
-            listOf("Usual order" to "As the stations are listed", "A–Z" to "By name",
+            listOf((if (picks) "Velvet's order" else "Usual order") to (if (picks) "The hand-picked order" else "As the stations are listed"), "A–Z" to "By name",
                 "Most heard" to "Hours listened by everyone, since the start", "Top rated" to "Average stars, from 3 ratings up",
                 "Lightest first" to "Least data an hour first (good for Data saver)").forEachIndexed { i, (en, de) ->
                 val t = Lang.tr(en); val d = Lang.tr(de)

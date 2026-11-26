@@ -266,6 +266,9 @@ fun App(c: MediaController?) {
     // Sort: usual · az · heard · rated (A–Z was the old default, so it stays the default)
     var sort by remember { mutableStateOf(prefs.getString("sort", null) ?: if (prefs.getBoolean("az", true)) "az" else "usual") }
     var sortSheet by remember { mutableStateOf(false) }
+    // Velvet Selection has its own order choice; "usual" there = Velvet's hand-picked order (24 Nov)
+    var picksSort by remember { mutableStateOf(prefs.getString("picksSort", "usual") ?: "usual") }
+    var kindSheet by remember { mutableStateOf(false) }
     var stats by remember { mutableStateOf<Stats.Data?>(null) }
     LaunchedEffect(Unit) { stats = Stats.get(ctx) }
     var page by remember { mutableStateOf<String?>(null) }      // settings · themes · eq · viz · alarm · request
@@ -308,10 +311,28 @@ fun App(c: MediaController?) {
                 onSignOut = { Account.signOut(ctx); Session.name = null })
             else if (tab == 0) {
                 // A–Z in every list except the Velvet Selection (hand-picked order) and Favourites (your own order)
-                val shown = stations.filter { cat == "all" || it.category == cat || (cat == "fav" && it.key in favKeys) }
-                    .let { l -> if (colId != PICKS) Stats.sort(l, sort, stats) else l }
+                val shown = stations.filter { cat == "all" || it.category == cat || (cat == "fav" && it.key in favKeys) || (cat == "tv" && it.tv) }
+                    .let { l -> Stats.sort(l, if (colId == PICKS) picksSort else sort, stats) }
                     .sortedBy { it.offline }
                 Column {
+                    val stState = rememberLazyListState()
+                    // the language row and the filter line fold away while you scroll down, and come back on the way up
+                    var headShown by remember { mutableStateOf(true) }
+                    LaunchedEffect(stState) {
+                        var li = 0; var lo = 0
+                        snapshotFlow { stState.firstVisibleItemIndex to stState.firstVisibleItemScrollOffset }.collect { (i, o) ->
+                            when {
+                                i == 0 && o < 60 -> headShown = true
+                                i > li || (i == li && o > lo + 24) -> headShown = false
+                                i < li || (i == li && o < lo - 24) -> headShown = true
+                            }
+                            li = i; lo = o
+                        }
+                    }
+                    androidx.compose.animation.AnimatedVisibility(headShown || tourStep >= 0,
+                        enter = androidx.compose.animation.expandVertically() + androidx.compose.animation.fadeIn(),
+                        exit = androidx.compose.animation.shrinkVertically() + androidx.compose.animation.fadeOut()) {
+                    Column {
                     val tabs = listOf(LangTab(PICKS, t("Velvet Selection"), star = true)) +
                         (pinned + recent.filter { it !in pinned }).mapNotNull { id -> cols.find { it.id == id } }.map { LangTab(it.id, it.name, it.id in pinned) } +
                         (if (colId == ALL) listOf(LangTab(ALL, t("Every station"))) else emptyList()) +
@@ -325,23 +346,29 @@ fun App(c: MediaController?) {
                         if (favHere > 0) add(Triple("fav", t("Favourites"), favHere))
                         col?.cats?.filter { (k, _) -> stations.any { it.category == k } }?.forEach { (k, label) -> add(Triple(k, label, -1)) }
                     }
-                    if (colId != PICKS) Box(Modifier.tourTarget("sort")) { CatRow(cats, cat, { cat = it }, t(SORTS.first { it.first == sort }.second), { sortSheet = true }) }
-                    else PicksHeading(!loading && stations.isEmpty())
+                    val cats2 = if (stations.any { it.tv }) cats + Triple("tv", t("TV channels"), stations.count { it.tv }) else cats
+                    if (kindSheet) KindSheet(cats2, cat, { cat = it }) { kindSheet = false }
+                    val kindWord = cats2.find { it.first == cat }?.second?.let { if (cat == "all") t("All kinds") else it } ?: t("All kinds")
+                    if (colId == PICKS && !loading && stations.isEmpty()) PicksHeading(true)
+                    else Box(Modifier.tourTarget("sort")) {
+                        SentenceFilter(kindWord, { kindSheet = true }, orderPhrase(if (colId == PICKS) picksSort else sort, colId == PICKS)) { sortSheet = true } }
+                    }
+                    }
                     if (loading) LinearProgressIndicator(Modifier.fillMaxWidth().padding(top = 8.dp), color = Accent)
-                    val stState = rememberLazyListState()
                     LaunchedEffect(colId, cat, sort) { stState.scrollToItem(0) }
                     val saving = remember(DataSaver.mode) { DataSaver.refresh(ctx) }
-                    val top3 = remember(shown, sort, stats) { if (sort == "heard") Stats.top3(shown, stats) else emptySet() }
+                    val curSort = if (colId == PICKS) picksSort else sort
+                    val top3 = remember(shown, curSort, stats) { if (curSort == "heard") Stats.top3(shown, stats) else emptySet() }
                     Box(Modifier.fillMaxSize()) {
                         LazyColumn(state = stState, contentPadding = PaddingValues(bottom = 16.dp)) {
                             items(shown, key = { it.key }) { s ->
                                 val base = if (colId == PICKS || colId == ALL) langOf(s) else col?.cats?.find { it.first == s.category }?.second ?: ""
-                                val sub = when { colId == PICKS -> base
-                                    sort == "heard" -> listOf(Stats.heardLabel(stats?.total?.get(s.key)), base).filter { it.isNotBlank() }.joinToString(" · ")
-                                    sort == "rated" -> listOf(Stats.ratedLabel(stats?.ratings?.get(s.key)), base).filter { it.isNotBlank() }.joinToString(" · ")
+                                val sub = when {
+                                    curSort == "heard" -> listOf(Stats.heardLabel(stats?.total?.get(s.key)), base).filter { it.isNotBlank() }.joinToString(" · ")
+                                    curSort == "rated" -> listOf(Stats.ratedLabel(stats?.ratings?.get(s.key)), base).filter { it.isNotBlank() }.joinToString(" · ")
                                     else -> base }.let { t ->
                                         // Data saver (or "Lightest first"): how heavy the station is
-                                        val w = if (sort == "light" || saving) DataSaver.label(DataSaver.lightest(s.br)) else ""
+                                        val w = if (curSort == "light" || saving) DataSaver.label(DataSaver.lightest(s.br)) else ""
                                         listOf(w, t).filter { it.isNotBlank() }.joinToString(" · ") }
                                 Box(if (s.key == shown.firstOrNull()?.key) Modifier.tourTarget("row") else Modifier) {
                                     StationRow(s, sub, s.key in favKeys, "st|${s.key}" == now.id, now.playing,
@@ -397,8 +424,12 @@ fun App(c: MediaController?) {
     if (arrangePins) ArrangePins(pinned.mapNotNull { id -> cols.find { it.id == id } }, onSave = { savePins(it) }) { arrangePins = false }
     if (pickLang) LanguageDialog(cols, colId, { if (it == PICKS && colId != PICKS) lastCol = colId; colId = it; go(0); pickLang = false }) { pickLang = false }
     if (full) FullPlayer(now, c, cast, onCloseAll = { closeAll() }) { full = false }
-    if (sortSheet) SortSheet(sort, { sort = it; prefs.edit().putString("sort", it).apply()
-        if (it == "heard" || it == "rated") scope.launch { stats = Stats.get(ctx) } }) { sortSheet = false }
+    if (sortSheet) {
+        val forPicks = colId == PICKS
+        SortSheet(if (forPicks) picksSort else sort, {
+            if (forPicks) { picksSort = it; prefs.edit().putString("picksSort", it).apply() } else { sort = it; prefs.edit().putString("sort", it).apply() }
+            if (it == "heard" || it == "rated") scope.launch { stats = Stats.get(ctx) } }, { sortSheet = false }, picks = forPicks)
+    }
     // Settings remembers how far down you were while you visit one of its pages; it opens at the top again next time
     val settingsScroll = androidx.compose.foundation.rememberScrollState()
     LaunchedEffect(page) { if (page == null) settingsScroll.scrollTo(0) }
@@ -692,7 +723,6 @@ fun FullPlayer(now: NowState, c: MediaController?, cast: CastUi, onCloseAll: () 
     }
 }
 
-@OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
 @OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
 @Composable
 fun InfoTab(languages: Int, update: Update?, onPage: (String) -> Unit = {}, onSignIn: () -> Unit, onSignOut: () -> Unit) {

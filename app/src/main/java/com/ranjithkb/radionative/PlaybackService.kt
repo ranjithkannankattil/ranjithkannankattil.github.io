@@ -142,7 +142,7 @@ class PlaybackService : MediaLibraryService() {
 
     override fun onCreate() {
         super.onCreate()
-        Crash.install(this); CarArt.init(this); DataUse.init(this); DataSaver.refresh(this)
+        Crash.install(this); CarArt.init(this); DataUse.init(this); DataSaver.refresh(this); EvenVolume.load(this)
         player = ExoPlayer.Builder(this, VelvetRenderers(this))
             .setAudioAttributes(AudioAttributes.Builder().setUsage(C.USAGE_MEDIA)
                 .setContentType(C.AUDIO_CONTENT_TYPE_MUSIC).build(), /* handleAudioFocus = */ true)
@@ -215,7 +215,8 @@ class PlaybackService : MediaLibraryService() {
             override fun onMediaItemTransition(mediaItem: MediaItem?, reason: Int) {
                 saveQueue(); applyDataSaver()
                 // another station (not just the same one reloaded on a different source): start afresh
-                if (mediaItem?.mediaId != lastId) { lastId = mediaItem?.mediaId; playedOk = false; giveUpReconnect() }
+                if (mediaItem?.mediaId != lastId) { lastId = mediaItem?.mediaId; playedOk = false; giveUpReconnect()
+                    EvenVolume.switchTo(this@PlaybackService, mediaItem?.mediaId?.removePrefix("st|")) }
                 mediaItem?.let { Recent.add(this@PlaybackService, it) }
                 if (System.currentTimeMillis() > alarmUntil) player.volume = 1f
                 if (player.isPlaying && mediaItem != null) Listen.start(this@PlaybackService, mediaItem.mediaId.removePrefix("st|"),

@@ -403,6 +403,27 @@ class LogicTest {
         assertEquals(u, item.mediaMetadata.artworkUri.toString())
     }
 
+    // ---------------- even volume
+    @Test fun even_volume_brings_quiet_and_loud_stations_together() {
+        val quiet = Leveller(); quiet.startAt(null); repeat(300) { quiet.block(-30f, 0.05f) }      // 15 s of a quiet station
+        val loud = Leveller(); loud.startAt(null); repeat(300) { loud.block(-10f, 0.05f) }        // 15 s of a loud one
+        assertEquals(10f, quiet.gainDb, 0.6f)                // brought up (never more than 10 dB)
+        assertEquals(-8f, loud.gainDb, 0.6f)                 // brought down
+        assertEquals(-20f, -30f + quiet.gainDb, 0.6f)        // they now sit within ~2 dB of each other
+        assertEquals(-18f, -10f + loud.gainDb, 0.6f)
+    }
+    @Test fun even_volume_ignores_silence_and_starts_from_the_remembered_level() {
+        val l = Leveller(); l.startAt(-28f)
+        assertEquals(10f, l.gainDb, 0.01f)                   // starts at the right gain at once
+        repeat(100) { l.block(-90f, 0.05f) }                 // silence doesn't change the level
+        assertEquals(-28f, l.loudness, 0.01f)
+    }
+    @Test fun even_volume_limiter_never_clips() {
+        assertEquals(0.5f, Leveller.limit(0.5f), 0f)
+        assertTrue(Leveller.limit(3f) < 1f && Leveller.limit(-3f) > -1f)
+        assertTrue(Leveller.limit(0.95f) in 0.9f..1f)
+    }
+
     // ---------------- rate us
     @Test fun review_rules() {
         val day = 86_400_000L; val now = 100 * day

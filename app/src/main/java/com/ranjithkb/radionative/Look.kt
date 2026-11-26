@@ -45,6 +45,8 @@ import androidx.compose.ui.semantics.customActions
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
@@ -155,6 +157,65 @@ fun LangTabs(tabs: List<LangTab>, selected: String, onClick: (LangTab) -> Unit, 
             }
         }
         HorizontalDivider(color = Line)
+    }
+}
+
+/** 2.10: the filters read as one sentence, e.g. "All kinds · most heard first". Each dotted word opens a short
+ *  list; choosing applies at once. Quieter than a row of chips and a sort button, and it says what is set. */
+@Composable
+fun SentenceFilter(kind: String, onKind: () -> Unit, order: String, onOrder: () -> Unit) {
+    Row(Modifier.fillMaxWidth().padding(start = Pad - 4.dp, end = Pad).heightIn(min = 44.dp), verticalAlignment = Alignment.CenterVertically) {
+        FilterWord(kind, "Kind of station: $kind. Change", onKind)
+        Text("  ·  ", fontSize = 15.sp, color = Soft)
+        FilterWord(order, "Order: $order. Change", onOrder)
+    }
+}
+
+@Composable
+private fun FilterWord(text: String, label: String, onClick: () -> Unit) {
+    val dots = AccentText.copy(alpha = 0.5f)
+    Row(Modifier.heightIn(min = 44.dp).clickable(onClickLabel = label, onClick = onClick).padding(horizontal = 4.dp)
+        .drawBehind {
+            val y = size.height / 2 + 13.dp.toPx()
+            drawLine(dots, androidx.compose.ui.geometry.Offset(4.dp.toPx(), y), androidx.compose.ui.geometry.Offset(size.width - 18.dp.toPx(), y),
+                strokeWidth = 1.5.dp.toPx(), pathEffect = androidx.compose.ui.graphics.PathEffect.dashPathEffect(floatArrayOf(2.dp.toPx(), 3.dp.toPx())))
+        }, verticalAlignment = Alignment.CenterVertically) {
+        Text(text, fontSize = 15.5.sp, color = AccentText, fontWeight = FontWeight.Medium, maxLines = 1)
+        Text(" ▾", fontSize = 11.sp, color = dots)
+    }
+}
+
+/** "first" words for the order in the sentence filter. */
+fun orderPhrase(sort: String, picks: Boolean): String = when (sort) {
+    "az" -> t("A to Z")
+    "heard" -> t("most heard first")
+    "rated" -> t("top rated first")
+    "light" -> t("lightest first")
+    else -> if (picks) t("Velvet's order") else t("usual order")
+}
+
+/** Kind of station: All, Favourites here, FM, Akashvani… and TV channels. Choosing closes the sheet. */
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun KindSheet(cats: List<Triple<String, String, Int>>, selected: String, onPick: (String) -> Unit, close: () -> Unit) {
+    ModalBottomSheet(onDismissRequest = close, containerColor = Paper, scrimColor = Color.Black.copy(alpha = 0.35f)) {
+        Column(Modifier.padding(start = Pad, end = Pad, bottom = 24.dp)) {
+            Text(t("Which kind?"), fontSize = 22.sp, color = Title, modifier = Modifier.padding(bottom = 10.dp))
+            Group {
+                cats.forEachIndexed { i, (k, label, n) ->
+                    val on = k == selected
+                    if (i > 0) RowLine()
+                    Row(Modifier.fillMaxWidth().heightIn(min = 54.dp).background(if (on) AccentSoft else Color.Transparent)
+                        .semantics { this.selected = on; role = Role.RadioButton }
+                        .clickable(onClickLabel = label) { onPick(k); close() }.padding(horizontal = 16.dp), verticalAlignment = Alignment.CenterVertically) {
+                        Text(label, Modifier.weight(1f), fontSize = 16.sp, color = if (on) AccentText else Title,
+                            fontWeight = if (on) FontWeight.Medium else FontWeight.Normal)
+                        if (n >= 0) Text("$n", fontSize = 14.sp, color = Soft)
+                        if (on) Text("  ✓", fontSize = 16.sp, color = AccentText)
+                    }
+                }
+            }
+        }
     }
 }
 
