@@ -405,12 +405,12 @@ class LogicTest {
 
     // ---------------- even volume
     @Test fun even_volume_brings_quiet_and_loud_stations_together() {
-        val quiet = Leveller(); quiet.startAt(null); repeat(300) { quiet.block(-30f, 0.05f) }      // 15 s of a quiet station
-        val loud = Leveller(); loud.startAt(null); repeat(300) { loud.block(-10f, 0.05f) }        // 15 s of a loud one
-        assertEquals(10f, quiet.gainDb, 0.6f)                // brought up (never more than 10 dB)
-        assertEquals(-8f, loud.gainDb, 0.6f)                 // brought down
-        assertEquals(-20f, -30f + quiet.gainDb, 0.6f)        // they now sit within ~2 dB of each other
-        assertEquals(-18f, -10f + loud.gainDb, 0.6f)
+        val quiet = Leveller(); quiet.startAt(null); repeat(600) { quiet.block(-30f, 0.05f) }      // 30 s of a quiet station
+        val loud = Leveller(); loud.startAt(null); repeat(600) { loud.block(-10f, 0.05f) }        // 30 s of a loud one
+        assertEquals(10f, quiet.gainDb, 0.3f)                // brought up (never more than 10 dB)
+        assertEquals(-8f, loud.gainDb, 0.3f)                 // brought down
+        assertEquals(-20f, -30f + quiet.gainDb, 0.3f)        // they now sit within ~2 dB of each other
+        assertEquals(-18f, -10f + loud.gainDb, 0.3f)
     }
     @Test fun even_volume_ignores_silence_and_starts_from_the_remembered_level() {
         val l = Leveller(); l.startAt(-28f)
