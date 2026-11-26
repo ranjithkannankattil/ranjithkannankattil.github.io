@@ -520,5 +520,27 @@ class DeviceTest {
         // the lock-screen / notification player opens the app when tapped (he asked, 26 Nov 2026)
         assertNotNull("tapping the lock-screen player opens the app", main { b.sessionActivity })
     }
+
+    /** Tester on a car screen (26 Nov 2026): Back closed the app. Now Favourites → Stations first; leaving needs two Backs. */
+    @Test fun t30_back_goes_back_before_leaving() {
+        val prefs = ctx.getSharedPreferences("app", Context.MODE_PRIVATE)
+        prefs.edit().putInt("tab", 1).apply()                        // open on Favourites
+        val sc = androidx.test.core.app.ActivityScenario.launch(MainActivity::class.java)
+        try {
+            Thread.sleep(3_000)
+            fun back() { sc.onActivity { it.onBackPressedDispatcher.onBackPressed() }; Thread.sleep(600) }
+            repeat(3) { if (prefs.getInt("tab", 1) != 0) back() }   // (a first-run tour may take one Back to close)
+            assertEquals("Back from Favourites goes to Stations", 0, prefs.getInt("tab", 1))
+            assertEquals("the app is still open", androidx.lifecycle.Lifecycle.State.RESUMED, sc.state)
+            back()
+            assertEquals("one Back on Stations only shows the note", androidx.lifecycle.Lifecycle.State.RESUMED, sc.state)
+            back()
+            assertTrue("a second Back leaves", waitForState(sc))
+        } finally { sc.close() }
+    }
+    private fun waitForState(sc: androidx.test.core.app.ActivityScenario<MainActivity>): Boolean {
+        repeat(20) { if (sc.state != androidx.lifecycle.Lifecycle.State.RESUMED) return true; Thread.sleep(250) }
+        return false
+    }
 }
 
