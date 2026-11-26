@@ -12,7 +12,7 @@ His reason: the app looks like one long list; in Settings you can't tell what is
 - **One look per kind of item**, used everywhere: opens a page = card with icon, current value in grey, ›;
   on/off = same card with a switch (whole card toggles); pick one of 2–3 = pill inside the card; do it now =
   filled accent button (max one per screen); just information = small grey text, no card; station = bigger card,
-  initials/logo, round play button, playing one glows in the accent colour.
+  name + line under it, inline ♡, round play button (no initials or logo), playing one glows in the accent colour.
 - **Colours always come from the chosen theme** (15 themes, light + dark); mockups are drawn in Velvet light.
   Use the **new logo** (gold V with signal rings, `ic_logo_mark.xml` / site `assets/icons/radio-velvet-*.png`),
   tinted to the theme. `drawable-nodpi/velvet_logo.png` is the OLD logo: don't use it; remove it in 2.10.
