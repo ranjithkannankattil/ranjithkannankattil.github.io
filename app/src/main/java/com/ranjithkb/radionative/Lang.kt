@@ -387,6 +387,9 @@ object Lang {
         "Pin the languages you want in your top row; Malayalam can be unpinned too." to "വേണ്ട ഭാഷകൾ മുകളിലെ നിരയിൽ പിൻ ചെയ്യാം; Malayalam-ഉം മാറ്റാം.",
         "A heart beside the station name in the big player." to "വലിയ പ്ലെയറിൽ നിലയത്തിന്റെ പേരിനരികെ ഹൃദയചിഹ്നം.",
         "Help and FAQ, in English, Malayalam and Hindi." to "സഹായവും ചോദ്യോത്തരങ്ങളും, English, Malayalam, Hindi എന്നിവയിൽ.",
+        "Play the last station on opening" to "തുറക്കുമ്പോൾ അവസാനം കേട്ട നിലയം പ്ലേ ചെയ്യുക",
+        "Opening the app, on the phone or in the car, starts the station you last played" to "ഫോണിലോ കാറിലോ ആപ്പ് തുറന്നാൽ അവസാനം കേട്ട നിലയം തുടങ്ങും",
+        "Play the last station when you open the app (Settings → Data and playback), on the phone and in the car." to "ആപ്പ് തുറക്കുമ്പോൾ അവസാനം കേട്ട നിലയം പ്ലേ ചെയ്യാം (സെറ്റിങ്സ് → ഡാറ്റയും പ്ലേയിങ്ങും), ഫോണിലും കാറിലും.",
     )
     private val HI: Map<String, String> = mapOf(
         "+  Add an alarm" to "+  अलार्म जोड़ें",
@@ -738,6 +741,9 @@ object Lang {
         "Pin the languages you want in your top row; Malayalam can be unpinned too." to "अपनी भाषाएँ ऊपर की पंक्ति में पिन करें; Malayalam का पिन भी हटा सकते हैं।",
         "A heart beside the station name in the big player." to "बड़े प्लेयर में स्टेशन के नाम के पास दिल का निशान।",
         "Help and FAQ, in English, Malayalam and Hindi." to "मदद और सवाल-जवाब, English, Malayalam और Hindi में।",
+        "Play the last station on opening" to "खोलते ही आख़िरी स्टेशन चलाएँ",
+        "Opening the app, on the phone or in the car, starts the station you last played" to "फ़ोन या कार में ऐप खोलते ही आख़िरी सुना स्टेशन चलने लगेगा",
+        "Play the last station when you open the app (Settings → Data and playback), on the phone and in the car." to "ऐप खोलते ही आख़िरी स्टेशन चलाएँ (सेटिंग्स → डेटा और चलाना), फ़ोन और कार दोनों में।",
     )
 }
 

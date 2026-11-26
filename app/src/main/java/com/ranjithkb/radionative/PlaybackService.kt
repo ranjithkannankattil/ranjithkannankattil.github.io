@@ -323,6 +323,7 @@ class PlaybackService : MediaLibraryService() {
 
     // ---- leaving the car: pause, and don't let a stray "play" from the car start it on the phone speaker ----
     @Volatile private var carGoneAt = 0L
+    @Volatile private var carAutoDone = false
     private var carType = -1
     private var carConn: androidx.car.app.connection.CarConnection? = null
     private val carObserver = androidx.lifecycle.Observer<Int> { type ->
@@ -337,7 +338,7 @@ class PlaybackService : MediaLibraryService() {
         }
     }
     private fun carGone(why: String) {
-        carGoneAt = android.os.SystemClock.elapsedRealtime()
+        carGoneAt = android.os.SystemClock.elapsedRealtime(); carAutoDone = false   // next drive may start the last station again
         if (ringing || !player.playWhenReady) { PlayLog.note(this, "$why: already paused"); return }
         PlayLog.who = why; player.pause()
     }
@@ -647,8 +648,18 @@ class PlaybackService : MediaLibraryService() {
         }.toMutableList())
 
         override fun onGetLibraryRoot(s: MediaLibrarySession, b: MediaSession.ControllerInfo, p: LibraryParams?)
-                : ListenableFuture<LibraryResult<MediaItem>> =
-            Futures.immediateFuture(LibraryResult.ofItem(folder("root", "Radio"), p))
+                : ListenableFuture<LibraryResult<MediaItem>> {
+            // "Play the last station on opening" (2.10): Radio Velvet opened in Android Auto starts the last station,
+            // once per drive, only when nothing else is playing and not for the car's own "recent" check
+            if (b.packageName.contains("projection.gearhead") && p?.isRecent != true && !carAutoDone
+                && Theme.prefs(this@PlaybackService).getBoolean("autoPlay", false)
+                && !player.isPlaying && getSystemService(android.media.AudioManager::class.java)?.isMusicActive != true) {
+                carAutoDone = true
+                savedQueue()?.let { q -> scope.launch { PlayLog.who = "opened in the car (Play the last station on opening)"
+                    player.setMediaItems(q.mediaItems, q.startIndex, q.startPositionMs); player.prepare(); player.play() } }
+            }
+            return Futures.immediateFuture(LibraryResult.ofItem(folder("root", "Radio"), p))
+        }
 
         override fun onGetItem(s: MediaLibrarySession, b: MediaSession.ControllerInfo, id: String)
                 : ListenableFuture<LibraryResult<MediaItem>> =

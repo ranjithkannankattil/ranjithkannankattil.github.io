@@ -62,6 +62,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.media3.common.MediaMetadata
 import androidx.media3.common.Player
 import androidx.media3.session.MediaController
+import androidx.media3.session.SessionCommand
 import androidx.media3.session.SessionToken
 import com.google.common.util.concurrent.MoreExecutors
 import kotlinx.coroutines.Dispatchers
@@ -120,6 +121,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        freshLaunch = savedInstanceState == null
         enableEdgeToEdge()
         if (Build.VERSION.SDK_INT >= 33) requestPermissions(arrayOf(Manifest.permission.POST_NOTIFICATIONS), 1)
         Session.name = Account.name(this)
@@ -152,11 +154,20 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+    /** Set when the app is opened afresh (not turned or brought back): "Play the last station on opening" may start it. */
+    private var freshLaunch = false
+
     override fun onStart() {
         super.onStart()
         val token = SessionToken(this, ComponentName(this, PlaybackService::class.java))
         val f = MediaController.Builder(this, token).buildAsync()
-        f.addListener({ controller = f.get() }, MoreExecutors.directExecutor())
+        f.addListener({ val c = f.get(); controller = c
+            if (freshLaunch) { freshLaunch = false
+                // only when nothing is playing (or loaded) and no alarm or link opened the app
+                if (Theme.prefs(this).getBoolean("autoPlay", false) && !c.isPlaying && c.mediaItemCount == 0 && intent?.data == null
+                    && intent?.action in listOf(null, android.content.Intent.ACTION_MAIN))
+                    c.sendCustomCommand(SessionCommand(PlaybackService.RESUME, android.os.Bundle.EMPTY), android.os.Bundle.EMPTY)
+            } }, MoreExecutors.directExecutor())
     }
 
     override fun onStop() {

@@ -243,6 +243,9 @@ fun SettingsScreen(close: () -> Unit, scroll: androidx.compose.foundation.Scroll
             RowLine()
             ToggleItem(t("Carry on after videos"), Theme.resume, icon = Icons.Outlined.Replay,
                 sub = t("The radio comes back after a video in another app. Never during calls.")) { Theme.resume = it; save() }
+            RowLine()
+            ToggleItem(t("Play the last station on opening"), Theme.autoPlay, icon = Icons.Outlined.PlayCircle,
+                sub = t("Opening the app, on the phone or in the car, starts the station you last played")) { Theme.autoPlay = it; save() }
         }
         InfoText(t("Data saver plays each station's lightest link and skips song pictures, for ships, villages and patchy signal."))
         Group(t("Feedback")) {
@@ -340,7 +343,8 @@ val WHATS_NEW = listOf(
     "Add your own station, kept private on your phone.",
     "Pin the languages you want in your top row; Malayalam can be unpinned too.",
     "A heart beside the station name in the big player.",
-    "Help and FAQ, in English, Malayalam and Hindi.")
+    "Help and FAQ, in English, Malayalam and Hindi.",
+    "Play the last station when you open the app (Settings → Data and playback), on the phone and in the car.")
 
 /** Settings → Text and font: text size and the font, each shown in itself. */
 @Composable
