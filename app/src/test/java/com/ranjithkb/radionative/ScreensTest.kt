@@ -588,5 +588,26 @@ class ScreensTest {
                 "Stations, Favourites, You", "Playing", "Paused", "Your listening").filter { t(it) == it }.map { "$code: $it" } }
         Lang.code = "en"
         assertTrue("not translated: $missing", missing.isEmpty()) }
+
+    /** He saw the song and buttons jump between player looks, and Share / Cast cut off at the bottom (26 Nov 2026). */
+    private fun sameSpotInEveryLook(tag: String) {
+        Theme.viz = "off"; Theme.text = 0; Theme.font = "jost"; Theme.spacing = 1; Theme.playerOpen = true
+        rule.mainClock.autoAdvance = false
+        rule.setContent { MaterialTheme(typography = PoppinsType) { Surface(Modifier.fillMaxSize(), color = Paper) { Player(true) } } }
+        val tops = HashMap<String, Float>()
+        (listOf("std") + Eras.LIST.map { it.id }).forEach { id ->
+            Theme.look = id; androidx.compose.runtime.snapshots.Snapshot.sendApplyNotifications(); rule.mainClock.advanceTimeBy(900)
+            tops[id] = rule.onNodeWithText("Karunamaya").getBoundsInRoot().top.value
+            val cast = rule.onNodeWithText("CAST", ignoreCase = true, substring = true).getBoundsInRoot()
+            val root = rule.onRoot().getBoundsInRoot()
+            assertTrue("$tag $id: Cast fully on screen (${cast.bottom} ≤ ${root.bottom})", cast.bottom.value <= root.bottom.value + 0.5f)
+            capture("r08-$tag-$id")
+        }
+        Theme.look = "std"; Theme.playerOpen = false
+        val spread = tops.values.max() - tops.values.min()
+        assertTrue("$tag: song title moves ${spread}dp between looks: $tops", spread < 1f)
+    }
+    @Test fun r08_player_text_stays_put() = sameSpotInEveryLook("phone")
+    @Test @Config(qualifiers = "w360dp-h640dp-xxhdpi") fun r09_player_text_stays_put_small() = sameSpotInEveryLook("small")
 }
 

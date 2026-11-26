@@ -1,5 +1,6 @@
 package com.ranjithkb.radionative
 
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import androidx.media3.common.AudioAttributes
@@ -236,7 +237,12 @@ class PlaybackService : MediaLibraryService() {
         local = StationSkipper(player,
             onPause = { PlayLog.note(this, "pause by " + PlayLog.who); resumer.cancel(); giveUpReconnect(); if (ringing) stopRing(pause = false) },
             onPlay = { PlayLog.note(this, "play by " + PlayLog.who) })
-        session = MediaLibrarySession.Builder(this, local, Callback()).build()
+        // tapping the player on the lock screen or in the notification opens the app (it did nothing before 2.10)
+        val openApp = android.app.PendingIntent.getActivity(this, 11, Intent(this, MainActivity::class.java)
+            .setAction(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_LAUNCHER)
+            .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_SINGLE_TOP),
+            android.app.PendingIntent.FLAG_IMMUTABLE or android.app.PendingIntent.FLAG_UPDATE_CURRENT)
+        session = MediaLibrarySession.Builder(this, local, Callback()).setSessionActivity(openApp).build()
         SleepTimer.pause = { session.player.pause() }
         // Cast: when a TV or speaker is picked, the same list carries on there; back on the phone when casting stops
         Cast.context(this)?.let { cc -> try {

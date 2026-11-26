@@ -517,6 +517,8 @@ class DeviceTest {
         assertTrue(waitFor(5_000, "cleared") { b.mediaItemCount == 0 })
         main { b.sendCustomCommand(SessionCommand(PlaybackService.RESUME, Bundle.EMPTY), Bundle.EMPTY) }
         assertTrue("the last station starts again", waitFor(25_000, "resume") { b.isPlaying && b.currentMediaItem?.mediaId == last })
+        // the lock-screen / notification player opens the app when tapped (he asked, 26 Nov 2026)
+        assertNotNull("tapping the lock-screen player opens the app", main { b.sessionActivity })
     }
 }
 

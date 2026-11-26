@@ -461,12 +461,16 @@ fun PlayerContent(now: NowState, c: androidx.media3.session.MediaController?, la
             val flip: (Int) -> Unit = { dir -> Theme.look = Eras.step(Theme.look, dir); Theme.save(ctx); shown = Eras.name(Theme.look) }
             val slide = rememberLookSlide()
             Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
-            Column(Modifier.fillMaxWidth().lookSlide(slide), horizontalAlignment = Alignment.CenterHorizontally) {
+            // every look gets the same room, so the station, song and buttons below stay in exactly the same place
+            // whichever look you swipe to, and nothing is pushed off the bottom (he saw both, 26 Nov 2026)
+            val slot = maxOf(h.value * 0.42f, art + 66f)
+            Column(Modifier.fillMaxWidth().height(slot.dp).lookSlide(slide), horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center) {
             if (era != null) {
                 // a radio from one era: it takes the cover's place (its own needles and meters replace the visualiser)
                 val rw = fullW.value - 48f
-                val rh = minOf(h.value * 0.44f, rw * era.h / era.w).coerceAtLeast(150f)
-                    .let { if (Eras.hasTone(era.id)) it + 44f else it }   // room for "Reset knobs" under the radio
+                val tone = if (Eras.hasTone(era.id)) 44f else 0f            // room for "Reset knobs" under the radio
+                val rh = minOf(slot - 10f - tone, rw * era.h / era.w).coerceAtLeast(120f) + tone
                 Box(Modifier.padding(top = 10.dp).fillMaxWidth().height(rh.dp), contentAlignment = Alignment.Center) {
                     EraRadio(era, now, c, Modifier.fillMaxSize(), onSwipe = flip, slide = slide)
                 }

@@ -390,7 +390,7 @@ private fun DrawScope.knob(tm: TextMeasurer, cx: Float, cy: Float, r: Float, ang
     txt(tm, label, cx, cy + r * 1.36f, 7.5f, s.metal, caps = true)
 }
 
-/** The long station dial: scale 88–108, the station's name over the needle. */
+/** The long station dial: scale 88–108, the station's name beside the needle. */
 private fun DrawScope.hdial(tm: TextMeasurer, x: Float, y: Float, w: Float, h: Float, v: RadioVals, s: Eras.Skin, frame: Float) {
     drawRect(s.panel, Offset(x, y), Size(w, h))
     drawRect(s.glow.copy(alpha = 0.10f + 0.18f * v.level), Offset(x, y), Size(w, h))   // the lamp behind the dial breathes with the music
@@ -400,7 +400,9 @@ private fun DrawScope.hdial(tm: TextMeasurer, x: Float, y: Float, w: Float, h: F
         if (i % 4 == 0) txt(tm, "${88 + i * 20 / 24}", px, y + h - 27, 9.5f, s.panelInk, weight = FontWeight.Normal)
     }
     val nx = x + 6 + v.pos * (w - 12)
-    txt(tm, v.station.take(18), nx.coerceIn(x + 50, x + w - 50), y + 5, 7f, s.panelInk, caps = true)
+    // the name sits beside the needle, never under it (he saw "R|ADIO MANGO", 26 Nov 2026)
+    if (nx < x + w / 2) txt(tm, v.station.take(18), nx + 7, y + 5, 7f, s.panelInk, left = true, caps = true)
+    else txt(tm, v.station.take(18), nx - 7, y + 5, 7f, s.panelInk, right = true, caps = true)
     drawRect(s.needle.copy(alpha = 0.25f), Offset(nx - 3, y), Size(6f, h))
     drawRect(s.needle, Offset(nx - 1, y), Size(2f, h))
     if (frame > 0) drawRect(s.metal, Offset(x, y), Size(w, h), style = Stroke(frame))
