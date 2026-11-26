@@ -142,6 +142,9 @@ His reason: the app looks like one long list; in Settings you can't tell what is
   sits beside the station name, within thumb reach, in every player look (not tucked in a corner or menu).
   **Row size** in Settings → Look: Compact · **Comfortable (default)** · Expanded. Compact = one-line rows, tighter
   gaps (good for car stereos and small screens); Expanded = larger text and touch targets with the song now playing.
+- **Tester suggestions (26 Nov 2026), for more room in landscape / the car:** "Add your own station" is a small + next
+  to Settings at the top (used by few, so not in the Favourites list); the sign-in note above Favourites has a ✕ that
+  hides it for the rest of the day. Built 26 Nov on `radio-native-dev`.
 - **Tester suggestion (26 Nov 2026): play the last station on opening** (on/off, off at the start; Settings → Data and
   playback). Opening the app on the phone starts the last station unless something is playing or an alarm/link opened it;
   opening Radio Velvet in Android Auto does the same once per drive, only when no other app is playing. Built 26 Nov on
