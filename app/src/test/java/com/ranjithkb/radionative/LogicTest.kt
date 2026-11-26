@@ -656,4 +656,12 @@ class LogicTest {
         assertEquals(2, Faq.search(en, " ").size)
         assertTrue(Faq.parse("not json", "en").isEmpty())
     }
+
+    /** 2.10 is newer than 2.9 (numbers, not text), and the Dev label doesn't fake an update. */
+    @Test fun version_numbers_compare_as_numbers() {
+        assertTrue(newer("2.10.0", "2.9.0")); assertFalse(newer("2.9.0", "2.10.0"))
+        assertTrue(newer("2.10.1", "2.10.0")); assertFalse(newer("2.10.0", "2.10.0-dev"))
+        assertFalse(newer("2.9.0", "2.10.0-dev"))
+    }
 }
+

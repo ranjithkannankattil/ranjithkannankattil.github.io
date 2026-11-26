@@ -45,7 +45,7 @@ suspend fun checkUpdate(ctx: Context): Update? = withContext(Dispatchers.IO) {
     } catch (e: Exception) { null }
 }
 
-private fun newer(a: String, b: String): Boolean {
+internal fun newer(a: String, b: String): Boolean {
     val x = a.split('.').map { it.toIntOrNull() ?: 0 }; val y = b.split('.').map { it.toIntOrNull() ?: 0 }
     for (i in 0 until 3) { val d = x.getOrElse(i) { 0 } - y.getOrElse(i) { 0 }; if (d != 0) return d > 0 }
     return false
