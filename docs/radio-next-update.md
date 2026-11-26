@@ -142,11 +142,8 @@ His reason: the app looks like one long list; in Settings you can't tell what is
   sits beside the station name, within thumb reach, in every player look (not tucked in a corner or menu).
   **Row size** in Settings → Look: Compact · **Comfortable (default)** · Expanded. Compact = one-line rows, tighter
   gaps (good for car stereos and small screens); Expanded = larger text and touch targets with the song now playing.
-- **Open question for him: keep the current design as an option?** He asked whether 2.10 could let people choose
-  between today's design and the new fluid one. Recommendation: no full two-design switch (every screen built and
-  tested twice, and fixes land in one but not the other); instead keep what people are used to (same tabs, same
-  places, Original player looks, Compact rows feel close to today) and roll the new look out in a Dev build for
-  testers first. Waiting for his decision.
+- **Decided 26 Nov 2026: all new design only** (he chose the full change: no switch back to today's design).
+  Building started 26 Nov on `radio-native-dev`.
 - Also in 2.10 (from earlier): bugs (radio turning itself on + Auto artwork flicker, Connecting… timeout,
   widget doesn't open the app, three looks ignore the colour theme, text shifts between looks, remaining
   translations), the share card drawn from the current player look, browse by country. Spotify-in-car
