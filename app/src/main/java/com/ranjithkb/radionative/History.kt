@@ -330,3 +330,11 @@ fun drawListeningCard(ctx: Context, period: String, ms: Long, bars: List<Pair<St
     cv.drawText("ranjithkb.com/radio", 540f, 1270f, paint(25f, alpha(ink, 0x99), light))
     return bmp
 }
+
+/** A number that counts up from 0 to [target] in about 0.7 s, and glides when it changes. */
+@Composable
+fun countUp(target: Long): Long {
+    val a = remember { Animatable(0f) }
+    LaunchedEffect(target) { a.animateTo(target.toFloat(), tween(700)) }
+    return a.value.toLong()
+}

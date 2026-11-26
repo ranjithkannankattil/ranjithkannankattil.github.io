@@ -56,9 +56,15 @@ suspend fun shareSongCard(ctx: Context, song: String, artist: String, station: S
     // the card in the listener's own look: colour theme (light / dark), font and visualiser, as in the big player
     val pal = Theme.pal; val viz = Theme.viz; val font = Theme.font
     val bands = if (System.currentTimeMillis() - Viz.stamp < 2000) Viz.bands.copyOf() else null
+    // 2.10: with a radio look chosen, the card is that radio (its colours, light or dark), not the standard cover
+    val look = Theme.look.takeIf { it != "std" && Eras.byId(it) != null }
+    val original = Theme.lookColours == "original"; val dark = Theme.dark; val themeId = Theme.themeId
     val file = withContext(Dispatchers.IO) {
-        val art = artUrl?.let { try { URL(it).openStream().use(BitmapFactory::decodeStream) } catch (e: Exception) { null } }
-        val bmp = drawSongCard(ctx, song, artist, station, art, link, pal, viz, font, bands)
+        val bmp = if (look != null) drawLookCard(ctx, look, original, dark, themeId, song, artist, station, link)
+        else {
+            val art = artUrl?.let { try { URL(it).openStream().use(BitmapFactory::decodeStream) } catch (e: Exception) { null } }
+            drawSongCard(ctx, song, artist, station, art, link, pal, viz, font, bands)
+        }
         val dir = File(ctx.cacheDir, "cards").apply { mkdirs() }
         File(dir, "song-card.png").also { f -> f.outputStream().use { bmp.compress(Bitmap.CompressFormat.PNG, 100, it) } }
     }

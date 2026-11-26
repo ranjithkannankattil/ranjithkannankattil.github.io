@@ -412,7 +412,9 @@ fun App(c: MediaController?) {
                                         // Data saver (or "Lightest first"): how heavy the station is
                                         val w = if (curSort == "light" || saving) DataSaver.label(DataSaver.lightest(s.br)) else ""
                                         listOf(w, t).filter { it.isNotBlank() }.joinToString(" · ") }
-                                Box(if (s.key == shown.firstOrNull()?.key) Modifier.tourTarget("row") else Modifier) {
+                                // a new list (another language, kind or order) fades in instead of jumping (2.10 motion)
+                                Box(Modifier.animateItem(fadeInSpec = androidx.compose.animation.core.tween(260))
+                                    .then(if (s.key == shown.firstOrNull()?.key) Modifier.tourTarget("row") else Modifier)) {
                                     StationRow(s, sub, s.key in favKeys, "st|${s.key}" == now.id, now.playing,
                                         onPlay = { play(shown, s) }, onFav = { favs.toggle(s); refreshFavs() }, badge = s.key in top3) }
                             }
@@ -917,9 +919,10 @@ fun ListeningTiles(open: () -> Unit = {}) {
             Text(n, fontSize = 26.sp, fontWeight = FontWeight.Light, color = AccentText, maxLines = 1)
             Text(label, fontSize = 13.sp, color = Soft, textAlign = androidx.compose.ui.text.style.TextAlign.Center, lineHeight = 17.sp)
         }
-        Tile(Listen.short(mine.week), t("this week"))
-        Tile(Listen.short(mine.total), t("in all"))
-        Tile("$favs", t("favourites"))
+        // the numbers count up when You opens (2.10 motion)
+        Tile(Listen.short(countUp(mine.week)), t("this week"))
+        Tile(Listen.short(countUp(mine.total)), t("in all"))
+        Tile("${countUp(favs.toLong())}", t("favourites"))
     }
     if (mine.top.isNotEmpty()) InfoText(t("Your top station") + ": " + mine.top.first().first)
 }

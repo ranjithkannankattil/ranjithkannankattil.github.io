@@ -31,6 +31,7 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.guava.future
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.async
 
 /** Station <-> player item. The stream list rides along in the metadata extras. */
 fun Station.toItem(language: String): MediaItem {
@@ -96,7 +97,7 @@ class PlaybackService : MediaLibraryService() {
         private val WAITS = longArrayOf(1_500, 3_000, 5_000, 8_000, 12_000, 20_000, 30_000)
         fun delayMs(n: Int): Long = WAITS[n.coerceIn(0, WAITS.size - 1)]
     }
-    companion object { const val STUCK_MS = 25_000L; const val CLOSE = "velvet.close"; const val ALARM = "velvet.alarm"; const val ALARM_STOP = "velvet.alarm.stop"; const val ALARM_START = "velvet.alarm.start"; const val RESUME = "velvet.resume"
+    companion object { const val STUCK_MS = 25_000L; const val COVER_WAIT_MS = 1_500L; const val CLOSE = "velvet.close"; const val ALARM = "velvet.alarm"; const val ALARM_STOP = "velvet.alarm.stop"; const val ALARM_START = "velvet.alarm.start"; const val RESUME = "velvet.resume"
         /** Sound outputs that mean "the car or a Bluetooth device": when one goes away, the radio pauses. */
         val CAR_OUTPUTS = setOf(android.media.AudioDeviceInfo.TYPE_BLUETOOTH_A2DP, android.media.AudioDeviceInfo.TYPE_BLE_HEADSET,
             android.media.AudioDeviceInfo.TYPE_BLE_SPEAKER, android.media.AudioDeviceInfo.TYPE_USB_DEVICE,
@@ -472,6 +473,8 @@ class PlaybackService : MediaLibraryService() {
         // Usual order is "Artist - Song"; some (e.g. Radio Mango) send "Song - Singer, Singer"
         if (parts.size == 2 && song.contains(',') && !artist.contains(',')) { val t = artist; artist = song; song = t }
         if (song.isBlank() || song.equals(station, true)) return
+        // the same song sent again (many stations repeat it every few seconds): nothing to change, no picture swap
+        if (item.mediaMetadata.title?.toString() == song && item.mediaMetadata.artworkUri?.toString()?.startsWith("http") == true) return
         fun update(art: String?) {
             val cur = player.currentMediaItem ?: return
             if (cur.mediaId != item.mediaId) return
@@ -481,8 +484,15 @@ class PlaybackService : MediaLibraryService() {
                 .setArtworkUri(art?.let(Uri::parse) ?: CarArt.uriFor(item.mediaId.removePrefix("st|"), station)).build()
             player.replaceMediaItem(i, cur.buildUpon().setMediaMetadata(md).build())
         }
-        update(null)
-        scope.launch { Repo.artwork(artist, song)?.let { update(it) } }
+        // Android Auto showed the station picture and then the cover a moment later (a flicker on every song).
+        // Wait up to 1.5 s for the cover and set the picture once; only if it's slow does the station picture go
+        // up first, and the cover follows when it arrives.
+        scope.launch {
+            val look = async { Repo.artwork(artist, song) }
+            val quick = kotlinx.coroutines.withTimeoutOrNull(COVER_WAIT_MS) { look.await() }
+            if (quick != null) update(quick)
+            else { update(null); look.await()?.let { update(it) } }
+        }
     }
 
     // ---- staying on air through tunnels and patchy signal
