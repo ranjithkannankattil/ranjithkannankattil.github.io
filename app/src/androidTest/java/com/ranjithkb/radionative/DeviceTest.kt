@@ -524,12 +524,14 @@ class DeviceTest {
     /** Tester on a car screen (26 Nov 2026): Back closed the app. Now Favourites → Stations first; leaving needs two Backs. */
     @Test fun t30_back_goes_back_before_leaving() {
         val prefs = ctx.getSharedPreferences("app", Context.MODE_PRIVATE)
+        Tour.done(ctx)                                               // the first-run tour opens on Stations and catches Back itself
         prefs.edit().putInt("tab", 1).apply()                        // open on Favourites
         val sc = androidx.test.core.app.ActivityScenario.launch(MainActivity::class.java)
         try {
             Thread.sleep(3_000)
             fun back() { sc.onActivity { it.onBackPressedDispatcher.onBackPressed() }; Thread.sleep(600) }
-            repeat(3) { if (prefs.getInt("tab", 1) != 0) back() }   // (a first-run tour may take one Back to close)
+            assertEquals("opened on Favourites", 1, prefs.getInt("tab", 0))
+            back()
             assertEquals("Back from Favourites goes to Stations", 0, prefs.getInt("tab", 1))
             assertEquals("tab", BackStep.last)
             assertEquals("the app is still open", androidx.lifecycle.Lifecycle.State.RESUMED, sc.state)
