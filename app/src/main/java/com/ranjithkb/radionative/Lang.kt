@@ -111,7 +111,7 @@ object Lang {
         "For ships, villages and patchy signal: plays each station's lightest link and skips song covers. Many stations then use 15–30 MB an hour instead of 60–90." to "കപ്പലിലും ഗ്രാമങ്ങളിലും സിഗ്നൽ കുറഞ്ഞിടത്തും: ഓരോ നിലയത്തിന്റെയും ഭാരം കുറഞ്ഞ ലിങ്ക് പ്ലേ ചെയ്യും, പാട്ടിന്റെ ചിത്രം ഒഴിവാക്കും. പല നിലയങ്ങൾക്കും മണിക്കൂറിൽ 60–90 MB-ക്ക് പകരം 15–30 MB മതി.",
         "Free radio from Kerala and around the world. Shall I show you around? It takes half a minute." to "കേരളത്തിൽ നിന്നും ലോകമെമ്പാടും നിന്നുള്ള സൗജന്യ റേഡിയോ. ഒന്ന് ചുറ്റിക്കാണിക്കട്ടെ? അര മിനിറ്റ് മതി.",
         "Hand-picked stations from every language" to "എല്ലാ ഭാഷകളിൽ നിന്നും തിരഞ്ഞെടുത്ത നിലയങ്ങൾ",
-        "Hours listened this week, by everyone" to "ഈ ആഴ്ച എല്ലാവരും കേട്ട മണിക്കൂറുകൾ",
+        "Hours listened by everyone, since the start" to "തുടക്കം മുതൽ എല്ലാവരും കേട്ട മണിക്കൂറുകൾ",
         "How the big player looks. Needles, meters and lamps move with the music, and the knobs work: tuning changes the station, volume is the phone's volume, bass and treble are the equaliser." to "വലിയ പ്ലേയറിന്റെ രൂപം. സൂചികളും മീറ്ററുകളും വിളക്കുകളും പാട്ടിനൊപ്പം ചലിക്കും, നോബുകൾ പ്രവർത്തിക്കും: ട്യൂണിങ് നിലയം മാറ്റും, വോള്യം ഫോണിന്റെ ശബ്ദം, ബാസും ട്രെബിളും ഈക്വലൈസർ.",
         "If a station doesn't start, Radio Velvet tries its other sources, then you can skip to the next one." to "ഒരു നിലയം തുടങ്ങിയില്ലെങ്കിൽ റേഡിയോ വെൽവെറ്റ് അതിന്റെ മറ്റു ലിങ്കുകൾ നോക്കും; പിന്നെ അടുത്തതിലേക്ക് മാറാം.",
         "If it doesn't play" to "കേൾക്കാനായില്ലെങ്കിൽ",
@@ -211,6 +211,8 @@ object Lang {
         "Sort stations" to "നിലയങ്ങളുടെ ക്രമം",
         "Sound" to "ശബ്ദം",
         "Spacious" to "വിശാലം",
+        "Expanded" to "വലുത്",
+        "Row size" to "വരിയുടെ വലുപ്പം",
         "Spin" to "ഏതെങ്കിലും ഒന്ന്",
         "Standard player" to "സാധാരണ പ്ലേയർ",
         "Start" to "തുടങ്ങുക",
@@ -275,7 +277,7 @@ object Lang {
         "e.g. Work, Weekend" to "ഉദാ. ജോലി, വാരാന്ത്യം",
         "hand-picked stations" to "തിരഞ്ഞെടുത്ത നിലയങ്ങൾ",
         "↺  Reset knobs" to "↺  നോബുകൾ പഴയപടിയാക്കുക",
-        "⇅ sorts the stations: A–Z, the list's own order, most heard this week, or top rated." to "⇅ നിലയങ്ങളുടെ ക്രമം മാറ്റും: അക്ഷരമാലാക്രമം, പട്ടികയുടെ സ്വന്തം ക്രമം, ഈ ആഴ്ച കൂടുതൽ കേട്ടത്, അല്ലെങ്കിൽ മികച്ച റേറ്റിങ്.",
+        "⇅ sorts the stations: A–Z, the list's own order, most heard, or top rated." to "⇅ നിലയങ്ങളുടെ ക്രമം മാറ്റും: അക്ഷരമാലാക്രമം, പട്ടികയുടെ സ്വന്തം ക്രമം, കൂടുതൽ കേട്ടത്, അല്ലെങ്കിൽ മികച്ച റേറ്റിങ്.",
     )
     private val HI: Map<String, String> = mapOf(
         "+  Add an alarm" to "+  अलार्म जोड़ें",
@@ -353,7 +355,7 @@ object Lang {
         "For ships, villages and patchy signal: plays each station's lightest link and skips song covers. Many stations then use 15–30 MB an hour instead of 60–90." to "जहाज़, गाँव और कमज़ोर सिग्नल के लिए: हर स्टेशन का सबसे हल्का लिंक चलाता है और गानों की तस्वीरें छोड़ देता है। कई स्टेशन तब घंटे में 60–90 की जगह 15–30 MB लेते हैं।",
         "Free radio from Kerala and around the world. Shall I show you around? It takes half a minute." to "केरल और दुनिया भर से मुफ़्त रेडियो। थोड़ा घुमा दूँ? आधा मिनट लगेगा।",
         "Hand-picked stations from every language" to "हर भाषा से चुने हुए स्टेशन",
-        "Hours listened this week, by everyone" to "इस हफ़्ते सबने कितने घंटे सुना",
+        "Hours listened by everyone, since the start" to "शुरुआत से सबने कितने घंटे सुना",
         "How the big player looks. Needles, meters and lamps move with the music, and the knobs work: tuning changes the station, volume is the phone's volume, bass and treble are the equaliser." to "बड़े प्लेयर का रूप। सुइयाँ, मीटर और बत्तियाँ संगीत के साथ चलती हैं, और नॉब काम करते हैं: ट्यूनिंग स्टेशन बदलती है, वॉल्यूम फ़ोन की आवाज़ है, बेस और ट्रेबल इक्वलाइज़र हैं।",
         "If a station doesn't start, Radio Velvet tries its other sources, then you can skip to the next one." to "अगर कोई स्टेशन शुरू न हो, तो रेडियो वेल्वेट उसके दूसरे स्रोत आज़माता है, फिर आप अगले पर जा सकते हैं।",
         "If it doesn't play" to "अगर न चले",
@@ -453,6 +455,8 @@ object Lang {
         "Sort stations" to "स्टेशनों का क्रम",
         "Sound" to "आवाज़",
         "Spacious" to "खुला",
+        "Expanded" to "बड़ा",
+        "Row size" to "पंक्ति का आकार",
         "Spin" to "कोई भी एक",
         "Standard player" to "सामान्य प्लेयर",
         "Start" to "शुरू करें",
@@ -517,7 +521,7 @@ object Lang {
         "e.g. Work, Weekend" to "जैसे काम, वीकेंड",
         "hand-picked stations" to "चुने हुए स्टेशन",
         "↺  Reset knobs" to "↺  नॉब रीसेट करें",
-        "⇅ sorts the stations: A–Z, the list's own order, most heard this week, or top rated." to "⇅ स्टेशनों का क्रम बदलता है: A–Z, सूची का अपना क्रम, इस हफ़्ते सबसे ज़्यादा सुने, या सबसे अच्छी रेटिंग।",
+        "⇅ sorts the stations: A–Z, the list's own order, most heard, or top rated." to "⇅ स्टेशनों का क्रम बदलता है: A–Z, सूची का अपना क्रम, सबसे ज़्यादा सुने, या सबसे अच्छी रेटिंग।",
     )
 }
 

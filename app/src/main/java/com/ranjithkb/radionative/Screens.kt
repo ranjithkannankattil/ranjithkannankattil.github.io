@@ -236,8 +236,8 @@ fun SettingsScreen(close: () -> Unit, scroll: androidx.compose.foundation.Scroll
                 if (pair.size == 1) Spacer(Modifier.weight(1f))
             }
         }
-        SectionHead(t("Station list"))
-        Segmented(listOf(t("Compact"), t("Comfortable"), t("Spacious")), Theme.spacing) { Theme.spacing = it; save() }
+        SectionHead(t("Row size"))
+        Segmented(listOf(t("Compact"), t("Comfortable"), t("Expanded")), Theme.spacing) { Theme.spacing = it; save() }
         SectionHead(t("Favourites"))
         Segmented(listOf(t("List"), t("Tiles")), if (Theme.favTiles) 1 else 0) { Theme.favTiles = it == 1; save() }
 
@@ -258,7 +258,7 @@ fun SettingsScreen(close: () -> Unit, scroll: androidx.compose.foundation.Scroll
             (if (alarms.count { it.on } > 1) " +${alarms.count { it.on } - 1}" else ""); else -> "Off" }, onClick = { open("alarm") })
         SettingRow(t("Request a station"), sub = t("Missing a station? Tell us"), onClick = { open("request") })
         SettingRow(t("Reset to the original look"), onClick = {
-            Theme.themeId = "velvet"; Theme.mode = "phone"; Theme.text = 0; Theme.font = "jost"; Theme.spacing = 0; Theme.viz = "off"
+            Theme.themeId = "velvet"; Theme.mode = "phone"; Theme.text = 0; Theme.font = "jost"; Theme.spacing = 1; Theme.viz = "off"
             Theme.look = "std"; Theme.lookColours = "original"; save() })
     }
 }
@@ -487,7 +487,7 @@ fun SortSheet(current: String, onPick: (String) -> Unit, close: () -> Unit) {
         Column(Modifier.padding(start = Pad, end = Pad, bottom = 24.dp)) {
             Label(t("Sort stations"), Soft, 10, Modifier.padding(bottom = 6.dp))
             listOf("Usual order" to "As the stations are listed", "A–Z" to "By name",
-                "Most heard" to "Hours listened this week, by everyone", "Top rated" to "Average stars, from 3 ratings up",
+                "Most heard" to "Hours listened by everyone, since the start", "Top rated" to "Average stars, from 3 ratings up",
                 "Lightest first" to "Least data an hour first (good for Data saver)").forEachIndexed { i, (en, de) ->
                 val t = Lang.tr(en); val d = Lang.tr(de)
                 val id = SORTS[i].first; val on = id == current
@@ -770,6 +770,22 @@ fun CommentsScreen(stKey: String, stationName: String, close: () -> Unit) {
 @Composable
 fun RecentStrip(items: List<Recent.Item>, nowKey: String?, onPlay: (Recent.Item) -> Unit) {
     if (items.isEmpty()) return
+    // wide, short screens (phone sideways, car stereos): one slim row of names, so the favourites below stay visible
+    if (androidx.compose.ui.platform.LocalConfiguration.current.screenHeightDp < 480) {
+        androidx.compose.foundation.lazy.LazyRow(Modifier.padding(top = 8.dp), contentPadding = PaddingValues(horizontal = Pad),
+            horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
+            item { Label(t("Recently played"), Soft, 9) }
+            items(items.size, key = { items[it].station.key }) { i ->
+                val it0 = items[i]; val on = it0.station.key == nowKey
+                Box(Modifier.heightIn(min = 44.dp).clip(RoundedCornerShape(22.dp)).background(if (on) AccentSoft else Paper2)
+                    .clickable(onClickLabel = "Play ${it0.station.name}") { onPlay(it0) }.padding(horizontal = 14.dp),
+                    contentAlignment = Alignment.Center) {
+                    Text(it0.station.name, fontSize = 14.sp, color = if (on) AccentText else Title, maxLines = 1)
+                }
+            }
+        }
+        return
+    }
     Column {
         Label(t("Recently played"), Soft, 10, Modifier.padding(start = Pad, top = 14.dp, bottom = 10.dp))
         androidx.compose.foundation.lazy.LazyRow(contentPadding = PaddingValues(horizontal = Pad), horizontalArrangement = Arrangement.spacedBy(12.dp)) {

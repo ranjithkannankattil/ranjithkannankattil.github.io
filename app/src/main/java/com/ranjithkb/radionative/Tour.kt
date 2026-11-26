@@ -46,7 +46,7 @@ object Tour {
         Step(null, "Welcome to Radio Velvet", "Free radio from Kerala and around the world. Shall I show you around? It takes half a minute."),
         Step("star", "Velvet Selection", "The star is the Velvet Selection: stations hand-picked from every language. Hold it to see its name."),
         Step("langs", "Languages", "Your languages sit in this row. ALL LANGUAGES opens the full list of 70+; hold a language to pin it."),
-        Step("sort", "Sort", "⇅ sorts the stations: A–Z, the list's own order, most heard this week, or top rated."),
+        Step("sort", "Sort", "⇅ sorts the stations: A–Z, the list's own order, most heard, or top rated."),
         Step("row", "Play and keep", "Tap a station to play it. Tap ♡ to keep it in your Favourites."),
         Step("header", "Search and Settings", "Search every station by name, or say it. ⚙ Settings has the app language, colour themes, text size, data saver, the equaliser and alarms."),
         Step("player", "The player", "Play and pause here. Tap the bar for the big player: swipe its cover to change the player look, from a 1930s radio to a 1990s tuner."),

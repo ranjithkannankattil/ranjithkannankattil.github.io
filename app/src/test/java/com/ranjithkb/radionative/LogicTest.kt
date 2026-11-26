@@ -270,8 +270,9 @@ class LogicTest {
     private val b = Station("b", "Alpha", "fm", listOf("x"), "malayalam")
     private val c = Station("c", "mango", "fm", listOf("x"), "malayalam")
     private val d = Station("d", "(Beta)", "fm", listOf("x"), "malayalam")
-    private val data = Stats.Data(mapOf("malayalam:a" to 600, "malayalam:c" to 30, "malayalam:d" to 6000),
-        mapOf("malayalam:a" to (4.2 to 10), "malayalam:b" to (5.0 to 2), "malayalam:c" to (4.9 to 3), "malayalam:d" to (4.2 to 40)), "x")
+    private val data = Stats.Data(mapOf("malayalam:b" to 9000),
+        mapOf("malayalam:a" to (4.2 to 10), "malayalam:b" to (5.0 to 2), "malayalam:c" to (4.9 to 3), "malayalam:d" to (4.2 to 40)), "x",
+        total = mapOf("malayalam:a" to 600, "malayalam:c" to 30, "malayalam:d" to 6000))   // Most heard = all time, not this week
 
     @Test fun sort_usual_keeps_order() = assertEquals(listOf(a, b, c, d), Stats.sort(listOf(a, b, c, d), "usual", data))
     @Test fun sort_az_ignores_case_and_brackets() = assertEquals(listOf(b, d, c, a), Stats.sort(listOf(a, b, c, d), "az", data))
@@ -282,14 +283,15 @@ class LogicTest {
     @Test fun top3_needs_an_hour() = assertEquals(setOf("malayalam:d", "malayalam:a"), Stats.top3(listOf(a, b, c, d), data))
     @Test fun labels() {
         assertEquals("Still collecting", Stats.heardLabel(null)); assertEquals("Still collecting", Stats.heardLabel(0))
-        assertEquals("45 min this week", Stats.heardLabel(45)); assertEquals("1 hr this week", Stats.heardLabel(60)); assertEquals("2 hrs this week", Stats.heardLabel(150))
-        assertEquals("1,240 hrs this week", Stats.heardLabel(1240 * 60 + 59))
+        assertEquals("45 min in all", Stats.heardLabel(45)); assertEquals("110 min in all", Stats.heardLabel(110)); assertEquals("2 hrs in all", Stats.heardLabel(150))
+        assertEquals("1,240 hrs in all", Stats.heardLabel(1240 * 60 + 59))
         assertEquals("Not enough ratings yet", Stats.ratedLabel(5.0 to 2)); assertEquals("★ 4.6 · 38 ratings", Stats.ratedLabel(4.6 to 38))
         assertEquals("Not enough ratings yet", Stats.ratedLabel(null))
     }
     @Test fun stats_file_parses() {
-        val j = JSONObject("""{"updated":"2026-11-14T20:59Z","week":{"malayalam:ahaliafm":185},"total":{},"ratings":{"english-news:bbc-live-news":[3.33,3]},"days":[]}""")
+        val j = JSONObject("""{"updated":"2026-11-14T20:59Z","week":{"malayalam:ahaliafm":185},"total":{"malayalam:ahaliafm":5100},"ratings":{"english-news:bbc-live-news":[3.33,3]},"days":[]}""")
         val p = Stats.parse(j)
+        assertEquals(5100, p.total["malayalam:ahaliafm"])
         assertEquals(185, p.week["malayalam:ahaliafm"]); assertEquals(3.33 to 3, p.ratings["english-news:bbc-live-news"])
         val empty = Stats.parse(JSONObject("{}")); assertTrue(empty.week.isEmpty() && empty.ratings.isEmpty())
     }
@@ -405,7 +407,8 @@ class LogicTest {
     @Test fun review_rules() {
         val day = 86_400_000L; val now = 100 * day
         assertTrue(ReviewRule.ready(now - 5 * day, now, 4 * 3_600_000L, 0, false))
-        assertFalse(ReviewRule.ready(now - 2 * day, now, 4 * 3_600_000L, 0, false))
+        assertTrue(ReviewRule.ready(now - 2 * day, now, 2 * 3_600_000L, 0, false))     // 2 days and 2 hours (his choice, 24 Nov)
+        assertFalse(ReviewRule.ready(now - day, now, 4 * 3_600_000L, 0, false))
         assertFalse(ReviewRule.ready(now - 5 * day, now, 3_600_000L, 0, false))
         assertFalse(ReviewRule.ready(now - 5 * day, now, 4 * 3_600_000L, now - day, false))
         assertFalse(ReviewRule.ready(now - 5 * day, now, 4 * 3_600_000L, 0, true))

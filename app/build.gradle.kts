@@ -67,6 +67,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-guava:1.9.0")
     // Cast to Chromecast / Google TV / Nest speakers
     implementation("androidx.media3:media3-cast:$media3")
+    implementation("androidx.car.app:app:1.4.0")          // only to know when Android Auto connects / disconnects
     implementation("androidx.mediarouter:mediarouter:1.7.0")
     implementation("androidx.fragment:fragment-ktx:1.8.5")
     implementation("androidx.appcompat:appcompat:1.7.0")

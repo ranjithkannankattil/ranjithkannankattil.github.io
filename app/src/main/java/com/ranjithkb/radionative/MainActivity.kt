@@ -335,7 +335,7 @@ fun App(c: MediaController?) {
                             items(shown, key = { it.key }) { s ->
                                 val base = if (colId == PICKS || colId == ALL) langOf(s) else col?.cats?.find { it.first == s.category }?.second ?: ""
                                 val sub = when { colId == PICKS -> base
-                                    sort == "heard" -> listOf(Stats.heardLabel(stats?.week?.get(s.key)), base).filter { it.isNotBlank() }.joinToString(" · ")
+                                    sort == "heard" -> listOf(Stats.heardLabel(stats?.total?.get(s.key)), base).filter { it.isNotBlank() }.joinToString(" · ")
                                     sort == "rated" -> listOf(Stats.ratedLabel(stats?.ratings?.get(s.key)), base).filter { it.isNotBlank() }.joinToString(" · ")
                                     else -> base }.let { t ->
                                         // Data saver (or "Lightest first"): how heavy the station is
@@ -506,7 +506,10 @@ fun FavsTab(list: List<Station>, now: NowState, langOf: (Station) -> String, onP
         order = order.toMutableList().apply { add(to.index, removeAt(from.index)) }
     }
     fun commit() { favs.replaceAll(order); onChanged() }
-    Column {
+    // Recently played and the "N favourites" line scroll away with the list (wide, short screens like car stereos
+    // had no room left for the favourites when these stayed fixed on top). Tiles and Reorder keep them on top.
+    val headInList = !edit && !Theme.favTiles
+    @Composable fun Head() = Column {
         if (!edit) RecentStrip(recent, now.id?.removePrefix("st|"), onRecent)
         Row(Modifier.fillMaxWidth().padding(16.dp, 10.dp), verticalAlignment = Alignment.CenterVertically) {
             Text(if (list.isEmpty()) "No favourites yet. Tap ♡ on any station, in any language."
@@ -530,6 +533,9 @@ fun FavsTab(list: List<Station>, now: NowState, langOf: (Station) -> String, onP
                 Text(if (busy) "Sharing…" else "Share this list as the Velvet Selection", color = Accent)
             }
         }
+    }
+    Column {
+        if (!headInList) Head()
         undo?.let { (s, at) ->
             Row(Modifier.fillMaxWidth().background(AccentSoft).padding(16.dp, 4.dp), verticalAlignment = Alignment.CenterVertically) {
                 Text("Removed ${s.name}", Modifier.weight(1f))
@@ -539,6 +545,7 @@ fun FavsTab(list: List<Station>, now: NowState, langOf: (Station) -> String, onP
         Box(Modifier.fillMaxSize()) {
 if (Theme.favTiles && !edit) FavTiles(list, now, langOf, onPlay) { i, s -> undo = s to i; favs.remove(s.key); onChanged() }
 else LazyColumn(state = listState, contentPadding = PaddingValues(bottom = 72.dp)) {
+            if (headInList) item(key = "head") { Head() }
             if (!edit) itemsIndexed(list, key = { _, s -> s.key }) { i, s ->
                 StationRow(s, langOf(s), true, "st|${s.key}" == now.id, now.playing,
                     onPlay = { onPlay(s) }, onFav = { undo = s to i; favs.remove(s.key); onChanged() })

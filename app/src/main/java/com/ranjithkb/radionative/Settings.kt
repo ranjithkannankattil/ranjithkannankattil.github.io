@@ -85,7 +85,7 @@ object Theme {
     var mode by mutableStateOf("phone")          // phone · light · dark
     var text by mutableStateOf(0)                // 0 normal · 1 large · 2 extra large
     var font by mutableStateOf("jost")           // one of FONTS (jost, poppins, … , phone)
-    var spacing by mutableStateOf(0)             // 0 compact · 1 comfortable · 2 spacious
+    var spacing by mutableStateOf(1)             // Row size: 0 compact · 1 comfortable (default) · 2 expanded
     var viz by mutableStateOf("off")             // bars · waves · circle · off
     var resume by mutableStateOf(true)           // carry on after another app's video
     var favTiles by mutableStateOf(false)        // Favourites as a grid of tiles instead of a list
@@ -107,7 +107,9 @@ object Theme {
         themeId = p.getString("theme", "velvet")!!.let { id -> if (THEMES.any { it.id == id }) id else "velvet" }
         mode = if (tvDark) "dark" else p.getString("mode", "phone")!!.let { if (it in listOf("phone", "light", "dark")) it else "phone" }
         text = p.getInt("text", 0).coerceIn(0, 2); font = p.getString("font", "jost")!!.let { f -> if (FONTS.any { it.id == f }) f else "jost" }
-        spacing = p.getInt("spacing", 0).coerceIn(0, 2)
+        // 2.10: Comfortable became the default row size; everyone starts there once, then their own choice stays
+        spacing = if (p.getBoolean("rowSize210", false)) p.getInt("spacing", 1).coerceIn(0, 2)
+                  else 1.also { p.edit().putBoolean("rowSize210", true).putInt("spacing", 1).apply() }
         viz = p.getString("viz", "off")!!.let { if (it in listOf("bars", "waves", "circle", "off")) it else "off" }
         resume = p.getBoolean("resume", true)
         favTiles = p.getBoolean("favTiles", false)

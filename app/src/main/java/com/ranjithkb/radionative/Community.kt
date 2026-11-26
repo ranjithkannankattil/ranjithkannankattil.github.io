@@ -152,16 +152,18 @@ object Crash {
 
 /** Most heard / Top rated: the nightly totals file from the website (js/station-stats.json), kept for 6 hours. */
 object Stats {
-    data class Data(val week: Map<String, Int>, val ratings: Map<String, Pair<Double, Int>>, val updated: String)
+    data class Data(val week: Map<String, Int>, val ratings: Map<String, Pair<Double, Int>>, val updated: String,
+                    val total: Map<String, Int> = emptyMap())   // minutes since counting began (Most heard uses this)
     @Volatile private var mem: Data? = null
     const val MIN_RATINGS = 3
 
     internal fun parse(j: JSONObject): Data {
         val w = j.optJSONObject("week") ?: JSONObject()
+        val tot = j.optJSONObject("total") ?: JSONObject()
         val r = j.optJSONObject("ratings") ?: JSONObject()
         return Data(w.keys().asSequence().associateWith { w.optInt(it) },
             r.keys().asSequence().mapNotNull { k -> r.optJSONArray(k)?.let { a -> k to (a.optDouble(0) to a.optInt(1)) } }.toMap(),
-            j.optString("updated"))
+            j.optString("updated"), tot.keys().asSequence().associateWith { tot.optInt(it) })
     }
 
     suspend fun get(ctx: Context): Data? = withContext(Dispatchers.IO) {
@@ -182,24 +184,23 @@ object Stats {
     fun sort(list: List<Station>, mode: String, d: Data?): List<Station> = when (mode) {
         "az" -> list.sortedBy { it.name.trimStart('(', '"', '\'', ' ').lowercase() }
         "light" -> list.sortedBy { DataSaver.lightest(it.br).takeIf { k -> k > 0 } ?: 9999 }
-        "heard" -> list.sortedByDescending { d?.week?.get(it.key) ?: 0 }
+        "heard" -> list.sortedByDescending { d?.total?.get(it.key) ?: 0 }   // Most heard = of all time (his choice, 24 Nov)
         "rated" -> list.sortedWith(compareByDescending<Station> { s -> d?.ratings?.get(s.key)?.takeIf { it.second >= MIN_RATINGS }?.first ?: -1.0 }
             .thenByDescending { s -> d?.ratings?.get(s.key)?.second ?: 0 })
         else -> list
     }
 
-    /** "185 hrs this week" (minutes below an hour), or "Still collecting". */
+    /** "185 hrs in all" (minutes below two hours), or "Still collecting". */
     fun heardLabel(min: Int?): String = when {
         min == null || min <= 0 -> t("Still collecting")
-        min < 60 -> "$min min this week"
-        min < 120 -> "1 hr this week"
-        else -> "%,d hrs this week".format(java.util.Locale.UK, min / 60)
+        min < 120 -> "$min min in all"
+        else -> "%,d hrs in all".format(java.util.Locale.UK, min / 60)
     }
     fun ratedLabel(r: Pair<Double, Int>?): String = if (r == null || r.second < MIN_RATINGS) t("Not enough ratings yet")
         else "★ " + String.format(java.util.Locale.UK, "%.1f", r.first) + " · ${r.second} ratings"
     /** Top 3 most heard in the list (gold ◆). */
     fun top3(list: List<Station>, d: Data?): Set<String> =
-        list.filter { (d?.week?.get(it.key) ?: 0) >= 60 }.sortedByDescending { d?.week?.get(it.key) ?: 0 }.take(3).map { it.key }.toSet()
+        list.filter { (d?.total?.get(it.key) ?: 0) >= 60 }.sortedByDescending { d?.total?.get(it.key) ?: 0 }.take(3).map { it.key }.toSet()
 }
 
 /** Recently played stations (on this phone only), newest first. */

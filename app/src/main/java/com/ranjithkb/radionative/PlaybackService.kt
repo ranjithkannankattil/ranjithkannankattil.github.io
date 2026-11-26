@@ -95,7 +95,12 @@ class PlaybackService : MediaLibraryService() {
         private val WAITS = longArrayOf(1_500, 3_000, 5_000, 8_000, 12_000, 20_000, 30_000)
         fun delayMs(n: Int): Long = WAITS[n.coerceIn(0, WAITS.size - 1)]
     }
-    companion object { const val CLOSE = "velvet.close"; const val ALARM = "velvet.alarm"; const val ALARM_STOP = "velvet.alarm.stop"; const val ALARM_START = "velvet.alarm.start"; const val RESUME = "velvet.resume" }
+    companion object { const val CLOSE = "velvet.close"; const val ALARM = "velvet.alarm"; const val ALARM_STOP = "velvet.alarm.stop"; const val ALARM_START = "velvet.alarm.start"; const val RESUME = "velvet.resume"
+        /** Sound outputs that mean "the car or a Bluetooth device": when one goes away, the radio pauses. */
+        val CAR_OUTPUTS = setOf(android.media.AudioDeviceInfo.TYPE_BLUETOOTH_A2DP, android.media.AudioDeviceInfo.TYPE_BLE_HEADSET,
+            android.media.AudioDeviceInfo.TYPE_BLE_SPEAKER, android.media.AudioDeviceInfo.TYPE_USB_DEVICE,
+            android.media.AudioDeviceInfo.TYPE_USB_ACCESSORY, android.media.AudioDeviceInfo.TYPE_BUS,
+            android.media.AudioDeviceInfo.TYPE_HEARING_AID) }
     private lateinit var eq: EqEngine
     private lateinit var resumer: ResumeWatcher
     private var tone: android.media.Ringtone? = null
@@ -150,6 +155,8 @@ class PlaybackService : MediaLibraryService() {
                 .setLoadErrorHandlingPolicy(androidx.media3.exoplayer.upstream.DefaultLoadErrorHandlingPolicy(10)))
             .build()
         applyDataSaver()
+        getSystemService(android.media.AudioManager::class.java)?.registerAudioDeviceCallback(outputs, null)
+        runCatching { carConn = androidx.car.app.connection.CarConnection(this).also { it.type.observeForever(carObserver) } }
         player.addListener(object : Player.Listener {
             override fun onMetadata(metadata: Metadata) {
                 for (i in 0 until metadata.length()) {
@@ -295,6 +302,33 @@ class PlaybackService : MediaLibraryService() {
     // Alarm.TONE_AFTER_MS after the alarm time, whatever happens, and stops on its own once the radio is on air.
     // It keeps going until Stop / Snooze / pause, at most Alarm.RING_MAX_MS.
     private var ringing = false
+
+    // ---- leaving the car: pause, and don't let a stray "play" from the car start it on the phone speaker ----
+    @Volatile private var carGoneAt = 0L
+    private var carType = -1
+    private var carConn: androidx.car.app.connection.CarConnection? = null
+    private val carObserver = androidx.lifecycle.Observer<Int> { type ->
+        val proj = androidx.car.app.connection.CarConnection.CONNECTION_TYPE_PROJECTION
+        if (carType == proj && type != proj) carGone("Android Auto disconnected")
+        carType = type
+    }
+    private val outputs = object : android.media.AudioDeviceCallback() {
+        override fun onAudioDevicesRemoved(removed: Array<out android.media.AudioDeviceInfo>) {
+            val car = removed.firstOrNull { it.isSink && it.type in CAR_OUTPUTS } ?: return
+            carGone("sound output gone (type ${car.type})")
+        }
+    }
+    private fun carGone(why: String) {
+        carGoneAt = android.os.SystemClock.elapsedRealtime()
+        if (ringing || !player.playWhenReady) { PlayLog.note(this, "$why: already paused"); return }
+        PlayLog.who = why; player.pause()
+    }
+    /** True for a play request that arrives in the first 10 s after the car / Bluetooth went away. */
+    private fun strayPlay(from: String): Boolean {
+        val recent = android.os.SystemClock.elapsedRealtime() - carGoneAt < 10_000
+        if (recent && !player.playWhenReady && from != packageName) { PlayLog.note(this, "ignored play from $from right after the car left"); return true }
+        return false
+    }
     private var ringId = 0
     private var ringJob: kotlinx.coroutines.Job? = null
     private var candidateAt = 0L
@@ -530,9 +564,13 @@ class PlaybackService : MediaLibraryService() {
     private inner class Callback : MediaLibrarySession.Callback {
         // who sent the last command (for the play log): the app, the lock screen, the car, Android Auto, Bluetooth…
         override fun onPlayerCommandRequest(s: MediaSession, c: MediaSession.ControllerInfo, playerCommand: Int): Int {
+            if (playerCommand == Player.COMMAND_PLAY_PAUSE && strayPlay(c.packageName)) return SessionResult.RESULT_ERROR_PERMISSION_DENIED
             PlayLog.who = c.packageName; return super.onPlayerCommandRequest(s, c, playerCommand)
         }
         override fun onMediaButtonEvent(s: MediaSession, c: MediaSession.ControllerInfo, intent: android.content.Intent): Boolean {
+            val key = androidx.core.content.IntentCompat.getParcelableExtra(intent, android.content.Intent.EXTRA_KEY_EVENT, android.view.KeyEvent::class.java)
+            if (key != null && key.keyCode in intArrayOf(android.view.KeyEvent.KEYCODE_MEDIA_PLAY, android.view.KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE, android.view.KeyEvent.KEYCODE_HEADSETHOOK)
+                && strayPlay("button:" + c.packageName)) return true
             PlayLog.who = "button:" + c.packageName; return super.onMediaButtonEvent(s, c, intent)
         }
         override fun onConnect(s: MediaSession, c: MediaSession.ControllerInfo): MediaSession.ConnectionResult =
@@ -566,9 +604,12 @@ class PlaybackService : MediaLibraryService() {
                                      startIndex: Int, startPositionMs: Long)
                 : ListenableFuture<MediaSession.MediaItemsWithStartPosition> {
             if (items.size == 1) {
-                val ids = siblings[items[0].mediaId]
+                // a car item carries the list it was shown in ("favs>st|col:id"), so next / previous stay in that list
+                val tapped = items[0].mediaId
+                val plain = plainId(tapped)
+                val ids = siblings[tapped]
                 val list = ids?.mapNotNull { id -> known[id]?.let { k -> k.buildUpon().setUri(k.requestMetadata.mediaUri).build() } }
-                val at = list?.indexOfFirst { it.mediaId == items[0].mediaId } ?: -1
+                val at = list?.indexOfFirst { it.mediaId == plain } ?: -1
                 if (list != null && list.size > 1 && at >= 0)
                     return Futures.immediateFuture(MediaSession.MediaItemsWithStartPosition(list, at, C.TIME_UNSET))
             }
@@ -578,8 +619,9 @@ class PlaybackService : MediaLibraryService() {
         // Items from the phone app / Android Auto arrive without their stream address: restore it.
         override fun onAddMediaItems(s: MediaSession, c: MediaSession.ControllerInfo, items: MutableList<MediaItem>)
                 : ListenableFuture<MutableList<MediaItem>> = Futures.immediateFuture(items.map {
-            val uri = it.requestMetadata.mediaUri ?: known[it.mediaId]?.requestMetadata?.mediaUri
-            val base = known[it.mediaId] ?: it
+            val id = plainId(it.mediaId)
+            val uri = it.requestMetadata.mediaUri ?: known[id]?.requestMetadata?.mediaUri
+            val base = known[id] ?: it.buildUpon().setMediaId(id).build()
             base.buildUpon().setUri(uri).build()
         }.toMutableList())
 
@@ -589,7 +631,7 @@ class PlaybackService : MediaLibraryService() {
 
         override fun onGetItem(s: MediaLibrarySession, b: MediaSession.ControllerInfo, id: String)
                 : ListenableFuture<LibraryResult<MediaItem>> =
-            Futures.immediateFuture(known[id]?.let { LibraryResult.ofItem(it, null) } ?: LibraryResult.ofError(LibraryResult.RESULT_ERROR_BAD_VALUE))
+            Futures.immediateFuture((known[id] ?: known[plainId(id)])?.let { LibraryResult.ofItem(it, null) } ?: LibraryResult.ofError(LibraryResult.RESULT_ERROR_BAD_VALUE))
 
         override fun onGetChildren(s: MediaLibrarySession, b: MediaSession.ControllerInfo, parent: String,
                                    page: Int, size: Int, p: LibraryParams?)
@@ -608,10 +650,20 @@ class PlaybackService : MediaLibraryService() {
             }
             list.forEach { known[it.mediaId] = it }
             val playable = list.filter { it.mediaMetadata.isPlayable == true }.map { it.mediaId }
-            playable.forEach { siblings[it] = playable }
-            LibraryResult.ofItemList(ImmutableList.copyOf(list), p)
+            // Each list gets its own ids for the car ("favs>st|…", "picks>st|…"): a station in both Favourites and
+            // Velvet Selection then knows which list it was tapped in (the car loads every tab, so one shared id
+            // used to end up with whichever list loaded last).
+            val shown = list.map { item ->
+                if (item.mediaMetadata.isPlayable != true) item
+                else item.buildUpon().setMediaId("$parent>${item.mediaId}").build().also { sc ->
+                    known[sc.mediaId] = sc; siblings[sc.mediaId] = playable }
+            }
+            LibraryResult.ofItemList(ImmutableList.copyOf(shown), p)
         }
     }
+
+    /** The station's own id from a car item's list-scoped id ("favs>st|col:id" → "st|col:id"). */
+    private fun plainId(id: String) = id.substringAfter('>')
 
     private fun folder(id: String, title: String) = MediaItem.Builder().setMediaId(id)
         .setMediaMetadata(MediaMetadata.Builder().setTitle(title).setIsBrowsable(true).setIsPlayable(false)
@@ -629,6 +681,8 @@ class PlaybackService : MediaLibraryService() {
 
     override fun onDestroy() {
         Theme.prefs(this).unregisterOnSharedPreferenceChangeListener(prefListener)
+        getSystemService(android.media.AudioManager::class.java)?.unregisterAudioDeviceCallback(outputs)
+        carConn?.type?.removeObserver(carObserver)
         stopTone(); eq.release(); giveUpReconnect()
         scope.cancel(); SleepTimer.pause = null
         castPlayer?.setSessionAvailabilityListener(null); castPlayer?.release()

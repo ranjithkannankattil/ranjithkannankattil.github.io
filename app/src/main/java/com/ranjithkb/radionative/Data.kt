@@ -20,19 +20,21 @@ data class Collection(val id: String, val name: String, val native: String, val 
 data class Station(val id: String, val name: String, val category: String, val streams: List<String>,
                    val col: String, val offline: Boolean = false, val geo: String = "",
                    /** kbps of each stream, same order (0 = not known): for Data saver. */
-                   val br: List<Int> = emptyList()) {
+                   val br: List<Int> = emptyList(),
+                   /** the sound of a TV channel (Asianet, Aaj Tak…): shows a small TV tag */
+                   val tv: Boolean = false) {
     /** "Only plays in the UAE" for stations that stream inside one country only. */
     val geoNote get() = if (geo.isBlank()) "" else "Only plays in " + (mapOf("AE" to "the UAE", "QA" to "Qatar", "BH" to "Bahrain",
         "OM" to "Oman", "SA" to "Saudi Arabia", "KW" to "Kuwait", "IN" to "India", "US" to "the USA", "GB" to "the UK")[geo] ?: geo)
     val key get() = "$col:$id"
     fun toJson(): JSONObject = JSONObject().put("id", id).put("name", name).put("category", category)
-        .put("streams", JSONArray(streams)).put("col", col).put("geo", geo).put("br", JSONArray(br))
+        .put("streams", JSONArray(streams)).put("col", col).put("geo", geo).put("br", JSONArray(br)).put("tv", tv)
     companion object {
         fun fromJson(o: JSONObject, col: String = o.optString("col")) = Station(
             o.getString("id"), o.getString("name"), o.optString("category"),
             List(o.getJSONArray("streams").length()) { o.getJSONArray("streams").getString(it) },
             col, o.optBoolean("offline") || o.optBoolean("hidden"), o.optString("geo"),
-            o.optJSONArray("br")?.let { a -> List(a.length()) { a.optInt(it) } } ?: emptyList())
+            o.optJSONArray("br")?.let { a -> List(a.length()) { a.optInt(it) } } ?: emptyList(), o.optBoolean("tv"))
     }
 }
 
