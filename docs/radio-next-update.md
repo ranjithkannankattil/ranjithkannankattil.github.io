@@ -142,6 +142,10 @@ His reason: the app looks like one long list; in Settings you can't tell what is
   sits beside the station name, within thumb reach, in every player look (not tucked in a corner or menu).
   **Row size** in Settings → Look: Compact · **Comfortable (default)** · Expanded. Compact = one-line rows, tighter
   gaps (good for car stereos and small screens); Expanded = larger text and touch targets with the song now playing.
+- **Tester suggestion (26 Nov 2026): play the last station on opening** (on/off, off at the start; Settings → Data and
+  playback). Opening the app on the phone starts the last station unless something is playing or an alarm/link opened it;
+  opening Radio Velvet in Android Auto does the same once per drive, only when no other app is playing. Built 26 Nov on
+  `radio-native-dev`. (Android Auto's own "Start music automatically" setting also works with Radio Velvet.)
 - **Decided 26 Nov 2026: all new design only** (he chose the full change: no switch back to today's design).
   Building started 26 Nov on `radio-native-dev`.
 - Also in 2.10 (from earlier): bugs (radio turning itself on + Auto artwork flicker, Connecting… timeout,
