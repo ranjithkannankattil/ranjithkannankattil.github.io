@@ -97,7 +97,10 @@ class PlaybackService : MediaLibraryService() {
         private val WAITS = longArrayOf(1_500, 3_000, 5_000, 8_000, 12_000, 20_000, 30_000)
         fun delayMs(n: Int): Long = WAITS[n.coerceIn(0, WAITS.size - 1)]
     }
-    companion object { const val STUCK_MS = 25_000L; const val COVER_WAIT_MS = 1_500L; const val CLOSE = "velvet.close"; const val ALARM = "velvet.alarm"; const val ALARM_STOP = "velvet.alarm.stop"; const val ALARM_START = "velvet.alarm.start"; const val RESUME = "velvet.resume"
+    companion object {
+        // Android Auto's own keys for how a folder's stations are shown (list or grid of tiles)
+        const val CONTENT_STYLE_PLAYABLE = "android.media.browse.CONTENT_STYLE_PLAYABLE_HINT"; const val STYLE_LIST = 1; const val STYLE_GRID = 2
+        const val STUCK_MS = 25_000L; const val COVER_WAIT_MS = 1_500L; const val CLOSE = "velvet.close"; const val ALARM = "velvet.alarm"; const val ALARM_STOP = "velvet.alarm.stop"; const val ALARM_START = "velvet.alarm.start"; const val RESUME = "velvet.resume"
         /** Sound outputs that mean "the car or a Bluetooth device": when one goes away, the radio pauses. */
         val CAR_OUTPUTS = setOf(android.media.AudioDeviceInfo.TYPE_BLUETOOTH_A2DP, android.media.AudioDeviceInfo.TYPE_BLE_HEADSET,
             android.media.AudioDeviceInfo.TYPE_BLE_SPEAKER, android.media.AudioDeviceInfo.TYPE_USB_DEVICE,
@@ -110,6 +113,8 @@ class PlaybackService : MediaLibraryService() {
     private val prefListener = android.content.SharedPreferences.OnSharedPreferenceChangeListener { _, k ->
         if (k != null && k.startsWith("eq")) eq.apply()
         if (k == "theme" || k == "mode") VelvetWidget.refresh(this)
+        // list ↔ tiles: tell the car to redraw its folders (it keeps them otherwise)
+        if (k == "favTiles" && ::session.isInitialized) session.notifyChildrenChanged("root", 100, null)
     }
 
     /**
@@ -694,7 +699,7 @@ class PlaybackService : MediaLibraryService() {
             val ctx = this@PlaybackService
             val cols = Repo.collections(ctx)
             val list: List<MediaItem> = when {
-                parent == "root" -> listOf(folder("favs", "Favourites"), folder("picks", "Velvet Selection")) + cols.map { folder("col|${it.id}", it.name) }
+                parent == "root" -> listOf(folder("favs", "Favourites", grid = Theme.prefs(this@PlaybackService).getBoolean("favTiles", false)), folder("picks", "Velvet Selection")) + cols.map { folder("col|${it.id}", it.name) }
                 parent == "favs" -> Favs(ctx).all().map { st -> st.toItem(cols.find { it.id == st.col }?.name ?: "") }
                 parent == "picks" -> Repo.picks(ctx).map { st -> st.toItem(cols.find { it.id == st.col }?.name ?: "") }
                 parent.startsWith("col|") -> {
@@ -720,9 +725,13 @@ class PlaybackService : MediaLibraryService() {
     /** The station's own id from a car item's list-scoped id ("favs>st|col:id" → "st|col:id"). */
     private fun plainId(id: String) = id.substringAfter('>')
 
-    private fun folder(id: String, title: String) = MediaItem.Builder().setMediaId(id)
+    /** A folder for the car. [grid] asks Android Auto to show its stations as tiles instead of a list
+     *  (Favourites, when Settings → Favourites is set to Tiles; a tester saw a list on his Pioneer, 26 Nov 2026). */
+    private fun folder(id: String, title: String, grid: Boolean = false) = MediaItem.Builder().setMediaId(id)
         .setMediaMetadata(MediaMetadata.Builder().setTitle(title).setIsBrowsable(true).setIsPlayable(false)
-            .setMediaType(MediaMetadata.MEDIA_TYPE_FOLDER_RADIO_STATIONS).build()).build()
+            .setMediaType(MediaMetadata.MEDIA_TYPE_FOLDER_RADIO_STATIONS)
+            .setExtras(android.os.Bundle().apply { putInt(CONTENT_STYLE_PLAYABLE, if (grid) STYLE_GRID else STYLE_LIST) })
+            .build()).build()
         .also { known[id] = it }
 
     override fun onGetSession(controllerInfo: MediaSession.ControllerInfo) = session

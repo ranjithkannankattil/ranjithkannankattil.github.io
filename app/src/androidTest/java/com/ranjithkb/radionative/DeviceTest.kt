@@ -547,5 +547,16 @@ class DeviceTest {
         repeat(20) { if (sc.state != androidx.lifecycle.Lifecycle.State.RESUMED) return true; Thread.sleep(250) }
         return false
     }
+
+    /** Tester on a Pioneer screen (26 Nov 2026): Favourites set to Tiles still showed as a list in Android Auto. */
+    @Test fun t31_car_favourites_follow_tiles_setting() {
+        val prefs = Theme.prefs(ctx)
+        prefs.edit().putBoolean("favTiles", true).commit()
+        var favs = children("root").first { it.mediaId == "favs" }
+        assertEquals("tiles asked for", PlaybackService.STYLE_GRID, favs.mediaMetadata.extras?.getInt(PlaybackService.CONTENT_STYLE_PLAYABLE))
+        prefs.edit().putBoolean("favTiles", false).commit()
+        favs = children("root").first { it.mediaId == "favs" }
+        assertEquals("list asked for", PlaybackService.STYLE_LIST, favs.mediaMetadata.extras?.getInt(PlaybackService.CONTENT_STYLE_PLAYABLE))
+    }
 }
 
