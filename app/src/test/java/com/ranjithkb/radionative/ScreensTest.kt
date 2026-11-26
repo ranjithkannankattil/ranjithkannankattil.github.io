@@ -93,8 +93,8 @@ class ScreensTest {
         LangTabs(listOf(LangTab(PICKS, t("Velvet Selection"), star = true), LangTab("malayalam", "Malayalam", true),
             LangTab("english", "English"), LangTab("tamil", "Tamil"), LangTab("_langs", t("All languages"), icon = true)), "malayalam", {}, {}) }
         Box(Modifier.tourTarget("sort")) {
-        CatRow(listOf(Triple("all", t("All"), 130), Triple("fav", t("Favourites"), 3), Triple("fm", "FM", -1), Triple("air", "Akashvani", -1),
-            Triple("online", "Online", -1)), "all", {}, t(SORTS.first { it.first == sortBy }.second), {}) }
+        // as in the app since 2.10: one sentence under the languages
+        SentenceFilter(t("All kinds"), {}, orderPhrase(sortBy, false)) {} }
         val shown = Stats.sort(sts, sortBy, stats)
         val top = if (sortBy == "heard") Stats.top3(shown, stats) else emptySet()
         LazyColumn(Modifier.weight(1f)) {

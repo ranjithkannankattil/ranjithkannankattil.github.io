@@ -392,6 +392,11 @@ object Lang {
         "Play the last station when you open the app (Settings → Data and playback), on the phone and in the car." to "ആപ്പ് തുറക്കുമ്പോൾ അവസാനം കേട്ട നിലയം പ്ലേ ചെയ്യാം (സെറ്റിങ്സ് → ഡാറ്റയും പ്ലേയിങ്ങും), ഫോണിലും കാറിലും.",
         "Playing" to "കേൾക്കുന്നു",
         "Paused" to "നിർത്തിവച്ചു",
+        "Showing" to "കാണിക്കുന്നത്:",
+        "What you see" to "നിങ്ങൾ കാണുന്നത്",
+        "This line says what's shown. Tap an underlined word to pick a kind of station (film songs, news, TV channels…) or the order: most heard, top rated, A to Z." to "ഈ വരി എന്താണ് കാണിക്കുന്നതെന്ന് പറയും. അടിവരയിട്ട വാക്ക് തൊട്ട് നിലയത്തിന്റെ തരം (സിനിമാഗാനം, വാർത്ത, ടിവി ചാനലുകൾ…) അല്ലെങ്കിൽ ക്രമം (കൂടുതൽ കേട്ടത്, മികച്ച റേറ്റിങ്, അക്ഷരമാലാക്രമം) തിരഞ്ഞെടുക്കാം.",
+        "Stations, Favourites, You" to "നിലയങ്ങൾ, പ്രിയപ്പെട്ടവ, നിങ്ങൾ",
+        "Favourites keeps your stations in your own order, as a list or as tiles. You has your listening, Settings, alarms, help, and this tour again." to "പ്രിയപ്പെട്ടവ നിങ്ങളുടെ ക്രമത്തിൽ, ലിസ്റ്റായോ ടൈലുകളായോ സൂക്ഷിക്കും. 'നിങ്ങൾ' എന്നതിൽ നിങ്ങളുടെ കേൾവി, സെറ്റിങ്സ്, അലാറങ്ങൾ, സഹായം, ഈ പരിചയം വീണ്ടും.",
     )
     private val HI: Map<String, String> = mapOf(
         "+  Add an alarm" to "+  अलार्म जोड़ें",
@@ -748,6 +753,11 @@ object Lang {
         "Play the last station when you open the app (Settings → Data and playback), on the phone and in the car." to "ऐप खोलते ही आख़िरी स्टेशन चलाएँ (सेटिंग्स → डेटा और चलाना), फ़ोन और कार दोनों में।",
         "Playing" to "चल रहा है",
         "Paused" to "रुका हुआ",
+        "Showing" to "दिखा रहे हैं:",
+        "What you see" to "आप क्या देख रहे हैं",
+        "This line says what's shown. Tap an underlined word to pick a kind of station (film songs, news, TV channels…) or the order: most heard, top rated, A to Z." to "यह पंक्ति बताती है कि क्या दिख रहा है। रेखांकित शब्द छूकर स्टेशन का प्रकार (फ़िल्मी गाने, समाचार, टीवी चैनल…) या क्रम (सबसे ज़्यादा सुने, सबसे अच्छी रेटिंग, A से Z) चुनें।",
+        "Stations, Favourites, You" to "स्टेशन, पसंदीदा, आप",
+        "Favourites keeps your stations in your own order, as a list or as tiles. You has your listening, Settings, alarms, help, and this tour again." to "पसंदीदा आपके स्टेशन आपके क्रम में, सूची या टाइल के रूप में रखता है। 'आप' में आपका सुनना, सेटिंग्स, अलार्म, मदद, और यह सैर दोबारा।",
     )
 }
 

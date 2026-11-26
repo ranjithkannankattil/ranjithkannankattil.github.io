@@ -168,11 +168,14 @@ fun LangTabs(tabs: List<LangTab>, selected: String, onClick: (LangTab) -> Unit, 
 
 /** 2.10: the filters read as one sentence, e.g. "All kinds · most heard first". Each dotted word opens a short
  *  list; choosing applies at once. Quieter than a row of chips and a sort button, and it says what is set. */
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun SentenceFilter(kind: String, onKind: () -> Unit, order: String, onOrder: () -> Unit) {
-    Row(Modifier.fillMaxWidth().padding(start = Pad - 4.dp, end = Pad).heightIn(min = 44.dp), verticalAlignment = Alignment.CenterVertically) {
-        FilterWord(kind, "Kind of station: $kind. Change", onKind)
-        Text("  ·  ", fontSize = 15.sp, color = Soft)
+    // reads as one sentence (agreed on the canvas): "Showing all kinds, most heard first"; the underlined words change it
+    FlowRow(Modifier.fillMaxWidth().padding(start = 20.dp, end = Pad, top = 2.dp, bottom = 4.dp), verticalArrangement = Arrangement.Center) {
+        Text(t("Showing") + " ", fontSize = 15.5.sp, color = Soft, modifier = Modifier.align(Alignment.CenterVertically))
+        FilterWord(if (Lang.code == "en") kind.lowercase() else kind, "Kind of station: $kind. Change", onKind)
+        Text(", ", fontSize = 15.5.sp, color = Soft, modifier = Modifier.align(Alignment.CenterVertically))
         FilterWord(order, "Order: $order. Change", onOrder)
     }
 }
