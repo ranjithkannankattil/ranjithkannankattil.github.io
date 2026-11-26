@@ -36,6 +36,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.draw.scale
+import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
@@ -246,30 +248,52 @@ fun CatRow(cats: List<Triple<String, String, Int>>, selected: String, onSelect: 
     }
 }
 
-/** One station: clean name, a small capitals line below, ♡ on the right. The playing one has a thin gold bar. */
+/** Pause / play of the station you're on, for the round button on its card (set by the app once it has the player). */
+object NowControl { var toggle: () -> Unit = {} }
+
+/**
+ * One station as a card (2.10, agreed on the canvas): name, a line under it, the ♡ inline and a round play button.
+ * The one you're on glows in the theme's colour with a thin outline; no letter badge and no logo.
+ * Row size (Compact · Comfortable · Expanded) changes the card's height and the gaps between cards.
+ */
 @Composable
 fun StationRow(s: Station, sub: String, fav: Boolean, current: Boolean, playing: Boolean, onPlay: () -> Unit, onFav: () -> Unit,
                highlight: String = "", badge: Boolean = false) {
-    val pad = when (Theme.spacing) { 1 -> 11.dp; 2 -> 17.dp; else -> 7.dp }
-    Column(Modifier.padding(horizontal = Pad)) {
-        Row(Modifier.fillMaxWidth().height(IntrinsicSize.Min).heightIn(min = Theme.rowHeight.dp).clickable(onClickLabel = "Play ${s.name}", onClick = onPlay),
+    val (minH, vPad, gap) = when (Theme.spacing) { 0 -> Triple(56, 6, 6); 2 -> Triple(80, 14, 12); else -> Triple(68, 10, 10) }
+    val shape = RoundedCornerShape(18.dp)
+    val src = remember { androidx.compose.foundation.interaction.MutableInteractionSource() }
+    val pressed by src.collectIsPressedAsState()
+    val scale by androidx.compose.animation.core.animateFloatAsState(if (pressed) 0.985f else 1f, label = "press")
+    val bg by androidx.compose.animation.animateColorAsState(if (current) AccentSoft else CardBg, label = "cardBg")
+    Box(Modifier.padding(start = 16.dp, end = 16.dp, bottom = gap.dp)) {
+        Row(Modifier.fillMaxWidth().scale(scale).heightIn(min = minH.dp)
+            .then(if (current) Modifier.border(1.5.dp, Accent, shape) else Modifier.shadow(2.dp, shape, ambientColor = Accent.copy(alpha = 0.18f), spotColor = Accent.copy(alpha = 0.12f)))
+            .clip(shape).background(bg)
+            .clickable(src, androidx.compose.material3.ripple(), onClickLabel = "Play ${s.name}", onClick = onPlay)
+            .padding(start = 18.dp, end = 8.dp, top = vPad.dp, bottom = vPad.dp),
             verticalAlignment = Alignment.CenterVertically) {
-            Box(Modifier.width(3.dp).fillMaxHeight().padding(vertical = 12.dp).background(if (current) GoldC else Color.Transparent))
-            Spacer(Modifier.width(13.dp))
-            Column(Modifier.weight(1f).padding(vertical = pad)) {
-                Text(highlighted(s.name, highlight, badge, s.tv, s.col == MINE), fontSize = 16.5.sp, lineHeight = 20.sp,
-                    fontWeight = if (current) FontWeight.Medium else FontWeight.Normal,
-                    color = if (current) AccentText else if (s.offline) Soft else Title, maxLines = 2, overflow = TextOverflow.Ellipsis)
-                val note = listOf(if (current) (if (playing) "Now playing" else "Paused") else "", sub,
+            Column(Modifier.weight(1f)) {
+                Text(highlighted(s.name, highlight, badge, s.tv, s.col == MINE), fontSize = (if (Theme.spacing == 2) 18 else 17).sp, lineHeight = 21.sp,
+                    fontWeight = FontWeight.Medium, color = if (s.offline) Soft else Title,
+                    maxLines = if (Theme.spacing == 0) 1 else 2, overflow = TextOverflow.Ellipsis)
+                val note = listOf(if (current) (if (playing) t("Playing") else t("Paused")) else "", sub,
                     if (s.offline) "Not working today" else s.geoNote).filter { it.isNotBlank() }.joinToString(" · ")
-                if (note.isNotBlank()) Label(note, if (current) AccentText else Soft, 9, Modifier.padding(top = 3.dp))
+                if (note.isNotBlank()) Text(note, fontSize = 14.sp, lineHeight = 18.sp, color = if (current) AccentText else Soft,
+                    maxLines = 1, overflow = TextOverflow.Ellipsis, modifier = Modifier.padding(top = 2.dp))
             }
-            IconButton(onFav, Modifier.size(44.dp).offset(x = 12.dp)) {
+            IconButton(onFav, Modifier.size(44.dp)) {
                 LineIcon(if (fav) R.drawable.ln_heart_fill else R.drawable.ln_heart,
                     if (fav) "Remove ${s.name} from favourites" else "Add ${s.name} to favourites", 20, if (fav) AccentText else Soft)
             }
+            // round play button: filled for the station you're on, outlined for the others
+            val on = current
+            Box(Modifier.padding(start = 4.dp).size(44.dp).clip(CircleShape)
+                .then(if (on) Modifier.background(Accent) else Modifier.border(1.5.dp, AccentText, CircleShape))
+                .clickable(onClickLabel = (if (on && playing) "Pause " else "Play ") + s.name) { if (on) NowControl.toggle() else onPlay() },
+                contentAlignment = Alignment.Center) {
+                LineIcon(if (on && playing) R.drawable.ln_pause else R.drawable.ln_play, null, 18, if (on) Color.White else AccentText)
+            }
         }
-        HorizontalDivider(color = Line)
     }
 }
 

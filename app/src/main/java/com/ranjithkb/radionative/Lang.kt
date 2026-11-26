@@ -390,6 +390,8 @@ object Lang {
         "Play the last station on opening" to "തുറക്കുമ്പോൾ അവസാനം കേട്ട നിലയം പ്ലേ ചെയ്യുക",
         "Opening the app, on the phone or in the car, starts the station you last played" to "ഫോണിലോ കാറിലോ ആപ്പ് തുറന്നാൽ അവസാനം കേട്ട നിലയം തുടങ്ങും",
         "Play the last station when you open the app (Settings → Data and playback), on the phone and in the car." to "ആപ്പ് തുറക്കുമ്പോൾ അവസാനം കേട്ട നിലയം പ്ലേ ചെയ്യാം (സെറ്റിങ്സ് → ഡാറ്റയും പ്ലേയിങ്ങും), ഫോണിലും കാറിലും.",
+        "Playing" to "കേൾക്കുന്നു",
+        "Paused" to "നിർത്തിവച്ചു",
     )
     private val HI: Map<String, String> = mapOf(
         "+  Add an alarm" to "+  अलार्म जोड़ें",
@@ -744,6 +746,8 @@ object Lang {
         "Play the last station on opening" to "खोलते ही आख़िरी स्टेशन चलाएँ",
         "Opening the app, on the phone or in the car, starts the station you last played" to "फ़ोन या कार में ऐप खोलते ही आख़िरी सुना स्टेशन चलने लगेगा",
         "Play the last station when you open the app (Settings → Data and playback), on the phone and in the car." to "ऐप खोलते ही आख़िरी स्टेशन चलाएँ (सेटिंग्स → डेटा और चलाना), फ़ोन और कार दोनों में।",
+        "Playing" to "चल रहा है",
+        "Paused" to "रुका हुआ",
     )
 }
 

@@ -268,6 +268,7 @@ fun App(c: MediaController?) {
     }
     val col = when (colId) { PICKS -> PICKS_COL; ALL -> ALL_COL; else -> cols.find { it.id == colId } }
     fun langOf(s: Station) = if (s.col == MINE) t("Yours") else cols.find { it.id == s.col }?.name ?: ""
+    SideEffect { NowControl.toggle = { c?.let { if (it.isPlaying) it.pause() else it.play() } } }
     fun play(list: List<Station>, s: Station) {
         val ctl = c ?: return
         val live = list.filter { !it.offline || it.key == s.key }
@@ -284,7 +285,8 @@ fun App(c: MediaController?) {
     var kindSheet by remember { mutableStateOf(false) }
     var stats by remember { mutableStateOf<Stats.Data?>(null) }
     LaunchedEffect(Unit) { stats = Stats.get(ctx) }
-    var page by remember { mutableStateOf<String?>(null) }      // settings · themes · eq · viz · alarm · request
+    // saveable: changing the app language rebuilds the screen, and you should stay on the page you were on
+    var page by androidx.compose.runtime.saveable.rememberSaveable { mutableStateOf<String?>(null) }      // settings · themes · eq · viz · alarm · request
     var recentPlayed by remember { mutableStateOf(Recent.all(ctx)) }
     LaunchedEffect(now.id) { kotlinx.coroutines.delay(500); recentPlayed = Recent.all(ctx) }
     LaunchedEffect(Unit) { Review.maybeAsk(ctx) }
