@@ -644,4 +644,16 @@ class LogicTest {
         val m = History.merge(a, listOf(b))
         assertEquals(1500L, m.days["2026-11-26"]); assertEquals(200L, m.months["2026-10"]); assertEquals(1500L, m.sm["2026-11"]!!["x:y"])
     }
+
+    @Test fun faq_parses_and_searches() {
+        val js = """{"sections":{"ml":{"Playing":"കേൾക്കുമ്പോൾ"}},"items":[
+          {"id":"data-use","section":"Playing","en":{"q":"How much data?","a":"About 30 MB an hour."},"ml":{"q":"എത്ര ഡാറ്റ?","a":"30 MB"}},
+          {"id":"cast","section":"Playing","en":{"q":"Can I cast?","a":"Yes, with Chromecast."}}]}"""
+        val en = Faq.parse(js, "en"); assertEquals(2, en.size); assertEquals("Playing", en[0].section)
+        val ml = Faq.parse(js, "ml"); assertEquals("എത്ര ഡാറ്റ?", ml[0].q); assertEquals("കേൾക്കുമ്പോൾ", ml[0].section)
+        assertEquals("Can I cast?", ml[1].q)   // missing translation falls back to English
+        assertEquals(listOf("cast"), Faq.search(en, "chromecast").map { it.id })
+        assertEquals(2, Faq.search(en, " ").size)
+        assertTrue(Faq.parse("not json", "en").isEmpty())
+    }
 }

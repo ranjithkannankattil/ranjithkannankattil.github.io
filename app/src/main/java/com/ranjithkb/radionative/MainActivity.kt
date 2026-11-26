@@ -197,6 +197,7 @@ fun App(c: MediaController?) {
     val prefs = remember { ctx.getSharedPreferences("app", Context.MODE_PRIVATE) }
     val favs = remember { Favs(ctx) }
     var favList by remember { mutableStateOf(favs.all()) }
+    var ownFromFavs by remember { mutableStateOf(false) }
     AppNote()
     val scope = rememberCoroutineScope()
     fun refreshFavs() {
@@ -255,7 +256,7 @@ fun App(c: MediaController?) {
         else if (colId == PICKS) { val fresh = Repo.picks(ctx, fresh = true); if (colId == PICKS && fresh.isNotEmpty()) stations = fresh }
     }
     val col = when (colId) { PICKS -> PICKS_COL; ALL -> ALL_COL; else -> cols.find { it.id == colId } }
-    fun langOf(s: Station) = cols.find { it.id == s.col }?.name ?: ""
+    fun langOf(s: Station) = if (s.col == MINE) t("Yours") else cols.find { it.id == s.col }?.name ?: ""
     fun play(list: List<Station>, s: Station) {
         val ctl = c ?: return
         val live = list.filter { !it.offline || it.key == s.key }
@@ -391,7 +392,8 @@ fun App(c: MediaController?) {
                     }
                     FavsTab(favList, now, langOf = ::langOf, onPlay = { s -> play(favList, s) },
                         recent = recentPlayed, onRecent = { r -> play(recentPlayed.map { it.station }, r.station) },
-                        onChanged = { refreshFavs() }, favs = favs, onPicks = { if (colId != PICKS) lastCol = colId; colId = PICKS; go(0) })
+                        onChanged = { refreshFavs() }, favs = favs, onPicks = { if (colId != PICKS) lastCol = colId; colId = PICKS; go(0) },
+                        onAddOwn = { ownFromFavs = true; page = "own" })
                 }
             }
         }
@@ -443,6 +445,8 @@ fun App(c: MediaController?) {
             when (pg) {
                 "settings" -> SettingsScreen({ page = null }, settingsScroll, update) { page = it }
                 "listening" -> ListeningScreen { page = null }
+                "faq" -> FaqScreen { page = null }
+                "own" -> OwnStationsScreen({ page = if (ownFromFavs) null else "settings"; ownFromFavs = false }) { refreshFavs() }
                 "text" -> TextFontScreen { page = "settings" }
                 "feature", "thanks" -> FeedbackScreen(pg) { page = "settings" }
                 "themes" -> ThemesScreen { page = "settings" }
@@ -534,7 +538,7 @@ fun Tile(name: String, on: Boolean, size: Int = 44) {
 @Composable
 fun FavsTab(list: List<Station>, now: NowState, langOf: (Station) -> String, onPlay: (Station) -> Unit,
             recent: List<Recent.Item> = emptyList(), onRecent: (Recent.Item) -> Unit = {},
-            onChanged: () -> Unit, favs: Favs, onPicks: () -> Unit) {
+            onChanged: () -> Unit, favs: Favs, onPicks: () -> Unit, onAddOwn: () -> Unit = {}) {
     val ctx = LocalContext.current
     val scope = rememberCoroutineScope()
     var edit by remember { mutableStateOf(false) }
@@ -562,6 +566,9 @@ fun FavsTab(list: List<Station>, now: NowState, langOf: (Station) -> String, onP
         }
         if (list.isEmpty()) OutlinedButton(onPicks, Modifier.padding(horizontal = 16.dp).heightIn(min = 48.dp)) {
             Icon(Icons.Filled.Star, null, tint = Accent); Spacer(Modifier.width(8.dp)); Text(t("Start with the Velvet Selection"))
+        }
+        if (!edit) TextButton(onAddOwn, Modifier.padding(horizontal = 8.dp).heightIn(min = 48.dp)) {
+            Icon(Icons.Outlined.Add, null, tint = AccentText); Spacer(Modifier.width(6.dp)); Text(t("Add your own station"), color = AccentText)
         }
         if (Account.isOwner(ctx) && list.isNotEmpty() && !edit) {
             var busy by remember { mutableStateOf(false) }
@@ -795,6 +802,8 @@ fun InfoTab(languages: Int, update: Update?, onPage: (String) -> Unit = {}, onSi
                     icon = Icons.Outlined.Alarm) { onPage("alarm") }
                 RowLine()
                 NavItem(t("Quick tour"), sub = t("A short walk through the app"), drawable = R.drawable.ln_star) { onPage("tour") }
+                RowLine()
+                NavItem(t("Help and FAQ"), sub = t("Answers, and how to set up the car, TV and iPhone"), icon = Icons.Outlined.HelpOutline) { onPage("faq") }
             }
         }
         item {

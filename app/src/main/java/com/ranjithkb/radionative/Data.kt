@@ -87,7 +87,12 @@ object Repo {
         }
     }
 
+    /** The listener FAQ (same file the Radio page uses), cached like the station lists. */
+    suspend fun faq(ctx: Context, fresh: Boolean = false): String? =
+        cached(ctx, "radio-faq.json", "$SITE/radio-faq.json?d=${System.currentTimeMillis() / 3600_000}", fresh)
+
     suspend fun stations(ctx: Context, col: String, fresh: Boolean = false): List<Station> {
+        if (col == MINE) return OwnStations.list(ctx)
         val js = cached(ctx, "st-$col.js", "$SITE/js/stations/$col.js?d=${System.currentTimeMillis() / 3600_000}", fresh) ?: return emptyList()
         val a = arrayIn(js, "STATIONS")
         return List(a.length()) { Station.fromJson(a.getJSONObject(it), col) }.filter { it.streams.isNotEmpty() }

@@ -225,6 +225,9 @@ fun SettingsScreen(close: () -> Unit, scroll: androidx.compose.foundation.Scroll
         Group(t("Favourites")) {
             PickItem(t("Show favourites as"), listOf(t("List"), t("Tiles")), if (Theme.favTiles) 1 else 0,
                 drawable = R.drawable.ln_heart) { Theme.favTiles = it == 1; save() }
+            RowLine()
+            val own = remember { OwnStations.list(ctx).size }
+            NavItem(t("Your own stations"), if (own > 0) "$own" else t("Add a link"), icon = Icons.Outlined.AddLink) { open("own") }
         }
         Group(t("Sound")) {
             NavItem(t("Equaliser"), if (Eq.on(ctx)) Eq.preset(ctx) else t("Off"), icon = Icons.Outlined.Tune) { open("eq") }

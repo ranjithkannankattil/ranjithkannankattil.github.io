@@ -257,7 +257,7 @@ fun StationRow(s: Station, sub: String, fav: Boolean, current: Boolean, playing:
             Box(Modifier.width(3.dp).fillMaxHeight().padding(vertical = 12.dp).background(if (current) GoldC else Color.Transparent))
             Spacer(Modifier.width(13.dp))
             Column(Modifier.weight(1f).padding(vertical = pad)) {
-                Text(highlighted(s.name, highlight, badge, s.tv), fontSize = 16.5.sp, lineHeight = 20.sp,
+                Text(highlighted(s.name, highlight, badge, s.tv, s.col == MINE), fontSize = 16.5.sp, lineHeight = 20.sp,
                     fontWeight = if (current) FontWeight.Medium else FontWeight.Normal,
                     color = if (current) AccentText else if (s.offline) Soft else Title, maxLines = 2, overflow = TextOverflow.Ellipsis)
                 val note = listOf(if (current) (if (playing) "Now playing" else "Paused") else "", sub,
@@ -275,7 +275,7 @@ fun StationRow(s: Station, sub: String, fav: Boolean, current: Boolean, playing:
 
 private fun catLabel(c: String) = mapOf("fm" to "FM", "air" to "Akashvani", "am" to "AM").getOrElse(c) { c.replaceFirstChar { it.uppercase() } }
 
-private fun highlighted(name: String, q: String, badge: Boolean = false, tv: Boolean = false) = buildAnnotatedString {
+private fun highlighted(name: String, q: String, badge: Boolean = false, tv: Boolean = false, yours: Boolean = false) = buildAnnotatedString {
     val i = if (q.isBlank()) -1 else name.indexOf(q, ignoreCase = true)
     if (i < 0) append(name) else {
         append(name.substring(0, i))
@@ -286,6 +286,8 @@ private fun highlighted(name: String, q: String, badge: Boolean = false, tv: Boo
     if (badge) withStyle(SpanStyle(color = GoldC, fontSize = 11.sp)) { append("  ◆") }
     // the sound of a TV channel: a small outlined-looking "TV" in the accent colour
     if (tv) withStyle(SpanStyle(color = AccentText, fontSize = 10.sp, fontWeight = FontWeight.Medium, letterSpacing = 1.sp)) { append("  TV") }
+    // a station you added yourself
+    if (yours) withStyle(SpanStyle(color = GoldC, fontSize = 10.sp, fontWeight = FontWeight.Medium, letterSpacing = 1.sp)) { append("  " + t("YOURS")) }
 }
 
 /** Station and song with an outlined gold play button; ♡ ⏮ ⏭ sleep cast below (✕ appears only while paused). Swipe to change station. */

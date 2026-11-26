@@ -109,7 +109,8 @@ object Account {
 
     suspend fun saveFavs(ctx: Context, keys: List<String>) = withContext(Dispatchers.IO) {
         val (uid, t) = token(ctx) ?: return@withContext
-        val arr = JSONArray(keys.map { JSONObject().put("stringValue", it) })
+        // your own stations stay on the phone: they're never sent to the account or the website
+        val arr = JSONArray(keys.filterNot { it.startsWith("$MINE:") }.map { JSONObject().put("stringValue", it) })
         http("$DOCS/users/$uid?updateMask.fieldPaths=favs", "PATCH",
             JSONObject().put("fields", JSONObject().put("favs", JSONObject().put("arrayValue", JSONObject().put("values", arr)))).toString(),
             bearer = t)
