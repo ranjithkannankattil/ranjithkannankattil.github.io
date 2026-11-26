@@ -48,7 +48,7 @@ window.STATIONS = [
       "https://cdn.thhp.vn/live/285c1421f29d05045909836b37313898e2f/playlist.m3u8"
     ],
     "br": [
-      200
+      73
     ]
   },
   {
@@ -132,6 +132,24 @@ window.STATIONS = [
     "br": [
       96
     ]
+  },
+  {
+    "id": "vov5",
+    "name": "VOV5",
+    "category": "news",
+    "streams": [
+      "https://audio-lss.vov.vn/live/vov5.m3u8"
+    ],
+    "added": "2026-11-26"
+  },
+  {
+    "id": "vov4",
+    "name": "VOV4",
+    "category": "news",
+    "streams": [
+      "https://audio-lss.vov.vn/live/vov4.m3u8"
+    ],
+    "added": "2026-11-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

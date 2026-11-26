@@ -42,7 +42,9 @@ window.STATIONS = [
     "streams": [
       "https://stream.beufm.kz/beufm"
     ],
-    "offline": true
+    "br": [
+      192
+    ]
   },
   {
     "id": "qazaq-radiosy",
@@ -208,4 +210,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

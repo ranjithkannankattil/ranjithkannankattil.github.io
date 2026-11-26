@@ -10,7 +10,7 @@ window.STATIONS = [
       "https://n12.radiojar.com/8s5u5tpdtwzuv?listening-from-radio-garden=1620219571863&rj-tok=AAABeTyl2zYARSWbLVnrEOlqGw&rj-ttl=5"
     ],
     "br": [
-      64
+      96
     ]
   },
   {
@@ -259,6 +259,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://broadcast.shoutstream.co.uk/stream/8112"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -280,7 +283,7 @@ window.STATIONS = [
       "https://n0e.radiojar.com/8s5u5tpdtwzuv?rj=&rj-tok=AAABg5BDP0EA2ElNLJYUJTsVcg&rj-ttl=5"
     ],
     "br": [
-      64
+      80
     ]
   },
   {
@@ -291,7 +294,7 @@ window.STATIONS = [
       "https://stream.radiojar.com/0tpy1h0kxtzuv"
     ],
     "br": [
-      80
+      64
     ]
   },
   {
@@ -334,6 +337,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://broadcast.shoutstream.co.uk:8078/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -646,7 +652,10 @@ window.STATIONS = [
     "streams": [
       "https://c30.radioboss.fm:18267/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "quran-radio-from-sharjah",
@@ -668,9 +677,7 @@ window.STATIONS = [
       "https://radio.garden/api/ara/content/listen/TBbZ87vu/channel.mp3"
     ],
     "added": "2026-10-25",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "chaine-1",
@@ -790,7 +797,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      128
+      129
     ]
   },
   {
@@ -1293,9 +1300,7 @@ window.STATIONS = [
       "https://medinafm.ice.infomaniak.ch/medinafm-64.mp3"
     ],
     "added": "2026-11-02",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "mbc-mood",
@@ -1756,4 +1761,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

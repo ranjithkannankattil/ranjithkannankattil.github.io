@@ -184,9 +184,7 @@ window.STATIONS = [
     "streams": [
       "https://s1.skyradio.com.mk/hits.mp3"
     ],
-    "br": [
-      192
-    ]
+    "offline": true
   },
   {
     "id": "radio-logos-mk",
@@ -275,10 +273,7 @@ window.STATIONS = [
     "streams": [
       "https://live.playfm.mk:8046/live"
     ],
-    "added": "2026-11-12",
-    "br": [
-      128
-    ]
+    "added": "2026-11-12"
   },
   {
     "id": "90-1-nbc-fm-narwee-90-1-fm",
@@ -302,4 +297,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

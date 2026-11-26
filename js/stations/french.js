@@ -740,7 +740,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "br": [
-      104
+      96
     ]
   },
   {
@@ -1120,9 +1120,7 @@ window.STATIONS = [
       "https://medinafm.ice.infomaniak.ch/medinafm-64.mp3"
     ],
     "added": "2026-11-01",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "tamanrasset",
@@ -1770,4 +1768,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

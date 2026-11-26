@@ -588,7 +588,10 @@ window.STATIONS = [
     "streams": [
       "https://punkirratia.net:8443/punk"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      192
+    ]
   },
   {
     "id": "rac105",
@@ -658,7 +661,9 @@ window.STATIONS = [
       "https://c2.auracast.net:8022/;"
     ],
     "added": "2026-10-25",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "flamenco-radio",
@@ -691,7 +696,10 @@ window.STATIONS = [
     "streams": [
       "https://24x7.red:42045/informa"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "blue-marlin-ibiza",
@@ -1756,4 +1764,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

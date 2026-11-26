@@ -216,7 +216,7 @@ window.STATIONS = [
       "https://server1.stweb.tv/rcvos/live/playlist.m3u8"
     ],
     "br": [
-      67
+      66
     ]
   },
   {
@@ -793,7 +793,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      128
+      96
     ]
   },
   {
@@ -1149,7 +1149,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-01",
     "br": [
-      160
+      64
     ]
   },
   {
@@ -1523,7 +1523,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-06",
     "br": [
-      128
+      256
     ]
   },
   {
@@ -1755,4 +1755,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

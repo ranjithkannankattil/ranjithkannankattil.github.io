@@ -10,7 +10,7 @@ window.STATIONS = [
       "https://radiolive.ytn.co.kr/radio/_definst_/20211118_fmlive/playlist.m3u8"
     ],
     "br": [
-      150
+      144
     ]
   },
   {
@@ -32,7 +32,7 @@ window.STATIONS = [
       "https://vod3.obs.co.kr:444/live/obsstream1/radio.stream/playlist.m3u8"
     ],
     "br": [
-      135
+      147
     ]
   },
   {
@@ -295,7 +295,8 @@ window.STATIONS = [
       "https://minisw.imbc.com/dsfm/_definst_/sfm.stream/playlist.m3u8?_lsu_sa_=64E1F515B3DD39F48D49D51B3F91F845A50235B5F40922623ED07Ca116813F96CCaF730F3DC2214C80793FA186bFA16366EDFB96805BA121B665FD1CA71F6B51539415FBACA311F4A80729A53AF1048CA6914FF7BE19FF3E13D0925748C307DD003B1B90C59F159D6854E59D759DDFEB"
     ],
     "added": "2026-10-23",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "big-b-radio-asian-pop",
@@ -355,7 +356,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      1143
+      1154
     ]
   },
   {
@@ -368,7 +369,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      1269
+      1284
     ]
   },
   {
@@ -381,7 +382,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      1150
+      1157
     ]
   },
   {
@@ -393,7 +394,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      96
+      97
     ]
   },
   {
@@ -418,7 +419,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      1150
+      1136
     ]
   },
   {
@@ -431,7 +432,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      4418
+      4416
     ]
   },
   {
@@ -503,7 +504,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      615
+      614
     ]
   },
   {
@@ -631,7 +632,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      1151
+      1143
     ]
   },
   {
@@ -644,7 +645,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      1143
+      1130
     ]
   },
   {
@@ -666,7 +667,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      1150
+      1152
     ]
   },
   {
@@ -719,11 +720,14 @@ window.STATIONS = [
     "name": "SBS Love FM",
     "category": "music",
     "streams": [
-      "https://radiolive.sbs.co.kr/lovepc/lovefm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTUzNDA1NDUsInBhdGgiOiIvbG92ZWZtLnN0cmVhbSIsImR1cmF0aW9uIjotMSwidW5vIjoiMmM3N2Y0OWQtMmMwNC00NzI0LWEyZDctZTI5NmY2ODU5MTI3IiwiaWF0IjoxNzk1Mjk3MzQ1fQ.ogrvyuex-WiDQftyUNWwTz8sjhhenmRKlTlA2f9P74g",
-      "https://radiolive.sbs.co.kr/lovepc/lovefm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTQ5MDg0MTAsInBhdGgiOiIvbG92ZWZtLnN0cmVhbSIsImR1cmF0aW9uIjotMSwidW5vIjoiZGE1OWM3NmMtOTg0OS00YmFkLWJhZjktMzgyMzA3OWEzZTNiIiwiaWF0IjoxNzk0ODY1MjEwfQ.G-2kdU04HuaXrswP_JIPYXCjd10hbNcP0fOe2k2yoAs"
+      "https://radiolive.sbs.co.kr/lovepc/lovefm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTU3NzI1MzksInBhdGgiOiIvbG92ZWZtLnN0cmVhbSIsImR1cmF0aW9uIjotMSwidW5vIjoiNTdmMGM0NDUtYjE0ZC00ZDg0LTg5ZWMtNGQ1M2Q1MWY2NTZlIiwiaWF0IjoxNzk1NzI5MzM5fQ.A4ei2tKVL8QSYYzRL4gbJVkO5XpMEVMJcuvFw9hFG2o",
+      "https://radiolive.sbs.co.kr/lovepc/lovefm.stream/playlist.m3u8?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3OTUzNDA1NDUsInBhdGgiOiIvbG92ZWZtLnN0cmVhbSIsImR1cmF0aW9uIjotMSwidW5vIjoiMmM3N2Y0OWQtMmMwNC00NzI0LWEyZDctZTI5NmY2ODU5MTI3IiwiaWF0IjoxNzk1Mjk3MzQ1fQ.ogrvyuex-WiDQftyUNWwTz8sjhhenmRKlTlA2f9P74g"
     ],
     "added": "2026-11-01",
-    "offline": true
+    "br": [
+      146,
+      0
+    ]
   },
   {
     "id": "cpbc",
@@ -761,4 +765,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

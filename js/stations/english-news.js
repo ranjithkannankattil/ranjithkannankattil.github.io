@@ -865,7 +865,9 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "where": "Zimbabwe",
-    "offline": true
+    "br": [
+      192
+    ]
   },
   {
     "id": "wbez-91-5-chicago-public-radio",
@@ -1739,7 +1741,7 @@ window.STATIONS = [
     "added": "2026-11-11",
     "where": "Canada",
     "br": [
-      48
+      47
     ]
   },
   {
@@ -1898,4 +1900,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

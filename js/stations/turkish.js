@@ -602,7 +602,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      64
+      63
     ]
   },
   {
@@ -639,7 +639,8 @@ window.STATIONS = [
     "added": "2026-10-25",
     "br": [
       141
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radyo-mezopotamya",
@@ -648,7 +649,10 @@ window.STATIONS = [
     "streams": [
       "https://anadolu.liderhost.com.tr/9404/stream"
     ],
-    "added": "2026-10-25"
+    "added": "2026-10-25",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radyo-karadeniz",
@@ -672,7 +676,8 @@ window.STATIONS = [
     "added": "2026-10-25",
     "br": [
       141
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "dinamo-fm-legacy",
@@ -882,10 +887,7 @@ window.STATIONS = [
     "streams": [
       "https://radyo.gonulmisralari.com/listen/canli/radio.mp3"
     ],
-    "added": "2026-10-28",
-    "br": [
-      192
-    ]
+    "added": "2026-10-28"
   },
   {
     "id": "antakya-renk-fm-hatay",
@@ -1251,7 +1253,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-02",
     "br": [
-      160
+      128
     ]
   },
   {
@@ -1560,9 +1562,7 @@ window.STATIONS = [
       "https://radyo.yayin.com.tr:6040/stream"
     ],
     "added": "2026-11-07",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "genc-fm",
@@ -1742,4 +1742,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

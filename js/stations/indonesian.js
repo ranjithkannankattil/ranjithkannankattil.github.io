@@ -290,10 +290,7 @@ window.STATIONS = [
       "https://i.klikhost.com:9620/;",
       "https://i.klikhost.com:9620/stream"
     ],
-    "br": [
-      64,
-      64
-    ]
+    "offline": true
   },
   {
     "id": "radio-music-indonesia",
@@ -425,7 +422,7 @@ window.STATIONS = [
       "https://server.radioimeldafm.co.id/radio/8040/gajahmadafm"
     ],
     "br": [
-      64
+      80
     ]
   },
   {
@@ -556,7 +553,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      64
+      80
     ]
   },
   {
@@ -875,9 +872,7 @@ window.STATIONS = [
       "https://svara-stream.radioddns.net/bali_voksradio_993fm"
     ],
     "added": "2026-10-28",
-    "br": [
-      160
-    ]
+    "offline": true
   },
   {
     "id": "imelda-fm",
@@ -888,7 +883,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      160
+      128
     ]
   },
   {
@@ -1660,9 +1655,7 @@ window.STATIONS = [
       "https://s2.free-shoutcast.com/stream/18096"
     ],
     "added": "2026-11-12",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "onix-radio",
@@ -1749,4 +1742,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

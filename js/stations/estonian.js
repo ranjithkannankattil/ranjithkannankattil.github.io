@@ -19,6 +19,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://c4.radioboss.fm:18123/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -220,7 +223,9 @@ window.STATIONS = [
     "streams": [
       "https://icecast.err.ee/r2pkorge.mp3"
     ],
-    "offline": true
+    "br": [
+      320
+    ]
   },
   {
     "id": "tre-raadio-ring-fm",
@@ -290,8 +295,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.err.ee/raadio2.opus"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "vomba-fm-2",
@@ -303,7 +307,7 @@ window.STATIONS = [
     ],
     "br": [
       320,
-      0
+      320
     ]
   },
   {
@@ -331,8 +335,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://icecast.err.ee/vikerraadio.opus"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "myhits-rock",
@@ -598,8 +601,7 @@ window.STATIONS = [
     "streams": [
       "https://icecast.err.ee/r2pop.opus"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "elmari-tantsuohtu",
@@ -632,8 +634,7 @@ window.STATIONS = [
     "streams": [
       "https://icecast.err.ee/r2chill.opus"
     ],
-    "added": "2026-10-24",
-    "offline": true
+    "added": "2026-10-24"
   },
   {
     "id": "r2extra-altpop",
@@ -696,4 +697,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

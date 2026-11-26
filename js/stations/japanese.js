@@ -440,7 +440,7 @@ window.STATIONS = [
       "https://vrc.gate.vrtv.jp/live?p=g&u=d"
     ],
     "br": [
-      1343
+      1384
     ]
   },
   {
@@ -666,7 +666,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      128
+      256
     ]
   },
   {
@@ -815,7 +815,9 @@ window.STATIONS = [
       "https://kuronegai.radioca.st/stream"
     ],
     "added": "2026-10-28",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "asia-dream-radio-japan-hits",
@@ -885,7 +887,9 @@ window.STATIONS = [
       "https://howlingf-gecko.radioca.st/autodj"
     ],
     "added": "2026-10-29",
-    "offline": true
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-gambaru",
@@ -1005,6 +1009,15 @@ window.STATIONS = [
     "br": [
       192
     ]
+  },
+  {
+    "id": "93-radio",
+    "name": "93 Radio — ニュース (日本語)",
+    "category": "news",
+    "streams": [
+      "https://93problems.com/api/radio/news-ja/stream.aac"
+    ],
+    "added": "2026-11-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

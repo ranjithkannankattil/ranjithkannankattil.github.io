@@ -346,9 +346,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://psrlive4.listenon.in/mohan?station=mohanradio"
-    ],
-    "br": [
-      48
     ]
   },
   {
@@ -416,9 +413,7 @@ window.STATIONS = [
       "https://usa3.fastcast4u.com/proxy/jeifm?mp=/1"
     ],
     "added": "2026-10-22",
-    "br": [
-      320
-    ]
+    "offline": true
   },
   {
     "id": "britishindiantamilradio",
@@ -535,10 +530,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio022/playlist.m3u8"
     ],
-    "added": "2026-10-23",
-    "br": [
-      79
-    ]
+    "added": "2026-10-23"
   },
   {
     "id": "fmrainbowtamil",
@@ -547,10 +539,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio022/playlist.m3u8"
     ],
-    "added": "2026-10-23",
-    "br": [
-      79
-    ]
+    "added": "2026-10-23"
   },
   {
     "id": "mellisai-fm",
@@ -1474,7 +1463,8 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio021/chunklist.m3u8"
     ],
-    "added": "2026-11-05"
+    "added": "2026-11-05",
+    "offline": true
   },
   {
     "id": "sweety-fm",
@@ -1741,4 +1731,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

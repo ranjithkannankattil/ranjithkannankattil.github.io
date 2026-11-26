@@ -77,7 +77,8 @@ window.STATIONS = [
     ],
     "br": [
       141
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "axa-rojava",
@@ -229,6 +230,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://anadolu.liderhost.com.tr/9404/stream"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -289,4 +293,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

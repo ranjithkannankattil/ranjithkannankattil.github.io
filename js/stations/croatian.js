@@ -667,8 +667,7 @@ window.STATIONS = [
     "streams": [
       "https://onlineradiobox.com/json/hr/vinkovci/play?platform=web"
     ],
-    "added": "2026-10-29",
-    "offline": true
+    "added": "2026-10-29"
   },
   {
     "id": "radio-92-fm",
@@ -991,7 +990,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-12",
     "br": [
-      128
+      170
     ]
   },
   {
@@ -1067,4 +1066,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

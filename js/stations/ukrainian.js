@@ -207,7 +207,9 @@ window.STATIONS = [
     "streams": [
       "https://s5.radioforge.com:7908/live?n=77357"
     ],
-    "offline": true
+    "br": [
+      192
+    ]
   },
   {
     "id": "24-breaking-live",
@@ -1505,4 +1507,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

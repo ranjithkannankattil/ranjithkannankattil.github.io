@@ -25,7 +25,7 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      256,
+      192,
       24,
       128
     ]
@@ -534,7 +534,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      256
+      192
     ]
   },
   {
@@ -760,7 +760,10 @@ window.STATIONS = [
     "streams": [
       "https://radio886.at/streams/radio_88.6/mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "hr3",
@@ -1095,10 +1098,7 @@ window.STATIONS = [
     "streams": [
       "https://webstream.schlagerparadies.de/schlager30842"
     ],
-    "added": "2026-10-31",
-    "br": [
-      192
-    ]
+    "added": "2026-10-31"
   },
   {
     "id": "absolut-relax",
@@ -1656,7 +1656,10 @@ window.STATIONS = [
     "streams": [
       "https://radio886.at/streams/88.6_Hard_Rock/mp3"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "br": [
+      128
+    ]
   },
   {
     "id": "energy-hit-music-only",
@@ -1779,4 +1782,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

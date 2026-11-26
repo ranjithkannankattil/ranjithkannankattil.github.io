@@ -94,10 +94,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio072/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "br": [
-      95
-    ]
+    "added": "2026-10-22"
   },
   {
     "id": "air-kolhapur",
@@ -106,10 +103,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio063/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "br": [
-      93
-    ]
+    "added": "2026-10-22"
   },
   {
     "id": "translation-of-the-quran-in-kashmiri",
@@ -148,4 +142,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

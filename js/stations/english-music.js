@@ -431,10 +431,7 @@ window.STATIONS = [
       "https://icecast.walmradio.com:8443/walm2"
     ],
     "added": "2026-10-22",
-    "where": "US",
-    "br": [
-      320
-    ]
+    "where": "US"
   },
   {
     "id": "walm-2",
@@ -508,7 +505,7 @@ window.STATIONS = [
     "added": "2026-10-23",
     "where": "UK",
     "br": [
-      48
+      47
     ]
   },
   {
@@ -1719,9 +1716,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "where": "UK",
-    "br": [
-      48
-    ]
+    "offline": true
   },
   {
     "id": "classic-fm-uk",
@@ -1889,4 +1884,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

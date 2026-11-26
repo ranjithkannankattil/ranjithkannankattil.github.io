@@ -373,7 +373,9 @@ window.STATIONS = [
     "streams": [
       "https://streaming.enacast.com/radiohospitalet56.mp3"
     ],
-    "offline": true
+    "br": [
+      96
+    ]
   },
   {
     "id": "canal-blau",
@@ -892,4 +894,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

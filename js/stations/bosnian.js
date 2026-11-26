@@ -31,7 +31,9 @@ window.STATIONS = [
     "streams": [
       "https://team-data.ba:10000/stream"
     ],
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-studio-m",
@@ -535,6 +537,15 @@ window.STATIONS = [
     "br": [
       192
     ]
+  },
+  {
+    "id": "tnt-radio-tuzla",
+    "name": "TNT Radio Tuzla",
+    "category": "music",
+    "streams": [
+      "https://server1.tnt.ba/proxy/tnttuzla?mp=/stream1"
+    ],
+    "added": "2026-11-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

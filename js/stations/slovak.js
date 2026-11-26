@@ -521,7 +521,9 @@ window.STATIONS = [
       "https://stream.bauermedia.sk/expres-hi.mp3"
     ],
     "added": "2026-10-23",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "slagr-radio",
@@ -726,7 +728,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "br": [
-      95
+      96
     ]
   },
   {
@@ -738,8 +740,8 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "br": [
-      95
+      96
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

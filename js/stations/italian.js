@@ -339,7 +339,7 @@ window.STATIONS = [
       "https://icy.unitedradio.it/101Legend.aac"
     ],
     "br": [
-      95
+      96
     ]
   },
   {
@@ -1075,7 +1075,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-01",
     "br": [
-      88
+      104
     ]
   },
   {
@@ -1636,7 +1636,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-09",
     "br": [
-      128
+      96
     ]
   },
   {
@@ -1760,4 +1760,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

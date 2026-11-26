@@ -302,8 +302,9 @@ window.STATIONS = [
     "streams": [
       "https://jfm1.hostingradio.ru:14536/ijstream.mp3"
     ],
-    "offline": true,
-    "hidden": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-svoboda-rfe-rl-russian-ch-4",
@@ -623,7 +624,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      256
+      128
     ]
   },
   {
@@ -680,7 +681,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      256
+      128
     ]
   },
   {
@@ -999,7 +1000,10 @@ window.STATIONS = [
     "streams": [
       "https://efir.retrofm.md:8000/retro"
     ],
-    "added": "2026-10-30"
+    "added": "2026-10-30",
+    "br": [
+      128
+    ]
   },
   {
     "id": "dfm-party",
@@ -1679,8 +1683,8 @@ window.STATIONS = [
     ],
     "added": "2026-11-09",
     "br": [
-      128
+      96
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

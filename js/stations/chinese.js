@@ -757,7 +757,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      51
+      52
     ]
   },
   {
@@ -1364,7 +1364,10 @@ window.STATIONS = [
     "streams": [
       "https://a.tunzilla.com/http://onairnow.ddns.net:8000/chinese.mp3"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      320
+    ]
   },
   {
     "id": "fm-24",
@@ -1598,4 +1601,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

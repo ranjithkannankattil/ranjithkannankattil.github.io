@@ -104,9 +104,7 @@ window.STATIONS = [
     "streams": [
       "https://live.radioanisoara.ro:8080/stream"
     ],
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "rockfm",
@@ -268,6 +266,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://efir.retrofm.md:8000/retro"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -561,7 +562,10 @@ window.STATIONS = [
     "streams": [
       "https://live.radiotranquila.net:8032/stream"
     ],
-    "added": "2026-10-24"
+    "added": "2026-10-24",
+    "br": [
+      128
+    ]
   },
   {
     "id": "clasic-radio-bach-bucuresti",
@@ -900,7 +904,10 @@ window.STATIONS = [
     "streams": [
       "https://stream.radioplai.md/live"
     ],
-    "added": "2026-10-29"
+    "added": "2026-10-29",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-ai-nostri",
@@ -1123,7 +1130,8 @@ window.STATIONS = [
     "streams": [
       "https://mp3.radiostill.ro:8888/stream"
     ],
-    "added": "2026-11-02"
+    "added": "2026-11-02",
+    "offline": true
   },
   {
     "id": "fun-radio-romania",
@@ -1747,4 +1755,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

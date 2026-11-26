@@ -179,7 +179,7 @@ window.STATIONS = [
       "https://icecast.kab.tv/live1-heb-574bcfd5.mp3"
     ],
     "br": [
-      80
+      64
     ]
   },
   {
@@ -410,7 +410,7 @@ window.STATIONS = [
       "https://gb25.streamgates.net/radios-audio/100Nostalgia/playlist.m3u8"
     ],
     "br": [
-      147
+      146
     ]
   },
   {
@@ -537,8 +537,7 @@ window.STATIONS = [
     "streams": [
       "https://vivo.solumedia.com:19360/jaitv/jaitv.m3u8"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "radios-100fm-100-stars",
@@ -619,7 +618,10 @@ window.STATIONS = [
     "streams": [
       "https://w296dk.online:8443/WEBAPP"
     ],
-    "added": "2026-11-26"
+    "added": "2026-11-26",
+    "br": [
+      112
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";

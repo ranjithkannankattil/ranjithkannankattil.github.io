@@ -258,7 +258,7 @@ window.STATIONS = [
       "https://live1.sr.se/p4vbtn-mp3-96"
     ],
     "br": [
-      172
+      112
     ]
   },
   {
@@ -321,7 +321,7 @@ window.STATIONS = [
       "https://live1.sr.se/p4vnrl-mp3-96"
     ],
     "br": [
-      164
+      144
     ]
   },
   {
@@ -398,7 +398,7 @@ window.STATIONS = [
       "https://live1.sr.se/p4sth-aac-32"
     ],
     "br": [
-      128
+      32
     ]
   },
   {
@@ -523,7 +523,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      102
+      114
     ]
   },
   {
@@ -616,7 +616,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      128
+      80
     ]
   },
   {
@@ -701,4 +701,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T09:25Z";
+window.STATIONS_CHECKED = "2026-11-26T23:04Z";
