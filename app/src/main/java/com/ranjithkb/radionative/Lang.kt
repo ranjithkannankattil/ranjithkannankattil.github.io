@@ -381,6 +381,12 @@ object Lang {
         "No question matches. Try another word, or write to hello@ranjithkb.com." to "ഒരു ചോദ്യവും യോജിക്കുന്നില്ല. മറ്റൊരു വാക്ക് നോക്കൂ, അല്ലെങ്കിൽ hello@ranjithkb.com ലേക്ക് എഴുതൂ.",
         "Share this answer" to "ഈ ഉത്തരം പങ്കിടുക",
         "Share" to "പങ്കിടുക",
+        "Even volume: every station at about the same loudness." to "ഒരേ ശബ്ദനില: എല്ലാ നിലയങ്ങളും ഏകദേശം ഒരേ ശബ്ദത്തിൽ.",
+        "Your listening: week, month, year and all time, with a picture to share." to "നിങ്ങളുടെ കേൾവി: ആഴ്ച, മാസം, വർഷം, ഇതുവരെ — പങ്കിടാൻ ഒരു ചിത്രവും.",
+        "Add your own station, kept private on your phone." to "സ്വന്തം നിലയം ചേർക്കാം, ഫോണിൽ സ്വകാര്യമായി.",
+        "Pin the languages you want in your top row; Malayalam can be unpinned too." to "വേണ്ട ഭാഷകൾ മുകളിലെ നിരയിൽ പിൻ ചെയ്യാം; Malayalam-ഉം മാറ്റാം.",
+        "A heart beside the station name in the big player." to "വലിയ പ്ലെയറിൽ നിലയത്തിന്റെ പേരിനരികെ ഹൃദയചിഹ്നം.",
+        "Help and FAQ, in English, Malayalam and Hindi." to "സഹായവും ചോദ്യോത്തരങ്ങളും, English, Malayalam, Hindi എന്നിവയിൽ.",
     )
     private val HI: Map<String, String> = mapOf(
         "+  Add an alarm" to "+  अलार्म जोड़ें",
@@ -726,6 +732,12 @@ object Lang {
         "No question matches. Try another word, or write to hello@ranjithkb.com." to "कोई सवाल नहीं मिला। दूसरा शब्द आज़माएँ, या hello@ranjithkb.com पर लिखें।",
         "Share this answer" to "यह जवाब शेयर करें",
         "Share" to "शेयर करें",
+        "Even volume: every station at about the same loudness." to "एक-सी आवाज़: हर स्टेशन लगभग एक जैसी आवाज़ में।",
+        "Your listening: week, month, year and all time, with a picture to share." to "आपका सुनना: हफ़्ता, महीना, साल और अब तक — शेयर करने को तस्वीर भी।",
+        "Add your own station, kept private on your phone." to "अपना स्टेशन जोड़ें, फ़ोन पर निजी रहेगा।",
+        "Pin the languages you want in your top row; Malayalam can be unpinned too." to "अपनी भाषाएँ ऊपर की पंक्ति में पिन करें; Malayalam का पिन भी हटा सकते हैं।",
+        "A heart beside the station name in the big player." to "बड़े प्लेयर में स्टेशन के नाम के पास दिल का निशान।",
+        "Help and FAQ, in English, Malayalam and Hindi." to "मदद और सवाल-जवाब, English, Malayalam और Hindi में।",
     )
 }
 

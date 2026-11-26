@@ -372,6 +372,31 @@ fun BottomNav(tab: Int, favCount: Int, go: (Int) -> Unit) {
     }
 }
 
+/** The same three tabs as [BottomNav], standing on the left of wide, short screens. */
+@Composable
+fun SideRail(tab: Int, favCount: Int, go: (Int) -> Unit) {
+    Row(Modifier.fillMaxHeight().background(Paper).statusBarsPadding().navigationBarsPadding()) {
+        Column(Modifier.width(84.dp).fillMaxHeight(), verticalArrangement = Arrangement.Center) {
+            listOf(Triple(R.drawable.ln_radio, t("Stations"), 0), Triple(R.drawable.ln_heart, t("Favourites"), 1),
+                Triple(R.drawable.ln_person, t("You"), 2)).forEach { (icon, label, i) ->
+                val on = tab == i
+                val pillInk = if (Theme.dark) GoldC else AccentText
+                Column(Modifier.fillMaxWidth().heightIn(min = 72.dp).clickable(onClickLabel = label) { go(i) }.semantics { selected = on },
+                    horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
+                    Box(Modifier.size(56.dp, 32.dp).clip(RoundedCornerShape(16.dp))
+                        .background(if (on) pillInk.copy(alpha = if (Theme.dark) 0.20f else 0.13f) else Color.Transparent),
+                        contentAlignment = Alignment.Center) {
+                        LineIcon(if (on && i == 1) R.drawable.ln_heart_fill else icon, null, 22, if (on) pillInk else Soft)
+                    }
+                    Label(if (i == 1) "$label $favCount" else label, if (on) pillInk else Soft, 9, Modifier.padding(top = 3.dp),
+                        if (on) FontWeight.SemiBold else FontWeight.Medium)
+                }
+            }
+        }
+        VerticalDivider(color = Line)
+    }
+}
+
 /** The big player: cover, song, rating, controls and SHARE · SPOTIFY · SLEEP · CAST. Fills the screen evenly. */
 @Composable
 fun PlayerContent(now: NowState, c: androidx.media3.session.MediaController?, language: String, cast: CastUi,

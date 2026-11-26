@@ -62,7 +62,12 @@ open class VelvetWidget : AppWidgetProvider() {
                 setImageViewResource(R.id.w_playicon, if (playing) R.drawable.ln_pause else R.drawable.ln_play)
                 setContentDescription(R.id.w_playicon, if (playing) "Pause" else "Play")
                 setOnClickPendingIntent(R.id.w_play, action(ctx, cls, PLAY))
-                val open = PendingIntent.getActivity(ctx, 0, Intent(ctx, MainActivity::class.java), PendingIntent.FLAG_IMMUTABLE)
+                // tapping anywhere on the widget except its buttons opens the app (before 2.10 only the logo and name did)
+                val open = PendingIntent.getActivity(ctx, 7, Intent(ctx, MainActivity::class.java)
+                    .setAction(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_LAUNCHER)
+                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED),
+                    PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)
+                setOnClickPendingIntent(R.id.w_root, open)
                 setOnClickPendingIntent(R.id.w_logo, open); setOnClickPendingIntent(R.id.w_station, open)
                 if (large) {
                     setInt(R.id.w_artbg, "setColorFilter", androidx.compose.ui.graphics.lerp(bg, ink, 0.1f).toArgb())
@@ -71,7 +76,7 @@ open class VelvetWidget : AppWidgetProvider() {
                     setTextColor(R.id.w_song, soft.toArgb())
                     setInt(R.id.w_prev, "setColorFilter", ink.toArgb()); setInt(R.id.w_next, "setColorFilter", ink.toArgb())
                     setOnClickPendingIntent(R.id.w_prev, action(ctx, cls, PREV)); setOnClickPendingIntent(R.id.w_next, action(ctx, cls, NEXT))
-                    setOnClickPendingIntent(R.id.w_open, open)
+                    setOnClickPendingIntent(R.id.w_open, open); setOnClickPendingIntent(R.id.w_song, open)
                 }
             }
         }

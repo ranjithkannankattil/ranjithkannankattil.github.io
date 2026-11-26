@@ -334,7 +334,13 @@ val WHATS_NEW = listOf(
     "Most heard now counts all listening since the start.",
     "Row size: Compact, Comfortable or Expanded.",
     "Feedback: suggest a station, request a feature or send a thank-you note.",
-    "TV channels carry a small TV tag.")
+    "TV channels carry a small TV tag.",
+    "Even volume: every station at about the same loudness.",
+    "Your listening: week, month, year and all time, with a picture to share.",
+    "Add your own station, kept private on your phone.",
+    "Pin the languages you want in your top row; Malayalam can be unpinned too.",
+    "A heart beside the station name in the big player.",
+    "Help and FAQ, in English, Malayalam and Hindi.")
 
 /** Settings → Text and font: text size and the font, each shown in itself. */
 @Composable

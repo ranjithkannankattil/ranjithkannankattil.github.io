@@ -298,7 +298,12 @@ fun App(c: MediaController?) {
         else if (key != null) scope.launch {
             Repo.stations(ctx, key.substringBefore(':')).find { it.key == key }?.let { favs.toggle(it); refreshFavs() } }
     }
-    Column(Modifier.fillMaxSize().statusBarsPadding()) {
+    // wide, short screens (phone on its side, car stereos): tabs move to a rail on the left so the lists keep their height
+    val conf = androidx.compose.ui.platform.LocalConfiguration.current
+    val rail = conf.screenWidthDp > conf.screenHeightDp && conf.screenHeightDp < 500
+    Row(Modifier.fillMaxSize()) {
+    if (rail) Box(Modifier.tourTarget("nav")) { SideRail(tab, favList.size, ::go) }
+    Column(Modifier.weight(1f).fillMaxHeight().statusBarsPadding()) {
         Box(Modifier.tourTarget("header")) { Header(onSearch = { search = true }, onSettings = { page = "settings" }) }
         update?.let { u ->
             Row(Modifier.fillMaxWidth().padding(top = 10.dp).background(AccentSoft).padding(start = 24.dp, end = 12.dp, top = 6.dp, bottom = 6.dp),
@@ -403,7 +408,8 @@ fun App(c: MediaController?) {
                 MiniPlayer(now, c, isFav = favList.any { it.key == key }, onFav = { toggleFavKey(key) }, onClose = { closeAll() },
                     cast = cast, onCast = { Cast.open(ctx, Theme.dark) }, onSleep = { barSleep = true }) { full = true } }
         } else Tour.targets.remove("player")
-        Box(Modifier.tourTarget("nav")) { BottomNav(tab, favList.size, ::go) }
+        if (!rail) Box(Modifier.tourTarget("nav")) { BottomNav(tab, favList.size, ::go) }
+    }
     }
     pillMenu?.let { c ->
         val isPin = c.id in pinned; val i = pinned.indexOf(c.id)

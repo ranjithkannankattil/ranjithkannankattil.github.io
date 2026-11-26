@@ -536,4 +536,29 @@ class ScreensTest {
         SearchContent(every, "Malayalam", { "Malayalam" }, emptySet(), null, false, { _, _, _ -> }, {}, {}, {}, {}, null) {} }
     @Test fun search_dark() = shot("10-search-dark", true) {
         SearchContent(sts, "Malayalam", { "Malayalam" }, setOf("malayalam:radiomango"), null, false, { _, _, _ -> }, {}, {}, {}, {}, "radio") {} }
+
+    // ---------------- 2.10 pages
+    private fun someListening() {
+        val ctx = rule.activity
+        val c = java.util.Calendar.getInstance()
+        listOf(40, 75, 20, 95, 130, 60, 110).forEachIndexed { i, m ->
+            val d = (c.clone() as java.util.Calendar).apply { add(java.util.Calendar.DAY_OF_YEAR, i - 6) }
+            History.add(ctx, if (i % 2 == 0) "malayalam:club-fm" else "malayalam:radio-mango", m * 60_000L, d)
+            if (i % 3 == 0) History.add(ctx, "hindi:mirchi", 25 * 60_000L, d)
+        }
+    }
+    @Test fun x01_your_listening() { someListening(); shot("x01-your-listening", false) { ListeningScreen {} } }
+    @Test fun x02_your_listening_dark() { someListening(); shot("x02-your-listening-dark", true) { ListeningScreen {} } }
+    @Test fun x03_listening_card() {
+        val bmp = drawListeningCard(rule.activity, "Month", 52 * 3_600_000L,
+            List(30) { (if (it % 5 == 0) "${it + 1}" else "") to (it * 37 % 11 + 1) * 600_000L }, listOf("Club FM", "Radio Mango", "Mirchi"), "Malayalam",
+            Theme.pal, Theme.font)
+        val dir = java.io.File("build/screens").apply { mkdirs() }
+        java.io.File(dir, "x03-listening-card.png").outputStream().use { bmp.compress(android.graphics.Bitmap.CompressFormat.PNG, 100, it) }
+    }
+    @Test fun x04_own_stations() { OwnStations.add(rule.activity, "Our church radio", "https://example.com/live.mp3")
+        shot("x04-own-stations", false) { OwnStationsScreen({}, {}) } }
+    @Test @Config(qualifiers = "w800dp-h400dp-mdpi") fun x05_landscape_rail() = shot("x05-landscape-800x400", false) {
+        Row(Modifier.fillMaxSize()) { SideRail(0, 12) {}; Box(Modifier.weight(1f)) { Stations(true) } } }
+    @Test fun x06_ml_you() = inLang("ml", "x06-ml-you") { Info() }
 }
