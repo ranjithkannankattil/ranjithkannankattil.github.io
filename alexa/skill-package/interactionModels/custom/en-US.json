@@ -1099,6 +1099,13 @@
        }
       },
       {
+       "id": "english-news:cbc-radio-one-vancouver",
+       "name": {
+        "value": "CBC Radio One Vancouver",
+        "synonyms": []
+       }
+      },
+      {
        "id": "english-news:wnyc-93-9-fm",
        "name": {
         "value": "WNYC 93.9 FM",
@@ -1979,6 +1986,15 @@
        }
       },
       {
+       "id": "english-news:cbc-radio-one-prince-george-bc",
+       "name": {
+        "value": "CBC Radio One - Prince George, BC",
+        "synonyms": [
+         "cbc radio one - prince george bc"
+        ]
+       }
+      },
+      {
        "id": "english-news:afn-360-naples",
        "name": {
         "value": "AFN 360 Naples",
@@ -2367,6 +2383,16 @@
        }
       },
       {
+       "id": "english-talk:102-7-star-fm-manila-dwsm",
+       "name": {
+        "value": "102.7 Star FM Manila - DWSM",
+        "synonyms": [
+         "one hundred two point seven star fm manila - dwsm",
+         "star fm manila - dwsm"
+        ]
+       }
+      },
+      {
        "id": "english-talk:kogo-am-600",
        "name": {
         "value": "Kogo AM 600",
@@ -2481,16 +2507,6 @@
        }
       },
       {
-       "id": "english-talk:glow-99-1-fm-akure",
-       "name": {
-        "value": "Glow 99.1 FM Akure",
-        "synonyms": [
-         "glow fm akure",
-         "glow ninety nine point one fm akure"
-        ]
-       }
-      },
-      {
        "id": "english-talk:historyradio-org",
        "name": {
         "value": "Historyradio Org",
@@ -2501,6 +2517,13 @@
        "id": "english-talk:northwest-public-broadcasting-news",
        "name": {
         "value": "Northwest Public Broadcasting - News",
+        "synonyms": []
+       }
+      },
+      {
+       "id": "english-talk:wabc",
+       "name": {
+        "value": "WABC",
         "synonyms": []
        }
       },
@@ -3945,6 +3968,13 @@
        }
       },
       {
+       "id": "hindi:fm-gold-mumbai",
+       "name": {
+        "value": "FM Gold Mumbai",
+        "synonyms": []
+       }
+      },
+      {
        "id": "hindi:radio-mirchi-usa",
        "name": {
         "value": "Radio Mirchi USA",
@@ -4015,6 +4045,13 @@
        "id": "hindi:mohammed-rafi",
        "name": {
         "value": "Mohammed Rafi",
+        "synonyms": []
+       }
+      },
+      {
+       "id": "hindi:vividh-bharti-mumbai",
+       "name": {
+        "value": "Vividh Bharti Mumbai",
         "synonyms": []
        }
       },
@@ -5662,15 +5699,6 @@
        }
       },
       {
-       "id": "kannada:radio-mirchi-bengaluru",
-       "name": {
-        "value": "Radio Mirchi Bengaluru",
-        "synonyms": [
-         "mirchi bengaluru"
-        ]
-       }
-      },
-      {
        "id": "kannada:vividh-bharati-bengaluru",
        "name": {
         "value": "Vividh Bharati Bengaluru",
@@ -5876,6 +5904,13 @@
         "synonyms": [
          "malda"
         ]
+       }
+      },
+      {
+       "id": "bengali:hot-now-bangla",
+       "name": {
+        "value": "Hot Now Bangla",
+        "synonyms": []
        }
       },
       {
@@ -6316,6 +6351,15 @@
         "synonyms": [
          "kasoot haryanvi",
          "radio kasoot haryanvi"
+        ]
+       }
+      },
+      {
+       "id": "more-indian:fm-rainbow-mumbai-marathi",
+       "name": {
+        "value": "FM Rainbow Mumbai (Marathi)",
+        "synonyms": [
+         "fm rainbow mumbai marathi"
         ]
        }
       },
@@ -7023,16 +7067,6 @@
        }
       },
       {
-       "id": "akan:yfm-97-9-takoradi",
-       "name": {
-        "value": "YFM 97.9 Takoradi",
-        "synonyms": [
-         "yfm ninety seven point nine takoradi",
-         "yfm takoradi"
-        ]
-       }
-      },
-      {
        "id": "akan:yfm-107-9-accra",
        "name": {
         "value": "YFM 107.9 Accra",
@@ -7187,13 +7221,6 @@
        "id": "chichewa:blantyre-synod-radio",
        "name": {
         "value": "Blantyre Synod Radio",
-        "synonyms": []
-       }
-      },
-      {
-       "id": "chichewa:timveni-online",
-       "name": {
-        "value": "Timveni Online",
         "synonyms": []
        }
       },
@@ -7454,6 +7481,13 @@
        "id": "yoruba-hausa:spiritflow-sounds-radio",
        "name": {
         "value": "SpiritFlow Sounds Radio",
+        "synonyms": []
+       }
+      },
+      {
+       "id": "yoruba-hausa:obi-kwankwaso-network",
+       "name": {
+        "value": "Obi Kwankwaso Network",
         "synonyms": []
        }
       },
@@ -8048,6 +8082,13 @@
        "id": "italian:funky-radio",
        "name": {
         "value": "Funky Radio",
+        "synonyms": []
+       }
+      },
+      {
+       "id": "italian:classic-hits-radio-italia",
+       "name": {
+        "value": "Classic Hits Radio Italia",
         "synonyms": []
        }
       },
@@ -11622,6 +11663,13 @@
        }
       },
       {
+       "id": "portuguese-brazil:mix-fm-porto-alegre",
+       "name": {
+        "value": "Mix FM - Porto Alegre",
+        "synonyms": []
+       }
+      },
+      {
        "id": "portuguese-brazil:jovem-pan-bh",
        "name": {
         "value": "Jovem Pan BH",
@@ -11873,6 +11921,15 @@
         "value": "Antena 3 - Main",
         "synonyms": [
          "antena three - main"
+        ]
+       }
+      },
+      {
+       "id": "portuguese-portugal:antena-3",
+       "name": {
+        "value": "Antena 3",
+        "synonyms": [
+         "antena three"
         ]
        }
       },
@@ -17917,15 +17974,6 @@
        }
       },
       {
-       "id": "slovak:radio-expres-2",
-       "name": {
-        "value": "Radio Expres",
-        "synonyms": [
-         "expres"
-        ]
-       }
-      },
-      {
        "id": "slovak:tv-lux-audio",
        "name": {
         "value": "TV Lux (audio)",
@@ -18625,6 +18673,13 @@
        }
       },
       {
+       "id": "croatian:hrt-radio-pula",
+       "name": {
+        "value": "HRT Radio Pula",
+        "synonyms": []
+       }
+      },
+      {
        "id": "croatian:radio-krka",
        "name": {
         "value": "Radio Krka",
@@ -18664,11 +18719,14 @@
        }
       },
       {
-       "id": "croatian:radio-vinkovci",
+       "id": "croatian:radio-92-fm",
        "name": {
-        "value": "Radio Vinkovci",
+        "value": "Radio 92 FM",
         "synonyms": [
-         "vinkovci"
+         "92 fm",
+         "ninety two fm",
+         "radio fm",
+         "radio ninety two fm"
         ]
        }
       },
@@ -19730,15 +19788,6 @@
        }
       },
       {
-       "id": "albanian:alfa-omega-radio",
-       "name": {
-        "value": "Alfa and Omega Radio",
-        "synonyms": [
-         "alfa and omega radio"
-        ]
-       }
-      },
-      {
        "id": "albanian:radio-emanuel",
        "name": {
         "value": "Radio Emanuel",
@@ -20035,6 +20084,15 @@
        "name": {
         "value": "Chill Albania",
         "synonyms": []
+       }
+      },
+      {
+       "id": "albanian:radio-pilafi",
+       "name": {
+        "value": "Radio Pilafi",
+        "synonyms": [
+         "pilafi"
+        ]
        }
       },
       {
@@ -21250,15 +21308,6 @@
        }
       },
       {
-       "id": "finnish:radio-kaleva",
-       "name": {
-        "value": "Radio Kaleva",
-        "synonyms": [
-         "kaleva"
-        ]
-       }
-      },
-      {
        "id": "finnish:fugefm",
        "name": {
         "value": "Fuge FM",
@@ -21601,13 +21650,6 @@
        }
       },
       {
-       "id": "estonian:r2extra-rap",
-       "name": {
-        "value": "R2Extra - Rap",
-        "synonyms": []
-       }
-      },
-      {
        "id": "estonian:tre-raadio-ring-fm",
        "name": {
         "value": "Tre Raadio Ring FM",
@@ -21750,23 +21792,9 @@
        }
       },
       {
-       "id": "estonian:r2pop",
-       "name": {
-        "value": "R2Pop",
-        "synonyms": []
-       }
-      },
-      {
        "id": "estonian:elmari-ballaadid",
        "name": {
         "value": "Elmari ballaadid",
-        "synonyms": []
-       }
-      },
-      {
-       "id": "estonian:r2chill",
-       "name": {
-        "value": "R2Chill",
         "synonyms": []
        }
       },
@@ -22637,13 +22665,6 @@
        }
       },
       {
-       "id": "arabic:medina-fm-nostalgie",
-       "name": {
-        "value": "Medina FM Nostalgie",
-        "synonyms": []
-       }
-      },
-      {
        "id": "arabic:emaar-fm-radio",
        "name": {
         "value": "Emaar FM Radio",
@@ -22665,13 +22686,6 @@
          "sba jeddah radio fm",
          "sba jeddah radio ninety eight point zero fm"
         ]
-       }
-      },
-      {
-       "id": "arabic:medina-fm-tarab",
-       "name": {
-        "value": "Medina FM Tarab",
-        "synonyms": []
        }
       },
       {
@@ -23039,6 +23053,13 @@
        "id": "turkish:radyo-mezopotamya",
        "name": {
         "value": "Radyo Mezopotamya",
+        "synonyms": []
+       }
+      },
+      {
+       "id": "turkish:radyo-karadeniz",
+       "name": {
+        "value": "Radyo Karadeniz",
         "synonyms": []
        }
       },
@@ -23918,6 +23939,15 @@
        }
       },
       {
+       "id": "azerbaijani:radio-space-104fm",
+       "name": {
+        "value": "Radio Space 104FM",
+        "synonyms": [
+         "space 104fm"
+        ]
+       }
+      },
+      {
        "id": "kazakh:darhan-radio",
        "name": {
         "value": "Darhan Radio",
@@ -23929,15 +23959,6 @@
        "name": {
         "value": "Shalqar",
         "synonyms": []
-       }
-      },
-      {
-       "id": "kazakh:beu",
-       "name": {
-        "value": "((Beu))",
-        "synonyms": [
-         "beu"
-        ]
        }
       },
       {
@@ -24301,13 +24322,6 @@
        }
       },
       {
-       "id": "japanese:galau-jikan-fm-indonesia",
-       "name": {
-        "value": "Galau Jikan FM - Indonesia",
-        "synonyms": []
-       }
-      },
-      {
        "id": "japanese:ia-music-news-japanese",
        "name": {
         "value": "IA Music and News - Japanese",
@@ -24393,15 +24407,6 @@
        "name": {
         "value": "Free FM X-Mas",
         "synonyms": []
-       }
-      },
-      {
-       "id": "japanese:radio-doki",
-       "name": {
-        "value": "Radio Doki",
-        "synonyms": [
-         "doki"
-        ]
        }
       },
       {
@@ -24733,6 +24738,13 @@
        }
       },
       {
+       "id": "indonesian:pandu-musik-radio",
+       "name": {
+        "value": "Pandu Musik Radio",
+        "synonyms": []
+       }
+      },
+      {
        "id": "indonesian:klcbs-fusion",
        "name": {
         "value": "KLCBS Fusion",
@@ -25038,10 +25050,28 @@
        }
       },
       {
+       "id": "indonesian:rri-pro-4-yogyakarta",
+       "name": {
+        "value": "RRI Pro 4 Yogyakarta",
+        "synonyms": [
+         "rri pro four yogyakarta"
+        ]
+       }
+      },
+      {
        "id": "indonesian:elpas-radio",
        "name": {
         "value": "Elpas Radio",
         "synonyms": []
+       }
+      },
+      {
+       "id": "indonesian:rri-pro-2-yogyakarta",
+       "name": {
+        "value": "RRI Pro 2 Yogyakarta",
+        "synonyms": [
+         "rri pro two yogyakarta"
+        ]
        }
       },
       {
@@ -25133,6 +25163,15 @@
        "name": {
         "value": "Tarakan FM",
         "synonyms": []
+       }
+      },
+      {
+       "id": "indonesian:rri-pro-1-yogyakarta",
+       "name": {
+        "value": "RRI Pro 1 Yogyakarta",
+        "synonyms": [
+         "rri pro one yogyakarta"
+        ]
        }
       },
       {
@@ -25327,6 +25366,26 @@
         "value": "Radio Kita Tasikmalaya",
         "synonyms": [
          "kita tasikmalaya"
+        ]
+       }
+      },
+      {
+       "id": "indonesian:bellasalam-87-6-fm-tasikmalaya",
+       "name": {
+        "value": "Bellasalam 87.6 FM Tasikmalaya",
+        "synonyms": [
+         "bellasalam eighty seven point six fm tasikmalaya",
+         "bellasalam fm tasikmalaya"
+        ]
+       }
+      },
+      {
+       "id": "indonesian:delta-99-2-fm-makassar",
+       "name": {
+        "value": "Delta 99.2 FM Makassar",
+        "synonyms": [
+         "delta fm makassar",
+         "delta ninety nine point two fm makassar"
         ]
        }
       },
