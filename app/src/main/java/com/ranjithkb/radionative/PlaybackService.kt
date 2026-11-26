@@ -95,7 +95,7 @@ class PlaybackService : MediaLibraryService() {
         private val WAITS = longArrayOf(1_500, 3_000, 5_000, 8_000, 12_000, 20_000, 30_000)
         fun delayMs(n: Int): Long = WAITS[n.coerceIn(0, WAITS.size - 1)]
     }
-    companion object { const val CLOSE = "velvet.close"; const val ALARM = "velvet.alarm"; const val ALARM_STOP = "velvet.alarm.stop"; const val ALARM_START = "velvet.alarm.start"; const val RESUME = "velvet.resume"
+    companion object { const val STUCK_MS = 25_000L; const val CLOSE = "velvet.close"; const val ALARM = "velvet.alarm"; const val ALARM_STOP = "velvet.alarm.stop"; const val ALARM_START = "velvet.alarm.start"; const val RESUME = "velvet.resume"
         /** Sound outputs that mean "the car or a Bluetooth device": when one goes away, the radio pauses. */
         val CAR_OUTPUTS = setOf(android.media.AudioDeviceInfo.TYPE_BLUETOOTH_A2DP, android.media.AudioDeviceInfo.TYPE_BLE_HEADSET,
             android.media.AudioDeviceInfo.TYPE_BLE_SPEAKER, android.media.AudioDeviceInfo.TYPE_USB_DEVICE,
@@ -169,6 +169,23 @@ class PlaybackService : MediaLibraryService() {
                 onFailed(error)
             }
             override fun onAudioSessionIdChanged(audioSessionId: Int) = eq.attach(audioSessionId)
+            // "Connecting…" for ever (2.10): some streams answer but never send sound, so no error ever comes.
+            // After 25 s of connecting: the station's next link; failing that one fresh try; then stop trying.
+            override fun onPlaybackStateChanged(state: Int) {
+                stuckJob?.cancel()
+                if (state != Player.STATE_BUFFERING || !player.playWhenReady) { if (state == Player.STATE_READY) stuckTries = 0; return }
+                stuckJob = scope.launch {
+                    kotlinx.coroutines.delay(STUCK_MS)
+                    if (player.playbackState != Player.STATE_BUFFERING || !player.playWhenReady || player.isPlaying) return@launch
+                    PlayLog.note(this@PlaybackService, "still connecting after ${STUCK_MS / 1000} s")
+                    when {
+                        nextSource() -> {}
+                        ringing -> nextCandidate()
+                        stuckTries++ < 1 -> { player.prepare(); player.play() }
+                        else -> { stuckTries = 0; PlayLog.who = "no sound from the station"; player.pause() }
+                    }
+                }
+            }
             override fun onPlayWhenReadyChanged(playWhenReady: Boolean, reason: Int) {
                 if (reason != Player.PLAY_WHEN_READY_CHANGE_REASON_USER_REQUEST)
                     PlayLog.note(this@PlaybackService, (if (playWhenReady) "playing" else "stopped") + " (" + when (reason) {
@@ -483,6 +500,9 @@ class PlaybackService : MediaLibraryService() {
     private var netCb: android.net.ConnectivityManager.NetworkCallback? = null
 
     private fun onAir() { playedOk = true; lostAt = 0; retryN = 0; retryJob?.cancel(); retryJob = null; unwatchNet() }
+
+    private var stuckJob: kotlinx.coroutines.Job? = null
+    private var stuckTries = 0
 
     private fun onFailed(error: PlaybackException) {
         val network = error.errorCode in 2000..2999
