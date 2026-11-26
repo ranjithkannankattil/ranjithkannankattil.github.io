@@ -137,6 +137,16 @@ His reason: the app looks like one long list; in Settings you can't tell what is
   on short screens (height < 480 dp) show Recently played as one slim row of small chips (or folded behind a
   "Recently played ›" line); and in landscape use a side rail instead of bottom tabs and a slimmer player bar so
   lists get the height. Screen tests at 800×400 and 1280×480 (car stereo sizes), plus phone landscape.
+- **Station rows and the player** (agreed 26 Nov 2026): no two-letter badge on station rows; the ♡ sits inline
+  next to the play button (a station's own logo shows only for stations in `everywhere`). In the big player the ♡
+  sits beside the station name, within thumb reach, in every player look (not tucked in a corner or menu).
+  **Row size** in Settings → Look: Compact · **Comfortable (default)** · Expanded. Compact = one-line rows, tighter
+  gaps (good for car stereos and small screens); Expanded = larger text and touch targets with the song now playing.
+- **Open question for him: keep the current design as an option?** He asked whether 2.10 could let people choose
+  between today's design and the new fluid one. Recommendation: no full two-design switch (every screen built and
+  tested twice, and fixes land in one but not the other); instead keep what people are used to (same tabs, same
+  places, Original player looks, Compact rows feel close to today) and roll the new look out in a Dev build for
+  testers first. Waiting for his decision.
 - Also in 2.10 (from earlier): bugs (radio turning itself on + Auto artwork flicker, Connecting… timeout,
   widget doesn't open the app, three looks ignore the colour theme, text shifts between looks, remaining
   translations), the share card drawn from the current player look, browse by country. Spotify-in-car
