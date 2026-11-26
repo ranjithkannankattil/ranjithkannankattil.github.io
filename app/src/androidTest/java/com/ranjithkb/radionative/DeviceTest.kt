@@ -531,11 +531,14 @@ class DeviceTest {
             fun back() { sc.onActivity { it.onBackPressedDispatcher.onBackPressed() }; Thread.sleep(600) }
             repeat(3) { if (prefs.getInt("tab", 1) != 0) back() }   // (a first-run tour may take one Back to close)
             assertEquals("Back from Favourites goes to Stations", 0, prefs.getInt("tab", 1))
+            assertEquals("tab", BackStep.last)
             assertEquals("the app is still open", androidx.lifecycle.Lifecycle.State.RESUMED, sc.state)
             back()
-            assertEquals("one Back on Stations only shows the note", androidx.lifecycle.Lifecycle.State.RESUMED, sc.state)
+            assertEquals("one Back on Stations only shows the note", "note", BackStep.last)
+            assertEquals(androidx.lifecycle.Lifecycle.State.RESUMED, sc.state)
             back()
-            assertTrue("a second Back leaves", waitForState(sc))
+            assertEquals("a second Back within 2.5 s leaves", "leave", BackStep.last)
+            log("after leaving, the screen is ${sc.state}")
         } finally { sc.close() }
     }
     private fun waitForState(sc: androidx.test.core.app.ActivityScenario<MainActivity>): Boolean {

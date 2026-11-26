@@ -297,16 +297,16 @@ fun App(c: MediaController?) {
     var lastBack by remember { mutableLongStateOf(0L) }
     androidx.activity.compose.BackHandler {
         when {
-            full -> full = false
-            page != null -> page = null
-            tab != 0 -> go(0)
-            System.currentTimeMillis() - lastBack < 2500 -> {
+            full -> { full = false; BackStep.last = "player" }
+            page != null -> { page = null; BackStep.last = "page" }
+            tab != 0 -> { go(0); BackStep.last = "tab" }
+            System.currentTimeMillis() - lastBack < 2500 -> { BackStep.last = "leave"
                 // the screen's context can be wrapped (language), so find the activity underneath; the radio keeps playing
                 var cx: Context? = ctx
                 while (cx is android.content.ContextWrapper && cx !is android.app.Activity) cx = cx.baseContext
                 (cx as? android.app.Activity)?.let { if (!it.moveTaskToBack(true)) it.finish() }
             }
-            else -> { lastBack = System.currentTimeMillis()
+            else -> { lastBack = System.currentTimeMillis(); BackStep.last = "note"
                 android.widget.Toast.makeText(ctx, t("Press back again to leave"), android.widget.Toast.LENGTH_SHORT).show() }
         }
     }
@@ -1229,3 +1229,6 @@ fun AppNote() {
         dismissButton = { if (o.optString("link").isNotBlank() && o.optString("button").isNotBlank())
             TextButton(close, Modifier.heightIn(min = 44.dp)) { Text(t("Not now")) } })
 }
+
+/** What the last Back did (player / page / tab / note / leave), for the device check t30. */
+object BackStep { @Volatile var last = "" }
