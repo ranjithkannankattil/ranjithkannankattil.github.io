@@ -1,20 +1,22 @@
 ## Alexa stream check
 
-Malayalam: **100 of 106** play the way an Echo needs.
-All checked: 174 of 181.
+Malayalam: **97 of 106** play the way an Echo needs.
+All checked: 170 of 181.
 
 | Station | Language | Result |
 |---|---|---|
+| AIR Ananthapuri FM | malayalam | ❌ URLError: <urlopen error _ssl.c:994: The handshake operation timed out> |
 | Deshavani FM | malayalam | ❌ URLError: <urlopen error timed out> |
 | Hit 96.7 (AE only) | malayalam | ❌ HTTPError: HTTP Error 401: Unauthorized |
 | Paattupetti | malayalam | ❌ HTTPError: HTTP Error 403: Station config not found (Redis) |
 | Puthiyerushalem | malayalam | ❌ HTTPError: HTTP Error 403: Station config not found (Redis) |
+| Raagam AIR 24*7 | malayalam | ❌ URLError: <urlopen error _ssl.c:994: The handshake operation timed out> |
 | Radio Wind | malayalam | ❌ HTTPError: HTTP Error 403: Station config not found (Redis) |
 | Shalom Radio | malayalam | ❌ HTTPError: HTTP Error 403: Station config not found (Redis) |
+| Vividh Bharati Thiruvananthapuram | malayalam | ❌ URLError: <urlopen error _ssl.c:994: The handshake operation timed out> |
 | 98.6 FM | malayalam | ✅ 200 audio/mpeg 16384B |
 | AIR Alappuzha | malayalam | ✅ 200 application/vnd.apple.mpegurl 93B |
-| AIR Ananthapuri FM | malayalam | ✅ 200 application/vnd.apple.mpegurl 199B |
-| AIR Devikulam | malayalam | ✅ 200 application/vnd.apple.mpegurl 367B |
+| AIR Devikulam | malayalam | ✅ 200 application/vnd.apple.mpegurl 370B |
 | AIR FM Rainbow Kochi | malayalam | ✅ 200 application/vnd.apple.mpegurl 370B |
 | AIR Kannur | malayalam | ✅ 200 application/vnd.apple.mpegurl 370B |
 | AIR Kochi FM | malayalam | ✅ 200 application/vnd.apple.mpegurl 370B |
@@ -72,22 +74,21 @@ All checked: 174 of 181.
 | Nammude UK | malayalam | ✅ 200 audio/aac 16384B |
 | Onattukara | malayalam | ✅ 200 audio/mpeg 16384B |
 | Peace Radio | malayalam | ✅ 200 audio/mpeg 16384B |
-| Planet FM 104.6 (NZ) | malayalam | ✅ 200 application/vnd.apple.mpegurl 106B |
+| Planet FM 104.6 (NZ) | malayalam | ✅ 200 application/vnd.apple.mpegurl 105B |
 | Planet black | malayalam | ✅ 200 audio/aacp 16384B |
 | Pranayam Radio | malayalam | ✅ 200 audio/mpeg 16384B |
 | Premam FM | malayalam | ✅ 200 audio/mpeg 16384B |
-| Raagam AIR 24*7 | malayalam | ✅ 200 application/vnd.apple.mpegurl 263B |
 | Radio 90 FM | malayalam | ✅ 200 audio/aacp 16384B |
 | Radio Beats | malayalam | ✅ 200 audio/mpeg 16384B |
 | Radio CU (University of Calicut) | malayalam | ✅ 200 audio/mpeg 16384B |
 | Radio Delhi | malayalam | ✅ 200 audio/mpeg 16384B |
 | Radio Islam | malayalam | ✅ 200 audio/mpeg 16384B |
 | Radio Keralam | malayalam | ✅ 200 audio/aac 16384B |
-| Radio Kochi | malayalam | ✅ 200 application/x-mpegurl 205B |
+| Radio Kochi | malayalam | ✅ 200 application/x-mpegurl 202B |
 | Radio Lemon New Zealand | malayalam | ✅ 200 audio/aac 16384B |
 | Radio Lime | malayalam | ✅ 200 audio/mpeg 16384B |
 | Radio Macfast 90.4 | malayalam | ✅ 200 audio/mpeg 16384B |
-| Radio Malabar | malayalam | ✅ 200 application/x-mpegurl 211B |
+| Radio Malabar | malayalam | ✅ 200 application/x-mpegurl 212B |
 | Radio Malayalam | malayalam | ✅ 200 audio/mpeg 16384B |
 | Radio Mango | malayalam | ✅ 200 audio/mpeg 16384B |
 | Radio Maria | malayalam | ✅ 200 audio/aacp 16384B |
@@ -109,7 +110,7 @@ All checked: 174 of 181.
 | Suno Bahrain | malayalam | ✅ 200 audio/mpeg 16384B |
 | Tirur Radio | malayalam | ✅ 200 audio/mpeg 16384B |
 | Vividh Bharati Malayalam | malayalam | ✅ 200 application/vnd.apple.mpegurl 371B |
-| Vividh Bharati Thiruvananthapuram | malayalam | ✅ 200 application/vnd.apple.mpegurl 93B |
 | World to World | malayalam | ✅ 200 audio/aac 16384B |
+| AIR Kodai FM | tamil | ❌ URLError: <urlopen error _ssl.c:994: The handshake operation timed out> |
 | Tamil Sun FM | tamil | ❌ BadStatusLine: ICY 200 OK
  |
