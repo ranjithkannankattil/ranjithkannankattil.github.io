@@ -397,6 +397,9 @@ object Lang {
         "This line says what's shown. Tap an underlined word to pick a kind of station (film songs, news, TV channels…) or the order: most heard, top rated, A to Z." to "ഈ വരി എന്താണ് കാണിക്കുന്നതെന്ന് പറയും. അടിവരയിട്ട വാക്ക് തൊട്ട് നിലയത്തിന്റെ തരം (സിനിമാഗാനം, വാർത്ത, ടിവി ചാനലുകൾ…) അല്ലെങ്കിൽ ക്രമം (കൂടുതൽ കേട്ടത്, മികച്ച റേറ്റിങ്, അക്ഷരമാലാക്രമം) തിരഞ്ഞെടുക്കാം.",
         "Stations, Favourites, You" to "നിലയങ്ങൾ, പ്രിയപ്പെട്ടവ, നിങ്ങൾ",
         "Favourites keeps your stations in your own order, as a list or as tiles. You has your listening, Settings, alarms, help, and this tour again." to "പ്രിയപ്പെട്ടവ നിങ്ങളുടെ ക്രമത്തിൽ, ലിസ്റ്റായോ ടൈലുകളായോ സൂക്ഷിക്കും. 'നിങ്ങൾ' എന്നതിൽ നിങ്ങളുടെ കേൾവി, സെറ്റിങ്സ്, അലാറങ്ങൾ, സഹായം, ഈ പരിചയം വീണ്ടും.",
+        "Hide for today" to "ഇന്നത്തേക്ക് മറയ്ക്കുക",
+        "Signing in…" to "സൈൻ ഇൻ ചെയ്യുന്നു…",
+        "Sign in to keep your favourites on every device and on ranjithkb.com." to "പ്രിയപ്പെട്ടവ എല്ലാ ഫോണിലും ranjithkb.com-ലും കിട്ടാൻ സൈൻ ഇൻ ചെയ്യുക.",
     )
     private val HI: Map<String, String> = mapOf(
         "+  Add an alarm" to "+  अलार्म जोड़ें",
@@ -758,6 +761,9 @@ object Lang {
         "This line says what's shown. Tap an underlined word to pick a kind of station (film songs, news, TV channels…) or the order: most heard, top rated, A to Z." to "यह पंक्ति बताती है कि क्या दिख रहा है। रेखांकित शब्द छूकर स्टेशन का प्रकार (फ़िल्मी गाने, समाचार, टीवी चैनल…) या क्रम (सबसे ज़्यादा सुने, सबसे अच्छी रेटिंग, A से Z) चुनें।",
         "Stations, Favourites, You" to "स्टेशन, पसंदीदा, आप",
         "Favourites keeps your stations in your own order, as a list or as tiles. You has your listening, Settings, alarms, help, and this tour again." to "पसंदीदा आपके स्टेशन आपके क्रम में, सूची या टाइल के रूप में रखता है। 'आप' में आपका सुनना, सेटिंग्स, अलार्म, मदद, और यह सैर दोबारा।",
+        "Hide for today" to "आज के लिए छिपाएँ",
+        "Signing in…" to "साइन इन हो रहा है…",
+        "Sign in to keep your favourites on every device and on ranjithkb.com." to "अपने पसंदीदा हर फ़ोन और ranjithkb.com पर रखने के लिए साइन इन करें।",
     )
 }
 

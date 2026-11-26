@@ -88,7 +88,7 @@ class ScreensTest {
         "malayalam:radiomalabar" to (4.8 to 12)), "2026-11-15")
 
     @Composable private fun Stations(playing: Boolean, sortBy: String = "az", tab: Int = 0) = Column(Modifier.fillMaxSize()) {
-        Box(Modifier.tourTarget("header")) { Header(onSearch = {}) }
+        Box(Modifier.tourTarget("header")) { Header(onSearch = {}, onAddOwn = {}) }
         Box(Modifier.tourTarget("langs")) {
         LangTabs(listOf(LangTab(PICKS, t("Velvet Selection"), star = true), LangTab("malayalam", "Malayalam", true),
             LangTab("english", "English"), LangTab("tamil", "Tamil"), LangTab("_langs", t("All languages"), icon = true)), "malayalam", {}, {}) }

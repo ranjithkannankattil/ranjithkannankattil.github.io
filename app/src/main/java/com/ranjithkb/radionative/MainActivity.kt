@@ -317,7 +317,8 @@ fun App(c: MediaController?) {
     Row(Modifier.fillMaxSize()) {
     if (rail) Box(Modifier.tourTarget("nav")) { SideRail(tab, favList.size, ::go) }
     Column(Modifier.weight(1f).fillMaxHeight().statusBarsPadding()) {
-        Box(Modifier.tourTarget("header")) { Header(onSearch = { search = true }, onSettings = { page = "settings" }) }
+        Box(Modifier.tourTarget("header")) { Header(onSearch = { search = true }, onSettings = { page = "settings" },
+            onAddOwn = { ownFromFavs = true; page = "own" }) }
         update?.let { u ->
             Row(Modifier.fillMaxWidth().padding(top = 10.dp).background(AccentSoft).padding(start = 24.dp, end = 12.dp, top = 6.dp, bottom = 6.dp),
                 verticalAlignment = Alignment.CenterVertically) {
@@ -402,11 +403,17 @@ fun App(c: MediaController?) {
                 }
             } else {
                 Column {
-                    if (Session.name == null) Row(Modifier.fillMaxWidth().padding(top = 10.dp).background(AccentSoft).padding(24.dp, 10.dp),
+                    // the sign-in note can be closed for the day (tester's idea, 26 Nov 2026): more room for the list
+                    val today = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.US).format(java.util.Date())
+                    var hidSignIn by remember { mutableStateOf(prefs.getString("signInHidden", "") == today) }
+                    if (Session.name == null && !hidSignIn) Row(Modifier.fillMaxWidth().padding(top = 10.dp).background(AccentSoft)
+                        .padding(start = 24.dp, end = 4.dp, top = 8.dp, bottom = 8.dp),
                         verticalAlignment = Alignment.CenterVertically) {
-                        Text(if (Session.busy) "Signing in…" else "Sign in to keep your favourites on every device and on ranjithkb.com.",
+                        Text(if (Session.busy) t("Signing in…") else t("Sign in to keep your favourites on every device and on ranjithkb.com."),
                             Modifier.weight(1f), fontSize = 15.sp)
                         if (!Session.busy) Button({ openUrl(ctx, Account.SIGN_IN_URL) }, Modifier.heightIn(min = 48.dp)) { Text(t("Sign in")) }
+                        IconButton({ hidSignIn = true; prefs.edit().putString("signInHidden", today).apply() }, Modifier.size(48.dp)) {
+                            Icon(Icons.Outlined.Close, t("Hide for today"), tint = InkSoft) }
                     }
                     FavsTab(favList, now, langOf = ::langOf, onPlay = { s -> play(favList, s) },
                         recent = recentPlayed, onRecent = { r -> play(recentPlayed.map { it.station }, r.station) },
@@ -586,9 +593,7 @@ fun FavsTab(list: List<Station>, now: NowState, langOf: (Station) -> String, onP
         if (list.isEmpty()) OutlinedButton(onPicks, Modifier.padding(horizontal = 16.dp).heightIn(min = 48.dp)) {
             Icon(Icons.Filled.Star, null, tint = Accent); Spacer(Modifier.width(8.dp)); Text(t("Start with the Velvet Selection"))
         }
-        if (!edit) TextButton(onAddOwn, Modifier.padding(horizontal = 8.dp).heightIn(min = 48.dp)) {
-            Icon(Icons.Outlined.Add, null, tint = AccentText); Spacer(Modifier.width(6.dp)); Text(t("Add your own station"), color = AccentText)
-        }
+
         if (Account.isOwner(ctx) && list.isNotEmpty() && !edit) {
             var busy by remember { mutableStateOf(false) }
             TextButton({ if (!busy) scope.launch { busy = true
