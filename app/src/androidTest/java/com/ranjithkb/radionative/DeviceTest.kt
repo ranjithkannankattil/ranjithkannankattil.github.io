@@ -429,4 +429,93 @@ class DeviceTest {
         assertNotNull("station-stats.json loads", d); log("stats: ${d!!.week.size} heard, ${d.ratings.size} rated")
         assertNotNull("logo list has Radio Macfast", CarArt.logoUrl(ctx, "malayalam:radiomacfast"))
     }
+
+    // ---------------- 2.10: every bug reported so far gets a check here, so it can't come back
+
+    /** Tester's car bug (25 Nov 2026): ⏭ in Favourites played the next Velvet Selection station instead. */
+    @Test fun t25_car_next_stays_in_favourites() {
+        val ml = children("col|malayalam").take(6)
+        val st = runBlockingStations("malayalam").filter { s -> ml.any { it.mediaId.endsWith(":" + s.id) } }.take(4)
+        assertTrue("4 favourites to test with", st.size == 4)
+        Favs(ctx).replaceAll(st)
+        val favs = children("favs")
+        log("car favourites: ${favs.map { it.mediaId }}")
+        assertEquals(4, favs.count { it.mediaMetadata.isPlayable == true })
+        val compat = carController()
+        compat.transportControls.playFromMediaId(favs[1].mediaId, null)
+        assertTrue("2nd favourite is on", waitFor(10_000, "fav 2") { b.currentMediaItem?.mediaId?.endsWith(":" + st[1].id) == true })
+        compat.transportControls.skipToNext()
+        assertTrue("⏭ goes to the 3rd favourite", waitFor(8_000, "fav 3") { b.currentMediaItem?.mediaId?.endsWith(":" + st[2].id) == true })
+        compat.transportControls.skipToPrevious()
+        assertTrue("⏮ back to the 2nd favourite", waitFor(8_000, "fav 2 again") { b.currentMediaItem?.mediaId?.endsWith(":" + st[1].id) == true })
+        assertEquals("the queue is the favourites only", 4, main { b.mediaItemCount })
+        // the same station shown in the Malayalam list must play inside that list, not favourites
+        val inLang = children("col|malayalam").first { it.mediaId.endsWith(":" + st[1].id) }
+        compat.transportControls.playFromMediaId(inLang.mediaId, null)
+        assertTrue("from a language list the queue is that language", waitFor(10_000, "lang queue") { b.mediaItemCount > 4 })
+        Favs(ctx).replaceAll(emptyList())
+    }
+    private fun runBlockingStations(col: String) = kotlinx.coroutines.runBlocking { Repo.stations(ctx, col) }
+
+    /** Tester's idea (25 Nov 2026), even volume: switching it on and off never stops the sound. */
+    @Test fun t26_even_volume_on_off_keeps_playing() {
+        playSomething()
+        listOf(true, false, true, false, true).forEach { on ->
+            EvenVolume.set(ctx, on); Thread.sleep(1_500)
+            assertTrue("still playing with even volume $on", main { b.isPlaying })
+        }
+        main { b.seekToNextMediaItem() }
+        assertTrue("next station plays with even volume on", waitFor(25_000, "next with even volume") { b.isPlaying })
+    }
+
+    /** "Connecting…" for ever (2.10): a stream that answers but never sends sound must not hang the player. */
+    @Test fun t27_silent_stream_moves_to_the_next_link() {
+        val server = java.net.ServerSocket(0)
+        val t = Thread { try { while (!server.isClosed) { val c = server.accept()
+            Thread { runCatching { c.getOutputStream().write("HTTP/1.1 200 OK\r\nContent-Type: audio/mpeg\r\n\r\n".toByteArray()); c.getOutputStream().flush()
+                Thread.sleep(120_000); c.close() } }.start() } } catch (e: Exception) { } }.apply { isDaemon = true; start() }
+        try {
+            val (list, i) = playSomething()
+            val good = main { b.currentMediaItem!! }
+            val streams = good.mediaMetadata.extras!!.getStringArrayList("streams")!!
+            val silent = "http://127.0.0.1:${server.localPort}/silent.mp3"
+            val st = Station("silenttest", "Silent test", "", listOf(silent) + streams, "english-news")
+            main { b.setMediaItem(st.toItem("English")); b.prepare(); b.play() }
+            assertTrue("after ~25 s of silence the next link plays", waitFor(70_000, "fallback link") { b.isPlaying })
+            log("play log: ${PlayLog.all(ctx).take(5)}")
+            assertTrue(PlayLog.all(ctx).any { it.contains("still connecting") })
+            // only the silent link: it gives up and pauses instead of 'Connecting…' for ever
+            val only = Station("silentonly", "Silent only", "", listOf(silent), "english-news")
+            main { b.setMediaItem(only.toItem("English")); b.prepare(); b.play() }
+            assertTrue("gives up and pauses", waitFor(90_000, "give up") { !b.playWhenReady })
+            log("list ${list.size} at $i")
+        } finally { server.close() }
+    }
+
+    /** Tester's idea (24 Nov 2026), your own station: it plays, sits in the car's Favourites, and stays off the account. */
+    @Test fun t28_own_station_plays_and_shows_in_the_car() {
+        playSomething()
+        val link = main { b.currentMediaItem!!.mediaMetadata.extras!!.getStringArrayList("streams")!!.first() }
+        main { b.pause() }
+        val mine = OwnStations.add(ctx, "My test station", link)
+        Favs(ctx).replaceAll(listOf(mine))
+        val favs = children("favs")
+        assertTrue("own station is in the car's Favourites", favs.any { it.mediaId.endsWith("$MINE:${mine.id}") })
+        assertEquals("loads like any list", mine.id, runBlockingStations(MINE).single().id)
+        val compat = carController()
+        compat.transportControls.playFromMediaId(favs.first { it.mediaId.endsWith(mine.id) }.mediaId, null)
+        assertTrue("own station plays", waitFor(25_000, "own plays") { b.isPlaying })
+        OwnStations.remove(ctx, mine.id); Favs(ctx).replaceAll(emptyList())
+    }
+
+    /** Tester's idea (26 Nov 2026): "Play the last station on opening" — the RESUME command starts the last station. */
+    @Test fun t29_resume_last_station() {
+        playSomething()
+        val last = main { b.currentMediaItem!!.mediaId }
+        main { b.stop(); b.clearMediaItems() }
+        assertTrue(waitFor(5_000, "cleared") { b.mediaItemCount == 0 })
+        main { b.sendCustomCommand(SessionCommand(PlaybackService.RESUME, Bundle.EMPTY), Bundle.EMPTY) }
+        assertTrue("the last station starts again", waitFor(25_000, "resume") { b.isPlaying && b.currentMediaItem?.mediaId == last })
+    }
 }
+

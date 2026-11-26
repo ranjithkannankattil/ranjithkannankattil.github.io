@@ -561,4 +561,32 @@ class ScreensTest {
     @Test @Config(qualifiers = "w800dp-h400dp-mdpi") fun x05_landscape_rail() = shot("x05-landscape-800x400", false) {
         Row(Modifier.fillMaxSize()) { SideRail(0, 12) {}; Box(Modifier.weight(1f)) { Stations(true) } } }
     @Test fun x06_ml_you() = inLang("ml", "x06-ml-you") { Info() }
+
+    // ---------------- 2.10 regressions: each bug or wish he reported stays fixed
+    @Test fun r01_filter_reads_as_a_sentence() { shot("r01-sentence", false) { Stations(true, "heard") }
+        rule.onNodeWithText("Showing", substring = true).assertExists()
+        rule.onNodeWithText("most heard first", substring = true).assertExists() }
+    @Test fun r02_reorder_is_a_small_icon() { shot("r02-favs-reorder-icon", false) {
+            FavsTab(sts.take(4), now(), { "Malayalam" }, {}, recent = emptyList(), onRecent = {}, onChanged = {}, favs = Favs(rule.activity), onPicks = {}) }
+        rule.onNodeWithContentDescription("Reorder / remove").assertExists()
+        rule.onNodeWithText("Reorder / remove").assertDoesNotExist()
+        rule.onNodeWithText("Add your own station").assertDoesNotExist() }       // moved to the + beside Settings
+    @Test fun r03_add_own_station_beside_settings() { shot("r03-header-plus", false) { Header({}, {}, {}) }
+        rule.onNodeWithContentDescription("Add your own station").assertExists() }
+    @Test fun r04_tour_says_you_not_info() {
+        assertTrue(Tour.STEPS.none { it.title.contains("Info") || it.text.contains("Info ") })
+        assertTrue(Tour.STEPS.any { it.title == "Stations, Favourites, You" }) }
+    @Test fun r05_station_cards_have_a_round_play_button() { shot("r05-cards", false) { Stations(true) }
+        rule.onAllNodesWithText("RADIO MANGO", substring = true, ignoreCase = true).fetchSemanticsNodes().let { assertTrue(it.isNotEmpty()) }
+        assertTrue(rule.onAllNodes(hasClickLabel("Play Radio Mango")).fetchSemanticsNodes().size >= 2) }   // card + round button
+    @Test fun r06_settings_has_every_210_switch() { shot("r06-settings", false) { SettingsScreen({}) {} }
+        listOf("Even volume", "Play the last station on opening", "Your own stations", "Carry on after videos")
+            .forEach { rule.onNodeWithText(it).performScrollTo().assertExists() } }
+    @Test fun r07_every_new_wording_is_translated() {
+        val missing = listOf("ml", "hi").flatMap { code -> Lang.code = code
+            listOf("Showing", "Play the last station on opening", "Hide for today", "Your own stations", "Even volume", "Help and FAQ",
+                "Stations, Favourites, You", "Playing", "Paused", "Your listening").filter { t(it) == it }.map { "$code: $it" } }
+        Lang.code = "en"
+        assertTrue("not translated: $missing", missing.isEmpty()) }
 }
+
