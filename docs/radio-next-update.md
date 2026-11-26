@@ -48,7 +48,7 @@ His reason: the app looks like one long list; in Settings you can't tell what is
 - Motion: rows lift under the finger, pages slide in with the icon travelling to the title, switches spring,
   pills glide, lists fade in row by row, numbers count up, chart bars grow.
 - **Station's own logo everywhere** (asked 23 Nov 2026, for Radio Utsav): stations listed in `everywhere` in
-  `js/station-logos.json` show their logo on station cards, the small player, the big player and as the cover for every
+  `js/station-logos.json` show their logo in the small player, the big player and as the cover for every
   song (instead of iTunes art) and on share cards; other stations keep logos on Android Auto only. Radio Utsav's only
   stream is http (`http://82.145.63.6:6094/mp=/stream`), which the app and the https website can't play, so it stays
   hidden until there is an https link (ask the station, or pass it through a small Cloudflare proxy if he agrees).
@@ -138,7 +138,7 @@ His reason: the app looks like one long list; in Settings you can't tell what is
   "Recently played ›" line); and in landscape use a side rail instead of bottom tabs and a slimmer player bar so
   lists get the height. Screen tests at 800×400 and 1280×480 (car stereo sizes), plus phone landscape.
 - **Station rows and the player** (agreed 26 Nov 2026): no two-letter badge on station rows; the ♡ sits inline
-  next to the play button (a station's own logo shows only for stations in `everywhere`). In the big player the ♡
+  next to the play button. No logo in station rows at all, even for stations that gave us one (he said so 26 Nov). In the big player the ♡
   sits beside the station name, within thumb reach, in every player look (not tucked in a corner or menu).
   **Row size** in Settings → Look: Compact · **Comfortable (default)** · Expanded. Compact = one-line rows, tighter
   gaps (good for car stereos and small screens); Expanded = larger text and touch targets with the song now playing.
