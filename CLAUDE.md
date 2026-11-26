@@ -120,8 +120,9 @@ Plain HTML/CSS/JS served by GitHub Pages from `main` (no build step); custom dom
   presence" (he granted it 19 Nov 2026): run the "Play store screenshots" workflow on main (input: version) to put them on the
   listing (2.7.0's went up that day). Keep listing changes out of the release
   upload (a failed commit there would lose the release).
-- **Going public**: his 14-day closed test ends ~noon 26 Nov 2026; then he applies for production in Play Console (Google: usually ≤ 7 days),
-  so public ≈ 28 Nov – early Dec. He launches with 2.9.0 as is (no small 2.9.1); the big redesign comes after launch as 2.10 or 3.0.
+- **Going public**: production access granted 26 Nov 2026 (applied 25 Nov). 2.9.0 (code 2033) sent to Google for production
+  review the same evening: full rollout, all 177 countries + rest of world. When it's live, switch the Radio page's app card
+  from "join the test" to a normal Google Play download button. The big redesign follows as 2.10.
 - **2.10 (next)**: the agreed design is written up in `docs/radio-next-update.md` ("2.10 design, agreed 22 Nov 2026"); build it on `radio-native-dev` when he says go.
 - **Android TV** (on `radio-native-dev`, not released yet): `TvActivity.kt` (rows of stations for the remote, big player, always dark),
   its own LEANBACK launcher entry and banner. `tv-test.yml` drives it on an Android TV emulator (screenshots + video to branch
