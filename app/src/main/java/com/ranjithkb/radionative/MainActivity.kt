@@ -300,7 +300,12 @@ fun App(c: MediaController?) {
             full -> full = false
             page != null -> page = null
             tab != 0 -> go(0)
-            System.currentTimeMillis() - lastBack < 2500 -> (ctx as? android.app.Activity)?.moveTaskToBack(true)
+            System.currentTimeMillis() - lastBack < 2500 -> {
+                // the screen's context can be wrapped (language), so find the activity underneath; the radio keeps playing
+                var cx: Context? = ctx
+                while (cx is android.content.ContextWrapper && cx !is android.app.Activity) cx = cx.baseContext
+                (cx as? android.app.Activity)?.let { if (!it.moveTaskToBack(true)) it.finish() }
+            }
             else -> { lastBack = System.currentTimeMillis()
                 android.widget.Toast.makeText(ctx, t("Press back again to leave"), android.widget.Toast.LENGTH_SHORT).show() }
         }
