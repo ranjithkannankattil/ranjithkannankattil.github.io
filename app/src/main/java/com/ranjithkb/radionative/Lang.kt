@@ -17,6 +17,8 @@ import androidx.compose.runtime.setValue
 object Lang {
     val CODES = listOf("en", "ml", "hi")
     val NAMES = mapOf("en" to "English", "ml" to "മലയാളം", "hi" to "हिन्दी")
+    /** The language names written in English letters (his choice: "Malayalam", never in Malayalam script, in the picker). */
+    val NAMES_EN = mapOf("en" to "English", "ml" to "Malayalam", "hi" to "Hindi")
     var code by mutableStateOf("en")
 
     private fun p(ctx: Context) = ctx.getSharedPreferences("settings", Context.MODE_PRIVATE)

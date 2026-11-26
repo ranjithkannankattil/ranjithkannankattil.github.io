@@ -162,4 +162,6 @@ object Listen {
     }
 
     fun hm(ms: Long): String { val m = ms / 60_000; return if (m >= 60) "${m / 60} h ${m % 60} min" else "$m min" }
+    /** Short form for a tile: "12 h", "45 min", "0 min". */
+    fun short(ms: Long): String { val m = ms / 60_000; return if (m >= 60) "%,d h".format(java.util.Locale.UK, m / 60) else "$m min" }
 }

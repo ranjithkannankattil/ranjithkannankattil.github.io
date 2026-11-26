@@ -279,14 +279,14 @@ fun MiniPlayer(now: NowState, c: androidx.media3.session.MediaController?, isFav
     }
 }
 
-/** STATIONS · FAVOURITES · INFO, with fine-line icons. */
+/** STATIONS · FAVOURITES · YOU, with fine-line icons. */
 @Composable
 fun BottomNav(tab: Int, favCount: Int, go: (Int) -> Unit) {
     Column(Modifier.background(Paper).navigationBarsPadding()) {
         HorizontalDivider(color = Line)
         Row(Modifier.fillMaxWidth().height(58.dp)) {
             listOf(Triple(R.drawable.ln_radio, t("Stations"), 0), Triple(R.drawable.ln_heart, if (Theme.text >= 2) t("Favourites") else t("Favourites") + " $favCount", 1),
-                Triple(R.drawable.ln_info, t("Info"), 2)).forEach { (icon, label, i) ->
+                Triple(R.drawable.ln_person, t("You"), 2)).forEach { (icon, label, i) ->
                 val on = tab == i
                 // the tab you're on sits in a soft pill of the theme's colour, so it's easy to see at a glance
                 val pillInk = if (Theme.dark) GoldC else AccentText

@@ -40,12 +40,14 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
-import androidx.compose.material.icons.outlined.FavoriteBorder
+import androidx.compose.material.icons.outlined.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
@@ -403,14 +405,16 @@ fun App(c: MediaController?) {
     page?.let { pg ->
         Box(Modifier.fillMaxSize()) {
             when (pg) {
-                "settings" -> SettingsScreen({ page = null }, settingsScroll) { page = it }
+                "settings" -> SettingsScreen({ page = null }, settingsScroll, update) { page = it }
+                "text" -> TextFontScreen { page = "settings" }
+                "feature", "thanks" -> FeedbackScreen(pg) { page = "settings" }
                 "themes" -> ThemesScreen { page = "settings" }
                 "look" -> PlayerLookScreen { page = "settings" }
                 "eq" -> EqualiserScreen { page = "settings" }
                 "viz" -> VisualiserScreen { page = "settings" }
                 "data" -> DataSaverScreen { page = "settings" }
-                "alarm" -> AlarmScreen((favList + recentPlayed.map { it.station }).distinctBy { it.key }.map { it to langOf(it) }) { page = "settings" }
-                "request" -> RequestScreen { page = null }
+                "alarm" -> AlarmScreen((favList + recentPlayed.map { it.station }).distinctBy { it.key }.map { it to langOf(it) }) { page = null }
+                "request" -> RequestScreen { page = "settings" }
                 else -> page = null
             }
         }
@@ -689,86 +693,78 @@ fun FullPlayer(now: NowState, c: MediaController?, cast: CastUi, onCloseAll: () 
 }
 
 @OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
+@OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
 @Composable
 fun InfoTab(languages: Int, update: Update?, onPage: (String) -> Unit = {}, onSignIn: () -> Unit, onSignOut: () -> Unit) {
+    // 2.10 "You" (was Info): you, your listening, three places to go, share, about. Version and feedback live in Settings.
     val ctx = LocalContext.current
-    // Tidy (Nov 2026): a header card, your listening, then short lists of rows like Settings; longer text opens its own page
     var about by remember { mutableStateOf<String?>(null) }
+    var account by remember { mutableStateOf(false) }
+    var ask by remember { mutableStateOf(false) }
+    val scope = rememberCoroutineScope()
     Box(Modifier.fillMaxSize()) {
-    LazyColumn(contentPadding = PaddingValues(start = 20.dp, end = 20.dp, top = 16.dp, bottom = 24.dp)) {
+    LazyColumn(contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 18.dp, bottom = 28.dp)) {
         item {
-            Column(Modifier.fillMaxWidth().clip(RoundedCornerShape(16.dp)).background(AccentSoft).padding(16.dp)) {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Box(Modifier.size(56.dp).clip(RoundedCornerShape(14.dp)).background(ArtBg), contentAlignment = Alignment.Center) {
-                        Icon(painterResource(R.drawable.ic_logo_mark), null, Modifier.size(40.dp), tint = Gold) }
-                    Column(Modifier.padding(start = 14.dp).weight(1f)) {
-                        Text("RADIO VELVET", fontSize = 15.sp, letterSpacing = 5.sp, fontWeight = FontWeight.Medium, color = Title)
-                        Text(t("Elegant sounds, always free"), fontSize = 14.sp, color = InkSoft)
-                        var log by remember { mutableStateOf(false) }
-                        Text(t("Version") + " ${appVersion(ctx)}" + if (update == null) " · " + t("Up to date") else "", fontSize = 13.sp, color = InkSoft,
-                            modifier = Modifier.combinedClickable(onClick = {}, onLongClickLabel = "Show what the radio did lately", onLongClick = { log = true }))
-                        // for testing: hold the version line to see what started or stopped the radio, and who asked
-                        if (log) AlertDialog(onDismissRequest = { log = false }, title = { Text("What the radio did lately") },
-                            text = { Column(Modifier.heightIn(max = 420.dp).verticalScroll(rememberScrollState())) {
-                                (PlayLog.all(ctx) + listOf("— alarms —") + AlarmLog.all(ctx)).forEach { Text(it, fontSize = 12.sp, lineHeight = 16.sp) } } },
-                            confirmButton = { TextButton({ log = false }) { Text(t("OK")) } },
-                            dismissButton = { TextButton({
-                                val cm = ctx.getSystemService(android.content.ClipboardManager::class.java)
-                                cm?.setPrimaryClip(android.content.ClipData.newPlainText("Radio Velvet log", (PlayLog.all(ctx) + AlarmLog.all(ctx)).joinToString("\n")))
-                            }) { Text("Copy") } })
-                    }
+            val name = Session.name
+            Row(Modifier.fillMaxWidth().clip(RoundedCornerShape(18.dp))
+                .clickable(onClickLabel = if (name != null) t("Your account") else t("Sign in with Google")) { if (name != null) account = !account else onSignIn() }
+                .padding(6.dp), verticalAlignment = Alignment.CenterVertically) {
+                Box(Modifier.size(64.dp).clip(CircleShape).background(Accent), contentAlignment = Alignment.Center) {
+                    if (name != null) Text(name.take(1).uppercase(), color = Color.White, fontSize = 26.sp, fontWeight = FontWeight.Medium)
+                    else Icon(painterResource(R.drawable.ic_logo_mark), null, Modifier.size(40.dp), tint = Gold)
                 }
-                update?.let { u ->
-                    Text("New version ${u.version}", fontWeight = FontWeight.SemiBold, modifier = Modifier.padding(top = 14.dp))
-                    u.notes.take(4).forEach { Text("• $it", fontSize = 14.sp, modifier = Modifier.padding(top = 3.dp)) }
-                    Box(Modifier.padding(top = 10.dp)) { UpdateButton(u, "Download and install") }
-                    Text(t("Open the downloaded file and allow the install. Your favourites stay."), fontSize = 12.sp, color = InkSoft)
+                Column(Modifier.padding(start = 16.dp).weight(1f)) {
+                    Text(name ?: t("Sign in with Google"), fontSize = 22.sp, color = Title)
+                    Text(if (name != null) t("Favourites saved to your Google account") else t("Keep your favourites on every phone and on the website"),
+                        fontSize = 14.sp, color = Soft, lineHeight = 19.sp)
                 }
+                Text("›", fontSize = 22.sp, color = Soft)
             }
-        }
-        item { Box(Modifier.padding(top = 22.dp)) { Section(t("Your listening")) { ListeningSection() } } }
-        item {
-            SectionHead(t("Your account"))
-            var open by remember { mutableStateOf(false) }
-            var ask by remember { mutableStateOf(false) }
-            val scope = rememberCoroutineScope()
-            if (Session.name != null) {
-                SettingRow("Signed in as ${Session.name}", sub = t("Favourites match on every phone and on ranjithkb.com"),
-                    onClick = { open = !open })
-                if (open) Row(Modifier.padding(vertical = 8.dp), verticalAlignment = Alignment.CenterVertically) {
+            AnimatedVisibility(account && Session.name != null) {
+                Row(Modifier.padding(top = 10.dp, start = 6.dp), verticalAlignment = Alignment.CenterVertically) {
                     OutlinedButton(onSignOut, Modifier.heightIn(min = 48.dp)) { Text(t("Sign out")) }
                     TextButton({ ask = true }, Modifier.padding(start = 8.dp).heightIn(min = 48.dp)) { Text(t("Delete account"), color = InkSoft) }
                 }
-                if (ask) AlertDialog(onDismissRequest = { ask = false },
-                    title = { Text(t("Delete your account?")) },
-                    text = { Text(t("This removes your saved favourites and your sign-in from Radio Velvet and ranjithkb.com. Favourites on this phone stay until you remove them.")) },
-                    confirmButton = { TextButton({ ask = false; scope.launch {
-                        Account.deleteAccount(ctx); Session.name = null } }) { Text(t("Delete")) } },
-                    dismissButton = { TextButton({ ask = false }) { Text(t("Cancel")) } })
-            } else SettingRow(t("Sign in with Google"), sub = t("Keep your favourites on every phone and on the website"), onClick = onSignIn)
+            }
+            if (ask) AlertDialog(onDismissRequest = { ask = false },
+                title = { Text(t("Delete your account?")) },
+                text = { Text(t("This removes your saved favourites and your sign-in from Radio Velvet and ranjithkb.com. Favourites on this phone stay until you remove them.")) },
+                confirmButton = { TextButton({ ask = false; scope.launch { Account.deleteAccount(ctx); Session.name = null } }) { Text(t("Delete")) } },
+                dismissButton = { TextButton({ ask = false }) { Text(t("Cancel")) } })
+        }
+        item { ListeningTiles() }
+        item {
+            Group(modifier = Modifier.padding(top = 20.dp)) {
+                NavItem(t("Settings"), sub = t("Colours, text, sound, data saver, feedback"), drawable = R.drawable.ln_gear) { onPage("settings") }
+                RowLine()
+                val alarms = remember { Alarm.all(ctx) }
+                val up = remember(alarms) { Alarm.upcoming(java.util.Calendar.getInstance(), alarms) }
+                NavItem(t("Alarms"), sub = if (up != null) t("Next") + ": " + Alarm.timeLabel(up.first.hour, up.first.minute,
+                        android.text.format.DateFormat.is24HourFormat(ctx)) else t("Wake up to the radio"),
+                    icon = Icons.Outlined.Alarm) { onPage("alarm") }
+                RowLine()
+                NavItem(t("Quick tour"), sub = t("A short walk through the app"), drawable = R.drawable.ln_star) { onPage("tour") }
+            }
         }
         item {
-            SectionHead(t("Make it yours"))
-            SettingRow(t("Settings"), sub = t("Colours, text size, equaliser, data saver"), onClick = { onPage("settings") })
-            SettingRow(t("Alarms"), sub = t("Wake up to the radio"), onClick = { onPage("alarm") })
-            SettingRow(t("Request a station"), sub = t("Missing a station? Tell us"), onClick = { onPage("request") })
-            SettingRow(t("Quick tour of the app"), onClick = { onPage("tour") })
-            SettingRow(t("Share Radio Velvet"), sub = t("Send the app to family and friends"), onClick = {
+            ActionButton(t("Share Radio Velvet"), Icons.Outlined.Share, Modifier.padding(top = 20.dp)) {
                 try { ctx.startActivity(android.content.Intent.createChooser(android.content.Intent(android.content.Intent.ACTION_SEND)
                     .setType("text/plain").putExtra(android.content.Intent.EXTRA_TEXT,
                         "Radio Velvet: free radio from Kerala and around the world. https://ranjithkb.com/radio.html"), "Share Radio Velvet"))
-                } catch (e: Exception) { } })
-            SettingRow(t("Write to us"), sub = t("hello@ranjithkb.com"), onClick = {
-                try { ctx.startActivity(android.content.Intent(android.content.Intent.ACTION_SENDTO,
-                    android.net.Uri.parse("mailto:hello@ranjithkb.com?subject=Radio%20Velvet"))) } catch (e: Exception) { } })
+                } catch (e: Exception) { } }
         }
         item {
-            SectionHead(t("About"))
-            SettingRow(t("What the app can do"), onClick = { about = "can" })
-            SettingRow(t("Which stations play"), onClick = { about = "stations" })
-            SettingRow(t("Privacy policy"), onClick = { openUrl(ctx, "https://ranjithkb.com/privacy.html#radio-velvet") })
-            SettingRow(t("Credits"), onClick = { about = "credits" })
-            SettingRow(t("Radio on ranjithkb.com"), onClick = { openUrl(ctx, "https://ranjithkb.com/radio.html") })
+            Group(t("About")) {
+                NavItem(t("What the app can do"), icon = Icons.Outlined.AutoAwesome) { about = "can" }
+                RowLine()
+                NavItem(t("Which stations play"), drawable = R.drawable.ln_radio) { about = "stations" }
+                RowLine()
+                NavItem(t("Privacy policy"), icon = Icons.Outlined.Lock) { openUrl(ctx, "https://ranjithkb.com/privacy.html#radio-velvet") }
+                RowLine()
+                NavItem(t("Credits"), icon = Icons.Outlined.Favorite) { about = "credits" }
+                RowLine()
+                NavItem(t("Radio on ranjithkb.com"), icon = Icons.Outlined.Language) { openUrl(ctx, "https://ranjithkb.com/radio.html") }
+            }
         }
     }
     when (about) {
@@ -796,6 +792,28 @@ fun InfoTab(languages: Int, update: Update?, onPage: (String) -> Unit = {}, onSi
         }
     }
     }
+}
+
+/** You → three numbers: this week, all your listening, favourites. Counted on this phone (or your account when signed in). */
+@Composable
+fun ListeningTiles() {
+    val ctx = LocalContext.current
+    var mine by remember { mutableStateOf(Listen.local(ctx)) }
+    LaunchedEffect(Session.name) { Listen.account(ctx)?.let { mine = it } }
+    val favs = remember { Favs(ctx).all().size }
+    GroupHead(t("Your listening"), Modifier.padding(top = 10.dp))
+    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+        @Composable fun Tile(n: String, label: String) = Column(Modifier.weight(1f).shadow(2.dp, RoundedCornerShape(16.dp))
+            .clip(RoundedCornerShape(16.dp)).background(CardBg).padding(vertical = 14.dp, horizontal = 8.dp),
+            horizontalAlignment = Alignment.CenterHorizontally) {
+            Text(n, fontSize = 26.sp, fontWeight = FontWeight.Light, color = AccentText, maxLines = 1)
+            Text(label, fontSize = 13.sp, color = Soft, textAlign = androidx.compose.ui.text.style.TextAlign.Center, lineHeight = 17.sp)
+        }
+        Tile(Listen.short(mine.week), t("this week"))
+        Tile(Listen.short(mine.total), t("in all"))
+        Tile("$favs", t("favourites"))
+    }
+    if (mine.top.isNotEmpty()) InfoText(t("Your top station") + ": " + mine.top.first().first)
 }
 
 @Composable

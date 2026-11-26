@@ -18,6 +18,9 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.*
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -192,74 +195,191 @@ fun ThemeChoice(t: ThemeDef, w: Int, onPick: () -> Unit) {
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-fun SettingsScreen(close: () -> Unit, scroll: androidx.compose.foundation.ScrollState? = null, open: (String) -> Unit) {
+fun SettingsScreen(close: () -> Unit, scroll: androidx.compose.foundation.ScrollState? = null, update: Update? = null, open: (String) -> Unit) {
     val ctx = LocalContext.current
     fun save() = Theme.save(ctx)
-    // the scroll position is kept by the caller, so coming back from Data saver, Colour theme… lands where you were
+    // 2.10: grouped cards, one look per kind of item. The scroll position is kept by the caller, so coming back
+    // from Data saver, Colour theme… lands where you were.
     SubPage(t("Settings"), close, scrollState = scroll) {
-        SectionHead("App language · ആപ്പിന്റെ ഭാഷ · ऐप की भाषा")
-        Segmented(Lang.CODES.map { Lang.NAMES[it]!! }, Lang.CODES.indexOf(Lang.code)) { Lang.set(ctx, Lang.CODES[it]) }
-        SectionHead(t("Appearance"))
-        Segmented(listOf(t("Phone"), t("Light"), t("Dark")), listOf("phone", "light", "dark").indexOf(Theme.mode)) {
-            Theme.mode = listOf("phone", "light", "dark")[it]; save() }
-        Text(t("Phone = follow the phone's light / dark setting."), fontSize = 12.sp, color = Soft, modifier = Modifier.padding(top = 6.dp))
-        // every theme as a little screen, side by side: swipe and tap
-        androidx.compose.foundation.lazy.LazyRow(Modifier.fillMaxWidth().padding(top = 16.dp), horizontalArrangement = Arrangement.spacedBy(12.dp),
-            state = androidx.compose.foundation.lazy.rememberLazyListState(THEMES.indexOfFirst { it.id == Theme.themeId }.coerceAtLeast(0))) {
-            items(THEMES.size) { i -> ThemeChoice(THEMES[i], 76) { Theme.themeId = THEMES[i].id; save() } }
+        Group(t("Language")) {
+            PickItem(t("App language"), Lang.CODES.map { Lang.NAMES_EN[it] ?: it }, Lang.CODES.indexOf(Lang.code),
+                icon = Icons.Outlined.Language) { Lang.set(ctx, Lang.CODES[it]) }
         }
-        TextButton({ open("themes") }, Modifier.align(Alignment.End).heightIn(min = 48.dp)) {
-            Text("All ${THEMES.size} colour themes ›", color = AccentText) }
-        SettingRow(t("Player look"), sub = t("Radios from the 1930s to the 1990s, in their own colours or yours"),
-            value = Eras.byId(Theme.look)?.name ?: "Standard", onClick = { open("look") })
+        Group(t("Look")) {
+            NavItem(t("Colour theme"), (THEMES.find { it.id == Theme.themeId }?.name ?: "Velvet") + " · " +
+                when (Theme.mode) { "light" -> t("Light"); "dark" -> t("Dark"); else -> t("follows the phone") },
+                icon = Icons.Outlined.Palette) { open("themes") }
+            RowLine()
+            NavItem(t("Player look"), Eras.byId(Theme.look)?.name ?: "Standard", drawable = R.drawable.ln_radio) { open("look") }
+            RowLine()
+            NavItem(t("Text and font"), (FONTS.find { it.id == Theme.font }?.name ?: "Jost") + " · " +
+                listOf(t("Normal"), t("Large"), t("Extra large"))[Theme.text.coerceIn(0, 2)],
+                icon = Icons.Outlined.TextFields) { open("text") }
+            RowLine()
+            NavItem(t("Visualiser"), if (Theme.viz == "off") t("Off") else Theme.viz.replaceFirstChar { it.uppercase() },
+                icon = Icons.Outlined.GraphicEq) { open("viz") }
+            RowLine()
+            PickItem(t("Row size"), listOf(t("Compact"), t("Comfortable"), t("Expanded")), Theme.spacing,
+                icon = Icons.Outlined.ViewAgenda) { Theme.spacing = it; save() }
+        }
+        Group(t("Favourites")) {
+            PickItem(t("Show favourites as"), listOf(t("List"), t("Tiles")), if (Theme.favTiles) 1 else 0,
+                drawable = R.drawable.ln_heart) { Theme.favTiles = it == 1; save() }
+        }
+        Group(t("Sound")) {
+            NavItem(t("Equaliser"), if (Eq.on(ctx)) Eq.preset(ctx) else t("Off"), icon = Icons.Outlined.Tune) { open("eq") }
+        }
+        Group(t("Data and playback")) {
+            NavItem(t("Data saver"), when (DataSaver.mode) { DataSaver.ON -> t("Always"); DataSaver.MOBILE -> t("On mobile data"); else -> t("Off") } +
+                " · " + DataUse.size(DataUse.thisMonth(ctx).let { it.first + it.second }) + " " + t("this month"),
+                icon = Icons.Outlined.DataSaverOn) { open("data") }
+            RowLine()
+            ToggleItem(t("Carry on after videos"), Theme.resume, icon = Icons.Outlined.Replay,
+                sub = t("The radio comes back after a video in another app. Never during calls.")) { Theme.resume = it; save() }
+        }
+        InfoText(t("Data saver plays each station's lightest link and skips song pictures, for ships, villages and patchy signal."))
+        Group(t("Feedback")) {
+            NavItem(t("Suggest a station"), sub = t("A link, or just its name"), icon = Icons.Outlined.AddCircleOutline) { open("request") }
+            RowLine()
+            NavItem(t("Request a feature"), sub = t("Something you wish the app did"), icon = Icons.Outlined.Lightbulb) { open("feature") }
+            RowLine()
+            NavItem(t("Send a thank-you note"), sub = t("A few words to the person who makes it"), drawable = R.drawable.ln_heart) { open("thanks") }
+            RowLine()
+            NavItem(t("Rate on Google Play"), sub = t("Helps others find Radio Velvet"), drawable = R.drawable.ln_star) {
+                openUrl(ctx, "https://play.google.com/store/apps/details?id=com.ranjithkb.radio") }
+        }
+        InfoText(t("Radio Velvet is one person's hobby, made in spare time, so a reply can take a few days. Every message is read."))
+        VersionCard(update)
+        Box(Modifier.fillMaxWidth().padding(top = 14.dp), contentAlignment = Alignment.Center) {
+            TextButton({ Theme.themeId = "velvet"; Theme.mode = "phone"; Theme.text = 0; Theme.font = "jost"; Theme.spacing = 1; Theme.viz = "off"
+                Theme.look = "std"; Theme.lookColours = "original"; save() }, Modifier.heightIn(min = 48.dp)) {
+                Text(t("Reset to the original look"), color = Soft, fontSize = 14.sp) }
+        }
+    }
+}
 
-        SectionHead(t("Text size"))
-        Segmented(listOf(t("Normal"), t("Large"), t("Extra large")), Theme.text) { Theme.text = it; save() }
-        SectionHead(t("Font"))
-        // each font shown in itself: tap to use it
+/** Bottom of Settings: the app icon, version, and whether it's up to date (with the update when there is one). */
+@OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
+@Composable
+fun VersionCard(update: Update?) {
+    val ctx = LocalContext.current
+    val scope = rememberCoroutineScope()
+    var log by remember { mutableStateOf(false) }
+    var news by remember { mutableStateOf(false) }
+    var checking by remember { mutableStateOf(false) }
+    var found by remember { mutableStateOf(update) }
+    var checkedAt by remember { mutableStateOf(System.currentTimeMillis()) }
+    Group(t("App version")) {
+        Row(Modifier.fillMaxWidth()
+            .combinedClickable(onClick = {}, onLongClickLabel = "Show what the radio did lately", onLongClick = { log = true })
+            .padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
+            Box(Modifier.size(52.dp).clip(RoundedCornerShape(13.dp)).background(ArtBg), contentAlignment = Alignment.Center) {
+                Icon(androidx.compose.ui.res.painterResource(R.drawable.ic_logo_mark), null, Modifier.size(36.dp), tint = GoldC) }
+            Column(Modifier.padding(start = 14.dp).weight(1f)) {
+                Text("Radio Velvet ${appVersion(ctx)}", fontSize = 17.sp, fontWeight = FontWeight.Medium, color = Title)
+                val hm = java.text.SimpleDateFormat("HH:mm", java.util.Locale.UK).format(java.util.Date(checkedAt))
+                Text(if (found == null) "✓ " + t("Up to date") + " · " + t("checked") + " $hm" else t("A new version is ready"),
+                    fontSize = 14.sp, color = if (found == null) Color(0xFF2E7D4F) else AccentText)
+            }
+        }
+        found?.let { u ->
+            Row(Modifier.fillMaxWidth().padding(horizontal = 12.dp).clip(RoundedCornerShape(16.dp)).background(Accent).padding(14.dp),
+                verticalAlignment = Alignment.CenterVertically) {
+                Column(Modifier.weight(1f)) {
+                    Text("${u.version} " + t("is ready"), color = Color.White, fontSize = 16.sp, fontWeight = FontWeight.Medium)
+                    u.notes.firstOrNull()?.let { Text(it, color = Color.White.copy(alpha = 0.85f), fontSize = 13.sp, maxLines = 2) }
+                }
+                Spacer(Modifier.width(10.dp))
+                if (BuildConfig.SELF_UPDATE) UpdateButton(u, t("Update"))
+                else Button({ openUrl(ctx, "https://play.google.com/store/apps/details?id=com.ranjithkb.radio") },
+                    Modifier.heightIn(min = 44.dp)) { Text(t("Update")) }
+            }
+            Spacer(Modifier.height(8.dp))
+        }
+        RowLine()
+        NavItem(t("What's new"), sub = t("What changed in this version"), icon = Icons.Outlined.NewReleases) { news = true }
+        RowLine()
+        NavItem(if (checking) t("Checking…") else t("Check for updates"), icon = Icons.Outlined.Refresh) {
+            if (!BuildConfig.SELF_UPDATE) openUrl(ctx, "https://play.google.com/store/apps/details?id=com.ranjithkb.radio")
+            else if (!checking) scope.launch { checking = true; found = checkUpdate(ctx); checkedAt = System.currentTimeMillis(); checking = false }
+        }
+    }
+    InfoText(t("Google Play keeps the app up to date by itself."))
+    if (news) AlertDialog(onDismissRequest = { news = false }, title = { Text(t("What's new")) },
+        text = { Column(Modifier.heightIn(max = 420.dp).verticalScroll(rememberScrollState())) {
+            WHATS_NEW.forEach { Text("• " + t(it), fontSize = 14.sp, lineHeight = 20.sp, modifier = Modifier.padding(top = 6.dp)) } } },
+        confirmButton = { TextButton({ news = false }) { Text(t("OK")) } })
+    // for testers: hold the version line to see what started or stopped the radio, and who asked
+    if (log) AlertDialog(onDismissRequest = { log = false }, title = { Text("What the radio did lately") },
+        text = { Column(Modifier.heightIn(max = 420.dp).verticalScroll(rememberScrollState())) {
+            (PlayLog.all(ctx) + listOf("— alarms —") + AlarmLog.all(ctx)).forEach { Text(it, fontSize = 12.sp, lineHeight = 16.sp) } } },
+        confirmButton = { TextButton({ log = false }) { Text(t("OK")) } },
+        dismissButton = { TextButton({
+            val cm = ctx.getSystemService(android.content.ClipboardManager::class.java)
+            cm?.setPrimaryClip(android.content.ClipData.newPlainText("Radio Velvet log", (PlayLog.all(ctx) + AlarmLog.all(ctx)).joinToString("\n")))
+        }) { Text("Copy") } })
+}
+
+/** Shown under Settings → App version → What's new. */
+val WHATS_NEW = listOf(
+    "A new, clearer look: settings in cards, every kind of item looks like what it does.",
+    "In the car: next and previous stay in the list you started from, and the radio pauses when you leave the car.",
+    "Most heard now counts all listening since the start.",
+    "Row size: Compact, Comfortable or Expanded.",
+    "Feedback: suggest a station, request a feature or send a thank-you note.",
+    "TV channels carry a small TV tag.")
+
+/** Settings → Text and font: text size and the font, each shown in itself. */
+@Composable
+fun TextFontScreen(close: () -> Unit) {
+    val ctx = LocalContext.current
+    fun save() = Theme.save(ctx)
+    SubPage(t("Text and font"), close) {
+        Group(t("Text size")) {
+            PickItem(null, listOf(t("Normal"), t("Large"), t("Extra large")), Theme.text) { Theme.text = it; save() }
+        }
+        GroupHead(t("Font"))
         FONTS.chunked(2).forEach { pair ->
-            Row(Modifier.fillMaxWidth().padding(bottom = 8.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            Row(Modifier.fillMaxWidth().padding(bottom = 10.dp), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                 pair.forEach { f ->
                     val on = f.id == Theme.font
-                    Column(Modifier.weight(1f).heightIn(min = 64.dp).border(if (on) 1.5.dp else 1.dp, if (on) Title else Line)
-                        .background(if (on) Paper2 else Color.Transparent)
+                    Column(Modifier.weight(1f).heightIn(min = 72.dp).clip(RoundedCornerShape(16.dp))
+                        .background(if (on) AccentSoft else CardBg).border(if (on) 1.5.dp else 0.dp, if (on) Accent else Color.Transparent, RoundedCornerShape(16.dp))
                         .semantics { selected = on; role = Role.RadioButton }.clickable(onClickLabel = "Use ${f.name}") { Theme.font = f.id; save() }
-                        .padding(horizontal = 12.dp, vertical = 8.dp), verticalArrangement = Arrangement.Center) {
-                        Text(if (f.res == null) "Radio Velvet" else "Radio Velvet", fontFamily = f.family, fontSize = (17 * (if (f.scale > 1f) 1.1f else 1f)).sp,
+                        .padding(horizontal = 14.dp, vertical = 10.dp), verticalArrangement = Arrangement.Center) {
+                        Text("Radio Velvet", fontFamily = f.family, fontSize = (17 * (if (f.scale > 1f) 1.1f else 1f)).sp,
                             color = Title, maxLines = 1, overflow = TextOverflow.Ellipsis)
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            if (on) Text("◆ ", color = GoldC, fontSize = 10.sp)
-                            Text(f.name + "  ·  " + f.kind, fontSize = 12.sp, color = if (on) AccentText else Soft, maxLines = 1, fontFamily = FONTS[0].family)
-                        }
+                        Text(f.name + "  ·  " + f.kind, fontSize = 12.sp, color = if (on) AccentText else Soft, maxLines = 1, fontFamily = FONTS[0].family)
                     }
                 }
                 if (pair.size == 1) Spacer(Modifier.weight(1f))
             }
         }
-        SectionHead(t("Row size"))
-        Segmented(listOf(t("Compact"), t("Comfortable"), t("Expanded")), Theme.spacing) { Theme.spacing = it; save() }
-        SectionHead(t("Favourites"))
-        Segmented(listOf(t("List"), t("Tiles")), if (Theme.favTiles) 1 else 0) { Theme.favTiles = it == 1; save() }
+    }
+}
 
-        SectionHead(t("Sound"))
-        SettingRow(t("Equaliser"), value = if (Eq.on(ctx)) Eq.preset(ctx) else "Off", onClick = { open("eq") })
-        SettingRow(t("Visualiser in the big player"), sub = t("Moving bars, waves or a circle with the music"),
-            value = Theme.viz.replaceFirstChar { it.uppercase() }, onClick = { open("viz") })
-        SettingRow(t("Resume after other apps"), sub = t("After a video in Facebook, WhatsApp… within 10 minutes. Never during calls."),
-            trailing = { VelvetSwitch(Theme.resume, "Resume after other apps") { Theme.resume = it; save() } })
-
-        SectionHead(t("Data"))
-        SettingRow(t("Data saver"), sub = t("For ships, villages and patchy signal: lightest links, no song covers"),
-            value = when (DataSaver.mode) { DataSaver.ON -> "Always"; DataSaver.MOBILE -> "Mobile data"; else -> "Off" }, onClick = { open("data") })
-        SectionHead(t("More"))
-        val alarms = remember { Alarm.all(ctx) }
-        val up = remember(alarms) { Alarm.upcoming(java.util.Calendar.getInstance(), alarms) }
-        SettingRow(t("Alarms"), value = when { up != null -> Alarm.timeLabel(up.first.hour, up.first.minute, android.text.format.DateFormat.is24HourFormat(ctx)) +
-            (if (alarms.count { it.on } > 1) " +${alarms.count { it.on } - 1}" else ""); else -> "Off" }, onClick = { open("alarm") })
-        SettingRow(t("Request a station"), sub = t("Missing a station? Tell us"), onClick = { open("request") })
-        SettingRow(t("Reset to the original look"), onClick = {
-            Theme.themeId = "velvet"; Theme.mode = "phone"; Theme.text = 0; Theme.font = "jost"; Theme.spacing = 1; Theme.viz = "off"
-            Theme.look = "std"; Theme.lookColours = "original"; save() })
+/** Settings → Feedback → Request a feature / Send a thank-you note: a short note to Ranjith (kept with station requests). */
+@Composable
+fun FeedbackScreen(kind: String, close: () -> Unit) {
+    val ctx = LocalContext.current
+    val scope = rememberCoroutineScope()
+    val feature = kind == "feature"
+    var text by remember { mutableStateOf("") }; var mail by remember { mutableStateOf("") }
+    var busy by remember { mutableStateOf(false) }; var msg by remember { mutableStateOf<String?>(null) }; var sent by remember { mutableStateOf(false) }
+    SubPage(if (feature) t("Request a feature") else t("Send a thank-you note"), close) {
+        Text(if (feature) t("What would make Radio Velvet better for you?") else t("A few kind words make a hobby project worth it. Thank you!"),
+            fontSize = 15.sp, color = Title, lineHeight = 22.sp, modifier = Modifier.padding(top = 6.dp))
+        Field(if (feature) "Your idea" else "Your note", text, if (feature) "e.g. a sleep timer that fades out" else "e.g. I listen every morning in the car", 300) { text = it; sent = false }
+        Field("Your email (only if you'd like a reply)", mail, "name@example.com", 80) { mail = it }
+        ActionButton(if (busy) t("Sending…") else if (sent) t("Sent") else t("Send"), modifier = Modifier.padding(top = 24.dp), enabled = !busy && !sent) {
+            if (text.trim().length < 2) { msg = t("Please write a few words first."); return@ActionButton }
+            scope.launch { busy = true
+                msg = Requests.send(ctx, if (feature) "Feature request" else "Thank-you note", mail, "", text)
+                busy = false; if (msg == null) { sent = true; text = ""; mail = "" } }
+        }
+        InfoText(t("Only Ranjith reads these. Radio Velvet is a hobby project, so a reply can take a few days."))
+        if (sent) Text("◆ " + t("Thank you! Sent."), fontSize = 15.sp, color = AccentText, modifier = Modifier.padding(top = 16.dp))
+        msg?.let { Text(it, fontSize = 14.sp, color = AccentText, modifier = Modifier.padding(top = 14.dp)) }
     }
 }
 
