@@ -47,7 +47,7 @@ window.STATIONS = [
       "https://icecast-qmusicbe-cdp.triple-it.nl/qmusic.aac"
     ],
     "br": [
-      95
+      96
     ]
   },
   {
@@ -84,7 +84,7 @@ window.STATIONS = [
       "https://icecast-qmusicnl-cdp.triple-it.nl/Joe_nl.mp3"
     ],
     "br": [
-      96,
+      95,
       128,
       128
     ]
@@ -608,7 +608,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      96
+      95
     ]
   },
   {
@@ -982,7 +982,9 @@ window.STATIONS = [
       "https://megahitfm.krioyohosting.com:1012/stream"
     ],
     "added": "2026-10-29",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-2-antwerpen",
@@ -1017,7 +1019,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      95
+      96
     ]
   },
   {
@@ -1516,9 +1518,7 @@ window.STATIONS = [
       "https://stream.qmusic.nl/10s/aac"
     ],
     "added": "2026-11-05",
-    "br": [
-      96
-    ]
+    "offline": true
   },
   {
     "id": "br6-radio",
@@ -1785,4 +1785,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

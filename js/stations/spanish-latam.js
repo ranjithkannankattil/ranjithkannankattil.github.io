@@ -10,7 +10,7 @@ window.STATIONS = [
       "https://live.convoynetwork.com/stream"
     ],
     "br": [
-      64
+      56
     ]
   },
   {
@@ -216,7 +216,7 @@ window.STATIONS = [
       "https://server1.stweb.tv/rcvos/live/playlist.m3u8"
     ],
     "br": [
-      67
+      68
     ]
   },
   {
@@ -382,7 +382,9 @@ window.STATIONS = [
     "streams": [
       "https://radio02.ferozo.com/proxy/ra01000409?mp=/stream"
     ],
-    "offline": true
+    "br": [
+      32
+    ]
   },
   {
     "id": "la-ke-buena-ciudad-de-mexico-92-9-fm-xeq",
@@ -471,7 +473,10 @@ window.STATIONS = [
     "streams": [
       "https://s3.radio.co/s97f38db97/listen"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      48
+    ]
   },
   {
     "id": "los-40-principales-mexico",
@@ -1755,4 +1760,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

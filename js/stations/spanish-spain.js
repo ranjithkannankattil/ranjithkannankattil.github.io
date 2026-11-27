@@ -780,7 +780,10 @@ window.STATIONS = [
     "streams": [
       "https://flucast14-h-cloud.flumotion.com/cope/megastar.mp3"
     ],
-    "added": "2026-10-26"
+    "added": "2026-10-26",
+    "br": [
+      128
+    ]
   },
   {
     "id": "onda-cero-sevilla",
@@ -1415,7 +1418,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-04",
     "br": [
-      160
+      112
     ]
   },
   {
@@ -1761,4 +1764,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

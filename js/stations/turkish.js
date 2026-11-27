@@ -64,8 +64,8 @@ window.STATIONS = [
       "https://moondigitalmaster.radyotvonline.net/kafaradyo/playlist.m3u8"
     ],
     "br": [
-      63,
-      63
+      64,
+      64
     ]
   },
   {
@@ -496,8 +496,7 @@ window.STATIONS = [
     "added": "2026-10-23",
     "br": [
       141
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "power-dance",
@@ -556,7 +555,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      150
+      151
     ]
   },
   {
@@ -568,7 +567,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      129
+      128
     ]
   },
   {
@@ -640,8 +639,7 @@ window.STATIONS = [
     "added": "2026-10-25",
     "br": [
       141
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radyo-mezopotamya",
@@ -677,8 +675,7 @@ window.STATIONS = [
     "added": "2026-10-25",
     "br": [
       141
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "dinamo-fm-legacy",
@@ -888,7 +885,10 @@ window.STATIONS = [
     "streams": [
       "https://radyo.gonulmisralari.com/listen/canli/radio.mp3"
     ],
-    "added": "2026-10-28"
+    "added": "2026-10-28",
+    "br": [
+      192
+    ]
   },
   {
     "id": "antakya-renk-fm-hatay",
@@ -1243,8 +1243,7 @@ window.STATIONS = [
     "added": "2026-11-02",
     "br": [
       141
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "bestefm",
@@ -1745,4 +1744,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

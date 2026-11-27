@@ -19,6 +19,9 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://s3.radio.co/s97f38db97/listen"
+    ],
+    "br": [
+      48
     ]
   },
   {
@@ -330,7 +333,8 @@ window.STATIONS = [
       "https://eu4.fastcast4u.com/proxy/makiemaxradio?mp=/1"
     ],
     "added": "2026-10-23",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "radio-ssese-101-9-fm",
@@ -453,4 +457,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

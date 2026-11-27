@@ -9,7 +9,9 @@ window.STATIONS = [
     "streams": [
       "https://listen.radioking.com/radio/119251/stream/158701"
     ],
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "azadi-fm",
@@ -291,4 +293,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

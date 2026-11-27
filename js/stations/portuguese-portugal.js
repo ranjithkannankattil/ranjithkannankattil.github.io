@@ -38,7 +38,7 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      127
+      128
     ]
   },
   {
@@ -130,7 +130,7 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
     ],
     "br": [
-      173
+      167
     ]
   },
   {
@@ -237,7 +237,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/rckids.aac"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -282,8 +282,8 @@ window.STATIONS = [
       "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
     ],
     "br": [
-      184,
-      184
+      168,
+      168
     ]
   },
   {
@@ -316,7 +316,7 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
     ],
     "br": [
-      185
+      189
     ]
   },
   {
@@ -383,10 +383,9 @@ window.STATIONS = [
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
     ],
     "br": [
-      260,
+      259,
       262
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "rca-radio-clube-de-armamar",
@@ -440,7 +439,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/smoothsoul.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -463,7 +462,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -474,9 +473,8 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/rdpafrica80a/playlist.m3u8"
     ],
     "added": "2026-10-22",
-    "offline": true,
     "br": [
-      184
+      176
     ]
   },
   {
@@ -488,9 +486,8 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      193
-    ],
-    "offline": true
+      187
+    ]
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -573,7 +570,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      167
+      177
     ]
   },
   {
@@ -645,7 +642,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -729,7 +726,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -753,7 +750,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -764,9 +761,7 @@ window.STATIONS = [
       "https://servidor15-3.brlogic.com:7088/live?source=15118"
     ],
     "added": "2026-10-26",
-    "br": [
-      96
-    ]
+    "offline": true
   },
   {
     "id": "radio-comercial-rock",
@@ -789,7 +784,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -801,7 +796,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -921,7 +916,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -1005,7 +1000,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      32
+      128
     ]
   },
   {
@@ -1173,7 +1168,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-01",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -1257,7 +1252,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-02",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -1367,7 +1362,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "br": [
-      256
+      160
     ]
   },
   {
@@ -1463,7 +1458,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "br": [
-      169
+      166
     ]
   },
   {
@@ -1576,9 +1571,7 @@ window.STATIONS = [
       "https://stream.zeno.fm/9prct7k8h0hvv"
     ],
     "added": "2026-11-06",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "radio-metal-on-the-thrasher",
@@ -1613,9 +1606,8 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "br": [
-      173
-    ],
-    "offline": true
+      168
+    ]
   },
   {
     "id": "radio-quantica",
@@ -1662,7 +1654,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-08",
     "br": [
-      112
+      160
     ]
   },
   {
@@ -1786,4 +1778,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

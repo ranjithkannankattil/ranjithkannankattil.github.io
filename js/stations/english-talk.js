@@ -282,7 +282,7 @@ window.STATIONS = [
     ],
     "where": "Canada",
     "br": [
-      47
+      48
     ]
   },
   {
@@ -481,7 +481,9 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "where": "US",
-    "offline": true
+    "br": [
+      96
+    ]
   },
   {
     "id": "comedy-104-radiostorm",
@@ -590,9 +592,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "where": "Jamaica",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "britcom-4",
@@ -718,7 +718,7 @@ window.STATIONS = [
     "added": "2026-10-26",
     "where": "UK",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -1332,7 +1332,9 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "where": "Jamaica",
-    "offline": true
+    "br": [
+      192
+    ]
   },
   {
     "id": "bbc-sounds-news",
@@ -1878,4 +1880,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

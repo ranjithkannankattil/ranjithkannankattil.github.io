@@ -183,9 +183,7 @@ window.STATIONS = [
     "streams": [
       "https://sapircast.caster.fm:17039/aRsGW"
     ],
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "tp-tv-channel-digital-tv-channel-10",
@@ -316,9 +314,7 @@ window.STATIONS = [
     "streams": [
       "https://pakeefm.org/stream/300006/"
     ],
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "mcot-loei-fm-100-00",
@@ -351,7 +347,7 @@ window.STATIONS = [
       "https://livefta.malimarcdn.com/ftaedge00/nat.sdp/playlist.m3u8"
     ],
     "br": [
-      2424
+      2406
     ]
   },
   {
@@ -361,9 +357,7 @@ window.STATIONS = [
     "streams": [
       "https://radio1.ohmi-design.com/8086/;"
     ],
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "mcot-chumphon-amphoe-lang-suan-fm-104-75",
@@ -385,9 +379,7 @@ window.STATIONS = [
       "https://nontawat3664.i234.me:8443/stream"
     ],
     "added": "2026-10-23",
-    "br": [
-      320
-    ]
+    "offline": true
   },
   {
     "id": "cwk-radio",
@@ -397,9 +389,7 @@ window.STATIONS = [
       "https://radio11.plathong.net/7050/;stream.mp3"
     ],
     "added": "2026-10-29",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "translation-of-the-quran-in-thai",
@@ -422,7 +412,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-06",
     "br": [
-      96
+      174
     ]
   },
   {
@@ -486,4 +476,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

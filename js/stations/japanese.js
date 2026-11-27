@@ -21,7 +21,7 @@ window.STATIONS = [
       "https://play.streamafrica.net/japancitypop"
     ],
     "br": [
-      192
+      128
     ]
   },
   {
@@ -150,6 +150,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s3.radio.co/sc8d895604/listen"
+    ],
+    "br": [
+      192
     ]
   },
   {
@@ -437,7 +440,7 @@ window.STATIONS = [
       "https://vrc.gate.vrtv.jp/live?p=g&u=d"
     ],
     "br": [
-      1326
+      1385
     ]
   },
   {
@@ -532,7 +535,9 @@ window.STATIONS = [
       "https://radio.gjfm.my.id/listen/gjfm/siaran"
     ],
     "added": "2026-10-23",
-    "offline": true
+    "br": [
+      80
+    ]
   },
   {
     "id": "j-club-powerplay-hiphop-asia-dream-radio",
@@ -884,7 +889,9 @@ window.STATIONS = [
       "https://howlingf-gecko.radioca.st/autodj"
     ],
     "added": "2026-10-29",
-    "offline": true
+    "br": [
+      320
+    ]
   },
   {
     "id": "radio-gambaru",
@@ -1024,7 +1031,10 @@ window.STATIONS = [
     "streams": [
       "https://friends-forever-1de71fbb.radiocult.fm/stream"
     ],
-    "added": "2026-11-27"
+    "added": "2026-11-27",
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

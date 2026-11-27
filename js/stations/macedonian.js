@@ -32,6 +32,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostar.pro/stream/exyuretro.php"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -73,6 +76,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostar.pro/stream/worldretro.php"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -144,6 +150,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostar.pro/stream/mknarodna.php"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -152,6 +161,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostar.pro/stream/starlive.php"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -160,6 +172,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostar.pro/stream/boemi.php"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -188,6 +203,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostar.pro/stream/narodna.php"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -196,6 +214,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radiostar.pro/stream/starplus.php"
+    ],
+    "br": [
+      208
     ]
   },
   {
@@ -252,7 +273,10 @@ window.STATIONS = [
     "streams": [
       "https://live.playfm.mk:8046/live"
     ],
-    "added": "2026-11-12"
+    "added": "2026-11-12",
+    "br": [
+      128
+    ]
   },
   {
     "id": "90-1-nbc-fm-narwee-90-1-fm",
@@ -276,4 +300,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

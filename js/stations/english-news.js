@@ -49,7 +49,7 @@ window.STATIONS = [
     ],
     "where": "US",
     "br": [
-      95
+      96
     ]
   },
   {
@@ -253,7 +253,9 @@ window.STATIONS = [
       "https://wamu.cdnstream1.com/wamu.mp3"
     ],
     "where": "US",
-    "offline": true
+    "br": [
+      96
+    ]
   },
   {
     "id": "bbc-radio-4",
@@ -426,7 +428,10 @@ window.STATIONS = [
       "https://ice31.securenetsystems.net/0079"
     ],
     "added": "2026-10-24",
-    "where": "Malawi"
+    "where": "Malawi",
+    "br": [
+      32
+    ]
   },
   {
     "id": "ujyaalo-90-network",
@@ -577,9 +582,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "where": "Jamaica",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "raxies-fm",
@@ -936,7 +939,7 @@ window.STATIONS = [
     "added": "2026-11-02",
     "where": "UK",
     "br": [
-      63
+      64
     ]
   },
   {
@@ -988,7 +991,7 @@ window.STATIONS = [
     "added": "2026-11-02",
     "where": "UK",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -1736,7 +1739,7 @@ window.STATIONS = [
     "added": "2026-11-11",
     "where": "Canada",
     "br": [
-      48
+      47
     ]
   },
   {
@@ -1895,4 +1898,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

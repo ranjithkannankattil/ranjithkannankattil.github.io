@@ -207,7 +207,9 @@ window.STATIONS = [
     "streams": [
       "https://s5.radioforge.com:7908/live?n=77357"
     ],
-    "offline": true
+    "br": [
+      192
+    ]
   },
   {
     "id": "24-breaking-live",
@@ -542,7 +544,10 @@ window.STATIONS = [
     "streams": [
       "https://cast.mediaonline.net.ua/radiopyatnica320"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      320
+    ]
   },
   {
     "id": "station-7",
@@ -1389,9 +1394,7 @@ window.STATIONS = [
       "https://online-novodnistrovsk.pp.ua:8443/playHD"
     ],
     "added": "2026-11-05",
-    "br": [
-      320
-    ]
+    "offline": true
   },
   {
     "id": "station-30",
@@ -1502,4 +1505,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

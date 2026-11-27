@@ -85,9 +85,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio.nestnews.al/listen/nest-radio/radio.mp3"
-    ],
-    "br": [
-      192
     ]
   },
   {
@@ -518,7 +515,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.radiomergimi.com:8114/stream"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-1",
@@ -737,7 +737,10 @@ window.STATIONS = [
     "streams": [
       "https://www.radiocriteria.com/stream"
     ],
-    "added": "2026-11-27"
+    "added": "2026-11-27",
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

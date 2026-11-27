@@ -153,7 +153,7 @@ window.STATIONS = [
       "https://zpilipov-geckohost.radioca.st/stream"
     ],
     "br": [
-      192
+      128
     ]
   },
   {
@@ -551,4 +551,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

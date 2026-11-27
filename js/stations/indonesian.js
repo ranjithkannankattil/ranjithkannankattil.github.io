@@ -278,9 +278,7 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:9154/stream"
     ],
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "radiks-fm-semarang",
@@ -303,7 +301,7 @@ window.STATIONS = [
       "https://stream.zeno.fm/wvq442iwm6ztv"
     ],
     "br": [
-      128
+      96
     ]
   },
   {
@@ -699,9 +697,7 @@ window.STATIONS = [
       "https://streaming.shoutcast.com/synchronizeradio"
     ],
     "added": "2026-10-25",
-    "br": [
-      96
-    ]
+    "offline": true
   },
   {
     "id": "radio-suara-al-iman-846-am-surabaya",
@@ -875,9 +871,7 @@ window.STATIONS = [
       "https://svara-stream.radioddns.net/bali_voksradio_993fm"
     ],
     "added": "2026-10-28",
-    "br": [
-      160
-    ]
+    "offline": true
   },
   {
     "id": "imelda-fm",
@@ -888,7 +882,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      128
+      160
     ]
   },
   {
@@ -1233,9 +1227,7 @@ window.STATIONS = [
       "https://ssg.streamingmurah.com:8078/;"
     ],
     "added": "2026-11-03",
-    "br": [
-      32
-    ]
+    "offline": true
   },
   {
     "id": "wawa-radio-101-2-fm",
@@ -1425,7 +1417,9 @@ window.STATIONS = [
       "https://radio.gjfm.my.id/listen/gjfm/siaran"
     ],
     "added": "2026-11-05",
-    "offline": true
+    "br": [
+      80
+    ]
   },
   {
     "id": "radio-cmn",
@@ -1495,9 +1489,7 @@ window.STATIONS = [
       "https://stream.swadesifm.com/radio/8090/radio.mp3"
     ],
     "added": "2026-11-06",
-    "br": [
-      96
-    ]
+    "offline": true
   },
   {
     "id": "hot-93-2-fm",
@@ -1660,9 +1652,7 @@ window.STATIONS = [
       "https://s2.free-shoutcast.com/stream/18096"
     ],
     "added": "2026-11-12",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "onix-radio",
@@ -1744,9 +1734,7 @@ window.STATIONS = [
       "https://stream.radioalikhwan.com/listen/delta_fm_makassar/hd"
     ],
     "added": "2026-11-25",
-    "br": [
-      32
-    ]
+    "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

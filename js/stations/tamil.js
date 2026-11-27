@@ -86,7 +86,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "89-4-tamil-fm",
@@ -192,7 +193,7 @@ window.STATIONS = [
       "https://stream.zeno.fm/r4znzpvskchvv"
     ],
     "br": [
-      112
+      128
     ]
   },
   {
@@ -374,7 +375,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio129/chunklist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "tamil-ragam",
@@ -418,7 +420,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      320
+      128
     ]
   },
   {
@@ -699,10 +701,7 @@ window.STATIONS = [
     "streams": [
       "https://gtr-unicast2u.radioca.st/stream"
     ],
-    "added": "2026-10-25",
-    "br": [
-      128
-    ]
+    "added": "2026-10-25"
   },
   {
     "id": "covai-fm",
@@ -797,7 +796,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      79
+      78
     ]
   },
   {
@@ -1035,10 +1034,7 @@ window.STATIONS = [
     "streams": [
       "https://bakthiisai-unicast2u.radioca.st/stream"
     ],
-    "added": "2026-10-30",
-    "br": [
-      128
-    ]
+    "added": "2026-10-30"
   },
   {
     "id": "dharisanam-fm",
@@ -1530,9 +1526,7 @@ window.STATIONS = [
       "https://sirpifmhd-unicast2u.radioca.st/stream"
     ],
     "added": "2026-11-06",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "pozhil-fm",
@@ -1554,9 +1548,7 @@ window.STATIONS = [
       "https://stream.rcast.net/68750"
     ],
     "added": "2026-11-06",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "thiruneriya-thamizhosai",
@@ -1614,9 +1606,7 @@ window.STATIONS = [
       "https://neramfm.com:8000/stream"
     ],
     "added": "2026-11-07",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "translation-of-the-quran-in-tamil",
@@ -1723,7 +1713,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-09",
     "br": [
-      112
+      128
     ]
   },
   {
@@ -1734,9 +1724,7 @@ window.STATIONS = [
       "https://nanbanfm-unicast2u.radioca.st/stream"
     ],
     "added": "2026-11-09",
-    "br": [
-      128
-    ]
+    "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

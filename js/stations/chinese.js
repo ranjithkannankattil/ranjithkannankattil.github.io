@@ -451,7 +451,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      80
+      64
     ]
   },
   {
@@ -757,7 +757,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      51
+      52
     ]
   },
   {
@@ -887,7 +887,10 @@ window.STATIONS = [
     "streams": [
       "https://s3.radio.co/s97f38db97/listen"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      48
+    ]
   },
   {
     "id": "hardbestfm-hardcore",
@@ -1190,8 +1193,7 @@ window.STATIONS = [
     "streams": [
       "https://play-radio-stream3.hndt.com/now/yorSd1X2/chunklist.m3u8"
     ],
-    "added": "2026-11-04",
-    "offline": true
+    "added": "2026-11-04"
   },
   {
     "id": "fred-film-radio",
@@ -1362,7 +1364,10 @@ window.STATIONS = [
     "streams": [
       "https://a.tunzilla.com/http://onairnow.ddns.net:8000/chinese.mp3"
     ],
-    "added": "2026-11-06"
+    "added": "2026-11-06",
+    "br": [
+      320
+    ]
   },
   {
     "id": "fm-24",
@@ -1596,4 +1601,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

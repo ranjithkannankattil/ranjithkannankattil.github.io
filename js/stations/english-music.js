@@ -303,7 +303,7 @@ window.STATIONS = [
     ],
     "where": "UK",
     "br": [
-      48
+      47
     ]
   },
   {
@@ -1179,7 +1179,8 @@ window.STATIONS = [
       "https://stream.revma.ihrhls.com/zc2017"
     ],
     "added": "2026-11-02",
-    "where": "US"
+    "where": "US",
+    "offline": true
   },
   {
     "id": "97-3-the-rock",
@@ -1872,7 +1873,7 @@ window.STATIONS = [
     "added": "2026-11-07",
     "where": "UK",
     "br": [
-      47
+      48
     ]
   },
   {
@@ -1889,4 +1890,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

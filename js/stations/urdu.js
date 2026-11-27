@@ -398,6 +398,15 @@ window.STATIONS = [
     "br": [
       32
     ]
+  },
+  {
+    "id": "friendchatzone-radio",
+    "name": "FriendChatZone Radio",
+    "category": "news",
+    "streams": [
+      "https://radio.friendchatzone.com/listen/friendchatzone/radio.mp3"
+    ],
+    "added": "2026-11-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

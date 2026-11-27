@@ -662,9 +662,7 @@ window.STATIONS = [
       "https://oxygenmusic.hu:8443/oxygenmusic_gyor_hd"
     ],
     "added": "2026-10-25",
-    "br": [
-      160
-    ]
+    "offline": true
   },
   {
     "id": "klasszik-radio-92-1",
@@ -747,7 +745,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "br": [
-      256
+      192
     ]
   },
   {
@@ -1576,4 +1574,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

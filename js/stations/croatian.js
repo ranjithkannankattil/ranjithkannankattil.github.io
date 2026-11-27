@@ -98,7 +98,7 @@ window.STATIONS = [
       "https://stream.zeno.fm/yetzdv442k8uv"
     ],
     "br": [
-      112
+      128
     ]
   },
   {
@@ -993,7 +993,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-12",
     "br": [
-      112
+      170
     ]
   },
   {
@@ -1069,4 +1069,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

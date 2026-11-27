@@ -129,7 +129,7 @@ window.STATIONS = [
       "https://5b2959fe11444.streamlock.net/radio/fm947.stream/playlist.m3u8"
     ],
     "br": [
-      51
+      52
     ]
   },
   {
@@ -342,7 +342,8 @@ window.STATIONS = [
     ],
     "br": [
       220
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "chkt-am1430-fairchild",
@@ -840,4 +841,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

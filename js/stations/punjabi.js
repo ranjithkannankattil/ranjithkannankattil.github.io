@@ -64,7 +64,7 @@ window.STATIONS = [
       "https://ais-sa1.streamon.fm/7681_64k.mp3"
     ],
     "br": [
-      67
+      81
     ]
   },
   {
@@ -273,7 +273,10 @@ window.STATIONS = [
       "https://stream.zeno.fm/019324w4ez4tv",
       "https://stream.zenolive.com/019324w4ez4tv"
     ],
-    "offline": true
+    "br": [
+      32,
+      32
+    ]
   },
   {
     "id": "radio-maharani",
@@ -441,4 +444,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

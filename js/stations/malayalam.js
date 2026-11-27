@@ -220,7 +220,8 @@ window.STATIONS = [
     "akv": "Akashvani Devikulam",
     "exclude": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "airkozhikodefm",
@@ -285,9 +286,7 @@ window.STATIONS = [
     "streams": [
       "https://cast1.my-control-panel.com/proxy/myradio90fm/stream"
     ],
-    "br": [
-      320
-    ]
+    "offline": true
   },
   {
     "id": "airkannur",
@@ -296,7 +295,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/b82c91a395fc4a7d/b82c91a395fc4a7d.m3u8"
     ],
-    "akv": "Akashvani Kannur"
+    "akv": "Akashvani Kannur",
+    "offline": true
   },
   {
     "id": "helloradio",
@@ -338,7 +338,8 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/58390a2ed33cea4a/58390a2ed33cea4a.m3u8"
     ],
-    "akv": "Akashvani Manjeri"
+    "akv": "Akashvani Manjeri",
+    "offline": true
   },
   {
     "id": "akashvanithrissur",
@@ -351,7 +352,8 @@ window.STATIONS = [
     "akv": "Akashvani Thrissur",
     "exclude": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radioneythal",
@@ -416,9 +418,7 @@ window.STATIONS = [
     "streams": [
       "https://icecast.octosignals.com/radiomacfast"
     ],
-    "br": [
-      96
-    ]
+    "offline": true
   },
   {
     "id": "globalradio",
@@ -464,9 +464,7 @@ window.STATIONS = [
     "streams": [
       "https://onair.junefm.in/live"
     ],
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "radiomangalam",
@@ -518,7 +516,7 @@ window.STATIONS = [
       "https://a5.asurahosting.com:7450/radio.mp3"
     ],
     "br": [
-      320
+      192
     ]
   },
   {
@@ -724,7 +722,8 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://streamasiahlscdn.atc-labs.com/karunasairadio.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radiomalayalam",
@@ -1398,9 +1397,7 @@ window.STATIONS = [
       "https://radio.shahimsha.com/listen/shahimsha/radio.mp3"
     ],
     "added": "2026-10-22",
-    "br": [
-      192
-    ]
+    "offline": true
   },
   {
     "id": "planet-black",
@@ -1531,7 +1528,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-14",
     "br": [
-      1560
+      1350
     ]
   },
   {
@@ -1556,4 +1553,4 @@ window.STATIONS = [
     "hidden": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

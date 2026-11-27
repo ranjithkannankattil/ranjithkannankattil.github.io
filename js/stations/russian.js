@@ -624,7 +624,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      128
+      256
     ]
   },
   {
@@ -681,7 +681,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      128
+      256
     ]
   },
   {
@@ -1329,7 +1329,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-04",
     "br": [
-      64
+      96
     ]
   },
   {
@@ -1550,9 +1550,7 @@ window.STATIONS = [
       "https://pub0101.101.ru/stream/pro/aac/64/36"
     ],
     "added": "2026-11-07",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "89-1fm",
@@ -1573,8 +1571,7 @@ window.STATIONS = [
     "streams": [
       "https://solovievfm.hostingradio.ru/solovievfm32.aacp"
     ],
-    "added": "2026-11-07",
-    "offline": true
+    "added": "2026-11-07"
   },
   {
     "id": "russian-rock-amg-radio",
@@ -1688,4 +1685,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

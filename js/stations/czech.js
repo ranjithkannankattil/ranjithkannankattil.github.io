@@ -441,7 +441,7 @@ window.STATIONS = [
       "https://stream.mediawork.cz/retrotv/retrotvHQ1/playlist.m3u8"
     ],
     "br": [
-      3185
+      2930
     ]
   },
   {
@@ -1067,7 +1067,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "br": [
-      3669
+      3321
     ]
   },
   {
@@ -1659,6 +1659,15 @@ window.STATIONS = [
     "br": [
       128
     ]
+  },
+  {
+    "id": "radiob",
+    "name": "RadioB",
+    "category": "music",
+    "streams": [
+      "https://stream.radiojar.com/9nayamd31tzuv"
+    ],
+    "added": "2026-11-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

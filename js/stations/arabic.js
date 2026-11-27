@@ -10,7 +10,7 @@ window.STATIONS = [
       "https://n12.radiojar.com/8s5u5tpdtwzuv?listening-from-radio-garden=1620219571863&rj-tok=AAABeTyl2zYARSWbLVnrEOlqGw&rj-ttl=5"
     ],
     "br": [
-      64
+      80
     ]
   },
   {
@@ -20,9 +20,7 @@ window.STATIONS = [
     "streams": [
       "https://9090streaming.mobtada.com/9090FMEGYPT"
     ],
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "station-2",
@@ -283,7 +281,7 @@ window.STATIONS = [
       "https://n0e.radiojar.com/8s5u5tpdtwzuv?rj=&rj-tok=AAABg5BDP0EA2ElNLJYUJTsVcg&rj-ttl=5"
     ],
     "br": [
-      64
+      80
     ]
   },
   {
@@ -437,7 +435,9 @@ window.STATIONS = [
     "streams": [
       "https://stream.damasradio.fm/radio"
     ],
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-manarat",
@@ -675,9 +675,7 @@ window.STATIONS = [
       "https://radio.garden/api/ara/content/listen/TBbZ87vu/channel.mp3"
     ],
     "added": "2026-10-25",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "chaine-1",
@@ -1394,7 +1392,9 @@ window.STATIONS = [
       "https://medinanachat.ice.infomaniak.ch/medinanachat-128.mp3"
     ],
     "added": "2026-11-04",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "emaar-fm-radio",
@@ -1437,7 +1437,9 @@ window.STATIONS = [
       "https://medinatarab.ice.infomaniak.ch/medinatarab-128.mp3"
     ],
     "added": "2026-11-04",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "virgin-radio-lebanon",
@@ -1761,4 +1763,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

@@ -63,7 +63,9 @@ window.STATIONS = [
     "streams": [
       "https://strw3.openstream.co/495"
     ],
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "jojo-fm",
@@ -170,8 +172,9 @@ window.STATIONS = [
     "streams": [
       "https://stream.zeno.fm/sg6x5m9nviltv"
     ],
-    "offline": true,
-    "hidden": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "prof-k-online-radio",
@@ -389,7 +392,9 @@ window.STATIONS = [
     "streams": [
       "https://lbsradio-dexterity.radioca.st/stream"
     ],
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "marweltan-radio59",
@@ -404,4 +409,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";

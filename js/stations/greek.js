@@ -384,7 +384,9 @@ window.STATIONS = [
     "streams": [
       "https://rdst.win:59450/stream"
     ],
-    "offline": true
+    "br": [
+      320
+    ]
   },
   {
     "id": "bar-legend-radio",
@@ -473,7 +475,8 @@ window.STATIONS = [
       "https://netradio.live24.gr/laikos876"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "balkan-radio",
@@ -1349,9 +1352,7 @@ window.STATIONS = [
       "https://stream.crete.ovh:8443/1"
     ],
     "added": "2026-11-03",
-    "br": [
-      32
-    ]
+    "offline": true
   },
   {
     "id": "d-code-96-2",
@@ -1409,7 +1410,8 @@ window.STATIONS = [
       "https://derti.live24.gr/laikos876"
     ],
     "added": "2026-11-04",
-    "offline": true
+    "offline": true,
+    "hidden": true
   },
   {
     "id": "cosmoradio-95-1",
@@ -1487,10 +1489,7 @@ window.STATIONS = [
     "streams": [
       "https://jacksonspalace.radioca.st/stream?type=http&nocache=220"
     ],
-    "added": "2026-11-05",
-    "br": [
-      128
-    ]
+    "added": "2026-11-05"
   },
   {
     "id": "blue-space",
@@ -1681,7 +1680,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "br": [
-      192
+      128
     ]
   },
   {
@@ -1757,4 +1756,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T09:37Z";
+window.STATIONS_CHECKED = "2026-11-27T22:48Z";
