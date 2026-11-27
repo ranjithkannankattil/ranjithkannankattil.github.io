@@ -70,7 +70,6 @@
     "macedonian:sky-radio-hits-skopje-macedonia": 1,
     "malay:myfriends-station": 36,
     "malayalam:air-akashvani-malayalam": 19,
-    "malayalam:airdevikulam": 1,
     "malayalam:greenradio": 78,
     "malayalam:hallos-radio": 11,
     "malayalam:keralafm": 78,
@@ -1799,11 +1798,6 @@
     "since": "2026-11-26"
   },
   "https://radio.wavespb.com/live/deae7120a205bfff/deae7120a205bfff.m3u8": {
-    "fails": 1,
-    "last_reason": "playlist HTTP 404",
-    "since": "2026-11-26"
-  },
-  "https://radio.wavespb.com/live/e97acc829da9bf2a/e97acc829da9bf2a.m3u8": {
     "fails": 1,
     "last_reason": "playlist HTTP 404",
     "since": "2026-11-26"
