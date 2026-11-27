@@ -639,9 +639,10 @@ class ScreensTest {
     @Test fun r12_player_bar_is_slim() { shot("r12-player-bar", false) { Stations(true) }
         val bar = rule.onNodeWithContentDescription("Pause", useUnmergedTree = true).getBoundsInRoot()
         val open = rule.onAllNodes(hasClickLabel("Open the player")).onFirst().getBoundsInRoot()
-        assertTrue("bar ${open.height} tall", open.height.value <= 84f)
+        val h = open.bottom.value - open.top.value
+        assertTrue("bar $h dp tall", h <= 84f)
         rule.onNodeWithContentDescription("Next station").assertDoesNotExist()
         rule.onNodeWithContentDescription("Sleep timer").assertDoesNotExist()
-        assertTrue(bar.width.value > 0) }
+        assertTrue(bar.right.value > bar.left.value) }
 }
 
