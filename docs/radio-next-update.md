@@ -143,7 +143,7 @@ His reason: the app looks like one long list; in Settings you can't tell what is
   **Row size** in Settings → Look: Compact · **Comfortable (default)** · Expanded. Compact = one-line rows, tighter
   gaps (good for car stereos and small screens); Expanded = larger text and touch targets with the song now playing.
 - **Changed 27 Nov 2026 (his decisions, replacing earlier ones):** station rows show the station's own **logo when it has
-  one** (earlier: no logos at all) and **only the ♡** (the round play button from the canvas is dropped; tapping the card
+  one**, else two letters on a soft tile (earlier: no logos or badges at all) and **only the ♡** (the round play button from the canvas is dropped; tapping the card
   plays). The **player bar is about half height** (picture, station, song, play/pause; like JioSaavn), with every other
   control in the big player. **Tags by name** in the kind picker ("By name": Retro, 60s–2000s, Melody, Hits, Instrumental,
   Kids). "Play the last station on opening" also fires when he comes back to the app after 20 s away (Back only sends the
