@@ -1396,8 +1396,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.shahimsha.com/listen/shahimsha/radio.mp3"
     ],
-    "added": "2026-10-22",
-    "offline": true
+    "added": "2026-10-22"
   },
   {
     "id": "planet-black",
@@ -1553,4 +1552,4 @@ window.STATIONS = [
     "hidden": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T22:48Z";
+window.STATIONS_CHECKED = "2026-11-27T22:59Z";
