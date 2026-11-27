@@ -142,6 +142,12 @@ His reason: the app looks like one long list; in Settings you can't tell what is
   sits beside the station name, within thumb reach, in every player look (not tucked in a corner or menu).
   **Row size** in Settings → Look: Compact · **Comfortable (default)** · Expanded. Compact = one-line rows, tighter
   gaps (good for car stereos and small screens); Expanded = larger text and touch targets with the song now playing.
+- **Changed 27 Nov 2026 (his decisions, replacing earlier ones):** station rows show the station's own **logo when it has
+  one** (earlier: no logos at all) and **only the ♡** (the round play button from the canvas is dropped; tapping the card
+  plays). The **player bar is about half height** (picture, station, song, play/pause; like JioSaavn), with every other
+  control in the big player. **Tags by name** in the kind picker ("By name": Retro, 60s–2000s, Melody, Hits, Instrumental,
+  Kids). "Play the last station on opening" also fires when he comes back to the app after 20 s away (Back only sends the
+  app to the background now). Favourites as tiles also apply in Android Auto (26 Nov).
 - **Tester suggestions (26 Nov 2026), for more room in landscape / the car:** "Add your own station" is a small + next
   to Settings at the top (used by few, so not in the Favourites list); the sign-in note above Favourites has a ✕ that
   hides it for the rest of the day. Built 26 Nov on `radio-native-dev`.
