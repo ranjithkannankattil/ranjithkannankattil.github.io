@@ -330,8 +330,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.wavespb.com/live/58390a2ed33cea4a/58390a2ed33cea4a.m3u8"
     ],
-    "akv": "Akashvani Manjeri",
-    "offline": true
+    "akv": "Akashvani Manjeri"
   },
   {
     "id": "akashvanithrissur",
@@ -408,8 +407,7 @@ window.STATIONS = [
     "category": "fm",
     "streams": [
       "https://icecast.octosignals.com/radiomacfast"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "globalradio",
@@ -712,8 +710,7 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://streamasiahlscdn.atc-labs.com/karunasairadio.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "radiomalayalam",
@@ -1544,4 +1541,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:53Z";
+window.STATIONS_CHECKED = "2026-11-27T00:53Z";

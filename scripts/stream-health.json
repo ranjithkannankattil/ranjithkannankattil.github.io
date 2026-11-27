@@ -73,9 +73,7 @@
     "malayalam:airdevikulam": 1,
     "malayalam:greenradio": 78,
     "malayalam:hallos-radio": 11,
-    "malayalam:karunasairadio": 1,
     "malayalam:keralafm": 78,
-    "malayalam:manjerifm": 1,
     "malayalam:mazhavilfm": 78,
     "malayalam:menorahradio": 78,
     "malayalam:myradio90fm": 1,
@@ -88,7 +86,6 @@
     "malayalam:radiokerala": 23,
     "malayalam:radiolalsalam": 78,
     "malayalam:radiolemonbengaluru": 33,
-    "malayalam:radiomacfast": 1,
     "malayalam:radiomallu": 78,
     "malayalam:radiomangalam": 78,
     "malayalam:radionellika": 78,
@@ -1592,11 +1589,6 @@
     "last_reason": "HTTP 404 error page",
     "since": "2026-11-01"
   },
-  "https://icecast.octosignals.com/radiomacfast": {
-    "fails": 1,
-    "last_reason": "HTTP 404 error page",
-    "since": "2026-11-26"
-  },
   "https://irvess.com/stream/irvess": {
     "fails": 34,
     "last_reason": "HTTP 404 error page",
@@ -1788,11 +1780,6 @@
     "since": "2026-11-26"
   },
   "https://radio.wavespb.com/live/3bcd83926d6c3cca/3bcd83926d6c3cca.m3u8": {
-    "fails": 1,
-    "last_reason": "playlist HTTP 404",
-    "since": "2026-11-26"
-  },
-  "https://radio.wavespb.com/live/58390a2ed33cea4a/58390a2ed33cea4a.m3u8": {
     "fails": 1,
     "last_reason": "playlist HTTP 404",
     "since": "2026-11-26"
@@ -2070,11 +2057,6 @@
   "https://stream.zenolive.com/019324w4ez4tv": {
     "fails": 1,
     "last_reason": "HTTP 503, 40 bytes",
-    "since": "2026-11-26"
-  },
-  "https://streamasiahlscdn.atc-labs.com/karunasairadio.m3u8": {
-    "fails": 1,
-    "last_reason": "playlist HTTP 404",
     "since": "2026-11-26"
   },
   "https://streamcdnb3-8e7439fdb1694c8da3a0fd63e4dda518.msvdn.net/rainews1/hls/rainews_2400/chunklist.m3u8": {
