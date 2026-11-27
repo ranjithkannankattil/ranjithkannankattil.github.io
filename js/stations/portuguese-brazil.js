@@ -760,10 +760,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.saopaulo01.com.br:10948/stream"
     ],
-    "added": "2026-10-26",
-    "br": [
-      48
-    ]
+    "added": "2026-10-26"
   },
   {
     "id": "89fm-radio-rock",
@@ -1766,4 +1763,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

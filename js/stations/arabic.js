@@ -10,7 +10,7 @@ window.STATIONS = [
       "https://n12.radiojar.com/8s5u5tpdtwzuv?listening-from-radio-garden=1620219571863&rj-tok=AAABeTyl2zYARSWbLVnrEOlqGw&rj-ttl=5"
     ],
     "br": [
-      96
+      64
     ]
   },
   {
@@ -283,7 +283,7 @@ window.STATIONS = [
       "https://n0e.radiojar.com/8s5u5tpdtwzuv?rj=&rj-tok=AAABg5BDP0EA2ElNLJYUJTsVcg&rj-ttl=5"
     ],
     "br": [
-      80
+      64
     ]
   },
   {
@@ -294,7 +294,7 @@ window.STATIONS = [
       "https://stream.radiojar.com/0tpy1h0kxtzuv"
     ],
     "br": [
-      64
+      80
     ]
   },
   {
@@ -437,9 +437,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.damasradio.fm/radio"
     ],
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "radio-manarat",
@@ -677,7 +675,9 @@ window.STATIONS = [
       "https://radio.garden/api/ara/content/listen/TBbZ87vu/channel.mp3"
     ],
     "added": "2026-10-25",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "chaine-1",
@@ -797,7 +797,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      129
+      128
     ]
   },
   {
@@ -1761,4 +1761,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

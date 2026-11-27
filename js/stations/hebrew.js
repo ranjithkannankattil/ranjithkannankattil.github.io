@@ -179,7 +179,7 @@ window.STATIONS = [
       "https://icecast.kab.tv/live1-heb-574bcfd5.mp3"
     ],
     "br": [
-      64
+      80
     ]
   },
   {
@@ -624,4 +624,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

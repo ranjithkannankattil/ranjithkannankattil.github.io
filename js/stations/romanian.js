@@ -103,8 +103,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radioanisoara.ro:8080/stream"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "rockfm",
@@ -343,9 +342,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://radio-romantic.ro/stream"
-    ],
-    "br": [
-      320
     ]
   },
   {
@@ -1500,10 +1496,7 @@ window.STATIONS = [
     "streams": [
       "https://s3.radio.co/s1492c0564/listen"
     ],
-    "added": "2026-11-06",
-    "br": [
-      320
-    ]
+    "added": "2026-11-06"
   },
   {
     "id": "radio-rfi-moldova",
@@ -1755,4 +1748,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

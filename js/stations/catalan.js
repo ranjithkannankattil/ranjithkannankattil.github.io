@@ -744,10 +744,7 @@ window.STATIONS = [
     "streams": [
       "https://directe.cugat.cat/directeHQ.mp3"
     ],
-    "added": "2026-10-26",
-    "br": [
-      128
-    ]
+    "added": "2026-10-26"
   },
   {
     "id": "radio-gallinera",
@@ -894,4 +891,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

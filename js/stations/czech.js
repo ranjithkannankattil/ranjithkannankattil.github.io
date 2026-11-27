@@ -441,7 +441,7 @@ window.STATIONS = [
       "https://stream.mediawork.cz/retrotv/retrotvHQ1/playlist.m3u8"
     ],
     "br": [
-      3315
+      3185
     ]
   },
   {
@@ -1067,7 +1067,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "br": [
-      3301
+      3669
     ]
   },
   {
@@ -1661,4 +1661,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

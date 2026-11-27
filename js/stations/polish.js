@@ -54,6 +54,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://go-audio.toya.net.pl/63214"
+    ],
+    "br": [
+      256
     ]
   },
   {
@@ -1218,7 +1221,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "br": [
-      64
+      128
     ]
   },
   {
@@ -1347,7 +1350,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "br": [
-      96
+      128
     ]
   },
   {
@@ -1759,4 +1762,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

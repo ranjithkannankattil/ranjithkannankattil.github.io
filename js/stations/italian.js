@@ -413,7 +413,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      94
+      96
     ]
   },
   {
@@ -1075,7 +1075,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-01",
     "br": [
-      104
+      88
     ]
   },
   {
@@ -1171,7 +1171,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-02",
     "br": [
-      88
+      96
     ]
   },
   {
@@ -1551,9 +1551,7 @@ window.STATIONS = [
       "https://ams-pioneer02.dedicateware.com:2655/stream"
     ],
     "added": "2026-11-08",
-    "br": [
-      320
-    ]
+    "offline": true
   },
   {
     "id": "virgin-radio-rock-ballads",
@@ -1636,7 +1634,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-09",
     "br": [
-      96
+      128
     ]
   },
   {
@@ -1732,7 +1730,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-10",
     "br": [
-      66
+      68
     ]
   },
   {
@@ -1760,4 +1758,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

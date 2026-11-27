@@ -545,7 +545,10 @@ window.STATIONS = [
     "streams": [
       "https://server1.tnt.ba/proxy/tnttuzla?mp=/stream1"
     ],
-    "added": "2026-11-26"
+    "added": "2026-11-26",
+    "br": [
+      128
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

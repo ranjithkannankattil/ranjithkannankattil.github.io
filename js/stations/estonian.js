@@ -111,9 +111,7 @@ window.STATIONS = [
     "streams": [
       "https://stream.hostbee.nl:5740/stream"
     ],
-    "br": [
-      320
-    ]
+    "offline": true
   },
   {
     "id": "raadio-kidzone",
@@ -697,4 +695,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

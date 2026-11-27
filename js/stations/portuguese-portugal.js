@@ -130,9 +130,8 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
     ],
     "br": [
-      172
-    ],
-    "offline": true
+      173
+    ]
   },
   {
     "id": "m80-radio-ballads",
@@ -175,7 +174,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m8060.aac"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -260,7 +259,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/smooth.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -279,12 +278,12 @@ window.STATIONS = [
     "name": "Antena 3",
     "category": "music",
     "streams": [
-      "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8",
-      "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8"
+      "https://streaming-live.rtp.pt/liveradio/antena380a/playlist.m3u8",
+      "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
     ],
     "br": [
-      168,
-      168
+      184,
+      184
     ]
   },
   {
@@ -317,7 +316,7 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
     ],
     "br": [
-      183
+      185
     ]
   },
   {
@@ -328,7 +327,7 @@ window.STATIONS = [
       "https://stream-hls.bauermedia.pt/cidade.aac/playlist.m3u8"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -384,9 +383,10 @@ window.STATIONS = [
       "https://streaming-live-app.rtp.pt/liveradio/antena280a/playlist.m3u8?DVR"
     ],
     "br": [
-      259,
+      260,
       262
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rca-radio-clube-de-armamar",
@@ -440,7 +440,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/smoothsoul.aac"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -476,7 +476,7 @@ window.STATIONS = [
     "added": "2026-10-22",
     "offline": true,
     "br": [
-      193
+      184
     ]
   },
   {
@@ -488,8 +488,9 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      192
-    ]
+      193
+    ],
+    "offline": true
   },
   {
     "id": "radio-festival-madeira-98-4-fm",
@@ -620,7 +621,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -752,7 +753,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -788,7 +789,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -800,7 +801,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -1366,7 +1367,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "br": [
-      128
+      256
     ]
   },
   {
@@ -1462,7 +1463,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "br": [
-      167
+      169
     ]
   },
   {
@@ -1612,8 +1613,9 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "br": [
-      165
-    ]
+      173
+    ],
+    "offline": true
   },
   {
     "id": "radio-quantica",
@@ -1659,7 +1661,9 @@ window.STATIONS = [
       "https://centova.radio.com.pt/proxy/037?mp=/stream"
     ],
     "added": "2026-11-08",
-    "offline": true
+    "br": [
+      112
+    ]
   },
   {
     "id": "radiofutura-pt",
@@ -1782,4 +1786,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

@@ -216,7 +216,7 @@ window.STATIONS = [
       "https://server1.stweb.tv/rcvos/live/playlist.m3u8"
     ],
     "br": [
-      66
+      67
     ]
   },
   {
@@ -471,10 +471,7 @@ window.STATIONS = [
     "streams": [
       "https://s3.radio.co/s97f38db97/listen"
     ],
-    "added": "2026-10-22",
-    "br": [
-      48
-    ]
+    "added": "2026-10-22"
   },
   {
     "id": "los-40-principales-mexico",
@@ -1183,7 +1180,10 @@ window.STATIONS = [
     "streams": [
       "https://theonestopradio.com/stream?url=https://icecast.teveo.cu/zrXXWK9F"
     ],
-    "added": "2026-11-01"
+    "added": "2026-11-01",
+    "br": [
+      64
+    ]
   },
   {
     "id": "tropical-100-mix",
@@ -1523,7 +1523,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-06",
     "br": [
-      256
+      128
     ]
   },
   {
@@ -1755,4 +1755,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

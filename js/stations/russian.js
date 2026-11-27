@@ -1329,7 +1329,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-04",
     "br": [
-      96
+      64
     ]
   },
   {
@@ -1573,7 +1573,8 @@ window.STATIONS = [
     "streams": [
       "https://solovievfm.hostingradio.ru/solovievfm32.aacp"
     ],
-    "added": "2026-11-07"
+    "added": "2026-11-07",
+    "offline": true
   },
   {
     "id": "russian-rock-amg-radio",
@@ -1683,8 +1684,8 @@ window.STATIONS = [
     ],
     "added": "2026-11-09",
     "br": [
-      96
+      128
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

@@ -29,7 +29,7 @@ window.STATIONS = [
       94,
       312,
       128,
-      0
+      312
     ]
   },
   {
@@ -75,7 +75,7 @@ window.STATIONS = [
       "https://live1.sr.se/p4gbg-aac-320"
     ],
     "br": [
-      296
+      312
     ]
   },
   {
@@ -160,7 +160,7 @@ window.STATIONS = [
       "https://live1.sr.se/p4plus-aac-320"
     ],
     "br": [
-      296
+      312
     ]
   },
   {
@@ -194,7 +194,7 @@ window.STATIONS = [
       "https://sverigesradio.se/topsy/direkt/213-lo-mp3.m3u"
     ],
     "br": [
-      86,
+      188,
       0
     ]
   },
@@ -291,7 +291,7 @@ window.STATIONS = [
       "https://live1.sr.se/p4kalm-mp3-96"
     ],
     "br": [
-      88
+      98
     ]
   },
   {
@@ -311,6 +311,9 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://www.sverigesradio.se/topsy/direkt/srapi/206.mp3"
+    ],
+    "br": [
+      208
     ]
   },
   {
@@ -431,7 +434,7 @@ window.STATIONS = [
       "https://live1.sr.se/p4jkpg-aac-320"
     ],
     "br": [
-      288
+      312
     ]
   },
   {
@@ -523,7 +526,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      114
+      102
     ]
   },
   {
@@ -685,7 +688,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-17",
     "br": [
-      248
+      312
     ]
   },
   {
@@ -701,4 +704,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

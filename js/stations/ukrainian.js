@@ -207,9 +207,7 @@ window.STATIONS = [
     "streams": [
       "https://s5.radioforge.com:7908/live?n=77357"
     ],
-    "br": [
-      192
-    ]
+    "offline": true
   },
   {
     "id": "24-breaking-live",
@@ -544,10 +542,7 @@ window.STATIONS = [
     "streams": [
       "https://cast.mediaonline.net.ua/radiopyatnica320"
     ],
-    "added": "2026-10-23",
-    "br": [
-      320
-    ]
+    "added": "2026-10-23"
   },
   {
     "id": "station-7",
@@ -1507,4 +1502,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

@@ -67,8 +67,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://1716664847.rsc.cdn77.org/1716664847/tracks-a1/mono.ts.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "station-6",
@@ -120,9 +119,7 @@ window.STATIONS = [
     "streams": [
       "https://1603884249.rsc.cdn77.org/1603884249/index.m3u8"
     ],
-    "br": [
-      100
-    ]
+    "offline": true
   },
   {
     "id": "fm94-7",
@@ -132,7 +129,7 @@ window.STATIONS = [
       "https://5b2959fe11444.streamlock.net/radio/fm947.stream/playlist.m3u8"
     ],
     "br": [
-      52
+      51
     ]
   },
   {
@@ -345,8 +342,7 @@ window.STATIONS = [
     ],
     "br": [
       220
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "chkt-am1430-fairchild",
@@ -630,7 +626,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -725,7 +721,9 @@ window.STATIONS = [
       "https://lhttp.qingting.fm/live/20701/64k.mp3"
     ],
     "added": "2026-10-26",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "956",
@@ -842,4 +840,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

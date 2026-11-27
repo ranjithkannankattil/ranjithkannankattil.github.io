@@ -215,7 +215,7 @@ window.STATIONS = [
       "https://live.livestreamtv.ca/azstar/amlst:azstar/playlist.m3u8"
     ],
     "br": [
-      4380
+      3930
     ]
   },
   {
@@ -313,4 +313,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

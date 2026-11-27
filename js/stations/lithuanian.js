@@ -226,7 +226,7 @@ window.STATIONS = [
       "https://wowzaott1.penki.lt/jazzfm/jazzfm.stream/playlist.m3u8"
     ],
     "br": [
-      89
+      90
     ]
   },
   {
@@ -377,4 +377,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

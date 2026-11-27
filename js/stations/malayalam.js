@@ -76,6 +76,10 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio229/chunklist.m3u8",
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio229/playlist.m3u8"
+    ],
+    "br": [
+      0,
+      96
     ]
   },
   {
@@ -201,6 +205,9 @@ window.STATIONS = [
     "category": "air",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio230/playlist.m3u8"
+    ],
+    "br": [
+      94
     ]
   },
   {
@@ -277,6 +284,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://cast1.my-control-panel.com/proxy/myradio90fm/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -405,6 +415,9 @@ window.STATIONS = [
     "category": "fm",
     "streams": [
       "https://icecast.octosignals.com/radiomacfast"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -450,6 +463,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://onair.junefm.in/live"
+    ],
+    "br": [
+      128
     ]
   },
   {
@@ -502,7 +518,7 @@ window.STATIONS = [
       "https://a5.asurahosting.com:7450/radio.mp3"
     ],
     "br": [
-      192
+      320
     ]
   },
   {
@@ -1515,7 +1531,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-14",
     "br": [
-      2520
+      1560
     ]
   },
   {
@@ -1536,7 +1552,8 @@ window.STATIONS = [
       "https://d3hrxqn1tritdh.cloudfront.net/6ff13de7ea9b53d7/6ff13de7ea9b53d7.m3u8"
     ],
     "added": "2026-11-17",
-    "offline": true
+    "offline": true,
+    "hidden": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T03:53Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

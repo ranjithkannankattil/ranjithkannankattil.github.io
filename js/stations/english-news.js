@@ -49,7 +49,7 @@ window.STATIONS = [
     ],
     "where": "US",
     "br": [
-      96
+      95
     ]
   },
   {
@@ -253,9 +253,7 @@ window.STATIONS = [
       "https://wamu.cdnstream1.com/wamu.mp3"
     ],
     "where": "US",
-    "br": [
-      96
-    ]
+    "offline": true
   },
   {
     "id": "bbc-radio-4",
@@ -428,10 +426,7 @@ window.STATIONS = [
       "https://ice31.securenetsystems.net/0079"
     ],
     "added": "2026-10-24",
-    "where": "Malawi",
-    "br": [
-      32
-    ]
+    "where": "Malawi"
   },
   {
     "id": "ujyaalo-90-network",
@@ -993,7 +988,7 @@ window.STATIONS = [
     "added": "2026-11-02",
     "where": "UK",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -1370,7 +1365,7 @@ window.STATIONS = [
     "where": "United Republic Of Tanzania",
     "br": [
       128,
-      0
+      64
     ]
   },
   {
@@ -1741,7 +1736,7 @@ window.STATIONS = [
     "added": "2026-11-11",
     "where": "Canada",
     "br": [
-      47
+      48
     ]
   },
   {
@@ -1900,4 +1895,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

@@ -150,9 +150,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://s3.radio.co/sc8d895604/listen"
-    ],
-    "br": [
-      192
     ]
   },
   {
@@ -440,7 +437,7 @@ window.STATIONS = [
       "https://vrc.gate.vrtv.jp/live?p=g&u=d"
     ],
     "br": [
-      1384
+      1326
     ]
   },
   {
@@ -887,9 +884,7 @@ window.STATIONS = [
       "https://howlingf-gecko.radioca.st/autodj"
     ],
     "added": "2026-10-29",
-    "br": [
-      320
-    ]
+    "offline": true
   },
   {
     "id": "radio-gambaru",
@@ -1017,7 +1012,19 @@ window.STATIONS = [
     "streams": [
       "https://93problems.com/api/radio/news-ja/stream.aac"
     ],
-    "added": "2026-11-26"
+    "added": "2026-11-26",
+    "br": [
+      128
+    ]
+  },
+  {
+    "id": "friends-forever",
+    "name": "Friends Forever",
+    "category": "music",
+    "streams": [
+      "https://friends-forever-1de71fbb.radiocult.fm/stream"
+    ],
+    "added": "2026-11-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

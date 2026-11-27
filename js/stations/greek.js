@@ -384,9 +384,7 @@ window.STATIONS = [
     "streams": [
       "https://rdst.win:59450/stream"
     ],
-    "br": [
-      320
-    ]
+    "offline": true
   },
   {
     "id": "bar-legend-radio",
@@ -1683,7 +1681,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "br": [
-      128
+      192
     ]
   },
   {
@@ -1759,4 +1757,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

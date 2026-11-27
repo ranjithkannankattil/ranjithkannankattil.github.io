@@ -64,8 +64,8 @@ window.STATIONS = [
       "https://moondigitalmaster.radyotvonline.net/kafaradyo/playlist.m3u8"
     ],
     "br": [
-      64,
-      64
+      63,
+      63
     ]
   },
   {
@@ -496,7 +496,8 @@ window.STATIONS = [
     "added": "2026-10-23",
     "br": [
       141
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "power-dance",
@@ -1016,7 +1017,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-31",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -1242,7 +1243,8 @@ window.STATIONS = [
     "added": "2026-11-02",
     "br": [
       141
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "bestefm",
@@ -1332,7 +1334,8 @@ window.STATIONS = [
     "added": "2026-11-04",
     "br": [
       106
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "gonul-fm-97-3",
@@ -1742,4 +1745,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

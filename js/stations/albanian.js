@@ -518,10 +518,7 @@ window.STATIONS = [
     "streams": [
       "https://radio.radiomergimi.com:8114/stream"
     ],
-    "added": "2026-10-23",
-    "br": [
-      128
-    ]
+    "added": "2026-10-23"
   },
   {
     "id": "radio-1",
@@ -732,6 +729,15 @@ window.STATIONS = [
     "br": [
       128
     ]
+  },
+  {
+    "id": "radio-criteria",
+    "name": "Radio Criteria",
+    "category": "music",
+    "streams": [
+      "https://www.radiocriteria.com/stream"
+    ],
+    "added": "2026-11-27"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

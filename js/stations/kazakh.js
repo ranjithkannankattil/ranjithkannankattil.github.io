@@ -75,9 +75,7 @@ window.STATIONS = [
     "streams": [
       "https://live.zhanafm.kz:8443/zhanafm_onair"
     ],
-    "br": [
-      192
-    ]
+    "offline": true
   },
   {
     "id": "ns-rock",
@@ -210,4 +208,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

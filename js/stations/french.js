@@ -740,7 +740,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "br": [
-      96
+      104
     ]
   },
   {
@@ -1014,10 +1014,7 @@ window.STATIONS = [
     "streams": [
       "https://s3.radio.co/s97f38db97/listen"
     ],
-    "added": "2026-10-31",
-    "br": [
-      48
-    ]
+    "added": "2026-10-31"
   },
   {
     "id": "marrakechplus",
@@ -1251,7 +1248,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-03",
     "br": [
-      88
+      96
     ]
   },
   {
@@ -1383,7 +1380,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "br": [
-      128
+      64
     ]
   },
   {
@@ -1768,4 +1765,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

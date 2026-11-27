@@ -48,7 +48,7 @@ window.STATIONS = [
       "https://cdn.thhp.vn/live/285c1421f29d05045909836b37313898e2f/playlist.m3u8"
     ],
     "br": [
-      73
+      200
     ]
   },
   {
@@ -152,4 +152,4 @@ window.STATIONS = [
     "added": "2026-11-26"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

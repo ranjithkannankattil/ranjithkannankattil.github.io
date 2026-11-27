@@ -107,7 +107,7 @@ window.STATIONS = [
       "https://stream.zeno.fm/r2gn1pgm4qruv"
     ],
     "br": [
-      64
+      128
     ]
   },
   {
@@ -354,7 +354,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio021/playlist.m3u8"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "air-tuticorin",
@@ -362,6 +363,9 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio025/masterlist.m3u8"
+    ],
+    "br": [
+      80
     ]
   },
   {
@@ -413,7 +417,9 @@ window.STATIONS = [
       "https://usa3.fastcast4u.com/proxy/jeifm?mp=/1"
     ],
     "added": "2026-10-22",
-    "offline": true
+    "br": [
+      320
+    ]
   },
   {
     "id": "britishindiantamilradio",
@@ -530,7 +536,8 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio022/playlist.m3u8"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "fmrainbowtamil",
@@ -539,7 +546,8 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio022/playlist.m3u8"
     ],
-    "added": "2026-10-23"
+    "added": "2026-10-23",
+    "offline": true
   },
   {
     "id": "mellisai-fm",
@@ -1731,4 +1739,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

@@ -249,7 +249,7 @@ window.STATIONS = [
       "https://radio10.plathong.net/7590/;stream.mp3"
     ],
     "br": [
-      192
+      160
     ]
   },
   {
@@ -327,7 +327,9 @@ window.STATIONS = [
     "streams": [
       "https://lb-media.mcot.net/RegionRadio/Loei.stream_aac/playlist.m3u8"
     ],
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "requestradio-string-alt",
@@ -349,7 +351,7 @@ window.STATIONS = [
       "https://livefta.malimarcdn.com/ftaedge00/nat.sdp/playlist.m3u8"
     ],
     "br": [
-      2418
+      2424
     ]
   },
   {
@@ -395,7 +397,9 @@ window.STATIONS = [
       "https://radio11.plathong.net/7050/;stream.mp3"
     ],
     "added": "2026-10-29",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "translation-of-the-quran-in-thai",
@@ -418,7 +422,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-06",
     "br": [
-      160
+      96
     ]
   },
   {
@@ -478,8 +482,8 @@ window.STATIONS = [
     ],
     "added": "2026-11-13",
     "br": [
-      52
+      48
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";

@@ -25,9 +25,9 @@ window.STATIONS = [
     ],
     "br": [
       128,
-      192,
+      256,
       24,
-      128
+      96
     ]
   },
   {
@@ -1098,7 +1098,10 @@ window.STATIONS = [
     "streams": [
       "https://webstream.schlagerparadies.de/schlager30842"
     ],
-    "added": "2026-10-31"
+    "added": "2026-10-31",
+    "br": [
+      192
+    ]
   },
   {
     "id": "absolut-relax",
@@ -1560,10 +1563,7 @@ window.STATIONS = [
     "streams": [
       "https://radiobzlive.rai.it/RAIBZ_Livestream"
     ],
-    "added": "2026-11-06",
-    "br": [
-      192
-    ]
+    "added": "2026-11-06"
   },
   {
     "id": "radio-paloma",
@@ -1782,4 +1782,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-26T23:04Z";
+window.STATIONS_CHECKED = "2026-11-27T09:37Z";
