@@ -150,6 +150,8 @@ class PlaybackService : MediaLibraryService() {
     override fun onCreate() {
         super.onCreate()
         Crash.install(this); CarArt.init(this); DataUse.init(this); DataSaver.refresh(this); EvenVolume.load(this)
+        // any other app making a sound (a WhatsApp sticker, a notification): Even volume holds still meanwhile
+        runCatching { getSystemService(android.media.AudioManager::class.java)?.registerAudioPlaybackCallback(otherSounds, null) }
         player = ExoPlayer.Builder(this, VelvetRenderers(this))
             .setAudioAttributes(AudioAttributes.Builder().setUsage(C.USAGE_MEDIA)
                 .setContentType(C.AUDIO_CONTENT_TYPE_MUSIC).build(), /* handleAudioFocus = */ true)
@@ -215,6 +217,7 @@ class PlaybackService : MediaLibraryService() {
             // for the volume jump he heard when posting a WhatsApp sticker (27 Nov 2026): note every time another app
             // briefly takes the sound, and every volume change, so the play log shows what happened
             override fun onPlaybackSuppressionReasonChanged(reason: Int) {
+                EvenVolume.hold(if (reason == Player.PLAYBACK_SUPPRESSION_REASON_NONE) 3_000 else 60_000)
                 PlayLog.note(this@PlaybackService, if (reason == Player.PLAYBACK_SUPPRESSION_REASON_NONE) "sound back from another app"
                     else "another app took the sound for a moment (reason $reason)")
             }
@@ -336,6 +339,11 @@ class PlaybackService : MediaLibraryService() {
     // ---- leaving the car: pause, and don't let a stray "play" from the car start it on the phone speaker ----
     @Volatile private var carGoneAt = 0L
     @Volatile private var carAutoDone = false
+    private val otherSounds = object : android.media.AudioManager.AudioPlaybackCallback() {
+        override fun onPlaybackConfigChanged(configs: MutableList<android.media.AudioPlaybackConfiguration>) {
+            if (configs.size > 1) { EvenVolume.hold(3_000); PlayLog.note(this@PlaybackService, "another sound playing (${configs.size}): even volume holds") }
+        }
+    }
     private var carType = -1
     private var carConn: androidx.car.app.connection.CarConnection? = null
     private val carObserver = androidx.lifecycle.Observer<Int> { type ->
@@ -754,6 +762,7 @@ class PlaybackService : MediaLibraryService() {
     }
 
     override fun onDestroy() {
+        runCatching { getSystemService(android.media.AudioManager::class.java)?.unregisterAudioPlaybackCallback(otherSounds) }
         Theme.prefs(this).unregisterOnSharedPreferenceChangeListener(prefListener)
         getSystemService(android.media.AudioManager::class.java)?.unregisterAudioDeviceCallback(outputs)
         carConn?.type?.removeObserver(carObserver)

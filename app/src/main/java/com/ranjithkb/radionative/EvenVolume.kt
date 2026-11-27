@@ -50,24 +50,33 @@ object EvenVolume {
     }
 
     fun set(ctx: Context, v: Boolean) { on = v; Theme.prefs(ctx).edit().putBoolean("evenVolume", v).apply() }
+
+    /** Another app has the sound (a WhatsApp sticker, a notification): hold everything still until a little after. */
+    @Volatile var holdUntil = 0L
+    fun hold(ms: Long) { holdUntil = maxOf(holdUntil, System.currentTimeMillis() + ms) }
 }
 
 /** Pure: follows loudness (dBFS) and works out the gain for each block of sound. */
-class Leveller(private val target: Float = -18f, private val maxDb: Float = 10f, private val tau: Float = 6f) {
+class Leveller(private val target: Float = -18f, private val maxDb: Float = 10f, private val tau: Float = 6f,
+               /** the most the sound may get LOUDER per second; quieter is allowed faster (he heard a sudden jump, 27 Nov 2026) */
+               private val riseDbPerSec: Float = 1f, private val fallDbPerSec: Float = 6f) {
     var loudness = target; private set
     var heard = false; private set
     var gainDb = 0f; private set
 
-    fun startAt(level: Float?) { heard = level != null; loudness = level ?: target; gainDb = (target - loudness).coerceIn(-maxDb, maxDb) }
+    /** A new station: start from its remembered level. The gain may drop at once, but never jumps up: it rises slowly. */
+    fun startAt(level: Float?) { heard = level != null; loudness = level ?: target; gainDb = minOf(gainDb, (target - loudness).coerceIn(-maxDb, maxDb)) }
 
     /** One block: its RMS level in dBFS and how many seconds it lasts. Returns the gain (dB) to use for it. */
-    fun block(rmsDb: Float, seconds: Float): Float {
+    fun block(rmsDb: Float, seconds: Float, held: Boolean = false): Float {
+        if (held) return gainDb                           // another app has the sound: change nothing
         if (rmsDb > -50f) {                               // ignore silence and talk pauses
             val a = (seconds / (if (heard) tau else 1.5f)).coerceAtMost(1f)   // first seconds of a new station: settle faster
             loudness += (rmsDb - loudness) * a; heard = true
         }
         val want = (target - loudness).coerceIn(-maxDb, maxDb)
-        gainDb += (want - gainDb) * (seconds / 2f).coerceAtMost(1f)          // glide, never jump
+        val step = (want - gainDb) * (seconds / 2f).coerceAtMost(1f)          // glide, never jump
+        gainDb += step.coerceIn(-fallDbPerSec * seconds, riseDbPerSec * seconds)
         return gainDb
     }
 
@@ -98,7 +107,8 @@ class EvenVolumeProcessor : BaseAudioProcessor() {
         for (i in 0 until samples) { val v = inp.getShort(start + i * 2) / 32768.0; sum += v * v }
         val rms = sqrt(sum / samples.coerceAtLeast(1))
         val db = if (rms <= 1e-7) -120f else (20 * log10(rms)).toFloat()
-        val g = 10.0.pow(EvenVolume.leveller.block(db, samples.toFloat() / channels / rate) / 20.0).toFloat()
+        val g = 10.0.pow(EvenVolume.leveller.block(db, samples.toFloat() / channels / rate,
+            held = System.currentTimeMillis() < EvenVolume.holdUntil) / 20.0).toFloat()
         out.order(ByteOrder.LITTLE_ENDIAN)
         for (i in 0 until samples) {
             val y = Leveller.limit(inp.getShort(start + i * 2) / 32768f * g)

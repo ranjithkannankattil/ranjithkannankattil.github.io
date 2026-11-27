@@ -414,9 +414,24 @@ class LogicTest {
     }
     @Test fun even_volume_ignores_silence_and_starts_from_the_remembered_level() {
         val l = Leveller(); l.startAt(-28f)
-        assertEquals(10f, l.gainDb, 0.01f)                   // starts at the right gain at once
+        assertEquals("a quiet station never starts with a jump up", 0f, l.gainDb, 0.01f)
         repeat(100) { l.block(-90f, 0.05f) }                 // silence doesn't change the level
         assertEquals(-28f, l.loudness, 0.01f)
+        val loud = Leveller(); loud.startAt(-8f)
+        assertEquals("a loud station is turned down at once", -10f, loud.gainDb, 0.01f)
+    }
+    /** He heard the radio jump louder when posting a WhatsApp sticker, with Even volume on (27 Nov 2026). */
+    @Test fun even_volume_never_jumps_louder() {
+        val l = Leveller(); l.startAt(-10f)                  // a loud station: turned down 8 dB
+        var last = l.gainDb; var worst = 0f
+        // then anything at all: silence, a sudden quiet patch, a loud burst, a new quiet station…
+        val inputs = List(200) { -90f } + List(200) { -40f } + List(100) { -5f } + List(400) { -45f }
+        inputs.forEachIndexed { i, db -> if (i == 500) l.startAt(-35f); val g = l.block(db, 0.05f); worst = maxOf(worst, g - last); last = g }
+        assertTrue("rose ${worst} dB in 50 ms (at most 0.05 allowed)", worst <= 0.05f + 1e-4f)
+        // while another app has the sound nothing moves
+        val h = Leveller(); h.startAt(-10f); val before = h.gainDb
+        repeat(100) { h.block(-60f, 0.05f, held = true) }
+        assertEquals(before, h.gainDb, 0f)
     }
     @Test fun even_volume_limiter_never_clips() {
         assertEquals(0.5f, Leveller.limit(0.5f), 0f)
