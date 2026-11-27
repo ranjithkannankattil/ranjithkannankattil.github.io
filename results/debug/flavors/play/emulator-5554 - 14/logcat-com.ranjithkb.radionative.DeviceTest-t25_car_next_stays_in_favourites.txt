@@ -1,0 +1,422 @@
+11-27 17:08:02.208  4573  4701 I TestRunner: started: t25_car_next_stays_in_favourites(com.ranjithkb.radionative.DeviceTest)
+11-27 17:08:02.213  4573  4573 I MediaController: Init adff74c [AndroidXMedia3/1.5.1] [emu64xa, sdk_gphone64_x86_64, Google, 34]
+11-27 17:08:02.272   879   879 W ConstraintSet: id unknown settings
+11-27 17:08:02.283   879   879 W ConstraintSet: id unknown dismiss
+11-27 17:08:02.284   879   879 W ConstraintSet: id unknown cancel
+11-27 17:08:02.306   879   931 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-27 17:08:02.334   879   879 W ConstraintSet: id unknown center_vertical_guideline
+11-27 17:08:02.334   879   879 W ConstraintSet: id unknown action_button_guideline
+11-27 17:08:02.334   879   879 W ConstraintSet: id unknown icon
+11-27 17:08:02.334   879   879 W ConstraintSet: id unknown media_seamless
+11-27 17:08:02.334   879   879 W ConstraintSet: id unknown media_action_barrier_start
+11-27 17:08:02.334   879   879 W ConstraintSet: id unknown media_action_barrier_end
+11-27 17:08:02.334   879   879 W ConstraintSet: id unknown media_action_barrier_top
+11-27 17:08:02.334   879   879 W ConstraintSet: id unknown remove_text
+11-27 17:08:02.334   879   879 W ConstraintSet: id unknown settings
+11-27 17:08:02.334   879   879 W ConstraintSet: id unknown dismiss
+11-27 17:08:02.334   879   879 W ConstraintSet: id unknown cancel
+11-27 17:08:02.463  4573  4701 I VELVET-TEST: car favourites: [favs>st|malayalam:radiomango, favs>st|malayalam:homefm, favs>st|malayalam:hit967, favs>st|malayalam:radiosunomalayalam]
+11-27 17:08:02.464  4573  4573 D MediaBrowserCompat: Connecting to a MediaBrowserService.
+11-27 17:08:02.470  4573  6085 D CCodecBuffers: [c2.android.mp3.decoder#965:1D-Output.Impl[N]] Client returned a buffer it does not own according to our record: 0
+11-27 17:08:02.471  4573  4860 D MediaCodec: keep callback message for reclaim
+11-27 17:08:02.472  4573  6085 I CCodecConfig: query failed after returning 7 values (BAD_INDEX)
+11-27 17:08:02.472  4573  6085 W Codec2Client: query -- param skipped: index = 1342179345.
+11-27 17:08:02.473  4573  6085 W Codec2Client: query -- param skipped: index = 2415921170.
+11-27 17:08:02.477  6133  6133 V AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio
+11-27 17:08:02.479  6133  6133 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-27 17:08:02.480  6133  6133 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=422881, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:02.480  6133  6133 D MediaControlGattService: updatePlayerState: playbackState= PAUSED
+11-27 17:08:02.481  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-27 17:08:02.481  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-27 17:08:02.481  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-27 17:08:02.481  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED_NOTIFY support: true
+11-27 17:08:02.482   879   879 D MediaDataManager: State updated outside of notification
+11-27 17:08:02.483  6133  6133 W MediaControlGattService: Feature TRACK_POSITION(BIT 7) support: true
+11-27 17:08:02.483  6133  6133 W MediaControlGattService: Feature TRACK_POSITION_NOTIFY support: true
+11-27 17:08:02.483  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:08:02.483   336  6645 I resolv  : GetAddrInfoHandler::run: {105 105 105 983145 10192 0}
+11-27 17:08:02.484   336  6646 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+11-27 17:08:02.484  6133  6133 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-27 17:08:02.485  6133  6133 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-27 17:08:02.485  6133  6133 W MediaControlGattService: Feature MEDIA_CONTROL_POINT_OPCODES_SUPPORTED(BIT 19) support: true
+11-27 17:08:02.485  6133  6133 W MediaControlGattService: Feature MEDIA_CONTROL_POINT_OPCODES_SUPPORTED_NOTIFY support: true
+11-27 17:08:02.486  6133  6133 W MediaControlGattService: Feature TRACK_TITLE(BIT 5) support: true
+11-27 17:08:02.486  6133  6133 W MediaControlGattService: Feature TRACK_TITLE(BIT 5) support: true
+11-27 17:08:02.486  6133  6133 W MediaControlGattService: Feature TRACK_TITLE_NOTIFY support: true
+11-27 17:08:02.487  6133  6133 W MediaControlGattService: Feature TRACK_DURATION(BIT 6) support: true
+11-27 17:08:02.487  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:08:02.488  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:08:02.488  6133  6133 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-27 17:08:02.488  6133  6133 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-27 17:08:02.488  6133  6133 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-27 17:08:02.488  6133  6133 W MediaControlGattService: Feature TRACK_CHANGED(BIT 4) support: true
+11-27 17:08:02.489   879   879 W ConstraintSet: id unknown center_vertical_guideline
+11-27 17:08:02.489   879   879 W ConstraintSet: id unknown action_button_guideline
+11-27 17:08:02.489   879   879 W ConstraintSet: id unknown icon
+11-27 17:08:02.489   879   879 W ConstraintSet: id unknown media_seamless
+11-27 17:08:02.489   879   879 W ConstraintSet: id unknown media_action_barrier_start
+11-27 17:08:02.490  6133  6133 W AudioMediaPlayerWrapper: onMetadataChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:02.491   336  6647 I resolv  : res_nmkquery: (QUERY, IN, A)
+11-27 17:08:02.491   397  2385 D audioserver: FGS Logger Transaction failed
+11-27 17:08:02.491   397  2385 D audioserver: -129
+11-27 17:08:02.492   879   879 W ConstraintSet: id unknown media_action_barrier_end
+11-27 17:08:02.493   879   879 W ConstraintSet: id unknown media_action_barrier_top
+11-27 17:08:02.494   879   879 W ConstraintSet: id unknown remove_text
+11-27 17:08:02.494  6133  6133 V AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio
+11-27 17:08:02.494   879   879 W ConstraintSet: id unknown settings
+11-27 17:08:02.494   879   879 W ConstraintSet: id unknown dismiss
+11-27 17:08:02.494   879   879 W ConstraintSet: id unknown cancel
+11-27 17:08:02.495  4573  4573 I VELVET-PLAY: play by com.ranjithkb.radio
+11-27 17:08:02.498   525  1258 I WifiService: acquireWifiLock uid=10192 lockMode=3
+11-27 17:08:02.498  6133  6133 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-27 17:08:02.498  6133  6133 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=422898, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:02.498  6133  6133 D AvrcpTargetJni: sendMediaUpdateNative
+11-27 17:08:02.499  6133  6133 I bt_stack: [INFO:avrcp_service.cc(515)] virtual void bluetooth::avrcp::AvrcpService::SendMediaUpdate(bool, bool, bool) track_changed=1 :  play_state=1 :  queue=1
+11-27 17:08:02.499  6133  6133 W AudioMediaPlayerWrapper: onMetadataChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:02.499  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=422881, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:02.500  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:02.500  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=422881, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:02.500  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:02.500  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=422894, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:02.501  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:02.501   336  6646 I resolv  : res_nsend: used send_dg 108 terrno: 0
+11-27 17:08:02.501   336  6646 I resolv  : doQuery: rcode=0, ancount=0, return value=108
+11-27 17:08:02.501  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=422894, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:02.501  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:02.502  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=422897, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:02.502  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:02.502  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=422897, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:02.502  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:02.502  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=422898, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:02.502  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:02.502  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=422898, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:02.502  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:02.504  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=422909, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:02.506  6133  6133 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-27 17:08:02.506  6133  6133 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=422909, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:02.506  6133  6133 D MediaControlGattService: updatePlayerState: playbackState= PAUSED
+11-27 17:08:02.506  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-27 17:08:02.506  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-27 17:08:02.506  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-27 17:08:02.506  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED_NOTIFY support: true
+11-27 17:08:02.507  6133  6133 W MediaControlGattService: Feature TRACK_POSITION(BIT 7) support: true
+11-27 17:08:02.507  6133  6133 W MediaControlGattService: Feature TRACK_POSITION_NOTIFY support: true
+11-27 17:08:02.507  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:08:02.508  6133  6133 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-27 17:08:02.508  6133  6133 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-27 17:08:02.508  6133  6133 W MediaControlGattService: Feature MEDIA_CONTROL_POINT_OPCODES_SUPPORTED(BIT 19) support: true
+11-27 17:08:02.508  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:08:02.508  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:08:02.508  6133  6133 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-27 17:08:02.508  6133  6133 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-27 17:08:02.508  6133  6133 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-27 17:08:02.508  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=422909, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:02.509  6133  6133 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-27 17:08:02.509  6133  6133 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=422909, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:02.509  6133  6133 D AvrcpTargetJni: sendMediaUpdateNative
+11-27 17:08:02.509  6133  6133 I bt_stack: [INFO:avrcp_service.cc(515)] virtual void bluetooth::avrcp::AvrcpService::SendMediaUpdate(bool, bool, bool) track_changed=0 :  play_state=1 :  queue=0
+11-27 17:08:02.511   336  6647 I resolv  : res_nsend: used send_dg 56 terrno: 0
+11-27 17:08:02.511   336  6647 I resolv  : doQuery: rcode=0, ancount=1, return value=56
+11-27 17:08:02.512  4573  6644 D TrafficStats: tagSocket(147) with statsTag=0xffffffff, statsUid=-1
+11-27 17:08:02.526  6133  6133 D AudioMediaPlayerWrapper: com.ranjithkb.radio Only Title and Artist info sync for metadata
+11-27 17:08:02.526  6133  6133 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-27 17:08:02.526  6133  6133 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=422909, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:02.527  6133  6133 W MediaControlGattService: Feature TRACK_POSITION(BIT 7) support: true
+11-27 17:08:02.527  6133  6133 W MediaControlGattService: Feature TRACK_POSITION_NOTIFY support: true
+11-27 17:08:02.527  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:08:02.527  6133  6133 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-27 17:08:02.527  6133  6133 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-27 17:08:02.528  6133  6133 W MediaControlGattService: Feature TRACK_TITLE(BIT 5) support: true
+11-27 17:08:02.528  6133  6133 W MediaControlGattService: Feature TRACK_DURATION(BIT 6) support: true
+11-27 17:08:02.528  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:08:02.529  6133  6133 D AudioMediaPlayerWrapper: com.ranjithkb.radio Only Title and Artist info sync for metadata
+11-27 17:08:02.530  6133  6133 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-27 17:08:02.530  6133  6133 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=422909, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:02.530  6133  6133 D AvrcpTargetJni: sendMediaUpdateNative
+11-27 17:08:02.530  6133  6133 I bt_stack: [INFO:avrcp_service.cc(515)] virtual void bluetooth::avrcp::AvrcpService::SendMediaUpdate(bool, bool, bool) track_changed=1 :  play_state=0 :  queue=0
+11-27 17:08:02.536  6133  6133 V AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio
+11-27 17:08:02.537  6133  6133 W AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:02.538  6133  6133 V AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio
+11-27 17:08:02.538  6133  6133 W AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:02.722  1566  1967 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-27 17:08:02.722  1566  1967 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-27 17:08:02.734  1566  1967 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-27 17:08:02.734  1566  1967 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-27 17:08:02.740   879   931 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-27 17:08:02.742   879   937 D EGL_emulation: app_time_stats: avg=222.99ms min=10.07ms max=406.06ms count=6
+11-27 17:08:02.764  1566  1967 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-27 17:08:02.765  1566  1967 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-27 17:08:02.771   879   879 W ConstraintSet: id unknown center_vertical_guideline
+11-27 17:08:02.773   879   879 W ConstraintSet: id unknown action_button_guideline
+11-27 17:08:02.774   879   879 W ConstraintSet: id unknown icon
+11-27 17:08:02.774   879   879 W ConstraintSet: id unknown media_seamless
+11-27 17:08:02.774   879   879 W ConstraintSet: id unknown media_action_barrier_start
+11-27 17:08:02.774  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=423177, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:08:02.775   879   879 W ConstraintSet: id unknown media_action_barrier_end
+11-27 17:08:02.775   879   879 W ConstraintSet: id unknown media_action_barrier_top
+11-27 17:08:02.775   879   879 W ConstraintSet: id unknown remove_text
+11-27 17:08:02.776   879   879 W ConstraintSet: id unknown settings
+11-27 17:08:02.776   879   879 W ConstraintSet: id unknown dismiss
+11-27 17:08:02.776   879   879 W ConstraintSet: id unknown cancel
+11-27 17:08:02.778  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=423177, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:08:02.784   336  6649 I resolv  : GetAddrInfoHandler::run: {105 105 105 983145 10192 0}
+11-27 17:08:02.785   336  6651 I resolv  : res_nmkquery: (QUERY, IN, A)
+11-27 17:08:02.787   336  6650 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+11-27 17:08:02.790   879   879 W ConstraintSet: id unknown center_vertical_guideline
+11-27 17:08:02.790   879   879 W ConstraintSet: id unknown action_button_guideline
+11-27 17:08:02.791   879   879 W ConstraintSet: id unknown icon
+11-27 17:08:02.791   879   879 W ConstraintSet: id unknown media_seamless
+11-27 17:08:02.792   879   879 W ConstraintSet: id unknown media_action_barrier_start
+11-27 17:08:02.792   879   879 W ConstraintSet: id unknown media_action_barrier_end
+11-27 17:08:02.792   879   879 W ConstraintSet: id unknown media_action_barrier_top
+11-27 17:08:02.792   879   879 W ConstraintSet: id unknown remove_text
+11-27 17:08:02.792   879   879 W ConstraintSet: id unknown settings
+11-27 17:08:02.792   879   879 W ConstraintSet: id unknown dismiss
+11-27 17:08:02.792   879   879 W ConstraintSet: id unknown cancel
+11-27 17:08:02.795  6133  6133 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-27 17:08:02.797  6133  6133 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=423193, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:08:02.798  6133  6133 D MediaControlGattService: updatePlayerState: playbackState= PAUSED
+11-27 17:08:02.799  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-27 17:08:02.799  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-27 17:08:02.799  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-27 17:08:02.799  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED_NOTIFY support: true
+11-27 17:08:02.800  6133  6133 W MediaControlGattService: Feature TRACK_POSITION(BIT 7) support: true
+11-27 17:08:02.800  6133  6133 W MediaControlGattService: Feature TRACK_POSITION_NOTIFY support: true
+11-27 17:08:02.800  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:08:02.801  6133  6133 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-27 17:08:02.801  6133  6133 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-27 17:08:02.801  6133  6133 W MediaControlGattService: Feature MEDIA_CONTROL_POINT_OPCODES_SUPPORTED(BIT 19) support: true
+11-27 17:08:02.801  6133  6133 W MediaControlGattService: Feature TRACK_TITLE(BIT 5) support: true
+11-27 17:08:02.801  6133  6133 W MediaControlGattService: Feature TRACK_TITLE(BIT 5) support: true
+11-27 17:08:02.802  6133  6133 W MediaControlGattService: Feature TRACK_TITLE_NOTIFY support: true
+11-27 17:08:02.803  6133  6133 W MediaControlGattService: Feature TRACK_DURATION(BIT 6) support: true
+11-27 17:08:02.803  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:08:02.804  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:08:02.804  6133  6133 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-27 17:08:02.804  6133  6133 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-27 17:08:02.804  6133  6133 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-27 17:08:02.804  6133  6133 W MediaControlGattService: Feature TRACK_CHANGED(BIT 4) support: true
+11-27 17:08:02.807  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=423193, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:08:02.808  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:02.808  6133  6133 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-27 17:08:02.808  6133  6133 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=BUFFERING(6), position=0, buffered position=-9223372036854775807, speed=0.0, updated=423201, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:08:02.808  6133  6133 D AvrcpTargetJni: sendMediaUpdateNative
+11-27 17:08:02.808  6133  6133 I bt_stack: [INFO:avrcp_service.cc(515)] virtual void bluetooth::avrcp::AvrcpService::SendMediaUpdate(bool, bool, bool) track_changed=1 :  play_state=1 :  queue=0
+11-27 17:08:02.808  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=423193, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:08:02.808  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:02.809  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=BUFFERING(6), position=0, buffered position=-9223372036854775807, speed=0.0, updated=423201, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:08:02.809  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:02.809  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=BUFFERING(6), position=0, buffered position=-9223372036854775807, speed=0.0, updated=423201, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:08:02.809  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:02.816  6133  6133 V AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio
+11-27 17:08:02.816  6133  6133 W AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:02.816  6133  6133 V AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio
+11-27 17:08:02.817  6133  6133 W AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:02.823   879   931 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-27 17:08:02.823  6133  6133 D AudioMediaPlayerWrapper: com.ranjithkb.radio Only Title and Artist info sync for metadata
+11-27 17:08:02.824  6133  6133 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-27 17:08:02.824  6133  6133 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=BUFFERING(6), position=0, buffered position=-9223372036854775807, speed=0.0, updated=423201, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:08:02.824  6133  6133 W MediaControlGattService: Feature TRACK_POSITION(BIT 7) support: true
+11-27 17:08:02.824  6133  6133 W MediaControlGattService: Feature TRACK_POSITION_NOTIFY support: true
+11-27 17:08:02.824  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:08:02.825  6133  6133 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-27 17:08:02.825  6133  6133 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-27 17:08:02.825  6133  6133 W MediaControlGattService: Feature TRACK_TITLE(BIT 5) support: true
+11-27 17:08:02.825  6133  6133 W MediaControlGattService: Feature TRACK_DURATION(BIT 6) support: true
+11-27 17:08:02.825  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:08:02.825  6133  6133 D AudioMediaPlayerWrapper: com.ranjithkb.radio Only Title and Artist info sync for metadata
+11-27 17:08:02.826  6133  6133 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-27 17:08:02.826  6133  6133 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=BUFFERING(6), position=0, buffered position=-9223372036854775807, speed=0.0, updated=423201, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:08:02.826  6133  6133 D AvrcpTargetJni: sendMediaUpdateNative
+11-27 17:08:02.826  6133  6133 I bt_stack: [INFO:avrcp_service.cc(515)] virtual void bluetooth::avrcp::AvrcpService::SendMediaUpdate(bool, bool, bool) track_changed=1 :  play_state=0 :  queue=0
+11-27 17:08:02.837   879   879 W ConstraintSet: id unknown center_vertical_guideline
+11-27 17:08:02.838   879   879 W ConstraintSet: id unknown action_button_guideline
+11-27 17:08:02.838   879   879 W ConstraintSet: id unknown icon
+11-27 17:08:02.838   879   879 W ConstraintSet: id unknown media_seamless
+11-27 17:08:02.838   879   879 W ConstraintSet: id unknown media_action_barrier_start
+11-27 17:08:02.838   879   879 W ConstraintSet: id unknown media_action_barrier_end
+11-27 17:08:02.838   879   879 W ConstraintSet: id unknown media_action_barrier_top
+11-27 17:08:02.839   879   879 W ConstraintSet: id unknown remove_text
+11-27 17:08:02.839   879   879 W ConstraintSet: id unknown settings
+11-27 17:08:02.839   879   879 W ConstraintSet: id unknown dismiss
+11-27 17:08:02.839   879   879 W ConstraintSet: id unknown cancel
+11-27 17:08:02.855   879   879 W ConstraintSet: id unknown center_vertical_guideline
+11-27 17:08:02.855   879   879 W ConstraintSet: id unknown action_button_guideline
+11-27 17:08:02.859   879   879 W ConstraintSet: id unknown icon
+11-27 17:08:02.859   879   879 W ConstraintSet: id unknown media_seamless
+11-27 17:08:02.859   879   879 W ConstraintSet: id unknown media_action_barrier_start
+11-27 17:08:02.859   879   879 W ConstraintSet: id unknown media_action_barrier_end
+11-27 17:08:02.859   879   879 W ConstraintSet: id unknown media_action_barrier_top
+11-27 17:08:02.859   879   879 W ConstraintSet: id unknown remove_text
+11-27 17:08:02.860   879   879 W ConstraintSet: id unknown settings
+11-27 17:08:02.860   879   879 W ConstraintSet: id unknown dismiss
+11-27 17:08:02.860   879   879 W ConstraintSet: id unknown cancel
+11-27 17:08:02.878   336  6650 I resolv  : res_nsend: used send_dg 85 terrno: 0
+11-27 17:08:02.878   336  6650 I resolv  : doQuery: rcode=0, ancount=2, return value=85
+11-27 17:08:02.912   336  6651 I resolv  : res_nsend: used send_dg 73 terrno: 0
+11-27 17:08:02.912   336  6651 I resolv  : doQuery: rcode=0, ancount=2, return value=73
+11-27 17:08:02.913  4573  6648 D TrafficStats: tagSocket(122) with statsTag=0xffffffff, statsUid=-1
+11-27 17:08:03.010  1566  1967 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-27 17:08:03.010  1566  1967 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-27 17:08:03.012   879   931 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-27 17:08:03.013   879   879 W ConstraintSet: id unknown center_vertical_guideline
+11-27 17:08:03.013   879   879 W ConstraintSet: id unknown action_button_guideline
+11-27 17:08:03.013   879   879 W ConstraintSet: id unknown icon
+11-27 17:08:03.013   879   879 W ConstraintSet: id unknown media_seamless
+11-27 17:08:03.013   879   879 W ConstraintSet: id unknown media_action_barrier_start
+11-27 17:08:03.013   879   879 W ConstraintSet: id unknown media_action_barrier_end
+11-27 17:08:03.014   879   879 W ConstraintSet: id unknown media_action_barrier_top
+11-27 17:08:03.015   879   879 W ConstraintSet: id unknown remove_text
+11-27 17:08:03.015   879   879 W ConstraintSet: id unknown settings
+11-27 17:08:03.015   879   879 W ConstraintSet: id unknown dismiss
+11-27 17:08:03.015   879   879 W ConstraintSet: id unknown cancel
+11-27 17:08:03.024  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=423425, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:03.024  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=423425, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:03.026  4573  6652 D TrafficStats: tagSocket(187) with statsTag=0xffffffff, statsUid=-1
+11-27 17:08:03.035  1566  1967 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-27 17:08:03.035  1566  1967 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-27 17:08:03.078  1566  1967 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-27 17:08:03.079  1566  1967 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-27 17:08:03.093  6133  6133 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-27 17:08:03.093  6133  6133 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=423494, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:03.093  6133  6133 D MediaControlGattService: updatePlayerState: playbackState= PAUSED
+11-27 17:08:03.093  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-27 17:08:03.093  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-27 17:08:03.093  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-27 17:08:03.093  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED_NOTIFY support: true
+11-27 17:08:03.097  6133  6133 W MediaControlGattService: Feature TRACK_POSITION(BIT 7) support: true
+11-27 17:08:03.097  6133  6133 W MediaControlGattService: Feature TRACK_POSITION_NOTIFY support: true
+11-27 17:08:03.097  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:08:03.098  6133  6133 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-27 17:08:03.098  6133  6133 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-27 17:08:03.098  6133  6133 W MediaControlGattService: Feature MEDIA_CONTROL_POINT_OPCODES_SUPPORTED(BIT 19) support: true
+11-27 17:08:03.098  6133  6133 W MediaControlGattService: Feature TRACK_TITLE(BIT 5) support: true
+11-27 17:08:03.098  6133  6133 W MediaControlGattService: Feature TRACK_TITLE(BIT 5) support: true
+11-27 17:08:03.098  6133  6133 W MediaControlGattService: Feature TRACK_TITLE_NOTIFY support: true
+11-27 17:08:03.099  6133  6133 W MediaControlGattService: Feature TRACK_DURATION(BIT 6) support: true
+11-27 17:08:03.099  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:08:03.099  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:08:03.099  6133  6133 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-27 17:08:03.099  6133  6133 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-27 17:08:03.099  6133  6133 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-27 17:08:03.099  6133  6133 W MediaControlGattService: Feature TRACK_CHANGED(BIT 4) support: true
+11-27 17:08:03.101  6133  6133 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-27 17:08:03.101  6133  6133 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=BUFFERING(6), position=0, buffered position=-9223372036854775807, speed=0.0, updated=423499, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:03.101  6133  6133 D AvrcpTargetJni: sendMediaUpdateNative
+11-27 17:08:03.101  6133  6133 I bt_stack: [INFO:avrcp_service.cc(515)] virtual void bluetooth::avrcp::AvrcpService::SendMediaUpdate(bool, bool, bool) track_changed=1 :  play_state=1 :  queue=0
+11-27 17:08:03.102  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=423494, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:03.103  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:03.103  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=423494, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:03.103  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:03.111  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=BUFFERING(6), position=0, buffered position=-9223372036854775807, speed=0.0, updated=423499, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:03.111  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:03.112  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=BUFFERING(6), position=0, buffered position=-9223372036854775807, speed=0.0, updated=423499, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:03.112  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:03.121  6133  6133 D AudioMediaPlayerWrapper: com.ranjithkb.radio Only Title and Artist info sync for metadata
+11-27 17:08:03.122  6133  6133 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-27 17:08:03.123  6133  6133 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=BUFFERING(6), position=0, buffered position=-9223372036854775807, speed=0.0, updated=423499, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:03.123   879   887 I ndroid.systemui: NativeAlloc concurrent copying GC freed 734758(14MB) AllocSpace objects, 24(1228KB) LOS objects, 50% free, 20MB/40MB, paused 120us,31us total 118.220ms
+11-27 17:08:03.124  6133  6133 W MediaControlGattService: Feature TRACK_POSITION(BIT 7) support: true
+11-27 17:08:03.124  6133  6133 W MediaControlGattService: Feature TRACK_POSITION_NOTIFY support: true
+11-27 17:08:03.124  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:08:03.125  6133  6133 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-27 17:08:03.125  6133  6133 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-27 17:08:03.125  6133  6133 W MediaControlGattService: Feature TRACK_TITLE(BIT 5) support: true
+11-27 17:08:03.125  6133  6133 W MediaControlGattService: Feature TRACK_DURATION(BIT 6) support: true
+11-27 17:08:03.125  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:08:03.126  6133  6133 D AudioMediaPlayerWrapper: com.ranjithkb.radio Only Title and Artist info sync for metadata
+11-27 17:08:03.126  6133  6133 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-27 17:08:03.126  6133  6133 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=BUFFERING(6), position=0, buffered position=-9223372036854775807, speed=0.0, updated=423499, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:03.126  6133  6133 D AvrcpTargetJni: sendMediaUpdateNative
+11-27 17:08:03.127  6133  6133 I bt_stack: [INFO:avrcp_service.cc(515)] virtual void bluetooth::avrcp::AvrcpService::SendMediaUpdate(bool, bool, bool) track_changed=1 :  play_state=0 :  queue=0
+11-27 17:08:03.143   879   931 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-27 17:08:03.150   879   931 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-27 17:08:03.158   879   879 W ConstraintSet: id unknown center_vertical_guideline
+11-27 17:08:03.159   879   879 W ConstraintSet: id unknown action_button_guideline
+11-27 17:08:03.159   879   879 W ConstraintSet: id unknown icon
+11-27 17:08:03.160   879   879 W ConstraintSet: id unknown media_seamless
+11-27 17:08:03.160   879   879 W ConstraintSet: id unknown media_action_barrier_start
+11-27 17:08:03.161   879   879 W ConstraintSet: id unknown media_action_barrier_end
+11-27 17:08:03.161   879   879 W ConstraintSet: id unknown media_action_barrier_top
+11-27 17:08:03.162   879   879 W ConstraintSet: id unknown remove_text
+11-27 17:08:03.162   879   879 W ConstraintSet: id unknown settings
+11-27 17:08:03.163   879   879 W ConstraintSet: id unknown dismiss
+11-27 17:08:03.163   879   879 W ConstraintSet: id unknown cancel
+11-27 17:08:03.172   879   879 W ConstraintSet: id unknown center_vertical_guideline
+11-27 17:08:03.172   879   879 W ConstraintSet: id unknown action_button_guideline
+11-27 17:08:03.172   879   879 W ConstraintSet: id unknown icon
+11-27 17:08:03.172   879   879 W ConstraintSet: id unknown media_seamless
+11-27 17:08:03.172   879   879 W ConstraintSet: id unknown media_action_barrier_start
+11-27 17:08:03.172   879   879 W ConstraintSet: id unknown media_action_barrier_end
+11-27 17:08:03.172   879   879 W ConstraintSet: id unknown media_action_barrier_top
+11-27 17:08:03.172   879   879 W ConstraintSet: id unknown remove_text
+11-27 17:08:03.172   879   879 W ConstraintSet: id unknown settings
+11-27 17:08:03.172   879   879 W ConstraintSet: id unknown dismiss
+11-27 17:08:03.172   879   879 W ConstraintSet: id unknown cancel
+11-27 17:08:03.296   879   931 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-27 17:08:03.297   879   879 W ConstraintSet: id unknown center_vertical_guideline
+11-27 17:08:03.297   879   879 W ConstraintSet: id unknown action_button_guideline
+11-27 17:08:03.297   879   879 W ConstraintSet: id unknown icon
+11-27 17:08:03.297   879   879 W ConstraintSet: id unknown media_seamless
+11-27 17:08:03.297   879   879 W ConstraintSet: id unknown media_action_barrier_start
+11-27 17:08:03.297   879   879 W ConstraintSet: id unknown media_action_barrier_end
+11-27 17:08:03.298   879   879 W ConstraintSet: id unknown media_action_barrier_top
+11-27 17:08:03.298   879   879 W ConstraintSet: id unknown remove_text
+11-27 17:08:03.298   879   879 W ConstraintSet: id unknown settings
+11-27 17:08:03.298   879   879 W ConstraintSet: id unknown dismiss
+11-27 17:08:03.298   879   879 W ConstraintSet: id unknown cancel
+11-27 17:08:03.397  4573  6653 D TrafficStats: tagSocket(122) with statsTag=0xffffffff, statsUid=-1
+11-27 17:08:03.405  6133  6133 V AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio
+11-27 17:08:03.408  6133  6133 D AudioMediaPlayerWrapper: com.ranjithkb.radio Only Title and Artist info sync for metadata
+11-27 17:08:03.409  6133  6133 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-27 17:08:03.410  6133  6133 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=423810, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:03.410  6133  6133 D AvrcpTargetJni: sendMediaUpdateNative
+11-27 17:08:03.411  6133  6133 I bt_stack: [INFO:avrcp_service.cc(515)] virtual void bluetooth::avrcp::AvrcpService::SendMediaUpdate(bool, bool, bool) track_changed=0 :  play_state=0 :  queue=1
+11-27 17:08:03.411  6133  6133 V AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio
+11-27 17:08:03.413  6133  6133 D AudioMediaPlayerWrapper: com.ranjithkb.radio Only Title and Artist info sync for metadata
+11-27 17:08:03.415  6133  6133 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-27 17:08:03.415  6133  6133 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=423810, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:03.416  6133  6133 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-27 17:08:03.417  6133  6133 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-27 17:08:03.417  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:08:03.418  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=423810, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:03.418  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:03.418  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=423810, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:03.419  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:03.420  4573  4573 I VELVET-PLAY: play by com.ranjithkb.radio
+11-27 17:08:03.421  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=423825, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:03.421  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:03.421  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=423825, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:03.421  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:03.441  6133  6133 V AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio
+11-27 17:08:03.443  6133  6133 W AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:03.443  6133  6133 V AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio
+11-27 17:08:03.445  6133  6133 W AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:08:03.631  1566  1967 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-27 17:08:03.631  1566  1967 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-27 17:08:03.661  1566  1967 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-27 17:08:03.661  1566  1967 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-27 17:08:03.675   879   931 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-27 17:08:03.676  4573  4573 I MediaController: Release adff74c [AndroidXMedia3/1.5.1] [emu64xa, sdk_gphone64_x86_64, Google, 34] [media3.common, media3.session, media3.exoplayer, media3.decoder, media3.cast, media3.exoplayer.hls, media3.datasource, media3.extractor]
+11-27 17:08:03.676  4573  4573 I VELVET-PLAY: pause by com.ranjithkb.radio
+11-27 17:08:03.689   525  2880 I WifiService: releaseWifiLock uid=10192
+11-27 17:08:03.691  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=424095, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:03.692   879   879 W ConstraintSet: id unknown center_vertical_guideline
+11-27 17:08:03.693   879   879 W ConstraintSet: id unknown action_button_guideline
+11-27 17:08:03.693   879   879 W ConstraintSet: id unknown icon
+11-27 17:08:03.693   879   879 W ConstraintSet: id unknown media_seamless
+11-27 17:08:03.693   879   879 W ConstraintSet: id unknown media_action_barrier_start
+11-27 17:08:03.693   879   879 W ConstraintSet: id unknown media_action_barrier_end
+11-27 17:08:03.693   879   879 W ConstraintSet: id unknown media_action_barrier_top
+11-27 17:08:03.693   879   879 W ConstraintSet: id unknown remove_text
+11-27 17:08:03.693   879   879 W ConstraintSet: id unknown settings
+11-27 17:08:03.693   879   879 W ConstraintSet: id unknown dismiss
+11-27 17:08:03.693   879   879 W ConstraintSet: id unknown cancel
+11-27 17:08:03.700  6133  6133 D AudioMediaPlayerWrapper: com.ranjithkb.radio Only Title and Artist info sync for metadata
+11-27 17:08:03.701  6133  6133 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-27 17:08:03.701  6133  6133 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=424095, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:03.702  6133  6133 D AvrcpTargetJni: sendMediaUpdateNative
+11-27 17:08:03.702  6133  6133 I bt_stack: [INFO:avrcp_service.cc(515)] virtual void bluetooth::avrcp::AvrcpService::SendMediaUpdate(bool, bool, bool) track_changed=0 :  play_state=1 :  queue=0
+11-27 17:08:03.703  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=424095, actions=7339703, custom actions=[], active item id=1, error=null}
+11-27 17:08:03.710  6133  6133 D AudioMediaPlayerWrapper: com.ranjithkb.radio Only Title and Artist info sync for metadata
+11-27 17:08:03.712  4573  4701 I TestRunner: finished: t25_car_next_stays_in_favourites(com.ranjithkb.radionative.DeviceTest)

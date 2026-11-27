@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.ranjithkb.radionative.DeviceTest" tests="46" failures="0" errors="0" skipped="0" time="544.647" timestamp="2026-11-27T17:12:21" hostname="localhost">
+  <properties>
+    <property name="device" value="emulator-5554 - 14" />
+    <property name="flavor" value="play" />
+    <property name="project" value=":app" />
+  </properties>
+  <testcase name="t01_car_browse_tree" classname="com.ranjithkb.radionative.DeviceTest" time="4.265" />
+  <testcase name="t02_car_pictures_open" classname="com.ranjithkb.radionative.DeviceTest" time="3.458" />
+  <testcase name="t03_plays_and_car_next_previous" classname="com.ranjithkb.radionative.DeviceTest" time="5.533" />
+  <testcase name="t04_lost_signal_comes_back" classname="com.ranjithkb.radionative.DeviceTest" time="48.794" />
+  <testcase name="t05_short_dropout_is_bridged" classname="com.ranjithkb.radionative.DeviceTest" time="8.377" />
+  <testcase name="t06_resumes_after_another_apps_video" classname="com.ranjithkb.radionative.DeviceTest" time="8.405" />
+  <testcase name="t07_own_pause_is_respected" classname="com.ranjithkb.radionative.DeviceTest" time="16.991" />
+  <testcase name="t08_equaliser_on_off_keeps_playing" classname="com.ranjithkb.radionative.DeviceTest" time="12.704" />
+  <testcase name="t09_visualiser_hears_the_music" classname="com.ranjithkb.radionative.DeviceTest" time="4.058" />
+  <testcase name="t10_alarm_rings_and_fades_in" classname="com.ranjithkb.radionative.DeviceTest" time="3.238" />
+  <testcase name="t11_widget_play_button" classname="com.ranjithkb.radionative.DeviceTest" time="3.33" />
+  <testcase name="t12_crash_report_saved_and_sent" classname="com.ranjithkb.radionative.DeviceTest" time="2.032" />
+  <testcase name="t13_stats_and_logos_files_load" classname="com.ranjithkb.radionative.DeviceTest" time="0.629" />
+  <testcase name="t14_dead_station_falls_back_to_a_favourite" classname="com.ranjithkb.radionative.DeviceTest" time="11.952" />
+  <testcase name="t15_nothing_plays_so_the_alarm_sound_rings_then_stop" classname="com.ranjithkb.radionative.DeviceTest" time="20.707" />
+  <testcase name="t16_snooze_rings_again_in_ten_minutes" classname="com.ranjithkb.radionative.DeviceTest" time="41.282" />
+  <testcase name="t17_several_alarms_android_rings_the_earliest" classname="com.ranjithkb.radionative.DeviceTest" time="0.111" />
+  <testcase name="t18_quiet_check_before_the_alarm" classname="com.ranjithkb.radionative.DeviceTest" time="2.643" />
+  <testcase name="t19_known_down_goes_straight_to_the_backup" classname="com.ranjithkb.radionative.DeviceTest" time="2.874" />
+  <testcase name="t20_pausing_ends_the_alarm" classname="com.ranjithkb.radionative.DeviceTest" time="24.816" />
+  <testcase name="t21_pause_stays_paused" classname="com.ranjithkb.radionative.DeviceTest" time="46.716" />
+  <testcase name="t22_alarm_survives_another_app_taking_the_sound" classname="com.ranjithkb.radionative.DeviceTest" time="5.642" />
+  <testcase name="t23_malayalam_keeps_jost_for_english" classname="com.ranjithkb.radionative.DeviceTest" time="0.027" />
+  <testcase name="t24_alarm_from_the_background_plays_as_a_foreground_service" classname="com.ranjithkb.radionative.DeviceTest" time="6.732" />
+  <testcase name="t25_car_next_stays_in_favourites" classname="com.ranjithkb.radionative.DeviceTest" time="1.496" />
+  <testcase name="t26_even_volume_on_off_keeps_playing" classname="com.ranjithkb.radionative.DeviceTest" time="9.875" />
+  <testcase name="t27_silent_stream_moves_to_the_next_link" classname="com.ranjithkb.radionative.DeviceTest" time="78.62" />
+  <testcase name="t28_own_station_plays_and_shows_in_the_car" classname="com.ranjithkb.radionative.DeviceTest" time="3.422" />
+  <testcase name="t29_resume_last_station" classname="com.ranjithkb.radionative.DeviceTest" time="4.353" />
+  <testcase name="t30_back_goes_back_before_leaving" classname="com.ranjithkb.radionative.DeviceTest" time="9.417" />
+  <testcase name="t31_car_favourites_follow_tiles_setting" classname="com.ranjithkb.radionative.DeviceTest" time="1.015" />
+  <testcase name="t32_play_last_station_on_opening" classname="com.ranjithkb.radionative.DeviceTest" time="18.823" />
+  <testcase name="e01_every_radio_draws_original_and_theme_light_and_dark" classname="com.ranjithkb.radionative.EraDeviceTest" time="11.83" />
+  <testcase name="e02_tuning_knob_changes_station_both_ways" classname="com.ranjithkb.radionative.EraDeviceTest" time="5.977" />
+  <testcase name="e02b_tuning_knob_turns_smoothly" classname="com.ranjithkb.radionative.EraDeviceTest" time="19.949" />
+  <testcase name="e03_volume_knob_is_the_phone_volume" classname="com.ranjithkb.radionative.EraDeviceTest" time="4.098" />
+  <testcase name="e04_bass_and_treble_knobs_are_the_equaliser_and_keep_playing" classname="com.ranjithkb.radionative.EraDeviceTest" time="5.2" />
+  <testcase name="e05_boombox_keys" classname="com.ranjithkb.radionative.EraDeviceTest" time="6.308" />
+  <testcase name="e06_meters_follow_the_music" classname="com.ranjithkb.radionative.EraDeviceTest" time="7.304" />
+  <testcase name="e07_every_knob_on_every_radio" classname="com.ranjithkb.radionative.EraDeviceTest" time="24.97" />
+  <testcase name="e08_the_drawn_knob_turns" classname="com.ranjithkb.radionative.EraDeviceTest" time="7.409" />
+  <testcase name="e09_turning_knobs_round_like_real_ones" classname="com.ranjithkb.radionative.EraDeviceTest" time="8.033" />
+  <testcase name="e10_swiping_the_radio_flips_the_look_once_and_knobs_never_do" classname="com.ranjithkb.radionative.EraDeviceTest" time="7.8" />
+  <testcase name="e11_fast_spin_and_shaky_finger" classname="com.ranjithkb.radionative.EraDeviceTest" time="7.764" />
+  <testcase name="e12_bottom_bar_swipe_still_changes_station" classname="com.ranjithkb.radionative.EraDeviceTest" time="5.492" />
+  <testcase name="e13_reset_knobs_puts_the_tone_back_to_flat" classname="com.ranjithkb.radionative.EraDeviceTest" time="7.804" />
+</testsuite>

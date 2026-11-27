@@ -1,0 +1,35 @@
+11-27 17:06:32.650  4573  4701 I TestRunner: started: t17_several_alarms_android_rings_the_earliest(com.ranjithkb.radionative.DeviceTest)
+11-27 17:06:32.652  4573  4573 I MediaController: Init 22943bf [AndroidXMedia3/1.5.1] [emu64xa, sdk_gphone64_x86_64, Google, 34]
+11-27 17:06:32.673  1566  1967 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-27 17:06:32.673  1566  1967 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-27 17:06:32.674  1566  1967 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-27 17:06:32.674  1566  1967 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-27 17:06:32.689   879   931 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-27 17:06:32.701  4573  4701 I VELVET-TEST: next alarm: want Soon Fri Nov 27 20:10:00 UTC 2026, Android has Fri Nov 27 20:10:00 UTC 2026
+11-27 17:06:32.705   879  1003 V WallpaperService: Setting wallpaper dimming: 0
+11-27 17:06:32.720  1566  1871 I AiAiEcho: Predicting[0]:
+11-27 17:06:32.720  1566  1871 I AiAiEcho: EchoTargets:
+11-27 17:06:32.720  1566  1871 I AiAiEcho: Filtered by AiAi flag check:
+11-27 17:06:32.721   879   879 D Tonal   : Tonal Palette - index: 4. Main color: ff343e65
+11-27 17:06:32.721   879   879 D Tonal   : Colors: ff0b0c16, ff141627, ff1d2138, ff272d4c, ff343e65, ff41477e, ff4e5597, ff8184a4, ff898cc3, ff9e9ecd, ffb7b6d9, ffd9d7eb, ffefeef7
+11-27 17:06:32.721   879   879 D Tonal   : Gradients:
+11-27 17:06:32.721   879   879 D Tonal   : 	Normal GradientColors(ff343e65, ff343e65)
+11-27 17:06:32.721   879   879 D Tonal   : 	Dark GradientColors(ff272d4c, ff272d4c)
+11-27 17:06:32.721   879   879 D Tonal   : 	Extra dark: GradientColors(ff1d2138, ff1d2138)
+11-27 17:06:32.729  1566  1871 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:
+11-27 17:06:32.730  1566  1871 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+11-27 17:06:32.736  1566  1871 I AiAiEcho: Predicting[0]:
+11-27 17:06:32.737  1566  1871 I AiAiEcho: EchoTargets:
+11-27 17:06:32.737  1566  1871 I AiAiEcho: Filtered by AiAi flag check:
+11-27 17:06:32.737  1566  1871 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:
+11-27 17:06:32.737  1566  1871 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+11-27 17:06:32.742  4573  4573 I MediaController: Release 22943bf [AndroidXMedia3/1.5.1] [emu64xa, sdk_gphone64_x86_64, Google, 34] [media3.common, media3.session, media3.exoplayer, media3.decoder, media3.cast, media3.exoplayer.hls, media3.datasource, media3.extractor]
+11-27 17:06:32.742  4573  4573 I VELVET-PLAY: pause by com.ranjithkb.radio
+11-27 17:06:32.744   879   879 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+11-27 17:06:32.746   879   879 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+11-27 17:06:32.747  1566  1871 I AiAiEcho: Predicting[0]:
+11-27 17:06:32.747  1566  1871 I AiAiEcho: EchoTargets:
+11-27 17:06:32.747  1566  1871 I AiAiEcho: Filtered by AiAi flag check:
+11-27 17:06:32.747  1566  1871 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:
+11-27 17:06:32.747  1566  1871 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface lockscreen with targets# 0 (types=[])
+11-27 17:06:32.752  4573  4701 I TestRunner: finished: t17_several_alarms_android_rings_the_earliest(com.ranjithkb.radionative.DeviceTest)

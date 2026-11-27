@@ -1,0 +1,546 @@
+11-27 17:09:40.010  4573  4701 I TestRunner: started: t30_back_goes_back_before_leaving(com.ranjithkb.radionative.DeviceTest)
+11-27 17:09:40.011  6133  6133 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-27 17:09:40.011  6133  6133 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=PAUSED(2), position=181, buffered position=9144, speed=0.0, updated=520380, actions=7339703, custom actions=[], active item id=0, error=null}
+11-27 17:09:40.011  6133  6133 D AvrcpTargetJni: sendMediaUpdateNative
+11-27 17:09:40.011  6133  6133 I bt_stack: [INFO:avrcp_service.cc(515)] virtual void bluetooth::avrcp::AvrcpService::SendMediaUpdate(bool, bool, bool) track_changed=0 :  play_state=1 :  queue=0
+11-27 17:09:40.012  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=181, buffered position=9144, speed=0.0, updated=520409, actions=7339703, custom actions=[], active item id=0, error=null}
+11-27 17:09:40.012  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:09:40.012  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=181, buffered position=9144, speed=0.0, updated=520409, actions=7339703, custom actions=[], active item id=0, error=null}
+11-27 17:09:40.012  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:09:40.032  1566  1967 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-27 17:09:40.033  1566  1967 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-27 17:09:40.036  4573  4573 I MediaController: Init 89f57f9 [AndroidXMedia3/1.5.1] [emu64xa, sdk_gphone64_x86_64, Google, 34]
+11-27 17:09:40.047   879   931 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-27 17:09:40.049   879   879 W ConstraintSet: id unknown center_vertical_guideline
+11-27 17:09:40.049   879   879 W ConstraintSet: id unknown action_button_guideline
+11-27 17:09:40.049   879   879 W ConstraintSet: id unknown icon
+11-27 17:09:40.049   879   879 W ConstraintSet: id unknown media_seamless
+11-27 17:09:40.049   879   879 W ConstraintSet: id unknown media_action_barrier_start
+11-27 17:09:40.049   879   879 W ConstraintSet: id unknown media_action_barrier_end
+11-27 17:09:40.049   879   879 W ConstraintSet: id unknown media_action_barrier_top
+11-27 17:09:40.049   879   879 W ConstraintSet: id unknown remove_text
+11-27 17:09:40.049   879   879 W ConstraintSet: id unknown settings
+11-27 17:09:40.049   879   879 W ConstraintSet: id unknown dismiss
+11-27 17:09:40.049   879   879 W ConstraintSet: id unknown cancel
+11-27 17:09:40.053  4573  4701 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+11-27 17:09:40.094   879   921 D SplashScreenView: Build android.window.SplashScreenView{c366800 V.E...... ......ID 0,0-0,0}
+11-27 17:09:40.094   879   921 D SplashScreenView: Icon: view: null drawable: null size: 0
+11-27 17:09:40.094   879   921 D SplashScreenView: Branding: view: android.view.View{6da7839 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+11-27 17:09:40.107   397   507 D audioserver: FGS Logger Transaction failed
+11-27 17:09:40.108   397   507 D audioserver: -129
+11-27 17:09:40.121   401   401 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+11-27 17:09:40.240  1156  1873 D EGL_emulation: app_time_stats: avg=5082.19ms min=5082.19ms max=5082.19ms count=1
+11-27 17:09:40.340  4573  4573 W ranjithkb.radio: Verification of void com.ranjithkb.radionative.MainActivity.onCreate(android.os.Bundle) took 104.326ms (1284.43 bytecodes/s) (4920B approximate peak alloc)
+11-27 17:09:40.372  1566  1967 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-27 17:09:40.372  1566  1967 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-27 17:09:40.373  1566  1967 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-27 17:09:40.374  1566  1967 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-27 17:09:40.420  4573  4573 D LifecycleMonitor: Lifecycle status change: com.ranjithkb.radionative.MainActivity@329f423 in: PRE_ON_CREATE
+11-27 17:09:40.427  4573  4573 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+11-27 17:09:40.580   879   931 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-27 17:09:40.776  4573  6905 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+11-27 17:09:40.808   879   931 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-27 17:09:40.820  4573  6905 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+11-27 17:09:40.820   401   401 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+11-27 17:09:40.832  4573  6905 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+11-27 17:09:40.853  4573  4573 D LifecycleMonitor: Lifecycle status change: com.ranjithkb.radionative.MainActivity@329f423 in: CREATED
+11-27 17:09:40.853  4573  4573 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=com.ranjithkb.radionative.MainActivity@329f423
+11-27 17:09:40.858   879   937 D EGL_emulation: app_time_stats: avg=418029.66ms min=418029.66ms max=418029.66ms count=1
+11-27 17:09:40.859  4573  4573 I MediaController: Init 66a9c0a [AndroidXMedia3/1.5.1] [emu64xa, sdk_gphone64_x86_64, Google, 34]
+11-27 17:09:40.862  4573  4573 D LifecycleMonitor: Lifecycle status change: com.ranjithkb.radionative.MainActivity@329f423 in: STARTED
+11-27 17:09:40.863  4573  4573 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=com.ranjithkb.radionative.MainActivity@329f423
+11-27 17:09:40.865  4573  4573 D LifecycleMonitor: Lifecycle status change: com.ranjithkb.radionative.MainActivity@329f423 in: RESUMED
+11-27 17:09:40.865  4573  4573 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.ranjithkb.radionative.MainActivity@329f423
+11-27 17:09:40.871  4573  4573 D CompatibilityChangeReporter: Compat change id reported: 237531167; UID 10192; state: DISABLED
+11-27 17:09:40.896   879   937 D EGL_emulation: app_time_stats: avg=141.42ms min=14.49ms max=446.00ms count=7
+11-27 17:09:40.896   879   931 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-27 17:09:40.901  4573  4573 W OpenGLRenderer: Unknown dataspace 0
+11-27 17:09:40.903   879   879 W ConstraintSet: id unknown center_vertical_guideline
+11-27 17:09:40.917   879   879 W ConstraintSet: id unknown action_button_guideline
+11-27 17:09:40.918   879   879 W ConstraintSet: id unknown icon
+11-27 17:09:40.918   879   879 W ConstraintSet: id unknown media_seamless
+11-27 17:09:40.918   879   879 W ConstraintSet: id unknown media_action_barrier_start
+11-27 17:09:40.918   879   879 W ConstraintSet: id unknown media_action_barrier_end
+11-27 17:09:40.918   879   879 W ConstraintSet: id unknown media_action_barrier_top
+11-27 17:09:40.918   879   879 W ConstraintSet: id unknown remove_text
+11-27 17:09:40.918   879   879 W ConstraintSet: id unknown settings
+11-27 17:09:40.918   879   879 W ConstraintSet: id unknown dismiss
+11-27 17:09:40.918   879   879 W ConstraintSet: id unknown cancel
+11-27 17:09:40.929   879   879 W ConstraintSet: id unknown center_vertical_guideline
+11-27 17:09:40.929   879   879 W ConstraintSet: id unknown action_button_guideline
+11-27 17:09:40.929   879   879 W ConstraintSet: id unknown icon
+11-27 17:09:40.929   879   879 W ConstraintSet: id unknown media_seamless
+11-27 17:09:40.929   879   879 W ConstraintSet: id unknown media_action_barrier_start
+11-27 17:09:40.929   879   879 W ConstraintSet: id unknown media_action_barrier_end
+11-27 17:09:40.929   879   879 W ConstraintSet: id unknown media_action_barrier_top
+11-27 17:09:40.929   879   879 W ConstraintSet: id unknown remove_text
+11-27 17:09:40.929   879   879 W ConstraintSet: id unknown settings
+11-27 17:09:40.929   879   879 W ConstraintSet: id unknown dismiss
+11-27 17:09:40.929   879   879 W ConstraintSet: id unknown cancel
+11-27 17:09:40.931  4573  4573 D LifecycleMonitor: Lifecycle status change: com.ranjithkb.radionative.MainActivity@329f423 in: PAUSED
+11-27 17:09:40.931  4573  4573 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.ranjithkb.radionative.MainActivity@329f423
+11-27 17:09:40.934   879   879 W ConstraintSet: id unknown center_vertical_guideline
+11-27 17:09:40.934   879   879 W ConstraintSet: id unknown action_button_guideline
+11-27 17:09:40.934   879   879 W ConstraintSet: id unknown icon
+11-27 17:09:40.934   879   879 W ConstraintSet: id unknown media_seamless
+11-27 17:09:40.934   879   879 W ConstraintSet: id unknown media_action_barrier_start
+11-27 17:09:40.934   879   879 W ConstraintSet: id unknown media_action_barrier_end
+11-27 17:09:40.934   879   879 W ConstraintSet: id unknown media_action_barrier_top
+11-27 17:09:40.935   879   879 W ConstraintSet: id unknown remove_text
+11-27 17:09:40.935   879   879 W ConstraintSet: id unknown settings
+11-27 17:09:40.935   879   879 W ConstraintSet: id unknown dismiss
+11-27 17:09:40.935   879   879 W ConstraintSet: id unknown cancel
+11-27 17:09:41.020   891   891 D CompatibilityChangeReporter: Compat change id reported: 171228096; UID 10182; state: ENABLED
+11-27 17:09:41.025   891   891 D CompatibilityChangeReporter: Compat change id reported: 210923482; UID 10182; state: ENABLED
+11-27 17:09:41.109   891   891 W LOTTIE  : Animation contains merge paths. Merge paths are only supported on KitKat+ and must be manually enabled by calling enableMergePathsForKitKatAndAbove().
+11-27 17:09:41.125   891   891 W LOTTIE  : Animation contains merge paths but they are disabled.
+11-27 17:09:41.147   891   891 D CompatibilityChangeReporter: Compat change id reported: 237531167; UID 10182; state: DISABLED
+11-27 17:09:41.170   401   415 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10182 pid=891
+11-27 17:09:41.170   401   415 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10182 => denied (132 us)
+11-27 17:09:41.170   401   577 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10182 pid=0
+11-27 17:09:41.170   401   577 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10182 => denied (425 us)
+11-27 17:09:41.170   401   577 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10182 pid=0
+11-27 17:09:41.170   401   577 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10182 => denied (68 us)
+11-27 17:09:41.170   401   577 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10182 pid=0
+11-27 17:09:41.170   401   577 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10182 => denied (126 us)
+11-27 17:09:41.173   401   415 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10182 pid=891
+11-27 17:09:41.173   401   415 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10182 => denied (3100 us)
+11-27 17:09:41.178   525  2152 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10182 pid=0
+11-27 17:09:41.178   525  2152 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10182 => denied (46 us)
+11-27 17:09:41.178   525  2152 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10182 pid=0
+11-27 17:09:41.178   525  2152 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10182 => denied (24 us)
+11-27 17:09:41.178   525  2152 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10182 pid=0
+11-27 17:09:41.178   525  2152 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10182 => denied (52 us)
+11-27 17:09:41.208   525   544 I ActivityTaskManager: Displayed com.google.android.permissioncontroller/com.android.permissioncontroller.permission.ui.GrantPermissionsActivity for user 0: +1s120ms
+11-27 17:09:41.370  4573  4573 W WindowOnBackDispatcher: OnBackInvokedCallback is not enabled for the application.
+11-27 17:09:41.370  4573  4573 W WindowOnBackDispatcher: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+11-27 17:09:41.485   401   642 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10192 pid=0
+11-27 17:09:41.485   401   642 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10192 => denied (102 us)
+11-27 17:09:41.485   401   642 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10192 pid=0
+11-27 17:09:41.485   401   642 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10192 => denied (123 us)
+11-27 17:09:41.485   401   415 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10192 pid=4573
+11-27 17:09:41.485   401   415 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10192 => denied (64 us)
+11-27 17:09:41.485   401   642 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10192 pid=0
+11-27 17:09:41.485   401   642 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10192 => denied (191 us)
+11-27 17:09:41.508  4573  6901 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+11-27 17:09:41.550   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+11-27 17:09:41.550  4573  6901 I Gralloc4: mapper 4.x is not supported
+11-27 17:09:42.114   525  2246 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10192 pid=0
+11-27 17:09:42.114   525  2246 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10192 => denied (170 us)
+11-27 17:09:42.114   525  2246 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10192 pid=0
+11-27 17:09:42.114   525  2246 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10192 => denied (27 us)
+11-27 17:09:42.114   525  2246 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10192 pid=0
+11-27 17:09:42.114   525  2246 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10192 => denied (15 us)
+11-27 17:09:42.147  4573  4584 I OpenGLRenderer: Davey! duration=1193ms; Flags=1, FrameTimelineVsyncId=69195, IntendedVsync=521325442080, Vsync=521342108746, InputEventId=0, HandleInputStart=521352785180, AnimationStart=521352789748, PerformTraversalsStart=521352792373, DrawStart=521981573062, FrameDeadline=521342108746, FrameInterval=521352753390, FrameStartTime=16666666, SyncQueued=522019844545, SyncStart=522020075610, IssueDrawCommandsStart=522020534444, SwapBuffers=522402975257, FrameCompleted=522519115463, DequeueBufferDuration=4148, QueueBufferDuration=381684, GpuCompleted=522519042638, SwapBuffersCompleted=522519115463, DisplayPresentTime=137438953471, CommandSubmissionCompleted=522402975257,
+11-27 17:09:42.150   879   920 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@39a042c
+11-27 17:09:42.159   525  2246 W InputManager-JNI: Input channel object 'ad9de Splash Screen com.ranjithkb.radio (client)' was disposed without first being removed with the input manager!
+11-27 17:09:42.164   891   891 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@e6dd9b7
+11-27 17:09:42.164  1156  1156 I ActivityThread: Schedule relaunch activity: com.google.android.apps.nexuslauncher.NexusLauncherActivity
+11-27 17:09:42.164  1156  1156 I ActivityThread: Schedule relaunch activity: com.google.android.apps.nexuslauncher.NexusLauncherActivity
+11-27 17:09:42.164   525  2246 W InputManager-JNI: Input channel object '61086ab com.google.android.permissioncontroller/com.android.permissioncontroller.permission.ui.GrantPermissionsActivity (client)' was disposed without first being removed with the input manager!
+11-27 17:09:42.175  1156  2097 D OneSearchSuggestProvider: Shut down the binder channel
+11-27 17:09:42.177  1156  1669 I IPCThreadState: oneway function results for code 2 on binder at 0x7a4c6fed3a10 will be dropped but finished with status UNKNOWN_TRANSACTION
+11-27 17:09:42.184  6133  6187 D BtGatt.ScanManager: uid 10129 isForeground true scanMode -1
+11-27 17:09:42.186  1156  1205 I ImeTracker: com.google.android.apps.nexuslauncher:302f350e: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+11-27 17:09:42.223  4573  4573 I Choreographer: Skipped 73 frames!  The application may be doing too much work on its main thread.
+11-27 17:09:42.268  1156  1156 D b/254119092: clearActivity
+11-27 17:09:42.268  1156  1156 D b/254119092: mActivity and mContext agree taskbarIsPresent=false
+11-27 17:09:42.286   336  6921 I resolv  : GetAddrInfoHandler::run: {105 105 105 983145 10192 0}
+11-27 17:09:42.294   525  2246 I ImeTracker: com.google.android.apps.nexuslauncher:302f350e: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-27 17:09:42.295  1672  3281 I PBSessionCacheImpl: Deleted sessionId[7355329565513565] from persistence.
+11-27 17:09:42.308   336  6923 I resolv  : res_nmkquery: (QUERY, IN, A)
+11-27 17:09:42.311   336  6922 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+11-27 17:09:42.311   336  6922 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7ec38e87efd0
+11-27 17:09:42.311   336  6922 I resolv  : doQuery: rcode=0, ancount=0, return value=91
+11-27 17:09:42.320  1156  1156 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@7578d16
+11-27 17:09:42.323  1156  1156 W WindowOnBackDispatcher: OnBackInvokedCallback is not enabled for the application.
+11-27 17:09:42.323  1156  1156 W WindowOnBackDispatcher: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+11-27 17:09:42.341  1672  2615 I A       : Using proto config with mendel
+11-27 17:09:42.342  1672  2615 I A       : Using proto config with mendel
+11-27 17:09:42.343  1672  2615 W SearchServiceCore: Abort, client detached.
+11-27 17:09:42.356   336  6923 I resolv  : res_nsend: used send_dg 95 terrno: 0
+11-27 17:09:42.356   336  6923 I resolv  : doQuery: rcode=0, ancount=4, return value=95
+11-27 17:09:42.360  1156  1205 I AiAiSuggestUi: Connecting to system intelligence module.
+11-27 17:09:42.361  4573  6914 D TrafficStats: tagSocket(200) with statsTag=0xffffffff, statsUid=-1
+11-27 17:09:42.424  4573  4573 D CompatibilityChangeReporter: Compat change id reported: 78294732; UID 10192; state: ENABLED
+11-27 17:09:42.425  4573  4573 D LifecycleMonitor: Lifecycle status change: com.ranjithkb.radionative.MainActivity@329f423 in: RESUMED
+11-27 17:09:42.426  4573  4573 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=com.ranjithkb.radionative.MainActivity@329f423
+11-27 17:09:42.447  1566  1566 I AiAiOverview: Created AiAiContentSuggestionsService.
+11-27 17:09:42.450  1156  1520 I AiAiSuggestUi: Successfully connected to system intelligence:
+11-27 17:09:42.459   525  2710 I ImeTracker: com.ranjithkb.radio:33355d95: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+11-27 17:09:42.459   525  2710 I ImeTracker: com.ranjithkb.radio:33355d95: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-27 17:09:42.475  1462  1462 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+11-27 17:09:42.512   336  6930 I resolv  : GetAddrInfoHandler::run: {105 105 105 983145 10192 0}
+11-27 17:09:42.520   336  6931 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+11-27 17:09:42.575   336  6932 I resolv  : res_nmkquery: (QUERY, IN, A)
+11-27 17:09:42.575   336  6931 I resolv  : res_nsend: used send_dg 93 terrno: 0
+11-27 17:09:42.575   336  6931 I resolv  : doQuery: rcode=0, ancount=2, return value=93
+11-27 17:09:42.577  6133  6187 D BtGatt.ScanManager: uid 10129 isForeground true scanMode -1
+11-27 17:09:42.585  1462  1462 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+11-27 17:09:42.586  1462  1462 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.ranjithkb.radio fieldId=0 fieldName=null extras=null}, false)
+11-27 17:09:42.587  1462  1462 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+11-27 17:09:42.593  1462  1462 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+11-27 17:09:42.598  1462  1462 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+11-27 17:09:42.599  1462  1462 I KeyboardModeManager: KeyboardModeManager.setInputView():364 setInputView() : supportsOneHandedMode=true
+11-27 17:09:42.600  1462  1462 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+11-27 17:09:42.601  1462  1462 I KeyboardModeManager: KeyboardModeManager.setInputView():356 setInputView() : entry=hwn{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_device=phone_device_size=default_enable_adaptive_text_editing=true_enable_inline_suggestions_on_client_side=false_enable_large_tablet_batch_1=false_enable_large_tablet_batch_2=false_enable_more_candidates_view_for_multilingual=false_enable_nav_redesign=false_enable_number_row=false_enable_preemptive_decode=true_enable_secondary_symbols=false_expressions=normal_four_or_more_letter_rows=false_keyboard_mode=normal_language=en-US_orientation=portrait_physical_keyboard=qwerty_show_secondary_digits=true_show_suggestions=true_split_with_duplicate_keys=true_variant=qwerty, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}
+11-27 17:09:42.605  1462  1462 I StyledKeyboardTheme: StyledKeyboardTheme.<init>():87 Pref: [], themeName: [silk:], darkMode: [false], cacheKey: [overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff0f0f3-ff76d1ff-ce191c6173d879ea127e4e40bfd70d3c]
+11-27 17:09:42.609  1462  1462 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+11-27 17:09:42.609  1462  1462 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+11-27 17:09:42.610  1462  1462 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+11-27 17:09:42.610  1462  1462 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+11-27 17:09:42.610  1462  1462 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+11-27 17:09:42.610  1462  1462 I GoogleInputMethodService: GoogleInputMethodService.initializeKeyboardTheme():1343 Apply keyboard theme: theme_border_bottom4dp_stylesheet_noshadow_gsans_pillkey_silkpopup_refinedkp_materiallight_phone_400_overlay_builtin_dynamic_color_light_base.binarypb:dynamic-light-fff0f0f3-ff76d1ff-ce191c6173d879ea127e4e40bfd70d3c_port
+11-27 17:09:42.612  1462  1462 I GoogleInputMethodService: GoogleInputMethodService.onCreateInputView():1768 onCreateInputView()
+11-27 17:09:42.613  1156  1156 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+11-27 17:09:42.615  1156  1156 D DeviceSearchAlg: search timeout = %d200
+11-27 17:09:42.616  1156  1156 W PageIndicator: Total number of pages invalid: 0. Assuming 1 page.
+11-27 17:09:42.616  1156  1156 W BcSmartspaceView: Current card is not present in the Adapter; cannot log.
+11-27 17:09:42.618   336  6932 I resolv  : res_nsend: used send_dg 69 terrno: 0
+11-27 17:09:42.619   336  6932 I resolv  : doQuery: rcode=0, ancount=2, return value=69
+11-27 17:09:42.620  1156  1156 I OverviewComponentObserver: updateOverviewTargets: mIsHomeDisabled=false, isDefaultHomeNull=false, mIsDefaultHome=true
+11-27 17:09:42.622  4573  6861 D TrafficStats: tagSocket(204) with statsTag=0xffffffff, statsUid=-1
+11-27 17:09:42.623  1462  1462 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+11-27 17:09:42.624  1462  1462 I KeyboardViewUtil: KeyboardViewUtil.getKeyboardHeightRatio():189 systemKeyboardHeightRatio:1.000000; userKeyboardHeightRatio:1.000000.
+11-27 17:09:42.626  1462  1462 I DeviceModeUtil: DeviceModeUtil.getDeviceMode():122 Get device mode phone by ui mode:1 and smallestScreenWidthDp:411
+11-27 17:09:42.629  1462  1462 I KeyboardModeManager: KeyboardModeManager.setInputView():364 setInputView() : supportsOneHandedMode=true
+11-27 17:09:42.630  1462  1462 I AndroidIME: KeyboardViewManager.updateKeyboardBackgroundFrameVisibility():357 Set background frame visibility. old:8, new:8
+11-27 17:09:42.630  1462  1462 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+11-27 17:09:42.631  1462  1462 I NormalModeController: NormalModeController.getKeyboardBodyViewHolderPaddingBottom():116 currentPrimeKeyboardType:SOFT systemPaddingBottom:-1
+11-27 17:09:42.634  5437  5629 I FontLog : Updating from directory version 0 to 25 from disk [CONTEXT service_id=132 ]
+11-27 17:09:42.635  1462  1462 I KeyboardModeManager: KeyboardModeManager.setInputView():356 setInputView() : entry=hwn{languageTag=en-US, variant=qwerty, hasLocalizedResources=true, conditionCacheKey=_device=phone_device_size=default_enable_adaptive_text_editing=true_enable_inline_suggestions_on_client_side=false_enable_large_tablet_batch_1=false_enable_large_tablet_batch_2=false_enable_more_candidates_view_for_multilingual=false_enable_nav_redesign=false_enable_number_row=false_enable_preemptive_decode=true_enable_secondary_symbols=false_expressions=normal_four_or_more_letter_rows=false_keyboard_mode=normal_language=en-US_orientation=portrait_physical_keyboard=qwerty_show_secondary_digits=true_show_suggestions=true_split_with_duplicate_keys=true_variant=qwerty, imeDef.stringId=ime_english_united_states, imeDef.className=com.google.android.apps.inputmethod.libs.latin5.LatinIme, imeDef.languageTag=en-US}
+11-27 17:09:42.639  1566  1566 I AiAiEcho: SearchContextManagerImpl::setSearchContext resultTypes=[141151] extras=[Bundle[mParcelledData.dataSize=684]] sessionId=[com.google.android.apps.nexuslauncher:e8419333-2861-4038-9250-e6b7774c3b15,0]
+11-27 17:09:42.644  1156  1205 D SearchTargetUtil:  query= size=1
+11-27 17:09:42.644  1156  1205 D SearchTargetUtil: layoutType=icon_row resultType=4096 packageName= extras=Bundle{icon_container_enabled=true,zero_state_all_apps_web_suggest_count=3,rank=1.0,key_ipc_start=523048,hide_subtitle=true,zero_state_qsb_web_suggest_count=10,}ParentID: null targetID: SESSION_INFO:0::zero_state_flags
+11-27 17:09:42.647  1156  1156 D AutofillManager: view is not autofillable - activity denied for autofill
+11-27 17:09:42.650  5437  5471 I FontLog : Using directory in FlatBuffer format [CONTEXT service_id=132 ]
+11-27 17:09:42.660  1156  1156 I ContentCaptureHelper: Setting logging level to DEBUG
+11-27 17:09:42.660  1156  1156 D ContentCaptureManager: setFlushViewTreeAppearingEventDisabled(): setting to false
+11-27 17:09:42.660  1156  1156 D ContentCaptureManager: updateWindowAttributes(): window flags=-2137980672
+11-27 17:09:42.668  1156  1156 D ContentCaptureManager: updateWindowAttributes(): window flags=-2137980672
+11-27 17:09:42.695  5437  5629 I FontLog : Received query Noto Color Emoji Compat, URI content://com.google.android.gms.fonts [CONTEXT service_id=132 ]
+11-27 17:09:42.698  5437  5629 I FontLog : Query [emojicompat-emoji-font] resolved to {Noto Color Emoji Compat, wdth 100.0, wght 400, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+11-27 17:09:42.707  5437  5629 I FontLog : Fetch {Noto Color Emoji Compat, wdth 100.0, wght 400, ital 0.0, bestEffort false} end status Status{statusCode=SUCCESS, resolution=null} [CONTEXT service_id=132 ]
+11-27 17:09:42.710  5437  5629 I FontLog : Pulling font file for id = 1, cache size = 1 [CONTEXT service_id=132 ]
+11-27 17:09:42.729  5437  5629 I FontLog : Pulling font file for id = 1, cache size = 1 [CONTEXT service_id=132 ]
+11-27 17:09:42.734  1156  1156 I Choreographer: Skipped 31 frames!  The application may be doing too much work on its main thread.
+11-27 17:09:42.734  1156  1205 I ImeTracker: com.google.android.apps.nexuslauncher:30362417: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+11-27 17:09:42.735   525   605 I ImeTracker: com.google.android.apps.nexuslauncher:30362417: onCancelled at PHASE_SERVER_CLIENT_FOCUSED
+11-27 17:09:42.747  4573  4584 I OpenGLRenderer: Davey! duration=1733ms; Flags=0, FrameTimelineVsyncId=69239, IntendedVsync=521408775410, Vsync=522625442028, InputEventId=0, HandleInputStart=522628899841, AnimationStart=522628903498, PerformTraversalsStart=522715345719, DrawStart=522715572192, FrameDeadline=522542108698, FrameInterval=522628290562, FrameStartTime=16666666, SyncQueued=522756950711, SyncStart=522756983452, IssueDrawCommandsStart=522757073189, SwapBuffers=523039707156, FrameCompleted=523142364253, DequeueBufferDuration=2654, QueueBufferDuration=328443, GpuCompleted=523142364253, SwapBuffersCompleted=523134711408, DisplayPresentTime=7517686669918416946, CommandSubmissionCompleted=523039707156,
+11-27 17:09:42.759  1156  1205 I ImeTracker: com.google.android.apps.nexuslauncher:66e8e88b: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+11-27 17:09:42.759   525  2152 I ImeTracker: com.google.android.apps.nexuslauncher:66e8e88b: onCancelled at PHASE_SERVER_CLIENT_FOCUSED
+11-27 17:09:42.775  1156  1156 W BcSmartspaceCard: No title view to update
+11-27 17:09:42.775  1156  1156 I BcSmartspaceCard: setFormattedContentDescription: text=null, iconDescription=null, contentDescription=null
+11-27 17:09:42.828  1672  1672 I ImeTracker: com.google.android.googlequicksearchbox:search:e9c9ac2d: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+11-27 17:09:42.828  1672  1672 I ImeTracker: com.google.android.googlequicksearchbox:search:e9c9ac2d: onFailed at PHASE_CLIENT_VIEW_SERVED
+11-27 17:09:42.836  5437  6387 I DiscoveryManager: Filter criteria(CC1AD845) scannerFlags(2)
+11-27 17:09:42.836  5437  6387 W DatabaseProcessor: processLocalDevices: failed to get the network info with non-null networkId.
+11-27 17:09:42.841  5437  5437 I CastMediaRouteProvider: Published 0 routes
+11-27 17:09:42.857  1672  1672 W PhoneWindow: Previously focused view reported id 2131435089 during save, but can't be found during restore.
+11-27 17:09:42.878  5437  6387 W GuestModeDeviceProber: setFilterCriteria
+11-27 17:09:42.880  5437  6387 W DatabaseProcessor: processLocalDevices: failed to get the network info with non-null networkId.
+11-27 17:09:42.896  5437  5437 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.mdns.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+11-27 17:09:42.896  5437  5437 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.mdns.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+11-27 17:09:42.904  1672  1672 I ImeTracker: com.google.android.googlequicksearchbox:search:6756a5b3: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+11-27 17:09:42.904  1672  1672 I ImeTracker: com.google.android.googlequicksearchbox:search:6756a5b3: onFailed at PHASE_CLIENT_VIEW_SERVED
+11-27 17:09:42.906  5437  6387 I CastDatabase: Saving the database
+11-27 17:09:42.914  1672  1672 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@72b37f4
+11-27 17:09:42.915   525  2246 W InputManager-JNI: Input channel object '5ca09b6 com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity (client)' was disposed without first being removed with the input manager!
+11-27 17:09:42.916  1156  1156 D TISBindHelper: TIS service connected
+11-27 17:09:42.916  1156  1156 D b/254119092: Set mActivity=com.google.android.apps.nexuslauncher.NexusLauncherActivity@4b277a9
+11-27 17:09:42.916  1156  1156 D b/254119092: mActivity and mContext agree taskbarIsPresent=false
+11-27 17:09:42.917  1156  1156 D MainContentCaptureSession: handleScheduleFlush(act:com.google.android.apps.nexuslauncher/.NexusLauncherActivity [state=1 (WAITING_FOR_SERVER), disabled=false], reason=FORCE_FLUSH): not a timeout reason because mDirectServiceInterface is not ready yet
+11-27 17:09:42.926  1156  1178 I s.nexuslauncher: Background young concurrent copying GC freed 50682(2013KB) AllocSpace objects, 4(480KB) LOS objects, 18% free, 10038KB/11MB, paused 1.148ms,12us total 283.200ms
+11-27 17:09:42.936  1672  1672 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@a353c36
+11-27 17:09:42.937   525  2710 W InputManager-JNI: Input channel object 'c040c0e com.google.android.googlequicksearchbox/android.app.ContextImpl (client)' was disposed without first being removed with the input manager!
+11-27 17:09:42.939  5437  6938 D TrafficStats: tagSocket(220) with statsTag=0x30000900, statsUid=-1
+11-27 17:09:42.943  5437  6387 I SQLiteCastStore: [CastNetworkInfo] saved: 0, skipped: 0, [CastDeviceInfo]: saved 0, skipped 0, [Paired Guest Mode DeviceInfo] saved: 0, skipped: 0. [ProbedNetworks]: saved 0, skipped: 0, [ProbedSocketAddress]: saved 0, skipped: 0, [Network-Device pairs]: saved: 0
+11-27 17:09:42.949   525   803 D ConnectivityService: NetReassign [no changes] [c 0] [a 0] [i 1]
+11-27 17:09:42.958   525   936 I WifiService: acquireMulticastLock uid=10129
+11-27 17:09:42.959  1566  2050 I AiAiStatsd: Successfully logged feature usage for VISUAL_CORTEX.
+11-27 17:09:42.964  1031  6154 D IpClient.wlan0: set max DTIM multiplier to 1
+11-27 17:09:42.964   525   796 E WifiStaIfaceAidlImpl: installApfPacketFilter failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+11-27 17:09:42.965   525   796 E WifiStaIfaceAidlImpl: setDtimMultiplier failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+11-27 17:09:42.974   342  1624 D android.hardware.audio@7.1-impl.ranchu: threadLoop: entering standby, frames: 6683584
+11-27 17:09:43.011  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=182, buffered position=11160, speed=0.0, updated=523414, actions=7339703, custom actions=[], active item id=0, error=null}
+11-27 17:09:43.011  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:09:43.011  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=182, buffered position=11160, speed=0.0, updated=523414, actions=7339703, custom actions=[], active item id=0, error=null}
+11-27 17:09:43.011  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:09:43.121   483   877 D BufferPoolAccessor2.0: bufferpool2 0x78ca33c54038 : 0(0 size) total buffers - 0(0 size) used buffers - 85/88 (recycle/alloc) - 3/88 (fetch/transfer)
+11-27 17:09:43.121   483   877 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 1
+11-27 17:09:43.121  4573  4895 D BufferPoolAccessor2.0: bufferpool2 0x7a4acfea5ce8 : 0(0 size) total buffers - 0(0 size) used buffers - 101/106 (recycle/alloc) - 13/176 (fetch/transfer)
+11-27 17:09:43.121  4573  4895 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 1
+11-27 17:09:43.341  5437  6935 W DatabaseProcessor: processLocalDevices: failed to get the network info with non-null networkId.
+11-27 17:09:43.341  5437  5437 I CastMediaRouteProvider: Published 0 routes
+11-27 17:09:45.096   891   900 W ssioncontroller: Cleared Reference was only reachable from finalizer (only reported once)
+11-27 17:09:45.121   483   877 D BufferPoolAccessor2.0: bufferpool2 0x78ca33c55068 : 3(6912 size) total buffers - 0(0 size) used buffers - 29/32 (recycle/alloc) - 3/32 (fetch/transfer)
+11-27 17:09:45.121   483   877 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 1
+11-27 17:09:45.121  4573  4895 D BufferPoolAccessor2.0: bufferpool2 0x7a4acfea2568 : 5(40960 size) total buffers - 0(0 size) used buffers - 28/33 (recycle/alloc) - 5/64 (fetch/transfer)
+11-27 17:09:45.121  4573  4895 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 1
+11-27 17:09:46.166   336  6948 I resolv  : GetAddrInfoHandler::run: {105 105 105 983145 10192 0}
+11-27 17:09:46.166   336  6949 I resolv  : GetAddrInfoHandler::run: {105 105 105 983145 10192 0}
+11-27 17:09:46.169   336  6953 I resolv  : res_nmkquery: (QUERY, IN, A)
+11-27 17:09:46.169   336  6953 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7ec38e881ff0
+11-27 17:09:46.169   336  6953 I resolv  : doQuery: rcode=0, ancount=2, return value=69
+11-27 17:09:46.169   336  6952 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+11-27 17:09:46.169   336  6952 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7ec2fe887650
+11-27 17:09:46.169   336  6952 I resolv  : doQuery: rcode=0, ancount=2, return value=93
+11-27 17:09:46.172  4573  6915 D TrafficStats: tagSocket(151) with statsTag=0xffffffff, statsUid=-1
+11-27 17:09:46.173   336  6950 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+11-27 17:09:46.173   336  6951 I resolv  : res_nmkquery: (QUERY, IN, A)
+11-27 17:09:46.174   336  6951 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7ec38e881ff0
+11-27 17:09:46.174   336  6951 I resolv  : doQuery: rcode=0, ancount=2, return value=69
+11-27 17:09:46.174   336  6950 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7ec2fe887650
+11-27 17:09:46.174   336  6950 I resolv  : doQuery: rcode=0, ancount=2, return value=93
+11-27 17:09:46.175  4573  6914 D TrafficStats: tagSocket(147) with statsTag=0xffffffff, statsUid=-1
+11-27 17:09:46.177   336  6954 I resolv  : GetAddrInfoHandler::run: {105 105 105 983145 10192 0}
+11-27 17:09:46.180   336  6956 I resolv  : res_nmkquery: (QUERY, IN, A)
+11-27 17:09:46.180   336  6956 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7ec38e881ff0
+11-27 17:09:46.180   336  6956 I resolv  : doQuery: rcode=0, ancount=2, return value=69
+11-27 17:09:46.183   336  6955 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+11-27 17:09:46.184   336  6955 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7ec2fe887650
+11-27 17:09:46.184   336  6955 I resolv  : doQuery: rcode=0, ancount=2, return value=93
+11-27 17:09:46.184  4573  6917 D TrafficStats: tagSocket(156) with statsTag=0xffffffff, statsUid=-1
+11-27 17:09:46.312  4573  6901 D EGL_emulation: app_time_stats: avg=698.08ms min=20.51ms max=2961.64ms count=6
+11-27 17:09:46.325  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=182, buffered position=14952, speed=0.0, updated=526724, actions=7339703, custom actions=[], active item id=0, error=null}
+11-27 17:09:46.331  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:09:46.331  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=182, buffered position=14952, speed=0.0, updated=526724, actions=7339703, custom actions=[], active item id=0, error=null}
+11-27 17:09:46.331  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:09:46.340  5437  6938 W AdaptiveDiscoveryWorker: Exiting Adaptive Discovery. Current NetworkInfo is NULL.
+11-27 17:09:46.390  4573  4580 I ranjithkb.radio: Background young concurrent copying GC freed 55478(2406KB) AllocSpace objects, 29(1024KB) LOS objects, 13% free, 16MB/19MB, paused 107us,21us total 192.172ms
+11-27 17:09:46.453  4573  4573 D CompatibilityChangeReporter: Compat change id reported: 147798919; UID 10192; state: ENABLED
+11-27 17:09:47.070  4573  4573 D LifecycleMonitor: Lifecycle status change: com.ranjithkb.radionative.MainActivity@329f423 in: PAUSED
+11-27 17:09:47.070  4573  4573 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=com.ranjithkb.radionative.MainActivity@329f423
+11-27 17:09:47.070   401   401 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+11-27 17:09:47.165   525  1594 W AppSearchIcing: icing-search-engine.cc:283: Error: 5, Message: Document (com.google.android.googlequicksearchbox$OneSearchZeroStateGoogleSuggestions/default, zp) not found.
+11-27 17:09:47.167  1566  1871 I AiAiEcho: Predicting[0]:
+11-27 17:09:47.167  1566  1871 I AiAiEcho: EchoTargets:
+11-27 17:09:47.167  1566  1871 I AiAiEcho: Filtered by AiAi flag check:
+11-27 17:09:47.167  1566  1871 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:
+11-27 17:09:47.170  1156  2097 D OneSearchSuggestProvider: Created the binder channel successfully for end point service =com.google.android.apps.search.googleapp.search.suggest.plugins.onesearch.server.OneSearchSuggestService , mChannel=z1{delegate=s1{logId=9, target=directaddress:///AndroidComponentAddress%5BIntent%20%7B%20act=grpc.io.action.BIND%20cmp=com.google.android.googlequicksearchbox/com.google.android.apps.search.googleapp.search.suggest.plugins.onesearch.server.OneSearchSuggestService%20%7D%5D}} , mOneSearchConnection=X1.T@966faa0
+11-27 17:09:47.179  1566  1871 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+11-27 17:09:47.369   879   937 D EGL_emulation: app_time_stats: avg=6472.63ms min=6472.63ms max=6472.63ms count=1
+11-27 17:09:47.382   525   644 D WifiNl80211Manager: Scan result ready event
+11-27 17:09:47.382   525   644 D WifiNative: Scan result ready event
+11-27 17:09:47.454  4573  4573 W GlobalMediaRouter: Ignoring invalid provider descriptor: null
+11-27 17:09:47.454  5437  6938 I DiscoveryManager: Filter criteria(null) scannerFlags(2)
+11-27 17:09:47.456  5437  6938 W DatabaseProcessor: processLocalDevices: failed to get the network info with non-null networkId.
+11-27 17:09:47.459  5437  6938 W GuestModeDeviceProber: setFilterCriteria
+11-27 17:09:47.459  5437  6938 W DatabaseProcessor: processLocalDevices: failed to get the network info with non-null networkId.
+11-27 17:09:47.461  5437  6938 W DatabaseProcessor: processLocalDevices: failed to get the network info with non-null networkId.
+11-27 17:09:47.461   525  2499 I WifiService: releaseMulticastLock uid=10129
+11-27 17:09:47.462  5437  5437 I CastMediaRouteProvider: Published 0 routes
+11-27 17:09:47.465  1031  6154 D IpClient.wlan0: set max DTIM multiplier to 2
+11-27 17:09:47.465   525   796 E WifiStaIfaceAidlImpl: installApfPacketFilter failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+11-27 17:09:47.466   525   796 E WifiStaIfaceAidlImpl: setDtimMultiplier failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+11-27 17:09:47.474  1672  1672 I A       : Constructor was called
+11-27 17:09:47.476  1672  1672 I A       : No savedInstanceState.
+11-27 17:09:47.479  1672  1672 I A       : makeRequest: subscribing to new source
+11-27 17:09:47.481  1672  1672 I A       : OnCreate Was Called
+11-27 17:09:47.482  1672  2360 W A       : Couldn't calculate ClientInstanceId, no account name
+11-27 17:09:47.485  1672  1672 I A       : getMinusOnePromotion
+11-27 17:09:47.510  1672  2520 I A       : #enqueuePeriodicJob: running = false
+11-27 17:09:47.516  1672  2548 I A       : loading data on surface MinusOne.
+11-27 17:09:47.525  1672  1672 I A       : Created gRPC endpoint to "search" for service class com.google.android.apps.search.googleapp.search.suggest.plugins.onesearch.server.OneSearchSuggestService
+11-27 17:09:47.526  1672  2520 I A       : #scheduledRefresh: enable_prod_refresh is true but we have no valid refresh schedule
+11-27 17:09:47.529  1672  1672 I A       : onApplyWindowInsets: systemWindowInsets=Insets{left=0, top=128, right=0, bottom=63}
+11-27 17:09:47.529  1672  1672 I A       : onApplyWindowInsets: Adjusting for display cutouts. Safe insets: left=0, top=128, right=0, bottom=0
+11-27 17:09:47.529  1672  1672 I A       : onApplyWindowInsets: systemWindowInsets=Insets{left=0, top=128, right=0, bottom=63}
+11-27 17:09:47.668  4573  4701 I VELVET-TEST: after leaving, the screen is STARTED
+11-27 17:09:47.699   392   392 I android.hardware.power-service.example: Power isModeSupported: 6
+11-27 17:09:47.790  1672  2359 W SQLiteLog: (28) double-quoted string literal: "MAIN_FEED"
+11-27 17:09:47.803   525   644 I ImeTracker: com.google.android.apps.nexuslauncher:e4e55d5: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+11-27 17:09:47.803   525   644 I ImeTracker: com.google.android.apps.nexuslauncher:e4e55d5: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-27 17:09:47.807  1462  1462 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+11-27 17:09:47.813  1462  1462 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+11-27 17:09:47.813  1462  1462 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.google.android.apps.nexuslauncher fieldId=0 fieldName=null extras=null}, false)
+11-27 17:09:47.814  1462  1462 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+11-27 17:09:47.819   879   921 D SplashScreenView: Build android.window.SplashScreenView{7e541c9 V.E...... ......ID 0,0-0,0}
+11-27 17:09:47.819   879   921 D SplashScreenView: Icon: view: null drawable: null size: 0
+11-27 17:09:47.819   879   921 D SplashScreenView: Branding: view: android.view.View{11e70ce G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+11-27 17:09:47.820  1672  2359 W SQLiteLog: (28) double-quoted string literal: "Session::Current"
+11-27 17:09:47.823  1672  2359 W SQLiteLog: (28) double-quoted string literal: "MAIN_FEED"
+11-27 17:09:47.823  1672  2359 W SQLiteLog: (28) double-quoted string literal: "Session::Current"
+11-27 17:09:47.860  1462  1462 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+11-27 17:09:47.897   879   879 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+11-27 17:09:47.906  5437  5629 I FontLog : Received query Google Sans, URI content://com.google.android.gms.fonts [CONTEXT service_id=132 ]
+11-27 17:09:47.906  5437  5629 I FontLog : Query [Google Sans] resolved to {Google Sans, wdth 100.0, wght 400, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+11-27 17:09:47.907  5437  5629 I FontLog : Font PFD returned from cache for {Google Sans, wdth 100.0, wght 400, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+11-27 17:09:47.908  5437  5629 I FontLog : Fetch {Google Sans, wdth 100.0, wght 400, ital 0.0, bestEffort false} end status Status{statusCode=SUCCESS, resolution=null} [CONTEXT service_id=132 ]
+11-27 17:09:47.909   337   337 D Zygote  : Forked child process 6965
+11-27 17:09:47.913  1672  2360 W earchbox:search: Long monitor contention with owner BG Thread #1 (2336) at void java.lang.Runtime.loadLibrary0(java.lang.ClassLoader, java.lang.Class, java.lang.String)(Runtime.java:1084) waiters=0 in void java.lang.Runtime.loadLibrary0(java.lang.ClassLoader, java.lang.Class, java.lang.String) for 393ms
+11-27 17:09:48.033  1672  2359 W A       : Didn't find the session (MAIN_FEED, true)
+11-27 17:09:48.033  1672  2359 W A       : Didn't find the session (MAIN_FEED, false)
+11-27 17:09:48.048  5437  5447 I FontLog : Pulling font file for id = 2, cache size = 2 [CONTEXT service_id=132 ]
+11-27 17:09:48.057  4573  4573 I MediaController: Release 66a9c0a [AndroidXMedia3/1.5.1] [emu64xa, sdk_gphone64_x86_64, Google, 34] [media3.common, media3.session, media3.exoplayer, media3.decoder, media3.cast, media3.exoplayer.hls, media3.datasource, media3.extractor]
+11-27 17:09:48.082  4573  4573 D LifecycleMonitor: Lifecycle status change: com.ranjithkb.radionative.MainActivity@329f423 in: STOPPED
+11-27 17:09:48.082  4573  4573 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=com.ranjithkb.radionative.MainActivity@329f423
+11-27 17:09:48.138  5437  5629 I FontLog : Received query Google Sans:500, URI content://com.google.android.gms.fonts [CONTEXT service_id=132 ]
+11-27 17:09:48.139  5437  5629 I FontLog : Query [Google Sans:500] resolved to {Google Sans, wdth 100.0, wght 500, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+11-27 17:09:48.139  5437  5629 I FontLog : Font PFD returned from cache for {Google Sans, wdth 100.0, wght 500, ital 0.0, bestEffort false} [CONTEXT service_id=132 ]
+11-27 17:09:48.139  5437  5629 I FontLog : Fetch {Google Sans, wdth 100.0, wght 500, ital 0.0, bestEffort false} end status Status{statusCode=SUCCESS, resolution=null} [CONTEXT service_id=132 ]
+11-27 17:09:48.141  5437  5608 I FontLog : Pulling font file for id = 3, cache size = 3 [CONTEXT service_id=132 ]
+11-27 17:09:48.157  6965  6965 I thkb.radio.test: Late-enabling -Xcheck:jni
+11-27 17:09:48.202  6965  6965 I thkb.radio.test: Using CollectorTypeCC GC.
+11-27 17:09:48.206  1672  2548 W A       : RenderableStreamDataSource#loadData - failed precheck
+11-27 17:09:48.206  1672  2548 W A       : DiscoverPrecheckException(precheckFailureReason=com.google.android.apps.search.googleapp.discover.w.a.c@4313f87)
+11-27 17:09:48.206  1672  2548 W A       : 	at com.google.android.apps.search.googleapp.discover.w.bb.d(PG:16)
+11-27 17:09:48.206  1672  2548 W A       : 	at com.google.android.apps.search.googleapp.discover.w.ap.invokeSuspend(PG:5)
+11-27 17:09:48.206  1672  2548 W A       : 	at com.google.android.apps.search.googleapp.discover.w.ap.invoke(PG:1)
+11-27 17:09:48.206  1672  2548 W A       : 	at kotlinx.coroutines.f.b.a(PG:1)
+11-27 17:09:48.206  1672  2548 W A       : 	at kotlinx.coroutines.m.a(PG:11)
+11-27 17:09:48.206  1672  2548 W A       : 	at com.google.android.apps.search.googleapp.discover.v.bb.f(PG:2)
+11-27 17:09:48.206  1672  2548 W A       : 	at com.google.android.apps.search.googleapp.discover.v.bb.d(PG:15)
+11-27 17:09:48.206  1672  2548 W A       : 	at com.google.android.apps.search.googleapp.discover.v.an.invokeSuspend(PG:1)
+11-27 17:09:48.206  1672  2548 W A       : 	at i.c.b.a.a.resumeWith(PG:4)
+11-27 17:09:48.206  1672  2548 W A       : 	at kotlinx.coroutines.bk.run(PG:14)
+11-27 17:09:48.206  1672  2548 W A       : 	at com.google.apps.tiktok.coroutines.f.run(PG:1)
+11-27 17:09:48.206  1672  2548 W A       : 	at com.google.android.libraries.i.ae.run(PG:1)
+11-27 17:09:48.206  1672  2548 W A       : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-27 17:09:48.206  1672  2548 W A       : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-27 17:09:48.206  1672  2548 W A       : 	at com.google.android.libraries.i.k.run(PG:2)
+11-27 17:09:48.206  1672  2548 W A       : 	at com.google.android.libraries.i.p.run(PG:4)
+11-27 17:09:48.206  1672  2548 W A       : 	at java.lang.Thread.run(Thread.java:1012)
+11-27 17:09:48.214  6965  6965 W thkb.radio.test: Unexpected CPU variant for x86: x86_64.
+11-27 17:09:48.214  6965  6965 W thkb.radio.test: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, tremont, kabylake, default
+11-27 17:09:48.281  1672  2615 I A       : Using proto config with mendel
+11-27 17:09:48.283  1672  2615 W A       : Queue length for executor EventBus is now 11. Perhaps some tasks are too long, or the pool is too small.
+11-27 17:09:48.328  1156  1873 D EGL_emulation: app_time_stats: avg=92.20ms min=21.32ms max=249.38ms count=11
+11-27 17:09:48.358   420   430 I adbd    : jdwp connection from 6965
+11-27 17:09:48.362  1672  1672 I A       : StreamFragmentPeer#onPending
+11-27 17:09:48.362  1672  1672 I A       : #fetchAndStoreData() on surface MinusOne.
+11-27 17:09:48.364  1672  2520 I A       : Creating in-process transport to InProcessServerAddress[com.google.android.googlequicksearchbox/OnDeviceServer[Hash:30766428]]
+11-27 17:09:48.368  1672  2520 W A       : Fetch failed. Renderable stream failure reason: USER_SIGNED_OUT
+11-27 17:09:48.368  1672  2520 W A       : DiscoverPrecheckException(precheckFailureReason=com.google.android.apps.search.googleapp.discover.w.a.c@4313f87)
+11-27 17:09:48.368  1672  2520 W A       : 	at com.google.android.apps.search.googleapp.discover.w.bb.d(PG:16)
+11-27 17:09:48.368  1672  2520 W A       : 	at com.google.android.apps.search.googleapp.discover.w.ax.invokeSuspend(PG:5)
+11-27 17:09:48.368  1672  2520 W A       : 	at com.google.android.apps.search.googleapp.discover.w.ax.invoke(PG:1)
+11-27 17:09:48.368  1672  2520 W A       : 	at kotlinx.coroutines.f.b.a(PG:1)
+11-27 17:09:48.368  1672  2520 W A       : 	at kotlinx.coroutines.m.a(PG:11)
+11-27 17:09:48.368  1672  2520 W A       : 	at com.google.android.apps.search.googleapp.discover.w.bb.c(PG:2)
+11-27 17:09:48.368  1672  2520 W A       : 	at com.google.android.apps.search.googleapp.discover.v.am.invokeSuspend(PG:5)
+11-27 17:09:48.368  1672  2520 W A       : 	at com.google.android.apps.search.googleapp.discover.v.am.invoke(PG:1)
+11-27 17:09:48.368  1672  2520 W A       : 	at kotlinx.coroutines.f.b.a(PG:1)
+11-27 17:09:48.368  1672  2520 W A       : 	at kotlinx.coroutines.m.a(PG:11)
+11-27 17:09:48.368  1672  2520 W A       : 	at com.google.android.apps.search.googleapp.discover.v.al.invokeSuspend(PG:4)
+11-27 17:09:48.368  1672  2520 W A       : 	at i.c.b.a.a.resumeWith(PG:4)
+11-27 17:09:48.368  1672  2520 W A       : 	at kotlinx.coroutines.bk.run(PG:14)
+11-27 17:09:48.368  1672  2520 W A       : 	at com.google.apps.tiktok.coroutines.f.run(PG:1)
+11-27 17:09:48.368  1672  2520 W A       : 	at com.google.android.libraries.i.ae.run(PG:1)
+11-27 17:09:48.368  1672  2520 W A       : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-27 17:09:48.368  1672  2520 W A       : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-27 17:09:48.368  1672  2520 W A       : 	at com.google.android.libraries.i.k.run(PG:2)
+11-27 17:09:48.368  1672  2520 W A       : 	at com.google.android.libraries.i.p.run(PG:4)
+11-27 17:09:48.368  1672  2520 W A       : 	at java.lang.Thread.run(Thread.java:1012)
+11-27 17:09:48.462  1156  1156 D SearchTargetUtil:  query= size=15
+11-27 17:09:48.462  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=plymouth belvedere,group_id=web522729,response_id=972e106d-fb69-43fd-9d90-e36acf78c75b,support_query_builder=false,} searchAction=plymouth belvedere searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: e182dbf3-2197-4cb2-99b3-a3b9298f5e19
+11-27 17:09:48.462  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=tell me about the new pirates of the caribbean secret cinema show and first look footage,group_id=web522729,response_id=972e106d-fb69-43fd-9d90-e36acf78c75b,support_query_builder=false,} searchAction=tell me about the new pirates of the caribbean secret cinema show and first look footage searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 2cc755ed-a8c5-42ce-8fdd-d5e697202e0c
+11-27 17:09:48.462  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=lead azide detonation iowa army,group_id=web522729,response_id=972e106d-fb69-43fd-9d90-e36acf78c75b,support_query_builder=false,} searchAction=lead azide detonation iowa army searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 06083423-3e3b-477f-9a1d-c5a51daad95a
+11-27 17:09:48.462  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=ai cyberattack,group_id=web522729,response_id=972e106d-fb69-43fd-9d90-e36acf78c75b,support_query_builder=false,} searchAction=ai cyberattack searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: be22844a-86e7-42bd-9ca1-1c487e58895c
+11-27 17:09:48.462  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=nintendo switch games black friday deals,group_id=web522729,response_id=972e106d-fb69-43fd-9d90-e36acf78c75b,support_query_builder=false,} searchAction=nintendo switch games black friday deals searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 2d99daa8-7c0f-4f61-8de9-ddebb8f3c258
+11-27 17:09:48.462  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=fireball meteor ohio,group_id=web522729,response_id=972e106d-fb69-43fd-9d90-e36acf78c75b,support_query_builder=false,} searchAction=fireball meteor ohio searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 660fd4d3-c98d-44c2-a4c1-36668e1f564c
+11-27 17:09:48.462  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=museum of the north mammoth fossils,group_id=web522729,response_id=972e106d-fb69-43fd-9d90-e36acf78c75b,support_query_builder=false,} searchAction=museum of the north mammoth fossils searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 19e28a71-dbfc-47b7-a726-dfb74fa45b28
+11-27 17:09:48.462  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=nyt connections hints,group_id=web522729,response_id=972e106d-fb69-43fd-9d90-e36acf78c75b,support_query_builder=false,} searchAction=nyt connections hints searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 8b627b31-c777-4a10-91f9-179139535276
+11-27 17:09:48.462  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=cleveland guardians,group_id=web522729,response_id=972e106d-fb69-43fd-9d90-e36acf78c75b,support_query_builder=false,} searchAction=cleveland guardians searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 96dc2470-d92b-4274-b51b-ea941a5d81ca
+11-27 17:09:48.462  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=dr annette wagner surgery,group_id=web522729,response_id=972e106d-fb69-43fd-9d90-e36acf78c75b,support_query_builder=false,} searchAction=dr annette wagner surgery searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: e234aa26-416c-4750-8d4a-c367e4ebfd80
+11-27 17:09:48.462  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=venkatesa chandrasekaran quantum gravity,group_id=web522729,response_id=972e106d-fb69-43fd-9d90-e36acf78c75b,support_query_builder=false,} searchAction=venkatesa chandrasekaran quantum gravity searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 7ae1c570-b516-442a-9937-225910a14110
+11-27 17:09:48.462  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=hackers breach air force,group_id=web522729,response_id=972e106d-fb69-43fd-9d90-e36acf78c75b,support_query_builder=false,} searchAction=hackers breach air force searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 3513031d-f29e-45f9-ba6c-345708cb5f4f
+11-27 17:09:48.462  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=california pier collapses,group_id=web522729,response_id=972e106d-fb69-43fd-9d90-e36acf78c75b,support_query_builder=false,} searchAction=california pier collapses searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: f4f1ad14-e270-4703-89c1-7ab6f6cd4b80
+11-27 17:09:48.462  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=apple iphone 18 pro black friday,group_id=web522729,response_id=972e106d-fb69-43fd-9d90-e36acf78c75b,support_query_builder=false,} searchAction=apple iphone 18 pro black friday searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: d7bf20bd-beb8-4580-95ee-5fab67a4695c
+11-27 17:09:48.462  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=gemma deaf dog,group_id=web522729,response_id=972e106d-fb69-43fd-9d90-e36acf78c75b,support_query_builder=false,} searchAction=gemma deaf dog searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 729e3b1c-d4ac-43ba-910c-5c54b2e954be
+11-27 17:09:48.489   879   937 D EGL_emulation: app_time_stats: avg=7602.76ms min=7602.76ms max=7602.76ms count=1
+11-27 17:09:48.513  1672  1672 W A       : Failed RenderableStream callback; SubscriptionCallbacks#onError(Throwable) called.
+11-27 17:09:48.513  1672  1672 W A       : com.google.android.apps.search.googleapp.discover.v.i: DiscoverPrecheckException(precheckFailureReason=com.google.android.apps.search.googleapp.discover.w.a.c@4313f87)
+11-27 17:09:48.513  1672  1672 W A       : 	at com.google.android.apps.search.googleapp.discover.v.ak.a(PG:1)
+11-27 17:09:48.513  1672  1672 W A       : 	at com.google.android.apps.search.googleapp.discover.v.am.invokeSuspend(PG:17)
+11-27 17:09:48.513  1672  1672 W A       : 	at i.c.b.a.a.resumeWith(PG:4)
+11-27 17:09:48.513  1672  1672 W A       : 	at kotlinx.coroutines.bk.run(PG:14)
+11-27 17:09:48.513  1672  1672 W A       : 	at com.google.apps.tiktok.coroutines.f.run(PG:1)
+11-27 17:09:48.513  1672  1672 W A       : 	at com.google.android.libraries.i.ae.run(PG:1)
+11-27 17:09:48.513  1672  1672 W A       : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-27 17:09:48.513  1672  1672 W A       : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-27 17:09:48.513  1672  1672 W A       : 	at com.google.android.libraries.i.k.run(PG:2)
+11-27 17:09:48.513  1672  1672 W A       : 	at com.google.android.libraries.i.p.run(PG:4)
+11-27 17:09:48.513  1672  1672 W A       : 	at java.lang.Thread.run(Thread.java:1012)
+11-27 17:09:48.513  1672  1672 W A       : Caused by: DiscoverPrecheckException(precheckFailureReason=com.google.android.apps.search.googleapp.discover.w.a.c@4313f87)
+11-27 17:09:48.513  1672  1672 W A       : 	at com.google.android.apps.search.googleapp.discover.w.bb.d(PG:16)
+11-27 17:09:48.513  1672  1672 W A       : 	at com.google.android.apps.search.googleapp.discover.w.ax.invokeSuspend(PG:5)
+11-27 17:09:48.513  1672  1672 W A       : 	at com.google.android.apps.search.googleapp.discover.w.ax.invoke(PG:1)
+11-27 17:09:48.513  1672  1672 W A       : 	at kotlinx.coroutines.f.b.a(PG:1)
+11-27 17:09:48.513  1672  1672 W A       : 	at kotlinx.coroutines.m.a(PG:11)
+11-27 17:09:48.513  1672  1672 W A       : 	at com.google.android.apps.search.googleapp.discover.w.bb.c(PG:2)
+11-27 17:09:48.513  1672  1672 W A       : 	at com.google.android.apps.search.googleapp.discover.v.am.invokeSuspend(PG:5)
+11-27 17:09:48.513  1672  1672 W A       : 	at com.google.android.apps.search.googleapp.discover.v.am.invoke(PG:1)
+11-27 17:09:48.513  1672  1672 W A       : 	at kotlinx.coroutines.f.b.a(PG:1)
+11-27 17:09:48.513  1672  1672 W A       : 	at kotlinx.coroutines.m.a(PG:11)
+11-27 17:09:48.513  1672  1672 W A       : 	at com.google.android.apps.search.googleapp.discover.v.al.invokeSuspend(PG:4)
+11-27 17:09:48.513  1672  1672 W A       : 	... 9 more
+11-27 17:09:48.533  1672  2615 I A       : Using proto config with mendel
+11-27 17:09:48.550   879   937 D EGL_emulation: app_time_stats: avg=390.82ms min=5.01ms max=983.93ms count=3
+11-27 17:09:48.579  6965  6965 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10193; state: ENABLED
+11-27 17:09:48.580  6965  6965 D CompatibilityChangeReporter: Compat change id reported: 242716250; UID 10193; state: ENABLED
+11-27 17:09:48.596  1672  2548 I A       : group apa_head_suggest present without account in *
+11-27 17:09:48.606  1672  2548 I A       : incrementApaDataDownloadStoreStatus(latency = PT0.236S, appVersion = 13.17.16.23, status = OK, locale = *, fileGroupnames = apa_head_suggest, accountScoped = false, localGroupsAvailable = false, timeSinceSearchBoot = Optional[PT7M29.25S] (FIVE_TO_TEN_MINUTES), timeSinceDataDownloadInit = PT6M37.984S (FIVE_TO_TEN_MINUTES))
+11-27 17:09:48.613  6965  6965 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+11-27 17:09:48.647  6965  6965 D nativeloader: Configuring clns-6 for other apk /system/framework/android.test.mock.jar. target_sdk_version=36, uses_libraries=ALL, library_path=/data/app/~~B3uJnnUaHhYZIp39l2AuJA==/com.ranjithkb.radio.test-Ae5T3gL0sYc9v8tYzVDUQQ==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.ranjithkb.radio.test
+11-27 17:09:48.648  6965  6965 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+11-27 17:09:48.650  6965  6965 D nativeloader: Configuring clns-7 for other apk /system/framework/android.test.runner.jar. target_sdk_version=36, uses_libraries=ALL, library_path=/data/app/~~B3uJnnUaHhYZIp39l2AuJA==/com.ranjithkb.radio.test-Ae5T3gL0sYc9v8tYzVDUQQ==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.ranjithkb.radio.test
+11-27 17:09:48.651  6965  6965 W ziparchive: Unable to open '/data/app/~~B3uJnnUaHhYZIp39l2AuJA==/com.ranjithkb.radio.test-Ae5T3gL0sYc9v8tYzVDUQQ==/base.dm': No such file or directory
+11-27 17:09:48.651  6965  6965 W ziparchive: Unable to open '/data/app/~~B3uJnnUaHhYZIp39l2AuJA==/com.ranjithkb.radio.test-Ae5T3gL0sYc9v8tYzVDUQQ==/base.dm': No such file or directory
+11-27 17:09:48.655   525  2248 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+11-27 17:09:48.704  6965  6965 D nativeloader: Configuring clns-8 for other apk /data/app/~~B3uJnnUaHhYZIp39l2AuJA==/com.ranjithkb.radio.test-Ae5T3gL0sYc9v8tYzVDUQQ==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~B3uJnnUaHhYZIp39l2AuJA==/com.ranjithkb.radio.test-Ae5T3gL0sYc9v8tYzVDUQQ==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.ranjithkb.radio.test
+11-27 17:09:48.755  6965  6965 V GraphicsEnvironment: Currently set values for:
+11-27 17:09:48.755  6965  6965 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+11-27 17:09:48.755  6965  6965 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+11-27 17:09:48.756  6965  6965 V GraphicsEnvironment: ANGLE GameManagerService for com.ranjithkb.radio.test: false
+11-27 17:09:48.756  6965  6965 V GraphicsEnvironment: com.ranjithkb.radio.test is not listed in per-application setting
+11-27 17:09:48.756  6965  6965 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+11-27 17:09:48.772  1672  1672 W View    : requestLayout() improperly called by android.widget.FrameLayout{d707ee0 V.E...... ......ID 0,0-1080,525 #7f0b0fee app:id/googleapp_discover_header_container} during layout: running second layout pass
+11-27 17:09:48.775  6965  6984 D libEGL  : loaded /vendor/lib64/egl/libEGL_emulation.so
+11-27 17:09:48.777  6965  6984 D libEGL  : loaded /vendor/lib64/egl/libGLESv1_CM_emulation.so
+11-27 17:09:48.783  6965  6984 D libEGL  : loaded /vendor/lib64/egl/libGLESv2_emulation.so
+11-27 17:09:48.804   879   879 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@c18a36e
+11-27 17:09:48.811  1672  3184 D EGL_emulation: app_time_stats: avg=392.91ms min=48.83ms max=662.80ms count=4
+11-27 17:09:48.820   525  2710 W InputManager-JNI: Input channel object '322efa3 Toast (client)' was disposed without first being removed with the input manager!
+11-27 17:09:48.859  1672  1672 I A       : Successfully updated last shown time for signed out error.
+11-27 17:09:48.883  6965  6965 D CompatibilityChangeReporter: Compat change id reported: 237531167; UID 10193; state: DISABLED
+11-27 17:09:48.884  6965  6965 W OpenGLRenderer: Unknown dataspace 0
+11-27 17:09:48.918   401   494 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10193 pid=6965
+11-27 17:09:48.918   401   494 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10193 => denied (134 us)
+11-27 17:09:48.919   401   494 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10193 pid=6965
+11-27 17:09:48.919   401   494 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10193 => denied (763 us)
+11-27 17:09:48.919   401   494 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10193 pid=6965
+11-27 17:09:48.919   401   494 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10193 => denied (279 us)
+11-27 17:09:48.926   401   414 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10193 pid=0
+11-27 17:09:48.926   401   414 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10193 => denied (8934 us)
+11-27 17:09:48.933  6965  6982 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+11-27 17:09:48.980  4318  4425 W Bugle   : TextClassifierLibManagerImpl: Reclaiming memory at level: 40
+11-27 17:09:49.053   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+11-27 17:09:49.053  6965  6982 I Gralloc4: mapper 4.x is not supported
+11-27 17:09:49.102  4573  4573 D LifecycleMonitor: Lifecycle status change: com.ranjithkb.radionative.MainActivity@329f423 in: DESTROYED
+11-27 17:09:49.103  4573  4573 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+11-27 17:09:49.103  4573  4573 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@f2d4b6c
+11-27 17:09:49.107  1672  2548 I A       : GMSCore Auth returned 0 accounts.
+11-27 17:09:49.107  1672  2548 I A       : GoogleOwnersProvider returned 0 accounts.
+11-27 17:09:49.250   525  2837 W ServiceManagerCppClient: Permission failure: android.permission.ROTATE_SURFACE_FLINGER from uid=10193 pid=0
+11-27 17:09:49.258   525  2837 D PermissionCache: checking android.permission.ROTATE_SURFACE_FLINGER for uid=10193 => denied (7362 us)
+11-27 17:09:49.258   525  2837 W ServiceManagerCppClient: Permission failure: android.permission.INTERNAL_SYSTEM_WINDOW from uid=10193 pid=0
+11-27 17:09:49.258   525  2837 D PermissionCache: checking android.permission.INTERNAL_SYSTEM_WINDOW for uid=10193 => denied (73 us)
+11-27 17:09:49.258   525  2837 W ServiceManagerCppClient: Permission failure: android.permission.ACCESS_SURFACE_FLINGER from uid=10193 pid=0
+11-27 17:09:49.258   525  2837 D PermissionCache: checking android.permission.ACCESS_SURFACE_FLINGER for uid=10193 => denied (37 us)
+11-27 17:09:49.260   525   935 W InputManager-JNI: Input channel object '28c9f3e com.ranjithkb.radio/com.ranjithkb.radionative.MainActivity (client)' was disposed without first being removed with the input manager!
+11-27 17:09:49.280   525   544 W ziparchive: Unable to open '/data/app/~~B3uJnnUaHhYZIp39l2AuJA==/com.ranjithkb.radio.test-Ae5T3gL0sYc9v8tYzVDUQQ==/base.dm': No such file or directory
+11-27 17:09:49.281   525   544 I ActivityTaskManager: Displayed com.ranjithkb.radio.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity for user 0: +1s542ms
+11-27 17:09:49.283   879   920 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@da8fbef
+11-27 17:09:49.298   525   935 W InputManager-JNI: Input channel object '20a781f Splash Screen com.ranjithkb.radio.test (client)' was disposed without first being removed with the input manager!
+11-27 17:09:49.311   525  1594 W AppSearchIcing: icing-search-engine.cc:283: Error: 5, Message: Document (com.google.android.googlequicksearchbox$OneSearchZeroStateGoogleSuggestions/default, zp) not found.
+11-27 17:09:49.313  1156  2097 D OneSearchSuggestProvider: Established or reuse existing binder channel authority=com.google.android.googlequicksearchbox
+11-27 17:09:49.321   401   401 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+11-27 17:09:49.342  1566  1871 I AiAiEcho: Predicting[0]:
+11-27 17:09:49.342  1566  1871 I AiAiEcho: EchoTargets:
+11-27 17:09:49.342  1566  1871 I AiAiEcho: Filtered by AiAi flag check:
+11-27 17:09:49.342  1566  1871 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:
+11-27 17:09:49.343  1566  1871 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+11-27 17:09:49.346  4573  4573 I MediaController: Release 89f57f9 [AndroidXMedia3/1.5.1] [emu64xa, sdk_gphone64_x86_64, Google, 34] [media3.common, media3.session, media3.exoplayer, media3.decoder, media3.cast, media3.exoplayer.hls, media3.datasource, media3.extractor]
+11-27 17:09:49.347  4573  4573 I VELVET-PLAY: pause by com.ranjithkb.radio
+11-27 17:09:49.417  4573  4701 I TestRunner: finished: t30_back_goes_back_before_leaving(com.ranjithkb.radionative.DeviceTest)

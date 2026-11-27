@@ -1,0 +1,84 @@
+INFO: Constructing runner from config.
+INFO: Configuring Android Instrumentation driver: android_instrumentation_runtime {
+  instrumentation_info {
+    app_package: "com.ranjithkb.radio"
+    test_package: "com.ranjithkb.radio.test"
+    test_runner_class: "androidx.test.runner.AndroidJUnitRunner"
+  }
+  instrumentation_args {
+    args_map {
+      key: "additionalTestOutputDir"
+      value: "/sdcard/Android/media/com.ranjithkb.radio/additional_test_output"
+    }
+  }
+}
+am_instrument_timeout: 31536000
+
+INFO: Configuring AndroidTestApkInstallerPlugin: apks_to_install {
+  apk_paths: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/apk/play/debug/app-play-debug.apk"
+  install_options {
+  }
+  uninstall_after_test: true
+}
+apks_to_install {
+  apk_paths: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/apk/androidTest/play/debug/app-play-debug-androidTest.apk"
+  install_options {
+  }
+  uninstall_after_test: true
+}
+
+INFO: No installables found in test fixture. Nothing to install.
+INFO: Installing [/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/apk/play/debug/app-play-debug.apk] on device emulator-5554.
+INFO: Installing [/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/apk/androidTest/play/debug/app-play-debug-androidTest.apk] on device emulator-5554.
+INFO: Start logcat streaming.
+INFO: Running Android Instrumentation driver.
+INFO: Copying files from device to host: /sdcard/Android/media/com.ranjithkb.radio/additional_test_output to /home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/connected_android_test_additional_output/playDebugAndroidTest/connected/emulator-5554 - 14
+INFO: Stop logcat streaming.
+INFO: Uninstalling com.ranjithkb.radio for device emulator-5554.
+INFO: Uninstalling com.ranjithkb.radio.test for device emulator-5554.
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t01_car_browse_tree: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t02_car_pictures_open: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t03_plays_and_car_next_previous: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t04_lost_signal_comes_back: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t05_short_dropout_is_bridged: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t06_resumes_after_another_apps_video: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t07_own_pause_is_respected: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t08_equaliser_on_off_keeps_playing: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t09_visualiser_hears_the_music: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t10_alarm_rings_and_fades_in: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t11_widget_play_button: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t12_crash_report_saved_and_sent: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t13_stats_and_logos_files_load: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t14_dead_station_falls_back_to_a_favourite: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t15_nothing_plays_so_the_alarm_sound_rings_then_stop: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t16_snooze_rings_again_in_ten_minutes: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t17_several_alarms_android_rings_the_earliest: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t18_quiet_check_before_the_alarm: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t19_known_down_goes_straight_to_the_backup: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t20_pausing_ends_the_alarm: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t21_pause_stays_paused: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t22_alarm_survives_another_app_taking_the_sound: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t23_malayalam_keeps_jost_for_english: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t24_alarm_from_the_background_plays_as_a_foreground_service: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t25_car_next_stays_in_favourites: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t26_even_volume_on_off_keeps_playing: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t27_silent_stream_moves_to_the_next_link: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t28_own_station_plays_and_shows_in_the_car: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t29_resume_last_station: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t30_back_goes_back_before_leaving: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t31_car_favourites_follow_tiles_setting: PASSED
+INFO: Execute com.ranjithkb.radionative.DeviceTest.t32_play_last_station_on_opening: PASSED
+INFO: Execute com.ranjithkb.radionative.EraDeviceTest.e01_every_radio_draws_original_and_theme_light_and_dark: PASSED
+INFO: Execute com.ranjithkb.radionative.EraDeviceTest.e02_tuning_knob_changes_station_both_ways: PASSED
+INFO: Execute com.ranjithkb.radionative.EraDeviceTest.e02b_tuning_knob_turns_smoothly: PASSED
+INFO: Execute com.ranjithkb.radionative.EraDeviceTest.e03_volume_knob_is_the_phone_volume: PASSED
+INFO: Execute com.ranjithkb.radionative.EraDeviceTest.e04_bass_and_treble_knobs_are_the_equaliser_and_keep_playing: PASSED
+INFO: Execute com.ranjithkb.radionative.EraDeviceTest.e05_boombox_keys: PASSED
+INFO: Execute com.ranjithkb.radionative.EraDeviceTest.e06_meters_follow_the_music: PASSED
+INFO: Execute com.ranjithkb.radionative.EraDeviceTest.e07_every_knob_on_every_radio: PASSED
+INFO: Execute com.ranjithkb.radionative.EraDeviceTest.e08_the_drawn_knob_turns: PASSED
+INFO: Execute com.ranjithkb.radionative.EraDeviceTest.e09_turning_knobs_round_like_real_ones: PASSED
+INFO: Execute com.ranjithkb.radionative.EraDeviceTest.e10_swiping_the_radio_flips_the_look_once_and_knobs_never_do: PASSED
+INFO: Execute com.ranjithkb.radionative.EraDeviceTest.e11_fast_spin_and_shaky_finger: PASSED
+INFO: Execute com.ranjithkb.radionative.EraDeviceTest.e12_bottom_bar_swipe_still_changes_station: PASSED
+INFO: Execute com.ranjithkb.radionative.EraDeviceTest.e13_reset_knobs_puts_the_tone_back_to_flat: PASSED

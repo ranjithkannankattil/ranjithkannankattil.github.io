@@ -1,0 +1,2597 @@
+# proto-message: google.testing.platform.proto.api.core.TestSuiteResult
+# 2026-11-27T17:12:21.711094154Z:
+test_suite_meta_data {
+  scheduled_test_case_count: 46
+  device {
+    id: "emulator-5554"
+    friendly_name: "primary"
+  }
+}
+test_status: PASSED
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t01_car_browse_tree"
+    start_time {
+      seconds: 1795798996
+      nanos: 887000000
+    }
+    end_time {
+      seconds: 1795799001
+      nanos: 224000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t01_car_browse_tree.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t02_car_pictures_open"
+    start_time {
+      seconds: 1795799001
+      nanos: 251000000
+    }
+    end_time {
+      seconds: 1795799004
+      nanos: 723000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t02_car_pictures_open.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t03_plays_and_car_next_previous"
+    start_time {
+      seconds: 1795799004
+      nanos: 753000000
+    }
+    end_time {
+      seconds: 1795799010
+      nanos: 282000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t03_plays_and_car_next_previous.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t04_lost_signal_comes_back"
+    start_time {
+      seconds: 1795799010
+      nanos: 287000000
+    }
+    end_time {
+      seconds: 1795799059
+      nanos: 72000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t04_lost_signal_comes_back.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t05_short_dropout_is_bridged"
+    start_time {
+      seconds: 1795799059
+      nanos: 105000000
+    }
+    end_time {
+      seconds: 1795799067
+      nanos: 488000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t05_short_dropout_is_bridged.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t06_resumes_after_another_apps_video"
+    start_time {
+      seconds: 1795799067
+      nanos: 490000000
+    }
+    end_time {
+      seconds: 1795799075
+      nanos: 892000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t06_resumes_after_another_apps_video.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t07_own_pause_is_respected"
+    start_time {
+      seconds: 1795799075
+      nanos: 895000000
+    }
+    end_time {
+      seconds: 1795799092
+      nanos: 887000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t07_own_pause_is_respected.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t08_equaliser_on_off_keeps_playing"
+    start_time {
+      seconds: 1795799092
+      nanos: 889000000
+    }
+    end_time {
+      seconds: 1795799105
+      nanos: 588000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t08_equaliser_on_off_keeps_playing.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t09_visualiser_hears_the_music"
+    start_time {
+      seconds: 1795799105
+      nanos: 591000000
+    }
+    end_time {
+      seconds: 1795799109
+      nanos: 650000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t09_visualiser_hears_the_music.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t10_alarm_rings_and_fades_in"
+    start_time {
+      seconds: 1795799109
+      nanos: 652000000
+    }
+    end_time {
+      seconds: 1795799112
+      nanos: 882000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t10_alarm_rings_and_fades_in.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t11_widget_play_button"
+    start_time {
+      seconds: 1795799112
+      nanos: 890000000
+    }
+    end_time {
+      seconds: 1795799116
+      nanos: 226000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t11_widget_play_button.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t12_crash_report_saved_and_sent"
+    start_time {
+      seconds: 1795799116
+      nanos: 228000000
+    }
+    end_time {
+      seconds: 1795799118
+      nanos: 261000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t12_crash_report_saved_and_sent.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t13_stats_and_logos_files_load"
+    start_time {
+      seconds: 1795799118
+      nanos: 263000000
+    }
+    end_time {
+      seconds: 1795799118
+      nanos: 891000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t13_stats_and_logos_files_load.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t14_dead_station_falls_back_to_a_favourite"
+    start_time {
+      seconds: 1795799118
+      nanos: 893000000
+    }
+    end_time {
+      seconds: 1795799130
+      nanos: 840000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t14_dead_station_falls_back_to_a_favourite.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t15_nothing_plays_so_the_alarm_sound_rings_then_stop"
+    start_time {
+      seconds: 1795799130
+      nanos: 842000000
+    }
+    end_time {
+      seconds: 1795799151
+      nanos: 554000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t15_nothing_plays_so_the_alarm_sound_rings_then_stop.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t16_snooze_rings_again_in_ten_minutes"
+    start_time {
+      seconds: 1795799151
+      nanos: 557000000
+    }
+    end_time {
+      seconds: 1795799192
+      nanos: 837000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t16_snooze_rings_again_in_ten_minutes.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t17_several_alarms_android_rings_the_earliest"
+    start_time {
+      seconds: 1795799192
+      nanos: 839000000
+    }
+    end_time {
+      seconds: 1795799192
+      nanos: 942000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t17_several_alarms_android_rings_the_earliest.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t18_quiet_check_before_the_alarm"
+    start_time {
+      seconds: 1795799192
+      nanos: 950000000
+    }
+    end_time {
+      seconds: 1795799195
+      nanos: 593000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t18_quiet_check_before_the_alarm.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t19_known_down_goes_straight_to_the_backup"
+    start_time {
+      seconds: 1795799195
+      nanos: 597000000
+    }
+    end_time {
+      seconds: 1795799198
+      nanos: 468000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t19_known_down_goes_straight_to_the_backup.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t20_pausing_ends_the_alarm"
+    start_time {
+      seconds: 1795799198
+      nanos: 471000000
+    }
+    end_time {
+      seconds: 1795799223
+      nanos: 288000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t20_pausing_ends_the_alarm.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t21_pause_stays_paused"
+    start_time {
+      seconds: 1795799223
+      nanos: 290000000
+    }
+    end_time {
+      seconds: 1795799270
+      nanos: 7000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t21_pause_stays_paused.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t22_alarm_survives_another_app_taking_the_sound"
+    start_time {
+      seconds: 1795799270
+      nanos: 9000000
+    }
+    end_time {
+      seconds: 1795799275
+      nanos: 649000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t22_alarm_survives_another_app_taking_the_sound.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t23_malayalam_keeps_jost_for_english"
+    start_time {
+      seconds: 1795799275
+      nanos: 651000000
+    }
+    end_time {
+      seconds: 1795799275
+      nanos: 676000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t23_malayalam_keeps_jost_for_english.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t24_alarm_from_the_background_plays_as_a_foreground_service"
+    start_time {
+      seconds: 1795799275
+      nanos: 678000000
+    }
+    end_time {
+      seconds: 1795799282
+      nanos: 409000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t24_alarm_from_the_background_plays_as_a_foreground_service.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t25_car_next_stays_in_favourites"
+    start_time {
+      seconds: 1795799282
+      nanos: 411000000
+    }
+    end_time {
+      seconds: 1795799283
+      nanos: 900000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t25_car_next_stays_in_favourites.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t26_even_volume_on_off_keeps_playing"
+    start_time {
+      seconds: 1795799283
+      nanos: 904000000
+    }
+    end_time {
+      seconds: 1795799293
+      nanos: 783000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t26_even_volume_on_off_keeps_playing.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t27_silent_stream_moves_to_the_next_link"
+    start_time {
+      seconds: 1795799293
+      nanos: 787000000
+    }
+    end_time {
+      seconds: 1795799372
+      nanos: 402000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t27_silent_stream_moves_to_the_next_link.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t28_own_station_plays_and_shows_in_the_car"
+    start_time {
+      seconds: 1795799372
+      nanos: 408000000
+    }
+    end_time {
+      seconds: 1795799375
+      nanos: 837000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t28_own_station_plays_and_shows_in_the_car.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t29_resume_last_station"
+    start_time {
+      seconds: 1795799375
+      nanos: 839000000
+    }
+    end_time {
+      seconds: 1795799380
+      nanos: 191000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t29_resume_last_station.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t30_back_goes_back_before_leaving"
+    start_time {
+      seconds: 1795799380
+      nanos: 218000000
+    }
+    end_time {
+      seconds: 1795799389
+      nanos: 629000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t30_back_goes_back_before_leaving.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t31_car_favourites_follow_tiles_setting"
+    start_time {
+      seconds: 1795799389
+      nanos: 631000000
+    }
+    end_time {
+      seconds: 1795799390
+      nanos: 648000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t31_car_favourites_follow_tiles_setting.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "DeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "t32_play_last_station_on_opening"
+    start_time {
+      seconds: 1795799390
+      nanos: 650000000
+    }
+    end_time {
+      seconds: 1795799409
+      nanos: 474000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.DeviceTest-t32_play_last_station_on_opening.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "EraDeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "e01_every_radio_draws_original_and_theme_light_and_dark"
+    start_time {
+      seconds: 1795799409
+      nanos: 527000000
+    }
+    end_time {
+      seconds: 1795799421
+      nanos: 353000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.EraDeviceTest-e01_every_radio_draws_original_and_theme_light_and_dark.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "EraDeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "e02_tuning_knob_changes_station_both_ways"
+    start_time {
+      seconds: 1795799421
+      nanos: 355000000
+    }
+    end_time {
+      seconds: 1795799427
+      nanos: 339000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.EraDeviceTest-e02_tuning_knob_changes_station_both_ways.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "EraDeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "e02b_tuning_knob_turns_smoothly"
+    start_time {
+      seconds: 1795799427
+      nanos: 544000000
+    }
+    end_time {
+      seconds: 1795799447
+      nanos: 491000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.EraDeviceTest-e02b_tuning_knob_turns_smoothly.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "EraDeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "e03_volume_knob_is_the_phone_volume"
+    start_time {
+      seconds: 1795799447
+      nanos: 519000000
+    }
+    end_time {
+      seconds: 1795799451
+      nanos: 614000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.EraDeviceTest-e03_volume_knob_is_the_phone_volume.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "EraDeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "e04_bass_and_treble_knobs_are_the_equaliser_and_keep_playing"
+    start_time {
+      seconds: 1795799451
+      nanos: 615000000
+    }
+    end_time {
+      seconds: 1795799456
+      nanos: 818000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.EraDeviceTest-e04_bass_and_treble_knobs_are_the_equaliser_and_keep_playing.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "EraDeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "e05_boombox_keys"
+    start_time {
+      seconds: 1795799456
+      nanos: 845000000
+    }
+    end_time {
+      seconds: 1795799463
+      nanos: 155000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.EraDeviceTest-e05_boombox_keys.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "EraDeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "e06_meters_follow_the_music"
+    start_time {
+      seconds: 1795799463
+      nanos: 156000000
+    }
+    end_time {
+      seconds: 1795799470
+      nanos: 456000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.EraDeviceTest-e06_meters_follow_the_music.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "EraDeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "e07_every_knob_on_every_radio"
+    start_time {
+      seconds: 1795799470
+      nanos: 461000000
+    }
+    end_time {
+      seconds: 1795799495
+      nanos: 438000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.EraDeviceTest-e07_every_knob_on_every_radio.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "EraDeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "e08_the_drawn_knob_turns"
+    start_time {
+      seconds: 1795799495
+      nanos: 468000000
+    }
+    end_time {
+      seconds: 1795799502
+      nanos: 875000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.EraDeviceTest-e08_the_drawn_knob_turns.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "EraDeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "e09_turning_knobs_round_like_real_ones"
+    start_time {
+      seconds: 1795799502
+      nanos: 928000000
+    }
+    end_time {
+      seconds: 1795799510
+      nanos: 956000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.EraDeviceTest-e09_turning_knobs_round_like_real_ones.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "EraDeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "e10_swiping_the_radio_flips_the_look_once_and_knobs_never_do"
+    start_time {
+      seconds: 1795799510
+      nanos: 958000000
+    }
+    end_time {
+      seconds: 1795799518
+      nanos: 761000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.EraDeviceTest-e10_swiping_the_radio_flips_the_look_once_and_knobs_never_do.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "EraDeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "e11_fast_spin_and_shaky_finger"
+    start_time {
+      seconds: 1795799518
+      nanos: 763000000
+    }
+    end_time {
+      seconds: 1795799526
+      nanos: 530000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.EraDeviceTest-e11_fast_spin_and_shaky_finger.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "EraDeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "e12_bottom_bar_swipe_still_changes_station"
+    start_time {
+      seconds: 1795799526
+      nanos: 532000000
+    }
+    end_time {
+      seconds: 1795799532
+      nanos: 25000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.EraDeviceTest-e12_bottom_bar_swipe_still_changes_station.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+test_result {
+  test_case {
+    test_class: "EraDeviceTest"
+    test_package: "com.ranjithkb.radionative"
+    test_method: "e13_reset_knobs_puts_the_tone_back_to_flat"
+    start_time {
+      seconds: 1795799532
+      nanos: 27000000
+    }
+    end_time {
+      seconds: 1795799539
+      nanos: 832000000
+    }
+    device {
+      id: "emulator-5554"
+      friendly_name: "primary"
+    }
+  }
+  test_status: PASSED
+  output_artifact {
+    label {
+      label: "logcat"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/logcat-com.ranjithkb.radionative.EraDeviceTest-e13_reset_knobs_puts_the_tone_back_to_flat.txt"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/device-info.pb"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.meminfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/meminfo"
+    }
+  }
+  output_artifact {
+    label {
+      label: "device-info.cpuinfo"
+      namespace: "android"
+    }
+    source_path {
+      path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/cpuinfo"
+    }
+  }
+}
+output_artifact {
+  label {
+    label: "test-results.log"
+    namespace: "com.google.testing.platform.runtime.android.driver.AndroidInstrumentationDriver"
+  }
+  source_path {
+    path: "/home/runner/work/ranjithkannankattil.github.io/ranjithkannankattil.github.io/app/build/outputs/androidTest-results/connected/debug/flavors/play/emulator-5554 - 14/testlog/test-results.log"
+  }
+  type: TEST_DATA
+  mime_type: "text/plain"
+}

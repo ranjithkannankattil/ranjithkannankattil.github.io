@@ -1,0 +1,394 @@
+11-27 17:10:51.393  4573  4701 I TestRunner: started: e04_bass_and_treble_knobs_are_the_equaliser_and_keep_playing(com.ranjithkb.radionative.EraDeviceTest)
+11-27 17:10:51.419  4573  4701 D IdlingRegistry: Registering idling resources: [androidx.compose.ui.test.EspressoLink@4a22cfc]
+11-27 17:10:51.432  4573  4701 W Settings: Setting always_finish_activities has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+11-27 17:10:51.442  4573  4895 D BufferPoolAccessor2.0: bufferpool2 0x7a4acfedd988 : 0(0 size) total buffers - 0(0 size) used buffers - 37/42 (recycle/alloc) - 5/32 (fetch/transfer)
+11-27 17:10:51.442  4573  4895 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 1
+11-27 17:10:51.483   483   877 D BufferPoolAccessor2.0: bufferpool2 0x78ca33c55e48 : 0(0 size) total buffers - 0(0 size) used buffers - 24/28 (recycle/alloc) - 4/28 (fetch/transfer)
+11-27 17:10:51.483   483   877 D BufferPoolAccessor2.0: evictor expired: 1, evicted: 1
+11-27 17:10:51.548  1566  1871 I AiAiEcho: Predicting[0]:
+11-27 17:10:51.548  1566  1871 I AiAiEcho: EchoTargets:
+11-27 17:10:51.548  1566  1871 I AiAiEcho: Filtered by AiAi flag check:
+11-27 17:10:51.548  1566  1871 I AiAiEcho: Ranked targets strategy: SORT, count: 0, ranking metadata:
+11-27 17:10:51.550   525  1594 W AppSearchIcing: icing-search-engine.cc:283: Error: 5, Message: Document (com.google.android.googlequicksearchbox$OneSearchZeroStateGoogleSuggestions/default, zp) not found.
+11-27 17:10:51.550   879   931 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-27 17:10:51.552  1156  2097 D OneSearchSuggestProvider: Created the binder channel successfully for end point service =com.google.android.apps.search.googleapp.search.suggest.plugins.onesearch.server.OneSearchSuggestService , mChannel=z1{delegate=s1{logId=37, target=directaddress:///AndroidComponentAddress%5BIntent%20%7B%20act=grpc.io.action.BIND%20cmp=com.google.android.googlequicksearchbox/com.google.android.apps.search.googleapp.search.suggest.plugins.onesearch.server.OneSearchSuggestService%20%7D%5D}} , mOneSearchConnection=X1.T@66bf2de
+11-27 17:10:51.554   879   879 W ConstraintSet: id unknown center_vertical_guideline
+11-27 17:10:51.554   879   879 W ConstraintSet: id unknown action_button_guideline
+11-27 17:10:51.554   879   879 W ConstraintSet: id unknown icon
+11-27 17:10:51.554   879   879 W ConstraintSet: id unknown media_seamless
+11-27 17:10:51.554   879   879 W ConstraintSet: id unknown media_action_barrier_start
+11-27 17:10:51.555   879   879 W ConstraintSet: id unknown media_action_barrier_end
+11-27 17:10:51.555   879   879 W ConstraintSet: id unknown media_action_barrier_top
+11-27 17:10:51.555   879   879 W ConstraintSet: id unknown remove_text
+11-27 17:10:51.555   879   879 W ConstraintSet: id unknown settings
+11-27 17:10:51.555   879   879 W ConstraintSet: id unknown dismiss
+11-27 17:10:51.555   879   879 W ConstraintSet: id unknown cancel
+11-27 17:10:51.557  1672  1672 I A       : Created gRPC endpoint to "search" for service class com.google.android.apps.search.googleapp.search.suggest.plugins.onesearch.server.OneSearchSuggestService
+11-27 17:10:51.570   879   921 D SplashScreenView: Build android.window.SplashScreenView{537b28b V.E...... ......ID 0,0-0,0}
+11-27 17:10:51.570   879   921 D SplashScreenView: Icon: view: null drawable: null size: 0
+11-27 17:10:51.570   879   921 D SplashScreenView: Branding: view: android.view.View{39f8f68 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+11-27 17:10:51.573  1672  2615 I A       : Using proto config with mendel
+11-27 17:10:51.576  1566  1871 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+11-27 17:10:51.595   879   887 I ndroid.systemui: NativeAlloc concurrent copying GC freed 591756(12MB) AllocSpace objects, 19(988KB) LOS objects, 50% free, 21MB/42MB, paused 37us,81us total 632.308ms
+11-27 17:10:51.605  1672  2615 I A       : Using proto config with mendel
+11-27 17:10:51.649  4573  4573 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@8a4bd39 in: PRE_ON_CREATE
+11-27 17:10:51.650  4573  4573 V ActivityScenario: Activity lifecycle changed event received but ignored because the reported transition was not ON_CREATE while the last known transition was PRE_ON_CREATE
+11-27 17:10:51.724  4573  4573 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@8a4bd39 in: CREATED
+11-27 17:10:51.725  4573  4573 V ActivityScenario: Update currentActivityStage to CREATED, currentActivity=androidx.activity.ComponentActivity@8a4bd39
+11-27 17:10:51.734  4573  4573 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@8a4bd39 in: STARTED
+11-27 17:10:51.734  4573  4573 V ActivityScenario: Update currentActivityStage to STARTED, currentActivity=androidx.activity.ComponentActivity@8a4bd39
+11-27 17:10:51.735  4573  4573 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@8a4bd39 in: RESUMED
+11-27 17:10:51.737  4573  4573 V ActivityScenario: Update currentActivityStage to RESUMED, currentActivity=androidx.activity.ComponentActivity@8a4bd39
+11-27 17:10:51.744  1156  1156 D SearchTargetUtil:  query= size=15
+11-27 17:10:51.744  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=plymouth belvedere,group_id=web522729,response_id=1f0d65b8-78c9-43b6-9cc4-0b39fb2981b5,support_query_builder=false,} searchAction=plymouth belvedere searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 7aeb7dd9-7cec-421f-b11b-4f863be23402
+11-27 17:10:51.744  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=tell me about the new pirates of the caribbean secret cinema show and first look footage,group_id=web522729,response_id=1f0d65b8-78c9-43b6-9cc4-0b39fb2981b5,support_query_builder=false,} searchAction=tell me about the new pirates of the caribbean secret cinema show and first look footage searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: f5ffa4be-ee1d-4f95-9f7c-4b3728d4fc91
+11-27 17:10:51.744  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=lead azide detonation iowa army,group_id=web522729,response_id=1f0d65b8-78c9-43b6-9cc4-0b39fb2981b5,support_query_builder=false,} searchAction=lead azide detonation iowa army searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 332519e4-88c1-4bb8-bf07-aca9e96b637b
+11-27 17:10:51.744  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=ai cyberattack,group_id=web522729,response_id=1f0d65b8-78c9-43b6-9cc4-0b39fb2981b5,support_query_builder=false,} searchAction=ai cyberattack searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 11b92606-86df-4f90-bcda-ff3269336bcd
+11-27 17:10:51.744  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=nintendo switch games black friday deals,group_id=web522729,response_id=1f0d65b8-78c9-43b6-9cc4-0b39fb2981b5,support_query_builder=false,} searchAction=nintendo switch games black friday deals searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 5eda72dd-e313-4bef-8e88-2566f71f1808
+11-27 17:10:51.744  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=fireball meteor ohio,group_id=web522729,response_id=1f0d65b8-78c9-43b6-9cc4-0b39fb2981b5,support_query_builder=false,} searchAction=fireball meteor ohio searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 9fbb5b09-83c3-470f-8f6e-c39e99eaf2d8
+11-27 17:10:51.744  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=museum of the north mammoth fossils,group_id=web522729,response_id=1f0d65b8-78c9-43b6-9cc4-0b39fb2981b5,support_query_builder=false,} searchAction=museum of the north mammoth fossils searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: efcff2ce-2bb8-4e61-aa2d-4f8f2460ad2d
+11-27 17:10:51.744  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=nyt connections hints,group_id=web522729,response_id=1f0d65b8-78c9-43b6-9cc4-0b39fb2981b5,support_query_builder=false,} searchAction=nyt connections hints searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 58995514-ae24-42fe-b0be-3ab0b58fa0bf
+11-27 17:10:51.744  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=cleveland guardians,group_id=web522729,response_id=1f0d65b8-78c9-43b6-9cc4-0b39fb2981b5,support_query_builder=false,} searchAction=cleveland guardians searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 85da5642-670f-43d0-98ac-41db338f0e9c
+11-27 17:10:51.744  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=dr annette wagner surgery,group_id=web522729,response_id=1f0d65b8-78c9-43b6-9cc4-0b39fb2981b5,support_query_builder=false,} searchAction=dr annette wagner surgery searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 5b45d07b-ea12-4504-a242-2814817ead23
+11-27 17:10:51.744  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=venkatesa chandrasekaran quantum gravity,group_id=web522729,response_id=1f0d65b8-78c9-43b6-9cc4-0b39fb2981b5,support_query_builder=false,} searchAction=venkatesa chandrasekaran quantum gravity searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 1ff2baff-9ef0-4c3f-ae8f-77994b0c7fea
+11-27 17:10:51.744  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=hackers breach air force,group_id=web522729,response_id=1f0d65b8-78c9-43b6-9cc4-0b39fb2981b5,support_query_builder=false,} searchAction=hackers breach air force searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: bfe3bb1d-9917-4dd4-be80-4f98fdee6012
+11-27 17:10:51.744  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=california pier collapses,group_id=web522729,response_id=1f0d65b8-78c9-43b6-9cc4-0b39fb2981b5,support_query_builder=false,} searchAction=california pier collapses searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: b2a023a1-dd57-4c6c-9820-b0129fbce6e2
+11-27 17:10:51.744  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=apple iphone 18 pro black friday,group_id=web522729,response_id=1f0d65b8-78c9-43b6-9cc4-0b39fb2981b5,support_query_builder=false,} searchAction=apple iphone 18 pro black friday searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 4acf686c-c431-4f0a-a1cd-d07e18d9f0a4
+11-27 17:10:51.744  1156  1156 D SearchTargetUtil: layoutType=short_icon_row resultType=131072 packageName=com.google.android.googlequicksearchbox extras=Bundle{suggestion_type=33,suggest_truncate_start=false,is_answer=false,is_entity=false,is_personal=false,suggest_raw_text=gemma deaf dog,group_id=web522729,response_id=1f0d65b8-78c9-43b6-9cc4-0b39fb2981b5,support_query_builder=false,} searchAction=gemma deaf dog searchActionExtras=Bundle{learn_more_url=https://support.google.com/websearch/answer/106230?hl=106230,suggestion_action_text=Report this,should_start_for_result=true,allow_pinning=true,skip_logging_in_target_handler=false,suggestion_action_rpc=2,}ParentID: null targetID: 30ff4e3b-72e2-4cf6-8316-b2a5a560ffd0
+11-27 17:10:51.821   879   920 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@b1d96e1
+11-27 17:10:51.825   525  2582 W InputManager-JNI: Input channel object 'db0e270 Splash Screen com.ranjithkb.radio.test (client)' was disposed without first being removed with the input manager!
+11-27 17:10:51.852   525   544 W ziparchive: Unable to open '/data/app/~~rtI5gn7ItxGYSAf18BeOAA==/com.ranjithkb.radio-YCZ6skP8UGsG4RVi7e7kQw==/base.dm': No such file or directory
+11-27 17:10:51.853   525   544 I ActivityTaskManager: Displayed com.ranjithkb.radio/androidx.activity.ComponentActivity for user 0: +324ms
+11-27 17:10:51.854  6965  6965 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@7a4f9bf
+11-27 17:10:51.857   525  2582 W InputManager-JNI: Input channel object '6a50a5d com.ranjithkb.radio.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity (client)' was disposed without first being removed with the input manager!
+11-27 17:10:51.860  1156  1205 I ImeTracker: com.google.android.apps.nexuslauncher:7ec44fc3: onRequestHide at ORIGIN_CLIENT_HIDE_SOFT_INPUT reason HIDE_SOFT_INPUT
+11-27 17:10:51.860  1156  1205 I ImeTracker: com.google.android.apps.nexuslauncher:7ec44fc3: onFailed at PHASE_CLIENT_VIEW_SERVED
+11-27 17:10:51.862  6133  6187 D BtGatt.ScanManager: uid 10129 isForeground true scanMode -1
+11-27 17:10:51.865  1672  3284 I PBSessionCacheImpl: Deleted sessionId[7355329565513912] from persistence.
+11-27 17:10:51.865  1156  2097 D OneSearchSuggestProvider: Shut down the binder channel
+11-27 17:10:51.866  1156  7037 I IPCThreadState: oneway function results for code 2 on binder at 0x7a4c6fed9e30 will be dropped but finished with status UNKNOWN_TRANSACTION
+11-27 17:10:51.912   525  2880 I ImeTracker: com.ranjithkb.radio:59ad43f4: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+11-27 17:10:51.912   525  2880 I ImeTracker: com.ranjithkb.radio:59ad43f4: onCancelled at PHASE_SERVER_SHOULD_HIDE
+11-27 17:10:51.912  1462  1462 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227
+11-27 17:10:51.913  1462  1462 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+11-27 17:10:51.913  1462  1462 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.ranjithkb.radio fieldId=0 fieldName=null extras=null}, false)
+11-27 17:10:51.918  1462  1462 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+11-27 17:10:51.938  1462  1462 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+11-27 17:10:51.951  1672  2615 W SearchServiceCore: Abort, client detached.
+11-27 17:10:51.995  4573  4573 I MediaController: Init d0f2f48 [AndroidXMedia3/1.5.1] [emu64xa, sdk_gphone64_x86_64, Google, 34]
+11-27 17:10:52.109  6133  6187 D BtGatt.ScanManager: uid 10129 isForeground true scanMode -1
+11-27 17:10:52.110   879   920 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@65df06c
+11-27 17:10:52.113   525  2880 W InputManager-JNI: Input channel object '2082806 Splash Screen com.ranjithkb.radio (client)' was disposed without first being removed with the input manager!
+11-27 17:10:52.148  5437  7274 I DiscoveryManager: Filter criteria(CC1AD845) scannerFlags(0)
+11-27 17:10:52.149  5437  7274 W DatabaseProcessor: processLocalDevices: failed to get the network info with non-null networkId.
+11-27 17:10:52.170  5437  5437 I CastMediaRouteProvider: Published 0 routes
+11-27 17:10:52.171  5437  7274 W GuestModeDeviceProber: setFilterCriteria
+11-27 17:10:52.171  5437  7274 W DatabaseProcessor: processLocalDevices: failed to get the network info with non-null networkId.
+11-27 17:10:52.188  5437  7274 D TrafficStats: tagSocket(87) with statsTag=0x30000900, statsUid=-1
+11-27 17:10:52.189   525   803 D ConnectivityService: NetReassign [no changes] [c 0] [a 1] [i 0]
+11-27 17:10:52.199   525   541 I WifiService: acquireMulticastLock uid=10129
+11-27 17:10:52.202  1031  6154 D IpClient.wlan0: set max DTIM multiplier to 1
+11-27 17:10:52.210   525   796 E WifiStaIfaceAidlImpl: installApfPacketFilter failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+11-27 17:10:52.212   525   796 E WifiStaIfaceAidlImpl: setDtimMultiplier failed with service-specific exception: android.os.ServiceSpecificException:  (code 4)
+11-27 17:10:52.290  4573  7298 D CCodecBuffers: [c2.android.mp3.decoder#370:1D-Output.Impl[N]] Client returned a buffer it does not own according to our record: 0
+11-27 17:10:52.290  4573  7298 D CCodecBuffers: [c2.android.mp3.decoder#370:1D-Output.Impl[N]] Client returned a buffer it does not own according to our record: 1
+11-27 17:10:52.290  4573  7298 D CCodecBuffers: [c2.android.mp3.decoder#370:1D-Output.Impl[N]] Client returned a buffer it does not own according to our record: 2
+11-27 17:10:52.291  4573  4860 D MediaCodec: keep callback message for reclaim
+11-27 17:10:52.291  4573  7298 I CCodecConfig: query failed after returning 7 values (BAD_INDEX)
+11-27 17:10:52.291  4573  7298 W Codec2Client: query -- param skipped: index = 1342179345.
+11-27 17:10:52.292  4573  7298 W Codec2Client: query -- param skipped: index = 2415921170.
+11-27 17:10:52.305   336  7333 I resolv  : GetAddrInfoHandler::run: {105 105 105 983145 10192 0}
+11-27 17:10:52.306   336  7334 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+11-27 17:10:52.306   336  7334 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7ec2fe88be50
+11-27 17:10:52.306   336  7334 I resolv  : doQuery: rcode=0, ancount=1, return value=143
+11-27 17:10:52.308  6133  6133 V AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio
+11-27 17:10:52.309  6133  6133 W AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:10:52.310  6133  6133 W AudioMediaPlayerWrapper: onMetadataChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:10:52.310  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=592707, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:10:52.310  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:10:52.311   336  7335 I resolv  : res_nmkquery: (QUERY, IN, A)
+11-27 17:10:52.311   336  7335 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x7ec44e880590
+11-27 17:10:52.311   336  7335 I resolv  : doQuery: rcode=0, ancount=2, return value=159
+11-27 17:10:52.312  4573  7332 D TrafficStats: tagSocket(144) with statsTag=0xffffffff, statsUid=-1
+11-27 17:10:52.313  6133  6133 V AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio
+11-27 17:10:52.314   397   397 D audioserver: FGS Logger Transaction failed
+11-27 17:10:52.315  6133  6133 W AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:10:52.316  6133  6133 W AudioMediaPlayerWrapper: onMetadataChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:10:52.316  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=592707, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:10:52.316  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:10:52.319   397   397 D audioserver: -129
+11-27 17:10:52.325  4573  4573 I VELVET-PLAY: play by com.ranjithkb.radio
+11-27 17:10:52.327   525   540 I WifiService: acquireWifiLock uid=10192 lockMode=3
+11-27 17:10:52.327  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=592728, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:10:52.327  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:10:52.327  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=592729, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:10:52.328  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:10:52.328  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=592728, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:10:52.328  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:10:52.328  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=0, buffered position=0, speed=0.0, updated=592729, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:10:52.328  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:10:52.331  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=592735, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:10:52.333  6133  6133 D AudioMediaPlayerWrapper: com.ranjithkb.radio Only Title and Artist info sync for metadata
+11-27 17:10:52.335  6133  6133 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-27 17:10:52.335  6133  6133 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=592735, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:10:52.335  6133  6133 D MediaControlGattService: updatePlayerState: playbackState= PAUSED
+11-27 17:10:52.335  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-27 17:10:52.335  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-27 17:10:52.335  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-27 17:10:52.335  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED_NOTIFY support: true
+11-27 17:10:52.336  6133  6133 W MediaControlGattService: Feature TRACK_POSITION(BIT 7) support: true
+11-27 17:10:52.337  6133  6133 W MediaControlGattService: Feature TRACK_POSITION_NOTIFY support: true
+11-27 17:10:52.337  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:10:52.337  6133  6133 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-27 17:10:52.337  6133  6133 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-27 17:10:52.337  6133  6133 W MediaControlGattService: Feature MEDIA_CONTROL_POINT_OPCODES_SUPPORTED(BIT 19) support: true
+11-27 17:10:52.337  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:10:52.337  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:10:52.337  6133  6133 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-27 17:10:52.337  6133  6133 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-27 17:10:52.338  6133  6133 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-27 17:10:52.338  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=592735, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:10:52.340  6133  6133 D AudioMediaPlayerWrapper: com.ranjithkb.radio Only Title and Artist info sync for metadata
+11-27 17:10:52.341  6133  6133 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-27 17:10:52.342  6133  6133 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=592735, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:10:52.342  6133  6133 D AvrcpTargetJni: sendMediaUpdateNative
+11-27 17:10:52.342  6133  6133 I bt_stack: [INFO:avrcp_service.cc(515)] virtual void bluetooth::avrcp::AvrcpService::SendMediaUpdate(bool, bool, bool) track_changed=0 :  play_state=1 :  queue=0
+11-27 17:10:52.361  6133  6133 V AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio
+11-27 17:10:52.363  6133  6133 W AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:10:52.363  6133  6133 V AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio
+11-27 17:10:52.366  6133  6133 W AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:10:52.549  1566  1967 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-27 17:10:52.549  1566  1967 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-27 17:10:52.558   879   937 D EGL_emulation: app_time_stats: avg=312.23ms min=94.85ms max=1278.45ms count=7
+11-27 17:10:52.566  1566  1967 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-27 17:10:52.567  1566  1967 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-27 17:10:52.577   879   931 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-27 17:10:52.579   879   879 W ConstraintSet: id unknown center_vertical_guideline
+11-27 17:10:52.579   879   879 W ConstraintSet: id unknown action_button_guideline
+11-27 17:10:52.580   879   879 W ConstraintSet: id unknown icon
+11-27 17:10:52.580   879   879 W ConstraintSet: id unknown media_seamless
+11-27 17:10:52.580   879   879 W ConstraintSet: id unknown media_action_barrier_start
+11-27 17:10:52.584   879   879 W ConstraintSet: id unknown media_action_barrier_end
+11-27 17:10:52.584   879   879 W ConstraintSet: id unknown media_action_barrier_top
+11-27 17:10:52.584   879   879 W ConstraintSet: id unknown remove_text
+11-27 17:10:52.584   879   879 W ConstraintSet: id unknown settings
+11-27 17:10:52.584   879   879 W ConstraintSet: id unknown dismiss
+11-27 17:10:52.585   879   879 W ConstraintSet: id unknown cancel
+11-27 17:10:52.622   879   937 D EGL_emulation: app_time_stats: avg=1504.10ms min=1504.10ms max=1504.10ms count=1
+11-27 17:10:52.651  5437  6387 W DatabaseProcessor: processLocalDevices: failed to get the network info with non-null networkId.
+11-27 17:10:52.652  5437  5437 I CastMediaRouteProvider: Published 0 routes
+11-27 17:10:52.776   879   931 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-27 17:10:52.778   879   879 W ConstraintSet: id unknown center_vertical_guideline
+11-27 17:10:52.778   879   879 W ConstraintSet: id unknown action_button_guideline
+11-27 17:10:52.778   879   879 W ConstraintSet: id unknown icon
+11-27 17:10:52.779   879   879 W ConstraintSet: id unknown media_seamless
+11-27 17:10:52.779   879   879 W ConstraintSet: id unknown media_action_barrier_start
+11-27 17:10:52.780   879   879 W ConstraintSet: id unknown media_action_barrier_end
+11-27 17:10:52.780   879   879 W ConstraintSet: id unknown media_action_barrier_top
+11-27 17:10:52.781   879   879 W ConstraintSet: id unknown remove_text
+11-27 17:10:52.781   879   879 W ConstraintSet: id unknown settings
+11-27 17:10:52.781   879   879 W ConstraintSet: id unknown dismiss
+11-27 17:10:52.781   879   879 W ConstraintSet: id unknown cancel
+11-27 17:10:53.744  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=594148, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:10:53.744  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:10:53.744  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=BUFFERING(6), position=0, buffered position=0, speed=0.0, updated=594148, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:10:53.744  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:10:53.761   342  1624 D android.hardware.audio@7.1-impl.ranchu: threadLoop: entering standby, frames: 8606080
+11-27 17:10:53.920  4573  4860 D MediaCodec: keep callback message for reclaim
+11-27 17:10:53.920  4573  7298 I CCodecConfig: query failed after returning 7 values (BAD_INDEX)
+11-27 17:10:53.921  4573  7298 W Codec2Client: query -- param skipped: index = 1342179345.
+11-27 17:10:53.921  4573  7298 W Codec2Client: query -- param skipped: index = 2415921170.
+11-27 17:10:53.941   397  2385 W AudioFlinger: createTrack_l(): mismatch between requested flags (00000008) and output flags (00000002)
+11-27 17:10:53.941   397  2385 D AudioFlinger: Client defaulted notificationFrames to 8024 for frameCount 16048
+11-27 17:10:53.942  6133  6133 V AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio
+11-27 17:10:53.942   397  2385 D AF::TrackHandle: OpPlayAudio: track:100 usage:1 not muted
+11-27 17:10:53.946  6133  6133 W AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:10:53.949  6133  6133 V AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio
+11-27 17:10:53.951  6133  6133 W AudioMediaPlayerWrapper: onQueueChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:10:53.959  6133  6133 W AudioMediaPlayerWrapper: onMetadataChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:10:53.960   397  2385 D audioserver: FGS Logger Transaction failed
+11-27 17:10:53.960   397  2385 D audioserver: -129
+11-27 17:10:53.964  6133  6133 W AudioMediaPlayerWrapper: onMetadataChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:10:53.973  4573  4573 D MediaRouter: onRestoreRoute() : route=RouteInfo{ name=Phone, description=null, status=null, category=RouteCategory{ name=System types=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO  groupable=false }, supportedTypes=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO , presentationDisplay=null }
+11-27 17:10:53.973  4573  4573 V MediaRouter: Selecting route: RouteInfo{ name=Phone, description=null, status=null, category=RouteCategory{ name=System types=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO  groupable=false }, supportedTypes=ROUTE_TYPE_LIVE_AUDIO ROUTE_TYPE_LIVE_VIDEO , presentationDisplay=null }
+11-27 17:10:53.980   879   879 D MediaDataManager: State updated outside of notification
+11-27 17:10:53.983   879   879 W ConstraintSet: id unknown center_vertical_guideline
+11-27 17:10:53.983   879   879 W ConstraintSet: id unknown action_button_guideline
+11-27 17:10:53.984   879   879 W ConstraintSet: id unknown icon
+11-27 17:10:53.985   879   879 W ConstraintSet: id unknown media_seamless
+11-27 17:10:53.986  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PLAYING(3), position=0, buffered position=5433, speed=1.0, updated=594380, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:10:53.986   879   879 W ConstraintSet: id unknown media_action_barrier_start
+11-27 17:10:53.987   879   879 W ConstraintSet: id unknown media_action_barrier_end
+11-27 17:10:53.988   879   879 W ConstraintSet: id unknown media_action_barrier_top
+11-27 17:10:53.988   879   879 W ConstraintSet: id unknown remove_text
+11-27 17:10:53.989   879   879 W ConstraintSet: id unknown settings
+11-27 17:10:53.990   879   879 W ConstraintSet: id unknown dismiss
+11-27 17:10:53.990   879   879 W ConstraintSet: id unknown cancel
+11-27 17:10:53.996  6133  6133 D AudioMediaPlayerWrapper: com.ranjithkb.radio Only Title and Artist info sync for metadata
+11-27 17:10:54.001  6133  6133 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-27 17:10:54.001  6133  6133 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=PLAYING(3), position=19, buffered position=5433, speed=1.0, updated=594401, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:10:54.001  6133  6133 D AvrcpTargetJni: sendMediaUpdateNative
+11-27 17:10:54.001  6133  6133 I bt_stack: [INFO:avrcp_service.cc(515)] virtual void bluetooth::avrcp::AvrcpService::SendMediaUpdate(bool, bool, bool) track_changed=0 :  play_state=1 :  queue=0
+11-27 17:10:54.002  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PLAYING(3), position=0, buffered position=5433, speed=1.0, updated=594380, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:10:54.003  6133  6133 D AudioMediaPlayerWrapper: com.ranjithkb.radio Only Title and Artist info sync for metadata
+11-27 17:10:54.005  6133  6133 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-27 17:10:54.005  6133  6133 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=PLAYING(3), position=27, buffered position=5433, speed=1.0, updated=594409, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:10:54.008  6133  6133 D MediaControlGattService: updatePlayerState: playbackState= PLAYING
+11-27 17:10:54.008  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-27 17:10:54.008  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-27 17:10:54.008  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-27 17:10:54.009  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED_NOTIFY support: true
+11-27 17:10:54.009  6133  6133 W MediaControlGattService: Feature TRACK_POSITION(BIT 7) support: true
+11-27 17:10:54.009  6133  6133 W MediaControlGattService: Feature TRACK_POSITION_NOTIFY support: true
+11-27 17:10:54.010  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:10:54.010  6133  6133 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-27 17:10:54.010  6133  6133 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-27 17:10:54.010  6133  6133 W MediaControlGattService: Feature MEDIA_CONTROL_POINT_OPCODES_SUPPORTED(BIT 19) support: true
+11-27 17:10:54.010  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:10:54.011  6133  6133 D MediaControlGattService: updateMediaStateChar
+11-27 17:10:54.011  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:10:54.011  6133  6133 D MediaControlGattService: updateMediaStateChar setting to state= 1
+11-27 17:10:54.012  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:10:54.012  6133  6133 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-27 17:10:54.012  6133  6133 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-27 17:10:54.012  6133  6133 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-27 17:10:54.012  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PLAYING(3), position=0, buffered position=5433, speed=1.0, updated=594382, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:10:54.012  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:10:54.012  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PLAYING(3), position=0, buffered position=5433, speed=1.0, updated=594382, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:10:54.012  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:10:54.015  4573  4860 D AudioTrack: getTimestamp_l(60): device stall time corrected using current time 594420294971
+11-27 17:10:54.033   397   507 D AudioFlinger: mixer(0x700d25cee930) throttle end: throttle time(5)
+11-27 17:10:54.090  4573  4573 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+11-27 17:10:54.197  1566  1967 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-27 17:10:54.197  1566  1967 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-27 17:10:54.198  1566  1967 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-27 17:10:54.199  1566  1967 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-27 17:10:54.200  1566  1967 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-27 17:10:54.200  1566  1967 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-27 17:10:54.227   879   937 D EGL_emulation: app_time_stats: avg=556.31ms min=41.06ms max=1434.31ms count=3
+11-27 17:10:54.231   879   931 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-27 17:10:54.285   879   931 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-27 17:10:54.288   879   879 W ConstraintSet: id unknown center_vertical_guideline
+11-27 17:10:54.288   879   879 W ConstraintSet: id unknown action_button_guideline
+11-27 17:10:54.288   879   879 W ConstraintSet: id unknown icon
+11-27 17:10:54.288   879   879 W ConstraintSet: id unknown media_seamless
+11-27 17:10:54.288   879   879 W ConstraintSet: id unknown media_action_barrier_start
+11-27 17:10:54.288   879   879 W ConstraintSet: id unknown media_action_barrier_end
+11-27 17:10:54.288   879   879 W ConstraintSet: id unknown media_action_barrier_top
+11-27 17:10:54.288   879   879 W ConstraintSet: id unknown remove_text
+11-27 17:10:54.288   879   879 W ConstraintSet: id unknown settings
+11-27 17:10:54.288   879   879 W ConstraintSet: id unknown dismiss
+11-27 17:10:54.288   879   879 W ConstraintSet: id unknown cancel
+11-27 17:10:54.316   879   879 W ConstraintSet: id unknown center_vertical_guideline
+11-27 17:10:54.319   879   879 W ConstraintSet: id unknown action_button_guideline
+11-27 17:10:54.320   879   879 W ConstraintSet: id unknown icon
+11-27 17:10:54.320   879   879 W ConstraintSet: id unknown media_seamless
+11-27 17:10:54.320   879   879 W ConstraintSet: id unknown media_action_barrier_start
+11-27 17:10:54.320   879   879 W ConstraintSet: id unknown media_action_barrier_end
+11-27 17:10:54.322   879   879 W ConstraintSet: id unknown media_action_barrier_top
+11-27 17:10:54.322   879   879 W ConstraintSet: id unknown remove_text
+11-27 17:10:54.322   879   879 W ConstraintSet: id unknown settings
+11-27 17:10:54.322   879   879 W ConstraintSet: id unknown dismiss
+11-27 17:10:54.322   879   879 W ConstraintSet: id unknown cancel
+11-27 17:10:54.415   879   931 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-27 17:10:54.417   879   879 W ConstraintSet: id unknown center_vertical_guideline
+11-27 17:10:54.417   879   879 W ConstraintSet: id unknown action_button_guideline
+11-27 17:10:54.417   879   879 W ConstraintSet: id unknown icon
+11-27 17:10:54.417   879   879 W ConstraintSet: id unknown media_seamless
+11-27 17:10:54.417   879   879 W ConstraintSet: id unknown media_action_barrier_start
+11-27 17:10:54.417   879   879 W ConstraintSet: id unknown media_action_barrier_end
+11-27 17:10:54.417   879   879 W ConstraintSet: id unknown media_action_barrier_top
+11-27 17:10:54.417   879   879 W ConstraintSet: id unknown remove_text
+11-27 17:10:54.417   879   879 W ConstraintSet: id unknown settings
+11-27 17:10:54.417   879   879 W ConstraintSet: id unknown dismiss
+11-27 17:10:54.417   879   879 W ConstraintSet: id unknown cancel
+11-27 17:10:54.542  4573  4701 I VELVET-TEST: equaliser from knobs: [6, 0, 0, 0, -6] (Custom)
+11-27 17:10:55.443  4573  4895 D BufferPoolAccessor2.0: bufferpool2 0x7a4acfed37a8 : 0(0 size) total buffers - 0(0 size) used buffers - 11/16 (recycle/alloc) - 1/2 (fetch/transfer)
+11-27 17:10:55.443  4573  4895 D BufferPoolAccessor2.0: bufferpool2 0x7a4acfeae7a8 : 0(0 size) total buffers - 0(0 size) used buffers - 6/10 (recycle/alloc) - 2/2 (fetch/transfer)
+11-27 17:10:55.443  4573  4895 D BufferPoolAccessor2.0: evictor expired: 3, evicted: 2
+11-27 17:10:55.483   483   877 D BufferPoolAccessor2.0: evictor expired: 2, evicted: 0
+11-27 17:10:55.494  4573  7298 D BufferPoolAccessor2.0: bufferpool2 0x7a4acfed0278 : 5(40960 size) total buffers - 1(8192 size) used buffers - 122/127 (recycle/alloc) - 9/238 (fetch/transfer)
+11-27 17:10:55.503   483  7299 D BufferPoolAccessor2.0: bufferpool2 0x78ca33c54038 : 4(18432 size) total buffers - 1(4608 size) used buffers - 116/120 (recycle/alloc) - 4/119 (fetch/transfer)
+11-27 17:10:55.651  5437  7274 W AdaptiveDiscoveryWorker: Exiting Adaptive Discovery. Current NetworkInfo is NULL.
+11-27 17:10:56.044  4573  4573 I MediaController: Release d0f2f48 [AndroidXMedia3/1.5.1] [emu64xa, sdk_gphone64_x86_64, Google, 34] [media3.common, media3.session, media3.exoplayer, media3.decoder, media3.cast, media3.exoplayer.hls, media3.datasource, media3.extractor]
+11-27 17:10:56.045  4573  4573 I VELVET-PLAY: pause by com.ranjithkb.radio
+11-27 17:10:56.047   525   540 I WifiService: releaseWifiLock uid=10192
+11-27 17:10:56.050  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=1988, buffered position=31973, speed=0.0, updated=596454, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:10:56.052  6133  6133 D AudioMediaPlayerWrapper: com.ranjithkb.radio Only Title and Artist info sync for metadata
+11-27 17:10:56.054  6133  6133 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-27 17:10:56.056  6133  6133 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=PAUSED(2), position=1988, buffered position=31973, speed=0.0, updated=596454, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:10:56.056  6133  6133 D AvrcpTargetJni: sendMediaUpdateNative
+11-27 17:10:56.056  6133  6133 I bt_stack: [INFO:avrcp_service.cc(515)] virtual void bluetooth::avrcp::AvrcpService::SendMediaUpdate(bool, bool, bool) track_changed=0 :  play_state=1 :  queue=0
+11-27 17:10:56.056  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=1988, buffered position=31973, speed=0.0, updated=596454, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:10:56.058  6133  6133 D AudioMediaPlayerWrapper: com.ranjithkb.radio Only Title and Artist info sync for metadata
+11-27 17:10:56.060  6133  6133 V AudioMediaPlayerWrapper: trySendMediaUpdate(): Metadata has been updated for com.ranjithkb.radio
+11-27 17:10:56.060  6133  6133 D MediaPlayerList: sendMediaUpdate state=PlaybackState {state=PAUSED(2), position=1988, buffered position=31973, speed=0.0, updated=596454, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:10:56.061   879   879 D MediaDataManager: State updated outside of notification
+11-27 17:10:56.063  6133  6133 D MediaControlGattService: updatePlayerState: playbackState= PAUSED
+11-27 17:10:56.063  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-27 17:10:56.063  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-27 17:10:56.063  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED(BIT 8) support: true
+11-27 17:10:56.063  6133  6133 W MediaControlGattService: Feature PLAYBACK_SPEED_NOTIFY support: true
+11-27 17:10:56.065  6133  6133 W MediaControlGattService: Feature TRACK_POSITION(BIT 7) support: true
+11-27 17:10:56.065  6133  6133 W MediaControlGattService: Feature TRACK_POSITION_NOTIFY support: true
+11-27 17:10:56.065  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:10:56.065  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:10:56.065  6133  6133 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-27 17:10:56.065  6133  6133 W MediaControlGattService: Feature PLAYER_NAME(BIT 1) support: true
+11-27 17:10:56.066  6133  6133 W MediaControlGattService: Feature MEDIA_CONTROL_POINT_OPCODES_SUPPORTED(BIT 19) support: true
+11-27 17:10:56.066  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:10:56.066  6133  6133 D MediaControlGattService: updateMediaStateChar
+11-27 17:10:56.066  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:10:56.066  6133  6133 D MediaControlGattService: updateMediaStateChar setting to state= 2
+11-27 17:10:56.066  6133  6133 W MediaControlGattService: Feature MEDIA_STATE(BIT 17) support: true
+11-27 17:10:56.066  6133  6133 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-27 17:10:56.066  6133  6133 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-27 17:10:56.066   879   879 W ConstraintSet: id unknown center_vertical_guideline
+11-27 17:10:56.066   879   879 W ConstraintSet: id unknown action_button_guideline
+11-27 17:10:56.067   879   879 W ConstraintSet: id unknown icon
+11-27 17:10:56.067  6133  6133 W MediaControlGattService: Feature SEEKING_SPEED(BIT 9) support: true
+11-27 17:10:56.067   879   879 W ConstraintSet: id unknown media_seamless
+11-27 17:10:56.067  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=1988, buffered position=31973, speed=0.0, updated=596466, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:10:56.067   879   879 W ConstraintSet: id unknown media_action_barrier_start
+11-27 17:10:56.067   879   879 W ConstraintSet: id unknown media_action_barrier_end
+11-27 17:10:56.067   879   879 W ConstraintSet: id unknown media_action_barrier_top
+11-27 17:10:56.067  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:10:56.067  6133  6133 V AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio : PlaybackState {state=PAUSED(2), position=1988, buffered position=31973, speed=0.0, updated=596466, actions=7339703, custom actions=[], active item id=2, error=null}
+11-27 17:10:56.067   879   879 W ConstraintSet: id unknown remove_text
+11-27 17:10:56.067   879   879 W ConstraintSet: id unknown settings
+11-27 17:10:56.067   879   879 W ConstraintSet: id unknown dismiss
+11-27 17:10:56.068  6133  6133 W AudioMediaPlayerWrapper: onPlaybackStateChanged(): com.ranjithkb.radio tried to update with no new data
+11-27 17:10:56.068   879   879 W ConstraintSet: id unknown cancel
+11-27 17:10:56.085  1566  1967 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-27 17:10:56.085  1566  1967 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-27 17:10:56.091   879   921 D SplashScreenView: Build android.window.SplashScreenView{1254932 V.E...... ......ID 0,0-0,0}
+11-27 17:10:56.091   879   921 D SplashScreenView: Icon: view: null drawable: null size: 0
+11-27 17:10:56.091   879   921 D SplashScreenView: Branding: view: android.view.View{7d99683 G.ED..... ......I. 0,0-0,0 #10204ef android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+11-27 17:10:56.096  4573  4573 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@8a4bd39 in: PAUSED
+11-27 17:10:56.096  4573  4573 V ActivityScenario: Update currentActivityStage to PAUSED, currentActivity=androidx.activity.ComponentActivity@8a4bd39
+11-27 17:10:56.104   401   401 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+11-27 17:10:56.154   879   937 D EGL_emulation: app_time_stats: avg=963.48ms min=213.95ms max=1713.01ms count=2
+11-27 17:10:56.218   397   507 D audioserver: FGS Logger Transaction failed
+11-27 17:10:56.218   397   507 D audioserver: -129
+11-27 17:10:56.277   879   937 D EGL_emulation: app_time_stats: avg=3654.85ms min=3654.85ms max=3654.85ms count=1
+11-27 17:10:56.297  6965  6982 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+11-27 17:10:56.300  1566  1967 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-27 17:10:56.300  1566  1967 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-27 17:10:56.307  1566  1967 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-27 17:10:56.307  1566  1967 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-27 17:10:56.414   342  6310 E EffectDP: mState is not DYNAMICS_PROCESSING_STATE_ACTIVE. Current mState 1
+11-27 17:10:56.470  4573  4573 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@8a4bd39 in: STOPPED
+11-27 17:10:56.471  4573  4573 V ActivityScenario: Update currentActivityStage to STOPPED, currentActivity=androidx.activity.ComponentActivity@8a4bd39
+11-27 17:10:56.498  4573  4573 D LifecycleMonitor: Lifecycle status change: androidx.activity.ComponentActivity@8a4bd39 in: DESTROYED
+11-27 17:10:56.499  4573  4573 V ActivityScenario: Update currentActivityStage to DESTROYED, currentActivity=null
+11-27 17:10:56.499  4573  4573 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@b93642e
+11-27 17:10:56.575   525   544 W ziparchive: Unable to open '/data/app/~~B3uJnnUaHhYZIp39l2AuJA==/com.ranjithkb.radio.test-Ae5T3gL0sYc9v8tYzVDUQQ==/base.dm': No such file or directory
+11-27 17:10:56.577   525   544 I ActivityTaskManager: Displayed com.ranjithkb.radio.test/androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity for user 0: +488ms
+11-27 17:10:56.577   525  2880 W InputManager-JNI: Input channel object '23631de com.ranjithkb.radio/androidx.activity.ComponentActivity (client)' was disposed without first being removed with the input manager!
+11-27 17:10:56.587   879   931 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-27 17:10:56.604   401   401 I BpBinder: onLastStrongRef automatically unlinking death recipients:
+11-27 17:10:56.609  4573  4573 W GlobalMediaRouter: Ignoring invalid provider descriptor: null
+11-27 17:10:56.615  4573  4701 D IdlingRegistry: Unregistering idling resources: [androidx.compose.ui.test.EspressoLink@4a22cfc]
+11-27 17:10:56.616   879   931 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-27 17:10:56.627  6133  6187 D BtGatt.ScanManager: uid 10129 isForeground true scanMode -1
+11-27 17:10:56.631  4573  4701 I TestRunner: finished: e04_bass_and_treble_knobs_are_the_equaliser_and_keep_playing(com.ranjithkb.radionative.EraDeviceTest)

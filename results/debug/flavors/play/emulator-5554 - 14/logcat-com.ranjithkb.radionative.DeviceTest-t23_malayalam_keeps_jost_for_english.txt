@@ -1,0 +1,6 @@
+11-27 17:07:55.462  4573  4701 I TestRunner: started: t23_malayalam_keeps_jost_for_english(com.ranjithkb.radionative.DeviceTest)
+11-27 17:07:55.464  4573  4573 I MediaController: Init b20008e [AndroidXMedia3/1.5.1] [emu64xa, sdk_gphone64_x86_64, Google, 34]
+11-27 17:07:55.479  4573  4701 I VELVET-TEST: mixed Jost + Manjari font built: true (Android 34)
+11-27 17:07:55.480  4573  4573 I MediaController: Release b20008e [AndroidXMedia3/1.5.1] [emu64xa, sdk_gphone64_x86_64, Google, 34] [media3.common, media3.session, media3.exoplayer, media3.decoder, media3.cast, media3.exoplayer.hls, media3.datasource, media3.extractor]
+11-27 17:07:55.480  4573  4573 I VELVET-PLAY: pause by com.ranjithkb.radio
+11-27 17:07:55.482  4573  4701 I TestRunner: finished: t23_malayalam_keeps_jost_for_english(com.ranjithkb.radionative.DeviceTest)

@@ -1,0 +1,97 @@
+11-27 17:05:16.028  4573  4701 I TestRunner: started: t12_crash_report_saved_and_sent(com.ranjithkb.radionative.DeviceTest)
+11-27 17:05:16.030  4573  4573 I MediaController: Init 374c497 [AndroidXMedia3/1.5.1] [emu64xa, sdk_gphone64_x86_64, Google, 34]
+11-27 17:05:16.065  4573  4701 I VELVET-ALARM: crash: IllegalStateException: TEST crash from the automated device check — please delete · at com.ranjithkb.radionative.DeviceTest.t12_crash_report_saved_and_sent(DeviceTest.kt:422)
+11-27 17:05:16.072   336  6392 I resolv  : GetAddrInfoHandler::run: {105 105 105 983145 10192 0}
+11-27 17:05:16.072   336  6393 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+11-27 17:05:16.072   336  6394 I resolv  : res_nmkquery: (QUERY, IN, A)
+11-27 17:05:16.075  1566  1967 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-27 17:05:16.075  1566  1967 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-27 17:05:16.079  1566  1967 W AiAiEcho: LyftNotificationParser Ridesharing ETA not enabled
+11-27 17:05:16.079  1566  1967 W AiAiEcho: SmartspaceNotificationPredictor no parser can handle this notification or notification is invalid
+11-27 17:05:16.092   336  6394 I resolv  : res_nsend: used send_dg 176 terrno: 0
+11-27 17:05:16.093   336  6394 I resolv  : doQuery: rcode=0, ancount=8, return value=176
+11-27 17:05:16.094   336  6393 I resolv  : res_nsend: used send_dg 272 terrno: 0
+11-27 17:05:16.094   336  6393 I resolv  : doQuery: rcode=0, ancount=8, return value=272
+11-27 17:05:16.095  4573  4777 D TrafficStats: tagSocket(174) with statsTag=0xffffffff, statsUid=-1
+11-27 17:05:16.113   879   931 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-27 17:05:16.119   879   931 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-27 17:05:16.127   879   937 D EGL_emulation: app_time_stats: avg=597.94ms min=196.92ms max=998.96ms count=2
+11-27 17:05:16.139   879   879 W ConstraintSet: id unknown center_vertical_guideline
+11-27 17:05:16.139   879   879 W ConstraintSet: id unknown action_button_guideline
+11-27 17:05:16.139   879   879 W ConstraintSet: id unknown icon
+11-27 17:05:16.139   879   879 W ConstraintSet: id unknown media_seamless
+11-27 17:05:16.139   879   879 W ConstraintSet: id unknown media_action_barrier_start
+11-27 17:05:16.139   879   879 W ConstraintSet: id unknown media_action_barrier_end
+11-27 17:05:16.139   879   879 W ConstraintSet: id unknown media_action_barrier_top
+11-27 17:05:16.140   879   879 W ConstraintSet: id unknown remove_text
+11-27 17:05:16.140   879   879 W ConstraintSet: id unknown settings
+11-27 17:05:16.140   879   879 W ConstraintSet: id unknown dismiss
+11-27 17:05:16.140   879   879 W ConstraintSet: id unknown cancel
+11-27 17:05:16.149   879   879 W ConstraintSet: id unknown center_vertical_guideline
+11-27 17:05:16.149   879   879 W ConstraintSet: id unknown action_button_guideline
+11-27 17:05:16.149   879   879 W ConstraintSet: id unknown icon
+11-27 17:05:16.149   879   879 W ConstraintSet: id unknown media_seamless
+11-27 17:05:16.149   879   879 W ConstraintSet: id unknown media_action_barrier_start
+11-27 17:05:16.149   879   879 W ConstraintSet: id unknown media_action_barrier_end
+11-27 17:05:16.149   879   879 W ConstraintSet: id unknown media_action_barrier_top
+11-27 17:05:16.149   879   879 W ConstraintSet: id unknown remove_text
+11-27 17:05:16.149   879   879 W ConstraintSet: id unknown settings
+11-27 17:05:16.150   879   879 W ConstraintSet: id unknown dismiss
+11-27 17:05:16.150   879   879 W ConstraintSet: id unknown cancel
+11-27 17:05:16.327   879   931 D MediaDataManager: loaded art from android.media.metadata.ALBUM_ART_URI
+11-27 17:05:16.357   879   879 W ConstraintSet: id unknown center_vertical_guideline
+11-27 17:05:16.357   879   879 W ConstraintSet: id unknown action_button_guideline
+11-27 17:05:16.357   879   879 W ConstraintSet: id unknown icon
+11-27 17:05:16.357   879   879 W ConstraintSet: id unknown media_seamless
+11-27 17:05:16.357   879   879 W ConstraintSet: id unknown media_action_barrier_start
+11-27 17:05:16.357   879   879 W ConstraintSet: id unknown media_action_barrier_end
+11-27 17:05:16.357   879   879 W ConstraintSet: id unknown media_action_barrier_top
+11-27 17:05:16.357   879   879 W ConstraintSet: id unknown remove_text
+11-27 17:05:16.357   879   879 W ConstraintSet: id unknown settings
+11-27 17:05:16.357   879   879 W ConstraintSet: id unknown dismiss
+11-27 17:05:16.357   879   879 W ConstraintSet: id unknown cancel
+11-27 17:05:17.014  1672  2548 W NamedFutures: Timeout future task has been cancelled: 60000 milliseconds
+11-27 17:05:17.014  1672  1672 E A       : Task 255 failed or timed out. Client 7355329565513848 disconnecting from SearchService!
+11-27 17:05:17.014  1672  1672 E A       : java.util.concurrent.CancellationException: Task was cancelled.
+11-27 17:05:17.014  1672  1672 E A       : 	at com.google.common.util.concurrent.d.s(PG:3)
+11-27 17:05:17.014  1672  1672 E A       : 	at com.google.common.util.concurrent.d.get(PG:4)
+11-27 17:05:17.014  1672  1672 E A       : 	at com.google.common.util.concurrent.eb.a(PG:1)
+11-27 17:05:17.014  1672  1672 E A       : 	at com.google.common.util.concurrent.ci.r(PG:2)
+11-27 17:05:17.014  1672  1672 E A       : 	at com.google.common.util.concurrent.cb.run(PG:4)
+11-27 17:05:17.014  1672  1672 E A       : 	at com.google.android.apps.gsa.shared.util.c.a.ba.run(PG:1)
+11-27 17:05:17.014  1672  1672 E A       : 	at android.os.Handler.handleCallback(Handler.java:958)
+11-27 17:05:17.014  1672  1672 E A       : 	at android.os.Handler.dispatchMessage(Handler.java:99)
+11-27 17:05:17.014  1672  1672 E A       : 	at android.os.Looper.loopOnce(Looper.java:205)
+11-27 17:05:17.014  1672  1672 E A       : 	at android.os.Looper.loop(Looper.java:294)
+11-27 17:05:17.014  1672  1672 E A       : 	at android.app.ActivityThread.main(ActivityThread.java:8177)
+11-27 17:05:17.014  1672  1672 E A       : 	at java.lang.reflect.Method.invoke(Native Method)
+11-27 17:05:17.014  1672  1672 E A       : 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:552)
+11-27 17:05:17.014  1672  1672 E A       : 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:971)
+11-27 17:05:17.017  1672  5634 E BgTaskExecutorImpl: PERIODIC background task MDD_WIFI_CHARGING_TASK was cancelled.
+11-27 17:05:17.017  1672  5634 E BgTaskExecutorImpl: java.util.concurrent.CancellationException: Task was cancelled.
+11-27 17:05:17.017  1672  5634 E BgTaskExecutorImpl: 	at com.google.common.util.concurrent.d.s(PG:3)
+11-27 17:05:17.017  1672  5634 E BgTaskExecutorImpl: 	at com.google.common.util.concurrent.d.get(PG:4)
+11-27 17:05:17.017  1672  5634 E BgTaskExecutorImpl: 	at com.google.common.util.concurrent.eb.a(PG:1)
+11-27 17:05:17.017  1672  5634 E BgTaskExecutorImpl: 	at com.google.common.util.concurrent.ci.r(PG:2)
+11-27 17:05:17.017  1672  5634 E BgTaskExecutorImpl: 	at com.google.common.util.concurrent.cb.run(PG:4)
+11-27 17:05:17.017  1672  5634 E BgTaskExecutorImpl: 	at com.google.android.apps.gsa.shared.util.c.a.cf.b(PG:1)
+11-27 17:05:17.017  1672  5634 E BgTaskExecutorImpl: 	at com.google.android.apps.gsa.shared.util.c.a.ci.run(PG:1)
+11-27 17:05:17.017  1672  5634 E BgTaskExecutorImpl: 	at com.google.android.libraries.i.ae.run(PG:1)
+11-27 17:05:17.017  1672  5634 E BgTaskExecutorImpl: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+11-27 17:05:17.017  1672  5634 E BgTaskExecutorImpl: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+11-27 17:05:17.017  1672  5634 E BgTaskExecutorImpl: 	at com.google.android.libraries.i.i.run(PG:2)
+11-27 17:05:17.017  1672  5634 E BgTaskExecutorImpl: 	at com.google.android.libraries.i.p.run(PG:4)
+11-27 17:05:17.017  1672  5634 E BgTaskExecutorImpl: 	at java.lang.Thread.run(Thread.java:1012)
+11-27 17:05:17.060   336  6395 I resolv  : GetAddrInfoHandler::run: {105 105 105 983145 10192 0}
+11-27 17:05:17.060   336  6397 I resolv  : res_nmkquery: (QUERY, IN, A)
+11-27 17:05:17.061   336  6396 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+11-27 17:05:17.065   336  6396 I resolv  : res_nsend: used send_dg 70 terrno: 0
+11-27 17:05:17.066   336  6396 I resolv  : doQuery: rcode=0, ancount=1, return value=70
+11-27 17:05:17.067   336  6397 I resolv  : res_nsend: used send_dg 58 terrno: 0
+11-27 17:05:17.067   336  6397 I resolv  : doQuery: rcode=0, ancount=1, return value=58
+11-27 17:05:17.068  4573  4777 D TrafficStats: tagSocket(142) with statsTag=0xffffffff, statsUid=-1
+11-27 17:05:17.322  4573  4573 I MediaController: Release 8cc5ec [AndroidXMedia3/1.5.1] [emu64xa, sdk_gphone64_x86_64, Google, 34] [media3.common, media3.session, media3.exoplayer, media3.decoder, media3.cast, media3.exoplayer.hls, media3.datasource, media3.extractor]
+11-27 17:05:17.772   879   879 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+11-27 17:05:18.072  4573  4573 I MediaController: Release 374c497 [AndroidXMedia3/1.5.1] [emu64xa, sdk_gphone64_x86_64, Google, 34] [media3.common, media3.session, media3.exoplayer, media3.decoder, media3.cast, media3.exoplayer.hls, media3.datasource, media3.extractor]
+11-27 17:05:18.073  4573  4573 I VELVET-PLAY: pause by com.ranjithkb.radio
+11-27 17:05:18.075  4573  4701 I TestRunner: finished: t12_crash_report_saved_and_sent(com.ranjithkb.radionative.DeviceTest)
