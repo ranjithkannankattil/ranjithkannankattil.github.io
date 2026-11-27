@@ -103,16 +103,18 @@ class EraDeviceTest {
             val knob = rule.onNodeWithContentDescription("Tuning knob", substring = true)
             val angles = ArrayList<Float>()
             val start = main { b.currentMediaItemIndex }
-            knob.performTouchInput {
-                val c = center; val r = minOf(width, height) * 0.4f
-                down(c + androidx.compose.ui.geometry.Offset(0f, -r))
-                for (i in 1..60) {                       // a slow clockwise turn, 3° at a time
-                    val a = Math.toRadians(-90.0 + i * 3.0)
-                    moveTo(c + androidx.compose.ui.geometry.Offset((r * kotlin.math.cos(a)).toFloat(), (r * kotlin.math.sin(a)).toFloat()))
-                    angles += TuneSpin.angle.floatValue
-                }
-                up()
+            // each move is sent on its own (a touch block is sent all at once), then the knob is read
+            fun at(i: Int, r: Float, c: androidx.compose.ui.geometry.Offset): androidx.compose.ui.geometry.Offset {
+                val a = Math.toRadians(-90.0 + i * 3.0)
+                return c + androidx.compose.ui.geometry.Offset((r * kotlin.math.cos(a)).toFloat(), (r * kotlin.math.sin(a)).toFloat())
             }
+            knob.performTouchInput { down(at(0, minOf(width, height) * 0.4f, center)) }
+            for (i in 1..60) {                           // a slow clockwise turn, 3° at a time
+                knob.performTouchInput { moveTo(at(i, minOf(width, height) * 0.4f, center)) }
+                rule.waitForIdle()
+                angles += main { TuneSpin.angle.floatValue }
+            }
+            knob.performTouchInput { up() }
             val back = angles.zipWithNext().count { (x, y) -> y < x - 0.01f }
             log("$id: knob ${angles.first()}° → ${angles.last()}°, steps back: $back")
             assertEquals("$id: the knob never moves backwards while turned forward", 0, back)
