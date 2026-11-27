@@ -98,7 +98,7 @@ class EraDeviceTest {
     /** He found the tuning knob shaking and pulling back while he turned it (27 Nov 2026). Turn it slowly round a
      *  circle on every radio: it must only ever move forward, and the station must change. */
     @Test fun e02b_tuning_knob_turns_smoothly() {
-        for (id in listOf("cathedral", "valve", "receiver", "digital", "transistor", "boombox")) {
+        for (id in listOf("cathedral", "valve", "transistor", "receiver")) {   // the radios with a tuning knob (boombox and digital have keys)
             main { era = Eras.byId(id)!! }; settle()
             val knob = rule.onNodeWithContentDescription("Tuning knob", substring = true)
             val angles = ArrayList<Float>()
