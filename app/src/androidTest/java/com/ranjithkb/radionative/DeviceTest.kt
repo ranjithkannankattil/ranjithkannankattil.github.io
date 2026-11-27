@@ -558,5 +558,38 @@ class DeviceTest {
         favs = children("root").first { it.mediaId == "favs" }
         assertEquals("list asked for", PlaybackService.STYLE_LIST, favs.mediaMetadata.extras?.getInt(PlaybackService.CONTENT_STYLE_PLAYABLE))
     }
+
+    /** He turned on "Play the last station on opening", left the app, cleared the notification, opened it: nothing. */
+    @Test fun t32_play_last_station_on_opening() {
+        Tour.done(ctx)
+        playSomething()
+        val last = main { b.currentMediaItem!!.mediaId }
+        Theme.prefs(ctx).edit().putBoolean("autoPlay", true).commit()
+        try {
+            // 1) nothing loaded (notification cleared): a fresh open brings back the last station
+            main { b.stop(); b.clearMediaItems() }
+            assertTrue(waitFor(5_000, "cleared") { b.mediaItemCount == 0 })
+            AutoPlayLog.last = ""
+            var sc = androidx.test.core.app.ActivityScenario.launch(MainActivity::class.java)
+            assertTrue("a fresh open starts the last station", waitFor(30_000, "autoplay fresh") { b.isPlaying && b.currentMediaItem?.mediaId == last })
+            assertEquals("resume", AutoPlayLog.last)
+            sc.close()
+            // 2) paused with the station still loaded, app opened again: it plays
+            main { b.pause() }
+            assertTrue(waitFor(5_000, "paused") { !b.isPlaying })
+            AutoPlayLog.last = ""
+            sc = androidx.test.core.app.ActivityScenario.launch(MainActivity::class.java)
+            assertTrue("opening while paused plays", waitFor(25_000, "autoplay paused") { b.isPlaying })
+            assertEquals("play", AutoPlayLog.last)
+            sc.close()
+            // 3) switched off: opening the app does nothing
+            main { b.pause() }
+            Theme.prefs(ctx).edit().putBoolean("autoPlay", false).commit()
+            sc = androidx.test.core.app.ActivityScenario.launch(MainActivity::class.java)
+            Thread.sleep(6_000)
+            assertFalse("off means off", main { b.isPlaying })
+            sc.close()
+        } finally { Theme.prefs(ctx).edit().putBoolean("autoPlay", false).commit() }
+    }
 }
 

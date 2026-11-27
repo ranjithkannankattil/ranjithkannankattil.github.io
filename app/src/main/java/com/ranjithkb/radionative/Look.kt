@@ -212,10 +212,11 @@ fun orderPhrase(sort: String, picks: Boolean): String = when (sort) {
 @Composable
 fun KindSheet(cats: List<Triple<String, String, Int>>, selected: String, onPick: (String) -> Unit, close: () -> Unit) {
     ModalBottomSheet(onDismissRequest = close, containerColor = Paper, scrimColor = Color.Black.copy(alpha = 0.35f)) {
-        Column(Modifier.padding(start = Pad, end = Pad, bottom = 24.dp)) {
+        Column(Modifier.padding(start = Pad, end = Pad, bottom = 24.dp).verticalScroll(rememberScrollState())) {
             Text(t("Which kind?"), fontSize = 22.sp, color = Title, modifier = Modifier.padding(bottom = 10.dp))
-            Group {
-                cats.forEachIndexed { i, (k, label, n) ->
+            val (kinds, tags) = cats.partition { !it.first.startsWith("tag:") }
+            @Composable fun KindRows(list: List<Triple<String, String, Int>>) = Group {
+                list.forEachIndexed { i, (k, label, n) ->
                     val on = k == selected
                     if (i > 0) RowLine()
                     Row(Modifier.fillMaxWidth().heightIn(min = 54.dp).background(if (on) AccentSoft else Color.Transparent)
@@ -228,6 +229,8 @@ fun KindSheet(cats: List<Triple<String, String, Int>>, selected: String, onPick:
                     }
                 }
             }
+            KindRows(kinds)
+            if (tags.isNotEmpty()) { GroupHead(t("BY NAME")); KindRows(tags) }
         }
     }
 }
@@ -255,8 +258,38 @@ fun CatRow(cats: List<Triple<String, String, Int>>, selected: String, onSelect: 
     }
 }
 
-/** Pause / play of the station you're on, for the round button on its card (set by the app once it has the player). */
+/** Pause / play of the station you're on (set by the app once it has the player). */
 object NowControl { var toggle: () -> Unit = {} }
+
+/** Station logos for the rows: the list from the website, pictures kept in memory and on the phone. */
+object RowLogos {
+    private val mem = android.util.LruCache<String, androidx.compose.ui.graphics.ImageBitmap>(160)
+    private val none = java.util.Collections.synchronizedSet(HashSet<String>())
+    fun cached(key: String) = mem.get(key)
+    suspend fun load(ctx: android.content.Context, key: String): androidx.compose.ui.graphics.ImageBitmap? =
+        kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+            mem.get(key)?.let { return@withContext it }
+            if (key in none) return@withContext null
+            val url = CarArt.logoUrl(ctx, key) ?: run { none += key; return@withContext null }
+            val f = java.io.File(java.io.File(ctx.cacheDir, "row-logos").apply { mkdirs() }, key.replace(Regex("[^a-zA-Z0-9._-]"), "_") + ".png")
+            val bmp = try {
+                if (!f.exists()) java.net.URL(url).openStream().use { inp -> f.outputStream().use { inp.copyTo(it) } }
+                android.graphics.BitmapFactory.decodeFile(f.path, android.graphics.BitmapFactory.Options().apply { inSampleSize = 2 })
+            } catch (e: Exception) { null }
+            bmp?.asImageBitmap()?.also { mem.put(key, it) } ?: run { none += key; null }
+        }
+}
+
+@Composable
+fun StationLogo(key: String, size: Int) {
+    val ctx = androidx.compose.ui.platform.LocalContext.current
+    val img by produceState(RowLogos.cached(key), key) { if (value == null) value = RowLogos.load(ctx, key) }
+    img?.let {
+        Box(Modifier.padding(end = 10.dp).size(size.dp).clip(RoundedCornerShape(10.dp)).background(Color.White), contentAlignment = Alignment.Center) {
+            androidx.compose.foundation.Image(it, null, Modifier.fillMaxSize().padding(3.dp), contentScale = androidx.compose.ui.layout.ContentScale.Fit)
+        }
+    }
+}
 
 /**
  * One station as a card (2.10, agreed on the canvas): name, a line under it, the ♡ inline and a round play button.
@@ -277,9 +310,11 @@ fun StationRow(s: Station, sub: String, fav: Boolean, current: Boolean, playing:
             .then(if (current) Modifier.border(1.5.dp, Accent, shape) else Modifier.shadow(2.dp, shape, ambientColor = Accent.copy(alpha = 0.18f), spotColor = Accent.copy(alpha = 0.12f)))
             .clip(shape).background(bg)
             .clickable(src, androidx.compose.material3.ripple(), onClickLabel = "Play ${s.name}", onClick = onPlay)
-            .padding(start = 18.dp, end = 8.dp, top = vPad.dp, bottom = vPad.dp),
+            .padding(start = 14.dp, end = 4.dp, top = vPad.dp, bottom = vPad.dp),
             verticalAlignment = Alignment.CenterVertically) {
-            Column(Modifier.weight(1f)) {
+            // the station's own logo when it has one (his wish, 27 Nov 2026); nothing in its place when it hasn't
+            StationLogo(s.key, if (Theme.spacing == 0) 36 else 44)
+            Column(Modifier.weight(1f).padding(start = 4.dp)) {
                 Text(highlighted(s.name, highlight, badge, s.tv, s.col == MINE), fontSize = (if (Theme.spacing == 2) 18 else 17).sp, lineHeight = 21.sp,
                     fontWeight = FontWeight.Medium, color = if (s.offline) Soft else Title,
                     maxLines = if (Theme.spacing == 0) 1 else 2, overflow = TextOverflow.Ellipsis)
@@ -288,17 +323,10 @@ fun StationRow(s: Station, sub: String, fav: Boolean, current: Boolean, playing:
                 if (note.isNotBlank()) Text(note, fontSize = 14.sp, lineHeight = 18.sp, color = if (current) AccentText else Soft,
                     maxLines = 1, overflow = TextOverflow.Ellipsis, modifier = Modifier.padding(top = 2.dp))
             }
-            IconButton(onFav, Modifier.size(44.dp)) {
+            // only the heart: tapping the card plays it (he found the round play button one control too many, 27 Nov 2026)
+            IconButton(onFav, Modifier.size(48.dp)) {
                 LineIcon(if (fav) R.drawable.ln_heart_fill else R.drawable.ln_heart,
                     if (fav) "Remove ${s.name} from favourites" else "Add ${s.name} to favourites", 20, if (fav) AccentText else Soft)
-            }
-            // round play button: filled for the station you're on, outlined for the others
-            val on = current
-            Box(Modifier.padding(start = 4.dp).size(44.dp).clip(CircleShape)
-                .then(if (on) Modifier.background(Accent) else Modifier.border(1.5.dp, AccentText, CircleShape))
-                .clickable(onClickLabel = (if (on && playing) "Pause " else "Play ") + s.name) { if (on) NowControl.toggle() else onPlay() },
-                contentAlignment = Alignment.Center) {
-                LineIcon(if (on && playing) R.drawable.ln_pause else R.drawable.ln_play, null, 18, if (on) Color.White else AccentText)
             }
         }
     }
@@ -330,48 +358,37 @@ fun MiniPlayer(now: NowState, c: androidx.media3.session.MediaController?, isFav
     val song = now.md.title?.toString() ?: ""
     val hasSong = song.isNotBlank() && song != station
     val artist = (now.md.artist?.toString() ?: "").split(" · ").filter { it != station }.joinToString(" · ")
+    // Half the old height (his idea, 27 Nov 2026, like JioSaavn): picture, station and song, play / pause.
+    // Heart, next, sleep and cast live in the big player, one tap away; swipe the bar sideways to change station.
+    val key = c?.currentMediaItem?.mediaId?.takeIf { "st|" in it }?.substringAfterLast("st|")   // collection:station
     Surface(color = BarBg, shadowElevation = 8.dp) {
-        Column(Modifier.fillMaxWidth()) {
-            Row(Modifier.fillMaxWidth().clickable(onClickLabel = t("Open the player"), onClick = open)
-                .pointerInput(c) { detectHorizontalDragGestures(onDragEnd = {
-                    if (drag < -120) c?.nextStation() else if (drag > 120) c?.prevStation(); drag = 0f },
-                    onDragCancel = { drag = 0f }) { _, d -> drag += d } }
-                .padding(start = Pad, end = 18.dp, top = 10.dp), verticalAlignment = Alignment.CenterVertically) {
-                Column(Modifier.weight(1f).padding(end = 12.dp)) {
-                    Label(if (cast.connected) "$station · on your TV / speaker" else station, BarGold, 9)
-                    val status = now.error ?: if (now.buffering) "Connecting…" else null
-                    Text(buildAnnotatedString {
-                        append(if (hasSong) song else status ?: "Live radio")
-                        if (hasSong && artist.isNotBlank()) withStyle(SpanStyle(fontWeight = FontWeight.Light, color = BarSoft)) { append(" — $artist") }
-                    }, fontSize = 16.sp, color = BarInk, maxLines = 1, overflow = TextOverflow.Ellipsis, modifier = Modifier.padding(top = 3.dp))
-                    if (hasSong && status != null) Text(status, fontSize = 12.sp, color = BarSoft, maxLines = 1)
-                }
-                Box(Modifier.size(48.dp).clip(CircleShape).border(1.dp, BarGold, CircleShape)
-                    .clickable(onClickLabel = if (now.playing) "Pause" else "Play") {
-                        c?.let { if (it.isPlaying) it.pause() else { it.prepare(); it.play() } } },
-                    contentAlignment = Alignment.Center) {
-                    LineIcon(if (now.playing) R.drawable.ln_pause else R.drawable.ln_play, if (now.playing) "Pause" else "Play", 20, BarGold)
-                }
+        Row(Modifier.fillMaxWidth().heightIn(min = 64.dp).clickable(onClickLabel = t("Open the player"), onClick = open)
+            .pointerInput(c) { detectHorizontalDragGestures(onDragEnd = {
+                if (drag < -120) c?.nextStation() else if (drag > 120) c?.prevStation(); drag = 0f },
+                onDragCancel = { drag = 0f }) { _, d -> drag += d } }
+            .padding(start = 12.dp, end = 8.dp, top = 8.dp, bottom = 8.dp), verticalAlignment = Alignment.CenterVertically) {
+            // the song's cover, else the station's logo, else nothing
+            val cover = artBitmap(now.md.artworkUri?.toString()?.takeUnless(CarArt::isStationArt))
+            if (cover != null) androidx.compose.foundation.Image(cover.asImageBitmap(), null,
+                Modifier.padding(end = 12.dp).size(44.dp).clip(RoundedCornerShape(8.dp)), contentScale = androidx.compose.ui.layout.ContentScale.Crop)
+            else if (key != null) StationLogo(key, 44)
+            Column(Modifier.weight(1f).padding(end = 8.dp)) {
+                Text(if (cast.connected) "$station · " + t("on your TV / speaker") else station, fontSize = 14.sp, color = BarGold,
+                    fontWeight = FontWeight.Medium, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                val status = now.error ?: if (now.buffering) t("Connecting…") else null
+                Text(buildAnnotatedString {
+                    append(if (hasSong) song else status ?: t("Live radio"))
+                    if (hasSong && artist.isNotBlank()) withStyle(SpanStyle(fontWeight = FontWeight.Light, color = BarSoft)) { append(" — $artist") }
+                }, fontSize = 15.sp, color = BarInk, maxLines = 1, overflow = TextOverflow.Ellipsis)
             }
-            Row(Modifier.fillMaxWidth().height(48.dp).padding(horizontal = 8.dp), verticalAlignment = Alignment.CenterVertically) {
-                @Composable fun Cell(label: String, onClick: () -> Unit, content: @Composable () -> Unit) =
-                    Box(Modifier.weight(1f).fillMaxHeight().clickable(onClickLabel = label, onClick = onClick), contentAlignment = Alignment.Center) { content() }
-                Cell(if (isFav) "Remove from favourites" else "Add to favourites", onFav) {
-                    LineIcon(if (isFav) R.drawable.ln_heart_fill else R.drawable.ln_heart,
-                        if (isFav) "Remove from favourites" else "Add to favourites", 20, if (isFav) BarGold else BarInk) }
-                Cell("Previous station", { c?.prevStation() }) { LineIcon(R.drawable.ln_prev, "Previous station", 20, BarInk) }
-                Cell("Next station", { c?.nextStation() }) { LineIcon(R.drawable.ln_next, "Next station", 20, BarInk) }
-                val sleepOn = SleepTimer.at > 0
-                Cell(if (sleepOn) "Sleep timer on" else "Sleep timer", onSleep) {
-                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                        LineIcon(R.drawable.ln_sleep, if (sleepOn) "Sleep timer on" else "Sleep timer", 20, if (sleepOn) BarGold else BarInk)
-                        if (sleepOn) Text(sleepLeft(), color = BarGold, fontSize = 9.sp, lineHeight = 10.sp)
-                    } }
-                if (cast.available) Cell(if (cast.connected) "Casting: change or stop" else "Cast to a TV or speaker", onCast) {
-                    LineIcon(R.drawable.ln_cast, if (cast.connected) "Casting" else "Cast", 20, if (cast.connected) BarGold else BarInk) }
-                // ✕ only while paused, so a stray tap can't stop the radio
-                if (!now.playing && !now.buffering) Cell("Stop and close the player", onClose) {
-                    LineIcon(R.drawable.ln_close, "Stop and close the player", 18, BarInk.copy(alpha = 0.8f)) }
+            // ✕ only while paused, so a stray tap can't stop the radio
+            if (!now.playing && !now.buffering) IconButton(onClose, Modifier.size(44.dp)) {
+                LineIcon(R.drawable.ln_close, "Stop and close the player", 16, BarInk.copy(alpha = 0.8f)) }
+            Box(Modifier.size(44.dp).clip(CircleShape).border(1.dp, BarGold, CircleShape)
+                .clickable(onClickLabel = if (now.playing) "Pause" else "Play") {
+                    c?.let { if (it.isPlaying) it.pause() else { it.prepare(); it.play() } } },
+                contentAlignment = Alignment.Center) {
+                LineIcon(if (now.playing) R.drawable.ln_pause else R.drawable.ln_play, if (now.playing) "Pause" else "Play", 18, BarGold)
             }
         }
     }

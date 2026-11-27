@@ -154,25 +154,42 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    /** Set when the app is opened afresh (not turned or brought back): "Play the last station on opening" may start it. */
+    /** Set when the app is opened afresh: "Play the last station on opening" may start it. */
     private var freshLaunch = false
+    /** When the app last went out of sight (0 = never). Coming back after [AWAY_MS] also counts as opening it. */
+    private var stoppedAt = 0L
 
     override fun onStart() {
         super.onStart()
+        // "opening the app" = a fresh start, or coming back after being away a while (Back now only sends the app
+        // to the background, so reopening it isn't a fresh start; he found the setting did nothing, 27 Nov 2026).
+        // A quick return (a sign-in page, the share sheet, turning the phone) doesn't count.
+        val opened = freshLaunch || (stoppedAt > 0 && android.os.SystemClock.elapsedRealtime() - stoppedAt > AWAY_MS)
+        freshLaunch = false
         val token = SessionToken(this, ComponentName(this, PlaybackService::class.java))
         val f = MediaController.Builder(this, token).buildAsync()
         f.addListener({ val c = f.get(); controller = c
-            if (freshLaunch) { freshLaunch = false
-                // only when nothing is playing (or loaded) and no alarm or link opened the app
-                if (Theme.prefs(this).getBoolean("autoPlay", false) && !c.isPlaying && c.mediaItemCount == 0 && intent?.data == null
-                    && intent?.action in listOf(null, android.content.Intent.ACTION_MAIN))
-                    c.sendCustomCommand(SessionCommand(PlaybackService.RESUME, android.os.Bundle.EMPTY), android.os.Bundle.EMPTY)
+            if (opened && shouldAutoPlay(Theme.prefs(this).getBoolean("autoPlay", false), c.isPlaying, intent?.data != null,
+                    intent?.action)) {
+                AutoPlayLog.last = if (c.mediaItemCount > 0) "play" else "resume"
+                // paused with the station still loaded: just play it; nothing loaded: bring back the last station
+                if (c.mediaItemCount > 0) c.play()
+                else c.sendCustomCommand(SessionCommand(PlaybackService.RESUME, android.os.Bundle.EMPTY), android.os.Bundle.EMPTY)
             } }, MoreExecutors.directExecutor())
     }
 
     override fun onStop() {
+        stoppedAt = android.os.SystemClock.elapsedRealtime()
         controller?.release(); controller = null
         super.onStop()
+    }
+
+    companion object {
+        const val AWAY_MS = 20_000L
+        /** Pure, so it can be tested: start the last station when the app is opened? */
+        // (an alarm opens the app with its own action, and a ringing alarm is already playing)
+        fun shouldAutoPlay(on: Boolean, playing: Boolean, openedByLink: Boolean, action: String?) =
+            on && !playing && !openedByLink && action in listOf(null, android.content.Intent.ACTION_MAIN)
     }
 }
 
@@ -351,7 +368,8 @@ fun App(c: MediaController?) {
                 onSignOut = { Account.signOut(ctx); Session.name = null })
             else if (tab == 0) {
                 // A–Z in every list except the Velvet Selection (hand-picked order) and Favourites (your own order)
-                val shown = stations.filter { cat == "all" || it.category == cat || (cat == "fav" && it.key in favKeys) || (cat == "tv" && it.tv) }
+                val shown = stations.filter { cat == "all" || it.category == cat || (cat == "fav" && it.key in favKeys) || (cat == "tv" && it.tv)
+                        || (cat.startsWith("tag:") && Tags.matches(cat.removePrefix("tag:"), it.name)) }
                     .let { l -> Stats.sort(l, if (colId == PICKS) picksSort else sort, stats) }
                     .sortedBy { it.offline }
                 Column {
@@ -388,7 +406,9 @@ fun App(c: MediaController?) {
                         if (favHere > 0) add(Triple("fav", t("Favourites"), favHere))
                         col?.cats?.filter { (k, _) -> stations.any { it.category == k } }?.forEach { (k, label) -> add(Triple(k, label, -1)) }
                     }
-                    val cats2 = if (stations.any { it.tv }) cats + Triple("tv", t("TV channels"), stations.count { it.tv }) else cats
+                    val cats2 = (if (stations.any { it.tv }) cats + Triple("tv", t("TV channels"), stations.count { it.tv }) else cats) +
+                        // tags by name (Retro, 90s…): their labels start with "#" so the sheet shows them under "By name"
+                        Tags.present(stations.map { it.name }).map { (tag, n) -> Triple("tag:$tag", t(tag), n) }
                     if (kindSheet) KindSheet(cats2, cat, { cat = it }) { kindSheet = false }
                     val kindWord = cats2.find { it.first == cat }?.second?.let { if (cat == "all") t("All kinds") else it } ?: t("All kinds")
                     if (colId == PICKS && !loading && stations.isEmpty()) PicksHeading(true)
@@ -1235,3 +1255,6 @@ fun AppNote() {
 
 /** What the last Back did (player / page / tab / note / leave), for the device check t30. */
 object BackStep { @Volatile var last = "" }
+
+/** What "Play the last station on opening" last did ("play" / "resume"), for the device check t32. */
+object AutoPlayLog { @Volatile var last = "" }

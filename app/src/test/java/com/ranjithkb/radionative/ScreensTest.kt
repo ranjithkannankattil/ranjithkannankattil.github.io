@@ -576,9 +576,10 @@ class ScreensTest {
     @Test fun r04_tour_says_you_not_info() {
         assertTrue(Tour.STEPS.none { it.title.contains("Info") || it.text.contains("Info ") })
         assertTrue(Tour.STEPS.any { it.title == "Stations, Favourites, You" }) }
-    @Test fun r05_station_cards_have_a_round_play_button() { shot("r05-cards", false) { Stations(true) }
-        rule.onAllNodesWithText("RADIO MANGO", substring = true, ignoreCase = true).fetchSemanticsNodes().let { assertTrue(it.isNotEmpty()) }
-        assertTrue(rule.onAllNodes(hasClickLabel("Play Radio Mango")).fetchSemanticsNodes().size >= 2) }   // card + round button
+    // 27 Nov 2026: he asked for the round play button to go (the card plays) and only the heart to stay
+    @Test fun r05_station_rows_have_heart_but_no_play_button() { shot("r05-cards", false) { Stations(true) }
+        assertEquals("only the card plays", 1, rule.onAllNodes(hasClickLabel("Play Radio Mango")).fetchSemanticsNodes().size)
+        rule.onNodeWithContentDescription("Add Radio Mango to favourites", useUnmergedTree = true).assertExists() }
     @Test fun r06_settings_has_every_210_switch() { shot("r06-settings", false) { SettingsScreen({}) {} }
         listOf("Even volume", "Play the last station on opening", "Your own stations", "Carry on after videos")
             .forEach { rule.onNodeWithText(it).performScrollTo().assertExists() } }
@@ -633,5 +634,14 @@ class ScreensTest {
     @Test fun r114_theme_dark_boombox() = themedLook("boombox", true)
     @Test fun r105_theme_digital() = themedLook("digital", false)
     @Test fun r115_theme_dark_digital() = themedLook("digital", true)
+
+    // 27 Nov 2026: the player bar is about half its old height (like JioSaavn); every control is in the big player
+    @Test fun r12_player_bar_is_slim() { shot("r12-player-bar", false) { Stations(true) }
+        val bar = rule.onNodeWithContentDescription("Pause", useUnmergedTree = true).getBoundsInRoot()
+        val open = rule.onAllNodes(hasClickLabel("Open the player")).onFirst().getBoundsInRoot()
+        assertTrue("bar ${open.height} tall", open.height.value <= 84f)
+        rule.onNodeWithContentDescription("Next station").assertDoesNotExist()
+        rule.onNodeWithContentDescription("Sleep timer").assertDoesNotExist()
+        assertTrue(bar.width.value > 0) }
 }
 

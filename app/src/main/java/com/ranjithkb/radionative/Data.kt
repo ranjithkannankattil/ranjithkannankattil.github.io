@@ -155,3 +155,28 @@ class Favs(ctx: Context) {
     fun replaceAll(l: List<Station>) = save(l)
     fun insert(s: Station, at: Int) { val l = all().filter { it.key != s.key }.toMutableList(); l.add(at.coerceIn(0, l.size), s); save(l) }
 }
+
+/**
+ * Tags (his idea, 27 Nov 2026): stations whose name says what they play. "Retro" finds every station with retro,
+ * oldies, classic, evergreen… in its name; "90s" finds 90s / 1990s / nineties. Shown under "By name" in the kind
+ * picker, only when the list has stations for that tag. Pure, so it can be tested.
+ */
+object Tags {
+    val LIST: List<Pair<String, Regex>> = listOf(
+        "Retro" to Regex("\\b(retro|oldies?|old\\s*(songs?|gold|hits)|classics?|classical hits|evergreen|golden|nostalgi\\w*|vintage|memories)\\b", RegexOption.IGNORE_CASE),
+        "60s" to Regex("\\b(60'?s|1960'?s|sixties)\\b", RegexOption.IGNORE_CASE),
+        "70s" to Regex("\\b(70'?s|1970'?s|seventies)\\b", RegexOption.IGNORE_CASE),
+        "80s" to Regex("\\b(80'?s|1980'?s|eighties)\\b", RegexOption.IGNORE_CASE),
+        "90s" to Regex("\\b(90'?s|1990'?s|nineties)\\b", RegexOption.IGNORE_CASE),
+        "2000s" to Regex("\\b(2000'?s|00'?s|noughties)\\b", RegexOption.IGNORE_CASE),
+        "Melody" to Regex("\\b(melod\\w*|ghazals?|romantic|love songs?)\\b", RegexOption.IGNORE_CASE),
+        "Hits" to Regex("\\b(hits?|top\\s*\\d+|chartbusters?)\\b", RegexOption.IGNORE_CASE),
+        "Instrumental" to Regex("\\b(instrumental|flute|veena|piano|lofi|lo-fi|chill)\\b", RegexOption.IGNORE_CASE),
+        "Kids" to Regex("\\b(kids?|children|nursery)\\b", RegexOption.IGNORE_CASE),
+    )
+    fun matches(tag: String, name: String) = LIST.firstOrNull { it.first == tag }?.second?.containsMatchIn(name) == true
+    /** Tags with at least one station in [names], with how many. */
+    fun present(names: List<String>): List<Pair<String, Int>> =
+        LIST.map { (tag, rx) -> tag to names.count { rx.containsMatchIn(it) } }.filter { it.second > 0 }
+}
+

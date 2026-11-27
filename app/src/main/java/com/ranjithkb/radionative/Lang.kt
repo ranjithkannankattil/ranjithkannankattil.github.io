@@ -401,6 +401,18 @@ object Lang {
         "Signing in…" to "സൈൻ ഇൻ ചെയ്യുന്നു…",
         "Sign in to keep your favourites on every device and on ranjithkb.com." to "പ്രിയപ്പെട്ടവ എല്ലാ ഫോണിലും ranjithkb.com-ലും കിട്ടാൻ സൈൻ ഇൻ ചെയ്യുക.",
         "Press back again to leave" to "പുറത്തുകടക്കാൻ വീണ്ടും ബാക്ക് അമർത്തുക",
+        "Your languages sit in this row. ALL LANGUAGES opens the full list of 70+: tap a pin there to keep a language in this row." to "നിങ്ങളുടെ ഭാഷകൾ ഈ നിരയിലാണ്. 'എല്ലാ ഭാഷകളും' 70-ലധികം ഭാഷകളുടെ പട്ടിക തുറക്കും: അവിടെ പിൻ തൊട്ടാൽ ആ ഭാഷ ഈ നിരയിൽ നിൽക്കും.",
+        "This line says what's shown. Tap an underlined word to pick a kind of station (film songs, news, TV channels, Retro, 90s…) or the order: most heard, top rated, A to Z." to "ഈ വരി എന്താണ് കാണിക്കുന്നതെന്ന് പറയും. അടിവരയിട്ട വാക്ക് തൊട്ട് നിലയത്തിന്റെ തരം (സിനിമാഗാനം, വാർത്ത, ടിവി ചാനലുകൾ, Retro, 90s…) അല്ലെങ്കിൽ ക്രമം (കൂടുതൽ കേട്ടത്, മികച്ച റേറ്റിങ്, അക്ഷരമാലാക്രമം) തിരഞ്ഞെടുക്കാം.",
+        "Search every station by name, or say it. + adds your own station. ⚙ Settings has the app language, colour themes, text size, data saver and the equaliser." to "എല്ലാ നിലയങ്ങളും പേരുകൊണ്ട് തിരയാം, അല്ലെങ്കിൽ പറയാം. + സ്വന്തം നിലയം ചേർക്കും. ⚙ സെറ്റിങ്സിൽ ആപ്പ് ഭാഷ, നിറങ്ങൾ, എഴുത്തിന്റെ വലുപ്പം, ഡാറ്റ സേവർ, ഈക്വലൈസർ എന്നിവയുണ്ട്.",
+        "Play and pause here; swipe the bar sideways to change station. Tap it for the big player with every control: swipe its cover to change the player look." to "ഇവിടെ പ്ലേയും പോസും; ബാർ വശത്തേക്ക് നീക്കിയാൽ നിലയം മാറും. തൊട്ടാൽ എല്ലാ നിയന്ത്രണങ്ങളുമുള്ള വലിയ പ്ലെയർ: അതിന്റെ ചിത്രം നീക്കിയാൽ പ്ലെയർ രൂപം മാറും.",
+        "Live radio" to "തത്സമയ റേഡിയോ",
+        "on your TV / speaker" to "നിങ്ങളുടെ ടിവിയിൽ / സ്പീക്കറിൽ",
+        "BY NAME" to "പേരനുസരിച്ച്",
+        "Retro" to "Retro",
+        "Melody" to "മെലഡി",
+        "Hits" to "ഹിറ്റുകൾ",
+        "Instrumental" to "ഉപകരണസംഗീതം",
+        "Kids" to "കുട്ടികൾക്ക്",
     )
     private val HI: Map<String, String> = mapOf(
         "+  Add an alarm" to "+  अलार्म जोड़ें",
@@ -766,6 +778,18 @@ object Lang {
         "Signing in…" to "साइन इन हो रहा है…",
         "Sign in to keep your favourites on every device and on ranjithkb.com." to "अपने पसंदीदा हर फ़ोन और ranjithkb.com पर रखने के लिए साइन इन करें।",
         "Press back again to leave" to "बाहर निकलने के लिए फिर से बैक दबाएँ",
+        "Your languages sit in this row. ALL LANGUAGES opens the full list of 70+: tap a pin there to keep a language in this row." to "आपकी भाषाएँ इस पंक्ति में हैं। 'सभी भाषाएँ' 70+ भाषाओं की सूची खोलता है: वहाँ पिन दबाकर किसी भाषा को इस पंक्ति में रखें।",
+        "This line says what's shown. Tap an underlined word to pick a kind of station (film songs, news, TV channels, Retro, 90s…) or the order: most heard, top rated, A to Z." to "यह पंक्ति बताती है कि क्या दिख रहा है। रेखांकित शब्द छूकर स्टेशन का प्रकार (फ़िल्मी गाने, समाचार, टीवी चैनल, Retro, 90s…) या क्रम (सबसे ज़्यादा सुने, सबसे अच्छी रेटिंग, A से Z) चुनें।",
+        "Search every station by name, or say it. + adds your own station. ⚙ Settings has the app language, colour themes, text size, data saver and the equaliser." to "हर स्टेशन को नाम से खोजें, या बोलकर। + से अपना स्टेशन जोड़ें। ⚙ सेटिंग्स में ऐप की भाषा, रंग थीम, अक्षरों का आकार, डेटा सेवर और इक्वलाइज़र है।",
+        "Play and pause here; swipe the bar sideways to change station. Tap it for the big player with every control: swipe its cover to change the player look." to "यहाँ चलाएँ और रोकें; बार को बगल में सरकाकर स्टेशन बदलें। छूने पर हर कंट्रोल वाला बड़ा प्लेयर खुलेगा: उसकी तस्वीर सरकाकर प्लेयर का रूप बदलें।",
+        "Live radio" to "लाइव रेडियो",
+        "on your TV / speaker" to "आपके टीवी / स्पीकर पर",
+        "BY NAME" to "नाम से",
+        "Retro" to "Retro",
+        "Melody" to "मेलोडी",
+        "Hits" to "हिट्स",
+        "Instrumental" to "वाद्य संगीत",
+        "Kids" to "बच्चों के लिए",
     )
 }
 

@@ -663,5 +663,25 @@ class LogicTest {
         assertTrue(newer("2.10.1", "2.10.0")); assertFalse(newer("2.10.0", "2.10.0-dev"))
         assertFalse(newer("2.9.0", "2.10.0-dev"))
     }
+
+    /** His idea, 27 Nov 2026: tags by name. */
+    @Test fun tags_find_stations_by_name() {
+        assertTrue(Tags.matches("Retro", "Retro Malayalam")); assertTrue(Tags.matches("Retro", "Evergreen Tamil Radio"))
+        assertTrue(Tags.matches("Retro", "Oldies 104")); assertTrue(Tags.matches("90s", "Radio 90s Hits"))
+        assertTrue(Tags.matches("90s", "Best of the 1990's")); assertTrue(Tags.matches("2000s", "2000s Pop"))
+        assertFalse(Tags.matches("90s", "Radio 1990 FM")); assertFalse(Tags.matches("Retro", "Club FM"))
+        assertFalse(Tags.matches("80s", "Big FM 92.7"))
+        assertEquals(listOf("Retro" to 2, "90s" to 1, "Hits" to 1), Tags.present(listOf("Retro Hits 90s", "Golden Melodies FM", "Club FM")).filter { it.first in setOf("Retro", "90s", "Hits") })
+    }
+
+    /** He found "Play the last station on opening" did nothing (27 Nov 2026). The rule itself: */
+    @Test fun autoplay_rule() {
+        assertTrue(MainActivity.shouldAutoPlay(true, false, false, android.content.Intent.ACTION_MAIN))
+        assertTrue(MainActivity.shouldAutoPlay(true, false, false, null))
+        assertFalse(MainActivity.shouldAutoPlay(false, false, false, null))          // switched off
+        assertFalse(MainActivity.shouldAutoPlay(true, true, false, null))            // already playing
+        assertFalse(MainActivity.shouldAutoPlay(true, false, true, android.content.Intent.ACTION_VIEW))   // opened by a link
+        assertFalse(MainActivity.shouldAutoPlay(true, false, false, "velvet.alarm")) // an alarm opened it
+    }
 }
 
