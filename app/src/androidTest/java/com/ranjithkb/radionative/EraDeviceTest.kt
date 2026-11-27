@@ -108,9 +108,13 @@ class EraDeviceTest {
                 val a = Math.toRadians(-90.0 + i * 3.0)
                 return c + androidx.compose.ui.geometry.Offset((r * kotlin.math.cos(a)).toFloat(), (r * kotlin.math.sin(a)).toFloat())
             }
-            knob.performTouchInput { down(at(0, minOf(width, height) * 0.4f, center)) }
-            for (i in 1..60) {                           // a slow clockwise turn, 3° at a time
-                knob.performTouchInput { moveTo(at(i, minOf(width, height) * 0.4f, center)) }
+            // a round knob is turned clockwise round a circle; the transistor's thumbwheel is slid in a straight line
+            val wheel = id == "transistor"
+            fun along(i: Int, w: Int, h: Int, c: androidx.compose.ui.geometry.Offset) =
+                if (wheel) androidx.compose.ui.geometry.Offset(w * (0.1f + 0.8f * i / 60f), c.y) else at(i, minOf(w, h) * 0.4f, c)
+            knob.performTouchInput { down(along(0, width, height, center)) }
+            for (i in 1..60) {                           // slowly, a little at a time
+                knob.performTouchInput { moveTo(along(i, width, height, center)) }
                 rule.waitForIdle()
                 angles += main { TuneSpin.angle.floatValue }
             }
