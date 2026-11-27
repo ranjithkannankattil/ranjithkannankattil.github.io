@@ -143,6 +143,16 @@ object Eras {
  * Turning a knob. Round the knob: the change in angle of the finger about the knob's centre (clockwise +).
  * Near the centre, or on a straight wheel: a straight swipe (right or up = clockwise). Degrees in both cases.
  */
+/**
+ * The tuning knob turns endlessly, like a real one: its angle is just how far you've turned it, while the needle on
+ * the dial shows the station. (It used to snap to the station's place on the scale after every step; with hundreds
+ * of stations a step is under a degree, so the knob shook and pulled back while he turned it, 27 Nov 2026.)
+ */
+object TuneSpin {
+    val angle = androidx.compose.runtime.mutableFloatStateOf(-40f)
+    fun add(deg: Float) { angle.floatValue = (angle.floatValue + deg) % 3600f }
+}
+
 object Rotary {
     fun angleDelta(c: Offset, a: Offset, b: Offset): Float {
         var d = Math.toDegrees((kotlin.math.atan2(b.y - c.y, b.x - c.x) - kotlin.math.atan2(a.y - c.y, a.x - c.x)).toDouble()).toFloat()
@@ -321,16 +331,18 @@ internal fun side(x: Float, width: Int): Int = when { x > width * 2f / 3f -> 1; 
 /** Turning gesture for a knob: [perStep] degrees per step; [onSteps] gets whole steps (+ clockwise); the part-way turn is drawn. */
 private fun Modifier.knob(wheel: Boolean, perStep: Float, key: String, turn: MutableMap<String, Float>, tick: () -> Unit,
                           restartOn: Any? = null, onSteps: (Int) -> Unit) = pointerInput(key, perStep, wheel, restartOn) {
+    val endless = key == "TUNE"
     val minR = 14.dp.toPx(); val pxPerDeg = 0.85.dp.toPx()
     val c = Offset(size.width / 2f, size.height / 2f)
     var acc = 0f
     detectDragGestures(onDragStart = { acc = 0f }, onDragEnd = { acc = 0f; turn.remove(key) }, onDragCancel = { acc = 0f; turn.remove(key) }) { ch, _ ->
         ch.consume()
-        acc += Rotary.turn(c, ch.previousPosition, ch.position, minR, pxPerDeg, wheel)
+        val d = Rotary.turn(c, ch.previousPosition, ch.position, minR, pxPerDeg, wheel)
+        acc += d
         val (n, rest) = Rotary.steps(acc, perStep)
         if (n != 0) { onSteps(n); tick() }
         acc = rest
-        turn[key] = rest
+        if (endless) TuneSpin.add(d) else turn[key] = rest
     }
 }
 
@@ -437,7 +449,7 @@ private fun DrawScope.cathedral(s: Eras.Skin, v: RadioVals, tm: TextMeasurer) {
     drawLine(s.needle, Offset(cx, cy), Offset(cx + cos(na).toFloat() * 36, cy + sin(na).toFloat() * 36), 2f, StrokeCap.Round)
     drawCircle(s.panelInk, 4f, Offset(cx, cy))
     txt(tm, v.freqLabel, cx, cy + 14, 8f, s.panelInk)
-    knob(tm, 61f, 331f, 22.4f, v.k("TUNE", Eras.angle(v.pos)), "Tune", s)
+    knob(tm, 61f, 331f, 22.4f, TuneSpin.angle.floatValue, "Tune", s)
     knob(tm, 239f, 331f, 22.4f, v.k("VOLUME", Eras.angle(v.vol)), "Volume", s)
 }
 
@@ -448,7 +460,7 @@ private fun DrawScope.valve(s: Eras.Skin, v: RadioVals, tm: TextMeasurer) {
     txt(tm, "VELVET", 170f, 130f, 15f, s.grille, spacing = 4.8f, weight = FontWeight.Normal)
     drawRoundRect(s.metal, Offset(18f, 18f), Size(304f, 144f), CornerRadius(12f), style = Stroke(2f))
     hdial(tm, 18f, 176f, 304f, 66f, v, s, 2f)
-    knob(tm, 49f, 285f, 22.4f, v.k("TUNE", Eras.angle(v.pos)), "Tune", s)
+    knob(tm, 49f, 285f, 22.4f, TuneSpin.angle.floatValue, "Tune", s)
     knob(tm, 291f, 285f, 22.4f, v.k("VOLUME", Eras.angle(v.vol)), "Volume", s)
     lamp(170f, 276f, 7f, s.glow, if (v.playing) 0.55f + 0.45f * v.level else 0f)
     txt(tm, "On air", 170f, 292f, 7.5f, s.metal, caps = true)
@@ -467,7 +479,7 @@ private fun DrawScope.transistor(s: Eras.Skin, v: RadioVals, tm: TextMeasurer) {
     hdial(tm, 16f, 156f, 268f, 56f, v, s, 1.5f)
     // the thumb wheel: its ribs roll with the dial
     drawRoundRect(s.body2, Offset(16f, 226f), Size(120f, 26f), CornerRadius(13f))
-    val off = ((v.pos * 60f + v.k("TUNE", 0f) / 6f) % 6f + 6f) % 6f
+    val off = ((TuneSpin.angle.floatValue / 6f) % 6f + 6f) % 6f
     var x = 18f + off; while (x < 134f) { drawLine(s.metal, Offset(x, 228f), Offset(x, 250f), 2.2f); x += 6f }
     drawRoundRect(s.metal, Offset(16f, 226f), Size(120f, 26f), CornerRadius(13f), style = Stroke(1f))
     txt(tm, "◀ Tune ▶", 284f, 233f, 7.5f, s.metal, caps = true)
@@ -494,7 +506,7 @@ private fun DrawScope.receiver(s: Eras.Skin, v: RadioVals, tm: TextMeasurer) {
     vu(tm, 14f, 14f, 150f, 92f, v.vuL, "Left", s)
     vu(tm, 176f, 14f, 150f, 92f, v.vuR, "Right", s)
     hdial(tm, 14f, 118f, 312f, 64f, v, s, 1f)
-    val angles = listOf(v.k("TUNE", Eras.angle(v.pos)), v.k("VOLUME", Eras.angle(v.vol)), v.k("BASS", Eras.angle(Eras.eqToKnob(v.bass))), v.k("TREBLE", Eras.angle(Eras.eqToKnob(v.treble))))
+    val angles = listOf(TuneSpin.angle.floatValue, v.k("VOLUME", Eras.angle(v.vol)), v.k("BASS", Eras.angle(Eras.eqToKnob(v.bass))), v.k("TREBLE", Eras.angle(Eras.eqToKnob(v.treble))))
     listOf("Tuning", "Volume", "Bass", "Treble").forEachIndexed { i, l -> knob(tm, 14f + 312f * (i + 0.5f) / 4, 224f, 21.6f, angles[i], l, s) }
     listOf(s.needle, s.glow, Color(0xFF5BC46A)).forEachIndexed { i, c -> lamp(124f + i * 16f, 282f, 4f, c, if (v.playing) 1f else 0.15f) }
     txt(tm, "Stereo · Live", 176f, 276f, 7.5f, s.metal, left = true, caps = true)

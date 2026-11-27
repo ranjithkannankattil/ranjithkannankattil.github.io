@@ -95,6 +95,32 @@ class EraDeviceTest {
         assertTrue("keeps playing after tuning", waitFor(25_000, "plays after tune") { b.isPlaying })
     }
 
+    /** He found the tuning knob shaking and pulling back while he turned it (27 Nov 2026). Turn it slowly round a
+     *  circle on every radio: it must only ever move forward, and the station must change. */
+    @Test fun e02b_tuning_knob_turns_smoothly() {
+        for (id in listOf("cathedral", "valve", "receiver", "digital", "transistor", "boombox")) {
+            main { era = Eras.byId(id)!! }; settle()
+            val knob = rule.onNodeWithContentDescription("Tuning knob", substring = true)
+            val angles = ArrayList<Float>()
+            val start = main { b.currentMediaItemIndex }
+            knob.performTouchInput {
+                val c = center; val r = minOf(width, height) * 0.4f
+                down(c + androidx.compose.ui.geometry.Offset(0f, -r))
+                for (i in 1..60) {                       // a slow clockwise turn, 3° at a time
+                    val a = Math.toRadians(-90.0 + i * 3.0)
+                    moveTo(c + androidx.compose.ui.geometry.Offset((r * kotlin.math.cos(a)).toFloat(), (r * kotlin.math.sin(a)).toFloat()))
+                    angles += TuneSpin.angle.floatValue
+                }
+                up()
+            }
+            val back = angles.zipWithNext().count { (x, y) -> y < x - 0.01f }
+            log("$id: knob ${angles.first()}° → ${angles.last()}°, steps back: $back")
+            assertEquals("$id: the knob never moves backwards while turned forward", 0, back)
+            assertTrue("$id: the knob turned", angles.last() - angles.first() > 20f)
+            assertTrue("$id: turning changed the station", waitFor(6_000, "$id tune") { b.currentMediaItemIndex != start })
+        }
+    }
+
     @Test fun e03_volume_knob_is_the_phone_volume() {
         main { era = Eras.byId("cathedral")!! }; settle()
         val am = ctx.getSystemService(AudioManager::class.java)
