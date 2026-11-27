@@ -76,7 +76,6 @@
     "malayalam:keralafm": 78,
     "malayalam:mazhavilfm": 78,
     "malayalam:menorahradio": 78,
-    "malayalam:myradio90fm": 1,
     "malayalam:njanmalayalibhakthi": 78,
     "malayalam:omrradio": 78,
     "malayalam:quranradiomalayalam": 78,
@@ -1498,11 +1497,6 @@
     "fails": 63,
     "last_reason": "HTTP 404, 16 bytes",
     "since": "2026-10-29"
-  },
-  "https://cast1.my-control-panel.com/proxy/myradio90fm/stream": {
-    "fails": 1,
-    "last_reason": "HTTP 401, 0 bytes",
-    "since": "2026-11-26"
   },
   "https://cast3.asurahosting.com/proxy/myfriend/stream": {
     "fails": 36,
