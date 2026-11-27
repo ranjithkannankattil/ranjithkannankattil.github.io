@@ -280,13 +280,23 @@ object RowLogos {
         }
 }
 
+/**
+ * The station's picture at the start of a row: its own logo when it has one, otherwise two letters on a soft tile
+ * ("Radio Mango" → RM; he chose this, 27 Nov 2026). The space is kept while the logo loads, so names don't jump.
+ */
 @Composable
-fun StationLogo(key: String, size: Int) {
+fun StationLogo(key: String, size: Int, name: String = "") {
     val ctx = androidx.compose.ui.platform.LocalContext.current
-    val img by produceState(RowLogos.cached(key), key) { if (value == null) value = RowLogos.load(ctx, key) }
-    img?.let {
-        Box(Modifier.padding(end = 10.dp).size(size.dp).clip(RoundedCornerShape(10.dp)).background(Color.White), contentAlignment = Alignment.Center) {
-            androidx.compose.foundation.Image(it, null, Modifier.fillMaxSize().padding(3.dp), contentScale = androidx.compose.ui.layout.ContentScale.Fit)
+    // null = still looking; then the logo, or "none"
+    val state by produceState<Any?>(RowLogos.cached(key), key) { if (value == null) value = RowLogos.load(ctx, key) ?: "none" }
+    Box(Modifier.padding(end = 12.dp).size(size.dp).clip(RoundedCornerShape(10.dp))
+        .background(if (state is androidx.compose.ui.graphics.ImageBitmap) Color.White else AccentSoft), contentAlignment = Alignment.Center) {
+        when (val v = state) {
+            is androidx.compose.ui.graphics.ImageBitmap ->
+                androidx.compose.foundation.Image(v, null, Modifier.fillMaxSize().padding(3.dp), contentScale = androidx.compose.ui.layout.ContentScale.Fit)
+            "none" -> if (name.isNotBlank()) Text(CarArt.letters(name), fontSize = (size * 0.36f).sp, color = AccentText,
+                fontWeight = FontWeight.Medium, letterSpacing = 0.5.sp, maxLines = 1)
+            else -> {}
         }
     }
 }
@@ -313,7 +323,7 @@ fun StationRow(s: Station, sub: String, fav: Boolean, current: Boolean, playing:
             .padding(start = 14.dp, end = 4.dp, top = vPad.dp, bottom = vPad.dp),
             verticalAlignment = Alignment.CenterVertically) {
             // the station's own logo when it has one (his wish, 27 Nov 2026); nothing in its place when it hasn't
-            StationLogo(s.key, if (Theme.spacing == 0) 36 else 44)
+            StationLogo(s.key, if (Theme.spacing == 0) 36 else 44, s.name)
             Column(Modifier.weight(1f).padding(start = 4.dp)) {
                 Text(highlighted(s.name, highlight, badge, s.tv, s.col == MINE), fontSize = (if (Theme.spacing == 2) 18 else 17).sp, lineHeight = 21.sp,
                     fontWeight = FontWeight.Medium, color = if (s.offline) Soft else Title,
@@ -371,7 +381,7 @@ fun MiniPlayer(now: NowState, c: androidx.media3.session.MediaController?, isFav
             val cover = artBitmap(now.md.artworkUri?.toString()?.takeUnless(CarArt::isStationArt))
             if (cover != null) androidx.compose.foundation.Image(cover.asImageBitmap(), null,
                 Modifier.padding(end = 12.dp).size(44.dp).clip(RoundedCornerShape(8.dp)), contentScale = androidx.compose.ui.layout.ContentScale.Crop)
-            else if (key != null) StationLogo(key, 44)
+            else if (key != null) StationLogo(key, 44, station)
             Column(Modifier.weight(1f).padding(end = 8.dp)) {
                 Text(if (cast.connected) "$station · " + t("on your TV / speaker") else station, fontSize = 14.sp, color = BarGold,
                     fontWeight = FontWeight.Medium, maxLines = 1, overflow = TextOverflow.Ellipsis)
