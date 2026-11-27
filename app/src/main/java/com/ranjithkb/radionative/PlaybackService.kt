@@ -212,6 +212,16 @@ class PlaybackService : MediaLibraryService() {
                 // another app (a video, a game) took the sound for good: start again once it's quiet, if allowed
                 if (reason == Player.PLAY_WHEN_READY_CHANGE_REASON_AUDIO_FOCUS_LOSS) resumer.lostForGood() else resumer.cancel()
             }
+            // for the volume jump he heard when posting a WhatsApp sticker (27 Nov 2026): note every time another app
+            // briefly takes the sound, and every volume change, so the play log shows what happened
+            override fun onPlaybackSuppressionReasonChanged(reason: Int) {
+                PlayLog.note(this@PlaybackService, if (reason == Player.PLAYBACK_SUPPRESSION_REASON_NONE) "sound back from another app"
+                    else "another app took the sound for a moment (reason $reason)")
+            }
+            override fun onVolumeChanged(volume: Float) {
+                PlayLog.note(this@PlaybackService, "player volume %.2f · even volume %s %.1f dB".format(java.util.Locale.UK, volume,
+                    if (EvenVolume.on) "on" else "off", EvenVolume.leveller.gainDb))
+            }
             override fun onEvents(p: Player, events: Player.Events) {
                 val item = p.currentMediaItem
                 val station = item?.mediaMetadata?.extras?.getString("station") ?: item?.mediaMetadata?.station?.toString()
