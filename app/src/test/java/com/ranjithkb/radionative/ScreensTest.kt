@@ -579,7 +579,7 @@ class ScreensTest {
     // 27 Nov 2026: he asked for the round play button to go (the card plays) and only the heart to stay
     @Test fun r05_station_rows_have_heart_but_no_play_button() { shot("r05-cards", false) { Stations(true) }
         assertEquals("only the card plays", 1, rule.onAllNodes(hasClickLabel("Play Radio Mango")).fetchSemanticsNodes().size)
-        rule.onNodeWithContentDescription("Add Radio Mango to favourites", useUnmergedTree = true).assertExists() }
+        rule.onNodeWithContentDescription("Remove Radio Mango from favourites", useUnmergedTree = true).assertExists() }   // Mango is a favourite here
     @Test fun r06_settings_has_every_210_switch() { shot("r06-settings", false) { SettingsScreen({}) {} }
         listOf("Even volume", "Play the last station on opening", "Your own stations", "Carry on after videos")
             .forEach { rule.onNodeWithText(it).performScrollTo().assertExists() } }
