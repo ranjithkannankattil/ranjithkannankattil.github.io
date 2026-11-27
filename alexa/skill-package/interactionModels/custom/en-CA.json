@@ -1133,16 +1133,6 @@
        }
       },
       {
-       "id": "english-news:wamu-88-5-washington",
-       "name": {
-        "value": "WAMU 88.5 Washington",
-        "synonyms": [
-         "wamu eighty eight point five washington",
-         "wamu washington"
-        ]
-       }
-      },
-      {
        "id": "english-news:bbc-radio-4",
        "name": {
         "value": "BBC Radio 4",
@@ -2324,13 +2314,6 @@
        }
       },
       {
-       "id": "english-talk:wamu-american-university-radio",
-       "name": {
-        "value": "WAMU American University Radio",
-        "synonyms": []
-       }
-      },
-      {
        "id": "english-talk:comedy-104-radiostorm",
        "name": {
         "value": "Comedy 104 - Radiostorm",
@@ -2604,16 +2587,6 @@
        "name": {
         "value": "ABC Radio National NT",
         "synonyms": []
-       }
-      },
-      {
-       "id": "english-talk:tbc-radio-88-5-fm",
-       "name": {
-        "value": "TBC Radio 88.5 FM",
-        "synonyms": [
-         "tbc radio eighty eight point five fm",
-         "tbc radio fm"
-        ]
        }
       },
       {
@@ -3968,13 +3941,6 @@
        }
       },
       {
-       "id": "hindi:fm-gold-mumbai",
-       "name": {
-        "value": "FM Gold Mumbai",
-        "synonyms": []
-       }
-      },
-      {
        "id": "hindi:radio-mirchi-usa",
        "name": {
         "value": "Radio Mirchi USA",
@@ -4045,13 +4011,6 @@
        "id": "hindi:mohammed-rafi",
        "name": {
         "value": "Mohammed Rafi",
-        "synonyms": []
-       }
-      },
-      {
-       "id": "hindi:vividh-bharti-mumbai",
-       "name": {
-        "value": "Vividh Bharti Mumbai",
         "synonyms": []
        }
       },
@@ -4528,13 +4487,6 @@
        }
       },
       {
-       "id": "hindi:air-bhopal",
-       "name": {
-        "value": "AIR bhopal",
-        "synonyms": []
-       }
-      },
-      {
        "id": "hindi:retrobollywood",
        "name": {
         "value": "Retrobollywood",
@@ -4894,13 +4846,6 @@
        }
       },
       {
-       "id": "tamil:fm-gold-tamil",
-       "name": {
-        "value": "FM Gold Tamil",
-        "synonyms": []
-       }
-      },
-      {
        "id": "tamil:air-tuticorin",
        "name": {
         "value": "AIR Tuticorin",
@@ -4992,20 +4937,6 @@
        "id": "tamil:friendstamilfm",
        "name": {
         "value": "Friendstamil FM",
-        "synonyms": []
-       }
-      },
-      {
-       "id": "tamil:chennai-fm-rainbow",
-       "name": {
-        "value": "Chennai FM Rainbow",
-        "synonyms": []
-       }
-      },
-      {
-       "id": "tamil:fmrainbowtamil",
-       "name": {
-        "value": "Fmrainbowtamil",
         "synonyms": []
        }
       },
@@ -5431,13 +5362,6 @@
        }
       },
       {
-       "id": "tamil:fm-gold-chennai",
-       "name": {
-        "value": "FM Gold Chennai",
-        "synonyms": []
-       }
-      },
-      {
        "id": "tamil:sweety-fm",
        "name": {
         "value": "Sweety FM",
@@ -5696,6 +5620,15 @@
        "name": {
         "value": "Kannada Hits",
         "synonyms": []
+       }
+      },
+      {
+       "id": "kannada:radio-mirchi-bengaluru",
+       "name": {
+        "value": "Radio Mirchi Bengaluru",
+        "synonyms": [
+         "mirchi bengaluru"
+        ]
        }
       },
       {
@@ -6081,15 +6014,6 @@
        }
       },
       {
-       "id": "punjabi:radio-punjab-today",
-       "name": {
-        "value": "Radio Punjab Today",
-        "synonyms": [
-         "punjab today"
-        ]
-       }
-      },
-      {
        "id": "punjabi:desi-world-radio",
        "name": {
         "value": "Desi World Radio",
@@ -6351,15 +6275,6 @@
         "synonyms": [
          "kasoot haryanvi",
          "radio kasoot haryanvi"
-        ]
-       }
-      },
-      {
-       "id": "more-indian:fm-rainbow-mumbai-marathi",
-       "name": {
-        "value": "FM Rainbow Mumbai (Marathi)",
-        "synonyms": [
-         "fm rainbow mumbai marathi"
         ]
        }
       },
@@ -7384,13 +7299,6 @@
        "id": "chichewa:nthanda-times",
        "name": {
         "value": "Nthanda Times",
-        "synonyms": []
-       }
-      },
-      {
-       "id": "chichewa:lbs-radio",
-       "name": {
-        "value": "LBS Radio",
         "synonyms": []
        }
       },
@@ -9576,13 +9484,6 @@
        }
       },
       {
-       "id": "french:medina-fm",
-       "name": {
-        "value": "Medina FM",
-        "synonyms": []
-       }
-      },
-      {
        "id": "french:radio-contact",
        "name": {
         "value": "Radio Contact",
@@ -9882,6 +9783,20 @@
        }
       },
       {
+       "id": "korean:kbs-classic-fm",
+       "name": {
+        "value": "KBS Classic FM",
+        "synonyms": []
+       }
+      },
+      {
+       "id": "korean:sbs-power-fm",
+       "name": {
+        "value": "SBS Power FM",
+        "synonyms": []
+       }
+      },
+      {
        "id": "korean:mbc-fm4u",
        "name": {
         "value": "MBC FM4U",
@@ -10040,6 +9955,20 @@
        "id": "korean:hit-fm-k-pop-hits",
        "name": {
         "value": "HIT FM K-Pop Hits",
+        "synonyms": []
+       }
+      },
+      {
+       "id": "korean:sbs-love-fm",
+       "name": {
+        "value": "SBS Love FM",
+        "synonyms": []
+       }
+      },
+      {
+       "id": "korean:cpbc",
+       "name": {
+        "value": "CPBC",
         "synonyms": []
        }
       },
@@ -11950,19 +11879,20 @@
        }
       },
       {
+       "id": "portuguese-portugal:antena-1-madeira-portugal",
+       "name": {
+        "value": "Antena 1 Madeira (Portugal)",
+        "synonyms": [
+         "antena 1 madeira portugal",
+         "antena one madeira portugal"
+        ]
+       }
+      },
+      {
        "id": "portuguese-portugal:benfica-fm",
        "name": {
         "value": "Benfica FM",
         "synonyms": []
-       }
-      },
-      {
-       "id": "portuguese-portugal:antena-2",
-       "name": {
-        "value": "Antena 2",
-        "synonyms": [
-         "antena two"
-        ]
        }
       },
       {
@@ -16192,13 +16122,6 @@
        }
       },
       {
-       "id": "russian:soloviev-fm",
-       "name": {
-        "value": "Soloviev FM",
-        "synonyms": []
-       }
-      },
-      {
        "id": "ukrainian:radio-roks-ballads",
        "name": {
         "value": "Radio ROKS Ballads",
@@ -17974,6 +17897,15 @@
        }
       },
       {
+       "id": "slovak:radio-expres-2",
+       "name": {
+        "value": "Radio Expres",
+        "synonyms": [
+         "expres"
+        ]
+       }
+      },
+      {
        "id": "slovak:tv-lux-audio",
        "name": {
         "value": "TV Lux (audio)",
@@ -18719,6 +18651,15 @@
        }
       },
       {
+       "id": "croatian:radio-vinkovci",
+       "name": {
+        "value": "Radio Vinkovci",
+        "synonyms": [
+         "vinkovci"
+        ]
+       }
+      },
+      {
        "id": "croatian:radio-92-fm",
        "name": {
         "value": "Radio 92 FM",
@@ -19148,6 +19089,13 @@
        "id": "bosnian:antena-sarajevo",
        "name": {
         "value": "Antena Sarajevo",
+        "synonyms": []
+       }
+      },
+      {
+       "id": "bosnian:tnt-radio-tuzla",
+       "name": {
+        "value": "TNT Radio Tuzla",
         "synonyms": []
        }
       },
@@ -19788,6 +19736,15 @@
        }
       },
       {
+       "id": "albanian:alfa-omega-radio",
+       "name": {
+        "value": "Alfa and Omega Radio",
+        "synonyms": [
+         "alfa and omega radio"
+        ]
+       }
+      },
+      {
        "id": "albanian:radio-emanuel",
        "name": {
         "value": "Radio Emanuel",
@@ -20096,6 +20053,15 @@
        }
       },
       {
+       "id": "albanian:radio-criteria",
+       "name": {
+        "value": "Radio Criteria",
+        "synonyms": [
+         "criteria"
+        ]
+       }
+      },
+      {
        "id": "macedonian:just-music-radio",
        "name": {
         "value": "Just Music Radio",
@@ -20230,15 +20196,6 @@
         "value": "Star Radio (Boemi) Skopje, Macedonia",
         "synonyms": [
          "star radio boemi skopje macedonia"
-        ]
-       }
-      },
-      {
-       "id": "macedonian:sky-radio-hits-skopje-macedonia",
-       "name": {
-        "value": "Sky Radio Hits Skopje, Macedonia",
-        "synonyms": [
-         "sky radio hits skopje macedonia"
         ]
        }
       },
@@ -21308,6 +21265,15 @@
        }
       },
       {
+       "id": "finnish:radio-kaleva",
+       "name": {
+        "value": "Radio Kaleva",
+        "synonyms": [
+         "kaleva"
+        ]
+       }
+      },
+      {
        "id": "finnish:fugefm",
        "name": {
         "value": "Fuge FM",
@@ -21650,6 +21616,13 @@
        }
       },
       {
+       "id": "estonian:r2extra-rap",
+       "name": {
+        "value": "R2Extra - Rap",
+        "synonyms": []
+       }
+      },
+      {
        "id": "estonian:tre-raadio-ring-fm",
        "name": {
         "value": "Tre Raadio Ring FM",
@@ -21792,9 +21765,23 @@
        }
       },
       {
+       "id": "estonian:r2pop",
+       "name": {
+        "value": "R2Pop",
+        "synonyms": []
+       }
+      },
+      {
        "id": "estonian:elmari-ballaadid",
        "name": {
         "value": "Elmari ballaadid",
+        "synonyms": []
+       }
+      },
+      {
+       "id": "estonian:r2chill",
+       "name": {
+        "value": "R2Chill",
         "synonyms": []
        }
       },
@@ -23005,13 +22992,6 @@
        }
       },
       {
-       "id": "turkish:trt-memleketim-fm",
-       "name": {
-        "value": "TRT Memleketim FM",
-        "synonyms": []
-       }
-      },
-      {
        "id": "turkish:power-dance",
        "name": {
         "value": "Power Dance",
@@ -23043,13 +23023,6 @@
        }
       },
       {
-       "id": "turkish:trt-tsr",
-       "name": {
-        "value": "TRT TSR",
-        "synonyms": []
-       }
-      },
-      {
        "id": "turkish:radyo-mezopotamya",
        "name": {
         "value": "Radyo Mezopotamya",
@@ -23060,13 +23033,6 @@
        "id": "turkish:radyo-karadeniz",
        "name": {
         "value": "Radyo Karadeniz",
-        "synonyms": []
-       }
-      },
-      {
-       "id": "turkish:trt-trabzon",
-       "name": {
-        "value": "TRT Trabzon",
         "synonyms": []
        }
       },
@@ -23245,13 +23211,6 @@
        "id": "turkish:radyo-d",
        "name": {
         "value": "Radyo D",
-        "synonyms": []
-       }
-      },
-      {
-       "id": "turkish:trt-antalya",
-       "name": {
-        "value": "TRT Antalya",
         "synonyms": []
        }
       },
@@ -23747,13 +23706,6 @@
        }
       },
       {
-       "id": "kurdish:kurd1-fm",
-       "name": {
-        "value": "Kurd1 FM",
-        "synonyms": []
-       }
-      },
-      {
        "id": "kurdish:govend-radyo",
        "name": {
         "value": "Govend radyo",
@@ -23959,6 +23911,15 @@
        "name": {
         "value": "Shalqar",
         "synonyms": []
+       }
+      },
+      {
+       "id": "kazakh:beu",
+       "name": {
+        "value": "((Beu))",
+        "synonyms": [
+         "beu"
+        ]
        }
       },
       {
@@ -24410,6 +24371,15 @@
        }
       },
       {
+       "id": "japanese:radio-doki",
+       "name": {
+        "value": "Radio Doki",
+        "synonyms": [
+         "doki"
+        ]
+       }
+      },
+      {
        "id": "japanese:radio-animklatu",
        "name": {
         "value": "Radio AnimKLATU",
@@ -24475,6 +24445,13 @@
        "id": "japanese:aisa-radio-alps",
        "name": {
         "value": "AISA Radio ALPS",
+        "synonyms": []
+       }
+      },
+      {
+       "id": "japanese:friends-forever",
+       "name": {
+        "value": "Friends Forever",
         "synonyms": []
        }
       },
@@ -26250,6 +26227,20 @@
        "id": "vietnamese:rfi-tieng-viet",
        "name": {
         "value": "RFI Tieng Viet",
+        "synonyms": []
+       }
+      },
+      {
+       "id": "vietnamese:vov5",
+       "name": {
+        "value": "VOV5",
+        "synonyms": []
+       }
+      },
+      {
+       "id": "vietnamese:vov4",
+       "name": {
+        "value": "VOV4",
         "synonyms": []
        }
       },
