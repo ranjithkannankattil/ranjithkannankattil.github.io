@@ -1,0 +1,232 @@
+### Cinema build
+```
+anteo.spaziocinema: 26 V.O. films; V.O. shows by day [15, 16, 15, 13, 15, 3, 2]; 34 dubbed
+citylife.spaziocinema: 11 V.O. films; V.O. shows by day [6, 5, 5, 4, 4, 2, 0]; 24 dubbed
+ariosto.spaziocinema: 1 V.O. films; V.O. shows by day [0, 1, 0, 0, 0, 0, 0]; 8 dubbed
+arlecchino.cinetecadimilano: 66 V.O. films; V.O. shows by day [3, 4, 2, 3, 3, 1, 1]; 10 dubbed
+mic.cinetecadimilano: 11 V.O. films; V.O. shows by day [0, 2, 0, 1, 1, 0, 1]; 17 dubbed
+capitol.spaziocinema: 1 V.O. films; V.O. shows by day [0, 0, 2, 0, 0, 0, 0]; 21 dubbed
+cinema.barberini: 13 V.O. films; V.O. shows by day [25, 25, 16, 14, 16, 0, 0]; 11 dubbed
+quattrofontane.ccroma: 12 V.O. films; V.O. shows by day [6, 8, 5, 0, 1, 1, 0]; 9 dubbed
+giuliocesare.ccroma: 10 V.O. films; V.O. shows by day [8, 11, 7, 0, 0, 1, 0]; 14 dubbed
+roma.andromeda: 1 V.O. films; V.O. shows by day [0, 0, 1, 1, 1, 0, 0]; 19 dubbed
+lux.cdr: 5 V.O. films; V.O. shows by day [6, 6, 2, 2, 2, 0, 0]; 20 dubbed
+nazionale.cctorino: 1 V.O. films; V.O. shows by day [1, 1, 1, 1, 1, 0, 0]; 6 dubbed
+arlecchino.popupcinema: 4 V.O. films; V.O. shows by day [2, 2, 2, 2, 1, 0, 0]; 3 dubbed
+medica.popupcinema: 3 V.O. films; V.O. shows by day [1, 1, 1, 1, 1, 1, 1]; 4 dubbed
+odeon.ccb: 7 V.O. films; V.O. shows by day [0, 3, 1, 1, 1, 0, 0]; 10 dubbed
+rialto.ccb: 2 V.O. films; V.O. shows by day [0, 2, 2, 2, 2, 0, 0]; 3 dubbed
+roma.ccb: 1 V.O. films; V.O. shows by day [0, 1, 1, 1, 1, 0, 0]; 1 dubbed
+europa.ccb: 3 V.O. films; V.O. shows by day [0, 0, 1, 0, 0, 0, 0]; 2 dubbed
+lumiere.cinetecabologna: 6 V.O. films; V.O. shows by day [8, 12, 9, 7, 10, 0, 0]; 0 dubbed
+flora.ccroma: 12 V.O. films; V.O. shows by day [3, 3, 4, 1, 0, 0, 0]; 6 dubbed
+casacinema: 6 V.O. films; V.O. shows by day [4, 8, 4, 3, 2, 1, 0]; 11 dubbed
+corallo.ccgenova: 1 V.O. films; V.O. shows by day [0, 1, 0, 0, 0, 0, 0]; 2 dubbed
+city.ccgenova: 0 V.O. films; V.O. shows by day [0, 0, 0, 0, 0, 0, 0]; 5 dubbed
+carignano.ccgenova: 0 V.O. films; V.O. shows by day [0, 0, 0, 0, 0, 0, 0]; 5 dubbed
+ariston.ccgenova: 2 V.O. films; V.O. shows by day [0, 2, 0, 0, 0, 0, 0]; 3 dubbed
+lab80: 5 V.O. films; V.O. shows by day [0, 2, 0, 1, 2, 0, 0]; 7 dubbed
+alcione: 0 V.O. film-days
+Milano: 15 films (11 English)
+    + new from anteo.spaziocinema: Fjord
+    + new from anteo.spaziocinema: L'essere Amato
+    + new from anteo.spaziocinema: You Can See Everything
+    + new from anteo.spaziocinema: Wild Horse Nine
+    + new from anteo.spaziocinema: La Gradiva
+    + new from anteo.spaziocinema: Look Back
+    + new from anteo.spaziocinema: Club Kid
+    + new from anteo.spaziocinema: Storie Parallele
+    + new from citylife.spaziocinema: Hunger games l'alba sulla mietitura
+    + new from citylife.spaziocinema: Ebenezer
+    + new from citylife.spaziocinema: Wildwood - i segreti del bosco proibito
+    + new from citylife.spaziocinema: Hexe: Il regno delle streghe
+    + new from arlecchino.cinetecadimilano: The Poseidon Adventure
+    sites: 24 per-show links, 24 times added, 0 Italian times dropped; venues not on MYmovies: anteo.spaziocinema:Anteo Palazzo Del Cinema→Anteo Palazzo del Cinema, ariosto.spaziocinema:Ariosto→Ariosto spazioCinema, arlecchino.cinetecadimilano:Cineteca Milano Arlecchino→Cineteca Arlecchino, citylife.spaziocinema:City Life Anteo→CityLife Anteo, mic.cinetecadimilano:Cineteca Di Milano→Cineteca Milano MIC
+    2026-11-29: 18 films (12 English)
+    2026-11-30: 12 films (8 English)
+    2026-12-01: 12 films (7 English)
+    2026-12-02: 14 films (6 English)
+    2026-12-03: 6 films (3 English)
+    2026-12-04: 4 films (1 English)
+    EN Palestine 36 [English via tmdb] syn poster imdb ott · 0 links
+    EN Urchin [English via cinema] syn poster imdb ott · 0 links
+    EN Fjord [English / Norwegian via cinema] syn poster imdb ott · 5 links
+    -- L'essere Amato [Spanish via cinema] · 2 links
+    EN You Can See Everything [English via cinema] syn poster imdb ott · 2 links
+    EN Wild Horse Nine [English via cinema] syn poster stream · 5 links
+    -- La Gradiva [French via cinema] syn poster imdb · 1 links
+    -- Look Back [Japanese via cinema] syn poster imdb stream ott · 1 links
+    EN Club Kid [English via cinema] syn poster imdb · 1 links
+    -- Storie Parallele [French via cinema] · 2 links
+    EN Hunger games l'alba sulla mietitura [English via cinema] · 1 links
+    EN Ebenezer [English via cinema] syn poster imdb · 1 links
+    EN Wildwood - i segreti del bosco proibito [English via cinema] syn poster imdb ott · 1 links
+    EN Hexe: Il regno delle streghe [English via cinema] · 1 links
+    EN The Poseidon Adventure [English via tmdb] syn poster imdb · 1 links
+Roma: 13 films (11 English)
+    + new from cinema.barberini: Werner Herzog. Radical Dreamer
+    + new from cinema.barberini: Hunger games - l'alba sulla mietitura
+    + new from cinema.barberini: Hexe: Il regno delle streghe
+    + new from cinema.barberini: Focker-In-Law
+    + new from cinema.barberini: Ebenezer
+    + new from cinema.barberini: Wild Horse Nine
+    + new from quattrofontane.ccroma: Storie Parallele
+    + new from quattrofontane.ccroma: Look Back
+    + new from lux.cdr: The Hunger Games: Sunrise on the Reaping
+    sites: 45 per-show links, 42 times added, 0 Italian times dropped; venues not on MYmovies: cinema.barberini:Cinema Barberini→Barberini, roma.andromeda:Andromeda Roma→Andromeda
+    2026-11-29: 12 films (10 English)
+    2026-11-30: 11 films (8 English)
+    2026-12-01: 7 films (6 English)
+    2026-12-02: 9 films (6 English)
+    2026-12-03: 1 films (1 English)
+    2026-12-04: 0 films (0 English)
+    EN You Can See Everything [English via cinema] syn poster imdb ott · 10 links
+    EN Fjord [English / Swedish / Norwegian via cinema] syn poster imdb ott · 2 links
+    EN Sabrina [English via tmdb] syn poster imdb stream · 0 links
+    EN Resident Evil [English via tmdb] syn poster ott · 0 links
+    EN Werner Herzog. Radical Dreamer [English via cinema] syn poster imdb ott · 1 links
+    EN Hunger games - l'alba sulla mietitura [English via cinema] · 7 links
+    EN Hexe: Il regno delle streghe [English via cinema] · 2 links
+    EN Focker-In-Law [English via cinema] syn poster · 5 links
+    EN Ebenezer [English via cinema] syn poster imdb · 3 links
+    EN Wild Horse Nine [English via cinema] syn poster stream · 6 links
+    -- Storie Parallele [French via cinema] · 4 links
+    -- Look Back [Japanese via cinema] syn poster imdb stream ott · 2 links
+    EN The Hunger Games: Sunrise on the Reaping [English via cinema] syn poster imdb · 3 links
+Torino: 5 films (2 English)
+    sites: 1 per-show links, 0 times added, 0 Italian times dropped
+    2026-11-29: 1 films (0 English)
+    2026-11-30: 1 films (0 English)
+    2026-12-01: 1 films (0 English)
+    2026-12-02: 1 films (0 English)
+    2026-12-03: 0 films (0 English)
+    2026-12-04: 0 films (0 English)
+    EN You Can See Everything [English via cinema] syn poster imdb ott · 0 links
+    -- El Ser Querido [Spanish via cinema] syn poster · 0 links
+    -- La Gradiva [French via cinema] syn poster imdb · 1 links
+    EN Wild Horse Nine [English via cinema] syn poster stream · 0 links
+    -- Hangar Rojo [Spanish via wikidata] syn poster · 0 links
+Bologna: 6 films (5 English)
+    + new from arlecchino.popupcinema: You Can See Everything
+    + new from arlecchino.popupcinema: La ballata del re delle api
+    + new from medica.popupcinema: Hunger games l'alba sulla mietitura
+    + new from lumiere.cinetecabologna: Histoires Parallèles
+    + new from lumiere.cinetecabologna: Fjord
+    + new from lumiere.cinetecabologna: Wild Horse Nine
+    sites: 11 per-show links, 11 times added, 0 Italian times dropped; venues not on MYmovies: arlecchino.popupcinema:Pop Up Cinema Arlecchino→Arlecchino, europa.ccb:Europa→Europa, lumiere.cinetecabologna:Cinema Lumiere→Lumière, medica.popupcinema:Pop Up Cinema Medica 4 K→Medica Palace, odeon.ccb:Odeon→Odeon, rialto.ccb:Rialto→Rialto Studios, roma.ccb:Roma→Roma d'Essai
+    2026-11-29: 8 films (5 English)
+    2026-11-30: 8 films (5 English)
+    2026-12-01: 7 films (5 English)
+    2026-12-02: 6 films (4 English)
+    2026-12-03: 1 films (1 English)
+    2026-12-04: 1 films (1 English)
+    EN You Can See Everything [English via cinema] syn poster imdb ott · 1 links
+    EN La ballata del re delle api [English via cinema] · 1 links
+    EN Hunger games l'alba sulla mietitura [English via cinema] · 1 links
+    -- Histoires Parallèles [French via cinema] · 2 links
+    EN Fjord [English / Norwegian / Swedish via cinema] syn poster imdb ott · 3 links
+    EN Wild Horse Nine [English via cinema] syn poster stream · 3 links
+Firenze: 6 films (2 English)
+    sites: 3 per-show links, 0 times added, 0 Italian times dropped
+    2026-11-29: 3 films (1 English)
+    2026-11-30: 3 films (1 English)
+    2026-12-01: 1 films (1 English)
+    2026-12-02: 0 films (0 English)
+    2026-12-03: 0 films (0 English)
+    2026-12-04: 0 films (0 English)
+    -- Parallel Tales [French via cinema] syn poster imdb · 1 links
+    EN Fjord [English / Swedish / Norwegian via cinema] syn poster imdb ott · 0 links
+    EN Wild Horse Nine [English via cinema] syn poster stream · 1 links
+    -- Look Back [Japanese via cinema] syn poster imdb · 1 links
+    -- Fatherland [German via cinema] syn poster imdb · 0 links
+    -- Minotaur [Russian via cinema] syn poster imdb · 0 links
+Napoli: 3 films (1 English)
+    + new from casacinema: Fjord
+    + new from casacinema: Histoires Parallèles
+    + new from casacinema: Look Back
+    sites: 4 per-show links, 4 times added, 0 Italian times dropped; venues not on MYmovies: casacinema:Casa Cinema Napoli→CasaCinema
+    2026-11-29: 4 films (2 English)
+    2026-11-30: 3 films (1 English)
+    2026-12-01: 3 films (1 English)
+    2026-12-02: 2 films (0 English)
+    2026-12-03: 1 films (1 English)
+    2026-12-04: 0 films (0 English)
+    EN Fjord [English / Swedish / Norwegian via cinema] syn poster imdb ott · 1 links
+    -- Histoires Parallèles [French via cinema] · 2 links
+    -- Look Back [Japanese via cinema] syn poster imdb stream ott · 1 links
+Genova: 0 films (0 English)
+    sites: 0 per-show links, 0 times added, 0 Italian times dropped; venues not on MYmovies: ariston.ccgenova:Ariston→Ariston, carignano.ccgenova:Filmclub→Circuito Filmclub, city.ccgenova:City→City, corallo.ccgenova:Corallo→Corallo
+    2026-11-29: 3 films (1 English)
+    2026-11-30: 0 films (0 English)
+    2026-12-01: 0 films (0 English)
+    2026-12-02: 0 films (0 English)
+    2026-12-03: 0 films (0 English)
+    2026-12-04: 0 films (0 English)
+Venezia: 0 films (0 English)
+    sites: 0 per-show links, 0 times added, 0 Italian times dropped
+    2026-11-29: 0 films (0 English)
+    2026-11-30: 0 films (0 English)
+    2026-12-01: 0 films (0 English)
+    2026-12-02: 0 films (0 English)
+    2026-12-03: 0 films (0 English)
+    2026-12-04: 0 films (0 English)
+Padova: 0 films (0 English)
+    sites: 0 per-show links, 0 times added, 0 Italian times dropped
+    2026-11-29: 0 films (0 English)
+    2026-11-30: 0 films (0 English)
+    2026-12-01: 0 films (0 English)
+    2026-12-02: 0 films (0 English)
+    2026-12-03: 0 films (0 English)
+    2026-12-04: 0 films (0 English)
+Verona: 0 films (0 English)
+    sites: 0 per-show links, 0 times added, 0 Italian times dropped
+    2026-11-29: 0 films (0 English)
+    2026-11-30: 0 films (0 English)
+    2026-12-01: 0 films (0 English)
+    2026-12-02: 0 films (0 English)
+    2026-12-03: 0 films (0 English)
+    2026-12-04: 0 films (0 English)
+Bergamo: 0 films (0 English)
+    sites: 0 per-show links, 0 times added, 0 Italian times dropped; venues not on MYmovies: lab80:Cult! Diffusione Culturale→Lab 80, lab80:Lo Schermo Bianco→Lab 80
+    2026-11-29: 2 films (0 English)
+    2026-11-30: 0 films (0 English)
+    2026-12-01: 1 films (0 English)
+    2026-12-02: 2 films (1 English)
+    2026-12-03: 0 films (0 English)
+    2026-12-04: 0 films (0 English)
+Brescia: 0 films (0 English)
+    sites: 0 per-show links, 0 times added, 0 Italian times dropped
+    2026-11-29: 0 films (0 English)
+    2026-11-30: 0 films (0 English)
+    2026-12-01: 0 films (0 English)
+    2026-12-02: 0 films (0 English)
+    2026-12-03: 0 films (0 English)
+    2026-12-04: 0 films (0 English)
+Monza: 0 films (0 English)
+    sites: 0 per-show links, 0 times added, 0 Italian times dropped; venues not on MYmovies: capitol.spaziocinema:Capitol Anteo Spazio Cinema→Capitol
+    2026-11-29: 0 films (0 English)
+    2026-11-30: 1 films (0 English)
+    2026-12-01: 0 films (0 English)
+    2026-12-02: 0 films (0 English)
+    2026-12-03: 0 films (0 English)
+    2026-12-04: 0 films (0 English)
+Pisa: 3 films (1 English)
+    sites: 0 per-show links, 0 times added, 0 Italian times dropped
+    2026-11-29: 0 films (0 English)
+    2026-11-30: 0 films (0 English)
+    2026-12-01: 0 films (0 English)
+    2026-12-02: 0 films (0 English)
+    2026-12-03: 0 films (0 English)
+    2026-12-04: 0 films (0 English)
+    EN You Can See Everything [English via cinema] syn poster imdb ott · 0 links
+    -- La Gradiva [French via cinema] syn poster imdb · 0 links
+    -- Alice nel Paese dei Coloni [Original language via country] poster · 0 links
+Trieste: 0 films (0 English)
+    sites: 0 per-show links, 0 times added, 0 Italian times dropped
+    2026-11-29: 0 films (0 English)
+    2026-11-30: 0 films (0 English)
+    2026-12-01: 0 films (0 English)
+    2026-12-02: 0 films (0 English)
+    2026-12-03: 0 films (0 English)
+    2026-12-04: 0 films (0 English)
+```
