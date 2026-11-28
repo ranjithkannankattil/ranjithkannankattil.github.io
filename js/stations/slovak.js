@@ -655,7 +655,9 @@ window.STATIONS = [
       "https://listen.radioking.com/radio/263218/stream/308365"
     ],
     "added": "2026-10-25",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "radio-pyramida",
@@ -742,4 +744,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T22:48Z";
+window.STATIONS_CHECKED = "2026-11-28T08:59Z";

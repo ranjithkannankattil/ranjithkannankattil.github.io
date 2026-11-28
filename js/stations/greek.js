@@ -1352,7 +1352,9 @@ window.STATIONS = [
       "https://stream.crete.ovh:8443/1"
     ],
     "added": "2026-11-03",
-    "offline": true
+    "br": [
+      32
+    ]
   },
   {
     "id": "d-code-96-2",
@@ -1680,7 +1682,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "br": [
-      128
+      192
     ]
   },
   {
@@ -1756,4 +1758,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T22:48Z";
+window.STATIONS_CHECKED = "2026-11-28T08:59Z";

@@ -278,7 +278,9 @@ window.STATIONS = [
     "streams": [
       "https://i.klikhost.com:9154/stream"
     ],
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "radiks-fm-semarang",
@@ -696,8 +698,7 @@ window.STATIONS = [
     "streams": [
       "https://streaming.shoutcast.com/synchronizeradio"
     ],
-    "added": "2026-10-25",
-    "offline": true
+    "added": "2026-10-25"
   },
   {
     "id": "radio-suara-al-iman-846-am-surabaya",
@@ -871,7 +872,9 @@ window.STATIONS = [
       "https://svara-stream.radioddns.net/bali_voksradio_993fm"
     ],
     "added": "2026-10-28",
-    "offline": true
+    "br": [
+      160
+    ]
   },
   {
     "id": "imelda-fm",
@@ -882,7 +885,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      160
+      128
     ]
   },
   {
@@ -1227,7 +1230,9 @@ window.STATIONS = [
       "https://ssg.streamingmurah.com:8078/;"
     ],
     "added": "2026-11-03",
-    "offline": true
+    "br": [
+      32
+    ]
   },
   {
     "id": "wawa-radio-101-2-fm",
@@ -1489,7 +1494,9 @@ window.STATIONS = [
       "https://stream.swadesifm.com/radio/8090/radio.mp3"
     ],
     "added": "2026-11-06",
-    "offline": true
+    "br": [
+      96
+    ]
   },
   {
     "id": "hot-93-2-fm",
@@ -1652,7 +1659,9 @@ window.STATIONS = [
       "https://s2.free-shoutcast.com/stream/18096"
     ],
     "added": "2026-11-12",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "onix-radio",
@@ -1722,9 +1731,7 @@ window.STATIONS = [
       "https://listen.bellasalamfm.com/listen/radiobellasalam/live"
     ],
     "added": "2026-11-25",
-    "br": [
-      128
-    ]
+    "offline": true
   },
   {
     "id": "delta-99-2-fm-makassar",
@@ -1737,4 +1744,4 @@ window.STATIONS = [
     "offline": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T22:48Z";
+window.STATIONS_CHECKED = "2026-11-28T08:59Z";

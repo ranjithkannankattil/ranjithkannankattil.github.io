@@ -103,7 +103,8 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://live.radioanisoara.ro:8080/stream"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "rockfm",
@@ -1708,10 +1709,7 @@ window.STATIONS = [
     "streams": [
       "https://stream-galati.radiogalati.ro/"
     ],
-    "added": "2026-11-09",
-    "br": [
-      128
-    ]
+    "added": "2026-11-09"
   },
   {
     "id": "radio-trinitas-88-5",
@@ -1750,4 +1748,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T22:48Z";
+window.STATIONS_CHECKED = "2026-11-28T08:59Z";

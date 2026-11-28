@@ -86,8 +86,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio051/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "89-4-tamil-fm",
@@ -364,9 +363,6 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio025/masterlist.m3u8"
-    ],
-    "br": [
-      80
     ]
   },
   {
@@ -375,8 +371,7 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio129/chunklist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "tamil-ragam",
@@ -538,8 +533,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio022/playlist.m3u8"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "fmrainbowtamil",
@@ -548,8 +542,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio022/playlist.m3u8"
     ],
-    "added": "2026-10-23",
-    "offline": true
+    "added": "2026-10-23"
   },
   {
     "id": "mellisai-fm",
@@ -724,7 +717,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      64
+      56
     ]
   },
   {
@@ -796,7 +789,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      78
+      80
     ]
   },
   {
@@ -1467,8 +1460,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio021/chunklist.m3u8"
     ],
-    "added": "2026-11-05",
-    "offline": true
+    "added": "2026-11-05"
   },
   {
     "id": "sweety-fm",
@@ -1525,8 +1517,7 @@ window.STATIONS = [
     "streams": [
       "https://sirpifmhd-unicast2u.radioca.st/stream"
     ],
-    "added": "2026-11-06",
-    "offline": true
+    "added": "2026-11-06"
   },
   {
     "id": "pozhil-fm",
@@ -1606,7 +1597,9 @@ window.STATIONS = [
       "https://neramfm.com:8000/stream"
     ],
     "added": "2026-11-07",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "translation-of-the-quran-in-tamil",
@@ -1723,8 +1716,7 @@ window.STATIONS = [
     "streams": [
       "https://nanbanfm-unicast2u.radioca.st/stream"
     ],
-    "added": "2026-11-09",
-    "offline": true
+    "added": "2026-11-09"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T22:48Z";
+window.STATIONS_CHECKED = "2026-11-28T08:59Z";

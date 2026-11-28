@@ -60,7 +60,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m8080.aac"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -130,8 +130,9 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena2jazzin80a/playlist.m3u8"
     ],
     "br": [
-      167
-    ]
+      178
+    ],
+    "offline": true
   },
   {
     "id": "m80-radio-ballads",
@@ -163,7 +164,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/m80nacional.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -237,7 +238,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/rckids.aac"
     ],
     "br": [
-      128
+      127
     ]
   },
   {
@@ -259,7 +260,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/smooth.aac"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -282,9 +283,10 @@ window.STATIONS = [
       "https://streaming-live-app.rtp.pt/liveradio/antena380a/playlist.m3u8"
     ],
     "br": [
-      168,
-      168
-    ]
+      173,
+      173
+    ],
+    "offline": true
   },
   {
     "id": "golofm",
@@ -316,7 +318,7 @@ window.STATIONS = [
       "https://streaming-live.rtp.pt/liveradio/antena1madeira80a/playlist.m3u8"
     ],
     "br": [
-      189
+      178
     ]
   },
   {
@@ -439,7 +441,7 @@ window.STATIONS = [
       "https://stream-icy.bauermedia.pt/smoothsoul.aac"
     ],
     "br": [
-      127
+      128
     ]
   },
   {
@@ -462,7 +464,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -474,8 +476,9 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      176
-    ]
+      190
+    ],
+    "offline": true
   },
   {
     "id": "antena-1-acores-portugal",
@@ -486,7 +489,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-22",
     "br": [
-      187
+      184
     ]
   },
   {
@@ -570,7 +573,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      177
+      167
     ]
   },
   {
@@ -642,7 +645,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -796,7 +799,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -856,7 +859,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -916,7 +919,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-28",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -964,7 +967,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -1000,7 +1003,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      128
+      80
     ]
   },
   {
@@ -1168,7 +1171,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-01",
     "br": [
-      128
+      127
     ]
   },
   {
@@ -1252,7 +1255,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-02",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -1458,7 +1461,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-05",
     "br": [
-      166
+      170
     ]
   },
   {
@@ -1606,7 +1609,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-07",
     "br": [
-      168
+      169
     ]
   },
   {
@@ -1654,7 +1657,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-08",
     "br": [
-      160
+      112
     ]
   },
   {
@@ -1778,4 +1781,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T22:48Z";
+window.STATIONS_CHECKED = "2026-11-28T08:59Z";

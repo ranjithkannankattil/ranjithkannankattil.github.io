@@ -129,9 +129,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast.mediaonline.net.ua/nrj320"
-    ],
-    "br": [
-      320
     ]
   },
   {
@@ -328,9 +325,7 @@ window.STATIONS = [
     "streams": [
       "https://cast.brg.ua/newshanson_main_public_mp3_hq"
     ],
-    "br": [
-      256
-    ]
+    "offline": true
   },
   {
     "id": "radivo",
@@ -383,9 +378,7 @@ window.STATIONS = [
     "streams": [
       "https://cast.brg.ua/djfmdance_main_public_mp3_hq"
     ],
-    "br": [
-      256
-    ]
+    "offline": true
   },
   {
     "id": "loungefm-chill-out",
@@ -393,9 +386,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://cast.mediaonline.net.ua/chillout320"
-    ],
-    "br": [
-      320
     ]
   },
   {
@@ -472,10 +462,7 @@ window.STATIONS = [
     "streams": [
       "https://globalic.stream:1810/stream"
     ],
-    "added": "2026-10-22",
-    "br": [
-      320
-    ]
+    "added": "2026-10-22"
   },
   {
     "id": "lounge-fm",
@@ -904,10 +891,7 @@ window.STATIONS = [
     "streams": [
       "https://cast.mediaonline.net.ua/wau320"
     ],
-    "added": "2026-10-28",
-    "br": [
-      320
-    ]
+    "added": "2026-10-28"
   },
   {
     "id": "the-west-pole-radio",
@@ -1094,9 +1078,7 @@ window.STATIONS = [
       "https://cast.brg.ua/businessradio_main_public_mp3_hq"
     ],
     "added": "2026-10-31",
-    "br": [
-      256
-    ]
+    "offline": true
   },
   {
     "id": "west-pole",
@@ -1394,7 +1376,9 @@ window.STATIONS = [
       "https://online-novodnistrovsk.pp.ua:8443/playHD"
     ],
     "added": "2026-11-05",
-    "offline": true
+    "br": [
+      320
+    ]
   },
   {
     "id": "station-30",
@@ -1505,4 +1489,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T22:48Z";
+window.STATIONS_CHECKED = "2026-11-28T08:59Z";

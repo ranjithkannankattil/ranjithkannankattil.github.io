@@ -242,7 +242,8 @@ window.STATIONS = [
     ],
     "br": [
       128
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radio-busovaca",
@@ -551,4 +552,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T22:48Z";
+window.STATIONS_CHECKED = "2026-11-28T08:59Z";

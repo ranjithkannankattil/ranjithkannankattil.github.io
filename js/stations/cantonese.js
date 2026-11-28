@@ -119,7 +119,9 @@ window.STATIONS = [
     "streams": [
       "https://1603884249.rsc.cdn77.org/1603884249/index.m3u8"
     ],
-    "offline": true
+    "br": [
+      100
+    ]
   },
   {
     "id": "fm94-7",
@@ -129,7 +131,7 @@ window.STATIONS = [
       "https://5b2959fe11444.streamlock.net/radio/fm947.stream/playlist.m3u8"
     ],
     "br": [
-      52
+      51
     ]
   },
   {
@@ -225,7 +227,8 @@ window.STATIONS = [
     ],
     "br": [
       80
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "station-15",
@@ -699,7 +702,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      127
+      128
     ]
   },
   {
@@ -841,4 +844,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T22:48Z";
+window.STATIONS_CHECKED = "2026-11-28T08:59Z";

@@ -10,7 +10,7 @@ window.STATIONS = [
       "https://live.convoynetwork.com/stream"
     ],
     "br": [
-      56
+      64
     ]
   },
   {
@@ -216,7 +216,7 @@ window.STATIONS = [
       "https://server1.stweb.tv/rcvos/live/playlist.m3u8"
     ],
     "br": [
-      68
+      66
     ]
   },
   {
@@ -1760,4 +1760,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T22:48Z";
+window.STATIONS_CHECKED = "2026-11-28T08:59Z";

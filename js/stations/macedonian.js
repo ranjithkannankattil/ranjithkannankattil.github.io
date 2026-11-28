@@ -77,9 +77,7 @@ window.STATIONS = [
     "streams": [
       "https://radiostar.pro/stream/worldretro.php"
     ],
-    "br": [
-      256
-    ]
+    "offline": true
   },
   {
     "id": "sky-folk",
@@ -151,9 +149,7 @@ window.STATIONS = [
     "streams": [
       "https://radiostar.pro/stream/mknarodna.php"
     ],
-    "br": [
-      256
-    ]
+    "offline": true
   },
   {
     "id": "star-radio-live-skopje-macedonia",
@@ -162,9 +158,7 @@ window.STATIONS = [
     "streams": [
       "https://radiostar.pro/stream/starlive.php"
     ],
-    "br": [
-      256
-    ]
+    "offline": true
   },
   {
     "id": "star-radio-boemi-skopje-macedonia",
@@ -184,7 +178,9 @@ window.STATIONS = [
     "streams": [
       "https://s1.skyradio.com.mk/hits.mp3"
     ],
-    "offline": true
+    "br": [
+      192
+    ]
   },
   {
     "id": "radio-logos-mk",
@@ -204,9 +200,7 @@ window.STATIONS = [
     "streams": [
       "https://radiostar.pro/stream/narodna.php"
     ],
-    "br": [
-      256
-    ]
+    "offline": true
   },
   {
     "id": "star-radio-plus-skopje-macedonia",
@@ -215,9 +209,7 @@ window.STATIONS = [
     "streams": [
       "https://radiostar.pro/stream/starplus.php"
     ],
-    "br": [
-      208
-    ]
+    "offline": true
   },
   {
     "id": "plenty-valley-fm-mill-park-melbourne-88-",
@@ -300,4 +292,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T22:48Z";
+window.STATIONS_CHECKED = "2026-11-28T08:59Z";

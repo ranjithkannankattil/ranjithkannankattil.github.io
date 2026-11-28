@@ -254,10 +254,12 @@ window.STATIONS = [
     "name": "Radio Dashuria",
     "category": "music",
     "streams": [
+      "https://play.radioking.io/radiodashuria1",
       "https://listen.radioking.com/radio/465815/stream/521297"
     ],
     "br": [
-      128
+      128,
+      0
     ]
   },
   {
@@ -743,4 +745,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T22:48Z";
+window.STATIONS_CHECKED = "2026-11-28T08:59Z";

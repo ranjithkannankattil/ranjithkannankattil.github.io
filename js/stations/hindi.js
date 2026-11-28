@@ -118,9 +118,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/playlist.m3u8"
-    ],
-    "br": [
-      94
     ]
   },
   {
@@ -504,11 +501,7 @@ window.STATIONS = [
       "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio011/hlspbaudio011_Auto.m3u8"
     ],
     "added": "2026-10-22",
-    "hidden": true,
-    "br": [
-      32
-    ],
-    "offline": true
+    "hidden": true
   },
   {
     "id": "sandesh-radio",
@@ -699,7 +692,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-25",
     "br": [
-      128
+      96
     ]
   },
   {
@@ -963,7 +956,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-29",
     "br": [
-      128
+      64
     ]
   },
   {
@@ -1439,7 +1432,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-04",
     "br": [
-      128
+      96
     ]
   },
   {
@@ -1497,8 +1490,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio212/chunklist.m3u8"
     ],
-    "added": "2026-11-05",
-    "offline": true
+    "added": "2026-11-05"
   },
   {
     "id": "retrobollywood",
@@ -1688,9 +1680,7 @@ window.STATIONS = [
       "https://usa1.fastcast4u.com/proxy/qrekthei?mp=/1"
     ],
     "added": "2026-11-09",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "bollywood-neha-kakkar",
@@ -1774,4 +1764,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T22:48Z";
+window.STATIONS_CHECKED = "2026-11-28T08:59Z";

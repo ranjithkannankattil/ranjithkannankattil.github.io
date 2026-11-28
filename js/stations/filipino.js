@@ -291,7 +291,7 @@ window.STATIONS = [
       "https://ais-sa1.streamon.fm/7681_64k.mp3"
     ],
     "br": [
-      81
+      67
     ]
   },
   {
@@ -799,6 +799,33 @@ window.STATIONS = [
     "br": [
       64
     ]
+  },
+  {
+    "id": "radio-143",
+    "name": "Radio 143",
+    "category": "music",
+    "streams": [
+      "https://3-144-96-209.sslip.io/radio143.mp3"
+    ],
+    "added": "2026-11-28"
+  },
+  {
+    "id": "budots-box",
+    "name": "Budots BOX",
+    "category": "music",
+    "streams": [
+      "https://az11.yesstreaming.net/listen/budots_box/stream.mp3"
+    ],
+    "added": "2026-11-28"
+  },
+  {
+    "id": "budots-box-data-saver",
+    "name": "BUDOTS BOX (data saver)",
+    "category": "music",
+    "streams": [
+      "https://az11.yesstreaming.net/listen/budots_box/stream.aac"
+    ],
+    "added": "2026-11-28"
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T22:48Z";
+window.STATIONS_CHECKED = "2026-11-28T08:59Z";

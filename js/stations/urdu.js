@@ -406,7 +406,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.friendchatzone.com/listen/friendchatzone/radio.mp3"
     ],
-    "added": "2026-11-27"
+    "added": "2026-11-27",
+    "br": [
+      96
+    ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T22:48Z";
+window.STATIONS_CHECKED = "2026-11-28T08:59Z";

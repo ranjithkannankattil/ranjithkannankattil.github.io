@@ -49,7 +49,7 @@ window.STATIONS = [
     ],
     "where": "US",
     "br": [
-      96
+      95
     ]
   },
   {
@@ -582,7 +582,9 @@ window.STATIONS = [
     ],
     "added": "2026-10-27",
     "where": "Jamaica",
-    "offline": true
+    "br": [
+      128
+    ]
   },
   {
     "id": "raxies-fm",
@@ -939,7 +941,7 @@ window.STATIONS = [
     "added": "2026-11-02",
     "where": "UK",
     "br": [
-      64
+      63
     ]
   },
   {
@@ -1739,7 +1741,7 @@ window.STATIONS = [
     "added": "2026-11-11",
     "where": "Canada",
     "br": [
-      47
+      48
     ]
   },
   {
@@ -1898,4 +1900,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T22:48Z";
+window.STATIONS_CHECKED = "2026-11-28T08:59Z";

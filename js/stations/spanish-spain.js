@@ -52,9 +52,6 @@ window.STATIONS = [
     "category": "news",
     "streams": [
       "https://wecast09-h-cloud.flumotion.com/copesedes/sevilla-mas.mp3"
-    ],
-    "br": [
-      96
     ]
   },
   {
@@ -231,9 +228,6 @@ window.STATIONS = [
     "category": "devotional",
     "streams": [
       "https://wecast09-h-cloud.flumotion.com/copesedes/cartagena.mp3"
-    ],
-    "br": [
-      96
     ]
   },
   {
@@ -294,9 +288,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://c2.auracast.net:8048/stream"
-    ],
-    "br": [
-      128
     ]
   },
   {
@@ -780,10 +771,7 @@ window.STATIONS = [
     "streams": [
       "https://flucast14-h-cloud.flumotion.com/cope/megastar.mp3"
     ],
-    "added": "2026-10-26",
-    "br": [
-      128
-    ]
+    "added": "2026-10-26"
   },
   {
     "id": "onda-cero-sevilla",
@@ -1764,4 +1752,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T22:48Z";
+window.STATIONS_CHECKED = "2026-11-28T08:59Z";

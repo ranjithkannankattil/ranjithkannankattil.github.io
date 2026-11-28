@@ -599,9 +599,7 @@ window.STATIONS = [
       "https://srv01.gpmradio.ru/stream/pro/aac/64/52"
     ],
     "added": "2026-10-24",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "95-6-fm",
@@ -624,7 +622,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-24",
     "br": [
-      256
+      128
     ]
   },
   {
@@ -1235,9 +1233,7 @@ window.STATIONS = [
       "https://srv01.gpmradio.ru/stream/pro/aac/64/161"
     ],
     "added": "2026-11-02",
-    "br": [
-      64
-    ]
+    "offline": true
   },
   {
     "id": "station-36",
@@ -1550,7 +1546,9 @@ window.STATIONS = [
       "https://pub0101.101.ru/stream/pro/aac/64/36"
     ],
     "added": "2026-11-07",
-    "offline": true
+    "br": [
+      64
+    ]
   },
   {
     "id": "89-1fm",
@@ -1685,4 +1683,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T22:48Z";
+window.STATIONS_CHECKED = "2026-11-28T08:59Z";

@@ -29,7 +29,7 @@ window.STATIONS = [
       94,
       312,
       128,
-      312
+      0
     ]
   },
   {
@@ -160,7 +160,7 @@ window.STATIONS = [
       "https://live1.sr.se/p4plus-aac-320"
     ],
     "br": [
-      296
+      312
     ]
   },
   {
@@ -291,7 +291,7 @@ window.STATIONS = [
       "https://live1.sr.se/p4kalm-mp3-96"
     ],
     "br": [
-      98
+      88
     ]
   },
   {
@@ -311,9 +311,6 @@ window.STATIONS = [
     "category": "music",
     "streams": [
       "https://www.sverigesradio.se/topsy/direkt/srapi/206.mp3"
-    ],
-    "br": [
-      164
     ]
   },
   {
@@ -324,7 +321,7 @@ window.STATIONS = [
       "https://live1.sr.se/p4vnrl-mp3-96"
     ],
     "br": [
-      144
+      164
     ]
   },
   {
@@ -526,7 +523,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-23",
     "br": [
-      102
+      114
     ]
   },
   {
@@ -619,7 +616,7 @@ window.STATIONS = [
     ],
     "added": "2026-10-26",
     "br": [
-      96
+      80
     ]
   },
   {
@@ -704,4 +701,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T22:48Z";
+window.STATIONS_CHECKED = "2026-11-28T08:59Z";

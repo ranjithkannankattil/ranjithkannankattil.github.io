@@ -31,8 +31,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio138/chunklist.m3u8",
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio138/playlist.m3u8"
-    ],
-    "offline": true
+    ]
   },
   {
     "id": "all4masti",
@@ -64,7 +63,7 @@ window.STATIONS = [
       "https://ais-sa1.streamon.fm/7681_64k.mp3"
     ],
     "br": [
-      81
+      67
     ]
   },
   {
@@ -444,4 +443,4 @@ window.STATIONS = [
     ]
   }
 ];
-window.STATIONS_CHECKED = "2026-11-27T22:48Z";
+window.STATIONS_CHECKED = "2026-11-28T08:59Z";

@@ -76,10 +76,6 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio229/chunklist.m3u8",
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio229/playlist.m3u8"
-    ],
-    "br": [
-      0,
-      96
     ]
   },
   {
@@ -284,6 +280,9 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://cast1.my-control-panel.com/proxy/myradio90fm/stream"
+    ],
+    "br": [
+      320
     ]
   },
   {
@@ -412,6 +411,9 @@ window.STATIONS = [
     "category": "fm",
     "streams": [
       "https://icecast.octosignals.com/radiomacfast"
+    ],
+    "br": [
+      96
     ]
   },
   {
@@ -457,7 +459,8 @@ window.STATIONS = [
     "category": "online",
     "streams": [
       "https://onair.junefm.in/live"
-    ]
+    ],
+    "offline": true
   },
   {
     "id": "radiomangalam",
@@ -509,7 +512,7 @@ window.STATIONS = [
       "https://a5.asurahosting.com:7450/radio.mp3"
     ],
     "br": [
-      192
+      320
     ]
   },
   {
@@ -534,7 +537,7 @@ window.STATIONS = [
       "https://live.accessmedia.nz/PlanetFM.stream/playlist.m3u8"
     ],
     "br": [
-      151,
+      150,
       135
     ]
   },
@@ -1055,7 +1058,7 @@ window.STATIONS = [
     ],
     "added": "2026-11-23",
     "br": [
-      360
+      256
     ]
   },
   {
@@ -1350,10 +1353,7 @@ window.STATIONS = [
     "streams": [
       "https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/playlist.m3u8"
     ],
-    "added": "2026-10-22",
-    "br": [
-      94
-    ]
+    "added": "2026-10-22"
   },
   {
     "id": "aural-oldies",
@@ -1388,7 +1388,10 @@ window.STATIONS = [
     "streams": [
       "https://radio.shahimsha.com/listen/shahimsha/radio.mp3"
     ],
-    "added": "2026-10-22"
+    "added": "2026-10-22",
+    "br": [
+      192
+    ]
   },
   {
     "id": "planet-black",
@@ -1544,4 +1547,4 @@ window.STATIONS = [
     "hidden": true
   }
 ];
-window.STATIONS_CHECKED = "2026-11-28T03:00Z";
+window.STATIONS_CHECKED = "2026-11-28T08:59Z";
