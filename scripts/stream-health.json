@@ -74,7 +74,6 @@
     "malayalam:air-akashvani-malayalam": 22,
     "malayalam:greenradio": 81,
     "malayalam:hallos-radio": 14,
-    "malayalam:junefm": 1,
     "malayalam:keralafm": 81,
     "malayalam:mazhavilfm": 81,
     "malayalam:menorahradio": 81,
@@ -1649,11 +1648,6 @@
   "https://nova-radio.neterra.tv/veselinaretro": {
     "fails": 1,
     "last_reason": "HTTP 0, 0 bytes",
-    "since": "2026-11-28"
-  },
-  "https://onair.junefm.in/live": {
-    "fails": 1,
-    "last_reason": "HTTP 404 error page",
     "since": "2026-11-28"
   },
   "https://oxygenmusic.hu:8443/oxygenmusic_gyor_hd": {
